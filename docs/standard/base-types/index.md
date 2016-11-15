@@ -34,6 +34,6 @@ Esta sección describe las operaciones de tipo base .NET, incluidas operaciones 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -26,6 +26,6 @@ Pude aprender sobre el uso de Docker con .NET Core en los siguientes tutoriales.
 Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](https://docs.asp.net).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -30,6 +30,6 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](https://docs.asp.net).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
