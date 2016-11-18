@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
 ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: 6536a608a4ee1bb10f41907a28114193a300a52c
+ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
 
 ---
 
@@ -148,6 +148,6 @@ Una vez se encuentra `await`, la ejecución de `CalculateResult()` se cede a su 
 `async` y `await` son el procedimiento recomendado para administrar el trabajo enlazado a la CPU si necesita capacidad de respuesta. Hay varios patrones para usar Async con trabajo enlazado a la CPU. Es importante tener en cuenta que hay un pequeño costo al usar Async y no se recomienda para bucles de pequeñas dimensiones.  Depende de usted determinar cómo escribe el código en torno a esta nueva funcionalidad.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
