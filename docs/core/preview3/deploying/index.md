@@ -4,15 +4,15 @@ description: "Implementación de aplicaciones .NET Core"
 keywords: ".NET, .NET Core, implementación de .NET Core"
 author: rpetrusha
 manager: wpickett
-ms.date: 09/08/2016
+ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
+ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
+ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
 
 ---
 
@@ -32,7 +32,7 @@ En una FDD, solo se implementa su aplicación y cualquier dependencia de tercero
 
 La implementación de FDD tienen varias ventajas:
 
-- No es necesario definir por adelantado los sistemas operativos de destino en los que se ejecutará la aplicación .NET Core. Como .NET Core usa un formato de archivo PE común para archivos ejecutables y bibliotecas independientemente del sistema operativo, .NET Core puede ejecutar la aplicación con independencia del sistema operativo subyacente. Para más información sobre el formato de archivo PE, consulte [.NET Assembly File Format](../../standard/assembly-format.md) (Formato de archivo de ensamblado .NET).
+- No es necesario definir por adelantado los sistemas operativos de destino en los que se ejecutará la aplicación .NET Core. Como .NET Core usa un formato de archivo PE común para archivos ejecutables y bibliotecas independientemente del sistema operativo, .NET Core puede ejecutar la aplicación con independencia del sistema operativo subyacente. Para más información sobre el formato de archivo PE, consulte [.NET Assembly File Format](../../../standard/assembly-format.md) (Formato de archivo de ensamblado .NET).
 
 - El tamaño de su paquete de implementación es pequeño. Solo tendrá que implementar la aplicación y sus dependencias, .NET Core propiamente dicho.
 
@@ -105,21 +105,28 @@ Además de los archivos binarios de la aplicación, el instalador debe también 
 
 La implementación de una implementación dependiente del marco con una o varias dependencias de terceros implica tres pasos adicionales antes de ejecutar el comando `dotnet restore`:
 
-1. Agregue referencias a las bibliotecas de terceros a la sección `dependencies` de su archivo `project.json`. La siguiente sección `dependencies` usa Json.NET como biblioteca de terceros.
+1. Agregue referencias a las bibliotecas de terceros a la sección `<ItemGroup>` de su archivo `csproj`. En la siguiente sección `<ItemGroup>` se muestra el elemento `<ItemGroup>` que contiene las dependencias del proyecto predeterminado con Json.NET como biblioteca de terceros.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": {
-        "type": "platform",
-        "version": "1.0.0"
-      },
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Microsoft.NETCore.App">
+          <Version>1.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json">
+          <Version>9.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Microsoft.NET.Sdk">
+          <Version>1.0.0-alpha-20161102-2</Version>
+          <PrivateAssets>All</PrivateAssets>
+        </PackageReference>
+      </ItemGroup>
     ```
+
+Observe que la dependencia del SDK permanece en el ejemplo anterior. Esto es así por diseño, dado que esta dependencia es necesaria para restaurar todos los destinos necesarios para permitir que las herramientas de línea de comandos funcionen.  
 
 2. Si no lo ha hecho ya, descargue el paquete de NuGet que contiene la dependencia de terceros. Para descargar el paquete, ejecute el comando `dotnet restore` después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
 
-Tenga en cuenta que una implementación dependiente del marco con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se podrá portar a sistemas Windows. Esto puede ocurrir si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de ello es el servidor Kestrel. Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contendrá una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md#what-are-rids) que admita la dependencia nativa (y que exista en su paquete de NuGet).
+Tenga en cuenta que una implementación dependiente del marco con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se podrá portar a sistemas Windows. Esto puede ocurrir si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de ello es el servidor Kestrel. Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contendrá una carpeta para cada [identificador en tiempo de ejecución (RID)](../../rid-catalog.md#what-are-rids) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
 ## <a name="self-contained-deployments-scd"></a>Implementaciones autocontenidas (SCD) ##
 
@@ -143,7 +150,7 @@ También tiene algunos inconvenientes:
 
 ### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> Implementación de una implementación autocontenida sencilla ###
 
-La implementación de una implementación autocontenida sin dependencias de terceros implica crear el proyecto, modificar el archivo project.json y compilar, probar y publicar la aplicación.  Un sencillo ejemplo escrito en C# ilustra el proceso. En el ejemplo se usa la utilidad `dotnet` desde la línea de comandos; sin embargo, también puede usar un entorno de desarrollo, como Visual Studio o Visual Studio Code para compilar, probar y publicar el ejemplo.
+La implementación de una implementación autocontenida sin dependencias de terceros implica crear el proyecto, modificar el archivo csproj y compilar, probar y publicar la aplicación.  Un sencillo ejemplo escrito en C# ilustra el proceso. En el ejemplo se usa la utilidad `dotnet` desde la línea de comandos; sin embargo, también puede usar un entorno de desarrollo, como Visual Studio o Visual Studio Code para compilar, probar y publicar el ejemplo.
 
 1. Cree un directorio para el proyecto y, en la línea de comandos, escriba `dotnet new` para crear un nuevo proyecto de consola de C#.
 
@@ -183,121 +190,124 @@ La implementación de una implementación autocontenida sin dependencias de terc
     }
     ```
 
-3. Abra el archivo `project.json` y quita la línea siguiente de la sección `frameworks`:
+3. Cree una etiqueta `<RuntimeIdentifiers>` en la sección `<PropertyGroup>` del archivo `csproj` que defina las plataformas a las que se dirige su aplicación, y especifique el identificador de tiempo de ejecución de cada una. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../../rid-catalog.md). Por ejemplo, la siguiente sección `runtimes` indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.11 de 64 bits.
 
-   ```json
-   "type": "platform",
-   ```
-La sección Framework debe aparecer de la manera siguiente una vez modificada:
-
-    ```json
-    "frameworks": {
-      "netcoreapp1.0": {
-        "dependencies": {
-          "Microsoft.NETCore.App": {
-             "version": "1.0.0"
-          }
-        }
-      }
-    }
+    ```xml
+        <PropertyGroup>
+          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        </PropertyGroup>
     ```
-Al quitar el atributo `"type": "platform"` se indica que el marco se proporciona como un conjunto de componentes locales a nuestra aplicación, y no como un paquete de plataforma de todo el sistema.
+Tenga en cuenta que también debe agregar un punto y coma para separar los RID. Además, tenga en cuenta que el elemento `<RuntimeIdentifier>` puede ir en cualquier `<PropertyGroup>` que tenga en su archivo `csproj`. Más adelante en esta sección aparece un ejemplo completo del archivo `csproj`.
 
-4. Cree una sección `runtimes` en el archivo `project.json` que defina las plataformas a las que se dirige su aplicación, y especifique el identificador de tiempo de ejecución de cada una. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md). Por ejemplo, la siguiente sección `runtimes` indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.10 de 64 bits.
+4. Ejecute el comando `dotnet restore` para restaurar las dependencias especificadas en el proyecto.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
-    ```
-Tenga en cuenta también de que debe agregar una coma para separar la sección `runtimes` de la sección anterior.
-Más adelante en esta sección aparece un ejemplo completo del archivo `project.json`.
-
-6. Ejecute el comando `dotnet restore` para restaurar las dependencias especificadas en el proyecto.
-
-7. Cree compilaciones de depuración de la aplicación en cada plataforma de destino mediante el comando `dotnet build`. A menos que especifique el identificador de tiempo de ejecución que desea quiere compilar, el comando `dotnet build` crea una compilación solo para el ID de tiempo de ejecución actual del sistema. Puede compilar la aplicación para ambas plataformas de destino con los comandos:
+5. Cree compilaciones de depuración de la aplicación en cada plataforma de destino mediante el comando `dotnet build`. A menos que especifique el identificador de tiempo de ejecución que desea quiere compilar, el comando `dotnet build` crea una compilación solo para el ID de tiempo de ejecución actual del sistema. Puede compilar la aplicación para ambas plataformas de destino con los comandos:
 
     ```console
     dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
+    dotnet build -r osx.10.11-x64
     ```
 Las compilaciones de depuración de la aplicación para cada plataforma se encontrarán en el directorio `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` del proyecto.
 
-8. Después de depurar y probar el programa, puede crear los archivos que se implementarán con la aplicación para cada plataforma de destino mediante la ejecución del comando `dotnet publish` en ambas plataformas de destino, de la manera siguiente:
+6. Después de depurar y probar el programa, puede crear los archivos que se implementarán con la aplicación para cada plataforma de destino mediante la ejecución del comando `dotnet publish` en ambas plataformas de destino, de la manera siguiente:
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
 Se crea una versión de lanzamiento (en lugar de una depuración) de la aplicación para cada plataforma de destino. Los archivos resultantes se colocan en un subdirectorio denominado `publish` que se encuentra en un subdirectorio del subdirectorio `.\bin\release\netcoreapp1.0\<runtime_identifier>` del proyecto. Tenga en cuenta que cada subdirectorio contiene el conjunto completo de archivos (los archivos de aplicación y todos los archivos de .NET Core) necesario para iniciar la aplicación.
 
-9. Junto con los archivos de la aplicación, el proceso de publicación emite un archivo de base de datos de programa (.pdb) que contiene información de depuración sobre la aplicación. El archivo es útil principalmente para depurar excepciones; puede elegir no empaquetarlo con los archivos de la aplicación.
+7. Junto con los archivos de la aplicación, el proceso de publicación emite un archivo de base de datos de programa (.pdb) que contiene información de depuración sobre la aplicación. El archivo es útil principalmente para depurar excepciones; puede elegir no empaquetarlo con los archivos de la aplicación.
 
 Los archivos publicados se pueden implementar de la forma que desee. Por ejemplo, puede empaquetarlos en un archivo comprimido, usar un simple comando `copy` o implementarlos con el paquete de instalación que prefiera. 
 
-El siguiente es el archivo `project.json` completo para este proyecto.
+El siguiente es el archivo `csproj` completo para este proyecto.
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "version": "1.0.0"
-        }
-      }
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.App">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161102-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
 ```
+
 
 ### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>Implementación de una implementación autocontenida con dependencias de terceros ###
 
 Implementar una implementación autocontenida con una o varias dependencias de terceros implica agregar la dependencia de terceros:
 
-1. Agregue referencias a las bibliotecas de terceros a la sección `dependencies` de su archivo `project.json`. La siguiente sección `dependencies` usa Json.NET como biblioteca de terceros.
+1. Agregue referencias a las bibliotecas de terceros a la sección `<ItemGroup>` de su archivo `csproj`. La siguiente sección `<ItemGroup>` usa Json.NET como biblioteca de terceros.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": "1.0.0",
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Microsoft.NETCore.App">
+          <Version>1.0.1</Version>
+        </PackageReference>
+        <PackageReference Include="Microsoft.NET.Sdk">
+          <Version>1.0.0-alpha-20161102-2</Version>
+          <PrivateAssets>All</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json">
+          <Version>9.0.1</Version>
+        </PackageReference>
+      </ItemGroup>
     ```
 2. Si aún no lo ha hecho, descargue el paquete de NuGet que contiene la dependencia de terceros en el sistema. Para que la dependencia esté disponibles para la aplicación, ejecute el comando `dotnet restore` después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
 
-El siguientes es el archivo project.json completo para este proyecto:
+El siguiente es el archivo csproj completo de este proyecto:
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0",
-    "Newtonsoft.Json": "9.0.1"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.App">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>9.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161102-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
 ```
 
 Al implementar la aplicación, los archivos de aplicación también contienen las dependencias de terceros usadas en la aplicación. Las bibliotecas de terceros no están aún presentes en el sistema en el que se ejecuta la aplicación.
@@ -306,44 +316,51 @@ Tenga en cuenta que solo puede implementar una implementación autocontenida con
 
 ### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>Implementación de una implementación autocontenida con una superficie menor ###
 
-Si la disponibilidad de espacio de almacenamiento adecuado en sistemas de destino puede ser un problema, puede reducir la superficie general de la aplicación excluyendo algunos componentes del sistema. Para ello, defina explícitamente los componentes de .NET Core que incluye su aplicación en su archivo project.json.
+Si la disponibilidad de espacio de almacenamiento adecuado en sistemas de destino puede ser un problema, puede reducir la superficie general de la aplicación excluyendo algunos componentes del sistema. Para ello, defina explícitamente los componentes de .NET Core que incluye su aplicación en su archivo csproj.
 
 Para crear una implementación autocontenida con una superficie menor, comience siguiendo los dos primeros pasos para crear una implementación autocontenida. Cuando haya ejecutado el comando `dotnet new` y agregado el código fuente de C# a la aplicación, haga lo siguiente:
 
-1. Abra el archivo `project.json` y reemplace la sección `frameworks` por lo siguiente:
+1. Abra el archivo `csproj` y reemplace la sección `frameworks` por lo siguiente:
 
-    ```json
-    "frameworks": {
-      "netstandard1.6": { }
-    }
-    ```
-Esto hace dos cosas:
-
-    * Indica que, en lugar de usar el marco entero `netcoreapp1.0`, que incluye .NET Core CLR, la biblioteca .NET Core y varios otros componentes del sistema, la aplicación emplea solamente a la biblioteca estándar. NET.
-
-    * Al quitar el atributo `"type": "platform"` se indica que el marco se proporciona como un conjunto de componentes locales a nuestra aplicación, y no como un paquete de plataforma de todo el sistema.
+    ```xml
+    <PropertyGroup>
+      <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+  ```
+Esta operación indica que, en lugar de usar el marco entero `netcoreapp1.0`, que incluye .NET Core CLR, la biblioteca .NET Core y varios otros componentes del sistema, la aplicación emplea solamente la biblioteca estándar. NET.
 
 2. Reemplace la sección `dependencies` por lo siguiente:
 
-    ```json
-    "dependencies": {
-      "NETStandard.Library": "1.6.0",
-      "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-      "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-    },
-    ```
+    ```xml
+    <ItemGroup>
+      <PackageReference Include="NETSTandard.Library">
+        <Version>1.6.0</Version>
+      </PackageReference>
+      <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
+        <Version>1.0.2</Version>
+      </PackageReference>
+      <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
+        <Version>1.0.1</Version>
+      </PackageReference>
+      <PackageReference Include="Microsoft.NET.Sdk">
+        <Version>1.0.0-alpha-20161102-2</Version>
+        <PrivateAssets>All</PrivateAssets>
+      </PackageReference>
+    </ItemGroup>
+  ```
+
    Esto define los componentes del sistema usados por nuestra aplicación. Los componentes del sistema empaquetados con nuestra aplicación incluyen la biblioteca estándar. NET, el entorno de tiempo de ejecución de .NET Core y el host de .NET Core. Esto produce una implementación autocontenida con una superficie menor.
 
-3. Al igual que hizo en el ejemplo `runtimes`Implementación de una implementación autocontenida sencilla`project.json`, cree una sección [ en el archivo ](#simpleSelf) que defina las plataformas a las que se dirige su aplicación, y especifique el identificador de tiempo de ejecución de cada una. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../rid-catalog.md). Por ejemplo, la siguiente sección `runtimes` indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.10 de 64 bits.
+3. Al igual que hizo en el ejemplo [Implementación de una implementación autocontenida sencilla](#simpleSelf), cree un elemento `<RuntimeIdentifiers>` en un elemento `<PropertyGroup>` del archivo `csproj` que defina las plataformas a las que se dirige su aplicación, y especifique el identificador de tiempo de ejecución de cada una. Para ver una lista de identificadores de tiempo de ejecución, consulte el [catálogo de identificadores de tiempo de ejecución](../../rid-catalog.md). Por ejemplo, el ejemplo siguiente indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.11 de 64 bits.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
+    ```xml
+        <PropertyGroup>
+          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        </PropertyGroup>
     ```
-Tenga en cuenta también de que debe agregar una coma para separar la sección `runtimes` de la sección anterior.
-Más adelante en esta sección aparece un ejemplo completo del archivo `project.json`.
+    
+
+Más adelante en esta sección aparece un ejemplo completo del archivo `csproj`.
 
 4. Ejecute el comando `dotnet restore` para restaurar las dependencias especificadas en el proyecto.
 
@@ -351,14 +368,14 @@ Más adelante en esta sección aparece un ejemplo completo del archivo `project.
 
     ```console
     dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
+    dotnet build -r osx.10.11-x64
     ```
 
 6. Después de depurar y probar el programa, puede crear los archivos que se implementarán con la aplicación para cada plataforma de destino mediante la ejecución del comando `dotnet publish` en ambas plataformas de destino, de la manera siguiente:
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
 Se crea una versión de lanzamiento (en lugar de una depuración) de la aplicación para cada plataforma de destino. Los archivos resultantes se colocan en un subdirectorio denominado `publish` que se encuentra en un subdirectorio del subdirectorio `.\bin\release\netstandard1.6\<runtime_identifier>` del proyecto. Tenga en cuenta que cada subdirectorio contiene el conjunto completo de archivos (los archivos de aplicación y todos los archivos de .NET Core) necesario para iniciar la aplicación.
 
@@ -366,29 +383,42 @@ Se crea una versión de lanzamiento (en lugar de una depuración) de la aplicaci
 
 Los archivos publicados se pueden implementar de la forma que desee. Por ejemplo, puede empaquetarlos en un archivo comprimido, usar un simple comando `copy` o implementarlos con el paquete de instalación que prefiera. 
 
-El siguiente es el archivo `project.json` completo para este proyecto.
+El siguiente es el archivo `csproj` completo para este proyecto.
 
-```json
-   {
-     "version": "1.0.0-*",
-     "buildOptions": {
-       "debugType": "portable",
-       "emitEntryPoint": true
-     },
-     "dependencies": {
-       "NETStandard.Library": "1.6.0",
-       "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-       "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-     },
-     "frameworks": {
-       "netstandard1.6": { }
-     },
-     "runtimes": {
-       "win10-x64": {},
-       "osx.10.10-x64": {}
-     }
-   }
+```xml
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" />
+    <EmbeddedResource Include="**\*.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NETSTandard.Library">
+      <Version>1.6.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161102-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
 ```
+
 
 
 

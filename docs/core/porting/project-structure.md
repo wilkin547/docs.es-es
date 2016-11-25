@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
 ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
+ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 
 ---
 
@@ -33,13 +33,13 @@ Este artículo pretende ayudar a los propietarios del proyecto que desean compil
   * No se le permite compartir la biblioteca .NET Core en distintos tipos de proyecto dentro del mismo archivo de solución. Para admitir esto, una opción mejor es [crear una Biblioteca de clases portable](#support-pcl).
   * No se permite la compilación de proyecto o cargar modificaciones admitidas por tareas y destinos de MSBuild. Para admitir esto, una opción mejor es [crear una Biblioteca de clases portable](#support-pcl).
 
-* [**Mantener separados los proyectos existentes y los proyectos de .NET Core nuevos**][option-xproj-folder]
+* <a name="support-vs"></a>[**Mantener separados los proyectos existentes y los proyectos de .NET Core nuevos**][option-xproj-folder]
   
   *Para qué se usa:*
   * Para mantener la compatibilidad con el desarrollo en proyectos existentes sin tener que hacer una actualización para los desarrolladores o colaboradores que posiblemente no tengan Visual Studio 2015.
   * Para disminuir la posibilidad de generar nuevos errores en proyectos existentes porque esos proyectos no requieren renovación de código.
 
-* [**Mantener los proyectos existentes y crear Bibliotecas de clases portables (PCL) que tienen a .NET Core como destino**][option-pcl]
+* <a name="support-pcl"></a>[**Mantener los proyectos existentes y crear Bibliotecas de clases portables (PCL) que tienen a .NET Core como destino**][option-pcl]
 
   *Para qué se usa:*
   * Para hacer referencia a las bibliotecas .NET Core en proyectos web o de escritorio que tienen como destino la plataforma completa de .NET Framework en la misma solución.
@@ -58,7 +58,7 @@ Considere el siguiente repositorio:
 
 Hay varias formas distintas de agregar compatibilidad para .NET Core para este repositorio en función de las restricciones y la complejidad de los proyectos existentes, que se describen a continuación.
 
-## <a name="replace-existing-projects-with-a-multitargeted-net-core-project-xproj"></a>Reemplazo de proyectos existentes por un proyecto .NET Core con compatibilidad con múltiples versiones (xproj)
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>Reemplazo de proyectos existentes por un proyecto .NET Core con compatibilidad con múltiples versiones (xproj)
 
 El repositorio se puede reorganizar de manera tal que se quita cualquier archivo `*.csproj` existente y se crea un archivo `*.xproj` único que establece varios marcos de trabajo como destino.  Esta es una opción excelente, porque un proyecto único se puede compilar para distintos marcos de trabajo.  También tiene la capacidad de controlar distintas dependencias, opciones de compilación, etc. por marco de trabajo de destino.
 
@@ -125,6 +125,6 @@ Consulte la [documentación sobre el traslado de .NET Core][porting-doc] para m�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
