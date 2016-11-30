@@ -215,7 +215,7 @@ La opción [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.
  
 Debido a que la opción [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) representa el comportamiento predeterminado del motor de expresiones regulares, casi nunca se especifica de forma explícita en una llamada de método. En su lugar, se llama a un constructor o método estático de coincidencia de patrones sin un parámetro options.
 
-## <a name="caseinsensitive-matching"></a>Coincidencia sin distinción entre mayúsculas y minúsculas
+## <a name="case-insensitive-matching"></a>Coincidencia sin distinción entre mayúsculas y minúsculas
 
 La opción [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase), o la opción insertada **i**, proporciona coincidencia sin distinción entre mayúsculas y minúsculas. De forma predeterminada, se usan las convenciones sobre el uso de mayúsculas de la referencia cultural actual.
 
@@ -543,7 +543,7 @@ End Class
 '    Joe: 164
 ```
 
-## <a name="singleline-mode"></a>Modo de una sola línea
+## <a name="single-line-mode"></a>Modo de una sola línea
 
 La opción [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline), o la opción insertada s, hace que el motor de expresiones regulares trate la cadena de entrada como si constase de una única línea. Para ello, se cambia el comportamiento del elemento de lenguaje punto (**.**) para que coincida con todos los caracteres, en vez de coincidir con todos los caracteres excepto con el de nueva línea **\n** o \u000A.
 
@@ -1233,7 +1233,7 @@ End Module
 '       Instead, it is a nonsensical paragraph.
 ```
 
-## <a name="righttoleft-mode"></a>Modo de derecha a izquierda
+## <a name="right-to-left-mode"></a>Modo de derecha a izquierda
 
 De forma predeterminada, el motor de expresiones regulares realiza las búsquedas de izquierda a derecha. Para invertir la dirección de búsqueda, se puede usar la opción [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft). De este modo, la búsqueda empieza automáticamente en la posición del último carácter de la cadena. En los métodos de coincidencia de patrones que incluyen un parámetro de posición inicial, como [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32)), la posición inicial es el índice del carácter situado más a la derecha en el que debe empezar la búsqueda. 
 
