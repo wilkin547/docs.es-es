@@ -26,7 +26,7 @@ Una excepción es cualquier condición de error o comportamiento inesperado que 
 
 En .NET, una excepción es un objeto que hereda de la clase [System.Exception](xref:System.Exception). Una excepción se inicia desde un área del código en la que ha producido un problema. La excepción se pasa hacia arriba en la pila hasta que la aplicación la controla o el programa finaliza.
 
-## <a name="exceptions-vs-traditional-errorhandling-methods"></a>Comparación entre los métodos tradicionales de control de errores y las excepciones
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Comparación entre los métodos tradicionales de control de errores y las excepciones
 
 Tradicionalmente, el modelo de control de errores de un lenguaje se basaba en el modo exclusivo del lenguaje de detectar los errores y buscarles controladores, o bien en el mecanismo de control de errores ofrecido por el sistema operativo. La forma en que .NET implementa el control de excepciones proporciona las siguientes ventajas:
 
@@ -247,7 +247,7 @@ public class ProcessFile
 }
 ```
 
-## <a name="how-to-create-userdefined-exceptions"></a>Cómo crear excepciones definidas por el usuario
+## <a name="how-to-create-user-defined-exceptions"></a>Cómo crear excepciones definidas por el usuario
 
 .NET proporciona una jerarquía de clases de excepción que se derivan en última instancia de la clase base @System.Exception.. Sin embargo, si ninguna de las excepciones predefinidas satisface sus necesidades, puede crear sus propias clases de excepciones derivadas de la clase @System.Exception.
 
