@@ -4,11 +4,10 @@ description: El comando dotnet-nuget-delete elimina o quita de la lista un paque
 keywords: dotnet-nuget-delete, CLI, comando de la CLI, .NET Core
 author: karann-msft
 ms.author: mairaw
-manager: wpickett
 ms.date: 11/11/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation

@@ -4,11 +4,10 @@ description: "El comando dotnet-nuget-locals borra o muestra los recursos de NuG
 keywords: dotnet-nuget-locals, CLI, comando de la CLI, .NET Core
 author: karann-msft
 ms.author: mairaw
-manager: wpickett
 ms.date: 11/15/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
 translationtype: Human Translation

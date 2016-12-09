@@ -4,11 +4,10 @@ description: Independencia del lenguaje y componentes independientes del lenguaj
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/22/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
@@ -17,7 +16,7 @@ ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
 
 ---
 
-# <a name="language-independence-and-languageindependent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
+# <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
 La plataforma .NET es independiente del lenguaje. Esto significa que, como desarrollador, puede desarrollar en uno de los muchos lenguajes que se centran en la plataforma .NET, como C#, F # y Visual Basic. Puede tener acceso a los tipos y miembros de bibliotecas de clases desarrollados para la plataforma .NET sin tener que conocer el lenguaje en el que se escribieron originalmente y sin tener que seguir las convenciones del lenguaje original. Si es un desarrollador de componentes, puede tener acceso al componente desde cualquier aplicación .NET independientemente de su lenguaje.
 
@@ -2816,7 +2815,7 @@ End Class
 
 Si está desarrollando una aplicación en lugar de una biblioteca (es decir, si no expone los tipos o miembros que pueden consumir otros desarrolladores de aplicaciones), la conformidad con CLS de los elementos del programa usados por la aplicación solo tendrá interés si su lenguaje admite estos elementos. En ese caso, el compilador del lenguaje generará un error cuando intente utilizar un elemento no conforme a CLS. 
 
-## <a name="crosslanguage-interoperability"></a>Interoperabilidad entre lenguajes
+## <a name="cross-language-interoperability"></a>Interoperabilidad entre lenguajes
 
 La independencia de lenguaje tiene varios significados posibles. Un significado implica perfectamente tipos escritos en un lenguaje desde una aplicación escrita en otro lenguaje. Un segundo significado, que es el descrito en este artículo, implica combinar código escrito en varios lenguajes en un único ensamblado de .NET Framework. 
 

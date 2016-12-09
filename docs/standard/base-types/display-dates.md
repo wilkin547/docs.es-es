@@ -3,11 +3,11 @@ title: "Cómo: Mostrar fechas en calendarios no gregorianos"
 description: "Cómo mostrar fechas en calendarios no gregorianos"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 93f06e1d-544b-4ccc-a0b2-95cd674852cb
 translationtype: Human Translation
@@ -16,7 +16,7 @@ ms.openlocfilehash: 85c9d450be48c553ea3a1f1a0f16c298941fa325
 
 ---
 
-# <a name="how-to-display-dates-in-nongregorian-calendars"></a>Cómo: Mostrar fechas en calendarios no gregorianos
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Cómo: Mostrar fechas en calendarios no gregorianos
 
 Los tipos [DateTime](xref:System.DateTime) y [DateTimeOffset](xref:System.DateTimeOffset) usan el calendario gregoriano como calendario predeterminado. Esto significa que al llamar al método `ToString` de un valor de fecha y hora se muestra la representación de cadena de esa fecha y hora en el calendario gregoriano, aunque se creara con otro calendario. Esto se muestra en el ejemplo siguiente, que usa dos maneras diferentes de crear un valor de fecha y hora con el calendario persa, pero muestra esos valores de fecha y hora en el calendario gregoriano cuando llama al método [ToString](xref:System.DateTime.ToString). En este ejemplo se reflejan dos técnicas usadas habitualmente, aunque incorrectas, para mostrar la fecha en un calendario determinado.
 

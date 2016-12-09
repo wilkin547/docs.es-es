@@ -3,11 +3,10 @@ title: "Introducción a .NET Core en Windows con Visual Studio 2017"
 description: "Introducción a .NET Core en Windows con Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation

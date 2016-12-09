@@ -3,11 +3,10 @@ title: Requisitos previos de .NET Core (herramientas de Preview 3)
 description: Requisitos previos de .NET Core (herramientas de Preview 3)
 keywords: .NET, .NET Core
 author: billwagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 09/15/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation

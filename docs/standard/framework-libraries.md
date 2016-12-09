@@ -3,11 +3,11 @@ title: Bibliotecas de Framework
 description: Bibliotecas de Framework
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
@@ -58,7 +58,7 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx): una API para cargar y consultar documentos XML con LINQ.
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx): una API para leer archivos Se puede usar ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)) para escribir archivos.
 
-## <a name="appmodel-apis"></a>API del modelo de aplicaciones
+## <a name="app-model-apis"></a>API del modelo de aplicaciones
 
 Hay muchos modelos de aplicaciones que pueden usarse con .NET, proporcionados por varias empresas.
 

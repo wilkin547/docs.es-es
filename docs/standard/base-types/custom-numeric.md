@@ -4,11 +4,10 @@ description: "Cadenas con formato numérico personalizado"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b1c16ee-956f-4e9c-8502-c3dd6598c51d
 translationtype: Human Translation
@@ -598,11 +597,11 @@ Console.WriteLine(String.Format("{0:" + fmt3 + "}", zeroValue))
 
 ## <a name="notes"></a>Notas
 
-### <a name="floatingpoint-infinities-and-nan"></a>Infinitos de punto flotante y NaN
+### <a name="floating-point-infinities-and-nan"></a>Infinitos de punto flotante y NaN
 
 Independientemente de la cadena de formato, si el valor de un tipo de punto flotante [Single](xref:System.Single) o [Double](xref:System.Double) es infinito positivo, infinito negativo o NaN (Not a Number, no es un número), la cadena con formato será el valor de la propiedad [PositiveInfinitySymbol](xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol), [NegativeInfinitySymbol](xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol) o [NaNSymbol](xref:System.Globalization.NumberFormatInfo.NaNSymbol) respectiva especificada por el objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) aplicable actualmente. 
 
-### <a name="rounding-and-fixedpoint-format-strings"></a>Cadenas de formato de punto fijo y redondeo
+### <a name="rounding-and-fixed-point-format-strings"></a>Cadenas de formato de punto fijo y redondeo
 
 Para las cadenas de formato de punto fijo (es decir, las cadenas de formato que no contienen caracteres de formato de notación científica), los números se redondean hasta tantos decimales como marcadores de posición de dígitos haya a la derecha del separador decimal. Si la cadena de formato no contiene ningún separador decimal, el número se redondea al entero más próximo. Si el número tiene más dígitos que marcadores de posición de dígitos a la izquierda del separador decimal, los dígitos adicionales se copian en la cadena de resultado justo antes del primer marcador de posición de dígitos.
 

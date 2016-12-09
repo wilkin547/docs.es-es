@@ -3,11 +3,11 @@ title: "Cómo permitir que los usuarios resuelvan horas ambiguas"
 description: "Cómo permitir que los usuarios resuelvan horas ambiguas"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d6858a5c-02ab-4367-9e08-fa22c051c38d
 translationtype: Human Translation

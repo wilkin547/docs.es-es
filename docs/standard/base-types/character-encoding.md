@@ -4,11 +4,10 @@ description: "Codificación de caracteres de .NET"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bce54e41-e9dc-493a-8988-1cbadc340fe8
 translationtype: Human Translation
@@ -592,7 +591,7 @@ Cuando un método intenta codificar o descodificar un carácter pero no existe n
 > [!IMPORTANT]
 > Los problemas más frecuentes en las operaciones de codificación se producen cuando un carácter Unicode no se puede asignar a una codificación determinada de la página de códigos. Los problemas más comunes de las operaciones de descodificación se producen cuando las secuencias no válidas de bytes no se pueden traducir a caracteres Unicode válidos. Por estas razones, debe saber qué estrategia de reserva emplea un determinado objeto de codificación. Siempre que sea posible, debe especificar la estrategia de reserva usada por un objeto de codificación cuando se crea una instancia del objeto.
  
-### <a name="bestfit-fallback"></a>Reserva con ajuste perfecto
+### <a name="best-fit-fallback"></a>Reserva con ajuste perfecto
 
 Cuando un carácter no tiene una coincidencia exacta en la codificación de destino, el codificador puede intentar asignarle a un carácter similar. (La reserva con ajuste perfecto es principalmente un problema de codificación en lugar de un problema de descodificación. Hay muy pocas páginas de códigos que contengan caracteres que no se puedan asignar correctamente a Unicode.) La reserva con ajuste perfecto es el valor predeterminado para las codificaciones de páginas de códigos y de juegos de caracteres de doble byte recuperadas por las sobrecargas de [Encoding.GetEncoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) y [Encoding.GetEncoding(String)](xref:System.Text.Encoding.GetEncoding(System.String)).
 

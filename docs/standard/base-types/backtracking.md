@@ -4,11 +4,10 @@ description: Retroceso en expresiones regulares
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8a3e6298-26b7-4c99-bd97-c9892f6c9418
 translationtype: Human Translation
@@ -236,7 +235,7 @@ La comparación de la cadena de entrada con la expresión regular continúa de e
 
 El retroceso permite crear expresiones regulares eficaces y flexibles. Sin embargo, como se ha mostrado en la sección anterior, estas ventajas pueden conllevar un bajo rendimiento inaceptable. Para evitar el retroceso excesivo, se debe definir un intervalo de tiempo de espera al crear una instancia de un objeto [Regex](xref:System.Text.RegularExpressions.Regex) o llamar a un método estático de coincidencia de expresión regular. Esta técnica se analiza en la sección siguiente. Además, .NET Core admite tres elementos del lenguaje de expresiones regulares que limitan o suprimen el retroceso y que admiten expresiones regulares complejas con poca o ninguna reducción del rendimiento: [subexpresiones sin retroceso](#nonbacktracking-subexpression), [aserciones de búsqueda tardía](#lookbehind-assertions) y [aserciones de búsqueda anticipada](#lookahead-assertions). Para obtener más información sobre cada elemento del lenguaje, consulte [Construcciones de agrupamiento en expresiones regulares](grouping.md).
 
-### <a name="defining-a-timeout-interval"></a>Definición de un intervalo de tiempo de espera
+### <a name="defining-a-time-out-interval"></a>Definición de un intervalo de tiempo de espera
 
 Se puede establecer un valor de tiempo de espera que represente el intervalo más largo en el que el motor de expresiones regulares buscará una coincidencia única antes de abandonar el intento y generar una excepción [RegexMatchTimeoutException](xref:System.Text.RegularExpressions.RegexMatchTimeoutException). El intervalo de tiempo de espera se especifica al proporcionar un valor [TimeSpan](xref:System.TimeSpan) al constructor `Regex(String, RegexOptions, TimeSpan)` para las expresiones regulares de instancias. Además, cada método estático de coincidencia de patrones tiene una sobrecarga con un valor [TimeSpan](xref:System.TimeSpan) al parámetro [Regex.Regex(String, RegexOptions, TimeSpan)] que permite especificar un valor de tiempo de espera. De manera predeterminada, el intervalo de tiempo de espera se establece en [Regex.InfiniteMatchTimeout](xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout) y el motor de expresiones regulares no agota dicho tiempo. 
 

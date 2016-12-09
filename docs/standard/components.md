@@ -3,12 +3,11 @@ title: Componentes de la arquitectura .NET
 description: "Describe los componentes principales de la arquitectura .NET, como la biblioteca .NET Standard, los entornos de tiempo de ejecución .NET y las herramientas."
 keywords: .NET, biblioteca de .NET Standard, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, compiladores
 author: cartermp
-manager: wpickett
-ms.author: cartermp
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-core-technologies
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation

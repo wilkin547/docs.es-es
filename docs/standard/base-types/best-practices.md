@@ -4,11 +4,10 @@ description: Procedimientos recomendados con expresiones regulares
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
@@ -686,7 +685,7 @@ Elemento del lenguaje | Descripción
 **(?<**=_subexpression_**)** | Búsqueda tardía positiva de ancho cero. Realizar una búsqueda tardía de la posición actual para determinar si *subexpression* coincide con la cadena de entrada.
 **(?<!**_subexpression_**)** | Búsqueda tardía negativa de ancho cero. Realizar una búsqueda tardía de la posición actual para determinar si *subexpression* no coincide con la cadena de entrada.
  
-## <a name="use-timeout-values"></a>Usar valores de tiempo de espera
+## <a name="use-time-out-values"></a>Usar valores de tiempo de espera
 
 Si sus expresiones regulares procesan datos de entrada que prácticamente coinciden con el patrón de expresiones regulares, normalmente se puede usar el retroceso excesivo, que afecta enormemente al rendimiento. Además de analizar cuidadosamente el uso del retroceso y probar la expresión regular en entradas casi coincidentes, debe establecer siempre un valor de tiempo de espera para garantizar que el impacto del retroceso excesivo, si aparece, se reduzca al mínimo.
 

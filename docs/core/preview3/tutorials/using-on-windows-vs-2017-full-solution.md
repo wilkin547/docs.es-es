@@ -3,11 +3,10 @@ title: "Creación de una solución completa de .NET Core en Windows con Visual S
 description: "Creación de una solución completa de .NET Core en Windows con Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
@@ -26,9 +25,9 @@ Visual Studio 2017 proporciona un entorno de desarrollo completo para las aplica
 
 Siga las instrucciones de [nuestra página de requisitos previos](../windows-prerequisites.md) para actualizar su entorno.
 
-# <a name="a-solution-using-only-net-core-projects"></a>Una solución solo con proyectos de .NET Core
+## <a name="a-solution-using-only-net-core-projects"></a>Una solución solo con proyectos de .NET Core
 
-## <a name="writing-the-library"></a>Escritura de la biblioteca
+### <a name="writing-the-library"></a>Escritura de la biblioteca
 
 1. En Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**. En el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Visual C#**, elija el nodo **.NET Core** y luego elija **Biblioteca de clases (.NET Standard)**. 
 

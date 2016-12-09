@@ -4,11 +4,10 @@ description: "Cadenas con formato de fecha y hora estándar"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: be239871-10cc-4949-b548-200bb260630a
 translationtype: Human Translation
@@ -376,7 +375,7 @@ Console.WriteLine(date1.ToString("m", _
 ' Displays 10 April
 ```
 
-## <a name="the-roundtrip-o-o-format-specifier"></a>El especificador de formato de operación de ida y vuelta ("O", "o")
+## <a name="the-round-trip-o-o-format-specifier"></a>El especificador de formato de operación de ida y vuelta ("O", "o")
 
 El especificador de formato estándar "O" u "o" representa una cadena de formato de fecha y hora personalizado mediante un patrón que conserva la información de la zona horaria y emite una cadena de resultado que cumple con la norma ISO 8601. En los valores [DateTime](xref:System.DateTime), este especificador de formato está diseñado para conservar los valores de fecha y hora junto con la propiedad [DateTime.Kind](xref:System.DateTime.Kind) en el texto. Se puede analizar la cadena con formato usando el método [DateTime.Parse(String, IFormatProvider, DateTimeStyles)](xref:System.DateTime.Parse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) o el método [DateTime.ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) si se establece el parámetro de estilos en [DateTimeStyles.RoundtripKind](xref:System.Globalization.DateTimeStyles.RoundtripKind). 
 
