@@ -1,0 +1,5 @@
+# [Tipos que aceptan valores NULL (Guía de programación de C#)](index.md)
+# [Cómo: Convertir con seguridad de bool? en bool (Guía de programación de C#)](how-to-safely-cast-from-bool-to-bool.md)
+# [Cómo: Identificar tipos que aceptan valores NULL (Guía de programación de C#)](how-to-identify-a-nullable-type.md)
+# [Aplicar la conversión boxing a tipos que aceptan valores NULL (Guía de programación de C#)](boxing-nullable-types.md)
+# [Utilizar tipos que aceptan valores NULL (Guía de programación de C#)](using-nullable-types.md)

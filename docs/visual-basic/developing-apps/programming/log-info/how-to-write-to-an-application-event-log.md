@@ -1,0 +1,89 @@
+---
+title: "C&#243;mo: Escribir en el registro de eventos de una aplicaci&#243;n (Visual Basic) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/14/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-visual-basic"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+helpviewer_keywords: 
+  - "Computer.EventLog (elemento)"
+  - "WriteEntry (método)"
+  - "My.Computer.EventLog (elemento)"
+  - "registros de eventos, escribir en"
+ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
+caps.latest.revision: 21
+caps.handback.revision: 21
+author: "stevehoag"
+ms.author: "shoag"
+manager: "wpickett"
+---
+# C&#243;mo: Escribir en el registro de eventos de una aplicaci&#243;n (Visual Basic)
+[!INCLUDE[vs2017banner](../../../../csharp/includes/vs2017banner.md)]
+
+Puede usar los objetos `My.Application.Log` y `My.Log` para escribir información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo configurar un agente de escucha de registro de eventos para que `My.Application.Log` escriba información de seguimiento en el registro de eventos de la aplicación.  
+  
+ No se puede escribir en el registro de seguridad. Para poder escribir en el registro del sistema, debe ser miembro de la cuenta LocalSystem o Administrador.  
+  
+ Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](../Topic/ETW%20Events%20in%20the%20.NET%20Framework.md).  
+  
+> [!NOTE]
+>  Los registros de eventos no se admiten en Windows 95, Windows 98 o Windows Millennium Edition.  
+  
+### Para agregar y configurar el agente de escucha de registro de eventos  
+  
+1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
+  
+     o bien  
+  
+     Si no hay ningún archivo app.config:  
+  
+    1.  En el menú **Proyecto**, elija **Agregar nuevo elemento**.  
+  
+    2.  En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Archivo de configuración de aplicación**.  
+  
+    3.  Haga clic en **Agregar**.  
+  
+2.  Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.  
+  
+     Encontrará la sección `<listeners>` en la sección `<source>` con el atributo de nombre "DefaultSource", que está anidada bajo la sección `<system.diagnostics>`, anidada bajo la sección de nivel superior `<configuration>`.  
+  
+3.  Agregue este elemento a dicha sección `<listeners>`:  
+  
+    ```  
+    <add name="EventLog"/>  
+    ```  
+  
+4.  Busque la sección `<sharedListeners>`, en la sección `<system.diagnostics>`, en la sección de nivel superior `<configuration>`.  
+  
+5.  Agregue este elemento a dicha sección `<sharedListeners>`:  
+  
+    ```  
+    <add name="EventLog"  
+        type="System.Diagnostics.EventLogTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+         initializeData="APPLICATION_NAME"/>  
+    ```  
+  
+     Reemplace `APPLICATION_NAME` por el nombre de su aplicación.  
+  
+    > [!NOTE]
+    >  Normalmente, una aplicación escribe solo errores en el registro de eventos. Para obtener información sobre el filtrado de la salida del registro, consulte [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+  
+### Para escribir información de eventos en el registro de eventos  
+  
+-   Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de eventos. Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+  
+     Después de configurar el agente de escucha de registro de eventos para un ensamblado, este recibe todos los mensajes que `My.Applcation.Log` escribe desde ese ensamblado.  
+  
+## Vea también  
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
+ <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
+ [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
+ [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
+ [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

@@ -1,0 +1,6 @@
+# [Propiedad de eje descendiente XML Visual Basic)](xml-descendant-axis-property.md)
+# [Propiedad de indizador de extensión (Visual Basic)](extension-indexer-property.md)
+# [Propiedades de eje secundario XML (Visual Basic)](xml-child-axis-property.md)
+# [Propiedades de eje XML (Visual Basic)](xml-axis-properties.md)
+# [Value (Propiedad XML) (Visual Basic)](xml-value-property.md)
+# [Propiedad de eje para atributos XML (Visual Basic)](xml-attribute-axis-property.md)

@@ -1,0 +1,6 @@
+# [Fragmentos de código de IntelliSense de Visual Basic](intellisense-code-snippets.md)
+# [Cómo: Compilar y ejecutar un proyecto en Visual Basic](how-to-compile-and-run-a-project.md)
+# [Ayuda para controladores de eventos en código de Visual Basic](help-for-event-handlers.md)
+# [Valores de configuración de Visual Basic](settings.md)
+# [Utilizar el entorno de desarrollo de Visual Basic](using-the-visual-basic-development-environment.md)
+# [Refactorización y Cambiar nombre (Cuadro de diálogo) (Visual Basic)](refactoring-and-rename-dialog-box.md)

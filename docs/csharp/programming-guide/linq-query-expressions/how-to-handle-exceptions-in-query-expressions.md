@@ -1,0 +1,55 @@
+---
+title: "C&#243;mo: Controlar excepciones con expresiones de consultas (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/15/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "excepciones [C#], consultas LINQ"
+  - "consultas [LINQ en C#], excepciones"
+  - "expresiones de consulta [LINQ en C#], excepciones"
+ms.assetid: 4ce6c081-7731-4b8f-b4fa-d947f165a18a
+caps.latest.revision: 15
+caps.handback.revision: 15
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# C&#243;mo: Controlar excepciones con expresiones de consultas (Gu&#237;a de programaci&#243;n de C#)
+[!INCLUDE[vs2017banner](../../../csharp/includes/vs2017banner.md)]
+
+Es posible llamar a cualquier método en el contexto de una expresión de consulta.  Sin embargo, se recomienda que evite llamar a cualquier método en una expresión de consulta que pueda crear un efecto secundario, como modificar el contenido del origen de datos o producir una excepción.  En este ejemplo se muestra cómo evitar que se produzcan excepciones al llamar a métodos en una expresión de consulta sin infringir las directrices generales de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] sobre el control de excepciones.  Dichas directrices indican que es aceptable detectar una excepción específica cuando se entiende por qué se producirá en un contexto determinado.  Para obtener más información, vea [Procedimientos recomendados para excepciones](../Topic/Best%20Practices%20for%20Exceptions.md).  
+  
+ En el último ejemplo se muestra cómo controlar los casos en los que se debe producir una excepción durante la ejecución de una consulta.  
+  
+## Ejemplo  
+ En el ejemplo siguiente se muestra cómo mover código de control de excepciones fuera de una expresión de consulta.  Esto sólo es posible cuando el método no depende de variables locales de la consulta.  
+  
+ [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_1.cs)]  
+  
+## Ejemplo  
+ En algunos casos, la mejor respuesta a una excepción que se produce desde una consulta puede ser detener la ejecución de la consulta inmediatamente.  En el ejemplo siguiente se muestra cómo controlar excepciones que pueden producirse desde el cuerpo de una consulta.  Suponga que `SomeMethodThatMightThrow` puede producir una excepción que requiere que se detenga la ejecución de la consulta.  
+  
+ Observe que el bloque `try` incluye el bucle `foreach` y no la consulta en sí.  Esto se debe a que el bucle `foreach` es el punto en el que se ejecuta la consulta realmente.  Para obtener más información, vea [Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+  
+ [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_2.cs)]  
+  
+## Compilar el código  
+  
+-   Cree un proyecto de [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)] para la versión 3.5 de .NET Framework.  De manera predeterminada, el proyecto incluye una referencia a System.Core.dll y una directiva `using` para el espacio de nombres System.Linq.  
+  
+-   Copie el código en el proyecto.  
+  
+-   Presione F5 para compilar y ejecutar el programa.  
+  
+ Presione cualquier tecla para salir de la ventana de consola.  
+  
+## Vea también  
+ [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
