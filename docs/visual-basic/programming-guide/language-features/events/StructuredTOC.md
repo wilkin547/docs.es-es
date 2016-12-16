@@ -1,0 +1,6 @@
+# [Eventos (Visual Basic)](events.md)
+## [Tutorial: Declarar y provocar eventos (Visual Basic)](walkthrough-declaring-and-raising-events.md)
+## [Tutorial: Controlar eventos (Visual Basic)](walkthrough-handling-events.md)
+## [Cómo: Declarar eventos personalizados para evitar bloqueos (Visual Basic)](how-to-declare-custom-events-to-avoid-blocking.md)
+## [Cómo: Declarar eventos personalizados para conservar memoria (Visual Basic)](how-to-declare-custom-events-to-conserve-memory.md)
+## [Solucionar problemas de controladores de eventos heredados en Visual Basic](troubleshooting-inherited-event-handlers.md)

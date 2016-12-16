@@ -1,0 +1,6 @@
+# [Literales XML (Visual Basic)](index.md)
+## [Literal de elemento XML (Visual Basic)](xml-element-literal.md)
+## [Literal de documento XML (Visual Basic)](xml-document-literal.md)
+## [Literal de CDATA XML (Visual Basic)](xml-cdata-literal.md)
+## [Literal de comentario XML (Visual Basic)](xml-comment-literal.md)
+## [Literal de instrucción de procesamiento XML (Visual Basic)](xml-processing-instruction-literal.md)
