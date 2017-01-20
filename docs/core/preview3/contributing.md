@@ -1,4 +1,4 @@
-# <a name="using-the-cli-preview3-folder-and-sub-folders"></a>Uso de la carpeta y las subcarpetas de cli-preview3
+# <a name="using-the-preview3-folder-and-sub-folders"></a>Uso de la carpeta y las subcarpetas de preview3
 
 Esta carpeta es el nodo de nivel superior que coincide con la carpeta de herramientas, pero contiene deltas de la versión NET Core Tooling Preview 3.
 
@@ -37,6 +37,6 @@ Nuestro objetivo final es sacar diferentes versiones como ramas en el [repositor
 Cuando llegue el momento, podemos combinar cada versión actual en la carpeta de [documentos](../docs) principal, combinar los nodos de tabla de contenido y publicarla como un conjunto de documentos independiente. Puede que sea necesario combinar las modificaciones en ambas versiones LTS de un archivo y la versión actual de ese archivo, pero podremos encontrar esos cambios con relativa facilidad.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

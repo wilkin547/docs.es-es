@@ -3,16 +3,15 @@ title: "Organización del proyecto para admitir .NET Framework y .NET Core"
 description: "Organización del proyecto para admitir .NET Framework y .NET Core"
 keywords: .NET, .NET Core
 author: conniey
-manager: wpickett
+ms.author: mairaw
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
 
 ---
 
@@ -62,14 +61,14 @@ Hay varias formas distintas de agregar compatibilidad para .NET Core para este r
 
 El repositorio se puede reorganizar de manera tal que se quita cualquier archivo `*.csproj` existente y se crea un archivo `*.xproj` único que establece varios marcos de trabajo como destino.  Esta es una opción excelente, porque un proyecto único se puede compilar para distintos marcos de trabajo.  También tiene la capacidad de controlar distintas dependencias, opciones de compilación, etc. por marco de trabajo de destino.
 
-![Creación de un xproj con varios marcos de trabajo de destino][example-xproj]
+![Creación de un xproj con varios marcos de destino][example-xproj]
 
 [**Código fuente**][example-xproj-code]
 
 Los cambios que debe tener en cuenta son los siguientes:
 * Se agrega `global.json`
 * `packages.config` y `*.csproj` se reemplazan por `project.json` y `*.xproj`
-* Los cambios en el [archivo project.json de Car][example-xproj-projectjson] y su [proyecto de prueba][example-xproj-projectjson-test] para admitir la compilación del marco de trabajo .NET Framework existente, al igual que otros
+* Los cambios en el [archivo project.json de Car][example-xproj-projectjson] y su [proyecto de prueba][example-xproj-projectjson-test] para admitir la compilación del marco .NET Framework existente, al igual que otros
 
 ## <a name="create-a-portable-class-library-pcl-to-target-net-core"></a>Creación de una Biblioteca de clases portable (PCL) con .NET Core como destino
 
@@ -106,7 +105,7 @@ Consulte la [documentación sobre el traslado de .NET Core][porting-doc] para m�
 [example-initial-project]: media/project-structure/project.png "Proyecto existente"
 [example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
 
-[example-xproj]: media/project-structure/project.xproj.png "Creación de un xproj con varios marcos de trabajo de destino"
+[example-xproj]: media/project-structure/project.xproj.png "Creación de un xproj con varios marcos de destino"
 [example-xproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/
 [example-xproj-projectjson]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/src/Car/project.json
 [example-xproj-projectjson-test]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/tests/Car.Tests/project.json
@@ -125,6 +124,6 @@ Consulte la [documentación sobre el traslado de .NET Core][porting-doc] para m�
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

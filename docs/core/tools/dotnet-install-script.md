@@ -4,23 +4,22 @@ description: "Aprenda sobre los scripts de dotnet-install para instalar las herr
 keywords: dotnet-install, scripts de dotnet-install, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 30e969c55d08b3ac276c6e7786fa96985dbb0a6b
+ms.sourcegitcommit: ae23d83d5ca03d1a9a248e375bc092e0d9d0cde0
+ms.openlocfilehash: d6a420fa29107952020ddfa58ce0256fd8829890
 
 ---
 
-#<a name="dotnetinstall-scripts-reference"></a>referencia de scripts de dotnet-install
+#<a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
 ## <a name="name"></a>Nombre
-dotnet-install.ps1 | dotnet-install.sh: script usado para instalar las herramientas de la interfaz de línea de comandos (CLI) y el entorno de tiempo de ejecución compartido
+`dotnet-install.ps1` | `dotnet-install.sh`: script usado para instalar las herramientas de la interfaz de línea de comandos (CLI) y el entorno de tiempo de ejecución compartido.
 
 ## <a name="synopsis"></a>Sinopsis
 Windows:
@@ -64,7 +63,7 @@ La versión de CLI que se instalará; debe especificar la versión como formada 
 
 `-InstallDir [DIR]`
 
-Ruta de acceso de instalación. Si no existe el directorio, se crea. El valor predeterminado es *% LocalAppData %\.dotnet*.
+Ruta de acceso de instalación. Si no existe el directorio, se crea. El valor predeterminado es *%LocalAppData%\Microsoft\dotnet*.
 
 `-Debug`
 
@@ -127,6 +126,6 @@ macOS y Linux:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

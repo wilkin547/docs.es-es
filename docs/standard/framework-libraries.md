@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
-ms.sourcegitcommit: 093b852fe1ed2307ebce914381fe47388b435c95
-ms.openlocfilehash: c11f89522a97d60f5ffb8588f4500b64b5d2d6db
+ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
+ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
 
 ---
 
@@ -30,15 +30,15 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 
 .NET incluye un conjunto de tipos primitivos, que se usan (en distintos grados) en todos los programas. Estos tipos contienen datos, como números, cadenas, bytes y objetos arbitrarios. El lenguaje C# incluye palabras clave para estos tipos. A continuación se muestra un conjunto de ejemplo de estos tipos, con las palabras clave de C# correspondientes.
 
-*   [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
-*   [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)): tipo entero con firma de 16 bits. También existe el valor [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx) sin firmar.
-*   [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)): tipo entero con firma de 32 bits. También existe el valor [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx) sin firmar.
-*   [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)): tipo de punto flotante de 32 bits.
-*   [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)): tipo decimal de 128 bits.
-*   [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)): entero sin firmar de 8 bits que representa un byte de memoria.
-*   [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)): tipo booleano que representa 'true' o 'false'.
-*   [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)): tipo numérico de 16 bits que representa un carácter Unicode.
-*   [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.
+* [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
+* [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)): tipo entero con firma de 16 bits. También existe el valor [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx) sin firmar.
+* [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)): tipo entero con firma de 32 bits. También existe el valor [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx) sin firmar.
+* [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)): tipo de punto flotante de 32 bits.
+* [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)): tipo decimal de 128 bits.
+* [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)): entero sin firmar de 8 bits que representa un byte de memoria.
+* [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)): tipo booleano que representa 'true' o 'false'.
+* [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)): tipo numérico de 16 bits que representa un carácter Unicode.
+* [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.
 
 ## <a name="data-structures"></a>Estructuras de datos
 
@@ -66,6 +66,6 @@ Hay muchos modelos de aplicaciones que pueden usarse con .NET, proporcionados po
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
