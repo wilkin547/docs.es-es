@@ -3,16 +3,16 @@ title: "Conversión entre DateTime y DateTimeOffset"
 description: "Conversión entre DateTime y DateTimeOffset"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fab3af5b-5d0f-4384-a40a-1b5d99b30dd1
 translationtype: Human Translation
 ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 312ac8cb7e901c4ceeff2e428620c2c4c615ca3d
+ms.openlocfilehash: 99ec9d8c433025bbc5122fe3ea364fe84f33a1f8
 
 ---
 
@@ -417,7 +417,7 @@ Console.WriteLine("{0} converted to {1} {2}", _
 '       11/4/2007 4:00:00 AM -05:00 converted to 11/4/2007 1:00:00 AM Local
 ```
 
-## <a name="a-generalpurpose-conversion-method"></a>Un método de conversión de uso general
+## <a name="a-general-purpose-conversion-method"></a>Un método de conversión de uso general
 
 El ejemplo siguiente define un método denominado `ConvertFromDateTimeOffset` que convierte valores [DateTimeOffset](xref:System.DateTimeOffset) a valores [DateTime](xref:System.DateTime). En función de su diferencia horaria, determina si el valor [DateTimeOffset](xref:System.DateTimeOffset) es una hora UTC, una hora local o alguna otra y define la propiedad [Kind](xref:System.DateTime.Kind) del valor de fecha y hora devuelto en consecuencia. 
 
@@ -532,6 +532,6 @@ Tenga en cuenta que este código hace dos suposiciones que, según la aplicació
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -4,16 +4,15 @@ description: Construcciones de agrupamiento en expresiones regulares
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: d27c8c68ea49f150fa0ae5c5c8b437c8c42c9c90
+ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
 
 ---
 
@@ -613,7 +612,7 @@ Next
 '    'decidedly ' found at index 9. 
 ```
 
-## <a name="zerowidth-positive-lookahead-assertions"></a>Aserciones de búsqueda anticipada positiva de ancho cero
+## <a name="zero-width-positive-lookahead-assertions"></a>Aserciones de búsqueda anticipada positiva de ancho cero
 
 La construcción de agrupamiento siguiente define una aserción de búsqueda anticipada positiva de ancho cero:
 
@@ -692,7 +691,7 @@ Modelo | Descripción
 `\w+` | Buscar coincidencias con uno o más caracteres alfabéticos.
 `(?=\sis\b)` | Determina si los caracteres que se usan para formar palabras van seguidos de un carácter de espacio en blanco y la cadena "is", seguida de un límite de palabras. En ese caso, la coincidencia es correcta.
 
-## <a name="zerowidth-negative-lookahead-assertions"></a>Aserciones de búsqueda anticipada negativa de ancho cero
+## <a name="zero-width-negative-lookahead-assertions"></a>Aserciones de búsqueda anticipada negativa de ancho cero
 
 La construcción de agrupamiento siguiente define una aserción de búsqueda anticipada negativa de ancho cero:
 
@@ -806,7 +805,7 @@ Modelo | Descripción
 `\b` | Finalizar la búsqueda de coincidencias en un límite de palabras.
 `\p{P})` | Si el carácter siguiente no es un signo de puntuación (como un punto o una coma), la coincidencia se realiza.
  
-## <a name="zerowidth-positive-lookbehind-assertions"></a>Aserciones de búsqueda tardía positiva de ancho cero
+## <a name="zero-width-positive-lookbehind-assertions"></a>Aserciones de búsqueda tardía positiva de ancho cero
 
 La construcción de agrupamiento siguiente define una aserción de búsqueda tardía positiva de ancho cero:
 
@@ -866,7 +865,7 @@ Modelo | Descripción
  
 Las aserciones de búsqueda tardía positiva de ancho cero también se usan para limitar el retroceso cuando el último carácter o caracteres de un grupo capturado debe ser un subconjunto de los caracteres que coincide con el patrón de la expresión regular de dicho grupo. Por ejemplo, si un grupo captura todos los caracteres que se usan para formar palabras consecutivos, puede usar una aserción de búsqueda tardía positiva de ancho cero para requerir que el último carácter sea alfabético. 
 
-## <a name="zerowidth-negative-lookbehind-assertions"></a>Aserciones de búsqueda tardía negativa de ancho cero
+## <a name="zero-width-negative-lookbehind-assertions"></a>Aserciones de búsqueda tardía negativa de ancho cero
 
 La construcción de agrupamiento siguiente define una aserción de búsqueda tardía negativa de ancho cero:
 
@@ -1164,6 +1163,6 @@ El primer grupo de captura coincide con cada palabra de la frase. El segundo gru
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

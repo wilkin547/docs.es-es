@@ -3,16 +3,15 @@ title: "recolección de elementos no utilizados"
 description: "recolección de elementos no utilizados"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: db39a0f5-e363-490f-a7e6-adb9a6ff2a8c
 translationtype: Human Translation
-ms.sourcegitcommit: 213ce098bcc2b5e31c55e759d895254d5ca33caa
-ms.openlocfilehash: 2406a03fa64eb02c70f05c1e8240e4bc5981e98d
+ms.sourcegitcommit: ffc0530b2263db0e073f351aac2d539de6701ead
+ms.openlocfilehash: 4646a7e8c75315bb1a13bc5fddecd77888f6ae69
 
 ---
 
@@ -66,6 +65,6 @@ Título | Descripción
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

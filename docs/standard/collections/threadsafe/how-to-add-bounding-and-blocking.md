@@ -3,16 +3,16 @@ title: "Cómo: Agregar la funcionalidad de límite y bloqueo a una colección"
 description: "Cómo: Agregar la funcionalidad de límite y bloqueo a una colección"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 678d5df2-af63-418f-8b2a-e0be7ea2d77b
 translationtype: Human Translation
 ms.sourcegitcommit: c15f2da15c6448cf1c36dea2d5fd53e734bb6608
-ms.openlocfilehash: 63a59dbcc323f392e3bf2991b1439aa062382623
+ms.openlocfilehash: 63c4fcddaac058a7e40aa1593a0551192cc84a4b
 
 ---
 
@@ -291,6 +291,6 @@ De forma predeterminada, el almacenamiento de [BlockingCollection&lt;T&gt;](http
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

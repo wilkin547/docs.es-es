@@ -3,16 +3,15 @@ title: Uso de MSBuild para compilar proyectos .NET Core
 description: Uso de MSBuild para compilar proyectos .NET Core
 keywords: .NET, .NET Core
 author: dsplaisted
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 13c66464-4f14-4db6-aa8b-06f25e7ba894
 translationtype: Human Translation
-ms.sourcegitcommit: a04755da6417bb28bad5f28a18ead9feeba2d957
-ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
+ms.sourcegitcommit: 098cb31bb79e47ebb2ad2e8c2f56d2d5d6da4079
+ms.openlocfilehash: 6a992d985948a22da58db8317bc04d2f1828fc05
 
 ---
 
@@ -21,13 +20,16 @@ ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
 Las herramientas de .NET Core [migrarán de project.json a proyectos basados en MSBuild](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/).
 Se espera que la primera versión de las herramientas de .NET Core que usen MSBuild se incluyan en la versión siguiente de Visual Studio.  Sin embargo, actualmente es posible usar MSBuild para los proyectos .NET Core. En esta página aprenderá a hacerlo.
 
-Se recomienda que la mayor parte de las personas que tienen como destino .NET Core en proyectos *nuevos* usen la experiencia de herramientas predeterminada con project.json debido a las razones siguientes:
+Es recomendable que los nuevos proyectos que tengan como destino .NET Core usen las herramientas predeterminadas con *project.json* por las razones siguientes:
 
-- MSBuild todavía admite una gran cantidad de las ventajas de project.json.
-- Gran parte de las herramientas basadas en ASP.NET actualmente no funciona con los proyectos de MSBuild.
-- Cuando finalmente lancemos las herramientas de .NET Core que usen MSBuild, se podrá convertir directamente de project.json a proyectos de MSBuild. 
+- MSBuild todavía no admite muchas de las características de *project.json*.
+- Muchas de las herramientas basadas en ASP.NET actualmente no funcionan con los proyectos de MSBuild.
+- Cuando se lancen las herramientas de .NET Core basadas en MSBuild, convertirán automáticamente *project.json* para que se base en MSBuild.
 
-Es posible que desee usar MSBuild para establecer a .NET Core como destino para los proyectos existentes que ya usan MSBuild al que desea trasladar a .NET Core, o bien si usa la extensibilidad de MSBuild en la compilación para los escenarios que no adecuados para los proyectos de project.json.
+Considere el uso de MSBuild cuando:
+
+ - Los proyectos existentes que utilizan MSBuild se están trasladando a .NET Core.
+ - Proyectos que usan la extensibilidad de MSBuild que no son perfectamente compatibles con *project.json*.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -130,6 +132,6 @@ También se puede comenzar a través de la creación de un proyecto en Visual St
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

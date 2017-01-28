@@ -3,16 +3,16 @@ title: "Valores numéricos en .NET Core"
 description: "Valores numéricos en .NET Core"
 keywords: .NET, .NET Core
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
 ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 6d14668e643c2451f4ace2119006f442ed4dee15
+ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 
 ---
 
@@ -39,7 +39,7 @@ Cada tipo integral admite un conjunto estándar de operadores de aritmética, co
      
 Tenga en cuenta que los tipos enteros sin signo no son conformes a CLS. Para obtener más información, consulte [.NET Common Type System & Common Language Specification](common-type-system.md) (Common Type System y Common Language Specification de .NET).
 
-## <a name="floatingpoint-types"></a>Tipos de punto flotante
+## <a name="floating-point-types"></a>Tipos de punto flotante
 
 .NET Core incluye tres tipos primitivos de punto flotante, que se enumeran en la tabla siguiente. 
 
@@ -61,7 +61,7 @@ Los tipos `Double` y `Single` están diseñados para usarse con valores que, por
 
 El tipo [System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex) representa un número complejo, es decir, un número con una parte de número real y una parte de número imaginario. Admite un conjunto estándar de operadores de aritmética, comparación, igualdad, conversión explícita y conversión implícita, así como métodos matemáticos, algebraicos y trigonométricos. 
 
-## <a name="simdenabled-vector-types"></a>Tipos de vector habilitados para SIMD
+## <a name="simd-enabled-vector-types"></a>Tipos de vector habilitados para SIMD
 
 El espacio de nombres `System.Numerics` incluye un conjunto de tipos de vector habilitados para SIMD para .NET Core. SIMD permite que algunas operaciones se ejecuten en paralelo en el nivel de hardware, con lo que se obtienen grandes mejoras de rendimiento en aplicaciones matemáticas, científicas y de gráficos que realizan cálculos con vectores. 
 
@@ -77,6 +77,6 @@ Los tipos de vector habilitados para SIMD en .NET Core incluyen los siguientes:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

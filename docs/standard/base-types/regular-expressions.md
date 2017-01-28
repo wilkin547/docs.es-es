@@ -3,16 +3,16 @@ title: Expresiones regulares en .NET
 description: Expresiones regulares en .NET
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
 ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: e9ae9cb47955fb926507be32afb875efd3260ce3
+ms.openlocfilehash: 1fc1edd64c330fe579f389750432665ed982976e
 
 ---
 
@@ -150,7 +150,7 @@ El método [Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(Sys
 
 Observe que la cadena de entrada incluye la subcadena "this? This". Sin embargo, debido al signo de puntuación intermedio, no se identifica como una duplicación.
 
-### <a name="example-3-dynamically-building-a-culturesensitive-regular-expression"></a>Ejemplo 3: crear dinámicamente una expresión regular dependiente de la referencia cultural
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Ejemplo 3: crear dinámicamente una expresión regular dependiente de la referencia cultural
 
 En el ejemplo siguiente se muestra la eficacia de las expresiones regulares, además de la flexibilidad que ofrecen las características de globalización de .NET. Se usa el objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) para determinar el formato de los valores de divisa en la referencia cultural actual del sistema. A continuación, se usa dicha información para construir dinámicamente una expresión regular que extrae los valores de divisa del texto. Para cada coincidencia, se extrae el subgrupo que solo contiene la cadena numérica, se convierte el subgrupo en un valor [Decimal](xref:System.Decimal) y se calcula un total acumulativo. 
 
@@ -313,6 +313,6 @@ Título | Descripción
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

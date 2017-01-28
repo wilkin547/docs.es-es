@@ -1,257 +1,88 @@
 ---
-title: .NET Primer
-description: .NET Primer
+title: Acerca de .NET
+description: "Más información sobre la plataforma. NET."
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
-ms.date: 10/05/2016
+ms.author: ronpet
+ms.date: 10/31/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: be774ae1291def36baafffbf2f717cf98565cd60
-ms.openlocfilehash: fba870a93784b579da1065a07d82974951ac7e28
+ms.sourcegitcommit: 254e89abefd28419bd2f36a047e4df939f7ff8da
+ms.openlocfilehash: 8eb9274def2683fae20765cbf701b706293744fc
 
 ---
 
-# <a name="net-primer"></a>.NET Primer
+# <a name="net-platform-guide"></a>Guía de la plataforma .NET
 
-> Consulte los [tutoriales "Introducción a .NET Core"](../core/getting-started.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando.
+> [!NOTE]
+Este artículo se va a volver a escribir.
+
+> Consulte los [tutoriales sobre "Introducción a .NET Core" ](../core/getting-started.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando.
 
 .NET es una plataforma de desarrollo de uso general. Puede usarse para cualquier tipo de carga de trabajo o aplicación donde se usen soluciones de uso general. Tiene varias características clave que son atractivas para muchos desarrolladores, incluida la administración automática de la memoria y los lenguajes de programación modernos, que facilitan más la creación eficaz de aplicaciones de alta calidad. .NET hace posible un entorno de programación de alto nivel con muchas características útiles, a la vez que proporciona acceso de bajo nivel a la memoria nativa y a las API.
 
-Hay disponibles varias implementaciones de .NET basadas en [estándares .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos que especifican los fundamentos de la plataforma. Se optimizan independientemente para diferentes tipos de aplicaciones (por ejemplo, para escritorio, móviles, juegos o la nube) y admiten muchos chips (por ejemplo, x86/x64, ARM) y sistemas operativos (por ejemplo, Windows, Linux, iOS Android y macOS). El código abierto también es una parte importante del ecosistema de .NET, con varias implementaciones de .NET y muchas bibliotecas disponibles bajo licencias con aprobación de OSI.
+C#, F# y Visual Basic son lenguajes populares que se basan y confían en la plataforma .NET. Los lenguajes .NET son famosos por sus características clave, tales como su modelo de programación asincrónica, Language Integrated Query, los tipos genéricos y la reflexión de sistemas de tipos. Los lenguajes también proporcionan opciones excelentes para paradigmas de programación funcionales y orientados en objetos.
 
-Consulte el documento [Información general sobre implementaciones de .NET](../about/products.md) para obtener información sobre todas las ediciones diferentes de .NET que están disponibles, de Microsoft y de otros proveedores.
+Estos lenguajes son muy diversos, desde el punto de vista de la filosofía y la sintaxis, pero también por la simetría proporcionada a través de un sistema de tipos compartidos. Este sistema de tipos está proporcionado por el entorno de tiempo de ejecución subyacente. .NET se diseñó teniendo en mente la idea de "Common Language Runtime" que podría admitir los requisitos de distintos lenguajes, por ejemplo, lenguajes de tipo dinámico o estático, y permitir la interoperabilidad entre ellos. Por ejemplo, es posible pasar una colección de objetos de `People` de un lenguaje a otro sin pérdida alguna de capacidad o semántica.
 
-Este manual le ayudará a entender algunos de los conceptos clave de la plataforma .NET y le indicará más recursos para cada tema determinado. Al final del mismo, debería tener suficiente información para poder reconocer términos y conceptos significativos de la plataforma .NET, y para saber cómo obtener más información acerca de ellos. 
+Hay disponibles varias [implementaciones y productos de .NET](components.md) basados en [estándares .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos que especifican los fundamentos de la plataforma. Se optimizan independientemente para diferentes tipos de aplicaciones (por ejemplo, para escritorio, móviles, juegos o la nube) y admiten muchos chips (por ejemplo, x86/x64, ARM) y sistemas operativos (por ejemplo, Windows, Linux, iOS Android y macOS). El código abierto también es una parte importante del ecosistema de .NET, con varias implementaciones de .NET y muchas bibliotecas disponibles bajo licencias con aprobación de OSI.
 
-## <a name="a-stroll-through-net"></a>Un paseo por .NET
+- Más información sobre [C#](../csharp/index.md)
+- Más información sobre [F#](../fsharp/index.md)
+- Examinar la [biblioteca de API de .NET](../../api/index.md)
+- [Introducción a Common Language Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
 
-Como cualquier marco de desarrollo de aplicaciones avanzadas y experimentadas, .NET tiene muchas características eficaces que facilitan el trabajo del desarrollador y que pretenden que la acción de escribir código sea más eficaz y expresiva. En esta sección se describen los conceptos básicos de las características más destacables y se indica cómo acceder a información más detallada en caso aplicable. Tras finalizar este paseo, debería tener suficiente información para poder leer los ejemplos de nuestros repositorios de GitHub, así como otro código y comprender su funcionamiento.
+<a name="fundamentals"></a>Aspectos básicos
+------------
 
-*   [Lenguajes de programación](#programming-languages)
-*   [Administración de memoria automática](#automatic-memory-management)
-*   [Seguridad de tipos](#type-safety)
-*   [Delegados y expresiones lambda](#delegates-and-lambdas)
-*   [Tipos genéricos (genéricos)](#generic-types-generics)
-*   [Language-Integrated Query (LINQ)](#language-integrated-query-linq)
-*   [Programación asincrónica](#async-programming)
-*   [Interoperabilidad nativa](#native-interoperability)
-*   [Código no seguro](#unsafe-code)
+**Varios idiomas**: .NET proporciona un sistema de tipos bien definido, formatos de archivo, tiempo de ejecución, framework y herramientas que pueden usar varios lenguajes, tanto para su propia ejecución como para interoperar con otros lenguajes usando los mismos componentes de .NET como su divisa compartida.
 
-### <a name="programming-languages"></a>Lenguajes de programación
+**Memoria administrada**: .NET le administra automáticamente memoria a través de un recolector de elementos no utilizados. Garantiza que siempre haga referencia a objetos activos, lo que le evita problemas desagradables como saturaciones del búfer e infracciones de acceso. Esto incluye la comprobación de límites de matriz.
 
-Como desarrollador, puede elegir cualquier lenguaje de programación compatible con .NET para crear la aplicación. Dado que .NET proporciona independencia e interoperabilidad entre lenguajes, puede interactuar con otras aplicaciones y componentes de .NET independientemente del lenguaje con el fueron desarrolladas.
+**Seguridad de tipos**: el principal modelo de .NET para la funcionalidad y representación de memoria es "tipos". Los tipos definen la forma y, opcionalmente, el comportamiento. El tiempo de ejecución garantiza que el código de llamada solo pueda funcionar con tipos conforme a su definición y a la visibilidad especificada de los miembros, de modo que proporciona resultados coherentes, fiables y seguros.
 
-Los lenguajes que permitan desarrollar aplicaciones de la plataforma .NET cumple la [especificación de Common Language Infrastructure (CLI)](https://www.visualstudio.com/en-us/mt639507).
+<a name="features"></a>Características
+--------
 
-Los lenguajes de Microsoft que admiten .NET incluyen C#, F # y Visual Basic. 
+**Tipos de valores definidos por el usuario**: los tipos de valores son una categoría de tipos útil debido a que ofrecen la semántica de "paso por valor" en lugar de "paso por referencia", tal y como ocurre con las clases. Los tipos de valores son obviamente más útiles para los datos numéricos. .NET permite tipos de valores para los tipos primitivos, como enteros, y los tipos definidos por el usuario.
 
-* C# es simple, eficaz, incluye seguridad de tipos y está orientado a objetos, al mismo tiempo que mantiene la expresividad y elegancia de los lenguajes de estilo C. Cualquiera que esté familiarizado con C y lenguajes similares, encontrará pocos problemas para adaptarse a C#.
+**Tipos genéricos**: los tipos genéricos son tipos con uno o más parámetros de tipo que se pueden especificar para cada instancia. Esto es útil para muchos tipos, que de no ser así podrían exponer el contenido como el tipo Objeto o requerir varias definiciones de tipo. Por ejemplo, una determinada instancia de un tipo de colección se puede realizar de forma específica para personas, ubicaciones de GPS o cadenas.
 
-* F # es un lenguaje de programación multiplataforma, principalmente funcional, que también admite la programación tradicional imperativa y orientada en objetos.
+**Reflexión**: .NET define un formato de metadatos que describe los tipos dentro de un archivo binario. El subsistema de reflexión usa estos datos, exponiendo las API para leer y crear instancias de tipos en tiempo de ejecución. Este recurso es muy útil para escenarios dinámicos donde no es conveniente conocer la implementación exacta de un programa antes de tiempo.
 
-* Visual Basic es un lenguaje fácil de aprender que puede usar para crear una gran variedad de aplicaciones que se ejecutan en .NET Framework.
+**Generación de códigos flexible**: .NET no prescribe un enfoque específico para transformar archivos binarios de .NET en código máquina. Se han usado muchos enfoques correctamente, incluida la interpretación, la compilación just-in-time (JIT), la compilación ahead-of-time (AOT) con reserva JIT y la compilación de AOT sin reserva JIT. Cada una de estas estrategias puede ser valiosa y es posible usarlas conjuntamente.
 
-> [!NOTE]
-> En la versión actual de .NET Core, solo C# es totalmente compatible en todas las herramientas de Microsoft.  F # es compatible con .NET Core SDK, pero todavía no tiene herramientas de Visual Studio.  La compatibilidad con Visual Basic para las herramientas de Visual Studio y SDK estará disponible próximamente.
+**Multiplataforma**: .NET esté destinado a ser una multiplataforma desde sus inicios. El formato binario y el conjunto de instrucciones son independientes del sistema operativo, de la CPU y del tamaño del puntero. Un archivo binario de .NET concreto compilado en 2000 para ejecutarse en un equipo de Windows de 32 bits puede ejecutarse en el dispositivo iOS ARM64 en 2016 sin ninguna modificación.
 
-### <a name="automatic-memory-management"></a>Administración de memoria automática
+<a name="open-source"></a>Abrir origen
+-----------
 
-La recolección de elementos no utilizados es la característica más conocida de .NET. Los desarrolladores no necesitan administrar activamente la memoria, aunque hay mecanismos destinados a proporcionar más información para el recolector de elementos no utilizados (GC). C# incluye la palabra clave `new` para asignar memoria en términos de un tipo determinado y la palabra clave `using` para proporcionar un ámbito para el uso del objeto. El GC opera con un enfoque diferido para la administración de memoria y prefiere el rendimiento de la aplicación sobre la recolección inmediata de la memoria.
+Las implementaciones [.NET Core](https://github.com/dotnet/core) y [Mono](https://github.com/mono/mono) de .NET son código abierto, con la licencia MIT. La documentación usa la licencia [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/). .NET Core y Mono están patrocinados por Microsoft y cuentan con muchos colaboradores de la comunidad. 
 
-Las dos líneas siguientes asignan memoria:
+Estos tiempos de ejecución de uso general pueden usarse como base para la investigación académica o los productos comerciales o de enseñanza y aprendizaje. Su naturaleza abierta también significa que cualquier persona puede contribuir al código de producto ascendente, dado un error o la necesidad de una nueva característica.
 
-```cs
-var title = ".NET Primer";
-var list = new List<string>;
+<a name="projects"></a>Proyectos
+--------
 
-```
+- [CoreCLR](https://github.com/dotnet/coreclr): runtime de .NET, usado por .NET Core.
+- [Mono](https://github.com/mono/mono): runtime de .NET, usado por Xamarin y otros.
+- [CoreFX](https://github.com/dotnet/coreclr): bibliotecas de clases de .NET, usadas por .NET Core y en cierta medida por Mono mediante el uso compartido de código fuente.
+- [Roslyn](https://github.com/dotnet/roslyn): compiladores de C# y Visual Basic, usados por la mayoría de las plataformas y herramientas de .NET. Expone las API para leer, escribir y analizar código fuente.
+- [F#](https://github.com/microsoft/visualfsharp): compilador de F#.
+- [Xamarin SDK](http://open.xamarin.com): herramientas y bibliotecas necesarias para escribir Android, iOS y macOS en C# y F#.
 
-No hay ninguna palabra clave análoga para anular la asignación de memoria, ya que la anulación de la asignación se realiza automáticamente cuando el recolector de elementos no utilizados reclama la memoria a través de su ejecución programada.
+<a name="standardized"></a>Normalizado
+------------
 
-Las variables del método normalmente quedan fuera de ámbito cuando se completa un método, en cuyo momento pueden recopilarse. Pero puede indicar en el GC que un objeto determinado esté fuera de ámbito antes de que salga el método a través de la instrucción `using`.
+.NET se especifica a través de [normas ECMA](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertas que destacan sus capacidades y que se pueden usar para realizar una nueva implementación. Existen otras implementaciones de .NET, y después de las de Microsoft, Mono y Unity son las más populares.
 
-```cs
-using(FileStream stream = GetFileStream(context))
-{
-    //operations on the stream
-}
 
-```
 
-Una vez que se complete el bloque de `using`, el GC sabrá que el objeto `stream` en el ejemplo anterior ya se puede recopilar y reclamar su memoria.
 
-La protección de la memoria es una de las características menos obvias, pero con un alcance bastante grande, que es posible gracias a un recolector de elementos no utilizados. El valor invariable de protección de la memoria es muy simple: un programa tiene protección de la memoria si solo tiene acceso a la memoria que se ha asignado (y no liberado). Los punteros pendientes siempre suponen errores y localizarlos suele ser bastante difícil.
-
-El runtime de .NET proporciona servicios adicionales para completar la promesa de protección de la memoria, que no ofrece de forma natural un GC. Garantiza que los programas no indicen el final de una matriz ni tengan acceso a un campo fantasma al final de un objeto.
-
-En el ejemplo siguiente, se iniciará una excepción como resultado de la protección de la memoria.
-
-```cs
-int[] numbers = new int[42];
-int number = numbers[42]; // will throw (indexes are 0-based)
-
-```
-
-### <a name="type-safety"></a>Seguridad de tipos
-
-Los objetos se asignan en términos de tipos. Las únicas operaciones permitidas para un objeto determinado, y la memoria que consume, son los de su tipo. Un tipo `Dog` puede tener métodos `Jump` y `WagTail`, pero no es probable que tenga un método `SumTotal`. Un programa solo puede llamar a los métodos declarados de un tipo determinado. Todas las demás llamadas producirán un error en tiempo de compilación o una excepción en tiempo de ejecución (en el caso de usar características dinámicas o `object`).
-
-Los lenguajes .NET están orientados a objetos, con las jerarquías de clases base y derivadas. El runtime de .NET solo permitirá llamadas y conversaciones de objetos que se alineen con la jerarquía de objetos. Recuerde que cada tipo definido en cualquier lenguaje .NET se deriva del tipo `object` base.
-
-```cs
-Dog dog = Dog.AdoptDog(); // Returns a Dog type
-Pet pet = (Pet)dog; // Dog derives from Pet
-pet.ActCute();
-Car car = (Car)dog; // will throw - no relationship between Car and Dog
-object temp = (object)dog; // legal - a Dog is an object
-car = (Car)temp; // will throw - the runtime isn't fooled
-car.Accelerate() // the dog won't like this, nor will the program get this far
-
-```
-
-La seguridad de tipos también se usa para ayudar a aplicar la encapsulación a través de la garantía de la fidelidad de las palabras clave del descriptor de acceso. Las palabras clave del descriptor de acceso son artefactos que controlan el acceso a los miembros de un tipo determinado a través de otro código. Normalmente se usan para distintos tipos de datos dentro de un tipo, que se usan para administrar su comportamiento.
-
-```cs
-Dog dog = Dog._nextDogToBeAdopted; // will throw - this is a private field
-
-```
-
-Algunos lenguajes .NET admiten **inferencia de tipos**. La inferencia de tipos significa que el compilador deducirá el tipo de expresión en el lado izquierdo a partir de la expresión en el lado derecho. Esto no significa que la seguridad de tipos se divida o evite. El tipo resultante **tiene** un tipo seguro con todo lo que ello implica. Reescribamos las dos primeras líneas del ejemplo anterior para introducir la inferencia de tipos. Puede observar que el resto del ejemplo es completamente el mismo.
-
-```cs
-  var dog = Dog.AdoptDog();
-  var pet = (Pet)dog;
-  pet.ActCute();
-  Car car = (Car)dog; // will throw - no relationship between Car and Dog
-  object temp = (object)dog; // legal - a Dog is an object
-  car = (Car)temp; // will throw - the runtime isn't fooled
-  car.Accelerate() // the dog won't like this, nor will the program get this far
-
-```
-
-### <a name="delegates-and-lambdas"></a>Delegados y expresiones lambda
-
-Los delegados son como los punteros de función de C++, con la gran diferencia de que tienen seguridad de tipos. Son un tipo de método sin conexión en el sistema de tipos de CLR. Los métodos regulares están conectados a una clase y solo se pueden llamar a través de convenciones de llamadas estáticas o de instancias.
-
-Los delegados se usan en varias API y lugares en el mundo .NET, especialmente a través de expresiones lambda, que son los pilares de LINQ.
-
-Obtenga más información al respecto en el documento [Delegados y expresiones lambda](delegates-lambdas.md).
-
-### <a name="generic-types-generics"></a>Tipos genéricos (genéricos)
-
-Los tipos genéricos, también denominados comúnmente "genéricos", son una característica que se agregó en .NET Framework 2.0. En resumen, los genéricos permiten al programador introducir un "parámetro de tipo" al diseñar sus clases, que permite al código de cliente (los usuarios del tipo) especificar el tipo exacto que se debe usar en lugar del parámetro de tipo.
-
-Los genéricos se agregaron para ayudar a los programadores a implementar estructuras de datos genéricos. Antes de que se agregasen, por ejemplo, para que un tipo _List_ fuese genérico, tendría que trabajar con elementos que fuesen de tipo _object_. Esto tendría diferentes problemas de rendimiento, así como semánticos, además de los posibles errores sutiles de tiempo de ejecución. Los más destacados de este último se producirían cuando una estructura de datos contiene, por ejemplo, enteros y cadenas, y se inicia _InvalidCastException_ al trabajar con los miembros de la lista.
-
-El siguiente ejemplo muestra un ejecución de programa básico mediante una instancia de tipos @System.Collections.Generic.List%601.
-
-```cs
-using System;
-using System.Collections.Generic;
-
-namespace GenericsSampleShort {
-    public static void Main(string[] args){
-        // List<string> is the client way of specifying the actual type for the type parameter T
-        List<string> listOfStrings = new List<string> { "First", "Second", "Third" };
-
-        // listOfStrings can accept only strings, both on read and write.
-        listOfStrings.Add("Fourth");
-
-        // Below will throw a compile-time error, since the type parameter
-        // specifies this list as containing only strings.
-        listOfStrings.Add(1);
-
-    }
-}
-
-```
-
-Para obtener más información, consulte el artículo [Información general (genéricos) de tipos genéricos](generics.md).
-
-### <a name="async-programming"></a>Programación asincrónica
-
-La programación asincrónica es un concepto de primera clase en .NET, con compatibilidad asincrónica en el tiempo de ejecución, las bibliotecas de Framework y las construcciones de lenguaje .NET. Internamente, se basa en objetos (como `Task`) que sacan partido del sistema operativo para realizar trabajos dependientes de E/s de la forma más eficaz posible.
-
-Para obtener más información acerca de la programación asincrónica en .NET, comience con la [Información general sobre la asincronía](async.md).
-
-### <a name="language-integrated-query-linq"></a>Language-Integrated Query (LINQ)
-
-LINQ es un conjunto eficaz de características para C# y VB que permiten escribir código simple y declarativo para operar en los datos. Los datos pueden estar en muchos formatos (como objetos en memoria, en una base de datos SQL o un documento XML), pero el código LINQ que escriba normalmente no aparecerá de forma diferente para cada origen de datos.
-
-Para obtener más información y ver algunos ejemplos, consulte [LINQ (Language-Integrated Query)](using-linq.md).
-
-### <a name="native-interoperability"></a>Interoperabilidad nativa
-
-Cada sistema operativo actualmente en uso proporciona mucha compatibilidad de plataformas para varias tareas de programación. .NET proporciona varias maneras de aprovechar dichas API. En conjunto, esta compatibilidad se denomina "interoperabilidad nativa" y en esta sección explicaremos cómo tener acceso a las API nativas desde código administrado . NET.
-
-La principal manera de crear interoperabilidad nativa es a través de "invocación de plataforma" o P/Invoke para abreviar. Esta compatibilidad con .NET Core está disponible en plataformas Windows y Linux. Otra manera de crear interoperabilidad nativa exclusiva de Windows se conoce como "Interoperabilidad COM", que se usa para trabajar con [componentes COM](https://msdn.microsoft.com/library/bwa2bx93.aspx) en código administrado. Se basa en la infraestructura de P/Invoke, pero funciona de forma ligeramente diferente.
-
-La mayoría de la compatibilidad de interoperabilidad de Mono (y, por tanto, de Xamarin) para Java y Objective-C se compila de forma similar, es decir, usan los mismos principios.
-
-Obtenga más información al respecto en el documento [Interoperabilidad nativa](native-interop.md).
-
-### <a name="unsafe-code"></a>Código no seguro
-
-El CLR permite la capacidad de tener acceso a la memoria nativa y realizar aritmética de punteros a través de código `unsafe`. Estas operaciones son necesarias para determinados algoritmos y para la interoperabilidad del sistema. Aunque es eficaz, se desaconseja el uso de código no seguro a menos que sea necesario para la interoperabilidad con las API del sistema o para implementar el algoritmo más eficaz. Es posible que el código no seguro no se ejecute del mismo modo en entornos diferentes y que también pierda las ventajas de un recolector de elementos no utilizados y de la seguridad de tipos. Se recomienda limitar y centralizar el código no seguro lo máximo posible, y probar el código a conciencia.
-
-El método `ToString()` de la [clase StringBuilder](https://github.com/dotnet/coreclr/blob/master/src/mscorlib/src/System/Text/StringBuilder.cs#L327) ilustra cómo el uso del código `unsafe` puede implementar de forma eficaz un algoritmo al moverse por fragmentos de memoria directamente:
-
-```cs
-public override String ToString() {
-          Contract.Ensures(Contract.Result<String>() != null);
-
-          VerifyClassInvariant();
-
-          if (Length == 0)
-              return String.Empty;
-
-          string ret = string.FastAllocateString(Length);
-          StringBuilder chunk = this;
-          unsafe {
-              fixed (char* destinationPtr = ret)
-              {
-                  do
-                  {
-                      if (chunk.m_ChunkLength > 0)
-                      {
-                          // Copy these into local variables so that they are stable even in the presence of ----s (hackers might do this)
-                          char[] sourceArray = chunk.m_ChunkChars;
-                          int chunkOffset = chunk.m_ChunkOffset;
-                          int chunkLength = chunk.m_ChunkLength;
-
-                          // Check that we will not overrun our boundaries.
-                          if ((uint)(chunkLength + chunkOffset) <= ret.Length && (uint)chunkLength <= (uint)sourceArray.Length)
-                          {
-                              fixed (char* sourcePtr = sourceArray)
-                                  string.wstrcpy(destinationPtr + chunkOffset, sourcePtr, chunkLength);
-                          }
-                          else
-                          {
-                              throw new ArgumentOutOfRangeException("chunkLength", Environment.GetResourceString("ArgumentOutOfRange_Index"));
-                          }
-                      }
-                      chunk = chunk.m_ChunkPrevious;
-                  } while (chunk != null);
-              }
-          }
-          return ret;
-      }
-
-```
-
-## <a name="notes"></a>Notas
-
-El término "runtime de .NET" se usa en todo el documento para abarcar las múltiples implementaciones de. NET, como CLR, Mono, IL2CPP y otros. Los nombres más específicos se usan solo si es necesario.
-
-Este documento no pretende ser de naturaleza histórica, sino describir la plataforma .NET tal y como es ahora. No es importante si una característica de .NET ha estado disponible siempre o se ha introducido recientemente, solo cabe destacar que es lo suficientemente importante para resaltarla y analizarla.
-
-
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

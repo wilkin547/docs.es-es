@@ -1,22 +1,22 @@
 ---
-title: Marcos de trabajo
-description: Marcos de trabajo
+title: Marcos y destinos
+description: "Explica los conceptos de los destinos de marcos al escribir código. NET."
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 09/19/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 translationtype: Human Translation
-ms.sourcegitcommit: 246d381246e78a27b7097d6b8126f421b52014de
-ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
+ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
+ms.openlocfilehash: 82ba6f4abe200dc48158eac1ad3e3609feeda2c9
 
 ---
 
-# <a name="frameworks"></a>Marcos de trabajo
+# <a name="frameworks-and-targets"></a>Marcos y destinos
 
 El ecosistema .NET tiene un concepto de marcos de trabajo. Los marcos de trabajo definen la API que puede usar para centrar el destino en una plataforma concreta. .NET Framework 4.6 es una de esas plataformas. Los marcos de trabajo se usan en Visual Studio y en otros IDE y editores para proporcionarle el conjunto correcto de API. También se usan en NuGet, para producción y consumo de paquetes de NuGet, para asegurarse de que crea y usa los paquetes adecuados (y los recursos subyacentes) para el marco de trabajo de destino. Se puede considerar que los marcos de trabajo son las monedas clave en el ecosistema de .NET. El concepto se basa en la corrección, pretende ayudarle a usted y a sus clientes a evitar @System.MissingMethodException y a sus compañeros en el runtime.
 
@@ -61,6 +61,6 @@ Puede hacer referencia a una familia de marcos de trabajo con formatos largos o 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

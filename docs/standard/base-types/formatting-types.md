@@ -4,16 +4,15 @@ description: "Aplicación de formato a tipos"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6c6ddfdbe288fe012adf31fd4d45af1b697d1132
+ms.openlocfilehash: 2dc4d1deff8d1b72cbe433c45dda873e9caa26fb
 
 ---
 
@@ -666,7 +665,7 @@ Título | Definición
 [Cadenas de formato de enumeración](enumeration-format.md) | Describe cadenas de formato estándar que se usan para crear representaciones de cadena de valores de enumeración.
 [Guid.ToString(String)](xref:System.Guid.ToString(System.String)) | Describe cadenas de formato estándar para los valores de [Guid](xref:System.Guid).
 
-## <a name="culturesensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Formato que tiene en cuenta las referencias culturales con proveedores de formato y la interfaz IFormatProvider
+## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Formato que tiene en cuenta las referencias culturales con proveedores de formato y la interfaz IFormatProvider
 
 Si bien los especificadores de formato permiten personalizar el formato de los objetos, la generación de una representación de cadena significativa de los objetos requiere a menudo información de formato adicional. Por ejemplo, cuando se da formato a un número como un valor de divisa mediante la cadena de formato estándar "C" o la cadena de formato personalizado “$ #,#.00”, se necesita como mínimo información sobre el símbolo de divisa, el separador de grupos y el separador decimal correctos para incluirla en la cadena con formato. En .NET, esta información de formato adicional está disponible mediante la interfaz [IFormatProvider](xref:System.IFormatProvider), que se proporciona como un parámetro a una o más sobrecargas del método `ToString` de los tipos numéricos y de fecha y hora. Las implementaciones de [IFormatProvider](xref:System.IFormatProvider) se usan en .NET para admitir el formato específico de una referencia cultural. En el siguiente ejemplo se muestra cómo cambia la representación en forma de cadena de un objeto cuando se le da formato con tres objetos [IFormatProvider](xref:System.IFormatProvider) que representan referencias culturales diferentes.
 
@@ -730,7 +729,7 @@ Método `ToString` de tipos de fecha y hora | [System.Globalization.DateTimeForm
 
 También se puede implementar un proveedor de formato propio para reemplazar cualquiera de estas clases. Sin embargo, el método `GetFormat` de la implementación debe devolver un objeto del tipo mostrado en la tabla anterior si debe proporcionar información de formato al método `ToString`.
 
-### <a name="culturesensitive-formatting-of-numeric-values"></a>Formato que tiene en cuenta las referencias culturales de valores numéricos
+### <a name="culture-sensitive-formatting-of-numeric-values"></a>Formato que tiene en cuenta las referencias culturales de valores numéricos
 
 De forma predeterminada, el formato de los valores numéricos depende de la referencia cultural. Si no especifica una referencia cultural cuando llama a un método de formato, se utilizan las convenciones de formato de la referencia cultural del subproceso actual. Esto se muestra en el ejemplo siguiente, que cambia la referencia cultural del subproceso actual cuatro veces y después llama al método [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)). En cada caso, la cadena resultante refleja las convenciones de formato de la referencia cultural actual. Esto se debe a que los métodos `ToString` y `ToString(String)` incluyen llamadas a cada tipo numérico del método `ToString(String, IFormatProvider)`. 
 
@@ -856,7 +855,7 @@ End Module
 '       fr:    1 043,630
 ```
 
-### <a name="culturesensitive-formatting-of-date-and-time-values"></a>Formato que tiene en cuenta las referencias culturales de valores de fecha y hora
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Formato que tiene en cuenta las referencias culturales de valores de fecha y hora
 
 De forma predeterminada, el formato de los valores de fecha y hora tiene en cuenta las referencias culturales. Si no especifica una referencia cultural cuando llama a un método de formato, se utilizan las convenciones de formato de la referencia cultural del subproceso actual. Esto se muestra en el ejemplo siguiente, que cambia la referencia cultural del subproceso actual cuatro veces y después llama al método [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)). En cada caso, la cadena resultante refleja las convenciones de formato de la referencia cultural actual. Esto se debe a que los métodos [DateTime.ToString ()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) y [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) encapsulan llamadas a los métodos [DateTime.ToString (String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) y [DateTimeOffset.ToString (String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)).
 
@@ -1404,6 +1403,6 @@ Título | Definición
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

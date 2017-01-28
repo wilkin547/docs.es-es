@@ -3,16 +3,16 @@ title: Bibliotecas de clases de .NET
 description: Bibliotecas de clases de .NET
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
 ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
+ms.openlocfilehash: eee8fcaff41db5821e4b6aa61875d6a4bcd80b10
 
 ---
 
@@ -26,7 +26,7 @@ Hay tres tipos de bibliotecas de clases que puede usar:
 *   Las bibliotecas de clases **portables** tienen acceso a un subconjunto de API y las pueden usar las aplicaciones y bibliotecas que tienen como destino varias plataformas.
 *   Las bibliotecas de clases de **.NET Core** son una fusión del concepto de biblioteca específica de la plataforma y portable en un único modelo que ofrece lo mejor de ambas.
 
-## <a name="platformspecific-class-libraries"></a>Bibliotecas de clases específicas de la plataforma
+## <a name="platform-specific-class-libraries"></a>Bibliotecas de clases específicas de la plataforma
 
 Las bibliotecas específicas de la plataforma se enlazan a una única plataforma de .NET (por ejemplo, .NET Framework en Windows) y, por tanto, pueden tomar dependencias significativas de un entorno de ejecución conocido. Este entorno expondrá un conjunto conocido de API (API de .NET y SO) y mantendrán y expondrán el estado esperado (por ejemplo, Registro de Windows).
 
@@ -64,6 +64,6 @@ Las bibliotecas de clases se admiten en Mono, incluidos los tres tipos de biblio
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

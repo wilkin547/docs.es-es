@@ -3,16 +3,16 @@ title: Migrar aplicaciones de ASP.NET MVC a contenedores de Windows
 description: "Aprenda a ejecutar una aplicación existente de ASP.NET MVC en un contenedor de Docker de Windows"
 keywords: Contenedores de Windows, Docker, ASP.NET MVC
 author: BillWagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: dotnet-mvc
 ms.devlang: dotnet
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: bde267042883d2f25848747047845a16b181e549
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c81e9783499ede9a612969f16a7e85d77fa921c4
 
 ---
 
@@ -42,7 +42,7 @@ Como mínimo, el equipo de desarrollo debe ejecutar la [actualización de aniver
 Antes de comenzar, tiene que instalar [Docker para Windows](https://docs.docker.com/docker-for-windows/), versión 1.12 Beta 26 o una versión más reciente. La compatibilidad con el contenedor de Windows solo está disponible en el canal Beta en este momento.
 
 > [!IMPORTANT]
-> Si usa Windows Server 2016, deberá seguir las instrucciones de [Implementación de host de contenedor - Windows Server](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment) para poder ejecutar contenedores de Docker.
+> Si usa Windows Server 2016, deberá seguir las instrucciones de [Implementación de host de contenedor - Windows Server](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) para poder ejecutar contenedores de Docker.
 
 Después de instalar e iniciar Docker, debe hacer clic con el botón derecho en el icono de bandeja y seleccionar **Cambiar a contenedores de Windows** para poder ejecutar imágenes de Docker basadas en Windows. Este comando tarda algunos segundos en ejecutarse:
 
@@ -181,6 +181,6 @@ En este tema, ha visto los pasos para mover y ejecutar una aplicación de ASP.NE
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

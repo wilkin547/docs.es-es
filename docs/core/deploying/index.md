@@ -3,16 +3,15 @@ title: "Implementación de aplicaciones .NET Core"
 description: "Implementación de aplicaciones .NET Core"
 keywords: ".NET, .NET Core, implementación de .NET Core"
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 09/08/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
 ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 96eb2cc7ca948b3e372fa1363b1741624d791d27
+ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
 
 ---
 
@@ -24,11 +23,11 @@ Puede crear dos tipos de implementaciones para aplicaciones .NET Core:
 
 - Implementación autocontenida. A diferencia de FDD, una implementación autocontenida (SCD) no depende de que los componentes compartidos estén presentes en el sistema de destino. Todos los componentes, incluidas las bibliotecas y el entorno de ejecución de .NET Core, se incluyen con la aplicación y están aislados de otras aplicaciones .NET Core. Las SCD incluyen un archivo ejecutable (como `app.exe` en plataformas de Windows para una aplicación denominada `app`), que es una versión con otro nombre del host de .NET Core específico de la plataforma y un archivo .dll (como `app.dll`), que es la aplicación real.
 
-## <a name="frameworkdependent-deployments-fdd"></a>Implementaciones dependientes de Framework (FDD) ##
+## <a name="framework-dependent-deployments-fdd"></a>Implementaciones dependientes de Framework (FDD) ##
 
 En una FDD, solo se implementa su aplicación y cualquier dependencia de terceros. No tiene que implementar .NET Core, puesto que la aplicación usará la versión de .NET Core que esté presente en el sistema de destino. Este es el modelo de implementación predeterminado para aplicaciones .NET Core.
 
-### <a name="why-create-a-frameworkdependent-deployment"></a>¿Por qué crear una implementación dependiente del marco? ###
+### <a name="why-create-a-framework-dependent-deployment"></a>¿Por qué crear una implementación dependiente del marco? ###
 
 La implementación de FDD tienen varias ventajas:
 
@@ -44,7 +43,7 @@ Hay también algunas desventajas:
 
 - Es posible que el entorno de tiempo de ejecución y las bibliotecas .NET Core cambien en futuras versiones sin su conocimiento. En raras ocasiones, esto puede cambiar el comportamiento de la aplicación.
 
-### <a name="deploying-a-frameworkdependent-deployment"></a>Implementación de una implementación dependiente del marco ###
+### <a name="deploying-a-framework-dependent-deployment"></a>Implementación de una implementación dependiente del marco ###
 
 La implementación de una implementación dependiente del marco sin dependencias de terceros implica simplemente la compilación, la prueba y la publicación de la aplicación. Un sencillo ejemplo escrito en C# ilustra el proceso. En el ejemplo se usa la [utilidad dotnet](../tools/dotnet.md) desde la línea de comandos; sin embargo, también puede usar un entorno de desarrollo, como Visual Studio o Visual Studio Code para compilar, probar y publicar el ejemplo.
 
@@ -101,7 +100,7 @@ El conjunto completo de archivos de la aplicación se puede implementar del modo
 
 Además de los archivos binarios de la aplicación, el instalador debe también empaquetar el programa de instalación de un marco compartido o buscarlo como requisito previo como parte de la instalación de la aplicación.  La instalación del marco compartido requiere acceso raíz o de administrador dado que implica a toda la máquina.
 
-### <a name="deploying-a-frameworkdependent-deployment-with-thirdparty-dependencies"></a>Implementación de una implementación dependiente del marco con dependencias de terceros ###
+### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>Implementación de una implementación dependiente del marco con dependencias de terceros ###
 
 La implementación de una implementación dependiente del marco con una o varias dependencias de terceros implica tres pasos adicionales antes de ejecutar el comando `dotnet restore`:
 
@@ -121,11 +120,11 @@ La implementación de una implementación dependiente del marco con una o varias
 
 Tenga en cuenta que una implementación dependiente del marco con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se podrá portar a sistemas Windows. Esto puede ocurrir si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de ello es el servidor Kestrel. Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contendrá una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md#what-are-rids) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
-## <a name="selfcontained-deployments-scd"></a>Implementaciones autocontenidas (SCD) ##
+## <a name="self-contained-deployments-scd"></a>Implementaciones autocontenidas (SCD) ##
 
 En una implementación autocontenida, no solo implementa su aplicación y cualquier dependencia de terceros, sino también la versión de .NET Core con la que compila la aplicación. La creación de una SCD no incluye, sin embargo, las [dependencias nativas de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) propiamente dichas en diversas plataformas (por ejemplo, OpenSSL en macOS) así que es necesario instalarlas antes de ejecutar la aplicación. 
 
-### <a name="why-deploy-a-selfcontained-deployment"></a>¿Por qué realizar una implementación autocontenida? ###
+### <a name="why-deploy-a-self-contained-deployment"></a>¿Por qué realizar una implementación autocontenida? ###
 
 La implementación de una implementación autocontenida tiene dos ventajas principales:
 
@@ -141,7 +140,7 @@ También tiene algunos inconvenientes:
 
 - La implementación de numerosas aplicaciones .NET Core autocontenidas en un sistema puede consumir importantes cantidades de espacio en disco, puesto que cada aplicación duplica archivos de .NET Core.
 
-### <a name="a-namesimpleselfa-deploying-a-simple-selfcontained-deployment"></a>Implementación de una implementación autocontenida sencilla ###
+### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> Implementación de una implementación autocontenida sencilla ###
 
 La implementación de una implementación autocontenida sin dependencias de terceros implica crear el proyecto, modificar el archivo project.json y compilar, probar y publicar la aplicación.  Un sencillo ejemplo escrito en C# ilustra el proceso. En el ejemplo se usa la utilidad `dotnet` desde la línea de comandos; sin embargo, también puede usar un entorno de desarrollo, como Visual Studio o Visual Studio Code para compilar, probar y publicar el ejemplo.
 
@@ -262,7 +261,7 @@ El siguiente es el archivo `project.json` completo para este proyecto.
 }
 ```
 
-### <a name="deploying-a-selfcontained-deployment-with-thirdparty-dependencies"></a>Implementación de una implementación autocontenida con dependencias de terceros ###
+### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>Implementación de una implementación autocontenida con dependencias de terceros ###
 
 Implementar una implementación autocontenida con una o varias dependencias de terceros implica agregar la dependencia de terceros:
 
@@ -304,7 +303,7 @@ Al implementar la aplicación, los archivos de aplicación también contienen la
 
 Tenga en cuenta que solo puede implementar una implementación autocontenida con una biblioteca de terceros en plataformas compatibles con esa biblioteca. Esto es parecido a tener dependencias de terceros con dependencias nativas en la implementación dependiente del marco. 
 
-### <a name="deploying-a-selfcontained-deployment-with-a-smaller-footprint"></a>Implementación de una implementación autocontenida con una superficie menor ###
+### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>Implementación de una implementación autocontenida con una superficie menor ###
 
 Si la disponibilidad de espacio de almacenamiento adecuado en sistemas de destino puede ser un problema, puede reducir la superficie general de la aplicación excluyendo algunos componentes del sistema. Para ello, defina explícitamente los componentes de .NET Core que incluye su aplicación en su archivo project.json.
 
@@ -392,6 +391,6 @@ El siguiente es el archivo `project.json` completo para este proyecto.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

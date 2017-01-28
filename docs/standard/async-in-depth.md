@@ -3,16 +3,16 @@ title: Async en profundidad
 description: "Explicación detallada sobre cómo funciona el código asincrónico en .NET"
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
 ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: 6536a608a4ee1bb10f41907a28114193a300a52c
+ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
 
 ---
 
@@ -35,7 +35,7 @@ Mediante `await`, su aplicación o servicio puede realizar trabajo útil mientra
 
 Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el [artículo Modelo asincrónico basado en tareas (TAP)](https://msdn.microsoft.com/library/hh873175.aspx).
 
-## <a name="deeper-dive-into-tasks-for-an-iobound-operation"></a>Tareas para una operación enlazada a E/S en profundidad
+## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Tareas para una operación enlazada a E/S en profundidad
 
 En la siguiente sección, se describe una vista general de lo que sucede con una llamada de E/S asincrónica normal. Comencemos con un par de ejemplos.
 
@@ -117,7 +117,7 @@ Sobre todo, ya que el trabajo enlazado a E/S no invierte prácticamente ningún 
 
 Además, es muy sencillo enviar trabajo al subproceso de interfaz de usuario (como actualizar una interfaz de usuario) con métodos `async` y no requiere trabajo adicional (como llamar a un delegado seguro para subprocesos).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpubound-operation"></a>Task y Task<T> para una operación enlazada a la CPU en profundidad
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Task y Task<T> para una operación enlazada a la CPU en profundidad
 
 El código `async` enlazado a la CPU es un poco diferente del código `async` enlazado a E/S.  Ya que el trabajo se realiza en la CPU, no hay ninguna forma de evitar dedicar un subproceso al cálculo.  El uso de `async` y `await` le proporciona una manera clara de interactuar con subprocesos en segundo plano y mantener al llamador del método asincrónico dinámico.  Tenga en cuenta que esto no proporciona ninguna protección para datos compartidos.  Si usa datos compartidos, aún tendrá que aplicar una estrategia de sincronización adecuada.
 
@@ -148,6 +148,6 @@ Una vez se encuentra `await`, la ejecución de `CalculateResult()` se cede a su 
 `async` y `await` son el procedimiento recomendado para administrar el trabajo enlazado a la CPU si necesita capacidad de respuesta. Hay varios patrones para usar Async con trabajo enlazado a la CPU. Es importante tener en cuenta que hay un pequeño costo al usar Async y no se recomienda para bucles de pequeñas dimensiones.  Depende de usted determinar cómo escribe el código en torno a esta nueva funcionalidad.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
