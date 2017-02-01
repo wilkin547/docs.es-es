@@ -3,22 +3,22 @@ title: "Introducción a .NET Core en Windows"
 description: "Introducción a .NET Core en Windows con Visual Studio 2015"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: 54da8aebd64e86c064214074bc261f72c3b0aedc
-ms.openlocfilehash: 299d479ce74a0e1f41ff42a0e6619f4964788194
+ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
+ms.openlocfilehash: 446ada6d325a81f9c0078e4771866d99af341aed
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>Introducción a .NET Core en Windows con Visual Studio 2015
 
-por [Bertrand Le Roy](https://github.com/bleroy) y [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2 de Visual Studio 2015 RC. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [Introducción a .NET Core en Windows con Visual Studio 2017](../preview3/tutorials/using-on-windows-vs-2017.md).
 
 Visual Studio 2015 proporciona un entorno de desarrollo completo para el desarrollo de aplicaciones .NET Core. Los procedimientos descritos en este documento describen los pasos necesarios para crear un número de soluciones .NET Core típicas o soluciones que incluyen componentes de .NET Core, con Visual Studio. Los escenarios incluyen pruebas y el uso de bibliotecas de terceros que no se han creado explícitamente para la versión más reciente de .NET Core. 
 
@@ -276,6 +276,6 @@ Este archivo project.json incluye cláusulas para UWP y .NET 4.6 y usa como dest
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

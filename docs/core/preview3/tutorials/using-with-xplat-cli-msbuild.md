@@ -1,5 +1,5 @@
 ---
-title: "Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (SDK Preview 3)"
+title: "Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (SDK Preview 4) | Microsoft Docs"
 description: "Introducción a .NET Core en Windows, Linux o macOS con la interfaz de línea de comandos (CLI) de .NET Core"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: ab71aab99505f211fe4adc86957eda4707761f1c
-ms.openlocfilehash: 01b17021e79bcdb2dc69f97b709f4aa63dbab9aa
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: e84012937be6ede9170dde7ff88575d2f4fa1052
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-sdk-preview-3"></a>Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (SDK Preview 3)
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-tooling-preview-4"></a>Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (Tooling Preview 4)
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 4 de Visual Studio 2017 RC. Para la versión .NET Core Tools Preview 2, consulte el tema [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos](../../tutorials/using-with-xplat-cli.md).
 
 Esta guía le enseñará a usar las herramientas de la CLI de .NET Core para crear aplicaciones de consola multiplataforma.  Se iniciará con la aplicación de consola más básica y finalmente abarcará varios proyectos, incluidas las pruebas. Agregue estas características paso a paso, a partir de lo que ya ha visto y compilado.
 
@@ -24,7 +27,7 @@ Si no está familiarizado con el conjunto de herramientas de la CLI de .NET Core
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Antes de comenzar, asegúrese de que tiene [.NET Core CLI Tooling Preview 3 o superior](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md).  También necesitará un editor de texto.
+Antes de comenzar, asegúrese de que tiene [.NET Core CLI Tooling Preview 4 o superior](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md).  También necesitará un editor de texto.
 
 ## <a name="hello-console-app"></a>Hola, aplicación de consola
 
@@ -314,10 +317,10 @@ Y listo.
  
 Espero que esta guía le ha ayudado a aprender a crear una aplicación de consola .NET Core, desde los aspectos básicos hasta un sistema de varios proyectos con pruebas unitarias.  El siguiente paso consiste en crear increíbles aplicaciones de consola usted mismo.
  
-Si le interesa un ejemplo más avanzado de una aplicación de consola, consulte el tutorial: [Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 3)](using-with-xplat-cli-msbuild-folders.md).
+Si le interesa un ejemplo más avanzado de una aplicación de consola, consulte el tutorial: [Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 4)](using-with-xplat-cli-msbuild-folders.md).
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

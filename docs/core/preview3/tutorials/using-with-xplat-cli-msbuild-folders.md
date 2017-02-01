@@ -1,6 +1,6 @@
 ---
-title: "Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 3)"
-description: "Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 3)"
+title: "Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 4) | Microsoft Docs"
+description: "Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 4)"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 0a3122a3c10838b74801bcc910070745cb9bf0d5
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f3d5ebbac45726e320e5b886dbb6b81259bea36c
 
 ---
 
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-3"></a>Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 3)
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-4"></a>Organización y prueba de proyectos con la línea de comandos de .NET Core (SDK Preview 4)
 
-Este tutorial sigue al tutorial [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (SDK Preview 3)](./using-with-xplat-cli-msbuild.md) para mostrar cómo ir más allá de los escenarios sencillos "hola a todos" y allanar el camino para aplicaciones más avanzadas y bien organizadas.
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 4 de Visual Studio 2017 RC. Para la versión .NET Core Tools Preview 2, consulte el tema [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos](../../tutorials/using-with-xplat-cli.md).
+
+Este tutorial sigue al tutorial [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (SDK Preview 4)](./using-with-xplat-cli-msbuild.md) para mostrar cómo ir más allá de los escenarios sencillos "hola a todos" y allanar el camino para aplicaciones más avanzadas y bien organizadas.
 
 ## <a name="using-folders-to-organize-code"></a>Uso de carpetas para organizar el código
 
@@ -322,6 +325,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,25 +1,28 @@
 ---
-title: Comando dotnet-new | .NET Core
+title: Comando dotnet-new | Microsoft Docs
 description: El comando dotnet-new crea nuevos proyectos de .NET Core en el directorio actual.
 keywords: dotnet-new, CLI, comando de CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 29ccc12ff893d316c816d22da862f90bfc9334ff
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
 
 ---
 
-#<a name="dotnetnew"></a>dotnet-new
+#<a name="dotnet-new"></a>dotnet-new
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [dotnet-new (Tooling Preview 4)](../preview3/tools/dotnet-new.md).
 
 ## <a name="name"></a>Nombre
-dotnet-new: crea un nuevo proyecto de .NET Core en el directorio actual.
+`dotnet-new`: crea un nuevo proyecto de .NET Core en el directorio actual.
 
 ## <a name="synopsis"></a>Sinopsis
 `dotnet new [--help] [--type] [--lang]`
@@ -63,6 +66,6 @@ Creación de un nuevo proyecto de aplicación con C# de ASP.NET Core en el direc
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

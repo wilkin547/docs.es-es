@@ -1,12 +1,12 @@
 ---
 redirect_url: /dotnet/articles/core/windows-prerequisites
 translationtype: Human Translation
-ms.sourcegitcommit: c81b3b4785bff3bf8963e0ba1b917a5f797099ff
-ms.openlocfilehash: fa172832ea849484230d2a8a77ed267689549a78
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 9db748afaabdce140c70a543fcb7f19c487b523f
 
 ---
 
-# <a name="prerequisites-for-net-core-on-windows-preview-3"></a>Requisitos previos para .NET Core en Windows (Preview 3)
+# <a name="prerequisites-for-net-core-on-windows-tooling-preview-4"></a>Requisitos previos para .NET Core en Windows (Tooling Preview 4)
 
 ## <a name="content-moved"></a>El contenido se ha movido.
 Este contenido se ha combinado y trasladado al tema [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md). 

@@ -1,22 +1,25 @@
 ---
-title: Modelo de extensibilidad de la CLI de .NET Core
+title: Modelo de extensibilidad de la CLI de .NET Core | Microsoft Docs
 description: Modelo de extensibilidad de la CLI de .NET Core
 keywords: CLI, extensibilidad, comandos personalizados, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: ea16d4b841f5c93da222df56db36d6fb70ea35f9
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 48f06f0af3768f7129e0a2b3a89bbdc7795959dc
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>Modelo de extensibilidad de la CLI de .NET Core 
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [Modelo de extensibilidad de la CLI de .NET Core (Tooling Preview 4)](../preview3/tools/extensibility.md).
 
 ## <a name="overview"></a>Información general
 En este documento se tratan las principales formas de ampliar las herramientas de la CLI y se explican los escenarios que impulsan cada una. Se describe cómo consumir las herramientas y se proporcionan notas cortas sobre cómo compilar ambos tipos de herramientas. 
@@ -29,14 +32,14 @@ Las herramientas de la CLI pueden extenderse de dos maneras principales:
 
 Los dos mecanismos de extensibilidad descritos anteriormente no son mutuamente excluyentes; puede usar uno solo o ambos. La selección de uno u otro depende en gran medida de cuál sea el objetivo que intenta alcanzar con su extensión.
 
-## <a name="perproject-based-extensibility"></a>Extensibilidad por proyecto
+## <a name="per-project-based-extensibility"></a>Extensibilidad por proyecto
 Las herramientas por proyecto son [aplicaciones de consola portátiles](../deploying/index.md) que se distribuyen como paquetes de NuGet. Las herramientas solo están disponibles en el contexto del proyecto que hace referencia a ellas y para el que se restauran; la invocación fuera del contexto del proyecto (por ejemplo, fuera del directorio que contiene el proyecto) dará error ya que no se podrá encontrar el comando.
 
 Estas herramientas son perfectas también para servidores de compilación, dado que no se necesita nada fuera de `project.json`. El proceso de compilación ejecuta la restauración para el proyecto que se compila y hay herramientas disponibles. Proyectos de lenguajes, como F #, también están en esta categoría; después de todo, cada proyecto solo se puede escribir en un lenguaje específico. 
 
 Finalmente, este modelo de extensibilidad proporciona compatibilidad con la creación de herramientas que necesitan acceso a la salida compilada del proyecto. Por ejemplo, varias herramientas de vista de Razor de aplicaciones [ASP.NET](https://www.asp.net/) MVC se incluyen dentro de esta categoría. 
 
-### <a name="consuming-perproject-tools"></a>Consumo de herramientas por proyecto
+### <a name="consuming-per-project-tools"></a>Consumo de herramientas por proyecto
 El consumo de estas herramientas requiere agregar un nodo `tools` a su `project.json`. Dentro del nodo `tools`, se hace referencia al paquete en el que reside la herramienta. Después de ejecutar `dotnet restore`, se restauran la herramienta y sus dependencias. 
 
 Para las herramientas que necesitan cargar la salida de compilación del proyecto para su ejecución, hay normalmente otra dependencia que aparece en las dependencias normales del archivo de proyecto. Esto significa que las herramientas que cargan el código del proyecto tienen dos componentes: 
@@ -101,7 +104,7 @@ Un buen ejemplo de este enfoque puede encontrarse en el [repositorio de la CLI d
 * [Implementación de la dependencia específica del marco](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages/dotnet-desktop-and-portable)
 
 
-### <a name="pathbased-extensibility"></a>Extensibilidad basada en la RUTA DE ACCESO
+### <a name="path-based-extensibility"></a>Extensibilidad basada en la RUTA DE ACCESO
 La extensibilidad basada en la RUTA DE ACCESO se suele usar con equipos de desarrollo, donde necesita una herramienta que abarque conceptualmente más de un único proyecto. La principal desventaja de este mecanismo de extensiones es que está vinculado a la máquina donde existe la herramienta. Si lo necesita en otro equipo, tendría que implementarlo.
 
 Este patrón de extensibilidad del conjunto de herramientas de la CLI es muy sencillo. Como se explica en la [información general de la CLI de .NET Core](index.md), el controlador `dotnet` puede ejecutar cualquier comando que se nombre según la convención `dotnet-<command>`. La lógica de resolución predeterminada sondeará primero varias ubicaciones y finalmente llegará a la RUTA DE ACCESO del sistema. Si el comando solicitado existe en la RUTA DE ACCESO del sistema y es un archivo binario que se puede invocar, el controlador `dotnet` lo invoca. 
@@ -132,6 +135,6 @@ Las herramientas de la CLI de .NET Core permiten dos puntos de extensibilidad pr
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

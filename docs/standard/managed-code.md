@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 translationtype: Human Translation
-ms.sourcegitcommit: 0013cf5604bfd1e8a16e5ca15577ac81fce49612
-ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
+ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
+ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
 
 ---
 
@@ -26,7 +26,7 @@ Compare esto con la forma en que ejecutaría un programa escrito en C/C++, tambi
 
 El código administrado se escribe en uno de los lenguajes de alto nivel que se pueden ejecutar en la plataforma .NET, como C#, Visual Basic, F # y otros. Cuando se compila código escrito en estos lenguajes con su respectivo compilador, no se obtiene código máquina. Se obtiene código de **lenguaje intermedio**, que más adelante el tiempo de ejecución compila y ejecuta. C++ es la única excepción a esta regla, ya que también puede generar archivos binarios nativos y no administrados que se ejecutan en Windows.
 
-## <a name="intermediate-language-execution"></a>Lenguaje intermedio y ejecución
+## <a name="intermediate-language--execution"></a>Lenguaje intermedio y ejecución
 
 ¿Qué es el "lenguaje intermedio" (o IL)? Es un producto de la compilación de código escrito en lenguajes .NET de alto nivel. Una vez compilado el código escrito en uno de estos idiomas, se obtiene un archivo binario integrado por IL. Es importante tener en cuenta que el IL es independiente de cualquier lenguaje específico que se ejecute sobre el tiempo de ejecución. Incluso hay una especificación independiente para él, que puede leer si le interesa.
 
@@ -48,6 +48,6 @@ De modo parecido, C# es un lenguaje que permite usar construcciones no administr
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
