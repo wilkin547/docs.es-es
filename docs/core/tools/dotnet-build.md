@@ -1,25 +1,28 @@
 ---
-title: Comando dotnet-build | SDK de .NET Core
+title: Comando dotnet-build | Microsoft Docs
 description: El comando dotnet-build compila un proyecto y todas sus dependencias.
 keywords: dotnet-build, CLI, comando de CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
 
 ---
 
-#<a name="dotnetbuild"></a>dotnet-build
+#<a name="dotnet-build"></a>dotnet-build
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [dotnet-build (Tooling Preview 4)](../preview3/tools/dotnet-build.md).
 
 ## <a name="name"></a>Nombre 
-dotnet-build: compila un proyecto y todas sus dependencias 
+`dotnet-build`: compila un proyecto y todas sus dependencias. 
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -76,11 +79,11 @@ Compila para un marco específico. El marco debe definirse en el archivo [projec
 
 Define una configuración con la que se va a realizar la compilación.  Si se omite, se adopta el valor predeterminado de `Debug`.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
 Tiempo de ejecución de destino con el que realizar la compilación. Para obtener una lista de identificadores de tiempo de ejecución (RID) que puede usar, consulte el [catálogo de RID](../rid-catalog.md). 
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
 Define con lo que se debe reemplazar `*` en el campo de versión en el archivo [project.json](project-json.md#version). El formato sigue las instrucciones de versión de NuGet. 
 
@@ -111,6 +114,6 @@ Compilación de un proyecto y sus dependencias para un tiempo de ejecución espe
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

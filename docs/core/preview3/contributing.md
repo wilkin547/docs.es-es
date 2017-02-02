@@ -1,8 +1,8 @@
 # <a name="using-the-preview3-folder-and-sub-folders"></a>Uso de la carpeta y las subcarpetas de preview3
 
-Esta carpeta es el nodo de nivel superior que coincide con la carpeta de herramientas, pero contiene deltas de la versión NET Core Tooling Preview 3.
+Esta carpeta es el nodo de nivel superior que coincide con la carpeta de herramientas, pero contiene deltas de la versión .NET Core Tooling Preview 4.
 
-El objetivo de esta estructura de carpetas paralela independiente es proporcionar una ubicación para el contenido relacionado con la versión Preview 3 que se pueda combinar con relativa facilidad en la estructura principal al proporcionar cambio de versión en el sitio publicado.
+El objetivo de esta estructura de carpetas paralela independiente es proporcionar una ubicación para el contenido relacionado con la versión Preview 4 que se pueda combinar con relativa facilidad en la estructura principal al proporcionar cambio de versión en el sitio publicado.
 
 El contenido de este nodo debe ser un conjunto de documentos más pequeño que represente los deltas de la versión de compatibilidad a largo plazo (LTS) y la última versión actual. 
 
@@ -11,9 +11,9 @@ El contenido de este nodo debe ser un conjunto de documentos más pequeño que r
 Hay dos casos para agregar nuevo contenido en esta versión:
 
 * Cambios en los documentos existentes
-    - Copie el contenido existente en una carpeta paralela en esta estructura. Realice los cambios y agregue el archivo modificado a la tabla de contenido de la versión Preview 3.
+    - Copie el contenido existente en una carpeta paralela en esta estructura. Realice los cambios y agregue el archivo modificado a la tabla de contenido de la versión Preview 4.
 * Nuevos documentos
-    - Coloque el nuevo documento en la ubicación apropiada y agréguelo a la tabla de contenido bajo el nodo de la versión Preview 3. 
+    - Coloque el nuevo documento en la ubicación apropiada y agréguelo a la tabla de contenido bajo el nodo de la versión Preview 4. 
 
 Todos los archivos de versión actual deben tener agregado lo siguiente en la parte superior del tema:
 

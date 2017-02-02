@@ -1,22 +1,25 @@
 ---
-title: Comando dotnet-build | SDK de .NET Core
+title: Comando dotnet-build | Microsoft Docs
 description: El comando dotnet-build compila un proyecto y todas sus dependencias.
 keywords: dotnet-build, CLI, comando de CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04c4d77b31bf4a1bdb425d837c490440e7312e57
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
 
 ---
 
-#<a name="dotnet-build"></a>dotnet-build
+#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build (Tooling Preview 4)
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 4 de Visual Studio 2017 RC. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-build](../../tools/dotnet-build.md).
 
 ## <a name="name"></a>Nombre 
 dotnet-build: compila un proyecto y todas sus dependencias 
@@ -31,7 +34,7 @@ dotnet-build: compila un proyecto y todas sus dependencias
 ## <a name="description"></a>Descripción
 
 El comando `dotnet build` compila varios archivos de origen de un proyecto de origen y sus dependencias en un archivo binario. De forma predeterminada, el archivo binario resultante está en lenguaje intermedio (IL) y tiene una extensión DLL. 
-`dotnet build`También quita un archivo `\*.deps` que describe lo que necesita el host para ejecutar la aplicación.  
+`dotnet build`También quita un archivo `*.deps` que describe lo que necesita el host para ejecutar la aplicación.  
 
 La compilación requiere la existencia de un archivo de recursos (un archivo que enumere todas las dependencias de la aplicación), lo que significa que tiene que ejecutar [`dotnet restore`](dotnet-restore.md) antes de compilar el código.
 
@@ -100,6 +103,6 @@ Compilación de un proyecto y sus dependencias para un tiempo de ejecución espe
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

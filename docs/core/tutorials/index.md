@@ -3,16 +3,15 @@ title: Tutoriales de .NET Core
 description: Tutoriales de .NET Core
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/24/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 9ab2f607e8ec5a24712ced5eec688894ca8ae394
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 1829b32f1a5f92c5ee065c3107750621681ac82c
 
 ---
 
@@ -27,9 +26,9 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0](managing-package-dependency-versions.md)
 - [Uso de MSBuild para compilar proyectos .NET Core](target-dotnetcore-with-msbuild.md)
 
-Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](https://docs.asp.net).
+Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

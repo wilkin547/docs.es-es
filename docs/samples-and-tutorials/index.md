@@ -3,16 +3,15 @@ title: Ejemplos y tutoriales
 description: Ejemplos y tutoriales
 keywords: .NET
 author: BillWagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/25/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-technologies
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 8c3a58f97c9cb70e168a055cd874ee10ebb08c54
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 
 ---
 
@@ -22,7 +21,7 @@ Disponemos de un catálogo completo de ejemplos y tutoriales que puede usar para
 
 Puede encontrar excelentes recursos para obtener información sobre el lenguaje de programación en el [sitio de la Fundación F #](http://fsharp.org/learn.html). 
 
-Puede encontrar excelentes recursos para obtener información sobre ASP.NET Core en el [sitio de ASP.NET](https://docs.asp.net/en/latest/tutorials/index.html).
+Puede encontrar excelentes recursos para obtener información sobre ASP.NET Core en el [sitio de ASP.NET](https://docs.microsoft.com/aspnet/core/tutorials/).
 
 Además, si está interesado en explorar C# usando un área de juegos en línea, consulte estos [tutoriales interactivos](http://go.microsoft.com/fwlink/?LinkId=817234).
 
@@ -99,6 +98,6 @@ Una versión completa del código que se va a crear se encuentra [en el reposito
 Este tutorial muestra cómo implementar una aplicación de consola existente en un contenedor de Windows. Una versión completa del código que se va a crear se encuentra [en el repositorio core-docs de GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
