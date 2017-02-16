@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: f9ffbb2e300df2080276096095a7269736260ba1
-ms.openlocfilehash: d56ddc264d861081f0b808711cccd489a374c0b8
+ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
+ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
 
 ---
 
@@ -35,7 +35,7 @@ Puede ver el conjunto completo de tiempos de ejecución de .NET que admiten la b
 | Nombre de la plataforma | Alias |  |  |  |  |  | | | |
 | :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
 |Estándar .NET | netstandard | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 | 2.0 |
-|Núcleo de .NET|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|vNext|
+|Núcleo de .NET|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|2.0|
 |.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|vNext|4.6.1|
 |Plataformas Mono/Xamarin||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|vNext|
 |Plataforma universal de Windows|uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|&rarr;|&rarr;|vNext|
@@ -85,7 +85,7 @@ El principal vehículo de distribución de los ensamblados de referencia de la b
 
 Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de la biblioteca estándar de .NET tienen como destino el marco ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md) `netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varios tiempos de ejecución deben tener como destino este marco. 
 
-El metapaquete `NETStandard.Library` hace referencia al conjunto completo de paquetes NuGet que definen la biblioteca estándar de .NET.  La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente 40 bibliotecas de .NET y las API asociadas que definen la Biblioteca estándar de .NET. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API. 
+El metapaquete `NETStandard.Library` hace referencia al conjunto completo de paquetes NuGet que definen la biblioteca estándar de .NET.  La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente&40; bibliotecas de .NET y las API asociadas que definen la Biblioteca estándar de .NET. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API. 
 
 ### <a name="versioning"></a>Control de versiones
 
@@ -134,6 +134,6 @@ Puede [compilar bibliotecas estándar de .NET](../core/tutorials/libraries.md) m
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
