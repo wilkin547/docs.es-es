@@ -1,22 +1,25 @@
 ---
-title: Comando dotnet-test | SDK de .NET Core
-description: El comando &quot;dotnet test&quot; se usa para ejecutar pruebas unitarias en un proyecto determinado.
+title: Comando dotnet-test | Microsoft Docs
+description: El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado.
 keywords: dotnet-test, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
+ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
+ms.sourcegitcommit: 02f39bc959a56ab0fc2cfa57ce13f300a8a46107
+ms.openlocfilehash: 204ebdb5a945dcd0c9277f1d95c113e829303b32
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+#<a name="dotnet-test-net-core-tools-rc4"></a>dotnet-test (.NET Core Tools RC4)
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-test](../../tools/dotnet-test.md).
 
 ## <a name="name"></a>Nombre
 
@@ -25,10 +28,10 @@ ms.openlocfilehash: 66c9f949980612f6e21b6d441c004cc09f4eb7d3
 ## <a name="synopsis"></a>Sinopsis
 
 `dotnet test [project] [--help] 
-    [--settings] [--listTests] [--testCaseFilter] 
-    [--testAdapterPath] [--logger] 
-    [--configuration] [--output] [--framework] [--diag]
-    [--noBuild]`  
+    [--settings] [--list-tests] [--filter] 
+    [--test-adapter-path] [--logger] 
+    [--configuration] [--framework] [--output] [--diag]
+    [--no-build] [--verbosity]`
 
 ## <a name="description"></a>Descripción
 
@@ -36,42 +39,7 @@ El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto d
 
 Los proyectos de prueba también necesitan especificar el ejecutor de la prueba. Para ello se utiliza un elemento `<PackageReference>` ordinario, como se puede ver en el siguiente archivo de proyecto de ejemplo:
 
-```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>15.0.0-preview-20161024-02</Version>
-    </PackageReference>
-    <PackageReference Include="xunit">
-      <Version>2.2.0-beta3-build3402</Version>
-    </PackageReference>
-    <PackageReference Include="xunit.runner.visualstudio">
-      <Version>2.2.0-beta4-build1188</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-```
+[!code-xml[Plantilla de XUnit Basic](../../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Opciones
 
@@ -83,49 +51,49 @@ Especifica una ruta de acceso al proyecto de prueba. Si se omite, se toma como p
 
 Imprime una corta ayuda para el comando.
 
-`-s | --settings <SETTINGS_FILE>`
+`-s|--settings <SETTINGS_FILE>`
 
 Configuración que se usará al ejecutar las pruebas. 
 
-`-lt | --listTests`
+`-t|--list-tests`
 
 Enumera todas las pruebas detectadas en el proyecto actual. 
 
-`-tcf | --testCaseFilter <EXPRESSION>`
+`--filter <EXPRESSION>`
 
-Filtrar las pruebas del proyecto actual con la expresión dada. 
+Filtra las pruebas del proyecto actual con la expresión dada. Para más información sobre la compatibilidad de filtrado, consulte [Running selective unit tests in Visual Studio using TestCaseFilter](https://aka.ms/vstest-filtering) (Ejecutar pruebas unitarias selectivas en Visual Studio mediante TestCaseFilter).
 
-`-tap | --testAdapterPath <TEST_ADAPTER_PATH>`
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Usa los adaptadores de prueba personalizados desde la ruta especificada en esta ejecución de pruebas. 
+Use los adaptadores de prueba personalizados en la ruta especificada de esta ejecución de pruebas. 
 
-`--logger <LOGGER>`
+`-l|--logger <LoggerUri/FriendlyName>`
 
-Especifica un registrador para resultados de pruebas. 
+Especifica un registrador para los resultados de pruebas. 
 
 `-c|--configuration <Debug|Release>`
 
-Configuración con la que se va a realizar la compilación. El valor predeterminado es `Release`. 
+Configuración con la que se va a realizar la compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración del SDK predeterminada.
 
-`-o|--output [OUTPUT_DIRECTORY]`
-
-Directorio donde se encuentran los archivos binarios que se ejecutarán.
-
-`-f|--framework [FRAMEWORK]`
+`-f|--framework <FRAMEWORK>`
 
 Busca archivos binarios de prueba para un marco específico.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Busca archivos binarios de prueba para el tiempo de ejecución especificado.
+Directorio donde se encuentran los archivos binarios que se ejecutarán.
 
-`--noBuild` 
-
-No compila el proyecto de prueba antes de ejecutarlo. 
-
-`-d | --diag <DIAGNOSTICS_FILE>`
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
 Habilita el modo de diagnóstico para la plataforma de prueba y escribe mensajes de diagnóstico en el archivo especificado. 
+
+`--no-build` 
+
+No compila el proyecto de prueba antes de ejecutarlo.
+
+`-v|--verbosity [quiet|minimal|normal|diagnostic]`
+
+Establece el nivel de detalle del comando. Puede especificar los siguientes niveles de detalle: q[uiet], m[inimal], n[ormal], d[etailed] y diag[nostic]. 
 
 ## <a name="examples"></a>Ejemplos
 
@@ -145,6 +113,6 @@ Ejecución de las pruebas en el proyecto test1:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

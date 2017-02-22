@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-restore | SDK de .NET Core
+title: Comando dotnet-restore | Microsoft Docs
 description: "Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore."
 keywords: dotnet-restore, CLI, comando de la CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 3c6c651aebfac0c27f340021d7779d37aa8bfe38
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
 
 ---
 
-#<a name="dotnetrestore"></a>dotnet-restore
+#<a name="dotnet-restore"></a>dotnet-restore
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión de .NET Core Tools RC4, consulte el tema [dotnet-restore (.NET Core Tools RC4)](../preview3/tools/dotnet-restore.md).
 
-`dotnet-restore`- Restaura las dependencias y las herramientas de un proyecto.
+## <a name="name"></a>Nombre
+
+`dotnet-restore`: restaura las dependencias y las herramientas de un proyecto.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -111,6 +114,6 @@ Restauración de dependencias y herramientas para el proyecto en el directorio a
 `dotnet restore --verbosity Error`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

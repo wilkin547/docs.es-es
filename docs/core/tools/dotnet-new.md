@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a49fe94ca8f678c614fb7f58767693c73e34c737
 
 ---
 
 #<a name="dotnet-new"></a>dotnet-new
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [dotnet-new (Tooling Preview 4)](../preview3/tools/dotnet-new.md).
+> Este tema se aplica a .NET Core Tools Preview 2. Para más información sobre la versión de .NET Core Tools RC4, consulte el tema [dotnet-new (.NET Core Tools RC4)](../preview3/tools/dotnet-new.md).
 
 ## <a name="name"></a>Nombre
 `dotnet-new`: crea un nuevo proyecto de .NET Core en el directorio actual.
@@ -66,6 +66,6 @@ Creación de un nuevo proyecto de aplicación con C# de ASP.NET Core en el direc
 `dotnet new -t web`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

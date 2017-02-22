@@ -10,12 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 ---
 
 # <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core #
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools RC4, consulte el tema [Modelo de extensibilidad de la CLI de .NET Core (.NET Core Tools RC4)](../preview3/deploying/index.md).
 
 Puede crear dos tipos de implementaciones para aplicaciones .NET Core: 
 
@@ -391,6 +394,6 @@ El siguiente es el archivo `project.json` completo para este proyecto.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

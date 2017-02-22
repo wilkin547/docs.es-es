@@ -1,5 +1,5 @@
 ---
-title: "Creación de una solución completa de .NET Core en Windows con Visual Studio 2017"
+title: "Creación de una solución completa de .NET Core en Windows con Visual Studio 2017 | Microsoft Docs"
 description: "Creación de una solución completa de .NET Core en Windows con Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
@@ -8,16 +8,17 @@ ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
-ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
+ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 9e65979d2f41e39e89109c2c5480acaebbef757f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 04f5264eaaa16be299e0d72f587ee232a5e61ca9
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Creación de una solución completa de .NET Core en Windows con Visual Studio 2017
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-net-core-tools-rc4"></a>Creación de una solución completa de .NET Core en Windows con Visual Studio 2017 (.NET Core Tools RC4)
 
-por [Bertrand Le Roy](https://github.com/bleroy) y [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [Introducción a .NET Core en Windows con Visual Studio 2015](../../tutorials/using-on-windows.md).
 
 Visual Studio 2017 proporciona un entorno de desarrollo completo para las aplicaciones .NET Core. Los procedimientos de este documento describen los pasos necesarios para compilar una solución típica de .NET Core que incluye bibliotecas reutilizables, pruebas y el uso de bibliotecas de terceros. 
 
@@ -66,7 +67,7 @@ Siga las instrucciones de [nuestra página de requisitos previos](../windows-pre
 
 ### <a name="writing-the-console-app"></a>Escritura de la aplicación de consola
 
-1. En el Explorador de soluciones, abra el menú contextual de la solución y agregue un nuevo proyecto **Aplicación de consola (.NET Core)**. Asígnele el nombre de "App" y establezca la ubicación en `Golden\src`.
+1. En el Explorador de soluciones, abra el menú contextual de la solución y agregue un nuevo proyecto **Aplicación de consola (.NET Core)**. Asígnele el nombre "App".
 
 2. En el proyecto **App**, abra el menú contextual del nodo **Dependencias** y elija **Agregar**, **Referencia**. 
 
@@ -74,7 +75,7 @@ Siga las instrucciones de [nuestra página de requisitos previos](../windows-pre
 
 6. Abra el menú contextual por el nodo **App** y elija **Establecer como proyecto de inicio**. Esto garantiza que al presionar F5 o CTRL+F5 se iniciará la aplicación de consola.
 
-7. Abra el archivo `Program.cs`, agregue una directiva `using Library;` en la parte superior del archivo y, después, agregue `Console.WriteLine($"The answer is {new Thing().Get(42)}");` al método `Main`.
+7. Abra el archivo `Program.cs`, agregue una directiva `using Library;` en la parte superior del archivo y, después, agregue `Console.WriteLine($"The answer is {new Thing().Get(42)}.");` al método `Main`.
 
 8. Establezca un punto de interrupción después de la línea que acaba de agregar.
 
@@ -84,6 +85,6 @@ Siga las instrucciones de [nuestra página de requisitos previos](../windows-pre
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

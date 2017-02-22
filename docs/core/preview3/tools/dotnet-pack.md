@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-pack | SDK de .NET Core
+title: Comando dotnet-pack | Microsoft Docs
 description: El comando dotnet-pack crea paquetes de NuGet para el proyecto .NET Core.
 keywords: dotnet-pack, CLI, comando de la CLI, .NET Core
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
+ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8e266f9b34923b0ab69140d78a20afeca00e0b7c
 
 ---
 
-#<a name="dotnet-pack"></a>dotnet-pack
+#<a name="dotnet-pack-net-core-tools-rc4"></a>dotnet-pack (.NET Core Tools RC4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-pack](../../tools/dotnet-pack.md).
 
-`dotnet-pack`-Empaqueta el código en un paquete de NuGet
+## <a name="name"></a>Nombre
+
+`dotnet-pack`: empaqueta el código en un paquete de NuGet.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -32,9 +35,9 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet pack` compila el proyecto y crea paquetes de NuGet. El resultado de este comando es un paquete de nuget. Si la opción `--include-symbols` está presente, se crea otro paquete que contiene los símbolos de depuración. 
+El comando `dotnet pack` compila el proyecto y crea paquetes de NuGet. El resultado de este comando es un paquete de NuGet. Si la opción `--include-symbols` está presente, se crea otro paquete que contiene los símbolos de depuración. 
 
-Las dependencias de NuGet del proyecto que se empaquetan se agregan al archivo nuspec, por lo que se pueden resolver cuando se instala el paquete. Las referencias de proyecto a proyecto no se empaquetan dentro del proyecto. Actualmente, debe disponer de un paquete por proyecto si tiene dependencias de proyecto a proyecto.
+Las dependencias de NuGet del proyecto que se empaquetan se agregan al archivo `nuspec`, por lo que se pueden resolver cuando se instala el paquete. Las referencias de proyecto a proyecto no se empaquetan dentro del proyecto. Actualmente, debe disponer de un paquete por proyecto si tiene dependencias de proyecto a proyecto.
 
 `dotnet pack`de forma predeterminada, primero compila el proyecto. Si desea evitar esto, pase la opción `--no-build`. Esto puede ser útil en escenarios de compilación de integración continua (CI) en el que conoce el código que se compiló anteriormente. 
 
@@ -58,7 +61,7 @@ No compila el proyecto antes de empaquetarlo.
 
 `--include-source`
 
-Incluye los archivos de origen en el paquete de nuget. Los archivos de origen se incluyen en la carpeta `src` dentro de nupkg. 
+Incluye los archivos de origen en el paquete de NuGet. Los archivos de origen se incluyen en la carpeta `src` dentro de `nupkg`. 
 
 `--include-symbols`
 
@@ -95,7 +98,6 @@ Empaquetado del proyecto actual y actualización de la versión de los paquetes 
 `dotnet pack --version-suffix "ci-1234"`
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

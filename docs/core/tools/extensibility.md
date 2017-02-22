@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 48f06f0af3768f7129e0a2b3a89bbdc7795959dc
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0a136e69e103994a69084b09f481489880d5df42
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>Modelo de extensibilidad de la CLI de .NET Core 
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [Modelo de extensibilidad de la CLI de .NET Core (Tooling Preview 4)](../preview3/tools/extensibility.md).
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión de .NET Core Tools RC4, consulte el tema [Modelo de extensibilidad de la CLI de .NET Core (.NET Core Tools RC4)](../preview3/tools/extensibility.md).
 
 ## <a name="overview"></a>Información general
 En este documento se tratan las principales formas de ampliar las herramientas de la CLI y se explican los escenarios que impulsan cada una. Se describe cómo consumir las herramientas y se proporcionan notas cortas sobre cómo compilar ambos tipos de herramientas. 
@@ -135,6 +135,6 @@ Las herramientas de la CLI de .NET Core permiten dos puntos de extensibilidad pr
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

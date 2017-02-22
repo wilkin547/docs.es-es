@@ -10,15 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
-ms.openlocfilehash: 446ada6d325a81f9c0078e4771866d99af341aed
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 29019587d2d847c5184d07024fa763c8af805d50
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>Introducción a .NET Core en Windows con Visual Studio 2015
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2 de Visual Studio 2015 RC. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [Introducción a .NET Core en Windows con Visual Studio 2017](../preview3/tutorials/using-on-windows-vs-2017.md).
+> Este tema se aplica a .NET Core Tools Preview 2 de Visual Studio 2015 RC. Para la versión de .NET Core Tools RC4, consulte el tema [Introducción a .NET Core en Windows con Visual Studio 2017](../preview3/tutorials/using-on-windows-vs-2017.md).
 
 Visual Studio 2015 proporciona un entorno de desarrollo completo para el desarrollo de aplicaciones .NET Core. Los procedimientos descritos en este documento describen los pasos necesarios para crear un número de soluciones .NET Core típicas o soluciones que incluyen componentes de .NET Core, con Visual Studio. Los escenarios incluyen pruebas y el uso de bibliotecas de terceros que no se han creado explícitamente para la versión más reciente de .NET Core. 
 
@@ -229,11 +229,11 @@ Cierre la solución anterior si estaba abierta: se iniciará un nuevo script des
 -------------------------------------
 Las herramientas de Biblioteca de clases portable pueden modificar automáticamente la PCL en .NET Standard de destino. 
 
-1.  Haga doble clic en el nodo "Propiedades" para abrir la página de propiedades del proyecto 
+1.    Haga doble clic en el nodo "Propiedades" para abrir la página de propiedades del proyecto 
 
-2.  En el “Targeting header” (Encabezado de destino), haga clic en el hipervínculo “Usar como destino la plataforma del estándar .NET”.
+2.    En el “Targeting header” (Encabezado de destino), haga clic en el hipervínculo “Usar como destino la plataforma del estándar .NET”.
 
-3.  Haga clic en "Sí" cuando se le pida confirmación.
+3.    Haga clic en "Sí" cuando se le pida confirmación.
 
 Las herramientas seleccionarán automáticamente la versión de .NET Standard que incluye todos los destinos dirigidos originalmente por la PCL. Se puede tener como destino una versión diferente de .NET Standard mediante la lista desplegable .NET estándar en la página de propiedades del proyecto.
  
@@ -241,17 +241,17 @@ Las herramientas seleccionarán automáticamente la versión de .NET Standard qu
 
 ### <a name="manually-edit-projectjson-to-target-net-standard-from-an-existing-portable-class-library"></a>Edite manualmente el archivo project.json para usar como destino .NET Standard desde una biblioteca de clases portable existente.
 
-1.  Si el archivo project.json contiene "dnxcore50" en el elemento "supports", quítelo.
+1.    Si el archivo project.json contiene "dnxcore50" en el elemento "supports", quítelo.
 
-2.  Quite la dependencia en "Microsoft.NETCore".
+2.    Quite la dependencia en "Microsoft.NETCore".
 
-3.  Modifique la dependencia en "Microsoft.NETCore.Portable.Compatibility" versión "1.0.0" a "1.0.1".
+3.    Modifique la dependencia en "Microsoft.NETCore.Portable.Compatibility" versión "1.0.0" a "1.0.1".
 
-4.  Agregue una dependencia en "NETStandard.Library" versión "1.6.0".
+4.    Agregue una dependencia en "NETStandard.Library" versión "1.6.0".
 
-5.  En el elemento "frameworks", quite la plataforma "dotnet" (y el elemento "imports" dentro de ella).
+5.    En el elemento "frameworks", quite la plataforma "dotnet" (y el elemento "imports" dentro de ella).
 
-6.  Agregue ` "netstandard1.x” : { } ` al elemento frameworks, donde x se reemplaza por la versión de .NET Standard que desea usar como destino.
+6.    Agregue ` "netstandard1.x” : { } ` al elemento frameworks, donde x se reemplaza por la versión de .NET Standard que desea usar como destino.
 
 ### <a name="example-projectjson"></a>Archivo project.json de ejemplo
 
@@ -276,6 +276,6 @@ Este archivo project.json incluye cláusulas para UWP y .NET 4.6 y usa como dest
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

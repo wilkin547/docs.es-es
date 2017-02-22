@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 4ef9e076e3afb4cf5c96c627dc102da1ff2c8ce0
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [Referencia de scripts de dotnet-install (Tooling Preview 4)](../preview3/tools/dotnet-install-script.md).
+> Este tema se aplica a .NET Core Tools Preview 2. Para más información sobre la versión .NET Core Tools RC4, consulte el tema [dotnet-install (.NET Core Tools RC4)](../preview3/tools/dotnet-install-script.md).
 
 ## <a name="name"></a>Nombre
 `dotnet-install.ps1` | `dotnet-install.sh`: script usado para instalar las herramientas de la interfaz de línea de comandos (CLI) y el entorno de tiempo de ejecución compartido.
@@ -129,6 +129,6 @@ macOS y Linux:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,22 +1,25 @@
 ---
-title: Comando dotnet | SDK de .NET Core
+title: Comando dotnet | Microsoft Docs
 description: "Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso."
 keywords: dotnet, CLI, comandos de la CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 77c37ac3d4d0ba9ad1feac539debe40b0ee31161
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6a4bc5dad16bb1455fd8f7bc6a5c3609a06b88a
 
 ---
 
 #<a name="dotnet-command"></a>comando dotnet
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para más información sobre la versión de .NET Core Tools RC4, consulte el tema [Comando dotnet (.NET Core Tools RC4)](../preview3/tools/dotnet.md).
 
 ## <a name="name"></a>Nombre
 
@@ -84,7 +87,9 @@ Compilación de un proyecto y sus dependencias en un directorio determinado:
 
 `dotnet build`
 
-Ejecución de una aplicación portátil con nombre `myapp.dll`: `dotnet myapp.dll`
+Ejecución de una aplicación portátil denominada `myapp.dll`:
+
+`dotnet myapp.dll`
 
 ## <a name="environment"></a>Entorno 
 
@@ -101,6 +106,6 @@ Especifica la ubicación del índice de mantenimiento que usará el host compart
 Especifica si se recopilan datos sobre el uso de herramientas de .NET Core y se envían a Microsoft. `true` para desactivar la característica de telemetría (valores true, 1 o sí aceptado); de lo contrario, `false` (valores false, 0 o no aceptado). Si no se establece, se toma como predeterminado `false`, es decir, la característica de telemetría está activada.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-publish | .NET Core SDK
+title: Comando dotnet-publish | Microsoft Docs
 description: El comando dotnet-publish publica el proyecto de .NET Core en un directorio.
 keywords: dotnet-publish, CLI, comando de la CLI, .NET Core
 author: blackdwarf
@@ -9,18 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
+ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: e480c32faa22859de74e06f3a199fba1c0720c46
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0d222382640fc239760f8f51c69f1f306674d7ca
 
 ---
 
-#<a name="dotnet-publish"></a>dotnet-publish
+#<a name="dotnet-publish-net-core-tools-rc4"></a>dotnet-publish (.NET Core Tools RC4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-publish](../../tools/dotnet-publish.md).
 
-`dotnet-publish` - Empaqueta la aplicación y todas sus dependencias en una carpeta y lo deja listo para publicarse
+## <a name="name"></a>Nombre
+
+`dotnet-publish`: empaqueta la aplicación y todas sus dependencias en una carpeta y la deja lista para publicarse.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -94,6 +97,6 @@ Publica la aplicación actual con el marco `netcoreapp1.0` y el entorno de tiemp
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
