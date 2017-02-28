@@ -13,6 +13,7 @@ ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
 translationtype: Human Translation
 ms.sourcegitcommit: 300a0304e316cfa265634a3faf74c81c7a8a5e08
 ms.openlocfilehash: d863587fbfee2bf713f8566a3e5b294d49ae50e9
+ms.lasthandoff: 11/16/2016
 
 ---
 
@@ -64,9 +65,4 @@ Y ahora tiene los archivos necesarios para publicar un paquete de NuGet.
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`No confunda `dotnet publish` con
 
 Es importante tener en cuenta que en ningún momento participa el comando `dotnet publish`.  El comando `dotnet publish` es para la implementación de aplicaciones con todas sus dependencias en el mismo paquete, no para generar un paquete de NuGet para distribuir y consumir a través de NuGet.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
