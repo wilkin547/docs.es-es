@@ -4,20 +4,20 @@ description: "Lenguaje de expresiones regulares: referencia rápida"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8c5dee8c-7bc7-4e6e-aff1-986965c4d98e
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ff1eef78985f9b5b428f3b696fb267b59f3cb283
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a6644fc2431beafa2128287eeac73bd598ee304a
+ms.lasthandoff: 03/02/2017
 
 ---
 
-# <a name="regular-expression-language-quick-reference"></a>Lenguaje de expresiones regulares: referencia rápida
+# <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares: referencia rápida
 
 Una expresión regular es un modelo con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras. Para obtener una breve introducción, consulte [Expresiones regulares en .NET](regular-expressions.md). 
 
@@ -145,7 +145,7 @@ Una referencia inversa permite identificar una subexpresión coincidente previam
 
 Construcción de referencias inversas | Descripción | Modelo | Coincidencias
 ----------------------- | ----------- | ------- | -------
-**\**_número_ | Referencia inversa. Coincide con el valor de una subexpresión numerada. | `(\w)\1 ` | "aa" en "aarón"
+**\**_número_ | Referencia inversa. Coincide con el valor de una subexpresión numerada. | `(\w)\1    ` | "aa" en "aarón"
 **\k<**_nombre_**>** | Referencia inversa con nombre Coincide con el valor de una expresión con nombre. | `(?<char>\w)\k<char>` | "aa" en "aarón"
 
 ## <a name="alternation-constructs"></a>Construcciones de alternancia
@@ -221,9 +221,4 @@ Construcción | Definición | Ejemplo
 [Descarga en formato Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
     
 [Descarga en formato PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
