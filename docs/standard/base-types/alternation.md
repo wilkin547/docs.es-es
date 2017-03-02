@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 59ffac4d-fc6e-461f-8783-d9f8dc88ce2c
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2c31622ff97f30e565ed2cd82128518d04d5d1dc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fa2a880e5bcc36354bd59d3dc032180c89984f1d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -100,7 +101,7 @@ Modelo | Descripción
 `\b` | Empieza en un límite de palabras.
 `gr` | Coincide con los caracteres "gr".
 `(a|e)` | Coincide con una "a" o una "e".
-`y\b` | Coincide con una "y" en un límite de palabras.
+`y\b` |    Coincide con una "y" en un límite de palabras.
 
 
 El carácter | también se puede usar para realizar una coincidencia either/or con varios caracteres o subexpresiones, que pueden incluir cualquier combinación de literales de carácter y elementos de lenguaje de expresión regular. (La clase de caracteres no proporciona esta funcionalidad). En el ejemplo siguiente, se usa el carácter | para extraer un número de la seguridad social (SSN) de EE. UU., de nueve dígitos y en formato *ddd-dd-dddd*, o un número de identificación de empleador (EIN), de nueve dígitos y en formato *dd-ddddddd*.
@@ -329,10 +330,5 @@ End Module
 Vea también
 
 [Lenguaje de expresiones regulares: referencia rápida](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

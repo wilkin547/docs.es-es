@@ -3,16 +3,17 @@ title: Desarrollo de bibliotecas con herramientas multiplataforma
 description: Desarrollo de bibliotecas con herramientas multiplataforma
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 translationtype: Human Translation
-ms.sourcegitcommit: 0882a5ca2f7814e2fd168dce40705d11b199f102
-ms.openlocfilehash: caf72bec4a5d3276d1fdeafc4fa3816e5f00c296
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7f419e1fc2c9f442b08e19ede4e84f9cf6843a94
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -63,7 +64,7 @@ La versión del estándar de la plataforma .NET que elija será un equilibrio en
 
 Además, el correspondiente [paquete NuGet del que se depende](https://www.nuget.org/packages/NETStandard.Library/) es `NETStandard.Library` versión `1.6.0`.  A pesar de que nada evita que dependa de `Microsoft.NETCore.App` como ocurre con las aplicaciones de consola, en general no se recomienda.  Si necesita API de un paquete que no está especificado en `NETStandard.Library`, siempre puede especificar ese paquete además de `NETStandard.Library` en la sección `dependencies` del archivo `project.json`.
 
-En función de sus necesidades, tiene 3 opciones principales cuando el destino es el estándar .NET.
+En función de sus necesidades, tiene&3; opciones principales cuando el destino es el estándar .NET.
 
 1. Puede usar la versión más reciente del estándar .NET, `netstandard1.6`, que es cuando desea acceso a la mayoría de las API y no importa si tiene menos alcance entre las implementaciones.
 2. Puede usar una versión inferior del estándar .NET para tener como destino las implementaciones .NET anteriores. El costo aquí es que no tiene acceso a algunas de las API más recientes.
@@ -485,7 +486,7 @@ Escenarios de consumo similares a este significan que las API a las que se tiene
 * **AwesomeLibrary.CSharp**: un proyecto con API públicas pensado para el consumo en C.#
 * **AwesomeLibrary.FSharp**: un proyecto con API públicas pensado para el consumo en F.#
 
-### <a name="projecttoproject-referencing"></a>Referencias entre proyectos
+### <a name="project-to-project-referencing"></a>Referencias entre proyectos
 
 La mejor forma de hacer referencia a un proyecto es la siguiente:
 
@@ -576,9 +577,4 @@ $ dotnet test
 ```
 
 Y listo.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

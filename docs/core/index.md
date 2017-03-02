@@ -3,16 +3,16 @@ title: "Núcleo de .NET"
 description: "Núcleo de .NET"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 8ada0e4c57febd4068be69330e7f9633517ce7ff
-ms.openlocfilehash: 8b6b38aa7f59002dcfbb229ce6522df67b611028
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 26210b19de4f7bf70c085735771b0175945f38d4
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -152,9 +152,4 @@ Las principales diferencias entre .NET Core y Mono:
 - **Plataformas**Mono admite muchas plataformas y CPU.
 - **Código abierto**Mono y .NET Core usan la licencia MIT y son proyectos de .NET Foundation.
 - **Enfoque**: el foco principal de Mono en los últimos años es plataformas móviles, aunque .NET Core se centra en las cargas de trabajo de la nube.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

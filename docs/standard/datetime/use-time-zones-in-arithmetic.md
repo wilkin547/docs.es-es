@@ -3,16 +3,17 @@ title: "Cómo usar zonas horarias en operaciones aritméticas de fecha y hora"
 description: "Cómo usar zonas horarias en operaciones aritméticas de fecha y hora"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 26870cdc-1709-4978-831b-ff2a2f24856f
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 735ae2f1d11ddf6b88b40c7b89083a45d1f07523
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a86471972d42adcbc412cc8eeb300410ca8a9c42
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -170,9 +171,4 @@ Los valores [DateTimeOffset](xref:System.DateTimeOffset) están desasociados de 
 [Fechas, horas y zonas horarias](index.md)
 
 [Efectuar operaciones aritméticas con fechas y horas](performing-arithmetic-operations.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

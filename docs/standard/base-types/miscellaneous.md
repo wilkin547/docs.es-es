@@ -4,16 +4,16 @@ description: "Construcciones misceláneas en expresiones regulares"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 478901dc-db6c-4d90-9d3b-f5cfdca2cbf5
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 477332f4009790727686aa3d91e35509e3766903
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 6b8e39902dc735cac72864024033fe5cc14fb55a
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -228,7 +228,7 @@ End Module
 '       Group 1: Dreaded
 ```
 
-## <a name="endofline-comment"></a>Comentario de final de línea
+## <a name="end-of-line-comment"></a>Comentario de final de línea
 
 Un signo de número (**#**) marca un comentario en modo X, que empieza en el carácter # sin escape al final del patrón de expresión regular y continúa hasta el final de la línea. Para usar esta construcción, debe habilitar la opción **x** (mediante opciones insertadas) o proporcionar el valor [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace) al parámetro *option* al crear una instancia del objeto [Regex](xref:System.Text.RegularExpressions.Regex) o al llamar al método [Regex](xref:System.Text.RegularExpressions.Regex) estático. 
 
@@ -294,10 +294,5 @@ Tenga en cuenta que, en lugar de proporcionar la construcción `(?x)` en la expr
 ## <a name="see-also"></a>Vea también
 
 [Lenguaje de expresiones regulares: referencia rápida](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

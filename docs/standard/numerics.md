@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
-ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 8e2aad830bdaccad6e8184fa462dd0d3157fd6c9
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -74,9 +75,4 @@ Los tipos de vector habilitados para SIMD en .NET Core incluyen los siguientes:
 * Dos tipos de matriz: [System.Numerics.Matrix3x2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix3x2), que representa una matriz de 3x2, y [System.Numerics.Matrix4x4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix4x4), que representa una matriz de 4x4. 
 
 * El tipo [System.Numerics.Plane](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Plane), que representa un plano tridimensional, y el tipo [System.Numerics.Quaternion](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Quaternion), que representa un vector que se usa para codificar rotaciones físicas tridimensionales.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

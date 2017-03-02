@@ -4,16 +4,15 @@ description: Paquetes, metapaquetes y marcos de trabajo
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -126,7 +125,7 @@ El marco de trabajo `.NETFramework,Version=4.6` representa las API disponibles e
 
 El marco de trabajo `.NETStandard,Version=1.3` está basado en paquete. Se basa en paquetes que tienen como destino el marco de trabajo para definir y exponer las API en términos del marco de trabajo.
 
-## <a name="packagebased-frameworks"></a>Marcos de trabajo basadas en paquete
+## <a name="package-based-frameworks"></a>Marcos de trabajo basadas en paquete
 
 Existe una relación recíproca entre los marcos de trabajo y los paquetes. La primera parte es definir las API disponibles para un marco de trabajo determinado, por ejemplo, `netstandard1.3`. Los paquetes que tienen como destino `netstandard1.3` (o marcos de trabajo compatibles, como `netstandard1.0`) definen las API disponibles para `netstandard1.3`. Esto puede parecer una definición circular, pero no lo es. En virtud de estar "basada en paquete", la definición de API del marco de trabajo proviene de los paquetes. El marco de trabajo mismo no define a ninguna API.
 
@@ -147,7 +146,7 @@ Los dos principales marcos de trabajo basados en paquete que se usan con .NET Co
 
 El marco de trabajo del estándar .NET (TFM: `netstandard`) representa las API definidas por la [Biblioteca estándar de .NET](../standard/library.md) y que se basan en ella. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admitirán en cualquier entorno de ejecución compatible con el estándar .NET, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan. 
 
-El metapaquete `NETStandard.Library` tiene como destino el marco de trabajo `netstandard`. La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente 40 bibliotecas de .NET y las API asociadas que definen la Biblioteca estándar de .NET. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API.
+El metapaquete `NETStandard.Library` tiene como destino el marco de trabajo `netstandard`. La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente&40; bibliotecas de .NET y las API asociadas que definen la Biblioteca estándar de .NET. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API.
 
 Una [versión de NETStandard.Library](versions/index.md) coincide con la versión más alta de `netstandard` que se expuso (a través de su clausura). La referencia de marco de trabajo en project.json se usa para seleccionar los recursos correctos en los paquetes subyacentes. En este caso, se requieren los recursos de `netstandard1.6`, en contraposición a `netstandard1.4` o `net46`, por ejemplo. 
 
@@ -183,11 +182,6 @@ Lo contrario no sería válido: establecer `netstandard1.6` como destino con la 
 
 El marco de trabajo de la aplicación .NET Core (TFM: `netcoreapp`) representa los paquetes y las API asociadas que se incluyen en la distribución de .NET Core y el modelo de aplicación de consola que proporciona. Las aplicaciones .NET Core deben usar este marco de trabajo, debido a que intentan establecer el modelo de aplicación de consola como destino, al igual que las bibliotecas que se pretende ejecutar solo en .NET Core. Usar este marco de trabajo restringe a las aplicaciones y bibliotecas solo a su ejecución en .NET Core. 
 
-El metapaquete `Microsoft.NETCore.App` tiene como destino el marco de trabajo `netcoreapp`. Proporciona acceso aproximadamente a 60 bibliotecas, de las cuales el paquete `NETStandard.Library` proporciona unas 40, además de otras 20. Puede hacer referencia a bibliotecas adicionales que establecen como destino a `netcoreapp` o marcos de trabajo compatibles, como `netstandard`, para obtener acceso a API adicionales. 
+El metapaquete `Microsoft.NETCore.App` tiene como destino el marco de trabajo `netcoreapp`. Proporciona acceso aproximadamente a&60; bibliotecas, de las cuales el paquete `NETStandard.Library` proporciona unas&40;, además de otras&20;. Puede hacer referencia a bibliotecas adicionales que establecen como destino a `netcoreapp` o marcos de trabajo compatibles, como `netstandard`, para obtener acceso a API adicionales. 
 
 La mayoría de las bibliotecas adicionales que `Microsoft.NETCore.App` proporciona también establecen como destino a `netstandard`, dado que otras bibliotecas `netstandard` satisfacen sus dependencias. Esto significa que las bibliotecas `netstandard` también pueden hacer referencia a esos paquetes como dependencias. 
-
-
-<!--HONumber=Nov16_HO1-->
-
-

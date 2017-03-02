@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 translationtype: Human Translation
-ms.sourcegitcommit: 1cb9e19ec9c9c0764244aeec5f62b812cbd91aef
-ms.openlocfilehash: 8cc784c267e9ca85ae110f8c92e0191f6fee6596
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
+ms.lasthandoff: 03/02/2017
 
 ---
  
@@ -112,7 +113,7 @@ cd api
 dotnet restore
 ```
 
-Pruebe la aplicación con `dotnet run` y vaya a **http://localhost: 5000/api/values**.
+Pruebe la aplicación con `dotnet run` y vaya a **http://localhost:&5000;/api/values**.
 
 ```javascript
 [
@@ -195,7 +196,7 @@ Seleccione el icono de depuración en la barra de vista del lado izquierdo de VS
 
 ![icono de depuración de vscode](./media/building-net-docker-images/debugging_debugicon.png)
 
-A continuación, toque el icono de reproducción o F5 para generar la imagen e iniciar la aplicación dentro del contenedor. Se iniciará la API web mediante el explorador web predeterminado en http://localhost: 5000.
+A continuación, toque el icono de reproducción o F5 para generar la imagen e iniciar la aplicación dentro del contenedor. Se iniciará la API web mediante el explorador web predeterminado en http://localhost:&5000;.
 
 ![Depuración con las herramientas de Docker de VSCode](./media/building-net-docker-images/docker-tools-vscode-f5.png)
 
@@ -219,10 +220,5 @@ api                 latest               ef17184c8de6        1 hour ago        2
 
 Mediante el generador de Docker para agregar los archivos necesarios a nuestra aplicación de API web se facilita el proceso para crear las versiones de desarrollo y producción de las imágenes.  Las herramientas son multiplataforma. Proporcionan también un script de PowerShell para lograr los mismos resultados en la integración de Windows y Visual Studio Code y ofrecen depuración paso a paso de la aplicación dentro del contenedor. Si comprende las variantes de imagen y los escenarios de destino, puede optimizar el proceso de desarrollo de bucle interior y conseguir imágenes optimizadas para implementaciones de producción.  
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

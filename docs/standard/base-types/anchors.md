@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 96dff1be-3005-4ba5-af1b-323182a26085
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ef2a63115f1efbe2418c348a3379fe7dd2face86
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 53345ba6ffda09a21cf4c626124797a3818aa504
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -187,7 +188,7 @@ Modelo | Descripción
 `(\w+\s\w+)` | Coincide con uno o varios caracteres que se usan para formar palabras seguidos de un espacio, seguidos de uno o varios caracteres que se usan para formar palabras. Este es el cuarto grupo de captura.
 `,` | Coincide con una coma.
 `\s\d{4}` | Coincide con un espacio seguido de cuatro dígitos decimales.
-`(-(\d{4}`&#124;`present))?` |  Coincide con cero o un guion seguido de cuatro dígitos decimales o de la cadena "present". Este es el sexto grupo de captura. También incluye un séptimo grupo de captura. 
+`(-(\d{4}`&#124;`present))?` |    Coincide con cero o un guion seguido de cuatro dígitos decimales o de la cadena "present". Este es el sexto grupo de captura. También incluye un séptimo grupo de captura. 
 `,?` | Coincide con una coma o ninguna.
 `(\s\d{4}(-(\d{4}`&#124;`present))?,?)+` | Coincide con una o más apariciones de lo siguiente: un espacio, cuatro dígitos decimales, cero o un guion seguido de cuatro dígitos decimales o de la cadena "present", y una coma o ninguna. Este es el quinto grupo de captura.
  
@@ -894,9 +895,4 @@ Modelo | Descripción
 
 [Opciones de expresiones regulares](options.md)
  
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

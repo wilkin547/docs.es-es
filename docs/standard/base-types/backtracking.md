@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8a3e6298-26b7-4c99-bd97-c9892f6c9418
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 649dfd6752f0589eb396b00e7d0b5184bb65d488
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 58925ce755e995432f3ff205793a192f34999e12
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -227,7 +228,7 @@ Como muestra el resultado del ejemplo, el motor de expresiones regulares tardó 
 
 * Vuelve a la coincidencia 4 guardada previamente. Determina que hay un carácter "a" adicional para asignar a un grupo capturado adicional. Por último, comprueba que está al final de la cadena. Como en la cadena queda un carácter adicional, la coincidencia produce un error. Esta coincidencia errónea necesita 4 comparaciones. Hasta ahora, se han realizado un total de 13 comparaciones.
 
-* Vuelve a la coincidencia 3 guardada previamente. Determina que hay dos caracteres "a" adicionales para asignar a un grupo capturado adicional. Sin embargo, se produce un error en la prueba de fin de cadena. Vuelva a la coincidencia 3 e intenta hacer coincidir los dos caracteres "a" adicionales en dos grupos capturados adicionales. Se sigue produciendo un error en la prueba de fin de cadena. Estas coincidencias con error necesitan 12 comparaciones. Hasta ahora, se ha realizado un total de 25 comparaciones. 
+* Vuelve a la coincidencia 3 guardada previamente. Determina que hay dos caracteres "a" adicionales para asignar a un grupo capturado adicional. Sin embargo, se produce un error en la prueba de fin de cadena. Vuelva a la coincidencia&3; e intenta hacer coincidir los dos caracteres "a" adicionales en dos grupos capturados adicionales. Se sigue produciendo un error en la prueba de fin de cadena. Estas coincidencias con error necesitan 12 comparaciones. Hasta ahora, se ha realizado un total de 25 comparaciones. 
 
 La comparación de la cadena de entrada con la expresión regular continúa de esta manera hasta que el motor de expresiones regulares ha intentado todas las posibles combinaciones de coincidencias y, a continuación, concluye que no hay ninguna coincidencia. Debido a los cuantificadores anidados, esta comparación es O(2n) o una operación exponencial, donde n es el número de caracteres de la cadena de entrada. Esto significa que, en el peor de los casos, una cadena de entrada de 30 caracteres necesita aproximadamente 1.073.741.824 comparaciones y una cadena de entrada de 40 caracteres necesita aproximadamente 1.099.511.627.776 comparaciones. Si usa cadenas de estas longitudes o incluso mayores, los métodos de expresión regular pueden tardar mucho tiempo en completarse cuando procesan datos de entrada que no coinciden con el patrón de expresión regular.
 
@@ -682,10 +683,5 @@ Modelo | Descripción
 [Construcciones de alternancia en expresiones regulares](alternation.md)
 
 [Construcciones de agrupamiento en expresiones regulares](grouping.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

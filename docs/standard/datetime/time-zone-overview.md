@@ -3,16 +3,17 @@ title: "Información general sobre zonas horarias"
 description: "Información general sobre zonas horarias"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e3a10f62-d403-4441-8621-adc964e32c07
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 31a4582c28c208a7a3d86259b360e3472b851249
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 200d502d12750a28d2a54058f53b4bbef78973c7
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -60,8 +61,3 @@ Para obtener más información sobre cómo convertir horas entre zonas horarias,
 ## <a name="see-also"></a>Vea también
 
 [Fechas, horas y zonas horarias](index.md)
-
-
-<!--HONumber=Nov16_HO1-->
-
-

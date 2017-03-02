@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 translationtype: Human Translation
-ms.sourcegitcommit: 30175813af95911c8ab4f2f0e39c40bed49a23b3
-ms.openlocfilehash: e6212a63e74f2d1525e87480b092861be9f92379
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ec5619e164be44205060d790ba1dc66e261faf92
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -39,9 +40,4 @@ Encabezados de ensamblado de ECMA 335 II.25.1, Estructura del formato de archivo
 ## <a name="processing-the-assemblies"></a>Procesar los ensamblados
 
 Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. [System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx) y [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -2,17 +2,18 @@
 title: "Información general sobre el SDK de .NET Core"
 description: "Información general sobre el SDK de .NET Core"
 keywords: .NET, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
 translationtype: Human Translation
-ms.sourcegitcommit: b7dbb80c16ca0d08ff6fe4c4f3a7b221f64c6608
-ms.openlocfilehash: a1808cdc0efb9087ffbda0a1631cd08e6bde0b3f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 41093464c0dc2631217d89e2e715d05b78051284
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -35,11 +36,4 @@ Los instaladores nativos están pensados principalmente para las máquinas de lo
 
 Por otro lado, los scripts de instalación no requieren privilegios administrativos. Sin embargo, tampoco instalan ningún requisito previo en la máquina; debe instalarlos todos manualmente. Los scripts están pensados principalmente para configurar servidores de compilación o cuando desee instalar las herramientas sin privilegios de administración (tenga en cuenta la salvedad con respecto a los requisitos previos que ya se mencionó). Puede encontrar más información en el [tema de referencia sobre los scripts de instalación](tools/dotnet-install-script.md). Si le interesa saber cómo configurar el SDK en el servidor de compilación de integración continua, consulte el documento sobre el [SDK con servidores de integración continua](tools/using-ci-with-cli.md). 
 
-De forma predeterminada, el SDK se instalará "en paralelo". Esto significa que pueden coexistir varias versiones de las herramientas de la CLI en un momento dado en una sola máquina. El uso de la versión correcta se explica en detalle en la [sección de controladores](tools/index.md#driver) del tema sobre las herramientas de línea de comandos de .NET Core. 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+De forma predeterminada, el SDK se instalará "en paralelo". Esto significa que pueden coexistir varias versiones de las herramientas de la CLI en un momento dado en una sola máquina. El uso de la versión correcta se explica en detalle en la [sección de controladores](tools/index.md#driver) del tema sobre las herramientas de línea de comandos de .NET Core.

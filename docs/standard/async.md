@@ -11,14 +11,15 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
-ms.sourcegitcommit: 9abc4879533074e6830a7343123b139e912d239b
-ms.openlocfilehash: 033d5e8eb317a17a8f121ff37c2731c3d24999f0
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fb9940e56b5d0e8f4474584102f2e6167a79f291
+ms.lasthandoff: 03/02/2017
 
 ---
 
 # <a name="async-overview"></a>Información general de Async
 
-No hace tanto tiempo, las aplicaciones funcionaban más rápido simplemente al comprar un PC o servidor nuevo y después se detuvo esa tendencia. De hecho, se ha invertido. Aparecieron teléfonos móviles con chips ARM de núcleo único de 1 GHz y cargas de trabajo de servidor que pasaron a máquinas virtuales. Los usuarios seguían queriendo una interfaz de usuario dinámica y los propietarios de empresas querían servidores que se ajustaran a su negocio. La transición al móvil y a la nube y una población conectada a Internet de más de 3 mil millones de usuarios ha generado un nuevo conjunto de patrones de software. 
+No hace tanto tiempo, las aplicaciones funcionaban más rápido simplemente al comprar un PC o servidor nuevo y después se detuvo esa tendencia. De hecho, se ha invertido. Aparecieron teléfonos móviles con chips ARM de núcleo único de 1 GHz y cargas de trabajo de servidor que pasaron a máquinas virtuales. Los usuarios seguían queriendo una interfaz de usuario dinámica y los propietarios de empresas querían servidores que se ajustaran a su negocio. La transición al móvil y a la nube y una población conectada a Internet de más de&3; mil millones de usuarios ha generado un nuevo conjunto de patrones de software. 
 
 * Se espera que las aplicaciones cliente estén siempre activadas y conectadas, y que sean dinámicas a la interacción del usuario (p. ej., función táctil) con clasificaciones altas en las tiendas de aplicaciones.
 * Se espera que los servicios controlen los picos de tráfico al escalar y reducir verticalmente con facilidad. 
@@ -39,10 +40,5 @@ El código de Async tiene las siguientes características:
 ## <a name="whats-next"></a>Pasos adicionales
 
 Para profundizar en los conceptos y programación de Async, consulte [Async en profundidad](async-in-depth.md).
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

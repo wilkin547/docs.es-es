@@ -4,23 +4,22 @@ description: "Migración de DNX a CLI de .NET Core"
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: c86f277a4c6fd6e6713da2b5f59eb171900190df
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b752e23f37f83a68ef4a7a97108479f7736d53cd
+ms.lasthandoff: 03/02/2017
 
 ---
 
 # <a name="migrating-from-dnx-to-net-core-cli"></a>Migración de DNX a CLI de .NET Core
 
 ## <a name="overview"></a>Información general
-Con la versión RC1 de .NET Core y ASP.NET Core 1.0, hicimos la presentación de las herramientas DNX a nivel general. Con la versión RC2 de .NET Core y ASP.NET Core 1.0 hicimos la transición a la CLI de .NET Core.
+Con la versión RC1 de .NET Core y ASP.NET Core 1.0, presentamos las herramientas DNX. Con la versión RC2 de .NET Core y ASP.NET Core 1.0, hicimos la transición de DNX a .NET Core CLI.
 
 Resumamos un poco de qué se trata DNX como un breve recordatorio. DNX era un entorno de ejecución y un conjunto de herramientas para compilar aplicaciones de .NET Core y, más específicamente, de ASP.NET Core 1.0. Constaba de 3 componentes principales:
 
@@ -55,17 +54,17 @@ Si usó DNX, usaba algunos comandos provenientes de uno de sus tres componentes 
 La tabla siguiente muestra la asignación entre los comandos de DNX/DNU y sus contrapartes de la CLI.
 
 
-| Comando de DNX                       | Comando de la CLI       | Descripción                                                                                                       |
-|--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
-| dnx run                           | dotnet run        | Ejecute el código desde el origen.                                                                                             |
-| dnu build                         | dotnet build      | Compile un archivo binario de IL del código.                                                                                  |
-| dnu pack                          | dotnet pack       | Cree un paquete NuGet del código.                                                                          |
-| dnx \[comando] (por ejemplo, "dnx web")   | no disponible\*             | Si se usa DNX, ejecute un comando según lo definido en project.json.                                                       |
-| dnu install                       | no disponible\*             | Si se usa DNX, instale un paquete como dependencia.                                                              |
-| dnu restore                       | dotnet restore    | Restaure las dependencias especificadas en project.json.                                                              |
-| dnu publish                       | dotnet publish    | Publique la aplicación para su implementación en una de tres formas (portátil, portátil con nativo e independiente).    |
-| dnu wrap                          | no disponible\*             | Si se usa DNX, encapsule un archivo project.json en csproj.                                                                      |
-| dnu commands                      | no disponible\*             | Si se usa DNX, administre los comandos instalados globalmente.                                                             |
+| Comando de DNX                        | Comando de la CLI        | Descripción                                                                                                         |
+|--------------------------------    |----------------    |-----------------------------------------------------------------------------------------------------------------    |
+| dnx run                            | dotnet run         | Ejecute el código desde el origen.                                                                                               |
+| dnu build                          | dotnet build       | Compile un archivo binario de IL del código.                                                                                    |
+| dnu pack                           | dotnet pack        | Cree un paquete NuGet del código.                                                                            |
+| dnx \[comando] (por ejemplo, "dnx web")     | no disponible\*              | Si se usa DNX, ejecute un comando según lo definido en project.json.                                                         |
+| dnu install                        | no disponible\*              | Si se usa DNX, instale un paquete como dependencia.                                                                |
+| dnu restore                        | dotnet restore     | Restaure las dependencias especificadas en project.json.                                                                |
+| dnu publish                        | dotnet publish     | Publique la aplicación para su implementación en una de tres formas (portátil, portátil con nativo e independiente).     |
+| dnu wrap                           | no disponible\*              | Si se usa DNX, encapsule un archivo project.json en csproj.                                                                        |
+| dnu commands                       | no disponible\*              | Si se usa DNX, administre los comandos instalados globalmente.                                                               |
 
 (\*): por diseño, la CLI no admite estas características. 
 
@@ -86,7 +85,7 @@ Existen dos formas principales de ejecutar el código. Una es desde el origen, c
 La otra forma es usar el `dotnet` mismo para ejecutar el código. Para ello, proporcione una ruta de acceso al ensamblado: `dotnet path/to/an/assembly.dll`. 
 
 ## <a name="migrating-your-dnx-project-to-net-core-cli"></a>Migración del proyecto DNX a la CLI de .NET Core
-Además de usar los comandos nuevos cuando se trabaja con el código, hay 3 aspectos importantes que se dejaron en la migración desde DNX:
+Además de usar los comandos nuevos cuando se trabaja con el código, hay&3; aspectos importantes que se dejaron en la migración desde DNX:
 
 1. Si lo tiene, migre el archivo `global.json` para usar la CLI.
 2. Migración del archivo del proyecto (`project.json`) mismo a las herramientas de la CLI.
@@ -143,10 +142,5 @@ Una vez que esté listo, puede intentar la restauración con `dotnet restore`. E
 
 La ejecución de `dotnet build` mostrará cualquier posible error de compilación, aunque no debería haber muchos. Una vez que el código se compile y ejecute correctamente, puede probarlo con el ejecutor. Ejecute `dotnet <path-to-your-assembly>` y vea si se ejecuta correctamente.
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 
