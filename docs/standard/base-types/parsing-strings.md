@@ -3,16 +3,17 @@ title: Analizar cadenas en .NET
 description: Analizar cadenas en .NET
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/22/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8103c0a6-61d3-40dd-a3e9-2a32ba6a4c05
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 61d1593b2d5271d69027658eef4c92da7c5542c8
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c741ae793d491f691a355df6ad064b81d609c7e5
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -33,10 +34,5 @@ Una operación de análisis convierte una cadena que representa un tipo base de 
 [Conversión de tipos en .NET](type-conversion.md): se describe cómo se convierten tipos.
 
 [Trabajar con tipos base en .NET](index.md): se describen las operaciones comunes que se pueden realizar en tipos base de .NET.
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

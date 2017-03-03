@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
-ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: eee8fcaff41db5821e4b6aa61875d6a4bcd80b10
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -61,9 +62,4 @@ Las siguientes plataformas admiten las bibliotecas de clases de .NET Core:
 ### <a name="mono-class-libraries"></a>Bibliotecas de clases de Mono
 
 Las bibliotecas de clases se admiten en Mono, incluidos los tres tipos de bibliotecas que se han descrito anteriormente. A menudo, Mono se ha visto (correctamente) como una implementación multiplataforma de Microsoft .NET Framework. En parte, se debía a que las bibliotecas de .NET Framework específicas de la plataforma podrían ejecutarse en el tiempo de ejecución Mono sin modificarse ni volver a compilarse. Esta característica ya existía antes de la creación de las bibliotecas de clases portables, por lo que era una elección obvia para habilitar la portabilidad binaria entre .NET Framework y Mono (aunque solo funcionaba en una dirección).
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
