@@ -4,22 +4,22 @@ description: "Núcleo de .NET"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
-ms.date: 07/06/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: f2b312bb-f80b-4b0d-9101-93908f06a6fa
+ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
 translationtype: Human Translation
 ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: f19efabc4330682ebfe6e38384086e2338cd6264
+ms.openlocfilehash: 697382a215a45fae159df62e7e9f4c73f5907d8f
 
 ---
 
-# <a name="net-core-tools-telemetry"></a>Telemetría de herramientas de .NET Core
+# <a name="net-core-tools-telemetry-net-core-tools-rc4"></a>Telemetría de herramientas de .NET Core (.NET Core Tools RC4)
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools RC4, consulte el tema [Telemetría de herramientas de .NET Core (.NET Core Tools RC4)](../preview3/tools/telemetry.md).
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [Telemetría de herramientas de .NET Core](../../tools/telemetry.md).
 
 Las herramientas de .NET Core incluyen una [característica de telemetría](https://github.com/dotnet/cli/pull/2145) que recopila información de uso. Es importante que el equipo de .NET entienda cómo se usan las herramientas a fin de que podamos mejorarlas.
 
@@ -81,31 +81,24 @@ Las herramientas de .NET Core muestran el texto siguiente cuando ejecuta por pri
 ```text
 Welcome to .NET Core!
 ---------------------
-
-Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to
+Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to 
 see available commands or go to https://aka.ms/dotnet-cli-docs.
 
 Telemetry
----------
-
-The .NET Core tools collect usage data in order to improve your experience.
-The data is anonymous and does not include commandline arguments. The data is
+--------------
+The .NET Core tools collect usage data in order to improve your experience. 
+The data is anonymous and does not include command-line arguments. The data is 
 collected by Microsoft and shared with the community.
-
-You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT
+You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT 
 environment variable to 1 using your favorite shell.
-
-You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-
-telemetry.
+You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
 
 Configuring...
---------------
-
-A command is running to initially populate your local package cache, to
-improve restore speed and enable offline access. This command will take up to
+-------------------
+A command is running to initially populate your local package cache, to 
+improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
-
 
 
 <!--HONumber=Feb17_HO2-->

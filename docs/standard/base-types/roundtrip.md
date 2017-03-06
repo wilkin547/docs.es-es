@@ -3,24 +3,25 @@ title: "Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora"
 description: "Cómo aplicar acciones de ida y vuelta a valores de fecha y hora"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 00a09c8a60138a1828d4e8c62dd72b88abbf4bbe
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 79c4da0cc6b4436fcbd5b345e23b387f2ad933d1
+ms.lasthandoff: 03/02/2017
 
 ---
 
-# <a name="how-to-roundtrip-date-and-time-values"></a>Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora
+# <a name="how-to-round-trip-date-and-time-values"></a>Cómo: Aplicar acciones de ida y vuelta a valores de fecha y hora
 
 En muchas aplicaciones, un valor de fecha y hora sirve para identificar inequívocamente un único punto en el tiempo. Este tema muestra cómo guardar y restaurar un valor [DateTime](xref:System.DateTime) y un valor [DateTimeOffset](xref:System.DateTimeOffset) de manera que el valor restaurado identifique la misma hora que el valor guardado.
 
-## <a name="to-roundtrip-a-datetime-value"></a>Para un valor DateTime de ida y vuelta
+## <a name="to-round-trip-a-datetime-value"></a>Para un valor DateTime de ida y vuelta
 
 1. Convierta el valor [DateTime](xref:System.DateTime) en su representación de cadena mediante una llamada al método [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) con el especificador de formato "o".
 
@@ -97,7 +98,7 @@ Console.WriteLine("Read {0} ({2}) from {1}.", restoredDate.ToString(), _
 
 Cuando se usa un valor [DateTime](xref:System.DateTime) de ida y vuelta, esta técnica mantiene correctamente la hora para todas las horas locales y universales. Por ejemplo, si un valor local [DateTime](xref:System.DateTime) se guarda en un sistema de la zona horaria estándar del Pacífico de Estados Unidos y se restaura en un sistema de la zona horaria estándar central de Estados Unidos, la fecha y hora restauradas serán dos horas posteriores a la hora original, lo que refleja la diferencia horaria entre las dos zonas. Pero esta técnica no es necesariamente precisa para horas no especificadas. Todos los valores [DateTime](xref:System.DateTime) cuya propiedad [Kind](xref:System.DateTime.Kind) es [Unspecified](xref:System.DateTimeKind.Unspecified) se tratan como si fueran horas locales. Si no es el caso, [DateTime](xref:System.DateTime) no identificará correctamente el punto en el tiempo. La solución alternativa para esta limitación es acoplar estrechamente un valor de fecha y hora con su zona horaria para la operación de guardado y restauración.
 
-## <a name="to-roundtrip-a-datetimeoffset-value"></a>Para un valor DateTimeOffset de ida y vuelta
+## <a name="to-round-trip-a-datetimeoffset-value"></a>Para un valor DateTimeOffset de ida y vuelta
 
 Convierta el valor [DateTimeOffset](xref:System.DateTimeOffset) en su representación de cadena mediante una llamada al método [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) con el especificador de formato "o".
 
@@ -175,10 +176,5 @@ Esta técnica identifica siempre de forma inequívoca un valor [DateTimeOffset](
 [Efectuar operaciones de formato](performing-formatting-operations.md)
 
 [Cadenas con formato de fecha y hora estándar](standard-datetime.md)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

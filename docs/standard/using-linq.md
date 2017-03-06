@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 translationtype: Human Translation
-ms.sourcegitcommit: 6992d907b152d67c51f43ec517902fb2effc6db2
-ms.openlocfilehash: 0d941d7722353c68051bb761f4b05a6e304291ef
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 6d9c163255939c3732177ecccb373479ab610447
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -272,12 +273,7 @@ Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente
 
 ## <a name="further-resources"></a>Recursos adicionales:
 
-*   [Ejemplos de LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+*   [Ejemplos de LINQ&101;](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/VB
 *   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un libro electrónico para aprender cómo se implementa LINQ to Objects
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

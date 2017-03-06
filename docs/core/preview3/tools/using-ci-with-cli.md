@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 2acfb2bf7732aa17e850b9adcf03dfcb7993908b
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 95c7f0f9911c7cb37c12afec74d0e942db77fbf6
 
 ---
 
-# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci-tooling-preview-4"></a>Uso de .NET Core SDK y herramientas de integración continua (CI) (Tooling Preview 4)
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci-net-core-tools-rc4"></a>Uso de .NET Core SDK y herramientas de integración continua (CI) (.NET Core Tools RC4)
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 4 de Visual Studio 2017 RC. Para la versión .NET Core Tools Preview 2, consulte el tema [Uso de .NET Core SDK y herramientas de integración continua (CI)](../../tools/using-ci-with-cli.md).
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [Uso de .NET Core SDK y herramientas de integración continua (CI)](../../tools/using-ci-with-cli.md).
 
 ## <a name="overview"></a>Información general
 En este documento se describe el uso del SDK de .NET Core y sus herramientas en el servidor de compilación. En general, en un servidor de compilación de CI, desea automatizar la instalación de alguna manera. La automatización, idealmente, no debería requerir privilegios administrativos si fuera posible. 
@@ -91,6 +91,6 @@ install:
 ```
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

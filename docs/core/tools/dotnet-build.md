@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bb64da75a2e7bc2d379bc1685b4187493792db78
 
 ---
 
 #<a name="dotnet-build"></a>dotnet-build
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools Preview 4 de Visual Studio 2017 RC, consulte el tema [dotnet-build (Tooling Preview 4)](../preview3/tools/dotnet-build.md).
+> Este tema se aplica a .NET Core Tools Preview 2. Para más información sobre la versión .NET Core Tools RC4, consulte el tema [dotnet-build (.NET Core Tools RC4)](../preview3/tools/dotnet-build.md).
 
 ## <a name="name"></a>Nombre 
 `dotnet-build`: compila un proyecto y todas sus dependencias. 
@@ -114,6 +114,6 @@ Compilación de un proyecto y sus dependencias para un tiempo de ejecución espe
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

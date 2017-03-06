@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6d735520-4059-4754-b34c-d117299d36f1
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: bedd1d281256545776c874a38ccb71ad594467c2
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 077a09152ac23c986a751f42c893e1dcca858291
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -141,13 +142,13 @@ Public Class RegexUtilities
 End Class
 ```
 
-En este ejemplo, el patrón de expresión regular `^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$` se interpreta como se muestra en la tabla siguiente. Tenga en cuenta que la expresión regular se compila usando la marca [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase).
+En este ejemplo, el patrón de expresión regular `^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^` \{ \} \|~ \w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|( ([0-9a-z] [-\w]*[0-9a-z] *\.) + [a-z0-9] [\-a-z0-9]{0,22}[a-z0-9]))$` se interpreta como se muestra en la tabla siguiente. Tenga en cuenta que la expresión regular se compila usando la marca [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase).
 
 Modelo | Descripción
 ------- | ----------- 
 `^` | Comenzar la búsqueda de coincidencia al principio de la cadena.
 `(?(")` | Determinar si el primer carácter es una comilla. `(?(")` es el principio de una construcción de alternancia.
-`(?("")("".+?(?<!\\)""@)` | Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no deben ir precedidas por un carácter de barra diagonal inversa `(\). (?<!` es el principio de una aserción de búsqueda tardía negativa de ancho cero. La cadena debe concluir con el signo (@)..
+`(?("")("".+?(?<!\\)""@)` | Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no deben ir precedidas por un carácter de barra diagonal inversa `(\). (?<!` es el principio de una aserción de búsqueda tardía negativa de ancho cero. La cadena debe concluir con una arroba (@).
 `&#124;(([0-9a-z] | Si el primer carácter no es un signo de comillas, buscar cualquier carácter alfabético de la a a la z o de la A a la Z (la comparación distingue entre mayúsculas y minúsculas) o cualquier carácter numérico del 0 al 9.
 `(\.(?!\.))` | Si el carácter siguiente es un punto, determinar que coincide. Si no lo es, buscar más adelante en el siguiente carácter y probar si coincide. `(?!\.)` es una aserción de búsqueda anticipada negativa de ancho igual a cero que evita que aparezcan dos puntos consecutivos en la parte local de una dirección de correo electrónico.
 `&#124;[-!#\$%&'\*\+/=\?\^`\{\}\&#124;~\w] | Si el carácter siguiente no es un punto, buscar cualquier carácter de palabra coincidente o uno de los siguientes caracteres: -!#$%'*+=?^`{}&#124;~. 
@@ -244,9 +245,4 @@ End Class
 [Expresiones regulares de .NET](regular-expressions.md)
 
 [Ejemplos de expresiones regulares](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

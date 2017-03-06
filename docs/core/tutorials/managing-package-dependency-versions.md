@@ -3,16 +3,16 @@ title: "Cómo administrar las versiones de dependencias de paquete para .NET Cor
 description: "Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
 translationtype: Human Translation
-ms.sourcegitcommit: dd32f1dd4d17ab1bb01b5578237cc950b147898c
-ms.openlocfilehash: 77e1f5484c0f55ae3989dbbea9bdbf2fb58f7926
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cf6c9757ab451f88c80fedb2dfebf7f5e320f365
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -72,7 +72,7 @@ Si es así, debe asegurarse de que el metapaquete con el que comienza esté corr
 
 Si es así, debe corregir las otras dependencias a 1.0.  Consulte las versiones de paquete y los números de compilación correctos al final de este artículo.
 
-### <a name="a-note-on-using-a-splat-string-when-versioning"></a>Nota sobre el uso de una cadena con asterisco (\*) cuando cree versiones
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>Nota sobre el uso de una cadena con asterisco (\*) cuando cree versiones
 
 Puede que haya adoptado un patrón de creación de versiones que usa una cadena con asterisco (\*) como la siguiente: `"System.Collections":"4.0.11-*"`.
 
@@ -85,9 +85,4 @@ Puede que haya adoptado un patrón de creación de versiones que usa una cadena 
 [Lista de todos los paquetes de entorno de ejecución y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
 [Lista de todos los paquetes de aplicaciones de .NET Core y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

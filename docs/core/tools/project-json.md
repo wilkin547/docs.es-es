@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a1a27c6653d61ab612b76a4522dffdf82afecafc
+ms.sourcegitcommit: 8fba5c76375763abf90e2e17d3bcc9d0039089f0
+ms.openlocfilehash: 2cdb43a9095217498c12c97548e4aa632b13a59c
 
 ---
 
 # <a name="projectjson-reference"></a>referencia de project.json
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la documentación de .NET Core Tools Preview 4 de Visual Studio 2017 RC, vea la sección [Herramientas de la interfaz de la línea de comandos de .NET Core (Tooling Preview 4)](../preview3/tools/index.md).
+> Este tema se aplica a .NET Core Tools Preview 2. Para la documentación de .NET Core Tools RC4, consulte el tema [Herramientas de la interfaz de la línea de comandos de .NET Core (.NET Core Tools RC4)](../preview3/tools/index.md).
 
 El archivo project.json se usa en proyectos .NET Core para definir los metadatos del proyecto, información sobre la compilación y las dependencias. En este tema de referencia verá la lista de todas las propiedades que puede definir en el archivo project.json.
 
@@ -1658,6 +1658,6 @@ Por ejemplo:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

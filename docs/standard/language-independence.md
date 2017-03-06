@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -320,10 +321,10 @@ El [sistema de tipos común](common-type-system.md) de .NET incluye varios tipos
 
 Tipo conforme a CLS | Descripción
 ------------------ | -----------
-[Byte](xref:System.Byte) | Entero de 8 bits sin signo 
-[Int16](xref:System.Int16) | Entero de 16 bits con signo 
-[Int32](xref:System.Int32) | Entero de 32 bits con signo 
-[Int64](xref:System.Int64) | Entero de 64 bits con signo
+[Byte](xref:System.Byte) | Entero de&8; bits sin signo 
+[Int16](xref:System.Int16) | Entero de&16; bits con signo 
+[Int32](xref:System.Int32) | Entero de&32; bits con signo 
+[Int64](xref:System.Int64) | Entero de&64; bits con signo
 [Single](xref:System.Single) | Valor de punto flotante de precisión sencilla
 [Double](xref:System.Double) | Valor de punto flotante de precisión doble
 [Boolean](xref:System.Boolean) | tipo de valor true o false 
@@ -337,10 +338,10 @@ Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.
 
 Tipo no conforme | Descripción | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
-[SByte](xref:System.SByte) | Tipo de datos enteros de 8 bits con signo | [Int16](xref:System.Int16)
-[UInt16](xref:System.UInt16) | Entero de 16 bits sin signo | [Int32](xref:System.Int32)
-[UInt32](xref:System.UInt32) | Entero de 32 bits sin signo | [Int64](xref:System.Int64)
-[UInt64](xref:System.UInt64) | Entero de 64 bits sin signo | [Int64](xref:System.Int64) (se puede desbordar), [BigInteger](xref:System.Numerics.BigInteger) o [Double](xref:System.Double)
+[SByte](xref:System.SByte) | Tipo de datos enteros de&8; bits con signo | [Int16](xref:System.Int16)
+[UInt16](xref:System.UInt16) | Entero de&16; bits sin signo | [Int32](xref:System.Int32)
+[UInt32](xref:System.UInt32) | Entero de&32; bits sin signo | [Int64](xref:System.Int64)
+[UInt64](xref:System.UInt64) | Entero de&64; bits sin signo | [Int64](xref:System.Int64) (se puede desbordar), [BigInteger](xref:System.Numerics.BigInteger) o [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | Puntero o identificador sin signo | [IntPtr](xref:System.IntPtr)
  
  La biblioteca de clases de .NET Framework o cualquier otra biblioteca de clases puede incluir otros tipos que no sean conformes a CLS; por ejemplo: 
@@ -781,7 +782,7 @@ Public Class [case]
 End Class
 ```
 
-En el siguiente ejemplo de C# se crean instancias de la clase `case` utilizando el símbolo @ para eliminar la ambigüedad entre el identificador y la palabra clave del lenguaje. Sin él, el compilador de C# mostraría dos mensajes de error similares a los siguientes: "Se esperaba un tipo" y "'Término 'case' de expresión no válido". 
+En el siguiente ejemplo de C# se crean instancias de la clase `case` usando el símbolo @ para eliminar la ambigüedad entre el identificador y la palabra clave del lenguaje. Sin él, el compilador de C# mostraría dos mensajes de error similares a los siguientes: "Se esperaba un tipo" y "'Término 'case' de expresión no válido". 
 
 ```csharp
 using System;
@@ -2951,10 +2952,5 @@ Para compilar con C#, cambie el nombre del compilador de vbc a csc y cambie la e
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

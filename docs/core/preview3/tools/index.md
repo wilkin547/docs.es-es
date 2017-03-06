@@ -1,23 +1,25 @@
 ---
-title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core"
+title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core | Microsoft Docs"
 description: "Información general sobre qué es la interfaz de línea de comandos (CLI) y sus características principales"
 keywords: CLI, herramientas de la CLI, .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d9e689524a3100f1c5c129bdf13ed691a850ad2e
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb9e39ed400ad93ae9b38890caa6c579f4a1594
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>Herramientas de la interfaz de la línea de comandos de .NET Core
+# <a name="net-core-command-line-interface-tools-net-core-tools-rc4"></a>Herramientas de la interfaz de la línea de comandos de .NET Core (.NET Core Tools RC4)
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [Herramientas de la interfaz de línea de comandos de .NET Core](../../tools/index.md).
 
 La interfaz de la línea de comandos (CLI) de .NET Core es una nueva cadena de herramientas fundamental multiplataforma para el desarrollo de aplicaciones .NET Core. Es "fundamental" porque es la capa primaria sobre la que se pueden crear otras herramientas de nivel superior, como entornos de desarrollo integrados (IDE), editores y orquestadores de compilación. 
 
@@ -36,6 +38,7 @@ De forma predeterminada, la CLI se instalará en paralelo. Esto significa que pu
 De forma predeterminada, se instalan los siguientes comandos:
 
 * [new](dotnet-new.md)
+* [migrate](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -86,10 +89,11 @@ La CLI permite que las aplicaciones sean portátiles de dos maneras principalmen
 
 Puede aprender más sobre ambas en el tema [Implementación de aplicaciones .NET Core](../deploying/index.md). 
 
-## <a name="migration-from-preview-3projectjson"></a>Migración desde Preview 3/project.json
+## <a name="migration-from-rc4projectjson"></a>Migración desde RC4/project.json
 Si ha usado herramientas de Preview 2 y proyectos project.json, puede consultar la documentación del comando [dotnet migrate](dotnet-migrate.md) para familiarizarse con él y con el modo de migrar el proyecto. 
 
-> **Nota:** El comando `dotnet migrate` no admite actualmente la migración de archivos project.json de Preview 2. 
+> [!NOTE]
+> El comando `dotnet migrate` no admite actualmente la migración de archivos project.json anteriores a la versión Preview 2. 
 
 ## <a name="extensibility"></a>Extensibilidad
 Por supuesto, no todas las herramientas que puede usar en el flujo de trabajo van a ser parte de las herramientas de la CLI de .NET Core. Sin embargo, esta CLI tiene un modelo de extensibilidad que le permite especificar herramientas adicionales para sus proyectos. Puede encontrar más información en el tema [Modelo de extensibilidad de la CLI de .NET Core](extensibility.md).
@@ -101,6 +105,6 @@ Esta ha sido una corta introducción a las características más importantes de 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

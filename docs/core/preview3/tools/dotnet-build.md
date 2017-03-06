@@ -11,15 +11,16 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
-#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build (Tooling Preview 4)
+#<a name="dotnet-build-net-core-tools-rc4"></a>dotnet-build (.NET Core Tools RC4)
 
 > [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 4 de Visual Studio 2017 RC. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-build](../../tools/dotnet-build.md).
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-build](../../tools/dotnet-build.md).
 
 ## <a name="name"></a>Nombre 
 dotnet-build: compila un proyecto y todas sus dependencias 
@@ -53,7 +54,7 @@ Para compilar una aplicación ejecutable en lugar de una biblioteca, debe establ
 
 `-h|--help`
 
-Imprime una corta ayuda para el comando.  
+Imprime una corta ayuda para el comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -69,11 +70,11 @@ Define una configuración con la que se va a realizar la compilación.  Si se om
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-Tiempo de ejecución de destino con el que realizar la compilación. Para obtener una lista de identificadores de tiempo de ejecución (RID) que puede usar, consulte el [catálogo de RID](../../rid-catalog.md). 
+Tiempo de ejecución de destino con el que realizar la compilación. Para obtener una lista de identificadores de tiempo de ejecución (RID) que puede usar, consulte el [catálogo de RID](../../rid-catalog.md).
 
 `--version-suffix [VERSION_SUFFIX]`
 
-Define qué `*` debe reemplazarse por el campo de versión en el archivo del proyecto. El formato sigue las instrucciones de versión de NuGet. 
+Define qué `*` debe reemplazarse por el campo de versión en el archivo del proyecto. El formato sigue las instrucciones de versión de NuGet.
 
 `--build-profile`
 
@@ -100,9 +101,4 @@ Creación de un proyecto y sus dependencias mediante la configuración de lanzam
 Compilación de un proyecto y sus dependencias para un tiempo de ejecución específico (en este ejemplo, Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

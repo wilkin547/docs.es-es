@@ -3,16 +3,16 @@ title: Pruebas unitarias en .NET Core
 description: Pruebas unitarias en .NET Core
 keywords: .NET, .NET Core
 author: ardalis
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 149086110d7470d97e1ab3e5969269626290b523
-ms.openlocfilehash: 94bae12916fd20f534916d97157605c6a9aa9202
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -30,16 +30,11 @@ Una de las mejores formas de garantizar que una aplicación de software hace lo 
 > [!NOTE]
 > A menudo, los desarrolladores tienen dificultades para idear buenos nombres para sus clases y métodos de prueba. Como punto de partida, el equipo de producto de ASP.NET sigue [estas convenciones](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
 
-Al escribir pruebas unitarias, tenga cuidado de no introducir accidentalmente dependencias en la infraestructura. Tienden a hacerlas más lentas y frágiles, por lo que se deben reservar para pruebas de integración. Puede evitar estas dependencias ocultas en el código de aplicación siguiendo el [principio de dependencias explícitas](http://deviq.com/explicit-dependencies-principle/) y el uso de [inyección de dependencias](https://docs.asp.net/en/latest/fundamentals/dependency-injection.html) para solicitar las dependencias del marco. También puede mantener sus pruebas unitarias en un proyecto aparte de sus pruebas de integración y asegurarse de que el proyecto de pruebas unitarias no tenga referencias a paquetes de infraestructura ni dependencias en ellos.
+Al escribir pruebas unitarias, tenga cuidado de no introducir accidentalmente dependencias en la infraestructura. Tienden a hacerlas más lentas y frágiles, por lo que se deben reservar para pruebas de integración. Puede evitar estas dependencias ocultas en el código de aplicación siguiendo el [principio de dependencias explícitas](http://deviq.com/explicit-dependencies-principle/) y el uso de [inyección de dependencias](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) para solicitar las dependencias del marco. También puede mantener sus pruebas unitarias en un proyecto aparte de sus pruebas de integración y asegurarse de que el proyecto de pruebas unitarias no tenga referencias a paquetes de infraestructura ni dependencias en ellos.
 
 Más información sobre las pruebas unitarias en proyectos de .NET Core:
 
 Pruebe este [tutorial al crear pruebas unitarias con xunit y la CLI de .NET](unit-testing-with-dotnet-test.md).
 
 El equipo de XUnit ha escrito un tutorial que muestra [cómo usar xunit con .NET Core y Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

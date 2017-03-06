@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: b5482a1d-7bdc-40fe-aa45-10df930ceb5b
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 35098ce238af88229fddf2adc7cf762848781ebc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 6be672acc84a76106e25b82574acad16beb4a8ac
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -328,7 +329,7 @@ El dominio de accesibilidad de un miembro anidado `M` declarado en un tipo `T` d
 
 El sistema de tipos común sólo impone dos restricciones en los nombres: 
 
-* Todos los nombres se codifican como cadenas de caracteres Unicode (de 16 bits).
+* Todos los nombres se codifican como cadenas de caracteres Unicode (de&16; bits).
 
 * Los nombres no pueden tener un valor incrustado (de 16 bits) de 0x0000.
 
@@ -532,8 +533,3 @@ Un tipo derivado hereda todos los miembros de su tipo base, es decir, estos miem
 ## <a name="see-also"></a>Vea también
 
 [Conversión de tipos en .NET Framework](type-conversion.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
-

@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-restore | SDK de .NET Core
+title: Comando dotnet-restore | Microsoft Docs
 description: "Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore."
 keywords: dotnet-restore, CLI, comando de la CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
+ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 594956488dee39903feba44e10d6bb81801412a4
 
 ---
 
-#<a name="dotnet-restore"></a>dotnet-restore
+#<a name="dotnet-restore-net-core-tools-rc4"></a>dotnet-restore (.NET Core Tools RC4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools RC4. Para la versión .NET Core Tools Preview 2, consulte el tema [dotnet-restore](../../tools/dotnet-restore.md).
 
-`dotnet-restore`- Restaura las dependencias y las herramientas de un proyecto.
+## <a name="name"></a>Nombre
+
+`dotnet-restore`: restaura las dependencias y las herramientas de un proyecto.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -84,7 +87,7 @@ Restauración de dependencias y herramientas para el proyecto en el directorio a
 
 Restauración de dependencias y herramientas para el proyecto `app1` encontrado en la ruta de acceso dada:
 
-`dotnet restore ~/projects/app1/app1.csproj``
+`dotnet restore ~/projects/app1/app1.csproj`
     
 Restauración de dependencias y herramientas para el proyecto en el directorio actual con la ruta de acceso de archivo proporcionada como origen de reserva:
 
@@ -100,6 +103,6 @@ Restauración de dependencias y herramientas para el proyecto en el directorio a
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

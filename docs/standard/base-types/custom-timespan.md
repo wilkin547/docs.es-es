@@ -4,16 +4,16 @@ description: Cadenas de formato TimeSpan personalizado
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e79745eb-6ebd-4e62-85c4-4f2830c27285
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 168bd497891ead884413fad4542943a24de7a7f4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: bec60437d4345decaf38f2bbb9434922ac889683
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -219,7 +219,7 @@ Console.WriteLine(ts3.ToString("d\.hh\:mm\:ss"))
 '       3.04:03:17
 ```
 
-## <a name="the-dddddddddd-custom-format-specifiers"></a>Especificadores de formato personalizado "dd"-"dddddddd"
+## <a name="the-dd-dddddddd-custom-format-specifiers"></a>Especificadores de formato personalizado "dd"-"dddddddd"
 
 Los especificadores de formato personalizado "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" y "dddddddd" presentan el valor de la propiedad [TimeSpan.Days](xref:System.TimeSpan.Days), que representa el número de días completos del intervalo de tiempo. 
 
@@ -1711,43 +1711,43 @@ Para incluir un carácter literal en una cadena de formato, se puede proceder de
 
 * Se puede escribirlo entre comillas sencillas (delimitador de cadena literal). 
 
-* Se puede anteponer una barra diagonal inversa ("\"), que se interpreta como un carácter de escape. En C#, esto significa que la cadena de formato debe ser @-quoted, o que el carácter literal debe ir precedido de una barra diagonal inversa adicional.
+* Se puede anteponer una barra diagonal inversa ("\"), que se interpreta como un carácter de escape. En C#, esto significa que la cadena de formato debe ser @-quoted o que el carácter literal debe ir precedido de una barra diagonal inversa adicional.
 
   En algunos casos, puede que sea necesario usar lógica condicional para incluir un carácter literal de escape en una cadena de formato. En el ejemplo siguiente se usa lógica condicional para incluir un símbolo de signo para los intervalos de tiempo negativos. 
   
-  ```csharp
-  using System;
+```csharp
+using System;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        TimeSpan result = new DateTime(2010, 01, 01) - DateTime.Now; 
-        String fmt = (result < TimeSpan.Zero ?  "\\-" : "") + "dd\\.hh\\:mm";
+public class Example
+{
+   public static void Main()
+   {
+      TimeSpan result = new DateTime(2010, 01, 01) - DateTime.Now; 
+      String fmt = (result < TimeSpan.Zero ?  "\\-" : "") + "dd\\.hh\\:mm";
 
-        Console.WriteLine(result.ToString(fmt));
-        Console.WriteLine("Interval: {0:" + fmt + "}", result);
-     }
-  }
-  // The example displays output like the following:
-  //       -1291.10:54
-  //       Interval: -1291.10:54
-  ```
+      Console.WriteLine(result.ToString(fmt));
+      Console.WriteLine("Interval: {0:" + fmt + "}", result);
+   }
+}
+// The example displays output like the following:
+//       -1291.10:54
+//       Interval: -1291.10:54
+```
 
-  ```vb
-  Module Example
-     Public Sub Main()
-        Dim result As TimeSpan = New DateTime(2010, 01, 01) - Date.Now 
-        Dim fmt As String = If(result < TimeSpan.Zero, "\-", "") + "dd\.hh\:mm"
+```vb
+Module Example
+   Public Sub Main()
+      Dim result As TimeSpan = New DateTime(2010, 01, 01) - Date.Now 
+      Dim fmt As String = If(result < TimeSpan.Zero, "\-", "") + "dd\.hh\:mm"
 
-        Console.WriteLine(result.ToString(fmt))
-        Console.WriteLine("Interval: {0:" + fmt + "}", result)
-     End Sub
-  End Module
-  ' The example displays output like the following:
-  '       -1291.10:54
-  '       Interval: -1291.10:54
-  ```
+      Console.WriteLine(result.ToString(fmt))
+      Console.WriteLine("Interval: {0:" + fmt + "}", result)
+   End Sub
+End Module
+' The example displays output like the following:
+'       -1291.10:54
+'       Interval: -1291.10:54
+```
   
 .NET no define ninguna gramática para los separadores en los intervalos de tiempo. Esto significa que los separadores entre los días y las horas, las horas y los minutos, los minutos y los segundos, y los segundos y las fracciones de segundo deben tratarse todos como literales de carácter en una cadena de formato.
 
@@ -1784,10 +1784,5 @@ Console.WriteLine(interval.ToString(fmt))
 [Aplicar formato a tipos](formatting-types.md)
 
 [Cadenas de formato TimeSpan estándar](standard-timespan.md)  
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

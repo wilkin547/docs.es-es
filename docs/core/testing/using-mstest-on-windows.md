@@ -3,16 +3,16 @@ title: Uso de MSTest con .NET Core en Windows
 description: "Cómo usar MSTest con .NET Core en Windows con Visual Studio 2015"
 keywords: MSTest, .NET, .NET Core
 author: ncarandini
-manager: wpickett
+ms.author: wiwagn
 ms.date: 08/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
 translationtype: Human Translation
-ms.sourcegitcommit: 6795f1ace77e6f4d1b2fe07e6281f4acb6d21271
-ms.openlocfilehash: c9d6bb1d45b9a6cb88334050669a4c064e53d54e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 94304cd742b63e77126bfa40651faa6974e58853
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -69,9 +69,4 @@ Siga las instrucciones de [Introducción a .NET Core en Windows](../tutorials/us
 11. En el menú **Prueba**, elija **Windows**, **Explorador de pruebas** y, en el Explorador de pruebas, seleccione **Ejecutar todo**.
    
    La prueba debe realizarse correctamente.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

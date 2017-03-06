@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
-ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8f0ad79eafde695b956e89f48073dba2651b51cb
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows/Linux/macOS con la línea de comandos
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión .NET Core Tools RC4, consulte el tema [Introducción a .NET Core en Windows, Linux y macOS con la línea de comandos (.NET Core Tools RC4)](../preview3/tutorials/using-with-xplat-cli-msbuild.md).
 
 Esta guía le enseñará a usar las herramientas de la CLI de .NET Core para crear aplicaciones de consola básicas multiplataforma.
 
@@ -612,7 +615,7 @@ public class PetTests
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+           
         Assert.Equal(expected, actual);
     }
 }
@@ -647,6 +650,6 @@ Si le interesa un ejemplo más avanzado de una aplicación de consola, consulte 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

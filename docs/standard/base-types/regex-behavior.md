@@ -4,16 +4,16 @@ description: Detalles del comportamiento de expresiones regulares
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6f11047f-45a4-4caf-a259-18abe08cc0d2
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: b217b59874ceafbb0e5e410878cc434974c5a863
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 5656cabb708dcfc311ac7a709446003951b97aa6
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -480,7 +480,7 @@ End Module
 
 Para obtener más información sobre las subexpresiones sin retroceso, consulte [Construcciones de agrupamiento en expresiones regulares](grouping.md).
 
-### <a name="righttoleft-matching"></a>Búsqueda de coincidencias de derecha a izquierda
+### <a name="right-to-left-matching"></a>Búsqueda de coincidencias de derecha a izquierda
 
 La búsqueda de coincidencias de derecha a izquierda se especifica al proporcionar la opción [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) a un constructor de clase [Regex](xref:System.Text.RegularExpressions.Regex) o a un método coincidente de instancia estática. Esta característica es útil al realizar búsquedas de derecha a izquierda en lugar de izquierda a derecha, o en los casos en los que es más eficaz iniciar una búsqueda de coincidencias en la parte derecha del patrón, en lugar de la izquierda. Como se muestra en el ejemplo siguiente, el uso de la búsqueda de coincidencias de derecha a izquierda puede cambiar el comportamiento de los cuantificadores expansivos. En el ejemplo se realizan dos búsquedas de una oración que termina con un número. La búsqueda de izquierda a derecha que usa el cuantificador expansivo `+` coincide con uno de los seis dígitos de la oración, mientras que la búsqueda de derecha a izquierda coincide con los seis dígitos. Para obtener una descripción del patrón de expresión regular, consulte el ejemplo que ilustra los cuantificadores diferidos anteriormente en esta sección.
 
@@ -637,10 +637,5 @@ Título | Descripción
 ## <a name="reference"></a>Referencia
 
 [System.Text.RegularExpressions](xref:System.Text.RegularExpressions)
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

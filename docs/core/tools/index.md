@@ -1,23 +1,25 @@
 ---
-title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core"
+title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core | Microsoft Docs"
 description: "Información general sobre qué es la interfaz de línea de comandos (CLI) y sus características principales"
 keywords: CLI, herramientas de la CLI, .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3a3326f96cf69d0ac466e52107597d80c2790b62
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 
 ---
 
-# <a name="net-core-commandline-interface-tools"></a>Herramientas de la interfaz de la línea de comandos de .NET Core
+# <a name="net-core-command-line-interface-tools"></a>Herramientas de la interfaz de la línea de comandos de .NET Core
+
+> [!WARNING]
+> Este tema se aplica a .NET Core Tools Preview 2. Para la versión de .NET Core Tools RC4, consulte el tema [Herramientas de la interfaz de la línea de comandos de .NET Core (.NET Core Tools RC4)](../preview3/tools/index.md).
 
 La interfaz de la línea de comandos (CLI) de .NET Core es una nueva cadena de herramientas fundamental multiplataforma para el desarrollo de aplicaciones .NET Core. Es "fundamental" porque es la capa primaria sobre la que se pueden crear otras herramientas de nivel superior, como entornos de desarrollo integrados (IDE), editores y orquestadores de compilación. 
 
@@ -99,6 +101,6 @@ Esta ha sido una corta introducción a las características más importantes de 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
