@@ -1,0 +1,7 @@
+# [How to: Create a List of Items](how-to-create-a-list-of-items.md)
+# [Tutorial: Escribir consultas en Visual Basic](walkthrough-writing-queries.md)
+# [Visual Basic Features That Support LINQ](features-that-support-linq.md)
+# [Type Relationships in Query Operations (Visual Basic)](type-relationships-in-query-operations.md)
+# [Getting Started with LINQ in Visual Basic](getting-started-with-linq.md)
+# [Escribir la primera consulta con LINQ](writing-your-first-linq-query.md)
+# [Operaciones básicas de consulta (Visual Basic)](basic-query-operations.md)

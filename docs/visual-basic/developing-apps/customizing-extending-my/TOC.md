@@ -1,0 +1,5 @@
+# [Empaquetar e implementar extensiones de My personalizadas](packaging-and-deploying-custom-my-extensions.md)
+# [Ampliar el modelo de la aplicación de Visual Basic](extending-the-visual-basic-application-model.md)
+# [Extender el espacio de nombres My en Visual Basic](extending-the-my-namespace.md)
+# [Personalizar los objetos que están disponibles en My](customizing-which-objects-are-available-in-my.md)
+# [Personalizar proyectos y ampliar My](customizing-projects-and-extending-my.md)

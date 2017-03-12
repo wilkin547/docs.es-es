@@ -1,0 +1,5 @@
+# [Cómo: Leer la configuración de la aplicación en Visual Basic](how-to-read-application-settings.md)
+# [Acceso a la configuración de la aplicación.](accessing-application-settings.md)
+# [Cómo: Crear cuadrículas de propiedades para la configuración del usuario en Visual Basic](how-to-create-property-grids-for-user-settings.md)
+# [Cómo: Cambiar la configuración del usuario en Visual Basic](how-to-change-user-settings.md)
+# [Cómo: Conservar la configuración del usuario en Visual Basic](how-to-persist-user-settings.md)
