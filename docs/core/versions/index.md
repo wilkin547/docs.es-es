@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -129,33 +129,28 @@ A continuación puede ver la demostración de actualizaciones de versión en los
 
 Después de enviar una versión estable de .NET Core v1.0.0, se agregan nuevas API a las bibliotecas .NET Core para permitir nuevos escenarios. Los diversos metapaquetes se actualizan para hacer referencia a los paquetes de biblioteca de .NET Core actualizados. Los metapaquetes tienen las versiones de las actualizaciones de revisión (x.y) para que coincidan con la versión más alta del marco. Los distintos marcos se actualizan para describir las nuevas API. Se lanza una nueva distribución de .NET Core con un número de versión que coincide con el metapaquete `Microsoft.NETCore.App`.
 
-A continuación puede ver la demostración de actualizaciones secundarias en los siguientes ejemplos de project.json.
+Puede ver la demostración de actualizaciones secundarias en el siguiente archivo del proyecto:
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
-  "frameworks": {
-    "netcoreapp1.1": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
 ### <a name="shipping-a-major-release"></a>Envío de una versión principal
 
 Dada una versión estable .NET Core v1.y.z, se agregan nuevas API a las bibliotecas .NET Core para permitir nuevos escenarios principales. Quizás, se quita la compatibilidad con una plataforma. Los diversos metapaquetes se actualizan para hacer referencia a los paquetes de biblioteca de .NET Core actualizados. El metapaquete `Microsoft.NETCore.App` y el marco `netcore` tienen versiones como una actualización principal (x.). Es probable que el metapaquete `NETStandard.Library` tenga la versión de una actualización secundaria (x.y) dado que se aplica a varias implementaciones de .NET. Se lanzaría una nueva distribución de .NET Core con un número de versión coincidente con el metapaquete `Microsoft.NETCore.App`.
 
-En el ejemplo siguiente puede ver la demostración de actualizaciones principales en la referencia del metapaquete de project.json.
+Puede ver la demostración de actualizaciones principales en el siguiente archivo del proyecto. (Tenga en cuenta que `netcoreapp2.0` no se ha publicado).
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "2.0.0"
-  },
-  "frameworks": {
-    "netcoreapp2.0": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
 ```
 
