@@ -24,14 +24,14 @@ Puede crear una matriz con tipo implícito en la que el tipo de la instancia de 
   
  En los ejemplos siguientes se muestra cómo crear una matriz con tipo implícito:  
   
- [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#37)]  
+ [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
  En el ejemplo anterior, observe que con las matrices con tipo implícito no se utilizan corchetes en el lado izquierdo de la instrucción de inicialización.  Observe además que las matrices escalonadas se inicializan utilizando `new []` al igual que las matrices unidimensionales.  
   
 ## Matrices con tipo implícito en inicializadores de objeto  
  Cuando se crea un tipo anónimo que contiene una matriz, la matriz debe tener un tipo implícito en el inicializador de objeto del tipo.  En el ejemplo siguiente, `contacts` es una matriz con tipo implícito de tipos anónimos, cada uno de los cuales contiene una matriz denominada `PhoneNumbers`.  Observe que la palabra clave `var` no se utiliza en los inicializadores de objeto.  
   
- [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#38)]  
+ [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

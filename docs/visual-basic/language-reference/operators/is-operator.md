@@ -55,7 +55,7 @@ result = object1 Is object2
 ## Ejemplo  
  El ejemplo siguiente utiliza el operador `Is` para comparar pares de referencias a objeto.  El resultado se asigna a un valor de tipo `Boolean` que indica si ambos objetos son idénticos.  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
   
  Como muestra el ejemplo anterior, puede utilizar el operador `Is` para comprobar objetos enlazados en tiempo de compilación y en tiempo de ejecución.  
   

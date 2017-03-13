@@ -37,9 +37,9 @@ La ventaja de sobrecargar un procedimiento radica en la flexibilidad de la llama
   
      El ejemplo siguiente llama al procedimiento `post` declarado en [Cómo: Definir varias versiones de un procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md).  Obtiene la identificación del cliente, determina si es `String` o `Integer`, y a continuación llama en cualquier caso al mismo procedimiento.  
   
-     [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_1.vb)]  
+     [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_2.vb)]  
+     [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
   
 ## Vea también  
  [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

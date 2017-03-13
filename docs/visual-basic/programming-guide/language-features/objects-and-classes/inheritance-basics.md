@@ -71,14 +71,14 @@ La instrucción `Inherits` se utiliza para declarar una nueva clase, denominada 
   
  En el siguiente ejemplo se define una clase base, `Payroll,` y una clase derivada, `BonusPayroll`, que reemplaza a un método heredado, `PayEmployee`.  Un procedimiento, `RunPayroll` crea y luego pasa un objeto `Payroll` y un objeto `BonusPayroll` a una función, `Pay`, que ejecuta el método `PayEmployee` de ambos objetos.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#28)]  
+ [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
   
 ## La palabra clave MyBase  
  La palabra clave `MyBase` se comporta como una variable de objeto que hace referencia a la clase base de la instancia actual de una clase.  `MyBase` suele usarse para obtener acceso a los miembros de la clase base que se reemplazan o se sombrean en una clase derivada.  En particular, `MyBase.New` se utiliza para llamar explícitamente a un constructor de una clase base desde un constructor de una clase derivada.  
   
  Por ejemplo, suponga que diseña una clase derivada que reemplaza un método heredado de la clase base.  El método reemplazado puede llamar al método de la clase base y modificar el valor devuelto como se muestra en el fragmento de código siguiente:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#109)]  
+ [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
   
  En la lista siguiente se describen las restricciones de uso de `MyBase`:  
   

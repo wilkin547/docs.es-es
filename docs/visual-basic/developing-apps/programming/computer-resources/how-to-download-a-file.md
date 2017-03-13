@@ -46,19 +46,19 @@ El método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> se puede
   
 -   Utilice el método `DownloadFile` para descargar el archivo; especifique la ubicación del archivo de destino como una cadena o un identificador uniforme de recursos \(URI\) y la ubicación donde se va a almacenar el archivo.  En este ejemplo se descarga el archivo `WineList.txt` desde `http://www.cohowinery.com/downloads` y se guarda en `C:\Documents and Settings\All Users\Documents`:  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
 ### Para descargar un archivo, especificando un intervalo de tiempo de espera  
   
 -   Utilice el método `DownloadFile` para descargar el archivo; especifique la ubicación del archivo de destino como una cadena o un identificador uniforme de recursos \(URI\), la ubicación donde se va a almacenar el archivo y el intervalo de tiempo de espera en milisegundos \(el valor predeterminado es 1000\).  Este ejemplo descarga el archivo `WineList.txt` de `http://www.cohowinery.com/downloads` y lo guarda en `C:\Documents and Settings\All Users\Documents`, especificando un intervalo de tiempo de espera de 500 milisegundos:  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
 ### Para descargar un archivo, proporcionando un nombre de usuario y contraseña  
   
 -   Utilice el método `DownLoadFile` para descargar el archivo; especifique la ubicación del archivo de destino como una cadena o un identificador uniforme de recursos \(URI\), la ubicación donde se va a almacenar el archivo, el nombre de usuario y la contraseña.  Este ejemplo descarga el archivo `WineList.txt` de `http://www.cohowinery.com/downloads` y lo guarda en `C:\Documents and Settings\All Users\Documents`, con el nombre de usuario `anonymous` y una contraseña en blanco.  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
     >  El método `DownLoadFile` utiliza el protocolo FTP para enviar información, incluidas las contraseñas, en texto sin formato y no se debe utilizar para transmitir información confidencial.  

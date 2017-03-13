@@ -21,7 +21,7 @@ caps.handback.revision: 10
 ## Ejemplo  
  En el ejemplo de código siguiente, <xref:System.Collections.Generic.Dictionary%602> se inicializa con instancias de tipo `StudentName`.  
   
- [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#34)]  
+ [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
  Observe los dos pares de llaves en cada elemento de la colección.  Las llaves internas contienen el inicializador de objeto para `StudentName` y las llaves externas contienen el inicializador para el par clave\-valor que se agregará a `students`<xref:System.Collections.Generic.Dictionary%602>.  Por último, se escribe entre llaves todo el inicializador de colección del diccionario.  
   

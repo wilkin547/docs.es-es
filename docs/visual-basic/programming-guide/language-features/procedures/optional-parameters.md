@@ -57,12 +57,12 @@ sub name(argument 1, , , argument 4)
   
  La primera llamada a `MsgBox` proporciona los tres argumentos en el orden en que `MsgBox` los define.  La segunda llamada únicamente proporciona el argumento obligatorio.  La tercera y la cuarta llamada proporcionan el primer y el tercer argumento.  La tercera llamada lo hace por posición y la llamada cuarta, por nombre.  
   
- [!code-vb[VbVbcnProcedures#47](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## Determinar si un argumento opcional está presente  
  En tiempo de ejecución un procedimiento no puede detectar si un argumento determinado se ha omitido o si el código de llamada ha suministrado de forma explícita el valor predeterminado de dicho argumento.  Si fuese necesario hacer esta distinción, se podría establecer como valor predeterminado un valor improbable.  El siguiente procedimiento define el parámetro opcional  `office` y comprueba si su valor predeterminado,  `QJZ`, ha sido omitido en la llamada:  
   
- [!code-vb[VbVbcnProcedures#46](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
  Si el parámetro opcional es un tipo de referencia, como `String`, puede utilizar `Nothing` como valor predeterminado, siempre y cuando éste no sea un valor esperado para el argumento.  
   

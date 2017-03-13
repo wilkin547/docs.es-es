@@ -23,7 +23,7 @@ Dado que los objetos son polimórficos, es posible que una variable de un tipo d
 ## Ejemplo  
  En los ejemplos siguientes se muestra cómo utilizar los operadores `is` y `as` para realizar una conversión de un tipo de referencia a otro sin el riesgo de que se produzca una excepción.  En el ejemplo también se muestra cómo utilizar el operador `as` con tipos de valor que aceptan valores NULL.  
   
- [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-safely-cast-by-us_1.cs)]  
+ [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
 ## Vea también  
  [Tipos](../../../csharp/programming-guide/types/index.md)   

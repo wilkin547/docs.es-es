@@ -62,7 +62,7 @@ Group Join element [As type] In collection _
 ## Ejemplo  
  En el ejemplo de código siguiente se combinan dos colecciones mediante la cláusula `Group Join`.  
   
- [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#14)]  
+ [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
 ## Vea también  
  [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

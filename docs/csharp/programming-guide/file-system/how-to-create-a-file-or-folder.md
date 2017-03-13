@@ -22,7 +22,7 @@ caps.handback.revision: 22
 Puede crear mediante programación una carpeta en el equipo, crear una subcarpeta, crear un archivo en la subcarpeta y escribir datos en el archivo.  
   
 ## Ejemplo  
- [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#10)]  
+ [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
  Si la carpeta existe ya, <xref:System.IO.Directory.CreateDirectory%2A> no hace nada y no se produce ninguna excepción.  Sin embargo, <xref:System.IO.File.Create%2A?displayProperty=fullName> reemplaza un archivo existente con un nuevo archivo.  El ejemplo utiliza una instrucción `if`\-`else` para evitar que un archivo existente se reemplace.  
   

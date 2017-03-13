@@ -35,9 +35,9 @@ Si está utilizando una clase o una estructura que define sus propios operadores
 ## Ejemplo  
  En el ejemplo siguiente se tiene acceso a la estructura SQL <xref:System.Data.SqlTypes.SqlString>, que define los operadores de conversión \([CType \(Función\)](../../../../visual-basic/language-reference/functions/ctype-function.md)\) entre una cadena SQL y una cadena de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] y viceversa.  Use `CType(`*expresión de cadena SQL*, `String)` para convertir una cadena SQL en una cadena de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] y `CType(`*expresión de cadena de Visual Basic*, <xref:System.Data.SqlTypes.SqlString>`)` para convertir en la dirección inversa.  
   
- [!code-vb[VbVbcnProcedures#30](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#31](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
  La estructura <xref:System.Data.SqlTypes.SqlString> define un operador de conversión \([CType \(Función\)](../../../../visual-basic/language-reference/functions/ctype-function.md)\) de `String` a <xref:System.Data.SqlTypes.SqlString> y otro de <xref:System.Data.SqlTypes.SqlString> a `String`.  La instrucción que asigna `title` a `jobTitle` utiliza el primer operador y la llamada a la función <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> utiliza el segundo.  
   

@@ -28,7 +28,7 @@ caps.handback.revision: 19
 En este ejemplo se muestra cómo usar una propiedad de eje descendiente para obtener acceso a todos los elementos XML que tienen el nombre especificado y están incluidos en un elemento XML.  Concretamente, se usa la propiedad `Value` para obtener el valor del primer elemento en la colección que la propiedad de eje descendiente `name` devuelve.  La propiedad de eje descendiente `name` obtiene todos los elementos denominados `name` que se incluyen en el objeto `contacts`.  En este ejemplo también se usa la propiedad de eje descendiente `phone` para obtener acceso a todos los descendientes denominados `phone` que se incluyen en el objeto `contacts`.  
   
 ## Ejemplo  
- [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-descen_1.vb)]  
+ [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-descendant-elements_1.vb)]  
   
 ## Compilar el código  
  Para este ejemplo se necesita:  

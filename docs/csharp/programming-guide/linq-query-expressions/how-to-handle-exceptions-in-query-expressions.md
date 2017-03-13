@@ -10,14 +10,14 @@ Es posible llamar a cualquier método en el contexto de una expresión de consul
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo mover código de control de excepciones fuera de una expresión de consulta.  Esto sólo es posible cuando el método no depende de variables locales de la consulta.  
   
- [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#10)]  
+ [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_1.cs)]  
   
 ## Ejemplo  
  En algunos casos, la mejor respuesta a una excepción que se produce desde una consulta puede ser detener la ejecución de la consulta inmediatamente.  En el ejemplo siguiente se muestra cómo controlar excepciones que pueden producirse desde el cuerpo de una consulta.  Suponga que `SomeMethodThatMightThrow` puede producir una excepción que requiere que se detenga la ejecución de la consulta.  
   
  Observe que el bloque `try` incluye el bucle `foreach` y no la consulta en sí.  Esto se debe a que el bucle `foreach` es el punto en el que se ejecuta la consulta realmente.  Para obtener más información, vea [Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
- [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#12)]  
+ [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 ## Compilar el código  
   

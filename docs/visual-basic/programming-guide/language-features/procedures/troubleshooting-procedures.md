@@ -50,7 +50,7 @@ Esta página muestra algunos problemas comunes que pueden aparecer al trabajar c
   
  **Enfoque correcto:** para poder modificar los elementos de una matriz que se debe devolver, defina una matriz interna como variable local.  En el siguiente ejemplo se compila sin errores.  
   
- [!code-vb[VbVbcnProcedures#66](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
 ## Argumento no modificado por una llamada a procedimiento  
  Si intenta permitir a un procedimiento que cambie un elemento de programación subyacente a un argumento en el código de llamada, debe pasarlo por referencia.  No obstante, un procedimiento puede tener acceso a los elementos de un argumento de tipo de referencia aun cuando se pase por valor.  
@@ -61,13 +61,13 @@ Esta página muestra algunos problemas comunes que pueden aparecer al trabajar c
   
  En el siguiente ejemplo se definen dos procedimientos que aceptan una variable de matriz por valor y operan con sus elementos.  El procedimiento `increase` suma sencillamente una unidad a cada elemento.  El procedimiento `replace` asigna una nueva matriz al parámetro `a()` y, a continuación, agrega una unidad a cada elemento.  La reasignación, sin embargo, no afecta a la variable de matriz subyacente al código de llamada porque `a()` se declara `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
  En el ejemplo siguiente se realizan llamadas a `increase` y `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
  La primera llamada a `MsgBox` muestra "After increase\(n\): 11, 21, 31, 41".  Como `n` es un tipo de referencia, `increase` puede cambiar sus miembros, aunque se pase `ByVal`.  
   
@@ -75,7 +75,7 @@ Esta página muestra algunos problemas comunes que pueden aparecer al trabajar c
   
  **Enfoque correcto:** para poder modificar un elemento variable subyacente en sí, páselo por referencia.  En el ejemplo siguiente se muestra el cambio en la declaración de `replace` que permite reemplazar una matriz por otra en el código de llamada.  
   
- [!code-vb[VbVbcnProcedures#64](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
 ## No se puede definir una sobrecarga  
  Si desea definir una versión sobrecargada de un procedimiento, debe utilizar el mismo nombre pero con una firma diferente.  Si el compilador no puede diferenciar su declaración de una sobrecarga con la misma firma, genera un error.  
@@ -117,9 +117,9 @@ Esta página muestra algunos problemas comunes que pueden aparecer al trabajar c
   
  Este proceso de resolución de las sobrecargas se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
  En la primera llamada, el compilador elimina la primera sobrecarga porque el tipo del primer argumento \(`Short`\) se restringe al tipo del parámetro correspondiente \(`Byte`\).  A continuación, elimina la tercera sobrecarga porque cada tipo de argumento de la segunda sobrecarga \(`Short` y `Single`\) se amplía al tipo correspondiente a la tercera sobrecarga \(`Integer` y `Single`\).  La segunda sobrecarga requiere una ampliación menor, y por eso el compilador la utiliza en la llamada.  
   
@@ -127,7 +127,7 @@ Esta página muestra algunos problemas comunes que pueden aparecer al trabajar c
   
  **Enfoque correcto:** para poder llamar a un procedimiento sobrecargado sin ambigüedad, utilice [CType \(Función\)](../../../../visual-basic/language-reference/functions/ctype-function.md) para que los tipos de datos de argumentos coincidan con los tipos de parámetros.  En el ejemplo siguiente se muestra una llamada a `z` que fuerza a la resolución a la segunda sobrecarga.  
   
- [!code-vb[VbVbcnProcedures#65](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
 ### Resolución de sobrecarga con argumentos Optional y ParamArray  
  Si dos sobrecargas de un procedimiento tienen las mismas firmas excepto que el último parámetro está declarado [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) en una y [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) en la otra, el compilador resuelve una llamada a ese procedimiento según la coincidencia más próxima.  Para obtener más información, vea [Resolución de sobrecargas](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md).  

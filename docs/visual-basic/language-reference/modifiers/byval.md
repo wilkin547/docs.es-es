@@ -41,7 +41,7 @@ Indica que un argumento se pasa de tal forma que el procedimiento o la propiedad
 ## Ejemplo  
  En el ejemplo siguiente se muestra el uso del mecanismo de paso del parámetro `ByVal` con un argumento de tipo de referencia.  En el ejemplo, el argumento es `c1`, una instancia de la clase `Class1`.  `ByVal` evita que el código en los procedimientos cambie el valor subyacente del argumento de referencia, `c1`, pero no protege las propiedades y campos accesibles de `c1`.  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/visualbasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
 ## Vea también  
  [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)   

@@ -18,18 +18,18 @@ caps.handback.revision: 20
 # Valores devueltos de Main() (Gu&#237;a de programaci&#243;n de C#)
 El método `Main` puede devolver `void`:  
   
- [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_1.cs)]  
+ [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]  
   
  También puede devolver un valor de tipo `int`:  
   
- [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_2.cs)]  
+ [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]  
   
  Si no se usa el valor devuelto por el método `Main`, la devolución de `void` permite un código un poco más simple.  Sin embargo, la devolución de un entero permite que el programa comunique información de estado a otros programas o scripts que invocan el archivo ejecutable.  En el ejemplo siguiente, se muestra cómo se puede obtener acceso al valor devuelto de `Main`.  
   
 ## Ejemplo  
  En este ejemplo, se usa un archivo por lotes para ejecutar un programa y probar el valor devuelto de la función `Main`.  Cuando un programa se ejecuta en Windows, cualquier valor que devuelva la función `Main` se almacena en una variable de entorno denominada `ERRORLEVEL`.  Al inspeccionar la variable `ERRORLEVEL`, los archivos por lotes pueden determinar el resultado de la ejecución.  Tradicionalmente, un valor devuelto de cero indica una ejecución correcta.  El siguiente ejemplo es un programa sencillo que devuelve el valor cero para la función `Main`.  El cero indica que el programa se ejecutó correctamente.  Guarde el programa como MainReturnValTest.cs.  
   
- [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-return-values_3.cs)]  
+ [!code-cs[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]  
   
 ## Ejemplo  
  Dado que en este ejemplo se usa un archivo por lotes, se recomienda compilar el código desde un símbolo del sistema.  Siga las instrucciones que se describen en [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) para habilitar las compilaciones desde la línea de comandos, o bien, use el símbolo del sistema de Visual Studio, que está disponible en el menú **Inicio** bajo **Visual Studio Tools**.  Desde el símbolo del sistema, navegue hasta la carpeta donde guardó el programa.  El comando siguiente compila MainReturnValTest.cs y genera el archivo ejecutable MainReturnValTest.exe.  

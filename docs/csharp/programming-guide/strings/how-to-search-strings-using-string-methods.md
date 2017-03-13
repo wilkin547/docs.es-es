@@ -22,7 +22,7 @@ El tipo [string](../../../csharp/language-reference/keywords/string.md), que es 
 ## Ejemplo  
  El ejemplo siguiente utiliza los métodos <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>, <xref:System.String.StartsWith%2A> y <xref:System.String.EndsWith%2A> para buscar las cadenas.  
   
- [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#21)]  
+ [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-string-methods_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

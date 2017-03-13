@@ -36,22 +36,22 @@ El método `CreateSubKey` del objeto `My.Computer.Registry` se puede utilizar pa
   
 -   Utilice el método `CreateSubKey`, especificando en qué subárbol se va a colocar la clave, así como el nombre de la clave.  El parámetro  `Subkey`  no distingue entre mayúsculas y minúsculas.  Este ejemplo crea la clave del Registro `MyTestKey` en HKEY\_CURRENT\_USER.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 #### Crear una clave del Registro y establecer un valor en él  
   
 1.  Utilice el método `CreateSubkey`, especificando en qué subárbol se va a colocar la clave, así como el nombre de la clave.  Este ejemplo crea la clave del Registro `MyTestKey` en HKEY\_CURRENT\_USER.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 2.  Establezca el valor con el método `SetValue`.  Este ejemplo establece el valor de la cadena. "  "MyTestKeyValue" en "This is a test value".  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_2.vb)]  
+     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
 ## Ejemplo  
  Este ejemplo crea la clave del Registro `MyTestKey` en HKEY\_CURRENT\_USER y, a continuación, establece el valor de la cadena `MyTestKeyValue` en `This is a test value`.  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_3.vb)]  
+ [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
 ## Programación eficaz  
  Examine la estructura del Registro para buscar la ubicación adecuada para la clave.  Por ejemplo, puede que desee abrir la clave HKEY\_CURRENT\_USER\\Software del usuario actual y crear una clave con el nombre de su empresa.  A continuación, agregue los valores del Registro a la clave de su empresa.  

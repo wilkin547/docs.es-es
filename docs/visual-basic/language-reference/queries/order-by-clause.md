@@ -46,17 +46,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## Ejemplo  
  La siguiente expresión de consulta usa una cláusula `From` para declarar una variable de rango `book` de la colección `books`.  La cláusula `Order By` ordena el resultado de la consulta por precio en orden ascendente \(el valor predeterminado\).  Los libros con el mismo precio se ordenan por título en orden ascendente.  La cláusula `Select` selecciona las propiedades `Title` y `Price` como los valores devueltos por la consulta.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#24)]  
+ [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
 ## Ejemplo  
  La expresión de consulta siguiente utiliza la cláusula `Order By` para ordenar el resultado de la consulta por precio en orden descendente.  Los libros con el mismo precio se ordenan por título en orden ascendente.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#25)]  
+ [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
 ## Ejemplo  
  La expresión de consulta siguiente utiliza una cláusula `Select` para seleccionar el título, precio, fecha de publicación y autor del libro.  Después rellena los campos `Title`, `Price`, `PublishDate` y `Author` de la variable de rango del nuevo ámbito.  La cláusula `Order By` ordena la nueva variable de rango por el nombre del autor, título del libro y, a continuación, precio.  Cada columna está ordenada en el orden predeterminado \(ascendente\).  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#26)]  
+ [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
 ## Vea también  
  [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

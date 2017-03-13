@@ -23,11 +23,11 @@ La palabra clave `set` define un método de *descriptor de acceso* en una propie
   
  Éste es un ejemplo de un descriptor de acceso `set` para una propiedad denominada `Seconds`:  
   
- [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/csharp/set_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/set_1.cs)]  
   
  Éste es un ejemplo de un descriptor de acceso `set` en una propiedad autoimplementada:  
   
- [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/csharp/set_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/set_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

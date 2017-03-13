@@ -43,7 +43,7 @@ caps.handback.revision: 16
  Para obtener más información acerca del control de excepciones, vea [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md).  
   
 ## Ejemplo  
- [!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/exception_1.cs)]  
+ [!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

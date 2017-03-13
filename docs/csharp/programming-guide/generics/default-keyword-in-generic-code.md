@@ -27,7 +27,7 @@ Un problema asociado a las clases y métodos genéricos es la forma de asignar u
   
  El ejemplo siguiente de las clases `GenericList<T>` muestra cómo utilizar la palabra clave `default`.  Para obtener más información, vea [Información general sobre los genéricos \(Guía de programación de C\#\)](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
   
- [!code-cs[csProgGuideGenerics#41](../../../csharp/programming-guide/generics/codesnippet/csharp/default-keyword-in-gener_1.cs)]  
+ [!code-cs[csProgGuideGenerics#41](../../../csharp/programming-guide/generics/codesnippet/CSharp/default-keyword-in-generic-code_1.cs)]  
   
 ## Vea también  
  <xref:System.Collections.Generic>   

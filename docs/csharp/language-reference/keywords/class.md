@@ -79,7 +79,7 @@ Las clases se declaran mediante la palabra clave `class`, como se muestra en el 
 ## Ejemplo  
  En el siguiente ejemplo se muestra la declaración de campos de clase, constructores y métodos.  También muestra la creación de instancias de objetos y la impresión de datos de instancia.  En este ejemplo, se declaran dos clases, la clase `Child`, que contiene dos campos privados \(`name` y `age`\) y dos métodos públicos.  La segunda clase, `StringTest`, se utiliza para contener `Main`.  
   
- [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/csharp/class_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]  
   
 ## Comentarios  
  En el ejemplo anterior, observe que sólo se puede obtener acceso a los campos privados \(`name` y `age`\) a través de los métodos públicos de la clase `Child`.  Por ejemplo, no es posible imprimir el valor name de la clase child desde el método `Main` con una instrucción como ésta:  

@@ -39,11 +39,11 @@ Si ha definido una clase o estructura, puede definir el comportamiento de un ope
 ## Ejemplo  
  En el ejemplo siguiente se define el operador `+` en una estructura denominada  `height`.  La estructura utiliza altos que se miden en pies y pulgadas.  Una *pulgada* equivale a 2,54 centímetros y un *pie* a 12 pulgadas.  Para garantizar que los valores están normalizados \(pulgadas \< 12,0\), el constructor lleva a cabo una aritmética *módulo* 12.  El operador `+` utiliza el constructor para generar valores normalizados.  
   
- [!code-vb[VbVbcnProcedures#25](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
   
  Puede probar la estructura  `height`  con el código siguiente.  
   
- [!code-vb[VbVbcnProcedures#26](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
  Para obtener más información y ejemplos, vea [Sobrecarga en Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)  
   

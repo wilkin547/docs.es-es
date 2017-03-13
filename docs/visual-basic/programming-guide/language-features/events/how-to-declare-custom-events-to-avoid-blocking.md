@@ -34,7 +34,7 @@ Hay varias circunstancias en las que resulta importante que un controlador de ev
   
  Cuando el código provoca el evento `Click`, el descriptor de acceso `RaiseEvent` invoca a todos los delegados del controlador de eventos de forma asincrónica con el método <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>.  Ese método invoca cada controlador en un subproceso de trabajo y vuelve inmediatamente, por lo que los controladores no se pueden bloquear entre si.  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#27)]  
+ [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
   
 ## Vea también  
  <xref:System.Collections.ArrayList>   

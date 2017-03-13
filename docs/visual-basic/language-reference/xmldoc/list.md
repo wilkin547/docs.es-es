@@ -68,7 +68,7 @@ Define una lista o una tabla.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<list>` para definir una lista con viñetas en la sección de comentarios.  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

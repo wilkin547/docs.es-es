@@ -24,7 +24,7 @@ El siguiente ejemplo simple muestra la forma estándar de declarar eventos en un
 >  No declare eventos virtuales en una clase base y los invalide en una clase derivada.  El compilador de C\# no administra correctamente y es imprevisible si un suscriptor al evento derivado suscribirá realmente al evento de clase base.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-raise-base-class-_1.cs)]  
+ [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

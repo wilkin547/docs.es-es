@@ -41,7 +41,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## Ejemplo  
  En el ejemplo siguiente se muestran varias maneras de obtener acceso a información sobre archivos y carpetas.  
   
- [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#6)]  
+ [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
   
 ## Programación eficaz  
  Al procesar cadenas de ruta de acceso especificadas por el usuario, también debería controlar las excepciones para las condiciones siguientes:  

@@ -24,7 +24,7 @@ En C\#, los argumentos se pueden pasar a parámetros por valor o por referencia.
   
  En el ejemplo siguiente se muestra la diferencia entre valor y parámetros de referencia.  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-parameters_1.cs)]  
+ [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
   
  Para obtener más información, vea los temas siguientes:  
   

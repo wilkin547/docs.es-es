@@ -23,7 +23,7 @@ Los indizadores permiten indizar las instancias de una clase o struct como matri
   
  En el ejemplo siguiente se define una clase genérica y se le proporcionan los métodos de descriptor de acceso simples [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) como un medio de asignar y recuperar valores.  La clase `Program` crea una instancia de esta clase para almacenar cadenas.  
   
- [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  Para obtener más ejemplos, vea [Secciones relacionadas](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  

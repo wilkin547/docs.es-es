@@ -39,7 +39,7 @@ caps.handback.revision: 19
   
  En el ejemplo siguiente se muestra una etiqueta \<see\> dentro de una sección de resumen.  
   
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/see_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

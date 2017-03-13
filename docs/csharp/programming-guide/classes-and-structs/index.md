@@ -37,7 +37,7 @@ Las clases y structs son dos de las construcciones básicas del Common Type Syst
 ## Ejemplo  
  En el ejemplo siguiente, se define `MyCustomClass` con tres miembros en el nivel superior del espacio de nombres `ProgrammingGuide`.  Se crea una instancia \(objeto\) de `MyCustomClass` en el método `Main` de la clase `Program`. Para obtener acceso a los métodos y propiedades del objeto se utiliza la notación de punto.  
   
- [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 ## Encapsulación  
  En ocasiones se hace referencia a la *encapsulación* como el primer pilar o principio de la programación orientada a objetos.  Según el principio de encapsulación, una clase o un struct puede especificar el nivel posible de acceso a cada uno de sus miembros en el código fuera de la clase o el struct.  Los métodos y variables que no se van a utilizar fuera de la clase o el ensamblado se pueden ocultar para limitar la posibilidad de errores de codificación o ataques malintencionadas.  

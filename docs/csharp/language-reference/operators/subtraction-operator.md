@@ -31,7 +31,7 @@ El operador `-` puede funcionar como operador unario o binario.
  Los tipos definidos por el usuario pueden sobrecargar los operadores unario y binario `-`.  Para obtener más información, vea [operador](../../../csharp/language-reference/keywords/operator.md).  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#40)]  
+ [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

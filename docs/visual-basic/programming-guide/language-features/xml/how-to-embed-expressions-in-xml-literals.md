@@ -35,7 +35,7 @@ Puede combinar literales XML con expresiones incrustadas para crear un documento
   
 -   En el ejemplo siguiente se muestra cómo insertar el texto incluido en la variable `contactName` entre los elementos de nombre de apertura y cierre.  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_1.vb)]  
+     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
      Este ejemplo produce el siguiente resultado.  
   
@@ -49,7 +49,7 @@ Puede combinar literales XML con expresiones incrustadas para crear un documento
   
 -   En el ejemplo siguiente se muestra cómo insertar el texto incluido en la variable `phoneType` como valor del atributo `type`.  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_2.vb)]  
+     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
      Este ejemplo produce el siguiente resultado.  
   
@@ -65,7 +65,7 @@ Puede combinar literales XML con expresiones incrustadas para crear un documento
   
      Al crear elementos mediante esta técnica, debe cerrarlos con la etiqueta \<\/\>.  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_3.vb)]  
+     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   
      Este ejemplo produce el siguiente resultado.  
   

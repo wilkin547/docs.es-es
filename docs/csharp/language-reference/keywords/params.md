@@ -29,7 +29,7 @@ Usando la palabra clave `params`, puede especificar un [parámetro de método](.
 ## Ejemplo  
  En el siguiente ejemplo se muestran varias maneras de enviar argumentos a un parámetro `params`.  
   
- [!code-cs[csrefKeywordsMethodParams#5](../../../csharp/language-reference/keywords/codesnippet/csharp/params_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/params_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

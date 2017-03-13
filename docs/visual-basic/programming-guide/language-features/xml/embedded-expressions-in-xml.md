@@ -30,7 +30,7 @@ Las expresiones incrustadas permiten crear literales XML con expresiones que se 
   
  Por ejemplo, puede crear un literal de elemento XML, combinando las expresiones incrustadas con contenido de texto literal.  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_1.vb)]  
+ [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
   
  Si `isbnNumber` contiene el entero 12345 y `modifiedDate` contiene la fecha 3\/5\/2006, cuando este código se ejecute, el valor de `book` es:  
   
@@ -55,27 +55,27 @@ Las expresiones incrustadas permiten crear literales XML con expresiones que se 
   
 -   Ejemplo de una expresión incrustada en el nombre de un elemento XML:  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_2.vb)]  
+     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
 -   Ejemplo de una expresión incrustada en el contenido de un elemento XML:  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_3.vb)]  
+     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
 -   Ejemplo de una expresión incrustada en el nombre del atributo de un elemento XML:  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_4.vb)]  
+     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
 -   Ejemplo de una expresión incrustada en el valor de un atributo del elemento XML:  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_5.vb)]  
+     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
 -   Ejemplo de una expresión incrustada en el atributo de un elemento XML:  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_6.vb)]  
+     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
   
 -   Ejemplo de una expresión incrustada en el elemento raíz de un documento XML:  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_7.vb)]  
+     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
  Si habilita `Option Strict`, el compilador comprueba que el tipo de cada expresión incrustada se amplíe al tipo necesario.  La única excepción es el elemento raíz de un documento XML, que se comprueba cuando el código se ejecuta.  Si compila sin `Option Strict`, puede incrustar expresiones de tipo `Object` y su tipo se comprueba en tiempo de ejecución.  
   

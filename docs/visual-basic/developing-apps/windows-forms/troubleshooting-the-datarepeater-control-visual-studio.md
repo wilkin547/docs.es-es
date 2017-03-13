@@ -46,8 +46,8 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
  Puede corregir este tipo de problemas restableciendo las propiedades perdidas en el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>, lo que sucede una vez completada la clonación predeterminada.  En el ejemplo siguiente se muestra cómo reparar la colección <xref:System.Windows.Forms.ListBox.Items%2A> de un control <xref:System.Windows.Forms.ListBox> en el controlador de eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>.  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterItemClonedCS/ItemCloned.cs#1)]
- [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterItemCloned/ItemCloned.vb#1)]  
+ [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
 ## Falta el símbolo de selección en el encabezado del elemento  
  Al cambiar la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> del encabezado de elemento en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, algunas opciones de color pueden hacer que el símbolo de selección desaparezca.  Al modificar la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>, el símbolo de selección también puede desaparecer.  

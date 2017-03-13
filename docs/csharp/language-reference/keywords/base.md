@@ -37,14 +37,14 @@ La palabra clave `base` se utiliza para obtener acceso a los miembros de la clas
 ## Ejemplo  
  En este ejemplo, tanto la clase base, `Person`, como la clase derivada, `Employee`, poseen un método denominado `Getinfo`.  Mediante la palabra clave `base`, se puede realizar una llamada al método `Getinfo` de la clase base desde la clase derivada.  
   
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/csharp/base_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
   
  Para obtener más ejemplos, vea [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) y [override](../../../csharp/language-reference/keywords/override.md).  
   
 ## Ejemplo  
  Este ejemplo muestra cómo especificar el constructor de la clase base al que se realiza la llamada cuando se crean instancias de una clase derivada.  
   
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/csharp/base_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

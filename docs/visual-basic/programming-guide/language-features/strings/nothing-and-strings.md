@@ -26,7 +26,7 @@ El runtime de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/li
 ## Visual Basic Runtime y .NET Framework  
  Considere el ejemplo siguiente:  
   
- [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/nothing-and-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
  El runtime de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] normalmente evalúa `Nothing` como una cadena vacía \(""\).  Sin embargo, [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] no lo hace, y se producirá una excepción cuando se intente realizar una operación de cadena en `Nothing`.  
   

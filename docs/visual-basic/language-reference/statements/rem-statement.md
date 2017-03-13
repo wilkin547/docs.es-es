@@ -53,7 +53,7 @@ REM comment
 ## Ejemplo  
  En el ejemplo siguiente se muestra la instrucción `REM`, que se utilizará para incluir observaciones explicativas en un programa.  También se muestra la alternativa de utilización de un carácter de comilla simple \(`'`\) en lugar de `REM`.  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
 ## Vea también  
  [Comentarios en código](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)   

@@ -24,17 +24,17 @@ La instrucción `break` permite terminar el bucle envolvente más cercano o la i
 ## Ejemplo  
  En este ejemplo, la instrucción condicional contiene un contador preparado para contar de 1 a 100; sin embargo, la instrucción `break` termina el bucle tras 4 iteraciones.  
   
- [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/csharp/break_1.cs)]  
+ [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_1.cs)]  
   
 ## Ejemplo  
  En este ejemplo, se usa la instrucción `break` para interrumpir la ejecución de un bucle anidado interno y devolver el control al bucle externo.  
   
- [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/csharp/break_2.cs)]  
+ [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_2.cs)]  
   
 ## Ejemplo  
  Este ejemplo muestra el uso de `break` en una instrucción [switch](../../../csharp/language-reference/keywords/switch.md).  
   
- [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/csharp/break_3.cs)]  
+ [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_3.cs)]  
   
  Si se escribió `4`, el resultado sería:  
   

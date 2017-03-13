@@ -75,11 +75,11 @@ Next [ counter ]
   
  En el ejemplo siguiente, la variable de `index` comienza con un valor de 1 y se incrementa con cada iteración del bucle, finalizando después de que el valor de `index` cobertura 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
  En el ejemplo siguiente, la variable de `number` comienza en 2 y es baja por 0,25 en cada iteración del bucle, finalizando después de que el valor de `number` cobertura 0.  El argumento de `Step` de `-.25` reduce el valor en 0,25 en cada iteración del bucle.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
 >  [While...End While \(Instrucción\)](../../../visual-basic/language-reference/statements/while-end-while-statement.md) o [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md) funciona bien cuando no se sabe de antemano cuántas veces para ejecutar las instrucciones del bucle.  Sin embargo, cuando espere ejecutar el bucle un número concreto de veces, `For`...`Next` es una mejor elección.  Determina el número de iteraciones cuando se entra en el bucle por primera vez.  
@@ -87,7 +87,7 @@ Next [ counter ]
 ## Bucles anidados  
  Se pueden anidar bucles `For` colocando un bucle dentro de otro.  En el ejemplo siguiente se muestran estructuras `For`...`Next` anidadas con valores de incremento diferentes.  El bucle externo crea una cadena para cada iteración del bucle.  El bucle interior disminuye una variable de contador de bucle por cada iteración del bucle.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
  Cuando los bucles de anidamiento, cada bucle deben tener una variable única de `counter`.  
   
@@ -100,7 +100,7 @@ Next [ counter ]
   
  En el siguiente ejemplo se muestra el uso de las instrucciones `Continue For` y `Exit For`.  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
  Puede incluir cualquier número de instrucciones `Exit For` en un bucle `For`...`Next`.  Cuando se utiliza dentro de bucles `For`…`Next` anidados, `Exit For` sale del bucle más profundo y transfiere el control al siguiente nivel de anidamiento.  
   
@@ -168,17 +168,17 @@ Next [ counter ]
 ## Ejemplo  
  El ejemplo siguiente elimina todos los elementos de una lista genérica.  En lugar de [For Each...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-each-next-statement.md), el ejemplo muestra una instrucción de `For`…`Next` que recorra en orden descendente.  El ejemplo utiliza esta técnica porque el método de `removeAt` hace elementos después del elemento quitado para tener un valor de índice mínimo.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
 ## Ejemplo  
  El ejemplo siguiente se recorre en iteración una enumeración que se declara mediante [Enum \(Instrucción\)](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
 ## Ejemplo  
  En el siguiente ejemplo, los parámetros de la instrucción utilizan una clase que tiene sobrecargas de operador para los operadores `+`, `-`, `>=` y `<=`.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
 ## Vea también  
  <xref:System.Collections.Generic.List%601>   

@@ -26,15 +26,15 @@ Un *campo* es una variable de cualquier tipo que se declara directamente en una 
   
  Los campos se declaran en el bloque de clase especificando el nivel de acceso del campo, seguido por el tipo de campo y después por el nombre del mismo.  Por ejemplo:  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_1.cs)]  
+ [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  Para obtener acceso a un campo en un objeto, agregue un punto después del nombre de objeto, seguido del nombre del campo, como en `objectname.fieldname`.  Por ejemplo:  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_2.cs)]  
+ [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  Se puede proporcionar un valor inicial a un campo utilizando el operador de asignación cuando se declara el campo.  Para asignar automáticamente al campo `day` el valor `"Monday"`, por ejemplo, declararía `day` como en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_3.cs)]  
+ [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  Los campos se inicializan inmediatamente antes de llamar al constructor para la instancia de objeto.  Si el constructor asigna el valor de un campo, sobrescribirá cualquier valor dado durante la declaración del campo.  Para obtener más información, vea [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

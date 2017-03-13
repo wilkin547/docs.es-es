@@ -68,7 +68,7 @@ Bifurcaciones válidas y no válidas en construcciones Try
 ## Ejemplo  
  En este ejemplo se usa la instrucción `GoTo` para bifurcar hacia etiquetas de línea ubicadas en un procedimiento.  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
 ## Vea también  
  [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

@@ -69,7 +69,7 @@ result = pattern >> amount
 ## Ejemplo  
  En el ejemplo siguiente se usa el operador `>>` para realizar desplazamientos aritméticos a la derecha en valores integrales.  El resultado tiene siempre el mismo tipo de datos que la expresión que se está desplazando.  
   
- [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
  Los resultados del ejemplo anterior son los siguientes:  
   
@@ -87,7 +87,7 @@ result = pattern >> amount
   
  El ejemplo siguiente muestra los cambios aritméticos en un valor negativo.  
   
- [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
  Los resultados del ejemplo anterior son los siguientes:  
   

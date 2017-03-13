@@ -49,11 +49,11 @@ From element [ As type ] In collection [ _ ]
   
  Puede especificar varias cláusulas `From` en una consulta para identificar varias colecciones que se van a combinar.  Cuando se especifican varias colecciones, se iteran en ellas independientemente o puede combinarlas si están relacionadas.  Puede combinar colecciones implícitamente mediante la cláusula `Select` o explícitamente mediante las cláusulas `Join` o `Group Join` Como alternativa, puede especificar varias variables de rango y colecciones en una sola cláusula `From`, con cada variable de rango y colección relacionadas separadas del resto por una coma.  El ejemplo de código siguiente muestra ambas opciones de sintaxis para la cláusula `From`.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#21)]  
+ [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
  La cláusula `From` define el ámbito de una consulta, que es similar al ámbito de un bucle `For`.  Por consiguiente, cada variable de rango `element` del ámbito de una consulta debe tener un nombre único.  Dado que puede especificar varias cláusulas `From` para una consulta, las cláusulas `From` subsiguientes pueden hacer referencia a las variables de rango de la cláusula `From` o pueden hacer referencia a las variables de rango de una cláusula `From` previa.  Por ejemplo, el ejemplo siguiente muestra una cláusula `From` anidada en la que la colección de la segunda cláusula se basa en una propiedad de variable de rango de la primera cláusula.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#22)]  
+ [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
  Cada cláusula `From` puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta.  Puede refinarla de las siguientes maneras:  
   
@@ -76,7 +76,7 @@ From element [ As type ] In collection [ _ ]
 ## Ejemplo  
  La siguiente expresión de consulta usa una cláusula `From` para declarar una variable de rango `cust` para cada objeto `Customer` de la colección `customers`.  La cláusula `Where` usa la variable de rango para restringir el resultado a los clientes de la región especificada.  El bucle `For Each` muestra el nombre de la compañía de cada cliente en el resultado de la consulta.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## Vea también  
  [Consultas](../../../visual-basic/language-reference/queries/queries.md)   

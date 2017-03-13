@@ -30,7 +30,7 @@ Una expresión de consulta debe comenzar con una cláusula `from`.  Además, una
   
  En el ejemplo siguiente, `numbers` es el origen de datos y `num` es la variable de rango.  Observe que ambas variables están fuertemente tipadas aunque se use la palabra clave [var](../../../csharp/language-reference/keywords/var.md).  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#1)]  
+ [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
 ## Variable de rango \(Range\)  
  El compilador deduce el tipo de la variable de rango cuando el origen de datos implementa <xref:System.Collections.Generic.IEnumerable%601>.  Por ejemplo, si el origen tiene un tipo `IEnumerable<Customer>`, se deduce que la variable de rango es `Customer`.  La única ocasión en que se debe especificar explícitamente el tipo es cuando el origen es un tipo `IEnumerable` no genérico, como <xref:System.Collections.ArrayList>.  Para obtener más información, vea [How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md).  
@@ -42,14 +42,14 @@ Una expresión de consulta debe comenzar con una cláusula `from`.  Además, una
 ## Cláusulas From compuestas  
  En algunos casos, cada elemento de la secuencia de origen puede ser en sí mismo una secuencia o contenerla.  Por ejemplo, el origen de datos puede ser un `IEnumerable<Student>`, donde cada objeto de estudiante de la secuencia contiene una lista de puntuaciones de exámenes.  Para tener acceso a la lista interna de cada elemento `Student`, puede utilizar cláusulas `from` compuestas.  La técnica es como utilizar instrucciones [foreach](../../../csharp/language-reference/keywords/foreach-in.md) anidadas.  Puede agregar cláusulas [where](../../../csharp/language-reference/keywords/partial-method.md) u [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) a cualquier cláusula `from` para filtrar los resultados.  En el ejemplo siguiente se muestra una secuencia de objetos `Student`, cada uno de los cuales contiene un objeto `List` interno de enteros que representan las puntuaciones de los exámenes.  Para tener acceso a la lista interna, utilice una cláusula `from` compuesta.  Puede insertar cláusulas entre las dos cláusulas `from` si es necesario.  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#2)]  
+ [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
 ## Utilizar varias cláusulas From para realizar combinaciones  
  Para tener acceso a las colecciones internas de un origen de datos único, se utiliza una cláusula `from` compuesta.  Sin embargo, una consulta también puede contener varias cláusulas `from` que generen consultas complementarias de orígenes de datos independientes.  Esta técnica permite realizar ciertos tipos de operaciones de combinación que no son posibles con la [cláusula Join](../../../csharp/language-reference/keywords/join-clause.md).  
   
  En el ejemplo siguiente se muestra cómo usar dos cláusulas `from` para formar una combinación cruzada completa de dos orígenes de datos.  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#3)]  
+ [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
  Para obtener más información sobre las operaciones de combinación que utilizan varias cláusulas `from`, vea [Cómo: Realizar operaciones de combinación personalizadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   

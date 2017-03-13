@@ -42,7 +42,7 @@ Especifica que el contenido tiene el formato de un párrafo.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<para>` para dividir la sección de comentarios del método `UpdateRecord` en dos párrafos.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/para_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

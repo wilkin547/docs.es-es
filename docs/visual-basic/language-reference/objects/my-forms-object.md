@@ -53,7 +53,7 @@ Suministra las propiedades para tener acceso a una instancia de cada formulario 
 ## Ejemplo  
  Este ejemplo cambia el título del formulario `SidebarMenu` predeterminado.  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
  Para que este ejemplo funcione, el proyecto debe tener un formulario denominado `SidebarMenu`.  Para obtener más información, vea [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/es-es/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   

@@ -24,7 +24,7 @@ La palabra clave contextual `ascending` se utiliza en la [cláusula orderby](../
 ## Ejemplo  
  En el ejemplo siguiente se muestra el uso de `ascending` en una [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md).  
   
- [!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/csharp/ascending_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

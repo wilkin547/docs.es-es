@@ -29,19 +29,19 @@ Los tres objetos `My` centrales que proporcionan acceso a información y funcion
 ## My.Application, My.Computer y My.User  
  Los ejemplos siguientes muestran cómo se puede recuperar información utilizando `My`.  
   
- [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_1.vb)]  
+ [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
   
- [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_2.vb)]  
+ [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
   
  Además de recuperar información, los miembros expuestos a través de estos tres objetos también permiten ejecutar métodos relacionados con ese objeto.  Por ejemplo, puede tener acceso a una variedad de métodos para manipular archivos o actualizar el Registro a través de `My.Computer`.  
   
  La E\/S de archivos resulta mucho más sencilla y rápida con `My`, que incluye una variedad de métodos y propiedades para manipular archivos, directorios y unidades.  El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> permite leer en archivos estructurados grandes con campos delimitados o de ancho fijo.  En este ejemplo se abre `TextFieldParser` `reader`, que se utiliza para leer `C:\TestFolder1\test1.txt`.  
   
- [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_3.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
  `My.Application` permite cambiar la referencia cultural de la aplicación.  El ejemplo siguiente muestra cómo se puede llamar a este método.  
   
- [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_4.vb)]  
+ [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   
 ## Vea también  
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   

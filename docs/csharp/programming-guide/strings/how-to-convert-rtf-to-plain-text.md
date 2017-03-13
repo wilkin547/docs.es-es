@@ -37,7 +37,7 @@ These characters are from the extended ASCII character set (Windows code page 12
   
 ```  
   
- [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#33)]  
+ [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-rtf-to-plain-text_1.cs)]  
   
  Los caracteres RTF se codifican en ocho bits.  Sin embargo, los usuarios pueden especificar caracteres Unicode además de caracteres ASCII extendidos de las páginas de códigos especificadas.  Dado que la propiedad <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> es de tipo [string](../../../csharp/language-reference/keywords/string.md), los caracteres se codifican como Unicode UTF\-16.  Los caracteres ASCII extendidos y los caracteres Unicode del documento RTF de origen se codifican correctamente en el resultado de texto.  
   

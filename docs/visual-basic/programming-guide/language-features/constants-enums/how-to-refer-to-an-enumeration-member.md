@@ -32,7 +32,7 @@ Las enumeraciones proporcionan una forma cómoda de trabajar con conjuntos de co
   
 -   Califique el nombre de miembro con la enumeración.  Por ejemplo, el ejemplo siguiente asigna el miembro `Saturday` de la enumeración `FirstDayOfWeek` a la variable  `DayValue`.  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#19)]  
+     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
   
 ## Vea también  
  [Cómo: Declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   

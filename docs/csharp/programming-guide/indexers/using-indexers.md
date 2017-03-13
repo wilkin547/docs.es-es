@@ -56,7 +56,7 @@ public int this [int index]   // Indexer declaration
  Conviene tener en cuenta que cuando se evalúa el acceso de un indizador, por ejemplo, en una instrucción `Console.Write` se llama al descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md).  Por ello, si no existe un descriptor de acceso `get` se producirá un error en tiempo de compilación.  
   
 ### Código  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_1.cs)]  
+ [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## Indizar utilizando otros valores  
  C\# no limita el tipo de índice al entero.  Por ejemplo, puede ser útil utilizar una cadena con un indizador.  Este tipo de indizador podría implementarse buscando la cadena dentro de la colección y devolviendo el valor adecuado.  Como se pueden sobrecargar los descriptores de acceso, es posible la coexistencia de cadenas y enteros.  
@@ -67,7 +67,7 @@ public int this [int index]   // Indexer declaration
  En este ejemplo, se declara una clase que almacena los días de la semana.  Se declara un descriptor de acceso `get` que toma una cadena, el nombre de un día, y devuelve el entero correspondiente.  Por ejemplo, Sunday devolverá 0, Monday devolverá 1, y así sucesivamente.  
   
 ### Código  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_2.cs)]  
+ [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## Programación sólida  
  Fundamentalmente, hay dos maneras de mejorar la seguridad y confiabilidad de los indizadores:  

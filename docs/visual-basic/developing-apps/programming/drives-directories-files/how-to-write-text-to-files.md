@@ -32,7 +32,7 @@ El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se pue
   
 -   Utilice el método `WriteAllText` para escribir el texto en un archivo, especificando el archivo y el texto que se va a escribir.  Este ejemplo escribe la línea `"This is new text."` en el archivo llamado `test.txt`, anexando el texto al texto existente en el archivo.  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
 #### Para escribir una serie de cadenas en un archivo  
   
@@ -40,7 +40,7 @@ El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se pue
   
      Este ejemplo escribe los nombres de los archivos contenidos en el directorio `Documents and Settings` en el archivo `FileList.txt`, insertando un retorno de carro entre cada uno de ellos para una mejor legibilidad.  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
 ## Programación eficaz  
  Las condiciones siguientes pueden provocar una excepción:  

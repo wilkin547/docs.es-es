@@ -45,15 +45,15 @@ Para que el proyecto pueda disponer de objetos externos, elija el comando **Agre
 ## Utilizar alias con la instrucción Imports  
  La instrucción `Imports` facilita el acceso a los métodos de clases porque elimina la necesidad de escribir explícitamente los nombres completos de las referencias.  Los alias permiten asignar un nombre más descriptivo a una sola parte de un espacio de nombres.  Por ejemplo, la secuencia retorno de carro y avance de línea, que permite mostrar un texto en varias líneas, forma parte del módulo <xref:Microsoft.VisualBasic.ControlChars> del espacio de nombres <xref:Microsoft.VisualBasic?displayProperty=fullName>.  Para utilizar esta constante en un programa que no tenga un alias, debe escribir el siguiente fragmento de código:  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
  Las instrucciones `Imports` deben aparecer siempre en las primeras líneas, inmediatamente después de cualquier instrucción `Option` de un módulo.  El fragmento de código siguiente muestra cómo se importa y se asigna un alias al módulo <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName>:  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
  Las referencias que después se hagan a este espacio de nombres pueden ser mucho más breves:  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
  Si una instrucción `Imports` no incluye un nombre de alias, los elementos definidos en el espacio de nombres importado pueden utilizarse en el módulo sin calificación.  Si se especifica el nombre del alias, debe utilizarse como calificador de los nombres contenidos en dicho espacio de nombres.  
   

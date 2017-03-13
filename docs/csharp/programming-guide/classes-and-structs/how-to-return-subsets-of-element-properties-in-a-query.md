@@ -31,7 +31,7 @@ select student.ID;
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar un tipo anónimo para devolver solamente un subconjunto de las propiedades de cada elemento de origen que coincida con la condición especificada.  
   
- [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#31)]  
+ [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
   
  Tenga en cuenta que el tipo anónimo utiliza los nombres del elemento de origen para sus propiedades si no se especifican nombres.  Para asignar nombres nuevos a las propiedades del tipo anónimo, escriba la instrucción `select` de la siguiente forma:  
   

@@ -10,7 +10,7 @@ En este tema se muestran dos formas distintas de crear una consulta que ordena l
  Para obtener más información sobre las continuaciones, vea [into](../../../csharp/language-reference/keywords/into.md).  En el ejemplo siguiente se utiliza una estructura de datos en memoria como origen de datos, pero se aplican los mismos principios a cualquier tipo de origen de datos [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  
   
 ## Ejemplo  
- [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#23)]  
+ [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
   
 ## Compilar el código  
  Este ejemplo contiene referencias a objetos definidos en la aplicación de ejemplo del tema [Cómo: Consultar una colección de objetos](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md).  Para compilar y ejecutar este método, péguelo en la clase `StudentClass` de esa aplicación y agregue una llamada a éste desde el método `Main`.  

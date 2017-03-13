@@ -35,7 +35,7 @@ Una *consulta* es una expresión que recupera datos de un origen de datos.  Las 
   
  En el ejemplo siguiente se muestra cómo se expresan las tres partes de una operación de consulta en el código fuente.  En el ejemplo se utiliza por comodidad una matriz de enteros como origen de datos, pero los mismos conceptos se aplican a otros orígenes de datos.  En el resto del tema se hace referencia a este ejemplo.  
   
- [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#1)]  
+ [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
  En la siguiente ilustración se muestra la operación de consulta completa.  En [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], la ejecución de la consulta es distinta de la propia consulta; en otras palabras, no se recuperan datos con la simple creación de la variable de consulta.  
   
@@ -46,7 +46,7 @@ Una *consulta* es una expresión que recupera datos de un origen de datos.  Las 
   
  Un tipo que se puede consultar no requiere ninguna modificación o tratamiento especial para servir como origen de datos [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Si los datos de origen aún no están en memoria como tipo que se puede consultar, el proveedor [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] debe representarlos como tales.  Por ejemplo, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] carga un documento XML en un tipo <xref:System.Xml.Linq.XElement> que se puede consultar:  
   
- [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#2)]  
+ [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
  Con [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], primero se crea una asignación relacional de objetos en tiempo de diseño, ya sea manualmente o mediante el [Object Relational Designer](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2).  Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos.  En el ejemplo siguiente, `Customers` representa una tabla concreta de la base de datos y el tipo del resultado de la consulta, <xref:System.Linq.IQueryable%601>, se deriva de <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -79,7 +79,7 @@ IQueryable<Customer> custQuery =
 ### Ejecución diferida  
  Como se ha mencionado previamente, la variable de consulta sólo almacena los comandos de la consulta.  La ejecución real de la consulta se aplaza hasta que se procese una iteración en la variable de consulta, en una instrucción `foreach`.  Este concepto se conoce como *ejecución diferida* y se muestra en el ejemplo siguiente:  
   
- [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#4)]  
+ [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
  La instrucción `foreach` es también donde se recuperan los resultados de la consulta.  Por ejemplo, en la consulta anterior, la variable de iteración `num` contiene cada valor \(de uno en uno\) en la secuencia devuelta.  
   
@@ -88,11 +88,11 @@ IQueryable<Customer> custQuery =
 ### Forzar la ejecución inmediata  
  Las consultas que realizan funciones de agregación en un intervalo de elementos de origen primero deben recorrer en iteración dichos elementos.  Algunos ejemplos de esas consultas son `Count`, `Max`, `Average` y `First`.  Se ejecutan sin una instrucción `foreach` explícita porque la propia consulta debe utilizar `foreach` para devolver un resultado.  Debe saber también que estos tipos de consultas devuelven un solo valor, no una colección `IEnumerable`.  La consulta siguiente devuelve un recuento de los números pares de la matriz de origen:  
   
- [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#5)]  
+ [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
  Para forzar la ejecución inmediata de cualquier consulta y almacenar en memoria caché sus resultados, puede llamar al método <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#6)]  
+ [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
  También puede forzar la ejecución si coloca el bucle `foreach` justo después de la expresión de consulta.  Sin embargo, al llamar a `ToList` o `ToArray` también se almacenan en memoria caché todos los datos en un objeto de colección único.  
   

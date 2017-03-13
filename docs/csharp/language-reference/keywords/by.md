@@ -24,7 +24,7 @@ La palabra clave contextual `by` se utiliza en la cláusula `group` de una expre
 ## Ejemplo  
  En el ejemplo siguiente se muestra el uso de la palabra clave contextual `by` en una cláusula `group` para especificar que los alumnos se deben agrupar según la primera letra de su apellido.  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/csharp/by_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
   
 ## Vea también  
  [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

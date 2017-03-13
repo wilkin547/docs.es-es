@@ -38,7 +38,7 @@ public delegate int TestDelegate(MyType m, long num);
  Para crear instancias del delegado debe utilizarse un método o una expresión lambda que tenga un tipo de valor devuelto y parámetros de entrada compatibles.  Para obtener más información sobre el grado de variación permitida en la firma de método, vea [Varianza en delegados](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md).  Para el uso con métodos anónimos, el delegado y el código que se van a asociar se declaran juntos.  En esta sección se describen las dos formas de crear instancias de delegados.  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/csharp/delegate_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

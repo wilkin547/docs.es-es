@@ -22,11 +22,11 @@ En C\#, un *operador* es un elemento de programa que se aplica a uno o varios *o
   
  La instrucción de C\# siguiente contiene un solo operador unario y un único operando. El operador de incremento, `++`, modifica el valor del operando `y`.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  La instrucción de C\# siguiente contiene dos operadores binarios, cada uno con dos operandos. El operador de asignaciones, `=`, tiene la variable de entero `y` y la expresión `2 + 3` como operandos. La propia expresión `2 + 3` está compuesta del operador de suma y dos operandos, `2` y `3`.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## Operadores, evaluación y prioridad de operadores  
  Un operando puede ser una expresión válida que se compone de código de una longitud indeterminada y puede incluir un número cualquiera de subexpresiones. En una expresión que contiene varios operadores, el orden de aplicación de estos viene determinado por la *prioridad de operador*, la *asociatividad* y los paréntesis.  

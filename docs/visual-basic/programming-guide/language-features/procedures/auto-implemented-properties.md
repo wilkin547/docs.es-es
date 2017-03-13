@@ -30,15 +30,15 @@ Las *propiedades implementadas automáticamente* permiten especificar rápidamen
   
  Con las propiedades implementadas automáticamente, una propiedad \(incluido un valor predeterminado\) puede declararse en una sola línea.  En el ejemplo siguiente se muestran tres declaraciones de propiedad.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
   
  Una propiedad implementada automáticamente equivale a una propiedad cuyo valor se almacena en un campo privado.  En el siguiente ejemplo de código se muestra una propiedad implementada automáticamente.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
   
  En el ejemplo de código siguiente se muestra el código equivalente al del ejemplo anterior de propiedad implementada automáticamente.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
  En el código siguiente se muestran las propiedades de solo lectura implementadoras:  
   
@@ -73,7 +73,7 @@ End Class
 ## Inicializar una propiedad implementada automáticamente  
  Cualquier expresión que se pueda usar para inicializar un campo es válida para inicializar una propiedad implementada automáticamente.  Al inicializar una propiedad implementada automáticamente, la expresión se evalúa y se pasa al procedimiento `Set` para la propiedad.  En los ejemplos de código siguientes se muestran algunas propiedades implementadas automáticamente que incluyen valores iniciales.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
  No se puede inicializar una propiedad implementada automáticamente que sea miembro de una `Interface` o que esté marcada como `MustOverride`.  
   
@@ -81,7 +81,7 @@ End Class
   
  Al declarar una propiedad implementada automáticamente como matriz, no se pueden especificar límites de matriz explícitos.  Sin embargo, se puede proporcionar un valor con un inicializador de matriz, como se muestra en los ejemplos siguientes.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## Definiciones de propiedades que requieren sintaxis estándar  
  Las propiedades implementadas automáticamente son fáciles de usar y admiten muchos escenarios de programación.  Sin embargo, hay situaciones en las que no se puede usar una propiedad de este tipo y, en su lugar, debe usarse la sintaxis de propiedades estándar o *expandidas*.  

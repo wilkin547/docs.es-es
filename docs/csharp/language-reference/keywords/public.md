@@ -33,7 +33,7 @@ class SampleClass
 ## Ejemplo  
  En el siguiente ejemplo, se declaran dos clases, `PointTest` y `MainClass`.  El acceso a los miembros públicos `x` e `y` de `PointTest` se realiza directamente desde `MainClass`.  
   
- [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#13)]  
+ [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
  Si se cambia el nivel de acceso de `public` a [private](../../../csharp/language-reference/keywords/private.md) o [protected](../../../csharp/language-reference/keywords/protected.md), se aparecerá el siguiente mensaje de error:  
   

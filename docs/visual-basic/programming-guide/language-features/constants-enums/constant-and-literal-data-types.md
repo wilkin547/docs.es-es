@@ -30,7 +30,7 @@ Un literal es un valor que se expresa a sí mismo en lugar de a un valor de vari
   
  Cuando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) es `Off` y [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) es `On`, debe declarar todas las constantes explícitamente con un tipo de datos.  En el siguiente ejemplo, el tipo de datos de `MyByte` se declara explícitamente como tipo de datos `Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
  Cuando `Option Infer` es `On` o `Option Strict` es `Off`, puede declarar una constante sin especificar un tipo de datos con una cláusula `As`.  El compilador determina el tipo de la constante del tipo de expresión.  Un literal entero numérico se convierte a tipo de datos `Integer` de manera predeterminada.  El tipo de datos predeterminado para números de punto flotante es `Double`, y las palabras clave `True` y `False` especifican una constante de tipo `Boolean`.  
   
@@ -48,11 +48,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  Para que funcione el ejemplo anterior, se anexa el carácter de tipo `D` al literal para que sea representado como un `Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
  En el ejemplo siguiente se muestra la utilización correcta de los caracteres de tipo y de inclusión:  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
  En la siguiente tabla se muestran los caracteres de inclusión y los caracteres de tipo disponibles en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
   

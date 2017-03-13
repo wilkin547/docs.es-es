@@ -94,11 +94,11 @@ Cuando se sobrecarga un procedimiento, debe utilizarse una *firma* diferente en 
 ## Sobrecargas implícitas de parámetros opcionales  
  Un procedimiento con un parámetro [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) equivale a dos procedimientos sobrecargados, uno con el parámetro opcional y otro sin él.  No puede sobrecargar este tipo de procedimiento con una lista de parámetros que se corresponda con cualquiera de ellos.  Las siguientes declaraciones ilustran este comportamiento:  
   
- [!code-vb[VbVbcnProcedures#58](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
  Existe un conjunto de sobrecargas implícitas para un procedimiento con varios argumentos opcionales, a las que se llega por una lógica similar a la del ejemplo anterior.  
   
@@ -113,13 +113,13 @@ Cuando se sobrecarga un procedimiento, debe utilizarse una *firma* diferente en 
   
  Las siguientes declaraciones ilustran estas sobrecargas implícitas:  
   
- [!code-vb[VbVbcnProcedures#68](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
  No puede sobrecargar este tipo de procedimiento con una lista de parámetros que tome una matriz unidimensional para la matriz de parámetros.  Sin embargo, puede utilizar las firmas de las otras sobrecarga implícitas.  Las siguientes declaraciones ilustran este comportamiento:  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
 ## Programación sin tipos como alternativa a la sobrecarga  
  Si desea permitir que el código de llamada pasar tipos de datos diferentes a un parámetro, un enfoque alternativo es programación sin tipos.  Puede establecer el modificador de comprobación de tipo en `Off` con la opción del compilador [Option Strict \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-strict-statement.md) u [\/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md).  No tiene que declarar después el tipo de datos del parámetro.  No obstante, este planteamiento presenta estas desventajas en comparación con la sobrecarga:  

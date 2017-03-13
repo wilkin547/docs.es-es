@@ -34,7 +34,7 @@ Hay varias circunstancias en las que es importante que una aplicación mantenga 
   
  Todos los eventos de la clase usan el campo `Events` para realizar un seguimiento de qué métodos está controlando cada evento.  
   
- [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#22)]  
+ [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
   
 ## Vea también  
  <xref:System.ComponentModel.EventHandlerList>   

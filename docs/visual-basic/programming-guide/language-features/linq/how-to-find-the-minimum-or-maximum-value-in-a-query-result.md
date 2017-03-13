@@ -81,7 +81,7 @@ Language\-Integrated Query \(LINQ\) simplifica el acceso a la información de la
   
      Agregue el código siguiente al evento `Load`.  Este código realiza una consulta en las tablas expuestas como propiedades del contexto de datos y determina los valores máximo y mínimo de los resultados.  En el ejemplo se usa la cláusula `Aggregate` para consultar un solo resultado y la cláusula `Group By` para mostrar una media de los resultados agrupados.  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form7.vb#14)]  
+     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
   
 4.  Presione F5 para ejecutar el proyecto y ver los resultados.  
   

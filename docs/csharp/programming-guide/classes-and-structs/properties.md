@@ -24,7 +24,7 @@ Una propiedad es un miembro que proporciona un mecanismo flexible para leer, esc
  En este ejemplo, la clase `TimePeriod` almacena un período de tiempo.  Internamente, la clase almacena el tiempo en segundos, pero una propiedad denominada `Hours` permite a un cliente especificar el tiempo en horas.  Los descriptores de acceso para la propiedad `Hours` realizan la conversión entre horas y segundos.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/properties_1.cs)]  
   
 ## Definiciones de cuerpos de expresión  
  Es habitual tener propiedades que simplemente devuelvan de inmediato el resultado de una expresión.  Hay un acceso directo de sintaxis para definir estas propiedades mediante `=>`:  

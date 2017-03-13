@@ -32,14 +32,14 @@ Las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]
 ## Variables IEnumerable\<T\> en consultas LINQ  
  Las variables de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] tienen tipos <xref:System.Collections.Generic.IEnumerable%601> o un tipo derivado, como <xref:System.Linq.IQueryable%601>.  Cuando se encuentre una variable de consulta de tipo `IEnumerable<Customer>`, sólo significa que la consulta, cuando se ejecute, generará una secuencia de cero o más objetos `Customer`.  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#34)]  
+ [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  Para obtener más información, consulte [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## Permitir al compilador administrar las declaraciones de tipos genéricos  
  Si lo prefiere, puede evitar la sintaxis genérica con el uso de la palabra clave [var](../../../../csharp/language-reference/keywords/var.md).  La palabra clave `var` indica al compilador que deduzca el tipo de una variable de consulta examinando el origen de datos especificado en la cláusula `from`.  En el ejemplo siguiente se genera el mismo código compilado que en el ejemplo anterior:  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#35)]  
+ [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  La palabra clave `var` es útil cuando el tipo de la variable es obvio o cuando no es tan importante especificar explícitamente los tipos genéricos anidados, como los que se generan en las consultas de grupo.  Por lo general, si utiliza `var`, debe saber que puede dificultar la legibilidad del código para los demás.  Para obtener más información, consulte [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

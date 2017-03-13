@@ -27,23 +27,23 @@ La palabra clave `bool` es un alias de <xref:System.Boolean?displayProperty=full
 ## Literales  
  Puede asignar un valor booleano a una variable de tipo `bool`.  También puede asignar una expresión que se evalúe como `bool` a una variable de tipo `bool`.  
   
- [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_1.cs)]  
   
  El valor predeterminado de una variable `bool` es `false`.  El valor predeterminado de una variable `bool?` es `null`.  
   
 ## Conversiones  
  En C\+\+, un valor de tipo `bool` se puede convertir a un valor de tipo `int`; es decir, `false` equivale a cero y `true` equivale a valores distintos de cero.  En C\#, no es posible realizar la conversión del tipo `bool` a otros tipos o viceversa.  Por ejemplo, la instrucción `if` siguiente no es válida en C\#:  
   
- [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]  
   
  Para probar una variable de tipo `int`, hay que compararla explícitamente con un valor \(por ejemplo, cero\), como se indica a continuación:  
   
- [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]  
   
 ## Ejemplo  
  En este ejemplo, se escribe un carácter desde el teclado y el programa comprueba si se trata de una letra.  Si es una letra, comprueba si está en minúsculas o mayúsculas.  Estas comprobaciones se realizan con <xref:System.Char.IsLetter%2A> y <xref:System.Char.IsLower%2A>, que devuelven el tipo `bool`:  
   
- [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_4.cs)]  
+ [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

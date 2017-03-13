@@ -25,7 +25,7 @@ caps.handback.revision: 10
 Este ejemplo crea la cadena "abcd" a partir de caracteres individuales.  
   
 ## Ejemplo  
- [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-a-string-f_1.vb)]  
+ [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
 ## Compilar el código  
  Este método no tiene ningún requisito especial.  

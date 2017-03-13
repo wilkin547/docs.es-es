@@ -42,13 +42,13 @@ System.Convert.ToInt32("35")
 ## Literales y nombres simples  
  Los dos tipos de expresiones más simples son literales y nombres simples.  Un literal es un valor constante que no tiene ningún nombre.  Por ejemplo, en el código siguiente, `5` y `"Hello World"` son valores literales:  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_1.cs)]  
+ [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  Para obtener más información sobre literales, vea [Tipos](../../../csharp/language-reference/keywords/types.md).  
   
  En el ejemplo anterior, tanto `i` como `s` son nombres simples que identifican variables locales.  Cuando estas variables se utilizan en una expresión, el nombre de variable se evalúa como el valor almacenado actualmente en la ubicación de la variable en memoria.  Esto se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_2.cs)]  
+ [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
   
 ## Expresiones de invocación  
  En el ejemplo de código siguiente, la llamada a `DoWork` es una expresión de invocación.  

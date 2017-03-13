@@ -64,7 +64,7 @@ Proporciona propiedades y métodos para acceder a la configuración de la aplica
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestra el valor de la `Nickname` configuración.  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#14)]  
+ [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
   
  Para que funcione este ejemplo, la aplicación debe tener un `Nickname` Configuración del tipo de `String`.  
   

@@ -19,7 +19,7 @@ caps.handback.revision: 19
 # Constructores privados (Gu&#237;a de programaci&#243;n de C#)
 Un constructor private es un caso especial de constructor de instancia.  Se utiliza generalmente en clases que contienen sólo miembros estáticos.  Si una clase tiene uno o más constructores privados y ningún constructor público, el resto de clases \(excepto las anidadas\) no podrán crear instancias de esta clase.  Por ejemplo:  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_1.cs)]  
   
  La declaración de un constructor vacío evita la generación automática de un constructor predeterminado.  Observe que si no utiliza un modificador de acceso en el constructor, éste será private de manera predeterminada.  Sin embargo, normalmente se utiliza el modificador [private](../../../csharp/language-reference/keywords/private.md) de manera explícita para aclarar que no es posible crear una instancia de la clase.  
   
@@ -28,11 +28,11 @@ Un constructor private es un caso especial de constructor de instancia.  Se util
 ## Ejemplo  
  El siguiente es un ejemplo de clase que utiliza un constructor private.  
   
- [!code-cs[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_2.cs)]  
   
  Observe que si quita el comentario de la siguiente instrucción del ejemplo, se producirá un error porque el constructor es inaccesible debido a su nivel de protección:  
   
- [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/private-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/private-constructors_3.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -45,15 +45,15 @@ Establece el compilador con destino [!INCLUDE[Compact](../../../visual-basic/ref
   
 -   La palabra clave [End \<palabra clave\> \(Instrucción\)](../../../visual-basic/language-reference/statements/end-keyword-statement.md), que finaliza la ejecución de un programa, está deshabilitada.  El programa siguiente lleva a cabo la compilación y la ejecución son `/netcf` pero produce un error en tiempo de compilación con `/netcf`.  
   
-     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
 -   El enlace en tiempo de ejecución, en todas sus formas, se deshabilita.  Cuando se encuentran escenarios de enlace en tiempo de ejecución, se generan errores en tiempo de compilación.  El programa siguiente lleva a cabo la compilación y la ejecución son `/netcf` pero produce un error en tiempo de compilación con `/netcf`.  
   
-     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
 -   Los modificadores [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) y[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) están deshabilitados.  La sintaxis de la instrucción [Declare \(Instrucción\)](../../../visual-basic/language-reference/statements/declare-statement.md) también cambia a `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`.  En el ejemplo de código siguiente se muestra el efecto de `/netcf` en una compilación:  
   
-     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
 -   Si se utilizan las palabras clave de Visual Basic 6.0 que se quitaron de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], se produce un error diferente que cuando se utiliza `/netcf`.  Esto afecta a los mensajes de error que se muestran para las siguientes palabras clave:  
   

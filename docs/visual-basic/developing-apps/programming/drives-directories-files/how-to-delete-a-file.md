@@ -30,19 +30,19 @@ El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un 
   
 -   Utilice el método `DeleteFile` para eliminar el archivo.  El código siguiente muestra cómo eliminar el archivo denominado `test.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
   
 ### Para eliminar un archivo de texto y pedirle al usuario que confirme que se debe eliminar el archivo  
   
 -   Utilice el método `DeleteFile` para eliminar el archivo, estableciendo `showUI` en `AllDialogs`.  El código siguiente muestra cómo eliminar el archivo denominado `test.txt` y permite al usuario confirmar la eliminación del archivo.  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
   
 ### Para eliminar un archivo de texto y enviarlo a la Papelera de Reciclaje  
   
 -   Utilice el método `DeleteFile` para eliminar el archivo, especificando `SendToRecycleBin` para el parámetro `recycle`.  El código siguiente muestra cómo eliminar el archivo denominado `test.txt` y enviarlo a la **Papelera de Reciclaje**.  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
   
 ## Programación eficaz  
  Las condiciones siguientes pueden provocar una excepción:  

@@ -26,7 +26,7 @@ La palabra clave `event` se utiliza para declarar un evento en una clase de edit
 ## Ejemplo  
  El ejemplo siguiente muestra cómo declarar y generar un evento que utiliza <xref:System.EventHandler> como tipo de delegado subyacente.  Para obtener el ejemplo de código completo que muestra también cómo utilizar el tipo de delegado genérico <xref:System.EventHandler%601> y cómo suscribirse a un evento y crear un método de control de eventos, vea [Cómo: Publicar eventos que cumplan las directrices de .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#7)]  
+ [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  Los eventos son un tipo especial de delegado multidifusión que sólo se puede invocar desde dentro de la clase o struct donde se declaran \(la clase de editor\).  Si otras clases o structs se suscriben al evento, se llamará a sus métodos de control de eventos cuando la clase de editor genere el evento.  Para obtener más información y ejemplos de código, vea [Eventos](../../../csharp/programming-guide/events/index.md) y [Delegados](../../../csharp/programming-guide/delegates/index.md).  
   

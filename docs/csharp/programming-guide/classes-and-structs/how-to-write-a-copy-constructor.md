@@ -22,7 +22,7 @@ C\# no proporciona un constructor de copias para los objetos, pero puede escribi
 ## Ejemplo  
  En el ejemplo siguiente, `Person` [clase](../../../csharp/language-reference/keywords/class.md) define un constructor de copias que toma, como argumento, una instancia de `Person`.  Los valores de las propiedades de los argumentos se asignan a las propiedades de la nueva instancia de `Person`.  El código contiene un constructor de copias alternativo que envía las propiedades de `Name` y de `Age` de la instancia que desea copiar al constructor de instancia de la clase.  
   
- [!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-write-a-copy-cons_1.cs)]  
+ [!code-cs[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
   
 ## Vea también  
  <xref:System.ICloneable>   

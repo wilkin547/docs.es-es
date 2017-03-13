@@ -49,7 +49,7 @@ El compilador genera una cadena id. por cada construcción del código marcada p
 ## Ejemplo  
  Los siguientes ejemplos muestran cómo se generarían las cadenas de id. para una clase y sus miembros:  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
 ## Vea también  
  [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   

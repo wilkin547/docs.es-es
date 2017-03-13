@@ -44,9 +44,9 @@ El mecanismo para pasar argumentos se determina en la declaración del procedimi
 ## Ejemplo  
  En el ejemplo siguiente se reemplaza una declaración del parámetro `ByRef`.  En la llamada que obliga a utilizar `ByVal`, tenga en cuenta los dos niveles de paréntesis.  
   
- [!code-vb[VbVbcnProcedures#39](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#40](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
  Cuando `str` está encerrado entre paréntesis adicionales dentro de la lista de argumentos, el procedimiento `setNewString` no puede cambiar su valor en el código de llamada, y `MsgBox` muestra "Cannot be replaced if passed ByVal".  Cuando `str` no está incluido entre paréntesis adicionales, el procedimiento no puede cambiarlo, y `MsgBox` muestra "This is a new value for the inString argument".  
   

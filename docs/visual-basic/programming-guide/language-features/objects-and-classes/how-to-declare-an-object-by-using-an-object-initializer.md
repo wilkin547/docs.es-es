@@ -30,7 +30,7 @@ Los inicializadores de objeto permiten declarar y crear instancias de una instan
   
  El procedimiento siguiente muestra cómo crear una instancia de una clase `Student` de tres maneras diferentes.  La clase tiene, entre otros datos, el nombre, apellido y propiedades de año de clase.  Cada una de las tres declaraciones crea una nueva instancia de `Student`, con la propiedad `First` establecida en "Michael", la propiedad `Last` establecida en "Tucker" y todos los otros miembros establecidos en sus valores predeterminados.  El resultado de cada declaración del procedimiento es equivalente al ejemplo siguiente, que no utiliza ningún inicializador de objeto.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
  Para obtener una implementación de la clase `Student`, vea [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  Puede copiar el código desde ese tema con el fin de configurar la clase y crear una lista de objetos `Student` con los que trabajar.  
   
@@ -46,7 +46,7 @@ Los inicializadores de objeto permiten declarar y crear instancias de una instan
   
 3.  En la lista de inicializaciones, incluya cada propiedad que desee inicializar y a la que desee asignar un valor inicial.  El nombre de la propiedad va precedido por un punto.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
      Puede inicializar uno o más miembros de la clase.  
   
@@ -60,11 +60,11 @@ Los inicializadores de objeto permiten declarar y crear instancias de una instan
   
 6.  Escriba `With` y, a continuación, un inicializador de objeto para inicializar uno o más miembros de la nueva instancia.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
 7.  Puede simplificar la definición del paso anterior omitiendo `As Student`.  De esta forma, el compilador determina que `student3` es una instancia de `Student` utilizando la inferencia de tipo de variable local.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
      Para obtener más información, vea [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

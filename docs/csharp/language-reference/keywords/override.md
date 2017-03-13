@@ -24,7 +24,7 @@ El modificador `override` es necesario para ampliar o modificar la implementaci�
 ## Ejemplo  
  En este ejemplo, la clase `Square` debe proporcionar una implementación de invalidación de `Area` porque ésta se hereda de la clase abstracta `ShapesClass`:  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  Un método `override` proporciona una nueva implementación de un miembro que se hereda de una clase base.  El método invalidado por una declaración `override` se conoce como método base invalidado.  El método base reemplazado debe tener la misma firma que el método `override`.  Para obtener más información sobre la herencia, vea [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -41,7 +41,7 @@ El modificador `override` es necesario para ampliar o modificar la implementaci�
 ## Ejemplo  
  Este ejemplo define una clase base denominada `Employee` y una clase derivada denominada `SalesEmployee`.  La clase `SalesEmployee` incluye una propiedad adicional, `salesbonus`, e invalida el método `CalculatePay` para tenerlo en cuenta.  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#9)]  
+ [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

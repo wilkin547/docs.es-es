@@ -91,7 +91,7 @@ End Event
 ## Comentarios  
  Una vez declarado el evento, use la instrucción `RaiseEvent` para generar el evento.  Un evento típico podría declararse y provocarse tal como se muestra en los fragmentos siguientes:  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#13)]  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
 >  Puede declarar argumentos de evento del mismo modo que los argumentos de procedimientos, con las siguientes excepciones: los eventos no pueden tener argumentos con nombre, argumentos `ParamArray` o argumentos `Optional`.  Los eventos no tienen valores devueltos.  
@@ -115,11 +115,11 @@ End Event
   
  Agregue una variable `WithEvents` a la sección de declaraciones de la clase `Form1`:  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
   
  Agregue el código siguiente al código de `Form1`.  Sustituya los procedimientos duplicados que existan, como `Form_Load` o `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
  Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón **Iniciar**.  El primer cuadro de texto empieza la cuenta atrás de los segundos.  Cuando transcurre el tiempo \(10 segundos\), el primer cuadro de texto muestra "Done".  
   

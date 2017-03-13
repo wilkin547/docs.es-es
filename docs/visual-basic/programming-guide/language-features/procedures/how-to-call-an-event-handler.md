@@ -45,7 +45,7 @@ Un *evento* es una acción o un suceso \(por ejemplo, cuando se hace clic con el
   
      En el ejemplo siguiente se define un evento y una variable `WithEvents` que hace referencia a la clase que desencadena el evento.  El procedimiento `Sub` de control de eventos utiliza una cláusula `Handles` para especificar la clase y el evento que ésta controla.  
   
-     [!code-vb[VbVbcnProcedures#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
 ### Para llamar a un controlador de eventos utilizando AddHandler  
   
@@ -57,7 +57,7 @@ Un *evento* es una acción o un suceso \(por ejemplo, cuando se hace clic con el
   
      En el ejemplo siguiente se define un procedimiento `Sub` que controla el evento <xref:System.Windows.Forms.Form.Closing> de un formulario.  A continuación, utiliza la instrucción [AddHandler \(Instrucción\)](../../../../visual-basic/language-reference/statements/addhandler-statement.md) para asociar el procedimiento `catchClose` como un controlador del evento <xref:System.Windows.Forms.Form.Closing>.  
   
-     [!code-vb[VbVbcnProcedures#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
      Puede desasociar un controlador de eventos de un evento ejecutando [RemoveHandler \(Instrucción\)](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   

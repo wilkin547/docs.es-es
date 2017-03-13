@@ -22,12 +22,12 @@ La clase <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName> se
 ## Ejemplo  
  El código siguiente es una aplicación de consola que realiza una búsqueda simple de cadenas sin distinción entre mayúsculas y minúsculas en una matriz.  El método estático <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=fullName> realiza la búsqueda a partir de la cadena de búsqueda y de una cadena que contiene el modelo de búsqueda.  En este caso, se utiliza un tercer argumento para indicar que no se debe distinguir entre mayúsculas y minúsculas.  Para obtener más información, vea <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=fullName>.  
   
- [!code-cs[csProgGuideStrings#17](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#17)]  
+ [!code-cs[csProgGuideStrings#17](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_1.cs)]  
   
 ## Ejemplo  
  El código siguiente es una aplicación de consola que utiliza expresiones regulares para validar el formato de cada cadena de una matriz.  La validación requiere que cada cadena tenga la forma de un número de teléfono en el que tres grupos de dígitos se separan por guiones. Los dos primeros grupos contienen tres dígitos, y el tercero, cuatro.  Para ello, se utiliza la expresión regular `^\\d{3}-\\d{3}-\\d{4}$`.  Para obtener más información, vea [Lenguaje de expresiones regulares \- Referencia rápida](../Topic/Regular%20Expression%20Language%20-%20Quick%20Reference.md).  
   
- [!code-cs[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#18)]  
+ [!code-cs[csProgGuideStrings#18](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-regular-expressions_2.cs)]  
   
 ## Vea también  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName>   

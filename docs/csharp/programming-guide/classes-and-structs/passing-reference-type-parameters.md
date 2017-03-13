@@ -22,21 +22,21 @@ Una variable de un [tipo de referencia](../../../csharp/language-reference/keywo
 ## Pasar tipos de referencia por valor  
  El siguiente ejemplo ilustra el paso de un parámetro de tipo de referencia, `arr`, por valor, a un método, `Change`.  Como el parámetro es una referencia a `arr`, es posible cambiar los valores de los elementos de la matriz.  Sin embargo, el intento de volver a asignar el parámetro a otra ubicación de memoria sólo funciona dentro del método y no afecta a la variable original, `arr`.  
   
- [!code-cs[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-reference-type-p_1.cs)]  
+ [!code-cs[csProgGuideParameters#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_1.cs)]  
   
  En el ejemplo anterior, la matriz `arr`, que es un tipo de referencia, se pasa al método sin el parámetro `ref`.  En ese caso, lo que se pasa al método es una copia de la referencia, la cual apunta a `arr`.  El resultado muestra cómo el método puede cambiar el contenido de un elemento de la matriz, en este caso de `1` a `888`.  Sin embargo, cuando se asigna una nueva porción de memoria mediante el operador [new](../../../csharp/language-reference/keywords/new.md) dentro del método `Change`, la variable `pArray` hace referencia a una nueva matriz.  De este modo, cualquier cambio posterior no afectará a la matriz original, `arr`, que se crea dentro de `Main`.  De hecho, en este ejemplo se crean dos matrices, una dentro de `Main` y otra dentro del método `Change`.  
   
 ## Pasar tipos de referencia por referencia  
  El ejemplo siguiente es igual que el ejemplo anterior, pero la palabra clave de `ref` se agrega al encabezado y la llamada del método.  Los cambios que ocurran en el efecto del método la variable original en el programa de llamada.  
   
- [!code-cs[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-reference-type-p_2.cs)]  
+ [!code-cs[csProgGuideParameters#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_2.cs)]  
   
  Todos los cambios que tienen lugar dentro del método afectan a la matriz original en `Main`.  De hecho, la matriz original se reasigna mediante el operador `new`.  De esta forma, después de llamar al método `Change`, cualquier referencia a `arr` apunta a la matriz de cinco elementos que se crea en el método `Change`.  
   
 ## Intercambiar dos cadenas  
  El intercambio de cadenas constituye un buen ejemplo de paso de parámetros de tipo de referencia por referencia.  En el ejemplo, se inicializan dos cadenas, `str1` y `str2`, en `Main` y se pasan al método `SwapStrings` como parámetros modificados por la palabra clave `ref`.  Las dos cadenas se intercambian dentro del método y también dentro de `Main`.  
   
- [!code-cs[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-reference-type-p_3.cs)]  
+ [!code-cs[csProgGuideParameters#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-reference-type-parameters_3.cs)]  
   
  En este ejemplo, los parámetros se deben pasar por referencia para que afecten a las variables del programa que realiza la llamada.  Si se quita la palabra clave `ref` del encabezado del método y de la llamada al método, no se producirá ningún cambio en el programa que realiza la llamada.  
   

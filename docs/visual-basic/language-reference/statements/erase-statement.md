@@ -43,7 +43,7 @@ Erase arraylist
 ## Ejemplo  
  En el ejemplo siguiente se utiliza la instrucción `Erase` para borrar dos matrices y liberar su memoria \(1000 y 100 elementos de almacenamiento, respectivamente\).  La instrucción `ReDim` después asigna una instancia de matriz nueva a la matriz de tres dimensiones.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
 ## Vea también  
  [Nothing](../../../visual-basic/language-reference/nothing.md)   

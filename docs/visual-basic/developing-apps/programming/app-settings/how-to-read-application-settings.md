@@ -30,7 +30,7 @@ Puede leer una configuración del usuario teniendo acceso a la propiedad de la c
 ## Ejemplo  
  En este ejemplo se muestra el valor de la configuración `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#14)]  
+ [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-read-application-settings_1.vb)]  
   
  Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`.  Para obtener más información, vea [Administrar la configuración de la aplicación \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
   

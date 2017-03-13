@@ -23,7 +23,7 @@ La palabra clave `unchecked` se utiliza con el fin de suprimir la comprobación 
   
  En un contexto sin comprobación de desbordamiento, si una expresión genera un valor fuera del intervalo del tipo de destino, no se marca el desbordamiento.  Por ejemplo, como el cálculo en el siguiente ejemplo se realiza en una expresión o un bloque `unchecked`, se pasa por alto que el resultado es demasiado grande para un valor entero y se asigna a `int1` el valor \-2.147.483.639.  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_1.cs)]  
+ [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  Si se quita el entorno `unchecked`, se produce un error de compilación.  Se puede detectar el desbordamiento en tiempo de compilación porque todos los términos de la expresión son constantes.  
   
@@ -34,7 +34,7 @@ La palabra clave `unchecked` se utiliza con el fin de suprimir la comprobación 
 ## Ejemplo  
  En este ejemplo, se muestra cómo usar la palabra clave `unchecked`.  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_2.cs)]  
+ [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

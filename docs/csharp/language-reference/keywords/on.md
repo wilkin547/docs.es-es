@@ -24,7 +24,7 @@ La palabra clave contextual `on` se utiliza en la [cláusula join](../../../csha
 ## Ejemplo  
  En el ejemplo siguiente se muestra el uso de `on` en una cláusula `join`.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/on_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

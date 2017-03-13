@@ -184,7 +184,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 2.  Este ejemplo de código muestra cómo determinar el nombre de tipo con nombre seguro para un tipo completo \(en este caso, "System.Diagnostics.FileLogTraceListener"\).  
   
-     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#15)]  
+     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
   
      Esta es la salida, que se puede usar para hacer referencia de manera exclusiva a un tipo con nombre seguro, como en el procedimiento "Para agregar agentes de escucha" anterior.  
   

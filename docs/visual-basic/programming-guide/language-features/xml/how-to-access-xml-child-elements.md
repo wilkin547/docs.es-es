@@ -28,7 +28,7 @@ caps.handback.revision: 18
 En este ejemplo se muestra cómo usar una propiedad de eje secundario para obtener acceso a todos los elementos secundarios XML que tienen el nombre especificado en un elemento XML.  Concretamente, se usa la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para obtener el valor del primer elemento en la colección que la propiedad de eje secundario `name` devuelve.  La propiedad de eje secundario `name` obtiene todos los elementos secundarios denominados `phone` en el objeto `contact`.  En este ejemplo se usa también la propiedad de eje secundario `phone` para obtener acceso a todos los elementos secundarios denominados `phone` que se incluyen en el objeto `contact`.  
   
 ## Ejemplo  
- [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-child-_1.vb)]  
+ [!code-vb[VbXMLSamples#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-child-elements_1.vb)]  
   
 ## Compilar el código  
  Para este ejemplo se necesita:  

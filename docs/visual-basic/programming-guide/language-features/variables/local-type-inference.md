@@ -32,7 +32,7 @@ caps.handback.revision: 43
 
 El compilador de Visual Basic utiliza la *inferencia de tipos* para determinar los tipos de datos de las variables locales declarados sin ninguna cláusula `As`.  El compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización.  Esto le permite declarar variables sin indicar explícitamente un tipo, como se muestra en el siguiente ejemplo. Como resultado de las declaraciones, `num1` y `num2` están fuertemente tipadas como enteros.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
   
 > [!NOTE]
 >  Si no desea que `num2` del ejemplo anterior vaya a tener un tipo como `Integer`, puede especificar otro tipo mediante una declaración como `Dim num3 As Object = 3` o `Dim num4 As Double = 3`.  
@@ -47,23 +47,23 @@ El compilador de Visual Basic utiliza la *inferencia de tipos* para determinar l
 ## Ejemplos  
  La inferencia de tipos se produce cuando una variable local se declara sin una cláusula `As` y se inicializa.  El compilador utiliza el tipo del valor inicial asignado como tipo de la variable.  Por ejemplo, cada una de las líneas de código siguientes declara una variable de tipo `String`.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
   
  El código siguiente muestra dos maneras equivalentes de crear una matriz de enteros.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
   
  Conviene utilizar la inferencia de tipos para determinar el tipo de una variable de control de bucle.  En el código siguiente, el compilador deduce que `number` es `Integer` porque `someNumbers2`, según el ejemplo anterior, es una matriz de enteros.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
   
  La inferencia de tipo de variable local se puede utilizar en instrucciones `Using` para establecer el tipo del nombre del recurso, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
   
  El tipo de una variable también se puede deducir de los valores devueltos de las funciones, como muestra el ejemplo siguiente.  Tanto `pList1` como `pList2` son matrices de procesos porque `Process.GetProcesses` devuelve una matriz de procesos.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## Option Infer  
  permisos de`Option Infer` que especifica si la inferencia de tipo de variable local se permite en un archivo determinado.  Para habilitar o bloquear la opción, escriba una de las instrucciones siguientes al principio del archivo.  

@@ -29,7 +29,7 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
  Un inicializador de colección se identifica mediante la palabra clave `From` seguida de llaves \(`{}`\).  Esta sintaxis es similar a la sintaxis de literales de matriz descrita en [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  En los siguientes ejemplos se muestran varias formas de usar los inicializadores de colección para crear colecciones.  
   
- [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  C\# también proporciona inicializadores de colección.  Los inicializadores de colección de C\# proporcionan la misma funcionalidad que los de Visual Basic.  Para obtener más información acerca de los inicializadores de colección de C\#, vea [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
@@ -37,11 +37,11 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
 ## Sintaxis  
  Un inicializador de colección está formado por una lista de valores separados por comas que se encierran entre llaves \(`{}`\) precedida por la palabra clave `From`, como se muestra en el código siguiente.  
   
- [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  Al crear una colección, como un objeto <xref:System.Collections.Generic.List%601> o <xref:System.Collections.Generic.Dictionary%602>, debe proporcionar el tipo de colección antes que el inicializador de colección, como se muestra en el código siguiente.  
   
- [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
 > [!NOTE]
 >  No puede combinar un inicializador de colección y un inicializador de objeto para inicializar el mismo objeto de colección.  Puede utilizar los inicializadores de objeto para inicializar objetos en un inicializador de colección.  
@@ -57,11 +57,11 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
  Así, en el ejemplo de código siguiente se muestra cómo crear una colección `List(Of Customer)` mediante un inicializador de colección.  Al ejecutar el código, cada uno de los objetos `Customer` se pasa al método `Add(Customer)` de la lista genérica.  
   
- [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#9](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  En el ejemplo de código siguiente se muestra código equivalente que no usa un inicializador de colección.  
   
- [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#10](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  Si la colección tiene un método `Add` con parámetros que coinciden con el constructor para el objeto `Customer`, se pueden anidar los valores de parámetro del método `Add` dentro de los inicializadores de colección, tal como se explica en la sección siguiente.  Si la colección no tiene este tipo de método `Add`, se puede crear uno como método de extensión.  Para obtener un ejemplo de cómo crear un método `Add` como método de extensión para una colección, vea [Cómo: Crear un método de extensión Add usado por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md).  Para obtener un ejemplo de cómo crear una colección personalizada que se pueda usar con un inicializador de colección, vea [Cómo: Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).  
   
@@ -70,11 +70,11 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
  Al crear una colección con valores anidados, cada uno de los elementos de la lista de valores anidados se pasa como argumento al método `Add` que coincide con los tipos de elemento.  Así, en el ejemplo de código siguiente se crea un objeto <xref:System.Collections.Generic.Dictionary%602> en el que las claves son de tipo `Integer` y los valores son de tipo `String`.  Cada una de las listas de valores anidados se corresponde con el método <xref:System.Collections.Generic.Dictionary%602.Add%2A> del objeto `Dictionary`.  
   
- [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  El ejemplo de código anterior es equivalente al código siguiente.  
   
- [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
  Solo las listas de valores anidados del primer nivel de anidamiento se envían al método `Add` para el tipo de colección.  Los niveles más profundos de anidamiento se tratan como literales de matriz y las listas de valores anidados no se corresponden con el método `Add` de ninguna colección.  
   

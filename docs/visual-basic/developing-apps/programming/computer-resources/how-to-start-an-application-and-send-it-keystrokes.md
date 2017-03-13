@@ -27,7 +27,7 @@ caps.handback.revision: 15
 En este ejemplo se utiliza la función `Shell` para iniciar la aplicación de la calculadora y, a continuación, se multiplican dos números enviando pulsaciones de tecla mediante el método `My.Computer.Keyboard.SendKeys`.  
   
 ## Ejemplo  
- [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#25)]  
+ [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
   
 ## Programación eficaz  
  Se produce una excepción <xref:System.ArgumentException> si no se puede encontrar una aplicación con el identificador de proceso solicitado.  

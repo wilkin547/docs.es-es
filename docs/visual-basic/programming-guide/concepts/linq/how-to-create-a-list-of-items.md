@@ -28,7 +28,7 @@ El código de este tema define una clase `Student` y crea una lista de instancia
 ## Ejemplo  
  Si está trabajando en el tutorial, puede utilizar este código para el archivo Module1.vb del proyecto creado.  Solo tiene que reemplazar las líneas marcadas con \*\*\* en el método `Main` por las consultas y las ejecuciones de consulta que se proporcionan en el tutorial.  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/how-to-create-a-list-of-_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
 ## Vea también  
  [Vídeo: Escribir consultas en Visual Basic](http://msdn.microsoft.com/library/bb820884.aspx)   

@@ -73,7 +73,7 @@ expression1 \ expression2
 ## Ejemplo  
  En el siguiente ejemplo se usa el operador `\` para realizar una división de entero.  El resultado será un número entero que representa el cociente entero de ambos operandos, con el resto descartado.  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
  Las expresiones en el ejemplo anterior devuelven valores de 2, 3, 33 y \-22 respectivamente.  
   

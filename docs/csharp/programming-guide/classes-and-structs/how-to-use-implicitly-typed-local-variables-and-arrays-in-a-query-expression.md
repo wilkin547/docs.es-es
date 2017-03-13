@@ -23,12 +23,12 @@ Puede usar variables locales tipificadas implícitamente siempre que desee que e
 ## Ejemplo  
  En el ejemplo siguiente se muestra un escenario común en el que se requiere la palabra clave `var`: una expresión de consulta que genera una secuencia de tipos anónimos.  En este escenario, la variable de consulta y la variable de iteración de la instrucción `foreach` deben escribirse implícitamente mediante `var` porque no se tiene acceso a un nombre de tipo del tipo anónimo.  Para obtener más información sobre los tipos anónimos, vea [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
- [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#32)]  
+ [!code-cs[csProgGuideLINQ#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se usa la palabra clave `var` en una situación similar, pero en la que el uso de `var` es opcional.  Dado que `student.LastName` es una cadena, la ejecución de la consulta devuelve una secuencia de cadenas.  Por tanto, el tipo de `queryID` puede declararse como `System.Collections.Generic.IEnumerable<string>` en lugar de `var`.  La palabra clave `var` se usa para mayor comodidad.  En el ejemplo, la variable de iteración de la instrucción `foreach` se escribe explícitamente como cadena, pero podría declararse usando `var`.  Dado que el tipo de la variable de iteración no es un tipo anónimo, el uso de `var` es opcional, no es obligatorio.  Recuerde que `var` no es un tipo, sino una instrucción para que el compilador infiera y asigne el tipo.  
   
- [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#33)]  
+ [!code-cs[csProgGuideLINQ#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression_2.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

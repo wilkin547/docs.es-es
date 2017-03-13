@@ -28,11 +28,11 @@ Una enumeración es la manera mejor de agrupar las constantes relacionadas.  Una
   
 1.  Escriba una declaración que incluya un nivel de acceso a código, la palabra clave `Enum` y un nombre válido.  Este ejemplo crea los valores `temperatureValues` de la enumeración `Private`.  
   
-     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#21)]  
+     [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
   
 2.  Defina las constantes en la enumeración.  Este ejemplo crea los valores `temperatureValues` de la enumeración `Public` y asigna sus valores.  
   
-     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#1)]  
+     [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
   
 ## Vea también  
  [Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

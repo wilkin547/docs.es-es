@@ -53,7 +53,7 @@ Pasar un argumento a un parámetro
 ## Tipo de datos de parámetro  
  El tipo de datos de un parámetro se define utilizando la cláusula `As` en su declaración.  Por ejemplo, la siguiente función acepta una cadena y un entero.  
   
- [!code-vb[VbVbcnProcedures#32](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-parameters-and_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
  Si el modificador de comprobación de tipos \([Option Strict \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\) es `Off,` la cláusula `As` es opcional, pero si la utiliza un parámetro, deben utilizarla todos.  Si la comprobación de tipos es `On`, la cláusula `As` será obligatoria para todos los parámetros del procedimiento.  
   

@@ -32,25 +32,25 @@ Este ejemplo muestra cómo se utilizan los delegados para pasar un procedimiento
   
 1.  Cree un delegado denominado `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
 2.  Cree un procedimiento denominado `AddNumbers` con los parámetros y el valor devuelto que coincidan con aquéllos de `MathOperator` para que coincidan las firmas.  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
 3.  Cree un procedimiento denominado `SubtractNumbers` con una firma que coincida con `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
 4.  Cree un procedimiento denominado `DelegateTest` que tome un delegado como parámetro.  
   
      Este procedimiento puede aceptar una referencia para `AddNumbers` o `SubtractNumbers` porque sus firmas coinciden con la firma `MathOperator`.  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
 5.  Cree un procedimiento denominado `Test` que llame a `DelegateTest` una vez con el delegado para `AddNumbers` como parámetro y, de nuevo, con el delegado para `SubtractNumbers` como parámetro.  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
      Cuando se llama a `Test`, primero muestra el resultado de `AddNumbers` sobre `5` y `3`, que es 8.  A continuación, se muestra el resultado de `SubtractNumbers` sobre `9` y `3`, que es 6.  
   

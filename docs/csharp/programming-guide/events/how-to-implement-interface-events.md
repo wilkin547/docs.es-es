@@ -62,7 +62,7 @@ Una [interfaz](../../../csharp/language-reference/keywords/interface.md) puede d
   
  Al proporcionar sus propios descriptores de acceso, puede especificar si los dos eventos se representan mediante el mismo evento en la clase o mediante eventos diferentes.  Por ejemplo, si los eventos deben provocarse en momentos diferentes según las especificaciones de la interfaz, luego puede asociar cada evento a una implementación distinta en la clase.  En el ejemplo siguiente, los suscriptores determinan qué evento `OnDraw` se recibirá convirtiendo la referencia de la forma en `IShape` o `IDrawingObject`.  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-implement-interfa_1.cs)]  
+ [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

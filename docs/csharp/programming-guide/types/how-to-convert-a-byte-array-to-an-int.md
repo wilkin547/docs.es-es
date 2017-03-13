@@ -38,7 +38,7 @@ Este ejemplo muestra cómo utilizar la clase <xref:System.BitConverter> para con
 > [!NOTE]
 >  El resultado puede cambiar en función del orden de bytes \(big\-endian o little\-endian\) de la arquitectura de equipo.  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_1.cs)]  
+ [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## Ejemplo  
  En este ejemplo, se llama al método <xref:System.BitConverter.GetBytes%28System.Int32%29> de la clase <xref:System.BitConverter> para convertir `int` en una matriz de bytes.  
@@ -46,7 +46,7 @@ Este ejemplo muestra cómo utilizar la clase <xref:System.BitConverter> para con
 > [!NOTE]
 >  El resultado puede cambiar en función del orden de bytes \(big\-endian o little\-endian\) de la arquitectura de equipo.  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_2.cs)]  
+ [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## Vea también  
  <xref:System.BitConverter>   

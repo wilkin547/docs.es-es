@@ -74,7 +74,7 @@ object.@<attribute>
 ## Ejemplo  
  El ejemplo siguiente muestra cómo obtener los valores de los atributos XML denominados `type` a partir de una colección de elementos XML que se denominan `phone`.  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_1.vb)]  
+ [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
   
  Este código muestra el texto siguiente:  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ## Ejemplo  
  El ejemplo siguiente muestra cómo crear los atributos de un elemento XML tanto mediante declaración, como parte del XML, como dinámicamente agregando un atributo a una instancia de un objeto <xref:System.Xml.Linq.XElement>.  Se crea el atributo `type` mediante declaración y el atributo `owne` dinámicamente.  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_2.vb)]  
+ [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
   
  Este código muestra el texto siguiente:  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## Ejemplo  
  El ejemplo siguiente utiliza la sintaxis de corchetes angulares para obtener el valor del atributo XML denominado `number-type`, que no es un identificador válido en [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_3.vb)]  
+ [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   
  Este código muestra el texto siguiente:  
   
@@ -109,7 +109,7 @@ object.@<attribute>
 ## Ejemplo  
  En el ejemplo siguiente se declara `ns` como prefijo de espacio de nombres XML.  A continuación, se usa el prefijo del espacio de nombres para crear un literal XML y obtener acceso al primer nodo secundario con el nombre completo "`ns:name`".  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_4.vb)]  
+ [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
   
  Este código muestra el texto siguiente:  
   

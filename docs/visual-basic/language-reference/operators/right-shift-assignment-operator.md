@@ -55,7 +55,7 @@ variableorproperty >>= amount
 ## Ejemplo  
  En el siguiente ejemplo se utiliza el operador `>>=` para desplazar el modelo de bits de una variable `Integer` a la derecha en la cantidad especificada y asignar el resultado a la variable.  
   
- [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-assignment-o_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
   
 ## Vea también  
  [\>\> \(Operador\)](../../../visual-basic/language-reference/operators/right-shift-operator.md)   

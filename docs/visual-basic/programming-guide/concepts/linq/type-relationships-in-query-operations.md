@@ -38,7 +38,7 @@ Partes de una consulta LINQ
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] simplifica el tipado fuerte al implementar la inferencia de tipo de variable local, lo que también se conoce como *tipo implícito*.  Esta característica se utiliza en el ejemplo anterior y, como observará, se utiliza en los ejemplos y la documentación de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  En Visual Basic, la inferencia de tipo de variable local se consigue simplemente utilizando una instrucción `Dim` sin una cláusula `As`.  En el ejemplo siguiente, `city` está fuertemente tipado como cadena.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
 >  La inferencia de tipo de variable local sólo funciona cuando `Option Infer` se establece en `On`.  Para obtener más información, consulte [Option Infer \(instrucción\)](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -47,16 +47,16 @@ Partes de una consulta LINQ
   
  Puede que tenga que especificar un tipo explícito para una variable de rango que no coincide con el tipo devuelto por el origen de datos.  Puede especificar el tipo de la variable de rango mediante una cláusula `As`.  Sin embargo, esto hace que se produzca un error si se trata de una [conversión de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) y `Option Strict` se ha establecido en `On`.  Por consiguiente, se recomienda realizar la conversión en los valores recuperados del origen de datos.  Puede convertir los valores del origen de datos en el tipo de variable de rango explícito con el método <xref:System.Linq.Enumerable.Cast%2A>.  También puede convertir los valores seleccionados en la cláusula `Select` en un tipo explícito distinto al de la variable de rango.  Estos puntos se reflejan en el código siguiente.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
 ## Consultas que devuelven elementos completos de los datos de origen  
  En el ejemplo siguiente se muestra una operación de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] que devuelve una secuencia de elementos seleccionados de los datos de origen.  El origen, `names`, contiene una matriz de cadenas y el resultado de la consulta es una secuencia que contiene cadenas que empiezan por la letra M.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
  Es equivalente al código siguiente, pero es mucho más corto y más fácil de escribir.  En Visual Basic, se prefiere la inferencia de tipo de variable local en las consultas.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
  En los dos ejemplos de código anteriores existen las siguientes relaciones, se determinen los tipos de forma implícita o explícita.  
   

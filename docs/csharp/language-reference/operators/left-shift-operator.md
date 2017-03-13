@@ -31,7 +31,7 @@ El operador de desplazamiento a la izquierda \(`<<`\) desplaza su primer operand
  Los tipos definidos por el usuario pueden sobrecargar el operador `<<` \(vea [operator \(Referencia de C\#\)](../../../csharp/language-reference/keywords/operator.md)\); el tipo del primer operando debe ser el tipo definido por el usuario, mientras que el tipo del segundo operando debe ser `int`.  Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si existe, también se sobrecarga de modo implícito.  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#14)]  
+ [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
 ## Comentarios  
  Observe que `i<<1` e `i<<33` dan el mismo resultado, ya que 1 y 33 tienen los mismos cinco bits de orden inferior.  

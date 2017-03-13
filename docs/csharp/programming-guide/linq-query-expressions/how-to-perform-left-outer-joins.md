@@ -15,7 +15,7 @@ Una combinación externa izquierda es una combinación en la que se devuelve un 
 > [!NOTE]
 >  El valor predeterminado para un tipo de referencia es `null`; por consiguiente, el ejemplo busca una referencia null antes de tener acceso a cada elemento de cada colección de `Pet`.  
   
- [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#7)]  
+ [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-left-outer-joins_1.cs)]  
   
 ## Compilar el código  
   

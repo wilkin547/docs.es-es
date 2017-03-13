@@ -39,7 +39,7 @@ Cuando se almacena un valor en una propiedad o cuando se recupera el valor de un
   
      En el ejemplo siguiente se lee el valor de la propiedad <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>, y se llama implícitamente a su procedimiento `Get`.  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-call-a-property-procedure_1.vb)]  
   
 2.  Si la propiedad toma argumentos, agregue paréntesis a continuación del nombre de la propiedad para incluir entre ellos la lista de argumentos.  Si no hay ningún argumento, puede omitir opcionalmente los paréntesis.  
   
@@ -53,7 +53,7 @@ Cuando se almacena un valor en una propiedad o cuando se recupera el valor de un
   
      En el ejemplo siguiente se establece el valor de la propiedad <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>, y se llama implícitamente al procedimiento `Set`.  
   
-     [!code-vb[VbVbcnProcedures#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-property-p_2.vb)]  
+     [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-call-a-property-procedure_2.vb)]  
   
 2.  Si la propiedad toma argumentos, agregue paréntesis a continuación del nombre de la propiedad para incluir entre ellos la lista de argumentos.  Si no hay ningún argumento, puede omitir opcionalmente los paréntesis.  
   

@@ -22,7 +22,7 @@ Devuelve el valor [booleano](../../../csharp/language-reference/keywords/bool.md
   
  Con los tipos booleanos que aceptan valores NULL, la expresión `a != b` no es necesariamente igual a `!(a == b)`, ya que uno o ambos valores pueden ser NULL.  Debe sobrecargar ambos operadores, `true` y `false`, por separado para identificar correctamente los valores NULL en la expresión.  En el ejemplo siguiente se muestra cómo sobrecargar y usar los operadores `true` y `false`.  
   
- [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#16)]  
+ [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-operator_1.cs)]  
   
  Un tipo que sobrecarga los operadores `true` y `false` puede utilizarse para la expresión de control en las instrucciones [if](../../../csharp/language-reference/keywords/if-else.md), [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md) y [for](../../../csharp/language-reference/keywords/for.md) y en las [expresiones condicionales](../../../csharp/language-reference/operators/conditional-operator.md).  
   

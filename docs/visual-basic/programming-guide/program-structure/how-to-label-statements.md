@@ -41,7 +41,7 @@ Los bloques de instrucciones están formados por líneas de código delimitadas 
   
      Por ejemplo, a las siguientes líneas de código se les han asignado las etiquetas `Jump` y `120`, respectivamente:  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
 ## Vea también  
  [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)   

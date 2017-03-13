@@ -29,7 +29,7 @@ Este ejemplo lee el contenido de un archivo de texto mediante los métodos está
 >  Los archivos que se utilizan en este ejemplo se crean en el tema [Cómo: Escribir en un archivo texto](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## Ejemplo  
- [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#4)]  
+ [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
 ## Compilar el código  
  Copie el código y péguelo en una aplicación de consola de C\#.  

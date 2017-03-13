@@ -27,7 +27,7 @@ Este ejemplo crea una cadena larga a partir de muchas cadenas más pequeñas med
 ## Ejemplo  
  En el ejemplo siguiente se crea una instancia de la clase <xref:System.Text.StringBuilder>, se anexan 1.000 cadenas a esa instancia y, a continuación, se devuelve su representación de cadena.  
   
- [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-strings-us_1.vb)]  
+ [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
 ## Vea también  
  [Utilizar la clase StringBuilder](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   

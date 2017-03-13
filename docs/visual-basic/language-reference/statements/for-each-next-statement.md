@@ -73,7 +73,7 @@ Next [ element ]
   
  En el siguiente ejemplo, la instrucción de `For Each`…`Next` recorre en iteración todos los elementos de una colección list.  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
  Para obtener más ejemplos, vea [Colecciones](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md) y [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
@@ -82,7 +82,7 @@ Next [ element ]
   
  El ejemplo siguiente demuestra estructuras `For Each`...`Next` anidadas.  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
   
  Cuando se anida bucles, cada bucle debe tener una variable única de `element`.  
   
@@ -95,7 +95,7 @@ Next [ element ]
   
  En el siguiente ejemplo se muestra cómo utilizar las instrucciones `Continue For` y `Exit For`.  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
   
  Puede colocar cualquier número de instrucciones `Exit For` en un bucle `For Each` .  Cuando se utiliza dentro de bucles `For Each` anidados, `Exit For` hace que la ejecución salga del bucle más profundo y transfiera el control al siguiente nivel de anidamiento.  
   
@@ -114,7 +114,7 @@ Next [ element ]
   
  El ejemplo siguiente utiliza una función de iterador.  La función de iterador tiene una instrucción de `Yield` que está dentro de un bucle de [For… Next](../../../visual-basic/language-reference/statements/for-next-statement.md).  En el método de `ListEvenNumbers`, cada iteración del cuerpo de instrucción de `For Each` crea una llamada a la función de iterador, que continúa a `Yield` la instrucción siguiente.  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
  Para obtener más información, vea [Iteradores](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md), [Yield \(Instrucción\)](../../../visual-basic/language-reference/statements/yield-statement.md) y [Iterador](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
@@ -142,7 +142,7 @@ Next [ element ]
   
  En el ejemplo siguiente, la asignación de `m` como valor inicial para `n` no compila a `Option Strict` está activado porque la conversión de `Long` a `Integer` es una conversión de restricción.  En la instrucción `For Each`, sin embargo, no se informa de ningún error del compilador, a pesar de que la asignación a `number` requiere la misma conversión de `Long` a `Integer`.  En la instrucción `For Each` que contiene un gran número, se produce un error en tiempo de ejecución cuando <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A> se aplica al gran número.  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
   
 ### Llamadas a IEnumerator  
  Cuando comienza la ejecución de un bucle `For Each`...`Next`, Visual Basic comprueba que `group` hace referencia a un objeto de colección válido.  Si no, produce una excepción.  De lo contrario, llama al método <xref:System.Collections.IEnumerator.MoveNext%2A> y a la propiedad <xref:System.Collections.IEnumerator.Current%2A> del objeto enumerador para devolver el primer elemento.  Si `MoveNext` indica que no hay un elemento siguiente, es decir, si la colección está vacía, el bucle `For Each` se detiene y el control pasa a la instrucción que sigue a `Next`.  De lo contrario, Visual Basic establece `element` en el primer elemento y ejecuta el bloque de instrucciones.  
@@ -163,7 +163,7 @@ Next [ element ]
 ## Ejemplo  
  El ejemplo siguiente muestra todas las carpetas del directorio C:\\ utilizando la clase <xref:System.IO.DirectoryInfo> .  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
 ## Ejemplo  
  El ejemplo siguiente muestra un procedimiento para ordenar una colección.  El ejemplo ordena las instancias de una clase de `Car` almacenados en <xref:System.Collections.Generic.List%601>.  La clase `Car` implementa la interfaz <xref:System.IComparable%601>, que requiere que el método <xref:System.IComparable%601.CompareTo%2A> se implemente.  
@@ -172,7 +172,7 @@ Next [ element ]
   
  En el método `ListCars`, la expresión `cars.Sort()` ordena la lista.  Esta llamada al método <xref:System.Collections.Generic.List%601.Sort%2A> de <xref:System.Collections.Generic.List%601> hace que el método `CompareTo` sea llamado automáticamente para los objetos de clase `Car` en `List`.  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## Vea también  
  [Colecciones](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   

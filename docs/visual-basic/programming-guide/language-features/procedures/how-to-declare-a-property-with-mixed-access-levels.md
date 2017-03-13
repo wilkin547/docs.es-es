@@ -39,7 +39,7 @@ Si desea que los procedimientos `Get` y `Set` de una propiedad tengan niveles de
   
 3.  No especifique un nivel de acceso en el otro procedimiento de propiedad.  Se acepta el nivel de acceso declarado en la instrucción `Property`.  Puede restringir el acceso en un solo procedimiento de propiedad.  
   
-     [!code-vb[VbVbcnProcedures#10](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-a-propert_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
      En el ejemplo anterior, el procedimiento `Get` tiene el mismo acceso `Protected` que la propiedad, mientras que el procedimiento `Set` tiene acceso `Private`.  Una clase derivada de `employee` puede leer el valor `salary`, pero sólo la clase `employee` puede establecerlo.  
   

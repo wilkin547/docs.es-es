@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # Gen&#233;ricos (Gu&#237;a de programaci&#243;n de C#)
 Los tipos genéricos se agregaron a la versión 2.0 del lenguaje C\# y Common Language Runtime \(CLR\).  Estos tipos agregan el concepto de parámetros de tipo a .NET Framework, lo cual permite diseñar clases y métodos que aplazan la especificación de uno o más tipos hasta que el código de cliente declara y crea una instancia de la clase o del método.  Por ejemplo, mediante la utilización de un parámetro de tipo genérico T, se puede escribir una clase única que otro código de cliente puede utilizar sin generar el costo o el riesgo de conversiones en tiempo de ejecución u operaciones de conversión boxing, como se muestra a continuación:  
   
- [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
 ## Información general acerca de los genéricos  
   

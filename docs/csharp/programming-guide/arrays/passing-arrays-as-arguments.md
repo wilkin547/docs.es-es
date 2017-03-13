@@ -21,15 +21,15 @@ Las matrices se pueden pasar como argumentos a los parámetros de método.  Dado
 ## Pasar matrices unidimensionales como argumentos  
  Una matriz unidimensional inicializada se puede pasar a un método.  Por ejemplo, la siguiente instrucción envía una matriz a un método de impresión.  
   
- [!code-cs[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_1.cs)]  
+ [!code-cs[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_1.cs)]  
   
  El código siguiente muestra una implementación parcial del método de impresión.  
   
- [!code-cs[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_2.cs)]  
+ [!code-cs[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_2.cs)]  
   
  Puede inicializar y pasar una nueva matriz en un solo paso, como se muestra en el siguiente ejemplo.  
   
- [!code-cs[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_3.cs)]  
+ [!code-cs[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_3.cs)]  
   
 ## Ejemplo  
   
@@ -37,20 +37,20 @@ Las matrices se pueden pasar como argumentos a los parámetros de método.  Dado
  En el ejemplo siguiente, se inicializa una matriz de cadenas y se pasa como argumento a un método `PrintArray` para las cadenas.  El método muestra los elementos de la matriz.  A continuación, se invocan los métodos `ChangeArray` y `ChangeArrayElement` para mostrar que el envío de un argumento de matriz por valor no evita que se realicen cambios en los elementos de la matriz.  
   
 ### Código  
- [!code-cs[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_4.cs)]  
+ [!code-cs[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_4.cs)]  
   
 ## Pasar matrices multidimensionales como argumentos  
  Una matriz multidimensional inicializada se pasa a un método del mismo modo que una matriz unidimensional.  
   
- [!code-cs[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_5.cs)]  
+ [!code-cs[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_5.cs)]  
   
  En el código siguiente se muestra una declaración parcial de un método de impresión que acepta una matriz bidimensional como argumento.  
   
- [!code-cs[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_6.cs)]  
+ [!code-cs[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_6.cs)]  
   
  Puede inicializar y pasar una nueva matriz en un solo paso, como se muestra en el siguiente ejemplo.  
   
- [!code-cs[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_7.cs)]  
+ [!code-cs[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_7.cs)]  
   
 ## Ejemplo  
   
@@ -58,7 +58,7 @@ Las matrices se pueden pasar como argumentos a los parámetros de método.  Dado
  En el ejemplo siguiente, se inicializa una matriz de enteros bidimensional y se pasa al método `Print2DArray`.  El método muestra los elementos de la matriz.  
   
 ### Código  
- [!code-cs[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/passing-arrays-as-argume_8.cs)]  
+ [!code-cs[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

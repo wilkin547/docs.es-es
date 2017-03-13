@@ -20,7 +20,7 @@ caps.handback.revision: 44
 # Tipos que aceptan valores NULL (Gu&#237;a de programaci&#243;n de C#)
 Los tipos que aceptan valores NULL son instancias del struct <xref:System.Nullable%601?displayProperty=fullName>.  Un tipo que acepta valores NULL puede representar el intervalo de valores correcto para su tipo de valor subyacente, además de un valor `null` adicional.  Por ejemplo, a un tipo `Nullable<Int32>` se le puede asignar cualquier valor entre \-2147483648 y 2147483647, o el valor `null`.  A `Nullable<bool>` se le pueden asignar los valores [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) o [null](../../../csharp/language-reference/keywords/null.md).  La posibilidad de asignar `null` a tipos numéricos y booleanos resulta especialmente útil para trabajar con bases de datos y otros tipos de datos que contienen elementos que pueden no tener un valor asignado.  Por ejemplo, un campo Boolean de una base de datos puede almacenar los valores  `true` o `false`, o puede ser indefinido.  
   
- [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
  El ejemplo mostrará este resultado:  
   

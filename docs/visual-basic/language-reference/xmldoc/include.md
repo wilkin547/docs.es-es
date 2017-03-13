@@ -51,7 +51,7 @@ Hace referencia a otro archivo que describe los tipos y miembros de su código f
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<include>` para importar comentarios de documentación del miembro de un archivo denominado `commentFile.xml`.  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
  El formato de `commentFile.xml` es el siguiente.  
   

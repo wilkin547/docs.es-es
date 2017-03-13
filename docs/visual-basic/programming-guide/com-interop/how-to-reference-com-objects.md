@@ -39,7 +39,7 @@ En [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vb
   
 3.  Para simplificar el acceso al ensamblado de interoperabilidad, agregue una instrucción `Imports` al principio del código de la clase o el módulo en el que va a utilizar el objeto COM:  Por ejemplo, en el siguiente ejemplo de código se importa el espacio de nombres `INKEDLib` de los objetos a los que se hace referencia en la biblioteca `Microsoft InkEdit Control 1.0`.  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#40)]  
+     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
   
 ### Para crear un ensamblado de interoperabilidad mediante Tlbimp  
   

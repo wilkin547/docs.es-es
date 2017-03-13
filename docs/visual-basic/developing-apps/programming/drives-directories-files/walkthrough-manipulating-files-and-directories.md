@@ -66,13 +66,13 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
   
 2.  Agregue el código siguiente al controlador de eventos `Click`.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
      La llamada `FolderBrowserDialog1.ShowDialog` abre el cuadro de diálogo **Buscar carpeta**.  Una vez que el usuario hace clic en **Aceptar**, la propiedad <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> se envía como un argumento al método `ListFiles`, que se agrega en el paso siguiente.  
   
 3.  Agregue el siguiente método `ListFiles`.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
      Este código primero borra el control **ListBox**.  
   
@@ -92,7 +92,7 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
   
 2.  Agregue el código siguiente al controlador de eventos `Click`.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
      El código comprueba que un elemento está seleccionado en `ListBox`.  A continuación, obtiene la entrada de la ruta de acceso del archivo de `ListBox`.  El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> se utiliza para comprobar si el archivo todavía existe.  
   
@@ -100,7 +100,7 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
   
 3.  Agregue el siguiente método `GetTextForOutput`.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
      El código utiliza el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> para obtener los parámetros del archivo.  Los parámetros del archivo se agregan a <xref:System.Text.StringBuilder>.  
   
@@ -116,7 +116,7 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
   
 1.  Agregue el siguiente código al final del controlador de eventos `examineButton_Click`.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
   
      El código establece la ruta del archivo de registro para colocar el archivo de registro en el mismo directorio que el archivo seleccionado.  El texto de la entrada de registro se establece en la fecha y hora actual seguido de la información del archivo.  
   
@@ -132,7 +132,7 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
   
 2.  Agregue el siguiente código al controlador de eventos.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
   
      Este código establece el directorio predeterminado del explorador de la carpeta en el directorio actual.  
   
@@ -144,7 +144,7 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
   
 1.  Agregue el siguiente método `SetEnabled`.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
   
      El método `SetEnabled` habilita o deshabilita controles dependiendo de si un elemento se selecciona en `ListBox`.  
   
@@ -161,12 +161,12 @@ Este tutorial ofrece una introducción a los fundamentos de la E\/S de archivos 
 ## Ejemplo completo utilizando My.Computer.FileSystem  
  El ejemplo completo aparece a continuación.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
 ## Ejemplo completo utilizando System.IO  
  El siguiente ejemplo equivalente utiliza las clases del espacio de nombres <xref:System.IO> en lugar de utilizar los objetos `My.Computer.FileSystem`.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## Vea también  
  <xref:System.IO>   

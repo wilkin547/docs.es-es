@@ -27,7 +27,7 @@ Las constantes son campos cuyos valores se establecen en tiempo de compilación 
  Un método para definir constantes no integrales consiste en agruparlas en una clase estática única denominada `Constants`.  Esto requerirá que todas las referencias a las constantes vayan precedidas del nombre de clase, como se muestra en el ejemplo siguiente.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
  El uso del calificador de nombres de clase ayuda a garantizar que los usuarios de la constante entiendan que es una constante y no se puede modificar.  
   

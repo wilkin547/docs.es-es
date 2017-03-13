@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # Constructores est&#225;ticos (Gu&#237;a de programaci&#243;n de C#)
 Un constructor estático se utiliza para inicializar cualquier dato [estático](../../../csharp/language-reference/keywords/static.md) o realizar una acción determinada que solo debe realizarse una vez.  Es llamado automáticamente antes de crear la primera instancia o de hacer referencia a cualquier miembro estático.  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
  Los constructores estáticos tienen las propiedades siguientes:  
   
@@ -40,7 +40,7 @@ Un constructor estático se utiliza para inicializar cualquier dato [estático](
 ## Ejemplo  
  En este ejemplo, la clase `Bus` tiene un constructor estático.  Cuando se crea la primera instancia de `Bus` \(`bus1`\), se invoca el constructor estático para inicializar la clase.  En el resultado del ejemplo, se comprueba que el constructor estático se ejecuta solo una vez, incluso si se crean dos instancias de `Bus`, y que se ejecuta antes de que se ejecute el constructor de instancia.  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

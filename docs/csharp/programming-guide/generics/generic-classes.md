@@ -43,27 +43,27 @@ Las clases genéricas encapsulan operaciones que no son específicas de un tipo 
   
  Las reglas para los parámetros de tipo y las restricciones tienen varias implicaciones en el comportamiento de la clase genérica, especialmente en lo relativo a la herencia y accesibilidad de los miembros.  Antes de continuar, debería entender algunos términos.  Para una clase genérica `Node<T>,`, el código cliente puede hacer referencia a la clase especificando un argumento de tipo para crear un tipo construido cerrado \(`Node<int>`\).  Como alternativa, puede dejar el parámetro de tipo sin especificar, por ejemplo, al especificar una clase base genérica, para crear un tipo construido abierto \(`Node<T>`\).  Las clases genéricas pueden heredar de clases base construidas cerradas o construidas abiertas:  
   
- [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_1.cs)]  
+ [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
   
  Las clases no genéricas, es decir, concretas, pueden heredar de las clases base construidas cerradas, pero no de las clases construidas abiertas ni de los parámetros de tipo 'from', ya que no hay ninguna forma de que el código cliente pueda proporcionar el tipo de argumento necesario para crear una instancia de la clase base en tiempo de ejecución.  
   
- [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_2.cs)]  
+ [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
   
  Las clases genéricas que heredan de tipos construidos abiertos deben proporcionar argumentos de tipo para cada parámetro de tipo de clase base no compartidos con la clase que hereda, tal como se muestra en el código siguiente:  
   
- [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_3.cs)]  
+ [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
   
  Las clases genéricas que heredan de tipos construidos abiertos deben especificar restricciones que impliquen o sean un superconjunto de las restricciones sobre el tipo base:  
   
- [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_4.cs)]  
+ [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
   
  Los tipos genéricos pueden utilizar varios parámetros y restricciones de tipo, de la forma siguiente:  
   
- [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_5.cs)]  
+ [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
   
  Los tipos construidos abiertos y construidos cerrados se pueden utilizar como parámetros de método:  
   
- [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_6.cs)]  
+ [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
   
  Si una clase genérica implementa una interfaz, todas las instancias de esa clase se pueden convertir explícitamente a esa interfaz.  
   

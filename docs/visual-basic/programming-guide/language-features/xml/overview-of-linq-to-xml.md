@@ -35,21 +35,21 @@ caps.handback.revision: 17
 ## Crear XML  
  Hay dos maneras de crear árboles XML en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  Puede declarar un literal XML directamente en código o puede utilizar la API de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Ambos procesos permiten que el código refleje la estructura final del árbol XML.  Por ejemplo, el siguiente ejemplo de código crea un elemento XML:  
   
- [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_1.vb)]  
+ [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
   
  Para obtener más información, vea [Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## Navegar y obtener acceso a XML  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] proporciona propiedades de eje XML para obtener acceso y navegar por las estructuras XML.  Estas propiedades permiten tener acceso a los elementos y atributos XML especificando los nombres de los elementos secundarios XML.  O bien, puede llamar explícitamente a los métodos de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] para navegar y buscar elementos y atributos.  Por ejemplo, el ejemplo de código siguiente utiliza propiedades de eje XML para hacer referencia a los atributos y elementos secundarios de un elemento XML.  El ejemplo de código usa una consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] para recuperar los elementos secundarios y generarlos como elementos XML, realizando eficazmente una transformación.  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_2.vb)]  
+ [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
   
  Para obtener más información, vea [Obtener acceso a XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## Espacios de nombres XML  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] permite especificar un alias en un espacio de nombres XML global utilizando la instrucción `Imports`.  El ejemplo siguiente muestra cómo utilizar la instrucción `Imports` para importar un espacio de nombres XML:  
   
- [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_3.vb)]  
+ [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
   
  Puede utilizar un alias de espacio de nombres XML al obtener acceso a las propiedades de eje XML y declarar literales XML para los documentos y elementos XML.  
   
@@ -60,16 +60,16 @@ caps.handback.revision: 17
 ### Utilizar espacios de nombres XML en literales XML  
  El ejemplo siguiente muestra cómo crear un objeto <xref:System.Xml.Linq.XElement> que utiliza el espacio de nombres `ns`global:  
   
- [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_4.vb)]  
+ [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
   
  El compilador de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] traduce literales XML que contienen los alias del espacio de nombres XML en código equivalente que utiliza la notación XML para usar los espacios de nombres XML, con el atributo `xmlns`.  Cuando se compila, el código del ejemplo de la sección anterior genera básicamente el mismo código ejecutable que el ejemplo siguiente:  
   
- [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_5.vb)]  
+ [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
   
 ### Usar los espacios de nombres XML en propiedades de eje XML  
  Los espacios de nombres XML declarados en literales XML no están disponibles para su uso en propiedades de eje XML.  Sin embargo, los espacios de nombres globales se pueden utilizar con las propiedades de eje XML.  Use dos puntos para separar el prefijo del espacio de nombres XML del nombre del elemento local.  A continuación, se muestra un ejemplo:  
   
- [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/overview-of-linq-to-xml_6.vb)]  
+ [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
 ## Vea también  
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   

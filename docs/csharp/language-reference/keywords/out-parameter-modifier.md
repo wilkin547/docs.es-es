@@ -19,17 +19,17 @@ caps.handback.revision: 9
 # Modificador del par&#225;metro out (Referencia de C#)
 La palabra clave `out` produce argumentos que se van a pasar por referencia.  Ocurre igual que con la palabra clave [ref](../../../csharp/language-reference/keywords/ref.md), excepto en que `ref` requiere que se inicialice la variable antes de pasarla.  Utilizar un parámetro `out`, la definición de método y el método de llamada deben utilizar explícitamente la palabra clave `out`.  Por ejemplo:  
   
- [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_1.cs)]  
   
  Aunque las variables que se pasan como argumentos `out` no tienen que inicializarse antes de pasarlas, se requiere que el método invocado asigne un valor antes de que se devuelva.  
   
  Aunque las palabras clave `out` y `ref` generan un comportamiento diferente en tiempo de ejecución, no se consideran parte de la firma del método en tiempo de compilación.  Por consiguiente, no se pueden sobrecargar los métodos si la única diferencia consiste en que un método toma un argumento `ref` y el otro toma un argumento `out`.  Por ejemplo, el código siguiente no se compilará:  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_2.cs)]  
   
  Sin embargo, se puede realizar la sobrecarga si un método toma un argumento `ref` u `out` y el otro no utiliza ninguno de los dos, de la manera siguiente:  
   
- [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_3.cs)]  
   
  Las propiedades no son variables y, por consiguiente, no se pueden pasar como parámetros `out`.  
   
@@ -44,7 +44,7 @@ La palabra clave `out` produce argumentos que se van a pasar por referencia.  Oc
 ## Ejemplo  
  Declarar un método como `out` es útil cuando se desea que devuelva varios valores.  En el siguiente ejemplo, se usa `out` para devolver tres variables con una única llamada al método.  Observe que el tercer argumento se asigna a null.  Esto permite que los métodos devuelvan valores opcionalmente.  
   
- [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_4.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

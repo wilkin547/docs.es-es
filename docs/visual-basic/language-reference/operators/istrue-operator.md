@@ -50,7 +50,7 @@ Determina si una expresión es `True`.
 ## Ejemplo  
  En el ejemplo de código siguiente se define el esquema de una estructura que incluye las definiciones para los operadores `IsFalse` e `IsTrue`.  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/istrue-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/istrue-operator_1.vb)]  
   
 ## Vea también  
  [IsFalse \(Operador\)](../../../visual-basic/language-reference/operators/isfalse-operator.md)   

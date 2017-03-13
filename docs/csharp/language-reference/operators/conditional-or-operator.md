@@ -42,7 +42,7 @@ x | y
 ## Ejemplo  
  En los ejemplos siguientes, que utiliza `||` evalúa sólo el primer operando.  La expresión que utiliza `|`evalúa ambos operandos.  En el segundo ejemplo, una excepción en tiempo de ejecución se produce si se evalúan los dos operandos.  
   
- [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#52)]  
+ [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

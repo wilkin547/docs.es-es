@@ -21,7 +21,7 @@ A las variables locales se les puede asignar un "tipo" deducido `var` en lugar d
   
  En los ejemplos siguientes se muestran varias maneras de declarar variables locales con `var`:  
   
- [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#43)]  
+ [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
   
  Es importante entender que la palabra clave `var` no significa "variant" ni indica que la variable tenga establecimiento flexible de tipos ni que sea de enlace en tiempo de ejecución.  Simplemente significa que el compilador determina y asigna el tipo más adecuado.  
   
@@ -54,7 +54,7 @@ A las variables locales se les puede asignar un "tipo" deducido `var` en lugar d
   
  Desde la perspectiva del código fuente, un tipo anónimo no tiene nombre.  Por tanto, si una variable de consulta se ha inicializado con `var`, la única manera de tener acceso a las propiedades de la secuencia de objetos devuelta consiste en utilizar `var` como el tipo de la variable de iteración en la instrucción `foreach`.  
   
- [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#44)]  
+ [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
   
 ## Comentarios  
  Las restricciones siguientes se aplican a las declaraciones de variable con tipo implícito:  
@@ -73,7 +73,7 @@ A las variables locales se les puede asignar un "tipo" deducido `var` en lugar d
   
  La palabra clave `var` también puede ser útil cuando es incómodo escribir el tipo específico de la variable en el teclado, cuando es obvio o cuando no mejora la legibilidad del código.  Un ejemplo de cómo `var` es útil en este sentido son los tipos genéricos anidados como los que se usan en las operaciones de agrupación.  En la consulta siguiente, el tipo de la variable de consulta es `IEnumerable<IGrouping<string, Student>>`.  Siempre y cuando usted y las otras personas que deben mantener el código lo entiendan, no hay ningún problema con el hecho de utilizar tipos implícitos por comodidad y brevedad.  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Group.cs#13)]  
+ [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
   
  Sin embargo, el uso de `var` tiene al menos el potencial de dificultar la compresión de su código a otros programadores.  Por esa razón, en la documentación de C\# generalmente `var` solo se utiliza cuando es necesario.  
   

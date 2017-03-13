@@ -30,12 +30,12 @@ En ocasiones es útil tener información sobre los caracteres de una cadena y de
 ## Ejemplo  
  Este ejemplo muestra cómo dividir una cadena en una matriz de caracteres \(`Char`\), y cómo dividir una cadena en una matriz `String` de sus caracteres de texto Unicode.  El motivo de esta distinción es que los caracteres de texto Unicode pueden constar de dos o más caracteres `Char` \(como un par suplente o una secuencia de caracteres combinada\).  Para obtener más información, vea <xref:System.Globalization.TextElementEnumerator> y el "Estándar Unicode" en la dirección http:\/\/www.unicode.org.  
   
- [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_1.vb)]  
+ [!code-vb[VbVbalrStrings#75](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_1.vb)]  
   
 ## Ejemplo  
  Es más difícil dividir una cadena en sus caracteres de texto Unicode, pero es necesario hacerlo si necesita información sobre la representación visual de una cadena.  Este ejemplo utiliza el método <xref:System.Globalization.StringInfo.SubstringByTextElements%2A> para obtener información sobre los caracteres de texto Unicode que constituyen una cadena.  
   
- [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-a-string-_2_2.vb)]  
+ [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
 ## Vea también  
  <xref:System.String.Chars%2A>   

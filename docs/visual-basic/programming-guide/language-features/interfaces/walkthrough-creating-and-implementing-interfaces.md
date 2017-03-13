@@ -45,7 +45,7 @@ Las interfaces describen las características de las propiedades, los métodos y
   
 5.  Defina una propiedad, un método y un evento para la interfaz; para ello, sitúe el siguiente código entre las instrucciones `Interface` y `End Interface`:  
   
-     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#98)]  
+     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
   
 ## Implementación  
  Puede notar que la sintaxis utilizada para declarar los miembros de la interfaz es diferente de la sintaxis utilizada para declarar los miembros de la clase.  Esta diferencia refleja el hecho de que las interfaces no pueden contener código de implementación.  
@@ -54,13 +54,13 @@ Las interfaces describen las características de las propiedades, los métodos y
   
 1.  Agregue una clase denominada `ImplementationClass`; para ello, agregue la siguiente instrucción a `Module1` después de la instrucción `End Interface` pero antes de la instrucción `End Module` y, a continuación, presione ENTRAR:  
   
-     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#99)]  
+     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
   
      Si está trabajando dentro del entorno de desarrollo integrado, el **Editor de código** proporciona la instrucción `End Class` correspondiente al presionar ENTRAR.  
   
 2.  Agregue la siguiente instrucción `Implements` a `ImplementationClass`, que da nombre a la interfaz que implementa la clase:  
   
-     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#100)]  
+     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
   
      Cuando se muestra separada de otros elementos en la parte superior de la clase o estructura, la instrucción `Implements` indica que la clase o estructura implementa una interfaz.  
   
@@ -68,25 +68,25 @@ Las interfaces describen las características de las propiedades, los métodos y
   
 3.  Si no está trabajando dentro del entorno de desarrollo integrado, debe implementar todos los miembros de la interfaz `MyInterface`.  Agregue el código siguiente a `ImplementationClass` para implementar `Event1`, `Method1` y `Prop1`:  
   
-     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#101)]  
+     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
   
      La instrucción `Implements` asigna un nombre a la interfaz y al miembro de la interfaz que se está implementando.  
   
 4.  Para finalizar la definición de `Prop1`, agregue un campo privado a la clase que almacenó el valor de propiedad:  
   
-     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#102)]  
+     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
   
      Devuelva el valor de `pval` desde el descriptor de acceso get de la propiedad.  
   
-     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#103)]  
+     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
   
      Establezca el valor de `pval` en el descriptor de acceso set de la propiedad.  
   
-     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#104)]  
+     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
   
 5.  Para finalizar la definición de `Method1`, agregue el código siguiente:  
   
-     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#105)]  
+     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
   
 #### Para probar la implementación de la interfaz  
   
@@ -94,23 +94,23 @@ Las interfaces describen las características de las propiedades, los métodos y
   
 2.  Agregue el siguiente campo `testInstance` a la clase `Form1`:  
   
-     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#120)]  
+     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
   
      Al declarar `testInstance` como `WithEvents`, la clase `Form1` puede controlar sus eventos.  
   
 3.  Agregue el siguiente controlador de eventos a la clase `Form1` para controlar los eventos desencadenados por `testInstance`:  
   
-     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#106)]  
+     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
   
 4.  Agregue una subrutina denominada `Test` a la clase `Form1` para probar la clase de implementación:  
   
-     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#107)]  
+     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
   
      El procedimiento `Test` crea una instancia de la clase que implementa `MyInterface`, asigna esa instancia al campo `testInstance`, define una propiedad y ejecuta un método a través de la interfaz.  
   
 5.  Agregue código para llamar al procedimiento `Test` desde el procedimiento `Form1 Load` del formulario de inicio:  
   
-     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#108)]  
+     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
   
 6.  Ejecute el procedimiento `Test` presionando F5.  Aparecerá el mensaje "Prop1 se ha definido como 9".  Tras hacer clic en Aceptar, aparecerá el mensaje "El parámetro X de Method1 es 5".  Al hacer clic en Aceptar, aparecerá el mensaje "El controlador de eventos ha interceptado el evento".  
   

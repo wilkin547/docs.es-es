@@ -10,7 +10,7 @@ En este ejemplo se muestra cómo se devuelve una consulta desde un método como 
 ## Ejemplo  
  En el ejemplo siguiente, el primer método devuelve una consulta como valor devuelto, mientras que el segundo método devuelve una consulta como parámetro `out`.  Tenga en cuenta que, en ambos casos, se devuelve una consulta, no los resultados de la consulta.  
   
- [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#80)]  
+ [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-a-query-from-a-method_1.cs)]  
   
 ## Compilar el código  
   

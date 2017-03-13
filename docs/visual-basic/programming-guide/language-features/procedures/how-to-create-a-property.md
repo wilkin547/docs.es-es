@@ -63,11 +63,11 @@ Una definición de propiedad se agrega entre una instrucción `Property` y una i
 ## Ejemplo  
  El ejemplo siguiente crea una propiedad de lectura y escritura que almacena un nombre completo como dos nombres constitutivos, el nombre y el apellido.  Cuando el código de llamada lee `fullName`, el procedimiento `Get` combina los dos nombres constitutivos y devuelve el nombre completo.  Cuando el código de llamada asigna un nuevo nombre completo, el procedimiento `Set` intenta dividirlo en dos nombres constitutivos.  Si no encuentra espacio, lo almacena como nombre.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
   
  El ejemplo siguiente muestra las llamadas típicas a los procedimientos de propiedad de `fullName`.  La primera llamada establece el valor de propiedad y la segunda la recupera.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
   
 ## Vea también  
  [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

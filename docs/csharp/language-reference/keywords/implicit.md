@@ -22,7 +22,7 @@ caps.handback.revision: 19
 La palabra clave `implicit` se utiliza para declarar un operador de conversión de tipo implícito definido por el usuario.  Utilícela para permitir conversiones implícitas entre un tipo definido por el usuario y otro tipo, si existen garantías de que la conversión no provocará la pérdida de datos.  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsConversion#5](../../../csharp/language-reference/keywords/codesnippet/csharp/implicit_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicit_1.cs)]  
   
  Si se eliminan las conversiones de tipo explícitas innecesarias y se utilizan conversiones implícitas, la legibilidad del código mejora.  Sin embargo, como las conversiones implícitas no requieren que los programadores conviertan explícitamente un tipo en otro, deben tomarse las medidas adecuadas para impedir que se produzcan resultados imprevistos.  En general, los operadores de conversión implícita nunca deberían producir excepciones ni pérdida de información, de modo que puedan utilizarse de forma segura sin intervención del programador.  Si un operador de conversión no cumple esos criterios, debería marcarse como `explicit`.  Para obtener más información, vea [Utilizar operadores de conversión \(Guía de programación de C\#\)](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
   

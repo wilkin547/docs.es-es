@@ -37,7 +37,7 @@ Herencia de clases
   
  En el ejemplo siguiente se muestra cómo se expresan en C\# las relaciones de clase presentadas en la ilustración anterior.  En el ejemplo también se muestra cómo `WorkItem` invalida el método virtual <xref:System.Object.ToString%2A?displayProperty=fullName> y cómo la clase `ChangeRequest` hereda la implementación de `WorkItem` del método.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/inheritance_1.cs)]  
+ [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## Métodos abstractos y virtuales  
  Cuando una clase base declara un método como [virtual](../../../csharp/language-reference/keywords/virtual.md), una clase derivada puede [invalidar](../../../csharp/language-reference/keywords/override.md) el método con su propia implementación.  Si una clase base declara un miembro como [abstracto](../../../csharp/language-reference/keywords/abstract.md), ese método se debe invalidar en cualquier clase no abstracta que herede directamente de dicha clase.  Si una clase derivada es abstracta en sí misma, hereda los miembros abstractos sin implementarlos.  Los miembros abstractos y virtuales son la base para el polimorfismo, la segunda característica principal de la programación orientada a objetos.  Para obtener más información, vea [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

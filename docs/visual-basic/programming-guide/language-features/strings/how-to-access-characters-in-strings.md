@@ -27,7 +27,7 @@ Este ejemplo muestra cómo utilizar la propiedad <xref:System.String.Chars%2A> p
 ## Ejemplo  
  En ocasiones es útil tener información sobre los caracteres de una cadena y de su posición dentro de la misma.  Una cadena se puede considerar como una matriz de caracteres \(instancias `Char`\); se puede recuperar un carácter concreto haciendo referencia al índice de dicho carácter a través de la propiedad <xref:System.String.Chars%2A>.  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-access-characters_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
  El parámetro `index` de la propiedad <xref:System.String.Chars%2A> está basado en cero.  
   

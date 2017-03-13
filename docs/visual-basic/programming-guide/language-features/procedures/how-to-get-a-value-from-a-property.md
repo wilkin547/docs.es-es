@@ -39,7 +39,7 @@ Recupera el valor de una propiedad incluyendo el nombre de propiedad en una expr
   
      En el ejemplo siguiente se lee el valor de la propiedad `Now` de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], y se llama implícitamente a su procedimiento `Get`.  
   
-     [!code-vb[VbVbalrDateProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/VbVbalrDateProperties/Module1.vb#4)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
 2.  Si la propiedad toma argumentos, agregue paréntesis a continuación del nombre de la propiedad para incluir entre ellos la lista de argumentos.  Si no hay ningún argumento, puede omitir opcionalmente los paréntesis.  
   

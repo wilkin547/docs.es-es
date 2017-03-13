@@ -38,11 +38,11 @@ Si un procedimiento declara un parámetro [ByRef](../../../../visual-basic/langu
 ## Ejemplo  
  En el siguiente ejemplo se muestran dos procedimientos que toman una variable de matriz y operan con sus elementos.  El procedimiento `increase` sencillamente suma una unidad a cada elemento.  El procedimiento `replace` asigna una nueva matriz al parámetro `a()` y, a continuación, suma una unidad a cada elemento.  La reasignación, sin embargo, no afecta a la variable de matriz subyacente al código de llamada.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
  La primera llamada a `MsgBox` muestra "After increase\(n\): 11, 21, 31, 41".  Dado que la matriz  `n`  es un tipo de referencia,  `replace`  puede cambiar sus miembros, aunque el mecanismo para transferir argumentos es `ByVal`.  
   

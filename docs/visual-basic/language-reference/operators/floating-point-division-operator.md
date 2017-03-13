@@ -85,7 +85,7 @@ expression1 / expression2
 ## Ejemplo  
  En este ejemplo se usa el operador `/` para realizar una división de punto flotante.  El resultado será el cociente de ambos operandos.  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/floating-point-division-_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
   
  Las expresiones en el ejemplo anterior devuelven valores de 2,5 y 3,333333.  Observe que el resultado es siempre de punto flotante \(`Double`\), aunque ambos operandos sean constantes enteras.  
   

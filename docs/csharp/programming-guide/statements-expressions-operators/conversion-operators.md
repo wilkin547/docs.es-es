@@ -21,7 +21,7 @@ caps.handback.revision: 22
 # Operadores de conversi&#243;n (Gu&#237;a de programaci&#243;n de C#)
 C\# permite a los programadores declarar conversiones de clases o structs para convertirlas en otras clases o structs o en tipos básicos.  Las conversiones se definen como operadores con el nombre del tipo al cual convierten.  El tipo contenedor debe ser el tipo del argumento que se va a convertir o el tipo del resultado de la conversión, pero no ambos.  
   
- [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/conversion-operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
 ## Información general de operadores de conversión  
  Los operadores de conversión tienen las propiedades siguientes:  

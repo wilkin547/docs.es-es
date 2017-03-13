@@ -36,7 +36,7 @@ Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
   
 -   Utilice el método `DeleteSubKey` para eliminar una clave del Registro.  Este ejemplo elimina la clave Software\/TestApp en la sección CurrentUser.  Puede cambiar esto en el código para la cadena adecuada o confiar en la información proporcionada por el usuario.  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-delete-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
 ## Programación eficaz  
  El método `DeleteSubKey` devuelve una cadena vacía si el par clave\/valor no existe.  

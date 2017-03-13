@@ -62,7 +62,7 @@ Especifica los atributos que se van a aplicar a un elemento de programación dec
 ## Ejemplo  
  En el ejemplo siguiente se aplica el atributo <xref:System.Runtime.InteropServices.DllImportAttribute> al esquema de una definición de un procedimiento `Function`.  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> indica que el procedimiento con atributos representa un punto de entrada en una biblioteca de vínculos dinámicos no administrada \(archivo DLL\).  El atributo proporciona el nombre del archivo DLL como argumento posicional y el resto de la información como inicializadores de variable.  
   

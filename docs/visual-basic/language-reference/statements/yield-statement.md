@@ -91,12 +91,12 @@ Next
   
  El tipo de valor devuelto del método de iterador es <xref:System.Collections.Generic.IEnumerable%601>, tipo de interfaz del iterador.  Cuando se llama al método de iterador, devuelve un objeto enumerable que contiene los potencias de un número.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
 ## Ejemplo  
  El ejemplo siguiente se muestra un descriptor de acceso de `Get` que sea un iterador.  La declaración de propiedad incluye un modificador de `Iterator`.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
  Para obtener otros ejemplos, vea [Iteradores](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
   

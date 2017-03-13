@@ -23,7 +23,7 @@ Una interfaz contiene solo las signaturas de [métodos](../../../csharp/programm
  Para obtener más información y ejemplos, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
   
  Una interfaz puede ser miembro de un espacio de nombres o de una clase, y puede contener signaturas de los siguientes miembros:  
   
@@ -46,7 +46,7 @@ Una interfaz contiene solo las signaturas de [métodos](../../../csharp/programm
 ## Ejemplo  
  En el ejemplo siguiente se muestra la implementación de una interfaz.  En este ejemplo, la interfaz contiene la declaración de propiedad y la clase contiene la implementación.  Cualquier instancia de una clase que implemente `IPoint` tiene las propiedades de entero `x` e `y`.  
   
- [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

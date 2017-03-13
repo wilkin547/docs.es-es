@@ -24,7 +24,7 @@ La palabra clave contextual `into` puede utilizarse para crear un identificador 
 ## Ejemplo  
  En el ejemplo siguiente se muestra el uso de la palabra clave `into` para habilitar un identificador temporal `fruitGroup` que tiene un tipo deducido de `IGrouping`.  Con el identificador puede invocar el método <xref:System.Linq.Enumerable.Count%2A> en cada grupo y seleccionar solamente aquellos grupos que contengan dos o más palabras.  
   
- [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Into.cs#18)]  
+ [!code-cs[cscsrefQueryKeywords#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/into_1.cs)]  
   
  El uso de `into` en una cláusula `group` sólo es necesario cuando desea realizar operaciones de consulta adicionales en cada grupo.  Para obtener más información, consulte [group \(cláusula\)](../../../csharp/language-reference/keywords/group-clause.md).  
   

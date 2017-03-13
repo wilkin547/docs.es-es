@@ -36,11 +36,11 @@ Representa el valor predeterminado de cualquier tipo de datos.  para los tipos d
   
  Si la variable es de un tipo de valor que no es que acepta valores NULL, la asignación de `Nothing` ella establecida en el valor predeterminado para el tipo declarado.  Si ese tipo contiene miembros de variables, se establecen los valores predeterminados de todos ellos.  En el ejemplo siguiente se ilustra todo esto para los tipos escalares.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
  Si una variable es de un tipo de referencia, asignándolo a `Nothing` conjuntos variables a una referencia de `null` del tipo de la variable.  Una variable que se establece en una referencia de `null` no está asociado a ningún objeto.  En el siguiente ejemplo se muestra cómo.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
  Al comprobar si una variable de referencia \(o tipo de valor que acepta valores NULL\) es `null`, no utilice `= Nothing` o `<> Nothing`.  Utilice siempre `Is Nothing` o `IsNot Nothing`.  
   
@@ -48,7 +48,7 @@ Representa el valor predeterminado de cualquier tipo de datos.  para los tipos d
   
  En el siguiente ejemplo se muestran comparaciones que usan los operadores `Is` e `IsNot`.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
  Si se declara una variable sin usar una cláusula `As` y se establece en `Nothing`, el tipo de la variable es `Object`.  Un ejemplo de esto es `Dim something = Nothing`.  Se produce un error de compilación en este caso `Option Strict` está y `Option Infer` está desactivado.  
   

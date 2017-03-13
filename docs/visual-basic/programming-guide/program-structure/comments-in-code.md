@@ -37,11 +37,11 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario \(`'`\).  
   
  Los comentarios pueden ir a continuación de una instrucción en la misma línea, o pueden ocupar una línea completa.  Ambas opciones quedan reflejadas en el código siguiente.  
   
- [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/comments-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#16](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_1.vb)]  
   
  Si el comentario necesita más de una línea, utilice el símbolo de comentario en cada línea, como se muestra en el siguiente ejemplo:  
   
- [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/comments-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## Instrucciones sobre los comentarios  
  La tabla siguiente proporciona directrices generales sobre los tipos de comentarios que pueden preceder una sección de código.  Se trata únicamente de sugerencias, ya que [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] no tiene reglas obligatorias para agregar comentarios.  Escriba lo que considere más conveniente, para uso propio o para cualquier otra persona que lea el código.  

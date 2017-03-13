@@ -44,7 +44,7 @@ Contiene enteros de 8 bits sin signo \(1 bytes\) que se sitúan en el intervalo 
 ## Ejemplo  
  En el ejemplo siguiente, `b` es una variable `Byte`.  Las instrucciones muestran el intervalo de la variable y la aplicación de operadores de desplazamiento de bits a ella.  
   
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
   
 ## Vea también  
  <xref:System.Byte?displayProperty=fullName>   

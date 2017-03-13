@@ -37,9 +37,9 @@ p--;
 ## Ejemplo  
  En este ejemplo, se avanza a través de una matriz incrementando el puntero según el tamaño de `int`.  Con cada paso que avanza, se muestra la dirección y el contenido del elemento de matriz.  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_1.cs)]  
   
- [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#13)]  
+ [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_2.cs)]  
   
   **Value:0 @ Address:12860272**  
 **Value:1 @ Address:12860276**  

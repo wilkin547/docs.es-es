@@ -23,12 +23,12 @@ En el ejemplo de código siguiente se muestra cómo se escribe una clase Collect
   
  En el ejemplo, el siguiente segmento de código usa la clase `Tokens` para dividir la frase "This is a sample sentence." en tokens usando ' ' y '\-' como separadores.  A continuación, el código muestra esos tokens mediante una instrucción `foreach`.  
   
- [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_1.cs)]  
+ [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## Ejemplo  
  Internamente, la clase `Tokens` usa una matriz para almacenar los tokens.  Como las matrices implementan las interfaces <xref:System.Collections.IEnumerator> e <xref:System.Collections.IEnumerable>, el ejemplo de código podría haber usado los métodos de enumeración de la matriz \(<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.Current%2A>\) en lugar de definirlos en la clase `Tokens`.  Las definiciones de los métodos se incluyen en el ejemplo para clarificar cómo están definidos y qué hace cada uno.  
   
- [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_2.cs)]  
+ [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
  En C\#, no es necesario que una clase Collection implemente <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> para que sea compatible con `foreach`.  Si la clase tiene los miembros <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A>y <xref:System.Collections.IEnumerator.Current%2A> necesarios, funcionará con `foreach`.  Omitir las interfaces tiene la ventaja de que permite definir un tipo de valor devuelto de `Current` que es más específico que <xref:System.Object>.  Esto proporciona seguridad de tipos.  
   

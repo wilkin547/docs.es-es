@@ -24,7 +24,7 @@ La palabra clave contextual `global`, cuando aparece antes del [operador ::](../
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar la palabra clave contextual `global` para especificar que la clase `TestApp` se define en el espacio de nombres global:  
   
- [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/csharp/global_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
   
 ## Vea también  
  [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)

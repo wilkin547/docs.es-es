@@ -49,7 +49,7 @@ Transfiere el control a un procedimiento `Function`, a un procedimiento `Sub` o 
 ## Ejemplo  
  El código siguiente se muestran los dos ejemplos donde es necesaria la palabra clave de `Call` llamar a un procedimiento.  En ambos ejemplos, la expresión denominada no comienza con un identificador.  
   
- [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/call-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
 ## Vea también  
  [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)   

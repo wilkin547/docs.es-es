@@ -66,11 +66,11 @@ Este tutorial muestra cómo se pueden utilizar las características del lenguaje
   
 1.  Busque la parte del método `Main` del proyecto que está marcada de esta manera:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
      Copie el código siguiente y péguelo en ella.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
 2.  Sitúe el puntero del mouse encima de `studentQuery` en el código para comprobar que el tipo asignado por el compilador es `IEnumerable(Of Student)`.  
   
@@ -81,7 +81,7 @@ Este tutorial muestra cómo se pueden utilizar las características del lenguaje
   
 1.  Agregue el bucle `For Each` siguiente debajo de la consulta en su proyecto.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
 2.  Sitúe el puntero del mouse encima de la variable de control de bucle `studentRecord` para ver su tipo de datos.  Se infiere que el tipo de `studentRecord` es `Student`, porque `studentQuery` devuelve una colección de instancias de `Student`.  
   
@@ -112,7 +112,7 @@ Este tutorial muestra cómo se pueden utilizar las características del lenguaje
   
 1.  Agregue el código de esta sección para incluir un identificador local en la expresión de consulta.  El identificador local contendrá un resultado intermedio.  En el ejemplo siguiente, `name` es un identificador que contiene una concatenación del nombre y el apellido del estudiante.  Se puede usar un identificador local por comodidad o para mejorar el rendimiento, ya que almacena los resultados de una expresión que, de otro modo, se calcularía varias veces.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
 2.  Compile y ejecute la aplicación; para ello, presione CTRL\+F5.  Observe los resultados en la ventana de la consola.  
   
@@ -120,7 +120,7 @@ Este tutorial muestra cómo se pueden utilizar las características del lenguaje
   
 1.  Agregue la consulta y el bucle `For Each` de esta sección para crear una consulta que genere una secuencia cuyos elementos difieran de los elementos del origen.  En el ejemplo siguiente, el origen es una colección de objetos `Student`, pero sólo se devuelve un único miembro de cada objeto: el nombre de los estudiantes cuyo apellido es García.  Dado que `currentStudent.First` es una cadena, el tipo de datos de la secuencia devuelta por `studentQuery3` es `IEnumerable(Of String)`, una secuencia de cadenas.  Como en ejemplos anteriores, la asignación del tipo de datos de `studentQuery3` se deja en manos del compilador, que lo determinará mediante la inferencia de tipo de variable local.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
 2.  Sitúe el puntero del mouse encima de `studentQuery3` en el código para comprobar que el tipo asignado es `IEnumerable(Of String)`.  
   
@@ -132,14 +132,14 @@ Este tutorial muestra cómo se pueden utilizar las características del lenguaje
   
      En el ejemplo siguiente se crea una consulta que devuelve el nombre y la condición de estudiante matriculado en el último año de estudios \(senior\) cuyo grado académico esté entre 1 y 10, por orden de grado académico.  En este ejemplo, el tipo de `studentQuery4` se debe deducir, porque la cláusula `Select` devuelve una instancia de tipo anónimo, y un tipo anónimo no tiene ningún nombre utilizable.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
 2.  Compile y ejecute la aplicación; para ello, presione CTRL\+F5.  Observe los resultados en la ventana de la consola.  
   
 ## Ejemplos adicionales  
  Ahora que ya comprende los conceptos básicos, aquí tiene una lista de ejemplos adicionales que ilustran la flexibilidad y eficacia de las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Cada ejemplo va precedido de una breve descripción de lo que hace.  Sitúe el puntero del mouse sobre la variable de resultado de cada consulta para ver el tipo deducido. Utilice un bucle de `For Each` para generar los resultados.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## Información adicional  
  Una vez que esté familiarizado con los conceptos básicos del uso de consultas, estará preparado para leer la documentación y ver los ejemplos del tipo de proveedor [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] específico que le interese:  

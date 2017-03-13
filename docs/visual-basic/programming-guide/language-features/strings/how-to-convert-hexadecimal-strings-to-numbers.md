@@ -33,7 +33,7 @@ En este ejemplo se convierte una cadena hexadecimal en un entero utilizando el m
   
      El primer argumento del método <xref:System.Convert.ToInt32%2A> es la cadena que se va a convertir.  El segundo argumento describe la base en que se expresa el número; el valor hexadecimal es base 16.  
   
-     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-hexadecim_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
   
 ## Vea también  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   

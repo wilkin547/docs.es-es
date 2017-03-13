@@ -45,7 +45,7 @@ Continue { Do | For | While }
 ## Ejemplo  
  El ejemplo de código siguiente utiliza la instrucción `Continue While` para pasar a la siguiente columna de una matriz si un divisor es cero.  `Continue While` está dentro de un bucle `For`.  Transfiere a la instrucción `While col < lastcol`, que es la siguiente iteración del bucle `While` más interior que contiene el bucle `For`.  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
 ## Vea también  
  [Do...Loop \(Instrucción\)](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

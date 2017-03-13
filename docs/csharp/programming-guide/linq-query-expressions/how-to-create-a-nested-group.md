@@ -6,7 +6,7 @@ caps.handback.revision: 12
 En el ejemplo siguiente se muestra cómo crear grupos anidados en una expresión de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)].  Cada grupo que se crea según el curso y el nivel académico se subdivide en grupos según los nombres de las personas.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#24)]  
+ [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-create-a-nested-group_1.cs)]  
   
  Observe que se requieren tres bucles `foreach` anidados para procesar una iteración en los elementos internos de un grupo anidado.  
   

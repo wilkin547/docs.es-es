@@ -24,7 +24,7 @@ caps.handback.revision: 32
 # if-else (Referencia de C#)
 Una instrucción `if` identifica qué instrucción se debe ejecutar dependiendo del valor de una expresión `Boolean`. En el ejemplo siguiente, la variable `Boolean``result` se establece en `true` y, a continuación, se comprueba en la instrucción `if`. El resultado es `The condition is true`  
   
- [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
   
  Puede ejecutar los ejemplos de este tema situándolos en el método `Main` de una aplicación de consola.  
   
@@ -43,28 +43,28 @@ Una instrucción `if` identifica qué instrucción se debe ejecutar dependiendo 
   
  La instrucción o las instrucciones en la `then-statement` y la `else-statement` pueden ser de cualquier tipo, incluida otra instrucción `if` anidada dentro de la instrucción `if`. En instrucciones `if` anidadas, cada cláusula `else` pertenece a la última `if` que no tiene su `else` correspondiente. En el ejemplo siguiente, `Result1` aparece si `m > 10` y `n > 20` se evalúan como true. Si `m > 10` es true, pero `n > 20` es false, aparece `Result2`.  
   
- [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
   
  En su lugar, si desea que `Result2` aparezca cuando `(m > 10)` es false, puede especificar dicha asociación mediante llaves para establecer el inicio y el fin de la instrucción `if` anidada, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
  Aparecerá `Result2` si la condición `(m > 10)` se evalúa como false.  
   
 ## Ejemplo  
  En el ejemplo siguiente, se escribe un carácter desde el teclado y el programa usa una instrucción `if` anidada para determinar si el carácter de entrada es un carácter alfabético. Si el carácter de entrada es un carácter alfabético, el programa comprueba si el carácter de entrada está en mayúsculas o minúsculas. Aparece un mensaje para cada caso.  
   
- [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_4.cs)]  
+ [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
   
 ## Ejemplo  
  También puede anidar una instrucción `if` dentro de un bloque else, tal como se muestra en el siguiente código parcial. El ejemplo anida instrucciones `if` dentro de dos bloques más y, a continuación, un bloque. Los comentarios de especifican qué condiciones son true o false en cada bloque.  
   
- [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_5.cs)]  
+ [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
   
 ## Ejemplo  
  El ejemplo siguiente determina si un carácter de entrada es una letra minúscula, una letra mayúscula o un número. Si estas tres condiciones son false, el carácter no es un carácter alfanumérico. En el ejemplo se muestra un mensaje para cada caso.  
   
- [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_6.cs)]  
+ [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
  Puesto que puede ser válida tanto una instrucción del bloque else como del bloque then, puede usar cualquier expresión booleana válida para la condición. Puede usar operadores lógicos como [&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) y [\!](../../../csharp/language-reference/operators/logical-negation-operator.md) para hacer condiciones compuestas. En el código siguiente, se muestran algunos ejemplos:  
   

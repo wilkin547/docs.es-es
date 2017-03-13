@@ -35,7 +35,7 @@ Puede utilizar el método `My.Settings.Save` para conservar los cambios efectuad
 ## Ejemplo  
  Este ejemplo cambia el valor de configuración de usuario `LastChanged` y guarda ese cambio llamando al método `My.Settings.Save`.  
   
- [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#5)]  
+ [!code-vb[VbVbalrMyResources#5](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-persist-user-settings_1.vb)]  
   
  Para que funcione este ejemplo, su aplicación debe tener un ajuste de usuario `LastChanged`, de tipo `Date`.  Para obtener más información, vea [Administrar la configuración de la aplicación \(.NET\)](/visual-studio/ide/managing-application-settings-dotnet).  
   

@@ -80,12 +80,12 @@ number1 Mod number2
 ## Ejemplo  
  En el ejemplo siguiente se usa el operador `Mod` para dividir dos números y devolver únicamente el resto.  Si uno de ellos es un número de punto flotante, el resto resultante también será un número punto flotante.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra la imprecisión potencial de los operandos de punto flotante.  En la primera instrucción, los operandos son `Double`, y 0.2 es una fracción binaria de recursividad infinita cuyo valor almacenado es 0.20000000000000001.  En la segunda instrucción, el carácter de tipo literal `D` obliga a que los dos operandos sean `Decimal`, y 0.2 tiene una representación precisa.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
 ## Vea también  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>   

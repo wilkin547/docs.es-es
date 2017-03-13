@@ -41,7 +41,7 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
   
  Cuando `location` es una clase que hereda de <xref:System.Windows.Forms.Form>, el compilador proporciona un procedimiento `Main` predeterminado que inicia la aplicación si la clase no tiene ningún procedimiento `Main`.  Esto le permite compilar código en la línea de comandos que se creó en el entorno de desarrollo.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
 ### Para establecer \/main en el entorno integrado de desarrollo \(IDE\) de Visual Studio  
   

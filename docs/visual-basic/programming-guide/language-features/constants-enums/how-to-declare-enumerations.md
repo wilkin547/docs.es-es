@@ -35,21 +35,21 @@ Una enumeración se crea con la instrucción `Enum` en la sección de declaracio
   
 1.  Escriba una declaración que incluya un nivel de acceso al código, la palabra clave `Enum` y un nombre válido, como en los ejemplos siguientes, cada uno de los cuales declara una palabra clave `Enum` diferente.  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#3)]  
+     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
   
 2.  Defina las constantes en la enumeración.  De manera predeterminada, la primera constante de una enumeración se inicializa con `0` y las siguientes se inicializan con un valor igual al de la constante anterior más uno.  Por ejemplo, la siguiente enumeración, `Days`, contiene una constante denominada `Sunday` con el valor `0`, una constante denominada `Monday` con el valor `1`, una constante denominada `Tuesday` con el valor `2`, etc.  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#4)]  
+     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
   
 3.  Se pueden asignar explícitamente valores a constantes en una enumeración mediante una instrucción de asignación.  Se puede asignar cualquier valor entero, incluidos números negativos.  Por ejemplo, puede que desee que las constantes con valores menores que cero representen condiciones de error.  En la siguiente enumeración, a la constante `Invalid` se le asigna explícitamente el valor `–1`, y a la constante `Sunday` se le asigna el valor `0`.  Como es la primera constante de la enumeración, `Saturday` también se inicializa con el valor `0`.  El valor de `Monday` es `1` \(el valor de `Sunday` más uno\); el valor de `Tuesday` es `2`, y así sucesivamente.  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#5)]  
+     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
   
 ### Para declarar una enumeración como un tipo explícito  
   
 -   Especifique el tipo de enumeración mediante la cláusula `As`, tal y como se muestra en el siguiente ejemplo.  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#6)]  
+     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
   
 ## Vea también  
  [Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   

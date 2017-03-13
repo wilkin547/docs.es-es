@@ -45,7 +45,7 @@ Especifica las excepciones que se pueden producir.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<exception>` para describir una excepción que puede producir la función `IntDivide`.  
   
- [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/exception_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

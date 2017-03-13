@@ -25,7 +25,7 @@ Todos los tipos numéricos y de enumeración definen un operador relacional "may
  Los tipos definidos por el usuario pueden sobrecargar el operador `>` \(vea [operador](../../../csharp/language-reference/keywords/operator.md)\).  Si se sobrecarga `>`, también se debe sobrecargar [\<](../../../csharp/language-reference/operators/less-than-operator.md).  Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si existe, también se sobrecarga de modo implícito.  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#29)]  
+ [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

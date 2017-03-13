@@ -56,7 +56,7 @@ variableorproperty <<= amount
 ## Ejemplo  
  En el siguiente ejemplo se utiliza el operador `<<=` para desplazar el modelo de bits de una variable `Integer` a la izquierda en la cantidad especificada y asignar el resultado a la variable.  
   
- [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-assignment-op_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
 ## Vea también  
  [\<\< \(Operador\)](../../../visual-basic/language-reference/operators/left-shift-operator.md)   

@@ -8,7 +8,7 @@ Este ejemplo muestra cómo ordenar los resultados de una operación de unión \(
 ## Ejemplo  
  Esta consulta crea una unión de grupos y, a continuación, ordena los grupos según el elemento categoría, que todavía está dentro del ámbito.  Dentro del inicializador de tipo anónimo, una subconsulta ordena todos los elementos coincidentes de la secuencia de productos.  
   
- [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#81)]  
+ [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-order-the-results-of-a-join-clause_1.cs)]  
   
 ## Compilar el código  
   

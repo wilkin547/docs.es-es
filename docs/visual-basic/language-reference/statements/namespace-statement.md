@@ -86,17 +86,17 @@ End Namespace
 ## Ejemplo  
  En el ejemplo siguiente se declaran dos espacios de nombres, uno anidado en el otro.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
 ## Ejemplo  
  En el siguiente ejemplo se declaran varios espacios de nombres anidados en una única línea; este ejemplo es equivalente al anterior.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se tiene acceso a la clase definida en los ejemplos anteriores.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se define el esqueleto de una nueva clase de lista genérica y se agrega al espacio de nombres <xref:System.Collections.Generic?displayProperty=fullName>.  

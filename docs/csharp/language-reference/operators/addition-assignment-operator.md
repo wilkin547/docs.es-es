@@ -41,7 +41,7 @@ x = x + y
  El operador `+=` se utiliza también para especificar un método al que se llama en respuesta a un evento; estos métodos se denominan controladores de eventos.  El uso del operador `+=` en este contexto se denomina *suscribirse a un evento*.  Para obtener más información, vea [Cómo: Suscribir y cancelar la suscripción a eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  y [Delegados](../../../csharp/programming-guide/delegates/index.md).  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#35)]  
+ [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

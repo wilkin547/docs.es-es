@@ -38,7 +38,7 @@ A continuación se incluye un ejemplo de una clase que se expondría como un obj
  La clase implementa la interfaz de clase; puede implementar más de una interfaz, pero la primera implementación debe ser la interfaz de clase predeterminada.  Implemente los métodos y propiedades expuestos para COM aquí.  Deben marcarse como públicos y coincidir con las declaraciones de la interfaz de clase.  Asimismo, declare los eventos que inicia la clase aquí.  Deben marcarse como públicos y coincidir con las declaraciones de la interfaz de eventos.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/csharp/example-com-class_1.cs)]  
+ [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

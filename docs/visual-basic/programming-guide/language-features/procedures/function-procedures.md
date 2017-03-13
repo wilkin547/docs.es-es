@@ -101,11 +101,11 @@ End Function
 ### Ejemplo de declaración y llamada  
  El siguiente procedimiento `Function` calcula la hipotenusa de un triángulo rectángulo a partir de los valores de los catetos.  
   
- [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
   
  El ejemplo siguiente muestra una llamada típica a `hypotenuse`.  
   
- [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
   
 ## Vea también  
  [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

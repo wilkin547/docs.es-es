@@ -31,7 +31,7 @@ sealed class B : A {}
 ## Ejemplo  
  En el ejemplo siguiente, `Z` se hereda de `Y`, pero `Z` no puede invalidar la función virtual `F` que se declara en `X` y se sella en `Y`.  
   
- [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#16)]  
+ [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
  Al definir nuevos métodos o propiedades en una clase, puede impedir que las clases derivadas invaliden dichos métodos o propiedades no declarándolos como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   
@@ -46,7 +46,7 @@ sealed class B : A {}
  Para obtener más ejemplos, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#17)]  
+ [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  En el ejemplo anterior, podría intentar heredar de la clase sealed utilizando la siguiente instrucción:  
   

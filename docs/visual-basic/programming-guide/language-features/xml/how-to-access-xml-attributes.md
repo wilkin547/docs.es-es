@@ -28,7 +28,7 @@ caps.handback.revision: 18
 En este ejemplo se muestra cómo usar una propiedad de eje de atributo para obtener acceso a los atributos XML de un elemento XML por su nombre.  En particular, se usa la propiedad de eje de atributo `type` para obtener acceso al atributo denominado `type` en el objeto `phone`.  
   
 ## Ejemplo  
- [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-attrib_1.vb)]  
+ [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-attributes_1.vb)]  
   
 ## Vea también  
  <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>   

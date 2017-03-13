@@ -20,12 +20,12 @@ caps.handback.revision: 21
 # C&#243;mo: Ejecutar c&#243;digo de limpieza mediante finally (Gu&#237;a de programaci&#243;n de C#)
 El propósito de una instrucción `finally` es asegurarse de que la limpieza necesaria de objetos, por lo general objetos que contienen recursos externos, se realiza inmediatamente, incluso cuando se produce una excepción.  Un ejemplo de esta limpieza es llamar a <xref:System.IO.Stream.Close%2A> en <xref:System.IO.FileStream> inmediatamente después de su uso en lugar de esperar que el objeto sea recolectado como elemento no utilizado por Common Language Runtime, de la siguiente manera:  
   
- [!code-cs[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-execute-cleanup-c_1.cs)]  
+ [!code-cs[csProgGuideExceptions#16](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_1.cs)]  
   
 ## Ejemplo  
  Para convertir el código anterior en una instrucción `try-catch-finally`, el código de limpieza está separado del código activo como se muestra a continuación.  
   
- [!code-cs[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-execute-cleanup-c_2.cs)]  
+ [!code-cs[csProgGuideExceptions#17](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-execute-cleanup-code-using-finally_2.cs)]  
   
  Dado que una excepción puede producirse dentro del bloque `try` en cualquier momento antes de llamar a `OpenWrite()` o que puede producirse un error en la propia llamada a `OpenWrite()`, no hay garantías de que el archivo esté abierto al intentar cerrarlo.  El bloque `finally` agrega una comprobación que garantiza que el objeto <xref:System.IO.FileStream> no es `null` antes de llamar al método <xref:System.IO.Stream.Close%2A>.  Sin la comprobación de `null`, el bloque `finally` podría iniciar su propia excepción <xref:System.NullReferenceException>, pero debería evitarse en lo posible producir excepciones en los bloques `finally`.  
   

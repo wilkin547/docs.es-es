@@ -22,7 +22,7 @@ En C\#, todas las cadenas en memoria se codifican como Unicode \(UTF\-16\).  Al 
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo convertir un archivo de texto codificado en ASCII de 8 bits, interpretando el texto de origen de acuerdo con la página de códigos 737 de Windows.  
   
- [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#34)]  
+ [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-between-legacy-encodings-and-unicode_1.cs)]  
   
 ## Vea también  
  [Cadenas](../../../csharp/programming-guide/strings/index.md)

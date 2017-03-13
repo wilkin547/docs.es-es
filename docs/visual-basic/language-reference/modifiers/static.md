@@ -45,7 +45,7 @@ Especifica si una o varias variables locales declaradas deben seguir existiendo 
 ## Ejemplo  
  El siguiente ejemplo muestra el uso de `Static`.  
   
- [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/visualbasic/static_1.vb)]  
+ [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
  El valor `totalSales` de la variable `Static` únicamente se inicializa en 0 una vez.  Cada vez que se escribe `updateSales`, `totalSales` sigue teniendo el valor calculado más reciente.  
   

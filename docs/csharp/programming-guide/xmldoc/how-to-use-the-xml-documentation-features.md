@@ -20,7 +20,7 @@ caps.handback.revision: 19
 El ejemplo siguiente proporciona una visión general básica de un tipo que se ha documentado.  
   
 ## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/how-to-use-the-xml-docum_1.cs)]  
+ [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **Este archivo .xml se generó con el ejemplo de código anterior.**  
 **¿\<? xml versión = "1.0"?>**  

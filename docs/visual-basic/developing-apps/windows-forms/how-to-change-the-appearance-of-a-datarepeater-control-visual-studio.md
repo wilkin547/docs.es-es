@@ -38,14 +38,14 @@ Puede cambiar la apariencia de un control <xref:Microsoft.VisualBasic.PowerPacks
   
 2.  En el controlador de eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>, agregue código para establecer las propiedades:  
   
-     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterAppearanceCS/VbPowerPacksDataRepeaterAppearance.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAppearance/VbPowerPacksDataRepeaterAppearance.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
 ## Ejemplo  
  Entre las personalizaciones más comunes del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> están la de mostrar las filas en colores alternos y la de cambiar el color de un campo en función de una condición.  En el ejemplo siguiente se muestra cómo llevar a cabo estas personalizaciones.  En este ejemplo, se supone que tiene un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> enlazado a la tabla Products de la base de datos Northwind.  
   
- [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAlternateBackColor/AlternateBackColor.vb#1)]
- [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPwrPacksDataRepeaterAltBColorCS/AlternateBackColor.cs#1)]  
+ [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
+ [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
  Observe que para ambas personalizaciones, debe proporcionar código a fin de establecer las propiedades para ambos lados de la condición.  Si no especifica la condición `Else`, verá resultados inesperados en tiempo de ejecución.  
   

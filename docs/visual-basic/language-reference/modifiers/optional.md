@@ -71,7 +71,7 @@ End Function
 ## Ejemplo  
  El ejemplo siguiente muestra cómo llamar a un procedimiento con los argumentos por posición y con los argumentos por nombre.  El procedimiento tiene dos parámetros opcionales.  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/visualbasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## Vea también  
  [Lista de parámetros](../../../visual-basic/language-reference/statements/parameter-list.md)   

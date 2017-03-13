@@ -24,7 +24,7 @@ Una *clase* es una construcción que permite crear tipos personalizados propios 
 ## Declarar clases  
  Las clases se declaran mediante la palabra clave [class](../../../csharp/language-reference/keywords/class.md), tal como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_1.cs)]  
+ [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
  El nivel de acceso precede a la palabra clave `class`.  Como, en este caso, se utiliza [public](../../../csharp/language-reference/keywords/public.md), cualquiera puede crear objetos a partir de esta clase.  El nombre de la clase sigue a la palabra clave `class`.  El resto de la definición es el cuerpo de clase, donde se definen el comportamiento y los datos.  Los campos, propiedades, métodos y eventos de una clase se conocen colectivamente como *miembros de clase*.  
   
@@ -33,22 +33,22 @@ Una *clase* es una construcción que permite crear tipos personalizados propios 
   
  Los objetos se pueden crear con la palabra clave [new](../../../csharp/language-reference/keywords/new.md) seguida del nombre de la clase en la que se basará el objeto, de la manera siguiente:  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_2.cs)]  
+ [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
  Cuando se crea una instancia de una clase, una referencia al objeto se vuelve a pasar al programador.  En el ejemplo anterior, `object1` es una referencia a un objeto basado en `Customer`.  Esta referencia apunta al nuevo objeto, pero no contiene los datos del objeto.  De hecho, se puede crear una referencia a objeto sin crear un objeto:  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_3.cs)]  
+ [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
  No se recomienda crear este tipo de referencias que realmente no apuntan a un objeto existente, ya que al intentar el acceso a un objeto a través de esa referencia se producirá un error en tiempo de ejecución.  No obstante, este tipo de referencia se puede crear para hacer referencia a un objeto, ya sea creando un nuevo objeto o asignándola a un objeto existente, de la forma siguiente:  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_4.cs)]  
+ [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
  Este código crea dos referencias a objeto que se refieren al mismo objeto.  Por consiguiente, los cambios realizados en el objeto a través de `object3` se reflejarán en los usos posteriores de `object4`.  Puesto que el acceso a los objetos basados en clases se realiza por referencia, las clases se denominan tipos por referencia.  
   
 ## Herencia de clase  
  La herencia se realiza a través de una *derivación*, lo que significa que una clase se declara utilizando una *clase base* de la cual hereda los datos y el comportamiento.  Una clase base se especifica anexando dos puntos y el nombre de la clase base a continuación del nombre de la clase derivada, del modo siguiente:  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_5.cs)]  
+ [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
  Cuando una clase declara una clase base, hereda todos los miembros de la clase base excepto los constructores.  
   
@@ -62,7 +62,7 @@ Una *clase* es una construcción que permite crear tipos personalizados propios 
  En el ejemplo siguiente, se define una clase pública que contiene un campo único, un método y un método especial denominado constructor.  Para obtener más información, vea [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md).  Luego se crean instancias de la clase con la palabra clave `new`.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_6.cs)]  
+ [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -23,11 +23,11 @@ La instrucción `fixed` evita que el recolector de elementos no utilizados vuelv
   
  La instrucción `fixed` establece un puntero a una variable administrada y "ancla" esa variable durante la ejecución de la instrucción.  Sin la instrucción `fixed`, los punteros a variables administradas móviles serían de poca utilidad, ya que el proceso de recolección de elementos no utilizados podría cambiar la ubicación de las variables de forma impredecible.  El compilador de C\# sólo permite asignar un puntero a una variable administrada en una instrucción `fixed`.  
   
- [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#1)]  
+ [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_1.cs)]  
   
  Puede inicializar un puntero mediante una matriz, una cadena, un búfer de tamaño fijo, o la dirección de una variable.  En el ejemplo siguiente se muestra el uso de direcciones, matrices y cadenas variables.  Para obtener más información sobre los búferes de tamaño fijo, vea [Búferes de tamaño fijo](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md).  
   
- [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#2)]  
+ [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_2.cs)]  
   
  Se pueden inicializar varios punteros a la vez, siempre que sean del mismo tipo.  
   
@@ -37,7 +37,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
   
  Para inicializar punteros de tipos distintos, simplemente anide instrucciones `fixed`, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#3)]  
+ [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_3.cs)]  
   
  Después de ejecutar el código de la instrucción, se desancla cualquier variable anteriormente anclada y queda sujeta al proceso de recolección de elementos no utilizados.  Por lo tanto, no se debe apuntar a esas variables desde fuera de la instrucción `fixed`.  
   
@@ -47,7 +47,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
  En el modo no seguro \(unsafe\), se puede asignar memoria a la pila, donde no está sometida a recolección de elementos no utilizados y, por lo tanto, no necesita anclarse.  Para obtener más información, vea [stackalloc \(Referencia de C\#\)](../../../csharp/language-reference/keywords/stackalloc.md).  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#4)]  
+ [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

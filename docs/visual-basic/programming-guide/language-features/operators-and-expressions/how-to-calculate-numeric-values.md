@@ -52,7 +52,7 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas.  Un
   
 -   Puede utilizar una instrucción de asignación para asignar el valor representado por una expresión numérica a una variable, como se muestra en el ejemplo siguiente.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
      En el ejemplo anterior, el valor de la expresión situada a la derecha del operador igual \(`=`\) se asigna a la variable `j` situada a la izquierda del operador, por lo que `j` da como resultado 276.  
   
@@ -65,7 +65,7 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas.  Un
   
 -   Utilice paréntesis para indicar las operaciones que desea efectuar en primer lugar.  En el ejemplo siguiente se muestran dos resultados diferentes con los mismos operandos y operadores.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
      En el ejemplo anterior, el cálculo de `j` ejecuta el operador de suma \(`+`\) en primer lugar debido a que los paréntesis en `(67 + i)` anulan la prioridad normal, por lo que el valor asignado a `j` es 276 \(4 por 69\).  El cálculo de `k` ejecuta los operadores con su prioridad normal \(`*` antes de `+`\), por lo que el valor asignado a `k` es 270 \(268 más 2\).  
   

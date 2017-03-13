@@ -44,14 +44,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Las excepciones concretas que se controlan y las acciones determinadas que se realizan en cada archivo o carpeta se proporcionan simplemente como ejemplos.  Debe modificar este código para que se ajuste a sus requisitos concretos.  Para obtener más información, vea los comentarios del código.  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#1)]  
+ [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo recorrer en iteración los archivos y las carpetas de un árbol de directorios sin utilizar la recursividad.  Esta técnica utiliza el tipo de colección genérica <xref:System.Collections.Generic.Stack%601>, que es una pila de tipo LIFO \(último en entrar, primero en salir\).  
   
  Las excepciones concretas que se controlan y las acciones determinadas que se realizan en cada archivo o carpeta se proporcionan simplemente como ejemplos.  Debe modificar este código para que se ajuste a sus requisitos concretos.  Para obtener más información, vea los comentarios del código.  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#2)]  
+ [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  Generalmente se tarda mucho tiempo en comprobar cada carpeta para determinar si su aplicación tiene permiso para abrirla.  Por consiguiente, el ejemplo de código incluye esa parte de la operación en un bloque `try/catch`.  Puede modificar el bloque `catch` de forma que, cuando se le deniegue el acceso a una carpeta, intente elevar sus permisos y obtener acceso a ésta de nuevo.  Como norma, detecte solamente las excepciones que puede controlar sin dejar la aplicación en un estado desconocido.  
   

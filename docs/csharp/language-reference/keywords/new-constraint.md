@@ -21,12 +21,12 @@ La restricción `new` especifica que, en una declaración de clase genérica, cu
 ## Ejemplo  
  Aplique la restricción `new` a un parámetro de tipo cuando una clase genérica cree nuevas instancias del tipo, como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#5)]  
+ [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
   
 ## Ejemplo  
  Cuando se utiliza la restricción `new()` con otras restricciones, se debe especificar en último lugar:  
   
- [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#6)]  
+ [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
   
  Para obtener más información, vea [Restricciones de tipos de parámetros](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   

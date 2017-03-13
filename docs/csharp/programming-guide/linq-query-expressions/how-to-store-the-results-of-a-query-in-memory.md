@@ -16,7 +16,7 @@ Una consulta es básicamente un conjunto de instrucciones sobre cómo recuperar 
  Cuando almacene los resultados de la consulta, se recomienda que asigne el objeto de colección devuelto a una nueva variable, como se muestra en el ejemplo siguiente:  
   
 ## Ejemplo  
- [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#25)]  
+ [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-store-the-results-of-a-query-in-memory_1.cs)]  
   
 ## Compilar el código  
   

@@ -25,7 +25,7 @@ El operador de `%` calcula el resto después de dividir el primer operando por e
  Los tipos definidos por el usuario pueden sobrecargar el operador `%` \(vea [operador](../../../csharp/language-reference/keywords/operator.md)\).  Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si existe, también se sobrecarga de modo implícito.  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#9)]  
+ [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]  
   
 ## Comentarios  
  Observe los errores de redondeo que presenta el tipo double.  

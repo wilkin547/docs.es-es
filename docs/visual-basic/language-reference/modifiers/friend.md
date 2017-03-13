@@ -46,7 +46,7 @@ Especifica que solo se puede obtener acceso a uno o varios elementos de programa
 ## Ejemplo  
  La siguiente clase usa el modificador `Friend` para permitir a otros elementos de programación dentro del mismo ensamblado tener acceso a ciertos miembros.  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
 ## Uso  
  Puede utilizar el modificador de `Friend` en estos contextos:  

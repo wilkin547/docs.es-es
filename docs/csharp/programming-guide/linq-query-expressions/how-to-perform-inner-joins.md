@@ -20,7 +20,7 @@ En términos de bases de datos relacionales, una *combinación interna* genera u
 ## Ejemplo de combinación de clave simple  
  En el ejemplo siguiente se crean dos colecciones que contienen objetos de dos tipos definidos por el usuario, `Person` y `Pet`.  La consulta usa la cláusula `join` en C\# para establecer correspondencias entre los objetos `Person` y los objetos `Pet` cuyo `Owner` es ese objeto `Person`.  La cláusula `select` en C\# define el aspecto de los objetos resultantes.  En este ejemplo, los objetos resultantes son tipos anónimos que consisten en el nombre del propietario y el nombre del animal doméstico.  
   
- [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#1)]  
+ [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_1.cs)]  
   
  Observe cómo el objeto `Person` cuyo `LastName` es "Huff" no aparece en el conjunto de resultados porque no es ningún objeto `Pet` cuyo `Pet.Owner` sea igual a ese objeto `Person`.  
   
@@ -31,7 +31,7 @@ En términos de bases de datos relacionales, una *combinación interna* genera u
   
  En el ejemplo siguiente se utiliza una lista de objetos `Employee` y una lista de objetos `Student` para determinar qué empleados son también estudiantes.  Ambos tipos tienen una propiedad `FirstName` y `LastName` de tipo <xref:System.String>.  Las funciones que crean las claves de combinación a partir de los elementos de cada lista devuelven un tipo anónimo formado por las propiedades `FirstName` y `LastName` de cada elemento.  La operación de combinación compara la igualdad de estas claves compuestas y devuelve pares de objetos de cada lista que tengan el mismo nombre y apellido.  
   
- [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#2)]  
+ [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_2.cs)]  
   
 ## Ejemplo  
   
@@ -44,7 +44,7 @@ En términos de bases de datos relacionales, una *combinación interna* genera u
   
  En C\#, la segunda cláusula `join` relaciona los tipos anónimos devueltos por la primera combinación con los objetos `Dog` de la lista de perros proporcionada en función de una clave compuesta formada por la propiedad `Owner` del tipo `Person` y la primera letra del nombre del animal.  Devuelve una secuencia de tipos anónimos que contiene las propiedades `Cat.Name` y `Dog.Name` de cada par coincidente.  Dado que se trata de una combinación interna, se devuelven sólo los objetos del primer origen de datos que tienen una correspondencia en el segundo origen de datos.  
   
- [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#3)]  
+ [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_3.cs)]  
   
 ## Ejemplo  
   
@@ -57,7 +57,7 @@ En términos de bases de datos relacionales, una *combinación interna* genera u
   
  El resultado de `query1` es equivalente al conjunto de resultados que se obtendrían usando la cláusula `join` sin la cláusula `into` para realizar una combinación interna.  La variable `query2` muestra esta consulta equivalente.  
   
- [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#4)]  
+ [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_4.cs)]  
   
 ## Compilar el código  
   

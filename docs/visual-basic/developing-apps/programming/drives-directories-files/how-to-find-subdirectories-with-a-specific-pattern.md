@@ -30,7 +30,7 @@ El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> devu
   
 -   Utilice el método `GetDirectories` y proporcione el nombre y ruta de acceso del directorio que desee buscar.  En el ejemplo siguiente se devuelven todos los directorios de la estructura de directorios que contienen la palabra "Logs" en su nombre y se agregan a `ListBox1`.  
   
-     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-subdirectori_1.vb)]  
+     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
   
 ## Programación eficaz  
  Las condiciones siguientes pueden provocar una excepción:  

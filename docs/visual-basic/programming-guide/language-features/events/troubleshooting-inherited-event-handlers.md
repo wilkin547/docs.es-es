@@ -33,7 +33,7 @@ Este tema enumera problemas comunes que surgen con controladores de eventos en c
   
 -   Un controlador de eventos heredado no debe incluir una cláusula [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md).  El método de la clase base está asociado ya con el evento y se iniciará en consecuencia.  Quite la cláusula `Handles` del método heredado.  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#32)]  
+     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
 -   Si el método heredado no tiene una palabra clave `Handles`, compruebe que el código no contiene una instrucción [AddHandler \(Instrucción\)](../../../../visual-basic/language-reference/statements/addhandler-statement.md) o métodos adicionales que controlen el mismo evento.  
   

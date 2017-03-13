@@ -46,7 +46,7 @@ RaiseEvent eventname[( argumentlist )]
   
  Si el evento no se ha declarado dentro del módulo en el que se produce, ocurrirá un error.  El siguiente fragmento de código muestra una declaración de evento y un procedimiento en el que se produce el evento.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#37)]  
+ [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
   
  No se puede utilizar `RaiseEvent` para generar eventos que no estén explícitamente declarados en el módulo.  Por ejemplo, todos los formularios heredan un evento <xref:System.Windows.Forms.Control.Click> de <xref:System.Windows.Forms.Form?displayProperty=fullName>; no se puede producir utilizando `RaiseEvent` en un formulario derivado.  Si se declara un evento `Click` en el módulo de formulario, sombrea el propio evento <xref:System.Windows.Forms.Control.Click> del formulario.  Sin embargo, todavía se puede invocar el evento <xref:System.Windows.Forms.Control.Click> del formulario llamando al método <xref:System.Windows.Forms.Control.OnClick%2A>.  
   
@@ -71,12 +71,12 @@ RaiseEvent eventname[( argumentlist )]
   
  Agregue una variable `WithEvents` a la sección de declaraciones de la clase `Form1`.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
   
 ## Ejemplo  
  Agregue el código siguiente al código de `Form1`.  Sustituya los procedimientos que estén duplicados, como `Form_Load` o `Button_Click`.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
   
  Presione F5 para ejecutar el ejemplo anterior y haga clic en el botón que tiene la etiqueta **Iniciar**.  El primer cuadro de texto empieza la cuenta atrás.  Cuando ha transcurrido todo el tiempo \(10 segundos\), el primer cuadro de texto presenta "Done".  
   

@@ -17,14 +17,14 @@ La combinación agrupada es útil para generar estructuras de datos jerárquicas
 ### Ejemplo de combinación agrupada  
  http:\/\/go.microsoft.com\/fwlink\/?LinkId\=44293En el ejemplo siguiente se realiza una combinación agrupada de objetos de tipo `Person` y `Pet` basada en elementos `Person` que coinciden con la propiedad `Pet.Owner`.  A diferencia de una combinación no agrupada, que generaría un par de elementos para cada coincidencia, la combinación agrupada sólo genera un objeto resultante para cada elemento de la primera colección, que en este ejemplo es un objeto `Person`.  Los elementos correspondientes de la segunda colección, que en este ejemplo son objetos `Pet`, se agrupan en una colección.  Finalmente, la función de selector de resultados crea un tipo anónimo para cada coincidencia formada por `Person.FirstName` y una colección de objetos `Pet`.  
   
- [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#5)]  
+ [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_1.cs)]  
   
 ## Ejemplo  
   
 ### Ejemplo de combinación agrupada para crear XML  
  Las combinaciones agrupadas son ideales para crear XML utilizando [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  El ejemplo siguiente es similar al anterior, salvo que en lugar de crear tipos anónimos, la función de selector de resultados crea elementos XML que representan los objetos combinados.  Para obtener más información sobre [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)], vea [LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
- [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#6)]  
+ [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_2.cs)]  
   
 ## Compilar el código  
   

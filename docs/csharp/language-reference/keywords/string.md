@@ -103,7 +103,7 @@ Console.WriteLine(a);
  Para obtener más información sobre las cadenas en C\#, vea [Cadenas](../../../csharp/programming-guide/strings/index.md).  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/csharp/string_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

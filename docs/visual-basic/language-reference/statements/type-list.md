@@ -90,17 +90,17 @@ Especifica los *parámetros de tipo* para un elemento de programación *genéric
 ## Ejemplo  
  En el ejemplo siguiente se muestra un esquema de definición de una clase de diccionario genérico, incluido un esquema de función para agregar una nueva entrada al diccionario.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
 ## Ejemplo  
  Como `dictionary` es genérico, el código que lo utiliza puede crear una variedad de objetos a partir de él, cada uno de los cuales tiene la misma funcionalidad pero que actúa en un tipo de datos diferente.  En el ejemplo siguiente se muestra una línea de código que crea un objeto `dictionary` con entradas `String` y claves `Integer`.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra el esquema de definición equivalente generado por el ejemplo anterior.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
 ## Vea también  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)   

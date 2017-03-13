@@ -44,7 +44,7 @@ Especifica el resumen del miembro.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<summary>` para describir el método `ResetCounter` y la propiedad `Counter`.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/summary_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

@@ -49,7 +49,7 @@ Proporciona propiedades para crear y tener acceso a una instancia única de cada
 ## Ejemplo  
  Este ejemplo llama al método `FahrenheitToCelsius` del servicio Web XML `TemperatureConverter` y devuelve el resultado.  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/VbVbalrMyWebService/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
   
  Para que este ejemplo funcione, el proyecto debe hacer referencia a un servicio Web denominado `Converter` y ese servicio Web debe exponer el método `ConvertTemperature`.  Para obtener más información, vea [Acceso a los servicios Web de la aplicación](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   

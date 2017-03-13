@@ -32,12 +32,12 @@ En los parámetros de tipo genérico, la palabra clave `in` especifica que el pa
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante.  También se muestra cómo se puede usar la conversión implícita para las clases que implementan dicha interfaz.  
   
- [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/in-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico contravariante.  También se muestra cómo se puede convertir un tipo de delegado implícitamente.  
   
- [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/in-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

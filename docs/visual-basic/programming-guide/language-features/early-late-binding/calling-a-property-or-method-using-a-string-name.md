@@ -44,11 +44,11 @@ En la mayoría de los casos, puede detectar las propiedades y métodos de un obj
   
  Suponga que agrega una referencia a un ensamblado que contiene una clase denominada `MathClass`, que tiene una función nueva denominada `SquareRoot`, como se muestra en el siguiente código:  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#53)]  
+ [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
   
  La aplicación podría utilizar controles de cuadro de texto para controlar qué método se va a llamar y sus argumentos.  Por ejemplo, si `TextBox1` contiene la expresión que se va a evaluar y `TextBox2` se utiliza para escribir el nombre de la función, puede utilizar el siguiente código para invocar la función `SquareRoot` en la expresión de `TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#54)]  
+ [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
   
  Si escribe "64" en `TextBox1`, "SquareRoot" en `TextBox2` y, a continuación, llama al procedimiento `CallMath`, se evalúa la raíz cuadrada del número que aparece en `TextBox1`.  El código del ejemplo invoca la función `SquareRoot` \(que toma una cadena con la expresión que se va a evaluar como argumento requerido\) y devuelve "8" en `TextBox1` \(la raíz cuadrada de 64\).  Si el usuario escribe una cadena no válida en `TextBox2`, o si la cadena contiene el nombre de una propiedad en lugar de un método, o si el método tiene un argumento necesario adicional, sin duda se producirá un error en tiempo de ejecución.  Debe agregar un código de control de errores sólido cuando use `CallByName` para prever estos errores u otros.  
   

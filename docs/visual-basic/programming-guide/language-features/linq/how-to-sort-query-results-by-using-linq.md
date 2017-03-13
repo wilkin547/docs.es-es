@@ -78,7 +78,7 @@ Language\-Integrated Query \(LINQ\) simplifica el acceso a la información de la
   
      Agregue el código siguiente al evento `Load` para consultar las tablas que se exponen como propiedades del contexto de datos y ordenar los resultados.  La consulta ordena los resultados por el número de pedidos de los clientes, en orden descendente.  Los clientes con el mismo número de pedidos se ordenan por el nombre de la compañía en orden ascendente \(valor predeterminado\).  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form4.vb#10)]  
+     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
   
 4.  Presione F5 para ejecutar el proyecto y ver los resultados.  
   

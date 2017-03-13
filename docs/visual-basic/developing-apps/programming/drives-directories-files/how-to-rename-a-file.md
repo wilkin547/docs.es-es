@@ -28,7 +28,7 @@ Utilice el método `RenameFile` del objeto `My.Computer.FileSystem` para cambiar
   
 -   Utilice el método `My.Computer.FileSystem.RenameFile` para cambiar el nombre de un archivo.  En este ejemplo se cambia el nombre del archivo `Test.txt` por `SecondTest.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
  Este ejemplo de código también está disponible como fragmento de código de IntelliSense.  En el selector de fragmentos de código, el fragmento de código se encuentra en **Sistema de archivos \- Procesando unidades, carpetas y archivos**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
   

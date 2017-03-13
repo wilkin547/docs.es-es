@@ -30,7 +30,7 @@ En los parámetros de tipo genérico, la palabra clave `out` especifica que el p
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica covariante.  También se muestra cómo usar la conversión implícita para las clases que implementan una interfaz covariante.  
   
- [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
  En una interfaz genérica, un parámetro de tipo se puede declarar como covariante si cumple las siguientes condiciones:  
   
@@ -44,7 +44,7 @@ En los parámetros de tipo genérico, la palabra clave `out` especifica que el p
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico covariante.  También se muestra cómo convertir implícitamente los tipos de delegado.  
   
- [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
  En un delegado genérico, un tipo se puede declarar como covariante si se usa solamente como tipo de valor devuelto por un método y no se usa para los argumentos de método.  
   

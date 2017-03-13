@@ -46,12 +46,12 @@ En los parámetros de tipo genérico, la palabra clave `In` especifica que el pa
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante.  También se muestra cómo se puede usar la conversión implícita para las clases que implementan dicha interfaz.  
   
- [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/in-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_1.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico contravariante.  También se muestra cómo se puede convertir un tipo de delegado implícitamente.  
   
- [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/in-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
 ## Vea también  
  [Varianza en interfaces genéricas](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   

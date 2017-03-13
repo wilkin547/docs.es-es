@@ -45,28 +45,28 @@ Cuando se llama a un procedimiento `Sub` o `Function`, los argumentos pueden pas
   
  Por ejemplo, el siguiente procedimiento `Sub` toma tres argumentos:  
   
- [!code-vb[VbVbcnProcedures#41](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_1.vb)]  
+ [!code-vb[VbVbcnProcedures#41](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_1.vb)]  
   
  Cuando se llama a este procedimiento, los argumentos pueden suministrarse por posición, por nombre o mediante una combinación de ambos.  
   
 ## Pasar argumentos por posición  
  Puede llamar al procedimiento  `studentInfo`  pasando sus argumentos por posición y delimitados por comas, como se muestra en el ejemplo siguiente:  
   
- [!code-vb[VbVbcnProcedures#42](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_2.vb)]  
+ [!code-vb[VbVbcnProcedures#42](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_2.vb)]  
   
  Si omite un argumento opcional de una lista de argumentos por posición, deberá mantener su posición mediante una coma.  El ejemplo siguiente llama a  `studentInfo`  sin el argumento  `age` :  
   
- [!code-vb[VbVbcnProcedures#43](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_3.vb)]  
+ [!code-vb[VbVbcnProcedures#43](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_3.vb)]  
   
 ## Pasar argumentos por nombre  
  Otra opción es llamar al procedimiento  `studentInfo`  pasando sus argumentos por nombre, también delimitados por comas, como se muestra en el ejemplo siguiente:  
   
- [!code-vb[VbVbcnProcedures#44](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_4.vb)]  
+ [!code-vb[VbVbcnProcedures#44](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_4.vb)]  
   
 ## Pasar argumentos por posición y por nombre  
  Puede suministrar los argumentos por posición y por nombre a la vez en la misma llamada a un procedimiento, como se muestra en el ejemplo siguiente:  
   
- [!code-vb[VbVbcnProcedures#45](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_5.vb)]  
+ [!code-vb[VbVbcnProcedures#45](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_5.vb)]  
   
  En el ejemplo anterior, no se necesita una coma adicional para mantener la posición del argumento  `age`  omitido, puesto que  `birth`  se pasa por nombre.  
   

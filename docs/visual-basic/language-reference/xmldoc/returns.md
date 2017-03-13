@@ -42,7 +42,7 @@ Especifica el valor devuelto de la propiedad o función.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<returns>` para explicar qué devuelve la función `DoesRecordExist`.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/returns_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

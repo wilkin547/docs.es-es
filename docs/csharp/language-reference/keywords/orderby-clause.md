@@ -25,12 +25,12 @@ En una expresión de consulta, la cláusula `orderby` hace que a la secuencia o 
 ## Ejemplo  
  En el ejemplo siguiente, la primera consulta ordena las palabras en orden alfabético empezando por la A y la segunda consulta ordena las mismas palabras en orden descendente.  \(La palabra clave `ascending` es el valor de ordenación predeterminado y se puede omitir.\)  
   
- [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#20)]  
+ [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se realiza una ordenación primaria de los apellidos de los alumnos y, a continuación, una ordenación secundaria de sus nombres.  
   
- [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#22)]  
+ [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
   
 ## Comentarios  
  En tiempo de compilación, la cláusula `orderby` se convierte en una llamada al método <xref:System.Linq.Enumerable.OrderBy%2A>.  Varias claves de la cláusula `orderby` se convierten en llamadas al método <xref:System.Linq.Enumerable.ThenBy%2A>.  

@@ -20,44 +20,44 @@ La agrupación es una de las funciones más eficaces de [!INCLUDE[vbteclinq](../
 ## Ejemplo  
  Todos los ejemplos de este tema utilizan las clases auxiliares y los orígenes de datos siguientes.  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo agrupar elementos de origen utilizando una propiedad única del elemento como clave de grupo.  En este caso, la clave es `string`, el apellido del alumno.  También se puede utilizar una subcadena para la clave.  La operación de agrupación utiliza el comparador de igualdad predeterminado para el tipo.  
   
  Pegue el siguiente método en la clase `StudentClass`.  Cambie la instrucción de llamada del método `Main` a `sc.GroupBySingleProperty()`.  
   
- [!code-cs[csProgGuideLINQ#17](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#17)]  
+ [!code-cs[csProgGuideLINQ#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_2.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo agrupar elementos de origen utilizando un elemento que no sea una propiedad del objeto para la clave de grupo.  En este ejemplo, la clave es la primera letra del apellido del alumno.  
   
  Pegue el siguiente método en la clase `StudentClass`.  Cambie la instrucción de llamada del método `Main` a `sc.GroupBySubstring()`.  
   
- [!code-cs[csProgGuideLINQ#18](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#18)]  
+ [!code-cs[csProgGuideLINQ#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_3.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo agrupar elementos de origen utilizando un intervalo numérico como clave de grupo.  La consulta proyecta a continuación los resultados en un tipo anónimo que sólo contiene el nombre y el apellido del alumno y el intervalo percentil al que éste pertenece.  Se utiliza un tipo anónimo porque no es necesario utilizar el objeto `Student` completo para mostrar los resultados.  `GetPercentile` es una función auxiliar que calcula un percentil en función de la puntuación media del alumno.  El método devuelve un entero comprendido entre 0 y 10.  
   
- [!code-cs[csProgGuideLINQ#50](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#50)]  
+ [!code-cs[csProgGuideLINQ#50](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_4.cs)]  
   
  Pegue el siguiente método en la clase `StudentClass`.  Cambie la instrucción de llamada del método `Main` a `sc.GroupByRange()`.  
   
- [!code-cs[csProgGuideLINQ#19](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#19)]  
+ [!code-cs[csProgGuideLINQ#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_5.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo agrupar elementos de origen utilizando una expresión de comparación booleana.  En este ejemplo, la expresión booleana comprueba si la puntuación media de los exámenes de un alumno es mayor que 75.  Como en ejemplos anteriores, los resultados se proyectan en un tipo anónimo porque no se necesita el elemento de origen completo.  Tenga en cuenta que las propiedades del tipo anónimo pasan a ser propiedades del miembro `Key` y se puede tener acceso a las mismas por su nombre al ejecutar la consulta.  
   
  Pegue el siguiente método en la clase `StudentClass`.  Cambie la instrucción de llamada del método `Main` a `sc.GroupByBoolean()`.  
   
- [!code-cs[csProgGuideLINQ#20](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#20)]  
+ [!code-cs[csProgGuideLINQ#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_6.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar un tipo anónimo para encapsular una clave que contiene varios valores.  En este ejemplo, el primer valor de clave es la primera letra del apellido del alumno.  El segundo valor de clave es un valor booleano que especifica si el alumno ha obtenido una puntuación superior a 85 en el primer examen.  Puede ordenar los grupos por cualquier propiedad de la clave.  
   
  Pegue el siguiente método en la clase `StudentClass`.  Cambie la instrucción de llamada del método `Main` a `sc.GroupByCompositeKey()`.  
   
- [!code-cs[csProgGuideLINQ#21](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#21)]  
+ [!code-cs[csProgGuideLINQ#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_7.cs)]  
   
 ## Compilar el código  
  Copie y pegue cada método que desee probar en la clase `StudentClass`.  Agregue una instrucción de llamada para el método en el método `Main` y presione F5.  

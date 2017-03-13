@@ -29,7 +29,7 @@ Las enumeraciones proporcionan una forma cómoda de trabajar con conjuntos de co
   
 -   Declare una matriz y convierta la enumeración en ella con el método <xref:System.Enum.GetValues%2A> antes de pasar la matriz como haría con cualquier otra variable.  En el ejemplo siguiente se muestra cada miembro de la enumeración <xref:Microsoft.VisualBasic.FirstDayOfWeek> cuando la recorre en iteración.  
   
-     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#7)]  
+     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
 ## Vea también  
  [Información general sobre las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   

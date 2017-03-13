@@ -28,7 +28,7 @@ La instrucción `switch` es una instrucción de control que selecciona una *secc
   
  Una instrucción `switch` incluye una o más secciones switch.  Cada sección switch contiene una o más *etiquetas case* seguidas de una o más instrucciones.  En el ejemplo siguiente se muestra una instrucción `switch` simple con tres secciones switch.  Cada sección switch tiene una etiqueta case, por ejemplo, `case 1`, y dos instrucciones.  
   
- [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_1.cs)]  
   
 ## Comentarios  
  Cada etiqueta case especifica un valor constante.  La instrucción switch transfiere el control a la sección switch cuya etiqueta case coincide con el valor de la *expresión switch* \(`caseSwitch` en el ejemplo\).  Si ninguna etiqueta case contiene un valor coincidente, el control se transfiere a la sección `default`, si hay alguna.  Si no hay ninguna sección `default`, no se realiza ninguna acción y el control se transfiere fuera de la instrucción `switch`.  En el ejemplo anterior, las instrucciones en la primera sección switch se ejecutan porque `case 1` coincide con el valor de `caseSwitch`.  
@@ -63,12 +63,12 @@ case 4:
 ## Ejemplo  
  En el ejemplo siguiente se muestran los requisitos y las capacidades de una instrucción `switch`.  
   
- [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_2.cs)]  
   
 ## Ejemplo  
  En el último ejemplo, la variable de cadena, `str`, y las etiquetas case de la cadena controlan el flujo de ejecución.  
   
- [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_3.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

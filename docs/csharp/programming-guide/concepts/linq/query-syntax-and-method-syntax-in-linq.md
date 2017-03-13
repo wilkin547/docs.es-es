@@ -27,7 +27,7 @@ La mayoría de las consultas en la documentación introductoria query language I
 ## Métodos de extensión de operador de consulta estándar  
  En el ejemplo siguiente se muestra una *expresión de consulta* simple y la consulta semánticamente equivalente, escrita como *consulta basada en método*.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#22)]  
+ [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  El resultado de los dos ejemplos es idéntico.  Puede ver que el tipo de la variable de consulta es el mismo en ambos formatos: <xref:System.Collections.Generic.IEnumerable%601>.  
   

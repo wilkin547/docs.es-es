@@ -36,11 +36,11 @@ Un *literal XML* permite incorporar XML directamente en el código de [!INCLUDE[
 ## Literales simples  
  Puede crear un objeto [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] en el código de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] escribiendo o pegando un XML válido.  Un literal de elemento XML devuelve un objeto <xref:System.Xml.Linq.XElement>.  Para obtener más información, vea [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) y [Literales XML y la especificación XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  En el ejemplo siguiente se crea un elemento XML que tiene varios elementos secundarios.  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
  Puede crear un documento XML iniciando un literal XML con `<?xml version="1.0"?>`, como se muestra en el ejemplo siguiente.  Un literal de documento XML devuelve un objeto <xref:System.Xml.Linq.XDocument>.  Para obtener más información, vea [Literal de documento XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
 >  La sintaxis de literales XML de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] no es idéntica a la de la especificación XML 1.0.  Para obtener más información, vea [Literales XML y la especificación XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
@@ -57,12 +57,12 @@ Un *literal XML* permite incorporar XML directamente en el código de [!INCLUDE[
   
  Por ejemplo, el código siguiente utiliza una consulta incrustada para crear elementos XML a partir de los miembros de la matriz `phoneNumbers2` y, a continuación, agregue esos elementos como elementos secundarios de `contact2`.  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
 ## Cómo crea el compilador objetos a partir de literales XML  
  El compilador [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] traduce los literales XML en las llamadas a los constructores [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] equivalentes para generar el objeto [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Por ejemplo, el compilador [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] traducirá el ejemplo de código siguiente en una llamada al constructor <xref:System.Xml.Linq.XProcessingInstruction> para obtener la instrucción de versión XML, en llamadas al constructor <xref:System.Xml.Linq.XElement> de los elementos `<contact>`, `<name>` y `<phone>`, y en llamadas al constructor <xref:System.Xml.Linq.XAttribute> del atributo `type`.  En concreto, dados los atributos del siguiente ejemplo, el compilador [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] llamará dos veces al constructor <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>.  La primera pasará el valor `type` al parámetro `name` y el valor `home` al parámetro `value`.  La segunda también pasará el valor `type` al parámetro `name`, pero el valor `work` al parámetro `value`.  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 ## Vea también  
  <xref:System.Xml.Linq.XElement>   

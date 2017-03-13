@@ -29,7 +29,7 @@ En una expresión de consulta, a veces resulta útil almacenar el resultado de u
   
 2.  Para habilitar que la consulta llame a `ToLower` sólo una vez en la variable de rango `word`.  Si no utiliza `let`, tendría que llamar a `ToLower` en cada predicado de la cláusula `where`.  
   
- [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Let.cs#28)]  
+ [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

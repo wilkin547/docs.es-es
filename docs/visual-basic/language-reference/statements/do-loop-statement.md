@@ -98,22 +98,22 @@ Loop { While | Until } condition
 ## Ejemplo  
  En el ejemplo siguiente, las instrucciones del bucle continúan ejecutándose hasta que la variable `index` es superior a 10.  La cláusula `Until` está al final del bucle.  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se utiliza una cláusula `While` en vez de una cláusula `Until`, y se prueba `condition` al inicio del bucle en lugar de al final.  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
   
 ## Ejemplo  
  En el siguiente ejemplo, `condition` detiene el bucle cuando la variable `index` es superior a 100.  La instrucción `If` del bucle, sin embargo, hace que la instrucción `Exit Do` detenga el bucle cuando la variable índice es mayor de 10.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se leen todas las líneas de un archivo de texto.  El método <xref:System.IO.File.OpenText%2A> abre el archivo y devuelve un <xref:System.IO.StreamReader> que lee los caracteres.  En la condición `Do...Loop`, el método <xref:System.IO.StreamReader.Peek%2A> de `StreamReader` determina si hay caracteres adicionales.  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
   
 ## Vea también  
  [Estructuras de bucles](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   

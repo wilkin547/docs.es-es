@@ -19,7 +19,7 @@ caps.handback.revision: 21
 # C&#243;mo: Invalidar el m&#233;todo ToString (Gu&#237;a de programaci&#243;n de C#)
 Cada clase o struct de C\# hereda implícitamente la clase <xref:System.Object>.  Por consiguiente, cada objeto de C\# obtiene el método <xref:System.Object.ToString%2A>, que devuelve una representación de cadena de ese objeto.  Por ejemplo, todas las variables de tipo `int` tienen un método `ToString`, que las habilita para devolver su contenido como cadena:  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_1.cs)]  
+ [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  Cuando cree una clase o struct personalizados, debe reemplazar el método <xref:System.Object.ToString%2A> para proporcionar información sobre el tipo al código de cliente.  
   
@@ -40,11 +40,11 @@ Cada clase o struct de C\# hereda implícitamente la clase <xref:System.Object>.
   
      En el ejemplo siguiente, se devuelve el nombre de la clase, además de los datos específicos de una instancia concreta de la clase.  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_2.cs)]  
+     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      Se puede probar el método `ToString` tal y como se muestra en el siguiente ejemplo de código:  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_3.cs)]  
+     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## Vea también  
  <xref:System.IFormattable>   

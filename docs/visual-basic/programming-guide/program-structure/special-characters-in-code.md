@@ -52,14 +52,14 @@ A veces es necesario usar caracteres especiales en el código, es decir, caracte
 ## Paréntesis  
  Utilice paréntesis al definir un procedimiento, como `Sub` o `Function`.  Debe incluir entre paréntesis todas las listas de argumentos de los procedimientos.  También se utilizan paréntesis para agrupar las variables o argumentos en grupos lógicos, en particular para reemplazar el orden predeterminado de prioridad de operadores en una expresión compleja.  Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
   
  Tras la ejecución del código anterior, el valor de `d` es 8,225 y el valor de `e` es 3.  El cálculo de `d` utiliza la prioridad predeterminada de `/` sobre `+` y es equivalente a `d = b + (c / a)`.  Los paréntesis del cálculo para `e` reemplazan la prioridad predeterminada.  
   
 ## Separadores  
  Los separadores hacen lo que su nombre sugiere; separan secciones de código.  En [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], el carácter separador corresponde a los dos puntos \(`:`\).  Utilice los separadores se desea incluir varias instrucciones en una única línea en lugar de escribirlas en líneas independientes.  Esto ahorra espacio y mejora la legibilidad del código.  En el ejemplo siguiente se muestran tres instrucciones separadas por dos puntos.  
   
- [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   
  Para obtener más información, vea [Cómo: Interrumpir y combinar instrucciones en código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
@@ -68,7 +68,7 @@ A veces es necesario usar caracteres especiales en el código, es decir, caracte
 ## Concatenación  
  Utilice el operador `&` para *concatenar* o vincular cadenas entre sí.  No lo confunda con el operador `+`, que suma valores numéricos.  Si utiliza el operador `+` para concatenar cuando está operando con valores numéricos, puede obtener resultados no deseados.  En el siguiente ejemplo se muestra cómo.  
   
- [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_3.vb)]  
+ [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
   
  Siguiendo la ejecución del código anterior, el valor de `resultA` es 21,01 y el valor de `resultB` es "10,0111".  
   
@@ -78,12 +78,12 @@ A veces es necesario usar caracteres especiales en el código, es decir, caracte
 ### Punto \(.\) Operador  
  Utilice el operador `.` en una clase, estructura, interfaz o enumeración como operador de acceso a miembros.  El miembro puede ser un campo, una propiedad, un evento o un método.  Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_4.vb)]  
+ [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
   
 ### Signo de exclamación \(\!\) Operador  
  Utilice el operador `!`, sólo en una clase o interfaz, como operador de acceso al diccionario.  La clase o interfaz debe tener una propiedad predeterminada que acepte un solo argumento `String`.  El identificador que sigue inmediatamente al operador `!` se convierte en el valor del argumento pasado a la propiedad predeterminada como cadena.  En el siguiente ejemplo se muestra cómo.  
   
- [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/special-characters-in-code_5.vb)]  
+ [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
   
  Las tres líneas de resultado de `MsgBox` muestran el valor `32856`.  La primera línea utiliza un acceso tradicional a la propiedad `index`, la segunda aprovecha el hecho de que `index` es la propiedad predeterminada de la clase `hasDefault` y la tercera usa el acceso de diccionario a la clase.  
   

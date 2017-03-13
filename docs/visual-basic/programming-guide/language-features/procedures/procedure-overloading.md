@@ -76,12 +76,12 @@ caps.handback.revision: 24
 ## Varias versiones de un procedimiento  
  Supongamos que está escribiendo un procedimiento `Sub` para contabilizar una transacción en el saldo de un cliente, y que desea hacer referencia al cliente por su nombre o por su número de cuenta.  Para ello, puede definir dos procedimientos `Sub` diferentes, como se indica en este ejemplo:  
   
- [!code-vb[VbVbcnProcedures#73](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
 ### Versiones sobrecargadas  
  Una alternativa podría ser sobrecargar un único nombre de procedimiento.  Puede utilizar la palabra clave [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) para definir una versión del procedimiento para cada lista de parámetros, tal y como se indica a continuación:  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### Sobrecargas adicionales  
  Si también deseara aceptar el importe de una transacción en `Decimal` o `Single`, podría sobrecargar de nuevo `post` para que permitiera esa variación.  Si hiciera esto en cada una de las sobrecargas del ejemplo anterior, obtendría cuatro procedimientos `Sub`, todos ellos con el mismo nombre pero con cuatro firmas diferentes.  
@@ -89,9 +89,9 @@ caps.handback.revision: 24
 ## Ventajas de la sobrecarga  
  La ventaja de sobrecargar un procedimiento radica en la flexibilidad de la llamada.  Si utilizamos el procedimiento `post` declarado en el ejemplo anterior, el código de llamada puede obtener la identificación de cliente como `String` o `Integer`, y después llamar al mismo procedimiento en los dos casos.  Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
- [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
 ## Vea también  
  [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

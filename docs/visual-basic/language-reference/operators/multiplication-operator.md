@@ -68,7 +68,7 @@ number1 * number2
 ## Ejemplo  
  En este ejemplo se usa el operador `*` para multiplicar dos números.  El resultado será el producto de dos operandos.  
   
- [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/multiplication-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
 ## Vea también  
  [\*\= \(Operador\)](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)   

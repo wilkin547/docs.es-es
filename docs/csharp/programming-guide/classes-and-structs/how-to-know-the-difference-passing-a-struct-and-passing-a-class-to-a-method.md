@@ -27,7 +27,7 @@ El ejemplo siguiente muestra cómo pasar [struct](../../../csharp/language-refer
  El resultado del ejemplo siguiente muestra la diferencia.  El valor del campo de `willIChange` de la instancia de clase se cambia por la llamada al método `ClassTaker` porque el método utiliza la dirección del parámetro para encontrar el campo especificado de la instancia de clase.  El campo de `willIChange` struct en el método de llamada no se cambia por la llamada al método `StructTaker` porque el valor del argumento es una copia del struct propia, no una copia de la dirección.  `StructTaker` cambia la copia, y se perderá la copia cuando la llamada a `StructTaker` se completa.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-know-the-differen_1.cs)]  
+ [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

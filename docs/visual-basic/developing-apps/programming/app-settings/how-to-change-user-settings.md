@@ -34,7 +34,7 @@ Puede cambiar una configuración de usuario asignando un nuevo valor a la propie
 ## Ejemplo  
  Este ejemplo cambia el valor de usuario `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#7)]  
+ [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
   
  Para que funcione este ejemplo, su aplicación debe tener un ajuste de usuario `Nickname`, de tipo `String`.  
   

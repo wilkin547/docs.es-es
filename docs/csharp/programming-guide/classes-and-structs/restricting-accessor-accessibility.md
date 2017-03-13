@@ -23,7 +23,7 @@ caps.handback.revision: 26
 # Restringir la accesibilidad del descriptor de acceso (Gu&#237;a de programaci&#243;n de C#)
 Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o indizador se denominan *descriptores de acceso*.  De forma predeterminada estos descriptores de acceso tienen la misma visibilidad o nivel de acceso: el de la propiedad o indizador al que pertenecen.  Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md).  Sin embargo, es a veces útil para restringir el acceso a uno de estos descriptores de acceso.  Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, al mismo tiempo que el descriptor de acceso `get` se mantiene públicamente accesible.  Por ejemplo:  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_1.cs)]  
+ [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  En este ejemplo, una propiedad denominada `Name` define un descriptor de acceso `get` y `set`.  El descriptor de acceso `get` recibe el nivel de accesibilidad de la misma propiedad, `public` en este caso, al mismo tiempo que el descriptor de acceso `set` se restringe explícitamente aplicando el modificador de acceso [protected](../../../csharp/language-reference/keywords/protected.md) al propio descriptor de acceso.  
   
@@ -41,12 +41,12 @@ Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../
 ## Modificadores de acceso en descriptores de acceso de reemplazo  
  Cuando se reemplaza una propiedad o un indizador, los descriptores de acceso reemplazados deben ser accesibles al código de reemplazo.  Además, el nivel de accesibilidad de la propiedad y del indizador, y de los descriptores de acceso debe coincidir con la propiedad y el indizador reemplazado y los descriptores de acceso correspondientes.  Por ejemplo:  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_2.cs)]  
+ [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## Implementar interfaces  
  Cuando utiliza un descriptor de acceso para implementar una interfaz, el descriptor de acceso no puede tener un modificador de acceso.  Sin embargo, si implementa la interfaz mediante un descriptor de acceso, como `get`, el otro descriptor de acceso puede tener un modificador de acceso, como se muestra en el siguiente ejemplo:  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_3.cs)]  
+ [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## Dominio de accesibilidad del descriptor de acceso  
  Si utiliza un modificador de acceso en el descriptor de acceso, este modificador determina el [dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md) del descriptor de acceso.  
@@ -58,7 +58,7 @@ Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../
   
  El ejemplo también muestra que un modificador de acceso restrictivo como `private` o `protected`, en el descriptor de acceso `set` de la propiedad `Name` en `DerivedClass` impide el acceso al descriptor de acceso y genera un error cuando lo asigna.  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_4.cs)]  
+ [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## Comentarios  
  Observe que si reemplaza la declaración `new private string Id` por `new public string Id`, obtiene el resultado:  

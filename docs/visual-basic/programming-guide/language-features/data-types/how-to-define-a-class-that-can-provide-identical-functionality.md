@@ -73,7 +73,7 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
      En el ejemplo siguiente se define una clase que administra una lista muy simple. Contiene la lista de la matriz interna `items` y el código que la usa puede declarar el tipo de datos de los elementos de la lista. Un constructor con parámetros permite que el código que lo usa establezca el límite superior de `items`, y el constructor predeterminado lo establece en 9 \(para un total de 10 elementos\).  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
   
      Puede declarar una clase de `simpleList` para que contenga una lista de valores `Integer`, otra para que contenga una lista de valores `String` y otra para que contenga valores `Date`. Excepto para el tipo de datos de los miembros de la lista, los objetos creados a partir de todas estas clases se comportan exactamente igual.  
   
@@ -81,7 +81,7 @@ Puede definir una clase desde la que se puedan crear objetos que proporcionen un
   
      Puede probar la clase `simpleList` con el siguiente código.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
 ## Vea también  
  [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

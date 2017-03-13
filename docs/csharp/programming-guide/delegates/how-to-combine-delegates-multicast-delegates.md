@@ -22,7 +22,7 @@ En este ejemplo se muestra cómo se crean delegados de multidifusión.  Una prop
  El operador `-` se puede usar para quitar un delegado componente de un delegado de multidifusión.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#11)]  
+ [!code-cs[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-combine-delegates-multicast-delegates_1.cs)]  
   
 ## Vea también  
  <xref:System.MulticastDelegate>   

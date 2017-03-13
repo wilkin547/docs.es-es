@@ -21,21 +21,21 @@ En el lenguaje C\#, los errores del programa se difunden en tiempo de ejecución
   
  Las clases derivadas de <xref:System.Exception> representan estas excepciones.  Esta clase identifica el tipo de excepción y contiene las propiedades que albergan detalles acerca de ésta.  Producir una excepción implica crear una instancia de una clase derivada de la excepción, configurar opcionalmente las propiedades de la excepción y, a continuación, iniciar el objeto con la palabra clave `throw`.  Por ejemplo:  
   
- [!code-cs[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/csharp/using-exceptions_1.cs)]  
+ [!code-cs[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
  Después de que se produzca una excepción, el motor en tiempo de ejecución comprueba la instrucción actual para ver si está dentro de un bloque `try`.  Si es así, se comprueba cualquier bloque `catch` asociado al bloque `try` para ver si puede detectar la excepción.  Los bloques `Catch` especifican generalmente los tipos de excepción; si el tipo del bloque `catch` es el mismo tipo de la excepción o de una clase base de la excepción, el bloque `catch` puede controlar el método.  Por ejemplo:  
   
- [!code-cs[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/csharp/using-exceptions_2.cs)]  
+ [!code-cs[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
  Si la instrucción que produce una excepción no está dentro de un bloque `try` o el bloque `try` que la encierra no tiene un bloque `catch` coincidente, el motor en tiempo de ejecución comprueba el método de llamada a una instrucción `try` y a los bloques `catch`.  El motor en ejecución continúa hasta la pila de llamadas, en búsqueda de un bloque `catch` compatible.  Después de encontrar y ejecutar el bloque `catch`, el control se pasa a la siguiente instrucción después de ese bloque `catch`.  
   
  Una instrucción `try` puede contener más de un bloque `catch`.  Se ejecuta la primera instrucción `catch` que puede controlar la excepción; cualquier instrucción `catch` posterior, aun cuando sea compatible, se omite.  Por consiguiente, los bloques catch siempre deberían ordenarse de más específico \(o más derivado\) a menos específico.  Por ejemplo:  
   
- [!code-cs[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/csharp/using-exceptions_3.cs)]  
+ [!code-cs[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
  Antes de que se ejecute el bloque `catch`, el motor en tiempo de ejecución comprueba los bloques `finally`.  Los bloques `Finally` permiten al programador limpiar cualquier estado ambiguo que pudiera haber quedado de un bloque `try` anulado o liberar cualquier recurso externo \(como controladores de gráficos, conexiones de base de datos o secuencias de archivos\) sin esperar a que el recolector de elementos no utilizados del motor en tiempo de ejecución finalice los objetos.  Por ejemplo:  
   
- [!code-cs[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/csharp/using-exceptions_4.cs)]  
+ [!code-cs[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
  Si `WriteByte()` produjo una excepción, el código del segundo bloque `try` que intenta abrir de nuevo el archivo produciría un error si no se llama a `file.Close()`, y el archivo permanecería bloqueado.  Debido a que los bloques `finally` se ejecutan aunque se produzca una excepción, el bloque `finally` del ejemplo anterior permite al archivo cerrarse correctamente y ayuda a evitar un error.  
   

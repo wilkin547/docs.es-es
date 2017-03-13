@@ -29,7 +29,7 @@ En este tema se muestra cómo convertir los bytes de una matriz de bytes en una 
 ## Ejemplo  
  Este ejemplo utiliza el método <xref:System.Text.Encoding.GetString%2A> de la clase de codificación <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> para convertir todos los bytes de una matriz de bytes en una cadena.  
   
- [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-an-array-_1.vb)]  
+ [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-an-array-of-bytes-into-a-string_1.vb)]  
   
  Puede elegir varias opciones de codificación para convertir una matriz de bytes en una cadena:  
   

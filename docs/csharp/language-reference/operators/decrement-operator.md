@@ -27,7 +27,7 @@ El operador de decremento \(`--`\) decrementa su operando en 1.  El operador de 
  Los tipos definidos por el usuario pueden sobrecargar el operador `--` \(vea [operador](../../../csharp/language-reference/keywords/operator.md)\).  Las operaciones en tipos enteros se suelen permitir en enumeraciones.  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#8)]  
+ [!code-cs[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

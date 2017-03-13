@@ -41,7 +41,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Si no especifica los nombres de miembro en el tipo anónimo, el compilador da a los miembros de tipo anónimo el mismo nombre que la propiedad que se usa para inicializarlos.  Debe proporcionar un nombre para una propiedad que se está inicializando con una expresión, como se muestra en el ejemplo anterior.  En el siguiente ejemplo, los nombres de las propiedades del tipo anónimo son `Color` y `Price`.  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/anonymous-types_1.cs)]  
+ [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  Normalmente, cuando se usa un tipo anónimo para inicializar una variable, la variable se declara como variable local con tipo implícito mediante [var](../../../csharp/language-reference/keywords/var.md).  El nombre del tipo no se puede especificar en la declaración de la variable porque solo el compilador tiene acceso al nombre subyacente del tipo anónimo.  Para obtener más información sobre `var`, vea [Variables locales con asignación implícita de tipos](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

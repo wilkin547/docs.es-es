@@ -31,21 +31,21 @@ Cuando se declara un elemento de programación en un módulo, [!INCLUDE[vbprvb](
   
  El ejemplo siguiente muestra una definición esquemática de un módulo y dos miembros de ese módulo.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
   
  Dentro de `projModule`, los elementos de programación declarados en el nivel de módulo se promueven a `projNamespace`.  En el ejemplo anterior, `basicEnum` e `innerClass` se promueven, pero `numberSub` no, porque no está declarado en el nivel de módulo.  
   
 ## Efecto de promoción de tipos  
  El efecto de promoción de tipos es que una cadena de calificación no necesita incluir el nombre del módulo.  El ejemplo siguiente realiza dos llamadas al procedimiento del ejemplo anterior.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
   
  En el ejemplo anterior, la primera llamada utiliza las cadenas de calificación completas.  Sin embargo, esto no es necesario debido a la promoción de tipos.  La segunda llamada también tiene acceso a los miembros del módulo sin incluir `projModule` en las cadenas de calificación.  
   
 ## Rechazo de promoción de tipos  
  Si el espacio de nombres ya tiene un miembro con el mismo nombre que un miembro del módulo, se rechaza la promoción de tipos para ese miembro del módulo.  El ejemplo siguiente muestra una definición esquemática de una enumeración y un módulo dentro del mismo espacio de nombres.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
  En el ejemplo anterior, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] no puede promover la clase `abc` a `thisNameSpace` porque ya hay una enumeración con el mismo nombre en el nivel del espacio de nombres.  Para tener acceso a `abcSub`, debe utilizar la cadena de calificación completa `thisNamespace.thisModule.abc.abcSub`.  Sin embargo, todavía se promueve la clase `xyz` y puede tener acceso a `xyzSub` con la cadena de calificación más corta `thisNamespace.xyz.xyzSub`.  
   
@@ -54,7 +54,7 @@ Cuando se declara un elemento de programación en un módulo, [!INCLUDE[vbprvb](
   
  **Consecuencias.** El rechazo de la promoción de tipos de una definición parcial puede provocar unos resultados inesperados e incluso errores del compilador.  El ejemplo siguiente muestra definiciones esquemáticas parciales de una clase, una de las cuales está dentro de un módulo.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/visualbasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
   
  En el ejemplo anterior, el desarrollador podría esperar que el compilador combinara las dos definiciones parciales de `sampleClass`.  Sin embargo, el compilador no considera la promoción para la definición parcial dentro de `sampleModule`.  En consecuencia, intenta compilar dos clases separadas y distintas, ambas denominadas `sampleClass` pero con rutas de acceso de calificación diferentes.  
   

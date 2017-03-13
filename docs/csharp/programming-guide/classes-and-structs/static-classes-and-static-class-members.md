@@ -63,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## Ejemplo  
  Este es un ejemplo de clase estática que contiene dos métodos que convierten la temperatura de grados Celsius a Fahrenheit y viceversa:  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_1.cs)]  
+ [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## Miembros estáticos  
  Una clase no estática puede contener métodos, campos, propiedades o eventos estáticos.  El miembro estático es invocable en una clase incluso si no se ha creado ninguna instancia de la clase.  El nombre de clase, y no el nombre de instancia, es el que tiene acceso al miembro estático.  Solo existe una copia de un miembro estático, independientemente del número de instancias que se creen de la clase.  Los métodos y propiedades estáticos no pueden tener acceso a los campos y eventos no estáticos de su tipo contenedor y no pueden tener acceso a una variable de instancia de ningún objeto a menos que se pase explícitamente en un parámetro de método.  
@@ -78,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Los miembros estáticos de la clase se declaran mediante la incorporación de la palabra clave `static` antes del tipo de valor devuelto del miembro, tal como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_2.cs)]  
+ [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  Los miembros estáticos se inicializan antes de obtener acceso al miembro estático por primera vez y antes de llamar al constructor estático, si éste existe.  Para tener acceso a un miembro estático de la clase, utilice el nombre de la clase en lugar de un nombre de variable para especificar la ubicación del miembro, tal como se muestra en el siguiente ejemplo:  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_3.cs)]  
+ [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  Si la clase contiene campos estáticos, proporcione un constructor estático que los inicialice cuando se cargue la clase.  
   

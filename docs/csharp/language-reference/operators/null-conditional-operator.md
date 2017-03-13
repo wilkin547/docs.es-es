@@ -30,7 +30,7 @@ Al operador `??` se le llama el operador de uso combinado de NULL.  Dicho operad
  El resultado de un operador ?? no se considera una constante, incluso aunque sus dos argumentos sean constantes.  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#53)]  
+ [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

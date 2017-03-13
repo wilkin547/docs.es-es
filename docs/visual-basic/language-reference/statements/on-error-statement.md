@@ -85,7 +85,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## Throw \(Instrucción\)  
  Un error que se produce con el método `Err.Raise` establece la propiedad `Exception` en una instancia recientemente creada de la clase <xref:System.Exception>.  Para poder provocar excepciones de tipos de excepción derivados, el lenguaje incluye la instrucción `Throw`.  Ésta acepta un único parámetro, que es la instancia de excepción que se va a desencadenar.  En el siguiente ejemplo se muestra cómo se pueden utilizar estas características con el control de excepciones existente:  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
  Observe que la instrucción `On Error GoTo` intercepta todos los errores, sin tener en cuenta la clase de excepción.  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Para impedir que el código de control de errores se ejecute cuando no se ha producido ningún error, coloque una instrucción `Exit Sub`, `Exit Function` o `Exit Property` inmediatamente antes de la rutina de control de errores, como en el siguiente fragmento:  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
  Aquí, el código de control de errores sigue a la instrucción `Exit Sub` y precede a la instrucción `End Sub` para separarlo del flujo de instrucciones del procedimiento.  El código de control de errores se puede colocar en cualquier lugar de un procedimiento.  
   
@@ -112,7 +112,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  Si se crea un objeto que tiene acceso a otros objetos, se debería intentar controlar cualquier error no controlado que devuelvan.  Si no es posible, asigne los códigos de error de `Err.Number` a uno de sus errores y, a continuación, devuélvalos al elemento que realizó la llamada al objeto.  Debería especificar el error agregando el código de error a la constante `VbObjectError`.  Por ejemplo, si el código de error es 1052, asígnelo del siguiente modo:  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
 >  Los errores del sistema que se producen durante las llamadas a bibliotecas de vínculos dinámicos \(DLL\) de Windows no provocan excepciones y no se pueden interceptar con el mecanismo de interceptación de errores de Visual Basic.  Al llamar a funciones de DLL, se debe comprobar, para cada valor devuelto, si la llamada se ha realizado correctamente o si se ha producido algún error \(según las especificaciones de la API\) y, en ese caso, comprobar el valor de la propiedad `LastDLLError` del objeto `Err`.  
@@ -120,7 +120,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## Ejemplo  
  En este ejemplo primero se utiliza la instrucción `On Error GoTo` para especificar la ubicación de una rutina de control de errores en un procedimiento.  En el ejemplo, el intento de dividir entre cero genera el número de error 6.  El error se administra en la rutina de control de errores y a continuación, el control se devuelve a la instrucción que produjo el error.  La instrucción `On Error GoTo 0` activa la interceptación de errores.  A continuación, se utiliza la instrucción `On Error Resume Next` para aplazar la interceptación de errores, así se puede conocer el contexto para el error generado por la siguiente instrucción.  Observe que `Err.Clear` se utiliza para borrar las propiedades del objeto `Err` una vez que se ha controlado el error.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
 ## Requisitos  
  **Espacio de nombres:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

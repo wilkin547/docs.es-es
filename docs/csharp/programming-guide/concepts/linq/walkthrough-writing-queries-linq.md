@@ -62,7 +62,7 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 -   Agregue la clase `Student` y la lista inicializada de estudiantes a la clase `Program` de su proyecto.  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#11)]  
+     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### Para agregar un nuevo estudiante a la lista de estudiantes  
   
@@ -76,7 +76,7 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
      Observe también que la variable de rango de la consulta, `student`, sirve de referencia para cada `Student` del origen, proporcionando acceso a los miembros de cada objeto.  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#12)]  
+ [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## Ejecutar la consulta  
   
@@ -90,7 +90,7 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 2.  Después de haber agregado este código, compile y ejecute la aplicación; para ello, presione Ctrl \+ F5. Los resultados aparecerán en la ventana **Consola**.  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#13)]  
+ [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### Para agregar otra condición de filtro  
   
@@ -130,11 +130,11 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 1.  La agrupación es una funcionalidad eficaz para las expresiones de consulta.  Una consulta con una cláusula group genera una secuencia de grupos donde cada grupo contiene una `Key` y una secuencia compuesta por todos los miembros de ese grupo.  La siguiente consulta nueva agrupa los estudiantes utilizando como clave la inicial de su apellido.  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#14)]  
+     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  Observe que el tipo de la consulta ha cambiado.  Ahora genera una secuencia de grupos que tienen un tipo `char` como clave y una secuencia de objetos `Student`.  Dado que el tipo de la consulta ha cambiado, el código siguiente también cambia el bucle de ejecución `foreach`:  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#15)]  
+     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  Presione Ctrl \+ F5 para ejecutar la aplicación y ver los resultados en la ventana **Consola**.  
   
@@ -144,7 +144,7 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 1.  Codificar explícitamente `IEnumerables` de `IGroupings` se puede convertir pronto en una tarea complicada.  Puede escribir la misma consulta y el mismo bucle `foreach` de una forma mucho más sencilla utilizando `var`.  La palabra clave `var` no cambia los tipos de los objetos; simplemente indica al compilador que los deduzca.  Cambie el tipo de `studentQuery` y la iteración `group` variable a `var` y vuelva a ejecutar la consulta.  Observe que en el bucle `foreach` interno, la variable de iteración todavía es de tipo `Student` y la consulta funciona igual que antes.  Cambie la variable de iteración `s` a `var` y ejecute de nuevo la consulta.  Verá que obtiene exactamente los mismos resultados.  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#16)]  
+     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      Para obtener más información acerca de [var](../../../../csharp/language-reference/keywords/var.md), vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -152,7 +152,7 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 1.  Al ejecutar la consulta anterior, verá que los grupos no están ordenados alfabéticamente.  Para cambiar esto, debe proporcionar una cláusula `orderby` después de la cláusula `group`.  Sin embargo, para usar una cláusula `orderby`, primero necesita un identificador que sirva de referencia para los grupos creados por la cláusula `group`.  Proporcione el identificador utilizando la palabra clave `into`, como se indica a continuación:  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#17)]  
+     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      Al ejecutar esta consulta, verá que ahora los grupos están ordenados alfabéticamente.  
   
@@ -160,7 +160,7 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 1.  Puede utilizar la palabra clave `let` para incluir un identificador para cualquier resultado de expresión de la expresión de consulta.  Este identificador puede usarse por comodidad, como en el ejemplo siguiente, o para mejorar el rendimiento, ya que almacena los resultados de una expresión para que no tenga que calcularse varias veces.  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#18)]  
+     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      Para obtener más información, consulte [let \(cláusula\)](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -168,17 +168,17 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
   
 1.  Como se describe en [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), algunas operaciones de consulta sólo se pueden expresar utilizando sintaxis de método.  El código siguiente calcula la puntuación total de cada `Student` de la secuencia de origen y, después, llama al método `Average()` en los resultados de esa consulta para calcular la puntuación promedio de la clase.  Observe la posición de los paréntesis alrededor de la expresión de consulta.  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#19)]  
+     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### Para transformar o proyectar en la cláusula select  
   
 1.  Es muy común que una consulta genere una secuencia cuyos elementos difieren de los elementos de las secuencias de origen.  Elimine o marque como comentario la consulta y el bucle de ejecución anteriores y reemplácelos con el código siguiente.  Observe que la consulta devuelve una secuencia de cadenas \(no `Students`\) y este hecho se refleja en el bucle `foreach`.  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#20)]  
+     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  El código anterior de este tutorial indicaba que la puntuación media de la clase es de 334, aproximadamente.  Para generar una secuencia de `Students` cuya puntuación total sea mayor que la media de la clase, junto con su `Student ID`, puede usar un tipo anónimo en la instrucción `select`:  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#21)]  
+     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## Pasos siguientes  
  Una vez que esté familiarizado con los aspectos básicos del uso de consultas in C\#, estará preparado para leer la documentación y ver los ejemplos del tipo de proveedor [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] específico que le interese:  

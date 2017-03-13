@@ -27,11 +27,11 @@ Una definición de clase o struct es como un plano que especifica qué puede hac
   
  Las instancias de clases se crean utilizando el [operador new](../../../csharp/language-reference/keywords/new-operator.md).  En el ejemplo siguiente, `Person` es el tipo y `person1` y `person 2` son instancias, u objetos, de ese tipo.  
   
- [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_1.cs)]  
+ [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
  Dado que los structs son tipos de valor, una variable de un objeto de struct contiene una copia de todo el objeto.  También se pueden crear instancias de structs utilizando el operador `new`, pero no es obligatorio, como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_2.cs)]  
+ [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
  La memoria para `p1` y `p2` se asigna en la pila de subprocesos.  Esta memoria se reclama junto con el tipo o método en el que se declara.  Ésta es una razón por la que los structs se copian en la asignación.  Por el contrario, Common Language Runtime reclama automáticamente \(mediante la recolección de elementos no utilizados\) la memoria asignada a una instancia de clase cuando todas las referencias al objeto han quedado fuera del ámbito.  No es posible destruir de manera determinista un objeto de clase como se hace en C\+\+.  Para obtener más información sobre la recolección de elementos no utilizados en [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)], vea [Garbage Collection](../Topic/Garbage%20Collection.md).  
   
@@ -45,7 +45,7 @@ Una definición de clase o struct es como un plano que especifica qué puede hac
   
 -   Para determinar si los campos de instancia de dos instancias de struct tienen los mismos valores, utilice el método <xref:System.ValueType.Equals%2A?displayProperty=fullName>.  Dado que todas los structs heredan implícitamente de <xref:System.ValueType?displayProperty=fullName>, se llama al método directamente en el objeto como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_3.cs)]  
+ [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
  La implementación <xref:System.ValueType?displayProperty=fullName> de `Equals` utiliza la reflexión porque debe ser capaz de determinar qué son los campos en cualquier struct.  Al crear sus propios structs, invalide el método `Equals` para proporcionar un algoritmo de igualdad eficaz específico de su tipo.  
   

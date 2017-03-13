@@ -39,7 +39,7 @@ x = x & y
  El operador `&=` no se puede sobrecargar directamente, pero los tipos definidos por el usuario sí pueden sobrecargar el [operador &](../../../csharp/language-reference/operators/and-operator.md) binario \(vea [operator \(Referencia de C\#](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#34)]  
+ [!code-cs[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

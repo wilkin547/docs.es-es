@@ -45,7 +45,7 @@ Un *parámetro* permite al código de llamada pasar un valor al procedimiento cu
   
      En el ejemplo siguiente se define el esquema de un procedimiento `Sub` con tres parámetros.  Los dos primeros parámetros son obligatorios, mientras que el tercero es opcional.  Las declaraciones de parámetros están separadas en la lista de parámetros mediante comas.  
   
-     [!code-vb[VbVbcnProcedures#33](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-paramete_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
      El primer parámetro acepta un objeto  `customer` , y `updateCustomer` puede actualizar directamente la variable transferida a `c` porque el argumento se ha transferido [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  El procedimiento no puede cambiar los valores de los últimos dos argumentos porque se han transferido [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

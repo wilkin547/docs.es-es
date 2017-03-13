@@ -23,7 +23,7 @@ caps.handback.revision: 15
 Este ejemplo muestra cómo utilizar la sobrecarga de operadores para crear una clase de números complejos `Complex` que define la suma compleja.  El programa muestra las partes real e imaginaria de los números y el resultado de la suma mediante un método sustituto del método `ToString`.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-use-operator-over_1.cs)]  
+ [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

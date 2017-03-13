@@ -23,12 +23,12 @@ En este ejemplo se muestra cómo realizar operaciones de combinación que no son
   
  El segundo método genera una secuencia de todos los productos cuyo id. de categoría se incluye en la lista de categorías que aparece a la izquierda.  Tenga en cuenta el uso de la cláusula `let` y el método `Contains` para crear una matriz temporal.  También es posible crear la matriz antes que la consulta y eliminar la primera cláusula `from`.  
   
- [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#64)]  
+ [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente, la consulta debe combinar dos secuencias en función de las claves coincidentes que, en el caso de la secuencia interna \(lateral derecha\), no se pueden obtener antes de la propia cláusula de combinación.  Si esta combinación se realizara con una cláusula `join`, debería llamarse al método `Split` para cada elemento.  El uso de varias cláusulas `from` permite que la consulta evite la sobrecarga de la llamada a método repetida.  Sin embargo, dado que la cláusula `join` está optimizada, en este caso concreto podría ser aún más rápido que usar varias cláusulas `from`.  Los resultados variarán dependiendo principalmente de lo costosa que sea la llamada a método.  
   
- [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#13)]  
+ [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_2.cs)]  
   
 ## Compilar el código  
   

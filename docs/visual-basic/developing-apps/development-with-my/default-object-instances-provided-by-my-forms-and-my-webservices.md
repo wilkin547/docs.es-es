@@ -27,9 +27,9 @@ Los objetos [My.Forms](../../../visual-basic/language-reference/objects/my-forms
 ## Instancias predeterminadas  
  Una instancia predeterminada es una instancia de la clase proporcionada por el tiempo de ejecución que no necesita declararse ni crearse como instancia con las instrucciones `Dim` y `New`.  En el ejemplo siguiente se muestra cómo se ha podido declarar y crear la instancia de una clase llamada <xref:System.Windows.Forms.Form> `Form1`, y cómo ahora puede obtener una instancia predeterminada de esta clase <xref:System.Windows.Forms.Form> mediante `My.Forms`.  
   
- [!code-vb[VbVbcnMy#5](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/default-object-instances_1.vb)]  
+ [!code-vb[VbVbcnMy#5](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_1.vb)]  
   
- [!code-vb[VbVbcnMy#6](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/default-object-instances_2.vb)]  
+ [!code-vb[VbVbcnMy#6](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/default-object-instances-provided-by-my-forms-and-my-webservices_2.vb)]  
   
  El objeto `My.Forms` devuelve una colección de instancias predeterminadas para cada clase `Form` que existe en su proyecto.  De igual forma, `My.WebServices` proporciona una instancia predeterminada de la clase de proxy para cada servicio Web al que ha creado una referencia en su aplicación.  
   

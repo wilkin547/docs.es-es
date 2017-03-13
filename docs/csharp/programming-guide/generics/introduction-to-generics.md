@@ -28,11 +28,11 @@ Las clases y los métodos genéricos combinan reusabilidad, seguridad de tipos y
   
  Observe que T está disponible para la clase anidada `Node`.  Cuando se creen instancias de `GenericList<T>` con un tipo concreto, por ejemplo `GenericList<int>`, cada aparición de `T` se reemplazará por `int`.  
   
- [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
   
  En el ejemplo de código siguiente se muestra cómo el código de cliente utiliza la clase genérica `GenericList<T>` para crear una lista de enteros.  Con sólo cambiar el argumento de tipo, el código siguiente puede modificarse fácilmente para crear listas de cadenas o cualquier otro tipo personalizado:  
   
- [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
 ## Vea también  
  <xref:System.Collections.Generic>   

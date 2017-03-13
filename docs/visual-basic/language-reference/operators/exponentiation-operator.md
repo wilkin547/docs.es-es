@@ -65,7 +65,7 @@ number ^ exponent
 ## Ejemplo  
  En el ejemplo siguiente se utiliza el operador `^` para elevar un número a la potencia del exponente.  El resultado será el primer operando a la potencia del segundo.  
   
- [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
  En el ejemplo anterior los resultados son:  
   

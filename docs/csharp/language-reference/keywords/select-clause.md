@@ -24,14 +24,14 @@ En una expresión de consulta, la cláusula `select` especifica el tipo de valor
   
  En el ejemplo siguiente se muestra una cláusula `select` simple en una expresión de consulta.  
   
- [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Select.cs#8)]  
+ [!code-cs[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_1.cs)]  
   
  El tipo de la secuencia generada por la cláusula `select` determina el tipo de la variable de consulta `queryHighScores`.  En el caso más sencillo, la cláusula `select` simplemente especifica la variable de rango.  Esto hace que la secuencia devuelta contenga elementos del mismo tipo que el origen de datos.  Para obtener más información, consulte [Type Relationships in LINQ Query Operations](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  Sin embargo, la cláusula `select` también proporciona un mecanismo eficaz para transformar \(o *proyectar*\) datos de origen en nuevos tipos.  Para obtener más información, vea [Transformaciones de datos con LINQ \(C\#\)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestran las distintas formas que puede adoptar una cláusula `select`.  En cada consulta, observe la relación entre la cláusula `select` y el tipo de la *variable de consulta* \(`studentQuery1`, `studentQuery2`, etc.\).  
   
- [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Select.cs#9)]  
+ [!code-cs[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_2.cs)]  
   
  Como se muestra en `studentQuery8` en el ejemplo anterior, en ocasiones puede que desee que los elementos de la secuencia devuelta sólo contengan un subconjunto de las propiedades de los elementos de origen.  Si se mantiene la secuencia devuelta lo menor posible, puede reducir los requisitos de memoria y aumentar la velocidad de ejecución de la consulta.  Esto se puede lograr creando un tipo anónimo en la cláusula `select` y utilizando un inicializador de objeto para inicializarlo con las propiedades adecuadas del elemento de origen.  Para obtener un ejemplo sobre la forma de realizar esta operación, vea [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   

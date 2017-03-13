@@ -34,15 +34,15 @@ La sobrecarga consiste en crear más de un procedimiento, constructor de instanc
 ## Uso de la sobrecarga  
  La sobrecarga es especialmente útil cuando un modelo de objeto exige el uso de nombres idénticos para procedimientos que operan en diferentes tipos de datos.  Por ejemplo, una clase que puede mostrar diferentes tipos de datos podría tener procedimientos `Display` como los siguientes:  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#64)]  
+ [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
   
  Sin sobrecarga, sería necesario crear distintos nombres para cada procedimiento, aunque realicen el mismo cometido, como se muestra a continuación:  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#65)]  
+ [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
   
  La sobrecarga facilita el uso de propiedades o métodos, puesto que ofrece una selección de tipos de datos que se pueden utilizar.  Por ejemplo, se pude llamar al método sobrecargado `Display` descrito anteriormente con cualquiera de las siguientes líneas de código:  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#66)]  
+ [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
  En tiempo de ejecución, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] llama al procedimiento correcto basándose en los tipos de datos de los parámetros que se han especificado.  
   
@@ -72,11 +72,11 @@ La sobrecarga consiste en crear más de un procedimiento, constructor de instanc
   
 2.  Agregue el código siguiente a la clase `TaxClass`.  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#67)]  
+     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
   
 3.  Agregue el procedimiento siguiente a su formulario.  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#68)]  
+     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
   
 4.  Agregue un botón al formulario y llame al procedimiento `ShowTax` desde el evento `Button1_Click` del botón.  
   

@@ -62,7 +62,7 @@ rootElement
 ## Ejemplo  
  En el ejemplo siguiente se crea un documento XML que tiene una declaración, una instrucción de procesamiento, un comentario y un elemento XML que contiene otro elemento.  
   
- [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-document-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-document-literal_1.vb)]  
   
 ## Vea también  
  <xref:System.Xml.Linq.XElement>   

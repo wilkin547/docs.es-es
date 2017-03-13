@@ -23,7 +23,7 @@ Puede almacenar distintas variables del mismo tipo en una estructura de datos de
   
  Los ejemplos siguientes crean matrices unidimensionales, multidimensionales y escalonadas:  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## Información general sobre las matrices  
  Una matriz tiene las propiedades siguientes:  

@@ -37,7 +37,7 @@ El método `GetValue` del objeto `My.Computer.Registry` se puede utilizar para l
   
 -   Utilice el método `GetValue` \(especificando la ruta de acceso y el nombre\) para leer un valor de la clave del Registro.  El ejemplo siguiente lee el valor `Name` de `HKEY_CURRENT_USER\Software\MyApp` y lo muestra en un cuadro de mensaje.  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_1.vb)]  
+     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
  Este ejemplo de código también está disponible como fragmento de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Sistema operativo Windows \> Registro**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
   
@@ -45,7 +45,7 @@ El método `GetValue` del objeto `My.Computer.Registry` se puede utilizar para l
   
 -   Utilice el método `GetValue` para recuperar el valor.  El código comprueba siguientes si el valor existe y devuelve un mensaje si no lo hace.  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-read-a-value-from_2.vb)]  
+     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
   
 ## Programación eficaz  
  El Registro contiene claves de nivel superior o raíz que se utilizan para almacenar datos.  Por ejemplo, la tecla principal de HKEY\_LOCAL\_MACHINE se utiliza para almacenar una configuración de nivel del equipo que utilizan todos los usuarios, mientras que HKEY\_CURRENT\_USER se utiliza para almacenar datos específicos de un usuario individual.  

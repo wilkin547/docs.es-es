@@ -67,7 +67,7 @@ El *período de duración* de un elemento declarado es el tiempo durante el cual
  El ejemplo siguiente declara una variable con la palabra clave [Static](../../../../visual-basic/language-reference/modifiers/static.md).  \(Observe que no necesita la palabra clave `Dim` cuando [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md) utiliza un modificador como `Static`.\)  
   
 ### Código  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/visualbasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
 ### Comentarios  
  En el ejemplo anterior, la variable `applesSold` continúa existiendo después de que el procedimiento `runningTotal` vuelve al código de llamada.  La siguiente vez que se llama a `runningTotal`, `applesSold` conserva el valor calculado anteriormente.  

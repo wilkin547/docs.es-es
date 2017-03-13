@@ -24,7 +24,7 @@ El modificador `abstract` indica que el elemento objeto de la modificación tien
 ## Ejemplo  
  En este ejemplo, la clase `Square` debe proporcionar una implementación de `Area` porque deriva de `ShapesClass`:  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  Las clases de tipo abstract presentan las siguientes características:  
   
@@ -66,12 +66,12 @@ El modificador `abstract` indica que el elemento objeto de la modificación tien
   
  Una clase abstracta que implementa una interfaz podría asignar los métodos de la interfaz a métodos abstractos.  Por ejemplo:  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#2)]  
+ [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## Ejemplo  
  En este ejemplo, la clase `DerivedClass` se deriva de una clase abstracta `BaseClass`.  La clase abstracta contiene un método abstracto, `AbstractMethod`, y dos propiedades abstractas, `X` y `Y`.  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#3)]  
+ [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  En el ejemplo anterior, si intenta crear una instancia de la clase abstracta mediante una instrucción como la siguiente:  
   

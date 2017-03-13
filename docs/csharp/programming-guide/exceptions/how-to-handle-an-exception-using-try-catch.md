@@ -23,7 +23,7 @@ El propósito de un bloque [try\-catch](../../../csharp/language-reference/keywo
 ## Ejemplo  
  En este ejemplo, <xref:System.IndexOutOfRangeException> no es la excepción más adecuada: <xref:System.ArgumentOutOfRangeException> tiene más sentido para el método porque el argumento de `index` pasado por el llamador produce el error.  
   
- [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-handle-an-excepti_1.cs)]  
+ [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
 ## Comentarios  
  El código que produce una excepción está incluido en el bloque `try`.  Una instrucción `catch` se agrega inmediatamente después para controlar `IndexOutOfRangeException`, si se produce.  El bloque `catch` controla `IndexOutOfRangeException` y en su lugar produce la excepción `ArgumentOutOfRangeException`, más adecuada.  Para proporcionar al llamador tanta información como sea posible, considere la posibilidad de especificar la excepción original como <xref:System.Exception.InnerException%2A> de la nueva excepción.  Dado que la propiedad <xref:System.Exception.InnerException%2A> es [de sólo lectura](../../../csharp/language-reference/keywords/readonly.md), debe asignarla en el constructor de la nueva excepción.  

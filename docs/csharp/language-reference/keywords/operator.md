@@ -24,7 +24,7 @@ Utilice la palabra clave `operator` para sobrecargar un operador integrado o pro
 ## Ejemplo  
  A continuación, se muestra una clase muy simplificada para números fraccionarios.  Sobrecarga los operadores \+ y \* para implementar la adición y multiplicación de números fraccionarios, y también proporciona un operador de conversión que convierte un tipo Fraction en un tipo double.  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/csharp/operator_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

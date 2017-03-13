@@ -33,26 +33,26 @@ Cuando se define una clase genérica, se pueden aplicar restricciones a las clas
 ## Por qué utilizar restricciones  
  Si desea examinar un elemento en una lista genérica para determinar si es válido o compararlo con otro elemento, el compilador debe tener alguna garantía de que el operador o método que tiene que llamar será compatible con cualquier argumento de tipo que el código de cliente pudiera especificar.  Esta garantía se obtiene al aplicar una o más restricciones a la definición de clase genérica.  Por ejemplo, la restricción de clase base le indica al compilador que sólo los objetos de este tipo o derivados de éste se usarán como argumentos de tipo.  Una vez que el compilador tiene esta garantía, puede permitir que se llame a los métodos de ese tipo en la clase genérica.  Las restricciones se aplican mediante la palabra clave contextual `where`.  En el siguiente ejemplo de código se muestra la funcionalidad que se puede agregar a la clase `GenericList<T>` \(en [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)\) mediante la aplicación de una restricción de clase base.  
   
- [!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/csharp/constraints-on-type-para_1.cs)]  
+ [!code-cs[csProgGuideGenerics#11](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_1.cs)]  
   
  La restricción permite a la clase genérica utilizar la propiedad `Employee.Name`, ya que está garantizado que todos los elementos de tipo T son un objeto `Employee` o un objeto que se hereda de `Employee`.  
   
  Se pueden aplicar varias restricciones al mismo parámetro de tipo y las propias restricciones pueden ser tipos genéricos, como se ve a continuación:  
   
- [!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/csharp/constraints-on-type-para_2.cs)]  
+ [!code-cs[csProgGuideGenerics#12](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_2.cs)]  
   
  Al restringir el parámetro de tipo, se aumenta el número de operaciones permitidas y el método llama a aquellas admitidas por el tipo de restricción y todos los tipos de su jerarquía de herencia.  Por lo tanto, al diseñar clases o métodos genéricos, si se va a realizar cualquier operación en los miembros genéricos más allá de una simple asignación o se va a llamar a cualquier método que no está admitido por `System.Object`, será necesario aplicar restricciones al parámetro de tipo.  
   
  Al aplicar la restricción `where T : class`, evite utilizar los operadores `!=` y `==` en el parámetro de tipo porque estos operadores sólo comprobarán la identidad de la referencia, pero no la igualdad de valores.  Esto es aplicable aunque estos operadores se sobrecarguen en un tipo que se utiliza como argumento.  El código siguiente ilustra este punto; el resultado es false aunque la clase <xref:System.String> sobrecargue el operador `==`.  
   
- [!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/csharp/constraints-on-type-para_3.cs)]  
+ [!code-cs[csProgGuideGenerics#13](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_3.cs)]  
   
  La razón de este comportamiento es que, en tiempo de compilación, el compilador sabe que T es un tipo de referencia y que, por lo tanto, debe usar los operadores predeterminados que son válidos para todos los tipos de referencia.  Si necesita probar la igualdad de valores, la forma recomendada es aplicar también la restricción `where T : IComparable<T>` e implementar esa interfaz en cualquier clase que se vaya a utilizar para construir la clase genérica.  
   
 ## Restringir varios parámetros  
  Pueden aplicar restricciones a varios parámetros, así como varias restricciones a un solo parámetro, como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/csharp/constraints-on-type-para_4.cs)]  
+ [!code-cs[csProgGuideGenerics#64](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_4.cs)]  
   
 ## Parámetros de tipo sin delimitar  
  Los parámetros de tipo que no tienen restricciones, como T en la clase pública `SampleClass<T>{}`, se denominan parámetros de tipo sin delimitar.  Los parámetros de tipo sin delimitar tienen las siguientes reglas:  
@@ -66,13 +66,13 @@ Cuando se define una clase genérica, se pueden aplicar restricciones a las clas
 ## Parámetros de tipo como restricciones  
  El uso de un parámetro de tipo genérico como restricción es útil cuando una función de miembro con su propio parámetro de tipo tiene que restringir ese parámetro al parámetro del tipo que lo contiene, como se muestra en el siguiente ejemplo:  
   
- [!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/csharp/constraints-on-type-para_5.cs)]  
+ [!code-cs[csProgGuideGenerics#14](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_5.cs)]  
   
  En el ejemplo anterior, `T` es una restricción de tipo en el contexto del método `Add` y un parámetro de tipo sin delimitar en el contexto de la clase `List`.  
   
  Los parámetros de tipo también se pueden usar como restricciones en las definiciones de clases genéricas.  Tenga en cuenta que el parámetro de tipo debe declararse dentro de los corchetes angulares junto con cualquier otro parámetro de tipo:  
   
- [!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/csharp/constraints-on-type-para_6.cs)]  
+ [!code-cs[csProgGuideGenerics#15](../../../csharp/programming-guide/generics/codesnippet/CSharp/constraints-on-type-parameters_6.cs)]  
   
  La utilidad de los parámetros de tipo como restricciones con clases genéricas es muy limitada, porque el compilador no puede suponer nada acerca del parámetro de tipo excepto que se deriva de `System.Object`.  Utilice los parámetros de tipo como restricciones en clases genéricas en escenarios en los que desee exigir una relación de herencia entre dos parámetros de tipo.  
   

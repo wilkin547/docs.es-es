@@ -22,15 +22,15 @@ En versiones de C\# anteriores a la versión 2.0, la única manera de declarar u
   
  La creación de métodos anónimos es básicamente una forma de pasar un bloque de código como parámetro de delegado.  A continuación se describen dos ejemplos de esto:  
   
- [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#6)]  
+ [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#5)]  
+ [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
  Mediante los métodos anónimos, se reduce la sobrecarga de codificación a la hora de crear instancias de delegados, ya que no es necesario crear un método independiente.  
   
  Por ejemplo, especificar un bloque de código en vez de un delegado puede ser útil en el caso de que la creación de un método pueda suponer una sobrecarga innecesaria.  Un buen ejemplo es cuando se inicia un nuevo subproceso.  Esta clase crea un subproceso y también contiene el código que el subproceso ejecuta sin crear un método adicional para el delegado.  
   
- [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#7)]  
+ [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
 ## Comentarios  
  El ámbito de los parámetros de un método anónimo es el *bloque del método anónimo*.  
@@ -39,7 +39,7 @@ En versiones de C\# anteriores a la versión 2.0, la única manera de declarar u
   
  Las variables locales y los parámetros cuyo ámbito contiene una declaración de método anónimo se denominan variables *externas* del método anónimo.  Por ejemplo, en el segmento de código siguiente, `n` es una variable externa:  
   
- [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#8)]  
+ [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
  Una referencia a la variable externa `n` se dice que es  *capturado* cuando se crea el delegado.  A diferencia de las variables locales, la duración de una variable capturada se extiende hasta que los delegados que hacen referencia a los métodos anónimos son elegibles para la recolección.  
   
@@ -58,7 +58,7 @@ En versiones de C\# anteriores a la versión 2.0, la única manera de declarar u
   
  En cada uno de los casos, se muestra un mensaje cuando se invoca al delegado.  
   
- [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#4)]  
+ [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

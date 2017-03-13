@@ -31,11 +31,11 @@ private fixed char name[30];
   
  Por ejemplo, antes de C\# 2.0, los siguientes `struct` tendrían 8 bytes de tamaño.  La matriz `pathName` es una referencia a la matriz asignada en el montón:  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#19)]  
+ [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  Comenzando con C\# 2.0, un `struct` puede contener una matriz incrustada.  En el siguiente ejemplo, la matriz `fixedBuffer` tiene un tamaño fijo.  Para tener acceso a los elementos de la matriz, use una instrucción `fixed` para establecer un puntero al primer elemento.  La instrucción `fixed` ancla una instancia de `fixedBuffer` a una ubicación concreta de la memoria.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#20)]  
+ [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  El tamaño de la matriz `char` de 128 elementos es 256 bytes.  Los búferes [char](../../../csharp/language-reference/keywords/char.md) de tamaño fijo siempre admiten dos bytes por carácter, independientemente de la codificación.  Esto es verdadero, incluso cuando se calculan las referencias de los búferes de caracteres a los métodos API o structs con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`.  Para obtener más información, vea <xref:System.Runtime.InteropServices.CharSet>.  
   

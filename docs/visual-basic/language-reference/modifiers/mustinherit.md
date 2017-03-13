@@ -43,7 +43,7 @@ Especifica que una clase sólo se puede utilizar como una clase base y que no se
 ## Ejemplo  
  En el ejemplo siguiente se ilustra la herencia forzada y el reemplazo forzado.  La clase base `shape` define una variable `acrossLine`.  Las clases `circle` y `square` se derivan de `shape`.  Heredan la definición de `acrossLine`, pero deben definir la función `area` porque ese cálculo es diferente en cada tipo de forma.  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/visualbasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
  Puede declarar `shape1` y `shape2` para que sean del tipo `shape`.  Sin embargo, no puede crear un objeto a partir de `shape` porque carece de la funcionalidad de `area` y se ha marcado como `MustInherit`.  
   

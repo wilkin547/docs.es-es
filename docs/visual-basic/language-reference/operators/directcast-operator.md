@@ -46,7 +46,7 @@ Introduce una operación de conversión de tipos basada en la herencia o la impl
 ## Ejemplo  
  El ejemplo siguiente muestra dos usos de `DirectCast`, uno con un resultado satisfactorio en tiempo de ejecución y otro que no lo tiene.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/visualbasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
   
  En el ejemplo anterior, el tipo en tiempo de ejecución de `q` es `Double`.  `CType` tiene un resultado satisfactorio porque `Double` puede convertirse en `Integer`.  No obstante, el primer `DirectCast` no tiene un resultado satisfactorio porque el tipo en tiempo de ejecución de `Double` no tiene relación de herencia con `Integer`, aunque existe una conversión.  El segundo `DirectCast` tiene un resultado satisfactorio porque convierte del tipo <xref:System.Windows.Forms.Form> al tipo <xref:System.Windows.Forms.Control> del que <xref:System.Windows.Forms.Form> hereda.  
   

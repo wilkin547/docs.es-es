@@ -108,11 +108,11 @@ End Property
 ### Ejemplo de declaración y llamada  
  La propiedad siguiente almacena un nombre completo como dos nombres constitutivos, el nombre y el apellido.  Cuando el código de llamada lee  `fullName`, el procedimiento `Get` combina los dos nombres constitutivos y devuelve el nombre completo.  Cuando el código de llamada asigna un nuevo nombre completo, el procedimiento `Set` intenta dividirlo en dos nombres constitutivos.  Si no encuentra espacio, lo almacena como nombre.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
  El ejemplo siguiente muestra las llamadas típicas a los procedimientos de propiedad de `fullName`.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
 ## Vea también  
  [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -117,7 +117,7 @@ End Try
   
  Dado que las clases <xref:System.IO.TextWriter> y <xref:System.IO.TextReader> implementan la interfaz <xref:System.IDisposable> , el código puede utilizar las instrucciones `Using` para asegurarse de que el archivo correctamente se cierra después de escribir y de las operaciones de lectura.  
   
- [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/using-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
 ## Vea también  
  <xref:System.IDisposable>   

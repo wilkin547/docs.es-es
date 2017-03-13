@@ -9,7 +9,7 @@ Las características de control de excepciones del lenguaje C\# proporcionan una
   
  En este ejemplo, el método hace una prueba para realizar una división por cero y detecta el error.  Sin el control de excepciones, este programa finalizaría con un error **DivideByZeroException no controlado**.  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exceptions-and-exception_1.cs)]  
+ [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## Información general sobre excepciones  
  Las excepciones tienen las propiedades siguientes:  

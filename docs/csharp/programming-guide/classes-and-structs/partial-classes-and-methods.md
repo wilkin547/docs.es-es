@@ -29,7 +29,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
 -   Para dividir una definición de clase, utilice el modificador [partial](../../../csharp/language-reference/keywords/partial-type.md), como se muestra a continuación:  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_1.cs)]  
+ [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  La palabra clave `partial` indica que otras partes de la clase, struct o interfaz se pueden definir en el espacio de nombres.  Todas las partes deben utilizar la palabra clave `partial`.  Todas las partes deben estar disponibles en tiempo de compilación para formar el tipo final.  Todas las partes deben tener la misma accesibilidad, ya sea `public`, `private`, etc.  
   
@@ -42,15 +42,15 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
  El siguiente ejemplo muestra que los tipos anidados pueden ser parciales, aunque el tipo en el que están anidados no sea propiamente parcial.  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_2.cs)]  
+ [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  En tiempo de compilación, se combinan los atributos de definiciones de tipo parcial.  Por ejemplo, consideremos las siguientes declaraciones:  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_3.cs)]  
+ [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  Son equivalentes a las declaraciones siguientes:  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_4.cs)]  
+ [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  Los siguientes elementos se combinan a partir de todas las definiciones de tipo parcial:  
   
@@ -66,24 +66,24 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
   
  Por ejemplo, consideremos las siguientes declaraciones:  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_5.cs)]  
+ [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  Son equivalentes a las declaraciones siguientes:  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_6.cs)]  
+ [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### Restricciones  
  Existen varias reglas que se deben seguir al trabajar con definiciones de clase parciales:  
   
 -   Todas las definiciones de tipo parcial creadas para ser parte del mismo tipo deben modificarse con `partial`.  Por ejemplo, las siguientes declaraciones de clase generan un error:  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_7.cs)]  
+     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   El modificador `partial` sólo puede aparecer inmediatamente antes de las palabras clave `class`, `struct` o `interface`.  
   
 -   Se permiten tipos parciales anidados en definiciones de tipo parcial, como se muestra en el siguiente ejemplo:  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_8.cs)]  
+     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   Todas las definiciones de tipo parcial que deben ser parte del mismo tipo deben definirse en el mismo ensamblado y el mismo módulo \(archivo .exe o .dll\).  Las definiciones parciales no pueden abarcar varios módulos.  
   
@@ -117,7 +117,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
  En el siguiente ejemplo, los campos y el constructor de la clase, `CoOrds`, se declaran en una definición de clase parcial, mientras que el miembro `PrintCoOrds` se declara en otra definición de clase parcial.  
   
 ### Código  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_9.cs)]  
+ [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## Ejemplo 2  
   
@@ -125,7 +125,7 @@ Es posible dividir la definición de una [clase](../../../csharp/language-refere
  El siguiente ejemplo muestra que también se pueden desarrollar structs e interfaces parciales.  
   
 ### Código  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_10.cs)]  
+ [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## Métodos Partial  
  Una clase o struct parcial puede contener un método parcial.  Una parte de la clase contiene la firma del método.  Una implementación opcional se puede definir en la misma parte u otra parte.  Si no se proporciona la implementación, el método y todas las llamadas a él se quitan en tiempo de compilación.  

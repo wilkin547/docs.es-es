@@ -22,29 +22,29 @@ Las *propiedades indizadas* mejoran la manera en que se utilizan las propiedades
   
  En versiones anteriores de C\#, los métodos son solo accesibles como propiedades si el método `get` no tiene ningún parámetro y el método `set` tiene solo un parámetro de valor.  Sin embargo, no todas las propiedades COM cumplen esas restricciones.  Por ejemplo, la propiedad [Range](http://go.microsoft.com/fwlink/?LinkId=166053) tiene un descriptor de acceso `get` que requiere un parámetro para el nombre del intervalo.  Antes, como no había acceso directo a la propiedad `Range`, había que utilizar el método `get_Range`, como se muestra en el siguiente ejemplo.  
   
- [!code-cs[csProgGuideIndexedProperties#1](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#1)]  
+ [!code-cs[csProgGuideIndexedProperties#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_1.cs)]  
   
  Las propiedades indizadas, en cambio, permiten escribir lo siguiente:  
   
- [!code-cs[csProgGuideIndexedProperties#2](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#2)]  
+ [!code-cs[csProgGuideIndexedProperties#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_2.cs)]  
   
 > [!NOTE]
 >  En el ejemplo anterior, también se utiliza la característica [argumentos opcionales](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), que se incluye en Visual C\# 2010 y que permite omitir `Type.Missing`.  
   
  De forma similar, para establecer el valor de la propiedad `Value` de un objeto [Range](http://go.microsoft.com/fwlink/?LinkId=179211) de Visual C\# 2008 y versiones anteriores, se necesitan dos argumentos.  Uno proporciona un argumento para un parámetro opcional que especifica el tipo del valor del intervalo.  El otro proporciona el valor de la propiedad `Value`.  Antes de Visual C\# 2010, C\# permitía solo un argumento.  Por consiguiente, en lugar de utilizar un método set normal, había que utilizar el método `set_Value` o una propiedad diferente, [Value2](http://go.microsoft.com/fwlink/?LinkId=166050).  Estas técnicas se ilustran en los siguientes ejemplos.  En ambos ejemplos, se establece el valor de la celda A1 en `Name`.  
   
- [!code-cs[csProgGuideIndexedProperties#3](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#3)]  
+ [!code-cs[csProgGuideIndexedProperties#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_3.cs)]  
   
  Las propiedades indizadas, en cambio, permiten escribir el código siguiente.  
   
- [!code-cs[csProgGuideIndexedProperties#4](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#4)]  
+ [!code-cs[csProgGuideIndexedProperties#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_4.cs)]  
   
  El usuario no puede crear propiedades indizadas.  La característica solo admite el uso de propiedades indizadas existentes.  
   
 ## Ejemplo  
  El código siguiente contiene un ejemplo completo.  Para obtener más información sobre cómo preparar un proyecto con acceso a la API de Office, vea [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C\#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   
- [!code-cs[csProgGuideIndexedProperties#5](../../../csharp/programming-guide/interop/codesnippet/csharp/indexedpropscom/program.cs#5)]  
+ [!code-cs[csProgGuideIndexedProperties#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-indexed-properties-in-com-interop-rogramming_5.cs)]  
   
 ## Vea también  
  [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   

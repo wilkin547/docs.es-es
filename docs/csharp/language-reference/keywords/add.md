@@ -23,7 +23,7 @@ La palabra clave contextual `add` se utiliza para definir un descriptor de acces
 ## Ejemplo  
  En el ejemplo siguiente se muestra un evento con descriptores de acceso `add` y [remove](../../../csharp/language-reference/keywords/remove.md) personalizados.  Para obtener el ejemplo completo, vea [Cómo: Implementar eventos de interfaz](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
   
- [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/csharp/add_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/add_1.cs)]  
   
  Por regla general, no necesita proporcionar sus propios descriptores de acceso de evento personalizados.  Los descriptores de acceso que genera automáticamente el compilador al declarar un evento son suficientes para la mayoría de los escenarios.  
   

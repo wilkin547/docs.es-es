@@ -50,7 +50,7 @@ Esta página muestra algunos problemas comunes que pueden aparecer al realizar o
   
  En el ejemplo siguiente se muestran comparaciones incorrectas y correctas de dos valores `Double`.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
  En el ejemplo anterior se usa el método <xref:System.Double.ToString%2A> de la estructura <xref:System.Double> para que pueda especificar una mayor precisión que la utilizada por la palabra clave `CStr`.  El valor predeterminado es de 15 dígitos, pero el formato "G17" lo amplía a 17 dígitos.  
   
@@ -66,7 +66,7 @@ Esta página muestra algunos problemas comunes que pueden aparecer al realizar o
   
  En el ejemplo siguiente se muestra la imprecisión potencial de los operandos de punto flotante.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
  En el ejemplo anterior se usa el método <xref:System.Double.ToString%2A> de la estructura <xref:System.Double> para que pueda especificar una mayor precisión que la utilizada por la palabra clave `CStr`.  El valor predeterminado es de 15 dígitos, pero el formato "G17" lo amplía a 17 dígitos.  
   
@@ -103,7 +103,7 @@ Esta página muestra algunos problemas comunes que pueden aparecer al realizar o
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
  Siempre existe un riesgo en la utilización de conversiones de restricción, porque se pueden producir errores en tiempo de ejecución.  Por ejemplo, se puede producir un error en una conversión de `String` a `Char` si el valor `String` contiene más de un carácter.  Por consiguiente, es mejor programar para que se utilice el carácter de tipo `C`.  
   

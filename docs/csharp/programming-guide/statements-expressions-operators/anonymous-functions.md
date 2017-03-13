@@ -34,7 +34,7 @@ Una  función anónima es una instrucción o expresión insertada que puede util
   
  El ejemplo siguiente muestra cómo ha evolucionado la creación de delegados desde C\# 1.0 a C\# 3.0:  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#65)]  
+ [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

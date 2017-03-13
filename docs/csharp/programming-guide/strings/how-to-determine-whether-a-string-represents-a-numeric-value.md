@@ -34,7 +34,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## Ejemplo  
  En los ejemplos siguientes se muestra cómo utilizar `TryParse` con representaciones de cadena de los valores `long`, `byte` y `decimal`.  
   
- [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#14)]  
+ [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
 ## Programación eficaz  
  Los tipos numéricos primitivos también implementan el método estático `Parse`, que produce una excepción si la cadena no es un número válido.  `TryParse` es, en general, más eficaz porque simplemente devuelve "false" si el número es no válido.  

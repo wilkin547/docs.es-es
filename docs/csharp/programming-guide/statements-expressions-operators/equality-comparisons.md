@@ -21,7 +21,7 @@ A veces es necesario comparar si dos valores son iguales.  En algunos casos, se 
 ## Igualdad de referencia  
  La igualdad de referencias significa que dos referencias de objeto hacen referencia al mismo objeto subyacente.  Esto puede suceder mediante una asignación simple, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/equality-comparisons_1.cs)]  
+ [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  En este código, se crean dos objetos, pero después de la instrucción de asignación, ambas referencias hacen referencia al mismo objeto.  Por consiguiente, presentan igualdad de referencia.  El método <xref:System.Object.ReferenceEquals%2A> se utiliza para determinar si dos referencias hacen referencia al mismo objeto.  
   

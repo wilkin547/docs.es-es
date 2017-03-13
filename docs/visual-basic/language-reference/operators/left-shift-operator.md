@@ -65,7 +65,7 @@ result = pattern << amount
 ## Ejemplo  
  En el ejemplo siguiente se utiliza el operador `<<` para realizar un desplazamiento aritmético a la izquierda en valores integrales.  El resultado tiene siempre el mismo tipo de datos que la expresión que se está desplazando.  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
   
  Los resultados del ejemplo anterior son los siguientes:  
   

@@ -54,7 +54,7 @@ Las API de Windows son bibliotecas de vínculos dinámicos \(DLL\) que forman pa
   
 4.  Agregue la función `Declare` siguiente a la clase o al módulo en el que desea utilizar el archivo DLL:  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#9)]  
+     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
   
 ### Partes de la instrucción Declare  
  La instrucción `Declare` incluye los siguientes elementos.  
@@ -88,7 +88,7 @@ Las API de Windows son bibliotecas de vínculos dinámicos \(DLL\) que forman pa
   
 3.  Agregue instrucciones `Const` equivalentes en la clase o el módulo para que estas constantes estén disponibles para la aplicación.  Por ejemplo:  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#11)]  
+     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
 ###### Para llamar al procedimiento de DLL  
   
@@ -96,7 +96,7 @@ Las API de Windows son bibliotecas de vínculos dinámicos \(DLL\) que forman pa
   
 2.  Agregue código al controlador de eventos `Click` del botón que ha agregado para llamar al procedimiento, y proporcione los argumentos correspondientes:  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#12)]  
+     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
   
 3.  Presione F5 para ejecutar el proyecto.  El cuadro de mensaje aparecerá con dos botones de respuesta **Sí** y **No**.  Haga clic en alguno de ellos.  
   
@@ -109,11 +109,11 @@ Las API de Windows son bibliotecas de vínculos dinámicos \(DLL\) que forman pa
   
 2.  Para simplificar el acceso al atributo `MarshalAs`, agregue una instrucción `Imports` en la parte superior del código de la clase o módulo, como en el siguiente ejemplo:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 3.  Agregue el prototipo de la función importada en la clase o módulo que está utilizando y aplique el atributo `MarshalAs` a los parámetros o al valor devuelto.  En el siguiente ejemplo, se calculan las referencias de una llamada API que espera el tipo `void*` como `AsAny`:  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#14)]  
+     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## Llamadas API con DllImport  
  El atributo `DllImport` proporciona una alternativa para llamar a las funciones de DLL sin bibliotecas de tipos.  El atributo `DllImport` es prácticamente equivalente a la instrucción `Declare` pero proporciona un mayor control sobre la forma en que se llama a las funciones.  
@@ -132,23 +132,23 @@ Las API de Windows son bibliotecas de vínculos dinámicos \(DLL\) que forman pa
   
 5.  Para simplificar el acceso a `DllImport`, agregue una instrucción `Imports` a la parte superior del código para la clase del formulario de inicio:  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 6.  Declare una función vacía que preceda a la instrucción `End Class` para el formulario y dé a la función el nombre `MoveFile`.  
   
 7.  Aplique los modificadores `Public` y `Shared` a la declaración de la función y establezca parámetros para `MoveFile` de acuerdo con los argumentos que utiliza la función de la API de Windows:  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#16)]  
+     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
   
      La función puede tener cualquier nombre de procedimiento válido; el atributo `DllImport` especifica el nombre de la DLL.  También controla el cálculo de referencias de interoperabilidad de los parámetros y los valores devueltos, de manera que puede elegir tipos de datos de Visual Studio que sean similares a los tipos de datos que utiliza la API.  
   
 8.  Aplique el atributo `DllImport` a la función vacía.  El primer parámetro es el nombre y la ubicación de la DLL que contiene la función a la que llama.  No es necesario que especifique la ruta de acceso de los archivos ubicados en los directorios del sistema de Windows.  El segundo parámetro es un argumento con nombre que especifica el nombre de la función de la API de Windows.  En este ejemplo, el atributo `DllImport` hace que las llamadas a `MoveFile` se reenvíen a `MoveFileW` en KERNEL32.DLL.  El método `MoveFileW` copia un archivo de la ruta de acceso `src` a la ruta de acceso `dst`.  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#17)]  
+     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
   
 9. Agregue el código al controlador de eventos `Button2_Click` para llamar a la función:  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#18)]  
+     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
   
 10. Cree un archivo con el nombre Test.txt y sitúelo en el directorio C:\\Tmp del disco duro.  Cree el directorio Tmp si es necesario.  
   

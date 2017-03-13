@@ -21,7 +21,7 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tip
   
  Los delegados se utilizan para pasar métodos como argumentos a otros métodos.  Los controladores de eventos no son más que métodos que se invocan a través de delegados.  Cree un método personalizado y una clase, como un control de Windows, podrá llamar al método cuando se produzca un determinado evento.  En el siguiente ejemplo se muestra una declaración de delegado:  
   
- [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#20)]  
+ [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
  Cualquier método de cualquier clase o struct accesible que coincida con el tipo de delegado se puede asignar al delegado.  El método puede ser estático o de instancia.  Esto permite cambiar las llamadas a métodos mediante programación y agregar nuevo código a las clases existentes.  
   

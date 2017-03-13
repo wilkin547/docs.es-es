@@ -53,7 +53,7 @@ Se llama a un procedimiento de operador utilizando el símbolo de operador en un
 ## Ejemplo  
  El ejemplo siguiente crea dos estructuras <xref:System.TimeSpan>, las suma y almacena el resultado en una tercera estructura <xref:System.TimeSpan>.  La estructura <xref:System.TimeSpan> define los procedimientos de operador para sobrecargar varios operadores estándar.  
   
- [!code-vb[VbVbcnProcedures#29](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-operator-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
  Como <xref:System.TimeSpan> sobrecarga el operador `+` estándar, el ejemplo anterior llama a un procedimiento de operador cuando calcula el valor de `combinedSpan`.  
   

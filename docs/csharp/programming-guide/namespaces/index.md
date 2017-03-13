@@ -19,19 +19,19 @@ caps.handback.revision: 27
 # Espacios de nombres (Gu&#237;a de programaci&#243;n de C#)
 Los espacios de nombres se utilizan en gran medida en la programación de C\# de dos maneras.  En primer lugar, .NET Framework utiliza los espacios de nombres para organizar sus múltiples clases, de la forma siguiente:  
   
- [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#22)]  
+ [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
  `System` es un espacio de nombres y `Console` es una clase de ese espacio de nombres.  Se puede utilizar la palabra clave `using` para que no se requiera el nombre completo, como en el ejemplo siguiente:  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
- [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#25)]  
+ [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
  Para obtener más información, vea [using \(directiva\)](../../../csharp/language-reference/keywords/using-directive.md).  
   
  En segundo lugar, declarar espacios de nombres propios puede ayudar a controlar el ámbito de clase y nombres de método en proyectos de programación grandes.  Utilice la palabra clave [namespace](../../../csharp/language-reference/keywords/namespace.md) para declarar un espacio de nombres, como en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#6)]  
+ [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
 ## Información general sobre los espacios de nombres  
  Los espacios de nombres tienen las propiedades siguientes:  

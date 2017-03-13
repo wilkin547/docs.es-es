@@ -111,7 +111,7 @@ End Structure
 ## Ejemplo  
  En el siguiente ejemplo se utiliza la instrucción `Structure` para definir un conjunto de datos relacionados de un empleado.  Se muestra el uso de los miembros `Public`, `Friend` y `Private` para reflejar la confidencialidad de los elementos de datos.  También se muestran los miembros de evento, propiedad y procedimiento.  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## Vea también  
  [Class \(Instrucción\)](../../../visual-basic/language-reference/statements/class-statement.md)   

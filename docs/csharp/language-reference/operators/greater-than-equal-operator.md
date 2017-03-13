@@ -25,7 +25,7 @@ Todos los tipos numéricos y de enumeración definen un operador relacional "may
  Los tipos definidos por el usuario pueden sobrecargar el operador `>=` Para obtener más información, vea [operator \(Referencia de C\#\)](../../../csharp/language-reference/keywords/operator.md)\).  Si se sobrecarga `>=`, también se debe sobrecargar [\<\=](../../../csharp/language-reference/operators/less-than-equal-operator.md).  Las operaciones en tipos enteros se suelen permitir en enumeraciones.  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#39](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#39)]  
+ [!code-cs[csRefOperators#39](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-equal-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

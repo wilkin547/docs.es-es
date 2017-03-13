@@ -47,7 +47,7 @@ Stop
 ## Ejemplo  
  En este ejemplo se utiliza la instrucción `Stop` para suspender la ejecución para cada iteración a través del bucle `For...Next`.  
   
- [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/stop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
 ## Vea también  
  [End \(Instrucción\)](../../../visual-basic/language-reference/statements/end-statement.md)

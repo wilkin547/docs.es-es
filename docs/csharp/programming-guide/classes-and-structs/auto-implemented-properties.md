@@ -22,7 +22,7 @@ En C\# 3.0 y versiones posteriores, las propiedades implementadas automáticamen
 ## Ejemplo  
  En el ejemplo siguiente se muestra una clase simple que tiene algunas propiedades implementadas automáticamente:  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#28)]  
+ [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  En C\# 6 y versiones posteriores, puede inicializar las propiedades implementadas automáticamente de forma similar a los campos:  
   

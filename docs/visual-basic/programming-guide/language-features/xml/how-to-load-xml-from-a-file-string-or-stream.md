@@ -33,7 +33,7 @@ Puede crear [Literales XML](../../../../visual-basic/language-reference/xml-lite
   
      En el ejemplo de código siguiente se muestra cómo usar el método <xref:System.Xml.Linq.XDocument.Load%28System.String%29> para rellenar un objeto <xref:System.Xml.Linq.XDocument> con XML de un archivo de texto.  
   
-     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_1.vb)]  
+     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_1.vb)]  
   
 ### Para cargar XML de una cadena  
   
@@ -41,7 +41,7 @@ Puede crear [Literales XML](../../../../visual-basic/language-reference/xml-lite
   
      En el ejemplo de código siguiente se muestra cómo usar el método <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=fullName> para rellenar un objeto <xref:System.Xml.Linq.XDocument> con XML de una cadena.  
   
-     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_2.vb)]  
+     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_2.vb)]  
   
 ### Para cargar XML de una secuencia  
   
@@ -49,7 +49,7 @@ Puede crear [Literales XML](../../../../visual-basic/language-reference/xml-lite
   
  En el ejemplo de código siguiente se muestra cómo usar el método <xref:System.Xml.Linq.XNode.ReadFrom%2A> para rellenar un objeto <xref:System.Xml.Linq.XDocument> con XML de una secuencia XML.  
   
- [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_3.vb)]  
+ [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
   
 ## Vea también  
  <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>   

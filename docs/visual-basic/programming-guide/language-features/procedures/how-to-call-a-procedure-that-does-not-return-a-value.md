@@ -35,7 +35,7 @@ Un procedimiento `Sub` no devuelve un valor al código de llamada.  Se llama a e
   
      En el siguiente ejemplo, se llama a la función <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] para activar una ventana de la aplicación.  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> toma el título de la ventana como único argumento.  No devuelve ningún valor al código de llamada.  Si no se está ejecutando un proceso del Bloc de notas, el ejemplo produce una excepción <xref:System.ArgumentException>.  En el procedimiento `Shell` se presupone que las aplicaciones se encuentran en las rutas de acceso especificadas.  
   
-     [!code-vb[VbVbalrCatRef#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_1_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
 ## Vea también  
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   

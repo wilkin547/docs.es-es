@@ -58,27 +58,27 @@ En la tabla siguiente se enumeran las funciones que Visual Basic proporciona par
 ## Ejemplo  
  En este ejemplo se utiliza la función `UCase` para devolver la versión en mayúsculas de una cadena.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
 ## Ejemplo  
  En este ejemplo se usa la función `LTrim` para quitar los espacios iniciales y la función `RTrim` para quitar los espacios finales de una variable de cadena.  También se usa la función `Trim` para quitar ambos tipos de espacios.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
 ## Ejemplo  
  En este ejemplo se utiliza la función `Mid` para devolver un número de caracteres especificado de una cadena.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
 ## Ejemplo  
  En este ejemplo se utiliza `Len` para devolver el número de caracteres de una cadena:  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
 ## Ejemplo  
  En este ejemplo se usa la función `InStr` para devolver la posición de la primera aparición de una cadena dentro de otra.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
 ## Ejemplo  
  En este ejemplo se muestran los diversos usos de la función `Format` para dar formato a valores tanto con formatos `String` como otros definidos por el usuario.  Para el separador de fecha \(`/`\), hora \(`:`\) e indicadores de a.m.\/p.m. \(`t` y `tt`\), el formato de salida que muestre su sistema dependerá de la configuración regional que use el código.  Cuando las horas y fechas se muestren en el entorno de desarrollo, se utilizará el formato de fecha y hora corta de la configuración regional del código.  
@@ -86,7 +86,7 @@ En la tabla siguiente se enumeran las funciones que Visual Basic proporciona par
 > [!NOTE]
 >  Para configuraciones regionales que utilizan un reloj de 24 horas, los indicadores de a.m.\/p.m. \(`t` y `tt`\) no muestran nada.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
 ## Vea también  
  [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)   

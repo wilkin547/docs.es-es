@@ -39,7 +39,7 @@ x = x * y
  El operador `*=` no se puede sobrecargar directamente, pero los tipos definidos por el usuario sí pueden sobrecargar el [operador \*](../../../csharp/language-reference/operators/multiplication-operator.md) \(vea [operador](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#13)]  
+ [!code-cs[csRefOperators#13](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-assignment-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

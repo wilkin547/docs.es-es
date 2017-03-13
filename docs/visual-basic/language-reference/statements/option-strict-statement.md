@@ -147,19 +147,19 @@ Option Strict { On | Off }
 ## Ejemplo  
  En los ejemplos siguientes se muestran errores de compilación producidos por conversiones de tipos implícitas que son conversiones de restricción.  Esta categoría de errores corresponde a la condición **Conversión implícita** en la página **Compilación**.  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra un error de tiempo de compilación causado por el enlace en tiempo de ejecución.  Esta categoría de errores corresponde a la condición **Enlace en tiempo de ejecución; la llamada podría dar error en tiempo de ejecución** en la página **Compilación**.  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
   
 ## Ejemplo  
  En los ejemplos siguientes se muestran errores producidos por variables declaradas con un tipo implícito de `Object`.  Esta categoría de errores corresponde a la condición **Tipo implícito; se supone el objeto** en la página **Compilación**.  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
 ## Vea también  
  [Conversiones de ampliación y de restricción](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   

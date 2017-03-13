@@ -60,7 +60,7 @@ object.Value
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para obtener acceso al primer nodo en una colección de objetos <xref:System.Xml.Linq.XElement>.  En el ejemplo se usa la propiedad de eje secundario para obtener la colección de todos los nodos secundarios denominados `phone` que se encuentran en el objeto `contact`.  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
  Este código muestra el texto siguiente:  
   
@@ -69,7 +69,7 @@ object.Value
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo obtener el valor de un atributo XML de una colección de objetos <xref:System.Xml.Linq.XAttribute>.  En el ejemplo se usa la propiedad de eje de atributo para mostrar el valor del atributo `type` de todos los elementos `phone`.  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
  Este código muestra el texto siguiente:  
   

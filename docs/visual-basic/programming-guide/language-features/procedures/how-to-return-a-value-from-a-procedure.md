@@ -35,11 +35,11 @@ Un procedimiento `Function` devuelve un valor al código de llamada ejecutando u
   
      El siguiente procedimiento `Function` calcula la hipotenusa de un triángulo rectángulo y la devuelve al código de llamada.  
   
-     [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
      El ejemplo siguiente muestra una llamada típica a `hypotenuse` que almacena el valor devuelto.  
   
-     [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
 ### Para devolver un valor mediante Exit Function o End Function  
   

@@ -50,9 +50,9 @@ Resolver entre versiones sobrecargadas
   
  Este proceso de resolución de las sobrecargas se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
  En la primera llamada, el compilador elimina la primera sobrecarga porque el tipo del primer argumento \(`Short`\) se restringe al tipo del parámetro correspondiente \(`Byte`\).  A continuación, elimina la tercera sobrecarga porque cada tipo de argumento de la segunda sobrecarga \(`Short` y `Single`\) se amplía al tipo correspondiente a la tercera sobrecarga \(`Integer` y `Single`\).  La segunda sobrecarga requiere una ampliación menor, y por eso el compilador la utiliza en la llamada.  
   

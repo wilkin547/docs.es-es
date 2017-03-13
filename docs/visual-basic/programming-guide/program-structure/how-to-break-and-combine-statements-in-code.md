@@ -49,7 +49,7 @@ Cuando crea el código, a veces debe crear instrucciones largas que requieren un
   
      En el ejemplo siguiente, la instrucción se segmenta en cuatro líneas con caracteres de continuación de línea al final de todas las líneas excepto la última.  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
      La utilización de esta secuencia facilita la lectura del código, tanto en pantalla como al imprimirlo.  
   
@@ -65,7 +65,7 @@ Cuando crea el código, a veces debe crear instrucciones largas que requieren un
   
 -   Separe las instrucciones con un signo de dos puntos \(`:`\), como en el ejemplo siguiente:  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
 ## Vea también  
  [Convenciones de código y estructura de programas](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   

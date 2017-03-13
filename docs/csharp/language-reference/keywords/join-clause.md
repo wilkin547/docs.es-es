@@ -33,14 +33,14 @@ La cláusula `join` sirve para asociar elementos de secuencias de origen diferen
 ## Combinación interna  
  En el ejemplo siguiente se muestra una combinación de igualdad interna simple.  Esta consulta genera una secuencia simple de pares de "nombre de producto \/ categoría".  La misma cadena de categoría aparecerá en varios elementos.  Si un elemento de `categories` no tiene ninguna correspondencia en `products`, esa categoría no aparecerá en los resultados.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#24)]  
+ [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Para obtener más información, vea [Cómo: Realizar combinaciones internas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
 ## Group Join  
  Una cláusula `join` con una expresión `into` se denomina unión agrupada.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#25)]  
+ [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  Una unión agrupada genera una secuencia de resultados jerárquica, que asocia los elementos de la secuencia de origen izquierda a uno o más elementos coincidentes de la secuencia de origen derecha.  Una unión agrupada no tiene equivalente en términos relacionales; es esencialmente una secuencia de matrices de objetos.  
   
@@ -50,14 +50,14 @@ La cláusula `join` sirve para asociar elementos de secuencias de origen diferen
   
  Por supuesto que también se puede usar el resultado de una combinación agrupada como generador de otra subconsulta:  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#26)]  
+ [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Para obtener más información, vea [Cómo: Realizar combinaciones agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## Combinación externa izquierda  
  En una combinación externa izquierda, se devuelven todos los elementos de la secuencia de origen izquierda, aun cuando no haya elementos correspondientes en la secuencia derecha.  Para realizar una combinación externa izquierda en [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)], utilice el método `DefaultIfEmpty` junto con una combinación agrupada para especificar el elemento derecho predeterminado que se generará si un elemento izquierdo no tiene coincidencias.  Puede utilizar `null` como valor predeterminado para cualquier tipo de referencia o puede especificar un tipo predeterminado definido por el usuario.  En el ejemplo siguiente se muestra un tipo predeterminado definido por el usuario:  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#27)]  
+ [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Para obtener más información, vea [Cómo: Realizar operaciones de combinación externa izquierda](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
@@ -78,7 +78,7 @@ La cláusula `join` sirve para asociar elementos de secuencias de origen diferen
 ## Ejemplo  
  En el ejemplo siguiente se comparan los resultados de una combinación interna, una combinación agrupada y una combinación externa izquierda en los mismos orígenes de datos, utilizando las mismas claves coincidentes.  En estos ejemplos se ha agregado código adicional para que los resultados se vean más claros en la consola.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#23)]  
+ [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## Comentarios  
  Una cláusula `join` que no va seguida de `into` se convierte en una llamada al método <xref:System.Linq.Enumerable.Join%2A>.  Una cláusula `join` que va seguida de `into` se convierte en una llamada al método <xref:System.Linq.Enumerable.GroupJoin%2A>.  

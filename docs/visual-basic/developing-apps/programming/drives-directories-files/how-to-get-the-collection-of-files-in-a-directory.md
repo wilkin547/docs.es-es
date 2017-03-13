@@ -34,7 +34,7 @@ Las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFil
   
 -   Use una de las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> y proporcione el nombre y la ruta de acceso del directorio para buscar en el parámetro `directory`.  En el siguiente ejemplo se devuelven todos los archivos contenidos en el directorio y se agregan a  `ListBox1`.  
   
-     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-get-the-collectio_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
   
 ## Programación eficaz  
  Las condiciones siguientes pueden provocar una excepción:  

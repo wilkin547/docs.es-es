@@ -20,7 +20,7 @@ Cuando se crea [clase](../../../csharp/language-reference/keywords/class.md) o [
   
  En el ejemplo siguiente, una clase denominada `Taxi` se define mediante un constructor simple.  Esta clase crea instancias con el operador [new](../../../csharp/language-reference/keywords/new.md).  El operador `new` invoca el constructor `Taxi` inmediatamente después de asignar la memoria al nuevo objeto.  
   
- [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
   
  Un constructor que no toma ningún parámetro se denomina *constructor predeterminado*.  Los constructores predeterminados se invocan cada vez que se crea una instancia de un objeto mediante el operador `new` y no se proporciona ningún argumento a `new`.  Para obtener más información, vea [Constructores de instancias](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
@@ -28,7 +28,7 @@ Cuando se crea [clase](../../../csharp/language-reference/keywords/class.md) o [
   
  Es posible evitar que se creen instancias de una clase mediante la conversión del constructor a privado, como se muestra a continuación:  
   
- [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_2.cs)]  
   
  Para obtener más información, vea [Constructores privados](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
@@ -59,33 +59,33 @@ Console.WriteLine("{0}, {1}", a, b);
   
  Tanto las clases como las `structs` pueden definir constructores que acepten parámetros.  Se debe llamar a constructores que toman parámetros a través de una instrucción `new` o [base](../../../csharp/language-reference/keywords/base.md).  Las clases y las `structs` también pueden definir varios constructores y no se requiere ninguno para definir un constructor predeterminado.  Por ejemplo:  
   
- [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_3.cs)]  
+ [!code-cs[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
  Esta clase se puede crear mediante cualquiera de las siguientes instrucciones:  
   
- [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_4.cs)]  
+ [!code-cs[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
  Cualquier constructor puede utilizar la palabra clave `base` para llamar al constructor de una clase base.  Por ejemplo:  
   
- [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_5.cs)]  
+ [!code-cs[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   
  En este ejemplo, se llama al constructor de la clase base antes de ejecutar el bloque del constructor.  La palabra clave `base` se puede utilizar con o sin parámetros.  Cualquier parámetro del constructor se puede utilizar como parámetro de `base` o como parte de una expresión.  Para obtener más información, vea [base](../../../csharp/language-reference/keywords/base.md).  
   
  En una clase derivada, si no se llama explícitamente al constructor de la clase base mediante la palabra clave `base`, se llamará implícitamente al constructor predeterminado, si existe alguno.  Esto significa que las siguientes declaraciones del constructor son efectivamente las mismas:  
   
- [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_6.cs)]  
+ [!code-cs[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
   
- [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_7.cs)]  
+ [!code-cs[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
   
  Si una clase base no proporciona un constructor predeterminado, la clase derivada debe realizar una llamada explícita a un constructor base mediante `base`.  
   
  Un constructor puede invocar a otro constructor en el mismo objeto mediante la palabra clave [this](../../../csharp/language-reference/keywords/this.md).  Al igual que `base`, `this` se puede utilizar con o sin parámetros y cualquier parámetro en el constructor está disponible como parámetro para `this` o como parte de una expresión.  Por ejemplo, el segundo constructor del ejemplo anterior se puede rescribir con `this`:  
   
- [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_8.cs)]  
+ [!code-cs[csProgGuideObjects#59](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_8.cs)]  
   
  El uso de la palabra clave `this` en el ejemplo anterior hace que se llame a este constructor:  
   
- [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-constructors_9.cs)]  
+ [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
  Los constructores se pueden marcar como [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o `protected` `internal`.  Estos modificadores de acceso definen cómo los usuarios de la clase pueden construir la clase.  Para obtener más información, vea [Modificadores de acceso \(Guía de programación de C\#\)](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   

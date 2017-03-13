@@ -35,18 +35,18 @@ A diferencia de un evento no personalizado, una declaración `Custom Event` requ
   
      Por ejemplo, si `Custom Event Test(ByVal sender As Object, ByVal i As Integer)` definiera `Custom Event`, el delegado correspondiente sería el siguiente.  
   
-     [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/custom-modifier-is-not-v_1.vb)]  
+     [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_1.vb)]  
   
 2.  Reemplace la lista de parámetros del evento personalizado con una cláusula `As` que especifica el tipo de delegado.  
   
      Continuando con el ejemplo, la declaración `Custom Event` se volvería a escribir como sigue.  
   
-     [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/custom-modifier-is-not-v_2.vb)]  
+     [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_2.vb)]  
   
 ## Ejemplo  
  Este ejemplo declara un `Custom Event` y especifica la cláusula `As` necesaria con un tipo de delegado.  
   
- [!code-vb[VbVbalrEventError#2](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/custom-modifier-is-not-v_3.vb)]  
+ [!code-vb[VbVbalrEventError#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_3.vb)]  
   
 ## Vea también  
  [Event \(Instrucción\)](../../../visual-basic/language-reference/statements/event-statement.md)   

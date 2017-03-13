@@ -35,20 +35,20 @@ El objeto `My.Computer.Audio` proporciona los métodos para reproducir sonidos.
   
  En el ejemplo siguiente, el método de `My.Computer.Audio.Play` reproduce un sonido.  Cuando se especifica `AudioPlayMode.WaitToComplete`, `My.Computer.Audio.Play` espera hasta que el sonido se completa antes de que el código de llamada continúe.  Al utilizar este ejemplo, debe asegurarse de que el nombre de archivo hace referencia a un archivo de sonido .wav que está en el equipo  
   
- [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#15)]  
+ [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
   
  En el ejemplo siguiente, el método de `My.Computer.Audio.Play` reproduce un sonido.  Al utilizar este ejemplo, debe asegurarse de que los recursos de la aplicación incluyen un archivo de sonido .wav denominado Waterfall.  
   
- [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#16)]  
+ [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
   
 ## Reproducir sonidos de Bucle  
  En el ejemplo siguiente, el método de `My.Computer.Audio.Play` reproduce el sonido especificado en segundo plano cuando se especifica `PlayMode.BackgroundLoop` .  Al utilizar este ejemplo, debe asegurarse de que el nombre de archivo hace referencia a un archivo de sonido .wav que está en el equipo.  
   
- [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#11)]  
+ [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
   
  En el ejemplo siguiente, el método de `My.Computer.Audio.Play` reproduce el sonido especificado en segundo plano cuando se especifica `PlayMode.BackgroundLoop` .  Al utilizar este ejemplo, debe asegurarse de que los recursos de la aplicación incluyen un archivo de sonido .wav denominado Waterfall.  
   
- [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#12)]  
+ [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
  El ejemplo de código anterior también está disponible como fragmentos de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms \> Sonido**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
   
@@ -61,7 +61,7 @@ El objeto `My.Computer.Audio` proporciona los métodos para reproducir sonidos.
   
  El ejemplo siguiente se detiene un sonido que se está reproduciendo en segundo plano.  
   
- [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#18)]  
+ [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
  El ejemplo de código anterior también está disponible como fragmentos de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms \> Sonido**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
   
@@ -72,7 +72,7 @@ El objeto `My.Computer.Audio` proporciona los métodos para reproducir sonidos.
   
  El ejemplo siguiente se usa el método de `My.Computer.Audio.PlaySystemSound` para reproducir un sonido del sistema.  
   
- [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#17)]  
+ [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
 ## Vea también  
  <xref:Microsoft.VisualBasic.Devices.Audio>   

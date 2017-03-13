@@ -21,7 +21,7 @@ En este tema se muestran las tres formas en que se puede escribir una consulta [
 ## Sintaxis de consulta  
  La forma recomendada de escribir la mayoría de las consultas es utilizar la *sintaxis de consulta* para crear *expresiones de consulta*.  En el ejemplo siguiente se muestran tres expresiones de consulta.  La primera expresión de consulta muestra cómo filtrar o restringir los resultados aplicando condiciones con una cláusula `where`.  Devuelve todos los elementos de la secuencia de origen cuyos valores son mayores que 7 o menores que 3.  La segunda expresión muestra cómo ordenar los resultados devueltos.  La tercera expresión muestra cómo agrupar los resultados según una clave.  Esta consulta devuelve dos grupos basándose en la primera letra de la palabra.  
   
- [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#5)]  
+ [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_1.cs)]  
   
  Observe que el tipo de las consultas es <xref:System.Collections.Generic.IEnumerable%601>.  Todas estas consultas podrían escribirse utilizando `var`, tal y como se muestra en el ejemplo siguiente:  
   
@@ -34,25 +34,25 @@ En este tema se muestran las tres formas en que se puede escribir una consulta [
 ## Sintaxis de método  
  Algunas operaciones de consulta deben expresarse como una llamada a un método.  Los métodos más habituales de este tipo son aquellos que devuelven valores numéricos singleton, como <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>, etc.  Siempre se debe llamar a estos métodos en último lugar en cualquier consulta porque representan un solo valor y no sirven como origen de una operación de consulta adicional.  En el ejemplo siguiente se muestra una llamada a un método en una expresión de consulta:  
   
- [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#6)]  
+ [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_2.cs)]  
   
 ## Ejemplo  
  Si el método incluye parámetros, éstos se proporcionan en forma de expresión [lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), tal y como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#7)]  
+ [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_3.cs)]  
   
  De todas las consultas anteriores, sólo la número 4 se ejecuta inmediatamente.  Esto se debe a que devuelve un solo valor y no una colección <xref:System.Collections.Generic.IEnumerable%601> genérica.  El propio método tiene que usar `foreach` para calcular su valor.  
   
  Cada una de las consultas anteriores puede escribirse usando tipos implícitos con [var](../../../csharp/language-reference/keywords/var.md), tal y como se muestra en el ejemplo siguiente:  
   
- [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#8)]  
+ [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_4.cs)]  
   
 ## Ejemplo  
   
 ## Sintaxis mixta de consulta y método  
  En este ejemplo se muestra cómo usar la sintaxis de método en los resultados de una cláusula de consulta.  Simplemente hay que incluir la expresión de consulta entre paréntesis y, a continuación, aplicar el operador de punto y llamar al método.  En el ejemplo siguiente, la consulta número 7 devuelve un recuento de los números cuyo valor se encuentra comprendido entre 3 y 7.  Sin embargo, en general es mejor utilizar una segunda variable para almacenar el resultado de la llamada al método.  De esta forma, es menos probable que la consulta se confunda con los resultados de la consulta.  
   
- [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#9)]  
+ [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_5.cs)]  
   
  La consulta número 7 se ejecuta inmediatamente porque devuelve un solo valor y no una colección.  
   

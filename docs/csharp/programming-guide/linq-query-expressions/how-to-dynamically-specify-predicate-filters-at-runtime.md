@@ -15,7 +15,7 @@ En algunos casos se desconoce hasta el momento de la ejecución cuántos predica
   
 4.  Reemplace la clase `Program` por el código siguiente.  
   
-     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#26)]  
+     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  Agregue la línea siguiente al método `Main` de la clase `DynamicPredicates`, bajo la declaración de `ids`.  
   
@@ -56,7 +56,7 @@ En algunos casos se desconoce hasta el momento de la ejecución cuántos predica
   
 2.  Copie el método siguiente y péguelo en la clase `DynamicPredicates`.  
   
-     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#27)]  
+     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  En la ventana **Argumentos de la línea de comandos**, reemplace los números del identificador del procedimiento anterior por un valor entero entre 1 y 4.  
   

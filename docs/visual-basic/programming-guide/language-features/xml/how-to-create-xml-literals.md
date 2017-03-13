@@ -30,7 +30,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
 -   Cree un elemento XML insertado usando la sintaxis de literales XML, que es igual que la sintaxis XML propiamente dicha.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
      Ejecute el código.  El resultado de este código es:  
   
@@ -48,7 +48,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
 -   Cree el documento XML insertado.  El código siguiente crea un documento XML que tiene sintaxis de literales, una declaración, una instrucción de procesamiento, un comentario y un elemento XML que contiene otro elemento.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
      Ejecute el código.  El resultado de este código es:  
   

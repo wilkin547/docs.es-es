@@ -38,7 +38,7 @@ Un *procedimiento genérico*, también denominado *método genérico*, es el que
 ## Inferencia de tipo  
  Puede llamar a un procedimiento genérico sin proporcionar ningún argumento de tipo.  Al llamar de este modo, el compilador intenta determinar los tipos de datos adecuados para pasar los argumentos de tipo del procedimiento.  Esto se denomina *inferencia de tipo*.  El código siguiente muestra una llamada en la que el compilador deduce que debe pasar el tipo `String` al parámetro de tipo `t`.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
  Si el compilador no puede deducir los argumentos de tipo del contexto de su llamada, crea un informe de error.  Una posible causa de este tipo de error es la falta de coincidencia del rango de matriz.  Por ejemplo, suponga que define un parámetro normal como matriz de un parámetro de tipo.  Si se llama al procedimiento genérico proporcionando una matriz de distinto rango \(número de dimensiones\), la desigualdad provoca que se produzca un error en la inferencia de tipo.  En el código siguiente se muestra una llamada en la que se pasa una matriz bidimensional a un procedimiento que espera una matriz unidimensional.  
   
@@ -64,14 +64,14 @@ Un *procedimiento genérico*, también denominado *método genérico*, es el que
  En el ejemplo siguiente se define un procedimiento genérico `Function` para encontrar un elemento concreto en una matriz.  Se define un parámetro de tipo, que se utiliza para construir los dos parámetros de la lista de parámetros.  
   
 ### Código  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### Comentarios  
  Para el ejemplo anterior es necesario poder comparar `searchValue` con cada elemento de `searchArray`.  Para garantizar esta capacidad, se restringe el parámetro de tipo `T` para implementar la interfaz <xref:System.IComparable%601>.  El código utiliza el método <xref:System.IComparable%601.CompareTo%2A>, en lugar del operador `=`, puesto que no existen garantías de que el tipo de argumento proporcionado para `T` admita el operador `=`.  
   
  Puede probar el procedimiento `findElement` con el código siguiente.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
  Las llamadas anteriores a `MsgBox` muestran respectivamente "0", "1" y "\-1."  
   

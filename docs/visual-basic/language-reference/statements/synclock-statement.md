@@ -89,13 +89,13 @@ End SyncLock
  Si la clase `simpleMessageList` compartiera una lista de mensajes entre todas sus instancias, las variables `messagesList` y `messagesLast` se declararían como `Shared`.  En este caso, la variable `messagesLock` también debería ser `Shared` para que hubiera un único objeto de bloqueo utilizado por todas las instancias.  
   
 ### Código  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
 ### Descripción  
  El siguiente ejemplo utiliza subprocesos y `SyncLock`.  Con el uso de la instrucción `SyncLock`, el bloque de instrucciones se convierte en una sección crítica y `balance` nunca toma un valor negativo.  Puede marcar como comentario las instrucciones `SyncLock` y `End SyncLock` para ver el efecto de omitir la palabra clave `SyncLock`.  
   
 ### Código  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
 ### Comentarios  
   

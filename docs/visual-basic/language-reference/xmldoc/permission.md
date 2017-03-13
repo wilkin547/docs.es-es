@@ -45,7 +45,7 @@ Especifica un permiso necesario para el miembro.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<permission>` para describir que el método `ReadFile` requiere <xref:System.Security.Permissions.FileIOPermission>.  
   
- [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/permission_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

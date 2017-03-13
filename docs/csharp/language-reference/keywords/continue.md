@@ -24,7 +24,7 @@ La instrucción de `continue` pasa el control a la siguiente iteración de [mien
 ## Ejemplo  
  En este ejemplo, un contador se inicializa para contar de 1 a 10.  Mediante la instrucción de `continue` junto con la expresión `(i < 9)`, las instrucciones entre `continue` y el final del cuerpo de `for` se omiten.  
   
- [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/csharp/continue_1.cs)]  
+ [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

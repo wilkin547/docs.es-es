@@ -51,7 +51,7 @@ Cuando se define una clase o struct, debe decidirse si tiene sentido crear una d
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo implementar la igualdad de valores en una clase \(tipo de referencia\).  
   
- [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_1.cs)]  
+ [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
  En las clases \(tipos de referencia\), la implementación predeterminada de ambos métodos <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> realiza una comparación de igualdad de referencias, no una comprobación de la igualdad de valores.  Cuando un implementador invalida el método virtual, el propósito es asignarle semántica de igualdad de valores.  
   
@@ -60,7 +60,7 @@ Cuando se define una clase o struct, debe decidirse si tiene sentido crear una d
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo implementar la igualdad de valores en un struct \(tipo de valor\):  
   
- [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_2.cs)]  
+ [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
  En el caso de los structs, la implementación predeterminada de <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> \(que es la versión invalidada en <xref:System.ValueType?displayProperty=fullName>\) realiza una comprobación de la igualdad de valores en la que usa la reflexión para comparar los valores de cada campo del tipo.  Cuando un implementador invalida el método `Equals` virtual en un struct, el propósito es proporcionar una forma más eficaz de realizar la comprobación de la igualdad de valores y, opcionalmente, basar la comparación en algún subconjunto del campo o las propiedades del struct.  
   

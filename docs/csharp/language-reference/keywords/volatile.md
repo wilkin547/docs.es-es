@@ -42,12 +42,12 @@ La palabra clave `volatile` indica que varios subprocesos que se ejecutan a la v
 ## Ejemplo  
  El ejemplo siguiente muestra cómo declarar una variable de campo pública como `volatile`.  
   
- [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#24)]  
+ [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo crear un subproceso auxiliar o de trabajo, y utilizarlo para realizar el procesamiento en paralelo con el del subproceso primario.  Para obtener información básica sobre multithreading, vea [Threading](../Topic/Managed%20Threading.md) y [Subprocesos](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md).  
   
- [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/csharp/volatile_2.cs)]  
+ [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

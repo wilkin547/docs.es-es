@@ -31,7 +31,7 @@ Un procedimiento *recursivo* es aquél que se llama a sí mismo.  En general, es
   
  En el siguiente procedimiento se utiliza la recursividad para calcular el factorial de su argumento original.  
   
- [!code-vb[VbVbcnProcedures#51](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
 ## Consideraciones sobre procedimientos recursivos  
  **Condiciones de limitación**.  Debe designar un procedimiento recursivo para probar al menos una condición que pueda poner fin a la recursividad; también debe supervisar los casos en los que no se satisface ninguna condición dentro de un número razonable de llamadas recursivas.  Si no existe al menos una condición que pueda cumplirse sin errores, el procedimiento corre un riesgo elevado de ejecutarse en un bucle infinito.  

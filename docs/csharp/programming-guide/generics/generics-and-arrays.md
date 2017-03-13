@@ -21,7 +21,7 @@ En C\# 2.0 y versiones posteriores, las matrices unidimensionales que tienen un 
   
  El siguiente ejemplo de código muestra la forma en que un solo método genérico que toma un parámetro de entrada <xref:System.Collections.Generic.IList%601> puede recorrer en iteración tanto una lista como una matriz; en este caso, una matriz de enteros.  
   
- [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-arrays_1.cs)]  
+ [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-arrays_1.cs)]  
   
 ## Vea también  
  <xref:System.Collections.Generic>   

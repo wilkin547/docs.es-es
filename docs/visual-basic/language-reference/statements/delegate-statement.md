@@ -71,7 +71,7 @@ Se utiliza para declarar un delegado.  Un delegado es un tipo de referencia que 
 ## Ejemplo  
  En el ejemplo siguiente se utiliza la instrucción `Delegate` para declarar un delegado que opere con dos números y devuelva un número.  El método `DelegateTest` toma una instancia de un delegado de este tipo y la utiliza para ordenar los números en pares.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
 ## Vea también  
  [AddressOf \(Operador\)](../../../visual-basic/language-reference/operators/addressof-operator.md)   

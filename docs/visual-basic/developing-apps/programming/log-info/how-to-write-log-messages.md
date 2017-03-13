@@ -28,7 +28,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
 ## Ejemplo  
  En este ejemplo se usa el método `My.Application.Log.WriteEntry` para escribir la información de seguimiento.  
   
- [!code-vb[VbVbalrMyApplicationLog#11](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#11)]  
+ [!code-vb[VbVbalrMyApplicationLog#11](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-write-log-messages_1.vb)]  
   
 ## Seguridad de .NET Framework  
  Asegúrese de que los datos que se escribe en el registro no incluyen información confidencial, como contraseñas de usuario. Para obtener más información, consulta [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  

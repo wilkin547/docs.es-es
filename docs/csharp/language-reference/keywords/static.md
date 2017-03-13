@@ -24,13 +24,13 @@ Utilice el modificador `static` para declarar un miembro estático, que pertenec
 ## Ejemplo  
  Por ejemplo, la siguiente clase se declara como `static` y sólo contiene métodos `static`:  
   
- [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#18)]  
+ [!code-cs[csrefKeywordsModifiers#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_1.cs)]  
   
  Una declaración de tipos o de constante constituye, implícitamente, un miembro estático.  
   
  No se puede hacer referencia a un miembro estático por medio de una instancia.  En vez de ello, se debe hacer referencia por medio del nombre de tipo.  Por ejemplo, considere la siguiente clase:  
   
- [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#19)]  
+ [!code-cs[csrefKeywordsModifiers#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_2.cs)]  
   
  Para referirse al miembro estático `x`, use el nombre completo, `MyBaseC.MyStruct.x`, a menos que el miembro sea accesible desde el mismo ámbito:  
   
@@ -54,12 +54,12 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 ## Ejemplo  
  Este ejemplo lee el nombre y el identificador de un nuevo empleado, incrementa en uno el contador de empleados y muestra la información del nuevo empleado y el nuevo número de empleados.  Por motivos de simplicidad, el programa lee el número actual de empleados desde el teclado.  En una aplicación real, esta información se leería desde un archivo.  
   
- [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#20)]  
+ [!code-cs[csrefKeywordsModifiers#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_3.cs)]  
   
 ## Ejemplo  
  Este ejemplo muestra que, aunque se puede inicializar un campo estático utilizando otro campo estático aún sin declarar, el resultado no estará definido hasta que no asigne explícitamente un valor al campo estático.  
   
- [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#21)]  
+ [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

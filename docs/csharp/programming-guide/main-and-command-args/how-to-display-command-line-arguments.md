@@ -30,7 +30,7 @@ Los argumentos proporcionados a una aplicación ejecutable en la línea de coman
 ## Ejemplo  
  Este ejemplo muestra los argumentos de la línea de comandos pasados a una aplicación de línea de comandos.  El resultado mostrado es para la primera entrada de la tabla anterior.  
   
- [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-display-command-l_1.cs)]  
+ [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

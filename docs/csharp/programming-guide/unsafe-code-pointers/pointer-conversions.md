@@ -38,9 +38,9 @@ La tabla siguiente muestra las conversiones de puntero implícitas predefinidas.
 ## Ejemplo  
  En el ejemplo siguiente, un puntero a `int` se convierte en un puntero a `byte`.  Observe que el puntero señala al byte direccionado más bajo de la variable.  Cuando incrementa sucesivamente el resultado, hasta el tamaño de `int` \(4 bytes\), puede mostrar los bytes restantes de la variable.  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_1.cs)]  
   
- [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#4)]  
+ [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

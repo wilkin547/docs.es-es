@@ -82,12 +82,12 @@ Console.WriteLine((double)dec + dub);
   
  En este ejemplo, `decimal` e [int](../../../csharp/language-reference/keywords/int.md) se mezclan en la misma expresión.  El resultado se evalúa como tipo `decimal`.  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/csharp/decimal_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
   
 ## Ejemplo  
  En este ejemplo, se da formato a los resultados mediante la cadena de formato de divisa.  Observe que `x` se redondea, ya que las posiciones decimales superan 0,99 $.  La variable `y`, que representa el máximo de dígitos exactos, se muestra exactamente en el formato correcto.  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/csharp/decimal_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # :: (operador) (Referencia de C#)
 El calificador de alias de espacio de nombres \(`::`\) se utiliza para buscar identificadores.  Siempre se coloca entre dos identificadores, como en este ejemplo:  
   
- [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#27)]  
+ [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## Comentarios  
  El calificador de alias de espacio de nombres puede ser `global`.  Éste invoca una búsqueda del espacio de nombres global, en lugar de un espacio de nombres con alias.  

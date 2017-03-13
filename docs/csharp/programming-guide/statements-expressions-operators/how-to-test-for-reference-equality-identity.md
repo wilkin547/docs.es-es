@@ -24,7 +24,7 @@ No tiene que implementar ninguna lógica personalizada para admitir las comparac
  En el ejemplo también se muestra por qué <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> siempre devuelve `false` para los tipos de valor y por qué no se debe usar <xref:System.Object.ReferenceEquals%2A> para determinar la igualdad entre cadenas.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-test-for-referenc_1.cs)]  
+ [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-test-for-reference-equality-identity_1.cs)]  
   
  La implementación de `Equals` en la clase base universal <xref:System.Object?displayProperty=fullName> también realiza una comprobación de la igualdad de referencias; sin embargo, es mejor no seguir este procedimiento porque, en el caso de que una clase invalide el método, los resultados podrían no ser los esperados.  Lo mismo se cumple para los operadores `==` y `!=`.  Cuando se usan en tipos de referencia, el comportamiento predeterminado de \=\= y `!=` consiste en realizar una comprobación de la igualdad de referencias.  Sin embargo, las clases derivadas pueden sobrecargar el operador para realizar una comprobación de la igualdad de valores.  Para minimizar las posibilidades de error, lo mejor es usar siempre <xref:System.Object.ReferenceEquals%2A> cuando deba determinarse si dos objetos tienen igualdad de referencia.  
   

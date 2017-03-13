@@ -31,7 +31,7 @@ La directiva `#Region` permite contraer y ocultar secciones de código en archiv
   
 -   Sitúe la sección de código entre las instrucciones `#Region` y `#End Region`, como en el siguiente ejemplo:  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/how-to-collapse-and-hide_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
      El bloque `#Region` puede utilizarse varias veces en un archivo de código; de esta forma, los usuarios pueden definir sus propios bloques de procedimientos y clases que, a su vez, pueden contraerse.  Los bloques `#Region` también pueden anidarse dentro de otros bloques `#Region`.  
   

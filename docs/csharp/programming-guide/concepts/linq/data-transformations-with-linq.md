@@ -40,11 +40,11 @@ caps.handback.revision: 15
 ## Combinar varias entradas en una sola secuencia de salida  
  Puede utilizar una consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] para crear una secuencia de salida que contenga elementos de más de una secuencia de entrada.  En el ejemplo siguiente se muestra cómo combinar dos estructuras de datos en memoria, pero se pueden aplicar los mismos principios para combinar datos de orígenes XML, SQL o de conjunto de datos.  Supongamos que tenemos los dos tipos de clases siguientes:  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#7)]  
+ [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  En el ejemplo siguiente se muestra la consulta:  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#8)]  
+ [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  Para obtener más información, consulte [join \(cláusula\)](../../../../csharp/language-reference/keywords/join-clause.md) y [select \(cláusula\)](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 15
 ## Transformar objetos en memoria en XML  
  Las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] hacen que sea fácil transformar los datos entre estructuras de datos en memoria, bases de datos SQL, conjuntos de datos [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] y documentos o secuencias XML.  En el ejemplo siguiente se transforman los objetos de una estructura de datos en memoria en elementos XML.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#9)]  
+ [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  El código genera el siguiente resultado XML:  
   
@@ -102,7 +102,7 @@ caps.handback.revision: 15
 > [!NOTE]
 >  No se permite llamar a métodos en las expresiones de consulta si la consulta se va a convertir en otro dominio.  Por ejemplo, no puede llamar a un método normal de C\# en [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] porque SQL Server no tiene contexto para el mismo.  Sin embargo, puede asignar procedimientos almacenados a los métodos y después llamar a los primeros.  Para obtener más información, consulte [Procedimientos almacenados](../Topic/Stored%20Procedures.md).  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#10)]  
+ [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## Vea también  
  [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   

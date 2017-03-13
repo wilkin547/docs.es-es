@@ -103,15 +103,15 @@ Se pueden derivar clases de Visual Basic de las clases `Public` de objetos COM, 
   
 6.  Agregue el código siguiente al principio de `MathClass` para heredar de la clase COM.  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#31)]  
+     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
 7.  Sobrecargue el método público de la clase base agregando el código siguiente a `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#32)]  
+     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
 8.  Amplíe la clase heredada agregando el código siguiente a `MathClass`:  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#33)]  
+     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
  La nueva clase hereda las propiedades de la clase base del objeto COM, sobrecarga un método y define otro método para extender la clase.  
   
@@ -121,7 +121,7 @@ Se pueden derivar clases de Visual Basic de las clases `Public` de objetos COM, 
   
 2.  En el procedimiento del controlador de eventos `Click` del botón, agregue el código siguiente para crear una instancia de `MathClass` y llamar a los métodos sobrecargados:  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#34)]  
+     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  Presione F5 para ejecutar el proyecto.  
   

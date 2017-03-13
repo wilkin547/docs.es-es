@@ -82,11 +82,11 @@ Un procedimiento de operador es una serie de instrucciones [!INCLUDE[vbprvb](../
 ### Ejemplo de declaración y llamada  
  La estructura siguiente almacena un valor entero con signo de 128 bits como las partes constitutivas de orden superior y de orden inferior.  Esta estructura define el operador `+` para agregar dos valores  `veryLong`  y generar un valor  `veryLong`  resultante.  
   
- [!code-vb[VbVbcnProcedures#23](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
  En el ejemplo siguiente se muestra una llamada típica al operador `+` establecido en  `veryLong`.  
   
- [!code-vb[VbVbcnProcedures#24](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
  Para obtener más información y ejemplos, vea [Sobrecarga en Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)  
   

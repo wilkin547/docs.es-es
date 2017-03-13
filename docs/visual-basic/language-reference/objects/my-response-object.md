@@ -32,7 +32,7 @@ Obtiene el objeto <xref:System.Web.HttpResponse> asociado a la página <xref:Sys
 ## Ejemplo  
  El ejemplo siguiente obtiene la colección de encabezados del objeto `My.Request` y utiliza el objeto `My.Response` para escribirlo en la página ASP.NET.  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-response-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
 ## Vea también  
  <xref:System.Web.HttpResponse>   

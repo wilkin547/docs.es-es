@@ -24,17 +24,17 @@ Puede utilizar la palabra clave contextual `out` en dos contextos \(cada uno es 
   
  La palabra clave `out` hace que los argumentos se pasen por referencia.  En esto es como la palabra clave [ref](../../../csharp/language-reference/keywords/ref.md), salvo que `ref` requiere que se inicialice la variable antes de pasarla.  Para usar un parámetro `out`, tanto la definición de método como el método de llamada deben utilizar explícitamente la palabra clave `out`.  Por ejemplo:  
   
- [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/csharp/out_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_1.cs)]  
   
  Aunque las variables que se pasan como argumentos `out` no tienen que inicializarse antes de pasarse, es necesario que el método llamado asigne un valor antes de que el método devuelva un resultado.  
   
  Aunque las palabras clave `ref` y `out` causan un comportamiento diferente en tiempo de ejecución, no se consideran parte de la signatura del método en tiempo de compilación.  Por lo tanto, los métodos no pueden sobrecargarse si la única diferencia es que un método toma un argumento `ref` y el otro toma un argumento `out`.  Por ejemplo, el código siguiente, no se compilará:  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/csharp/out_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_2.cs)]  
   
  La sobrecarga es posible, sin embargo, si un método toma un argumento `ref` o `out` y el otro no utiliza ninguno, así:  
   
- [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_3.cs)]  
   
  Las propiedades no son variables y, por tanto, no pueden pasarse como parámetros `out`.  
   
@@ -49,7 +49,7 @@ Puede utilizar la palabra clave contextual `out` en dos contextos \(cada uno es 
 ## Ejemplo  
  Declarar un método `out` resulta útil cuando se desea que devuelva varios valores.  En el ejemplo siguiente, se utiliza `out` para devolver tres variables con una única llamada al método.  Tenga en cuenta que el tercer argumento se asigna a null.  Esto permite que los métodos devuelvan valores opcionalmente.  
   
- [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out_4.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)

@@ -34,11 +34,11 @@ Introduce una cláusula `New` para crear una nueva instancia de objeto, especifi
   
  Puede utilizar una cláusula `New` en una instrucción de declaración o en una instrucción de asignación.  Cuando se ejecuta la instrucción, esta llama al constructor apropiado de la clase especificada y le pasa los argumentos que se le han proporcionado.  En el ejemplo siguiente se muestra esto creando instancias de una clase `Customer` que tiene dos constructores, uno que no toma parámetros y otro que toma un parámetro de cadena.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
  Dado que las matrices son clases, `New` puede crear una nueva instancia de la matriz, como se muestra en los ejemplos siguientes.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
  Common Language Runtime \(CLR\) produce un error <xref:System.OutOfMemoryException> si no hay memoria suficiente para crear la nueva instancia.  
   

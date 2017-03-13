@@ -21,17 +21,17 @@ Dado que las cadenas son *inmutables*, no es posible modificar el valor de un ob
 ## Ejemplo  
  En el ejemplo siguiente se muestran varias formas de reemplazar o quitar subcadenas en una cadena especificada.  
   
- [!code-cs[csProgGuideStrings#28](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#28)]  
+ [!code-cs[csProgGuideStrings#28](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_1.cs)]  
   
 ## Ejemplo  
  Para obtener acceso a los caracteres individuales de una cadena mediante la notación de matrices, puede utilizar el objeto <xref:System.Text.StringBuilder>, que sobrecarga el operador `[]` para proporcionar acceso a su búfer de caracteres interno.  También puede convertir la cadena en una matriz de caracteres mediante el método <xref:System.String.ToCharArray%2A>.  En el ejemplo siguiente se utiliza `ToCharArray` para crear la matriz.  A continuación, se modifican algunos elementos de esa matriz.  Después, se llama a un constructor de cadena que toma una matriz de caracteres como parámetro de entrada para crear una nueva cadena.  
   
- [!code-cs[csProgGuideStrings#24](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#24)]  
+ [!code-cs[csProgGuideStrings#24](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_2.cs)]  
   
 ## Ejemplo  
  El ejemplo siguiente se proporciona para aquellas situaciones poco habituales en las que puede que desee modificar una cadena en contexto mediante código no seguro de forma similar a las matrices de caracteres de estilo de C.  En el ejemplo se muestra cómo obtener acceso a los caracteres individuales "en contexto" mediante la palabra clave fixed.  También se muestra un posible efecto secundario de realizar operaciones no seguras en las cadenas que se produce por la forma en que el compilador de C\# almacena \(confina\) las cadenas internamente.  En general, no debería utilizar esta técnica a menos que sea absolutamente necesario.  
   
- [!code-cs[csProgGuideStrings#29](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#29)]  
+ [!code-cs[csProgGuideStrings#29](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_3.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

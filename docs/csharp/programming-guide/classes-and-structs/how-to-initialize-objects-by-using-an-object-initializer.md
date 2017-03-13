@@ -26,12 +26,12 @@ Puede usar inicializadores de objetos para inicializar objetos de tipo de forma 
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo inicializar un tipo `StudentName` nuevo mediante inicializadores de objeto.  
   
- [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#35)]  
+ [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo inicializar una colección de tipos `StudentName` mediante un inicializador de colección.  Observe que un inicializador de colección es una serie de inicializadores de objeto separados por comas.  
   
- [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#36)]  
+ [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## Compilar el código  
  Para ejecutar este código, copie y pegue la clase en un proyecto de aplicación de consola de Visual C\# creado en [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  Para obtener más información, vea [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  

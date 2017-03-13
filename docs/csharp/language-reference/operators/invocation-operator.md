@@ -24,11 +24,11 @@ Además de usarlos para especificar el orden de las operaciones en una expresió
   
 1.  Especificar conversiones o conversiones de tipo.  
   
-     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#1)]  
+     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
 2.  Invocar métodos o delegados.  
   
-     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#2)]  
+     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
 ## Comentarios  
  Una conversión de tipos invoca explícitamente el operador de conversión de un tipo a otro; se producirá un error en la conversión si no se ha definido ese operador.  Para definir un operador de conversión, vea [explicit \(Referencia de C\#\)](../../../csharp/language-reference/keywords/explicit.md) e [implicit \(Referencia de C\#\)](../../../csharp/language-reference/keywords/implicit.md).  

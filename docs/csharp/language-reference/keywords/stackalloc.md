@@ -43,7 +43,7 @@ block = stackalloc int[100];
  En el ejemplo siguiente se calculan y se muestran los primeros 20 números de la secuencia de Fibonacci.  Cada número es la suma de los dos números anteriores.  En el código, un bloque de memoria de tamaño suficiente para contener 20 elementos de tipo `int` se asigna en la pila y no en el montón.  La dirección del bloque se almacena en el puntero `fib`.  Esta memoria no está sometida a la recolección de elementos no utilizados y, por lo tanto, no necesita anclarse \(mediante el uso de [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)\).  La duración del bloque de memoria se limita a la duración del método que lo define.  No hay forma de liberar la memoria antes de la devolución del método.  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#15)]  
+ [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/stackalloc_1.cs)]  
   
 ## Seguridad  
  El código no seguro es menos seguro que las alternativas seguras.  Sin embargo, el uso de `stackalloc` habilita automáticamente las características de detección de saturación del búfer en Common Language Runtime \(CLR\).  Si se detecta una saturación del búfer, el proceso se finaliza tan rápidamente como sea posible para reducir la oportunidad de que se ejecute código malintencionado.  

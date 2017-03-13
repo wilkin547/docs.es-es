@@ -26,7 +26,7 @@ caps.handback.revision: 11
 
 Cualquier elemento de programación \(como una variable, una clase o un miembro\) puede tener el mismo nombre que una palabra clave restringida.  Por ejemplo, puede crear una variable denominada `Loop`.  Sin embargo, para hacer referencia a su versión de la misma \(que tiene el mismo nombre que la palabra clave restringida `Loop`\), debe calificarla precediéndola de su espacio de nombres completo o debe encerrarla entre corchetes \(`[ ]`\), como muestra el ejemplo siguiente.  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/keywords-as-element-name_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
  Si no hace ninguna de ellas, Visual Basic de por supuesto el uso de la palabra clave `Loop` intrínseca y produce un error, como en el ejemplo siguiente:  
   

@@ -59,7 +59,7 @@ object(index)
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo usar el indizador de extensión para obtener acceso al segundo nodo secundario en una colección de objetos <xref:System.Xml.Linq.XElement>.  Se obtiene acceso a la colección mediante la propiedad de eje secundario, que obtiene todos los elementos secundarios denominados `phone` del objeto `contact`.  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
  Este código muestra el texto siguiente:  
   

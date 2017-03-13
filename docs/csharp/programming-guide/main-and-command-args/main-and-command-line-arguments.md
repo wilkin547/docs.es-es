@@ -7,7 +7,7 @@ El método `Main` es el punto de entrada de una aplicación de consola de C\# o 
   
  En un programa de C\#, sólo puede haber un punto de entrada.  Si tiene más de una clase con un método `Main`, debe compilar el programa con la opción del compilador **\/main** para especificar qué método `Main` se va a utilizar como punto de entrada.  Para obtener más información, vea [\/main \(Specify Location of Main Method\)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-and-command-line-ar_1.cs)]  
+ [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
 ## Información general  
   

@@ -52,7 +52,7 @@ La instrucción `Const` se utiliza para declarar una constante y establecer su v
   
 -   Escriba una declaración que incluya un especificador de acceso, la palabra clave `Const` y una expresión, como en los ejemplos siguientes:  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#8)]  
+     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
      Cuando [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) es `Off` y [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) es `On`, debe declarar una constante explícitamente especificando un tipo de datos \(`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single` o `String`\).  
   
@@ -62,7 +62,7 @@ La instrucción `Const` se utiliza para declarar una constante y establecer su v
   
 -   Escriba una declaración que incluya la palabra clave `As` y un tipo de datos explícito, como en los ejemplos siguientes:  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#9)]  
+     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
      Pueden declararse varias constantes en una sola línea, si bien para facilitar la lectura del código se recomienda declarar solamente una constante por línea.  Si declara varias constantes en una línea única, deben tener todas ellas el mismo nivel de acceso \(`Public`, `Private`, `Friend`, `Protected` o `Protected Friend`\).  
   

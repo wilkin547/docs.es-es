@@ -27,17 +27,17 @@ En una definición de tipo genérico, la cláusula `where` se utiliza para espec
   
  Además de las restricciones de interfaz, una cláusula `where` puede incluir una restricción de clase base, que establece que un tipo debe tener la clase especificada como clase base \(o ser la propia clase\) para poder utilizarlo como argumento de tipo para ese tipo genérico.  Si se utiliza una restricción semejante, debe aparecer antes que cualquier otra restricción sobre ese parámetro de tipo.  
   
- [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
  La cláusula `where` también puede incluir una restricción de constructor.  Es posible crear una instancia de un parámetro de tipo utilizando el operador new; sin embargo, para ello el parámetro de tipo debe estar restringido por la restricción de constructor, `new()`.  La [restricción new\(\)](../../../csharp/language-reference/keywords/new-constraint.md) permite que el compilador sepa que cualquier argumento de tipo que se proporcione debe tener un constructor sin parámetros accesible, o predeterminado.  Por ejemplo:  
   
- [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
  La restricción `new()` aparece en último lugar en la cláusula `where`.  
   
  Con varios parámetros de tipo, utilice una cláusula `where` para cada parámetro de tipo, por ejemplo:  
   
- [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_3.cs)]  
+ [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
  También puede adjuntar restricciones a parámetros de tipo de métodos genéricos, como el siguiente:  
   

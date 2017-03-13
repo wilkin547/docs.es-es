@@ -33,12 +33,12 @@ caps.handback.revision: 19
 
 Una *expresión booleana* es una expresión que se evalúa como un valor del [tipo de datos Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` o `False`.  Las expresiones `Boolean` pueden ser de varias formas.  La más simple es la comparación directa del valor de una variable `Boolean` con un literal `Boolean`, como se muestra en el ejemplo siguiente:  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
   
 ## Dos significados del operador \=  
  Tenga en cuenta que la instrucción de asignación `newCustomer = True` tiene la misma apariencia que la expresión del ejemplo anterior, pero realiza funciones diferentes y se utiliza de forma distinta.  En el ejemplo anterior, la expresión `newCustomer = True` representa un valor booleano y el signo `=` se interpreta como un operador de comparación.  En una instrucción independiente, el signo `=` se interpretaría como operador de asignación y asignaría el valor de la derecha a la variable de la izquierda.  Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
   
  Para obtener más información, vea [Comparaciones de valores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) e [Instrucciones](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -59,7 +59,7 @@ Una *expresión booleana* es una expresión que se evalúa como un valor del [ti
 ## Operadores de evaluación "cortocircuitada"  
  Los operadores lógicos `AndAlso` y `OrElse` exhiben un comportamiento conocido como evaluación *cortocircuitada*.  Un operador de evaluación cortocircuitada evalúa primero el operando de la izquierda.  Si el operando de la izquierda determina el valor de la expresión completa, la ejecución del programa continúa sin evaluar la expresión de la derecha.  Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
   
  En el ejemplo anterior, el operador evalúa la expresión de la izquierda, `45 < 12`.  Dado que la expresión de la izquierda se evalúa como `False`, la expresión lógica completa se debe evaluar como `False`.  Por tanto el programa pasa por alto la ejecución del código del bloque `If` sin evaluar la expresión de la derecha, `testFunction(3)`.  Este ejemplo no llama a `testFunction()` porque la expresión de la izquierda hace que toda la expresión se evalúe como False.  
   
@@ -68,7 +68,7 @@ Una *expresión booleana* es una expresión que se evalúa como un valor del [ti
 ### Comparación con operadores que no cortocircuitan  
  Por el contrario, cuando se utilizan los operadores lógicos `And` y `Or`, se evalúan los dos lados de la expresión.  Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
   
  El ejemplo anterior llama a `testFunction()` aunque la expresión de la izquierda se evalúe como `False`.  
   

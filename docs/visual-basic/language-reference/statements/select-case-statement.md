@@ -89,7 +89,7 @@ End Select
 ## Ejemplo  
  En el ejemplo siguiente se utiliza una construcción `Select Case` para escribir una línea correspondiente al valor de la variable `number`.  La segunda instrucción `Case` contiene el valor que coincide con el valor actual de `number`, por lo que se ejecuta la instrucción que escribe "Between 6 and 8, inclusive".  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
 ## Vea también  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   

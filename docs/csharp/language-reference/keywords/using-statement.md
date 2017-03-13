@@ -21,7 +21,7 @@ Proporciona una sintaxis adecuada que garantiza el uso correcto de los objetos <
 ## Ejemplo  
  El ejemplo siguiente muestra cómo utilizar la instrucción using.  
   
- [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
 ## Comentarios  
  <xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que obtienen acceso a recursos no administrados \(en este caso, identificadores de archivo y contextos de dispositivo\).  Existen muchos más tipos de recursos no administrados y tipos de biblioteca de clases que los encapsulan.  Todos estos tipos deben implementar la interfaz <xref:System.IDisposable>.  
@@ -30,15 +30,15 @@ Proporciona una sintaxis adecuada que garantiza el uso correcto de los objetos <
   
  La instrucción `using` garantiza que se llame a <xref:System.IDisposable.Dispose%2A>, aunque se produzca una excepción mientras se llama a los métodos del objeto.  Puede conseguir el mismo resultado colocando el objeto dentro de un bloque try y llamando a continuación a <xref:System.IDisposable.Dispose%2A> en un bloque finally; de hecho, esta es la forma en que el compilador traduce la instrucción `using`.  El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación \(tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto\):  
   
- [!code-cs[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_2.cs)]  
   
  Se pueden declarar varias instancias de un tipo en una instrucción `using`, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csrefKeywordsNamespace#6](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_3.cs)]  
   
  Puede crear instancias del objeto de recursos y, a continuación, pasar la variable a la instrucción `using`, pero no es un procedimiento recomendado.  En este caso, el objeto permanece en el ámbito después de que el control abandone el bloque `using`, aunque es probable que ya no tenga acceso a sus recursos no administrados.  En otras palabras, ya no se inicializará completamente.  Si intenta utilizar el objeto fuera del bloque `using`, se arriesga a que se inicie una excepción.  Por esta razón, suele ser mejor crear instancias del objeto en la instrucción `using` y limitar su ámbito al bloque `using`.  
   
- [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/csharp/using-statement_4.cs)]  
+ [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

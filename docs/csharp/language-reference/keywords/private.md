@@ -38,7 +38,7 @@ class Employee
 ## Ejemplo  
  En este ejemplo, la clase `Employee` contiene dos miembros de datos privados, `name` y `salary`.  Como miembros privados, sólo pueden tener acceso a ellos los métodos miembro.  Los métodos públicos denominados `GetName` y `Salary` se agregan para permitir un acceso controlado a los miembros privados.  Se obtiene acceso al miembro `name` a través de un método público y al miembro `salary` a través de una propiedad pública de sólo lectura.  \(Vea [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md) para obtener más información\).  
   
- [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#10)]  
+ [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

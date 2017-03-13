@@ -36,7 +36,7 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
 3.  En la <xref:System.Windows.Forms.Control.Click> el controlador de eventos de Button1, agregue el código siguiente:  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbcnMyApplicationLogFiltering/Form1.vb#1)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  Ejecute la aplicación en el depurador.  
   

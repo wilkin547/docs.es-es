@@ -42,7 +42,7 @@ Puede definir un procedimiento en varias versiones *sobrecargándolo*, es decir,
 ## Ejemplo  
  En el ejemplo siguiente se define un procedimiento `Sub` que contabiliza una transacción en el balance de un cliente.  El procedimiento utiliza la palabra clave `Overloads` para definir dos versiones del procedimiento, una que acepta al cliente por nombre y otra que lo acepta por número de cuenta.  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-multiple-v_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
   
  El código de llamada puede obtener la identificación del cliente como una `String` o como un `Integer`, pero a continuación utiliza la misma instrucción de llamada en los dos casos.  
   

@@ -46,13 +46,13 @@ Si un procedimiento tiene un parámetro [ParamArray](../../../../visual-basic/la
 ## Ejemplo  
  En el ejemplo siguiente se muestra un procedimiento definido con un parámetro [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) y a continuación se muestra una definición equivalente con procedimientos sobrecargados.  
   
- [!code-vb[VbVbcnProcedures#69](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
  No puede sobrecargar este tipo de procedimiento con una lista de parámetros que tome una matriz unidimensional para la matriz de parámetros.  Sin embargo, puede utilizar las firmas de las otras sobrecarga implícitas.  Las siguientes declaraciones ilustran este comportamiento:  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
  En las versiones sobrecargadas, el código no tiene que comprobar si el código de llamada proporciona uno o varios valores para el parámetro `ParamArray`, pero si lo hace, no tiene que comprobar cuántos valores proporciona.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] pasa el control a la versión que coincida con la lista de argumentos de llamada.  
   

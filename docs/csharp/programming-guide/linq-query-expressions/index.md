@@ -9,7 +9,7 @@ caps.handback.revision: 21
   
  En el siguiente ejemplo se muestra la operación de consulta completa.  La operación completa incluye la creación de un origen de datos, la definición de la expresión de consulta y la ejecución de la consulta en una instrucción `foreach`.  
   
- [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#11)]  
+ [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
  Para obtener más información acerca de los fundamentos de [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] en C\#, vea [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md).  
   

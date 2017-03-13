@@ -29,17 +29,17 @@ Cuando se comparan cadenas, se genera un resultado que indica que una cadena es 
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo comparar correctamente las cadenas cuyos valores no cambiarán en función de la configuración regional del equipo del usuario.  Además, también muestra la característica *asignación al grupo interno de cadenas* de C\#.  Cuando un programa declara dos o más variables de cadena idénticas, el compilador las almacena en la misma ubicación.  Al llamar al método <xref:System.Object.ReferenceEquals%2A>, puede ver que las dos cadenas hacen referencia realmente al mismo objeto en memoria.  Utilice el método <xref:System.String.Copy%2A?displayProperty=fullName> para evitar el proceso de asignación al grupo interno de cadenas, como se muestra en el ejemplo.  
   
- [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#11)]  
+ [!code-cs[csProgGuideStrings#11](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_1.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo comparar cadenas de la mejor forma utilizando los métodos <xref:System.String?displayProperty=fullName> que toman una enumeración <xref:System.StringComparison>.  Tenga en cuenta que aquí no se utilizan los métodos de instancia<xref:System.String.CompareTo%2A?displayProperty=fullName>, ya que ninguna de las sobrecargas toma un elemento <xref:System.StringComparison>.  
   
- [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#31)]  
+ [!code-cs[csProgGuideStrings#31](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_2.cs)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo ordenar y buscar cadenas en una matriz de forma que se tenga en cuenta la referencia cultural mediante los métodos estáticos <xref:System.Array> que toman un parámetro <xref:System.StringComparer?displayProperty=fullName>.  
   
- [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#32)]  
+ [!code-cs[csProgGuideStrings#32](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-compare-strings_3.cs)]  
   
  Las clases de colección como <xref:System.Collections.Hashtable?displayProperty=fullName>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> y <xref:System.Collections.Generic.List%601?displayProperty=fullName> tienen constructores que toman un parámetro <xref:System.StringComparer?displayProperty=fullName> cuando el tipo de los elementos o las claves es `string`.  En general, debe usar estos constructores siempre que sea posible y especificar `Ordinal` u `OrdinalIgnoreCase`.  
   

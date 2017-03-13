@@ -35,7 +35,7 @@ En el siguiente ejemplo se muestra cómo agrupar elementos en fragmentos que rep
 ## Ejemplo  
  En el siguiente ejemplo se muestran el método de extensión y el código de cliente que lo utiliza.  
   
- [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/how-to-group-results-by-_1.cs)]  
+ [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-group-results-by-contiguous-keys_1.cs)]  
   
  Para utilizar el método de extensión en su proyecto, copie la clase estática `MyExtensions` en un archivo de código fuente nuevo o ya existente y, si es necesario, agregue una directiva `using` para el espacio de nombres donde se encuentra.  
   

@@ -23,9 +23,9 @@ En el ejemplo siguiente se usan punteros para copiar bytes de una matriz a otra.
  En este ejemplo se usa la palabra clave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), lo que permite utilizar punteros en el método `Copy`.  La instrucción [fixed](../../../csharp/language-reference/keywords/fixed-statement.md) se utiliza para declarar punteros a las matrices de origen y destino.  Así se *ancla* la ubicación de las matrices de origen y destino en memoria, para que no puedan ser desplazadas por la recolección de elementos no utilizados.  Los bloques de memoria de las matrices no están anclados cuando se completa el bloque `fixed`.  Dado que el método `Copy` de este ejemplo usa la palabra clave `unsafe`, debe compilarse con la opción del compilador **\/unsafe**.  Para establecer la opción en Visual Studio, haga clic con el botón secundario en el nombre de proyecto y, a continuación, haga clic en **Propiedades**.  En la pestaña **Compilación**, seleccione **Permitir código no seguro**.  
   
 ## Ejemplo  
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_1.cs)]  
   
- [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#18)]  
+ [!code-cs[csProgGuidePointers#18](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-use-pointers-to-copy-an-array-of-bytes_2.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

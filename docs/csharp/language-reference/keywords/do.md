@@ -24,7 +24,7 @@ La instrucción `do` ejecuta una instrucción o un bloque de instrucciones repet
 ## Ejemplo  
  En el ejemplo siguiente las instrucciones de bucle `do-while` se ejecutan con la condición de que la variable `x` sea menor que 5.  
   
- [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/csharp/do_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
   
  A diferencia de la instrucción [while](../../../csharp/language-reference/keywords/while.md), un bucle `do-while` se ejecuta una vez antes de que se evalúe la expresión condicional.  
   

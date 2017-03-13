@@ -27,14 +27,14 @@ Las propiedades se pueden declarar en una [interfaz](../../../csharp/language-re
   
  A continuación se muestra un ejemplo de descriptor de acceso de un indizador de interfaz:  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_1.cs)]  
+ [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
  La firma de un indizador debe ser diferente de las firmas de los demás indizadores declarados en la misma interfaz.  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra cómo se implementan indizadores de interfaz:  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_2.cs)]  
+ [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
  En el ejemplo anterior, se podría usar la implementación de miembro de interfaz explícito mediante el nombre completo del miembro de interfaz.  Por ejemplo:  
   

@@ -76,7 +76,7 @@ Dim l, m As Long, x, y As Single
 ## Inferencia de tipo de variable local  
  La *inferencia de tipos* se usa para determinar los tipos de datos de las variables locales que se han declarado sin ninguna cláusula `As`.  El compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización.  Esto permite declarar variables sin especificar un tipo de forma explícita.  En el ejemplo siguiente, `num1` y `num2` están fuertemente tipados como enteros.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
  Si desea utilizar la inferencia de tipo de variable local, `Option Infer` debe estar establecido en `On`.  Para obtener más información, vea [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) y [Option Infer \(instrucción\)](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   

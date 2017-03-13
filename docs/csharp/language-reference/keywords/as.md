@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # as (Referencia de C#)
 Puede utilizar el operador de `as` para realizar algunos tipos de conversiones entre los tipos de referencia compatibles o [tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md).  El siguiente fragmento de código muestra un ejemplo.  
   
- [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#1)]  
+ [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_1.cs)]  
   
 ## Comentarios  
  El operador `as` es como una operación de conversión de tipos.  Sin embargo, si la conversión no es posible, `as` devuelve `null` en lugar de producir una excepción.  Considere el ejemplo siguiente:  
@@ -40,7 +40,7 @@ expression is type ? (type)expression : (type)null
  Observe que el operador de `as` realiza sólo conversiones de referencia, conversiones que acepta valores NULL, y conversiones boxing.  El operador de `as` no puede realizar otras conversiones, como conversiones definidas por el usuario, que deben en su lugar realizar mediante expresiones de conversión.  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#2)]  
+ [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

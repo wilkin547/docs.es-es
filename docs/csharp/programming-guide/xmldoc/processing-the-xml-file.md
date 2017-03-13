@@ -82,7 +82,7 @@ El compilador genera una cadena id. por cada construcción del código marcada p
 ## Ejemplos  
  Los siguientes ejemplos muestran cómo se generarían las cadenas de id. para una clase y sus miembros:  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#21)]  
+ [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
 ## Vea también  
  [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   

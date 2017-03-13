@@ -75,11 +75,11 @@ Un procedimiento `Sub` es una serie de instrucciones de [!INCLUDE[vbprvb](../../
 ### Ejemplo de declaración y llamada  
  El procedimiento `Sub` que aparece a continuación notifica al usuario del equipo la tarea que está a punto de realizar la aplicación, y también muestra una marca de tiempo.  En lugar de duplicar este código al principio de cada tarea, la aplicación simplemente llama a  `tellOperator`  desde varios lugares.  Cada llamada pasa una cadena al argumento  `task`  que identifica la tarea que se va a iniciar.  
   
- [!code-vb[VbVbcnProcedures#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
  El ejemplo siguiente muestra una llamada típica a  `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
 ## Vea también  
  [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

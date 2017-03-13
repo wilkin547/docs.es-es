@@ -29,7 +29,7 @@ Los métodos <xref:System.Enum.GetValues%2A> y <xref:System.Enum.GetNames%2A> pe
   
 -   Utilice el método <xref:System.Enum.GetNames%2A> para recuperar las cadenas asociadas a los miembros de enumeración.  Este ejemplo declara una enumeración, `flavorEnum`, y utiliza luego el método <xref:System.Enum.GetNames%2A> para mostrar las cadenas asociadas a cada miembro.  
   
-     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#2)]  
+     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]  
   
 ## Vea también  
  <xref:System.Enum.GetValues%2A>   

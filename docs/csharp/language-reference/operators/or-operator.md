@@ -26,7 +26,7 @@ Binary        `|`  están predefinidos para los tipos enteros y `bool`.  Para lo
  Los tipos definidos por el usuario pueden sobrecargar el operador          `|` \(vea [operator](../../../csharp/language-reference/keywords/operator.md)\).  
   
 ## Ejemplo  
- [!code-cs[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#31)]  
+ [!code-cs[csRefOperators#31](../../../csharp/language-reference/operators/codesnippet/CSharp/or-operator_1.cs)]  
   
 ## Vea también  
  [Referencia de C\#](../../../csharp/language-reference/index.md)   

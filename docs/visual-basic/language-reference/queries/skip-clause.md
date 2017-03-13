@@ -48,7 +48,7 @@ Skip count
 ## Ejemplo  
  En el ejemplo de código siguiente se usa la cláusula `Skip` junto con la cláusula `Take` para que se devuelvan los datos de una consulta en páginas.  La función `GetCustomers` usa la cláusula `Skip` para que se omitan los clientes de la lista hasta el valor de índice de inicio proporcionado, y usa la cláusula `Take` para que se devuelva una página de los clientes a partir de ese valor de índice.  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#1)]  
+ [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
 ## Vea también  
  [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

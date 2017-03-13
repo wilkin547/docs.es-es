@@ -24,7 +24,7 @@ La palabra clave contextual `equals` se utiliza en una cláusula `join` de una e
 ## Ejemplo  
  En el ejemplo siguiente se muestra el uso de la palabra clave `equals` en una cláusula `join`.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/equals_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]  
   
 ## Vea también  
  [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

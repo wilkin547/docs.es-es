@@ -28,11 +28,11 @@ El objeto `TextFieldParser` permite analizar y procesar archivos muy grandes est
 ## Analizar diferentes tipos de archivos de texto  
  Los archivos de texto pueden tener campos de varios anchos, delimitados por un carácter como una coma o un espacio de tabulación.  Defina la propiedad `TextFieldType` y el delimitador, como en el ejemplo siguiente, que utiliza el método `SetDelimiters` para definir un archivo de texto delimitado por tabulaciones:  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
   
  Otros archivos de texto pueden tener anchos de campo fijos.  En tal caso, es necesario definir `TextFieldType` como `FixedWidth` y definir los anchos de cada campo, como en el ejemplo siguiente.  En este ejemplo se utiliza el método `SetFieldWidths`, para definir las columnas de texto: la primera columna tiene 5 caracteres de ancho, la segunda tiene 10, la tercera 11 y la cuarta es de ancho variable.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
   
  Cuando se define el formato, se puede recorrer el archivo utilizando el método `ReadFields` para procesar cada línea.  
   

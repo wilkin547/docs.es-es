@@ -44,7 +44,7 @@ Indica que el texto dentro de una descripción es código.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<c>` en la sección de resumen para indicar que `Counter` es código.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/c_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

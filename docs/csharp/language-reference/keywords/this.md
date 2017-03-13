@@ -30,7 +30,7 @@ La palabra clave `this` hace referencia a la instancia actual de la clase y tamb
   
 -   Calificar miembros con el fin de evitar ambigüedades con nombres similares, por ejemplo:  
   
- [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/csharp/this_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
 -   Pasar un objeto como parámetro a otros métodos, por ejemplo, para:  
   
@@ -40,14 +40,14 @@ La palabra clave `this` hace referencia a la instancia actual de la clase y tamb
   
 -   Declarar indizadores, por ejemplo:  
   
- [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/csharp/this_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
  Debido a que las funciones miembro estáticas existen en el nivel de clase y no como parte de un objeto, no tienen un puntero `this`.  Es un error hacer referencia a `this` en un método estático.  
   
 ## Ejemplo  
  En este ejemplo, `this` se utiliza para calificar los miembros de la clase `Employee`, `name` y `alias`, que presentan ambigüedad con nombres similares.  También se utiliza para pasar un objeto al método `CalcTax`, el cual pertenece a otra clase.  
   
- [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/csharp/this_3.cs)]  
+ [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

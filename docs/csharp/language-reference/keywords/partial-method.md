@@ -28,7 +28,7 @@ Un método parcial tiene su signatura definida en una parte de un tipo parcial y
   
  En el ejemplo siguiente se muestra un método parcial definido en dos partes de una clase parcial:  
   
- [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-method_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-method_1.cs)]  
   
  Para obtener más información, vea [Clases y métodos parciales](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
   

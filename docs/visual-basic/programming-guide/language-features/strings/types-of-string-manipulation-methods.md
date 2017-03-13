@@ -27,7 +27,7 @@ Existen diferentes formas de analizar y manipular las cadenas.  Algunos métodos
 ## Lenguaje Visual Studio y .NET Framework  
  Los métodos de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] se usan como funciones inherentes del lenguaje.  Pueden utilizarse sin calificación en el código.  En el siguiente ejemplo se muestra el uso habitual de un comando de manipulación de cadenas de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]:  
   
- [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_1.vb)]  
+ [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   
  En este ejemplo, la función `Mid` realiza una operación directa en `aString` y asigna el valor a `bString`.  
   
@@ -39,14 +39,14 @@ Existen diferentes formas de analizar y manipular las cadenas.  Algunos métodos
 #### Métodos compartidos  
  Un método compartido es un método que se deriva de la propia clase `String` y no necesita una instancia de dicha clase para funcionar.  Estos métodos se pueden calificar con el nombre de la clase \(`String`\) en lugar de hacerlo con una instancia de la clase `String`.  Por ejemplo:  
   
- [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_2.vb)]  
+ [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
   
  En el ejemplo anterior, el método <xref:System.String.Copy%2A?displayProperty=fullName> es un método estático, que actúa sobre una expresión dada y asigna el valor resultante a `bString`.  
   
 #### Métodos de instancia  
  En contraste, los métodos de instancia se derivan de una instancia concreta de `String` y deben calificarse con el nombre de la instancia.  Por ejemplo:  
   
- [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_3.vb)]  
+ [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
   
  En este ejemplo, el método <xref:System.String.Substring%2A?displayProperty=fullName> es un método de la instancia de `String` \(es decir, `aString`\).  Realiza una operación en `aString` y asigna ese valor a `bString`.  
   

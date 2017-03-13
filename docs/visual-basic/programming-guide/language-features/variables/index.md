@@ -33,7 +33,7 @@ Al realizar cálculos con [!INCLUDE[vbprvb](../../../../csharp/programming-guide
 ## Asignar valores  
  Para efectuar cálculos y asignar el resultado a una variable, se utilizan instrucciones de asignación, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  El signo igual \(`=`\) de este ejemplo es un operador de asignación, no un operador de igualdad.  El valor se asigna a la variable `applesSold`.  

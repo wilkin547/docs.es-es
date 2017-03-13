@@ -10,7 +10,7 @@ En este ejemplo se muestra cómo realizar una consulta simple en una lista de ob
 ## Ejemplo  
  La consulta siguiente devuelve los alumnos que obtuvieron una puntuación de 90 o más en su primer examen.  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-query-a-collection-of-objects_1.cs)]  
   
  Esta consulta es deliberadamente simple para permitirle experimentar.  Por ejemplo, puede probar más predicados en la cláusula `where` o utiliza una cláusula `orderby` para ordenar los resultados.  
   

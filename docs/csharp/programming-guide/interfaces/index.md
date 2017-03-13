@@ -23,7 +23,7 @@ Una interfaz contiene las definiciones de un grupo de funcionalidades relacionad
   
  Defina una interfaz mediante usando palabra clave [interface](../../../csharp/language-reference/keywords/interface.md), como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
  Cualquier clase o estructura que implementa la interfaz <xref:System.IEquatable%601> debe contener una definición para un método <xref:System.IEquatable%601.Equals%2A> que coincida con la firma que la interfaz especifica.  Como resultado, puede contar con una clase que implementa `IEquatable<T>` para contener un método `Equals` con el que una instancia de la clase puede determinar si es igual a otra instancia de la misma clase.  
   
@@ -39,7 +39,7 @@ Una interfaz contiene las definiciones de un grupo de funcionalidades relacionad
   
  En el ejemplo siguiente se muestra una implementación de la interfaz IEquatable\<T\>.  La clase de implementación `Car` debe proporcionar una implementación del método <xref:System.IEquatable%601.Equals%2A>.  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_2.cs)]  
+ [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_2.cs)]  
   
  Las propiedades y los indizadores de una clase pueden definir descriptores de acceso adicionales para una propiedad o indizador que estén definidos en una interfaz.  Por ejemplo, una interfaz puede declarar una propiedad que tenga un descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md).  La clase que implementa la interfaz puede declarar la misma propiedad con un descriptor de acceso `get` y [set](../../../csharp/language-reference/keywords/set.md).  Sin embargo, si la propiedad o el indizador usan una implementación explícita, los descriptores de acceso deben coincidir.  Para obtener más información sobre la implementación explícita, vea [Implementación explícita de interfaz](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) y [Propiedades de interfaz](../../../csharp/programming-guide/classes-and-structs/interface-properties.md).  
   

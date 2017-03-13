@@ -22,7 +22,7 @@ caps.handback.revision: 28
 # espacio de nombres (Referencia de C#)
 La palabra clave `namespace` se utiliza para declarar un ámbito que contiene un conjunto de objetos relacionados.  Puede utilizar un espacio de nombres para organizar elementos de código y crear global \- tipos únicos.  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## Comentarios  
  Dentro de un espacio de nombres, se pueden declarar uno o varios de los siguientes tipos:  
@@ -45,12 +45,12 @@ La palabra clave `namespace` se utiliza para declarar un ámbito que contiene un
   
  Un espacio de nombres se puede definir en dos o más declaraciones.  Por ejemplo, en el siguiente ejemplo se definen dos clases como parte del espacio de nombres `MyCompany`:  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## Ejemplo  
  El siguiente ejemplo muestra cómo realizar una llamada a un método estático en un espacio de nombres anidado.  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## Para obtener más información  
  Para obtener más información sobre el uso de espacios de nombres, vea los temas siguientes:  

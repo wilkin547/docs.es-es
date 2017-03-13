@@ -42,7 +42,7 @@ Si desea averiguar si una expresión de [String \(Tipo de datos\)](../../../../v
   
      El ejemplo siguiente prueba si `myString` consta exactamente del carácter individual `H`.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
 ### Para hacer coincidir un carácter de la expresión de cadena con respecto a un carácter comodín  
   
@@ -50,7 +50,7 @@ Si desea averiguar si una expresión de [String \(Tipo de datos\)](../../../../v
   
      El ejemplo siguiente prueba si `myString` está compuesto del carácter individual `W` seguido de exactamente dos caracteres de cualquier valor.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
 ### Para hacer coincidir un carácter de la expresión de cadena con respecto a una lista de caracteres  
   
@@ -58,7 +58,7 @@ Si desea averiguar si una expresión de [String \(Tipo de datos\)](../../../../v
   
      El ejemplo siguiente prueba si `myString` está compuesto de cualquier carácter válido seguido por exactamente uno de los caracteres `A`, `C` o `E`.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
      Tenga en cuenta que esta coincidencia distingue entre mayúsculas y minúsculas.  
   
@@ -68,7 +68,7 @@ Si desea averiguar si una expresión de [String \(Tipo de datos\)](../../../../v
   
      El ejemplo siguiente prueba si `myString` incluye los caracteres `num` seguidos por exactamente uno de los caracteres `i`, `j`, `k`, `l`, `m` o `n`.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
      Tenga en cuenta que esta coincidencia distingue entre mayúsculas y minúsculas.  
   
@@ -85,7 +85,7 @@ Si desea averiguar si una expresión de [String \(Tipo de datos\)](../../../../v
   
      El ejemplo siguiente prueba el número de teléfono de siete dígitos `phoneNum` para ver si está formado exactamente por tres números seguidos por un espacio, un guión \(`–`\), un punto \(`.`\) o ningún carácter, seguidos exactamente por cuatro números.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
 ## Vea también  
  [Operadores de comparación](../../../../visual-basic/language-reference/operators/comparison-operators.md)   

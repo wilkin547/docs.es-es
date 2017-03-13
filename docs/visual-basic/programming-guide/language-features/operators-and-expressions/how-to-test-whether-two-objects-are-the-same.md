@@ -32,7 +32,7 @@ Si hay dos variables que hacen referencia a objetos, se puede utilizar el operad
   
 -   Utilice el operador [Is \(Operador\)](../../../../visual-basic/language-reference/operators/is-operator.md) o [IsNot \(Operador\)](../../../../visual-basic/language-reference/operators/isnot-operator.md) con las dos variables como operandos.  
   
-     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-test-whether-two-_1.vb)]  
+     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
   
  Podría ser conveniente tomar ciertas medidas que dependen de si los dos objetos hacen referencia a la misma instancia.  En el ejemplo anterior se compara el control `c` con el control activo en el formulario `f`.  Si no hay un control activo o hay uno que no es la misma instancia de control que `c`, la instrucción `If` genera un error y se vuelve al procedimiento sin procesar la instrucción.  
   

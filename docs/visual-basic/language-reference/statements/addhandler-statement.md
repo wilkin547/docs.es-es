@@ -50,7 +50,7 @@ AddHandler event, AddressOf eventhandler
 >  En los eventos personalizados, la instrucción `AddHandler` invoca al descriptor de acceso `AddHandler` del evento.  Para obtener más información sobre eventos personalizados, vea [Event \(Instrucción\)](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## Ejemplo  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  
   
 ## Vea también  
  [RemoveHandler \(Instrucción\)](../../../visual-basic/language-reference/statements/removehandler-statement.md)   

@@ -59,7 +59,7 @@ result = expression1 & expression2
 ## Ejemplo  
  En este ejemplo se usa el operador `&` para forzar la concatenación de cadenas.  El resultado es un valor de cadena que representa la concatenación de ambos operandos.  
   
- [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
 ## Vea también  
  [&\= \(Operador\)](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

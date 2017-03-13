@@ -36,17 +36,17 @@ Los métodos de extensión permiten a los desarrolladores agregar funcionalidad 
 ### Descripción  
  En el siguiente ejemplo se define una extensión `Print` para el tipo de datos <xref:System.String>.  El método usa `Console.WriteLine` para mostrar una cadena.  El parámetro del método `Print`, `aString`, establece que el método de extensión extiende la clase <xref:System.String>.  
   
- [!code-vb[VbVbalrExtensionMethods#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/StringExtensions.vb#1)]  
+ [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
  Observe que la definición de método de extensión se marca con el atributo de extensión `<Extension()>`.  Marcar el módulo en el que se define el método es opcional, pero se debe marcar cada método de extensión.  <xref:System.Runtime.CompilerServices> debe importarse para poder obtener acceso al atributo de extensión.  
   
  Los métodos de extensión se pueden declarar únicamente dentro de los módulos.  Normalmente, el módulo en el que se define un método de extensión no es el mismo que el módulo en el que se llama.  En su lugar, se importa el módulo que contiene el método de extensión, si fuera necesario, para incluirlo en el ámbito.  Después de que el módulo que contiene `Print` esté en el ámbito, se puede llamar al método como si fuera un método de instancia ordinario que no toma argumentos, como `ToUpper`:  
   
- [!code-vb[VbVbalrExtensionMethods#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class1.vb#2)]  
+ [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
   
  En el ejemplo siguiente, `PrintAndPunctuate`, también es una extensión de <xref:System.String>, esta vez definida con dos parámetros.  El primer parámetro, `aString`, establece que el método de extensión extiende <xref:System.String>.  El segundo parámetro, `punc`, está pensado para ser una cadena de signos de puntuación que se pasa como argumento cuando se llama al método.  El método muestra la cadena seguida de los signos de puntuación.  
   
- [!code-vb[VbVbalrExtensionMethods#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class2.vb#3)]  
+ [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
  Se llama al método enviando un argumento de cadena para `punc`: `example.PrintAndPunctuate(".")`  
   
@@ -120,7 +120,7 @@ End Module
   
  Los métodos de extensión no se consideran en los enlaces en tiempo de ejecución.  En el siguiente ejemplo, la instrucción `anObject.PrintMe()` genera una excepción <xref:System.MissingMemberException>, la misma excepción que se produciría si se eliminara la segunda definición del método de extensión `PrintMe`.  
   
- [!code-vb[VbVbalrExtensionMethods#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class6.vb#9)]  
+ [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
   
 ## Procedimientos recomendados  
  Los métodos de extensión proporcionan una manera conveniente y eficaz de extender un tipo existente.  Sin embargo, para usarlos correctamente se deben tener en cuenta algunos puntos.  Estas consideraciones se aplican principalmente a los autores de bibliotecas de clases, pero podrían afectar a cualquier aplicación que use métodos de extensión.  
@@ -140,23 +140,23 @@ End Module
 ## Métodos de extensión, métodos de instancia y propiedades  
  Cuando un método de instancia dentro del ámbito tiene una firma que es compatible con los argumentos de una instrucción de llamada, se elige el método de instancia de preferencia a cualquier método de extensión.  El método de instancia tiene la prioridad aun cuando el método de extensión tenga una mejor coincidencia.  En el ejemplo siguiente, `ExampleClass` contiene un método de instancia denominado `ExampleMethod` que tiene un parámetro de tipo `Integer`.  El método de extensión `ExampleMethod` extiende `ExampleClass` y tiene un parámetro de tipo `Long`.  
   
- [!code-vb[VbVbalrExtensionMethods#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class4.vb#4)]  
+ [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
   
  La primera llamada a `ExampleMethod` en el código siguiente llama al método de extensión, porque `arg1` es `Long` y sólo es compatible con el parámetro `Long` en el método de extensión.  La segunda llamada a `ExampleMethod` tiene un argumento `Integer`, `arg2`, y llama al método de instancia.  
   
- [!code-vb[VbVbalrExtensionMethods#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class4.vb#5)]  
+ [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
   
  Ahora invierta los tipos de datos de los parámetros en los dos métodos:  
   
- [!code-vb[VbVbalrExtensionMethods#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class5.vb#6)]  
+ [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
   
  Ahora el código de `Main` llama al método de instancia las dos veces.  Esto se debe a que `arg1` y `arg2` tienen una conversión de ampliación a `Long`, y el método de instancia tiene prioridad sobre el método de extensión en ambos casos.  
   
- [!code-vb[VbVbalrExtensionMethods#7](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Class5.vb#7)]  
+ [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
   
  Por lo tanto, un método de extensión no puede reemplazar a un método de instancia existente.  Sin embargo, cuando un método de extensión tiene el mismo nombre que un método de instancia pero las firmas no entran en conflicto, se puede tener acceso a ambos métodos.  Por ejemplo, si la clase `ExampleClass` contiene un método denominado `ExampleMethod` que no toma ningún argumento, se permiten métodos de extensión con el mismo nombre pero con firmas diferentes, como se muestra en el código siguiente.  
   
- [!code-vb[VbVbalrExtensionMethods#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/ConsoleApplication1/Module3.vb#8)]  
+ [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
   
  Los resultados de este código son los siguientes:  
   

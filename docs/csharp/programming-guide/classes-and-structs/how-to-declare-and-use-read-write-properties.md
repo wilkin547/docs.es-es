@@ -25,26 +25,26 @@ Las propiedades proporcionan la comodidad de utilizar miembros de datos público
  Este ejemplo muestra una clase `Person` con dos propiedades: `Name` \(cadena\) y `Age` \(entero\).  Ambas propiedades proporcionan descriptores de acceso `get` y `set`, por lo que se consideran propiedades de lectura y escritura.  
   
 ## Ejemplo  
- [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_1.cs)]  
+ [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_1.cs)]  
   
 ## Programación eficaz  
  En el ejemplo anterior, las propiedades `Name` y `Age` son [public](../../../csharp/language-reference/keywords/public.md) e incluyen un descriptor de acceso `get` y `set`.  Esto permite que cualquier objeto lea y escriba estas propiedades.  Sin embargo, a veces es conveniente excluir uno de los descriptores de acceso.  Por ejemplo, al omitir el descriptor de acceso `set`, la propiedad pasa a ser de sólo lectura:  
   
- [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_2.cs)]  
+ [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_2.cs)]  
   
  Opcionalmente, se puede exponer públicamente un descriptor de acceso pero definir el otro como private o protected.  Para obtener más información, vea [Accesibilidad del descriptor de acceso asimétrico \(Guía de programación de C\#\)](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
  Una vez declaradas las propiedades, se pueden utilizar como si fueran campos de la clase.  Esto permite una sintaxis muy natural, tanto para obtener como para establecer el valor de una propiedad, como se muestra en las siguientes instrucciones:  
   
- [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_3.cs)]  
+ [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_3.cs)]  
   
  Observe que, en un método `set` de una propiedad, se dispone de una variable especial `value`.  Esta variable contiene el valor especificado por el usuario, por ejemplo:  
   
- [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_4.cs)]  
+ [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_4.cs)]  
   
  Observe la sintaxis tan simple que se utiliza para incrementar la propiedad `Age` de un objeto `Person`:  
   
- [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_5.cs)]  
+ [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_5.cs)]  
   
  Si se utilizaron métodos `set` y `get` independientes para modelar las propiedades, el código equivalente tendría el siguiente aspecto:  
   
@@ -54,7 +54,7 @@ person.SetAge(person.GetAge() + 1);
   
  En el siguiente ejemplo, el método `ToString` se reemplaza:  
   
- [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_6.cs)]  
+ [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_6.cs)]  
   
  Observe que `ToString` no se utiliza explícitamente en el programa.  Se invoca de forma predeterminada mediante las llamadas `WriteLine`.  
   

@@ -30,7 +30,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando se desea 
   
      [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)] crea un método de control de eventos vacío y lo agrega al código.  También puede agregar manualmente el código en la vista **Código**.  Por ejemplo, las líneas siguientes de código declaran un método de control de eventos al que se llamará cuando la clase `Form` genere el evento `Load`.  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-subscribe-to-and-_1.cs)]  
+     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      La línea de código que es necesaria para suscribirse al evento también se genera automáticamente con el método `InitializeComponent` en el archivo Form1.Designer.cs del proyecto.  Se asemeja a lo siguiente:  
   

@@ -63,12 +63,12 @@ Inherits basetypenames
 ## Ejemplo  
  En el ejemplo siguiente se utiliza la instrucción `Inherits` para mostrar cómo una clase denominada `thisClass` puede heredar todos los miembros de una clase base denominada `anotherClass`.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
 ## Ejemplo  
  En el ejemplo siguiente se muestra la herencia de varias interfaces.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
  Ahora, la interfaz denominada `thisInterface` incluye todas las definiciones de las interfaces <xref:System.IComparable>, <xref:System.IDisposable> y <xref:System.IFormattable>. Los miembros heredados proporcionan, respectivamente, la comparación específica de tipos de dos objetos, la liberación de recursos asignados y la expresión del valor de un objeto como un elemento de tipo `String`.  Una clase que implementa `thisInterface` debe implementar cada miembro de cada interfaz base.  
   

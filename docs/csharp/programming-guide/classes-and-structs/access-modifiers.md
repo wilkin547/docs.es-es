@@ -36,7 +36,7 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad, que control
   
  En los ejemplos siguientes se muestra cómo especificar modificadores de acceso en un tipo y un miembro:  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_1.cs)]  
+ [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  No todos los tipos o miembros pueden utilizar todos los modificadores de acceso en todos los contextos. Además, en algunos casos, la accesibilidad de un miembro de tipo está restringida por la accesibilidad de su tipo contenedor.  En las secciones siguientes se proporcionan más detalles sobre la accesibilidad.  
   
@@ -62,7 +62,7 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad, que control
   
  Para establecer el nivel de acceso para un miembro de clase o struct, agregue la palabra clave adecuada a la declaración del miembro, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_2.cs)]  
+ [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
 >  El nivel de accesibilidad interno protegido significa protegido O interno, no protegido E interno.  Es decir, se puede tener acceso a un miembro interno protegido desde cualquier clase del mismo ensamblado, incluidas las clases derivadas.  Para limitar la accesibilidad sólo a clases derivadas en el mismo ensamblado, declare la propia clase como interna y declare sus miembros como protegidos.  

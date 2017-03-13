@@ -25,7 +25,7 @@ Un uso común de `catch` y `finally` consiste en obtener y utilizar recursos en 
  Para obtener más información y ejemplos sobre cómo volver a producir las excepciones, vea [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) y [Producir excepciones](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md).  Para obtener más información sobre el bloque de `finally` , vea [intento\-final](../../../csharp/language-reference/keywords/try-finally.md).  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -48,7 +48,7 @@ Al llamar a un procedimiento, se agrega detrás del nombre de procedimiento una 
   
      En el siguiente ejemplo se llama a la función <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
   
-     [!code-vb[VbVbcnProcedures#34](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-pass-arguments-to_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
      El ejemplo anterior proporciona el primer argumento necesario que es la cadena de mensaje que se va a mostrar.  Omite un argumento para el segundo parámetro opcional que especifica los botones que se van a mostrar en el cuadro de mensaje.  Como la llamada no proporciona ningún valor, `MsgBox` utiliza el valor predeterminado, `MsgBoxStyle.OKOnly`, que muestra sólo un botón **Aceptar**.  
   

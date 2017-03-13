@@ -26,7 +26,7 @@ En respuesta a la declaración de una instancia de un tipo anónimo, el compilad
 ## Código generado por compilador  
  En la siguiente definición de `product`, el compilador crea una nueva definición de clase que contiene las propiedades `Name`, `Price` y `OnHand`.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
  La definición de clase contiene definiciones de propiedad similares a la siguiente.  Observe que no hay ningún método `Set` para las propiedades de clave.  Los valores de las propiedades de clave son de sólo lectura.  
   
@@ -75,13 +75,13 @@ End Class
   
      Por ejemplo, en los ejemplos siguientes, `Equals` devuelve `True` sólo para `employee01` y `employee08`.  El comentario situado delante de que cada línea especifica la razón por la que la nueva instancia no coincide con `employee01`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
 -   `GetHashcode` proporciona un algoritmo GetHashCode único correctamente.  El algoritmo utiliza sólo las propiedades de clave para calcular el código hash.  
   
 -   `ToString` devuelve una cadena de valores de propiedad concatenados, como se muestra en el ejemplo siguiente.  Se incluyen tanto las propiedades de clave como las que no lo son.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
  Explícitamente las propiedades con nombre de un tipo anónimo no pueden estar en conflicto con estos métodos generados.  Es decir, no puede utilizar `.Equals`, `.GetHashCode`ni `.ToString` para asignar un nombre a una propiedad.  
   

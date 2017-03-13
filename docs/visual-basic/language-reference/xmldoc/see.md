@@ -42,7 +42,7 @@ Especifica un vínculo a otro miembro.
 ## Ejemplo  
  Este ejemplo utiliza la etiqueta `<see>` en la sección de comentarios `UpdateRecord` para hacer referencia al método `DoesRecordExist`.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/see_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
 ## Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

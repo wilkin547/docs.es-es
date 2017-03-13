@@ -24,7 +24,7 @@ Mediante un bucle `for` , puede ejecutar una instrucción o un bloque de instruc
 ## Ejemplo  
  En el ejemplo siguiente, el valor `i` se escribe en la consola y se incrementa en 1 en cada iteración del bucle.  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/csharp/for_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  La instrucción `for` en el ejemplo anterior realiza las acciones siguientes.  
   
@@ -101,11 +101,11 @@ for (initializer; condition; iterator)
   
  El ejemplo siguiente muestra varias menos opciones comunes: asignando un valor a una variable externa de bucle en la sección de inicializadores, invocando el método `Console.WriteLine` en el inicializador y las secciones de iterador, y cambiar los valores de dos variables en la sección del iterador.  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/csharp/for_2.cs)]  
+ [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  Todas las expresiones que definen una instrucción `for` son opcionales.  Por ejemplo, la siguiente instrucción crea un bucle infinito.  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/csharp/for_3.cs)]  
+ [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

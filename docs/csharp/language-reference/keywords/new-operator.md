@@ -54,7 +54,7 @@ int i = 0;
 ## Ejemplo  
  En el siguiente ejemplo, se crean e inicializan, mediante el operador `new`, un objeto `struct` y un objeto class y, a continuación, se les asignan valores.  Se muestran los valores predeterminados y asignados.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#7)]  
+ [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  Observe en el ejemplo que el valor predeterminado de una cadena es `null`.  Por lo tanto, no se muestra.  
   

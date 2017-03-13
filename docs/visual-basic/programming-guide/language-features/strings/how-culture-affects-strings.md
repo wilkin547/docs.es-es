@@ -53,7 +53,7 @@ En esta página de ayuda se describe cómo [!INCLUDE[vbprvb](../../../../csharp/
   
  Para convertir una fecha a la cadena de la referencia cultural, pase el objeto <xref:System.Globalization.CultureInfo> al método <xref:System.DateTime.ToString%28System.IFormatProvider%29> del objeto de fecha.  Por ejemplo, el código siguiente muestra "07\/04\/2005 00:00:00", independientemente de la configuración de la referencia cultural de la aplicación.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/how-culture-affects-stri_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
 >  Los literales de fecha siempre se interpretan según la referencia cultural inglesa.  
@@ -69,11 +69,11 @@ En esta página de ayuda se describe cómo [!INCLUDE[vbprvb](../../../../csharp/
   
  La función `StrComp` devuelve un entero que indica la relación entre las dos cadenas comparadas basándose en el criterio de ordenación.  Un resultado con un valor positivo indica que la primera cadena es mayor que la segunda.  Un resultado negativo indica que la primera cadena es más pequeña y cero indica igualdad entre las dos cadenas.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
  También puede usar el equivalente en [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] de la función `StrComp`, es decir, el método <xref:System.String.Compare%2A?displayProperty=fullName>.  Éste es un método estático sobrecargado de la clase de cadena base.  En el siguiente ejemplo se ilustra cómo se utiliza este método:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
  Para un control más estricto sobre la realización de las comparaciones, puede utilizar sobrecargas adicionales del método <xref:System.String.Compare%2A>.  Con el método <xref:System.String.Compare%2A?displayProperty=fullName>, puede utilizar el argumento `comparisonType` para especificar qué tipo de comparación se debe utilizar.  
   

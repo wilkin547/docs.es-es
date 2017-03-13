@@ -38,33 +38,33 @@ Este tutorial muestra cómo utilizar la clase <xref:System.Security.Cryptography
   
 1.  Crear la clase `Simple3Des` para encapsular los métodos de cifrado y descifrado.  
   
-     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_1.vb)]  
+     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
   
 2.  Agregue una importación de espacio de nombres de criptografía al principio del archivo que contiene la clase `Simple3Des` .  
   
-     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_2.vb)]  
+     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
   
 3.  En la clase `Simple3Des` , agregue un campo privado para almacenar el proveedor de servicios criptográficos 3DES.  
   
-     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_3.vb)]  
+     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
   
 4.  Agregar un método privado que cree una matriz de bytes de una longitud especificada a partir del hash de la clave especificada.  
   
-     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_4.vb)]  
+     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
   
 5.  Agregar un constructor para inicializar el proveedor de servicios criptográficos 3DES.  
   
      El parámetro `key` controla los métodos `EncryptData` y `DecryptData`.  
   
-     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_5.vb)]  
+     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
   
 6.  Agregue un método público que cifre una cadena.  
   
-     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_6.vb)]  
+     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
   
 7.  Agregue un método público que descifre una cadena.  
   
-     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_7.vb)]  
+     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
   
      La clase contenedora se puede utilizar ahora para proteger los activos del usuario.  En este ejemplo, se utiliza para almacenar con seguridad los datos privados del usuario en un archivo de texto públicamente accesible.  
   
@@ -72,11 +72,11 @@ Este tutorial muestra cómo utilizar la clase <xref:System.Security.Cryptography
   
 1.  En una clase independiente, agregue un método que utilice el método `EncryptData` del contenedor para cifrar una cadena y escribirla en la carpeta Mis documentos del usuario.  
   
-     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_8.vb)]  
+     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
   
 2.  Agregue un método que lea la cadena cifrada de la carpeta Mis documentos del usuario y descifre la cadena con el método `DecryptData` del contenedor.  
   
-     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_9.vb)]  
+     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
   
 3.  Agregue el código de la interfaz de usuario para llamar a los métodos `TestEncoding` y `TestDecoding`.  
   

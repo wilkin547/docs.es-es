@@ -52,12 +52,12 @@ public const int c2 = c1 + 100;
 >  La palabra clave [readonly](../../../csharp/language-reference/keywords/readonly.md) difiere de la palabra clave `const`.  Un campo `const` solo se puede inicializar en la declaración del campo.  Un campo `readonly` se puede inicializar en la declaración o en un constructor.  Por lo tanto, los campos `readonly` pueden tener diferentes valores en función del constructor que se use.  Además, aunque un campo `const` es una constante en tiempo de compilación, el campo `readonly` se puede usar para constantes en tiempo de ejecución, como en esta línea: `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`  
   
 ## Ejemplo  
- [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#5)]  
+ [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
   
 ## Ejemplo  
  Este ejemplo demuestra cómo usar las constantes como variables locales.  
   
- [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#6)]  
+ [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

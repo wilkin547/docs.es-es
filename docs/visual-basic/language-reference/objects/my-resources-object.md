@@ -61,29 +61,29 @@ Proporciona propiedades y clases para obtener acceso a los recursos de la aplica
 ## Ejemplo  
  Este ejemplo establece el título de un formulario en el recurso de cadena denominado `Form1Title` en el archivo de recursos de la aplicación.  Para que el ejemplo funcione, la aplicación debe tener una cadena denominada `Form1Title` en el archivo de recursos.  Para obtener más información, vea [How to: Add or Remove Resources](http://msdn.microsoft.com/es-es/7b77bc06-3952-4799-b029-def3f8f7f88d).  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
 ## Ejemplo  
  Este ejemplo establece el icono del formulario en el icono denominado `Form1Icon` que está almacenado en el archivo de recursos de la aplicación.  Para que el ejemplo funcione, la aplicación debe tener un icono denominado `Form1Icon` en el archivo de recursos.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#2)]  
+ [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
   
 ## Ejemplo  
  Este ejemplo establece la imagen de fondo de un formulario en el recurso de imagen denominado `Form1Background`, que está en el archivo de recursos de la aplicación.  Para que este ejemplo funcione, la aplicación debe tener un recurso de imagen denominado `Form1Background` en el archivo de recursos.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#3)]  
+ [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
   
 ## Ejemplo  
  Este ejemplo reproduce el sonido que se almacena como un recurso de sonido denominado `Form1Greeting` en el archivo de recursos de la aplicación.  Para que el ejemplo funcione, la aplicación debe tener un recurso de sonido denominado `Form1Greeting` en el archivo de recursos.  El método `My.Computer.Audio.Play` está disponible sólo para las aplicaciones de Windows Forms.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#4)]  
+ [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
   
 ## Ejemplo  
  Este ejemplo recupera la versión de referencia cultural francesa de un recurso de cadena de la aplicación.  Se llama al recurso `Message`.  Para cambiar la referencia cultural que el objeto de `My.Resources` usa, el ejemplo utiliza <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  Para que este ejemplo funcione, la aplicación debe tener una cadena denominada `Message` en el archivo de recursos, y debe tener la versión de referencia cultural francesa de ese archivo de recursos, Resources.fr\-FR.resx.  Para obtener más información, vea [How to: Add or Remove Resources](http://msdn.microsoft.com/es-es/7b77bc06-3952-4799-b029-def3f8f7f88d).  Si la aplicación no tiene la versión de referencia cultural francesa del archivo de recursos, el objeto de `My.Resource` recupera el recurso del archivo de recursos de referencia cultural predeterminado.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#10)]  
+ [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
 ## Vea también  
  [How to: Add or Remove Resources](http://msdn.microsoft.com/es-es/7b77bc06-3952-4799-b029-def3f8f7f88d)   

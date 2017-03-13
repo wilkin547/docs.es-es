@@ -34,7 +34,7 @@ Los destructores se utilizan para destruir instancias de clases.
   
  Por ejemplo, el siguiente código muestra una declaración de un destructor para la clase `Car`:  
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
   
  El destructor llama implícitamente al método <xref:System.Object.Finalize%2A> sobre la clase base del objeto.  Por lo tanto, el código de destructor anterior se traduce implícitamente al siguiente código:  
   
@@ -78,7 +78,7 @@ protected override void Finalize()
 ## Ejemplo  
  En el siguiente ejemplo se crean tres clases que forman una cadena de herencia.  La clase `First` es la clase base, `Second` se deriva de `First` y `Third` se deriva de `Second`.  Las tres tienen destructores.  En `Main()`, se crea una instancia de la clase más derivada.  Cuando ejecute el programa, observe que se llama a los destructores de las tres clases automáticamente y en orden, desde la más derivada hasta la menos derivada.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## Especificación del lenguaje C\#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

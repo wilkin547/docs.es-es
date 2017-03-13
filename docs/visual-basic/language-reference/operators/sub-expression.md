@@ -63,7 +63,7 @@ End Sub
 ## Ejemplo  
  A continuación, se muestra un ejemplo de una expresión lambda que escribe un valor en la consola.  En el ejemplo se muestra la sintaxis de expresiones lambda de una sola línea y de varias líneas para una subrutina.  Para obtener más ejemplos, vea [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
 ## Vea también  
  [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)   
