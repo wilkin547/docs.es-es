@@ -1,5 +1,0 @@
-# [Main() y argumentos de la línea de comandos](main-and-command-line-arguments.md)
-## [Argumentos de la línea de comandos](command-line-arguments.md)
-## [Cómo: Mostrar argumentos de la línea de comandos](how-to-display-command-line-arguments.md)
-## [Cómo: Obtener acceso a argumentos de la línea de comandos utilizando foreach](how-to-access-command-line-arguments-using-foreach.md)
-## [Valores devueltos Main()](main-return-values.md)

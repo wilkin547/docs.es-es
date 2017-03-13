@@ -1,5 +1,0 @@
-# [Utilizar delegados](using-delegates.md)
-# [Delegados con métodos con nombre y delegados con métodos anónimos](delegates-with-named-vs-anonymous-methods.md)
-# [Delegados](index.md)
-# [Cómo: Declarar un delegado, crear instancias del mismo y utilizarlo](how-to-declare-instantiate-and-use-a-delegate.md)
-# [Cómo: Combinar delegados (delegados de multidifusión)](how-to-combine-delegates-multicast-delegates.md)

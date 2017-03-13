@@ -1,6 +1,0 @@
-# [Desarrollo con la función My](index.md)
-# [Instancias de objeto predeterminadas proporcionadas por My.Forms y My.WebServices](default-object-instances-provided-by-my-forms-and-my-webservices.md)
-# [Realizar tareas con My.Application, My.Computer y My.User](performing-tasks-with-my-application-my-computer-and-my-user.md)
-# [Cómo My depende del tipo de proyecto](how-my-depends-on-project-type.md)
-# [Desarrollo rápido de aplicaciones con My.Resources y My.Settings](rapid-application-development-with-my-resources-and-my-settings.md)
-# [Información general sobre el modelo de aplicaciones de Visual Basic](overview-of-the-visual-basic-application-model.md)

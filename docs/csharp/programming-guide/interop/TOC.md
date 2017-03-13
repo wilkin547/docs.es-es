@@ -1,7 +1,0 @@
-# [Cómo: Utilizar la invocación de plataforma para reproducir un archivo de sonido](how-to-use-platform-invoke-to-play-a-wave-file.md)
-# [Información general sobre interoperabilidad](interoperability-overview.md)
-# [Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM](how-to-use-indexed-properties-in-com-interop-rogramming.md)
-# [Clase COM de ejemplo](example-com-class.md)
-# [Tutorial: Programación de Office](walkthrough-office-programming.md)
-# [Interoperabilidad](interoperability.md)
-# [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](how-to-access-office-onterop-objects.md)
