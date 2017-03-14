@@ -1,0 +1,13 @@
+# [Tutoriales](index.md)
+## [🔧 Utilización de Visual Studio para crear, depurar e implementar una aplicación](create-debug-deploy.md)
+## [🔧 Utilización de C# interactivo para explorar y experimentar](exploring-with-csharp-interactive.md)
+## [🔧 Creación de bibliotecas portátiles](creating-portable-libraries.md)
+## [🔧 Programación asincrónica de la interfaz de usuario](asynchronous-ui-programming.md)
+## [🔧 Programación asincrónica del servidor](asynchronous-server-programming.md)
+## [🔧 Programación simultánea](concurrent-programming.md)
+## [Herencia en C# y .NET](inheritance.md)
+## [Aplicación de consola](console-teleprompter.md)
+## [Cliente REST](console-webapiclient.md)
+## [Trabajar con LINQ](working-with-linq.md)
+## [Microservicios alojados en Docker](microservices.md)
+   
