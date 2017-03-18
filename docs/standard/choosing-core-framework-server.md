@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
-ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
+ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
+ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
+ms.lasthandoff: 02/23/2017
 
 ---
 
@@ -53,7 +54,7 @@ Son muchas las plataformas de infraestructura que podría utilizar. Para sistema
 
 ### <a name="containers"></a>Contenedores
 
-Los contenedores se usan normalmente en combinación con una arquitectura de microservicios, aunque también se pueden usar para contener aplicaciones o servicio web que siguen cualquier modelo de arquitectura. Aunque puede usar .NET Framework con contenedores de Windows, la modularidad y ligereza de .NET Core la convierten en perfecta para los contenedores.  Al crear e implementar un contenedor, el tamaño de su imagen es bastante más pequeño con .NET Core que con .NET Framework.  Como es multiplataforma, puede implementar aplicaciones de servidor en contenedores de Linux Docker, por ejemplo.
+Los contenedores se usan normalmente en combinación con una arquitectura de microservicios, aunque también se pueden usar para contener aplicaciones o servicio web que siguen cualquier modelo de arquitectura. Aunque puede usar .NET Framework con contenedores de Windows, la modularidad y ligereza de .NET Core la convierten en perfecta para los contenedores. Al crear e implementar un contenedor, el tamaño de su imagen es bastante más pequeño con .NET Core que con .NET Framework. Como es multiplataforma, puede implementar aplicaciones de servidor en contenedores de Linux Docker, por ejemplo.
 
 Luego puede hospedar los contenedores de Docker en su propia infraestructura de Linux o Windows, o usar un servicio en la nube como [Azure Container Service](https://azure.microsoft.com/services/container-service/) que puede administrar, organizar y escalar la aplicación basada en contenedor en la nube.
 
@@ -107,9 +108,4 @@ Algunas plataformas de terceros o de Microsoft no son compatibles con .NET Core.
 * [Portabilidad de .NET Framework a .NET Core](../core/porting/index.md)
 * [Guía de .NET Framework en Docker](../framework/index.md)
 * [Introducción a los componentes de .NET](components.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

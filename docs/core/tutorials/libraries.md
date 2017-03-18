@@ -11,15 +11,16 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 7f419e1fc2c9f442b08e19ede4e84f9cf6843a94
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 94b6d965c7a39a02723b641f6551e54dd4df1f07
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desarrollo de bibliotecas con herramientas multiplataforma
 
-**Algunos detalles están sujetos a cambio a medida que evoluciona la cadena de herramientas.**
+> [!WARNING]
+> Este tema todavía no se ha actualizado a la última versión de las herramientas.
 
 En este artículo se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI.  La CLI proporciona una experiencia eficaz y de bajo nivel que funciona en todos los SO compatibles.  De todos modos puede seguir compilando bibliotecas con Visual Studio; si esa es la experiencia de su preferencia, [consulte la guía sobre Visual Studio](libraries-with-vs.md).
 

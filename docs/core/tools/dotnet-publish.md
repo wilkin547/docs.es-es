@@ -4,51 +4,49 @@ description: El comando dotnet-publish publica el proyecto de .NET Core en un di
 keywords: dotnet-publish, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
+ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 1cf1611ab83874ad44855521d21040d102206338
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 78487673d8fa07286605fb806f30083747b17386
+ms.lasthandoff: 03/07/2017
 
 ---
-
 #<a name="dotnet-publish"></a>dotnet-publish
 
-> [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión de .NET Core Tools RC4, consulte el tema [dotnet-publish (.NET Core Tools RC4)](../preview3/tools/dotnet-publish.md).
-
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet-publish`: empaqueta la aplicación y todas sus dependencias en una carpeta y la deja lista para publicarse.
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet publish [project] 
-    [--help] [--framework]  
-    [--runtime] [--build-base-path] [--output]  
-    [--version-suffix] [--configuration] [--native-subdirectory] [--no-build]`
+```
+dotnet publish [project] [-f|--framework] [-r|--runtime] [-o|--output] [-c|--configuration] [--version-suffix] [-v|--verbosity]
+dotnet publish [-h|--help]
+```
 
 ## <a name="description"></a>Descripción
 
-`dotnet publish` compila la aplicación, lee sus dependencias especificadas en el archivo [project.json](project-json.md) y publica el conjunto resultante de archivos en un directorio. 
+`dotnet publish` compila la aplicación, lee sus dependencias especificadas en el archivo project.json y publica el conjunto resultante de archivos en un directorio. La salida contendrá lo siguiente:
 
-Dependiendo del tipo de aplicación portátil, el directorio resultante contendrá lo siguiente:
+1. Código de lenguaje intermedio (IL) en un ensamblado con una extensión `*.dll`.
+2. Archivo *deps.json* que contiene todas las dependencias del proyecto. 
+3. Archivo *Runtime.config.json* que especifica el entorno de tiempo de ejecución compartido que espera la aplicación, así como otras opciones de configuración para el tiempo de ejecución (por ejemplo, el tipo de recolección de elementos no utilizados).
+4. Todas las dependencias de la aplicación. Estas se copian de la caché de NuGet y a la carpeta de salida. 
 
-1. *Aplicación portátil*: código de lenguaje intermedio (IL) de la aplicación y todas las dependencias administradas de la aplicación.
-    * *Aplicación portátil con dependencias nativas*: igual que anteriormente con un subdirectorio para la plataforma admitida de cada dependencia nativa. 
-2. *Aplicación autocontenida*: igual que anteriormente más el tiempo de ejecución completo para la plataforma de destino.
+El resultado del comando `dotnet publish` está listo para implementarse en una máquina remota para su ejecución y es la única manera compatible oficialmente para preparar la aplicación que se va a implementar en otra máquina (por ejemplo, un servidor) para su ejecución. Dependiendo del tipo de implementación que especifique el proyecto, la máquina remota tendrá que tener el entorno de tiempo de ejecución compartido de .NET Core instalado. Para más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).
 
-Para más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).
+## <a name="arguments"></a>Argumentos
+
+`project` 
+
+El proyecto para publicar, cuyo valor predeterminado es el directorio actual si no se especifica `project`. 
 
 ## <a name="options"></a>Opciones
-
-`[project]` 
-
-El proyecto para publicar, cuyo valor predeterminado es el directorio actual si no se especifica `[project]`. Este valor puede ser una ruta de acceso al archivo [project.json](project-json.md) o al directorio del proyecto que contiene el archivo [project.json](project-json.md). Si no se encuentra ningún archivo [project.json](project-json.md), `dotnet publish` produce un error. 
 
 `-h|--help`
 
@@ -56,55 +54,46 @@ Imprime una corta ayuda para el comando.
 
 `-f|--framework <FRAMEWORK>`
 
-Publica la aplicación para un identificador de marco determinado (FID). Si no se especifica, el FID se lee de [project.json](project-json.md#frameworks). Si no se encuentra ningún marco válido, el comando produce un error. Si se encuentran varios marcos válidos, el comando publica para todos los marcos válidos. 
+Publica la aplicación para la plataforma de destino especificada. La plataforma de destino tiene que especificarse en el archivo del proyecto.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica la aplicación para un determinado entorno de tiempo de ejecución. Para obtener una lista de identificadores de tiempo de ejecución (RID) que puede usar, consulte el [catálogo de RID](../rid-catalog.md).
-
-`-b|--build-base-path <OUTPUT_DIRECTORY>`
-
-Directorio en el que se van a colocar las salidas temporales.
+Publica la aplicación para un determinado entorno de tiempo de ejecución. Esto se usa al crear una [implementación autocontenida](../deploying/index.md#self-contained-deployments-scd). Para obtener una lista de identificadores de tiempo de ejecución (RID) que puede usar, consulte el [catálogo de RID](../rid-catalog.md). El valor predeterminado es publicar una [aplicación dependiente del marco](../deploying/index.md#framework-dependent-deployments-fdd).
 
 `-o|--output <OUTPUT_PATH>`
 
 Especifique la ruta donde colocar el directorio. Si no se especifica, se toma como predeterminada *_./bin/[configuration]/[framework]/_* para aplicaciones portátiles o *_./bin/[configuration]/[framework]/[runtime]_* para implementaciones autocontenidas.
 
-`--version-suffix [VERSION_SUFFIX]`
+`-c|--configuration {Debug|Release}`
 
-Define qué `*` debe reemplazarse por el campo de versión en el archivo project.json.
+Configuración para usar al compilar el proyecto. El valor predeterminado es `Debug`.
 
-`-c|--configuration [Debug|Release]`
+`--version-suffix <VERSION_SUFFIX>`
 
-Configuración para usar al publicar. El valor predeterminado es `Debug`.
+Define qué `*` debe reemplazarse por el campo de versión en el archivo del proyecto.
 
-`[--native-subdirectory]` Mecanismo temporal para incluir subdirectorios de recursos nativos de paquetes de dependencia en la salida. 
+`-v|--verbosity <LEVEL>`
 
-`[--no-build]` No compila proyectos antes de publicarlos.
+Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
 ## <a name="examples"></a>Ejemplos
 
-Publicación de una aplicación mediante el marco que se encuentra en `project.json`. Si `project.json` contiene el nodo [runtimes](project-json.md#runtimes), se publica para el RID de la plataforma actual.
+Publicar el proyecto que se ha encontrado en el directorio actual:
 
 `dotnet publish`
 
-Publicación de la aplicación mediante el archivo [project.json](project-json.md) especificado:
+Publicar la aplicación con el archivo del proyecto especificado:
 
-`dotnet publish ~/projects/app1/project.json`
+`dotnet publish ~/projects/app1/app1.csproj`
     
-Publicación de la aplicación actual con el marco `netcoreapp1.0`:
+Publicar el proyecto que se ha encontrado en el directorio actual con el marco `netcoreapp1.1`:
 
-`dotnet publish --framework netcoreapp1.0`
+`dotnet publish --framework netcoreapp1.1`
     
-Publicación de la aplicación actual con el marco `netcoreapp1.0` y el entorno de tiempo de ejecución para `OS X 10.10` (este RID tiene que existir en el nodo `project.json` [runtimes](project-json.md#runtimes)):
+Publica la aplicación actual con el marco `netcoreapp1.1` y el entorno de tiempo de ejecución para `OS X 10.10` (este RID tiene que existir en el archivo de proyecto):
 
-`dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
+`dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
 ## <a name="see-also"></a>Vea también
 * [Marcos](../../standard/frameworks.md)
 * [Catálogo de identificadores de tiempo de ejecución (RID)](../rid-catalog.md)
-
-
-<!--HONumber=Feb17_HO2-->
-
-
