@@ -1,34 +1,51 @@
 ---
-title: "Mid (Instrucci&#243;n) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.MidB"
-  - "vb.Mid"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Mid (instrucción)"
-  - "cadenas [Visual Basic], reemplazar"
-  - "cadenas [Visual Basic], subcadenas"
-  - "subcadenas, Mid (instrucción)"
+title: "Mid (instrucción) | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.MidB
+- vb.Mid
+dev_langs:
+- VB
+helpviewer_keywords:
+- substrings, Mid statement
+- strings [Visual Basic], substrings
+- Mid statement
+- strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Mid (Instrucci&#243;n)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e385d6838daa16d45903c6b270fc47ad88797845
+ms.lasthandoff: 03/13/2017
 
-Sustituye un número especificado de caracteres de una variable `String` por los caracteres de otra cadena.  
+---
+# <a name="mid-statement"></a>Mid (Instrucción)
+Reemplaza un número especificado de caracteres de un `String` variables con caracteres de otra cadena.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Mid( _  
@@ -38,46 +55,46 @@ Mid( _
 ) = StringExpression  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `Target`  
- Obligatorio.  Nombre de la variable `String` que se va a modificar.  
+ Obligatorio. Nombre de la `String` variable va a modificar.  
   
  `Start`  
- Obligatorio.  Expresión `Integer`.  Posición de carácter de `Target` donde comienza el reemplazo del texto.  `Start` usa un índice basado en uno.  
+ Obligatorio. `Integer`expresión. Posición de carácter de `Target` donde comienza el reemplazo de texto. `Start`utiliza un índice basado en uno.  
   
  `Length`  
- Opcional.  Expresión `Integer`.  Número de caracteres que se va a reemplazar.  Si se omite, se utilizará `String` por completo.  
+ Opcional. `Integer`expresión. Número de caracteres que se va a reemplazar. Si omite todos `String` se utiliza.  
   
  `StringExpression`  
- Obligatorio.  Expresión de tipo `String` que reemplaza parte de `Target`.  
+ Obligatorio. `String`Expresión que reemplaza parte de `Target`.  
   
-## Excepciones  
+## <a name="exceptions"></a>Excepciones  
   
-|Tipo de excepción|Condition|  
-|-----------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` \<\= 0 ó `Length` \<0.|  
+|Tipo de excepción|Condición|  
+|--------------------|---------------|  
+|<xref:System.ArgumentException></xref:System.ArgumentException>|`Start`<= 0="" or=""></=>`Length`< 0.></ 0.>|  
   
-## Comentarios  
- El número de caracteres reemplazado siempre es menor o igual que el número de caracteres de `Target`.  
+## <a name="remarks"></a>Comentarios  
+ El número de caracteres reemplazados siempre es menor o igual que el número de caracteres en `Target`.  
   
- Visual Basic tiene una función <xref:Microsoft.VisualBasic.Strings.Mid%2A> y una instrucción `Mid`.  Ambos elementos actúan en un número especificado de caracteres de una cadena, pero la función `Mid` devuelve los caracteres, en tanto que la instrucción `Mid` los reemplaza.  Para obtener más información, vea <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic tiene un <xref:Microsoft.VisualBasic.Strings.Mid%2A>(función) y un `Mid` instrucción.</xref:Microsoft.VisualBasic.Strings.Mid%2A> Estos elementos funcionan en un número especificado de caracteres de una cadena, pero la `Mid` función devuelve los caracteres mientras el `Mid` instrucción reemplaza los caracteres. Para obtener más información, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.</xref:Microsoft.VisualBasic.Strings.Mid%2A>  
   
 > [!NOTE]
->  La instrucción `MidB` de versiones anteriores de Visual Basic devuelve una subcadena en bytes, en lugar de caracteres.  Se utiliza principalmente para convertir cadenas en aplicaciones de juegos de caracteres de doble byte \(DBCS\).  Todas las cadenas de Visual Basic están en Unicode y ya no se admite `MidB`.  
+>  El `MidB` instrucción de versiones anteriores de Visual Basic devuelve una subcadena en bytes, en lugar de caracteres. Se utiliza principalmente para convertir cadenas en aplicaciones de caracteres de doble byte (DBCS). Todas las cadenas de Visual Basic están en Unicode, y `MidB` ya no se admite.  
   
-## Ejemplo  
- En este ejemplo se utiliza la instrucción `Mid` para reemplazar un número de caracteres específico de una variable de cadena por los caracteres de otra cadena.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se utiliza la `Mid` instrucción para reemplazar un número especificado de caracteres de una variable de cadena con caracteres de otra cadena.  
   
- [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings&#5;](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
-## Requisitos  
- **Espacio de nombres:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>Requisitos  
+ **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Módulo:** `Strings`  
+ **Módulo:**`Strings`  
   
- **Ensamblado:** [!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime-md.md)]  
+ **Ensamblado:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>   
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.VisualBasic.Strings.Mid%2A></xref:Microsoft.VisualBasic.Strings.Mid%2A>   
  [Cadenas](../../../visual-basic/programming-guide/language-features/strings/index.md)   
  [Introducción a las cadenas en Visual Basic](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

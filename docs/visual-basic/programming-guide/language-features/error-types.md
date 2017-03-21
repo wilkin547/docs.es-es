@@ -1,44 +1,60 @@
 ---
-title: "Tipos de error (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-helpviewer_keywords: 
-  - "errores [Visual Basic], lógicos"
-  - "errores [Visual Basic], sintaxis"
-  - "errores [Visual Basic], tipos"
-  - "excepciones, tipos"
-  - "errores lógicos, Visual Basic"
-  - "errores en tiempo de ejecución, tipos de error"
-  - "sintaxis: errores, Visual Basic"
+title: Tipos de error (Visual Basic) | Documentos de Microsoft
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- exceptions, types
+- errors [Visual Basic], types
+- errors [Visual Basic], logic
+- errors [Visual Basic], syntax
+- logic errors, Visual Basic
+- run-time errors, types of errors
+- syntax errors, Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Tipos de error (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d48756b74baf757f043e68124d8b65c2f613e595
+ms.lasthandoff: 03/13/2017
 
-En [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], los errores \(también denominados *excepciones*\) se dividen en tres categorías: errores de sintaxis, errores en tiempo de ejecución y errores lógicos.  
+---
+# <a name="error-types-visual-basic"></a>Tipos de error (Visual Basic)
+En [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], errores (también denominada *excepciones*) se dividen en tres categorías: errores de sintaxis, errores en tiempo de ejecución y errores lógicos.  
   
-## Errores de sintaxis  
- Los *errores de sintaxis* son aquellos que aparecen mientras se escribe el código.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] comprueba el código mientras se escribe en la ventana **Editor de código** y alerta si se comete un error, por ejemplo, si se escribe mal una palabra o se usa un elemento del lenguaje de forma incorrecta.  Los errores sintácticos son los errores más frecuentes.  Se pueden corregir fácilmente en el entorno de codificación en cuanto se producen.  
+## <a name="syntax-errors"></a>Errores de sintaxis  
+ *Errores de sintaxis* son aquellos que aparecen mientras escribe el código. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]comprueba el código mientras se escribe en el **Editor de código** ventana y le avisa si comete un error, como escribir mal una palabra o uso incorrecto de un elemento del lenguaje. Errores de sintaxis son el tipo más común de errores. Puede corregir fácilmente en el entorno de codificación en cuanto se producen.  
   
 > [!NOTE]
->  La instrucción `Option Explicit` es una medida para evitar los errores de sintaxis.  Le obliga a declarar, por anticipado, todas las variables que se vayan a utilizar en la aplicación.  De este modo, cuando se utilicen las variables en el código, cualquier error tipográfico que se produzca se capturará de forma inmediata, y podrá corregirse.  
+>  El `Option Explicit` instrucción es una medida para evitar errores de sintaxis. Obliga a declarar, por anticipado, todas las variables que se utilizará en la aplicación. Por lo tanto, cuando esas variables se utilizan en el código, cualquier error tipográfico se detecta inmediatamente y se puedan solucionar.  
   
-## Errores en tiempo de ejecución  
- Los *errores en tiempo de ejecución* son aquellos que aparecen solamente después de la compilación y la ejecución del código.  Pueden darse errores de este tipo, por ejemplo, en fragmentos de código aparentemente correctos, por no presentar errores sintácticos, pero que no se ejecutan correctamente.  Por ejemplo, podría escribir correctamente una línea de código que abre un archivo.  Pero, si el archivo está dañado, la aplicación no podrá ejecutar la función `Open` y se detendrá su ejecución.  La mayoría de los errores de este tipo pueden corregirse modificando el código que presenta errores, para después compilarlo y volver a ejecutarlo.  
+## <a name="run-time-errors"></a>Errores en tiempo de ejecución  
+ *Errores en tiempo de ejecución* son aquellos que aparecen después de compilar y ejecutar el código. Fragmentos de código que parece ser correcta, ya que no tiene errores de sintaxis, pero que no se ejecutará. Por ejemplo, podría escribir correctamente una línea de código para abrir un archivo. Pero si el archivo está dañado, la aplicación no puede ejecutar el `Open` (función) y lo deja de ejecutarse. Puede corregir la mayoría de los errores de tiempo de ejecución por volver a escribir el código defectuoso y, a continuación, volver a compilar y volver a ejecutarla.  
   
-## Errores lógicos  
- Los *errores lógicos* son aquellos que aparecen cuando la aplicación está en funcionamiento.  Son a menudo resultados no deseados o inesperados en respuesta a acciones del usuario.  Por ejemplo, una clave mal escrita u otra influencia externa podría hacer que la aplicación dejase de funcionar aún siendo correctos los parámetros, o que simplemente no funcionase.  Por lo general, los errores lógicos son los más difíciles de corregir, puesto que no siempre está claro dónde se originan.  
+## <a name="logic-errors"></a>Errores lógicos  
+ *Errores lógicos* son aquellos que aparecen cuando la aplicación está en uso. Son la mayoría de los resultados inesperada o no deseada a menudo en respuesta a las acciones del usuario. Por ejemplo, una clave mal escrita u otra influencia externa podría hacer que la aplicación deje de funcionar dentro de los parámetros esperados, o por completo. Errores lógicos generalmente son el tipo más difícil de solucionar, ya que no siempre está claro dónde se originan.  
   
-## Vea también  
- [Try...Catch...Finally \(Instrucción\)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [Conceptos básicos del depurador](/visual-studio/debugger/debugger-basics)
+## <a name="see-also"></a>Vea también  
+ [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
+ [Conceptos básicos del depurador](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)

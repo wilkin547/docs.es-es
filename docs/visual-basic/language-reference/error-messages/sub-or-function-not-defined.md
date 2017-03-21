@@ -1,45 +1,61 @@
 ---
-title: "Sub o Function no definida (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID35"
-dev_langs: 
-  - "VB"
+title: Sub o Function no definida (Visual Basic) | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbrID35
+dev_langs:
+- VB
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Sub o Function no definida (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7d32bc9c8f13b245e6333c4460cab541f6e9409e
+ms.lasthandoff: 03/13/2017
 
-Para realizar una llamada a `Sub` o `Function` deben definirse.  Las causas posibles de este error son:  
+---
+# <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function no definida (Visual Basic)
+Un `Sub` o `Function` para llamarse deben definirse. Las causas posibles de este error son:  
   
--   Se ha escrito mal el nombre de procedimiento.  
+-   Error al escribir el nombre del procedimiento.  
   
--   Se intenta llamar a un procedimiento desde otro proyecto sin agregar explícitamente una referencia a ese proyecto en el cuadro de diálogo **Referencias**.  
+-   Intenta llamar a un procedimiento desde otro proyecto sin agregar explícitamente una referencia a ese proyecto en el **referencias** cuadro de diálogo.  
   
--   Se ha especificado un procedimiento que no es visible para el procedimiento que llama.  
+-   Especifica un procedimiento que no es visible para el procedimiento que realiza la llamada.  
   
--   Se ha declarado una rutina de biblioteca de vínculos dinámicos \(DLL\) Windows o una rutina de recursos del código Macintosh que no se encuentra en la biblioteca o el recurso del código especificados.  
+-   Declaración de una rutina de biblioteca de vínculos dinámicos (DLL) de Windows o una rutina de recursos del código Macintosh que no está en el recurso de biblioteca o de código especificado.  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Asegúrese de que el nombre de procedimiento está correctamente escrito.  
+1.  Asegúrese de que ha escrito correctamente el nombre del procedimiento.  
   
-2.  Busque el nombre del proyecto que contiene el procedimiento al que desea llamar en el cuadro de diálogo **Referencias**.  Si no aparece, haga clic en el botón **Examinar** para buscarlo.  Active la casilla situada a la izquierda del nombre de proyecto y haga clic en **Aceptar**.  
+2.  Busque el nombre del proyecto que contiene el procedimiento que desea llamar el **referencias** cuadro de diálogo. Si no aparece, haga clic en el **examinar** botón para buscarlo. Active la casilla de verificación a la izquierda del nombre del proyecto y, a continuación, haga clic en **Aceptar**.  
   
 3.  Compruebe el nombre de la rutina.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)   
- [Administrar referencias en un proyecto](/visual-studio/ide/managing-references-in-a-project)   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)
+ [Administrar referencias en un proyecto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
+ [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)

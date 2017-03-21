@@ -1,51 +1,67 @@
 ---
-title: "C&#243;mo: Crear documentaci&#243;n XML en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "comentarios XML"
-  - "documentación XML, crear"
+title: "Cómo: crear documentación XML en Visual Basic | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- XML comments
+- XML documentation, creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# C&#243;mo: Crear documentaci&#243;n XML en Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 363a20c0fce05566b61e764d05932a9dfb779f90
+ms.lasthandoff: 03/13/2017
 
-En este ejemplo se muestra cómo agregar comentarios de documentación XML al código.  
+---
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Cómo: Crear documentación XML en Visual Basic
+Este ejemplo muestra cómo agregar comentarios de documentación XML al código.  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### Para crear documentación XML para un tipo o miembro  
+### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Para crear documentación XML para un tipo o miembro  
   
-1.  En el **Editor de código**, coloque el cursor en la línea situada encima del tipo o miembro para el que desea crear la documentación.  
+1.  En el **Editor de código**, coloque el cursor en la línea anterior del tipo o miembro para el que desea crear documentación.  
   
-2.  Escriba `'''` \(tres comillas simples\).  
+2.  Tipo `'''` (tres comillas simples).  
   
-     Se agrega una estructura XML para el tipo o miembro en el **Editor de código**.  
+     Se agrega un esquema XML para el tipo o miembro en el **Editor de código**.  
   
-3.  Agregue información descriptiva entre las etiquetas adecuadas.  
+3.  Agregar información descriptiva entre las etiquetas adecuadas.  
   
     > [!NOTE]
     >  Si agrega líneas adicionales dentro del bloque de documentación XML, cada línea debe comenzar con `'''`.  
   
-4.  Agregue código adicional que utilice el tipo o miembro con los nuevos comentarios de documentación XML.  
+4.  Agregar código adicional que utiliza el tipo o miembro con los nuevos comentarios de documentación XML.  
   
-     IntelliSense muestra el texto de la etiqueta \<summary\> para el tipo o miembro.  
+     IntelliSense muestra el texto de la \<resumen > etiqueta para el tipo o miembro.  
   
-5.  Compile el código para generar un archivo XML que incluya los comentarios de la documentación.  Para obtener más información, vea [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5.  Compile el código para generar un archivo XML que contiene los comentarios de documentación. Para obtener más información, consulte [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Documentar el código con XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)   
- [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)   
- [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+ [Etiquetas de comentario XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)   
+ [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)

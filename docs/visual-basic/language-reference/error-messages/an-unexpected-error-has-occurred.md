@@ -1,25 +1,41 @@
 ---
-title: "Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia &#250;nica | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrAppModel_CantGetMemoryMappedFile"
-dev_langs: 
-  - "VB"
+title: "Se produjo un error inesperado porque no se puede adquirir un recurso de sistema operativo necesario para el inicio de instancia única | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbrAppModel_CantGetMemoryMappedFile
+dev_langs:
+- VB
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia &#250;nica
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
+ms.lasthandoff: 03/13/2017
 
-La aplicación no pudo obtener un recurso de sistema operativo necesario.  Algunas de las posibles causas de este problema son:  
+---
+# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única
+La aplicación no pudo obtener un recurso de sistema operativo necesario. Algunas de las posibles causas de este problema son:  
   
 -   La aplicación no tiene permisos para crear objetos de sistema operativo con nombre.  
   
@@ -27,7 +43,7 @@ La aplicación no pudo obtener un recurso de sistema operativo necesario.  Algun
   
 -   La aplicación necesita acceder a un objeto de sistema operativo, pero hay otro proceso que lo está utilizando.  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
 1.  Confirme que la aplicación tiene permisos suficientes para crear objetos de sistema operativo con nombre.  
   
@@ -37,7 +53,7 @@ La aplicación no pudo obtener un recurso de sistema operativo necesario.  Algun
   
 4.  Anote las circunstancias en las que se ha produjo el error y llame a los Servicios de soporte técnico de Microsoft.  
   
-## Vea también  
- [Aplicación \(Página, Diseñador de proyectos\) \(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic)   
- [Conceptos básicos del depurador](/visual-studio/debugger/debugger-basics)   
- [Hable con nosotros](/visual-studio/ide/talk-to-us)
+## <a name="see-also"></a>Vea también  
+ [Página de aplicación, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
+ [Aspectos básicos del depurador](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
+ [Hable con nosotros](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

@@ -1,43 +1,59 @@
 ---
-title: "C&#243;mo: Incrustar expresiones en literales XML (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "expresiones incrustadas [Visual Basic]"
-  - "literales XML [Visual Basic], expresiones incrustadas"
+title: "Cómo: Incrustar expresiones en literales XML (Visual Basic) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- embedded expressions [Visual Basic]
+- XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# C&#243;mo: Incrustar expresiones en literales XML (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 40b0e4273223093262bc54a2b13d28fc93a44c69
+ms.lasthandoff: 03/13/2017
 
-Puede combinar literales XML con expresiones incrustadas para crear un documento, fragmento o elemento XML que incluye el contenido creado en tiempo de ejecución.  En los ejemplos siguientes se muestra cómo usar las expresiones incrustadas para rellenar el contenido de elemento, atributos y nombres de elemento en tiempo de ejecución.  
+---
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Cómo: Incrustar expresiones en literales XML (Visual Basic)
+Puede combinar los literales XML con expresiones incrustadas para crear un documento XML, fragmento o elemento que incluye contenido creado en tiempo de ejecución. Los ejemplos siguientes muestran cómo utilizar expresiones incrustadas para rellenar el contenido de los elementos, atributos y nombres de elemento en tiempo de ejecución.  
   
- La sintaxis para una expresión incrustada es `<%=` `exp` `%>`, que es la misma sintaxis que usa [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp-md.md)]. Para obtener más información, vea [Expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ La sintaxis de una expresión incrustada es `<%=` `exp` `%>`, que es la misma sintaxis que [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] utiliza. Para obtener más información, consulte [expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- También puede usar las API de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)] para crear objetos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  Para obtener más información, consulte <xref:System.Xml.Linq.XElement>.  
+ También puede utilizar el [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] API para crear [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] objetos. Para obtener más información, consulte <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>  
   
-## Procedimientos  
+## <a name="procedures"></a>Procedimientos  
   
-#### Para insertar texto como contenido de elemento  
+#### <a name="to-insert-text-as-element-content"></a>Para insertar texto como contenido del elemento  
   
--   En el ejemplo siguiente se muestra cómo insertar el texto incluido en la variable `contactName` entre los elementos de nombre de apertura y cierre.  
+-   En el ejemplo siguiente se muestra cómo insertar el texto que se encuentra en la `contactName` variable entre los elementos de nombre de apertura y cierre.  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples&#39;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
-     Este ejemplo produce el siguiente resultado.  
+     Este ejemplo produce el siguiente resultado:  
   
     ```  
     <contact>  
@@ -45,13 +61,13 @@ Puede combinar literales XML con expresiones incrustadas para crear un documento
     </contact>  
     ```  
   
-#### Para insertar texto como un valor de atributo  
+#### <a name="to-insert-text-as-an-attribute-value"></a>Para insertar texto como un valor de atributo  
   
--   En el ejemplo siguiente se muestra cómo insertar el texto incluido en la variable `phoneType` como valor del atributo `type`.  
+-   En el ejemplo siguiente se muestra cómo insertar el texto que se encuentra en la `phoneType` variable como el valor de la `type` atributo.  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples Nº&40;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
-     Este ejemplo produce el siguiente resultado.  
+     Este ejemplo produce el siguiente resultado:  
   
     ```  
     <contact>  
@@ -59,15 +75,15 @@ Puede combinar literales XML con expresiones incrustadas para crear un documento
     </contact>  
     ```  
   
-#### Para insertar texto como nombre de elemento  
+#### <a name="to-insert-text-for-an-element-name"></a>Para insertar texto para un nombre de elemento  
   
--   En el ejemplo siguiente se muestra cómo insertar el texto incluido en la variable `elementName` como el nombre de un elemento.  
+-   En el ejemplo siguiente se muestra cómo insertar el texto que se encuentra en la `elementName` variable como el nombre de un elemento.  
   
-     Al crear elementos mediante esta técnica, debe cerrarlos con la etiqueta \<\/\>.  
+     Al crear elementos mediante esta técnica, debe cerrarlos con la \</ > etiqueta.  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
+     [!code-vb[VbXMLSamples nº&41;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   
-     Este ejemplo produce el siguiente resultado.  
+     Este ejemplo produce el siguiente resultado:  
   
     ```  
     <contact>  
@@ -75,8 +91,8 @@ Puede combinar literales XML con expresiones incrustadas para crear un documento
     </contact>  
     ```  
   
-## Vea también  
- [Cómo: Crear literales XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo: crear literales XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)   
  [Expresiones incrustadas en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)   
  [Crear XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

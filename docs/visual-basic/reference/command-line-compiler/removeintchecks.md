@@ -1,57 +1,71 @@
 ---
-title: "/removeintchecks | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "removeintchecks"
-  - "/removeintchecks"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/removeintchecks (opción del compilador) [Visual Basic]"
-  - "removeintchecks (opción del compilador) [Visual Basic]"
-  - "-removeintchecks (opción del compilador) [Visual Basic]"
+title: /removeintchecks | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- removeintchecks
+- /removeintchecks
+dev_langs:
+- VB
+helpviewer_keywords:
+- removeintchecks compiler option [Visual Basic]
+- /removeintchecks compiler option [Visual Basic]
+- -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# /removeintchecks
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8e50200b8755ccc6b1c173024856955f5075b67e
+ms.lasthandoff: 03/13/2017
 
-Activa o desactiva la comprobación de errores de desbordamiento para operaciones con enteros.  
+---
+# <a name="removeintchecks"></a>/removeintchecks
+Activa para operaciones con enteros o desactivar la comprobación de errores de desbordamiento.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /removeintchecks[+ | -]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`+`  &#124; `-`|Opcional.  La opción de `/removeintchecks-` hace que el compilador para comprobar todos los cálculos enteros para los errores de desbordamiento.  El valor predeterminado es `/removeintchecks-`.<br /><br /> Si se especifican `/removeintchecks` o `/removeintchecks+`, se desactiva la comprobación de errores, lo cual acelera las operaciones de cálculo con enteros.  No obstante, sin la comprobación de errores, se pueden almacenar resultados incorrectos si se sobrepasan las capacidades de los tipos de datos.|  
+|---|---|  
+|`+` &#124; `-`|Opcional. El `/removeintchecks-` opción hace que el compilador compruebe todos los cálculos de enteros para los errores de desbordamiento. De manera predeterminada, es `/removeintchecks-`.<br /><br /> Especificar `/removeintchecks` o `/removeintchecks+` evita la comprobación de errores y realizar cálculos de enteros más rápidos. Sin embargo, sin la comprobación de errores, y si se sobrepasan las capacidades de tipo de datos, se pueden almacenar resultados incorrectos cuando se genera un error.|  
   
-||  
-|-|  
-|Para establecer \/removeintchecks en el entorno de desarrollo integrado de Visual Studio|  
-|1.  Tenga seleccionado un proyecto en el **Explorador de soluciones**.  En el menú **Proyecto**, haga clic en **Propiedades**.  Para obtener más información, vea [Introduction to the Project Designer](http://msdn.microsoft.com/es-es/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la ficha **Compilar**.<br />3.  Haga clic en el botón **Avanzadas**.<br />4.  Modifique el valor del cuadro **Quitar comprobaciones de desbordamiento con enteros**.|  
+|Para establecer /removeintchecks en Visual Studio de entorno de desarrollo integrado|  
+|---|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en el **compilar** ficha.<br />3.  Haga clic en el botón **Avanzada** .<br />4.  Modificar el valor de la **Quitar comprobaciones de desbordamiento con enteros** cuadro.|  
   
-## Ejemplo  
- La línea siguiente compila `Test.vb` y desactiva la comprobación de errores de desbordamiento de enteros.  
+## <a name="example"></a>Ejemplo  
+ El siguiente código compila `Test.vb` y desactiva la comprobación de errores de desbordamiento de enteros.  
   
 ```  
 vbc /removeintchecks+ test.vb  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

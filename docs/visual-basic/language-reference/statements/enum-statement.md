@@ -1,32 +1,49 @@
 ---
-title: "Instrucci&#243;n Enum (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Enum"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "constantes enumeradas"
-  - "Enum (instrucción)"
-  - "Private (palabra clave), Enum (instrucciones)"
-  - "Public (palabra clave), en la instrucción Enum"
-  - "variables [Visual Basic], (enumeración)"
-  - "constantes, enumeradas"
+title: "Enum (instrucción) (Visual Basic) | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Enum
+dev_langs:
+- VB
+helpviewer_keywords:
+- enumerated constants
+- Enum statement
+- Private keyword, Enum statements
+- Public keyword, in Enum statement
+- variables [Visual Basic], enumeration
+- constants, enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
 caps.latest.revision: 44
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 44
----
-# Instrucci&#243;n Enum (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f9d3377300d30fd045c041367a528766fa9a8ed9
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="enum-statement-visual-basic"></a>Instrucción Enum (Visual Basic)
 Declara una enumeración y define los valores de sus miembros.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,21 +59,21 @@ End Enum
   
 -   `attributelist`  
   
-     Opcional. Lista de atributos que se aplican a esta enumeración. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) corchetes angulares ("`<`"y"`>`").  
+     Opcional. Lista de atributos que se aplican a esta enumeración. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares ("`<`"y"`>`").  
   
-     El <xref:System.FlagsAttribute> atributo indica que el valor de una instancia de la enumeración puede incluir varios miembros de enumeración y que cada miembro representa un campo de bits en el valor de enumeración.  
+     El <xref:System.FlagsAttribute>atributo indica que el valor de una instancia de la enumeración puede incluir varios miembros de enumeración y que cada miembro representa un campo de bits en el valor de enumeración.</xref:System.FlagsAttribute>  
   
 -   `accessmodifier`  
   
      Opcional. Especifica qué código puede tener acceso a esta enumeración. Puede ser uno de los siguientes:  
   
-    -   [Público](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
      Puede especificar `Protected``Friend` para permitir el acceso desde el código dentro del mismo ensamblado, una clase derivada o clase de enumeración.  
   
@@ -66,7 +83,7 @@ End Enum
   
 -   `enumerationname`  
   
-     Requerido. Nombre de la enumeración. Para obtener información sobre los nombres válidos, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Obligatorio. Nombre de la enumeración. Para obtener información sobre los nombres válidos, consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `datatype`  
   
@@ -74,14 +91,13 @@ End Enum
   
 -   `memberlist`  
   
-     Requerido. Lista de constantes de miembros que se declara en esta instrucción. Varios miembros aparecen en líneas de código fuente individuales.  
+     Obligatorio. Lista de constantes de miembros que se declara en esta instrucción. Varios miembros aparecen en líneas de código fuente individuales.  
   
-     Cada `member` tiene la sintaxis y las partes siguientes: `[<attribute list>] member name [ = initializer ]`  
+     Cada `member` tiene la sintaxis y las partes siguientes:`[<attribute list>] member name [ = initializer ]`  
   
-    |||  
-    |-|-|  
     |Parte|Descripción|  
-    |`membername`|Requerido. Nombre de este miembro.|  
+    |---|---|  
+    |`membername`|Obligatorio. Nombre de este miembro.|  
     |`initializer`|Opcional. Expresión que se evalúa en tiempo de compilación y se asigna a este miembro.|  
   
 -   `End` `Enum`  
@@ -114,73 +130,73 @@ End Enum
  Se puede aplicar los atributos a una enumeración como un todo, pero no a sus miembros individualmente. Un atributo proporciona información a los metadatos del ensamblado.  
   
 ## <a name="data-type"></a>Tipo de datos  
- El `Enum` instrucción puede declarar el tipo de datos de una enumeración. Cada miembro toma el tipo de datos de la enumeración. Puede especificar `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, o `UShort`.  
+ El `Enum` instrucción puede declarar el tipo de datos de una enumeración. Cada miembro toma el tipo de datos de la enumeración. You can specify `Byte`, `Integer`, `Long`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort`.  
   
  Si no se especifica `datatype` para la enumeración, cada miembro toma el tipo de datos de su `initializer`. Si se especifican ambas `datatype` y `initializer`, tipo de datos de `initializer` debe poder convertirse a `datatype`. Si no `datatype` ni `initializer` está presente, el valor predeterminado es de tipo de datos `Integer`.  
   
 ## <a name="initializing-members"></a>Inicialización de miembros  
  El `Enum` instrucción puede inicializar el contenido de los miembros seleccionados en `memberlist`. Utiliza `initializer` para proporcionar una expresión que se asigna al miembro.  
   
- Si no se especifica `initializer` para un miembro, Visual Basic lo inicializa a cero (si es la primera `member` en `memberlist`), o en un valor superior en uno al de la inmediatamente anterior a `member`.  
+ Si no se especifica `initializer` de un miembro, Visual Basic lo inicializa a cero (si es la primera `member` en `memberlist`), o en un valor superior en uno al de la inmediatamente anterior a `member`.  
   
  La expresión proporcionada en cada `initializer` puede ser cualquier combinación de literales, otras constantes que ya están definidas y miembros de enumeración que ya están definidos, incluso un miembro anterior de esta enumeración. Puede utilizar operadores aritméticos y lógicos para combinar estos elementos.  
   
- No puede utilizar variables o funciones en `initializer`. Sin embargo, puede utilizar palabras clave de conversión como `CByte` y `CShort`. También puede utilizar `AscW` Si se le llama con una constante `String` o `Char` argumento, puesto que puede evaluarse en tiempo de compilación.  
+ No puede utilizar variables o funciones en `initializer`. Sin embargo, puede utilizar palabras clave de conversión como `CByte` y `CShort`. También puede usar `AscW` si se le llama con una constante `String` o `Char` argumento, puesto que puede evaluarse en tiempo de compilación.  
   
  Las enumeraciones no pueden tener valores de punto flotante. Si un miembro se le asigna un valor de punto flotante y `Option Strict` se establece en on, se produce un error del compilador. Si `Option Strict` está desactivado, el valor se convierte automáticamente en el `Enum` tipo.  
   
  Si el valor de un miembro rebasa el intervalo permitido para el tipo de datos subyacente, o si se inicializa a un miembro al valor máximo permitido por el tipo de datos subyacente, el compilador notifica un error.  
   
 ## <a name="modifiers"></a>Modificadores  
- Clase, estructura, módulo y predeterminada de enumeraciones de miembro de interfaz acceso público. Los niveles de acceso se pueden ajustar con los modificadores de acceso. Espacio de nombres predeterminado de las enumeraciones de miembro para el acceso de confianza. Puede ajustar los niveles de acceso público, pero no a privado o protegido. Para obtener más información, consulte [niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Clase, estructura, módulo y predeterminada de enumeraciones de miembro de interfaz acceso público. Los niveles de acceso se pueden ajustar con los modificadores de acceso. Namespace predeterminado de las enumeraciones de miembro para el acceso de confianza. Puede ajustar los niveles de acceso público, pero no a privado o protegido. Para obtener más información, consulte [niveles de acceso en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Todos los miembros de enumeración tienen acceso público y no puede utilizar ningún modificador de acceso en ellos. Sin embargo, si la propia enumeración tiene un nivel de acceso más limitado, el nivel de acceso de la enumeración especificada tiene prioridad.  
   
  De forma predeterminada, todas las enumeraciones son tipos y sus campos son constantes. Por lo tanto, la `Shared`, `Static`, y `ReadOnly` no se puede usar palabras clave al declarar una enumeración o sus miembros.  
   
 ## <a name="assigning-multiple-values"></a>Asignar varios valores  
- Enumeraciones suelen representan valores mutuamente exclusivos. Al incluir el <xref:System.FlagsAttribute> atributo el `Enum` declaración, en su lugar, puede asignar varios valores a una instancia de la enumeración. El <xref:System.FlagsAttribute> atributo especifica que la enumeración se tratan como un campo de bits, es decir, un conjunto de indicadores. Se denominan *bit a bit* enumeraciones.  
+ Enumeraciones suelen representan valores mutuamente exclusivos. Al incluir la <xref:System.FlagsAttribute>el atributo en el `Enum` declaración, en su lugar, puede asignar varios valores a una instancia de la enumeración.</xref:System.FlagsAttribute> El <xref:System.FlagsAttribute>atributo especifica que la enumeración se tratan como un campo de bits, es decir, un conjunto de indicadores.</xref:System.FlagsAttribute> Se denominan *bit a bit* enumeraciones.  
   
- Cuando se declara una enumeración mediante el uso de la <xref:System.FlagsAttribute> atributo, se recomienda que use potencias de 2, que es, 1, 2, 4, 8, 16 etc., para los valores. También se recomienda que "" ser el nombre de un miembro cuyo valor es 0. Para obtener instrucciones adicionales, consulte <xref:System.FlagsAttribute> y <xref:System.Enum>.  
+ Cuando se declara una enumeración mediante el uso de la <xref:System.FlagsAttribute>atributo, se recomienda que use potencias de 2, que es, 1, 2, 4, 8, 16 etc., para los valores.</xref:System.FlagsAttribute> También se recomienda que "" ser el nombre de un miembro cuyo valor es 0. Para obtener instrucciones adicionales, consulte <xref:System.FlagsAttribute>y <xref:System.Enum>.</xref:System.Enum> </xref:System.FlagsAttribute>  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar el `Enum` instrucción. Tenga en cuenta que el miembro se denomina `EggSizeEnum.Medium`, y no como `Medium`.  
+ En el ejemplo siguiente se muestra cómo utilizar el `Enum` instrucción. Tenga en cuenta que el miembro se denomina `EggSizeEnum.Medium`y no como `Medium`.  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
+ [!code-vb[VbEnumsTask nº&41;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
   
 ## <a name="example"></a>Ejemplo  
  El método en el ejemplo siguiente está fuera de la `Egg` clase. Por lo tanto, `EggSizeEnum` es un nombre completo como `Egg.EggSizeEnum`.  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
+ [!code-vb[VbEnumsTask&#42;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el `Enum` denominado de instrucción para definir un conjunto relacionado de valores constantes. En este caso, los valores son colores que puede optar por diseñar formularios de entrada de datos para una base de datos.  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
+ [!code-vb[VbEnumsTask Nº&30;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra valores que incluyen números positivos y negativos.  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
+ [!code-vb[VbEnumsTask&#31;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, un `As` cláusula se utiliza para especificar el `datatype` de una enumeración.  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
+ [!code-vb[VbEnumsTask Nº&6;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar una enumeración bit a bit. Varios valores se pueden asignar a una instancia de una enumeración bit a bit. El `Enum` declaración incluye la <xref:System.FlagsAttribute> atributo, que indica que la enumeración se puede tratar como un conjunto de indicadores.  
+ En el ejemplo siguiente se muestra cómo utilizar una enumeración bit a bit. Varios valores se pueden asignar a una instancia de una enumeración bit a bit. El `Enum` declaración incluye la <xref:System.FlagsAttribute>atributo, que indica que la enumeración se puede tratar como un conjunto de indicadores.</xref:System.FlagsAttribute>  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
+ [!code-vb[VbEnumsTask&#61;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se recorre en iteración una enumeración. Usa el <xref:System.Enum.GetNames%2A> método para recuperar una matriz de nombres de miembro de la enumeración y <xref:System.Enum.GetValues%2A> para recuperar una matriz de valores de miembro.  
+ En el ejemplo siguiente se recorre en iteración una enumeración. Usa el <xref:System.Enum.GetNames%2A>método para recuperar una matriz de nombres de miembro de la enumeración y <xref:System.Enum.GetValues%2A>para recuperar una matriz de valores de miembro.</xref:System.Enum.GetValues%2A> </xref:System.Enum.GetNames%2A>  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
+ [!code-vb[VbEnumsTask&#51;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Enum>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
+ <xref:System.Enum></xref:System.Enum>   
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A>   
  [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)   
  [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)   
  [Conversiones implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   

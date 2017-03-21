@@ -1,72 +1,86 @@
 ---
-title: "/libpath | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/libpath (opción del compilador) [Visual Basic]"
-  - "libpath (opción del compilador) [Visual Basic]"
-  - "-libpath (opción del compilador) [Visual Basic]"
+title: /LIBPATH | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- libpath compiler option [Visual Basic]
+- /libpath compiler option [Visual Basic]
+- -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# /libpath
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: cc534e782cff34f0c4882f3da2af973fed69ff80
+ms.lasthandoff: 03/13/2017
 
-Especifica la ubicación de ensamblados a los que se hace referencia.  
+---
+# <a name="libpath"></a>/libpath
+Especifica la ubicación de ensamblados de referencia.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /libpath:dirList  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`dirList`|Obligatorio.  Lista de directorios delimitados por punto y coma para que el compilador busque en caso de que no se encuentre un ensamblado al que se hace referencia en el directorio de trabajo actual \(el directorio desde el que se invoca el compilador\) o en el directorio del sistema de Common Language Runtime.  Si el nombre de directorio contiene un espacio, incluya el nombre entre comillas \(" "\).|  
+|---|---|  
+|`dirList`|Obligatorio. Lista delimitada por punto y coma de directorios para que el compilador busque en caso de un ensamblado de referencia no se encuentra en uno el directorio de trabajo actual (el directorio desde el que se invoca el compilador) o el directorio del sistema de common language runtime. Si el nombre del directorio contiene un espacio, encierre el nombre entre comillas ("").|  
   
-## Comentarios  
- La opción `/libpath` especifica la ubicación de ensamblados a los que se hace referencia mediante la opción [\/reference](../../../visual-basic/reference/command-line-compiler/reference.md).  
+## <a name="remarks"></a>Comentarios  
+ El `/libpath` opción especifica la ubicación de ensamblados al que hace referencia el [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) opción.  
   
- El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
+ El compilador busca referencias a ensamblados que no están completamente calificadas en el orden siguiente:  
   
-1.  Directorio actual de trabajo.  Es el directorio desde donde se invoca al compilador.  
+1.  Directorio de trabajo actual. Éste es el directorio desde el que se invoca el compilador.  
   
-2.  Directorio del sistema de Common Language Runtime.  
+2.  El directorio de sistema common language runtime.  
   
 3.  Directorios especificados por `/libpath`.  
   
 4.  Directorios especificados por la variable de entorno LIB.  
   
- La opción  `/libpath` es aditiva; si se especifica más de una vez, se agregan nuevos valores a los ya existentes.  
+ El `/libpath` opción es aditiva; al especificar más de una vez, anexa nuevos valores a los que.  
   
- Utilice `/reference` para especificar una referencia a un ensamblado.  
+ Use `/reference` para especificar una referencia de ensamblado.  
   
-||  
-|-|  
-|Para establecer \/libpath en el entorno de desarrollo integrado de Visual Studio|  
-|1.  Tenga seleccionado un proyecto en el **Explorador de soluciones**.  En el menú **Proyecto**, haga clic en **Propiedades**.  Para obtener más información, vea [Introduction to the Project Designer](http://msdn.microsoft.com/es-es/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la ficha **Referencias**.<br />3.  Haga clic en el botón **Rutas de acceso de referencia**.<br />4.  En el cuadro de diálogo **Rutas de acceso de referencia**, escriba el nombre de directorio en el cuadro **Carpeta:**.<br />5.  Haga clic en **Agregar carpeta**.|  
+|Para establecer /libpath en Visual Studio de entorno de desarrollo integrado|  
+|---|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en el **referencias** ficha.<br />3.  Haga clic en el **hacer referencia a rutas de acceso... ** botón.<br />4.  En el **las rutas de acceso de referencia** cuadro de diálogo, escriba el nombre del directorio en el **carpeta:** cuadro.<br />5.  Haga clic en **Agregar carpeta**.|  
   
-## Ejemplo  
- El código siguiente compila `T2.vb` para crear un archivo .exe.  El compilador busca referencias a ensamblados en el directorio de trabajo, en el directorio raíz de la unidad C: y en el directorio New Assemblies de la unidad C:.  
+## <a name="example"></a>Ejemplo  
+ El siguiente código compila `T2.vb` para crear un archivo .exe. El compilador busca en el directorio de trabajo, en el directorio raíz de la unidad C: y en el directorio New Assemblies de la unidad C: de referencias de ensamblado.  
   
 ```  
 vbc /libpath:c:\;"c:\New Assemblies" /reference:t2.dll t2.vb  
 ```  
   
-## Vea también  
- [Ensamblados y Caché global de ensamblados](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md)   
+## <a name="see-also"></a>Vea también  
+ [Ensamblados y caché Global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -1,84 +1,100 @@
 ---
-title: "Modo virtual del control DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater"
-  - "DataRepeater, modo virtual"
-  - "enlace de datos virtual"
+title: Modo virtual del control DataRepeater (Visual Studio) | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- virtual data binding
+- DataRepeater
+- DataRepeater, virtual mode
 ms.assetid: 5fb805dc-2d8b-4139-b1e3-86e4c2667221
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Modo virtual del control DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 85f7e250c57a507e891eb30756c0550098cce9e0
+ms.lasthandoff: 03/13/2017
 
-Si desea mostrar grandes volúmenes de datos en formato de tabla en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, puede mejorar el rendimiento estableciendo la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> en `True` y controlando de forma explícita la interacción del control con su origen de datos.  El control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> proporciona varios eventos que permiten controlar la interacción con el origen de datos y mostrar los datos según sea necesario en tiempo de ejecución.  
+---
+# <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>Modo virtual del control DataRepeater (Visual Studio)
+Si desea mostrar grandes cantidades de datos tabulares en una <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control, puede mejorar el rendimiento estableciendo la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>propiedad `True` y administrar explícitamente la interacción del control con su origen de datos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> El <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control proporciona varios eventos que puede controlar para interactuar con el origen de datos y mostrar los datos según sea necesario en tiempo de ejecución.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
   
-## Cómo funciona el modo virtual  
- El escenario más común para el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> es enlazar en tiempo de diseño los controles secundarios de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> a un origen de datos y permitir que <xref:System.Windows.Forms.BindingSource> intercambie datos en ambos sentidos según sea necesario.  Cuando se utiliza el modo virtual, los controles no se enlazan a un origen de datos, por lo que los datos se intercambian en ambos sentidos con el origen de datos subyacente.  
+## <a name="how-virtual-mode-works"></a>Virtual cómo funciona el modo  
+ El escenario más común para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>es enlazar los controles secundarios del control de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>a datos de origen en tiempo de diseño y permitir la <xref:System.Windows.Forms.BindingSource>para pasar datos sentidos según sea necesario.</xref:System.Windows.Forms.BindingSource> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Al utilizar el modo virtual, los controles no se enlazan a un origen de datos y datos se pasan hacia delante y hacia atrás en el origen de datos subyacente en tiempo de ejecución.  
   
- Cuando la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> se establece en `True`, se crea la interfaz de usuario agregando controles del **Cuadro de herramientas** en lugar de agregar los controles enlazados en la ventana **Orígenes de datos**.  
+ Cuando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>propiedad está establecida en `True`, se crea la interfaz de usuario agregando controles desde el **cuadro de herramientas** en lugar de agregar controles enlazados de la **orígenes de datos** ventana.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>  
   
- Los eventos se provocan individualmente para cada control y es preciso agregar código para controlar la presentación de los datos.  Cuando un nuevo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> se desplaza y queda visible, el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> se provoca una vez por cada control; debe proporcionar los valores correspondientes a cada control en el controlador de eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>.  
+ Se generan eventos en forma de control a control, y debe agregar código para controlar la presentación de datos. Cuando un nuevo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>se desplaza en la vista, la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>evento se desencadena una vez para cada control y proporcione los valores de cada control en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>controlador de eventos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>  
   
- Si el usuario cambia los datos de uno de los controles, se provoca el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>, en cuyo caso deberá validar los datos y guardarlos en el origen de datos.  
+ Si se modifican datos en uno de los controles por el usuario, el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>se genera el evento y debe validar los datos y guardarlo en el origen de datos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>  
   
- Si el usuario agrega un nuevo elemento, se provoca el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>.  Utilice el controlador de este evento para crear un nuevo registro en el origen de datos.  Para evitar los cambios imprevistos, también debe supervisar el evento <xref:System.Windows.Forms.Control.KeyDown> de cada control y llamar al método <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> si el usuario presiona la tecla ESC.  
+ Si el usuario agrega un nuevo elemento, el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>evento se desencadena.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> Utilice el controlador de este evento para crear un nuevo registro en el origen de datos. Para evitar cambios no deseados, también debe supervisar el <xref:System.Windows.Forms.Control.KeyDown>eventos para cada control y llamar a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>Si el usuario presiona la tecla ESC.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> </xref:System.Windows.Forms.Control.KeyDown>  
   
- Si el origen de datos cambia, puede actualizar el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> mediante una llamada a los métodos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetTemplateItem%2A> y <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetTemplateItem%2A>.  Se debe llamar a ambos métodos por orden.  
+ Si los datos de origen cambia, puede actualizar el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control llamando a la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A>y <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A>métodos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.EndResetItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.BeginResetItemTemplate%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Deben llamar a ambos métodos en orden.  
   
- Por último, debe implementar los controladores del evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>, que se provoca cuando se elimina un elemento y, opcionalmente, para los eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems> y <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems>, que se provocan cada vez que un usuario elimina un elemento presionando la tecla SUPR.  
+ Por último, debe implementar los controladores de eventos para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>evento, que se produce cuando se elimina un elemento y, opcionalmente, para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems>y <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems>eventos que se producen cuando un usuario elimina un elemento presionando la tecla SUPR.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletedItems> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.UserDeletingItems> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>  
   
-## Implementar el modo virtual  
- A continuación se muestran los pasos necesarios para implementar el modo virtual.  
+## <a name="implementing-virtual-mode"></a>Implementar el modo Virtual  
+ Siguientes son los pasos necesarios para implementar el modo virtual.  
   
-#### Para implementar el modo virtual  
+#### <a name="to-implement-virtual-mode"></a>Para implementar el modo virtual  
   
-1.  Arrastre un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> desde la ficha **Visual Basic PowerPacks** del **Cuadro de herramientas** hasta un control de formulario o un control contenedor.  Establezca la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> en `True`.  
+1.  Arrastre un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control desde el **Visual Basic PowerPacks** ficha en el **cuadro de herramientas** a un control de formulario o contenedor.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Establecer el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>propiedad `True`.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>  
   
-2.  Arrastre los controles desde el **Cuadro de herramientas** hasta la región de la plantilla de elemento \(la región superior\) del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Necesitará un control para cada campo del origen de datos que desee mostrar.  
+2.  Arrastre controles desde el **herramientas** a la región de plantilla de elementos (la región superior) de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Necesitará un control para cada campo del origen de datos que desea mostrar.  
   
-3.  Implemente un controlador para que el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> proporcione valores para cada control.  Se provoca este evento cuando un nuevo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> se desplaza y queda visible.  El código será similar al siguiente ejemplo, que se aplica a un origen de datos denominado `Employees`.  
+3.  Implemente un controlador para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>eventos para proporcionar valores para cada control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> Este evento se desencadena cuando un nuevo <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>se desplaza en la vista.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> El código será similar a la del ejemplo siguiente, que es para un origen de datos denominado `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode n.º&1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
   
-4.  Implemente un controlador para que el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> almacene los datos.  Se provoca este evento cuando el usuario confirma los cambios y los escribe en un control secundario de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  El código será similar al siguiente ejemplo, que se aplica a un origen de datos denominado `Employees`.  
+4.  Implemente un controlador para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>eventos para almacenar los datos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> Este evento se desencadena cuando el usuario confirma los cambios en un control secundario del <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> El código será similar a la del ejemplo siguiente, que es para un origen de datos denominado `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&2;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
   
-5.  Implemente un controlador para el evento <xref:System.Windows.Forms.Control.KeyDown> de cada control secundario y supervise la tecla ESC.  Llame al método <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> para evitar que se provoque el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>.  El código tendrá un aspecto similar al ejemplo siguiente.  
+5.  Implemente un controlador para cada control secundario <xref:System.Windows.Forms.Control.KeyDown>eventos y monitor de la tecla ESC.</xref:System.Windows.Forms.Control.KeyDown> Llame a la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A>método para impedir que el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>que se produzca el evento.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> El código será similar en el siguiente ejemplo.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&3;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
   
-6.  Implemente un controlador para el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>.  Se provoca este evento cuando el usuario agrega un nuevo elemento al control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  El código será similar al siguiente ejemplo, que se aplica a un origen de datos denominado `Employees`.  
+6.  Implemente un controlador para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>eventos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> Este evento se desencadena cuando el usuario agrega un elemento nuevo en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> El código será similar a la del ejemplo siguiente, que es para un origen de datos denominado `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode Nº&4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#4;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
   
-7.  Implemente un controlador para el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>.  Este evento se produce cuando un usuario elimina un elemento existente.  El código será similar al siguiente ejemplo, que se aplica a un origen de datos denominado `Employees`.  
+7.  Implemente un controlador para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved>eventos.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved> Este evento se produce cuando un usuario elimina un elemento existente. El código será similar a la del ejemplo siguiente, que es para un origen de datos denominado `Employees`.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&#5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&#5;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
   
-8.  Para efectuar una validación de nivel de control, puede implementar controladores para los eventos <xref:System.Windows.Forms.Control.Validating> de los controles secundarios.  El código tendrá un aspecto similar al ejemplo siguiente.  
+8.  Para la validación de nivel de control, puede implementar controladores para el <xref:System.Windows.Forms.Control.Validating>eventos de los controles secundarios.</xref:System.Windows.Forms.Control.Validating> El código será similar en el siguiente ejemplo.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode&6;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb) ] 
+     [!code-cs [VbPowerPacksDataRepeaterVirtualMode&6;](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>   
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>   
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>   
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded>   
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded></xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded>   
  [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)

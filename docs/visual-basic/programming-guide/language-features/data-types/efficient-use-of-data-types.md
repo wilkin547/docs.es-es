@@ -1,68 +1,84 @@
 ---
-title: "Uso eficiente de tipos de datos (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "AscW (función), preferida a Asc"
-  - "ChrW (función), preferida a Chr"
-  - "tipos de datos [Visual Basic], optimizar"
-  - "tipos de datos [Visual Basic], tipado fuerte"
-  - "tipos de datos [Visual Basic], utilizar eficazmente"
-  - "tipos de datos [Visual Basic], establecimiento flexible de tipos"
-  - "optimización, tipos de datos"
-  - "rendimiento, eficacia de los tipos de datos"
-  - "tipado fuerte"
-  - "establecimiento de tipos, inflexible"
+title: Uso eficiente de tipos de datos (Visual Basic) | Documentos de Microsoft
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- performance, data type efficiency
+- data types [Visual Basic], weak typing
+- AscW function, preferred to Asc
+- data types [Visual Basic], using efficiently
+- optimization, data types
+- data types [Visual Basic], strong typing
+- strong typing
+- typing, strong
+- data types [Visual Basic], optimizing
+- ChrW function, preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Uso eficiente de tipos de datos (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b81a1c81d970beee32925c3f2fe6ca3bcad79151
+ms.lasthandoff: 03/13/2017
 
-A las variables no declaradas y a las variables declaradas sin un tipo de datos se les asigna el tipo de datos `Object`.  Esto facilita la creación más rápida de programas, pero puede provocar que se ejecuten de una forma más lenta.  
+---
+# <a name="efficient-use-of-data-types-visual-basic"></a>Uso eficiente de tipos de datos (Visual Basic)
+Las variables no declaradas y las variables declaradas sin un tipo de datos se les asigna el `Object` tipo de datos. Resulta muy fácil escribir programas rápidamente, pero puede provocar que se ejecuten más lentamente.  
   
-## Tipado fuerte  
- La especificación de tipos de datos para todas las variables recibe el nombre de *tipado fuerte*.  La utilización del tipado fuerte tiene diversas ventajas:  
+## <a name="strong-typing"></a>Seguro escribiendo  
+ Especificar los tipos de datos para todas las variables se conoce como *establecimiento inflexible de tipos*. Uso de establecimiento inflexible de tipos tiene varias ventajas:  
   
--   Habilita la compatibilidad con intellisense® para las variables.  Esto le permite ver las propiedades de las variables y otros miembros a medida que escribe el código.  
+-   Habilita la compatibilidad con IntelliSense para las variables. Esto le permite ver sus propiedades y otros miembros a medida que escribe en el código.  
   
--   Saca partido de la comprobación de tipos del compilador.  Permite detectar las instrucciones que pueden fallar en tiempo de ejecución debido a errores tales como el desbordamiento.  También detecta llamadas a métodos en objetos que no las admiten.  
+-   Aprovecha las ventajas de la comprobación de tipo compilador. Detectar las instrucciones que pueden fallar en tiempo de ejecución debido a errores como el desbordamiento. También detecta llamadas a métodos en objetos que no las admiten.  
   
--   Tiene como consecuencia una ejecución más rápida del código.  
+-   Da como resultado una ejecución más rápida del código.  
   
-## Tipos de datos más eficaces  
- Para las variables que no contienen nunca valores decimales, los tipos de datos integrales son más eficientes que los tipos no integrales.  En [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], `Integer` y `UInteger` son los tipos numéricos más eficaces.  
+## <a name="most-efficient-data-types"></a>Tipos de datos más eficaces  
+ Para las variables que contienen nunca valores decimales, los tipos de datos enteros son más eficaces que los tipos no integrales. En [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], `Integer` y `UInteger` son los tipos numéricos más eficaces.  
   
- Para los números fraccionarios, `Double` es el más eficaz de los tipos de datos, porque los procesadores de las plataformas actuales realizan las operaciones de punto flotante en precisión doble.  Sin embargo, las operaciones con `Double` no son tan rápidas como con los tipos enteros como `Integer`.  
+ Para los números fraccionarios, `Double` es el tipo de datos más eficaz, porque los procesadores de plataformas actuales realizan operaciones de punto flotante de precisión doble. Sin embargo, las operaciones con `Double` no son tan rápidas como con los tipos enteros como `Integer`.  
   
-## Especificar tipo de datos  
- Utilice [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md) para declarar una variable de un tipo específico.  Puede especificar su nivel de acceso simultáneamente utilizando la palabra clave [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [Private](../../../../visual-basic/language-reference/modifiers/private.md), como en el ejemplo siguiente.  
+## <a name="specifying-data-type"></a>Especifica el tipo de datos  
+ Utilice la [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md) para declarar una variable de un tipo específico. Simultáneamente, puede especificar su nivel de acceso mediante el [público](../../../../visual-basic/language-reference/modifiers/public.md), [protegido](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), o [privada](../../../../visual-basic/language-reference/modifiers/private.md) palabra clave, como en el ejemplo siguiente.  
   
 ```  
 Private x As Double  
 Protected s As String  
 ```  
   
-## Conversión de caracteres  
- Las funciones `AscW` y `ChrW` funcionan en Unicode.  Es más recomendable utilizar estas funciones que `Asc` y `Chr`, que deben traducir a Unicode y desde éste.  
+## <a name="character-conversion"></a>Conversión de caracteres  
+ El `AscW` y `ChrW` funciones funcionan en Unicode. Se deben utilizar en lugar de a `Asc` y `Chr`, que deben traducir a y desde Unicode.  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>   
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>   
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>   
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.VisualBasic.Strings.Asc%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>   
+ <xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A>   
+ <xref:Microsoft.VisualBasic.Strings.Chr%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>   
+ <xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
  [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
  [Tipos de datos numéricos](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
  [Declaración de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Utilizar IntelliSense](/visual-studio/ide/using-intellisense)
+ [Usar IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense)

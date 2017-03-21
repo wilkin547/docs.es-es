@@ -1,43 +1,59 @@
 ---
-title: "Instrucci&#243;n Try...Catch...Finally (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Try...Catch...Finally"
-  - "vb.when"
-  - "vb.Finally"
-  - "vb.Catch"
-  - "vb.Try"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Catch (instrucción)"
-  - "control de errores, mientras se ejecuta el código"
-  - "Finally (palabra clave) [Visual Basic], Try...Catch...Finally"
-  - "control estructurado de excepciones, Try...Catch...Finally (instrucciones)"
-  - "Try (instrucción)"
-  - "Try (instrucción), Try...Catch...Finally"
-  - "Try...Catch...Finally (instrucciones)"
-  - "control de excepciones try-catch, Try...Catch...Finally (instrucciones)"
-  - "código de Visual Basic, controlar errores durante la ejecución"
-  - "When (palabra clave)"
+title: "Try... Catch... Finally (instrucción) (Visual Basic) | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Try...Catch...Finally
+- vb.when
+- vb.Finally
+- vb.Catch
+- vb.Try
+dev_langs:
+- VB
+helpviewer_keywords:
+- Try...Catch...Finally statements
+- Try statement
+- try-catch exception handling, Try...Catch...Finally statements
+- error handling, while running code
+- Try statement, Try...Catch...Finally
+- Finally keyword [Visual Basic], Try...Catch...Finally
+- Catch statement
+- When keyword
+- Visual Basic code, handling errors while running
+- structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: 69
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 69
----
-# Instrucci&#243;n Try...Catch...Finally (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 379359e3a338746ccd440dbe1ad58c483e562dbe
+ms.lasthandoff: 03/13/2017
 
-Esta instrucción proporciona una manera de controlar algunos o todos los errores posibles que pueden ocurrir en un bloque de código determinado mientras se ejecuta el código.  
+---
+# <a name="trycatchfinally-statement-visual-basic"></a>Instrucción Try...Catch...Finally (Visual Basic)
+Proporciona una manera de controlar algunos o todos los errores posibles que pueden producirse en un determinado bloque de código, mientras sigue ejecutando el código.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Try  
@@ -52,149 +68,148 @@ Try
 End Try  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`tryStatements`|Opcional.  Instrucciones en las que puede ocurrir un error.  Puede ser una instrucción compuesta.|  
-|`Catch`|Opcional.  Se permite utilizar varios bloques `Catch`.  Si se produce una excepción al procesar el bloque `Try`, cada instrucción `Catch` se examina en orden textual para determinar si controla la excepción; el parámetro `exception` representa la excepción que se ha producido.|  
-|`exception`|Opcional.  Cualquier nombre de variable.  El valor inicial de `exception` es el valor del error producido.  Se utiliza con `Catch` para especificar la captura del error.  Si se omite, la instrucción `Catch` detecta cualquier excepción.|  
-|`type`|Opcional.  Especifica el tipo de filtro de clase.  Si el valor de `exception` es del tipo especificado en `type` o de un tipo derivado, el identificador queda enlazado al objeto de excepción.|  
-|`When`|Opcional.  Una instrucción `Catch` con una cláusula `When` sólo detecta las excepciones cuando `expression` se evalúa como `True`.  Una cláusula `When` sólo se aplica después de comprobar el tipo de la excepción y `expression` puede hacer referencia al identificador que representa la excepción.|  
-|`expression`|Opcional.  Debe ser convertible implícitamente a `Boolean`.  Cualquier expresión que describe un filtro genérico.  Se utiliza normalmente para filtrar por número de error.  Se utiliza con la palabra clave `When` para especificar las circunstancias bajo las que se captura el error.|  
-|`catchStatements`|Opcional.  Instrucciones para controlar los errores que se producen en el bloque `Try` asociado.  Puede ser una instrucción compuesta.|  
-|`Exit Try`|Opcional.  Palabra clave que interrumpe la ejecución de la estructura `Try...Catch...Finally`.  La ejecución se reanuda con el código que sigue inmediatamente a la instrucción `End Try`.  Se ejecutará la instrucción `Finally` todavía.  No se permite en bloques `Finally`.|  
-|`Finally`|Opcional.  Siempre se ejecuta un bloque `Finally` cuando la ejecución sale de cualquier parte de la instrucción `Try...Catch`.|  
-|`finallyStatements`|Opcional.  Instrucciones que se ejecutan después de las demás operaciones de procesamiento de error.|  
-|`End Try`|Finaliza la estructura `Try...Catch...Finally`.|  
+|---|---|  
+|`tryStatements`|Opcional. Instrucciones donde puede producirse un error. Puede ser una instrucción compuesta.|  
+|`Catch`|Opcional. Varios `Catch` bloques permitido. Si se produce una excepción al procesar el `Try` bloquear cada `Catch` instrucción se examina en orden textual para determinar si controla la excepción con `exception` que representa la excepción que se ha producido.|  
+|`exception`|Opcional. Cualquier nombre de variable. El valor inicial de `exception` es el valor del error producido. Se utiliza con `Catch` especificar el error detectado. Si se omite, el `Catch` instrucción detecta cualquier excepción.|  
+|`type`|Opcional. Especifica el tipo de filtro de clase. Si el valor de `exception` es del tipo especificado por `type` o de un tipo derivado, el identificador queda enlazado al objeto de excepción.|  
+|`When`|Opcional. Un `Catch` instrucción con un `When` cláusula detecta excepciones sólo cuando `expression` se evalúa como `True`. Un `When` cláusula se aplica únicamente después de comprobar el tipo de la excepción, y `expression` pueden hacer referencia al identificador que representa la excepción.|  
+|`expression`|Opcional. Debe ser implícitamente convertible a `Boolean`. Cualquier expresión que describe un filtro genérico. Se utiliza normalmente para filtrar por número de error. Se utiliza con `When` (palabra clave) para especificar las circunstancias bajo las que se captura el error.|  
+|`catchStatements`|Opcional. Instrucciones para controlar los errores que se producen en el asociado `Try` bloque. Puede ser una instrucción compuesta.|  
+|`Exit Try`|Opcional. Palabra clave que interrumpe fuera de la `Try...Catch...Finally` estructura. La ejecución se reanuda con el código que sigue el `End Try` instrucción. El `Finally` todavía se ejecutará la instrucción. No se permite en `Finally` bloques.|  
+|`Finally`|Opcional. Un `Finally` bloque siempre se ejecuta cuando la ejecución sale de cualquier parte de la `Try...Catch` instrucción.|  
+|`finallyStatements`|Opcional. Instrucciones que se ejecutan una vez realizado el resto del procesamiento de error.|  
+|`End Try`|Finaliza el `Try...Catch...Finally` estructura.|  
   
-## Comentarios  
- Si piensa que se puede producir una excepción determinada en una sección concreta del código, incluya éste en un bloque `Try` y utilice un bloque `Catch` para conservar el control y tratar la excepción que se produce.  
+## <a name="remarks"></a>Comentarios  
+ Si piensa que podría producir una excepción determinada en una sección concreta del código, coloque el código en un `Try` bloquear y usar un `Catch` bloque para conservar el control y controlar la excepción si se produce.  
   
- Una instrucción `Try…Catch` consiste en un bloque `Try` seguido de una o más cláusulas `Catch`, que especifican controladores para varias excepciones.  Cuando se produce una excepción en un bloque `Try`, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] busca la instrucción `Catch` que controla la excepción.  Si no se encuentra una instrucción `Catch` coincidente, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] examina el método que llamó al método actual, y así sucesivamente hasta la pila de llamadas.  Si no se encuentra ningún bloque `Catch`, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] muestra al usuario un mensaje de excepción no controlada y detiene la ejecución del programa.  
+ Un `Try…Catch` instrucción consta de un `Try` bloque seguido de uno o varios `Catch` cláusulas que especifican controladores para diferentes excepciones. Cuando se produce una excepción un `Try` bloque, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] busca el `Catch` instrucción que controla la excepción. Si una coincidencia `Catch` no se encuentra la instrucción, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] examina el método que llamó al método actual, y así sucesivamente la pila de llamadas. Si no hay ningún `Catch` bloque se encuentra, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] muestra al usuario un mensaje de excepción no controlada y detiene la ejecución del programa.  
   
- Puede utilizar más de una instrucción `Catch` en una instrucción `Try…Catch` .  Si lo hace, el orden de las cláusulas `Catch` es significativo debido a que se examinan en orden.  Las excepciones más específicas se capturan antes que las menos específicas.  
+ Puede usar más de una `Catch` instrucción en un `Try…Catch` instrucción. Si lo hace, el orden de la `Catch` cláusulas es importante, ya que se examinan en orden. Detectar las excepciones más específicas antes que las menos específicas.  
   
- Las siguientes condiciones de la instrucción `Catch` son las menos específicas y detectarán todas las excepciones que se deriven de la clase <xref:System.Exception>.  Normalmente debe utilizar una de estas variaciones como el último bloque `Catch` de la estructura `Try...Catch...Finally`, después de detectar todas las excepciones específicas que espera.  El flujo de control nunca puede alcanzar un bloque `Catch` situado detrás de cualquiera de estas variaciones.  
+ El siguiente `Catch` condiciones de instrucción son menos específicos y todas las detectará excepciones que derivan de la <xref:System.Exception>clase.</xref:System.Exception> Normalmente debe usar una de estas variaciones en la última `Catch` bloquear el `Try...Catch...Finally` estructura después de detectar todas las excepciones específicas que espera. Flujo de control nunca puede alcanzar un `Catch` cualquiera de estas variaciones en el siguiente bloque.  
   
--   El `type` es `Exception`, por ejemplo: `Catch ex As Exception`  
+-   El `type` es `Exception`, por ejemplo:`Catch ex As Exception`  
   
--   La instrucción no tiene ninguna variable `exception`, por ejemplo: `Catch`  
+-   La instrucción no tiene ningún `exception` variable, por ejemplo:`Catch`  
   
- Cuando una instrucción `Try…Catch…Finally` está anidada en otro bloque `Try`, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] primero examina cada instrucción `Catch` en el bloque `Try` más interno.  Si no encuentra ninguna instrucción `Catch` coincidente, la búsqueda continúa en las instrucciones `Catch` del bloque `Try…Catch…Finally` exterior.  
+ Cuando un `Try…Catch…Finally` instrucción está anidada en otro `Try` bloque, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] primero examina cada `Catch` instrucción interno `Try` bloque. Si no hay coincidencia `Catch` se encuentra una instrucción, la búsqueda continúa en la `Catch` instrucciones de externo `Try…Catch…Finally` bloque.  
   
- Las variables locales de un bloque `Try` no se encuentran disponibles en un bloque `Catch` porque se trata de bloques independientes.  Si se desea utilizar una variable en más de un bloque, se debe declarar la variable fuera de la estructura `Try...Catch...Finally`.  
-  
-> [!TIP]
->  La instrucción `Try…Catch…Finally` está disponible como un fragmento de código de IntelliSense.  En el Administrador de fragmentos de código, expanda **Modelos de código \- If, For Each, Try Catch, Property, etc**, y **Control de errores \(excepciones\)**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
-  
-## Bloque Finally  
- Si tiene una o más instrucciones que se deben ejecutar antes de salir de la estructura `Try`, utilice un bloque `Finally`.  El control pasa al bloque `Finally` justo antes de salir de la estructura `Try…Catch`.  Esto se produce incluso si aparece una excepción dentro de la estructura `Try`.  
-  
- Un bloque `Finally` es útil para ejecutar cualquier código que debe ejecutar incluso si hay una excepción.  El control se pasa al bloque `Finally` independientemente de cómo se sale del bloque `Try...Catch`.  
-  
- El código de un bloque `Finally` se ejecuta incluso si el código encuentra una instrucción `Return` en un bloque `Try` o `Catch`.  El control no pasa de un bloque `Try` o `Catch` al bloque `Finally` correspondiente en los casos siguientes:  
-  
--   Se encuentra [End \(Instrucción\)](../../../visual-basic/language-reference/statements/end-statement.md) en el bloque `Try` o `Catch`.  
-  
--   Se produce <xref:System.StackOverflowException> en el bloque `Try` o `Catch`.  
-  
- No es válido explícitamente transferir la ejecución en un bloque de `Finally` .  Transferir la ejecución de un bloque de `Finally` no es válido, pero con una excepción.  
-  
- Si una instrucción `Try` no contiene al menos un bloque `Catch`, debe contener un bloque `Finally`.  
+ Las variables locales de un `Try` bloque no están disponibles en un `Catch` bloquear porque se trata de bloques independientes. Si desea utilizar una variable en más de un bloque, declare la variable fuera del `Try...Catch...Finally` estructura.  
   
 > [!TIP]
->  Si no tiene que detectar excepciones específicas, la instrucción `Using` se comporta como un bloque `Try…Finally` y garantiza la disposición de los recursos, independientemente de cómo salga del bloque.  Esto es cierto incluso con una excepción no controlada.  Para obtener más información, vea [Using \(Instrucción\)](../../../visual-basic/language-reference/statements/using-statement.md).  
+>  El `Try…Catch…Finally` instrucción está disponible como un fragmento de código de IntelliSense. En el Administrador de fragmentos de código, expanda **modelos de código - si, para cada uno, Try Catch, propiedad, etcetera**y, a continuación, **control de errores (excepciones)**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Argumento de la excepción  
- El argumento `exception` del bloque `Catch` es una instancia de la clase <xref:System.Exception> o una clase que se deriva de la clase `Exception`.  La instancia de la clase `Exception` corresponde al error que se produjo en el bloque `Try`.  
+## <a name="finally-block"></a>Bloque finally  
+ Si tiene una o más instrucciones que deben ejecutarse antes de salir de la `Try` estructura, use un `Finally` bloque. El control pasa a la `Finally` bloquear antes de transferirlos fuera de la `Try…Catch` estructura. Esto es así incluso si se produce una excepción en cualquier lugar dentro de la `Try` estructura.  
   
- Las propiedades del objeto `Exception` ayudan a identificar la causa y la ubicación de una excepción.  Por ejemplo, la propiedad <xref:System.Exception.StackTrace%2A> muestra una lista de los métodos llamados que generaron la excepción, lo que ayuda a detectar el lugar del código en el que ocurrió el error.  <xref:System.Exception.Message%2A> devuelve un mensaje que describe la excepción.  <xref:System.Exception.HelpLink%2A> devuelve un vínculo a un archivo de ayuda asociado.  <xref:System.Exception.InnerException%2A> devuelve el objeto `Exception` que causó la excepción actual, o devuelve `Nothing` si no hay ninguna `Exception` original.  
+ Un `Finally` bloque es útil para ejecutar cualquier código que deba ejecutarse incluso si hay una excepción. El control pasa a la `Finally` bloque con independencia del `Try...Catch` bloquear salidas.  
   
-## Consideraciones sobre cuándo utilizar una instrucción Try…Catch  
- Utilice una instrucción `Try…Catch` solo para indicar la ocurrencia de eventos de programa inusuales o imprevistos.  Esto pasa por las siguientes razones:  
+ El código en un `Finally` bloque se ejecuta incluso si el código encuentra un `Return` instrucción en un `Try` o `Catch` bloque. El control no pasar de un `Try` o `Catch` bloquear correspondiente `Finally` bloquear en los casos siguientes:  
   
--   Detectar excepciones en tiempo de ejecución crea sobrecarga adicional, y es probable que sea más lento que la comprobación previa para evitar excepciones.  
+-   Un [instrucción End](../../../visual-basic/language-reference/statements/end-statement.md) se encuentra en la `Try` o `Catch` bloque.  
   
--   Si un bloque `Catch` no se maneja correctamente, puede que no se informe correctamente a los usuarios acerca de la excepción.  
+-   Un <xref:System.StackOverflowException>se produce en el `Try` o `Catch` bloque.</xref:System.StackOverflowException>  
   
--   El control de excepciones hace a un programa más complejo.  
+ No es válido transferir explícitamente la ejecución en un `Finally` bloque. Transferir la ejecución fuera de un `Finally` bloque no es válido, excepto a través de una excepción.  
   
- No siempre es necesario una instrucción `Try…Catch` para comprobar una condición que es probable que ocurra.  El siguiente ejemplo comprueba si existe un archivo antes de intentar abrirlo.  Esto reduce la necesidad de detectar una excepción iniciada por el método <xref:System.IO.File.OpenText%2A> .  
+ Si un `Try` instrucción no contiene al menos una `Catch` bloque, debe contener una `Finally` bloque.  
   
- [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_1.vb)]  
+> [!TIP]
+>  Si no tiene que capturar excepciones específicas, la `Using` instrucción se comporta como un `Try…Finally` bloque y garantiza la disposición de los recursos, independientemente de cómo salga del bloque. Esto es cierto incluso con una excepción no controlada. Para obtener más información, consulte [instrucción Using](../../../visual-basic/language-reference/statements/using-statement.md).  
   
- Asegúrese de que el código de los bloques `Catch` puede informar correctamente de las excepciones a los usuarios, ya sea a través del registro seguro para subprocesos o de mensajes adecuados.  De lo contrario, las excepciones podrían seguir siendo desconocidas.  
+## <a name="exception-argument"></a>Argumento de excepción  
+ El `Catch` bloque `exception` argumento es una instancia de la <xref:System.Exception>clase o una clase que deriva de la `Exception` clase</xref:System.Exception> El `Exception` instancia de la clase que corresponde al error que se produjo en el `Try` bloque.  
   
-## Métodos Async  
- Si marca un método con el modificador de [Asincrónica](../../../visual-basic/language-reference/modifiers/async.md) , puede utilizar el operador de [Espera](../../../visual-basic/language-reference/operators/await-operator.md) en el método.  Un fragmento con el operador de `Await` suspende la ejecución del método hasta que la tarea aguardada complete.  La tarea representa el trabajo en curso.  Cuando la tarea asociada a los finals de operador de `Await` , ejecución se reanuda en el mismo método.  Para obtener más información, vea [Flujo de control en programas Async](../Topic/Control%20Flow%20in%20Async%20Programs%20\(C%23%20and%20Visual%20Basic\).md).  
+ Las propiedades de la `Exception` objeto ayuda a identificar la causa y la ubicación de una excepción. Por ejemplo, el <xref:System.Exception.StackTrace%2A>listas de propiedades de los métodos llamados que produjeron la excepción, lo que le ayuda a encontrar dónde se produjo el error en el código.</xref:System.Exception.StackTrace%2A> <xref:System.Exception.Message%2A>Devuelve un mensaje que describe la excepción.</xref:System.Exception.Message%2A> <xref:System.Exception.HelpLink%2A>Devuelve un vínculo a un archivo de ayuda asociado.</xref:System.Exception.HelpLink%2A> <xref:System.Exception.InnerException%2A>Devuelve el `Exception` devuelve el objeto que produjo la excepción actual, o bien `Nothing` si no hay ningún original `Exception`.</xref:System.Exception.InnerException%2A>  
   
- Una tarea devuelta por un método Async puede finalizar con errores, indicando que completó debido a una excepción no controlada.  Una tarea también puede finalizar en un estado cancelado, que da lugar a `OperationCanceledException` que se va a iniciar de la expresión de aguardar.  Para detectar cualquier tipo de excepción, coloque la expresión de `Await` asociado a la tarea en un bloque de `Try` , y detectar la excepción en el bloque de `Catch` .  Un ejemplo se explica más adelante en este tema.  
+## <a name="considerations-when-using-a-trycatch-statement"></a>Consideraciones al usar un bloque Try... Catch (instrucción)  
+ Use un `Try…Catch` instrucción sólo para señalizar la aparición de eventos de programa inusuales o inesperados. Las razones siguientes:  
   
- Una tarea puede estar con errores porque varias excepciones son responsables del error.  Por ejemplo, la tarea puede ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  Cuando se espera por tarea, la excepción detectada es solo una de las excepciones, y no puede predecir qué excepción se detectar.  Un ejemplo se explica más adelante en este tema.  
+-   Detectar excepciones en tiempo de ejecución crea una sobrecarga adicional y es probable que sea más lenta que la comprobación previa para evitar las excepciones.  
   
- Una expresión de `Await` no puede estar dentro de un bloque de `Catch` o de bloque de `Finally` .  
+-   Si un `Catch` bloque no se administra correctamente, la excepción podría no mostrarse correctamente a los usuarios.  
   
-## Iteradores  
- Una función de iterador o un descriptor de acceso de `Get` realiza una iteración personalizada en una colección.  Un iterador utiliza un fragmento de [producción](../../../visual-basic/language-reference/statements/yield-statement.md) para devolver cada elemento de la colección de uno en uno.  Llama a una función de iterador mediante [For Each...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+-   Control de excepciones hace que un programa más complejo.  
   
- Un fragmento de `Yield` puede estar dentro de un bloque de `Try` .  `Try` bloqueos que contiene un fragmento de `Yield` puede tener bloques de `Catch` , y un bloque de `Finally` .  Vea “bloque Try en la sección de Visual Basic” de [Iteradores](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md) para obtener un ejemplo.  
+ No necesita siempre un `Try…Catch` instrucción para comprobar una condición que es probable que ocurra. En el ejemplo siguiente se comprueba si existe un archivo antes de intentar abrirlo. Esto reduce la necesidad de detectar una excepción producida por el <xref:System.IO.File.OpenText%2A>método.</xref:System.IO.File.OpenText%2A>  
   
- Un fragmento de `Yield` no puede estar dentro de un bloque de `Catch` o bloque de `Finally` .  
+ [!code-vb[VbVbalrStatements&#94;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_1.vb)]  
   
- Si el cuerpo de `For Each` \(fuera de la función de iterador\) produce una excepción, un bloque de `Catch` en la función de iterador no se ejecuta, pero un bloque de `Finally` en la función de iterador se ejecuta.  Un bloque de `Catch` dentro de una función de iterador detecta las excepciones que se producen dentro de la función de iterador.  
+ Garantizar que el código en `Catch` bloques pueden comunicar correctamente las excepciones a los usuarios, ya sea a través de subprocesos registro o los mensajes adecuados. De lo contrario, las excepciones pueden permanecer desconocidas.  
   
-## Situaciones de confianza parcial  
- En situaciones de confianza parcial, como una aplicación hospedada en un recurso compartido de red, `Try...Catch...Finally` no detectará las excepciones de seguridad que se produzcan antes de llamar al método que contiene la llamada.  El ejemplo siguiente, si se coloca en un recurso compartido de servidor y se ejecuta desde el mismo, producirá el error: "Sub System.Security.SecurityException: Error de solicitud". Para obtener más información sobre excepciones de seguridad, vea la clase <xref:System.Security.SecurityException>.  
+## <a name="async-methods"></a>Métodos asincrónicos  
+ Si marca un método con la [Async](../../../visual-basic/language-reference/modifiers/async.md) modificador, puede utilizar el [Await](../../../visual-basic/language-reference/operators/await-operator.md) operador en el método. Una instrucción con el `Await` operador suspende la ejecución del método hasta que se complete la tarea esperada. La tarea representa el trabajo en curso. Cuando la tarea que está asociada la `Await` operador finalice, se reanuda la ejecución en el mismo método. Para obtener más información, consulte [flujo de Control en programas Async](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
- [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_2.vb)]  
+ Una tarea devuelta por un método asincrónico puede encontrarse en un estado de error que indica que ha completado debido a una excepción no controlada. También puede finalizar una tarea en un estado cancelado, lo que resulta en una `OperationCanceledException` que se producen fuera de la expresión await. Para detectar cualquier tipo de excepción, coloque el `Await` expresión asociada con la tarea en un `Try` bloquear y detectar la excepción en el `Catch` bloque. Más adelante en este tema se proporciona un ejemplo.  
   
- En este tipo de situación de confianza parcial, debe colocar la instrucción `Process.Start` en un procedimiento `Sub` independiente.  La llamada inicial a `Sub` producirá un error.  Esto permite que `Try...Catch` lo capture antes de que se inicie el procedimiento `Sub` que contiene `Process.Start` y se produzca la excepción de seguridad.  
+ Una tarea puede estar en un estado de error porque varias excepciones eran responsables de su ausencia. Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> Cuando se espera dicha tarea, la excepción detectada es sólo una de las excepciones y no se puede predecir qué excepción será detectada. Más adelante en este tema se proporciona un ejemplo.  
   
-## Ejemplo  
- El ejemplo siguiente muestra la estructura de la instrucción `Try...Catch...Finally`.  
+ Un `Await` expresión no puede estar dentro de un `Catch` bloque o `Finally` bloque.  
   
- [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
+## <a name="iterators"></a>Iteradores  
+ Una función de iterador o `Get` descriptor de acceso realiza una iteración personalizada en una colección. Un iterador se usa un [producen](../../../visual-basic/language-reference/statements/yield-statement.md) instrucción para devolver cada elemento de la colección a la vez. Puede llamar a una función de iterador con un [For Each... Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
-## Ejemplo  
- En el ejemplo siguiente, el método `CreateException` arroja una `NullReferenceException`.  El código que genera la excepción no está en un bloque `Try` .  Por lo tanto, el método `CreateException` no controla la excepción.  El método `RunSample` no controla la excepción porque la llamada al método `CreateException` está en un bloque `Try`.  
+ Un `Yield` instrucción puede estar dentro de un `Try` bloque. Un `Try` bloque que contiene un `Yield` instrucción puede tener `Catch` bloquea y puede tener un `Finally` bloque. Consulte la sección "Probar bloques en Visual Basic" de [iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) para obtener un ejemplo.  
   
- El ejemplo incluye instrucciones `Catch` para varios tipos de excepciones, ordenadas de la más específica a la más general.  
+ Un `Yield` instrucción no puede estar dentro de un `Catch` bloque o una `Finally` bloque.  
   
- [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
+ Si el `For Each` cuerpo (fuera de la función de iterador) produce una excepción, un `Catch` no se ejecuta el bloque de la función del iterador, pero un `Finally` se ejecuta el bloque de la función del iterador. Un `Catch` bloque dentro de una función de iterador captura solo las excepciones que se producen dentro de la función de iterador.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo utilizar una instrucción `Catch When` para filtrar una expresión condicional.  Si la expresión condicional se evalúa a `True`, se ejecuta el código en el bloque `Catch`.  
+## <a name="partial-trust-situations"></a>Situaciones de confianza parcial  
+ En situaciones de confianza parcial, como una aplicación hospedada en un recurso compartido de red, `Try...Catch...Finally` no detecta excepciones de seguridad que se producen antes de invocar el método que contiene la llamada. El siguiente ejemplo, cuando se coloca en un recurso compartido de servidor y se ejecuta desde allí, produce el error "System.Security.SecurityException: error de solicitud." Para obtener más información acerca de las excepciones de seguridad, vea la <xref:System.Security.SecurityException>clase.</xref:System.Security.SecurityException>  
   
- [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements&#85;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_2.vb)]  
   
-## Ejemplo  
- El ejemplo siguiente tiene una instrucción `Try…Catch` incluida en un bloque `Try` .  El bloque `Catch` interior produce una excepción que tiene su propiedad `InnerException` establecida en la excepción original.  El bloque exterior `Catch` informa de su propia excepción y de la excepción interna.  
+ En esta situación de confianza parcial, tiene que poner el `Process.Start` instrucción en otro `Sub`. La llamada inicial a la `Sub` se producirá un error. Esto permite `Try...Catch` capturarla antes de la `Sub` que contiene `Process.Start` se inicia y se produce la excepción de seguridad.  
   
- [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra la estructura de la `Try...Catch...Finally` instrucción.  
   
-## Ejemplo  
- El ejemplo siguiente se muestra el control de excepciones para los métodos async.  Para detectar una excepción que se aplique a una tarea async, la expresión de `Await` está en un bloque de `Try` del llamador, y la excepción se detecta en el bloque de `Catch` .  
+ [!code-vb[VbVbalrStatements&#86;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
   
- Quite los comentarios de la línea de `Throw New Exception` en el ejemplo para mostrar el control de excepciones.  La excepción se detecta en el bloque de `Catch` , la propiedad de `IsFaulted` de la tarea se establece en `True`, y la propiedad de `Exception.InnerException` de la tarea se establece en la excepción.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente, la `CreateException` método produce un `NullReferenceException`. El código que genera la excepción no está en un `Try` bloque. Por lo tanto, la `CreateException` método no controla la excepción. El `RunSample` método controlar la excepción porque la llamada a la `CreateException` método está en un `Try` bloque.  
   
- Quite los comentarios de la línea de `Throw New OperationCancelledException` para mostrar qué ocurre al cancelar un proceso asincrónico.  La excepción se detecta en el bloque de `Catch` , y la propiedad de `IsCanceled` de la tarea se establece en `True`.  Sin embargo, en algunas condiciones que no se aplican a este ejemplo, `IsFaulted` se establece en `True` y `IsCanceled` se establece en `False`.  
+ El ejemplo incluye `Catch` instrucciones para varios tipos de excepciones, se ordenan desde el más específico al más general.  
   
- [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements&#91;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
   
-## Ejemplo  
- El ejemplo siguiente se muestra el control de excepciones donde varias tareas pueden producir excepciones.  El bloque de `Try` tiene la expresión de `Await` para la tarea que <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> devolvió.  Finaliza la tarea cuando se completan las tres tareas a las que se aplica <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> .  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar un `Catch When` instrucción para filtrar en una expresión condicional. Si la expresión condicional se evalúa como `True`, el código en el `Catch` bloquear ejecuciones.  
   
- Cada una de las tres causas de tareas una excepción.  El bloque de `Catch` recorre las excepciones, que se encuentran en la propiedad de `Exception.InnerExceptions` de la tarea que `Task.WhenAll` devolvió.  
+ [!code-vb[VbVbalrStatements&#92;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
   
- [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente tiene un `Try…Catch` instrucción que se encuentra en un `Try` bloque. Interno `Catch` bloque produce una excepción que tiene su `InnerException` propiedad establecida en la excepción original. Externo `Catch` bloque informa acerca de su propia excepción y la excepción interna.  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.Information.Err%2A>   
- <xref:System.Exception>   
- [Exit \(Instrucción\)](../../../visual-basic/language-reference/statements/exit-statement.md)   
- [On Error \(Instrucción\)](../../../visual-basic/language-reference/statements/on-error-statement.md)   
- [Procedimientos recomendados para usar fragmentos de código](/visual-studio/ide/best-practices-for-using-code-snippets)   
- [Control de excepciones](../Topic/Exception%20Handling%20\(Task%20Parallel%20Library\).md)   
- [Throw \(Instrucción\)](../../../visual-basic/language-reference/statements/throw-statement.md)
+ [!code-vb[VbVbalrStatements&#93;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
+  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra el control de excepciones de los métodos asincrónicos. Para detectar una excepción que se aplica a una tarea asincrónica, el `Await` expresión está en un `Try` bloque del llamador y la excepción se detecta en el `Catch` bloque.  
+  
+ Quite la marca de comentario de la línea `Throw New Exception` en el ejemplo para demostrar el control de excepciones. La excepción es detectada en el `Catch` bloquear la tarea `IsFaulted` propiedad está establecida en `True`y la tarea `Exception.InnerException` propiedad se establece en la excepción.  
+  
+ Quite el `Throw New OperationCancelledException` línea para mostrar qué ocurre cuando se cancela un proceso asincrónico. La excepción es detectada en el `Catch` bloque y la tarea `IsCanceled` propiedad está establecida en `True`. Sin embargo, en algunas condiciones que no se aplican a este ejemplo, `IsFaulted` está establecido en `True` y `IsCanceled` está establecido en `False`.  
+  
+ [!code-vb[csAsyncExceptions n.º&1;](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
+  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra el control de excepciones en el que varias tareas pueden producir varias excepciones. El `Try` bloque tiene el `Await` expresión para la tarea que <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>devuelto.</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> La tarea está completa cuando las tres tareas que <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>se aplica completados.</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>  
+  
+ Cada una de las tres tareas produce una excepción. El `Catch` bloque itera a través de las excepciones, que se encuentran en la `Exception.InnerExceptions` propiedad de la tarea que `Task.WhenAll` devuelto.  
+  
+ [!code-vb[csAsyncExceptions&3;](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
+  
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.VisualBasic.Information.Err%2A></xref:Microsoft.VisualBasic.Information.Err%2A>   
+ <xref:System.Exception></xref:System.Exception>   
+ [Exit (instrucción)](../../../visual-basic/language-reference/statements/exit-statement.md)   
+ [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)   
+ [Procedimientos recomendados para utilizar fragmentos de código](https://docs.microsoft.com/visualstudio/ide/best-practices-for-using-code-snippets)   
+ [Control de excepciones](https://msdn.microsoft.com/library/dd997415)   
+ [Throw (instrucción)](../../../visual-basic/language-reference/statements/throw-statement.md)

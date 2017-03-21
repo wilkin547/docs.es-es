@@ -1,65 +1,81 @@
 ---
-title: "/errorreport | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/errorreport (opción del compilador) [Visual Basic]"
-  - "errorreport (opción del compilador) [Visual Basic]"
-  - "-errorreport (opción del compilador) [Visual Basic]"
+title: /errorreport | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- -errorreport compiler option [Visual Basic]
+- /errorreport compiler option [Visual Basic]
+- errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# /errorreport
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2ebe5646256926f68a1a900b91c25a1768505785
+ms.lasthandoff: 03/13/2017
 
-Especifica cómo el compilador de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] debe indicar los errores internos.  
+---
+# <a name="errorreport"></a>/errorreport
+Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] los errores internos del compilador.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /errorreport:{ prompt | queue | send | none }  
 ```  
   
-## Comentarios  
- Esta opción proporciona una forma cómoda de informar de un error interno del compilador \(ICE\) de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] al equipo de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] de Microsoft.  De manera predeterminada, el compilador no envía información a Microsoft.  Sin embargo, si encuentra un error del compilador interno, esta opción permite indicar el error a Microsoft.  Esta información ayudará a los ingenieros de Microsoft a identificar la causa y puede ayudar a mejorar la siguiente versión de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+## <a name="remarks"></a>Comentarios  
+ Esta opción proporciona una manera cómoda de informe una [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] error interno del compilador (ICE) a la [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] team en Microsoft. De forma predeterminada, el compilador no envía ninguna información a Microsoft. Sin embargo, si se produce un error de compilador interno, esta opción permite informar del error a Microsoft. Esta información le ayudará a los ingenieros de Microsoft a identificar la causa y puede ayudar a mejorar la siguiente versión de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
- La capacidad de un usuario para enviar informes depende del equipo y de los permisos de la directiva del usuario.  
+ Capacidad de un usuario para enviar informes depende de permisos de la directiva de equipo y usuario.  
   
- En la tabla siguiente se resume el efecto de la opción `/errorreport`:  
+ En la tabla siguiente se resume el efecto de la `/errorreport` opción.  
   
-|||  
-|-|-|  
 |Opción|Comportamiento|  
-|`prompt`|Si se produce un error del compilador interno, aparece un cuadro de diálogo para que pueda ver los datos exactos recogidos por el compilador.  Puede determinar si hay cualquier información confidencial en el informe de errores y decidir si desea enviarlo a Microsoft.  Si decide enviarlo, y el equipo y configuración de la directiva de derechos de usuario lo permiten, el compilador envía los datos a Microsoft.|  
-|`queue`|Pone en la cola el informe de errores.  Cuando inicia una sesión con privilegios de administrador, puede informar de todos los errores desde la última vez que inició una sesión \(se le pedirá que envíe informes de errores como máximo una vez cada tres días\).  Es el comportamiento predeterminado cuando no se especifica la opción `/errorreport`.|  
-|`send`|Si se produce un error del compilador interno, y el equipo y configuración de la directiva de derechos de usuario lo permiten, el compilador envía los datos a Microsoft.<br /><br /> La opción `/errorReport:send` intenta enviar automáticamente información de error a Microsoft.  Esta opción depende del Registro.  Para obtener más información sobre la configuración de los valores en el Registro, vea [How to Turn on Automatic Error Reporting in Visual Studio 2008 Command\-line Tools](http://go.microsoft.com/fwlink/?LinkID=184695).|  
-|`none`|Si se produce un error del compilador interno, no se recopilará ni se enviará a Microsoft.|  
+|---|---|  
+|`prompt`|Si se produce un error interno del compilador, aparece un cuadro de diálogo para que pueda ver los datos exactos que recogidos por el compilador. Puede determinar si hay cualquier información confidencial en el informe de errores y tomar una decisión sobre si se envía a Microsoft. Si decide enviarlo, y la configuración de directiva de equipo y de usuario lo permite, el compilador envía los datos a Microsoft.|  
+|`queue`|Pone en cola el informe de errores. Cuando inicie sesión con privilegios de administrador, puede notificar los errores desde la última vez que inició sesión (no se le para enviar informes de errores más de una vez cada tres días). Este es el comportamiento predeterminado cuando la `/errorreport` no se especifica la opción.|  
+|`send`|Si se produce un error interno del compilador, y la configuración de directiva de equipo y de usuario lo permite, el compilador envía los datos a Microsoft.<br /><br /> La opción `/errorReport:send` intenta enviar automáticamente información de errores a Microsoft. Esta opción depende del registro. Para obtener más información acerca de cómo establecer los valores apropiados en el registro, consulte [cómo activar el informe de errores automático en las herramientas de línea de comandos de Visual Studio 2008](http://go.microsoft.com/fwlink/?LinkID=184695).|  
+|`none`|Si se produce un error interno del compilador, no se recopila o envía a Microsoft.|  
   
- El compilador envía datos que incluyen la pila en el momento del error, que normalmente incluye algún código fuente.  Si se utilizó `/errorreport` con la opción [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md), se envía todo el archivo de código fuente.  
+ El compilador envía datos que incluyen la pila en el momento del error, que normalmente incluye algún código fuente. Si `/errorreport` se usa con el [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) opción, se envía el archivo de código fuente completo.  
   
- Esta opción se utiliza de manera más adecuada con la opción [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md), ya que permite a los ingenieros de Microsoft reproducir con más facilidad el error.  
+ Esta opción se usa mejor con la [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) opción, ya que permite a los ingenieros de Microsoft más fácil reproducen el error.  
   
 > [!NOTE]
->  La opción `/errorreport` no está disponible en el entorno de desarrollo de Visual Studio; sólo está disponible cuando se compila desde la línea de comandos.  
+>  El `/errorreport` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible sólo cuando se compila desde la línea de comandos.  
   
-## Ejemplo  
- El código siguiente intenta compilar `T2.vb` y, si el compilador encuentra un error del compilador interno, pregunta si desea enviar el informe de errores a Microsoft.  
+## <a name="example"></a>Ejemplo  
+ El código siguiente intenta compilar `T2.vb`, y si el compilador encuentra un error interno del compilador, le pide que enviar el informe de errores a Microsoft.  
   
 ```  
 vbc /errorreport:prompt t2.vb  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [\/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+ [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)

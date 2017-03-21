@@ -1,41 +1,58 @@
 ---
-title: "La primera instrucci&#243;n de este &#39;Sub New&#39; debe ser una llamada expl&#237;cita a &#39;MyBase.New&#39; o a &#39;MyClass.New&#39; porque el constructor &#39;&lt;nombre de constructor&gt;&#39; de la clase base &#39;&lt;nombre de clase base&gt;&#39; de &#39;&lt;nombre de clase derivada&gt;&#39; est&#225; marcado como obsoleto: &#39;&lt;mensaje de error&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30920"
-  - "bc30920"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30920"
+title: "La primera instrucción de este &quot;Sub New&quot; debe ser una llamada explícita a &quot;MyBase.New&quot; o &quot;MyClass.New&quot; porque el &quot;&lt;constructorname&gt;&quot;en la clase base&quot;&lt;baseclassname&gt;&quot;de&quot;&lt;derivedclassname&gt;&quot; está marcado como obsoleto: &quot;&lt;errormessage&gt;&quot; | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30920
+- bc30920
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# La primera instrucci&#243;n de este &#39;Sub New&#39; debe ser una llamada expl&#237;cita a &#39;MyBase.New&#39; o a &#39;MyClass.New&#39; porque el constructor &#39;&lt;nombre de constructor&gt;&#39; de la clase base &#39;&lt;nombre de clase base&gt;&#39; de &#39;&lt;nombre de clase derivada&gt;&#39; est&#225; marcado como obsoleto: &#39;&lt;mensaje de error&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: feb04d426b7e050b7ad05cdfd4d481172dda3a49
+ms.lasthandoff: 03/13/2017
 
-Un constructor de clase no llama explícitamente a un constructor de clase base y el constructor de la clase base implícita está marcado con el atributo <xref:System.ObsoleteAttribute> y la directiva de tratarlo como un error.  
+---
+# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>La primera instrucción de este 'Sub New' debe ser una llamada explícita a 'MyBase.New' o 'MyClass.New' porque el '&lt;constructorname&gt;'en la clase base'&lt;baseclassname&gt;'de'&lt;derivedclassname&gt;' está marcado como obsoleto: '&lt;errormessage&gt;'
+Un constructor de clase no llama explícitamente a un constructor de clase base y el constructor de clase base implícito está marcado con el <xref:System.ObsoleteAttribute>atributo y la directiva para tratarlo como un error.</xref:System.ObsoleteAttribute>  
   
- Cuando un constructor de clase derivada no llama a un constructor de clase base, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] intenta generar una llamada implícita a un constructor de clase base sin parámetros.  Si no hay en la clase base un constructor accesible al que se puede llamar sin argumentos, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] no puede generar una llamada implícita.  En este caso, el constructor necesario está marcado con el atributo <xref:System.ObsoleteAttribute>, por lo tanto, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] no puede llamarlo.  
+ Cuando un constructor de clase derivada no llama a un constructor de clase base, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] intenta generar una llamada implícita a un constructor de clase base sin parámetros. Si no hay ningún constructor accesible en la clase base que se puede llamar sin argumentos, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] no se puede generar una llamada implícita. En este caso, el constructor necesario se marca con el <xref:System.ObsoleteAttribute>lo atributo [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] no puede llamar a lo</xref:System.ObsoleteAttribute>  
   
- Para indicar que un elemento de programación ya no está en uso, puede marcarlo aplicándole <xref:System.ObsoleteAttribute>.  Si hace esto, podrá establecer la propiedad <xref:System.ObsoleteAttribute.IsError%2A> del atributo en `True` o `False`.  Si la establece en `True`, el compilador tratará como un error los intentos de utilizar el elemento.  Si la establece en `False`, o deja el valor predeterminado `False`, el compilador emitirá una advertencia cuando se intente utilizar el elemento.  
+ Puede marcar cualquier elemento de programación ya no está en uso aplicando <xref:System.ObsoleteAttribute>a lo</xref:System.ObsoleteAttribute> Si lo hace, puede establecer el atributo <xref:System.ObsoleteAttribute.IsError%2A>propiedad como `True` o `False`.</xref:System.ObsoleteAttribute.IsError%2A> Si se establece en `True`, el compilador trata un intento de usar el elemento como un error. Si se establece en `False`o se deja el valor predeterminado `False`, el compilador emite una advertencia si se produce un intento de usar el elemento.  
   
- **Identificador de error:** BC30920  
+ **Id. de error:** BC30920  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Examine el mensaje de error y adopte las medidas oportunas.  
+1.  Examine el mensaje de error indicado y tome las medidas adecuadas.  
   
 2.  Incluya una llamada a `MyBase.New()` o `MyClass.New()` como la primera instrucción de `Sub New` en la clase derivada.  
   
-## Vea también  
- [Atributos](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vea también  
+ [Información general de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+ 

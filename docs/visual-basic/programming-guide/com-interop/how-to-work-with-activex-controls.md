@@ -1,47 +1,63 @@
 ---
-title: "C&#243;mo: Trabajar con controles ActiveX (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "controles ActiveX, agregar al cuadro de herramientas"
-  - "cuadro de herramientas, agregar controles"
+title: "Cómo: trabajar con controles ActiveX (Visual Basic) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Toolbox, adding controls
+- ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# C&#243;mo: Trabajar con controles ActiveX (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 12780fc2e95e219befdfd7283a2f958f21e447f7
+ms.lasthandoff: 03/13/2017
 
-Los controles ActiveX son componentes u objetos COM que se pueden insertar en una página Web o en otra aplicación para reutilizar una funcionalidad empaquetada programada por otros.  Puede usar controles ActiveX desarrollados para Visual Basic 6.0 y versiones anteriores a fin de agregar características al **Cuadro de herramientas** de [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  
+---
+# <a name="how-to-work-with-activex-controls-visual-basic"></a>Cómo: Trabajar con controles ActiveX (Visual Basic)
+Los controles ActiveX son componentes COM o los objetos que puede insertar en una página Web u otra aplicación para reutilizar una funcionalidad empaquetada programada. Puede utilizar controles ActiveX desarrollados para que Visual Basic 6.0 y versiones anteriores para agregar características a la **herramientas** de [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
   
-### Para agregar controles ActiveX al cuadro de herramientas  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Para agregar controles ActiveX al cuadro de herramientas  
   
-1.  En el menú **Herramientas**, haga clic en **Elegir elementos del cuadro de herramientas**.  
+1.  En el **herramientas** menú, haga clic en **elegir elementos del cuadro de herramientas**.  
   
-     Aparece el cuadro de diálogo **Elegir cuadro de herramientas**.  
+     El **elegir cuadro de herramientas** aparece el cuadro de diálogo.  
   
-2.  Haga clic en la ficha **Componentes COM**.  
+2.  Haga clic en el **componentes COM** ficha.  
   
 3.  Active la casilla situada junto al control ActiveX que desea utilizar y, a continuación, haga clic en **Aceptar**.  
   
-     El nuevo control aparece junto a las demás herramientas del **Cuadro de herramientas**.  
+     El nuevo control aparece con las otras herramientas en el **cuadro de herramientas**.  
   
     > [!NOTE]
-    >  Puede utilizar la herramienta Aximp para crear manualmente un ensamblado de interoperabilidad para controles ActiveX.  Para obtener más información, vea [Aximp.exe \(Windows Forms ActiveX Control Importer\)](../Topic/Aximp.exe%20\(Windows%20Forms%20ActiveX%20Control%20Importer\).md).  
+    >  Puede utilizar la herramienta Aximp para crear manualmente un ensamblado de interoperabilidad para controles ActiveX. Para obtener más información, consulte [Aximp.exe (importador de controles de ActiveX de Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)   
- [Cómo: Agregar controles ActiveX a formularios Windows Forms](../Topic/How%20to:%20Add%20ActiveX%20Controls%20to%20Windows%20Forms.md)   
- [Aximp.exe \(Windows Forms ActiveX Control Importer\)](../Topic/Aximp.exe%20\(Windows%20Forms%20ActiveX%20Control%20Importer\).md)   
- [Consideraciones al alojar un control ActiveX en Windows Forms](../Topic/Considerations%20When%20Hosting%20an%20ActiveX%20Control%20on%20a%20Windows%20Form.md)   
+ [Cómo: agregar controles ActiveX a formularios Windows Forms](http://msdn.microsoft.com/library/54a61e5b-555e-4887-b41e-6244fed271eb)   
+ [Aximp.exe (importador de controles ActiveX de Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)   
+ [Consideraciones al alojar un Control ActiveX en un formulario Windows Forms](http://msdn.microsoft.com/library/2509302d-a74e-484f-9890-2acdbfa67a68)   
  [Solución de problemas de interoperabilidad](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

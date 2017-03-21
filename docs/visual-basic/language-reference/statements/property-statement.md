@@ -1,32 +1,48 @@
 ---
-title: "Property Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PropertySet"
-  - "vb.Property"
-  - "vb.PropertyGet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Property (instrucción)"
-  - "modificador predeterminado"
-  - "Property (procedimientos), Property (instrucciones)"
-  - "Property (palabra clave)"
+title: "Property (instrucción) | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PropertySet
+- vb.Property
+- vb.PropertyGet
+dev_langs:
+- VB
+helpviewer_keywords:
+- Property statement
+- default modifier
+- property procedures, Property statements
+- Property keyword
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
 caps.latest.revision: 41
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 41
----
-# Property Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 87cb32c12ab3238508a6a4bb114306909e409dda
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="property-statement"></a>Property Statement
 Declara el nombre de una propiedad y los procedimientos de propiedad utilizados para almacenar y recuperar el valor de la propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -61,19 +77,19 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `accessmodifier`  
   
-     Opcional en el `Property` instrucción y en al menos uno de los `Get` y `Set` instrucciones. Puede ser uno de los siguientes:  
+     Opcional en la `Property` instrucción y en al menos uno de los `Get` y `Set` instrucciones. Puede ser uno de los siguientes:  
   
-    -   [Público](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Privado](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
-     Vea [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Consulte [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `propertymodifiers`  
   
@@ -81,9 +97,9 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     -   [Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
-    -   [Invalidaciones](../../../visual-basic/language-reference/modifiers/overrides.md)  
+    -   [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
-    -   [Reemplazable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+    -   [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
     -   [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
@@ -115,7 +131,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `name`  
   
-     Requerido. Nombre de la propiedad. Vea [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Obligatorio. Nombre de la propiedad. Consulte [nombres de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
@@ -139,11 +155,10 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
      `interface.definedname`  
   
-    |||  
-    |-|-|  
     |Parte|Descripción|  
-    |`interface`|Requerido. Nombre de una interfaz implementada por esta propiedad contenedora de clase o estructura.|  
-    |`definedname`|Requerido. Nombre por el que se define la propiedad en `interface`.|  
+    |---|---|  
+    |`interface`|Obligatorio. Nombre de una interfaz implementada por esta propiedad contenedora de clase o estructura.|  
+    |`definedname`|Obligatorio. Nombre por el que se define la propiedad en `interface`.|  
   
 -   `Get`  
   
@@ -172,7 +187,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 ## <a name="remarks"></a>Comentarios  
  El `Property` instrucción presenta la declaración de una propiedad. Una propiedad puede tener un `Get` procedimiento (solo lectura), un `Set` procedimiento (sólo escritura) o ambas (de lectura y escritura). Puede omitir el `Get` y `Set` procedimiento cuando se usa una propiedad implementada automáticamente. Para obtener más información, consulte [Auto-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
- Puede usar `Property` sólo en el nivel de clase. Esto significa que el *contexto de la declaración* de una propiedad debe ser una clase, estructura, módulo o interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento ni un bloque. Para obtener más información, consulte [contextos de declaración y niveles de acceso predeterminados](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Puede usar `Property` sólo en el nivel de clase. Esto significa que la *contexto de la declaración* de una propiedad debe ser una clase, estructura, módulo o interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento ni un bloque. Para obtener más información, consulte [contextos de declaración y niveles de acceso predeterminados](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  De forma predeterminada, propiedades utilizan acceso público. Puede ajustar el nivel de acceso de una propiedad con un modificador de acceso en la `Property` instrucción y, opcionalmente, ajustar uno de sus procedimientos de propiedad a un nivel de acceso más restrictivo.  
   
@@ -180,7 +195,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 ## <a name="rules"></a>Reglas  
   
--   **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, puede especificar opcionalmente un nivel de acceso diferente para el `Get` o la `Set` procedimiento, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si se declara la propiedad `Friend`, puede declarar el `Set` procedimiento `Private`, pero no `Public`.  
+-   **Niveles de acceso mixtos.** Si va a definir una propiedad de lectura y escritura, puede especificar opcionalmente un nivel de acceso diferente para el `Get` o `Set` procedimiento, pero no ambos. Si lo hace, el nivel de acceso del procedimiento debe ser más restrictivo que el nivel de acceso de la propiedad. Por ejemplo, si se declara la propiedad `Friend`, puede declarar la `Set` procedimiento `Private`, pero no `Public`.  
   
      Si va a definir un `ReadOnly` o `WriteOnly` propiedad, el procedimiento de propiedad único (`Get` o `Set`, respectivamente) representa toda la propiedad. No se puede declarar un nivel de acceso diferente para este procedimiento, porque se establecerían dos niveles de acceso para la propiedad.  
   
@@ -188,32 +203,32 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
      Si no se especifica `returntype`, la propiedad devuelve `Object`.  
   
--   **Implementación.** Si esta propiedad utiliza la `Implements` (palabra clave), la clase o estructura contenedora debe tener un `Implements` instrucción inmediatamente posterior a su `Class` o `Structure` instrucción. El `Implements` instrucción debe incluir cada interfaz especificada en `implementslist`. Sin embargo, el nombre por el que una interfaz define el `Property` (en `definedname`) no tiene que ser el mismo que el nombre de esta propiedad (en `name`).  
+-   **Implementación.** Si utiliza esta propiedad el `Implements` (palabra clave), la clase o estructura contenedora debe tener un `Implements` instrucción inmediatamente siguiente a su `Class` o `Structure` instrucción. El `Implements` instrucción debe incluir cada interfaz especificada en `implementslist`. Sin embargo, el nombre por el que una interfaz define la `Property` (en `definedname`) no tiene que ser el mismo que el nombre de esta propiedad (en `name`).  
   
 ## <a name="behavior"></a>Comportamiento  
   
 -   **Devolver desde un procedimiento de propiedad.** Cuando el `Get` o `Set` procedimiento vuelve al código de llamada, la ejecución continúa con la instrucción que sigue a la instrucción que lo invocó.  
   
-     El `Exit Property` y `Return` instrucciones provocan una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` y `Return` pueden aparecer instrucciones en cualquier parte en el procedimiento y puede combinar `Exit Property` y `Return` instrucciones.  
+     El `Exit Property` y `Return` instrucciones provocan una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` y `Return` instrucciones pueden aparecer en cualquier parte en el procedimiento y puede combinar `Exit Property` y `Return` instrucciones.  
   
--   **Valor devuelto.** Para devolver un valor desde un `Get` procedimiento, puede asignar el valor al nombre de propiedad o incluirlo en una `Return` instrucción. En el ejemplo siguiente se asigna el valor devuelto al nombre de propiedad `quoteForTheDay` y, a continuación, usa el `Exit Property` instrucción para devolver.  
+-   **Valor devuelto.** Para devolver un valor desde una `Get` procedimiento, puede asignar el valor al nombre de propiedad o incluirlo en una `Return` instrucción. En el ejemplo siguiente se asigna el valor devuelto al nombre de propiedad `quoteForTheDay` y, a continuación, usa el `Exit Property` instrucción para devolver.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements Nº&27;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements&#28;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
   
      Si utiliza `Exit Property` sin asignar un valor a `name`, el `Get` procedimiento devuelve el valor predeterminado tipo de la propiedad de datos.  
   
      El `Return` instrucción al mismo tiempo asigna el `Get` procedimiento devuelve el valor y sale del procedimiento. En el ejemplo siguiente se muestra cómo hacerlo.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements Nº&27;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements&#29;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se declara una propiedad en una clase.  
   
- [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements&#51;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
 ## <a name="see-also"></a>Vea también  
  [Propiedades autoimplementadas](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   

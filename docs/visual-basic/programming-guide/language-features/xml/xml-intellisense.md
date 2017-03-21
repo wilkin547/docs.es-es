@@ -1,62 +1,77 @@
 ---
-title: "IntelliSense XML en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "IntelliSense [Visual Basic], XML"
-  - "código de Visual Basic, XML"
-  - "XML [Visual Basic], IntelliSense"
-  - "XML IntelliSense [Visual Basic]"
+title: XML IntelliSense en Visual Basic | Documentos de Microsoft
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, XML
+- XML IntelliSense [Visual Basic]
+- XML [Visual Basic], IntelliSense
+- IntelliSense [Visual Basic], XML
 ms.assetid: 59506ce9-d64e-417e-90fc-e9fe19f0a8fa
 caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
----
-# IntelliSense XML en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8c43db3d2010e4fa92eebeec8a973c50052b1340
+ms.lasthandoff: 03/13/2017
 
-El editor de código de Visual Basic incluye las características de IntelliSense para XML que proporcionan la finalización de palabras de los elementos definidos en un esquema XML.  Si incluye un archivo de definición de esquema XML \(XSD\) en el proyecto e importa el espacio de nombres de destino del esquema mediante la instrucción `Imports`, el editor de código incluirá elementos desde el esquema XSD en la lista de IntelliSense de variables miembro válidas para los objetos <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument>.  La ilustración siguiente muestra la lista de miembros de IntelliSense para un objeto <xref:System.Xml.Linq.XElement>.  
+---
+# <a name="xml-intellisense-in-visual-basic"></a>XML IntelliSense en Visual Basic
+El Editor de código de Visual Basic incluye características de IntelliSense para XML que proporcionan la finalización de palabras para los elementos definidos en un esquema XML. Si incluye un archivo de definición de esquemas XML (XSD) en el proyecto e importar el espacio de nombres de destino del esquema mediante la `Imports` instrucción, el Editor de código incluirá elementos desde el esquema XSD en la lista de IntelliSense de variables miembro válidas para <xref:System.Xml.Linq.XElement>y <xref:System.Xml.Linq.XDocument>objetos.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> La ilustración siguiente muestra la lista de los miembros de IntelliSense para un <xref:System.Xml.Linq.XElement>objeto.</xref:System.Xml.Linq.XElement>  
   
- ![XML IntelliSense en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/media/xml-intellisense.png "XML\_Intellisense")  
+ ![XML IntelliSense en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/media/xml_intellisense.png "XML_Intellisense")  
 IntelliSense XML  
   
-## Habilitar IntelliSense XML en Visual Basic  
- Para habilitar IntelliSense XML en Visual Basic, debe incluir un archivo de esquema XSD en el proyecto de Visual Basic.  También debe importar el espacio de nombres de destino para dicho esquema en el archivo de código mediante la instrucción `Imports`.  O bien, puede agregar el espacio de nombres de destino a la lista de espacios de nombres de nivel de proyecto mediante la página **Referencias** del Diseñador de proyectos de Visual Basic.  Para obtener ejemplos, vea [Cómo: Habilitar IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/how-to-enable-xml-intellisense.md).  Para obtener más información, vea [Imports \(Instrucción, Espacio de nombres XML\)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) y [Página Referencias, Diseñador de proyectos \(Visual Basic\)](/visual-studio/ide/reference/references-page-project-designer-visual-basic).  
+## <a name="enabling-xml-intellisense-in-visual-basic"></a>Habilitar IntelliSense XML en Visual Basic  
+ Para habilitar IntelliSense XML en Visual Basic, debe incluir un archivo de esquema XSD en el proyecto de Visual Basic. También debe importar el espacio de nombres de destino para el esquema XSD en el archivo de código mediante el uso de la `Imports` instrucción. Como alternativa, puede agregar el espacio de nombres de destino a la lista de nombres de nivel de proyecto mediante la **referencias** página del Diseñador de proyectos de Visual Basic. Para obtener ejemplos, vea [Cómo: habilitar IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/how-to-enable-xml-intellisense.md). Para obtener más información, consulte [instrucción Imports (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) y [página referencias, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
   
- Observe que, de forma predeterminada, no puede ver los archivos de esquema XSD en proyectos de Visual Basic.  Quizá deba hacer clic en el botón **Mostrar todos los archivos** para seleccionar un archivo XSD que se vaya a incluir en el proyecto.  
+ Tenga en cuenta que, de forma predeterminada, no puede ver los archivos de esquema XSD en proyectos de Visual Basic. Puede que tenga que haga clic en el **mostrar todos los archivos** el botón para seleccionar un archivo XSD para incluir en el proyecto.  
   
-### Generar un archivo de esquema \(inferencia de esquemas\)  
+### <a name="generating-a-schema-file-schema-inference"></a>Generar un archivo de esquema (inferencia de esquemas)  
  Puede crear un esquema XSD para un archivo XML existente deduciendo el esquema XSD mediante las herramientas XML de Visual Studio.  
   
--   A partir de SP1, puede utilizar el Asistente de XML a esquema para crear un conjunto de esquemas XML que se infiere de uno o más documentos XML e incluirlo en el proyecto.  Puede utilizar cualquier combinación de documentos XML en forma de archivos de texto, XML de direcciones de Internet HTTP o XML que esté escrito o pegado en el Asistente de XML a esquema.  Para tener acceso al Asistente de XML a esquema, haga clic en **Agregar nuevo elemento** en el menú **Proyecto** y agregue una plantilla **XML a esquema** del grupo de plantillas **Datos** o **Elementos comunes**.  Después de haber incluido todos los orígenes de documentos XML desde los que inferir el conjunto de esquemas XML, haga clic en **Aceptar** para crear el conjunto de esquemas inferido.  Para obtener más información, vea [Asistente XML a esquema](../../../../visual-basic/programming-guide/language-features/xml/xml-to-schema-wizard.md).  
+-   A partir de SP1, puede utilizar el Asistente de XML a esquema para crear un conjunto de esquemas XML que se infiere de uno o más documentos XML e incluirlo en el proyecto. Puede utilizar cualquier combinación de documentos XML en forma de archivos de texto, XML de direcciones de HTTP Internet o XML que esté escrito o pegado en el Asistente de XML a esquema. Para tener acceso el Asistente de XML a esquema, haga clic en **Agregar nuevo elemento** en el **proyecto** menú y agregue un **XML a esquema** plantilla desde el **datos** o **elementos comunes** grupo de plantillas. Una vez que ha incluido todos los orígenes de documentos XML para inferir el conjunto de esquemas XML desde, haga clic en **Aceptar** para crear el esquema deducido conjunto. Para obtener más información, consulte [Asistente XML a esquema](../../../../visual-basic/programming-guide/language-features/xml/xml-to-schema-wizard.md).  
   
--   También puede utilizar el Editor XML de Visual Studio para inferir un conjunto de esquemas XSD de un archivo XML.  Para crear un conjunto de esquemas XML mediante el Editor XML, abra un archivo XML en el Diseñador XML de Visual Studio y, a continuación, haga clic en **Crear esquema** en el menú **XML**.  Después de crear el conjunto de esquemas XSD, puede guardarlo en uno o más archivos XSD e incluirlos en su proyecto.  Para obtener más información, vea [Cómo: Habilitar IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/how-to-enable-xml-intellisense.md).  
+-   También puede utilizar el Editor XML de Visual Studio para deducir un esquema XSD que se establece desde un archivo XML. Para crear un esquema XML establecido mediante el Editor XML, abra un archivo XML en el Diseñador de XML de Visual Studio y, a continuación, haga clic en **Create Schema** en el **XML** menú. Después de crear el conjunto de esquemas XSD, puede guardar el conjunto de esquemas creados en uno o más archivos XSD y los incluye en el proyecto. Para obtener más información, consulte[Cómo: habilitar IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/how-to-enable-xml-intellisense.md).  
   
- Observe que los distintos conjuntos de esquemas XSD se podrían inferir de varios documentos XML que se piensa que tienen el mismo esquema.  Esto se puede producir cuando elementos y atributos concretos se encuentran en un archivo XML y no en otro, o cuando los elementos están incluidos en orden diferente, por ejemplo.  Debe revisar los conjuntos de esquemas XSD inferidos respecto a su integridad y exactitud al utilizar la inferencia del esquema XSD.  
+ Tenga en cuenta que los distintos conjuntos de esquemas XSD se podrían deducir de varios documentos XML que se piensa que tienen el mismo esquema. Esto puede ocurrir cuando se encuentran elementos y atributos concretos en un archivo XML y no en otro, o cuando se incluyen los elementos en un orden diferente, por ejemplo. Debe revisar los conjuntos de esquemas XSD deducidos son completos y precisos al utilizar la inferencia del esquema XSD.  
   
-## Lista de miembros  
- Después de escribir un punto \(.\) para delimitar una instancia de un objeto <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument> \(o una instancia de `IEnumerable(Of XElement)` o `IEnumerable(Of XDocument)`\), IntelliSense de Visual Basic muestra una lista de los posibles miembros del objeto.  La lista inicial incluye tres opciones que representan propiedades de eje XML, como se describe en la siguiente lista.  
+## <a name="member-list"></a>Lista de miembros  
+ Después de escribir un punto (.) para delimitar una instancia de un <xref:System.Xml.Linq.XElement>o <xref:System.Xml.Linq.XDocument>objeto (o una instancia de `IEnumerable(Of XElement)` o `IEnumerable(Of XDocument)`), IntelliSense de Visual Basic muestra una lista de miembros de objeto posibles.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> La lista inicial incluye tres opciones que representan propiedades de eje XML, como se describe en la siguiente lista.  
   
-|||  
-|-|-|  
 |Opción|Descripción|  
-|**\< \>**|Seleccione esta opción para mostrar una lista de los posibles elementos secundarios.  Para obtener más información, vea [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) y el método <xref:System.Xml.Linq.XContainer.Elements%2A>.|  
-|**@**|Seleccione esta opción para mostrar una lista de los posibles atributos.  Para obtener más información, vea [Propiedades de eje XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md). Esta opción sólo está disponible para los objetos de tipo <xref:System.Xml.Linq.XElement>.|  
-|**…\< \>**|Seleccione esta opción para mostrar una lista de los posibles elementos descendientes.  Para obtener más información, vea [Cómo: Obtener acceso a elementos descendientes XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md) y el método <xref:System.Xml.Linq.XContainer.Elements%2A>.|  
+|---|---|  
+|**\< >**|Seleccione esta opción para mostrar una lista de posibles secundarios de elementos. Para obtener más información, consulte [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) y <xref:System.Xml.Linq.XContainer.Elements%2A>método.</xref:System.Xml.Linq.XContainer.Elements%2A>|  
+|**@**|Seleccione esta opción para mostrar una lista de los posibles atributos. Para obtener más información, consulte [propiedades de eje XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md). Esta opción sólo está disponible para objetos de tipo <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement>|  
+|**…\< >**|Seleccione esta opción para mostrar una lista de posibles elementos descendientes. Para obtener más información, consulte [Cómo: obtener acceso a XML descendiente elementos](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md) y la <xref:System.Xml.Linq.XContainer.Elements%2A>(método).</xref:System.Xml.Linq.XContainer.Elements%2A>|  
   
- Seleccione o empiece a escribir cualquiera de las opciones XML de la lista.  La lista de miembros mostrará después los posibles miembros del esquema XML que son específicos de la opción seleccionada.  Si tiene espacios de nombres XML importados y asociados a un prefijo del espacio de nombres XML concreto, se incluye una posible lista de prefijos de espacio de nombres XML en la lista de miembros.  
+ Seleccione o comience a escribir en cualquiera de las opciones de XML de la lista. La lista de miembros mostrará después los posibles miembros del esquema XML que son específicos de la opción seleccionada. Si tiene espacios de nombres XML importado que están asociados con un prefijo de espacio de nombres XML concreto, se incluye una lista de prefijos de espacio de nombres XML potenciales en la lista de miembros.  
   
- Por ejemplo, considere el siguiente esquema XSD:  
+ Por ejemplo, considere el siguiente esquema XSD.  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -84,7 +99,7 @@ IntelliSense XML
 </xs:schema>  
 ```  
   
- El XML válido para el esquema XSD se parecería a lo siguiente.  
+ XML válido para el esquema XSD se parecería al siguiente.  
   
 ```  
 <?xml version="1.0"?>  
@@ -97,27 +112,27 @@ IntelliSense XML
 </PurchaseOrders>  
 ```  
   
- Si incluye este archivo de esquema XSD en un proyecto e importa el espacio de nombres de destino desde el esquema XSD al proyecto o archivo de código, IntelliSense de Visual Basic muestra los miembros a partir del esquema a medida que escribe el código de Visual Basic.  Si el espacio de nombres de destino para el esquema XSD se importa como el espacio de nombres predeterminado y escribe lo siguiente, IntelliSense muestra una lista de posibles elementos secundarios del elemento XML `PurchaseOrder`.  
+ Si incluye este archivo de esquema XSD en un proyecto e importar el espacio de nombres de destino del esquema XSD en el archivo de código o proyecto, IntelliSense de Visual Basic muestra los miembros desde el esquema a medida que escribe el código de Visual Basic. Si el espacio de nombres de destino para el esquema XSD se importa como el espacio de nombres predeterminado y escriba lo siguiente, IntelliSense muestra una lista de posibles elementos secundarios para el `PurchaseOrder` elemento XML.  
   
 ```  
 Dim po = <PurchaseOrder />  
 po.<  
 ```  
   
- La lista está formada por los elementos Dirección, Comentario y Elementos.  
+ La lista está formada por los elementos dirección, comentario y elementos.  
   
-### Niveles de certeza de los elementos de la lista de IntelliSense  
- El procedimiento con el fin de determinar el tipo XSD que se va a utilizar para IntelliSense no es exacto.  Como resultado, IntelliSense XML mostrará a menudo una lista expandida de posibles miembros.  Para ayudar a seleccionar un elemento en la lista de miembros de IntelliSense, los elementos se muestran con indicación del nivel de certeza que IntelliSense XML tiene para un miembro determinado.  
+### <a name="certainty-levels-for-intellisense-list-items"></a>Niveles de seguridad para elementos de lista de IntelliSense  
+ Determinar el tipo XSD para IntelliSense no es exacto. Como resultado, IntelliSense XML mostrará a menudo una lista expandida de posibles miembros. Para ayudarle a seleccionar un elemento de la lista de miembros de IntelliSense, los elementos se muestran con indicación del nivel de certeza que IntelliSense XML tiene para un miembro determinado.  
   
- A veces IntelliSense XML puede identificar un tipo específico a partir del esquema XSD.  En estos casos, mostrará posibles elementos secundarios, atributos o elementos descendientes para ese tipo XSD con un grado alto de certeza.  Estos elementos se identifican con una marca de verificación.  
+ A veces IntelliSense XML puede identificar un tipo específico del esquema XSD. En estos casos, mostrará posibles elementos secundarios, atributos o elementos descendientes para ese tipo XSD con un alto grado de certeza. Estos elementos se identifican con una marca de verificación.  
   
- Sin embargo, a veces IntelliSense XML no puede identificar un tipo específico a partir del esquema XSD.  En estos casos, mostrará una lista expandida de posibles elementos secundarios, atributos o elementos descendientes a partir del esquema XSD para el proyecto con un grado bajo de certeza.  Estos elementos se identifican con un signo de interrogación.  
+ Sin embargo, a veces IntelliSense XML no es capaz de identificar un tipo específico del esquema XSD. En estos casos, mostrará una lista expandida de posibles elementos secundarios, atributos o elementos descendientes desde el esquema XSD para el proyecto con un escaso grado de certeza. Estos elementos se identifican con un signo de interrogación.  
   
-## Vea también  
- [Cómo: Habilitar IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/how-to-enable-xml-intellisense.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo: habilitar IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/how-to-enable-xml-intellisense.md)   
  [Asistente XML a esquema](../../../../visual-basic/programming-guide/language-features/xml/xml-to-schema-wizard.md)   
- [Imports \(Instrucción, Espacio de nombres XML\)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)   
+ [Imports (instrucción) (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)   
  [Literal de elemento XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
  [Propiedad Axis para atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)   
  [Propiedad de eje descendiente XML](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)   
- [Página Referencias, Diseñador de proyectos \(Visual Basic\)](/visual-studio/ide/reference/references-page-project-designer-visual-basic)
+ [Página Referencias, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic)

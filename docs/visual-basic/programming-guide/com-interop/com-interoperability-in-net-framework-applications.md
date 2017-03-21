@@ -1,49 +1,65 @@
 ---
-title: "Interoperabilidad COM en aplicaciones .NET Framework (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "interoperabilidad COM"
-  - "interoperabilidad, objetos COM y .NET Framework"
-  - "componentes compartidos"
+title: Interoperabilidad COM en aplicaciones de .NET Framework (Visual Basic) | Documentos de Microsoft
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- interoperability, COM and .NET framework objects
+- COM interop
+- shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# Interoperabilidad COM en aplicaciones .NET Framework (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 308ee8e495efa9368ef55d781f6b6dc314db51ac
+ms.lasthandoff: 03/13/2017
 
-Si desea utilizar objetos COM y objetos de .NET Framework en la misma aplicación, debe tener en cuenta las diferencias que existen en el modo en que los objetos residen en la memoria.  Un objeto de .NET Framework reside en la memoria administrada, es decir, en la memoria que controla Common Language Runtime, y el motor en tiempo de ejecución puede desplazarlo según sea necesario.  Un objeto COM reside en la memoria no administrada y no se prevé que se mueva a otra ubicación de la memoria.  [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] y [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] proporcionan las herramientas para controlar la interacción de estos componentes administrados y no administrados.  Para obtener más información sobre el código administrado, vea [Common Language Runtime](../Topic/Common%20Language%20Runtime%20\(CLR\).md).  
+---
+# <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>Interoperabilidad COM en aplicaciones .NET Framework (Visual Basic)
+Si desea utilizar objetos COM y objetos de .NET Framework en la misma aplicación, debe resolver las diferencias en cómo los objetos existen en la memoria. Un objeto de .NET Framework se encuentra en la memoria administrada, la memoria controlada por common language runtime y se pueden mover en tiempo de ejecución según sea necesario. Un objeto COM se encuentra en la memoria no administrada y no se espera que se mueve a otra ubicación de memoria. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]y el [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] proporcionan herramientas para controlar la interacción de estas administrado y componentes. Para obtener más información sobre el código administrado, consulte [Common Language Runtime](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482).  
   
- Además de usar objetos COM en las aplicaciones .NET, es posible que también desee usar [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] para desarrollar objetos accesibles a partir de código no administrado a través de COM.  
+ Además de utilizar objetos COM en aplicaciones. NET, también puede utilizar [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] para desarrollar objetos accesibles desde código no administrado a través de COM.  
   
- Los vínculos de esta página proporcionan información detallada sobre las interacciones entre los objetos COM y los objetos de .NET Framework.  
+ Los vínculos en esta página proporcionan detalles sobre las interacciones entre objetos COM y .NET Framework.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- Proporciona vínculos a temas sobre la interoperabilidad COM en Visual Basic, incluidos los objetos COM, los controles ActiveX, las DLL Win32, los objetos administrados y la herencia de los objetos COM.  
+ Proporciona vínculos a temas que tratan sobre la interoperabilidad COM en Visual Basic, incluidos los objetos de COM, controles de ActiveX, archivos DLL para Win32, objetos administrados y herencia de objetos COM.  
   
- [COM Interop Wrapper Error](/visual-cpp/misc/com-interop-wrapper-error)  
- Explica las consecuencias y opciones en caso de que el sistema del proyecto no pueda crear un contenedor de interoperabilidad COM para un componente concreto.  
+ [Error de contenedor de interoperabilidad COM](https://docs.microsoft.com/cpp/misc/com-interop-wrapper-error)  
+ Describe las opciones y las consecuencias si el sistema del proyecto no puede crear un contenedor de interoperabilidad COM para un componente concreto.  
   
- [Interoperating with Unmanaged Code](../Topic/Interoperating%20with%20Unmanaged%20Code.md)  
- Describe brevemente algunos de los problemas de la interacción entre el código administrado y no administrado, y proporciona vínculos a más información.  
+ [Interoperación con código no administrado](https://msdn.microsoft.com/library/sd10k43k)  
+ Describe algunos de los problemas de interacción entre código administrado y brevemente y proporciona vínculos a más información.  
   
- [COM Wrappers](../Topic/COM%20Wrappers.md)  
- Describe los contenedores invocables en tiempo de ejecución, que permiten que el código administrado llame a métodos COM, y los contenedores CCW, que permiten que los clientes COM llamen a métodos de objetos .NET.  
+ [Contenedores COM](http://msdn.microsoft.com/library/e56c485b-6b67-4345-8e66-fd21835a6092)  
+ Describe contenedores RCW, que permiten al código administrado llamar a métodos COM, y los contenedores COM invocables, que permiten a los clientes COM llamar a métodos de objeto. NET.  
   
- [Advanced COM Interoperability](http://msdn.microsoft.com/es-es/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- Proporciona vínculos a temas en los que se describe la interoperabilidad COM en lo que respecta a contenedores, excepciones, herencia, subprocesos, eventos, conversiones y cálculo de referencias.  
+ [Interoperabilidad COM avanzada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ Proporciona vínculos a temas sobre la interoperabilidad COM con respecto a contenedores, excepciones, herencia, subprocesos, eventos, conversiones y cálculo de referencias.  
   
- [Tlbimp.exe \(Type Library Importer\)](../Topic/Tlbimp.exe%20\(Type%20Library%20Importer\).md)  
- Describe la herramienta que se puede utilizar para convertir las definiciones de tipos que se encuentran en una biblioteca de tipos COM en definiciones equivalentes en un ensamblado de Common Language Runtime.
+ [Tlbimp.exe (importador de la biblioteca de tipos)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ Describe la herramienta que se puede utilizar para convertir las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de common language runtime.

@@ -1,59 +1,73 @@
 ---
-title: "/win32icon | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/win32icon (opción del compilador) [Visual Basic]"
-  - "win32icon (opción del compilador) [Visual Basic]"
-  - "-win32icon (opción del compilador) [Visual Basic]"
+title: /win32icon | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- win32icon compiler option [Visual Basic]
+- -win32icon compiler option [Visual Basic]
+- /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# /win32icon
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 110a3861d6628dc2c3fb251aaa31762fb94f04c9
+ms.lasthandoff: 03/13/2017
 
-Inserta un archivo .ico en el archivo de salida.  Este archivo .ico representa el archivo de salida en **El Explorador de archivos**.  
+---
+# <a name="win32icon"></a>/win32icon
+Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el archivo de salida en **Explorador de archivos**.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /win32icon:filename  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`filename`|El archivo .ico que se desea agregar al archivo de salida.  Escriba el nombre de archivo entre comillas \(" "\) si contiene espacios.|  
+|---|---|  
+|`filename`|El archivo .ico para agregar al archivo de salida. Encierre el nombre de archivo entre comillas ("") si contiene espacios.|  
   
-## Comentarios  
- Puede crear un archivo .ico con el Compilador de recursos de Microsoft Windows \(RC\).  El Compilador de recursos se invoca al compilar un programa de Visual C\+\+; se crea un archivo .ico a partir del archivo .rc.  Las opciones `/win32icon` y `/win32resource` se excluyen mutuamente.  
+## <a name="remarks"></a>Comentarios  
+ Puede crear un archivo .ico con el compilador de recursos de Microsoft Windows (RC). El compilador de recursos se invoca cuando se compila un programa de Visual C++; se crea un archivo .ico en el archivo .rc. El `/win32icon` y `/win32resource` opciones son mutuamente excluyentes.  
   
- Vea [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md) si desea hacer referencia a un archivo de recursos de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] o vea[\/resource](../../../visual-basic/reference/command-line-compiler/resource.md) si desea adjuntar un archivo de recursos [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)].  Vea [\/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar un archivo .res.  
+ Consulte [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] archivo de recursos, o [/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] archivo de recursos. Consulte [/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar un archivo. res.  
   
-||  
-|-|  
-|Para establecer \/win32icon en el entorno de desarrollo integrado de Visual Studio|  
-|1.  Tenga seleccionado un proyecto en el **Explorador de soluciones**.  En el menú **Proyecto**, haga clic en **Propiedades**.  Para obtener más información, vea [Introduction to the Project Designer](http://msdn.microsoft.com/es-es/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la ficha **Aplicación**.<br />3.  Modifique el valor en el cuadro **Icono**.|  
+|Para establecer /win32icon en el IDE de Visual Studio|  
+|---|  
+|1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor en el **icono** cuadro.|  
   
-## Ejemplo  
- La siguiente línea compila `In.vb` y asocia un archivo .ico rf.ico, `Rf.ico`.  
+## <a name="example"></a>Ejemplo  
+ El siguiente código compila `In.vb` y adjunta un archivo .ico, `Rf.ico`.  
   
 ```  
 vbc /win32icon:rf.ico in.vb  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

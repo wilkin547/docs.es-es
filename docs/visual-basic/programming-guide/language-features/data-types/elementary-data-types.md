@@ -1,45 +1,61 @@
 ---
-title: "Tipos de datos b&#225;sicos (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "tipos de datos [Visual Basic], elementales"
-  - "tipos de datos básicos"
+title: "Tipos de datos básicos (Visual Basic) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- elementary data types
+- data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Tipos de datos b&#225;sicos (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e99954c86345076f5702212e35a51d2c4b25deca
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] proporciona un conjunto de tipos de datos predefinidos que puede usar en numerosos elementos de programación.  Esta sección describe estos tipos y la forma de utilizarlos.  
+---
+# <a name="elementary-data-types-visual-basic"></a>Tipos de datos básicos (Visual Basic)
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Proporciona un conjunto de tipos de datos predefinidos que puede utilizar para muchos de los elementos de programación. Esta sección describe estos tipos y cómo utilizarlos.  
   
 > [!NOTE]
->  Una clase admite los tipos de datos básicos en Visual Basic una estructura o que está en el espacio de nombres <xref:System> .  El compilador utiliza la palabra clave de cada tipo de datos como alias para la clase o estructura subyacente.  Por ejemplo, declarar una variable con la palabra reservada `Byte` es lo mismo que declararla utilizando el nombre completo <xref:System.Byte?displayProperty=fullName>de la estructura.  
+>  Cada tipo de datos básico en Visual Basic es compatible con una estructura o una clase que se encuentra en la <xref:System>espacio de nombres.</xref:System> El compilador utiliza cada palabra clave de tipo de datos como un alias para la clase o estructura subyacente. Por ejemplo, se declara una variable mediante la palabra reservada `Byte` es lo mismo que declarar mediante el nombre completo de estructura <xref:System.Byte?displayProperty=fullName>.</xref:System.Byte?displayProperty=fullName>  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Tipos de datos numéricos](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
  Describe los tipos numéricos integrales y no integrales.  
   
  [Tipos de datos de caracteres](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- Describe los tipos `Char` y `String`.  
+ Describe el `Char` y `String` tipos.  
   
  [Tipos de datos varios](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- Describe los tipos `Boolean`, `Date` y `Object`.  
+ Describe el `Boolean`, `Date`, y `Object` tipos.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Presenta los tipos de datos de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] y describe cómo utilizarlos.  
+ Presenta el [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipos de datos y describe cómo utilizarlos.  
   
  [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Enumera los tipos de datos básicos proporcionados en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].
+ Proporciona una visión general de los tipos de datos básicos proporcionados por [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].

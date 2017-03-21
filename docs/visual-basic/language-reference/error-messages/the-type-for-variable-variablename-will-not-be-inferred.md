@@ -1,33 +1,50 @@
 ---
-title: "El tipo de la variable &#39;&lt;nombreDeVariable&gt;&#39; no se inferir&#225; porque est&#225; enlazada a un campo en un &#225;mbito de inclusi&#243;n. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc42110"
-  - "bc42110"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42110"
+title: "El tipo de variable &quot;&lt;variablename&gt;&quot; no se inferirá porque está enlazada a un campo en un ámbito envolvente | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc42110
+- bc42110
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 caps.latest.revision: 33
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 33
----
-# El tipo de la variable &#39;&lt;nombreDeVariable&gt;&#39; no se inferir&#225; porque est&#225; enlazada a un campo en un &#225;mbito de inclusi&#243;n.
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ab7d69c34a58dc898553868258c4fdf6b81db343
+ms.lasthandoff: 03/13/2017
 
-El tipo de la variable '\<nombreDeVariable\>' no se inferirá porque está enlazada a un campo en un ámbito de inclusión.Cambie el nombre de '\<nombreDeVariable\>' o utilice el nombre completo \(por ejemplo, 'Me.nombreDeVariable' o 'MiBase.nombreDeVariable'\).  
+---
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de variable '&lt;variablename&gt;' no se inferirá porque está enlazada a un campo en un ámbito de inclusión
+El tipo de variable '\<variablename >' no se inferirá porque está enlazada a un campo en un ámbito de inclusión. Cambie el nombre de '\<variablename >', o utilice el nombre completo (por ejemplo, 'Me.nombreDeVariable' o 'MiBase.nombreDeVariable').  
   
- Una variable de control de bucle en su código tiene el mismo nombre que un campo de la clase u otro ámbito de inclusión.  Dado que la variable de control se utiliza sin una cláusula `As`, se enlaza al campo en el ámbito de inclusión y el compilador no crea una nueva variable para ella ni infiere su tipo.  
+ Una variable de control de bucle en su código tiene el mismo nombre que un campo de la clase u otro ámbito de inclusión. Dado que la variable de control se utiliza sin una cláusula `As`, se enlaza al campo en el ámbito de inclusión y el compilador no crea una nueva variable para ella ni infiere su tipo.  
   
- En el ejemplo siguiente, `Index`, es decir, la variable de control en la instrucción `For`, se enlaza al campo `Index` de la clase `Customer`.  El compilador no crea una nueva variable para la variable de control `Index` ni infiere su tipo.  
+ En el ejemplo siguiente, `Index`, es decir, la variable de control en la instrucción `For`, se enlaza al campo `Index` de la clase `Customer`. El compilador no crea una nueva variable para la variable de control `Index` ni infiere su tipo.  
   
 ```  
 Class Customer  
@@ -47,11 +64,11 @@ End Class
   
 ```  
   
- De forma predeterminada, este mensaje es una advertencia.  Para obtener información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configurar advertencias en Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratar advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Identificador de error:** BC42110  
+ **Id. de error:** BC42110  
   
-### Para resolver esta advertencia  
+### <a name="to-address-this-warning"></a>Para resolver esta advertencia  
   
 -   Convierta la variable de control de bucle en local cambiando su nombre por un identificador que tampoco sea el nombre de un campo de la clase.  
   
@@ -71,7 +88,7 @@ End Class
     For Index As Integer = 1 To 10  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El código siguiente muestra el ejemplo anterior con la primera corrección en contexto.  
   
 ```  
@@ -90,10 +107,10 @@ Class Customer
 End Class  
 ```  
   
-## Vea también  
- [Option Infer \(instrucción\)](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [For Each...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [For...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Cómo: Hacer referencia a la instancia actual de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+## <a name="see-also"></a>Vea también  
+ [Opción Infer (instrucción)](../../../visual-basic/language-reference/statements/option-infer-statement.md)   
+ [For Each... Next (instrucción)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
+ [Para... Next (instrucción)](../../../visual-basic/language-reference/statements/for-next-statement.md)   
+ [Cómo: hacer referencia a la instancia actual de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
+ [Inferencia de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

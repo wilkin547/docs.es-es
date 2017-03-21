@@ -1,57 +1,73 @@
 ---
-title: "&lt;param&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<param> (etiqueta XML)"
-  - "param (etiqueta XML)"
+title: '&lt;param&gt; (Visual Basic) | Documentos de Microsoft'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- param XML tag
+- <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# &lt;param&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 41852a7fc41595050940d87f9e741df5cb23361c
+ms.lasthandoff: 03/13/2017
 
-Define un nombre y descripción de parámetro.  
+---
+# <a name="ltparamgt-visual-basic"></a>&lt;param&gt; (Visual Basic)
+Define un nombre de parámetro y una descripción.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 <param name="name">description</param>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `name`  
- Nombre de un parámetro de método.  Ponga el nombre entre comillas dobles \(" "\).  
+ El nombre de un parámetro de método. Ponga el nombre entre comillas dobles ("").  
   
  `description`  
- Descripción del parámetro.  
+ Una descripción para el parámetro.  
   
-## Comentarios  
- La etiqueta `<param>` se debe utilizar en el comentario de una declaración de método para describir uno de los parámetros del método.  
+## <a name="remarks"></a>Comentarios  
+ La `<param>` etiqueta debe usarse en el comentario de una declaración de método para describir uno de los parámetros del método.  
   
- El texto de la etiqueta `<param>` aparecerá en las siguientes ubicaciones:  
+ El texto de la `<param>` etiqueta aparecerá en las siguientes ubicaciones:  
   
--   Información de parámetros de IntelliSense.  Para obtener más información, vea [Utilizar IntelliSense](/visual-studio/ide/using-intellisense).  
+-   Información de parámetros de IntelliSense. Para obtener más información, vea [Usar IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense).  
   
--   Examinador de objetos.  Para obtener más información, vea [Ver la estructura del código](/visual-studio/ide/viewing-the-structure-of-code).  
+-   Examinador de objetos. Para obtener más información, vea [Ver la estructura del código](https://docs.microsoft.com/visualstudio/ide/viewing-the-structure-of-code).  
   
- Compile con [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
+ Compile con [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para procesar los comentarios de documentación en un archivo.  
   
-## Ejemplo  
- En este ejemplo se utiliza la etiqueta `<param>` para describir el parámetro `id`.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se utiliza la `<param>` etiqueta para describir la `id` parámetro.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments Nº&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

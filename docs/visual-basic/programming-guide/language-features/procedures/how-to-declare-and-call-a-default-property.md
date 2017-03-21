@@ -1,103 +1,119 @@
 ---
-title: "C&#243;mo: Declarar y llamar a una propiedad predeterminada en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "propiedades predeterminadas"
-  - "propiedades predeterminadas, en Visual Basic"
-  - "predeterminados, propiedades"
-  - "procedimientos, definir"
-  - "propiedades [Visual Basic], predeterminado"
-  - "código de Visual Basic, procedimientos"
-  - "código de Visual Basic, propiedades"
+title: "Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- defaults, properties
+- properties [Visual Basic], default
+- procedures, defining
+- default properties, in Visual Basic
+- Visual Basic code, procedures
+- Visual Basic code, properties
+- default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 23
----
-# C&#243;mo: Declarar y llamar a una propiedad predeterminada en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ce98e7fe72a395f6c4cde481feaa60be28c6fcc3
+ms.lasthandoff: 03/13/2017
 
-Una *propiedad predeterminada* es una propiedad de clase o de estructura a la que el código puede tener acceso sin especificarlo.  Cuando el código de llamada menciona una clase o estructura pero no una propiedad, y el contexto permite tener acceso a una propiedad, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] resuelve el acceso a la propiedad predeterminada de esa clase o estructura, si existe.  
+---
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic
+Un *propiedad predeterminada* es una propiedad de clase o estructura que el código puede tener acceso sin especificarlo. Al llamar a código nombres una clase o estructura pero no una propiedad, y el contexto permite tener acceso a una propiedad [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] resuelve el acceso a esa clase o propiedad de la estructura predeterminada, si existe.  
   
- Una clase o estructura puede tener a lo sumo una propiedad predeterminada.  No obstante, puede sobrecargar una propiedad predeterminada y tener más de una versión de ella.  
+ Una clase o estructura puede tener a lo sumo una propiedad predeterminada. Sin embargo, puede sobrecargar una propiedad predeterminada y tener más de una versión del mismo.  
   
- Para obtener más información, vea [Default](../../../../visual-basic/language-reference/modifiers/default.md).  
+ Para obtener más información, consulte [predeterminado](../../../../visual-basic/language-reference/modifiers/default.md).  
   
-### Para declarar una propiedad predeterminada  
+### <a name="to-declare-a-default-property"></a>Para declarar una propiedad predeterminada  
   
-1.  Declare la propiedad de la manera normal.  No especifique la palabra clave `Shared` o `Private`.  
+1.  Declare la propiedad de la manera normal. No se especifica la `Shared` o `Private` (palabra clave).  
   
-2.  Incluya la palabra clave `Default` en la declaración de la propiedad.  
+2.  Incluir el `Default` palabra clave en la declaración de propiedad.  
   
-3.  Especifique al menos un parámetro para la propiedad.  No puede definir una propiedad predeterminada que no acepte al menos un argumento.  
+3.  Especifique al menos un parámetro de la propiedad. No se puede definir una propiedad predeterminada que no tiene al menos un argumento.  
   
-     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures&#17;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
-### Para llamar a una propiedad predeterminada  
+### <a name="to-call-a-default-property"></a>Para llamar a una propiedad predeterminada  
   
-1.  Declare una variable de la clase contenedora o tipo de estructura.  
+1.  Declare una variable del tipo de clase o estructura contenedora.  
   
-     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
+     [!code-vb[VbVbcnProcedures Nº&16;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
 2.  Utilice el nombre de variable solo en una expresión donde normalmente incluiría el nombre de propiedad.  
   
-     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
+     [!code-vb[21 VbVbcnProcedures](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
-3.  Agregue detrás del nombre de variable una lista de argumentos entre paréntesis.  Una propiedad predeterminada debe aceptar al menos un argumento.  
+3.  Siga el nombre de variable con una lista de argumentos entre paréntesis. Una propiedad predeterminada debe tener al menos un argumento.  
   
-     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
+     [!code-vb[VbVbcnProcedures&#20;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
-4.  Para recuperar el valor de propiedad predeterminado, utilice el nombre de variable, con una lista de argumentos, en una expresión o detrás del signo igual \(`=`\) en una instrucción de asignación.  
+4.  Para recuperar el valor de propiedad predeterminado, utilice el nombre de variable con una lista de argumentos en una expresión o tras la igual (`=`) inicie sesión en una instrucción de asignación.  
   
-     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
+     [!code-vb[VbVbcnProcedures&#15;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
-5.  Para establecer el valor de propiedad predeterminado, utilice el nombre de variable, con una lista de argumentos, a la izquierda de una instrucción de asignación.  
+5.  Para establecer el valor de propiedad predeterminado, utilice el nombre de variable con una lista de argumentos, en el lado izquierdo de una instrucción de asignación.  
   
-     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
+     [!code-vb[VbVbcnProcedures&#14;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
-6.  Siempre puede especificar el nombre de la propiedad predeterminada junto con el nombre de variable, tal como lo haría para tener acceso a cualquier otra propiedad.  
+6.  Siempre puede especificar el nombre de propiedad predeterminado junto con el nombre de variable como haría para tener acceso a cualquier otra propiedad.  
   
-     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
+     [!code-vb[VbVbcnProcedures Nº&19;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
-## Ejemplo  
- En el siguiente ejemplo se declara una propiedad predeterminada en una clase.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se declara una propiedad predeterminada en una clase.  
   
- [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
+ [!code-vb[VbVbcnProcedures&#12;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
-## Ejemplo  
- En el ejemplo siguiente se indica cómo se llama a la propiedad predeterminada `myProperty` en la clase `class1`.  Las tres instrucciones de asignación almacenan valores en `myProperty` y la llamada <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> lee los valores.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo llamar a la propiedad predeterminada `myProperty` en la clase `class1`. Las tres instrucciones de asignación almacenan valores en `myProperty`y el <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>llamada lee los valores.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
   
- [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
+ [!code-vb[VbVbcnProcedures&#13;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
- El uso más común de una propiedad predeterminada es la propiedad <xref:Microsoft.VisualBasic.Collection.Item%2A> en diversas clases de colección.  
+ El uso más común de una propiedad predeterminada es la <xref:Microsoft.VisualBasic.Collection.Item%2A>propiedad en diversas clases de colección.</xref:Microsoft.VisualBasic.Collection.Item%2A>  
   
-## Programación eficaz  
- Las propiedades predeterminadas pueden producir una pequeña reducción en los caracteres del código fuente pero pueden dificultar la lectura del código.  Si el código de llamada no está familiarizado con su clase o estructura, cuando hace referencia al nombre de éstas, no puede estar seguro de si esta referencia tiene acceso a la clase o estructura en sí, o a una propiedad predeterminada.  Esto puede conducir a errores del compilador o a ligeros errores lógicos en tiempo de ejecución.  
+## <a name="robust-programming"></a>Programación sólida  
+ Propiedades predeterminadas pueden producir una pequeña reducción en caracteres de código fuente, pero puede hacer el código más difícil de leer. Si el código de llamada no está familiarizado con su clase o estructura, cuando hace referencia al nombre de clase o estructura no puede ser determinado si accede a que hacen referencia a la clase o estructura en Sí o una propiedad predeterminada. Esto puede conducir a errores del compilador o errores sutiles lógica en tiempo de ejecución.  
   
- Puede reducir levemente las posibilidades de errores de propiedades predeterminadas utilizando siempre [Option Strict \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-strict-statement.md) para establecer la comprobación de tipos del compilador en `On`.  
+ Puede reducir levemente la posibilidad de errores de la propiedad de forma predeterminada al usar siempre el [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md) para establecer el tipo de compilador de comprobación `On`.  
   
- Si está pensando en utilizar una clase o estructura en el código, debe determinar si tiene una propiedad predeterminada, y si es así, cómo se llama.  
+ Si planea usar una clase o estructura en el código, debe determinar si posee una propiedad predeterminada y si es así, lo que su nombre es.  
   
- Debido a estas desventajas, debería considerar no definir propiedades predeterminadas.  Para una mejor lectura del código, debería considerar asimismo hacer siempre una referencia explícita a todas las propiedades, incluso a las propiedades predeterminadas.  
+ Debido a estas desventajas, considere la posibilidad de no definir propiedades predeterminadas. Para la legibilidad del código, debe tener en cuenta siempre referencia explícitamente a todas las propiedades, incluso predeterminados propiedades.  
   
-## Vea también  
- [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Argumentos y parámetros de procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Property \(Instrucción\)](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Default](../../../../visual-basic/language-reference/modifiers/default.md)   
- [Diferencias entre propiedades y variables en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
- [Cómo: Crear una propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [Cómo: Declarar una propiedad con niveles de acceso mixtos](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [Cómo: Llamar a un procedimiento de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [Cómo: Establecer un valor en una propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [Cómo: Obtener un valor de una propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Vea también  
+ [Property (procedimientos)](./property-procedures.md)   
+ [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)   
+ [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)   
+ [Valor predeterminado](../../../../visual-basic/language-reference/modifiers/default.md)   
+ [Diferencias entre propiedades y Variables en Visual Basic](./differences-between-properties-and-variables.md)   
+ [Cómo: crear una propiedad](./how-to-create-a-property.md)   
+ [Cómo: declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)   
+ [Cómo: llamar a un procedimiento de propiedad](./how-to-call-a-property-procedure.md)   
+ [Cómo: establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)   
+ [Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)

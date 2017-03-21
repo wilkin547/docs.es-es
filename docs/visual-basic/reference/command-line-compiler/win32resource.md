@@ -1,59 +1,75 @@
 ---
-title: "/win32resource | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "/win32resource"
-  - "win32resource"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/win32resource (opción del compilador) [Visual Basic]"
-  - "win32resource (opción del compilador) [Visual Basic]"
-  - "-win32resource (opción del compilador) [Visual Basic]"
+title: /win32resource | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- /win32resource
+- win32resource
+dev_langs:
+- VB
+helpviewer_keywords:
+- /win32resource compiler option [Visual Basic]
+- -win32resource compiler option [Visual Basic]
+- win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# /win32resource
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 37902590d5a05d7fdb2a521f3c3de2ad88c2c502
+ms.lasthandoff: 03/13/2017
 
-Inserta un archivo de recursos Win32 en el archivo de salida generado.  
+---
+# <a name="win32resource"></a>/win32resource
+Inserta un archivo de recursos de Win32 en el archivo de salida.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /win32resource:filename  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `filename`  
- El nombre del archivo de recursos que se desea agregar al archivo de salida.  Escriba el nombre de archivo entre comillas \(" "\) si contiene espacios.  
+ El nombre del archivo de recursos para agregar al archivo de salida. Encierre el nombre de archivo entre comillas ("") si contiene espacios.  
   
-## Comentarios  
- Puede crear un archivo de recursos de Win32 con el Compilador de recursos de Microsoft Windows \(RC\).  
+## <a name="remarks"></a>Comentarios  
+ Puede crear un archivo de recursos de Win32 con el compilador de recursos de Microsoft Windows (RC).  
   
- Un recurso de Win32 puede contener información de la versión o mapas de bits \(icono\) que ayuda identifican la aplicación en **El Explorador de archivos**.  Si no se especifica la opción `/win32resource`, el compilador generará información de versión basada en la versión del ensamblado.  Las opciones `/win32resource` y `/win32icon` se excluyen mutuamente.  
+ Un recurso de Win32 puede contener la versión o información de mapa de bits (icono) que ayuda a identificar la aplicación en **Explorador de archivos**. Si no se especifica `/win32resource`, el compilador genera información de versión basada en la versión del ensamblado. El `/win32resource` y `/win32icon` opciones son mutuamente excluyentes.  
   
- Vea [\/linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md) si desea hacer referencia a un archivo de recursos de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] o vea[\/resource](../../../visual-basic/reference/command-line-compiler/resource.md) si desea adjuntar un archivo de recursos [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)].  
+ Consulte [/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] archivo de recursos, o [/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] archivo de recursos.  
   
 > [!NOTE]
->  La opción `/win32resource` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
+>  El `/win32resource` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible sólo cuando se compila desde la línea de comandos.  
   
-## Ejemplo  
- La siguiente línea compila `In.vb` y asocia el archivo de recursos de Win32 `Rf.res`:  
+## <a name="example"></a>Ejemplo  
+ El siguiente código compila `In.vb` y adjunta un archivo de recursos Win32 `Rf.res`:  
   
 ```  
 vbc /win32resource:rf.res in.vb  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

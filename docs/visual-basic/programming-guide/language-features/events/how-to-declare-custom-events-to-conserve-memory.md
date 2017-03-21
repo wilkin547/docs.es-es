@@ -1,42 +1,58 @@
 ---
-title: "C&#243;mo: Declarar eventos personalizados para conservar memoria (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "eventos personalizados"
-  - "declarar eventos, personalizados"
-  - "eventos [Visual Basic], personalizados"
+title: "Cómo: declarar eventos personalizados para conservar memoria (Visual Basic) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declaring events, custom
+- events [Visual Basic], custom
+- custom events
 ms.assetid: 87ebee87-260c-462f-979c-407874debd19
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
----
-# C&#243;mo: Declarar eventos personalizados para conservar memoria (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4f8ce32a3b4da411a73010119283ce9661b82a6c
+ms.lasthandoff: 03/13/2017
 
-Hay varias circunstancias en las que es importante que una aplicación mantenga un bajo uso de memoria.  Los eventos personalizados permiten a la aplicación utilizar memoria sólo para los eventos que controla.  
+---
+# <a name="how-to-declare-custom-events-to-conserve-memory-visual-basic"></a>Cómo: Declarar eventos personalizados para conservar memoria (Visual Basic)
+Hay varias circunstancias, es importante que una aplicación conserve su uso de memoria baja. Los eventos personalizados permiten utilizar memoria sólo para los eventos que controla la aplicación.  
   
- De manera predeterminada, cuando una clase declara un evento, el compilador asigna memoria para que un campo almacene información de eventos.  Si una clase tiene muchos eventos no usados, ocupan memoria inútilmente.  
+ De forma predeterminada, cuando una clase declara un evento, el compilador asigna memoria para un campo almacenar la información de evento. Si una clase tiene muchos eventos no usados, innecesariamente ocupan memoria.  
   
- En lugar de utilizar la implementación predeterminada de los eventos que Visual Basic proporciona, puede utilizar los eventos personalizados para administrar más cuidadosamente el uso de memoria.  
+ En lugar de usar la implementación predeterminada de eventos que proporciona Visual Basic, puede utilizar eventos personalizados para administrar el uso de memoria más detenidamente.  
   
-## Ejemplo  
- En este ejemplo, la clase utiliza una instancia de la clase <xref:System.ComponentModel.EventHandlerList>, almacenada en el campo `Events`, para guardar información sobre los eventos que están en uso.  La clase <xref:System.ComponentModel.EventHandlerList> es una clase de lista optimizada diseñada para contener delegados.  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo, la clase utiliza una instancia de la <xref:System.ComponentModel.EventHandlerList>(clase), almacenado en los `Events` campo para almacenar información sobre los eventos en uso.</xref:System.ComponentModel.EventHandlerList> El <xref:System.ComponentModel.EventHandlerList>es una clase de lista optimizada diseñada para contener delegados.</xref:System.ComponentModel.EventHandlerList>  
   
- Todos los eventos de la clase usan el campo `Events` para realizar un seguimiento de qué métodos está controlando cada evento.  
+ Todos los eventos de la clase usan el `Events` campo para realizar un seguimiento de qué métodos está controlando cada evento.  
   
- [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
+ [!code-vb[VbVbalrEvents&#22;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
   
-## Vea también  
- <xref:System.ComponentModel.EventHandlerList>   
- [Eventos](../../../../visual-basic/programming-guide/language-features/events/events.md)   
- [Cómo: Declarar eventos personalizados para evitar bloqueos](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ComponentModel.EventHandlerList></xref:System.ComponentModel.EventHandlerList>   
+ [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)   
+ [Declarar eventos personalizados para evitar bloqueos](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)

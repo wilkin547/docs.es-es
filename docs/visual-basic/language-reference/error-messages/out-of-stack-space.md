@@ -1,40 +1,56 @@
 ---
-title: "Espacio de pila insuficiente (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID28"
-dev_langs: 
-  - "VB"
+title: (Visual Basic) de espacio de pila | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbrID28
+dev_langs:
+- VB
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Espacio de pila insuficiente (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6343767da28ea4e02f9443006b222640755f7882
+ms.lasthandoff: 03/13/2017
 
-La pila es un área de trabajo de memoria que aumenta y disminuye dinámicamente con las demandas del programa en ejecución.  Se han superado los límites.  
+---
+# <a name="out-of-stack-space-visual-basic"></a>Espacio de pila insuficiente (Visual Basic)
+La pila es un área de trabajo de memoria que aumenta y disminuye dinámicamente con las demandas del programa en ejecución. Se han superado su límite.  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Compruebe que los procedimientos no estén profundamente anidados.  
+1.  Compruebe que los procedimientos no están anidados demasiado profundo.  
   
 2.  Asegúrese de que los procedimientos recursivos terminan correctamente.  
   
-3.  Si las variables locales requieren más espacio de variable local que el disponible, intente declarar algunas variables en el nivel del módulo.  También puede declarar todas las variables estáticas en el procedimiento anteponiendo a la palabra clave `Property`, `Sub` o `Function` la palabra `Static`.  O puede utilizar la instrucción `Static` para declarar variables estáticas individuales dentro de los procedimientos.  
+3.  Si las variables locales requieren más espacio de variable local que está disponible, intente declarar algunas variables en el nivel de módulo. También puede declarar todas las variables en el procedimiento estático poniendo el `Property`, `Sub`, o `Function` palabra clave with `Static`. O bien puede usar el `Static` instrucción para declarar variables estáticas individuales dentro de procedimientos.  
   
-4.  Vuelva a definir algunas de sus cadenas de longitud fija como cadenas de longitud variable, ya que las cadenas de longitud fija utilizan más espacio de pila que las de longitud variable.  También puede definir la cadena en el nivel del módulo donde no se requiere espacio de pila.  
+4.  Volver a definir algunas de las cadenas de longitud fija como cadenas de longitud variable, como cadenas de longitud fija utilizan más espacio de pila que las cadenas de longitud variable. También puede definir la cadena en el nivel de módulo donde no requiere ningún espacio de pila.  
   
-5.  Compruebe el número de llamadas a función `DoEvents` anidadas, utilizando el cuadro de diálogo `Calls` para ver qué procedimientos están activos en la pila.  
+5.  Compruebe el número de anidada `DoEvents` llamadas a funciones, usando la `Calls` cuadro de diálogo para ver qué procedimientos están activos en la pila.  
   
-6.  Asegúrese de que no ha provocado "eventos en cascada" al desencadenar el evento que llama al procedimiento de evento que ya está en la pila.  Un evento en cascada es similar a una llamada a procedimientos recursiva e indefinida, pero es menos evidente, dado que la llamada se realiza mediante [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] en lugar de tratarse de una llamada explícita en el código.  Utilice el cuadro de diálogo `Calls` para ver qué procedimientos están activos en la pila.  
+6.  Asegúrese de que no ha provocado "eventos en cascada" desencadenando un evento que llama a un procedimiento de evento ya en la pila. Un evento en cascada es similar a una llamada de procedimiento recursiva indefinida, pero es menos evidente, dado que la llamada se realiza por [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] en lugar de una llamada explícita en el código. Utilice la `Calls`cuadro de diálogo para ver qué procedimientos están activos en la pila.  
   
-## Vea también  
- [Memoria \(Ventana\)](/visual-studio/debugger/memory-windows)
+## <a name="see-also"></a>Vea también  
+ [Ventana Memoria](https://docs.microsoft.com/visualstudio/debugger/memory-windows)

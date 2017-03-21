@@ -1,33 +1,49 @@
 ---
-title: "La expresi&#243;n lambda no se quitar&#225; de este controlador de eventos | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42326"
-  - "vbc42326"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC42326"
+title: "Expresión lambda no se quitará de este controlador de eventos | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42326
+- vbc42326
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# La expresi&#243;n lambda no se quitar&#225; de este controlador de eventos
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: bdf7ad8f8a116c818e72d67150d72d0c96a4dc3b
+ms.lasthandoff: 03/13/2017
 
-La expresión lambda no se quitará de este controlador de eventos.Asigne la expresión lambda a una variable y utilice la variable para agregar y quitar el evento.  
+---
+# <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>La expresión lambda no se quitará de este controlador de eventos
+La expresión lambda no se quitará de este controlador de eventos. Asigne la expresión lambda a una variable y use la variable para agregar y quitar el evento.  
   
- Cuando se utilizan expresiones lambda con controladores de eventos, es posible que no vea el comportamiento que espera.  El compilador genera un nuevo método para cada definición de la expresión lambda, incluso si son idénticos.  Por consiguiente, el código siguiente muestra `False`.  
+ Cuando se utilizan expresiones lambda con controladores de eventos, es podrán que no vea el comportamiento que espera. El compilador genera un nuevo método para cada definición de la expresión lambda, incluso si son idénticos. Por lo tanto, el código siguiente muestra `False`.  
   
-```vb#  
+```vb  
 Module Module1  
   
     Sub Main()  
@@ -41,9 +57,9 @@ Module Module1
 End Module  
 ```  
   
- Cuando se utilizan expresiones lambda con controladores de eventos, pueden producirse resultados inesperados.  En el ejemplo siguiente, la instrucción `RemoveHandler` no quita la expresión lambda agregada por `AddHandler`.  
+ Cuando se utilizan expresiones lambda con controladores de eventos, esto puede producir resultados inesperados. En el ejemplo siguiente, la expresión lambda agregada por `AddHandler` no quita el `RemoveHandler` instrucción.  
   
-```vb#  
+```vb  
 Module Module1  
   
     Event ProcessInteger(ByVal x As Integer)  
@@ -62,37 +78,37 @@ Module Module1
 End Module  
 ```  
   
- De forma predeterminada, este mensaje es una advertencia.  Para obtener más información sobre cómo ocultar las advertencias o tratarlas como errores, vea [Configurar advertencias en Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o tratar advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Id. de error:** BC42326  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Para evitar la advertencia y quitar la expresión lambda, asigne la expresión lambda a una variable y utilice la variable en las instrucciones `RemoveHandler` y `AddHandler`, como se muestra en el ejemplo siguiente.  
+-   Para evitar la advertencia y quitar la expresión lambda, asigne la expresión lambda a una variable y usar la variable de la `AddHandler` y `RemoveHandler` instrucciones, como se muestra en el ejemplo siguiente.  
   
-    ```vb#  
-    Module Module1  
+```vb  
+Module Module1  
   
-        Event ProcessInteger(ByVal x As Integer)  
+    Event ProcessInteger(ByVal x As Integer)  
   
-        Dim PrintHandler As ProcessIntegerEventHandler  
+    Dim PrintHandler As ProcessIntegerEventHandler  
   
-        Sub Main()  
+    Sub Main()  
   
-            ' Assign the lambda expression to a variable.  
-            PrintHandler = Function(m As Integer) m  
+        ' Assign the lambda expression to a variable.  
+        PrintHandler = Function(m As Integer) m  
   
-            ' Use the variable to add the listener.  
-            AddHandler ProcessInteger, PrintHandler  
+        ' Use the variable to add the listener.  
+        AddHandler ProcessInteger, PrintHandler  
   
-            ' Use the variable again when you want to remove the listener.  
-            RemoveHandler ProcessInteger, PrintHandler  
+        ' Use the variable again when you want to remove the listener.  
+        RemoveHandler ProcessInteger, PrintHandler  
   
-        End Sub  
-    End Module  
-    ```  
+    End Sub  
+End Module  
+```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
  [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Eventos](../../../visual-basic/programming-guide/language-features/events/events.md)
+ [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)

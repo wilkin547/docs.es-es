@@ -1,27 +1,43 @@
 ---
-title: "C&#243;mo: Invocar un m&#233;todo delegado (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "Cómo: invocar un método delegado (Visual Basic) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# C&#243;mo: Invocar un m&#233;todo delegado (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 29b20eb6089886c8111711388472004bbacea312
+ms.lasthandoff: 03/13/2017
 
-Este ejemplo muestra cómo asociar un método a un delegado e invocar luego este método a través del delegado.  
+---
+# <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Cómo: Invocar un método delegado (Visual Basic)
+Este ejemplo muestra cómo asociar un método a un delegado y, a continuación, se invoca ese método a través del delegado.  
   
-### Cree el delegado y los procedimientos correspondientes  
+### <a name="create-the-delegate-and-matching-procedures"></a>Crear el delegado y los procedimientos correspondientes  
   
 1.  Cree un delegado denominado `MySubDelegate`.  
   
@@ -29,7 +45,7 @@ Este ejemplo muestra cómo asociar un método a un delegado e invocar luego este
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Declare una clase que contenga un método con la misma firma que el delegado.  
+2.  Declare una clase que contiene un método con la misma firma que el delegado.  
   
     ```  
     Class class1  
@@ -39,7 +55,7 @@ Este ejemplo muestra cómo asociar un método a un delegado e invocar luego este
     End Class  
     ```  
   
-3.  Defina un método que cree una instancia del delegado e invoque el método asociado al delegado llamando al método `Invoke` integrado.  
+3.  Defina un método que crea una instancia del delegado y se invoca el método asociado al delegado llamando integrado `Invoke` método.  
   
     ```  
     Protected Sub DelegateTest()  
@@ -51,8 +67,8 @@ Este ejemplo muestra cómo asociar un método a un delegado e invocar luego este
     End Sub  
     ```  
   
-## Vea también  
- [Delegate \(Instrucción\)](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/delegates.md)   
- [Eventos](../../../../visual-basic/programming-guide/language-features/events/events.md)   
- [Aplicaciones multiproceso](../Topic/Multithreaded%20Applications%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vea también  
+ [Delegate (instrucción)](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
+ [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
+ [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md)   
+ [Aplicaciones multiproceso](http://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)

@@ -1,39 +1,56 @@
 ---
-title: "&#39;&lt;nombre de elemento&gt;&#39; est&#225; obsoleto (Advertencia de Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc40008"
-  - "bc40008"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40008"
+title: "&quot;&lt;elementname&gt;&quot; está obsoleto (advertencia de Visual Basic) | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc40008
+- bc40008
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# &#39;&lt;nombre de elemento&gt;&#39; est&#225; obsoleto (Advertencia de Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ccec3b2659502c84dd4db9c9c4d796362958030b
+ms.lasthandoff: 03/13/2017
 
-Una instrucción intenta obtener acceso a un elemento de programación que está marcado con el atributo <xref:System.ObsoleteAttribute> y la directiva para tratarlo como una advertencia.  
+---
+# <a name="39ltelementnamegt39-is-obsolete-visual-basic-warning"></a>'&lt;elementname&gt;' está obsoleto (advertencia de Visual Basic)
+Una instrucción intenta obtener acceso a un elemento de programación que se ha marcado con el <xref:System.ObsoleteAttribute>atributo y la directiva para tratarlo como una advertencia.</xref:System.ObsoleteAttribute>  
   
- Para indicar que un elemento de programación ya no está en uso, puede marcarlo aplicándole <xref:System.ObsoleteAttribute>.  Si hace esto, podrá establecer la propiedad <xref:System.ObsoleteAttribute.IsError%2A> del atributo en `True` o `False`.  Si la establece en `True`, el compilador tratará como un error los intentos de utilizar el elemento.  Si la establece en `False`, o deja el valor predeterminado `False`, el compilador emitirá una advertencia cuando se intente utilizar el elemento.  
+ Puede marcar cualquier elemento de programación ya no está en uso aplicando <xref:System.ObsoleteAttribute>a lo</xref:System.ObsoleteAttribute> Si lo hace, puede establecer el atributo <xref:System.ObsoleteAttribute.IsError%2A>propiedad como `True` o `False`.</xref:System.ObsoleteAttribute.IsError%2A> Si se establece en `True`, el compilador trata un intento de usar el elemento como un error. Si se establece en `False`o se deja el valor predeterminado `False`, el compilador emite una advertencia si se produce un intento de usar el elemento.  
   
- De manera predeterminada, este mensaje es una advertencia, pues la propiedad <xref:System.ObsoleteAttribute.IsError%2A> de <xref:System.ObsoleteAttribute> es `False`.  Para obtener más información sobre cómo ocultar las advertencias o tratarlas como errores, vea [Configurar advertencias en Visual Basic](/visual-studio/ide/configuring-warnings-in-visual-basic).  
+ De forma predeterminada, este mensaje es una advertencia, ya que el <xref:System.ObsoleteAttribute.IsError%2A>propiedad de <xref:System.ObsoleteAttribute>es `False`.</xref:System.ObsoleteAttribute> </xref:System.ObsoleteAttribute.IsError%2A> Para obtener más información acerca de cómo ocultar las advertencias o tratar las advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Identificador de error:** BC40008  
+ **Id. de error:** BC40008  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Asegúrese de que el nombre del elemento esté escrito correctamente en la referencia del código fuente.  
+-   Asegúrese de que la referencia del código fuente escriba correctamente el nombre del elemento.  
   
-## Vea también  
- [Atributos](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vea también  
+ [Información general de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+

@@ -1,76 +1,92 @@
 ---
-title: "Constantes definidas por el usuario (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "referencias circulares entre constantes"
-  - "Const (instrucción) [Visual Basic], constantes definidas por el usuario"
-  - "constantes, referencias circulares"
-  - "constantes, definidas por el usuario"
-  - "ámbito, constantes"
-  - "constantes definidas por el usuario"
+title: Constantes (Visual Basic) definidos por el usuario | Documentos de Microsoft
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- constants, circular references
+- Const statement [Visual Basic], user-defined constants
+- user-defined constants
+- scope, constants
+- constants, user-defined
+- circular references between constants
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Constantes definidas por el usuario (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e5942d8663a8866b2f9794a86756f2bf25660ba5
+ms.lasthandoff: 03/13/2017
 
-Una constante es un nombre significativo que toma el lugar de un número o cadena que no cambia.  Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación.  Puede utilizar constantes definidas por los controles o componentes con los que trabaja o puede crear sus propias constantes.  Las constantes que crea el usuario se denominan *definidas por el usuario*.  
+---
+# <a name="user-defined-constants-visual-basic"></a>Constantes definidas por el usuario (Visual Basic)
+Una constante es un nombre significativo que toma el lugar de un número o una cadena que no cambia. Las constantes almacenan valores que, como su nombre indica, permanecen constantes durante la ejecución de una aplicación. Puede usar constantes definidas por los controles o componentes con los que trabaja o puede crear los suyos propios. Se describen las constantes que crea usted mismo como *definido por el usuario*.  
   
- Las constantes se declaran con la instrucción `Const`, utilizando las mismas directrices que en la creación de nombres de variables.  Si `Option Strict` es `On`, debe declarar el tipo de constante explícitamente.  
+ Declarar una constante con el `Const` instrucción, utilizando las mismas directrices que en la creación de un nombre de variable. Si `Option Strict` es `On`, debe declarar explícitamente el tipo de constante.  
   
-## Utilización de la instrucción Const  
- Una instrucción `Const` puede representar una cantidad matemática o fecha y hora:  
+## <a name="const-statement-usage"></a>Utilización de la instrucción const  
+ Un `Const` instrucción puede representar un matemáticas o cantidad de fecha y hora:  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
+ [!code-vb[VbEnumsTask&#10;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
   
- También puede definir constantes `String`:  
+ También puede definir `String` constantes:  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
+ [!code-vb[VbEnumsTask&#13;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
   
- La expresión a la derecha del signo igual \(`=`\) suele ser un número o una cadena de literal, pero también puede ser una expresión que da como resultado un número o una cadena \(si bien dicha expresión no puede contener llamadas a funciones\).  Incluso pueden definirse constantes en términos de constantes definidas anteriormente:  
+ La expresión a la derecha del signo igual ( `=` ) suele ser un número o una cadena literal, pero también puede ser una expresión que da como resultado un número o una cadena (aunque esa expresión no puede contener llamadas a funciones). Puede incluso definir constantes en términos de constantes definidas anteriormente:  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
+ [!code-vb[VbEnumsTask&#15;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
   
-## Ámbito de las constantes definidas por el usuario  
- El ámbito de la instrucción `Const` es el mismo que el de una variable declarada en la misma ubicación.  Puede especificar el ámbito de cualquiera de las siguientes maneras:  
+## <a name="scope-of-user-defined-constants"></a>Ámbito de las constantes definidas por el usuario  
+ Un `Const` ámbito de la instrucción es el mismo que el de una variable declarada en la misma ubicación. Puede especificar el ámbito en cualquiera de las maneras siguientes:  
   
--   Para crear una constante que exista sólo dentro de un procedimiento concreto, declárela dentro de dicho procedimiento.  
+-   Para crear una constante que sólo existe dentro de un procedimiento, declárela dentro de ese procedimiento.  
   
--   Para crear una constante disponible para todos los procedimientos de una clase, pero no para código fuera de ese módulo, declárela en la sección de declaraciones de la clase.  
+-   Para crear una constante disponible para todos los procedimientos dentro de una clase, pero no para el código fuera de ese módulo, declárela en la sección de declaraciones de la clase.  
   
--   Para crear una constante que esté disponible para todos los miembros de un ensamblado, pero no para clientes fuera del ensamblado, declárela mediante la palabra clave `Friend` en la sección de declaraciones de la clase.  
+-   Para crear una constante que esté disponible para todos los miembros de un ensamblado, pero no para clientes fuera del ensamblado, declárela mediante la `Friend` palabra clave en la sección de declaraciones de la clase.  
   
--   Para crear una constante disponible en toda la aplicación, declárela con la palabra clave `Public` en la sección de declaraciones de la clase.  
+-   Para crear una constante disponible en toda la aplicación, declárela con la `Public` palabra clave en las declaraciones de sección de la clase.  
   
- Para obtener más información, vea [Cómo: Declarar una constante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
+ Para obtener más información, consulte [Cómo: declarar constantes de un](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   
-### Evitar referencias circulares  
- Puesto que las constantes pueden definirse en función de otras constantes, puede ocurrir que sin darse cuenta cree un *ciclo* o referencia circular involuntariamente, entre dos o más constantes.  Un ciclo se produce cuando hay dos o más constantes públicas, cada una definida basándose en la otra, como en este ejemplo:  
+### <a name="avoiding-circular-references"></a>Evitar referencias circulares  
+ Porque las constantes pueden definirse en términos de otras constantes, es posible crear accidentalmente un *ciclo*, o una referencia circular, entre dos o más constantes. Un ciclo se produce cuando hay dos o más constantes públicas, cada uno de los cuales se define en términos de la otra, como en el ejemplo siguiente:  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
+ [!code-vb[VbEnumsTask Nº&16;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
+[!code-vb[VbEnumsTask&#17;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
- Si se produce un ciclo,[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] genera un error del compilador.  
+ Si se produce un ciclo, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] genera un error del compilador.  
   
-## Vea también  
- [Const \(Instrucción\)](../../../../visual-basic/language-reference/statements/const-statement.md)   
+## <a name="see-also"></a>Vea también  
+ [Const (instrucción)](../../../../visual-basic/language-reference/statements/const-statement.md)   
  [Tipos de datos constantes y literales](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
  [Constantes y enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)   
  [Constantes y enumeraciones](../../../../visual-basic/language-reference/constants-and-enumerations.md)   
- [Información general sobre las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
- [Información general sobre las constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Cómo: Declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
+ [Información general de las enumeraciones](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
+ [Información general de constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
+ [Cómo: declarar una enumeración](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
  [Enumeraciones y calificación de nombres](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Option Strict \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

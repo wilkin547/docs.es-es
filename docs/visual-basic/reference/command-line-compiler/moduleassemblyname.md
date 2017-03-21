@@ -1,63 +1,78 @@
 ---
-title: "/moduleassemblyname | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "/moduleassemblyname (opción del compilador) [Visual Basic]"
-  - "moduleassemblyname (opción del compilador) [Visual Basic]"
-  - "-moduleassemblyname (opción del compilador) [Visual Basic]"
+title: /moduleassemblyname | Documentos de Microsoft
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- moduleassemblyname compiler option [Visual Basic]
+- /moduleassemblyname compiler option [Visual Basic]
+- -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# /moduleassemblyname
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f6b042b26ad866f177158562653c91f4f7527c04
+ms.lasthandoff: 03/13/2017
 
-Especifica el nombre del ensamblado del que formará parte este módulo.  
+---
+# <a name="moduleassemblyname"></a>/moduleassemblyname
+Especifica el nombre del ensamblado del que este módulo formará parte.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /moduleassemblyname:assembly_name  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
   
-|||  
-|-|-|  
 |Término|Definición|  
-|`assembly_name`|Nombre del ensamblado del que este módulo va a formar parte.|  
+|---|---|  
+|`assembly_name`|El nombre del ensamblado que formará parte de este módulo.|  
   
-## Comentarios  
- El compilador procesa la opción `/moduleassemblyname` solamente si se ha especificado la opción `/target:module`.  De este modo, el compilador crea un módulo.  El módulo creado por el compilador únicamente es válido para el ensamblado especificado con la opción `/moduleassemblyname`.  Si coloca el módulo en otro ensamblado, se generarán errores en tiempo de ejecución.  
+## <a name="remarks"></a>Comentarios  
+ Procese el compilador la `/moduleassemblyname` opción únicamente en caso el `/target:module` se ha especificado la opción. Esto hace que el compilador crear un módulo. El módulo creado por el compilador sólo es válido para el ensamblado especificado con el `/moduleassemblyname` opción. Si coloca el módulo en un ensamblado diferente, se producirán errores de tiempo de ejecución.  
   
- Se necesita la opción `/moduleassemblyname` solamente cuando se cumplen las siguientes condiciones:  
+ El `/moduleassemblyname` opción es necesaria sólo cuando se cumple la siguiente:  
   
--   Un tipo de datos en el módulo necesita acceso a un tipo `Friend` en un ensamblado al que se hace referencia.  
+-   Un tipo de datos en el módulo necesita acceso a un `Friend` tipo en un ensamblado.  
   
--   El ensamblado al que se hace referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará el módulo.  
+-   El ensamblado de referencia ha concedido acceso de ensamblado de confianza al ensamblado en el que se generará el módulo.  
   
- Para obtener más información sobre cómo crear un módulo, vea [\/target](../../../visual-basic/reference/command-line-compiler/target.md).  Para obtener más información sobre los ensamblados de confianza, vea [Ensamblados de confianza](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md).  
+ Para obtener más información acerca de cómo crear un módulo, consulte [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obtener más información acerca de ensamblados de confianza, consulte [Friend (ensamblados)](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
 > [!NOTE]
->  La opción `/moduleassemblyname` no está disponible en el entorno de desarrollo de Visual Studio; únicamente está disponible cuando se compila desde un símbolo del sistema.  
+>  El `/moduleassemblyname` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible sólo cuando se compila desde un símbolo del sistema.  
   
-## Vea también  
- [Cómo: Compilar un ensamblado de varios archivos](../Topic/How%20to:%20Build%20a%20Multifile%20Assembly.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo: compilar un ensamblado de múltiples archivos](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5)   
  [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [\/target](../../../visual-basic/reference/command-line-compiler/target.md)   
- [\/main](../../../visual-basic/reference/command-line-compiler/main.md)   
- [\/reference](../../../visual-basic/reference/command-line-compiler/reference.md)   
- [\/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)   
- [Ensamblados y Caché global de ensamblados](../Topic/Assemblies%20and%20the%20Global%20Assembly%20Cache%20\(C%23%20and%20Visual%20Basic\).md)   
+ [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
+ [/ main](../../../visual-basic/reference/command-line-compiler/main.md)   
+ [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)   
+ [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)   
+ [Ensamblados y caché Global de ensamblados](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)   
- [Ensamblados de confianza](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)
+ [Ensamblados de confianza](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)

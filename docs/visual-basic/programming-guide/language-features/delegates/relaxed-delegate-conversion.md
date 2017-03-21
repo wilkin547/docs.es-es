@@ -1,65 +1,81 @@
 ---
-title: "Conversi&#243;n de delegado no estricta (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "conversiones, delegados flexibles"
-  - "delegados [Visual Basic], conversión no estricta"
-  - "conversión de delegado no estricta [Visual Basic]"
+title: "Suaviza la conversión de delegado (Visual Basic) | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- relaxed delegate conversion [Visual Basic]
+- delegates [Visual Basic], relaxed conversion
+- conversions, relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Conversi&#243;n de delegado no estricta (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c0160165d3df9755481b89570b4cd135b3a990a2
+ms.lasthandoff: 03/13/2017
 
-La conversión de delegado flexible permite asignar funciones y subrutinas a delegados o controladores incluso cuando sus firmas no son idénticas. Por tanto, el enlace a los delegados se vuelve coherente con el enlace ya permitido en las llamadas a métodos.  
+---
+# <a name="relaxed-delegate-conversion-visual-basic"></a>Conversión de delegado no estricta (Visual Basic)
+Conversión de delegado flexible le permite asignar funciones y subrutinas a delegados o controladores incluso cuando sus firmas no son idénticas. Por lo tanto, el enlace a delegados se vuelve coherente con el enlace ya permitido para las invocaciones de método.  
   
-## Parámetros y tipo de valor devuelto  
- En lugar de la coincidencia exacta de firmas, la conversión flexible requiere que se cumplan las condiciones siguientes cuando `Option Strict` está establecido en `On`:  
+## <a name="parameters-and-return-type"></a>Parámetros y tipo de valor devuelto  
+ En lugar de la firma con coincidencia exacta, la conversión flexible requiere que se cumplen las condiciones siguientes cuando `Option Strict` está establecido en `On`:  
   
--   Debe existir una conversión de ampliación desde el tipo de datos de cada parámetro delegado al tipo de datos del parámetro correspondiente de la función asignada o `Sub`.  En el ejemplo siguiente, el delegado `Del1` tiene un parámetro, `Integer`.  El parámetro `m` en las expresiones lambda asignadas debe tener un tipo de datos para el que haya una conversión de ampliación desde `Integer`, como `Long` o `Double`.  
+-   Debe existir una conversión de ampliación desde el tipo de datos de cada parámetro de delegado para el tipo de datos del parámetro correspondiente de la función asignada o `Sub`. En el ejemplo siguiente, el delegado `Del1` tiene un parámetro, un `Integer`. Parámetro `m` en la expresión lambda asignada expresiones deben tener un tipo de datos para el que hay una conversión de ampliación de `Integer`, como `Long` o `Double`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+     [!code-vb[1 VbVbalrRelaxedDelegates](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
   
-     [!code-vb[VbVbalrRelaxedDelegates#2](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates&#2;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_2.vb)]  
   
-     Sólo se permiten las conversiones de restricción cuando `Option Strict` está establecido en `Off`.  
+     Las conversiones de restricción se permiten solo cuando `Option Strict` está establecido en `Off`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#8](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates Nº&8;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_3.vb)]  
   
--   Debe existir una conversión de ampliación en la dirección contraria desde el tipo de valor devuelto de la función o `Sub` asignada al tipo de valor devuelto del delegado.  En los ejemplos siguientes, el cuerpo de cada expresión lambda asignada se debe evaluar como un tipo de datos que se amplía a `Integer`, porque el tipo de valor devuelto de `del1` es `Integer`.  
+-   Debe existir una conversión de ampliación en la dirección contraria desde el tipo de valor devuelto de la función asignada o `Sub` para el tipo de valor devuelto del delegado. En los ejemplos siguientes, el cuerpo de cada expresión lambda asignada se debe evaluar como un tipo de datos que se amplíe a `Integer` porque el tipo devuelto de `del1` es `Integer`.  
   
-     [!code-vb[VbVbalrRelaxedDelegates#3](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
+     [!code-vb[VbVbalrRelaxedDelegates&3;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_4.vb)]  
   
- Si `Option Strict` está establecido en `Off`, se quita la restricción de ampliación en ambas direcciones.  
+ Si `Option Strict` se establece en `Off`, se quitan la restricción de ampliación en ambas direcciones.  
   
- [!code-vb[VbVbalrRelaxedDelegates#4](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates Nº&4;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_5.vb)]  
   
-## Omisión de las especificaciones del parámetro  
- Los delegados flexibles también permiten omitir completamente las especificaciones del parámetro en el método asignado:  
+## <a name="omitting-parameter-specifications"></a>La omisión de las especificaciones del parámetro  
+ Delegados flexibles también permiten omitir completamente las especificaciones de parámetros en el método asignado:  
   
- [!code-vb[VbVbalrRelaxedDelegates#5](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#5;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_6.vb)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#6](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates Nº&6;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_7.vb)]  
   
- Observe que no puede especificar algunos parámetros y omitir otros.  
+ Tenga en cuenta que no puede especificar algunos parámetros y omitir otros.  
   
- [!code-vb[VbVbalrRelaxedDelegates#15](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#15;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_8.vb)]  
   
- La capacidad de omitir parámetros es útil en una situación en la que se define un controlador de eventos, donde están implicados varios parámetros complejos.  No se usan argumentos en algunos controladores de eventos.  En su lugar, el controlador tiene directamente acceso al estado del control en el que se registra el evento y omite los argumentos.  Los delegados flexibles permiten omitir argumentos en aquellas declaraciones sin ambigüedades.  En el ejemplo siguiente, el método completo `OnClick` se puede volver a escribir como `RelaxedOnClick`.  
+ La capacidad de omitir parámetros es útil en una situación como la definición de un controlador de eventos, donde están implicados varios parámetros complejos. No se utilizan los argumentos de algunos controladores de eventos. En su lugar, el controlador directamente tiene acceso al estado del control en el que está registrado el evento y omite los argumentos. Delegados flexibles permiten omitir argumentos en aquellas declaraciones sin ambigüedades. En el ejemplo siguiente, el método completo `OnClick` puede reescribirse como `RelaxedOnClick`.  
   
-```vb#  
+```vb  
 Sub OnClick(ByVal sender As Object, ByVal e As EventArgs) Handles b.Click  
     MessageBox.Show("Hello World from" + b.Text)  
 End Sub  
@@ -69,32 +85,32 @@ Sub RelaxedOnClick() Handles b.Click
 End Sub  
 ```  
   
-## Ejemplos de AddressOf  
- Las expresiones lambda se usan en los ejemplos anteriores para que se vean fácilmente las relaciones entre tipos.  Sin embargo, se permite la misma flexibilidad para las asignaciones de delegado que usan `AddressOf`, `Handles` o `AddHandler`.  
+## <a name="addressof-examples"></a>Ejemplos de AddressOf  
+ Las expresiones lambda se usan en los ejemplos anteriores para facilitar las relaciones de tipo ver. Sin embargo, el mismas relajaciones permitidas para las asignaciones de delegado que usan `AddressOf`, `Handles`, o `AddHandler`.  
   
- En el siguiente ejemplo, las funciones `f1`, `f2`, `f3` y `f4` se pueden asignar a `Del1`.  
+ En el ejemplo siguiente, las funciones `f1`, `f2`, `f3`, y `f4` puede asignarse a `Del1`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#1](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
+ [!code-vb[1 VbVbalrRelaxedDelegates](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_1.vb)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#7](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#7;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_9.vb)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#9](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#9;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_10.vb)]  
   
- El ejemplo siguiente sólo es válido cuando `Option Strict` está establecido en `Off`.  
+ El ejemplo siguiente es válido solamente cuando `Option Strict` está establecido en `Off`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#14](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#14;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_11.vb)]  
   
-## Colocar valores devueltos de una función  
- La conversión de delegado flexible permite asignar una función a un delegado `Sub`, omitiendo así el valor devuelto de la función.  Sin embargo, no se puede asignar un `Sub` a un delegado de función.  En el ejemplo siguiente, la dirección de función `doubler` se asigna al delegado `Sub``Del3`.  
+## <a name="dropping-function-returns"></a>Quitar la función devuelve  
+ Conversión de delegado flexible le permite asignar una función a un `Sub` delegado, omitiendo el valor devuelto de la función de forma eficaz. Sin embargo, no puede asignar un `Sub` a un delegado de función. En el ejemplo siguiente, la dirección de función `doubler` se asigna a `Sub` delegar `Del3`.  
   
- [!code-vb[VbVbalrRelaxedDelegates#10](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#10;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_12.vb)]  
   
- [!code-vb[VbVbalrRelaxedDelegates#11](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
+ [!code-vb[VbVbalrRelaxedDelegates&#11;](../../../../visual-basic/programming-guide/language-features/delegates/codesnippet/VisualBasic/relaxed-delegate-conversion_13.vb)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Expresiones lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/delegates.md)   
- [Cómo: Pasar procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)   
- [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [Option Strict \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+ [Conversiones de restricción y ampliación](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
+ [Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
+ [Cómo: pasar procedimientos a otro procedimiento en Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)   
+ [Inferencia de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+ [Option Strict (instrucción)](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

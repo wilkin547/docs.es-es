@@ -1,103 +1,119 @@
 ---
-title: "Operadores de comparaci&#243;n en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operadores de comparación"
-  - "operadores de comparación, comparar valores numéricos"
-  - "operadores de comparación, comparar objetos"
-  - "operadores de comparación, comparar cadenas"
-  - "números, comparar"
-  - "valores numéricos, comparar"
-  - "objetos [Visual Basic], comparar"
-  - "operadores [Visual Basic], comparación"
-  - "comparación de cadenas [Visual Basic]"
-  - "comparación de cadenas [Visual Basic], operadores"
-  - "cadenas [Visual Basic], comparar"
-  - "código de Visual Basic, operadores"
+title: "Operadores de comparación en Visual Basic | Documentos de Microsoft"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- comparison operators, comparing strings
+- comparison operators, comparing objects
+- strings [Visual Basic], comparing
+- comparison operators
+- string comparison [Visual Basic], operators
+- objects [Visual Basic], comparing
+- numbers, comparing
+- Visual Basic code, operators
+- string comparison [Visual Basic]
+- numeric values, comparing
+- comparison operators, comparing numeric values
+- operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Operadores de comparaci&#243;n en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6185d1676f2cd160c9c3e855cce4a6d2bbe2ffb4
+ms.lasthandoff: 03/13/2017
 
-Los operadores de comparación comparan dos expresiones y devuelven un valor `Boolean` que representa la relación entre sus valores.  Existen operadores para comparar valores numéricos, operadores para comparar cadenas y operadores para comparar objetos.  Los tres tipos de operadores se describen a continuación.  
+---
+# <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
+Operadores de comparación comparan dos expresiones y devuelven un `Boolean` valor que representa la relación de sus valores. Existen operadores para comparar valores numéricos, operadores para comparar cadenas y operadores para comparar los objetos. Los tres tipos de operadores se describen a continuación.  
   
-## Comparar valores numéricos  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] compara valores numéricos mediante seis operadores de comparación numéricos.  Cada operador toma como operandos dos expresiones que se evalúan como valores numéricos.  La tabla siguiente enumera los operadores y muestra ejemplos de cada uno.  
+## <a name="comparing-numeric-values"></a>Comparar valores numéricos  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Compara valores numéricos mediante seis operadores de comparación numérica. Cada operador toma como operandos dos expresiones que se evalúan como valores numéricos. En la tabla siguiente se enumera los operadores y muestra ejemplos de cada uno.  
   
 |Operador|Condición que prueba|Ejemplos|  
-|--------------|--------------------------|--------------|  
-|`=` \(Igualdad\)|¿Es igual el valor de la primera expresión que el de la segunda?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>` \(Desigualdad\)|¿Es distinto el valor de la primera expresión del valor de la segunda?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<` \(Menor que\)|¿Es el valor de la primera expresión menor que el valor de la segunda?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>` \(Mayor que\)|¿Es el valor de la primera expresión mayor que el valor de la segunda?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=` \(Menor o igual que\)|¿Es el valor de la primera expresión menor o igual que el valor de la segunda?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=` \(Mayor o igual que\)|¿Es el valor de la primera expresión mayor o igual que el valor de la segunda?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|--------------|----------------------|--------------|  
+|`=`(Igualdad)|¿Es el valor de la primera expresión igual al valor de la segunda?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
+|`<>`(Desigualdad)|¿Es el valor de la primera expresión iguales al valor de la segunda?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<`(Menor que)|¿Es el valor de la primera expresión menor que el valor de la segunda?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>`(Mayor que)|¿Es el valor de la primera expresión mayor que el valor de la segunda?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=`(Menor o igual que)|¿Es el valor de la primera expresión menor o igual que el valor de la segunda?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=`(Mayor o igual que)|¿Es el valor de la primera expresión mayor o igual que el valor de la segunda?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
-## Comparar cadenas  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] compara cadenas mediante [Like \(Operador\)](../../../../visual-basic/language-reference/operators/like-operator.md) así como los operadores de comparación numéricos.  El operador `Like` le permite especificar un modelo.  La cadena se compara a continuación contra el modelo y si coincide, el resultado es `True`.  De lo contrario, el resultado es `False`.  Los operadores numéricos permiten comparar valores `String` basándose en su criterio de ordenación, como se indica en el ejemplo siguiente:  
+## <a name="comparing-strings"></a>Comparar cadenas  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Compara cadenas utilizando la [operador Like](../../../../visual-basic/language-reference/operators/like-operator.md) , así como los operadores de comparación numérica. El `Like` operador le permite especificar un patrón. La cadena se compara entonces con el modelo y si coincide, el resultado es `True`. De lo contrario, el resultado es `False`. Los operadores numéricos permiten comparar `String` valores según su criterio de ordenación, como se muestra en el ejemplo siguiente.  
   
  `"73" < "9"`  
   
  `' The result of the preceding comparison is True.`  
   
- El resultado del ejemplo anterior es `True` porque el primer carácter de la primera cadena se ordena antes que el primer carácter de la segunda cadena.  Si los primeros caracteres fueran iguales, la comparación continuaría con el siguiente carácter de las dos cadenas, y así sucesivamente.  También puede probar la igualdad de cadenas utilizando al operador de igualdad, como se puede ver en el ejemplo siguiente.  
+ El resultado del ejemplo anterior es `True` porque el primer carácter de la primera cadena se ordena antes que el primer carácter de la segunda cadena. Si los primeros caracteres son iguales, la comparación debería seguir el carácter siguiente de ambas cadenas y así sucesivamente. También puede probar la igualdad de cadenas utilizando el operador de igualdad, como se muestra en el ejemplo siguiente.  
   
  `"734" = "734"`  
   
  `' The result of the preceding comparison is True.`  
   
- Si una cadena es un prefijo de otra, como "aa" y "aaa", la cadena más larga se considera mayor que la más corta.  Esto se ilustra en el siguiente ejemplo:  
+ Si una cadena es un prefijo de otra, como "aa" y "aaa", la cadena más larga se considera mayor que la cadena más corta. Esto se ilustra en el siguiente ejemplo:  
   
  `"aaa" > "aa"`  
   
  `' The result of the preceding comparison is True.`  
   
- El criterio de ordenación se basará en una comparación binaria o una comparación textual, en función del valor de `Option Compare`.  Para obtener más información, vea [Option Compare \(Instrucción\)](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+ El criterio de ordenación se basa en una comparación binaria o una comparación textual dependiendo del valor de `Option Compare`. Para obtener más información, consulte [instrucción Option Compare](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
-## Comparar objetos  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] compara dos variables de referencia a objetos con [Is \(Operador\)](../../../../visual-basic/language-reference/operators/is-operator.md) e [IsNot \(Operador\)](../../../../visual-basic/language-reference/operators/isnot-operator.md).  Puede utilizar cualquiera de estos operadores para determinar si las dos variables de referencia se refieren a la misma instancia de objeto.  Esto se ilustra en el siguiente ejemplo:  
+## <a name="comparing-objects"></a>Comparar objetos  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]Compara dos objetos variables de referencia con el [operador Is](../../../../visual-basic/language-reference/operators/is-operator.md) y [IsNot (operador)](../../../../visual-basic/language-reference/operators/isnot-operator.md). Puede utilizar cualquiera de estos operadores para determinar si dos variables de referencia que hacen referencia a la misma instancia de objeto. Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators&#65;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
- En el ejemplo anterior, `x Is y` se evalúa como `True`, porque ambas variables se refieren a la misma instancia.  Compare este resultado con el del ejemplo siguiente.  
+ En el ejemplo anterior, `x Is y` se evalúa como `True`, porque ambas variables se refieren a la misma instancia. Compare este resultado con el siguiente ejemplo.  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators&#66;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
- En el ejemplo anterior, `x Is y` se evalúa como `False`, porque aunque las variables hacen referencia a objetos del mismo tipo, se refieren a distintas instancias de ese tipo.  
+ En el ejemplo anterior, `x Is y` se evalúa como `False`, porque aunque las variables hacen referencia a objetos del mismo tipo, hacen referencia a instancias diferentes de ese tipo.  
   
- Cuando desee probar dos objetos que no señalan a la misma instancia, el operador `IsNot` permite evitar una combinación gramaticalmente torpe de `Not` e `Is`.  Esto se ilustra en el siguiente ejemplo:  
+ Cuando desee probar dos objetos no señala a la misma instancia, el `IsNot` operador le permite evitar una combinación gramaticalmente torpe de `Not` y `Is`. Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators&#67;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
  En el ejemplo anterior, `If a IsNot b` es equivalente a `If Not a Is b`.  
   
-### Comparar tipos de objetos  
- Para probar si un objeto es de un tipo concreto se puede utilizar la expresión `TypeOf`...`Is`.  La sintaxis es la siguiente:  
+### <a name="comparing-object-type"></a>Comparar tipos de objetos  
+ Puede probar si un objeto es de un tipo determinado con el `TypeOf`... `Is` expresión. La sintaxis es la siguiente:  
   
  `TypeOf <objectexpression> Is <typename>`  
   
- Cuando `typename` especifica un tipo de interfaz, la expresión `TypeOf`...`Is` devuelve `True` si el objeto implementa el tipo de interfaz.  Cuando `typename` es un tipo de clase, la expresión devuelve `True` si el objeto es una instancia de la clase especificada o de una clase que se deriva de la clase especificada.  Esto se ilustra en el siguiente ejemplo:  
+ Cuando `typename` especifica un tipo de interfaz, la `TypeOf`... `Is` expresión devuelve `True` si el objeto implementa el tipo de interfaz. Cuando `typename` es un tipo de clase, la expresión devuelve `True` si el objeto es una instancia de la clase especificada o de una clase que deriva de la clase especificada. Esto se ilustra en el siguiente ejemplo:  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators&#68;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
- En el ejemplo anterior, la expresión `TypeOf x Is Control` se evalúa como `True` porque el tipo de `x` es `Button`, que hereda de `Control`.  
+ En el ejemplo anterior, el `TypeOf x Is Control` expresión se evalúa como `True` porque el tipo de `x` es `Button`, que hereda de `Control`.  
   
- Para obtener más información, vea [TypeOf \(Operador\)](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
+ Para obtener más información, consulte [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Comparaciones de valores](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)   
  [Operadores de comparación](../../../../visual-basic/language-reference/operators/comparison-operators.md)   
  [Operadores](../../../../visual-basic/language-reference/operators/index.md)   

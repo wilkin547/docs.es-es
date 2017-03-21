@@ -1,64 +1,80 @@
 ---
-title: "Imports (Instrucci&#243;n, Espacio de nombres XML) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ImportsXmlns"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "importaciones [Visual Basic]"
-  - "Imports (instrucción) [Visual Basic]"
-  - "espacios de nombres [Visual Basic], importar"
-  - "espacio de nombres XML [Visual Basic], importar"
+title: "Imports (instrucción) (XML Namespace) | Documentos de Microsoft"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ImportsXmlns
+dev_langs:
+- VB
+helpviewer_keywords:
+- XML namespace [Visual Basic], importing
+- imports [Visual Basic]
+- Imports statement [Visual Basic]
+- namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Imports (Instrucci&#243;n, Espacio de nombres XML)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 546168994973d19336f86f4b4e9ec566f0b9dd91
+ms.lasthandoff: 03/13/2017
 
-Importa los prefijos del espacio de nombres XML para su uso en literales XML y propiedades de eje XML.  
+---
+# <a name="imports-statement-xml-namespace"></a>Imports (Instrucción, Espacio de nombres XML)
+Importa los prefijos de espacio de nombres XML para su uso en literales XML y propiedades de eje XML.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `xmlNamespacePrefix`  
- Opcional.  Cadena por la que los elementos y atributos XML pueden hacer referencia a `xmlNamespaceName`.  Si no se proporciona `xmlNamespacePrefix`, el espacio de nombres XML importado es el espacio de nombres XML predeterminado.  Debe ser un identificador XML válido.  Para obtener más información, vea [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
+ Opcional. La cadena de por qué XML hacer referencia a elementos y atributos `xmlNamespaceName`. Si no hay ningún `xmlNamespacePrefix` es proporcionado, el espacio de nombres XML importado es el espacio de nombres XML predeterminado. Debe ser un identificador XML válido. Para obtener más información, consulte [nombres de declarar elementos y atributos XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).  
   
  `xmlNamespaceName`  
- Obligatorio.  Cadena que identifica el espacio de nombres XML que se importa.  
+ Obligatorio. Cadena que identifica el espacio de nombres XML que se importa.  
   
-## Comentarios  
- Puede usar la instrucción `Imports` para definir espacios de nombres XML globales que puede utilizar con literales XML y propiedades de eje XML o como los parámetros pasados al operador `GetXmlNamespace`.  \(Para obtener información sobre cómo utilizar la instrucción `Imports` con el fin de importar un alias que se pueda usar donde los nombres de tipo se utilizan en el código, vea [Instrucción Imports \(Tipo y espacio de nombres de .NET\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).\) La sintaxis para declarar un espacio de nombres XML utilizando la instrucción `Imports` es idéntica a la sintaxis usada en XML.  Por consiguiente, puede copiar una declaración de espacio de nombres de un archivo XML y usarla en una instrucción `Imports`.  
+## <a name="remarks"></a>Comentarios  
+ Puede usar el `Imports` instrucción para definir los espacios de nombres XML globales que puede utilizar con literales XML y propiedades de eje XML o como parámetros pasados a la `GetXmlNamespace` operador. (Para obtener información acerca del uso de la `Imports` instrucción para importar un alias que se puede utilizar donde se utilizan los nombres de tipo en el código, consulte [Imports (instrucción Namespace .NET y tipo)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) La sintaxis para declarar un espacio de nombres XML mediante el uso de la `Imports` instrucción es idéntica a la sintaxis utilizada en XML. Por lo tanto, puede copiar una declaración de espacio de nombres de un archivo XML y usarlo en un `Imports` instrucción.  
   
- Los prefijos de espacios de nombres XML son útiles si desea crear repetidamente elementos XML cuyo origen sea el mismo espacio de nombres.  El prefijo del espacio de nombres XML declarado con la instrucción `Imports` es global en tanto que todo el código del archivo puede disponer de él.  Puede usarlo si crea literales de elemento XML y al tener acceso a las propiedades de eje XML.  Para obtener más información, vea [Literal de elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) y [Propiedades de eje XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ Los prefijos de espacio de nombres XML son útiles cuando desea crear repetidamente elementos XML que están en el mismo espacio de nombres. El prefijo de espacio de nombres XML declarados con el `Imports` instrucción es global en el sentido de que está disponible para todo el código en el archivo. Para usarla al crear literales de elemento XML y al tener acceso a propiedades de eje XML. Para obtener más información, consulte [Literal de elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) y [propiedades de eje XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
   
- Si define un espacio de nombres XML global sin ningún prefijo de espacio de nombres \(por ejemplo, `Imports <xmlns="http://SomeNameSpace>"`\), ese espacio de nombres se considera el espacio de nombres XML predeterminado.  El espacio de nombres XML predeterminado se utiliza para cualquier literal de elemento XML o propiedades de eje de atributo XML que no especifiquen explícitamente un espacio de nombres.  El espacio de nombres predeterminado también se usa si el espacio de nombres especificado es el espacio de nombres vacío \(es decir, `xmlns=""`\).  El espacio de nombres XML predeterminado no se aplica a los atributos XML de literales XML ni a las propiedades de eje de atributo XML que no tengan espacio de nombres.  
+ Si define un espacio de nombres XML global sin un prefijo de espacio de nombres (por ejemplo, `Imports <xmlns="http://SomeNameSpace>"`), ese espacio de nombres se considera el espacio de nombres XML predeterminado. Espacio de nombres XML predeterminado se utiliza para los literales de elemento XML o propiedades de eje de atributo XML que no especifiquen explícitamente un espacio de nombres. El espacio de nombres predeterminado también se usa si el espacio de nombres especificado es el espacio de nombres vacío (es decir, `xmlns=""`). Espacio de nombres XML predeterminado no se aplica a los atributos XML en literales XML y propiedades de eje de atributo XML que no tiene un espacio de nombres.  
   
- Los espacios de nombres XML definidos en un literal XML, que se denomina *espacios de nombres XML locales*, tienen prioridad sobre los espacios de nombres XML que define la instrucción `Imports` como globales.  Los espacios de nombres XML que define la instrucción `Imports` tienen prioridad sobre los espacios de nombres XML importados para un proyecto de Visual Basic.  Si un literal XML define un espacio de nombres XML, ese espacio de nombres local no se aplica a las expresiones incrustadas.  
+ Espacios de nombres XML que se definen en un literal XML, que se denominan *espacios de nombres XML local*, tienen prioridad sobre los espacios de nombres XML definidos por el `Imports` instrucción como globales. Espacios de nombres XML definidos por el `Imports` instrucción tienen prioridad sobre los espacios de nombres XML importados para un proyecto de Visual Basic. Si un literal XML define un espacio de nombres XML, ese espacio de nombres local no se aplica a las expresiones incrustadas.  
   
- Los espacios de nombres XML globales siguen las mismas reglas de ámbito y definición que los espacios de nombres de .NET Framework.  Como resultado, puede incluir una instrucción `Imports` para definir un espacio de nombres XML global donde pueda importar un espacio de nombres de .NET Framework.  Se incluyen tanto los archivos de código como los espacios de nombres importados de nivel de proyecto.  Para obtener información sobre espacios de nombres importados de nivel de proyecto, vea [Página Referencias, Diseñador de proyectos \(Visual Basic\)](/visual-studio/ide/reference/references-page-project-designer-visual-basic).  
+ Espacios de nombres XML globales siguen las mismas reglas de ámbito y definición como espacios de nombres de .NET Framework. Como resultado, puede incluir un `Imports` instrucción para definir un espacio de nombres XML global donde pueda importar un espacio de nombres de .NET Framework. Esto incluye archivos de código y espacios de nombres importados de nivel de proyecto. Para obtener información acerca de espacios de nombres importados de nivel de proyecto, vea [página referencias, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
   
- Cada archivo de código fuente puede contener cualquier número de instrucciones `Imports`.  Éstas deben ir a continuación de las declaraciones de opción, como la instrucción `Option Strict`, y deben preceder a cualquier declaración de elemento de programación como las instrucciones `Module` o `Class`.  
+ Cada archivo de código fuente puede contener cualquier número de `Imports` instrucciones. Éstas deben seguir las declaraciones de opción, como el `Option Strict` instrucción y se deben preceder a declaraciones de elemento de programación, como `Module` o `Class` las instrucciones.  
   
-## Ejemplo  
- El ejemplo siguiente importa un espacio de nombres XML predeterminado y un espacio de nombres XML identificado con el prefijo `ns`.  Después crea literales XML que utilizan ambos espacios de nombres.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente importa el espacio de nombres XML predeterminado y un espacio de nombres XML identificado con el prefijo `ns`. Después crea literales XML que utilizan ambos espacios de nombres.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples nº&45;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
   
- Este código muestra el texto siguiente:  
+ Este código muestra el siguiente texto:  
   
 ```  
 <ns:outer xmlns="http://DefaultNamespace"   
@@ -69,12 +85,12 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 </ns:outer>  
 ```  
   
-## Ejemplo  
- El ejemplo siguiente importa el prefijo de espacio de nombres XML `ns`.  Después crea un literal XML que usa el prefijo de espacio de nombres y muestra el formato final del elemento.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente importa el prefijo de espacio de nombres XML `ns`. A continuación, crea un literal XML que usa el prefijo de espacio de nombres y muestra el formato final del elemento.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples&#22;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
   
- Este código muestra el texto siguiente:  
+ Este código muestra el siguiente texto:  
   
 ```  
 <ns:outer xmlns:ns="http://SomeNamespace">  
@@ -85,19 +101,19 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 </ns:outer>  
 ```  
   
- Observe que el compilador convirtió el prefijo del espacio de nombres XML de un prefijo global en una definición de prefijo local.  
+ Observe que el compilador convirtió el prefijo del espacio de nombres XML de un prefijo global a una definición de prefijo local.  
   
-## Ejemplo  
- El ejemplo siguiente importa el prefijo de espacio de nombres XML `ns`.  A continuación, se usa el prefijo del espacio de nombres para crear un literal XML y obtener acceso al primer nodo secundario con el nombre completo `ns:name`.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente importa el prefijo de espacio de nombres XML `ns`. A continuación, se usa el prefijo del espacio de nombres para crear un literal XML y obtener acceso al primer nodo secundario con el nombre completo `ns:name`.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples Nº&19;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
   
- Este código muestra el texto siguiente:  
+ Este código muestra el siguiente texto:  
   
  `Patrick Hines`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Literal de elemento XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
  [Propiedades de eje XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
  [Nombres de atributos y elementos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)   
- [GetXmlNamespace \(Operador\)](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+ [GetXmlNamespace (operador)](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

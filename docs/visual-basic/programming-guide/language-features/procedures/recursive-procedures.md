@@ -1,60 +1,76 @@
 ---
-title: "Procedimientos recursivos (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "funciones [Visual Basic], llamar de forma recursiva"
-  - "procedimientos, llamar"
-  - "procedimientos, recursivos"
-  - "procedimientos, que se llaman a sí mismos"
-  - "recursividad"
-  - "procedimientos recursivos"
-  - "código de Visual Basic, procedimientos"
+title: Procedimientos recursivos (Visual Basic) | Documentos de Microsoft
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, procedures
+- procedures, that call themselves
+- procedures, recursive
+- procedures, calling
+- recursive procedures
+- functions [Visual Basic], calling recursively
+- recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Procedimientos recursivos (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9fc95cd5f7cfd5637f6282c6ef571eb81bac1816
+ms.lasthandoff: 03/13/2017
 
-Un procedimiento *recursivo* es aquél que se llama a sí mismo.  En general, esta no suele ser la manera más eficaz de escribir código en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+---
+# <a name="recursive-procedures-visual-basic"></a>Procedimientos recursivos (Visual Basic)
+Un *recursiva* procedimiento es aquél que se llama a sí mismo. En general, esto no es la manera más eficaz escribir [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] código.  
   
- En el siguiente procedimiento se utiliza la recursividad para calcular el factorial de su argumento original.  
+ El siguiente procedimiento utiliza la recursividad para calcular el factorial de su argumento original.  
   
- [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures&#51;](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
-## Consideraciones sobre procedimientos recursivos  
- **Condiciones de limitación**.  Debe designar un procedimiento recursivo para probar al menos una condición que pueda poner fin a la recursividad; también debe supervisar los casos en los que no se satisface ninguna condición dentro de un número razonable de llamadas recursivas.  Si no existe al menos una condición que pueda cumplirse sin errores, el procedimiento corre un riesgo elevado de ejecutarse en un bucle infinito.  
+## <a name="considerations-with-recursive-procedures"></a>Consideraciones sobre procedimientos recursivos  
+ **Condiciones restrictivas**. Debe diseñar un procedimiento recursivo para probar al menos una condición que puede finalizar la recursividad y también debe controlar el caso donde no se cumple ninguna condición de ese tipo dentro de un número razonable de llamadas recursivas. Sin al menos una condición que puede cumplirse sin errores, el procedimiento ejecuta un alto riesgo de ejecutar un bucle infinito.  
   
- **Uso de la memoria**.  La aplicación tiene una cantidad de espacio limitada para las variables locales.  Cada vez que un procedimiento se llama a sí mismo, utiliza más cantidad de ese espacio para las copias adicionales de sus variables locales.  Si este proceso continúa indefinidamente, se acaba produciendo un error <xref:System.StackOverflowException>.  
+ **Uso de memoria**. La aplicación tiene una cantidad limitada de espacio para variables locales. Cada vez que un procedimiento se llama a sí mismo, utiliza más espacio para las copias adicionales de sus variables locales. Si este proceso continúa indefinidamente, se acaba produciendo un <xref:System.StackOverflowException>error.</xref:System.StackOverflowException>  
   
- **Eficacia**.  Casi siempre se puede sustituir un bucle por la recursividad.  Un bucle no tiene la sobrecarga de transferir argumentos, inicializar el almacenamiento adicional y devolver valores.  Su rendimiento puede ser mucho mayor sin llamadas recursivas.  
+ **Eficiencia**. Casi siempre se puede sustituir un bucle por la recursividad. Un bucle no tiene la sobrecarga de transferir argumentos, inicializar el almacenamiento adicional y devolver valores. El rendimiento puede ser mucho mayor sin llamadas recursivas.  
   
- **Recursividad mutua**.  Si dos procedimientos se llaman mutuamente, el rendimiento puede ser muy deficiente o incluso puede producirse un bucle infinito.  Este tipo de diseño presenta los mismos problemas que un procedimiento recursivo único, pero puede ser más difícil de detectar y depurar.  
+ **Recursividad mutua**. Puede observar un rendimiento muy deficiente o incluso un bucle infinito si dos procedimientos llaman entre sí. Este tipo de diseño presenta los mismos problemas que un procedimiento recursivo único, pero puede ser difícil de detectar y depurar.  
   
- **Llamadas con paréntesis**.  Cuando un procedimiento `Function` se llama a sí mismo de manera recursiva, debe agregar paréntesis detrás del nombre del procedimiento, aun cuando no exista una lista de argumentos.  De lo contrario, se considerará que el nombre de la función representa al valor devuelto por ésta.  
+ **Llamadas con paréntesis**. Cuando un `Function` procedimiento llama repetidamente, deberá seguir el nombre del procedimiento con paréntesis, incluso si no hay ninguna lista de argumentos. De lo contrario, se toma el nombre de función que representa el valor devuelto de la función.  
   
- **Pruebas** Si escribe un procedimiento recursivo, debe probarlo minuciosamente para asegurarse de que siempre cumple ciertas condiciones de limitación.  También debería comprobar que la memoria no resulta insuficiente debido a la gran cantidad de llamadas recursivas.  
+ **Pruebas**. Si escribe un procedimiento recursivo, debe probarlo con mucho cuidado para asegurarse de que siempre cumple ciertas condiciones de limitación. También debe asegurarse de que no se puede ejecutar sin memoria debido a que hay demasiadas llamadas recursivas.  
   
-## Vea también  
- <xref:System.StackOverflowException>   
- [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedimientos Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Procedimientos Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedimientos de operador](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Argumentos y parámetros de procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Sobrecarga de procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Procedimientos de solución de problemas](../../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
- [Estructuras de bucles](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Solución de problemas de excepciones: System.StackOverflowException](../Topic/Troubleshooting%20Exceptions:%20System.StackOverflowException.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.StackOverflowException></xref:System.StackOverflowException>   
+ [Procedimientos](./index.md)   
+ [Sub (procedimientos)](./sub-procedures.md)   
+ [Function (procedimientos)](./function-procedures.md)   
+ [Property (procedimientos)](./property-procedures.md)   
+ [Procedimientos de operadores](./operator-procedures.md)   
+ [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)   
+ [Sobrecarga de procedimientos](./procedure-overloading.md)   
+ [Procedimientos de solución de problemas](./troubleshooting-procedures.md)   
+ [Estructuras de bucle](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
+ [Solución de problemas de excepciones: System.StackOverflowException](http://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
