@@ -39,11 +39,11 @@ Comandos de .NET Core (telemetría no habilitada):
 - `dotnet restore`
 - `dotnet run`
 
-##<a name="behavior"></a>Comportamiento
+## <a name="behavior"></a>Comportamiento
 
 La característica de telemetría de las herramientas de .NET Core está habilitada de manera predeterminada. Puede optar por no tener la característica de telemetría; para ello, establezca una variable de entorno DOTNET_CLI_TELEMETRY_OPTOUT (por ejemplo, `export` en macOS/Linux, `set` en Windows) en true (por ejemplo, "true", 1).
 
-##<a name="data-points"></a>Puntos de datos
+## <a name="data-points"></a>Puntos de datos
 
 La característica recopila los siguientes puntos de datos:
 
@@ -57,7 +57,7 @@ La característica recopila los siguientes puntos de datos:
 
 La característica no recopilará información personal, como nombres de usuario o correos electrónicos. No examinará el código ni extraerá información a nivel de proyecto alguna que pueda tener un carácter confidencial, como nombre, repositorio o autor (si los definió en el archivo project.json). Queremos saber cómo se usan las herramientas y no lo que compila con ellas. Si ve que se recopila información confidencial, se trata de un error. [Informe de la existencia de un problema](https://github.com/dotnet/cli/issues) y se corregirá.
 
-##<a name="license"></a>Licencia
+## <a name="license"></a>Licencia
 
 La distribución de Microsoft de .NET Core cuenta con licencia en virtud del [CLUF DE LA BIBLIOTECA DE MICROSOFT .NET](https://aka.ms/dotnet-core-eula). Esto incluye la sección "DATOS" que se vuelven a mostrar a continuación, para habilitar la telemetría.
 
@@ -97,3 +97,4 @@ A command is running to initially populate your local package cache, to
 improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
+
