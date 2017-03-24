@@ -31,7 +31,7 @@ Las instrucciones `using` de C# y `Using` de Visual Basic simplifican el código
 
 En el ejemplo siguiente se usa la instrucción `using` para crear y liberar un objeto [System.IO.StreamReader](xref:System.IO.StreamReader).
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -77,7 +77,7 @@ End Module
 
 Si bien la clase [StreamReader](xref:System.IO.StreamReader) implementa la interfaz [IDisposable](xref:System.IDisposable), que indica que usa un recurso no administrado, en el ejemplo no se llama al método [StreamReader.Dispose](xref:System.IO.StreamReader.Dispose(System.Boolean)) de manera explícita. Cuando el compilador de C# o de Visual Basic encuentra la instrucción `using`, emite un lenguaje intermedio (IL), que equivale al código siguiente que contiene un bloque `try/finally` de manera explícita. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -134,7 +134,7 @@ End Module
 
 La instrucción `using` de C# también permite adquirir varios recursos en una sola instrucción, lo que internamente equivale a instrucciones using anidadas. En el ejemplo siguiente se crean instancias de dos objetos [StreamReader](xref:System.IO.StreamReader) para leer el contenido de dos archivos. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -171,7 +171,7 @@ En lugar de ajustar un bloque `try/finally` en una instrucción `using`, puede e
 
 El siguiente ejemplo es similar al anterior, a excepción de que se usa un bloque `try/catch/finally` para crear instancias, usar y eliminar un objeto [StreamReader](xref:System.IO.StreamReader), y para controlar las excepciones que produce el constructor [StreamReader](xref:System.IO.StreamReader) y su método [ReadToEnd](xref:System.IO.StreamReader.ReadToEnd). Observe que el código del bloque `finally` comprueba que el objeto que implementa [IDisposable](xref:System.IDisposable) no es `null` antes de llamar al método [Dispose](xref:System.IDisposable.Dispose). No hacerlo puede provocar una excepción [NullReferenceException](xref:System.NullReferenceException) en tiempo de ejecución. 
 
-```cs
+```csharp
 using System;
 using System.Globalization;
 using System.IO;

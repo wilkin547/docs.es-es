@@ -38,7 +38,7 @@ P/Invoke es una tecnología que permite acceder a estructuras, devoluciones de l
 
 Empecemos por el ejemplo más común, es decir, llamar a funciones no administradas en el código administrado. Vamos a mostrar un cuadro de mensaje desde una aplicación de línea de comandos:
 
-```cs
+```csharp
 using System.Runtime.InteropServices;
 
 public class Program {
@@ -66,7 +66,7 @@ El resto del ejemplo simplemente invoca el método como si se tratara de cualqui
 
 El ejemplo es parecido para macOS. Evidentemente, lo que debe cambiar es el nombre de la biblioteca en el atributo `DllImport`, ya que macOS tiene un esquema diferente para la nomenclatura de bibliotecas dinámicas. En el ejemplo siguiente se usa la función `getpid(2)` para obtener el identificador de proceso de la aplicación e imprimirlo en la consola.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -89,7 +89,7 @@ namespace PInvokeSamples {
 
 Naturalmente, es parecido en Linux. El nombre de la función es el mismo, ya que `getpid(2)` es la llamada del sistema de [POSIX](https://en.wikipedia.org/wiki/POSIX).
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -116,7 +116,7 @@ Por supuesto, el tiempo de ejecución permite que la comunicación fluya en amba
 
 La forma en que se usa esta característica se parece al proceso de administrado a nativo que se ha descrito anteriormente. En el caso de una devolución de llamada específica, debe definir un delegado que coincida con la firma y pasarlo al método externo. El tiempo de ejecución se encargará de todo lo demás.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -160,7 +160,7 @@ Teniendo esto en cuenta, examinemos el ejemplo:
 
 Los ejemplos de Linux y macOS se muestran a continuación. Para ellos, usamos la función `ftw` que se encuentra en `libc`, la biblioteca de C. Esta función se usa para atravesar las jerarquías de directorio y toma un puntero a una función como uno de sus parámetros. Dicha función tiene la firma siguiente: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -213,7 +213,7 @@ namespace PInvokeSamples {
 
 El ejemplo de macOS usa la misma función. La única diferencia es el argumento del atributo `DllImport`, ya que macOS guarda `libc` en un lugar diferente.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -272,7 +272,7 @@ La **serialización** es el proceso de transformación de tipos cuando tienen qu
 
 La serialización es necesaria porque los tipos del código administrado y del código no administrado son diferentes. En el código administrado, por ejemplo, tiene `String`, mientras que en el entorno no administrado, las cadenas pueden ser Unicode ("anchas"), no Unicode, terminadas en un valor nulo, ASCII, etc. De forma predeterminada, el subsistema de P/Invoke intentará hacer "lo correcto" según el comportamiento predeterminado que se puede ver en [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Pero en aquellas situaciones en las que necesita un control adicional, puede emplear el atributo `MarshalAs` para especificar qué tipo se espera en el lado no administrado. Por ejemplo, si queremos que la cadena se envíe como una cadena ANSI terminada en un valor nulo, podemos hacerlo de la manera siguiente:
 
-```cs
+```csharp
 [DllImport("somenativelibrary.dll"]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
@@ -282,7 +282,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 Otro aspecto de la serialización de tipos es cómo pasar una estructura a un método no administrado. Por ejemplo, algunos métodos no administrados requieren una estructura como parámetro. En estos casos, debemos crear una clase o una estructura correspondiente en la parte administrada del entorno para usarla como un parámetro. Pero no basta con definir simplemente la clase. También es necesario indicarle al contador de referencias cómo asignar campos de la clase a la estructura no administrada. Aquí es donde entra en juego el atributo `StructLayout`.
 
-```cs
+```csharp
 [DllImport("kernel32.dll")]
 static extern void GetSystemTime(SystemTime systemTime);
 
@@ -324,7 +324,7 @@ typedef struct _SYSTEMTIME {
 
 Ya vimos el ejemplo de Linux y macOS para esto en el ejemplo anterior, pero lo mostramos de nuevo a continuación.
 
-```cs
+```csharp
 [StructLayout(LayoutKind.Sequential)]
 public class StatClass {
         public uint DeviceID;
