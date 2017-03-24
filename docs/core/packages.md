@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -44,74 +44,44 @@ A continuación se muestra una lista de los paquetes NuGet clave para .NET Core:
 - [System.Linq](https://www.nuget.org/packages/System.Linq): un conjunto de tipos para consultar objetos, que incluye Enumerable y [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2).
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection): un conjunto de tipos para cargar, inspeccionar y activar tipos, que incluye [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly), [TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) y [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo).
 
-Se hace referencia a los paquetes en project.json. En el ejemplo siguiente, se hace referencia al paquete[System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
+Normalmente, en lugar de incluir paquetes en sus proyectos en una base de paquete a paquete, es mucho más sencillo incluir un *metapaquete*, que es un conjunto de paquetes que a menudo se usan conjuntamente. (Para obtener más información sobre los metapaquetes, vea la siguiente sección). En cambio, cuando necesite un solo paquete, puede incluirlo como en el ejemplo siguiente, que hace referencia al paquete [System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
 
-```json
-{
-  "dependencies": {
-    "System.Runtime": "4.1.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+  </ItemGroup>
+</Project>
 ```
-
-En la mayoría de los casos, no se hará referencia directamente a los paquetes de .NET Core de nivel inferior, puesto que así terminará con demasiados paquetes que administrar. En lugar de eso, deberá hacer referencia a un metapaquete.
 
 ## <a name="metapackages"></a>Metapaquetes
 
 Los metapaquetes son una conversión de paquetes NuGet que se usa para describir un conjunto de paquetes que tienen sentido juntos. Para representar este conjunto de paquetes, los transforman en dependencias. De manera opcional, pueden especificar un marco de trabajo a fin de establecer uno para este conjunto de paquetes. 
 
-Si hace referencia a un metapaquete, en realidad agrega una referencia a cada uno de sus paquetes dependientes como gesto único. Esto significa que todas las bibliotecas existentes en esos paquetes (refs o libs) están disponibles para IntelliSense (o una experiencia similar) y para publicar la aplicación (solo libs). 
+De manera predeterminada, las versiones anteriores de las herramientas de .NET Core (las herramientas basadas en project.json y csproj) especificaban un marco y un metapaquete. Pero, actualmente, el marco de destino hace referencia implícitamente al metapaquete, de manera que cada uno está asociado a un marco de destino. Por ejemplo, el marco `netstandard1.6` hace referencia al metapaquete de la versión 1.6.0 de NetStandard.Library. De manera similar, el marco `netcoreapp1.1` hace referencia al metapaquete de la versión 1.1.0 de Microsoft.NETCore.App. Para obtener más información, vea [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Referencia del paquete implícita del metapaquete en el SDK de .NET Core).
 
-Nota: Los términos 'lib" y "ref" se refieren a las carpetas que se encuentran en los paquetes NuGet. Las carpetas "ref" describen la API pública de un paquete a través de metadatos de ensamblado. Las carpetas "lib" contienen la implementación de esa API pública para un marco de trabajo determinado. 
+Dirigirse a un marco y hacer referencia implícitamente a un metapaquete significa que realmente está agregando una referencia a cada uno de sus paquetes dependientes como un gesto único. Esto hace que todas las bibliotecas de esos paquetes estén disponibles para IntelliSense (o una experiencia similar) y para publicar la aplicación.  
 
 Usar metapaquetes tiene ventajas:
 
 - Proporciona una experiencia del usuario adecuada para hacer referencia a un gran conjunto de paquetes específicos. 
 - Define un conjunto de paquetes (incluidas las versiones específicas) que se prueban y trabajan correctamente en conjunto.
 
-El metapaquete de la Biblioteca estándar de .NET:
+El metapaquete de la Biblioteca estándar de .NET es:
 
 - [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library): describe las bibliotecas que forman parte de la "Biblioteca estándar de .NET". Se aplica a todas las implementaciones .NET (por ejemplo, .NET Framework, .NET Core y Mono) que admite la Biblioteca estándar de .NET. Establece el marco de trabajo "netstandard".
 
-Los siguientes son los metapaquetes clave de .NET Core:
+Los metapaquetes principales de .NET Core son:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): describe las bibliotecas que forman parte de la distribución de .NET Core. Establece el [`.NETCoreApp`marco de trabajo](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Depende del `NETStandard.Library` más pequeño.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility): un conjunto de fachadas de compatibilidad que permite que las Bibliotecas de clases portables (PCL) basadas en mscorlib se ejecuten en .NET Core.
 
-Se hace referencia a los metapaquetes del mismo modo que con cualquier paquete NuGet en project.json. 
-
-En el ejemplo siguiente, se hace referencia al metapaquete `NETStandard.Library`, que se usa para crear bibliotecas portátiles entre los entornos de ejecución .NET.
-
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
-```
-
-En el ejemplo siguiente, se hace referencia al metapaquete `Microsoft.NETCore.App`, que se usa para crear aplicaciones y bibliotecas pensadas para ejecutarse en .NET Core y aprovecharlo al máximo. Proporciona acceso a un conjunto de bibliotecas más grande que proporciona `NETStandard.Library`.
-
-```json
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {}
-  }
-}
-```
-
 ## <a name="frameworks"></a>Marcos de trabajo
 
-Cada uno de los paquetes de .NET Core admite un conjunto de marcos de trabajo, declarados con carpetas de marcos (dentro de las carpetas lib y ref que se mencionaron anteriormente). Los marcos de trabajo describen un conjunto de API disponible (y posiblemente también otras características) en que puede basarse cuando tiene como destino un marco de trabajo determinado. Se crean versiones suyas cada vez que se agregan API nuevas.
+Cada paquete de .NET Core admite un conjunto de marcos en tiempo de ejecución. Los marcos de trabajo describen un conjunto de API disponible (y posiblemente también otras características) en que puede basarse cuando tiene como destino un marco de trabajo determinado. Se crean versiones suyas cada vez que se agregan API nuevas.
 
 Por ejemplo, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) admite los siguientes marcos de trabajo:
 
@@ -135,48 +105,41 @@ La segunda parte de la relación es la selección de recursos. Los paquetes pued
 
 Puede ver esta relación en la imagen anterior. La *API* tiene como destino el *marco de trabajo* y lo define. El *marco de trabajo* se usa para la *selección de recursos*. El *recurso* le brinda la API.
 
-Una pregunta interesante es dónde finaliza la definición de un marco de trabajo basado en paquete y dónde comienza el consumo de esa definición. La vista del marco de trabajo se puede considerar como una función de un archivo project.json determinado. Las dependencias crean la vista del marco de trabajo, independiente de los publicadores de esas dependencias.
-
 Los dos principales marcos de trabajo basados en paquete que se usan con .NET Core son los siguientes:
 
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>Estándar .NET
+### <a name="net-standard"></a>.NET Standard
 
-El marco de trabajo del estándar .NET (TFM: `netstandard`) representa las API definidas por la [Biblioteca estándar de .NET](../standard/library.md) y que se basan en ella. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admitirán en cualquier entorno de ejecución compatible con el estándar .NET, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan. 
+El marco de .NET Standard (moniker del marco de destino: `netstandard`) representa las API definidas por la [Biblioteca estándar de .NET](../standard/library.md) y que se basan en ella. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admitirán en cualquier entorno de ejecución compatible con el estándar .NET, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan. 
 
-El metapaquete `NETStandard.Library` tiene como destino el marco de trabajo `netstandard`. La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente&40; bibliotecas de .NET y las API asociadas que definen la Biblioteca estándar de .NET. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API.
+El marco `netstandard` hace referencia implícitamente al metapaquete `NETStandard.Library`. Por ejemplo, el siguiente archivo del proyecto de MSBuild indica que el proyecto tiene como destino `netstandard1.6`, que hace referencia al metapaquete de la versión 1.6 de la Biblioteca estándar de .NET. 
 
-Una [versión de NETStandard.Library](versions/index.md) coincide con la versión más alta de `netstandard` que se expuso (a través de su clausura). La referencia de marco de trabajo en project.json se usa para seleccionar los recursos correctos en los paquetes subyacentes. En este caso, se requieren los recursos de `netstandard1.6`, en contraposición a `netstandard1.4` o `net46`, por ejemplo. 
-
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
-No es necesario que las referencias de marco de trabajo y metapaquete de project.json coincidan. Por ejemplo, el siguiente archivo project.son es válido.
+En cambio, las referencias del metapaquete y el marco en el archivo del proyecto no necesitan coincidir, y puede usar el elemento `<NetStandardImplicitPackageVersion>` en su archivo del proyecto para especificar una versión de marco que sea anterior a la del metapaquete. Por ejemplo, el siguiente archivo del proyecto es válido.
 
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.3": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <NetStandardImplicitPackageVersion Include="NetStandardLibrary" Version="1.6.0" />
+  </ItemGroup>
+</Project>
 ```
 
 Puede parecer extraño establecer `netstandard1.3` como destino pero usa la versión 1.6.0 de `NETStandard.Library`. Se trata de un caso de uso válido, debido a que el metapaquete mantiene la compatibilidad con versiones anteriores de `netstandard`. Podría ser el caso que estandarizó en la versión 1.6.0 del metapaquete y úselo para todas las bibliotecas, que establecen como destino distintas versiones de `netstandard`. Con este enfoque, solo necesita restaurar `NETStandard.Library` 1.6.0 y no las versiones anteriores. 
 
-Lo contrario no sería válido: establecer `netstandard1.6` como destino con la versión 1.3.0 de `NETStandard.Library`. No puede establecer como destino un marco de trabajo superior con un metapaquete inferior, debido a que el metapaquete de una versión inferior no expondrá ningún recurso para ese marco de trabajo superior. El [esquema de control de versiones] para los metapaquetes afirma que los metapaquetes coinciden con la versión superior del marco de trabajo que describen. En virtud del esquema de control de versiones, la primera versión de `NETStandard.Library` es v1.6.0, siempre que contenga recursos de `netstandard1.6`. La versión v1.3.0 se usa en el ejemplo anterior, para lograr una simetría con el ejemplo anterior, pero no existe realmente.
+Lo contrario no sería válido: establecer `netstandard1.6` como destino con la versión 1.3.0 de `NETStandard.Library`. No puede establecer como destino un marco de trabajo superior con un metapaquete inferior, debido a que el metapaquete de una versión inferior no expondrá ningún recurso para ese marco de trabajo superior. El esquema de control de versiones para los metapaquetes afirma que estos coinciden con la versión más reciente del marco de trabajo que describen. En virtud del esquema de control de versiones, la primera versión de `NETStandard.Library` es v1.6.0, siempre que contenga recursos de `netstandard1.6`. La versión v1.3.0 se usa en el ejemplo anterior, para lograr una simetría con el ejemplo anterior, pero no existe realmente.
 
 ### <a name="net-core-application"></a>Aplicación .NET Core
 
@@ -185,3 +148,4 @@ El marco de trabajo de la aplicación .NET Core (TFM: `netcoreapp`) representa l
 El metapaquete `Microsoft.NETCore.App` tiene como destino el marco de trabajo `netcoreapp`. Proporciona acceso aproximadamente a&60; bibliotecas, de las cuales el paquete `NETStandard.Library` proporciona unas&40;, además de otras&20;. Puede hacer referencia a bibliotecas adicionales que establecen como destino a `netcoreapp` o marcos de trabajo compatibles, como `netstandard`, para obtener acceso a API adicionales. 
 
 La mayoría de las bibliotecas adicionales que `Microsoft.NETCore.App` proporciona también establecen como destino a `netstandard`, dado que otras bibliotecas `netstandard` satisfacen sus dependencias. Esto significa que las bibliotecas `netstandard` también pueden hacer referencia a esos paquetes como dependencias. 
+

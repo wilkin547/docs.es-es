@@ -1,0 +1,7 @@
+# [Interoperabilidad](index.md)
+## [Información general sobre interoperabilidad](interoperability-overview.md)
+## [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](how-to-access-office-onterop-objects.md)
+## [Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM](how-to-use-indexed-properties-in-com-interop-rogramming.md)
+## [Cómo: Utilizar la invocación de plataforma para reproducir un archivo de sonido](how-to-use-platform-invoke-to-play-a-wave-file.md)
+## [Tutorial: Programación de Office (C# y Visual Basic)](walkthrough-office-programming.md)
+## [Clase COM de ejemplo](example-com-class.md)

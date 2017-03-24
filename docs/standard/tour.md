@@ -56,7 +56,7 @@ No hay ninguna palabra clave análoga para anular la asignación de memoria, ya 
 
 Los tipos dentro de un ámbito dado quedan normalmente fuera de ámbito cuando se completa un método, momento en el cual pueden recopilarse. Sin embargo, puede indicar al GC que un objeto determinado esté fuera de ámbito en cuanto el método se cierre mediante la instrucción `using`.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L6-L9)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 Una vez que se complete el bloque de `using`, el GC sabrá que el objeto `stream` en el ejemplo anterior ya se puede recopilar y reclamar su memoria.
 
@@ -68,7 +68,7 @@ El runtime de .NET proporciona servicios adicionales para completar la promesa d
 
 En el ejemplo siguiente, se iniciará una excepción como resultado de la protección de la memoria.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L11-L12)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="type-safety"></a>Seguridad de tipos
 

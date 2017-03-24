@@ -4,46 +4,47 @@ description: "El comando dotnet-run proporciona una opción conveniente para eje
 keywords: dotnet-run, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
+ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 60bb9160e43788539b0dc6bcf1372bb925e9ba22
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-run"></a>dotnet-run
 
-> [!WARNING]
-> Este tema se aplica a .NET Core Tools Preview 2. Para la versión de .NET Core Tools RC4, consulte el tema [dotnet-run (.NET Core Tools RC4)](../preview3/tools/dotnet-run.md).
-
-## <a name="name"></a>Nombre 
+## <a name="name"></a>Name 
 
 `dotnet-run`: ejecuta el código fuente disponible sin comandos explícitos de compilación o lanzamiento.
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet run [--help] [--framework] [--configuration]
-    [--project] [[--] [application arguments]]`
+```
+dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 ## <a name="description"></a>Descripción
-El comando `dotnet run` proporciona una opción conveniente para ejecutar la aplicación desde el código fuente con un comando. Compila el código fuente, genera un programa de salida y luego ejecuta ese programa. Este comando es útil para el desarrollo iterativo rápido y también puede usarse para ejecutar un programa con origen distribuido (por ejemplo, un sitio web).
 
-Este comando se basa en [dotnet build](dotnet-build.md) para compilar entradas de origen en un ensamblado. NET, antes de iniciar el programa. Los requisitos de este comando y el control de entradas de origen se heredan todos del comando de compilación. En la documentación del comando de compilación se proporciona más información sobre de esos requisitos.
+El comando `dotnet run` proporciona una opción conveniente para ejecutar la aplicación desde el código fuente con un comando. Es útil para un desarrollo iterativo rápido en la línea de comandos. El comando depende del comando [`dotnet build`](dotnet-build.md) para compilar el código, por lo que cualquier requisito de la compilación, como que el proyecto tiene que restaurarse primero, se aplica a `dotnet run` también. 
 
-Los archivos de salida se escriben en la carpeta *bin* secundaria, que se crea si no existe. Los archivos se sobrescribirán según sea necesario. Los archivos temporales se escriben en la carpeta *obj* secundaria.  
+Los archivos de salida se escriben en la ubicación predeterminada que es `bin/<configuration>/<target>`. Por ejemplo, si tiene una aplicación `netcoreapp1.0` y ejecuta `dotnet run`, el resultado se colocará en `bin/Debug/netcoreapp1.0`. Los archivos se sobrescriben según sea necesario. Los archivos temporales se colocan en el directorio `obj`. 
 
-En el caso de un proyecto con varios marcos especificados, `dotnet run` selecciona primero los marcos de .NET Core. Si no existen, se genera un error de salida. Para especificar otros marcos, use el argumento `--framework`.
+En el caso de un proyecto con varios marcos especificados, `dotnet run` mostrará un error a no ser que se use la opción `--framework` para especificar para qué marco se va a ejecutar la aplicación.
 
 El comando `dotnet run` debe usarse en el contexto de proyectos, no de ensamblados compilados. Si, por el contrario, lo que intenta es ejecutar una DLL de aplicación portátil, debe usar [dotnet](dotnet.md) sin ningún comando, como en el ejemplo siguiente:
  
 `dotnet myapp.dll`
 
 Para más información sobre el controlador `dotnet`, consulte el tema [Herramientas de la interfaz de línea de comandos (CLI) de .NET Core](index.md).
+
+Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias de la aplicación que se encuentran fuera del entorno de tiempo de ejecución compartido desde la caché de NuGet. Por tanto, no se recomienda usar este comando para ejecutar aplicaciones en producción. En su lugar, debe [crear una implementación](../deploying/index.md) con el comando [`dotnet publish`](dotnet-publish.md) y usarlo en producción. 
 
 ## <a name="options"></a>Opciones
 
@@ -55,31 +56,28 @@ Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación 
 
 Imprime una corta ayuda para el comando.
 
-`-f`, `--framework <FRAMEWORK_IDENTIFIER>`
+`-c|--configuration {Debug|Release}`
 
-Ejecuta la aplicación por un identificador de marco determinado (FID). 
+Configuración que se va a usar para compilar el proyecto. El valor predeterminado es `Debug`.
 
-`-c`, `--configuration <Debug|Release>`
+`-f|--framework <FRAMEWORK_IDENTIFIER>`
 
-Configuración para usar al publicar. El valor predeterminado es `Debug`.
+Compila y ejecuta la aplicación con el marco especificado. El marco tiene que especificarse en el archivo del proyecto.
 
-`-p`, `--project [PATH]`
+`-p|--project <PATH>`
 
-Especifica el proyecto que se va a ejecutar. Puede ser una ruta de acceso a un archivo [project.json](project-json.md) o a un directorio que contiene un archivo [project.json](project-json.md). Si no se especifica, se toma como predeterminado el directorio actual. 
+Especifica la ruta de acceso al archivo del proyecto que se va a ejecutar. Puede ser una ruta de acceso a un archivo [csproj](csproj.md) o a un directorio que contiene un archivo [csproj](csproj.md). Si no se especifica, se toma como predeterminado el directorio actual. 
 
 ## <a name="examples"></a>Ejemplos
 
-Ejecución del proyecto en el directorio actual:`dotnet run` 
+Ejecución del proyecto en el directorio actual:
+
+`dotnet run` 
 
 Ejecución del proyecto especificado:
 
-`dotnet run --project /projects/proj1/project.json`
+`dotnet run --project /projects/proj1/proj1.csproj`
 
 Ejecución del proyecto en el directorio actual (el argumento `--help` en este ejemplo se pasa a la aplicación que se ejecuta, dado que se usó el argumento `--`):
 
 `dotnet run --configuration Release -- --help`
-
-
-<!--HONumber=Feb17_HO2-->
-
-
