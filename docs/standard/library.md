@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
+ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -68,7 +68,7 @@ La especificación de la biblioteca estándar de .NET es un conjunto estandariza
 
 La especificación oficial es un conjunto de archivos .cs que definen las API que forman parte del estándar. El [directorio de referencia](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref) de cada [componente](https://github.com/dotnet/corefx/tree/master/src) define las API de la biblioteca estándar de .NET. Aunque los artefactos de referencia residen en el [repositorio de CoreFX](https://github.com/dotnet/corefx), no son específicos de .NET Core.
 
-El metapaquete [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([código fuente](https://github.com/dotnet/corefx/blob/master/pkg/NETStandard.Library/NETStandard.Library.packages.targets)) describe el conjunto de bibliotecas que definen (en parte) una o varias versiones de la biblioteca estándar de .NET.
+El metapaquete [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) ([código fuente](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) describe el conjunto de bibliotecas que definen (en parte) una o varias versiones de la biblioteca estándar de .NET.
 
 Un componente determinado, como System.Runtime, describe lo siguiente:
 

@@ -3,17 +3,17 @@ title: Paseo por .NET
 description: "Una visita guiada a través de algunas de las características más importantes de la plataforma. NET."
 keywords: ".NET, .NET Core, Paseo, Lenguajes de programación, Unsafe, Administración de memoria, Seguridad de tipos, Asincrónico"
 author: cartermp
-manager: wpickett
-ms.author: phcart
-ms.date: 11/16/2016
+ms.author: wiwagn
+ms.date: 02/09/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 2c57b5cebd63b1d94b127cd269e3b319fb24dd97
-ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
+ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
+ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -34,7 +34,7 @@ En el futuro, este sitio de documentación tendrá la posibilidad de ejecutar es
 
 ## <a name="programming-languages"></a>Lenguajes de programación
 
-.NET admite varios lenguajes de programación.  Los entornos de tiempo de ejecución .NET implementan [Common Language Infrastructure (CLI)](https://www.visualstudio.com/en-us/mt639507), que, entre otras cosas, especifica un entorno de tiempo de ejecución independiente del lenguaje y la interoperabilidad del lenguaje.  Esto significa que puede elegir cualquier lenguaje .NET para crear aplicaciones y servicios en. NET.
+.NET admite varios lenguajes de programación.  Los entornos de tiempo de ejecución .NET implementan [Common Language Infrastructure (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre otras cosas, especifica un entorno de tiempo de ejecución independiente del lenguaje y la interoperabilidad del lenguaje.  Esto significa que puede elegir cualquier lenguaje .NET para crear aplicaciones y servicios en. NET.
 
 Microsoft desarrolla activamente y admite tres lenguajes. NET: C#, F # y Visual Basic. NET. 
 
@@ -54,21 +54,27 @@ Las dos líneas siguientes asignan memoria:
 
 No hay ninguna palabra clave análoga para anular la asignación de memoria, ya que la anulación de la asignación se realiza automáticamente cuando el recolector de elementos no utilizados reclama la memoria a través de su ejecución programada.
 
-Los tipos dentro de un ámbito dado quedan normalmente fuera de ámbito cuando se completa un método, momento en el cual pueden recopilarse. Sin embargo, puede indicar al GC que un objeto determinado esté fuera de ámbito en cuanto el método se cierre mediante la instrucción `using`.
+El recolector de elementos no utilizados es solo uno de los servicios que ayudan a garantizar la *protección de la memoria*.  El valor invariable de protección de la memoria es muy simple: un programa tiene protección de la memoria si solo tiene acceso a la memoria que se ha asignado (y no liberado).  Por ejemplo, el entorno de ejecución garantiza que los programas no indicen el final de una matriz ni tengan acceso a un campo fantasma al final de un objeto.
+
+En el ejemplo siguiente, el entorno de ejecución devolverá una excepción `InvalidIndexException` para activar la protección de la memoria.
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
-Una vez que se complete el bloque de `using`, el GC sabrá que el objeto `stream` en el ejemplo anterior ya se puede recopilar y reclamar su memoria.
+## <a name="working-with-unmanaged-resources"></a>Trabajar con recursos no administrados
 
-Reglas para esto tienen una semántica ligeramente diferente en F#.  Para más información sobre la administración de recursos en F #, consulte el artículo sobre la [administración de recursos y la palabra clave `use` ](../fsharp/language-reference/resource-management-the-use-keyword.md).
+Algunos objetos hacen referencia a *recursos no administrados*. Los recursos no administrados son recursos que el entorno de ejecución .NET no mantiene de forma automática.  Por ejemplo, un identificador de archivo es un recurso no administrado.  Un objeto @System.IO.FileStream es un objeto administrado, pero hace referencia a un identificador de archivo, que es uno no administrado.  Cuando haya acabado de usar FileStream, deberá liberar el identificador de archivo.
 
-La protección de la memoria es una de las características menos obvias, pero con un alcance bastante grande, que es posible gracias a un recolector de elementos no utilizados. El valor invariable de protección de la memoria es muy simple: un programa tiene protección de la memoria si solo tiene acceso a la memoria que se ha asignado (y no liberado). Los punteros pendientes siempre suponen errores y localizarlos suele ser bastante difícil.
+En .NET, los objetos que hacen referencia a recursos no administrados implementan la interfaz de @System.IDisposable.  Cuando haya acabado de usar el objeto, deberá llamar al método @System.IDisposable.Dispose del objeto, que es el responsable de liberar cualquier recurso no administrado.  Los lenguajes de .NET ofrecen una sintaxis `using` muy útil para dichos objetos, como se muestra en el ejemplo siguiente:
 
-El runtime de .NET proporciona servicios adicionales para completar la promesa de protección de la memoria, que no ofrece de forma natural un GC. Garantiza que los programas no indicen el final de una matriz ni tengan acceso a un campo fantasma al final de un objeto.
+[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-En el ejemplo siguiente, se iniciará una excepción como resultado de la protección de la memoria.
+Cuando el bloque `using` se haya completado, el entorno de ejecución .NET llamará automáticamente al método @System.IDisposable.Dispose del objeto `stream`, que liberará el identificador de archivo.  El entorno de ejecución también seguirá el mismo procedimiento en caso de que una excepción provoque que el control abandone el bloque.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+Para obtener más detalles, consulte las siguientes páginas:
+
+* Para C#, [using (Instrucción)](../csharp/language-reference/keywords/using-statement.md)
+* Para F#, [Resource Management: The `use` Keyword](../fsharp/language-reference/resource-management-the-use-keyword.md) (Administración de recursos: la palabra clave `use`)
+* Para Visual Basic, [Using (Instrucción)](../visual-basic/language-reference/statements/using-statement.md)
 
 ## <a name="type-safety"></a>Seguridad de tipos
 
@@ -102,7 +108,7 @@ Los genéricos son una característica que se agregó en .NET Framework 2.0. En 
 
 Los genéricos se agregaron para ayudar a los programadores a implementar estructuras de datos genéricos. Antes de su llegada, para que un tipo `List` fuese genérico, por ejemplo, habría que trabajar con elementos que fuesen de tipo `object`. Esto tendría diferentes problemas de rendimiento, así como semánticos, además de los posibles errores sutiles de tiempo de ejecución. Lo más destacado de esto último se produciría cuando una estructura de datos contiene, por ejemplo, enteros y cadenas, y se inicia la excepción `InvalidCastException` al trabajar con los miembros de la lista.
 
-El siguiente ejemplo muestra un ejecución de programa básico mediante una instancia de tipos @System.Collections.Generic.List%601.
+En el siguiente ejemplo se muestra un ejecución de programa básico mediante una instancia de tipos @System.Collections.Generic.List%601.
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
@@ -147,8 +153,4 @@ Si está interesado en un paseo por las características de F #, consulte [Paseo
 Si desea empezar a escribir su propio código, consulte [Introducción](getting-started.md).
 
 Para más información sobre los principales componentes de. NET, consulte [Componentes de la arquitectura .NET](components.md).
-
-
-<!--HONumber=Nov16_HO3-->
-
 
