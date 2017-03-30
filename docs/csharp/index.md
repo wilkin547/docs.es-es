@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d9efc2b1b8ad38a6444e7362da13ce3838476abd
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
+ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
+ms.lasthandoff: 03/28/2017
 
 ---
 
@@ -27,7 +27,7 @@ La Guía de C# proporciona una gran cantidad de información sobre el lenguaje C
     - Si ya ha desarrollado antes, pero es nuevo en C#, lea el [paseo por el lenguaje C#](tour-of-csharp/index.md). Obtendrá información sobre la sintaxis básica y la estructura del lenguaje y puede utilizar el paseo por el lenguaje para comparar C# con otros lenguajes que ya ha usado. También puede examinar los [tutoriales](tutorials/index.md) para probar programas básicos de C#. O bien, consulte los [conceptos de C#](concepts.md) para conocer perfectamente las características del lenguaje C#.
 
 * Desarrolladores de C# experimentados:
-    - Si ha usado C# antes, debe empezar por leer las novedades de la última versión del lenguaje. Lea [Novedades de C# 6](csharp-6.md) para conocer las nuevas características de la versión actual. A continuación, consulte los [conceptos de C#](concepts.md) en los que desea indagar más.
+    - Si ha usado C# antes, debe empezar por leer las novedades de la última versión del lenguaje. Lea [Novedades de C#](whats-new/index.md) para conocer las nuevas características de la versión actual. A continuación, consulte los [conceptos de C#](concepts.md) en los que desea indagar más.
  
 ## <a name="how-the-c-guide-is-organized"></a>Cómo se organiza la Guía de C#
 
@@ -42,7 +42,7 @@ La Guía de C# contiene siete secciones. Puede leerlas en orden o ir directament
 * [Un paseo por C#](tour-of-csharp/index.md): 
     - En esta sección se proporciona información general sobre el lenguaje. Aprenderá los elementos que componen los programas de C# y las capacidades del lenguaje. Verá ejemplos de todos los elementos de sintaxis de C# y discusiones sobre los temas principales del lenguaje C#. 
 
-* [Características más recientes](whats-new.md):
+* [Características más recientes](whats-new/index.md):
     - Obtenga información sobre las nuevas características del lenguaje. Obtenga información sobre las nuevas herramientas como C# interactivo (REPL de C#) y el SDK de .NET Compiler Platform. Aprenderá cómo evoluciona el idioma. Observará cómo las nuevas herramientas pueden aportarle más productividad en la exploración del lenguaje y la automatización de tareas. 
 
 * [C# interactivo](interactive/index.md):
