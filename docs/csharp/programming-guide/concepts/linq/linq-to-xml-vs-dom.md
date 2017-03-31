@@ -1,0 +1,151 @@
+---
+title: LINQ to XML frente a DOM (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4734d82ef2f912e76a2e7a3dbc4ab3a2f45382b1
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML frente a DOM (C#)
+En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
+  
+## <a name="new-ways-to-construct-xml-trees"></a>Nuevas formas de crear árboles XML  
+ En DOM W3C, los árboles XML se crean de abajo arriba; es decir, se crea un documento, se crean elementos y, a continuación, se agregan los elementos al documento.  
+  
+ Por ejemplo, a continuación se muestra una forma típica de crear un árbol XML mediante la implementación de DOM de Microsoft, <xref:System.Xml.XmlDocument>:  
+  
+```csharp  
+XmlDocument doc = new XmlDocument();  
+XmlElement name = doc.CreateElement("Name");  
+name.InnerText = "Patrick Hines";  
+XmlElement phone1 = doc.CreateElement("Phone");  
+phone1.SetAttribute("Type", "Home");  
+phone1.InnerText = "206-555-0144";          
+XmlElement phone2 = doc.CreateElement("Phone");  
+phone2.SetAttribute("Type", "Work");  
+phone2.InnerText = "425-555-0145";          
+XmlElement street1 = doc.CreateElement("Street1");          
+street1.InnerText = "123 Main St";  
+XmlElement city = doc.CreateElement("City");  
+city.InnerText = "Mercer Island";  
+XmlElement state = doc.CreateElement("State");  
+state.InnerText = "WA";  
+XmlElement postal = doc.CreateElement("Postal");  
+postal.InnerText = "68042";  
+XmlElement address = doc.CreateElement("Address");  
+address.AppendChild(street1);  
+address.AppendChild(city);  
+address.AppendChild(state);  
+address.AppendChild(postal);  
+XmlElement contact = doc.CreateElement("Contact");  
+contact.AppendChild(name);  
+contact.AppendChild(phone1);  
+contact.AppendChild(phone2);  
+contact.AppendChild(address);  
+XmlElement contacts = doc.CreateElement("Contacts");  
+contacts.AppendChild(contact);  
+doc.AppendChild(contacts);  
+```  
+  
+ Este estilo de codificación no proporciona mucha información visual acerca de la estructura del árbol XML. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] admite este enfoque para crear un árbol XML, pero también admite un enfoque alternativo, la *construcción funcional*. La construcción funcional usa los constructores <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XAttribute> para crear un árbol XML.  
+  
+ A continuación se muestra cómo se crea el mismo árbol XML mediante la construcción funcional [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]:  
+  
+```csharp  
+XElement contacts =  
+    new XElement("Contacts",  
+        new XElement("Contact",  
+            new XElement("Name", "Patrick Hines"),  
+            new XElement("Phone", "206-555-0144",   
+                new XAttribute("Type", "Home")),  
+            new XElement("phone", "425-555-0145",  
+                new XAttribute("Type", "Work")),  
+            new XElement("Address",  
+                new XElement("Street1", "123 Main St"),  
+                new XElement("City", "Mercer Island"),  
+                new XElement("State", "WA"),  
+                new XElement("Postal", "68042")  
+            )  
+        )  
+    );  
+```  
+  
+ Tenga en cuenta que si se aplica la sangría al código para crear el árbol XML, se mostrará la estructura XML subyacente.  
+  
+ Para obtener más información, vea [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))  
+  
+## <a name="working-directly-with-xml-elements"></a>Trabajar directamente con elementos XML  
+ La programación con XML suele centrarse en elementos XML y quizás en los atributos. En [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], se puede trabajar directamente con atributos y elementos XML. Por ejemplo, puede realizar lo siguiente:  
+  
+-   Crear elementos XML sin usar un objeto de documento. Esto simplifica la programación cuando se tiene que trabajar con fragmentos de árboles XML.  
+  
+-   Cargar objetos `T:System.Xml.Linq.XElement` directamente de un archivo XML.  
+  
+-   Serializar objetos `T:System.Xml.Linq.XElement` a un archivo o una secuencia.  
+  
+ Compare esto con modelo DOM del consorcio W3C, en el que el documento XML se usa como contenedor lógico para el árbol XML. En DOM, los nodos XML, incluyendo elementos y atributos, se deben crear en el contexto de un documento XML. A continuación se muestra un fragmento del código para crear un nombre de elemento en DOM:  
+  
+```csharp  
+XmlDocument doc = new XmlDocument();  
+XmlElement name = doc.CreateElement("Name");  
+name.InnerText = "Patrick Hines";  
+doc.AppendChild(name);  
+```  
+  
+ Si desea usar un elemento en varios documentos, debe importar los nodos en los documentos. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] evita este grado de complejidad.  
+  
+ Cuando se usa LINQ to XML, se usa la clase <xref:System.Xml.Linq.XDocument> solamente si se quiere agregar un comentario o una instrucción de procesamiento en el nivel de raíz del documento.  
+  
+## <a name="simplified-handling-of-names-and-namespaces"></a>Control simplificado de nombres y espacios de nombres  
+ Controlar nombres, espacios de nombres y prefijos de espacios de nombres suele ser una parte compleja de la programación XML. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] simplifica los nombres y los espacios de nombres al eliminar el requisito de tener que tratar con prefijos de espacios de nombres. Si lo desea, puede controlar los prefijos de espacios de nombres. Pero si decide no controlar explícitamente los prefijos de espacios de nombres, durante la serialización [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] asignará prefijos de espacios de nombres si son necesarios, o serializará con espacios de nombres predeterminados si no lo son. Si se usan espacios de nombres predeterminados, no habrá prefijos de espacios de nombres en el documento resultante. Para obtener más información, vea [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+  
+ Otro problema de DOM consiste en que no permite cambiar el nombre de un nodo. Por el contrario, hay que crear un nuevo nodo y copiar en él todos los nodos secundarios, por lo que se pierde la identidad del nodo original. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] evita este problema al permitir que se establezca la propiedad <xref:System.Xml.Linq.XName> en un nodo.  
+  
+## <a name="static-method-support-for-loading-xml"></a>Compatibilidad con el método estático para cargar XML  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para obtener más información, vea [Cómo cargar XML de un archivo (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+  
+## <a name="removal-of-support-for-dtd-constructs"></a>Eliminación de la compatibilidad con construcciones DTD  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] simplifica aún más la programación XML quitando la compatibilidad con entidades y referencias a entidades. La administración de entidades es compleja y su uso es muy poco común. La eliminación de la compatibilidad aumenta el rendimiento y simplifica la interfaz de programación. Cuando se rellena un árbol de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], se expanden todas las entidades DTD.  
+  
+## <a name="support-for-fragments"></a>Compatibilidad con fragmentos  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] no proporciona un equivalente para la clase `XmlDocumentFragment`. Aun así, en muchos casos, el concepto `XmlDocumentFragment` puede controlarse mediante el resultado de una consulta escrita como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XNode> o como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>.  
+  
+## <a name="support-for-xpathnavigator"></a>Compatibilidad con XPathNavigator  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona compatibilidad con <xref:System.Xml.XPath.XPathNavigator> mediante métodos de extensión en el espacio de nombres <xref:System.Xml.XPath?displayProperty=fullName>. Para obtener más información, vea <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
+  
+## <a name="support-for-white-space-and-indentation"></a>Compatibilidad con espacios en blanco y sangría  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] trata los espacios en blanco de forma más sencilla que DOM.  
+  
+ Un caso muy común es aquel en el que se leen datos XML con sangría, se crea un árbol XML en memoria sin ningún nodo de texto con espacios en blanco (es decir, sin preservar los espacios en blanco), se realizan ciertas operaciones sobre el XML y éste se guarda con sangría. Si se serializa el XML con formato, solo se preservan en el XML aquellos espacios en blanco más significativos. Éste es el comportamiento predeterminado en [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+  
+ Otro escenario muy común es aquel en el que se lee y se modifica código XML en el que se ha aplicado sangría de forma intencionada. Es posible que no desee modificar esta sangría de ninguna forma. En [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], puede conseguirlo si preserva los espacios en blanco a la hora de cargar o analizar el XML y si deshabilita el formato cuando serialice el XML.  
+  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] almacena los espacios en blanco como un nodo <xref:System.Xml.Linq.XText>, en lugar de tener un tipo de nodo <xref:System.Xml.XmlNodeType> especializado, como DOM.  
+  
+## <a name="support-for-annotations"></a>Compatibilidad con anotaciones  
+ Los elementos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] admiten un conjunto extensible de anotaciones. Esto puede resultar útil para realizar un seguimiento de información diversa de un elemento, como la información de esquema, información acerca de si un elemento está enlazado a una interfaz de usuario o cualquier otro tipo de información específica de una aplicación. Para obtener más información, vea [Anotaciones en LINQ to XML](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5).  
+  
+## <a name="support-for-schema-information"></a>Compatibilidad con la información de esquema  
+ [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona compatibilidad con la validación XSD mediante métodos de extensión en el espacio de nombres <xref:System.Xml.Schema?displayProperty=fullName>. Puede validar que un árbol XML sea compatible con un XSD. Puede rellenar el árbol XML con el conjunto de información posterior a la validación del esquema (PSVI). Para obtener más información, vea [Cómo validar con XSD](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) y <xref:System.Xml.Schema.Extensions>.  
+  
+## <a name="see-also"></a>Vea también  
+ [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

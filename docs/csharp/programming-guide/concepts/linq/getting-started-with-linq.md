@@ -1,75 +1,85 @@
 ---
-title: "Getting Started with LINQ in C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#]"
-  - "queries [LINQ in C#]"
-  - "LINQ, C#"
-  - "queries [LINQ], LINQ in C#"
+title: "Introducción a LINQ en C#| Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#]
+- queries [LINQ in C#]
+- LINQ, C#
+- queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 88eff7c3909a31939f5789fd19bc4f1d07d013b7
+ms.lasthandoff: 03/13/2017
+
 ---
-# Getting Started with LINQ in C# #
-Esta sección contiene información adicional básica que le ayudará a comprender el resto de la documentación y ejemplos de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+# <a name="getting-started-with-linq-in-c"></a>Introducción a LINQ en C##
+Esta sección contiene información básica general que le ayudará a comprender el resto de la documentación y los ejemplos de LINQ.  
   
-## En esta sección  
- [Introduction to LINQ Queries \(C\#\)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- Describe las tres partes de la operación de consulta básica de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] que son comunes en todos los lenguajes y orígenes de datos.  
+## <a name="in-this-section"></a>En esta sección  
+ [Introducción a las consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ Describe las tres partes de la operación de consulta LINQ básica que son comunes a todos los lenguajes y orígenes de datos.  
   
- [LINQ and Generic Types \(C\#\)](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
- Proporciona una introducción breve a los tipos genéricos tal como se utilizan en LINQ.  
+ [LINQ y tipos genéricos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-generic-types.md)  
+ Ofrece una breve introducción a los tipos genéricos, tal como se usan en LINQ.  
   
- [Basic LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
- Describe los tipos más comunes de operaciones de consulta y cómo se expresan en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] y C\#.  
+ [Operaciones básicas de consulta LINQ](../../../../csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
+ Describe los tipos más comunes de operaciones de consulta y cómo se expresan en C#.  
   
- [Transformaciones de datos con LINQ \(C\#\)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
- Describe las distintas maneras de transformar los datos recuperados en las consultas.  
+ [Transformaciones de datos con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)  
+ Describe las diversas formas de transformar datos recuperados en las consultas.  
   
- [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
- Describe cómo se mantienen o transforman los tipos en las tres partes de una operación de consulta de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+ [Relaciones entre tipos en las operaciones de consulta LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  
+ Describe cómo se mantienen o transforman los tipos en las tres partes de una operación de consulta LINQ.  
   
- [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
- Compara la sintaxis de método y la sintaxis de consulta como dos maneras de expresar una consulta LINQ.  
+ [Sintaxis de consultas y sintaxis de métodos en LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
+ Compara la sintaxis de métodos y la sintaxis de consultas como dos maneras de expresar una consulta LINQ.  
   
- [C\# Features That Support LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
- Describe las construcciones de lenguaje agregadas en C\# 3.0 que admiten [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+ [Características de C# compatibles con LINQ](../../../../csharp/programming-guide/concepts/linq/features-that-support-linq.md)  
+ Describe las construcciones de lenguaje agregadas en C# 3.0 que son compatibles con LINQ.  
   
- [Walkthrough: Writing Queries in C\#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Instrucciones paso a paso para crear un proyecto [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] en C\#, agregar un origen de datos simple y realizar algunas operaciones de consulta básicas.  
+ [Tutorial: Escribir consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ Instrucciones paso a paso para crear un proyecto LINQ de C#, mediante la adición de un origen de datos simple y la realización de algunas operaciones básicas de consulta.  
   
-## Secciones relacionadas  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)  
- Proporciona vínculos a temas que explican las tecnologías de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ Contiene vínculos a temas que explican las tecnologías de LINQ.  
   
  [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- Incluye información general sobre las consultas en [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] y proporciona vínculos a recursos adicionales.  
+ Incluye información general sobre las consultas en LINQ y proporciona vínculos a recursos adicionales.  
   
- [Visual Studio IDE and Tools Support for LINQ](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
- Describe las herramientas disponibles en el entorno de Visual Studio para diseñar, codificar y depurar aplicaciones habilitadas para LINQ.  
+ [Compatibilidad del IDE y las herramientas de Visual Studio para LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  
+ Describe las herramientas disponibles en el entorno de Visual Studio para diseñar, codificar y depurar la aplicación habilitada para LINQ.  
   
- [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)  
- Describe la versión de .NET Framework, los espacios de nombres y las referencias que son necesarios para crear proyectos LINQ.  
+ [Información general sobre operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Presenta los métodos estándar usados en LINQ.  
   
- [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Presenta los métodos estándar utilizados en [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
-  
- [Ejemplos de LINQ](../Topic/LINQ%20Samples.md)  
- Proporciona vínculos a temas que explican los ejemplos de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  
-  
- [Getting Started with LINQ in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Proporciona vínculos a temas que explican el uso de LINQ con Visual Basic.  
-  
-## Vea también  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)
+ [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ Proporciona vínculos a temas sobre el uso de LINQ con Visual Basic.

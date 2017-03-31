@@ -1,66 +1,82 @@
 ---
-title: "Herencia (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "clases abstractas [C#]"
-  - "métodos abstractos [C#]"
-  - "lenguaje C#, herencia"
-  - "clases derivadas [C#]"
-  - "herencia [C#]"
-  - "métodos virtuales [C#]"
+title: "Herencia (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- abstract methods [C#]
+- abstract classes [C#]
+- inheritance [C#]
+- derived classes [C#]
+- virtual methods [C#]
+- C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
 caps.latest.revision: 38
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 38
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 4590130fed9606f0f0592895de548c4bd7865db7
+ms.lasthandoff: 03/13/2017
+
 ---
-# Herencia (Gu&#237;a de programaci&#243;n de C#)
-La herencia, junto con la encapsulación y el polimorfismo, es una de las tres características principales \(o *pilares*\) de la programación orientada a objetos.  La herencia permite crear nuevas clases que reutilizan, extienden y modifican el comportamiento que se define en otras clases.  La clase cuyos miembros se heredan se denomina *clase base* y la clase que hereda esos miembros se denomina *clase derivada*.  Una clase derivada solo puede tener una clase base directa.  Sin embargo, la herencia es transitiva.  Si ClassC se deriva de ClassB y ClassB se deriva de ClassA, ClassC hereda los miembros declarados en ClassB y ClassA.  
+# <a name="inheritance-c-programming-guide"></a>Herencia (Guía de programación de C#)
+
+La herencia, junto con la encapsulación y el polimorfismo, es una de las tres características principales de la programación orientada a objetos. La herencia permite crear clases nuevas que reutilizan, extienden y modifican el comportamiento que se define en otras clases. La clase cuyos miembros se heredan se denomina *clase base* y la clase que hereda esos miembros se denomina *clase derivada*. Una clase derivada solo puede tener una clase base directa, pero la herencia es transitiva. Si ClaseC se deriva de ClaseB y ClaseB se deriva de ClaseA, ClaseC hereda los miembros declarados en ClaseB y ClaseA.  
   
 > [!NOTE]
->  Los structs no admiten la herencia pero pueden implementar interfaces.  Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+>  Los structs no admiten la herencia, pero pueden implementar interfaces. Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
- Conceptualmente, una clase derivada es una especialización de la clase base.  Por ejemplo, si tiene una clase base `Animal`, puede tener una clase derivada denominada `Mammal` y otra clase derivada denominada `Reptile`.  `Mammal` es `Animal`y `Reptile` es `Animal`, pero cada clase derivada representa especializaciones diferentes de la clase base.  
+ Conceptualmente, una clase derivada es una especialización de la clase base. Por ejemplo, si tiene una clase base `Animal`, podría tener una clase derivada denominada `Mammal` y otra clase derivada denominada `Reptile`. `Mammal` es `Animal` y `Reptile` también es `Animal`, pero cada clase derivada representa especializaciones diferentes de la clase base.  
   
- Al definir una clase para derivar de otra clase, la clase derivada obtiene implícitamente todos los miembros de la clase base, salvo sus constructores y destructores.  La clase derivada puede, por tanto, reutilizar el código de la clase base sin tener que volver a implementarlo.  En la clase derivada, puede agregar más miembros.  De esta manera, la clase derivada extiende la funcionalidad de la clase base.  
+ Cuando se define una clase para que derive de otra clase, la clase derivada obtiene implícitamente todos los miembros de la clase base, salvo sus constructores y sus destructores. La clase derivada puede reutilizar el código de la clase base sin tener que volver a implementarlo. Puede agregar más miembros en la clase derivada. De esta manera, la clase derivada amplía la funcionalidad de la clase base.  
   
- En la ilustración siguiente se muestra una clase `WorkItem` que representa un elemento de trabajo en algún proceso de negocio.  Como todas las clases, deriva de <xref:System.Object?displayProperty=fullName> y hereda de todos sus métodos.  `WorkItem` agrega cinco miembros propios.  Incluyen un constructor, porque los constructores no se heredan.  La clase `ChangeRequest` hereda de `WorkItem` y representa un tipo determinado de elemento de trabajo.  `ChangeRequest` agrega dos o más miembros a los miembros que hereda de `WorkItem` y <xref:System.Object>.  Debe agregar su propio constructor, y también agrega `originalItemID`.  La propiedad `originalItemID` permite que la instancia de `ChangeRequest` se asocie al `WorkItem` original al que se aplica la solicitud de cambio.  
+ En la ilustración siguiente se muestra una clase `WorkItem` que representa un elemento de trabajo de un proceso empresarial. Al igual que todas las clases, deriva de <xref:System.Object?displayProperty=fullName> y hereda todos sus métodos. `WorkItem` agrega cinco miembros propios. Entre estos se incluye un constructor, dado que los constructores no se heredan. La clase `ChangeRequest` hereda de `WorkItem` y representa un tipo concreto de elemento de trabajo. `ChangeRequest` agrega dos miembros más a los miembros que hereda de `WorkItem` y de <xref:System.Object>. Debe agregar su propio constructor y además agrega `originalItemID`. La propiedad `originalItemID` permite que la instancia `ChangeRequest` se asocie con el `WorkItem` original al que se aplica la solicitud de cambio.  
   
- ![Herencia de clases](../../../csharp/programming-guide/classes-and-structs/media/class-inheritance.png "Class\_Inheritance")  
+ ![Herencia de clases](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 Herencia de clases  
   
- En el ejemplo siguiente se muestra cómo se expresan en C\# las relaciones de clase presentadas en la ilustración anterior.  En el ejemplo también se muestra cómo `WorkItem` invalida el método virtual <xref:System.Object.ToString%2A?displayProperty=fullName> y cómo la clase `ChangeRequest` hereda la implementación de `WorkItem` del método.  
+ En el ejemplo siguiente se muestra cómo se expresan en C# las relaciones de clase de la ilustración anterior. En el ejemplo también se muestra cómo `WorkItem` reemplaza el método virtual <xref:System.Object.ToString%2A?displayProperty=fullName> y cómo la clase `ChangeRequest` hereda la implementación `WorkItem` del método.  
   
  [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
-## Métodos abstractos y virtuales  
- Cuando una clase base declara un método como [virtual](../../../csharp/language-reference/keywords/virtual.md), una clase derivada puede [invalidar](../../../csharp/language-reference/keywords/override.md) el método con su propia implementación.  Si una clase base declara un miembro como [abstracto](../../../csharp/language-reference/keywords/abstract.md), ese método se debe invalidar en cualquier clase no abstracta que herede directamente de dicha clase.  Si una clase derivada es abstracta en sí misma, hereda los miembros abstractos sin implementarlos.  Los miembros abstractos y virtuales son la base para el polimorfismo, la segunda característica principal de la programación orientada a objetos.  Para obtener más información, vea [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+## <a name="abstract-and-virtual-methods"></a>Métodos abstractos y virtuales  
+ Cuando una clase base declara un método como [virtual](../../../csharp/language-reference/keywords/virtual.md), una clase derivada puede [reemplazar](../../../csharp/language-reference/keywords/override.md) el método con su propia implementación. Si una clase base declara un miembro como [abstracto](../../../csharp/language-reference/keywords/abstract.md), ese método se debe reemplazar en todas las clases no abstractas que hereden directamente de dicha clase. Si una clase derivada es abstracta, hereda los miembros abstractos sin implementarlos. Los miembros abstractos y virtuales son la base del polimorfismo, que es la segunda característica principal de la programación orientada a objetos. Para obtener más información, vea [Polimorfismo ](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
-## Clases base abstractas  
- Puede declarar una clase como [abstracta](../../../csharp/language-reference/keywords/abstract.md) si desea evitar la creación directa de instancias por medio de la palabra clave [new](../../../csharp/language-reference/keywords/new.md).  Si hace esto, la clase solo se puede utilizar si una nueva clase se deriva de ella.  Una clase abstracta puede contener una o más firmas de método que se declaran a sí mismas como abstractas.  Estas firmas especifican los parámetros y el valor devuelto pero no tienen ninguna implementación \(cuerpo del método\).  Una clase abstracta no tiene que contener miembros abstractos; sin embargo, si una clase contiene un miembro abstracto, la propia clase se debe declarar como abstracta.  Las clases derivadas que no son abstractas por sí mismas deben proporcionar la implementación de cualquier método abstracto de una clase base abstracta.  Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+## <a name="abstract-base-classes"></a>Clases base abstractas  
+ Puede declarar una clase como [abstracta](../../../csharp/language-reference/keywords/abstract.md) para quiere impedir la creación directa de instancias mediante la palabra clave [new](../../../csharp/language-reference/keywords/new.md). Si lo hace, la clase solo se puede usar si se deriva de ella una clase nueva. Una clase abstracta puede contener una o más firmas de método que, a su vez, se declaran como abstractas. Estas firmas especifican los parámetros y el valor devuelto, pero no tienen ninguna implementación (cuerpo del método). Una clase abstracta no tiene que contener miembros abstractos, pero si lo hace, la clase debe declararse como abstracta. Las clases derivadas que no son abstractas deben proporcionar la implementación para todos los métodos abstractos de una clase base abstracta. Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
-## Interfaces  
- Una *interfaz* es un tipo de referencia similar en cierto modo a una clase base abstracta compuesta únicamente por miembros abstractos.  Cuando una clase implementa una interfaz, debe proporcionar una implementación para todos los miembros de la interfaz.  Una clase puede implementar varias interfaces aunque solo puede derivar de una única clase base directa.  
+## <a name="interfaces"></a>Interfaces  
+ Una *interfaz* es un tipo de referencia similar a una clase base abstracta formada únicamente por miembros abstractos. Cuando una clase implementa una interfaz, debe proporcionar una implementación para todos los miembros de la interfaz. Una clase puede implementar varias interfaces, aunque solo puede derivar de una única clase base directa.  
   
- Las interfaces se utilizan para definir funciones específicas para las clases que no tienen necesariamente una relación de identidad.  Por ejemplo, la interfaz <xref:System.IEquatable%601?displayProperty=fullName> puede ser implementada por cualquier clase o struct que deba permitir al código de cliente determinar si dos objetos del tipo son equivalentes \(sin embargo, el tipo define la equivalencia\).  <xref:System.IEquatable%601> no implica el mismo tipo de relación "es un\(a\)" que existe entre una clase base y una clase derivada \(por ejemplo, un `Mammal` es un `Animal`\).  Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ Las interfaces se usan para definir funciones específicas para clases que no tienen necesariamente una relación "es un/una". Por ejemplo, la interfaz <xref:System.IEquatable%601?displayProperty=fullName> se puede implementar mediante cualquier clase o struct que deba permitir que el código de cliente determine si dos objetos del tipo son equivalentes (pero el tipo define la equivalencia). <xref:System.IEquatable%601> no implica el mismo tipo de relación "es un/una" que existe entre una clase base y una clase derivada (por ejemplo, `Mammal` es `Animal`). Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
-## Acceso de la clase derivada a los miembros de la clase base  
- Una clase derivada tiene acceso a los miembros públicos, protegidos, internos e internos protegidos de una clase base.  Aunque una clase derivada hereda los miembros privados de una clase base, no puede tener acceso a estos miembros.  Sin embargo, todos los miembros privados siguen presentes en la clase derivada y pueden hacer el mismo trabajo que harían en la propia clase base.  Por ejemplo, supongamos que un método protegido de la clase base tiene acceso a un campo privado.  Este campo debe estar presente en la clase derivada para que el método heredado de la clase base funcione correctamente.  
+## <a name="preventing-further-derivation"></a>Impedir la derivación adicional  
+ Una clase puede impedir que otras clases hereden de ella o de cualquiera de sus miembros. Para ello, se declara a sí misma o declara su miembro como [sellado](../../../csharp/language-reference/keywords/sealed.md). Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
-## Evitar la derivación adicional  
- Una clase puede evitar que otras clases hereden de ella, o de cualquiera de sus miembros, declarándose a sí misma o al miembro como [sealed](../../../csharp/language-reference/keywords/sealed.md).  Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
+## <a name="derived-class-hiding-of-base-class-members"></a>Clase derivada que oculta miembros de clase base  
+ Una clase derivada puede ocultar miembros de clase base si declara los miembros con el mismo nombre y firma. Se puede usar el modificador [new](../../../csharp/language-reference/keywords/new.md) para indicar explícitamente que el miembro no está diseñado para reemplazar al miembro base. No es necesario usar [new](../../../csharp/language-reference/keywords/new.md), pero se generará una advertencia del compilador si no se usa [new](../../../csharp/language-reference/keywords/new.md). Para obtener más información, vea [Control de versiones con las palabras clave Override y New ](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) y [Saber cuándo usar las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## Ocultar miembros de la clase base en la clase derivada  
- Una clase derivada puede ocultar miembros de la clase base si los declara con el mismo nombre y firma.  Se puede utilizar el modificador [new](../../../csharp/language-reference/keywords/new.md) para indicar explícitamente que no se pretende que el miembro sea una invalidación del miembro base.  No es necesario utilizar [new](../../../csharp/language-reference/keywords/new.md), pero se generará una advertencia del compilador si no se usa [new](../../../csharp/language-reference/keywords/new.md).  Para obtener más información, vea [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) y [Saber cuándo utilizar las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
-  
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [clase](../../../csharp/language-reference/keywords/class.md)   
+ [class](../../../csharp/language-reference/keywords/class.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)

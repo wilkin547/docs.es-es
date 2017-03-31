@@ -1,35 +1,54 @@
 ---
-title: "Operador / (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/ (operador) [C#]"
-  - "operador de división [C#]"
+title: Operador / (Referencia de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- / operator [C#]
+- division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 387be8c240001557722b4a30b785637c72c9be37
+ms.lasthandoff: 03/13/2017
+
 ---
-# Operador / (Referencia de C#)
-El operador de división \(`/`\) permite dividir su primer operando por su segundo operando.  Todos los tipos numéricos poseen operadores de división predefinidos.  
+# <a name="-operator-c-reference"></a>Operador / (Referencia de C#)
+El operador de división (`/`) divide su primer operando por su segundo operando. Todos los tipos numéricos tienen operadores de división predefinidos.  
   
-## Comentarios  
- Los tipos definidos por el usuario pueden sobrecargar el operador `/` \(vea [operador](../../../csharp/language-reference/keywords/operator.md)\).  Una sobrecarga del operador `/`, sobrecarga implícitamente el [operador \/\=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md).  
+## <a name="remarks"></a>Comentarios  
+ Los tipos definidos por el usuario pueden sobrecargar el operador `/` (vea [operator](../../../csharp/language-reference/keywords/operator.md)). Una sobrecarga del operador `/` sobrecarga implícitamente el [operador /=](division-assignment-operator.md).  
   
- El resultado de dividir dos enteros siempre es un número entero.  Por ejemplo, el resultado de 7 \/ 3 es 2.  Para determinar el resto de 7 \/ 3, utilice el operador de resto \([%](../../../csharp/language-reference/operators/modulus-operator.md)\).  Para obtener un cociente como un número racional o fracción, asigne al dividendo o al divisor el tipo `float` o el tipo `double`.  Puede asignar al tipo de forma implícita si express el dividendo o el divisor como decimal, poniendo un dígito a la derecha del separador decimal, como se muestra en el ejemplo siguiente.  
+ Cuando se dividen dos números enteros, el resultado siempre es un entero. Por ejemplo, el resultado de 7 / 3 es 2. Para determinar el resto de 7 / 3, use el operador de resto ([%](../../../csharp/language-reference/operators/modulus-operator.md)). Para obtener un cociente como un número racional o fracción, asigne al dividendo o al divisor el tipo `float` o el tipo `double`. Puede asignar el tipo de forma implícita si expresa el dividendo o el divisor como decimal. Para ello, coloque un dígito a la derecha del separador decimal, como se muestra en el ejemplo siguiente.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-cs[csRefOperators#42](../../../csharp/language-reference/operators/codesnippet/CSharp/division-operator_1.cs)]  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [operadores de C\#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+

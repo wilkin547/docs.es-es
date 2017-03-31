@@ -1,26 +1,44 @@
 ---
-title: "Operador . (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "._CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - ". (operador) [C#]"
-  - "operador de punto (.) [C#]"
-  - "operador de acceso a miembros (.) [C#]"
+title: . Operador (Referencia de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- ._CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- member access operator (.) [C#]
+- . operator [C#]
+- dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 45c775fe92e61de7be2356218f33964071e96c07
+ms.lasthandoff: 03/13/2017
+
 ---
-# Operador . (Referencia de C#)
-El operador de punto \(`.`\) se utiliza para el acceso a miembros.  El operador de punto especifica un miembro de un tipo o espacio de nombres.  Por ejemplo, el operador de punto se utiliza para tener acceso a métodos específicos dentro de las bibliotecas de clases de .NET Framework:  
+# <a name="-operator-c-reference"></a>. Operador (Referencia de C#)
+El operador punto (`.`) se usa para el acceso a miembros. El operador punto especifica un miembro de un tipo o espacio de nombres. Por ejemplo, el operador punto se usa para tener acceso a métodos específicos de las bibliotecas de clases de .NET Framework:  
   
  [!code-cs[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
@@ -30,26 +48,26 @@ El operador de punto \(`.`\) se utiliza para el acceso a miembros.  El operador 
   
  [!code-cs[csRefOperators#18](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_3.cs)]  
   
- La variable `s` tiene dos miembros, `a` y `b`; para tener acceso a ellos, use el operador de punto:  
+ La variable `s` tiene dos miembros, `a` y `b`. Para obtener acceso a ellos, use el operador punto:  
   
  [!code-cs[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
- El punto también se utiliza para formar nombres completos, que son nombres que especifican el espacio de nombres o la interfaz, por ejemplo, a la que pertenecen.  
+ El punto también se usa para formar nombres completos, que son nombres que especifican el espacio de nombres o la interfaz, por ejemplo, a los que pertenecen.  
   
  [!code-cs[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
- La directiva using hace que la calificación de nombres sea opcional en algunos casos:  
+ La directiva using hace que algunos elementos de calificación de nombres sean opcionales:  
   
  [!code-cs[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
- Sin embargo, un identificador ambiguo debe calificarse:  
+ Pero cuando un identificador es ambiguo, debe calificarse:  
   
  [!code-cs[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [operadores de C\#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Operadores de C#](../../../csharp/language-reference/operators/index.md)

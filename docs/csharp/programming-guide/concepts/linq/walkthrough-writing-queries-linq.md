@@ -1,118 +1,135 @@
 ---
-title: "Walkthrough: Writing Queries in C# (LINQ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "get-started-article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], walkthroughs"
-  - "LINQ [C#], writing queries"
-  - "queries [LINQ in C#], writing"
-  - "writing LINQ queries"
+title: 'Tutorial: Escribir consultas en C# (LINQ) | Microsoft Docs'
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: get-started-article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], walkthroughs
+- LINQ [C#], writing queries
+- queries [LINQ in C#], writing
+- writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 caps.latest.revision: 32
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 30
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9dd72793d23c7f6ccc208a3368c255f7cc4dbbd7
+ms.lasthandoff: 03/13/2017
+
 ---
-# Walkthrough: Writing Queries in C# (LINQ)
-Este tutorial muestra las características del lenguaje C\# que se utilizan para escribir expresiones de consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)].  Después de completar este tutorial, estará preparado para ver los ejemplos y la documentación del proveedor [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] específico que le interese, como [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)], [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] to DataSets o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)].  
+# <a name="walkthrough-writing-queries-in-c-linq"></a>Tutorial: Escribir consultas en C# (LINQ)
+Este tutorial muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINQ.  
   
-## Requisitos previos  
- Este tutorial requiere características que se introducen en Visual Studio 2008.  
+## <a name="create-a-c-project"></a>Crear un proyecto de C#  
   
- ![vínculo a vídeo](../../../../csharp/programming-guide/concepts/linq/media/playvideo.png "PlayVideo") Para obtener una versión en vídeo de este tema, vea [Video How to: Writing Queries in C\# \(LINQ\)](http://go.microsoft.com/fwlink/?LinkId=100393).  
+> [!NOTE]
+>  Las siguientes instrucciones se aplican a Visual Studio. Si usa otro entorno de desarrollo, cree un proyecto de consola con una referencia a System.Core.dll y una directiva `using` para el espacio de nombres <xref:System.Linq?displayProperty=fullName>.  
   
-## Crear un proyecto de C\#  
-  
-#### Para crear un proyecto  
+#### <a name="to-create-a-project-in-visual-studio"></a>Para crear un proyecto en Visual Studio  
   
 1.  Inicie Visual Studio.  
   
-2.  En la barra de menú, elija **Archivo**, **Nuevo**, **Proyecto**.  
+2.  En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
   
-     Aparece el cuadro de diálogo **Nuevo proyecto**.  
+     Aparece el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  Expanda **Instalado**, expanda **Plantillas**, expanda **Visual c\#** y, a continuación **Aplicación de consola**.  
+3.  Expanda **Instalado**, **Plantillas**, **Visual C#** y luego elija **Aplicación de consola**.  
   
-4.  En el cuadro de texto **Nombre**, escriba un nombre diferente o acepte el nombre predeterminado, y elija el botón **Aceptar**.  
+4.  En el cuadro de texto **Nombre**, escriba otro nombre o acepte el predeterminado y luego elija el botón **Aceptar**.  
   
-     El nuevo proyecto aparecerá en el **Explorador de soluciones**.  
+     El nuevo proyecto aparece en el **Explorador de soluciones**.  
   
-5.  Observe que su proyecto tiene una referencia a System.Core.dll y una directiva `using` para el espacio de nombres <xref:System.Linq?displayProperty=fullName>.  
+5.  Observe que el proyecto tiene una referencia a System.Core.dll y una directiva `using` para el espacio de nombres <xref:System.Linq?displayProperty=fullName>.  
   
-## Crear un origen de datos en memoria  
- El origen de datos de las consultas es una simple lista de objetos `Student`.  Cada registro `Student` tiene un nombre, un apellido y una matriz de enteros que representa sus puntuaciones de exámenes en la clase.  Copie este código en el proyecto.  Observe las siguientes características:  
+## <a name="create-an-in-memory-data-source"></a>Crear un origen de datos en memoria  
+ El origen de datos de las consultas es una simple lista de objetos `Student`. Cada registro `Student` tiene un nombre, un apellido y una matriz de enteros que representa sus puntuaciones de las pruebas en la clase. Copie este código en el proyecto. Observe las siguientes características:  
   
--   La clase `Student` está formada por propiedades autoimplementadas.  
+-   La clase `Student` consta de propiedades implementadas automáticamente.  
   
--   Cada estudiante de la lista se inicializa con un inicializador de objeto.  
+-   Cada alumno de la lista se inicializa con un inicializador de objeto.  
   
 -   La propia lista se inicializa con un inicializador de colección.  
   
- Esta estructura de datos completa se inicializará, y se crearán instancias de ella, sin llamadas explícitas a un constructor o sin acceso a miembros explícito.  Para obtener más información acerca de estas nuevas características, vea [Propiedades autoimplementadas](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) y [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Toda la estructura de datos se inicializará y creará una instancia sin llamadas explícitas a ningún constructor ni acceso a miembro explícito. Para obtener más información sobre estas nuevas características, vea [Auto-Implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) (Propiedades implementadas automáticamente) y [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-#### Para agregar el origen de datos  
+#### <a name="to-add-the-data-source"></a>Para agregar el origen de datos  
   
--   Agregue la clase `Student` y la lista inicializada de estudiantes a la clase `Program` de su proyecto.  
+-   Agregue la clase `Student` y la lista inicializada de alumnos a la clase `Program` del proyecto.  
   
      [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
-#### Para agregar un nuevo estudiante a la lista de estudiantes  
+#### <a name="to-add-a-new-student-to-the-students-list"></a>Para agregar un nuevo alumno a la lista de alumnos  
   
-1.  Agregue un nuevo `Student` a la lista `Students` y utilice el nombre y las puntuaciones de examen que desee.  Intente escribir toda la información del nuevo estudiante para aprender mejor la sintaxis del inicializador de objeto.  
+1.  Agregue un nuevo `Student` a la lista `Students` y use el nombre y las puntuaciones de las pruebas que prefiera. Pruebe a escribir toda la nueva información de alumno para conocer mejor la sintaxis del inicializador de objeto.  
   
-## Crear la consulta  
+## <a name="create-the-query"></a>Crear la consulta  
   
-#### Para crear una consulta sencilla  
+#### <a name="to-create-a-simple-query"></a>Para crear una consulta simple  
   
--   En el método `Main` de la aplicación, cree una consulta simple que, cuando se ejecute, genere una lista de todos los estudiantes cuya puntuación fue mayor que 90 en el primer examen.  Tenga en cuenta que, como se selecciona el objeto `Student`, el tipo de la consulta es `IEnumerable<Student>`.  Aunque en el código también se podría utilizar un tipo implícito mediante la palabra clave [var](../../../../csharp/language-reference/keywords/var.md), se usa un tipo explícito para ilustrar los resultados de forma más clara.  \(Para obtener más información acerca de `var`, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).\)  
+-   En el método `Main` de la aplicación, cree una consulta simple que, cuando se ejecute, genere una lista de todos los alumnos cuya puntuación en la primera prueba haya sido superior a 90. Tenga en cuenta que, dado que se ha seleccionado todo el objeto `Student`, el tipo de la consulta es `IEnumerable<Student>`. Aunque el código podría usar tipos implícitos con la palabra clave [var](../../../../csharp/language-reference/keywords/var.md), se usan tipos explícitos para mostrar claramente los resultados. (Para obtener más información sobre `var`, vea [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) [Variables locales con tipo implícito]).  
   
-     Observe también que la variable de rango de la consulta, `student`, sirve de referencia para cada `Student` del origen, proporcionando acceso a los miembros de cada objeto.  
+     Tenga también en cuenta que la variable de rango de la consulta, `student`, actúa como referencia a cada `Student` del origen, lo que proporciona acceso a miembro para cada objeto.  
   
  [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
-## Ejecutar la consulta  
+## <a name="execute-the-query"></a>Ejecutar la consulta  
   
-#### Para ejecutar la consulta  
+#### <a name="to-execute-the-query"></a>Para ejecutar la consulta  
   
-1.  Ahora escriba el bucle `foreach` que hará que se ejecute la consulta.  Tenga en cuenta lo siguiente acerca del código:  
+1.  Escriba ahora el bucle `foreach` que hará que la consulta se ejecute. Tenga en cuenta los siguiente sobre el código:  
   
-    -   Se tiene acceso a cada elemento de la secuencia devuelta a través de la variable de iteración del bucle `foreach`.  
+    -   A cada elemento de la secuencia devuelta se accede mediante la variable de iteración del bucle `foreach`.  
   
-    -   El tipo de esta variable es `Student`, y el tipo de la variable de consulta es compatible, `IEnumerable<Student>`.  
+    -   El tipo de esta variables es `Student` y el tipo de la variable de consulta es compatible, `IEnumerable<Student>`.  
   
-2.  Después de haber agregado este código, compile y ejecute la aplicación; para ello, presione Ctrl \+ F5. Los resultados aparecerán en la ventana **Consola**.  
+2.  Tras agregar este código, compile y ejecute la aplicación para ver los resultados en la ventana **Consola**.  
   
  [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
-#### Para agregar otra condición de filtro  
+#### <a name="to-add-another-filter-condition"></a>Para agregar otra condición de filtro  
   
-1.  Puede combinar varias condiciones booleanas en la cláusula `where` para delimitar más la consulta.  El código siguiente agrega una condición para que la consulta devuelva los estudiantes cuya primera puntuación fue superior a 90 y cuya última puntuación fue inferior a 80.  La cláusula `where` se debería parecer a la del código siguiente.  
+1.  Puede combinar varias condiciones booleanas en la cláusula `where` para delimitar aún más una consulta. El código siguiente agrega una condición para que la consulta devuelva los alumnos cuya primera puntuación haya sido superior a 90 y cuya última puntuación haya sido inferior a 80. La cláusula `where` debería ser similar al código siguiente.  
   
     ```  
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Para obtener más información, consulte [where \(cláusula\)](../../../../csharp/language-reference/keywords/where-clause.md).  
+     Para obtener más información, vea [where (Cláusula)](../../../../csharp/language-reference/keywords/where-clause.md).  
   
-## Modificar la consulta  
+## <a name="modify-the-query"></a>Modificar la consulta  
   
-#### Para ordenar los resultados  
+#### <a name="to-order-the-results"></a>Para ordenar los resultados  
   
-1.  Será más fácil examinar los resultados si están ordenados de alguna manera.  Puede ordenar la secuencia devuelta según cualquier campo accesible de los elementos de origen.  Por ejemplo, la cláusula `orderby` siguiente ordena los resultados alfabéticamente, de la A a la Z, por apellido de estudiante.  Agregue la siguiente cláusula `orderby` a la consulta, justo detrás de la instrucción `where` y delante de la instrucción `select`:  
+1.  Le resultará más fácil examinar los resultados si se muestran con algún tipo de orden. Puede ordenar la secuencia devuelta por cualquier campo accesible de los elementos de origen. Por ejemplo, la cláusula `orderby` siguiente ordena los resultados alfabéticamente de la A a la Z por el apellido de cada alumno. Agregue la cláusula `orderby` siguiente a la consulta, inmediatamente después de la instrucción `where` y antes de la instrucción `select`:  
   
     ```  
     orderby student.Last ascending  
     ```  
   
-2.  Ahora cambie la cláusula `orderby` de forma que ordene los resultados en orden inverso, según la puntuación del primer examen, de mayor a menor.  
+2.  Cambie ahora la cláusula `orderby` para que ordene los resultados en orden inverso según la puntuación en la primera prueba, de la puntuación más alta a la más baja.  
   
     ```  
     orderby student.Scores[0] descending  
@@ -124,76 +141,74 @@ Este tutorial muestra las características del lenguaje C\# que se utilizan para
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     Para obtener más información, consulte [orderby \(cláusula\)](../../../../csharp/language-reference/keywords/orderby-clause.md).  
+     Para obtener más información, vea [orderby (Cláusula)](../../../../csharp/language-reference/keywords/orderby-clause.md).  
   
-#### Para agrupar los resultados  
+#### <a name="to-group-the-results"></a>Para agrupar los resultados  
   
-1.  La agrupación es una funcionalidad eficaz para las expresiones de consulta.  Una consulta con una cláusula group genera una secuencia de grupos donde cada grupo contiene una `Key` y una secuencia compuesta por todos los miembros de ese grupo.  La siguiente consulta nueva agrupa los estudiantes utilizando como clave la inicial de su apellido.  
+1.  La agrupación es una funcionalidad de gran eficacia en expresiones de consulta. Una consulta con una cláusula group genera una secuencia de grupos y cada grupo propiamente dicho contiene un `Key` y una secuencia que consta de todos los miembros del grupo. La siguiente nueva consulta agrupa los alumnos usando la primera letra del apellido como clave.  
   
      [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
-2.  Observe que el tipo de la consulta ha cambiado.  Ahora genera una secuencia de grupos que tienen un tipo `char` como clave y una secuencia de objetos `Student`.  Dado que el tipo de la consulta ha cambiado, el código siguiente también cambia el bucle de ejecución `foreach`:  
+2.  Tenga en cuenta que el tipo de la consulta ha cambiado. Ahora genera una secuencia de grupos que tienen un tipo `char` como clave y una secuencia de objetos `Student`. Dado que el tipo de la consulta ha cambiado, el siguiente código cambia también el bucle de ejecución `foreach`:  
   
      [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
-3.  Presione Ctrl \+ F5 para ejecutar la aplicación y ver los resultados en la ventana **Consola**.  
+3.  Ejecute la aplicación y vea los resultados en la ventana **Consola**.  
   
-     Para obtener más información, consulte [group \(cláusula\)](../../../../csharp/language-reference/keywords/group-clause.md).  
+     Para obtener más información, vea [group (Cláusula)](../../../../csharp/language-reference/keywords/group-clause.md).  
   
-#### Para hacer que las variables sean de tipo implícito  
+#### <a name="to-make-the-variables-implicitly-typed"></a>Para que las variables tengan tipo implícito  
   
-1.  Codificar explícitamente `IEnumerables` de `IGroupings` se puede convertir pronto en una tarea complicada.  Puede escribir la misma consulta y el mismo bucle `foreach` de una forma mucho más sencilla utilizando `var`.  La palabra clave `var` no cambia los tipos de los objetos; simplemente indica al compilador que los deduzca.  Cambie el tipo de `studentQuery` y la iteración `group` variable a `var` y vuelva a ejecutar la consulta.  Observe que en el bucle `foreach` interno, la variable de iteración todavía es de tipo `Student` y la consulta funciona igual que antes.  Cambie la variable de iteración `s` a `var` y ejecute de nuevo la consulta.  Verá que obtiene exactamente los mismos resultados.  
+1.  La codificación explícita con `IEnumerables` de `IGroupings` puede resultar tediosa. Puede escribir la misma consulta y el bucle `foreach` mucho más cómodamente con `var`. La palabra clave `var` no cambia los tipos de los objetos; solo indica al compilador que deduzca los tipos. Cambie el tipo de `studentQuery` y la variable de iteración `group` a `var` y vuelva a ejecutar la consulta. Tenga en cuenta que en el bucle `foreach` interior, la variable de iteración sigue teniendo como tipo `Student` y la consulta funciona igual que antes. Cambie la variable de iteración `s` a `var` y vuelva a ejecutar la consulta. Como puede ver, obtiene exactamente los mismos resultados.  
   
      [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
-     Para obtener más información acerca de [var](../../../../csharp/language-reference/keywords/var.md), vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
+     Para obtener más información sobre [var](../../../../csharp/language-reference/keywords/var.md), vea [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) (Variables locales con tipo implícito).  
   
-#### Para ordenar los grupos por su valor de clave  
+#### <a name="to-order-the-groups-by-their-key-value"></a>Para ordenar los grupos por su valor clave  
   
-1.  Al ejecutar la consulta anterior, verá que los grupos no están ordenados alfabéticamente.  Para cambiar esto, debe proporcionar una cláusula `orderby` después de la cláusula `group`.  Sin embargo, para usar una cláusula `orderby`, primero necesita un identificador que sirva de referencia para los grupos creados por la cláusula `group`.  Proporcione el identificador utilizando la palabra clave `into`, como se indica a continuación:  
+1.  Al ejecutar la consulta anterior, observará que los grupos no están en orden alfabético. Para cambiar esto, debe especificar una cláusula `orderby` después de la cláusula `group`. Pero para usar una cláusula `orderby`, necesita primero un identificador que actúe como referencia a los grupos creados por la cláusula `group`. El identificador se especifica con la palabra clave `into`, de la manera siguiente:  
   
      [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
-     Al ejecutar esta consulta, verá que ahora los grupos están ordenados alfabéticamente.  
+     Cuando ejecute esta consulta, verá que los grupos aparecen ahora ordenados alfabéticamente.  
   
-#### Incluir un identificador mediante let  
+#### <a name="to-introduce-an-identifier-by-using-let"></a>Para incluir un identificador mediante let  
   
-1.  Puede utilizar la palabra clave `let` para incluir un identificador para cualquier resultado de expresión de la expresión de consulta.  Este identificador puede usarse por comodidad, como en el ejemplo siguiente, o para mejorar el rendimiento, ya que almacena los resultados de una expresión para que no tenga que calcularse varias veces.  
+1.  Puede usar la palabra clave `let` para incluir un identificador con cualquier resultado de la expresión en la expresión de consulta. Este identificador puede resultar cómodo, como en el ejemplo siguiente, o mejorar el rendimiento almacenando los resultados de una expresión para que no tenga que calcularse varias veces.  
   
      [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
-     Para obtener más información, consulte [let \(cláusula\)](../../../../csharp/language-reference/keywords/let-clause.md).  
+     Para obtener más información, vea [let (Cláusula)](../../../../csharp/language-reference/keywords/let-clause.md).  
   
-#### Para utilizar la sintaxis de método en una expresión de consulta  
+#### <a name="to-use-method-syntax-in-a-query-expression"></a>Para usar la sintaxis de método en una expresión de consulta  
   
-1.  Como se describe en [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), algunas operaciones de consulta sólo se pueden expresar utilizando sintaxis de método.  El código siguiente calcula la puntuación total de cada `Student` de la secuencia de origen y, después, llama al método `Average()` en los resultados de esa consulta para calcular la puntuación promedio de la clase.  Observe la posición de los paréntesis alrededor de la expresión de consulta.  
+1.  Tal y como se describe en [Sintaxis de consulta y sintaxis de método en LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), algunas operaciones de consulta solo pueden expresarse con una sintaxis de método. El código siguiente calcula la puntuación total de cada `Student` de la secuencia de origen y luego llama al método `Average()` en los resultados de esa consulta para calcular la puntuación media de la clase. Tenga en cuenta la colocación de los paréntesis alrededor de la expresión de consulta.  
   
      [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
-#### Para transformar o proyectar en la cláusula select  
+#### <a name="to-transform-or-project-in-the-select-clause"></a>Para transformar o proyectar en la cláusula select  
   
-1.  Es muy común que una consulta genere una secuencia cuyos elementos difieren de los elementos de las secuencias de origen.  Elimine o marque como comentario la consulta y el bucle de ejecución anteriores y reemplácelos con el código siguiente.  Observe que la consulta devuelve una secuencia de cadenas \(no `Students`\) y este hecho se refleja en el bucle `foreach`.  
+1.  Es muy frecuente que una consulta genere una secuencia cuyos elementos difieren de los elementos de las secuencias de origen. Elimine la consulta y el bucle de ejecución anteriores o conviértalos en comentario, y reemplácelos por el código siguiente. Tenga en cuenta que la consulta devuelve una secuencia de cadenas (no `Students`) y este hecho se refleja en el bucle `foreach`.  
   
      [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
-2.  El código anterior de este tutorial indicaba que la puntuación media de la clase es de 334, aproximadamente.  Para generar una secuencia de `Students` cuya puntuación total sea mayor que la media de la clase, junto con su `Student ID`, puede usar un tipo anónimo en la instrucción `select`:  
+2.  El código anterior en este tutorial indicaba que la puntuación media de la clase es aproximadamente 334. Para generar una secuencia de `Students` cuya puntuación total sea superior al promedio de la clase, junto con su `Student ID`, puede usar un tipo anónimo en la instrucción `select`:  
   
      [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
-## Pasos siguientes  
- Una vez que esté familiarizado con los aspectos básicos del uso de consultas in C\#, estará preparado para leer la documentación y ver los ejemplos del tipo de proveedor [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] específico que le interese:  
+## <a name="next-steps"></a>Pasos siguientes  
+ Cuando se haya familiarizado con los aspectos básicos del uso de consultas en C#, estará preparado para leer la documentación y ejemplos del tipo específico de proveedor LINQ que le interese:  
   
- [LINQ a SQL](../Topic/LINQ%20to%20SQL.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)  
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)  
   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
- [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## Vea también  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [Getting Started with LINQ in C\#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Supplementary LINQ Resources](../Topic/Supplementary%20LINQ%20Resources.md)   
- [Tutorial: Escribir consultas en Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)
+## <a name="see-also"></a>Vea también  
+ [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
+ [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)

@@ -1,57 +1,75 @@
 ---
-title: "C&#243;mo: Implementar e invocar un m&#233;todo de extensi&#243;n personalizado (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "métodos de extensión [C#], implementar y llamar"
+title: "Cómo: Implementar e invocar un método de extensión personalizado (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9ba08e55e3bc07c2ce6369e2b33ccbe632545d24
+ms.lasthandoff: 03/13/2017
+
 ---
-# C&#243;mo: Implementar e invocar un m&#233;todo de extensi&#243;n personalizado (Gu&#237;a de programaci&#243;n de C#)
-En este tema se muestra cómo implementar dispone los métodos de extensión para el tipo en [biblioteca de clases de .NET Framework.](http://go.microsoft.com/fwlink/?LinkID=217856), o cualquier otro tipo .NET que desea extender.  El código cliente puede utilizar sus métodos de extensión agregando una referencia al archivo DLL que los contiene, así como una directiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifica el espacio de nombres en el que se definen los métodos de extensión.  
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Cómo: Implementar e invocar un método de extensión personalizado (Guía de programación de C#)
+En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de la [biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856) o para cualquier otro tipo .NET que desee extender. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  
   
-### Para definir y llamar al método de extensión  
+## <a name="to-define-and-call-the-extension-method"></a>Para definir y llamar al método de extensión  
   
-1.  Defina una [clase](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) estática que contenga el método de extensión.  
+1.  Defina una [class](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) estática que contenga el método de extensión.  
   
-     La clase debe estar visible para el código cliente.  Para obtener más información sobre las reglas de accesibilidad, vea [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+     La clase debe estar visible para el código de cliente. Para obtener más información sobre las reglas de accesibilidad, vea [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
-2.  Implemente el método de extensión como método estático que tenga al menos la misma visibilidad que la clase contenedora.  
+2.  Implemente el método de extensión como un método estático con al menos la misma visibilidad que la clase contenedora.  
   
-3.  El primer parámetro del método especifica el tipo en el que funciona el método; debe estar precedido del modificador [this](../../../csharp/language-reference/keywords/this.md).  
+3.  El primer parámetro del método especifica el tipo en el que opera el método; debe ir precedido del modificador [this](../../../csharp/language-reference/keywords/this.md).  
   
 4.  En el código de llamada, agregue una directiva `using` para especificar el [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md) que contiene la clase del método de extensión.  
   
-5.  Llame a los métodos como si fueran métodos de instancia en el tipo.  
+5.  Llame a los métodos como si fueran métodos de instancia del tipo.  
   
-     Observe que el código de llamada no especifica el primer parámetro porque éste representa el tipo en el que se aplica el operador y el compilador ya conoce el tipo del objeto.  Sólo tiene que proporcionar argumentos para segundos parámetros a través de `n`.  
+     Tenga en cuenta que el primer parámetro no se especifica mediante el código de llamada, ya que representa el tipo al que se aplica el operador y el compilador ya conoce el tipo del objeto. Solo tiene que proporcionar argumentos para los parámetros comprendidos entre el 2 y `n`.  
   
-## Ejemplo  
- En el ejemplo siguiente se implementa un método de extensión denominado `WordCount` en la clase `CustomExtensions.StringExtension`.  El método funciona en la clase <xref:System.String>, que se especifica como primer parámetro de método.  El espacio de nombres `CustomExtensions` se importa al espacio de nombres de la aplicación y se llama al método desde el método `Main`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se implementa un método de extensión denominado `WordCount` en la clase `CustomExtensions.StringExtension`. El método opera en la clase <xref:System.String>, que se especifica como el primer parámetro de método. El espacio de nombres `CustomExtensions` se importa en el espacio de nombres de la aplicación y se llama al método dentro del método `Main`.  
   
  [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
-## Compilar el código  
- Para ejecutar este código, debe copiarlo y pegarlo en un proyecto de aplicación de consola de Visual C\# creado en [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)].  De manera predeterminada, el proyecto tiene como destino la versión 3.5 de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] y contiene una referencia a System.Core.dll y una directiva `using` para System.Linq.  Si el proyecto no cumple uno o varios de estos requisitos, puede agregar lo que falte manualmente.  Para obtener más información, vea [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
+## <a name="compiling-the-code"></a>Compilar el código  
+ Para ejecutar este código, cópielo y péguelo en un proyecto de aplicación de la consola de Visual C# creado en [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)]. De forma predeterminada, este proyecto tiene como destino la versión 3.5 de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] y tiene una referencia a System.Core.dll y una directiva `using` para System.Linq. Si faltan uno o varios de estos requisitos del proyecto, se pueden agregar manualmente.   
   
-## Seguridad de .NET Framework  
- Los métodos de extensión no presentan vulnerabilidades de seguridad concretas.  No se pueden utilizar para suplantar los métodos existentes en un tipo, ya que todas las colisiones de nombre se resuelven a favor de la instancia o el método estático definido por el propio tipo.  Los métodos de extensión no pueden obtener acceso a los datos privados de la clase extendida.  
+## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+ Los métodos de extensión no presentan ninguna vulnerabilidad de seguridad específica. No se pueden usar nunca para suplantar los métodos existentes en un tipo, porque todos los conflictos de nombres se resuelven a favor de la instancia o del método estático definido por el tipo en cuestión. Los métodos de extensión no pueden tener acceso a los datos privados de la clase extendida.  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
+ [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)   
  [public](../../../csharp/language-reference/keywords/public.md)   
  [this](../../../csharp/language-reference/keywords/this.md)   
- [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md)
+ [namespace](../../../csharp/language-reference/keywords/namespace.md)

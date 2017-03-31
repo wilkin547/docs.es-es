@@ -1,48 +1,67 @@
 ---
-title: "#pragma warning (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#pragma warning"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#pragma (advertencia) (C#)"
+title: '#pragma warning (Referencia de C#) | Microsoft Docs'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#pragma warning'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 820b6de93a2a739d97084250601e41a5eb4a89f8
+ms.lasthandoff: 03/13/2017
+
 ---
-# #pragma warning (Referencia de C#)
-`#pragma warning` puede habilitar o deshabilitar ciertas advertencias.  
+# <a name="pragma-warning-c-reference"></a>#pragma warning (Referencia de C#)
+`#pragma warning` puede habilitar o deshabilitar determinadas advertencias.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 #pragma warning disable warning-list  
 #pragma warning restore warning-list  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `warning-list`  
- Es una lista de números de advertencia separados por coma.  Escriba los números solos, sin el prefijo "CS".  
+ Una lista separada por comas de números de advertencia. El prefijo "CS" es opcional.  
   
- Cuando no se especifica ningún número de advertencia, `disable` deshabilita todas las advertencias y `restore` las habilita todas.  
+ Cuando no se especifica ningún número de advertencia, `disable` deshabilita todas las advertencias y `restore` habilita todas las advertencias.  
   
 > [!NOTE]
->  Para encontrar números de advertencia en Visual Studio, compile el proyecto y, a continuación, busque dichos números en la ventana de salida .  
+>  Para buscar los números de advertencia en Visual Studio, compile el proyecto y después busque los números de advertencia en la ventana **Salida**.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```  
 // pragma_warning.cs  
 using System;  
   
-#pragma warning disable 414, 3021  
+#pragma warning disable 414, CS3021  
 [CLSCompliant(false)]  
 public class C  
 {  
@@ -51,7 +70,7 @@ public class C
     {  
     }  
 }  
-#pragma warning restore 3021  
+#pragma warning restore CS3021  
 [CLSCompliant(false)]  // CS3021  
 public class D  
 {  
@@ -62,8 +81,8 @@ public class D
 }  
 ```  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Directivas de preprocesador de C\#](../../../csharp/language-reference/preprocessor-directives/index.md)   
- [C\# Compiler Errors](../../../csharp/language-reference/compiler-messages/index.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)   
+ [Errores del compilador de C#](../../../csharp/language-reference/compiler-messages/index.md)

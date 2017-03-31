@@ -1,35 +1,55 @@
 ---
-title: "Palabras clave del espacio de nombres (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "espacios de nombres [C#], palabras clave"
+title: Palabras clave del espacio de nombres (Referencia de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 59c384e6a103dfdf1f0fe8b38c601cdad7b0ea12
+ms.lasthandoff: 03/13/2017
+
 ---
-# Palabras clave del espacio de nombres (Referencia de C#)
-Esta sección describe las palabras clave y operadores relacionados con el uso de espacios de nombres:  
+# <a name="namespace-keywords-c-reference"></a>Palabras clave del espacio de nombres (Referencia de C#)
+En esta sección se describen las palabras clave y los operadores asociados con el uso de espacios de nombres:  
   
--   [Espacio de nombres](../../../csharp/language-reference/keywords/namespace.md)  
+-   [namespace](../../../csharp/language-reference/keywords/namespace.md)  
   
 -   [using](../../../csharp/language-reference/keywords/using.md)  
+ 
+-   [using static](using-static.md)
   
--   [.  Operador](../../../csharp/language-reference/operators/member-access-operator.md)  
+-   [Operador .](../../../csharp/language-reference/operators/member-access-operator.md)  
   
--   [Operator ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+-   [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
   
--   [alias externo](../../../csharp/language-reference/keywords/extern-alias.md)  
+-   [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)

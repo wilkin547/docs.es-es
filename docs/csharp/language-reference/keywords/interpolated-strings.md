@@ -1,78 +1,100 @@
 ---
-title: "Cadenas interpoladas (referencia de C# y Visual Basic) | Microsoft Docs"
-ms.date: "2017-02-03"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
+title: Cadenas interpoladas (C#) | Microsoft Docs
+ms.date: 2017-02-03
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 9
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 9
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
+ms.lasthandoff: 03/13/2017
+
 ---
-# Cadenas interpoladas (referencia de C# y Visual Basic)
-Se utiliza para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una expresión de cadena interpolada crea una cadena reemplazando las expresiones incluidas por las representaciones ToString de los resultados de las expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [Formatos compuestos](../Topic/Composite%20Formatting.md).  Este es un ejemplo de una cadena interpolada:  
+# <a name="interpolated-strings-c-reference"></a>Cadenas interpoladas (Referencia de C#)
+
+Se utiliza para construir cadenas.  Una cadena interpolada es similar a una cadena de plantilla que contiene *expresiones interpoladas*.  Una cadena interpolada devuelve una cadena que reemplaza a las expresiones interpoladas que contiene por sus representaciones de cadena.  
+
+Los argumentos de una cadena interpolada son más fáciles de entender que una [cadena de formato compuesto](../../../standard/base-types/composite-format.md#composite-format-string).  Por ejemplo, la cadena interpolada  
   
-```c#  
-Console.WriteLine($"Name = {name}, hours = {hours:hh}")  
+```csharp  
+Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 
 ```  
-  
- La estructura de una cadena interpolada es la siguiente:  
-  
+contiene dos expresiones interpoladas, "{name}" y "{hours:hh}". La cadena de formato compuesto equivalente es esta:
+
+```csharp
+Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);  
 ```  
-$ " <text> { <interpolation-expression> <optional-comma-field-width> <optional-colon-format> } <text> ... } "  
-```  
-  
- Puede utilizar una cadena interpolada en cualquier lugar que pueda utilizar un literal de cadena.  Al ejecutarse, su programa ejecutaría el código con el literal de cadena interpolada, el código calcula un nuevo literal de cadena evaluando las expresiones de interpolación.  Este cálculo se produce cada vez que se ejecuta el código con la cadena interpolada.  
-  
- Para incluir una llave \("{" o "}"\) en una cadena interpolada, use dos llaves, "{{" o "}}".  Consulte la sección Conversiones implícitas para obtener más detalles.  
-  
-## Conversiones implícitas  
- Hay conversiones de tipo implícito de una cadena interpolada:  
-  
-```c#  
-var s = $"hello, {name}" System.IFormattable s = $"Hello, {name}" System.FormattableString s = $"Hello, {name}"  
+
+La estructura de una cadena interpolada es la siguiente:  
   
 ```  
-  
- El primer ejemplo genera un valor de `string` donde se hayan calculado todos los valores de interpolación de cadena.  Es el resultado final y es de tipo cadena.  Todas las apariciones de llaves dobles \("{{" y "}}"\) se convierten en una única llave.  
-  
- El segundo ejemplo genera una variable <xref:System.IFormattable> que le permite convertir la cadena con contexto invariable.  Esto es útil para obtener formatos de numéricos y de datos correctos en diferentes idiomas.  Todas las apariciones de llaves dobles \("{{" y "}}"\) permanecen como llaves dobles hasta que dé formato a la cadena mediante ToString.  Todas las expresiones de interpolación incluidas se convierten en {0}, \\{1\\} y así sucesivamente.  
-  
-```c#  
-s.ToString(null, System.Globalization.CultureInfo.InvariantCulture);  
+$"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text> ..."  
 ```  
+
+donde: 
+
+- *field-width* es un entero con signo que indica el número de caracteres del campo. Si es positivo, el campo está alineado a la derecha. Si es negativo, está alineado a la izquierda. 
+
+- *format-string* es una cadena de formato adecuada para el tipo de objeto al que se da formato. Por ejemplo, para un valor @System.DateTime, podría ser una cadena de formato estándar de fecha y hora, como "D" o "d".
+
+ Puede utilizar una cadena interpolada en cualquier lugar que pueda utilizar un literal de cadena.  La cadena interpolada se evalúa cada vez que se ejecuta el código con la cadena interpolada. Esto le permite separar la definición y la evaluación de una cadena interpolada.  
   
- El tercer ejemplo genera un <xref:System.FormattableString>, que le permite inspeccionar los objetos que se generen a partir de los cálculos de interpolación.  Inspeccionar los objetos y cómo se presentan como cadenas podría, por ejemplo, ayudarle a protegerse frente a un ataque de inyección si estuviese compilando una consulta.  Con <xref:System.FormattableString> dispone de operaciones de conveniencia para generar los resultados de cadena InvariantCulture y CurrentCulture.  Todas las apariciones de llaves dobles \("{{" y "}}"\) permanecen como llaves dobles hasta que dé formato.  Todas las expresiones de interpolación incluidas se convierten en {0}, \\{1\\} y así sucesivamente.  
+ Para incluir una llave ("{" o "}") en una cadena interpolada, use dos llaves, "{{" o "}}".  Consulte la sección Conversiones implícitas para obtener más detalles.  
+
+Si la cadena interpolada contiene otros caracteres con un significado especial en una cadena interpolada, como comillas dobles ("), dos puntos (:) o coma (,), deben incluirse entre caracteres de escape si aparecen en texto literal, o bien deben incluirse en una expresión delimitada por paréntesis si son elementos del lenguaje incluidos en una expresión interpolada. En el ejemplo siguiente las comillas se escriben entre caracteres de escape para incluirlas en la cadena de resultado y se usan paréntesis para delimitar la expresión `(age == 1 ? "" : "s")` de modo que el carácter de dos puntos no se interprete como el principio de una cadena de formato.
+
+[!code-cs[interpolated-strings4](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings4.cs#1)]  
+
+## <a name="implicit-conversions"></a>Conversiones implícitas  
+
+Hay tres conversiones de tipo implícito de una cadena interpolada:  
+
+1. Conversión de una cadena interpolada a @System.String. En el ejemplo siguiente se devuelve una cadena cuyas expresiones de cadena interpolada se han reemplazado por las representaciones de cadena. Por ejemplo:
+
+   [!code-cs[interpolated-strings1](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings1.cs#1)]  
+
+   Este es el resultado final de una interpretación de cadena. Todas las apariciones de llaves dobles ("{{" y "}}") se convierten en una única llave. 
+
+2. Conversión de una cadena interpolada a una variable <xref:System.IFormattable> que permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>. Esto resulta útil para incluir elementos como los formatos numéricos y de fecha correctos para cada referencia cultural.  Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato a la cadena mediante una llamada implícita o explícita al método @System.Object.ToString.  Todas las expresiones de interpolación incluidas se convierten en {0}, \{1\} y así sucesivamente.  
+
+   En el ejemplo siguiente se usa la reflexión para mostrar los miembros y los valores de propiedad y campo de una variable <xref:System.IFormattable> que se crea a partir de una cadena interpolada. También se pasa la variable <xref:System.IFormattable> al método @System.Console(System.String).
+
+   [!code-cs[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
+
+   Tenga en cuenta que la cadena interpolada solo se puede inspeccionar mediante reflexión. Si se pasa a un método de formato de cadena, como @System.Console.WriteLine(System.String), sus elementos de formato se resuelven y se devuelve la cadena de resultado. 
+
+3. Conversión de una cadena interpolada a una variable <xref:System.FormattableString> que representa una cadena de formato compuesto. El hecho de inspeccionar la cadena de formato compuesto y la manera en que se presenta como cadena de resultado podría ayudarle a protegerse frente a un ataque por inyección si estuviese compilando una consulta.  <xref:System.FormattableString> también incluye sobrecargas <xref:System.FormattableString.ToString> que le permiten generar cadenas de resultado para @System.Globalization.InvariantCulture y @System.Globalization.CurrentCulture.  Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato.  Todas las expresiones de interpolación incluidas se convierten en {0}, \{1\} y así sucesivamente.  
+
+   [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
+
+## <a name="language-specification"></a>Especificación del lenguaje  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Ejemplos  
-  
-```c#  
-$"Name = {name}, hours = {hours:hh}" var s = $"hello, {name}" System.IFormattable s = $"Hello, {name}" System.FormattableString s = $"Hello, {name}" $"{person.Name, 20} is {person.Age:D3} year {(p.Age == 1 ? "" : "s")} old."  
-  
-```  
-  
- No es necesario entrecomillar los caracteres de comillas dentro de las expresiones de interpolación incluidas porque las expresiones de cadenas interpoladas comienzan por $ y el compilador examina las expresiones de interpolación incluidas como texto equilibrado hasta que encuentre una coma, dos puntos o una llave de cierre.  Por las mismas razones, el último ejemplo utiliza paréntesis para permitir que la expresión condicional \(`p.Age == 1 ? "" : "s"`\) esté dentro de la expresión de interpolación sin que los dos puntos inicien una especificación de formato.  Fuera de la expresión de interpolación incluida \(pero aún dentro de la expresión de cadena interpolad\) escape los caracteres de comillas como lo haría normalmente.  
-  
-## Sintaxis  
-  
-```  
-expression: interpolated-string-expression interpolated-string-expression: interpolated-string-start interpolations interpolated-string-end interpolations: single-interpolation single-interpolation interpolated-string-mid interpolations single-interpolation: interpolation-start interpolation-start : regular-string-literal interpolation-start: expression expression , expression  
-  
-```  
-  
-## Especificaciones del lenguaje  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
-  
- Para obtener más información, vea [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md).  
-  
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.IFormattable?displayProperty=fullName>   
  <xref:System.FormattableString?displayProperty=fullName>   
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)   
- [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+

@@ -1,64 +1,82 @@
 ---
-title: "byte (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "byte"
-  - "byte_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "byte (palabra clave) [C#]"
+title: byte (Referencia de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- byte
+- byte_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
 caps.latest.revision: 19
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 19
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7c522506b4541edb2a81036e93e8872711f849b9
+ms.lasthandoff: 03/13/2017
+
 ---
-# byte (Referencia de C#)
-La palabra clave `byte` denota un tipo entero que almacena valores según se muestra en la tabla siguiente.  
+# <a name="byte-c-reference"></a>byte (Referencia de C#)
+La palabra clave `byte` denota un tipo entero que almacena valores como se indica en la tabla siguiente.  
   
-|Tipo|Intervalo|Size|Tipo de .NET Framework|  
-|----------|---------------|----------|----------------------------|  
+|Tipo|Intervalo|Tamaño|Tipo de .NET Framework|  
+|----------|-----------|----------|-------------------------|  
 |`byte`|De 0 a 255|Entero de 8 bits sin signo|<xref:System.Byte?displayProperty=fullName>|  
   
-## Literales  
- Las variables de tipo `byte` se pueden declarar e inicializar como en el siguiente ejemplo:  
+## <a name="literals"></a>Literales  
+ Puede declarar e inicializar una variable `byte` como en este ejemplo:  
   
 ```  
 byte myByte = 255;  
 ```  
   
- En la declaración anterior, el literal entero `255` se convierte implícitamente del tipo [int](../../../csharp/language-reference/keywords/int.md) al tipo `byte`.  Si el literal entero supera el intervalo de valores del tipo `byte`, se producirá un error de compilación.  
+ En la declaración anterior, el literal entero `255` se convierte implícitamente de [int](../../../csharp/language-reference/keywords/int.md) a `byte`. Si el literal entero supera el intervalo de `byte`, se producirá un error de compilación.  
   
-## Conversiones  
- Hay una conversión implícita predefinida de `byte` a [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [longo](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md).  
+## <a name="conversions"></a>Conversiones  
+ Hay una conversión implícita predefinida de `byte` a [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) o [decimal](../../../csharp/language-reference/keywords/decimal.md).  
   
- No es posible convertir implícitamente a `byte` otros tipos numéricos no literales de mayor tamaño de almacenamiento.  Para obtener más información acerca de los tamaños de almacenamiento de tipos enteros, vea [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md).  Considere, por ejemplo, las dos variables siguientes de tipo `byte`, `x` e `y`:  
+ No se pueden convertir implícitamente los tipos numéricos no literales de mayor tamaño de almacenamiento a `byte`. Para más información sobre los tamaños de almacenamiento de los tipos enteros, vea la [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md). Considere, por ejemplo, las dos siguientes variables de `byte` `x` y `y`:  
   
 ```  
   
 byte x = 10, y = 20;  
 ```  
   
- La instrucción de asignación siguiente producirá un error de compilación, ya que la expresión aritmética del lado derecho del operador de asignación se evalúa de forma predeterminada como `int`.  
+ La instrucción de asignación siguiente producirá un error de compilación porque la expresión aritmética del lado derecho del operador de asignación da como resultado `int` de forma predeterminada.  
   
 ```  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
- Para solucionar este problema, utilice una conversión explícita:  
+ Para corregir este problema, use una conversión:  
   
 ```  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
- Sin embargo, es posible utilizar las instrucciones siguientes, donde la variable de destino tiene un tamaño de almacenamiento igual o superior:  
+ Pero es posible usar las instrucciones siguientes cuando la variable de destino tiene el mismo tamaño de almacenamiento o un tamaño de almacenamiento mayor:  
   
 ```  
 int x = 10, y = 20;  
@@ -66,7 +84,7 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- Sin embargo, no existe conversión implícita de tipos de punto flotante a tipo `byte`.  Por ejemplo, la instrucción siguiente generará un error de compilación, a menos que se utilice una conversión explícita:  
+ Además, no hay ninguna conversión implícita de tipos de punto flotante a `byte`. Por ejemplo, la instrucción siguiente genera un error del compilador a menos que se use una conversión explícita:  
   
 ```  
 // Error: no implicit conversion from double:  
@@ -75,14 +93,14 @@ byte x = 3.0;
 byte y = (byte)3.0;  
 ```  
   
- Para llamar a métodos sobrecargados, debe utilizarse una conversión explícita de tipos.  Considere, por ejemplo, los dos métodos sobrecargados siguientes que utilizan parámetros de tipo `byte` e [int](../../../csharp/language-reference/keywords/int.md):  
+ Al llamar a métodos sobrecargados, debe usarse una conversión. Por ejemplo, considere los siguientes métodos sobrecargados que usan parámetros `byte` e [int](../../../csharp/language-reference/keywords/int.md):  
   
 ```  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
- Si se utiliza la conversión explícita al tipo `byte`, se garantiza la llamada al tipo correcto; por ejemplo:  
+ El uso de la conversión `byte` garantiza que se llama al tipo correcto, por ejemplo:  
   
 ```  
 // Calling the method with the int parameter:  
@@ -91,18 +109,18 @@ SampleMethod(5);
 SampleMethod((byte)5);  
 ```  
   
- Para obtener más información sobre expresiones aritméticas con tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).  
+ Para obtener información sobre expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).  
   
- Para obtener más información sobre reglas de conversión numéricas implícitas, vea [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Para más información sobre las reglas de conversión numéricas implícitas, vea la [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Byte>   
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   

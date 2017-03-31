@@ -1,75 +1,91 @@
 ---
-title: "C&#243;mo: Copiar un directorio en otro directorio en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "directorios [Visual Basic], copiar"
-  - "carpetas [Visual Basic], copiar"
-  - "E/S [Visual Basic], copiar directorios"
-  - "E/S [Visual Basic], copiar carpetas"
+title: "Cómo: Copiar un directorio en otro directorio en Visual Basic | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- I/O [Visual Basic], copying directories
+- I/O [Visual Basic], copying folders
+- folders [Visual Basic], copying
+- directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# C&#243;mo: Copiar un directorio en otro directorio en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0b2d59f347df075e3f8c4f952b62e8ad7fa1643f
+ms.lasthandoff: 03/13/2017
 
-Utilice el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> para copiar un directorio en otro directorio.  Este método copia el contenido del directorio así como el propio directorio.  Si el directorio de destino no existe, se creará.  Si existe un directorio con el mismo nombre en la ubicación de destino y `overwrite` está establecido en `False`, se combinará el contenido de los dos directorios.  Puede especificar un nuevo nombre para el directorio durante la operación.  
+---
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Cómo: Copiar un directorio en otro directorio en Visual Basic
+Use el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> para copiar un directorio en otro. Este método copia el contenido del directorio además del propio directorio. Si el directorio de destino no existe, se creará. Si existe un directorio con el mismo nombre en la ubicación de destino y `overwrite` se establece en `False`, se combinará el contenido de los dos directorios. Puede especificar un nuevo nombre para el directorio durante la operación.  
   
- Cuando se copian archivos dentro de un directorio, se pueden producir excepciones producidas por un archivo concreto, como que un archivo existe durante una combinación mientras `overwrite` está establecido en `False`.  Cuando se producen dichas excepciones, se consolidan en una excepción única, cuya propiedad `Data` contiene entradas en las que la ruta de acceso del archivo o del directorio es la clave y el mensaje de excepción concreto está contenido en el valor correspondiente.  
+ Al copiar archivos en un directorio, pueden iniciarse excepciones producidas por un archivo concreto, como un archivo existente durante una combinación mientras `overwrite` está establecido en `False`. Cuando estas excepciones se inician, se consolidan en una sola excepción, cuya propiedad `Data` contiene entradas en las que la ruta de acceso del archivo o directorio es la clave y el mensaje de excepción concreto está contenido en el valor correspondiente.  
   
-### Para copiar un directorio en otro directorio  
+### <a name="to-copy-a-directory-to-another-directory"></a>Para copiar un directorio en otro  
   
--   Utilice el método `CopyDirectory`, especificando los nombres de directorio de origen y de destino.  En el siguiente ejemplo se copia el directorio denominado `TestDirectory1` en `TestDirectory2`, sobrescribiendo los archivos existentes.  
+-   Use el método `CopyDirectory` y especifique los nombres de los directorios de origen y destino. En el ejemplo siguiente se copia el directorio denominado `TestDirectory1` en `TestDirectory2`, lo que sobrescribe los archivos existentes.  
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     Este ejemplo de código también está disponible como fragmento de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Sistema de archivos \- Procesando unidades, carpetas y archivos**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
+     Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Programación eficaz  
+## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nuevo nombre especificado para el directorio contiene un signo de dos puntos \(:\) o una barra diagonal \(\\ o \/\) \(<xref:System.ArgumentException>\).  
+-   El nuevo nombre especificado para el directorio contiene un signo de dos puntos (:) o una barra diagonal (\ o /) (<xref:System.ArgumentException>).  
   
--   La ruta de acceso no es válida por una de las razones siguientes: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo \(empieza por \\\\.  \\\) \(<xref:System.ArgumentException>\).  
+-   La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  
   
--   La ruta de acceso no es válida porque es `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` es `Nothing` o una cadena vacía \(<xref:System.ArgumentNullException>\).  
+-   `destinationDirectoryName` es `Nothing` o una cadena vacía (<xref:System.ArgumentNullException>).  
   
--   El directorio de origen no existe \(<xref:System.IO.DirectoryNotFoundException>\).  
+-   El directorio de origen no existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   El directorio de origen es un directorio raíz \(<xref:System.IO.IOException>\).  
+-   El directorio de origen es un directorio raíz (<xref:System.IO.IOException>).  
   
--   La ruta de acceso combinada apunta a un archivo existente \(<xref:System.IO.IOException>\).  
+-   La ruta de acceso combinada apunta a un archivo existente (<xref:System.IO.IOException>).  
   
--   La ruta de acceso de origen y la ruta de acceso de destino son iguales \(<xref:System.IO.IOException>\).  
+-   Las rutas de acceso de origen y destino son iguales (<xref:System.IO.IOException>).  
   
--   `ShowUI` está establecido en `UIOption.AllDialogs` y el usuario cancela la operación o no se puede copiar uno o más archivos del directorio \(<xref:System.OperationCanceledException>\).  
+-   `ShowUI` se establece en `UIOption.AllDialogs` y el usuario cancela la operación o uno o más archivos del directorio no pueden copiarse (<xref:System.OperationCanceledException>).  
   
--   La operación es cíclica \(<xref:System.InvalidOperationException>\).  
+-   La operación es cíclica (<xref:System.InvalidOperationException>).  
   
--   La ruta de acceso contiene un signo de dos puntos \(:\) \(<xref:System.NotSupportedException>\).  
+-   La ruta de acceso contiene un signo de dos puntos (:) (<xref:System.NotSupportedException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema \(<xref:System.IO.PathTooLongException>\).  
+-   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
--   Un nombre de archivo o de carpeta en la ruta de acceso contiene dos puntos \(:\) o está en un formato no válido \(<xref:System.NotSupportedException>\).  
+-   Un nombre de archivo o de carpeta de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
--   El usuario no tiene los permisos necesarios para ver la ruta de acceso \(<xref:System.Security.SecurityException>\).  
+-   El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
   
--   Existe un archivo de destino pero no se puede obtener acceso a él \(<xref:System.UnauthorizedAccessException>\).  
+-   Existe un archivo de destino al que no se puede acceder (<xref:System.UnauthorizedAccessException>).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   
- [Cómo: Buscar subdirectorios con un modelo concreto](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
- [Cómo: Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+ [How to: Find Subdirectories with a Specific Pattern](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  (Cómo: Buscar subdirectorios con un modelo concreto en Visual Basic)  
+ [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

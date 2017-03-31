@@ -1,34 +1,58 @@
 ---
-title: "nameof (Refernecia de C# y Visual Basic) | Microsoft Docs"
-ms.date: "2017-03-03"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
+title: nameof (Referencia de C# y Visual Basic) | Microsoft Docs
+ms.date: 2017-03-03
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- nameof_CSharpKeyword
+- nameof
+dev_langs:
+- CSharp
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
 caps.latest.revision: 3
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ce73de9177d6138b9acb00f3c7d3ace8e7a064f2
+ms.lasthandoff: 03/13/2017
+
 ---
-# nameof (Refernecia de C# y Visual Basic)
-Se utiliza para obtener el nombre de cadena \(incompleto\) simple de una variable, tipo o miembro.  Al informar de errores en el código, enlazar vínculos de controlador de vistas de modelo \(MVC\), desencadenar eventos de propiedad cambiada, etc., a menudo le interesa capturar el nombre de cadena de un método.  Usar `nameof` ayuda a lograr que su código siga siendo válido al cambiar el nombre de definiciones.  Antes tenía que usar literales de cadena para hacer referencia a definiciones, lo que resulta precario al cambiar el nombre de elementos de código, ya que las herramientas no saben comprobar estos literales de cadena.  
+# <a name="nameof-c-and-visual-basic-reference"></a>nameof (Refernecia de C# y Visual Basic)
+
+Se utiliza para obtener el nombre de cadena (incompleto) simple de una variable, tipo o miembro.  
+
+Al informar de errores en el código, enlazar vínculos de controlador de vistas de modelo (MVC), desencadenar eventos de propiedad cambiada, etc., a menudo le interesa capturar el nombre de cadena de un método.  Usar `nameof` ayuda a lograr que su código siga siendo válido al cambiar el nombre de definiciones.  Antes había que usar literales de cadena para hacer referencia a definiciones, lo que resulta precario al cambiar el nombre de elementos de código, ya que las herramientas no saben comprobar estos literales de cadena.  
   
  Una expresión `nameof` tiene este formato:  
   
-```c#  
+```csharp  
 if (x == null) throw new ArgumentNullException(nameof(x));  
 WriteLine(nameof(person.Address.ZipCode)); // prints "ZipCode”  
   
 ```  
   
-## Casos de uso clave  
+## <a name="key-use-cases"></a>Casos de uso clave  
  Estos ejemplos muestran los casos de uso clave para `nameof`.  
   
  Validar parámetros:  
- ```c#  
+ ```csharp  
 void f(string s) {  
     if (s == null) throw new ArgumentNullException(nameof(s));  
 }  
@@ -45,7 +69,7 @@ void f(string s) {
 ```  
   
  INotifyPropertyChanged:  
- ```c#  
+ ```csharp  
 int p {  
     get { return this.p; }  
     set { this.p = value; PropertyChanged(this, new PropertyChangedEventArgs(nameof(this.p)); } // nameof(p) works too  
@@ -54,13 +78,13 @@ int p {
 ```  
   
  Propiedad de dependencia de XAML:  
- ```c#  
+ ```csharp  
 public static DependencyProperty AgeProperty = DependencyProperty.Register(nameof(Age), typeof(int), typeof(C));  
   
 ```  
   
  Registro:  
- ```c#  
+ ```csharp  
 void f(int i) {  
     Log(nameof(f), "method entry");  
 }  
@@ -68,17 +92,17 @@ void f(int i) {
 ```  
   
  Atributos:  
- ```c#  
+ ```csharp  
 [DebuggerDisplay("={" + nameof(GetString) + "()}")]  
 class C {  
     string GetString() { }  
 }  
 ```  
   
-## Ejemplos  
- Algunos ejemplos de C\#:  
+## <a name="examples"></a>Ejemplos  
+ Algunos ejemplos de C#:  
   
-```c#  
+```csharp  
 using Stuff = Some.Cool.Functionality  
 class C {  
     static int Method1 (string x, int y) {}  
@@ -118,10 +142,10 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
   
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El argumento `nameof` debe ser un nombre sencillo, nombre completo, acceso a miembros, acceso base a un miembro especificado o este acceso a un miembro especificado.  La expresión de argumento identifica una definición de código, pero nunca se evalúa.  
   
- Dado que el argumento debe ser sintácticamente una expresión, hay muchas cosas no permitidas que no sería útil mostrar.  Sí vale la pena mencionar los siguientes elementos que producen errores: tipos predefinidos \(por ejemplo, `int` o `void`\), tipos que aceptan valores null \(`Point?`\), tipos de matriz \(`Customer[,]`\), tipos de puntero \(`Buffer*`\), alias completo \(`A::B`\), tipos genéricos sin enlazar \(`Dictionary<,>`\), símbolos de preprocesamiento \(`DEBUG`\) y etiquetas \(`loop:`\).  
+ Dado que el argumento debe ser sintácticamente una expresión, hay muchas cosas no permitidas que no sería útil mostrar.  Sí vale la pena mencionar los siguientes elementos que producen errores: tipos predefinidos (por ejemplo, `int` o `void`), tipos que aceptan valores null (`Point?`), tipos de matriz (`Customer[,]`), tipos de puntero (`Buffer*`), alias completo (`A::B`), tipos genéricos sin enlazar (`Dictionary<,>`), símbolos de preprocesamiento (`DEBUG`) y etiquetas (`loop:`).  
   
  Si necesita obtener el nombre completo, puede utilizar la expresión `typeof` junto con `nameof`.  
   
@@ -131,14 +155,14 @@ NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of ins
   
  No hay ninguna manera de obtener información de firma, como "`Method1 (str, str)`".  Una manera de hacerlo es usar una expresión, `Expression e = () => A.B.Method1("s1", "s2")`, y extraer el MemberInfo del árbol de expresión resultante.  
   
-## Especificaciones del lenguaje  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="language-specifications"></a>Especificaciones del lenguaje  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
- Para obtener más información, vea la [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md).  
+ Para obtener más información, vea [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md).  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)   
  [Guía de programación en Visual Basic](../../../visual-basic/programming-guide/index.md)

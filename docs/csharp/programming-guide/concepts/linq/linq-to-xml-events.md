@@ -1,0 +1,117 @@
+---
+title: Eventos de LINQ to XML (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f19439004a9551f5e13588201ca3aaf201620681
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="linq-to-xml-events-c"></a>Eventos de LINQ to XML (C#)
+Los eventos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] permiten recibir notificaciones cuando se modifica un árbol XML.  
+  
+ Puede agregar eventos a una instancia de cualquier <xref:System.Xml.Linq.XObject>. El controlador de eventos recibirá eventos relacionados con las modificaciones realizadas en ese elemento <xref:System.Xml.Linq.XObject> y en cualquiera de sus descendientes. Por ejemplo, puede agregar un controlador de evento a la raíz del árbol y controlar todas las modificaciones que se realicen al árbol desde ese controlador de eventos.  
+  
+ Para obtener ejemplos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], consulte <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.  
+  
+## <a name="types-and-events"></a>Tipos y eventos  
+ Puede utilizar los siguientes tipos a la hora de trabajar con eventos:  
+  
+|Tipo|Descripción|  
+|----------|-----------------|  
+|<xref:System.Xml.Linq.XObjectChange>|Especifica el tipo de un evento que se genera para un <xref:System.Xml.Linq.XObject>.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Proporciona datos para los eventos <xref:System.Xml.Linq.XObject.Changing> y <xref:System.Xml.Linq.XObject.Changed>.|  
+  
+ Los siguientes eventos se generan cuando se modifica un árbol XML:  
+  
+|Evento|Descripción|  
+|-----------|-----------------|  
+|<xref:System.Xml.Linq.XObject.Changing>|Se produce justo antes de que este <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes se vayan a cambiar.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Se produce cuando se ha cambiado <xref:System.Xml.Linq.XObject> o cualquiera de sus descendientes.|  
+  
+## <a name="example"></a>Ejemplo  
+  
+### <a name="description"></a>Descripción  
+ Los eventos resultan útiles cuando desea mantener cierta información de agregado en un árbol XML. Por ejemplo, quizá desee mantener el total de una factura que es la suma de los conceptos de la factura. Este ejemplo utiliza eventos para mantener el total de todos los elementos secundarios que se encuentran bajo el elemento complejo `Items`.  
+  
+### <a name="code"></a>Código  
+  
+```csharp  
+XElement root = new XElement("Root",  
+    new XElement("Total", "0"),  
+    new XElement("Items")  
+);  
+XElement total = root.Element("Total");  
+XElement items = root.Element("Items");  
+items.Changed += (object sender, XObjectChangeEventArgs cea) =>  
+{  
+    switch (cea.ObjectChange)  
+    {  
+        case XObjectChange.Add:  
+            if (sender is XElement)  
+                total.Value = ((int)total + (int)(XElement)sender).ToString();  
+            if (sender is XText)  
+                total.Value = ((int)total + (int)((XText)sender).Parent).ToString();  
+            break;  
+        case XObjectChange.Remove:  
+            if (sender is XElement)  
+                total.Value = ((int)total - (int)(XElement)sender).ToString();  
+            if (sender is XText)  
+                total.Value = ((int)total - Int32.Parse(((XText)sender).Value)).ToString();  
+            break;  
+    }  
+    Console.WriteLine("Changed {0} {1}",  
+      sender.GetType().ToString(), cea.ObjectChange.ToString());  
+};  
+items.SetElementValue("Item1", 25);  
+items.SetElementValue("Item2", 50);  
+items.SetElementValue("Item2", 75);  
+items.SetElementValue("Item3", 133);  
+items.SetElementValue("Item1", null);  
+items.SetElementValue("Item4", 100);  
+Console.WriteLine("Total:{0}", (int)total);  
+Console.WriteLine(root);  
+```  
+  
+### <a name="comments"></a>Comentarios  
+ Este código genera el siguiente resultado:  
+  
+```  
+Changed System.Xml.Linq.XElement Add  
+Changed System.Xml.Linq.XElement Add  
+Changed System.Xml.Linq.XText Remove  
+Changed System.Xml.Linq.XText Add  
+Changed System.Xml.Linq.XElement Add  
+Changed System.Xml.Linq.XElement Remove  
+Changed System.Xml.Linq.XElement Add  
+Total:308  
+<Root>  
+  <Total>308</Total>  
+  <Items>  
+    <Item2>75</Item2>  
+    <Item3>133</Item3>  
+    <Item4>100</Item4>  
+  </Items>  
+</Root>  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

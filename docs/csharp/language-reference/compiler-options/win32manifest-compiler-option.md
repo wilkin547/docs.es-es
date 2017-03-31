@@ -1,60 +1,78 @@
 ---
-title: "/win32manifest (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/win32manifest"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/win32manifest compiler option [C#]"
-  - "win32manifest compiler option [C#]"
-  - "-win32manifest compiler option [C#]"
+title: /win32manifest (Opciones del compilador de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /win32manifest
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /win32manifest compiler option [C#]
+- win32manifest compiler option [C#]
+- -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b9a5c7c994644d512d4049dbc5aab3fbea70d6ae
+ms.lasthandoff: 03/13/2017
+
 ---
-# /win32manifest (C# Compiler Options)
-Utilice la opción **\/win32manifest** para especificar que un archivo de manifiesto de la aplicación Win32 definido por el usuario se incruste en el archivo portable ejecutable \(PE\) de un proyecto.  
+# <a name="win32manifest-c-compiler-options"></a>/win32manifest (Opciones del compilador de C#)
+Use la opción **/win32manifest** para identificar un archivo de manifiesto de aplicación Win32 definido por el usuario que se va a incrustar en un archivo portable ejecutable (PE) del proyecto.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /win32manifest: filename  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `filename`  
- El nombre y la ubicación del archivo de manifiesto personalizado.  
+ Nombre y ubicación del archivo de manifiesto personalizado.  
   
-## Comentarios  
- De forma predeterminada, el compilador de [!INCLUDE[csharp_current_short](../../../csharp/language-reference/compiler-options/includes/csharp-current-short-md.md)] incrusta un manifiesto de aplicación que especifica un nivel de ejecución solicitado de "asInvoker". Alice crea el manifiesto en la misma carpeta en la que se compila la aplicación ejecutable, normalmente la carpeta de bin\\Debug o de bin\\Release cuando se usa Visual Studio.  Si desea proporcionar un manifiesto personalizado, por ejemplo para especificar una ejecución solicitada level de “highestAvailable” o “requireAdministrator”, utilice esta opción para especificar el nombre del archivo.  
-  
-> [!NOTE]
->  Esta opción y la opción [\/win32res \(Import a Win32 Resource File\)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) son mutuamente excluyentes.  Si intenta utilizar ambas opciones en la misma línea de comandos obtendrá un error de compilación.  
-  
- Una aplicación sin un manifiesto de aplicación que especifique un nivel de ejecución solicitado se someterá a la virtualización de archivos y del Registro bajo la característica Control de cuentas de usuario de Windows Vista.  Para obtener más información sobre la virtualización, vea [El caso de desarrollador de Windows Vista: Requisitos de desarrollo de aplicaciones de Windows Vista para el Control de cuentas de usuario \(UAC\)](http://go.microsoft.com/fwlink/?LinkId=95452).  
-  
- Su aplicación se someterá a la virtualización si se cumple cualquiera de estas condiciones:  
-  
--   Utilice la opción **\/nowin32manifest** y no proporcione ningún manifiesto en un paso de compilación posterior o como parte de un archivo de recursos Windows \(.res\) utilizando la opción **\/win32res**.  
-  
--   Proporcione un manifiesto personalizado que no especifique ningún nivel de ejecución solicitado.  
-  
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)] crea un archivo .manifest predeterminado y lo almacena en los directorios de depuración y lanzamiento junto con el archivo ejecutable.  Para agregar un manifiesto personalizado, cree uno en cualquier editor de texto y agregue el archivo al proyecto a continuación.  Como alternativa, puede hacer clic con el botón secundario en el icono **Proyecto** del **Explorador de soluciones**, hacer clic en **Agregar nuevo elemento** y, a continuación, en **Archivo de manifiesto de aplicación**.  Después de haber agregado el archivo de manifiesto nuevo o existente, éste aparecerá en la lista desplegable **Manifiesto**.  Para obtener más información, vea [Página de aplicación, Diseñador de proyectos \(C\#\)](/visual-studio/ide/reference/application-page-project-designer-csharp).  
-  
- Puede proporcionar el manifiesto de aplicación como paso personalizado posterior a la compilación o como parte de un archivo de recursos Win32 mediante la opción [\/nowin32manifest \(No Win32 Manifest\)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md).  Utilice esa misma opción si desea que la aplicación se someta a la virtualización de archivos o del Registro en Windows Vista.  De esta forma se evitará que el compilador cree e incruste un manifiesto predeterminado en el archivo portable ejecutable \(PE\).  
-  
-## Ejemplo  
- En el ejemplo siguiente se muestra el manifiesto predeterminado que el compilador de Visual C\# inserta en un archivo PE.  
+## <a name="remarks"></a>Comentarios  
+ De forma predeterminada, el compilador [!INCLUDE[csharp_current_short](../../../csharp/language-reference/compiler-options/includes/csharp_current_short_md.md)] incrusta un manifiesto de aplicación que especifica un nivel de ejecución solicitado de "asInvoker". Crea el manifiesto en la misma carpeta en la que se ha compilado el archivo ejecutable, normalmente la carpeta bin\Debug o bin\Release cuando se usa Visual Studio. Si quiere proporcionar un manifiesto personalizado, por ejemplo para especificar un nivel de ejecución solicitado de "highestAvailable" o "requireAdministrator", use esta opción para especificar el nombre del archivo.  
   
 > [!NOTE]
->  El compilador inserta un nombre de aplicación estándar "MyApplication.app" en el archivo xml.  Ésta es una solución alternativa para habilitar las aplicaciones con el fin de que se ejecuten en Windows Server 2003 Service Pack 3.  
+>  Esta opción y [/win32res (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) son mutuamente excluyentes. Si intenta usar ambas en la misma línea de comandos, obtendrá un error de compilación.  
+  
+ Una aplicación sin manifiesto de aplicación que especifique un nivel de ejecución solicitado estará sujeta a virtualización de archivos y Registro conforme a la característica Control de cuentas de usuario de Windows Vista. Para más información sobre la virtualización, vea [The Windows Vista Developer Story: Windows Vista Application Development Requirements for User Account Control (UAC) (Historia para desarrolladores de Windows Vista: Requisitos de desarrollo para el control de cuentas de usuario en Windows Vista)](http://go.microsoft.com/fwlink/?LinkId=95452).  
+  
+ La aplicación estará sujeta a virtualización si se cumple cualquiera de estas condiciones:  
+  
+-   Se usa la opción **/nowin32manifest** y no se proporciona ningún manifiesto en un paso de compilación posterior o como parte de un archivo de recursos de Windows (.res) mediante la opción **/win32res**.  
+  
+-   Se proporciona un manifiesto personalizado que no especifica un nivel de ejecución solicitado.  
+  
+ [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] crea un archivo de manifiesto predeterminado y lo almacena en los directorios de depuración y lanzamiento junto con el archivo ejecutable. Puede agregar un manifiesto personalizado si crea uno en cualquier editor de texto y luego lo agrega al proyecto. También puede hacer clic con el botón derecho en el icono **Proyecto** del **Explorador de soluciones**, hacer clic en **Agregar nuevo elemento** y luego en **Archivo de manifiesto de aplicación**. Después de haber agregado el archivo de manifiesto nuevo o existente, aparecerá en la lista desplegable **Manifiesto**. Para más información, vea [Página de aplicación, Diseñador de proyectos (C#)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-csharp).  
+  
+ Puede proporcionar el manifiesto de aplicación como un paso personalizado posterior a la compilación o como parte de un archivo de recursos Win32 mediante la opción [/nowin32manifest (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md). Use esa misma opción si quiere que la aplicación esté sujeta a virtualización de archivos y Registro en Windows Vista. Esto evitará que el compilador cree e incruste un manifiesto predeterminado en el archivo portable ejecutable (PE).  
+  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra el manifiesto predeterminado que el compilador de Visual C# inserta en un archivo PE.  
+  
+> [!NOTE]
+>  El compilador inserta un nombre de aplicación estándar "MyApplication.app" en el archivo xml. Se trata de una solución alternativa para permitir que las aplicaciones se ejecuten en Windows Server 2003 Service Pack 3.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -70,7 +88,7 @@ Utilice la opción **\/win32manifest** para especificar que un archivo de manifi
 </assembly>  
 ```  
   
-## Vea también  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [\/nowin32manifest \(No Win32 Manifest\)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/es-es/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vea también  
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [/nowin32manifest (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)   
+ [NO ESTÁ EN LA COMPILACIÓN Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

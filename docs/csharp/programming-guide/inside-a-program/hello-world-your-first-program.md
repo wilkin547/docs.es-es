@@ -1,68 +1,86 @@
 ---
-title: "Hello World, su primer programa (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "cs.program"
-  - "vs.csharp.startpage.firstapplication"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "ejemplos [C#], Hola a todos"
-  - "ejemplo de Hola a todos [C#]"
+title: "Hello World, su primer programa (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: get-started-article
+f1_keywords:
+- cs.program
+- vs.csharp.startpage.firstapplication
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- examples [C#], Hello World
+- Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 caps.latest.revision: 39
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 39
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7ca42afd69e814ce448bfea97c2dbf480830a74a
+ms.lasthandoff: 03/13/2017
+
 ---
-# Hello World, su primer programa (Gu&#237;a de programaci&#243;n de C#)
-El siguiente procedimiento crea una versión de C\# del tradicional "Hello World\!".  El programa muestra la cadena `Hello World!`  
+# <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World, su primer programa (Guía de programación de C#)
+En el siguiente procedimiento se crea una versión de C# del programa tradicional "Hello World!" . El programa muestra la cadena `Hello World!`.  
   
- Para obtener más ejemplos de conceptos de introducción, vea [Introducción a Visual C\# y Visual Basic](/visual-studio/ide/getting-started-with-visual-csharp-and-visual-basic).  
+ Para obtener más ejemplos de los conceptos preliminares, vea [Introducción a Visual C# y Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
- [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### Para crear y ejecutar una aplicación de consola  
+### <a name="to-create-and-run-a-console-application"></a>Para crear y ejecutar una aplicación de consola  
   
 1.  Inicie Visual Studio.  
   
 2.  En la barra de menús, elija **Archivo**, **Nuevo**, **Proyecto**.  
   
-     Aparece el cuadro de diálogo **Nuevo proyecto**.  
+     Aparece el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  Expanda **Instalado**, **Plantillas**, **Visual C\#** y, a continuación, elija **Aplicación de consola**.  
+3.  Expanda **Instalado**, **Plantillas**, **Visual C#** y, luego, elija **Aplicación de consola**.  
   
-4.  En el cuadro **Nombre**, especifique un nombre para el proyecto y, a continuación, elija el botón **Aceptar**.  
+4.  En el cuadro **Nombre**, escriba un nombre para el proyecto y, después, elija el botón **Aceptar**.  
   
-     El nuevo proyecto aparecerá en el **Explorador de soluciones**.  
+     El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
-5.  Si Program.cs no está abierto en **Editor de código**, abra el menú contextual de **Program.cs** en **Explorador de soluciones** y, a continuación, elija **Ver código**.  
+5.  Si Program.cs no está abierto en el **Editor de código**, abra el menú contextual de **Program.cs** en el **Explorador de soluciones** y elija **Ver código**.  
   
-6.  Reemplace el contenido de Program.cs con el código siguiente.  
+6.  Reemplace el contenido de Program.cs por el código siguiente.  
   
      [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
-7.  Elija la tecla F5 para ejecutar el proyecto.  Aparecerá una ventana del símbolo del sistema con la línea `Hello World!`  
+7.  Pulse la tecla F5 para ejecutar el proyecto. Aparecerá una ventana del símbolo del sistema que contiene la línea `Hello World!`.  
   
- A continuación, se examinan las partes importantes de este programa.  
+ Después se examinan las partes importantes de este programa.  
   
-## Comentarios  
- La primera línea contiene un comentario.  Los caracteres `//` convierten el resto de la línea en un comentario.  
+## <a name="comments"></a>Comentarios  
+ La primera línea contiene un comentario. Los caracteres `//` convierten el resto de la línea en un comentario.  
   
  [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
- Un bloque de texto también se puede convertir en comentario si se incluye entre los caracteres `/*` y `*/`.  El ejemplo siguiente muestra esta opción.  
+ También puede convertir un bloque de texto en un comentario escribiéndolo entre los caracteres `/*` y `*/`. Esta implementación se muestra en el ejemplo siguiente.  
   
  [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
-## Método principal  
- Una aplicación de consola en C\# debe contener un método `Main`, en el cual se inicia y se termina el control.  Este método es donde se crean objetos y se ejecutan otros métodos.  
+## <a name="main-method"></a>Método main  
+ Una aplicación de la consola de C# debe contener un método `Main`, en el que se inicia y finaliza un control. El método `Main` es donde se crean los objetos y se ejecutan otros métodos.  
   
- El método `Main` es un método [static](../../../csharp/language-reference/keywords/static.md) que reside dentro de una clase o un struct.  En el ejemplo anterior de "Hello World\!", reside en una clase denominada `Hello`.  Puede declarar el método `Main` de una de las maneras siguientes:  
+ El método `Main` es un método [estático](../../../csharp/language-reference/keywords/static.md) que reside dentro de una clase o de un struct. En el ejemplo anterior de "Hello World!", reside en una clase denominada `Hello`. Puede declarar el método `Main` de una de las siguientes maneras:  
   
 -   Puede devolver `void`.  
   
@@ -72,7 +90,7 @@ El siguiente procedimiento crea una versión de C\# del tradicional "Hello World
   
      [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
--   Puede utilizar argumentos con cualquiera de los tipos devueltos.  
+-   Puede tomar argumentos con cualquiera de los tipos de valor devueltos.  
   
      [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
@@ -80,64 +98,64 @@ El siguiente procedimiento crea una versión de C\# del tradicional "Hello World
   
      [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
- El parámetro del método `Main`, `args`, es una matriz de tipo `string` que contiene los argumentos de la línea de comandos utilizados para llamar al programa.  A diferencia de C\+\+, la matriz no incluye el nombre del archivo ejecutable \(exe\).  
+ El parámetro del método `Main`, `args`, es una matriz `string` que contiene los argumentos de la línea de comandos usados para invocar el programa. A diferencia de C++, la matriz no incluye el nombre del archivo ejecutable (.exe).  
   
- Para obtener más información sobre cómo utilizar argumentos de la línea de comandos, vea los ejemplos de [Main\(\) y argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md) y [Cómo: Crear y utilizar ensamblados mediante la línea de comandos](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md).  
+ Para obtener más información sobre cómo usar los argumentos de la línea de comandos, vea los ejemplos de [Main() y argumentos de línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md) y [Cómo: Crear y utilizar ensamblados desde la línea de comandos](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
- La llamada a <xref:System.Console.ReadKey%2A> al final del método `Main` impide que la ventana de la consola se cierre antes de que pueda leer el resultado al ejecutar el programa en modo de depuración presionando F5.  
+ La llamada a <xref:System.Console.ReadKey%2A> al final del método `Main` evita que se cierre la ventana de la consola antes de que pueda leer la salida al ejecutar el programa en modo de depuración (presionando F5).  
   
-## Entrada y salida  
- Los programas de C\# utilizan normalmente los servicios de entrada y salida que ofrece la biblioteca en tiempo de ejecución de .NET Framework.  La instrucción `System.Console.WriteLine("Hello World!");` utiliza el método <xref:System.Console.WriteLine%2A>.  Es uno de los métodos de salida de la clase <xref:System.Console> en la biblioteca en tiempo de ejecución.  Muestra el parámetro cadena en el flujo de salida estándar seguido por una nueva línea.  Otros métodos de <xref:System.Console> se utilizan para otras operaciones de entrada y salida.  Si incluye la directiva `using System;` al principio del programa, puede utilizar directamente las clases y métodos de <xref:System> sin escribir el nombre completo.  Por ejemplo, puede llamar a `Console.WriteLine` en lugar de llamar a `System.Console.WriteLine`:  
+## <a name="input-and-output"></a>Entrada y salida  
+ Los programas de C# suelen usar los servicios de entrada y salida proporcionados por la biblioteca en tiempo de ejecución de .NET Framework. La instrucción `System.Console.WriteLine("Hello World!");` usa el método <xref:System.Console.WriteLine%2A>. Este es uno de los métodos de salida de la clase <xref:System.Console> en la biblioteca de tiempo de ejecución. Muestra el parámetro de cadena en la secuencia de salida estándar, seguida de una nueva línea. Hay otros métodos <xref:System.Console> disponibles para las distintas operaciones de entrada y salida. Si incluye la directiva `using System;` al inicio del programa, puede usar directamente las clases y los métodos <xref:System> sin calificarlos totalmente. Por ejemplo, puede llamar a `Console.WriteLine` en vez de llamar a `System.Console.WriteLine`:  
   
  [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
  [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
- Para obtener más información sobre métodos de entrada y salida, vea <xref:System.IO>.  
+ Para obtener más información sobre los métodos de entrada y salida, vea <xref:System.IO>.  
   
-## Compilación y ejecución de línea de comandos  
- Puede compilar el programa "Hello World\!" usando la línea de comandos en lugar del entorno de desarrollo integrado \(IDE\) de Visual Studio.  
+## <a name="command-line-compilation-and-execution"></a>Compilación y ejecución en la línea de comandos  
+ Puede compilar el programa "Hello World!" con la línea de comandos en lugar del entorno de desarrollo integrado (IDE) de Visual Studio.  
   
-#### Para compilar y ejecutar desde un símbolo del sistema  
+#### <a name="to-compile-and-run-from-a-command-prompt"></a>Para compilar y ejecutar desde un símbolo del sistema  
   
-1.  Pegue el código del procedimiento anterior en cualquier editor de texto y, a continuación, guarde el archivo como archivo de texto.  Asigne al archivo el nombre `Hello.cs`.  Los archivos de código fuente de C\# utilizan la extensión `.cs`.  
+1.  Pegue el código del procedimiento anterior en cualquier editor de texto y guarde el archivo como un archivo de texto. Asigne al archivo el nombre `Hello.cs`. Los archivos de código fuente de C# usan la extensión `.cs`.  
   
-2.  Realice uno de los pasos siguientes para abrir una ventana de símbolo del sistema:  
+2.  Siga uno de los pasos siguientes para abrir una ventana del símbolo del sistema:  
   
-    -   En Windows 8, en la pantalla de **Iniciar**, busque `Símbolo del sistema para desarrolladores` y, a continuación, puntee o elija **Símbolo del sistema para desarrolladores de VS2012**.  
+    -   En Windows 8, en la pantalla **Inicio**, busque `Developer Command Prompt` y pulse o elija **Símbolo del sistema para desarrolladores de VS2012**.  
   
-         Una ventana de símbolo del sistema del desarrollador aparece.  
+         Aparecerá una ventana del símbolo del sistema para desarrolladores.  
   
-    -   En Windows 7, abra el menú de **Iniciar**, expanda la carpeta para la versión actual de Visual Studio, abra el menú contextual para **Visual Studio Tools**y, a continuación, elija **Símbolo del sistema para desarrolladores de VS2012**.  
+    -   En Windows 7, abra el menú **Inicio**, expanda la carpeta de la versión actual de Visual Studio, abra el menú contextual de **Visual Studio Tools** y elija **Símbolo del sistema para desarrolladores de VS2012**.  
   
-         Una ventana de símbolo del sistema del desarrollador aparece.  
+         Aparecerá una ventana del símbolo del sistema para desarrolladores.  
   
-    -   Habilite compilaciones de línea de comandos desde una ventana Símbolo del sistema estándar.  
+    -   Habilite las compilaciones de la línea de comandos desde una ventana estándar del símbolo del sistema.  
   
-         Vea [How to: Set Environment Variables for the Visual Studio Command Line](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         Vea [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
-3.  En la ventana del símbolo del sistema, navegue hasta la carpeta que contiene su archivo `Hello.cs`.  
+3.  En la ventana del símbolo del sistema, vaya a la carpeta que contiene el archivo `Hello.cs`.  
   
 4.  Escriba el comando siguiente para compilar `Hello.cs`.  
   
      `csc Hello.cs`  
   
-     Si el programa no tiene ningún error de compilación, se crea un archivo ejecutable denominado `Hello.exe`.  
+     Si el programa no tiene ningún error de compilación, se creará un archivo ejecutable denominado `Hello.exe`.  
   
-5.  En la ventana de símbolo del sistema, especifique el siguiente comando para ejecutar el programa:  
+5.  En la ventana del símbolo del sistema, escriba el siguiente comando para ejecutar el programa:  
   
      `Hello`  
   
- Para obtener más información sobre el compilador de C\# y sus opciones, vea [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md).  
+ Para obtener más información sobre el compilador de C# y sus opciones, vea [C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) (Opciones del compilador de C#).  
   
-## Capítulo destacado del libro  
- [Escribir un programa de C\#](http://go.microsoft.com/fwlink/?LinkId=221227) en [Iniciar Visual C\# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
+## <a name="featured-book-chapter"></a>Capítulo destacado del libro  
+ [Writing a C# Program](http://go.microsoft.com/fwlink/?LinkId=221227) in [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) (Escribir un programa de C# en Beginning Visual C# 2010)  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Dentro de un programa de C\#](../../../csharp/programming-guide/inside-a-program/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Dentro de un programa de C#](../../../csharp/programming-guide/inside-a-program/index.md)   
  [Cadenas](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover\>C\# Sample Applications](http://msdn.microsoft.com/es-es/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Main\(\) y argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/main-and-command-line-arguments.md)   
- [Introducción a Visual C\# y Visual Basic](/visual-studio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [\<paveover>C# Sample Applications](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  (<paveover> Aplicaciones de ejemplo de C#)  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Main() y argumentos de línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [Introducción a Visual C# y Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
