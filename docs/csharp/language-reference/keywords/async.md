@@ -61,7 +61,7 @@ string contents = await contentsTask;
  La palabra clave `async` es contextual en el sentido de que es una palabra clave cuando modifica un método, una expresión lambda o un método anónimo. En todos los demás contextos, se interpreta como identificador.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra la estructura y el flujo de control entre un controlador de eventos asincrónicos, `StartButton_Click`, y un método asincrónico, `ExampleMethodAsync`. El resultado del método asincrónico es la longitud de un sitio web descargado. El código es adecuado para una aplicación Windows Presentation Foundation (WPF) o de la Tienda Windows creada en [!INCLUDE[vs_dev12](../../../csharp/getting-started/includes/vs_dev12_md.md)]; vea los comentarios del código para configurar la aplicación.  
+ En el ejemplo siguiente se muestra la estructura y el flujo de control entre un controlador de eventos asincrónicos, `StartButton_Click`, y un método asincrónico, `ExampleMethodAsync`. El resultado del método asincrónico es la longitud de un sitio web descargado. El código es adecuado para una aplicación Windows Presentation Foundation (WPF) o de la Tienda Windows creada en Visual Studio; vea los comentarios del código para configurar la aplicación.  
   
 ```csharp  
 // You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
