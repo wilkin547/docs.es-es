@@ -39,8 +39,7 @@ ms.lasthandoff: 03/13/2017
 `#region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de [esquematización](https://docs.microsoft.com/visualstudio/ide/outlining) del editor de código de Visual Studio. En archivos de código más largos, es conveniente poder contraer u ocultar una o varias regiones para poder centrarse en la parte del archivo en la que se está trabajando actualmente. En el ejemplo siguiente se muestra cómo definir una región:  
   
 ```  
-  
-      #region MyClass definition  
+#region MyClass definition  
 public class MyClass   
 {  
     static void Main()   
@@ -59,3 +58,4 @@ public class MyClass
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
