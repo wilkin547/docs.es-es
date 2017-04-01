@@ -36,14 +36,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5fbd7c5e08d862f079e0596cbe394afd0538bccc
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 61f23020b8a5dd0136d54e0a2ceb925bebca88cc
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 ## <a name="types-variables-and-values"></a>Tipos, variables y valores  
- C# es un lenguaje fuertemente tipado. Todas las variables y constantes tienen un tipo, al igual que todas las expresiones que se evalúan como un valor. Cada una de las firmas de método especifica un tipo para cada parámetro de entrada y para el valor devuelto. La biblioteca de clases .NET Framework define un conjunto de tipos numéricos integrados, así como tipos más complejos que representan una amplia variedad de construcciones lógicas, como el sistema de archivos, conexiones de red, colecciones y matrices de objetos, y fechas. Los programas de C# típicos utilizan tipos de la biblioteca de clases, así como tipos definidos por el usuario que modelan los conceptos que son específicos de dominio del problema del programa.  
+ C# es un lenguaje fuertemente tipado. Todas las variables y constantes tienen un tipo, al igual que todas las expresiones que se evalúan como un valor. Cada una de las firmas de método especifica un tipo para cada parámetro de entrada y para el valor devuelto. La biblioteca de clases .NET Framework define un conjunto de tipos numéricos integrados, así como tipos más complejos que representan una amplia variedad de construcciones lógicas, como el sistema de archivos, conexiones de red, colecciones y matrices de objetos, y fechas. Los programas de C# típicos usan tipos de la biblioteca de clases, así como tipos definidos por el usuario que modelan los conceptos que son específicos del dominio del problema del programa.  
   
  Entre la información almacenada en un tipo se puede incluir lo siguiente:  
   
@@ -59,14 +59,14 @@ ms.lasthandoff: 03/13/2017
   
 -   Los tipos de operaciones permitidas.  
   
- El compilador utiliza información de tipo para garantizar que todas las operaciones que se realizan en el código cuentan *con seguridad de tipos*. Por ejemplo, si declara una variable de tipo [int](../../../csharp/language-reference/keywords/int.md), el compilador le permite utilizar la variable en operaciones de suma y resta. Si intenta realizar esas mismas operaciones en una variable de tipo [bool](../../../csharp/language-reference/keywords/bool.md), el compilador genera un error, como se muestra en el siguiente ejemplo:  
+ El compilador usa información de tipo para garantizar que todas las operaciones que se realizan en el código cuentan *con seguridad de tipos*. Por ejemplo, si declara una variable de tipo [int](../../../csharp/language-reference/keywords/int.md), el compilador le permite usar la variable en operaciones de suma y resta. Si intenta realizar esas mismas operaciones en una variable de tipo [bool](../../../csharp/language-reference/keywords/bool.md), el compilador genera un error, como se muestra en el siguiente ejemplo:  
   
  [!code-cs[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  Los desarrolladores de C y C++ deben tener en cuenta que, en C#, [bool](../../../csharp/language-reference/keywords/bool.md) no se puede convertir en [int](../../../csharp/language-reference/keywords/int.md).  
   
- El compilador incrusta la información de tipo en el archivo ejecutable como metadatos. Common Language Runtime (CLR) utiliza esos metadatos en tiempo de ejecución para garantizar aún más la seguridad de tipos cuando asigna y reclama memoria.  
+ El compilador inserta la información de tipo en el archivo ejecutable como metadatos. Common Language Runtime (CLR) utiliza esos metadatos en tiempo de ejecución para garantizar aún más la seguridad de tipos cuando asigna y reclama memoria.  
   
 ### <a name="specifying-types-in-variable-declarations"></a>Definición de tipos en declaraciones de variable  
  Cuando declare una variable o constante en un programa, debe especificar su tipo o utilizar la palabra clave [var](../../../csharp/language-reference/keywords/var.md) para que el compilador infiera el tipo. En el ejemplo siguiente se muestran algunas declaraciones de variable que utilizan tanto tipos numéricos integrados como tipos complejos definidos por el usuario:  
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
   
- Tras declarar una variable, no se puede volver a declarar con un nuevo tipo y no se le puede asignar un valor que no sea compatible con su tipo declarado. Por ejemplo, no puede declarar un valor [int](../../../csharp/language-reference/keywords/int.md) y, luego, asignarle un valor booleano de [true](../../../csharp/language-reference/keywords/true-literal.md). Sin embargo, los valores se pueden convertir en otros tipos, por ejemplo, cuando se asignan a variables nuevas o se pasan como argumentos de método. El compilador realiza automáticamente una *conversión de tipo* que no da lugar a una pérdida de datos. Una conversión que pueda dar lugar a la pérdida de datos requiere un valor *cast* en el código fuente.  
+ Tras declarar una variable, no se puede volver a declarar con un nuevo tipo y no se le puede asignar un valor que no sea compatible con su tipo declarado. Por ejemplo, no puede declarar un valor [int](../../../csharp/language-reference/keywords/int.md) y, luego, asignarle un valor booleano de [true](../../../csharp/language-reference/keywords/true-literal.md). En cambio, los valores se pueden convertir en otros tipos, por ejemplo, cuando se asignan a variables nuevas o se pasan como argumentos de método. El compilador realiza automáticamente una *conversión de tipo* que no da lugar a una pérdida de datos. Una conversión que pueda dar lugar a la pérdida de datos requiere un valor *cast* en el código fuente.  
   
  Para más información, vea [Conversiones de tipos](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 03/13/2017
  C# proporciona un conjunto estándar de tipos numéricos integrados para representar números enteros, valores de punto flotante, expresiones booleanas, caracteres de texto, valores decimales y otros tipos de datos. También hay tipos `string` y `object` integrados. Están disponibles para su uso en cualquier programa de C#. Para más información sobre los tipos integrados, vea [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md).  
   
 ## <a name="custom-types"></a>Tipos personalizados  
- Las construcciones [struct](../../../csharp/language-reference/keywords/struct.md), [class](../../../csharp/language-reference/keywords/class.md), [interface](../../../csharp/language-reference/keywords/interface.md) y [enum](../../../csharp/language-reference/keywords/enum.md) se utilizan para crear sus propios tipos personalizados. La biblioteca de clases .NET Framework es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos utilizados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otras están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. Para más información, vea [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856).  
+ Las construcciones [struct](../../../csharp/language-reference/keywords/struct.md), [class](../../../csharp/language-reference/keywords/class.md), [interface](../../../csharp/language-reference/keywords/interface.md) y [enum](../../../csharp/language-reference/keywords/enum.md) se utilizan para crear sus propios tipos personalizados. La biblioteca de clases .NET Framework es en sí misma una colección de tipos personalizados proporcionados por Microsoft que puede usar en sus propias aplicaciones. De forma predeterminada, los tipos usados con más frecuencia en la biblioteca de clases están disponibles en cualquier programa de C#. Otros están disponibles solo cuando agrega explícitamente una referencia de proyecto al ensamblado en el que se definen. Una vez que el compilador tenga una referencia al ensamblado, puede declarar variables (y constantes) de los tipos declarados en dicho ensamblado en el código fuente. Para más información, vea [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856).  
   
 ## <a name="the-common-type-system"></a>Common Type System  
  Es importante entender dos aspectos fundamentales sobre el sistema de tipos en [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]:  
@@ -202,9 +202,7 @@ stringList.Add(4);
 -   [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
   
 -   [Genéricos](../../../csharp/programming-guide/generics/index.md)  
-  
--   [Variables y expresiones](http://go.microsoft.com/fwlink/?LinkId=221228) en [Introducción a Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
+
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
