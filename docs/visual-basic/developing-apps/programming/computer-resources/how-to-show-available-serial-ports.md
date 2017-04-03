@@ -1,59 +1,75 @@
 ---
-title: "C&#243;mo: Mostrar los puertos serie disponibles en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.Ports (objeto)"
-  - "My.Computer.Ports.SerialPortNames (propiedad)"
-  - "puertos, disponibilidad de puertos serie"
-  - "puertos serie, disponibilidad"
+title: "Cómo: Mostrar los puertos serie disponibles en Visual Basic | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- serial ports, availability
+- My.Computer.Ports.SerialPortNames property
+- My.Computer.Ports object
+- ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# C&#243;mo: Mostrar los puertos serie disponibles en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: cc316600acd5f551dad8fbd4b7260c512231da5e
+ms.lasthandoff: 03/13/2017
 
-En este tema se describe cómo utilizar `My.Computer.Ports` para mostrar los puertos serie disponibles del equipo en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+---
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Cómo: Mostrar los puertos serie disponibles en Visual Basic
+En este tema se describe cómo usar `My.Computer.Ports` para mostrar los puertos serie disponibles del equipo en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
- Para permitir que un usuario seleccione el puerto que desea utilizar, los nombres de los puertos serie se colocan en un control <xref:System.Windows.Forms.ListBox>.  
+ Para permitir al usuario seleccionar qué puerto quiere usar, los nombres de los puertos serie se colocan en un control <xref:System.Windows.Forms.ListBox>.  
   
-## Ejemplo  
- Este ejemplo recorre todas las cadenas que devuelve la propiedad `My.Computer.Ports.SerialPortNames`.  Estas cadenas son los nombres de los puertos serie disponibles en el equipo.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo recorre todas las cadenas que devuelve la propiedad `My.Computer.Ports.SerialPortNames`. Estas cadenas son los nombres de los puertos serie disponibles en el equipo.  
   
- Normalmente, un usuario selecciona el puerto serie que la aplicación debe utilizar en la lista de puertos disponibles.  En este ejemplo, los nombres de puertos serie se almacenan en un control <xref:System.Windows.Forms.ListBox>.  Para obtener más información, vea [ListBox \(Control\)](../Topic/ListBox%20Control%20\(Windows%20Forms\).md).  
+ Normalmente, los usuarios seleccionan el puerto serie que la aplicación debe usar en la lista de puertos disponibles. En este ejemplo, los nombres de puerto serie se almacenan en un control <xref:System.Windows.Forms.ListBox>. Para obtener más información, consulte [ListBox Control](http://msdn.microsoft.com/library/b0172473-c5f2-411e-aaa4-c8f17cb5eed4) (Control ListBox).  
   
  [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Conectividad y redes**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 -   Una referencia de proyecto a System.Windows.Forms.dll.  
   
--   Acceso a los miembros del espacio de nombres <xref:System.Windows.Forms>.  Agregar una instrucción `Imports` si no se incluyen nombres de miembro completos en el código.  Para obtener más información, vea [Instrucción Imports \(Tipo y espacio de nombres de .NET\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+-   Acceso a los miembros del espacio de nombres <xref:System.Windows.Forms>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 -   Que el formulario tenga un control <xref:System.Windows.Forms.ListBox> denominado `ListBox1`.  
   
-## Programación eficaz  
- No tiene que utilizar el control <xref:System.Windows.Forms.ListBox> para mostrar los nombres de los puertos serie disponibles.  En su lugar, puede utilizar un control <xref:System.Windows.Forms.ComboBox> u otro control.  Si la aplicación no necesita una respuesta del usuario, puede utilizar un control <xref:System.Windows.Forms.TextBox> para mostrar la información.  
+## <a name="robust-programming"></a>Programación sólida  
+ No resulta necesario usar el control <xref:System.Windows.Forms.ListBox> para mostrar los nombres de los puertos serie disponibles. En su lugar, puede usar un <xref:System.Windows.Forms.ComboBox> u otro control. Si la aplicación no necesita una respuesta del usuario, puede usar un control <xref:System.Windows.Forms.TextBox> para mostrar la información.  
   
 > [!NOTE]
->  Es posible que los nombres de puerto devueltos por `My.Computer.Ports.SerialPortNames` sean incorrectos cuando se ejecuta en Windows 98.  Para evitar que se produzcan errores en la aplicación, use el control de excepciones, como la instrucción `Try...Catch...Finally` o la instrucción `Using`, cuando utilice los nombres de puerto para abrir los puertos.  
+>  Los nombres de puerto devueltos por `My.Computer.Ports.SerialPortNames` pueden ser incorrectos cuando la ejecución se realiza en Windows 98. Para evitar errores de aplicación, use el control de excepciones, como las instrucciones `Try...Catch...Finally` o `Using`, al usar los nombres de puerto para abrir puertos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Devices.Ports>   
  [Cómo: Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Cómo: Enviar cadenas a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
- [Cómo: Recibir cadenas de puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+ [Recibir cadenas de puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)

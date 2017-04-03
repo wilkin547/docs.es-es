@@ -1,66 +1,84 @@
 ---
-title: "where (restricci&#243;n de tipo gen&#233;rico) (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "whereconstraint"
-  - "whereconstraint_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "where (restricción de tipo genérico) [C#]"
+title: "where (restricción de tipo genérico) (Referencia de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- whereconstraint
+- whereconstraint_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- where (generic type constraint) [C#]
 ms.assetid: d7aa871b-0714-416a-bab2-96f87ada4310
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
+ms.lasthandoff: 03/13/2017
+
 ---
-# where (restricci&#243;n de tipo gen&#233;rico) (Referencia de C#)
-En una definición de tipo genérico, la cláusula `where` se utiliza para especificar restricciones sobre los tipos que se pueden utilizar como argumentos para un parámetro de tipo definido en una declaración genérica.  Por ejemplo, puede declarar una clase genérica, `MyGenericClass`, de modo que el parámetro de tipo `T` implemente la interfaz <xref:System.IComparable%601>:  
+# <a name="where-generic-type-constraint-c-reference"></a>where (restricción de tipo genérico) (Referencia de C#)
+En una definición de tipo genérico, la cláusula `where` se usa para especificar restricciones sobre los tipos que se pueden usar como argumentos para un parámetro de tipo definido en una declaración genérica. Por ejemplo, se puede declarar una clase genérica, `MyGenericClass`, de modo que el parámetro de tipo `T` implemente la interfaz <xref:System.IComparable%601>:  
   
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
 > [!NOTE]
->  Para obtener más información sobre la cláusula where en una expresión de consulta, vea [where \(cláusula\)](../../../csharp/language-reference/keywords/where-clause.md).  
+>  Para obtener más información sobre la cláusula where en una expresión de consulta, vea [where (Cláusula)](../../../csharp/language-reference/keywords/where-clause.md).  
   
- Además de las restricciones de interfaz, una cláusula `where` puede incluir una restricción de clase base, que establece que un tipo debe tener la clase especificada como clase base \(o ser la propia clase\) para poder utilizarlo como argumento de tipo para ese tipo genérico.  Si se utiliza una restricción semejante, debe aparecer antes que cualquier otra restricción sobre ese parámetro de tipo.  
+ Además de las restricciones de interfaz, una cláusula `where` puede incluir una restricción de clase base, que establece que un tipo debe tener la clase especificada como clase base (o ser la propia clase) para poder usarse como un argumento de tipo para ese tipo genérico. Si se usa este tipo de restricción, debe aparecer antes que cualquier otra restricción sobre ese parámetro de tipo.  
   
  [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
- La cláusula `where` también puede incluir una restricción de constructor.  Es posible crear una instancia de un parámetro de tipo utilizando el operador new; sin embargo, para ello el parámetro de tipo debe estar restringido por la restricción de constructor, `new()`.  La [restricción new\(\)](../../../csharp/language-reference/keywords/new-constraint.md) permite que el compilador sepa que cualquier argumento de tipo que se proporcione debe tener un constructor sin parámetros accesible, o predeterminado.  Por ejemplo:  
+ Puede que la cláusula `where` incluya también una restricción de constructor. Es posible crear una instancia de un parámetro de tipo usando el operador new; pero, para ello, el parámetro de tipo debe restringirse mediante la restricción de constructor, `new()`. La [restricción new()](../../../csharp/language-reference/keywords/new-constraint.md) permite que el compilador sepa que cualquier argumento de tipo especificado debe tener accesible un constructor sin parámetros o el constructor predeterminado. Por ejemplo:  
   
  [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
  La restricción `new()` aparece en último lugar en la cláusula `where`.  
   
- Con varios parámetros de tipo, utilice una cláusula `where` para cada parámetro de tipo, por ejemplo:  
+ Con varios parámetros de tipo, use una cláusula `where` para cada parámetro de tipo, por ejemplo:  
   
  [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
- También puede adjuntar restricciones a parámetros de tipo de métodos genéricos, como el siguiente:  
+ También puede asociar restricciones a parámetros de tipo de métodos genéricos, de la siguiente manera:  
   
 ```  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
- Observe que la sintaxis para describir las restricciones de parámetros de tipo en delegados es igual que la sintaxis de métodos.  
+ Observe que la sintaxis para describir las restricciones de parámetro de tipo en delegados es igual que la de métodos:  
   
 ```  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
- Para obtener información sobre delegados genéricos, vea [Delegados genéricos \(Guía de programación de C\#\)](../../../csharp/programming-guide/generics/generic-delegates.md).  
+ Para obtener información sobre los delegados genéricos, vea [Delegados genéricos](../../../csharp/programming-guide/generics/generic-delegates.md).  
   
- Para obtener información detallada sobre la sintaxis y el uso de restricciones, vea [Restricciones de tipos de parámetros \(Guía de programación de C\#\)](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
+ Para obtener más información sobre la sintaxis y el uso de restricciones, vea [Restricciones de tipos de parámetros](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Introducción a los genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Restricción new](../../../csharp/language-reference/keywords/new-constraint.md)   
+ [new (Restricción)](../../../csharp/language-reference/keywords/new-constraint.md)   
  [Restricciones de tipos de parámetros](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

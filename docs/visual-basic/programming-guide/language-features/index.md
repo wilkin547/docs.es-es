@@ -1,78 +1,94 @@
 ---
-title: "Caracter&#237;sticas del lenguaje Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "código de Visual Basic"
-  - "código de Visual Basic, elementos de"
+title: "Características del lenguaje Visual Basic | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic code, elements of
+- Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Caracter&#237;sticas del lenguaje Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 31cf21a3db5f5fc7ad980765cb54041c0e99c24b
+ms.lasthandoff: 03/13/2017
 
-En los siguientes temas se presentan y se describen los componentes básicos de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], un lenguaje de programación orientado a objetos.  Tras crear la interfaz de usuario de su aplicación utilizando formularios y controles, debe escribir el código que define el comportamiento de la aplicación.  Al igual que cualquier otro lenguaje de programación moderno, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] admite varios elementos de lenguaje y construcciones de programación comunes.  
+---
+# <a name="visual-basic-language-features"></a>Características del lenguaje Visual Basic
+Los temas siguientes presentan y describen los componentes básicos de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], un lenguaje de programación orientado a objetos. Después de crear la interfaz de usuario para su aplicación con formularios y controles, debe escribir el código que define el comportamiento de la aplicación. Como sucede con cualquier otro lenguaje de programación moderno, [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] admite una serie de elementos de lenguaje y construcciones de programación comunes.  
   
- Si ha programado en otros lenguajes, gran parte del material que se trata en esta sección le resultará familiar.  Aunque la mayoría de las construcciones son similares a las de otros lenguajes, el modelo orientado a eventos de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] presenta algunas diferencias sutiles.  
+ Si ha programado en otros lenguajes, gran parte del material tratado en esta sección le resultará familiar. Aunque la mayoría de las construcciones son similares a las de otros lenguajes, la naturaleza orientada a eventos de [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] presenta algunas diferencias sutiles.  
   
- Si es un programador principiante, el material tratado en esta sección le servirá como introducción a los bloques de creación básicos para escribir código.  Una vez que comprenda los conceptos básicos, podrá crear aplicaciones eficaces mediante [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+ Si está familiarizado con la programación, el material de esta sección sirve como introducción a los bloques de creación básicos para escribir código. Una vez que comprenda los aspectos básicos, puede crear aplicaciones eficaces con [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- Explica cómo hacer el código más compacto y eficaz declarando y utilizando matrices, que contienen múltiples valores relacionados.  
+ Explica cómo hacer el código más compacto y eficaz mediante la declaración y utilización de matrices, que contienen varios valores relacionados.  
   
  [Inicializadores de colección](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  Describe los inicializadores de colección, que permiten crear una colección y rellenarla con un conjunto inicial de valores.  
   
  [Constantes y enumeraciones](../../../visual-basic/programming-guide/language-features/constants-enums/index.md)  
- Explica el almacenamiento de valores inmutables para su uso repetido, incluidos los conjuntos de valores constantes relacionados.  
+ Explica el almacenamiento de valores inmutables para su uso repetido, incluidos los conjuntos de valores de constantes relacionadas.  
   
- [Control Flow](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
+ [Flujo de control](../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
  Muestra cómo regular el flujo de la ejecución del programa.  
   
  [Tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Describe qué tipos de datos pueden albergar los elementos de programación y la forma en que éstos se almacenan.  
+ Describe qué tipos de datos puede contener un elemento de programación y cómo almacenarlos.  
   
  [Elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- Cubre los elementos de programación que puede declarar, sus nombres y características, y cómo el compilador resuelve las referencias a los mismos.  
+ Abarca la programación de elementos que puede declarar, sus nombres y características, y cómo el compilador resuelve las referencias a ellos.  
   
- [Delegados](../../../visual-basic/programming-guide/language-features/delegates/delegates.md)  
- Proporciona una introducción a los delegados y a cómo se utilizan en Visual Basic.  
+ [Delegados](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ Se proporciona una introducción a los delegados y se explica cómo se usan en Visual Basic.  
   
- [Enlace en tiempo de compilación y en tiempo de ejecución](../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md)  
- Describe los enlaces, que realiza el compilador cuando se asigna un objeto a una variable de objeto, y las diferencias entre los objetos con enlaces en tiempo de compilación y en tiempo de ejecución.  
+ [Enlace en tiempo de compilación y en tiempo de ejecución](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ Describe los enlaces, que realiza el compilador cuando se asigna un objeto a una variable de objeto, y las diferencias entre los objetos con enlace anticipado y con enlace en tiempo de ejecución.  
   
  [Tipos de error](../../../visual-basic/programming-guide/language-features/error-types.md)  
- Proporciona información general sobre los errores de sintaxis, los errores en tiempo de ejecución y los errores lógicos.  
+ Proporciona información general sobre los errores de sintaxis, errores en tiempo de ejecución y errores lógicos.  
   
- [Eventos](../../../visual-basic/programming-guide/language-features/events/events.md)  
+ [Eventos](../../../visual-basic/programming-guide/language-features/events/index.md)  
  Muestra cómo declarar y utilizar eventos.  
   
  [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)  
- Describe qué son las interfaces y cómo pueden utilizarse en las aplicaciones.  
+ Describe qué son las interfaces y cómo usarlas en las aplicaciones.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Proporciona vínculos a temas que introducen las características y la programación de [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)].  
+ Proporciona vínculos a temas que presentan la programación y las características de [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext_md.md)].  
   
  [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- Ofrece información general sobre objetos y clases, cómo se utilizan, cómo se relacionan entre sí, y las propiedades, métodos y eventos que exponen.  
+ Proporciona información general sobre objetos y clases, cómo se utilizan, las relaciones que mantienen entre sí y las propiedades, los métodos y los eventos que exponen.  
   
  [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- Describe los elementos de código que manipulan elementos que contienen valores, cómo utilizarlos eficientemente y cómo combinarlos para producir nuevos valores.  
+ Describe los elementos de código que manipulan elementos que contienen valores, cómo utilizarlos de forma eficaz y cómo combinarlos para producir nuevos valores.  
   
  [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- Explica los procedimientos `Sub`, `Function`, `Property` y `Operator`, además de temas avanzados como procedimientos recursivos y sobrecargados.  
+ Describe los procedimientos `Sub`, `Function`, `Property` y `Operator`, así como temas avanzados, como procedimientos recursivos y sobrecargados.  
   
  [Instrucciones](../../../visual-basic/programming-guide/language-features/statements.md)  
  Describe las instrucciones de declaración y ejecutables.  
@@ -81,14 +97,14 @@ En los siguientes temas se presentan y se describen los componentes básicos de 
  Proporciona vínculos a temas que describen los conceptos básicos sobre el uso de cadenas en Visual Basic.  
   
  [Variables](../../../visual-basic/programming-guide/language-features/variables/index.md)  
- Presenta las variables y describe cómo se utilizan en Visual Basic.  
+ Presenta las variables y describe cómo utilizarlas en Visual Basic.  
   
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Proporciona vínculos a temas en los que se describe cómo usar XML en Visual Basic.  
   
-## Secciones relacionadas  
- [Colecciones](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)  
- Describe algunos de los tipos de colecciones que proporcionadas por .NET Framework.  Muestra cómo utilizar colecciones simples y colecciones de pares clave\-valor.  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ Describe algunos de los tipos de colecciones proporcionadas por .NET Framework. Muestra cómo usar colecciones sencillas y colecciones de pares clave-valor.  
   
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
- Proporciona información de referencia sobre distintos aspectos de la programación en [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].
+ Contiene información de referencia sobre los distintos aspectos de la programación en [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].

@@ -1,52 +1,70 @@
 ---
-title: "Utilizar excepciones (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "control de excepciones [C#], acerca del control de excepciones"
-  - "excepciones [C#], acerca de excepciones"
+title: "Usar excepciones (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- exception handling [C#], about exception handling
+- exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8a4bbb2f6d8060cd9196dd510cd89c827c9d697d
+ms.lasthandoff: 03/13/2017
+
 ---
-# Utilizar excepciones (Gu&#237;a de programaci&#243;n de C#)
-En el lenguaje C\#, los errores del programa se difunden en tiempo de ejecución a través del programa mediante un mecanismo denominado excepciones.  Las excepciones se producen cuando el código encuentra un error y se detectan mediante el código que puede corregir el error.  Las excepciones se pueden producir mediante el Common Language Runtime \(CLR\) de .NET Framework o mediante código de un programa.  Una vez que se produce una excepción, ésta se difunde a la pila de llamadas hasta que se encuentra una instrucción `catch` para la excepción.  Las excepciones no detectadas se identifican a través de un controlador de excepciones genérico proporcionado por el sistema que muestra un cuadro de diálogo.  
+# <a name="using-exceptions-c-programming-guide"></a>Usar excepciones (Guía de programación de C#)
+En C#, los errores del programa en tiempo de ejecución se propagan a través del programa mediante un mecanismo denominado excepciones. Las excepciones las inicia el código que encuentra un error y las detecta el código que puede corregir dicho error. Las excepciones puede iniciarlas .NET Framework Common Language Runtime o el código de un programa. Una vez iniciada, una excepción se propaga hasta la pila de llamadas hasta que encuentra una instrucción `catch` para la excepción. Las excepciones no detectadas se controlan mediante un controlador de excepciones que ofrece el sistema y muestra un cuadro de diálogo.  
   
- Las clases derivadas de <xref:System.Exception> representan estas excepciones.  Esta clase identifica el tipo de excepción y contiene las propiedades que albergan detalles acerca de ésta.  Producir una excepción implica crear una instancia de una clase derivada de la excepción, configurar opcionalmente las propiedades de la excepción y, a continuación, iniciar el objeto con la palabra clave `throw`.  Por ejemplo:  
+ Las excepciones están representadas por clases derivadas de <xref:System.Exception>. Esta clase identifica el tipo de excepción y contiene propiedades que tienen los detalles sobre la excepción. Iniciar una excepción implica crear una instancia de una clase derivada de excepción, configurar opcionalmente las propiedades de la excepción y luego producir el objeto con la palabra clave `throw`. Por ejemplo:  
   
  [!code-cs[csProgGuideExceptions#1](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_1.cs)]  
   
- Después de que se produzca una excepción, el motor en tiempo de ejecución comprueba la instrucción actual para ver si está dentro de un bloque `try`.  Si es así, se comprueba cualquier bloque `catch` asociado al bloque `try` para ver si puede detectar la excepción.  Los bloques `Catch` especifican generalmente los tipos de excepción; si el tipo del bloque `catch` es el mismo tipo de la excepción o de una clase base de la excepción, el bloque `catch` puede controlar el método.  Por ejemplo:  
+ Cuando se inicia una excepción, el entorno runtime comprueba la instrucción actual para ver si se encuentra dentro de un bloque `try`. Si es así, se comprueban los bloques `catch` asociados al bloque `try` para ver si pueden detectar la excepción. Los bloques `Catch` suelen especificar tipos de excepción; si el tipo del bloque `catch` es el mismo de la excepción, o una clase base de la excepción, el bloque `catch` puede controlar el método. Por ejemplo:  
   
  [!code-cs[csProgGuideExceptions#2](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_2.cs)]  
   
- Si la instrucción que produce una excepción no está dentro de un bloque `try` o el bloque `try` que la encierra no tiene un bloque `catch` coincidente, el motor en tiempo de ejecución comprueba el método de llamada a una instrucción `try` y a los bloques `catch`.  El motor en ejecución continúa hasta la pila de llamadas, en búsqueda de un bloque `catch` compatible.  Después de encontrar y ejecutar el bloque `catch`, el control se pasa a la siguiente instrucción después de ese bloque `catch`.  
+ Si la instrucción que inicia una excepción no está en un bloque `try` o si el bloque `try` que la encierra no tiene un bloque `catch` coincidente, el entorno runtime busca una instrucción `try` y bloques `catch` en el método de llamada. El entorno runtime sigue hasta la pila de llamadas para buscar un bloque `catch` compatible. Después de encontrar el bloque `catch` y ejecutarlo, el control pasa a la siguiente instrucción después de dicho bloque `catch`.  
   
- Una instrucción `try` puede contener más de un bloque `catch`.  Se ejecuta la primera instrucción `catch` que puede controlar la excepción; cualquier instrucción `catch` posterior, aun cuando sea compatible, se omite.  Por consiguiente, los bloques catch siempre deberían ordenarse de más específico \(o más derivado\) a menos específico.  Por ejemplo:  
+ Una instrucción `try` puede contener más de un bloque `catch`. Se ejecuta la primera instrucción `catch` que pueda controlar la excepción; las instrucciones `catch` siguientes se omiten, aunque sean compatibles. Por consiguiente, los bloques catch deben ordenarse siempre de más específico (o más derivado) a menos específico. Por ejemplo:  
   
  [!code-cs[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
   
- Antes de que se ejecute el bloque `catch`, el motor en tiempo de ejecución comprueba los bloques `finally`.  Los bloques `Finally` permiten al programador limpiar cualquier estado ambiguo que pudiera haber quedado de un bloque `try` anulado o liberar cualquier recurso externo \(como controladores de gráficos, conexiones de base de datos o secuencias de archivos\) sin esperar a que el recolector de elementos no utilizados del motor en tiempo de ejecución finalice los objetos.  Por ejemplo:  
+ Para que el bloque `catch` se ejecute, el entorno runtime busca bloques `finally`. Los bloques `Finally` permiten al programador limpiar cualquier estado ambiguo que pudiera haber quedado tras la anulación de un bloque `try` o liberar los recursos externos (como identificadores de gráficos, conexiones de base de datos o flujos de archivos) sin tener que esperar a que el recolector de elementos no utilizados del entorno runtime finalice los objetos. Por ejemplo:  
   
  [!code-cs[csProgGuideExceptions#4](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_4.cs)]  
   
- Si `WriteByte()` produjo una excepción, el código del segundo bloque `try` que intenta abrir de nuevo el archivo produciría un error si no se llama a `file.Close()`, y el archivo permanecería bloqueado.  Debido a que los bloques `finally` se ejecutan aunque se produzca una excepción, el bloque `finally` del ejemplo anterior permite al archivo cerrarse correctamente y ayuda a evitar un error.  
+ Si `WriteByte()` ha iniciado una excepción, el código del segundo bloque `try` que intente reabrir el archivo generaría un error si no se llama a `file.Close()` y el archivo permanecería bloqueado. Como los bloques `finally` se ejecutan aunque se inicie una excepción, el bloque `finally` del ejemplo anterior permite que el archivo se cierre correctamente y ayuda a evitar un error.  
   
- Si no se encuentra ningún bloque `catch` compatible en la pila de llamadas después de que se produzca una excepción, puede suceder una de estas tres cosas:  
+ Si no se encuentra ningún bloque `catch` compatible en la pila de llamadas después de iniciar una excepción, sucede una de estas tres acciones:  
   
--   Si la excepción está dentro de un destructor, el destructor se anula y se llama al destructor base, si existe.  
+-   Si la excepción se encuentra en un destructor, se anula el destructor y, si procede, se llama al destructor base.  
   
--   Si la pila de llamadas contiene un constructor estático o un inicializador de campo estático, se produce una <xref:System.TypeInitializationException>, con la excepción original asignada a la propiedad <xref:System.Exception.InnerException%2A> de la nueva excepción.  
+-   Si la pila de llamadas contiene un constructor estático o un inicializador de campo estático, se inicia una excepción <xref:System.TypeInitializationException>, y la excepción original se asigna a la propiedad <xref:System.Exception.InnerException%2A> de la nueva excepción.  
   
--   Si se alcanza el comienzo del subproceso, éste finaliza.  
+-   Si se llega al comienzo del subproceso, este finaliza.  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/exceptions-and-exception-handling.md)
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)

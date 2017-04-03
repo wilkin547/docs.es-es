@@ -1,52 +1,70 @@
 ---
-title: "using (Instrucci&#243;n, Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "using (instrucción) [C#]"
+title: "using (Instrucción, Referencia de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 587e50d5c81c19d75e9d8bf4779064947a373b71
+ms.lasthandoff: 03/13/2017
+
 ---
-# using (Instrucci&#243;n, Referencia de C#)
-Proporciona una sintaxis adecuada que garantiza el uso correcto de los objetos <xref:System.IDisposable>.  
+# <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)
+Ofrece una sintaxis adecuada que garantiza el uso correcto de objetos <xref:System.IDisposable>.  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar la instrucción using.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo usar la instrucción using.  
   
  [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
-## Comentarios  
- <xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que obtienen acceso a recursos no administrados \(en este caso, identificadores de archivo y contextos de dispositivo\).  Existen muchos más tipos de recursos no administrados y tipos de biblioteca de clases que los encapsulan.  Todos estos tipos deben implementar la interfaz <xref:System.IDisposable>.  
+## <a name="remarks"></a>Comentarios  
+ <xref:System.IO.File> y <xref:System.Drawing.Font> son ejemplos de tipos administrados que acceden a recursos no administrados (en este caso, identificadores de archivo y contextos de dispositivo). Hay muchos otros tipos de recursos no administrados y tipos de la biblioteca de clases que los encapsulan. Todos estos tipos deben implementar la interfaz <xref:System.IDisposable>.  
   
- Como norma, cuando utilice un objeto `IDisposable`, declárelo y cree instancias del mismo en una instrucción `using`.  La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> en el objeto de la forma correcta y, si se utiliza tal y como se ha explicado anteriormente, también hace que el propio objeto salga del ámbito en cuanto se llama a <xref:System.IDisposable.Dispose%2A>.  Dentro del bloque `using`, el objeto es de sólo lectura y no puede modificarse ni reasignarse.  
+ Como regla general, cuando se usa un objeto `IDisposable`, debe declarar y crear instancias del mismo en una instrucción `using`. La instrucción `using` llama al método <xref:System.IDisposable.Dispose%2A> del objeto de forma correcta y (cuando se usa tal y como se muestra anteriormente) también hace que el propio objeto salga del ámbito en cuanto se llame a <xref:System.IDisposable.Dispose%2A>. Dentro del bloque `using`, el objeto es de solo lectura y no se puede modificar ni reasignar.  
   
- La instrucción `using` garantiza que se llame a <xref:System.IDisposable.Dispose%2A>, aunque se produzca una excepción mientras se llama a los métodos del objeto.  Puede conseguir el mismo resultado colocando el objeto dentro de un bloque try y llamando a continuación a <xref:System.IDisposable.Dispose%2A> en un bloque finally; de hecho, esta es la forma en que el compilador traduce la instrucción `using`.  El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación \(tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto\):  
+ La instrucción `using` garantiza que se llama a <xref:System.IDisposable.Dispose%2A> aunque se produzca una excepción mientras llama a métodos en el objeto. Puede lograr el mismo resultado colocando el objeto dentro de un bloque try y llamando luego a <xref:System.IDisposable.Dispose%2A> en un bloque finally; de hecho, es así cómo el compilador traduce la instrucción `using`. El ejemplo de código anterior se extiende al siguiente código en tiempo de compilación (tenga en cuenta las llaves adicionales para crear el ámbito limitado del objeto):  
   
  [!code-cs[csrefKeywordsNamespace#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_2.cs)]  
   
- Se pueden declarar varias instancias de un tipo en una instrucción `using`, como se muestra en el ejemplo siguiente.  
+ Se pueden declarar varias instancias de un tipo en una instrucción `using`, tal y como se muestra en el ejemplo siguiente.  
   
  [!code-cs[csrefKeywordsNamespace#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_3.cs)]  
   
- Puede crear instancias del objeto de recursos y, a continuación, pasar la variable a la instrucción `using`, pero no es un procedimiento recomendado.  En este caso, el objeto permanece en el ámbito después de que el control abandone el bloque `using`, aunque es probable que ya no tenga acceso a sus recursos no administrados.  En otras palabras, ya no se inicializará completamente.  Si intenta utilizar el objeto fuera del bloque `using`, se arriesga a que se inicie una excepción.  Por esta razón, suele ser mejor crear instancias del objeto en la instrucción `using` y limitar su ámbito al bloque `using`.  
+ Puede crear una instancia del objeto de recurso y luego pasar la variable a la instrucción `using`, pero esto no es un procedimiento recomendado. En este caso, el objeto permanece en el ámbito después de que el control abandone el bloque `using` aunque probablemente ya no tenga acceso a sus recursos no administrados. En otras palabras, ya no estará completamente inicializado. Si intenta usar el objeto fuera del bloque `using`, corre el riesgo de iniciar una excepción. Por este motivo, suele ser mejor crear una instancia del objeto en la instrucción `using` y limitar su ámbito al bloque `using`.  
   
  [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)   
- [using \(directiva\)](../../../csharp/language-reference/keywords/using-directive.md)   
- [Garbage Collection](../Topic/Garbage%20Collection.md)   
- [Implementing a Dispose Method](../Topic/Implementing%20a%20Dispose%20Method.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
+ [using Directive](../../../csharp/language-reference/keywords/using-directive.md)  (using [Directiva, Referencia de C#])  
+ [Recolección de elementos no utilizados](../../../standard/garbagecollection/index.md)   
+ [Implementar un método Dispose](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)

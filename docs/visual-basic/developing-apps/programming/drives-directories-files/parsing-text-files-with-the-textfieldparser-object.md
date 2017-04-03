@@ -1,47 +1,63 @@
 ---
-title: "Analizar archivos de texto con el objeto TextFieldParser (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "archivos, analizar"
-  - "E/S [Visual Basic], analizar archivos"
-  - "TextFieldParser (objeto), utilizar"
+title: Analizar archivos de texto con el objeto TextFieldParser (Visual Basic) | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- TextFieldParser object, using
+- I/O [Visual Basic], parsing files
+- files, parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# Analizar archivos de texto con el objeto TextFieldParser (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 570a5218ce2d750eb5f3a1a1b57e1e05f7fc0cbd
+ms.lasthandoff: 03/13/2017
 
-El objeto `TextFieldParser` permite analizar y procesar archivos muy grandes estructurados como columnas de texto de ancho delimitado, como archivos de registro o información de base de datos heredada.  Analizar un archivo de texto con `TextFieldParser` es similar a recorrer en iteración un archivo de texto, mientras que el método de análisis para extraer archivos de texto es similar a los métodos de manipulación de cadenas que se utilizan para convertir cadenas delimitadas en tokens.  
+---
+# <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analizar archivos de texto con el objeto TextFieldParser (Visual Basic)
+El objeto `TextFieldParser` permite analizar y procesar archivos muy grandes estructurados como columnas de texto con ancho delimitado, como archivos de registro o información de la base de datos heredada. Analizar un archivo de texto con `TextFieldParser` es similar a recorrer en iteración un archivo de texto, mientras que el método parse para extraer campos de texto es similar a los métodos de manipulación de cadenas usados para acortar cadenas delimitadas.  
   
-## Analizar diferentes tipos de archivos de texto  
- Los archivos de texto pueden tener campos de varios anchos, delimitados por un carácter como una coma o un espacio de tabulación.  Defina la propiedad `TextFieldType` y el delimitador, como en el ejemplo siguiente, que utiliza el método `SetDelimiters` para definir un archivo de texto delimitado por tabulaciones:  
+## <a name="parsing-different-types-of-text-files"></a>Analizar diferentes tipos de archivos de texto  
+ Los archivos de texto pueden tener campos con diversas anchuras, delimitados por un carácter, como una coma o un espacio de tabulación. Defina `TextFieldType` y el delimitador, como en el ejemplo siguiente, que usa el método `SetDelimiters` para definir un archivo de texto delimitado por tabulaciones:  
   
  [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
   
- Otros archivos de texto pueden tener anchos de campo fijos.  En tal caso, es necesario definir `TextFieldType` como `FixedWidth` y definir los anchos de cada campo, como en el ejemplo siguiente.  En este ejemplo se utiliza el método `SetFieldWidths`, para definir las columnas de texto: la primera columna tiene 5 caracteres de ancho, la segunda tiene 10, la tercera 11 y la cuarta es de ancho variable.  
+ Otros archivos de texto pueden tener anchos de campos fijos. En tales casos, debe definir `TextFieldType` como `FixedWidth` y definir los anchos de cada campo, como en el ejemplo siguiente. En este ejemplo se usa el método `SetFieldWidths` para definir las columnas de texto: la primera columna es de 5 caracteres de ancho, la segunda de 10, la tercera de 11 y la cuarta es de ancho variable.  
   
  [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
   
- Cuando se define el formato, se puede recorrer el archivo utilizando el método `ReadFields` para procesar cada línea.  
+ Una vez definido el formato, puede recorrer en bucle el archivo usando el método `ReadFields` para procesar cada línea sucesivamente.  
   
- Si un campo no coincide con el formato especificado, se produce una excepción <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>.  Cuando se produce este tipo de excepciones, las propiedades `ErrorLine` y `ErrorLineNumber` contienen el texto que produce la excepción y el número de línea de ese texto.  
+ Si un campo no coincide con el formato especificado, se producirá una excepción <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>. Cuando se producen dichas excepciones, en las propiedades `ErrorLine` y `ErrorLineNumber` se indica el texto que da lugar a la excepción y el número de línea de dicho texto.  
   
-## Analizar archivos con varios formatos  
- El método `PeekChars` del objeto `TextFieldParser` se puede utilizar para comprobar cada archivo antes de leerlo, lo que permite definir varios formatos para los campos y actuar en consecuencia.  Para obtener más información, vea [Cómo: Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
+## <a name="parsing-files-with-multiple-formats"></a>Analizar archivos con varios formatos  
+ El método `PeekChars` del objeto `TextFieldParser` se puede usar para comprobar cada campo antes de leerlo, lo que le permite definir varios formatos para los campos y actuar en consecuencia. Para obtener más información, consulte [Cómo: Leer archivos de texto con varios formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>   
@@ -56,5 +72,4 @@ El objeto `TextFieldParser` permite analizar y procesar archivos muy grandes est
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TrimWhiteSpace%2A>   
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A>   
- [Solución de problemas de excepciones: Microsoft.VisualBasic.FileIO.TextFieldParser.MalformedLineException](../Topic/Troubleshooting%20Exceptions:%20Microsoft.VisualBasic.FileIO.TextFieldParser.MalformedLineException.md)
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A>

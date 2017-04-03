@@ -25,7 +25,7 @@ LINQ proporciona capacidades de consulta de nivel de lenguaje y una API de [func
 
 Sintaxis de consulta de nivel de lenguaje:
 
-```cs
+```csharp
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
@@ -34,7 +34,7 @@ var linqExperts = from p in programmers
 
 Mismo ejemplo usando la API `IEnumerable<T>`:
 
-```cs
+```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
 
@@ -46,7 +46,7 @@ Imagine que tiene una lista de mascotas, pero desea convertirla en un diccionari
 
 Código imperativo tradicional:
 
-```cs
+```csharp
 var petLookup = new Dictionary<int, Pet>();
 
 foreach (var pet in pets)
@@ -60,7 +60,7 @@ La intención de este código no es crear un nuevo `Dictionary<int, Pet>` y agre
 
 Expresión LINQ equivalente:
 
-```cs
+```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
 
 ```
@@ -73,7 +73,7 @@ Para una parte importante del software que conocemos, todo tiene que ver con el 
 
 Veamos un ejemplo: buscar todos los elementos XML con un valor de atributo concreto.
 
-```cs
+```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
                                            string attributeName, string value)
 {
@@ -92,14 +92,14 @@ Interactuar con XML no es lo único que puede hacer con los proveedores LINQ. [L
 
 Es una pregunta que surge con frecuencia. Después de todo, esto:
 
-```cs
+```csharp
 var filteredItems = myItems.Where(item => item.Foo);
 
 ```
 
 es mucho más conciso que esto:
 
-```cs
+```csharp
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
@@ -132,7 +132,7 @@ Lo siguiente es una demostración rápida de algunas de las piezas básicas de L
 
 *   Las herramientas esenciales - `Where`, `Select`, y `Aggregate`:
 
-```cs
+```csharp
 // Filtering a list
 var germanShepards = dogs.Where(dog => dog.Breed == DogBreed.GermanShepard);
 
@@ -156,7 +156,7 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 
 *   Reducción de una lista de listas:
 
-```cs
+```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 
@@ -164,7 +164,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 
 *   Unión entre dos conjuntos (con un comparador personalizado):
 
-```cs
+```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
 {
     public bool Equals(Dog a, Dog b)
@@ -200,7 +200,7 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 
 *   Intersección entre dos conjuntos:
 
-```cs
+```csharp
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
@@ -209,7 +209,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 
 *   Ordenación:
 
-```cs
+```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
@@ -219,7 +219,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
 
 *   Por último, un ejemplo más avanzado: determinar si los valores de las propiedades de dos instancias del mismo tipo son iguales (tomado y modificado de [esta entrada de StackOverflow](http://stackoverflow.com/a/844855)):
 
-```cs
+```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
 {
     if (self != null && to != null)
@@ -248,7 +248,7 @@ PLINQ, o Parallel LINQ, es un motor de ejecución en paralelo para expresiones d
 
 Considere el siguiente caso:
 
-```cs
+```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
 {
     var seed = default(UInt64);

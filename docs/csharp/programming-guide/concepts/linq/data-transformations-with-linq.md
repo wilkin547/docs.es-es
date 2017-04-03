@@ -1,44 +1,63 @@
 ---
-title: "Transformaciones de datos con LINQ (C#) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "LINQ [C#], transformación de datos"
-  - "elementos de origen [LINQ en C#]"
-  - "combinar varias entradas [LINQ en C#]"
-  - "varias salidas para una sola secuencia de salida [LINQ en C#]"
-  - "subconjunto de elementos de origen [LINQ en C#]"
-  - "orígenes de datos [LINQ en C#], transformaciones de datos"
-  - "transformaciones de datos [LINQ en C#]"
+title: Transformaciones de datos con LINQ (C#) | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- LINQ [C#], data transformations
+- source elements [LINQ in C#]
+- joining multiple inputs [LINQ in C#]
+- multiple outputs for one output sequence [LINQ in C#]
+- subset of source elements [LINQ in C#]
+- data sources [LINQ in C#], data transformations
+- data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0b7f8874e9a22ca14bee009cab98e13d96bd9621
+ms.lasthandoff: 03/13/2017
+
 ---
-# Transformaciones de datos con LINQ (C#)
-[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] no trata simplemente de la recuperación de datos.  También es una herramienta eficaz para transformarlos.  Mediante una consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)], puede utilizar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida.  Puede modificar la propia secuencia sin modificar los elementos con operaciones de ordenación y agrupación. Pero quizás la característica más eficaz de las consultas de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] es la capacidad de crear nuevos tipos.  Esto se logra en la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md).  Por ejemplo, puede realizar las tareas siguientes:  
+# <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
+[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] no solo sirve para la recuperación de datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  
   
 -   Combinar varias secuencias de entrada en una sola secuencia de salida que tiene un tipo nuevo.  
   
 -   Crear secuencias de salida cuyos elementos estén formados por una o varias propiedades de cada elemento de la secuencia de origen.  
   
--   Crear secuencias de salida cuyos elementos estén formados por los resultados de operaciones realizadas en los datos de origen.  
+-   Crear secuencias de salida cuyos elementos estén formados por los resultados de las operaciones realizadas en el origen de datos.  
   
--   Crear secuencias de salida en un formato diferente.  Por ejemplo, puede transformar datos de filas SQL o archivos de texto en XML.  
+-   Crear secuencias de salida en un formato diferente. Por ejemplo, se pueden transformar datos de filas de SQL o archivos de texto en XML.  
   
- Éstos son sólo algunos ejemplos.  De hecho, estas transformaciones se pueden combinar de varias maneras en la misma consulta.  Además, la secuencia de salida de una consulta se puede utilizar como secuencia de entrada para una nueva consulta.  
+ Estos son solo algunos ejemplos. Por supuesto, estas transformaciones pueden combinarse de diversas formas en la misma consulta. Además, se puede usar la secuencia de salida de una consulta como la secuencia de entrada para una nueva consulta.  
   
-## Combinar varias entradas en una sola secuencia de salida  
- Puede utilizar una consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] para crear una secuencia de salida que contenga elementos de más de una secuencia de entrada.  En el ejemplo siguiente se muestra cómo combinar dos estructuras de datos en memoria, pero se pueden aplicar los mismos principios para combinar datos de orígenes XML, SQL o de conjunto de datos.  Supongamos que tenemos los dos tipos de clases siguientes:  
+## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Combinar varias entradas en una secuencia de salida  
+ Se puede usar una consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para crear una secuencia de salida que contiene los elementos de más de una secuencia de entrada. En el ejemplo siguiente se muestra cómo combinar dos estructuras de datos en memoria, pero se pueden aplicar los mismos principios para combinar datos de XML o de orígenes SQL o DataSet. Supongamos los dos tipos de clase siguientes:  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
@@ -46,33 +65,33 @@ caps.handback.revision: 15
   
  [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
- Para obtener más información, consulte [join \(cláusula\)](../../../../csharp/language-reference/keywords/join-clause.md) y [select \(cláusula\)](../../../../csharp/language-reference/keywords/select-clause.md).  
+ Para obtener más información, vea [join (Cláusula)](../../../../csharp/language-reference/keywords/join-clause.md) y [select (Cláusula)](../../../../csharp/language-reference/keywords/select-clause.md).  
   
-## Seleccionar un subconjunto de cada elemento de origen  
- Principalmente existen dos maneras de seleccionar un subconjunto de cada elemento de la secuencia de origen:  
+## <a name="selecting-a-subset-of-each-source-element"></a>Seleccionar un subconjunto de cada elemento de origen  
+ Hay dos maneras principales de seleccionar un subconjunto de cada elemento de la secuencia de origen:  
   
-1.  Para seleccionar un solo miembro del elemento de origen, utilice la operación con punto.  En el ejemplo siguiente, supongamos que un objeto `Customer` contiene varias propiedades públicas que incluyen una cadena denominada `City`.  Cuando se ejecuta, esta consulta generará una secuencia de salida de cadenas.  
+1.  Para seleccionar a un solo miembro del elemento de origen, use la operación de punto. En el ejemplo siguiente, suponga que un objeto `Customer` contiene varias propiedades públicas, incluida una cadena denominada `City`. Cuando se ejecuta, esta consulta genera una secuencia de salida de cadenas.  
   
     ```  
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  Para crear elementos que contienen más de una propiedad del elemento de origen, puede utilizar un inicializador de objeto con un objeto con nombre o un tipo anónimo.  En el ejemplo siguiente se muestra el uso de un tipo anónimo para encapsular dos propiedades de cada elemento `Customer`:  
+2.  Para crear elementos que contengan más de una propiedad del elemento de origen, se puede usar un inicializador de objeto con un objeto con nombre o un tipo anónimo. En el ejemplo siguiente se muestra el uso de un tipo anónimo para encapsular dos propiedades de cada elemento `Customer`:  
   
     ```  
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  
   
- Para obtener más información, consulte [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) y [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Para obtener más información, vea [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) y [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-## Transformar objetos en memoria en XML  
- Las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] hacen que sea fácil transformar los datos entre estructuras de datos en memoria, bases de datos SQL, conjuntos de datos [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] y documentos o secuencias XML.  En el ejemplo siguiente se transforman los objetos de una estructura de datos en memoria en elementos XML.  
+## <a name="transforming-in-memory-objects-into-xml"></a>Transformar objetos en memoria en XML  
+ Las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] facilitan la transformación de datos entre las estructuras de datos en memoria, bases de datos SQL, conjuntos de datos de [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] y documentos o secuencias de XML. En el siguiente ejemplo se transforman objetos de una estructura de datos en memoria en elementos XML.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
- El código genera el siguiente resultado XML:  
+ El código produce el siguiente resultado de XML:  
   
 ```  
 < Root>  
@@ -94,21 +113,20 @@ caps.handback.revision: 15
 </Root>  
 ```  
   
- Para obtener más información, vea [Crear árboles XML en C\#](../Topic/Creating%20XML%20Trees%20in%20C%23%20\(LINQ%20to%20XML\)1.md).  
+ Para obtener más información, vea [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md) (Creación de árboles XML [C#]).  
   
-## Realizar operaciones con elementos de origen  
- Es posible que una secuencia de salida no contenga elementos o propiedades de elemento de la secuencia de origen.  Por el contrario, la salida podría ser una secuencia de valores que se calcula utilizando los elementos de origen como argumentos de entrada.  Cuando se ejecuta la siguiente consulta simple, genera una secuencia de cadenas cuyos valores representan un cálculo basado en la secuencia de origen de elementos de tipo `double`.  
+## <a name="performing-operations-on-source-elements"></a>Realizar operaciones en los elementos de origen  
+ Es posible que una secuencia de salida no contenga ningún elemento o propiedades de elemento de la secuencia de origen. En su lugar, es posible que la salida sea una secuencia de valores que se calcula usando los elementos de origen como argumentos de entrada. La siguiente consulta simple, cuando se ejecuta, genera una secuencia de cadenas cuyos valores representan un cálculo basado en la secuencia de origen de elementos de tipo `double`.  
   
 > [!NOTE]
->  No se permite llamar a métodos en las expresiones de consulta si la consulta se va a convertir en otro dominio.  Por ejemplo, no puede llamar a un método normal de C\# en [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)] porque SQL Server no tiene contexto para el mismo.  Sin embargo, puede asignar procedimientos almacenados a los métodos y después llamar a los primeros.  Para obtener más información, consulte [Procedimientos almacenados](../Topic/Stored%20Procedures.md).  
+>  No se admite llamar a métodos en expresiones de consulta si la consulta se va a convertir a otro dominio. Por ejemplo, no se puede llamar a un método normal de C# en [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] porque SQL Server no tiene contexto para él. En cambio, se pueden asignar procedimientos almacenados a los métodos y llamar a los primeros. Para obtener más información, vea [Procedimientos almacenados](http://msdn.microsoft.com/library/4d23dd7a-a85f-44ff-a717-af7d0950c0fc).  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
-## Vea también  
- [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   
- [LINQ a SQL](../Topic/LINQ%20to%20SQL.md)   
- [LINQ to DataSet](../Topic/LINQ%20to%20DataSet.md)   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)   
+## <a name="see-also"></a>Vea también  
+ [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)   
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
  [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [select \(cláusula\)](../../../../csharp/language-reference/keywords/select-clause.md)   
- [Cómo: Combinar datos con cláusulas Join](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+ [select (cláusula)](../../../../csharp/language-reference/keywords/select-clause.md)

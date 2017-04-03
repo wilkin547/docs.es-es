@@ -1,28 +1,46 @@
 ---
-title: "join (Cl&#225;usula, Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "join"
-  - "join_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "join (cláusula) [C#]"
-  - "join (palabra clave) [C#]"
+title: "join (Cláusula, Referencia de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- join
+- join_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- join clause [C#]
+- join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 caps.latest.revision: 29
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 29
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
+ms.lasthandoff: 03/13/2017
+
 ---
-# join (Cl&#225;usula, Referencia de C#)
-La cláusula `join` sirve para asociar elementos de secuencias de origen diferentes que no tienen ninguna relación directa en el modelo de objetos.  El único requisito es que los elementos de cada origen compartan algún valor para el que se pueda comparar la igualdad.  Por ejemplo, un distribuidor de comida podría tener una lista de proveedores de cierto producto y una lista de compradores.  Se puede utilizar una cláusula `join`, por ejemplo, para crear una lista de proveedores y compradores de ese producto que se encuentren en la misma región especificada.  
+# <a name="join-clause-c-reference"></a>join (Cláusula, Referencia de C#)
+La cláusula `join` es útil para asociar elementos de secuencias de origen diferentes que no tienen ninguna relación directa en el modelo de objetos. El único requisito es que los elementos de cada origen compartan algún valor del que se pueda comparar la igualdad. Por ejemplo, imagínese que un distribuidor de comida tiene una lista de proveedores de un determinado producto y una lista de compradores. Se puede usar una cláusula `join`, por ejemplo, para crear una lista de los proveedores y compradores de dicho producto que se encuentran en la misma región especificada.  
   
- Una cláusula `join` usa dos secuencias de origen como entrada.  Los elementos de cada secuencia deben ser o contener una propiedad que se pueda comparar con una propiedad correspondiente en la otra secuencia.  La cláusula `join` compara la igualdad de las claves especificadas utilizando la palabra clave especial `equals`.  Todas las combinaciones realizadas por la cláusula `join` son combinaciones de igualdad.  La forma del resultado de una cláusula `join` depende del tipo de combinación específico que se está realizando.  A continuación se indican los tres tipos de combinación más comunes:  
+ La cláusula `join` toma dos secuencias de origen como entrada. Los elementos de cada secuencia deben ser o deben contener una propiedad que se pueda comparar con una propiedad correspondiente en la otra secuencia. La cláusula `join` compara la igualdad de las claves especificadas mediante la palabra clave especial `equals`. Todas las combinaciones efectuadas por la cláusula `join` son combinaciones de igualdad. La forma de la salida de una cláusula `join` depende del tipo específico de combinación que se va a efectuar. Estos son los tres tipos de combinación más comunes:  
   
 -   Combinación interna  
   
@@ -30,67 +48,67 @@ La cláusula `join` sirve para asociar elementos de secuencias de origen diferen
   
 -   Combinación externa izquierda  
   
-## Combinación interna  
- En el ejemplo siguiente se muestra una combinación de igualdad interna simple.  Esta consulta genera una secuencia simple de pares de "nombre de producto \/ categoría".  La misma cadena de categoría aparecerá en varios elementos.  Si un elemento de `categories` no tiene ninguna correspondencia en `products`, esa categoría no aparecerá en los resultados.  
+## <a name="inner-join"></a>Combinación interna  
+ En el ejemplo siguiente se muestra una combinación de igualdad interna simple. Esta consulta genera una secuencia plana de pares de "nombre de producto y categoría". La misma cadena de categoría aparecerá en varios elementos. Si un elemento de `categories` no tiene ningún `products` que coincida, dicha categoría no aparecerá en los resultados.  
   
  [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  Para obtener más información, vea [Cómo: Realizar combinaciones internas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md).  
   
-## Group Join  
- Una cláusula `join` con una expresión `into` se denomina unión agrupada.  
+## <a name="group-join"></a>Combinación agrupada  
+ Una cláusula `join` con una expresión `into` se denomina "combinación agrupada".  
   
  [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
- Una unión agrupada genera una secuencia de resultados jerárquica, que asocia los elementos de la secuencia de origen izquierda a uno o más elementos coincidentes de la secuencia de origen derecha.  Una unión agrupada no tiene equivalente en términos relacionales; es esencialmente una secuencia de matrices de objetos.  
+ Las combinaciones agrupadas generan una secuencia de resultados jerárquicos que asocia los elementos de la secuencia de origen izquierda con uno o más elementos coincidentes de la secuencia de origen derecha. Las combinaciones agrupadas no tienen ningún equivalente en términos relacionales; son básicamente una secuencia de matrices de objetos.  
   
- Si no se encuentran elementos en la secuencia de origen derecha que coincidan con un elemento del origen izquierdo, la cláusula `join` genera una matriz vacía para ese elemento.  Por consiguiente, la combinación agrupada básicamente sigue siendo una combinación de igualdad interna, con la diferencia de que la secuencia resultante se organiza en grupos.  
+ Si no se encuentra ningún elemento de la secuencia de origen derecha para que coincida con un elemento del origen izquierdo, la cláusula `join` generará una matriz vacía para ese elemento. Por lo tanto, la combinación agrupada es básicamente una combinación de igualdad interna, salvo que la secuencia del resultado se organiza en grupos.  
   
- Si simplemente selecciona los resultados de una combinación agrupada, puede tener acceso a los elementos, pero no puede identificar la clave según la cual coinciden.  Por lo tanto, generalmente es más útil seleccionar los resultados de la combinación agrupada en un nuevo tipo que también incluya el nombre de la clave, como se mostraba en el ejemplo anterior.  
+ Si solo selecciona los resultados de una combinación agrupada, puede tener acceso a los elementos, pero no podrá identificar la clave en la que coinciden. Por lo tanto, suele resultar más útil seleccionar los resultados de la combinación agrupada en un nuevo tipo que también tenga el nombre de la clave, como se muestra en el ejemplo anterior.  
   
- Por supuesto que también se puede usar el resultado de una combinación agrupada como generador de otra subconsulta:  
+ Por supuesto, también puede usar el resultado de una combinación agrupada como generador de otra subconsulta:  
   
  [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  Para obtener más información, vea [Cómo: Realizar combinaciones agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
-## Combinación externa izquierda  
- En una combinación externa izquierda, se devuelven todos los elementos de la secuencia de origen izquierda, aun cuando no haya elementos correspondientes en la secuencia derecha.  Para realizar una combinación externa izquierda en [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)], utilice el método `DefaultIfEmpty` junto con una combinación agrupada para especificar el elemento derecho predeterminado que se generará si un elemento izquierdo no tiene coincidencias.  Puede utilizar `null` como valor predeterminado para cualquier tipo de referencia o puede especificar un tipo predeterminado definido por el usuario.  En el ejemplo siguiente se muestra un tipo predeterminado definido por el usuario:  
+## <a name="left-outer-join"></a>Combinación externa izquierda  
+ En una combinación externa izquierda se devuelven todos los elementos de la secuencia de origen izquierda, incluso si no hay elementos coincidentes en la secuencia derecha. Para efectuar una combinación externa izquierda en [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], use el método `DefaultIfEmpty` junto con una combinación agrupada para especificar un elemento derecho predeterminado para que se genere si un elemento izquierdo no tiene coincidencias. Puede usar `null` como valor predeterminado para cualquier tipo de referencia, aunque también puede especificar un tipo predeterminado definido por el usuario. En el ejemplo siguiente se muestra un tipo predeterminado definido por el usuario:  
   
  [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  Para obtener más información, vea [Cómo: Realizar operaciones de combinación externa izquierda](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md).  
   
-## Operador de igualdad  
- Una cláusula `join` realiza una combinación de igualdad.  En otras palabras, las coincidencias sólo se pueden basar en la igualdad de dos claves.  No se admiten otros tipos de comparaciones, como "mayor que" o "distinto de".  Para que quede claro que todas las combinaciones son combinaciones de igualdad, la cláusula `join` utiliza la palabra clave `equals` en lugar del operador `==`.  La palabra clave `equals` sólo se puede utilizar en una cláusula `join` y difiere del operador `==` en un aspecto importante.  Con `equals`, la clave izquierda utiliza la secuencia de origen externa y la clave derecha utiliza el origen interno.  El origen externo sólo está en ámbito en el lado izquierdo de `equals` y la secuencia de origen interna sólo está en ámbito en el lado derecho.  
+## <a name="the-equals-operator"></a>El operador de igualdad  
+ La cláusula `join` efectúa una combinación de igualdad. En otras palabras, solo puede basar las coincidencias en la igualdad de dos claves. No se admiten otros tipos de comparaciones, como "mayor que" o "no es igual a". Para aclarar que todas las combinaciones son combinaciones de igualdad, la cláusula `join` usa la palabra clave `equals` en lugar del operador `==`. La palabra clave `equals` solo se puede usar en una cláusula `join` y difiere del operador `==` en un aspecto importante. Con `equals`, la clave izquierda usa la secuencia de origen externa, mientras que la clave derecha usa el origen interno. El origen externo solo está en el ámbito del lado izquierdo de `equals`, mientras que la secuencia de origen interna solo está en el ámbito del lado derecho.  
   
-## Combinaciones de desigualdad  
- Puede realizar combinaciones de desigualdad, combinaciones cruzadas y otras operaciones de combinación personalizadas utilizando varias cláusulas `from` para incluir nuevas secuencias en una consulta de manera independiente.  Para obtener más información, vea [Cómo: Realizar operaciones de combinación personalizadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
+## <a name="non-equijoins"></a>Combinaciones de desigualdad  
+ Puede efectuar combinaciones de desigualdad, combinaciones cruzadas y otras operaciones de combinación personalizadas usando varias cláusulas `from` para introducir nuevas secuencias en una consulta de manera independiente. Para obtener más información, vea [Cómo: Realizar operaciones de combinación personalizadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   
-## Combinaciones de colecciones de objetos frente atablas relacionales  
- En una expresión de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)], las operaciones de combinación se realizan en colecciones de objetos.  En realidad, las colecciones de objetos no se pueden "combinar" exactamente de la misma manera que dos tablas relacionales.  En [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)], sólo se requieren cláusulas `join` explícitas cuando dos secuencias de origen no están unidas por ninguna relación.  Al trabajar con [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)], las tablas de clave externa se representan en el modelo de objetos como propiedades de la tabla principal.  Por ejemplo, en la base de datos Northwind, la tabla de clientes tiene una relación de clave externa con la tabla de pedidos.  Al asignar las tablas al modelo de objetos, la clase Customer tiene una propiedad Orders que contiene la colección de pedidos asociados a ese cliente.  De hecho, la combinación se ha realizado automáticamente.  
+## <a name="joins-on-object-collections-vs-relational-tables"></a>Uniones en las colecciones de objetos frente a las tablas relacionales  
+ En una expresión de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], las operaciones de combinación se efectúan en las colecciones de objetos. Las colecciones de objetos no se pueden "combinar" exactamente igual que dos tablas relacionales. En [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], las cláusulas `join` explícitas solo son necesarias cuando dos secuencias de origen no están unidas por ninguna relación. Cuando se trabaja con [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], las tablas de claves externas se representan en el modelo de objetos como propiedades de la tabla principal. Por ejemplo, en la base de datos Northwind, la tabla Customer (Cliente) tiene una relación de clave externa con la tabla Orders (Pedidos). Al asignar las tablas al modelo de objetos, la clase Customer tiene una propiedad Orders que contiene la colección Orders asociada a ese cliente. De hecho, la combinación ya se ha llevado a cabo automáticamente.  
   
- Para obtener más información sobre cómo realizar consultas en tablas relacionadas en el contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq-md.md)], vea [Cómo: Asignar relaciones de base de datos](../Topic/How%20to:%20Map%20Database%20Relationships.md).  
+ Para obtener más información sobre las consultas en tablas relacionadas en el contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], vea [Cómo: Asignar relaciones de base de datos](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af).  
   
-## Claves compuestas  
- Puede comprobar la igualdad de varios valores mediante el uso de una clave compuesta.  Para obtener más información, vea [Cómo: Realizar una unión usando claves compuestas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md).  Las claves compuestas también se pueden utilizar en una cláusula `group`.  
+## <a name="composite-keys"></a>Claves compuestas  
+ Puede probar la igualdad de varios valores mediante una clave compuesta. Para obtener más información, vea [Cómo: Realizar una unión usando claves compuestas ](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). Las claves compuestas también se pueden usar en una cláusula `group`.  
   
-## Ejemplo  
- En el ejemplo siguiente se comparan los resultados de una combinación interna, una combinación agrupada y una combinación externa izquierda en los mismos orígenes de datos, utilizando las mismas claves coincidentes.  En estos ejemplos se ha agregado código adicional para que los resultados se vean más claros en la consola.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se comparan los resultados de una combinación interna, una combinación agrupada y una combinación externa izquierda en los mismos orígenes de datos mediante las mismas claves coincidentes. Se ha agregado algún código adicional a estos ejemplos para aclarar los resultados en la pantalla de la consola.  
   
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
-## Comentarios  
- Una cláusula `join` que no va seguida de `into` se convierte en una llamada al método <xref:System.Linq.Enumerable.Join%2A>.  Una cláusula `join` que va seguida de `into` se convierte en una llamada al método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
+## <a name="remarks"></a>Comentarios  
+ Las cláusulas `join` que no van seguidas de `into` se convierten en una llamada al método <xref:System.Linq.Enumerable.Join%2A>. Las cláusulas `join` que van seguidas de `into` se convierten en una llamada al método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
   
-## Vea también  
- [Palabras clave para consultas \(LINQ\)](../../../csharp/language-reference/keywords/query-keywords.md)   
+## <a name="see-also"></a>Vea también  
+ [Palabras clave de consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [Join Operations](../../../visual-basic/programming-guide/concepts/linq/join-operations.md)   
- [group \(cláusula\)](../../../csharp/language-reference/keywords/group-clause.md)   
+ [Operaciones de combinación](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   
+ [group (cláusula)](../../../csharp/language-reference/keywords/group-clause.md)   
  [Cómo: Realizar operaciones de combinación externa izquierda](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
  [Cómo: Realizar combinaciones internas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
  [Cómo: Realizar combinaciones agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
  [Cómo: Ordenar los resultados de una cláusula join](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
  [Cómo: Realizar una unión usando claves compuestas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [Cómo: Instalar bases de datos de ejemplo](../Topic/How%20to:%20Install%20Sample%20Databases.md)
+ [Cómo: Instalar bases de datos de ejemplo](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)

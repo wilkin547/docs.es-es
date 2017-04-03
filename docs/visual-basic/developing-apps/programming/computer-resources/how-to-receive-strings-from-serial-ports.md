@@ -1,80 +1,96 @@
 ---
-title: "C&#243;mo: Recibir cadenas de puertos serie en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Resources (objeto)"
-  - "puertos serie, recuperar cadenas"
-  - "cadenas [Visual Basic], recuperar de puertos serie"
+title: "Cómo: Recibir cadenas de puertos serie en Visual Basic | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- serial ports, retrieving strings
+- strings [Visual Basic], retrieving from serial ports
+- My.Resources object
 ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
----
-# C&#243;mo: Recibir cadenas de puertos serie en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 8e56646b1d8ff3b682a402b4b2fc7442c3338a49
+ms.lasthandoff: 03/13/2017
 
-En este tema se explica cómo utilizar `My.Computer.Ports` para recibir cadenas de los puertos serie del equipo en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)].  
+---
+# <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Cómo: Recibir cadenas de puertos serie en Visual Basic
+En este tema se describe cómo usar `My.Computer.Ports` para recibir cadenas de los puertos serie del equipo en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   
-### Para recibir cadenas del puerto serie  
+### <a name="to-receive-strings-from-the-serial-port"></a>Para recibir cadenas del puerto serie  
   
 1.  Inicialice la cadena de devolución.  
   
      [!code-vb[VbVbalrMyComputer#38](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_1.vb)]  
   
-2.  Determine qué puerto serie debe proporcionar las cadenas.  Este ejemplo supone que es `COM1`.  
+2.  Determine el puerto serie que debe proporcionar las cadenas. En este ejemplo se da por supuesto que es `COM1`.  
   
-3.  Utilice el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto.  Para obtener más información, vea <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3.  Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para más información, vea <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     El bloque `Try...Catch...Finally` permite a la aplicación cerrar el puerto serie aun cuando se genere una excepción.  Todo el código que manipula el puerto serie debe aparecer dentro de este bloque.  
+     El bloque `Try...Catch...Finally` permite a la aplicación cerrar el puerto serie aunque se genere una excepción. Todo el código que manipula el puerto serie debe aparecer dentro de este bloque.  
   
      [!code-vb[VbVbalrMyComputer#39](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_2.vb)]  
   
-4.  Cree un bucle `Do` para leer las líneas de texto hasta que no queden líneas disponibles.  
+4.  Cree un bucle `Do` que lea líneas de texto hasta que no haya más líneas disponibles.  
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  Utilice el método <xref:System.IO.Ports.SerialPort.ReadLine%2A> para leer en el puerto serie la siguiente línea de texto disponible.  
+5.  Use el método <xref:System.IO.Ports.SerialPort.ReadLine%2A> para leer la siguiente línea disponible desde el puerto serie.  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
-6.  Utilice una instrucción `If` para determinar si el método <xref:System.IO.Ports.SerialPort.ReadLine%2A> devuelve `Nothing` \(lo que significa que no hay más texto disponible\).  Si devuelve `Nothing`, salga del bucle `Do`.  
+6.  Use una instrucción `If` para determinar si el método <xref:System.IO.Ports.SerialPort.ReadLine%2A> devuelve `Nothing` (lo que indica que no hay más texto disponible). Si devuelve `Nothing`, salga del bucle `Do`.  
   
      [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   
-7.  Agregue un bloque `Else` a la instrucción `If` para controlar el caso de que realmente se lea la cadena.  El bloque anexa la cadena del puerto serie a la cadena de devolución.  
+7.  Agregue un bloque `Else` a la instrucción `If` para controlar el caso si la cadena se lee realmente. El bloque anexa la cadena del puerto serie a la cadena de devolución.  
   
      [!code-vb[VbVbalrMyComputer#43](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_6.vb)]  
   
-8.  Devuelva la cadena.  
+8.  Devolver la cadena.  
   
      [!code-vb[VbVbalrMyComputer#44](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_7.vb)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-vb[VbVbalrMyComputer#37](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_8.vb)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense.  En el selector de fragmentos de código, se encuentra en **Conectividad y redes**.  Para obtener más información, vea [Fragmentos de código](/visual-studio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
   
-## Compilar el código  
- Este ejemplo supone que el equipo está utilizando el puerto `COM1`.  
+## <a name="compiling-the-code"></a>Compilar el código  
+ En este ejemplo se presupone que el equipo usa `COM1`.  
   
-## Programación eficaz  
- Este ejemplo supone que el equipo está utilizando el puerto `COM1`.  Para mayor flexibilidad, el código debería permitir al usuario seleccionar el puerto serie deseado en una lista de puertos disponibles.  Para obtener más información, vea [Cómo: Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+## <a name="robust-programming"></a>Programación sólida  
+ En este ejemplo se presupone que el equipo usa `COM1`. Para brindar mayor flexibilidad, el código debe permitir al usuario seleccionar el puerto serie que quiera de una lista de puertos disponibles. Para obtener más información, vea [How to: Show Available Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md) (Cómo: Mostrar los puertos serie disponibles en Visual Basic).  
   
- En este ejemplo se utiliza un bloque `Try...Catch...Finally` para asegurarse de que la aplicación cierra el puerto y detectar cualquier excepción de tiempo de espera.  Para obtener más información, vea [Try...Catch...Finally \(Instrucción\)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ En este ejemplo se usa un bloque `Try...Catch...Finally` para asegurarse de que la aplicación cierra el puerto y para capturar las excepciones de tiempo de espera. Para obtener más información, vea [Try...Catch...Finally Statement](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Devices.Ports>   
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [Cómo: Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Cómo: Enviar cadenas a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
- [Cómo: Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+ [Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

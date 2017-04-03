@@ -1,25 +1,43 @@
 ---
-title: "lock (Instrucci&#243;n, Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "lock_CSharpKeyword"
-  - "lock"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lock (palabra clave) [C#]"
+title: "Instrucción lock (Referencia de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- lock_CSharpKeyword
+- lock
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 caps.latest.revision: 43
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 43
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 020be199391789360ae9a25858bef54d8259ae56
+ms.lasthandoff: 03/13/2017
+
 ---
-# lock (Instrucci&#243;n, Referencia de C#)
-La palabra clave `lock` marca un bloque de instrucciones como una sección crucial, para lo cual utiliza el bloqueo de exclusión mutua de un objeto, la ejecución de una instrucción y, posteriormente, la liberación del bloqueo.  El ejemplo siguiente incluye un fragmento de `lock` .  
+# <a name="lock-statement-c-reference"></a>lock (Instrucción, Referencia de C#)
+La palabra clave `lock` marca un bloque de instrucciones como una sección crítica. Para ello, obtiene el bloqueo de exclusión mutua para un objeto determinado, ejecuta una instrucción y, después, libera el bloqueo. En el ejemplo siguiente se incluye una instrucción `lock`.  
   
 ```  
   
@@ -43,49 +61,49 @@ class Account
   
 ```  
   
- Para obtener más información, vea [Sincronización de subprocesos](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md).  
+ Para obtener más información, vea [Sincronización de subprocesos](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4).  
   
-## Comentarios  
- La palabra clave `lock` garantiza que un subproceso no va a entrar en una sección crítica del código mientras otro subproceso se encuentre ya en esta sección.  Si otro subproceso intenta entrar en un código bloqueado, esperará, o se bloqueará, hasta que el objeto se libere.  
+## <a name="remarks"></a>Comentarios  
+ La palabra clave `lock` garantiza que un subproceso no entra en una sección crítica de código mientras otro subproceso se encuentra en la sección crítica. Si otro subproceso intenta entrar en un código bloqueado, esperará hasta que se libere el objeto.  
   
- En la sección [Subprocesos](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md) se describe el subprocesamiento.  
+ En la sección [Subprocesamiento](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c) se describen los subprocesos.  
   
- La palabra clave `lock` llama a <xref:System.Threading.Monitor.Enter%2A> al principio del bloque y a <xref:System.Threading.Monitor.Exit%2A> al final del bloque.  Se produce <xref:System.Threading.ThreadInterruptedException> si <xref:System.Threading.Thread.Interrupt%2A> interrumpe un subproceso que está esperando para escribir un fragmento de `lock` .  
+ La palabra clave `lock` llama a <xref:System.Threading.Monitor.Enter%2A> al principio del bloque y a <xref:System.Threading.Monitor.Exit%2A> al final del bloque. Se produce una excepción <xref:System.Threading.ThreadInterruptedException> si <xref:System.Threading.Thread.Interrupt%2A> interrumpe un subproceso que está esperando para entrar en una instrucción `lock`.  
   
- En general evite bloquear un tipo `public` o instancias que estén fuera del control de su código.  Las construcciones comunes `lock (this)`, `lock (typeof (MyType))` y `lock ("myLock")` incumplen esta instrucción:  
+ En general, evite el bloqueo en un tipo `public` o en instancias que estén fuera del control de su código. Las construcciones comunes `lock (this)`, `lock (typeof (MyType))` y `lock ("myLock")` incumplen esta instrucción:  
   
--   `lock (this)` se convierte en un problema si la instancia es accesible públicamente.  
+-   `lock (this)` es un problema si la instancia es accesible públicamente.  
   
--   `lock (typeof (MyType))` se convierte en un problema si `MyType` es accesible públicamente.  
+-   `lock (typeof (MyType))` es un problema si `MyType` es accesible públicamente.  
   
--   `lock("myLock")` se convierte en un problema puesto que cualquier otro código del proceso que utilice la misma cadena compartirá el mismo bloqueo.  
+-   `lock("myLock")` es un problema porque cualquier otro código del proceso que use la misma cadena compartirá el bloqueo.  
   
- El procedimiento recomendado es definir un objeto un objeto `private` para realizar el bloqueo o una variable de objeto `private static` para proteger los datos comunes a todas las instancias.  
+ Se recomienda definir un objeto `private` para bloquear, o una variable de objeto `private static` para proteger los datos comunes a todas las instancias.  
   
- No puede utilizar la palabra clave de [espera](../../../csharp/language-reference/keywords/await.md) en el cuerpo de un fragmento de `lock` .  
+ No se puede usar la palabra clave [await](../../../csharp/language-reference/keywords/await.md) en el cuerpo de una instrucción `lock`.  
   
-## Ejemplo  
- El siguiente ejemplo muestra un uso simple de subprocesos sin bloquear en C\#.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra un uso simple de subprocesos sin bloquear en C#.  
   
  [!code-cs[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
-## Ejemplo  
- El siguiente ejemplo utiliza subprocesos y `lock`.  Con el uso de la instrucción `lock`, el bloque de instrucciones se convierte en una sección crítica y `balance` nunca tomará un valor negativo.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se usan subprocesos y `lock`. Siempre que la instrucción `lock` esté presente, el bloque de instrucciones será una sección crítica y `balance` nunca se convertirá en un número negativo.  
   
  [!code-cs[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Reflection.MethodImplAttributes>   
  <xref:System.Threading.Mutex>   
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Subprocesos](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)   
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Subprocesamiento](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Palabras clave de instrucciones](../../../csharp/language-reference/keywords/statement-keywords.md)   
- [Monitores](../Topic/Monitors.md)   
- [Interlocked Operations](../Topic/Interlocked%20Operations.md)   
- [AutoResetEvent](../Topic/AutoResetEvent.md)   
- [Sincronización de subprocesos](../Topic/Thread%20Synchronization%20\(C%23%20and%20Visual%20Basic\).md)
+ @System.Threading.Monitor   
+ [Operaciones de bloqueo](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
+ [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
+ [Sincronización de subprocesos](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)

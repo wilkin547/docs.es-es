@@ -10,12 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
+ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
+ms.openlocfilehash: b86693b1d6eed0ff5b8d1831e324354241f29806
+ms.lasthandoff: 03/15/2017
 
 ---
 
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
+
+> [!WARNING]
+> Este tema todavía no se ha actualizado a la última versión de las herramientas.
 
 Este artículo pretende ayudar a los propietarios del proyecto que desean compilar su solución en .NET Framework y en .NET Core, en paralelo.  Se proporcionan varias opciones para organizar los proyectos a fin de permitir que los desarrolladores alcancen este objetivo.  Los siguientes son algunos escenarios típicos que debe considerar cuando decida cómo va a configurar el diseño del proyecto con .NET Core.  Es posible que no abarquen todos los aspectos que desea, pero debe darles prioridad en función de las necesidades del proyecto.
 
@@ -121,9 +125,4 @@ Consulte la [documentación sobre el traslado de .NET Core][porting-doc] para m�
 [option-xproj-folder]: #keep-existing-projects-and-create-a-net-core-project
 
 [how-to-multitarget]: ../tutorials/libraries.md#how-to-multitarget
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

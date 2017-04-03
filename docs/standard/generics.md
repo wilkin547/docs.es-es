@@ -29,7 +29,7 @@ Los genéricos también están disponibles en el runtime o **reificados**. Esto 
 
 Este es un pequeño programa que muestra la eficacia que supone conocer el tipo de estructura de datos en el runtime:
 
-```cs
+```csharp
   using System;
   using System.Collections;
   using System.Collections.Generic;

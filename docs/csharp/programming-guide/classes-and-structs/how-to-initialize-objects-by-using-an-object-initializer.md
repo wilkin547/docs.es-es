@@ -1,41 +1,59 @@
 ---
-title: "C&#243;mo: Inicializar objetos usando un inicializador de objeto (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "inicializadores de objeto [C#], cómo se utiliza"
-  - "objetos [C#], inicializar"
+title: "Cómo: Inicializar objetos usando un inicializador de objeto (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- object initializers [C#], how to use
+- objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
 caps.latest.revision: 20
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 20
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9d6537332b4ddcca185a0ac3039a925e0b3fcef2
+ms.lasthandoff: 03/13/2017
+
 ---
-# C&#243;mo: Inicializar objetos usando un inicializador de objeto (Gu&#237;a de programaci&#243;n de C#)
-Puede usar inicializadores de objetos para inicializar objetos de tipo de forma declarativa sin tener que invocar explícitamente a un constructor del tipo.  
+# <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>Cómo: Inicializar objetos usando un inicializador de objeto (Guía de programación de C#)
+Puede usar inicializadores de objeto para inicializar objetos de tipo de una forma declarativa sin tener que invocar explícitamente un constructor para el tipo.  
   
- En los ejemplos siguientes se muestra cómo utilizar inicializadores de objeto con objetos con nombre.  El compilador procesa los inicializadores de objeto accediendo primero al constructor predeterminado de la instancia y luego procesa las inicializaciones de miembro.  Por consiguiente, si el constructor predeterminado se declara como `private` en la clase, se producirán errores en los inicializadores de objeto que requieran acceso público.  
+ En los siguientes ejemplos se muestra cómo usar los inicializadores de objeto con objetos con nombre. El compilador procesa los inicializadores de objeto primero obteniendo acceso al constructor de instancia predeterminado y después procesando las inicializaciones de miembro. Por lo tanto, si el constructor predeterminado se declara como `private` en la clase, se producirá un error en los inicializadores de objeto que requieren acceso público.  
   
- Debe utilizar un inicializador de objeto si define un tipo anónimo.  Para obtener más información, vea [Cómo: Devolver subconjuntos de propiedades de elementos en una consulta](../../../csharp/programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).  
+ Debe usar un inicializador de objeto si va a definir un tipo anónimo. Para obtener más información, vea [Cómo: Devolver subconjuntos de propiedades de elementos en una consulta](../../../csharp/programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo inicializar un tipo `StudentName` nuevo mediante inicializadores de objeto.  
+## <a name="example"></a>Ejemplo  
+ En el siguiente ejemplo se muestra cómo inicializar un nuevo tipo `StudentName` usando inicializadores de objeto.  
   
  [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo inicializar una colección de tipos `StudentName` mediante un inicializador de colección.  Observe que un inicializador de colección es una serie de inicializadores de objeto separados por comas.  
+## <a name="example"></a>Ejemplo  
+ En el siguiente ejemplo se muestra cómo inicializar una colección de tipos `StudentName` usando un inicializador de colección. Tenga en cuenta que un inicializador de colección es una serie de inicializadores de objeto separados por comas.  
   
  [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
-## Compilar el código  
- Para ejecutar este código, copie y pegue la clase en un proyecto de aplicación de consola de Visual C\# creado en [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)].  Para obtener más información, vea [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md).  
+## <a name="compiling-the-code"></a>Compilar el código  
+ Para ejecutar este código, copie y pegue la clase en un proyecto de aplicación de consola de Visual C# creado en [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].   
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)

@@ -1,0 +1,99 @@
+---
+title: "Usar la varianza en interfaces para las colecciones genéricas (C#) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9bf7f107833800f5ae2843dcefcd195a8a15a1b8
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Usar la varianza en interfaces para las colecciones genéricas (C#)
+Una interfaz covariante permite que sus métodos devuelvan tipos más derivados que los especificados en la interfaz. Una interfaz contravariante permite que sus métodos acepten parámetros de tipos menos derivados que los especificados en la interfaz.  
+  
+ Varias interfaces existentes en .NET Framework 4 pasaron a ser covariantes y contravariantes. Entre otras, se incluyen <xref:System.Collections.Generic.IEnumerable%601> y <xref:System.IComparable%601>. Esto permite volver a usar métodos que funcionan con colecciones genéricas de tipos base para colecciones de tipos derivados.  
+  
+ Para obtener una lista de interfaces variantes de .NET Framework, vea [Varianza en interfaces genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
+  
+## <a name="converting-generic-collections"></a>Convertir colecciones genéricas  
+ En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la covarianza en la interfaz <xref:System.Collections.Generic.IEnumerable%601>. El método `PrintFullName` acepta una colección del tipo `IEnumerable<Person>` como parámetro. Pero se puede volver a usar para una colección del tipo `IEnumerable<Employee>` porque `Employee` hereda `Person`.  
+  
+<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+## <a name="comparing-generic-collections"></a>Comparar colecciones genéricas  
+ En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la contravarianza en la interfaz <xref:System.Collections.Generic.IComparer%601>. La clase `PersonComparer` implementa la interfaz `IComparer<Person>`. Pero se puede volver a usar esta clase para comparar una secuencia de objetos del tipo `Employee` porque `Employee` hereda `Person`.  
+  
+```cs  
+// Simple hierarchy of classes.  
+public class Person  
+{  
+    public string FirstName { get; set; }  
+    public string LastName { get; set; }  
+}  
+  
+public class Employee : Person { }  
+  
+// The custom comparer for the Person type  
+// with standard implementations of Equals()  
+// and GetHashCode() methods.  
+class PersonComparer : IEqualityComparer<Person>  
+{  
+    public bool Equals(Person x, Person y)  
+    {              
+        if (Object.ReferenceEquals(x, y)) return true;  
+        if (Object.ReferenceEquals(x, null) ||  
+            Object.ReferenceEquals(y, null))  
+            return false;              
+        return x.FirstName == y.FirstName && x.LastName == y.LastName;  
+    }  
+    public int GetHashCode(Person person)  
+    {  
+        if (Object.ReferenceEquals(person, null)) return 0;  
+        int hashFirstName = person.FirstName == null  
+            ? 0 : person.FirstName.GetHashCode();  
+        int hashLastName = person.LastName.GetHashCode();  
+        return hashFirstName ^ hashLastName;  
+    }  
+}  
+  
+class Program  
+{  
+  
+    public static void Test()  
+    {  
+        List<Employee> employees = new List<Employee> {  
+               new Employee() {FirstName = "Michael", LastName = "Alexander"},  
+               new Employee() {FirstName = "Jeff", LastName = "Price"}  
+            };  
+  
+        // You can pass PersonComparer,   
+        // which implements IEqualityComparer<Person>,  
+        // although the method expects IEqualityComparer<Employee>.  
+  
+        IEnumerable<Employee> noduplicates =  
+            employees.Distinct<Employee>(new PersonComparer());  
+  
+        foreach (var employee in noduplicates)  
+            Console.WriteLine(employee.FirstName + " " + employee.LastName);  
+    }  
+}  
+```  
+  
+## <a name="see-also"></a>Vea también  
+ [Varianza en interfaces genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

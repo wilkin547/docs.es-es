@@ -1,48 +1,65 @@
 ---
-title: "Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Log (objeto), filtrar el resultado"
-  - "My.Application.Log (objeto), filtrar el resultado"
-  - "registros de eventos de aplicación, el filtrado de salida"
+title: Filtrar el resultado de My.Application.Log (Visual Basic) | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Log object, filtering output
+- My.Application.Log object, filtering output
+- application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
+ms.lasthandoff: 03/13/2017
 
-Este tutorial muestra cómo cambiar el filtrado para el registro de forma predeterminada la `My.Application.Log` objeto, para controlar qué información se pasa desde el `Log` objeto para los agentes de escucha y qué información escriben los agentes de escucha. Puede cambiar el comportamiento del registro después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
+---
+# <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
+En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos. Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
   
 ## <a name="getting-started"></a>Introducción  
- Cada mensaje que `My.Application.Log` escrituras tiene un nivel de gravedad asociado, los mecanismos de filtrado se utilizan para controlar el resultado del registro. Esta aplicación de ejemplo usa `My.Application.Log` métodos para escribir varios mensajes de registro con distintos niveles de gravedad.  
+ Cada mensaje que `My.Application.Log` escribe tiene un nivel de gravedad asociado, que los mecanismos de filtrado usan para controlar el resultado del registro. En esta aplicación de ejemplo se usan métodos `My.Application.Log` para escribir varios mensajes de registro con distintos niveles de gravedad.  
   
-#### <a name="to-build-the-sample-application"></a>Para compilar la aplicación de ejemplo  
+#### <a name="to-build-the-sample-application"></a>Para crear la aplicación de ejemplo  
   
-1.  Abra un nuevo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] el proyecto de aplicación de Windows.  
+1.  Abra un proyecto de aplicación Windows de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] nuevo.  
   
 2.  Agregue un botón denominado Button1 a Form1.  
   
-3.  En la <xref:System.Windows.Forms.Control.Click> el controlador de eventos de Button1, agregue el código siguiente:  
+3.  En el controlador de eventos <xref:System.Windows.Forms.Control.Click> para Button1, agregue el código siguiente:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  Ejecute la aplicación en el depurador.  
   
-5.  Presione **Button1**.  
+5.  Pulse **Button1**.  
   
-     La aplicación escribe la información siguiente al archivo de salida y de registro de depuración de la aplicación.  
+     La aplicación escribe la siguiente información en el archivo de registro y de salida de la depuración de la aplicación.  
   
      `DefaultSource Information: 0 : In Button1_Click`  
   
@@ -50,21 +67,20 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
 6.  Cierre la aplicación.  
   
-     Para obtener información sobre cómo ver la ventana de salida de depuración de la aplicación, consulte [ventana Resultados](/visual-studio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, consulte [Tutorial: determinar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Para obtener información sobre cómo ver la ventana de salida de la depuración de la aplicación, vea [Resultados (Ventana)](https://docs.microsoft.com/visualstudio/ide/reference/output-window). Para obtener información sobre la ubicación del archivo de registro de la aplicación, vea [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
-    >  De forma predeterminada, la aplicación vacía el archivo de registro generado cuando se cierra la aplicación.  
+    >  De manera predeterminada, la aplicación vacía el resultado del archivo de registro cuando la aplicación se cierra.  
   
-     En el ejemplo anterior, la segunda llamada a la <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> método y la llamada a la <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> método genera el resultado del registro, mientras que la primera y última llamadas a la `WriteEntry` no lo hace el método. Esto es porque los niveles de gravedad de `WriteEntry` y `WriteException` son "Información" y "Error", que permiten la `My.Application.Log` del objeto predeterminado de filtrado del registro. Sin embargo, los eventos con niveles de gravedad "Iniciar" y "Detener" no pueden producir la salida de registro.  
+     En el ejemplo anterior, la segunda llamada al método <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A> y la llamada al método <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A> genera el resultado del registro, mientras que la primera y la última llamada al método `WriteEntry` no lo hacen. Esto se debe a que los niveles de gravedad de `WriteEntry` y `WriteException` son "Information" y "Error", que permite el filtrado de registro predeterminado del objeto `My.Application.Log`. En cambio, los eventos con niveles de gravedad "Start" y "Stop" no pueden generar el resultado del registro.  
   
-## <a name="filtering-for-all-myapplicationlog-listeners"></a>Filtrado de todos los agentes de escucha de My.Application.Log  
- El `My.Application.Log` de objeto usa un <xref:System.Diagnostics.SourceSwitch> denominado `DefaultSwitch` para controlar qué mensajes pasa de la `WriteEntry` y `WriteException` métodos a los agentes de escucha de registro. Puede configurar `DefaultSwitch` en el archivo de configuración de la aplicación estableciendo su valor en uno de los <xref:System.Diagnostics.SourceLevels> valores de enumeración. De forma predeterminada, su valor es "Información".  
+## <a name="filtering-for-all-myapplicationlog-listeners"></a>Filtrado para todos los agentes de escucha de My.Application.Log  
+ El objeto `My.Application.Log` usa un objeto <xref:System.Diagnostics.SourceSwitch> denominado `DefaultSwitch` para controlar qué mensajes pasa de los métodos `WriteEntry` y `WriteException` a los agentes de escucha de registro. Puede configurar `DefaultSwitch` en el archivo de configuración de la aplicación estableciendo su valor en uno de los valores de enumeración <xref:System.Diagnostics.SourceLevels>. De manera predeterminada, su valor es "Information".  
   
- Esta tabla muestra el nivel de gravedad requerido para que registro que se va a escribir un mensaje en los agentes de escucha, dado un determinado `DefaultSwitch` configuración.  
+ En esta tabla se muestra el nivel de gravedad necesario para que el registro escriba un mensaje a los agentes de escucha, con un valor `DefaultSwitch` determinado.  
   
-|||  
-|-|-|  
-|Valor de DefaultSwitch|Gravedad del mensaje requerida para el resultado|  
+|Valor DefaultSwitch|Gravedad del mensaje que se necesita para el resultado|  
+|---|---| 
 |`Critical`|`Critical`|  
 |`Error`|`Critical` o `Error`|  
 |`Warning`|`Critical`, `Error` o `Warning`|  
@@ -72,16 +88,16 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
 |`Verbose`|`Critical`, `Error`, `Warning`, `Information` o `Verbose`|  
 |`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume` o `Transfer`|  
 |`All`|Se permiten todos los mensajes.|  
-|`Off`|Todos los mensajes están bloqueados.|  
+|`Off`|Se bloquean todos los mensajes.|  
   
 > [!NOTE]
->  El `WriteEntry` y `WriteException` métodos tienen una sobrecarga que no especifica un nivel de gravedad. El nivel de gravedad implícito para la `WriteEntry` sobrecarga es "Información" y el nivel de gravedad implícito para la `WriteException` sobrecarga es "Error".  
+>  Los métodos `WriteEntry` y `WriteException` tienen una sobrecarga que no especifica un nivel de gravedad. El nivel de gravedad implícito para la sobrecarga `WriteEntry` es "Information" y el nivel de gravedad implícito para la sobrecarga `WriteException` es "Error".  
   
- Esta tabla explica el resultado del registro se muestra en el ejemplo anterior: con el valor predeterminado `DefaultSwitch` establecer "Information", sólo la segunda llamada a la `WriteEntry` método y la llamada a la `WriteException` el resultado del método generan registros.  
+ En esta tabla se explica el resultado del registro que se muestra en el ejemplo anterior: con el valor `DefaultSwitch` predeterminado de "Information", solo la segunda llamada al método `WriteEntry` y la llamada al método `WriteException` generan un resultado del registro.  
   
-#### <a name="to-log-only-activity-tracing-events"></a>Para registrar eventos de seguimiento de actividad única  
+#### <a name="to-log-only-activity-tracing-events"></a>Para registrar solo los eventos de seguimiento de la actividad  
   
-1.  Haga clic en app.config en el **el Explorador de soluciones** y seleccione **abiertos**.  
+1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      O bien  
   
@@ -93,13 +109,13 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
     3.  Haga clic en **Agregar**.  
   
-2.  Busque la `<switches>` sección, que se encuentra en la `<system.diagnostics>` sección, que se encuentra en el nivel superior `<configuration>` sección.  
+2.  Busque la sección `<switches>`, en la sección `<system.diagnostics>`, que se encuentra en la sección de nivel superior `<configuration>`.  
   
-3.  Busque el elemento que se agrega `DefaultSwitch` a la colección de modificadores. Debería ser similar a este elemento:  
+3.  Busque el elemento que agrega `DefaultSwitch` a la colección de modificadores. Este elemento debe ser similar a este:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Cambie el valor de la `value` atributo a "ActivityTracing".  
+4.  Cambie el valor del atributo `value` a "ActivityTracing".  
   
 5.  El contenido del archivo app.config debe ser similar al código XML siguiente:  
   
@@ -132,9 +148,9 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
 6.  Ejecute la aplicación en el depurador.  
   
-7.  Presione **Button1**.  
+7.  Pulse **Button1**.  
   
-     La aplicación escribe la información siguiente al archivo de salida y de registro de depuración de la aplicación:  
+     La aplicación escribe la siguiente información en el archivo de registro y de salida de la depuración de la aplicación:  
   
      `DefaultSource Start: 4 : Entering Button1_Click`  
   
@@ -142,21 +158,21 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
 8.  Cierre la aplicación.  
   
-9. Cambie el valor de la `value` atributo "Información".  
+9. Cambie el valor del atributo `value` de nuevo a "Information".  
   
     > [!NOTE]
-    >  El `DefaultSwitch` Cambiar configuración controla sólo `My.Application.Log`. No cambia la [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> y <xref:System.Diagnostics.Debug?displayProperty=fullName> se comportan las clases.  
+    >  La configuración del modificador `DefaultSwitch` solo controla `My.Application.Log`. No cambia el comportamiento de las clases <xref:System.Diagnostics.Trace?displayProperty=fullName> y <xref:System.Diagnostics.Debug?displayProperty=fullName> de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
   
-## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtrado para los agentes de escucha de My.Application.Log individual  
- El ejemplo anterior muestra cómo cambiar el filtrado para todos los `My.Application.Log` salida. En este ejemplo se muestra cómo filtrar un agente de escucha de registro individuales. De forma predeterminada, una aplicación tiene dos agentes de escucha que escriben en el resultado de la depuración de la aplicación y el archivo de registro.  
+## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtrado individual para los agentes de escucha de My.Application.Log  
+ En el ejemplo anterior se muestra cómo cambiar el filtrado para todos los resultados de `My.Application.Log`. En este ejemplo se muestra cómo filtrar un agente de escucha de registro individual. De manera predeterminada, una aplicación tiene dos agentes de escucha que escriben en el archivo de registro y de salida de la depuración de la aplicación.  
   
- El archivo de configuración controla el comportamiento de los agentes de escucha de registro permitiendo que cada uno tenga un filtro, que es similar a un conmutador para `My.Application.Log`. Un agente de escucha de registro generará un mensaje sólo si la gravedad del mensaje puede por tanto el registro `DefaultSwitch` y filtrar el registro del agente de escucha.  
+ El archivo de configuración controla el comportamiento de los agentes de escucha de registro permitiendo que cada uno tenga un filtro, que es similar a un modificador para `My.Application.Log`. Un agente de escucha de registro generará un mensaje solo si la gravedad de este se permite por el filtro del agente de escucha de registro y del `DefaultSwitch` del registro.  
   
- En este ejemplo se muestra cómo configurar el filtrado para un nuevo agente de escucha de depuración y agregarlo a la `Log` objeto. El agente de escucha de depuración predeterminado debe quitarse de la `Log` del objeto, por lo que resulta evidente que los mensajes de depuración proceden del nuevo agente de escucha de depuración.  
+ En este ejemplo se muestra cómo configurar el filtrado para un nuevo agente de escucha de depuración y agregarlo al objeto `Log`. El agente de escucha de depuración predeterminado debe quitarse del objeto `Log`, por lo que es evidente que los mensajes de depuración provienen del nuevo agente de escucha de depuración.  
   
-#### <a name="to-log-only-activity-tracing-events"></a>Para registrar sólo eventos de seguimiento de actividad  
+#### <a name="to-log-only-activity-tracing-events"></a>Para registrar solo los eventos de seguimiento de la actividad  
   
-1.  Haga clic en app.config en el **el Explorador de soluciones** y elija **abiertos**.  
+1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
      O bien  
   
@@ -168,11 +184,11 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
     3.  Haga clic en **Agregar**.  
   
-2.  Haga clic en app.config en **el Explorador de soluciones**. Elija **abiertos**.  
+2.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones**. Pulse **Abrir**.  
   
-3.  Busque la `<listeners>` sección, en la `<source>` sección con el `name` atributo "DefaultSource", que se encuentra en la `<sources>` sección. El `<sources>` sección está bajo la `<system.diagnostics>` sección, en el nivel superior `<configuration>` sección.  
+3.  Busque la sección `<listeners>`, en la sección `<source>` con el atributo `name` "DefaultSource", que está en la sección `<sources>`. La sección `<sources>` está en la sección `<system.diagnostics>`, en la sección de nivel superior `<configuration>`.  
   
-4.  Agregue este elemento a la `<listeners>` sección:  
+4.  Agregue este elemento a la sección `<listeners>`:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -196,7 +212,7 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
     </add>  
     ```  
   
-     El <xref:System.Diagnostics.EventTypeFilter> filtro toma uno de los <xref:System.Diagnostics.SourceLevels> valores de enumeración como su `initializeData` atributo.  
+     El filtro <xref:System.Diagnostics.EventTypeFilter> toma uno de los valores de enumeración <xref:System.Diagnostics.SourceLevels> como su atributo `initializeData`.  
   
 7.  El contenido del archivo app.config debe ser similar al código XML siguiente:  
   
@@ -241,26 +257,26 @@ Este tutorial muestra cómo cambiar el filtrado para el registro de forma predet
   
 8.  Ejecute la aplicación en el depurador.  
   
-9. Presione **Button1**.  
+9. Pulse **Button1**.  
   
-     La aplicación escribe la información siguiente al archivo de registro de la aplicación:  
+     La aplicación escribe la siguiente información en el archivo de registro de la aplicación:  
   
      `Default Information: 0 : In Button1_Click`  
   
      `Default Error: 2 : Error in the application.`  
   
-     La aplicación escribe menos información a los resultados de la depuración de la aplicación debido a que el filtrado más restrictivo.  
+     La aplicación escribe menos información en el resultado de depuración de la aplicación porque el filtrado es más restrictivo.  
   
      `Default Error   2   Error`  
   
 10. Cierre la aplicación.  
   
- Para obtener más información acerca de cómo cambiar la configuración del registro después de la implementación, consulte [trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
+ Para obtener más información sobre cómo cambiar la configuración del registro después de la implementación, vea [Trabajar con registros de aplicaciones en Visual Basic](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial: Determinar el lugar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
+ [Tutorial: Determinar el lugar en el que My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
  [Tutorial: Cambiar el lugar donde My.Application.Log escribe información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [Tutorial: Crear agentes de escucha de registro personalizado](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [Cómo: escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [Modificadores de seguimiento](../Topic/Trace%20Switches.md)   
- [Información de registro de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+ [Tutorial: Crear agentes de escucha de registro personalizados](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
+ [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
+ [Modificadores de seguimiento](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [Registrar información de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

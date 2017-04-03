@@ -1,0 +1,91 @@
+---
+title: "Cómo: Modificar árboles de expresiones (C#) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 73d95a78673271fb8e458ed7f3c88e2e73eb3455
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="how-to-modify-expression-trees-c"></a>Cómo: Modificar árboles de expresiones (C#)
+En este tema se muestra cómo modificar un árbol de expresión. Los árboles de expresiones son inmutables, lo que significa que no pueden modificarse directamente. Para cambiar un árbol de expresión, debe crear una copia de un árbol de expresión existente y, una vez creada la copia, realizar los cambios necesarios. Puede usar la clase <xref:System.Linq.Expressions.ExpressionVisitor> para recorrer un árbol de expresión existente y copiar cada nodo que visita.  
+  
+### <a name="to-modify-an-expression-tree"></a>Para modificar un árbol de expresión  
+  
+1.  Cree un nuevo proyecto de **aplicación de consola**.  
+  
+2.  Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
+  
+3.  Agregue la clase `AndAlsoModifier` al proyecto.  
+  
+    ```csharp  
+    public class AndAlsoModifier : ExpressionVisitor  
+    {  
+        public Expression Modify(Expression expression)  
+        {  
+            return Visit(expression);  
+        }  
+  
+        protected override Expression VisitBinary(BinaryExpression b)  
+        {  
+            if (b.NodeType == ExpressionType.AndAlso)  
+            {  
+                Expression left = this.Visit(b.Left);  
+                Expression right = this.Visit(b.Right);  
+  
+                // Make this binary expression an OrElse operation instead of an AndAlso operation.  
+                return Expression.MakeBinary(ExpressionType.OrElse, left, right, b.IsLiftedToNull, b.Method);  
+            }  
+  
+            return base.VisitBinary(b);  
+        }  
+    }  
+    ```  
+  
+     Esta clase hereda la clase <xref:System.Linq.Expressions.ExpressionVisitor> y está especializada en la modificación de expresiones que representan operaciones `AND` condicionales. Cambia estas operaciones de una expresión `AND` condicional a una expresión `OR` condicional. Para ello, la clase invalida el método <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> del tipo base, porque las expresiones `AND` condicionales se representan como expresiones binarias. En el método `VisitBinary`, si la expresión que se pasa representa una operación `AND` condicional, el código construye una nueva expresión que contiene el operador `OR` condicional en lugar del operador `AND` condicional. Si la expresión que se pasa a `VisitBinary` no representa una operación `AND` condicional, el método defiere a la implementación de la case base. Los métodos de clase base construyen nodos que son como los árboles de expresiones que se pasan, pero los subárboles de los nodos se reemplazan por los árboles de expresiones que genera de forma recursiva el visitante.  
+  
+4.  Agregue una directiva `using` al archivo para el espacio de nombres `System.Linq.Expressions`.  
+  
+5.  Agregue código al método `Main` en el archivo Program.cs para crear un árbol de expresión y pasarlo al método que lo modificará.  
+  
+    ```csharp  
+    Expression<Func<string, bool>> expr = name => name.Length > 10 && name.StartsWith("G");  
+    Console.WriteLine(expr);  
+  
+    AndAlsoModifier treeModifier = new AndAlsoModifier();  
+    Expression modifiedExpr = treeModifier.Modify((Expression) expr);  
+  
+    Console.WriteLine(modifiedExpr);  
+  
+    /*  This code produces the following output:  
+  
+        name => ((name.Length > 10) && name.StartsWith("G"))  
+        name => ((name.Length > 10) || name.StartsWith("G"))  
+    */  
+    ```  
+  
+     El código crea una expresión que contiene una operación `AND` condicional. Luego crea una instancia de la clase `AndAlsoModifier` y pasa la expresión al método `Modify` de esta clase. Se generan los árboles de expresiones tanto originales como modificados para mostrar el cambio.  
+  
+6.  Compile y ejecute la aplicación.  
+  
+## <a name="see-also"></a>Vea también  
+ [Cómo: Ejecutar árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
+ [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

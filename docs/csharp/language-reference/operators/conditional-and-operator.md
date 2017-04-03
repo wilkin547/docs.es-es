@@ -1,52 +1,70 @@
 ---
-title: "Operador &amp;&amp; (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "&&_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "&& (operador) [C#]"
-  - "AND (operador lógico) [C#]"
+title: Operador &amp;&amp; (Referencia de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '&&_CSharpKeyword'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '&& operator [C#]'
+- logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: f60d50510a4b6233e248fda87cfbb05a4c299312
+ms.lasthandoff: 03/13/2017
+
 ---
-# Operador &amp;&amp; (Referencia de C#)
-El operador AND condicional \(`&&`\) realiza una operación lógica AND de sus operandos de tipo `bool`, pero sólo evalúa su segundo operando si es necesario.  
+# <a name="ampamp-operator-c-reference"></a>Operador &amp;&amp; (Referencia de C#)
+El operador AND condicional (`&&`) realiza una operación lógica AND con sus operandos `bool`, pero solo evalúa el segundo operando si es necesario.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La operación  
   
 ```  
 x && y  
 ```  
   
- se corresponde con la operación  
+ corresponde a la operación  
   
 ```  
 x & y  
 ```  
   
- pero si `x`es `false`, `y` no se evalúa, porque el resultado de la operación de AND es `false` independientemente de cuál sea la configuración de `y` .  Esto se conoce como evaluación "cortocircuitada".  
+ salvo que si `x` es `false`, `y` no se evalúa porque el resultado de la operación AND es `false` independientemente del valor de `y`. Esto se conoce como evaluación "de cortocircuito".  
   
- El operador AND condicional no se puede sobrecargar, pero las sobrecargas de los operadores lógicos normales y los operadores [true](../../../csharp/language-reference/keywords/true.md) y [false](../../../csharp/language-reference/keywords/false.md) también se consideran, con ciertas restricciones, sobrecargas de los operadores lógicos condicionales.  
+ El operador AND condicional no puede sobrecargarse, pero las sobrecargas de los operadores lógicos regulares y los operadores [true](../../../csharp/language-reference/keywords/true.md) y [false](../../../csharp/language-reference/keywords/false.md) se consideran también, con algunas restricciones, sobrecargas de los operadores lógicos condicionales.  
   
-## Ejemplo  
- En el ejemplo siguiente, la expresión condicional en la segunda instrucción de `if` evalúa sólo el primer operando porque el operando devuelve `false`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente, la expresión condicional de la segunda instrucción `if` evalúa solo el primer operando porque este devuelve `false`.  
   
  [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [operadores de C\#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Operadores de C#](../../../csharp/language-reference/operators/index.md)

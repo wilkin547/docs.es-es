@@ -1,46 +1,64 @@
 ---
-title: "C&#243;mo: Publicar eventos que cumplan las directrices de .NET Framework (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "eventos [C#], instrucciones de implementación"
+title: "Cómo: Publicar eventos que cumplan las directrices de .NET Framework (Guía de programación de C#)| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 78d069249c8131a091a206703c475faaf641d17b
+ms.lasthandoff: 03/13/2017
+
 ---
-# C&#243;mo: Publicar eventos que cumplan las directrices de .NET Framework (Gu&#237;a de programaci&#243;n de C#)
-En el procedimiento siguiente se muestra cómo puede agregar eventos que se ajusten al modelo estándar de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] en sus propias clases y structs.  Todos los eventos de la biblioteca de clases [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] se basan en el delegado <xref:System.EventHandler>, que se define del modo siguiente:  
+# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Cómo: Publicar eventos que cumplan las directrices de .NET Framework (Guía de programación de C#)
+En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] estándar a las clases y structs. Todos los eventos de la biblioteca de clases [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:  
   
 ```  
 public delegate void EventHandler(object sender, EventArgs e);  
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong-md.md)] incluye una versión genérica de este delegado, <xref:System.EventHandler%601>.  Los ejemplos siguientes muestran cómo utilizar ambas versiones.  
+>  [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] incluye una versión genérica de este delegado, <xref:System.EventHandler%601>. En los siguientes ejemplos se muestra cómo usar las dos versiones.  
   
- Aunque los eventos de las clases que defina se pueden basar en cualquier tipo de delegado válido, incluidos los delegados que devuelven un valor, normalmente es aconsejable que los eventos se basen en el modelo de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] a través de <xref:System.EventHandler>, como se muestra en el ejemplo siguiente.  
+ Aunque los eventos de las clases que defina se pueden basar en cualquier tipo de delegado válido, incluidos los delegados que devuelven un valor, por lo general se recomienda que base los eventos en el patrón [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] mediante <xref:System.EventHandler>, como se muestra en el ejemplo siguiente.  
   
-### Para publicar eventos basados en el modelo EventHandler  
+### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Para publicar eventos basados en el patrón EventHandler  
   
-1.  \(Omita este paso y vaya directamente al paso 3a si no tiene que enviar datos personalizados con el evento\). Declare la clase de sus datos personalizados en un ámbito que sea visible para las clases del publicador y del suscriptor.  A continuación, agregue los miembros necesarios para que contengan los datos de evento personalizados.  En este ejemplo, se devuelve una cadena simple.  
+1.  (Omita este paso y vaya al paso 3a si no tiene que enviar datos personalizados con el evento). Declare la clase de los datos personalizados en un ámbito que sea visible para las clases de publicador y suscriptor. Luego, agregue los miembros necesarios para almacenar los datos de eventos personalizados. En este ejemplo se devuelve una cadena simple.  
   
 <CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-2.  \(Omita este paso si utiliza la versión genérica de <xref:System.EventHandler%601>\). Declare un delegado en la clase de publicación.  Asígnele un nombre que acabe en *EventHandler*.  El segundo parámetro especifica el tipo EventArgs personalizado.  
+2.  (Omita este paso si usa la versión genérica de <xref:System.EventHandler%601>). Declare un delegado en la clase de publicación. Asígnele un nombre que acabe por *EventHandler*. El segundo parámetro especifica el tipo EventArgs personalizado.  
   
     ```  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
-3.  Declare el evento en la clase de publicación mediante alguno de los procedimientos siguientes.  
+3.  Declare el evento en la clase de publicación llevando a cabo uno de los siguientes pasos.  
   
-    1.  Si no tiene ninguna clase EventArgs personalizada, el tipo Event será el delegado EventHandler no genérico.  No necesita declarar el delegado porque ya está declarado en el espacio de nombres <xref:System> que se incluyó al crear el proyecto de C\#.  Agregue el código siguiente a la clase del publicador.  
+    1.  Si no tiene ninguna clase EventArgs personalizada, el tipo Event será el delegado EventHandler no genérico. No es necesario declarar el delegado, porque ya está declarado en el espacio de nombres <xref:System> que se incluye al crear el proyecto de C#. Agregue el código siguiente a la clase de publicador.  
   
         ```  
         public event EventHandler RaiseCustomEvent;  
@@ -53,19 +71,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
         ```  
   
-    3.  Si utiliza la versión genérica, no necesita un delegado personalizado.  En lugar de ello, en la clase de publicación, especifique el tipo de evento como `EventHandler<CustomEventArgs>` y sustituya el nombre de su propia clase incluido entre corchetes angulares.  
+    3.  Si usa la versión genérica, no necesita ningún delegado personalizado. En su lugar, en la clase de publicación, especifique el tipo de evento como `EventHandler<CustomEventArgs>`, sustituyendo el nombre de su propia clase que aparece entre corchetes angulares.  
   
         ```  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  
         ```  
   
-## Ejemplo  
- En el ejemplo siguiente se muestran los pasos anteriores con una clase EventArgs personalizada y <xref:System.EventHandler%601> como tipo de evento.  
+## <a name="example"></a>Ejemplo  
+ En el siguiente ejemplo se muestran los pasos anteriores mediante el uso de una clase EventArgs personalizada y <xref:System.EventHandler%601> como tipo de evento.  
   
  [!code-cs[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Delegate>   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Eventos](../../../csharp/programming-guide/events/index.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)

@@ -1,48 +1,66 @@
 ---
-title: "in (Modificador gen&#233;rico) (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "contravarianza, in (palabra clave) [C#]"
-  - "in (palabra clave) [C#]"
+title: "in (Modificador genérico) (Referencia de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- contravariance, in keyword [C#]
+- in keyword [C#]
 ms.assetid: 3a778c36-8aed-4ebe-aa8b-39f4057215b1
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b6c490d14b47aaa527fe2ddb3627ea0a84bfe604
+ms.lasthandoff: 03/13/2017
+
 ---
-# in (Modificador gen&#233;rico) (Referencia de C#)
-En los parámetros de tipo genérico, la palabra clave `in` especifica que el parámetro de tipo es contravariante.  Puede usar la palabra clave `in` en delegados e interfaces genéricos.  
+# <a name="in-generic-modifier-c-reference"></a>in (Modificador genérico) (Referencia de C#)
+Para los parámetros de tipo genérico, la palabra clave `in` especifica que el parámetro de tipo es contravariante. Puede usar la palabra clave `in` en las interfaces y delegados genéricos.  
   
- La contravarianza permite usar un tipo menos derivado que el especificado por el parámetro genérico.  Esto permite la conversión implícita de las clases que implementan interfaces variantes y de los tipos delegados.  La covarianza y contravarianza en los parámetros de tipo genérico son compatibles con los tipos de referencia, pero no con los tipos de valor.  
+ La contravarianza permite usar un tipo menos derivado que el que se especifica en el parámetro genérico. Esto permite la conversión implícita de las clases que implementan interfaces variantes y la conversión implícita de los tipos de delegado. La covarianza y la contravarianza de los parámetros de tipo genérico son compatibles con los tipos de referencia, pero no lo son con los tipos de valor.  
   
- Un tipo se puede declarar como contravariante en una interfaz o un delegado genérico si solamente se usa solamente como tipo de los argumentos de método y no como tipo devuelto por un método.  Los parámetros `Ref` y `out` no pueden ser variantes.  
+ Un tipo se puede declarar contravariante en una interfaz o delegado genéricos si solo se usa como tipo de argumentos de método y no se usa como tipo de un valor devuelto de un método. Los parámetros `Ref` y `out` no pueden ser variantes.  
   
- Una interfaz que tiene un parámetro de tipo contravariante permite que sus métodos acepten argumentos de tipos menos derivados que los especificados por el parámetro de tipo de interfaz.  Por ejemplo, dado que en .NET Framework 4, en la interfaz <xref:System.Collections.Generic.IComparer%601>, el tipo T es contravariante, puede asignar un objeto del tipo `IComparer(Of Person)` a otro objeto del tipo `IComparer(Of Employee)` sin usar ningún método de conversión especial si `Employee` hereda `Person`.  
+ Una interfaz que tiene un parámetro de tipo contravariante permite que sus métodos acepten argumentos de tipos menos derivados que los que se especifican en el parámetro de tipo de interfaz. Por ejemplo, dado que en la interfaz <xref:System.Collections.Generic.IComparer%601> de .NET Framework 4 el tipo T es contravariante, puede asignar un objeto de tipo `IComparer(Of Person)` a un objeto de tipo `IComparer(Of Employee)` sin tener que usar ningún método de conversión especial si `Employee` hereda `Person`.  
   
  A un delegado contravariante se le puede asignar otro delegado del mismo tipo, pero con un parámetro de tipo genérico menos derivado.  
   
- Para obtener más información, vea [Covarianza y contravarianza](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md).  
+ Para obtener más información, vea [Covariance and Contravariance](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8) (Covarianza y contravarianza).  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante.  También se muestra cómo se puede usar la conversión implícita para las clases que implementan dicha interfaz.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo declarar, extender e implementar una interfaz genérica contravariante. También se muestra cómo puede usar la conversión implícita para las clases que implementan esta interfaz.  
   
  [!code-cs[csVarianceKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_1.cs)]  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar, invocar y crear instancias de un delegado genérico contravariante.  También se muestra cómo se puede convertir un tipo de delegado implícitamente.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo declarar e invocar un delegado genérico contravariante, y crear instancias de este. También se muestra cómo puede convertir implícitamente un tipo de delegado.  
   
  [!code-cs[csVarianceKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/in-generic-modifier_2.cs)]  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [Covarianza y contravarianza](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md)   
+ [Covariance and Contravariance](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)  (Covarianza y contravarianza)  
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)

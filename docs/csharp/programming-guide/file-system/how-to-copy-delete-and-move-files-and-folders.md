@@ -1,44 +1,62 @@
 ---
-title: "C&#243;mo: Copiar, eliminar y mover archivos y carpetas (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "E/S [C#]"
+title: "Cómo: Copiar, eliminar y mover archivos y carpetas (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- I/O [C#]
 ms.assetid: 62e52cd7-9597-4e4a-acf9-1315f5cdbf05
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c7e9a170882c4e8dbb04dc014642a28ad4365e39
+ms.lasthandoff: 03/13/2017
+
 ---
-# C&#243;mo: Copiar, eliminar y mover archivos y carpetas (Gu&#237;a de programaci&#243;n de C#)
-En los ejemplos siguientes se muestra cómo copiar, mover y eliminar archivos y carpetas de forma sincrónica utilizando las clases <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> y <xref:System.IO.DirectoryInfo?displayProperty=fullName> del espacio de nombres <xref:System.IO?displayProperty=fullName>.  En estos ejemplos no se proporciona ninguna barra de progreso ni cualquier otra interfaz de usuario.  Si desea proporcionar un cuadro de diálogo de progreso estándar, vea [Cómo: Proporcionar un cuadro de diálogo de progreso para operaciones de archivos](../../../csharp/programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md).  
+# <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Cómo: Copiar, eliminar y mover archivos y carpetas (Guía de programación de C#)
+En los ejemplos siguientes se muestra cómo copiar, mover y eliminar archivos y carpetas de forma sincrónica mediante las clases <xref:System.IO.File?displayProperty=fullName>, <xref:System.IO.Directory?displayProperty=fullName>, <xref:System.IO.FileInfo?displayProperty=fullName> y <xref:System.IO.DirectoryInfo?displayProperty=fullName> del espacio de nombres <xref:System.IO?displayProperty=fullName>. En estos ejemplos no se proporciona una barra de progreso ni ninguna otra interfaz de usuario. Si quiere proporcionar un cuadro de diálogo de progreso estándar, vea [Cómo: Proporcionar un cuadro de diálogo de progreso para operaciones de archivos](how-to-provide-a-progress-dialog-box-for-file-operations.md).  
   
- Utilice <xref:System.IO.FileSystemWatcher?displayProperty=fullName> para proporcionar eventos que permitan calcular el progreso al realizar operaciones en varios archivos.  Otro enfoque consiste en utilizar la invocación de plataforma para llamar a los métodos relacionados con archivos pertinentes en el shell de Windows.  Para obtener información sobre cómo realizar estas operaciones de archivo de forma asincrónica, vea [E\/S de archivos asincrónica](../Topic/Asynchronous%20File%20I-O.md).  
+ Use <xref:System.IO.FileSystemWatcher?displayProperty=fullName> para proporcionar eventos que le permitan calcular el progreso al realizar operaciones en varios archivos. Otro enfoque consiste en usar la invocación de plataforma para llamar a los métodos pertinentes relacionados con archivos en el shell de Windows. Para obtener información sobre cómo realizar estas operaciones de archivo de forma asincrónica, vea [E/S de archivos asincrónica](https://msdn.microsoft.com/library/kztecsys).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo copiar archivos y directorios.  
   
  [!code-cs[csFilesandFolders#7](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_1.cs)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo mover archivos y directorios.  
   
  [!code-cs[csFilesandFolders#8](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_2.cs)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo eliminar archivos y directorios.  
   
  [!code-cs[csFilesandFolders#9](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_3.cs)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.IO?displayProperty=fullName>   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Registro y sistema de archivos](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)   
- [Cómo: Proporcionar un cuadro de diálogo de progreso para operaciones de archivos](../../../csharp/programming-guide/file-system/how-to-provide-a-progress-dialog-box-for-file-operations.md)   
- [E\/S de archivos y secuencias](../Topic/File%20and%20Stream%20I-O.md)   
- [Tareas de E\/S comunes](../Topic/Common%20I-O%20Tasks.md)
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Registro y sistema de archivos (Guía de programación de C#)](index.md)   
+ [Cómo: Proporcionar un cuadro de diálogo de progreso para operaciones de archivos](how-to-provide-a-progress-dialog-box-for-file-operations.md)   
+ [E/S de archivos y secuencias](https://msdn.microsoft.com/library/k3352a4t)   
+ [Tareas de E/S comunes](https://msdn.microsoft.com/library/ms404278)

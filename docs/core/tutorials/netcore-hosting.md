@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 translationtype: Human Translation
-ms.sourcegitcommit: 0a9d42f59e48a790e83a5a46b1559b613340136a
-ms.openlocfilehash: 01b3b0e7a0e2d2a330b10b2f3482ddd1ed3d51bf
-ms.lasthandoff: 03/03/2017
+ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
+ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
+ms.lasthandoff: 03/08/2017
 
 ---
 
@@ -28,7 +28,7 @@ En este artículo se proporciona información general sobre los pasos necesarios
 
 Como los hosts son aplicaciones nativas, este tutorial tratará la creación de una aplicación de C++ para hospedar .NET Core. Necesitará un entorno de desarrollo de C++ (como el que se proporciona mediante [Visual Studio](https://www.visualstudio.com/downloads/)).
 
-También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://www.microsoft.com/net/core) y [crear una pequeña aplicación de prueba de .NET Core](https://github.com/dotnet/docs/blob/master/docs/csharp/getting-started/with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
+También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://www.microsoft.com/net/core) y [crear una pequeña aplicación de prueba de .NET Core](../../csharp/getting-started/with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
 
 Este tutorial y su [ejemplo asociado](https://github.com/dotnet/docs/tree/master/samples/core/hosting) crean un host de Windows, pero vea las notas al final de este artículo sobre cómo hospedar en UNIX.
 
