@@ -17,7 +17,7 @@ ms.lasthandoff: 03/13/2017
 
 ---
 
-# <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#  
+# <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C## 
 
 C# (pronunciado "si sharp" en inglés) es un lenguaje de programación sencillo, moderno, orientado a objetos y con seguridad de tipos. C# tiene sus raíces en la familia de lenguajes C, y a los programadores de C, C++, Java y JavaScript les resultará familiar inmediatamente.
 
