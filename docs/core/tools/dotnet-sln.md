@@ -1,21 +1,22 @@
 ---
-title: Comando dotnet-sln | Microsoft Docs
+title: 'Comando dotnet-sln: CLI de .NET Core | Microsoft Docs'
 description: "El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución."
 keywords: dotnet-sln, CLI, comando de la CLI, .NET Core
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 84c2a9cab36dcfa76f90d75c83f4988ba441b0a8
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-sln"></a>dotnet-sln
 
 ## <a name="name"></a>Nombre
@@ -25,11 +26,11 @@ ms.lasthandoff: 03/07/2017
 ## <a name="synopsis"></a>Sinopsis
 
 ```
-dotnet sln [<solution_name>] add <project> <project>
-dotnet sln [<solution_name>] add **/**
-dotnet sln [<solution_name>] remove <project> <project>
-dotnet sln [<solution_name>] remove **/**
-dotnet sln [<solution_name>] list
+dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
+dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
+dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
 
@@ -39,17 +40,17 @@ El comando `dotnet sln` proporciona una opción conveniente para agregar, quitar
 
 ## <a name="commands"></a>Comandos
 
-`add <project>`
+`add <PROJECT> ...`
 
 `add **/*`
 
-Agrega un proyecto o varios proyectos al archivo de solución. El patrón Glob se admite en terminales basados en Unix/Linux.
+Agrega un proyecto o varios proyectos al archivo de solución. Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.
 
-`remove <project>`
+`remove <PROJECT> ...`
 
 `remove **/*`
 
-Quita un proyecto o varios proyectos del archivo de solución. El patrón Glob se admite en terminales basados en Unix/Linux.
+Quita un proyecto o varios proyectos del archivo de solución. Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.
 
 `list`
 
@@ -57,9 +58,9 @@ Lista todos los proyectos de un archivo de solución.
 
 ## <a name="arguments"></a>Argumentos
 
-`solution_name`
+`SOLUTION_NAME`
 
-Archivo de solución que se va a utilizar. Si no se especifica, el comando buscará uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
+Archivo de solución que se va a utilizar. Si no se especifica, el comando busca uno en el directorio actual. Si hay varios archivos de solución en el directorio, se debe especificar uno.
 
 ## <a name="options"></a>Opciones
 
@@ -81,7 +82,7 @@ Quite un proyecto de una solución:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Agregue varios proyectos a una solución mediante el patrón de uso de comodines:
+Agregue varios proyectos a una solución mediante el patrón global:
 
 `dotnet sln add **/**/*.fsproj`
 

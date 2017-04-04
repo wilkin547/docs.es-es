@@ -4,16 +4,16 @@ description: "Un tutorial paso a paso que muestra cómo empezar a trabajar con .
 keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 240061d2515c14ba7ab733f4cc9e7e38fb2a5c7c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e30414ac3dd48bbb060ad6f2a33a0a124cba0fa3
+ms.openlocfilehash: 6ffca900d5649823e6aa2e28486a64a2f7844efc
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -25,7 +25,7 @@ Si no está familiarizado con el conjunto de herramientas de la CLI de .NET Core
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [SDK 1.0.0 de .NET Core](https://www.microsoft.com/net/download/core).
+- [SDK 1.0 de .NET Core](https://www.microsoft.com/net/download/core).
 - Un editor de texto o un editor de código de su elección.
 
 ## <a name="hello-console-app"></a>Hola, aplicación de consola
@@ -78,7 +78,7 @@ Veamos un tutorial rápido:
     Hello World!
     ```
 
-    También puede ejecutar [`dotnet build`](../tools/dotnet-build.md) para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada como un archivo DLL que se puede ejecutar con `dotnet bin\Debug\netcoreapp1.0\Hello.dll` en Windows (use `/` para otros sistemas que no sean de Windows). También puede especificar argumentos específicos para la aplicación como verá posteriormente en el tema.
+    También puede ejecutar [`dotnet build`](../tools/dotnet-build.md) para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada como un archivo DLL que se puede ejecutar con `dotnet bin\Debug\netcoreapp1.0\Hello.dll` en Windows (use `/` para otros sistemas que no sean de Windows). También puede especificar argumentos para la aplicación como verá posteriormente en el tema.
 
     ```
     $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
@@ -163,3 +163,4 @@ Tenga en cuenta que los comandos y los pasos que se muestran en este tutorial pa
 ## <a name="see-also"></a>Vea también
 
 [Organización y prueba de proyectos con las herramientas de la CLI de .NET Core](testing-with-cli.md)
+

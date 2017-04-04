@@ -1,0 +1,200 @@
+---
+title: "Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac | Microsoft Docs"
+description: "Este tema le guía en la creación de una solución .NET Core que incluye una biblioteca reutilizable y pruebas unitarias."
+keywords: .NET, .NET Core, macOS, Mac
+author: guardrex
+ms.author: mairaw
+ms.date: 03/16/2017
+ms.topic: article
+ms.prod: .net-core
+ms.devlang: dotnet
+ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
+translationtype: Human Translation
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: c76168d1c9ae65ef0d17c55aab156a4f16ecea52
+ms.lasthandoff: 03/20/2017
+
+---
+
+# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac
+
+Visual Studio para Mac proporciona un entorno de desarrollo integrado (IDE) completo para el desarrollo de aplicaciones .NET Core. Este tema le guía en la creación de una solución .NET Core que incluye una biblioteca reutilizable y pruebas unitarias.
+
+En este tutorial se muestra cómo crear una aplicación que acepte una palabra de búsqueda y una cadena de texto del usuario, cuente el número de veces que la palabra de búsqueda aparece en la cadena utilizando un método en una biblioteca de clases, y devuelva el resultado al usuario. La solución también incluye pruebas unitarias para la biblioteca de clases como una introducción a los conceptos de desarrollo controlado por pruebas (TDD). Si prefiere continuar usando el tutorial con un ejemplo completo, descargue la [solución de ejemplo](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter).
+
+> [!NOTE]
+> Visual Studio para Mac es un software de versión preliminar. Como con todas las versiones preliminares de productos de Microsoft, sus comentarios son muy valiosos. Hay dos maneras de proporcionar comentarios al equipo de desarrollo de Visual Studio para Mac:
+> * En Visual Studio para Mac, seleccione **Ayuda > Notificar un problema** en el menú o **Notificar un problema** desde la pantalla de bienvenida, que abre una ventana para presentar un informe de errores.
+> * Para hacer una sugerencia, seleccione **Ayuda > Aportar una sugerencia** en el menú o **Aportar una sugerencia** desde la pantalla de bienvenida, que le lleva a la [página web de User Voice de Visual Studio para Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
+
+## <a name="prerequisites"></a>Requisitos previos
+
+[.NET Core y OpenSSL](https://www.microsoft.com/net/core#macos)
+
+Para más información sobre los requisitos previos, consulte los [requisitos previos para .NET Core en Mac](../../core/macos-prerequisites.md).
+
+## <a name="getting-started"></a>Introducción
+
+Si ya ha instalado los requisitos previos y Visual Studio para Mac, omita esta sección y proceda con [Compilación de una biblioteca](#building-a-library). Siga estos pasos para instalar los requisitos previos y Visual Studio para Mac:
+
+1. Descargue e instale [.NET Core y OpenSSL](https://www.microsoft.com/net/core#macos).
+
+1. Descargue el [instalador de Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Ejecute el instalador. Lea y acepte el contrato de licencia. Durante la instalación, se les proporciona la oportunidad de instalar Xamarin, una tecnología de desarrollo de aplicaciones móviles multiplataforma. La instalación de Xamarin y sus componentes relacionados es opcional para el desarrollo de .NET Core. Para ver un tutorial del proceso de instalación de Visual Studio para Mac, consulte [Introducing Visual Studio for Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) (Introducción a Visual Studio para Mac). Una vez completada la instalación, inicie el IDE de Visual Studio para Mac.
+
+## <a name="building-a-library"></a>Creación de una biblioteca
+
+1. En la pantalla de bienvenida, seleccione **Nuevo proyecto**. En el cuadro de diálogo **Nuevo proyecto**, en el nodo **Multiplatform** (Multiplataforma), seleccione la plantilla **Biblioteca .NET Standard**. Seleccione **Siguiente**.
+
+   ![Cuadro de diálogo Nuevo proyecto](./media/using-on-mac-vs-full-solution/vsmacfull01.png)
+
+1. Asigne al proyecto el nombre "TextUtils" (un nombre corto para "Text Utilities") y la solución "WordCounter". Deje activada la opción **Cree un directorio de proyecto dentro del directorio de la solución**. Seleccione **Crear**.
+
+   ![Cuadro de diálogo Nuevo proyecto](./media/using-on-mac-vs-full-solution/vsmacfull02.png)
+
+1. En la barra lateral **Solución**, expanda el nodo `TextUtils` para mostrar el archivo de clase proporcionado por la plantilla *Class1.cs*. Haga clic con el botón derecho en el archivo, seleccione **Cambiar nombre** en el menú contextual y denomínelo *WordCount.cs*. Abra el archivo y reemplace el contenido por el código siguiente:
+
+   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+
+1. Guarde el archivo mediante uno de estos tres métodos: use el método abreviado de teclado <kbd>&#8984;</kbd>+<kbd>s</kbd>, seleccione **Archivo > Guardar** en el menú o haga clic con el botón derecho en la pestaña del archivo y seleccione **Guardar** en el menú contextual. La siguiente imagen muestra la ventana de IDE:
+
+   ![Ventana del IDE que muestra la biblioteca de clases TextUtils, el archivo de clase WordCount, la clase estática WordCount y el método GetWordCount](./media/using-on-mac-vs-full-solution/vsmacfull03.png)
+
+1. Seleccione **Errores** en el margen inferior de la ventana de IDE para abrir el panel **Errores**. Seleccione el botón **Salida de la compilación**.
+
+   ![Margen inferior del IDE con el botón Errores](./media/using-on-mac-vs-full-solution/vsmacfull03b.png)
+
+1. Seleccione **Compilar > Compilar todo** en el menú.
+
+   La solución se compila. El panel de salida de la compilación muestra que la compilación es correcta.
+
+   ![Panel de salida de la compilación del panel Errores que muestra el mensaje de compilación correcta](./media/using-on-mac-vs-full-solution/vsmacfull04.png)
+
+## <a name="creating-a-test-project"></a>Creación de un proyecto de prueba
+
+Las pruebas unitarias proporcionan pruebas de software automatizadas durante el desarrollo y la publicación. El marco de trabajo de pruebas que usa en este tutorial es [xUnit](https://xunit.github.io/).
+
+1. En la barra lateral **Solución**, haga clic con el botón derecho en la solución `WordCounter` y seleccione **Agregar > Agregar nuevo proyecto**.
+
+1. En el cuadro de diálogo **Nuevo proyecto**, seleccione **Pruebas** en el nodo **.NET Core**. Seleccione el **proyecto de prueba xUnit** y haga clic en **Siguiente**.
+
+   ![Cuadro de diálogo Nuevo proyecto que crea el proyecto de prueba xUnit](./media/using-on-mac-vs-full-solution/vsmacfull05.png)
+
+1. Asigne al nuevo proyecto el nombre "TestLibrary" y seleccione **Crear**.
+
+   ![Cuadro de diálogo Nuevo proyecto que proporciona el nombre del proyecto](./media/using-on-mac-vs-full-solution/vsmacfull06.png)
+
+1. Para que la biblioteca de prueba funcione con la clase `WordCount`, agregue una referencia al proyecto `TextUtils`. En la barra lateral **Solución**, haga clic con el botón derecho en **Dependencias** en **TestLibrary**. Seleccione **Editar referencias** en el menú contextual.
+
+1. En el cuadro de diálogo **Editar referencias**, seleccione el proyecto **TextUtils** en la pestaña **Proyectos**. Seleccione **Aceptar**.
+
+   ![Cuadro de diálogo Editar referencias](./media/using-on-mac-vs-full-solution/vsmacfull07.png)
+
+1. En el proyecto **TestLibrary**, cambie el nombre del archivo *UnitTest1.cs* por *TextUtilsTests.cs*.
+
+1. Abra el archivo y reemplace el código por lo siguiente:
+
+   ```csharp
+   using Xunit;
+   using TextUtils;
+   using System.Diagnostics;
+
+   namespace TestLibrary
+   {
+       public class TextUtils_GetWordCountShould
+       {
+           [Fact]
+           public void IgnoreCasing()
+           {
+               var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
+   
+               Assert.NotEqual(2, wordCount);
+           }
+       }
+   }
+   ```
+
+   La siguiente imagen muestra el IDE con el código de prueba unitaria en su lugar. Preste atención a la instrucción `Assert.NotEquals`.
+
+   ![Prueba unitaria inicial para comprobar GetWordCount en la ventana principal del IDE](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
+
+   Mediante TDD, es importante hacer que una nueva prueba no se supere una vez para confirmar que su lógica de prueba es correcta. El método pasa el nombre "Jack" (en mayúsculas) y una cadena con "Jack" y "jack" (mayúsculas y minúsculas). Si el método `GetWordCount` funciona correctamente, devuelve un recuento de dos instancias de la palabra de búsqueda. Para que la prueba no se supere a propósito, primero implementará la prueba afirmando que el método `GetWordCount` no devuelve dos instancias de la palabra de búsqueda "Jack". Continúe con el paso siguiente para no superar la prueba a propósito.
+
+1. Actualmente, Visual Studio para Mac no integra pruebas xUnit en su ejecutor de pruebas incorporado, así que ejecute pruebas xUnit en la consola. Haga clic con el botón derecho en el proyecto `TestLibrary` y elija **Herramientas > Abrir en terminal** en el menú contextual. En el símbolo del sistema, ejecute `dotnet test`.
+   
+   La prueba no se supera, que es el resultado correcto. El método de prueba afirma que dos instancias de `inputString`, "Jack", no se devuelve de la cadena "Jack jack", proporciona al método `GetWordCount`. Puesto que la distinción de mayúsculas y minúsculas se ha factorizado en el método `GetWordCount`, se devuelven dos instancias. La aserción de que 2 *no es igual a* 2 produce un error. Este es el resultado correcto, y la lógica de nuestra prueba es buena. Deje abierta la ventana de consola mientras se prepara para modificar la prueba para su versión final en el paso siguiente.
+
+   ![Error de prueba en la ventana de consola. Total de pruebas: superadas: 0, no superadas 1. Error de serie de pruebas.](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
+
+1. Modifique el método de prueba `IgnoreCasing` cambiando `Assert.NotEqual` por `Assert.Equal`. Guarde el archivo mediante el método abreviado de teclado <kbd>&#8984;</kbd>+<kbd>s</kbd>, **Archivo > Guardar** en el menú, o haga clic con el botón derecho en la pestaña del archivo y seleccione **Guardar** en el menú contextual.
+
+   Se espera que el valor "Jack" de `searchWord` devuelva dos instancias con `inputString` "Jack jack" pasado a `GetWordCount`. En la ventana de consola, ejecute de nuevo `dotnet test`. La prueba se supera. Hay dos instancias de "Jack" en la cadena "Jack jack" (se omite la distinción de mayúsculas y minúsculas) y la aserción de prueba es `true`.
+
+   ![Prueba superada en la ventana de consola. Total de pruebas: superadas: 1, no superadas: 0. Serie de pruebas superadas.](./media/using-on-mac-vs-full-solution/vsmacfull10.png)
+
+1. Probar los valores devueltos individuales con un elemento `Fact` es solo el comienzo de lo que se puede hacer con las pruebas unitarias. Otra técnica eficaz le permite probar varios valores a la vez mediante un elemento `Theory`. Agregue el siguiente método a la clase `TextUtils_GetWordCountShould`. Después de agregar este método tiene dos métodos en la clase:
+
+   ```csharp
+   [Theory]
+   [InlineData(0, "Ting", "Does not appear in the string.")]
+   [InlineData(1, "Ting", "Ting appears once.")]
+   [InlineData(2, "Ting", "Ting appears twice with Ting.")]
+   public void CountInstancesCorrectly(int count, 
+                                       string searchWord, 
+                                       string inputString)
+   {
+       Assert.Equal(count, WordCount.GetWordCount(searchWord,
+                                                  inputString));
+   }
+   ```
+
+   El método `CountInstancesCorrectly` comprueba que el método `GetWordCount` cuenta correctamente. El método `InlineData` proporciona un recuento, una palabra de búsqueda y una cadena de entrada para comprobar. El método de prueba se ejecuta una vez por cada línea de datos. Una vez más, observe que está afirmando un error primero mediante `Assert.NotEqual`, aunque sabe que los recuentos de los datos son correctos y que los valores coincidirán con los recuentos devueltos por el método `GetWordCount`. Realizar el paso de no superar la prueba a propósito podría parecer una pérdida de tiempo al principio, pero comprobar la lógica de la prueba de esta manera es una comprobación importante en la lógica de las pruebas. Al final es probable que se encuentre con un método de prueba que se supera cuando espera que no lo haga y que encuentre un error en la lógica de la prueba. Merece la pena el esfuerzo de realizar este paso cada vez que crea un método de prueba.
+   
+1. Guarde el archivo y ejecute `dotnet test` en la ventana de consola. La prueba de distinción de mayúsculas y minúsculas se supera pero las tres pruebas de recuento no. Esto es exactamente lo que espera que ocurra.
+
+   ![Error de prueba en la ventana de consola. Total de pruebas: superadas: 4, no superadas: 3. Error de serie de pruebas.](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
+
+1. Modifique el método de prueba `CountInstancesCorrectly` cambiando `Assert.NotEqual` por `Assert.Equal`. Guarde el archivo. Ejecute de nuevo `dotnet test` en la ventana de consola. Todas las pruebas se superan.
+
+   ![Prueba superada en la ventana de consola. Total de pruebas: superadas: 4, no superadas: 0. Serie de pruebas superadas.](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
+
+## <a name="adding-a-console-app"></a>Adición de una aplicación de consola
+
+1. En la barra lateral **Solución**, haga clic con el botón derecho en la solución `WordCounter`. Agregue un nuevo proyecto de **aplicación de consola**; para ello, seleccione la plantilla en **.NET Core > Plantillas de la aplicación**. Seleccione **Siguiente**. Nombre al proyecto **WordCounterApp**. Seleccione **Crear** para crear el proyecto en la solución.
+
+1. En la barra lateral **Soluciones**, haga clic con el botón derecho en el nodo **Dependencias** del nuevo proyecto **WordCounterApp**. En el cuadro de diálogo **Editar referencias**, marque **TextUtils** y seleccione **Aceptar**.
+
+1. Abra el archivo *Program.cs*. Reemplace el código por el siguiente:
+
+   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+
+1. Para ejecutar la aplicación en una ventana de consola en lugar del IDE, haga clic con el botón derecho en el proyecto `WordCounterApp`, seleccione **Opciones** y abra el nodo **Predeterminado** en **Configuraciones**. Active la casilla **Ejecutar en consola externa**. Deje activada la opción **Pausar salida de la consola**. Esta configuración hace que la aplicación se genere en una ventana de consola para que pueda realizar entradas para las instrucciones `Console.ReadLine`. Si deja que la aplicación se ejecute en el IDE, solo puede ver el resultado de las instrucciones `Console.WriteLine`. Las instrucciones `Console.ReadLine` no funcionan en el panel **Salida de la aplicación** del IDE.
+
+   ![Ventana de opciones de proyecto](./media/using-on-mac-vs-full-solution/vsmacfull13.png)
+
+1. Dado que la versión preliminar de Visual Studio para Mac actualmente no puede ejecutar las pruebas cuando se ejecuta la solución, ejecutará la aplicación de consola directamente. Haga clic con el botón derecho en el proyecto `WordCounterApp` y seleccione **Run item** (Ejecutar elemento) en el menú contextual. Si intenta ejecutar la aplicación con el botón Reproducir, el ejecutor de pruebas y la aplicación no se ejecutarán. Para más información sobre el estado del trabajo en este problema, consulte [xunit/xamarinstudio.xunit (60)](https://github.com/xunit/xamarinstudio.xunit/issues/60). Al ejecutar la aplicación, proporcione valores para la palabra de búsqueda y la cadena de entrada en los mensajes de la ventana de consola. La aplicación indica el número de veces que aparece la palabra de búsqueda en la cadena.
+
+   ![Ventana de consola que muestra la palabra "olives" (aceitunas) buscada en la cadena: "Iro ate olives by the lake, and the olives were wonderful" (Iro comió aceitunas junto al lago y las aceitunas estaban buenísimas). La aplicación responde: "The search word olives appears 2 times" (La palabra de búsqueda "aceitunas" aparece 2 veces).](./media/using-on-mac-vs-full-solution/vsmacfull14.png)
+
+1. La última característica para explorar es la depuración con Visual Studio para Mac. Establezca un punto de interrupción sobre la instrucción `Console.WriteLine`: selecciónelo en el margen izquierdo de la línea 23 y verá un círculo rojo junto a la línea de código. Como alternativa, seleccione cualquier parte de la línea de código y seleccione **Ejecutar > Alternar puntos de interrupción** en el menú.
+
+   ![Punto de interrupción establecido en línea 23, la instrucción Console.WriteLine](./media/using-on-mac-vs-full-solution/vsmacfull15.png)
+
+1. Haga clic con el botón derecho en el proyecto `WordCounterApp` . Seleccione **Start Debugging item** (Iniciar depuración de elemento) en el menú contextual. Cuando se ejecute la aplicación, escriba la palabra de búsqueda "cat" (gato) y la cadena "The dog chased the cat, but the cat escaped" (El perro persiguió el gato, pero el gato se escapó) que se va a buscar. Cuando se llegue a la instrucción `Console.WriteLine`, la ejecución del programa se detiene antes de que se ejecute la instrucción. En la pestaña **Variables locales**, puede ver los valores `searchWord`, `inputString`, `wordCount` y `pluralChar`.
+
+   ![La ejecución de programa se detiene en la instrucción Console.WriteLine con la ventana Variables locales que muestra los valores inmediatamente antes de que se ejecute dicha instrucción.](./media/using-on-mac-vs-full-solution/vsmacfull16.png)
+
+1. En el panel **Inmediato**, escriba "wordCount = 999;" y presione Entrar. Se asigna un valor absurdo de 999 a la variable `wordCount`, lo que demuestra que puede sustituir valores de variables durante la depuración.
+
+   ![Hemos llegado al punto de interrupción. wordCount cambia a un valor de 999 en la ventana Inmediato](./media/using-on-mac-vs-full-solution/vsmacfull17.png)
+
+1. En la barra de herramientas, haga clic en la flecha para *continuar*. Examine la salida en la ventana de consola. Notifica el valor incorrecto de 999 que estableció cuando estaba depurando la aplicación.
+
+   ![Botón Continuar en la barra de herramientas](./media/using-on-mac-vs-full-solution/vsmacfull18.png)
+
+   ![El recuento de palabras de búsqueda cambia a un valor de 999 en la salida de la aplicación](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+* Explore características adicionales de Visual Studio para Mac en una [introducción a Visual Studio para Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) en el sitio web para desarrolladores de Xamarin.
+* Para una revisión más en profundidad de las características de Visual Studio para Mac, consulte la guía [Xamarin Studio Tour](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/ide-tour/) (Paseo por Xamarin Studio).
+

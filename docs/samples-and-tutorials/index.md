@@ -10,8 +10,9 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: c10736e81d4f43d6ba70b71c25878dc4068a4a10
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -86,6 +87,14 @@ Este tutorial muestra muchas de las características de LINQ y los elementos del
 
 Este tutorial muestra la creación de un microservicio de ASP.NET Core y el hospedaje en Docker. Una versión completa del código que se va a crear se encuentra [en el repositorio core-docs de GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice).
 
+**[Introducción a .NET Core en macOS con Visual Studio para Mac ](../core/tutorials/using-on-mac-vs.md)**
+
+Este tutorial muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
+
+**[Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
+
+Este tutorial muestra cómo crear una solución completa de .NET Core que incluye una biblioteca reutilizable y pruebas unitarias.
+
 ## <a name="deploying-to-containers"></a>Implementación de contenedores
 
 **[Ejecución de aplicaciones de ASP.NET MVC en contenedores de Docker de Windows](../framework/docker/aspnetmvc.md)**
@@ -96,8 +105,3 @@ Una versión completa del código que se va a crear se encuentra [en el reposito
 **[Ejecución de aplicaciones de consola .NET Framework en contenedores de Windows](../framework/docker/console.md)**
 
 Este tutorial muestra cómo implementar una aplicación de consola existente en un contenedor de Windows. Una versión completa del código que se va a crear se encuentra [en el repositorio core-docs de GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
-
-
-<!--HONumber=Jan17_HO3-->
-
-

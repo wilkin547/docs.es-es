@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: dc0693c2e2c034c4c71b4270ef2812be4af72e72
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: e9b8ad13a48dd43236769b130d6f8a75b7b023ca
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -1185,7 +1185,7 @@ Console.WriteLine(result)
 
 Además de reemplazar un elemento de formato con la representación de cadena de su objeto correspondiente, los elementos de formato también permiten controlar lo siguiente: 
 
-* La forma específica en que un objeto se representa como una cadena, si el objeto implementa la interfaz [IFormattable](xref:System.IFormattable) y admite cadenas de formato. Para ello, siga el índice del elemento de formato con un signo : (dos puntos) seguido de una cadena de formato válida. En el ejemplo anterior, esto se hacía dando formato a un valor de fecha con la cadena de formato "d" (patrón de fecha corta) (por ejemplo, `{0:d}`) y dando formato a un valor numérico con la cadena de formato "C2" (por ejemplo, `{2:C2}`) para representar el número como un valor de moneda con dos decimales fraccionarios. 
+* La forma específica en que un objeto se representa como una cadena, si el objeto implementa la interfaz [IFormattable](xref:System.IFormattable) y admite cadenas de formato. Para ello, siga el índice del elemento de formato con un signo : (dos puntos) seguido de una cadena de formato válida. En el ejemplo anterior, esto se hacía aplicando formato a un valor de fecha con la cadena de formato "d" (patrón de fecha corta) (por ejemplo, `{0:d}`) y a un valor numérico con la cadena de formato "C2" (por ejemplo, `{2:C2}`) para representar el número como un valor de divisa con dos decimales fraccionarios. 
 
 * El ancho del campo que contiene la representación de cadena del objeto y la alineación de la representación de cadena en ese campo. Para ello, escriba una coma (,) seguida del ancho del campo. La cadena se alinea a la derecha en el campo si el ancho del campo es un valor positivo, y se alinea a la izquierda si el ancho del campo es un valor negativo. En el ejemplo siguiente los valores de fecha se alinean a la izquierda en un campo de 20 caracteres y los valores decimales con un dígito fraccionario se alinean a la derecha en un campo de 11 caracteres. 
 

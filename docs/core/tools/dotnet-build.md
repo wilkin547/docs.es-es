@@ -1,22 +1,23 @@
 ---
-title: Comando dotnet-build | Microsoft Docs
+title: 'Comando dotnet-build: CLI de .NET Core | Microsoft Docs'
 description: El comando dotnet-build compila un proyecto y todas sus dependencias.
 keywords: dotnet-build, CLI, comando de CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 17c2db54f871795c370a6475c21e36736a6b46c3
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-build"></a>dotnet-build
+
+# <a name="dotnet-build"></a>dotnet-build
 
 ## <a name="name"></a>Name
 
@@ -24,24 +25,21 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>Sinopsis
 
-```
-dotnet build [project] [-o|--output] [-f|--framework] [-c|--configuration] [-r|--runtime] [--version-suffix] [--no-incremental] [--no-dependencies] [-v|--verbosity]
-dotnet build [--help]
-```
+`dotnet build [<PROJECT>] [-o|--output] [-f|--framework] [-c|--configuration] [-r|--runtime] [--version-suffix] [--no-incremental] [--no-dependencies] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Descripción
-El comando `dotnet build` crea el proyecto y sus dependencias en un conjunto de archivos binarios. Los archivos binarios son los archivos de símbolos que se han usado para la depuración (tienen una extensión `*.pdb`), así como el código del proyecto en lenguaje intermedio (IL) con una extensión `*.dll`. Además, se generará un archivo JSON que muestra las dependencias de la aplicación con la extensión `*.deps.json`. Por último, también se generará un archivo `runtime.config.json`. Este archivo especifica en qué entorno de tiempo de ejecución compartido y en qué versión se ejecutará el código compilado. 
 
-Si el proyecto tiene dependencias de terceros, como bibliotecas de NuGet, estas se resolverán desde la caché de NuGet y no estarán disponibles en el resultado compilado del proyecto. Teniendo eso en cuenta, el producto de `dotnet build` no está listo para transferirse a otra máquina que se va a ejecutar. Esto difiere del comportamiento de .NET Framework en el que compilar un proyecto ejecutable (una aplicación) generará un resultado que puede ejecutarse en cualquier máquina que tenga .NET Framework instalado. Para obtener una experiencia similar en .NET Core, tiene que usar el comando [dotnet publish](dotnet-publish.md). Puede encontrar más información sobre esto en el documento [Implementación de aplicaciones .NET Core](../deploying/index.md). 
+El comando `dotnet build` crea el proyecto y sus dependencias en un conjunto de archivos binarios. Los archivos binarios incluyen el código del proyecto en archivos de lenguaje intermedio (IL) con una extensión *.dll* y los archivos de símbolos usados para la depuración con una extensión *.pdb*. Se genera un archivo JSON de dependencias (*\*. deps.json*) que incluye las dependencias de la aplicación. Se genera un archivo *\*.runtimeconfig.json*, que especifica el tiempo de ejecución compartido y su versión de la aplicación.
 
-La compilación requiere la existencia de un archivo *assets.json* (un archivo que muestra todas las dependencias de la aplicación), lo que significa que tiene que ejecutar [`dotnet restore`](dotnet-restore.md) antes de compilar el proyecto. La falta del archivo de recursos se manifiesta como la incapacidad de las herramientas para resolver ensamblados de referencia, lo que provocará errores. 
+Si el proyecto tiene dependencias de terceros, como bibliotecas de NuGet, estas se resuelven desde la caché de NuGet y no están disponibles en la salida compilada del proyecto. Teniendo eso en cuenta, el producto de `dotnet build` no está listo para transferirse a otra máquina para ejecutarse. Esto contrasta con el comportamiento de .NET Framework en el que al compilar un proyecto ejecutable (una aplicación) se genera ese ejecutable en cualquier máquina donde esté instalado .NET. Para tener una experiencia similar con .NET Core, use el comando [dotnet publish](dotnet-publish.md). Para más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md). 
 
-`dotnet build` usa MSBuild para compilar el proyecto, por lo tanto admite las compilaciones en paralelo y las compilaciones incrementales. Consulte la [documentación de MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild) para obtener más información sobre estos temas. 
+La compilación requiere el archivo *project.assets.json*, que muestra las dependencias de la aplicación. El archivo se crea al ejecutar [`dotnet restore`](dotnet-restore.md) antes de compilar el proyecto. Sin el archivo de recursos, las herramientas no pueden resolver los ensamblados de referencia, lo que dará lugar a errores.
 
-Además de sus opciones, el comando `dotnet build` también aceptará opciones de MSBuild, como `/p` para establecer propiedades o `/l` para definir un registrador. Puede obtener más información sobre estas opciones en la documentación del comando [`dotnet msbuild`](dotnet-msbuild.md). Si quiere saber cuándo 
+`dotnet build` usa MSBuild para compilar el proyecto; por lo tanto, admite las compilaciones en paralelo e incrementales. Para más información, consulte [Compilaciones incrementales](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds). 
 
-Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputType>` en el archivo del proyecto. En el siguiente ejemplo se muestra un proyecto que generará un código ejecutable: 
+Además de sus opciones, el comando `dotnet build` acepta opciones de MSBuild, como `/p` para establecer propiedades o `/l` para definir un registrador. Aprenda más sobre de estas opciones en la [referencia de línea de comandos de MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
 
+Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputType>` en el archivo del proyecto. En el siguiente ejemplo se muestra un proyecto que generará un código ejecutable:
 
 ```xml
 <PropertyGroup>
@@ -49,14 +47,13 @@ Si el proyecto es ejecutable o no viene determinado por la propiedad `<OutputTyp
 </PropertyGroup>
 ```
 
-Para generar una biblioteca, simplemente omita esa propiedad. La principal diferencia en el resultado es que el archivo de DLL de IL para una biblioteca no contendrá ningún punto de entrada y no será posible ejecutarlo. 
+Para generar una biblioteca, omita la propiedad `<OutputType>`. La principal diferencia en la salida compilada es que la DLL de IL para una biblioteca no contiene puntos de entrada y no se puede ejecutar. 
 
 ## <a name="arguments"></a>Argumentos
 
-`project`
+`PROJECT`
 
-El archivo del proyecto que se va a compilar.
-Si no se especifica un archivo del proyecto, MSBuild busca en el directorio de trabajo actual un archivo que tenga una extensión de archivo que termine en `proj` y usa ese archivo.
+El archivo del proyecto que se va a compilar. Si no se especifica un archivo de proyecto, MSBuild busca en el directorio de trabajo actual un archivo que tenga una extensión de archivo que termine en *proj* y usa ese archivo.
 
 ## <a name="options"></a>Opciones
 
@@ -70,19 +67,19 @@ Directorio donde se colocan los archivos binarios compilados. También debe defi
 
 `-f|--framework <FRAMEWORK>`
 
-Compila para un marco específico. El marco debe definirse en el [archivo de proyecto](csproj.md).
+Compila para un [marco de trabajo](../../standard/frameworks.md) específico. El marco se debe definir en el [archivo de proyecto](csproj.md).
 
-`-c|--configuration [Debug|Release]`
+`-c|--configuration <CONFIGURATION>`
 
-Define una configuración con la que se va a realizar la compilación. Si se omite, se adopta el valor predeterminado de `Debug`.
+Define la configuración de compilación. Si se omite, la configuración de compilación usa de forma predeterminada `Debug`. Use `Release` para compilar una configuración de versión.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Tiempo de ejecución de destino con el que realizar la compilación. Para obtener una lista de identificadores de tiempo de ejecución (RID) que puede usar, consulte el [catálogo de RID](../rid-catalog.md).
+Especifica el tiempo de ejecución de destino. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
-Define qué `*` debe reemplazarse por el campo de versión en el archivo del proyecto. El formato sigue las instrucciones de versión de NuGet.
+Define el sufijo de la versión de un asterisco (`*`) en el campo de versión del archivo del proyecto. El formato sigue las instrucciones de versión de NuGet.
 
 `--no-incremental`
 
@@ -90,9 +87,9 @@ Marca la compilación como no segura para la compilación incremental. Esto desa
 
 `--no-dependencies`
 
-Omite las referencias de proyecto a proyecto y solo compila el proyecto raíz especificado para compilar.
+Omite las referencias de proyecto a proyecto (P2P) y solo compila el proyecto raíz especificado para compilar.
 
-`-v|--verbosity`
+`-v|--verbosity <LEVEL>`
 
 Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
@@ -109,3 +106,4 @@ Creación de un proyecto y sus dependencias mediante la configuración de lanzam
 Compilación de un proyecto y sus dependencias para un tiempo de ejecución específico (en este ejemplo, Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
+
