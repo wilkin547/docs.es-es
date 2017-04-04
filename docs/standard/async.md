@@ -11,17 +11,17 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: fb9940e56b5d0e8f4474584102f2e6167a79f291
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: db4c9721381a9675b06f0fc6b5381d987816e9a4
+ms.lasthandoff: 03/10/2017
 
 ---
 
 # <a name="async-overview"></a>Información general de Async
 
-No hace tanto tiempo, las aplicaciones funcionaban más rápido simplemente al comprar un PC o servidor nuevo y después se detuvo esa tendencia. De hecho, se ha invertido. Aparecieron teléfonos móviles con chips ARM de núcleo único de 1 GHz y cargas de trabajo de servidor que pasaron a máquinas virtuales. Los usuarios seguían queriendo una interfaz de usuario dinámica y los propietarios de empresas querían servidores que se ajustaran a su negocio. La transición al móvil y a la nube y una población conectada a Internet de más de&3; mil millones de usuarios ha generado un nuevo conjunto de patrones de software. 
+No hace tanto tiempo, las aplicaciones funcionaban más rápido simplemente al comprar un PC o servidor nuevo y después se detuvo esa tendencia. De hecho, se ha invertido. Aparecieron teléfonos móviles con chips ARM de núcleo único de 1 GHz y cargas de trabajo de servidor que pasaron a máquinas virtuales. Los usuarios seguían queriendo una interfaz de usuario dinámica y los propietarios de empresas querían servidores que se ajustaran a su negocio. La transición al móvil y a la nube y una población conectada a Internet de más de 3 mil millones de usuarios ha generado un nuevo conjunto de patrones de software. 
 
-* Se espera que las aplicaciones cliente estén siempre activadas y conectadas, y que sean dinámicas a la interacción del usuario (p. ej., función táctil) con clasificaciones altas en las tiendas de aplicaciones.
+* Se espera que las aplicaciones cliente estén siempre activadas y conectadas, y que respondan adecuadamente a la interacción del usuario (p. ej., función táctil) con altas calificaciones en la tienda de aplicaciones.
 * Se espera que los servicios controlen los picos de tráfico al escalar y reducir verticalmente con facilidad. 
 
 La programación de Async es una técnica clave que facilita controlar las operaciones simultáneas y de E/S de bloqueo en varios núcleos. .NET proporciona a servicios y aplicaciones la capacidad de ser dinámicos y elásticos con modelos de programación asincrónicos de nivel de lenguaje y fáciles de usar en C#, VB y F#.

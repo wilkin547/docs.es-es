@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: a6f90a43b5f129cd246546f2cc36c4b97c3fb15c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
+ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -74,7 +74,7 @@ Tal como muestra la tabla anterior, hay características de DNX que decidimos no
 ### <a name="global-commands"></a>Comandos globales
 DNU incluía un concepto llamado "comandos globales". En esencia, se trataba de aplicaciones de consola empaquetadas como paquetes NuGet con un script de shell que podría invocar el DNX especificado para ejecutar la aplicación. 
 
-La CLI no admite este concepto. Sin embargo, sí admite el concepto de agregar comandos por proyecto que se pueden invocar con la conocida sintaxis `dotnet <command>`. Puede encontrar más información sobre esto en la [información general sobre extensibilidad](../tools/index.md#extensibility). 
+La CLI no admite este concepto. Sin embargo, sí admite el concepto de agregar comandos por proyecto que se pueden invocar con la conocida sintaxis `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalación de dependencias
 A partir de la versión v1, las herramientas de la CLI de .NET Core no tienen un comando `install` para instalar dependencias. Con el fin de instalar un paquete desde NuGet, necesitaría agregarlo como una dependencia al archivo `project.json` y, luego, ejecutar `dotnet restore`. 
@@ -85,7 +85,7 @@ Existen dos formas principales de ejecutar el código. Una es desde el origen, c
 La otra forma es usar el `dotnet` mismo para ejecutar el código. Para ello, proporcione una ruta de acceso al ensamblado: `dotnet path/to/an/assembly.dll`. 
 
 ## <a name="migrating-your-dnx-project-to-net-core-cli"></a>Migración del proyecto DNX a la CLI de .NET Core
-Además de usar los comandos nuevos cuando se trabaja con el código, hay&3; aspectos importantes que se dejaron en la migración desde DNX:
+Además de usar los comandos nuevos cuando se trabaja con el código, hay 3 aspectos importantes que se dejaron en la migración desde DNX:
 
 1. Si lo tiene, migre el archivo `global.json` para usar la CLI.
 2. Migración del archivo del proyecto (`project.json`) mismo a las herramientas de la CLI.
@@ -117,7 +117,7 @@ Si compila una aplicación de consola, debe agregar el siguiente fragmento de c�
 
 Esto indica a `dotnet build` que emita un punto de entrada para la aplicación, lo que permitirá que el código se pueda ejecutar. Si compila una biblioteca de clases, simplemente debe omitir la sección anterior. Por supuesto, una vez que agregue el fragmento de código anterior al archivo `project.json`, deberá agregar un punto de entrada estático. Con la migración de DNX, los servicios de DI que proporcionaba ya no están disponibles y, por lo tanto, debe tratarse de un punto de entrada .NET básico: `static void Main()`.
 
-Si tiene una sección de "comandos" en su `project.json`, puede quitarla. Algunos de los comandos que existían como comandos de DNU, como los comandos de la CLI de Entity Framework, se trasladan para convertirse en extensiones por proyecto en la CLI. Si compila sus propios comandos que usa en los proyectos, debe reemplazarlos con extensiones de la CLI. En este caso, el nodo `commands` en `project.json` se debe reemplazar por el nodo `tools` y debe mostrar las dependencias de herramientas, tal como se explica en la [sección sobre la extensibilidad de la CLI](../tools/index.md#extensibility). 
+Si tiene una sección de "comandos" en su `project.json`, puede quitarla. Algunos de los comandos que existían como comandos de DNU, como los comandos de la CLI de Entity Framework, se trasladan para convertirse en extensiones por proyecto en la CLI. Si compila sus propios comandos que usa en los proyectos, debe reemplazarlos con extensiones de la CLI. En este caso, el nodo `commands` de `project.json` debe reemplazarse por el nodo `tools` y se deben enumerar las dependencias de herramientas. 
 
 Una vez hecho esto, deberá decidir qué tipo de portabilidad desea para la aplicación. Con .NET Core, invertimos en proporcionar un espectro de opciones de portabilidad entre las que puede elegir. Por ejemplo, podría tener una aplicación completamente *portátil*, o bien podría querer tener una aplicación *autocontenida*. La opción de la aplicación portátil es más similar a cómo funcionan las aplicaciones de .NET Framework: necesita un componente compartido para ejecutarlo en la máquina de destino (.NET Core). La aplicación autocontenida no requiere que .NET Core esté instalado en el destino, pero es necesario generar una aplicación para cada SO que desea admitir. Estos tipos de portabilidad, y otros más, se analizan en el documento sobre los  [tipos de portabilidad de aplicaciones](../deploying/index.md). 
 

@@ -1,46 +1,43 @@
 ---
-title: Comando dotnet-test | Microsoft Docs
+title: 'Comando dotnet-test: CLI de .NET Core | Microsoft Docs'
 description: El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado.
 keywords: dotnet-test, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
+ms.lasthandoff: 03/22/2017
 
 ---
 
 #<a name="dotnet-test"></a>dotnet-test
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
-`dotnet-test`: controlador de prueba de .NET
+`dotnet-test`: controlador de prueba de .NET usado para ejecutar pruebas unitarias.
 
 ## <a name="synopsis"></a>Sinopsis
 
-```
-dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
-dotnet test [-h|--help]
-```
+`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. Las pruebas unitarias son proyectos de biblioteca de clases que tienen dependencias en el marco de pruebas unitarias (por ejemplo, NUnit o xUnit) y en el ejecutor dotnet test de ese marco de pruebas unitarias. Estas se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
+El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. Las pruebas unitarias son proyectos de biblioteca de clases que tienen dependencias en el marco de pruebas unitarias (por ejemplo, MSText, NUnit o xUnit) y en el ejecutor de pruebas de dotnet de ese marco de pruebas unitarias. Estas se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
 
-Los proyectos de prueba también necesitan especificar el ejecutor de la prueba. Para ello se utiliza un elemento `<PackageReference>` ordinario, como se puede ver en el siguiente archivo de proyecto de ejemplo:
+Los proyectos de prueba también deben especificar el ejecutor de pruebas. Para ello se utiliza un elemento `<PackageReference>` ordinario, como se puede ver en el siguiente archivo de proyecto de ejemplo:
 
 [!code-xml[Plantilla de XUnit Basic](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Opciones
 
-`project`
+`PROJECT`
     
 Especifica una ruta de acceso al proyecto de prueba. Si se omite, se toma como predeterminado el directorio actual.
 
@@ -68,13 +65,13 @@ Use los adaptadores de prueba personalizados en la ruta especificada de esta eje
 
 Especifica un registrador para los resultados de pruebas. 
 
-`-c|--configuration <Debug|Release>`
+`-c|--configuration <CONFIGURATION>`
 
-Configuración con la que se va a realizar la compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración del SDK predeterminada.
+Configuración con la que se va a realizar la compilación. El valor predeterminado es `Debug`, pero la configuración del proyecto podría invalidar esta configuración predeterminada del SDK.
 
 `-f|--framework <FRAMEWORK>`
 
-Busca archivos binarios de prueba para un marco específico.
+Busca archivos binarios de prueba para un [marco](../../standard/frameworks.md) específico.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -98,12 +95,11 @@ Ejecución de las pruebas en el proyecto en el directorio actual:
 
 `dotnet test` 
 
-Ejecución de las pruebas en el proyecto test1:
+Ejecute las pruebas en el proyecto `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>Vea también
 
-[Marcos](../../standard/frameworks.md)
-
-[Catálogo de identificadores de tiempo de ejecución (RID)](../rid-catalog.md)
+* [Marcos de trabajo de destino](../../standard/frameworks.md)
+* [Catálogo de identificadores de tiempo de ejecución (RID)](../rid-catalog.md)

@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e67270cf713857a5fea16ebdd0abab774f555808
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -38,7 +38,7 @@ Con el cambio al formato *csproj* en las últimas versiones del SDK, hemos trasl
 
 El principal motivo de este cambio consiste en reducir el desorden en el archivo del proyecto. Los valores predeterminados presentes en el SDK deberían abarcar los casos de uso más habituales, por lo que no resulta necesario repetirlos en todos los proyectos que cree. Esto da lugar a archivos de proyecto más pequeños que resultan mucho más fáciles de entender, así como de editar manualmente si fuera necesario. 
 
-En la siguiente tabla se muestra qué elementos y qué globs se incluyen y excluyen en el SDK: 
+En la siguiente tabla se muestra qué elementos y qué [globs](https://en.wikipedia.org/wiki/Glob_(programming)) se incluyen y excluyen en el SDK: 
 
 | Elemento              | Glob para incluir                               | Glob para excluir                                                     | Glob para quitar                  |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
@@ -110,10 +110,10 @@ Como alternativa, el atributo puede contener:
 * `All`: se usan todos los recursos.
 
 ### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
-El elemento `<DotnetCliToolReference>` especifica la herramienta de la CLI que el usuario quiere restaurar en el contexto del proyecto. Es un sustituto del nodo `tools` de *project.json*. 
+El elemento `<DotNetCliToolReference>` especifica la herramienta de la CLI que el usuario quiere restaurar en el contexto del proyecto. Es un sustituto del nodo `tools` de *project.json*. 
 
 ```xml
-<DotnetCliToolReference Include="<package-id>" Version="" />
+<DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>Versión
@@ -243,3 +243,4 @@ Ruta de acceso base para el archivo *.nuspec*.
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Lista separada por punto y coma de pares clave=valor.
+

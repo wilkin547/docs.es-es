@@ -4,15 +4,15 @@ description: "Migración de project.json de .NET Core a csproj"
 keywords: ".NET, .NET Core, migración de .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/04/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 translationtype: Human Translation
-ms.sourcegitcommit: f829714f545314daaa218b241008b5a2955ec589
-ms.openlocfilehash: 5872201f705c07bf692d0dc7f962068632f6b540
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: fae5eabac7d1aac577c5c7a27e306c8c7ea8b418
+ms.openlocfilehash: 73ab5a9bdd957e6d9394a3be0aa55f554ee7a86a
+ms.lasthandoff: 03/16/2017
 
 ---
 
@@ -54,6 +54,8 @@ Los archivos que se migraron (*project.json*, *global.json* y *.xproj*) se mover
 > [!NOTE]
 > Si se usa VS Code, el comando `dotnet migrate` no modificará archivos específicos de VS Code como `tasks.json`. Estos archivos deben modificarse de forma manual. Esto también sucede si se usa Project Ryder o cualquier editor o entorno de desarrollo integrado (IDE) que no sea Visual Studio. 
 
+Consulte [Una asignación entre propiedades project.json y csproj](../tools/project-json-to-csproj.md) para una comparación de los formatos project.json y csproj.
+
 ### <a name="common-issues"></a>Problemas comunes
 
 - Si se produce un error: "No se encuentra ningún archivo que coincida con el comando dotnet-migrate":
@@ -79,7 +81,7 @@ El formato de csproj de .NET Core ha cambiado y evolucionado con cada nueva vers
 * Quite las instrucciones `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` de la parte superior e inferior del proyecto. Estas instrucciones de importación están implícitas en el SDK, por lo que no es necesario que estén en el proyecto. 
 * Si tiene elementos `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` en el proyecto, debe quitarlos. Estas referencias de paquete son [implícitas para el SDK ](https://aka.ms/sdkimplicitrefs). 
 * Quite el elemento `Microsoft.NET.Sdk` `<PackageReference>`, si existe. La referencia del SDK procede del atributo `Sdk` del elemento `<Project>`. 
-* Quite los patrones globales que son [implícitos para el SDK](https://aka.ms/sdkimplicititems). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación. 
+* Quite los [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que están [implícitos en el SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación. 
 
 Tras seguir estos pasos, el proyecto debe ser totalmente compatible con el formato csproj RTM de .NET Core. 
 
