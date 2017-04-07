@@ -21,9 +21,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 401ac8986dee5f9f1504fb6c4e1f627d87f0f236
-ms.openlocfilehash: c4459a9ff5f013ba948005c0806db85147b0b019
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 5f22d535ea6fb55ccadba4476e2e61f32b7a64f2
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="expression-trees-visual-basic"></a>Árboles de expresión (Visual Basic)
@@ -100,9 +100,9 @@ Dim factorial As Integer =
   
 Console.WriteLine(factorial)  
 ' Prints 120.  
-```  
-  
- Para obtener más información, consulte [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (or later)](http://go.microsoft.com/fwlink/?LinkId=169513) (Generar métodos dinámicos con árboles de expresión en Visual Studio 2010 o versiones posteriores).  
+```
+
+Para obtener más información, consulte [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513) (Generar métodos dinámicos con árboles de expresión en Visual Studio 2010), que también se aplica a las últimas versiones de Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analizar árboles de expresión  
  En el siguiente ejemplo de código se muestra cómo la expresión del árbol que representa la expresión lambda `Function(num) num < 5` se puede descomponer en partes.  

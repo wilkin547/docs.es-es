@@ -20,9 +20,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 401ac8986dee5f9f1504fb6c4e1f627d87f0f236
-ms.openlocfilehash: 4c30202de9524f276050d77320da79748817cdf0
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 87195c8936aba485919d6c717fcbfaa1b282bddc
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="expression-trees-c"></a>Árboles de expresión (C#)
@@ -41,7 +41,7 @@ Los árboles de expresión representan el código en una estructura de datos en 
   
  Los siguientes ejemplos de código muestran cómo crear un árbol de expresión que represente la expresión lambda `num => num < 5` con el compilador de C#.  
   
-```cs  
+```csharp  
 Expression<Func<int, bool>> lambda = num => num < 5;  
 ```  
   
@@ -50,7 +50,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
   
  En el siguiente ejemplo de código se muestra cómo crear un árbol de expresión que represente la expresión lambda `num => num < 5` mediante la API.  
   
-```cs  
+```csharp  
 // Add the following using directive to your code file:  
 // using System.Linq.Expressions;  
   
@@ -67,7 +67,7 @@ Expression<Func<int, bool>> lambda1 =
   
  En .NET Framework 4 y versiones posteriores, la API de árboles de expresión admite también asignaciones y expresiones de flujo de control como bucles, bloques condicionales y bloques `try-catch`. Con la API, se pueden crear árboles de expresión más complejos que los que pueden crear el compilador de C# a partir de expresiones lambda. En el siguiente ejemplo se indica cómo crear un árbol de expresión que calcula el factorial de un número.  
   
-```cs  
+```csharp  
 // Creating a parameter expression.  
 ParameterExpression value = Expression.Parameter(typeof(int), "value");  
   
@@ -105,14 +105,14 @@ int factorial = Expression.Lambda<Func<int, int>>(block, value).Compile()(5);
   
 Console.WriteLine(factorial);  
 // Prints 120.  
-```  
-  
- Para obtener más información, consulte [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (or later)](http://go.microsoft.com/fwlink/?LinkId=169513) (Generar métodos dinámicos con árboles de expresión en Visual Studio 2010 o versiones posteriores).  
+```
+
+Para obtener más información, consulte [Generating Dynamic Methods with Expression Trees in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513) (Generar métodos dinámicos con árboles de expresión en Visual Studio 2010), que también se aplica a las últimas versiones de Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analizar árboles de expresión  
  En el siguiente ejemplo de código se muestra cómo la expresión del árbol que representa la expresión lambda `num => num < 5` se puede descomponer en partes.  
   
-```cs  
+```csharp  
 // Add the following using directive to your code file:  
 // using System.Linq.Expressions;  
   
@@ -141,7 +141,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
   
  En el siguiente ejemplo de código se indica cómo compilar un árbol de expresión y ejecutar el código resultante.  
   
-```cs  
+```csharp  
 // Creating an expression tree.  
 Expression<Func<int, bool>> expr = num => num < 5;  
   
