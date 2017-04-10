@@ -156,8 +156,6 @@ Visual Studio presenta características nuevas en C# y Visual Basic que mejoran 
   
      Este código muestra algunas de las nuevas características de C#: capacidad para omitir la palabra clave `ref` en programación COM, argumentos con nombre y argumentos opcionales. Estas características ya existen en Visual Basic. El método [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) tiene siete parámetros, y todos se definen como parámetros de referencia opcionales. Antes de Visual C# 2010, había que definir variables de objeto para utilizar como argumentos de los siete parámetros, incluso cuando no se tenía ningún valor significativo para enviarles. Los argumentos opcionales y con nombre permiten designar los parámetros a los que se desea tener acceso por nombre, y enviar argumentos únicamente a esos parámetros. En este ejemplo se envían argumentos para indicar que se debe crear un vínculo al libro en el Portapapeles (parámetro `Link`), y que el vínculo se mostrará en el documento de Word como un icono (parámetro `DisplayAsIcon`). Visual C# 2010 también permite omitir la palabra clave `ref` para estos argumentos. Compare el siguiente segmento de código de Visual C# 2008 con la única línea necesaria en Visual C# 2010:  
   
-     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_11.cs)]  
-  
 ### <a name="to-run-the-application"></a>Para ejecutar la aplicación  
   
 1.  Presione F5 para ejecutar la aplicación. Excel se abre y muestra una tabla que contiene la información de las dos cuentas de `bankAccounts`. Entonces aparece un documento de Word que contiene un vínculo a la tabla de Excel.  
