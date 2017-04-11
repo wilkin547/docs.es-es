@@ -212,9 +212,9 @@
 ## [Paseo por C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [Novedades de C#](csharp/whats-new.md) 
-### [Novedades de C# 7](csharp/csharp-7.md)
-### [Novedades de C# 6](csharp/csharp-6.md)
+## [Novedades de C#](csharp/whats-new/index.md) 
+### [Novedades de C# 7](csharp/whats-new/csharp-7.md)
+### [Novedades de C# 6](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
 ## [🔧 C# interactivo](csharp/interactive/)
 <!-- Do this section later, once master redirects are in place -->

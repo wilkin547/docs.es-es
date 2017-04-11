@@ -12,3 +12,4 @@ ms.lasthandoff: 03/08/2017
 ## <a name="content-retired"></a>Contenido retirado
 
 Para obtener un tutorial de introducción sobre .NET Core y Visual Studio 2017, vea [Creación de una aplicación Hola a todos en C# con .NET Core en Visual Studio 2017](../../csharp/getting-started/with-visual-studio.md).
+
