@@ -40,7 +40,7 @@ ms.openlocfilehash: 88eff7c3909a31939f5789fd19bc4f1d07d013b7
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="getting-started-with-linq-in-c"></a>Introducción a LINQ en C##
+# <a name="getting-started-with-linq-in-c"></a>Introducción a LINQ en C#
 Esta sección contiene información básica general que le ayudará a comprender el resto de la documentación y los ejemplos de LINQ.  
   
 ## <a name="in-this-section"></a>En esta sección  
