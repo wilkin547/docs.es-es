@@ -2,7 +2,7 @@
 title: "Especificar dinámicamente filtros con predicado en tiempo de ejecución"
 description: "Cómo especificar dinámicamente filtros con predicado en tiempo de ejecución."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

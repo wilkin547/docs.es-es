@@ -2,8 +2,8 @@
 title: "Depuración de la aplicación Hola a todos en C# con Visual Studio 2017"
 description: "Aprenda a depurar una aplicación Hola a todos, escrita en C# con Visual Studio 2017"
 keywords: ".NET Core, aplicación de consola de .NET Core, depuración de .NET Core"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

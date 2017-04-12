@@ -2,8 +2,8 @@
 title: "Publicación de la aplicación Hola a todos con Visual Studio 2017"
 description: "Publicación de la aplicación Hola a todos con Visual Studio 2017"
 keywords: ".NET, .NET Core, aplicación de consola .NET Core, publicación (.NET Core), implementación (.NET Core)"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

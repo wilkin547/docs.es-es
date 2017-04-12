@@ -2,7 +2,7 @@
 title: "Devolver una consulta de un método"
 description: "Cómo devolver una consulta."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
