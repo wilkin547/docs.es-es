@@ -1,0 +1,151 @@
+---
+title: "Ejemplo de uso compartido de puertos Net.TCP | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
+caps.latest.revision: 18
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 18
+---
+# Ejemplo de uso compartido de puertos Net.TCP
+El protocolo TCP\/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo.Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación.Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
+  
+> [!IMPORTANT]
+>  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>   
+>  `<>InstallDrive:\WF_WCF_Samples`  
+>   
+>  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>   
+>  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
+  
+ Muchos protocolos tienen un número de puerto estándar o predeterminado que utilizan.Por ejemplo, el protocolo HTTP utiliza suele usar el puerto TCP 80.Internet Information Services \(IIS\) tiene un agente de escucha para compartir un puerto entre varias aplicaciones HTTP.IIS realiza escuchas directamente en el puerto y reenvía los mensajes a la aplicación adecuada basada en la información dentro de la secuencia de mensajes.Esto permite a varias aplicaciones HTTP utilizar el mismo número de puerto sin tener que competir a la hora de reservar el puerto para recibir mensajes.  
+  
+ El uso compartido de puertos de NetTcp es una característica de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]que le permite de igual forma que varias aplicaciones de red compartan un único puerto.El servicio de uso compartido de puerto de NetTcp acepta las conexiones usando el protocolo de net.tcp y reenvía mensajes basados en su dirección de destino.  
+  
+ El servicio de uso compartido de puerto de NetTcp no está habilitado de forma predeterminada.Antes de ejecutar este ejemplo, debe habilitar manualmente el servicio.Para obtener más información, vea [Cómo habilitar el servicio de uso compartido de puertos Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).Si el servicio está deshabilitado, se produce una excepción cuando se inicia la aplicación de servidor.  
+  
+```  
+Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
+```  
+  
+ El uso compartido del puerto se habilita en el servidor estableciendo la propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> del enlace <xref:System.ServiceModel.NetTcpBinding> o el elemento de enlace <xref:System.ServiceModel.Channels.TcpTransportBindingElement>.El cliente no tiene que saber cómo se ha configurado el uso compartido de puerto para usarlo en el servidor.  
+  
+## Cómo habilitar el uso compartido del puerto  
+ El código siguiente muestra cómo habilitar el uso compartido del puerto en el servidor.Inicia una instancia del servicio `ICalculator` en un puerto fijo con una ruta de acceso del URI aleatoria.Aunque dos servicios pueden compartir el mismo puerto, sus direcciones de extremo totales deben seguir siendo únicas de manera que el servicio de uso compartido de puertos de NetTcp puede enrutar los mensajes a la aplicación correcta.  
+  
+```  
+// Configure a binding with TCP port sharing enabled  
+NetTcpBinding binding = new NetTcpBinding();  
+binding.PortSharingEnabled = true;  
+  
+// Start a service on a fixed TCP port  
+ServiceHost host = new ServiceHost(typeof(CalculatorService));  
+ushort salt = (ushort)new Random().Next();  
+string address =  
+   String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
+host.Open();  
+```  
+  
+ Con el uso compartido del puerto habilitado, puede ejecutar el servicio varias veces sin tener un conflicto sobre el número de puerto.Si cambia el código para deshabilitar el uso compartido del puerto, iniciar hasta un máximo de dos copias del servicio da como resultado que la segunda fracase con un <xref:System.ServiceModel.AddressAlreadyInUseException>.  
+  
+```  
+Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
+```  
+  
+## Ejecución del ejemplo  
+ Puede utilizar el cliente de pruebas para comprobar que los mensajes se enrutan correctamente a los servicios que comparten el puerto.  
+  
+```  
+class client  
+{  
+   static void Main(string[] args)  
+   {  
+      Console.Write("Enter the service number to test: ");  
+      ushort salt = ushort.Parse(Console.ReadLine());  
+      string address = String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+      ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding());  
+      ICalculator proxy = factory.CreateChannel(new EndpointAddress(address));  
+  
+      // Call the Add service operation.  
+      double value1 = 100.00D;  
+      double value2 = 15.99D;  
+      double result = proxy.Add(value1, value2);  
+      Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
+  
+      // Call the Subtract service operation.  
+      value1 = 145.00D;  
+      value2 = 76.54D;  
+      result = proxy.Subtract(value1, value2);  
+      Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
+  
+      // Call the Multiply service operation.  
+      value1 = 9.00D;  
+      value2 = 81.25D;  
+      result = proxy.Multiply(value1, value2);  
+      Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
+  
+      // Call the Divide service operation.  
+      value1 = 22.00D;  
+      value2 = 7.00D;  
+      result = proxy.Divide(value1, value2);  
+      Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
+  
+      Console.WriteLine();  
+      Console.WriteLine("Press <ENTER> to terminate client.");  
+      Console.ReadLine();  
+  
+      factory.Close();  
+   }  
+}  
+```  
+  
+ Cada instancia del servicio imprime su número y dirección únicos.Por ejemplo, puede ver el texto siguiente al ejecutar service.exe.  
+  
+```  
+Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
+Press <ENTER> to terminate service.  
+```  
+  
+ Introduzca el número del servicio que ve aquí cuando ejecute client.exe.  
+  
+```  
+Enter the service number to test: 4381  
+Add(100,15.99) = 115.99  
+Subtract(145,76.54) = 68.46  
+Multiply(9,81.25) = 731.25  
+Divide(22,7) = 3.14285714285714  
+  
+Press <ENTER> to terminate client.  
+```  
+  
+ Este ejemplo se puede ejecutar en una configuración de equipos cruzada cambiando la dirección generada que utiliza el cliente.En el archivo Client.cs, cambie la cadena de formato de dirección de extremo para que coincida con la nueva dirección del servicio.Reemplace cualquier referencia al "host local" con la dirección IP del equipo del servidor.Debe recompilar el ejemplo después de realizar esta modificación.  
+  
+#### Para configurar, compilar y ejecutar el ejemplo  
+  
+1.  Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando.  
+  
+    ```  
+    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
+  
+    ```  
+  
+2.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+  
+3.  Habilite el servicio de uso compartido del puerto de NetTcp tal y como se ha descrito previamente en la sección de introducción.  
+  
+4.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+  
+5.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).Los detalles concretos para ejecutar este ejemplo se han incluido previamente en la sección Ejecución del ejemplo.  
+  
+## Vea también

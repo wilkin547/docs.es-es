@@ -1,0 +1,212 @@
+---
+title: "Correlaci&#243;n d&#250;plex duradera | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
+caps.latest.revision: 9
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 9
+---
+# Correlaci&#243;n d&#250;plex duradera
+La correlación dúplex duradera, también conocida como correlación de devolución de llamada, es útil cuando un servicio de flujo de trabajo tiene un requisito para enviar una devolución de llamada al autor de la llamada inicial.A diferencia del dúplex de WCF, la devolución de llamada puede producirse en cualquier momento en el futuro y no está vinculada a un mismo canal o a la duración del canal; el único requisito es que el autor de la llamada tenga un extremo activo que realice escuchas para el mensaje de devolución de llamada.Esto permite a dos servicios de flujo de trabajo comunicarse en una conversación de ejecución prolongada.En este tema, se proporciona información general sobre la correlación dúplex duradera.  
+  
+## Usar la correlación dúplex duradera  
+ Para usar la correlación dúplex duradera, los dos servicios deben usar un enlace habilitado para el contexto que admita operaciones bidireccionales, como <xref:System.ServiceModel.NetTcpContextBinding> o <xref:System.ServiceModel.WSHttpContextBinding>.El servicio de llamada registra <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> con el enlace deseado en <xref:System.ServiceModel.Endpoint> del cliente.El servicio de recepción recibe estos datos en la llamada inicial y, a continuación, los usa en su propia <xref:System.ServiceModel.Endpoint>, en la actividad <xref:System.ServiceModel.Activities.Send> que realiza la devolución de llamada al servicio de llamada.En este ejemplo, dos servicios se comunican entre sí.El primer servicio invoca un método en el segundo servicio y, a continuación, espera una respuesta.El segundo servicio conoce el nombre del método de devolución de llamada, pero no conoce el extremo del servicio que implementa este método en tiempo de diseño.  
+  
+> [!NOTE]
+>  El dúplex duradero solo se puede usar cuando el objeto <xref:System.ServiceModel.Channels.AddressingVersion> del extremo se configura con la propiedad <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>.Si no es así, se inicia una excepción <xref:System.InvalidOperation> con el siguiente mensaje: "El mensaje contiene un encabezado de contexto de devolución de llamada con una referencia de extremo para AddressingVersion 'Addressing200408 \(http:\/\/schemas.xmlsoap.org\/ws\/2004\/08\/addressing\)'.El contexto de devolución de llamada solo se puede transmitir cuando AddressingVersion se configura con 'WSAddressing10'".  
+  
+ En el siguiente ejemplo, se hospeda un servicio de flujo de trabajo que crea una <xref:System.ServiceModel.Endpoint> de devolución de llamada mediante <xref:System.ServiceModel.WSHttpContextBinding>.  
+  
+```csharp  
+// Host WF Service 1.  
+string baseAddress1 = "http://localhost:8080/Service1";  
+WorkflowServiceHost host1 = new WorkflowServiceHost(GetWF1(), new Uri(baseAddress1));  
+  
+// Add the callback endpoint.  
+WSHttpContextBinding Binding1 = new WSHttpContextBinding();  
+host1.AddServiceEndpoint("ICallbackItemsReady", Binding1, "ItemsReady");  
+  
+// Add the service endpoint.  
+host1.AddServiceEndpoint("IService1", Binding1, baseAddress1);  
+  
+// Open the first workflow service.  
+host1.Open();  
+Console.WriteLine("Service1 waiting at: {0}", baseAddress1);  
+```  
+  
+ El flujo de trabajo que implementa este servicio de flujo de trabajo inicializa la correlación de devolución de llamada con su actividad <xref:System.ServiceModel.Activities.Send> y hace referencia a este extremo de devolución de llamada de la actividad <xref:System.ServiceModel.Activities.Receive> que se relaciona con <xref:System.ServiceModel.Activities.Send>.En el siguiente ejemplo, se representa el flujo de trabajo que se devuelve del método `GetWF1`.  
+  
+```csharp  
+Variable<CorrelationHandle> CallbackHandle = new Variable<CorrelationHandle>();  
+  
+Receive StartOrder = new Receive  
+{  
+    CanCreateInstance = true,  
+    ServiceContractName = "IService1",  
+    OperationName = "StartOrder"  
+};  
+  
+Send GetItems = new Send  
+{  
+    CorrelationInitializers =   
+    {  
+        new CallbackCorrelationInitializer  
+        {  
+            CorrelationHandle = CallbackHandle  
+        }  
+    },  
+    ServiceContractName = "IService2",  
+    OperationName = "StartItems",  
+    Endpoint = new Endpoint  
+    {  
+        AddressUri = new Uri("http://localhost:8081/Service2"),  
+        Binding = new WSHttpContextBinding  
+        {  
+            ClientCallbackAddress = new Uri("http://localhost:8080/Service1/ItemsReady")                          
+        }  
+    }  
+};  
+  
+Receive ItemsReady = new Receive  
+{  
+    ServiceContractName = "ICallbackItemsReady",  
+    OperationName = "ItemsReady",  
+    CorrelatesWith = CallbackHandle,  
+};  
+  
+Activity wf = new Sequence  
+{  
+    Variables =  
+    {  
+        CallbackHandle  
+    },  
+    Activities =  
+    {  
+        StartOrder,  
+        new WriteLine  
+        {  
+            Text = "WF1 - Started"  
+        },  
+        GetItems,  
+        new WriteLine  
+        {  
+            Text = "WF1 - Request Submitted"  
+        },  
+        ItemsReady,  
+        new WriteLine  
+        {  
+            Text = "WF1 - Items Received"  
+        }  
+     }  
+};  
+```  
+  
+ El segundo servicio de flujo de trabajo se hospeda mediante un enlace proporcionado por sistema, con un enlace basado en el contexto.  
+  
+```csharp  
+// Host WF Service 2.  
+string baseAddress2 = "http://localhost:8081/Service2";  
+WorkflowServiceHost host2 = new WorkflowServiceHost(GetWF2(), new Uri(baseAddress2));  
+  
+// Add the service endpoint.  
+WSHttpContextBinding Binding2 = new WSHttpContextBinding();  
+host2.AddServiceEndpoint("IService2", Binding2, baseAddress2);  
+  
+// Open the second workflow service.  
+host2.Open();  
+Console.WriteLine("Service2 waiting at: {0}", baseAddress2);  
+```  
+  
+ El flujo de trabajo que implementa este servicio de flujo de trabajo comienza con una actividad <xref:System.ServiceModel.Activities.Receive>.Esta actividad de recepción inicializa la correlación de devolución de llamada para este servicio, se retrasa durante un período de tiempo para simular un trabajo de ejecución prolongada y, a continuación, vuelve a llamar al primer servicio mediante el contexto de devolución de llamada que se pasó en la primera llamada al servicio.En el siguiente ejemplo, se representa el flujo de trabajo que se devuelve de una llamada a `GetWF2`.Tenga en cuenta que la actividad <xref:System.ServiceModel.Activities.Send> tiene una dirección de marcador de posición `http://www.contoso.com`; la dirección real usada en el tiempo de ejecución es la dirección de devolución de llamada proporcionada.  
+  
+```csharp  
+Variable<CorrelationHandle> ItemsCallbackHandle = new Variable<CorrelationHandle>();  
+  
+Receive StartItems = new Receive  
+{  
+    CorrelationInitializers =   
+    {  
+        new CallbackCorrelationInitializer  
+        {  
+            CorrelationHandle = ItemsCallbackHandle  
+        }  
+    },  
+    CanCreateInstance = true,  
+    ServiceContractName = "IService2",  
+    OperationName = "StartItems"  
+};  
+  
+Send ItemsReady = new Send  
+{  
+    CorrelatesWith = ItemsCallbackHandle,  
+    Endpoint = new Endpoint  
+    {  
+        // The callback address on the binding is used  
+        // instead of this placeholder address.  
+        AddressUri = new Uri("http://www.contoso.com"),  
+  
+        Binding = new WSHttpContextBinding()  
+    },  
+    OperationName = "ItemsReady",  
+    ServiceContractName = "ICallbackItemsReady"  
+};  
+  
+Activity wf = new Sequence  
+{  
+    Variables =  
+    {  
+        ItemsCallbackHandle  
+    },  
+    Activities =  
+    {  
+        StartItems,  
+        new WriteLine  
+        {  
+            Text = "WF2 - Request Received"  
+        },  
+        new Delay  
+        {  
+            Duration = TimeSpan.FromMinutes(90)  
+        },  
+        new WriteLine  
+        {  
+            Text = "WF2 - Sending items"  
+        },  
+        ItemsReady,  
+        new WriteLine  
+        {  
+            Text = "WF2 - Items sent"  
+        }  
+     }  
+};  
+```  
+  
+ Cuando se invoca el método `StartOrder` en el primer flujo de trabajo, se muestra el siguiente resultado, que muestra el flujo de ejecución a través de los dos flujos de trabajo.  
+  
+```Output  
+Service1 en espera en: http://localhost:8080/Service1  
+Service2 en espera en: http://localhost:8081/Service2  
+Presione ENTRAR para salir.   
+WF1 - Iniciado  
+WF2 - Solicitud recibida  
+WF1 - Solicitud enviada  
+WF2 - Enviando elementos  
+WF2 - Elementos enviados  
+WF1 - Elementos recibidos  
+  
+```  
+  
+ En este ejemplo, ambos flujos de trabajo administran explícitamente la correlación mediante una clase <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>.Dado que solo hubo una correlación única en los flujos de trabajo de este ejemplo, la administración <xref:System.ServiceModel.Activities.CorrelationHandle> predeterminada habría sido suficiente.  
+  
+## Vea también  
+ [Dúplex duradero &#91;Ejemplos de WF&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

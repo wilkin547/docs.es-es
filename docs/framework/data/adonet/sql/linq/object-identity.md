@@ -1,0 +1,50 @@
+---
+title: "Identidad de objetos | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
+caps.latest.revision: 2
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 2
+---
+# Identidad de objetos
+Los objetos en tiempo de ejecución tienen identidades únicas.  Dos variables que hacen referencia al mismo objeto en realidad hacen referencia a la misma instancia del objeto.  Por este motivo, los cambios que se realizan a través de una variable están visibles inmediatamente a través de la otra.  
+  
+ Las filas de una tabla de base de datos relacional no tienen identidades únicas.  Dado que cada fila tiene una clave principal única, dos filas no comparten el mismo valor de clave.  Sin embargo, este hecho restringe sólo el contenido de la tabla de base de datos.  
+  
+ En realidad, la mayoría de las veces los datos se extraen de la base de datos y se colocan en un nivel diferente, donde una aplicación trabaja con ellos.  Éste es el modelo que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite.  Cuando los datos se extraen de la base de datos como filas, no se espera que dos filas que representan los mismos datos realmente se correspondan con las mismas instancias de fila.  Si consulta un cliente concreto dos veces, obtiene dos filas de datos. Cada fila contiene la misma información.  
+  
+ En el caso de los objetos, se espera algo muy diferente.  Se espera que, si se solicita la misma información a <xref:System.Data.Linq.DataContext> varias veces, de hecho se obtendrá la misma instancia de objeto.  Este comportamiento es el esperado porque los objetos tienen un significado especial para una aplicación y se espera que se comporten como objetos.  Se han diseñado como jerarquías o gráficos.  Lo que se espera es que se recuperarán como tales y no que se recibirán múltiples instancias replicadas sólo porque se solicitó lo mismo más de una vez.  
+  
+ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.DataContext> administra la identidad de objeto.  Siempre que se recupera una nueva fila de la base de datos, la fila se registra en una tabla de identidad según su clave principal y se crea un nuevo objeto.  Siempre que se recupera esa misma fila, la instancia de objeto original se devuelve a la aplicación.  De esta manera, <xref:System.Data.Linq.DataContext> convierte el concepto de identidad desde el punto de vista de la base de datos \(es decir, claves principales\) en el concepto de identidad desde el punto de vista del lenguaje \(es decir, instancias\).  La aplicación solo ve el objeto en el estado en que se recuperó por primera vez.  Los nuevos datos, si son diferentes, se descartan.  Para obtener más información, consulta [Recuperar objetos de la memoria caché de identidad](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
+  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza este enfoque para administrar la integridad de los objetos locales de manera que se admitan las actualizaciones optimistas.  Dado que los únicos cambios que se producen después de crear el objeto son los realizados por la aplicación, la intención de la aplicación está clara.  Si en ese período de tiempo un tercero ha realizado cambios, se identifican en el momento en que se llama a `SubmitChanges()`.  
+  
+> [!NOTE]
+>  Si el objeto solicitado por la consulta se puede identificar con facilidad como ya recuperado, no se ejecuta ninguna consulta.  La tabla de identidad actúa como caché de todos los objetos previamente recuperados.  
+  
+## Ejemplos  
+  
+### Primer ejemplo de almacenamiento de objetos en caché  
+ En este ejemplo, si ejecuta la misma consulta dos veces, en cada ocasión recibe una referencia al mismo objeto en memoria.  
+  
+ [!code-csharp[DLinqObjectIdentity#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#1)]
+ [!code-vb[DLinqObjectIdentity#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#1)]  
+  
+### Segundo ejemplo de almacenamiento de objetos en caché  
+ En este ejemplo, si ejecuta consultas diferentes que devuelven la misma fila de la base de datos, en cada ocasión recibe una referencia al mismo objeto en memoria.  
+  
+ [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
+ [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
+  
+## Vea también  
+ [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

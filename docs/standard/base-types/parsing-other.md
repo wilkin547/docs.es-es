@@ -1,86 +1,56 @@
 ---
-title: Analizar otras cadenas en .NET
-description: Analizar otras cadenas en .NET
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/29/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 67670b10-3df4-45ea-8908-5ba3f056887c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: db80cc5f37e814f224ff76b14a906bb4d41064fb
-ms.lasthandoff: 03/02/2017
-
+title: "Analizar otras cadenas en .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "Tipo de datos char, analizar cadenas"
+  - "enumeraciones [.NET Framework], cadenas de análisis"
+  - "tipos base, analizar cadenas"
+  - "analizar cadenas, otras cadenas"
+  - "tipo de datos booleano, analizar cadenas"
+ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
+caps.latest.revision: 15
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 15
 ---
-
-# <a name="parsing-other-strings-in-net"></a>Analizar otras cadenas en .NET
-
-Además de cadenas numéricas y [DateTime](xref:System.DateTime), puede analizar cadenas que representan los tipos [Char](xref:System.Char), [Boolean](xref:System.Boolean) y [Enum](xref:System.Enum) en tipos de datos.
-
-## <a name="char"></a>Char
-
-El método de análisis estático asociado con el tipo de datos [Char](xref:System.Char) es útil para convertir una cadena que contiene un único carácter en su valor Unicode. En el ejemplo de código siguiente se analiza una cadena en un carácter Unicode.
-
-```csharp
-string MyString1 = "A";
-char MyChar = Char.Parse(MyString1);
-// MyChar now contains a Unicode "A" character.
-```
-
-```vb
-Dim MyString1 As String = "A"
-Dim MyChar As Char = Char.Parse(MyString1)
-' MyChar now contains a Unicode "A" character.
-```
-
-## <a name="boolean"></a>Booleano
-
-El tipo de datos [Boolean](xref:System.Boolean) contiene un método [Parse](xref:System.Boolean.Parse(System.String)) que se puede usar para convertir una cadena que representa un valor `Boolean` en un tipo `Boolean` real. Este método no distingue mayúsculas de minúsculas y puede analizar correctamente una cadena que contenga "True" o "False". El método `Parse` asociado al tipo `Boolean` también puede analizar cadenas que estén rodeadas por espacios en blanco. Si se pasa otra cadena, se produce una excepción [FormatException](xref:System.FormatException).
-
-En el ejemplo de código siguiente se usa el método `Parse` para convertir una cadena en un valor `Boolean`.
-
-```csharp
-string MyString2 = "True";
-bool MyBool = bool.Parse(MyString2);
-// MyBool now contains a True Boolean value.
-```
-
-```vb
-Dim MyString1 As String = "A"
-Dim MyChar As Char = Char.Parse(MyString1)
-' MyChar now contains a Unicode "A" character.
-```
-
-## <a name="enumeration"></a>Enumeración
-
-Puede usar el método [Parse](xref:System.Enum.Parse(System.Type,System.String)) estático para inicializar un tipo de enumeración en el valor de una cadena. Este método acepta el tipo de enumeración que se está analizando, la cadena que se va a analizar y una marca `Boolean` opcional que indica si el análisis distingue mayúsculas de minúsculas. La cadena que se va a analizar puede contener varios valores separados por comas, que pueden ir precedidos o seguidos de uno o varios espacios vacíos (también denominados espacios en blanco). Cuando la cadena contiene varios valores, el valor del objeto devuelto es el valor de todos los valores especificados combinados con una operación OR bit a bit.
-
-En el ejemplo siguiente se usa el método `Parse` para convertir una representación de cadena en un valor de enumeración. La enumeración [DayOfWeek](xref:System.DayOfWeek) se inicializa en Thursday desde una cadena.
-
-```csharp
-string MyString3 = "Thursday";
-DayOfWeek MyDays = (DayOfWeek)Enum.Parse(typeof(DayOfWeek), MyString3);
-Console.WriteLine(MyDays);
-// The result is Thursday.
-```
-
-```vb
-Dim MyString3 As String = "Thursday"
-Dim MyDays As DayOfWeek = CType([Enum].Parse(GetType(DayOfWeek), MyString3), DayOfWeek)
-Console.WriteLine("{0:G}", MyDays)
-' The result is Thursday.
-```
-
-## <a name="see-also"></a>Vea también
-
-[Analizar cadenas en .NET](parsing-strings.md)
-
-[Aplicar formato a tipos en .NET](formatting-types.md)
-
-[Conversión de tipos en .NET](type-conversion.md)
-
-
+# Analizar otras cadenas en .NET Framework
+Además de cadenas numéricas y <xref:System.DateTime> se pueden analizar cadenas que representan los tipos <xref:System.Char>, <xref:System.Boolean> y <xref:System.Enum> en tipos de datos.  
+  
+## Char  
+ El método de análisis estático asociado al tipo de datos **Char** resulta útil para convertir una cadena de un único carácter en su valor Unicode.  En el ejemplo de código siguiente se analiza una cadena en un carácter Unicode.  
+  
+ [!code-cpp[Conceptual.String.Parse#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#2)]
+ [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
+ [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
+  
+## Boolean  
+ El tipo de datos **Boolean** tiene un método **Parse** que se puede utilizar para convertir la cadena que representa un valor Boolean en un tipo **Boolean** propiamente dicho.  En este método no hay distinción entre mayúsculas y minúsculas y se puede analizar correctamente una cadena que contenga "True" o "False." El método **Parse** asociado al tipo de datos **Boolean** también puede analizar cadenas que tienen espacios en blanco alrededor.  Si se pasa cualquier otra cadena, se produce una <xref:System.FormatException>.  
+  
+ En el ejemplo de código siguiente se utiliza el método **Parse** para convertir una cadena en un valor Boolean.  
+  
+ [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
+ [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
+ [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
+  
+## Enumeración  
+ Se puede usar el método estático **Parse** para inicializar un tipo de enumeración en el valor de una cadena.  Este método acepta el tipo de enumeración que se está analizando, la cadena que se va a analizar y un marcador Boolean opcional que indica si hay distinción entre mayúsculas y minúsculas.  La cadena que se va a analizar puede contener varios valores separados por comas, que pueden ir precedidos o seguidos por uno o varios espacios vacíos \(también denominados espacios en blanco\).  Cuando la cadena contiene varios valores, el valor del objeto devuelto es el valor de todos los valores especificados combinados con una operación OR bit a bit.  
+  
+ En el ejemplo siguiente se utiliza el método **Parse** para convertir una representación de cadena en un valor de enumeración.  A partir de la cadena se inicializa la enumeración <xref:System.DayOfWeek> en **Thursday**.  
+  
+ [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
+ [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
+ [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
+  
+## Vea también  
+ [Analizar cadenas](../../../docs/standard/base-types/parsing-strings.md)   
+ [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md)   
+ [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)

@@ -1,0 +1,1 @@
+directorio de archivos de imagen (IFD)

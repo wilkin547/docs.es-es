@@ -1,0 +1,66 @@
+---
+title: "System.String (M&#233;todos) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
+caps.latest.revision: 2
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 2
+---
+# System.String (M&#233;todos)
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.String> siguientes.  
+  
+## Métodos System.String no admitidos en general  
+ Métodos <xref:System.String> no admitidos en general:  
+  
+-   Sobrecargas que reconocen la referencia cultural \(métodos que utilizan `CultureInfo` \/ `StringComparison` \/ `IFormatProvider`\).  
+  
+-   Métodos que utilizan o generan una matriz `char`.  
+  
+## Métodos System.String estáticos no admitidos  
+  
+|Métodos System.String estáticos no admitidos|  
+|--------------------------------------------------|  
+|<xref:System.String.Copy%28System.String%29?displayProperty=fullName>|  
+|<xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=fullName>|  
+|<xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=fullName>|  
+|<xref:System.String.Compare%28System.String%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>|  
+|<xref:System.String.Compare%28System.String%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%29?displayProperty=fullName>|  
+|<xref:System.String.Compare%28System.String%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=fullName>|  
+|<xref:System.String.CompareOrdinal%28System.String%2CSystem.String%29?displayProperty=fullName>|  
+|<xref:System.String.CompareOrdinal%28System.String%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Int32%29?displayProperty=fullName>|  
+|<xref:System.String.Format%2A?displayProperty=fullName>|  
+|<xref:System.String.Join%2A?displayProperty=fullName>|  
+  
+## Métodos System.String no estáticos no admitidos  
+  
+|Métodos System.String no estáticos no admitidos|  
+|-----------------------------------------------------|  
+|[String.IndexOfAny\(Char\<xref:System.String.IndexOfAny%28System.Char%5B%5D%29?displayProperty=fullName>|  
+|<xref:System.String.Split%2A?displayProperty=fullName>|  
+|<xref:System.String.ToCharArray?displayProperty=fullName>|  
+|<xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName>|  
+|[String.TrimEnd\(Char\<xref:System.String.TrimEnd%28System.Char%5B%5D%29?displayProperty=fullName>|  
+|[String.TrimStart\(Char\<xref:System.String.TrimStart%28System.Char%5B%5D%29?displayProperty=fullName>|  
+  
+## Diferencias respecto a .NET  
+  
+-   Las consultas no tienen en cuenta las intercalaciones de SQL Server que podrían aplicarse en el servidor y, por lo tanto, proporcionan de forma predeterminada comparaciones dependientes de la referencia cultural, sin distinción entre mayúsculas y minúsculas.  Este comportamiento difiere del predeterminado, la semántica con distinción entre mayúsculas y minúsculas de .NET Framework.  
+  
+-   Cuando `LastIndexOf` devuelve 0, la cadena es `NULL` o la posición encontrada es 0.  
+  
+-   Pueden obtenerse resultados inesperados en operaciones de concatenación u otras operaciones con cadenas de longitud fija \(`CHAR`, `NCHAR`\), porque a estos tipos se les aplica relleno automáticamente en la base de datos.  
+  
+-   Dado que muchos métodos, como `Replace`, `ToLower`, `ToUpper`, y el indizador de carácter, no tienen ningún equivalente válido para las columnas `TEXT` o `NTEXT` y XML, se producirán `SqlExceptions` si se convierten de la forma habitual.  Este comportamiento se considera que es aceptable para estos tipos.  Sin embargo, todas las operaciones de cadena deben coincidir con la semántica de Common Language Runtime \(CLR\) para `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` y `NVARCHAR(max)`.  
+  
+## Vea también  
+ [Funciones y tipos de datos](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
