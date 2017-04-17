@@ -267,4 +267,4 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
  <xref:System.Text.DecoderFallback>   
  <xref:System.Text.Encoding>   
  <xref:System.Text.EncoderFallback>   
- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+ [Globalización y localización](../../../ml/index.xml)

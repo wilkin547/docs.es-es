@@ -40,5 +40,5 @@ En esta sección se describen las operaciones con tipos base de .NET Framework: 
  [Sistema de tipos comunes](../../../docs/standard/base-types/common-type-system.md)  
  Describe los tipos que utiliza .NET Framework.  
   
- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)  
+ [Fechas, horas y zonas horarias](../../../ml/index.xml)  
  Describe cómo trabajar con zonas horarias y conversiones de la zona horaria en aplicaciones que tienen en cuenta la zona horaria.

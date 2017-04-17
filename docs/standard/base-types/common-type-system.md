@@ -282,7 +282,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 <a name="Events"></a>   
 ### Eventos  
- Un evento define un incidente al que se puede responder, así como los métodos para suscribirse a un evento, anular la suscripción y generar el evento.  Los eventos se usan con frecuencia para informar a otros tipos de cambios de estado.  Para obtener más información, consulte [Eventos](../../../docs/standard/events/index.md).  
+ Un evento define un incidente al que se puede responder, así como los métodos para suscribirse a un evento, anular la suscripción y generar el evento.  Los eventos se usan con frecuencia para informar a otros tipos de cambios de estado.  Para obtener más información, consulte [Eventos](../../../ml/index.xml).  
   
 <a name="NestedTypes"></a>   
 ### Tipos anidados  
@@ -323,5 +323,5 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 ## Vea también  
  [Biblioteca de clases de .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856)   
- [Common Language Runtime](../../../docs/standard/clr.md)   
+ [Common Language Runtime](../../../ocs/standard/clr.md)   
  [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)

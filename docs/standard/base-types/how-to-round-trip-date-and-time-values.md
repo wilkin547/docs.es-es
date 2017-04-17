@@ -102,5 +102,5 @@ En muchas aplicaciones, la finalidad de un valor de fecha y hora consiste en ide
   
 ## Vea también  
  [Efectuar operaciones de formato](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)   
+ [Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../ocs/standard/datetime/choosing-between-datetime.md)   
  [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
