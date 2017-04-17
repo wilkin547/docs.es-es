@@ -64,7 +64,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML define una segunda gramática, DottedXamlName, que se utiliza para las referencias completas a propiedades y eventos, así como para los miembros asociados.  Para obtener más información, vea <xref:System.Windows.DependencyProperty> y [Información general sobre XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ XAML define una segunda gramática, DottedXamlName, que se utiliza para las referencias completas a propiedades y eventos, así como para los miembros asociados.  Para obtener más información, vea <xref:System.Windows.DependencyProperty> y [Información general sobre XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
  Los valores de cadena que son del tipo DottedXamlName deben respetar la gramática siguiente:  
   

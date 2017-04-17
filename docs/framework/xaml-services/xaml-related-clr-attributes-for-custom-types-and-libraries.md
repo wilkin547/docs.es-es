@@ -134,7 +134,7 @@ En este tema se describen los atributos de Common Language Runtime \(CLR\) defin
   
  El atributo <xref:System.ComponentModel.TypeConverterAttribute> se aplica al tipo, haciendo referencia a la implementación del convertidor de tipos.  Los convertidores de tipos se pueden definir para XAML en las clases, estructuras o interfaces.  No es necesario proporcionar la conversión de tipos para las enumeraciones; esa conversión está habilitada de forma nativa.  
   
- El convertidor de tipos debe poder convertir una cadena que se usa para los atributos o el texto de inicialización del marcado en el tipo de destino deseado.  Para obtener más información, vea [Clases TypeConverter y XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ El convertidor de tipos debe poder convertir una cadena que se usa para los atributos o el texto de inicialización del marcado en el tipo de destino deseado.  Para obtener más información, vea [Clases TypeConverter y XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md).  
   
  En lugar de aplicarlo a todos los valores de un tipo, un comportamiento de convertidor de tipos para XAML también se puede establecer en una propiedad concreta.  En este caso, se aplica <xref:System.ComponentModel.TypeConverterAttribute> a la definición de la propiedad \(la definición externa, no las definiciones de `get` y `set` concretas\).  
   

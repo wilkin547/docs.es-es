@@ -74,8 +74,8 @@ Proporciona compatibilidad general para las matrices de objetos en XAML, a trav�
   
  `</x:Array>`  
   
- Para los tipos personalizados usados como elementos de matriz, la clase también debe admitir los requisitos para crear instancias de ellos en XAML como elementos de objeto.  Para obtener más información, vea [Clases XAML y personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Para los tipos personalizados usados como elementos de matriz, la clase también debe admitir los requisitos para crear instancias de ellos en XAML como elementos de objeto.  Para obtener más información, vea [Clases XAML y personalizadas para WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## Vea también  
- [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
+ [Extensiones de marcado y XAML de WPF](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

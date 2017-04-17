@@ -68,7 +68,7 @@ Proporciona el objeto de CLR <xref:System.Type> que es el tipo subyacente para u
 ## Notas de uso de WPF  
   
 ### Espacio de nombres XAML predeterminado y asignación de tipo  
- El espacio de nombres XAML predeterminado para programación de WPF contiene la mayoría de los tipos XAML que se necesitan para escenarios de XAML típicos; por consiguiente, a menudo se pueden evitar prefijos cuando se hace referencia a los valores de tipo de XAML.  Puede que sea necesario asignar un prefijo si se hace referencia a un tipo desde un ensamblado personalizado, o para los tipos que existen en un ensamblado de WPF pero que están dentro de un espacio de nombres CLR que no se ha asignado para formar parte de la definición de espacio de nombres XAML predeterminado.  Para obtener más información sobre prefijos, espacios de nombres XAML y cómo asignar espacios de nombres CLR, vea [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ El espacio de nombres XAML predeterminado para programación de WPF contiene la mayoría de los tipos XAML que se necesitan para escenarios de XAML típicos; por consiguiente, a menudo se pueden evitar prefijos cuando se hace referencia a los valores de tipo de XAML.  Puede que sea necesario asignar un prefijo si se hace referencia a un tipo desde un ensamblado personalizado, o para los tipos que existen en un ensamblado de WPF pero que están dentro de un espacio de nombres CLR que no se ha asignado para formar parte de la definición de espacio de nombres XAML predeterminado.  Para obtener más información sobre prefijos, espacios de nombres XAML y cómo asignar espacios de nombres CLR, vea [Espacios de nombres y asignación de espacios de nombres XAML para WPF](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ### Escribir las propiedades que admitan el nombre de tipo como cadena  
  WPF admite técnicas que permiten especificar el valor de algunas propiedades de tipo<xref:System.Type> sin necesidad de un uso de extensión de marcado `x:Type`.  En su lugar, puede especificar el valor como una cadena que denomina el tipo.  Ejemplos de ello son <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> y <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>.  La compatibilidad para este comportamiento no se proporciona a través de convertidores de tipos o extensiones de marcado.  En su lugar, éste es un comportamiento del aplazamiento implementado a través de <xref:System.Windows.FrameworkElementFactory>.  
@@ -88,6 +88,6 @@ Proporciona el objeto de CLR <xref:System.Type> que es el tipo subyacente para u
   
 ## Vea también  
  <xref:System.Windows.Style>   
- [Aplicar estilos y plantillas](../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Información general sobre XAML \(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [Extensiones de marcado y XAML de WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [Aplicar estilos y plantillas](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
+ [Información general sobre XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [Extensiones de marcado y XAML de WPF](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

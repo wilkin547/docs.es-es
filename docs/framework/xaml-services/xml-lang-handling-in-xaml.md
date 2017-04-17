@@ -51,4 +51,4 @@ El atributo `xml:lang` es un atributo definido por [!INCLUDE[TLA2#tla_xml](../..
  Para los elementos que son las clases derivadas de <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement>, puede usar la propiedad de dependencia <xref:System.Windows.FrameworkElement.Language%2A> equivalente en lugar del atributo `xml:lang`. De forma predeterminada, la propiedad <xref:System.Windows.FrameworkElement.Language%2A> usa "en\-US" si no se establece de otra manera, a través de la propiedad o mediante el procesamiento del atributo `xml:lang`.  
   
 ## Vea también  
- [Globalización de WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [Globalización de WPF](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

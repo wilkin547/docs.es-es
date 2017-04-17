@@ -58,8 +58,8 @@ Modifica el comportamiento de compilación de XAML, de tal forma que los campos 
  De forma predeterminada, la clase parcial del elemento raíz es pública; sin embargo, puede convertirla en no pública utilizando el objeto [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md) también afecta al nivel de acceso de la instancia de la clase del elemento raíz.  Puede incluir `x:Name` y `x:FieldModifier` en el elemento raíz, pero lo único que se consigue es una copia de campo público del elemento raíz, pero el nivel de acceso real de la clase del elemento raíz sigue estando controlado por [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
   
 ## Vea también  
- [Clases XAML y personalizadas para WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [Código subyacente y XAML en WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [Clases XAML y personalizadas para WPF](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [Código subyacente y XAML en WPF](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [Compilar una aplicación de WPF \(WPF\)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
+ [Compilar una aplicación de WPF \(WPF\)](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
