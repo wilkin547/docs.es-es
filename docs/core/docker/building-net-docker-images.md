@@ -113,7 +113,7 @@ cd api
 dotnet restore
 ```
 
-Pruebe la aplicación con `dotnet run` y vaya a **http://localhost:&5000;/api/values**.
+Pruebe la aplicación con `dotnet run` y vaya a **http://localhost:5000/api/values**.
 
 ```javascript
 [
@@ -196,7 +196,7 @@ Seleccione el icono de depuración en la barra de vista del lado izquierdo de VS
 
 ![icono de depuración de vscode](./media/building-net-docker-images/debugging_debugicon.png)
 
-A continuación, toque el icono de reproducción o F5 para generar la imagen e iniciar la aplicación dentro del contenedor. Se iniciará la API web mediante el explorador web predeterminado en http://localhost:&5000;.
+A continuación, toque el icono de reproducción o F5 para generar la imagen e iniciar la aplicación dentro del contenedor. Se iniciará la API web mediante el explorador web predeterminado en http://localhost:5000.
 
 ![Depuración con las herramientas de Docker de VSCode](./media/building-net-docker-images/docker-tools-vscode-f5.png)
 
