@@ -11,9 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d00277ceb7fd1c8a7186da330ab2bc4ad40c59a7
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 978dd62d655d0168b5a9c1c9732bc69ca9b256eb
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -79,7 +79,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Controlador
 
-El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../app-types.md) o ejecutar un comando. La única vez que se usa `dotnet` sin un comando es cuando se usa para iniciar una aplicación.
+El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../deploying/index.md) o ejecutar un comando. La única vez que se usa `dotnet` sin un comando es cuando se usa para iniciar una aplicación.
 
 Para ejecutar una aplicación dependiente del marco, especifique la aplicación después del controlador, por ejemplo, `dotnet /path/to/my_app.dll`. Cuando ejecute el comando desde la carpeta donde reside la DLL de la aplicación, simplemente ejecute `dotnet my_app.dll`.
 
@@ -104,5 +104,5 @@ Si usó herramientas de la versión preliminar 2 para producir proyectos basados
 ## <a name="additional-resources"></a>Recursos adicionales
 
 * [dotnet/repositorio de GitHub de la CLI](https://github.com/dotnet/cli/)
-* [.NET Core installation guide](https://aka.ms/dotnetcoregs/) (Guía de instalación de .NET Core)
+* [.NET Core installation guide](https://aka.ms/dotnetcoregs) (Guía de instalación de .NET Core)
 

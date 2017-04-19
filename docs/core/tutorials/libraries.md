@@ -65,7 +65,7 @@ La versión del estándar de la plataforma .NET que elija será un equilibrio en
 
 Además, el correspondiente [paquete NuGet del que se depende](https://www.nuget.org/packages/NETStandard.Library/) es `NETStandard.Library` versión `1.6.0`.  A pesar de que nada evita que dependa de `Microsoft.NETCore.App` como ocurre con las aplicaciones de consola, en general no se recomienda.  Si necesita API de un paquete que no está especificado en `NETStandard.Library`, siempre puede especificar ese paquete además de `NETStandard.Library` en la sección `dependencies` del archivo `project.json`.
 
-En función de sus necesidades, tiene&3; opciones principales cuando el destino es el estándar .NET.
+En función de sus necesidades, tiene 3 opciones principales cuando el destino es el estándar .NET.
 
 1. Puede usar la versión más reciente del estándar .NET, `netstandard1.6`, que es cuando desea acceso a la mayoría de las API y no importa si tiene menos alcance entre las implementaciones.
 2. Puede usar una versión inferior del estándar .NET para tener como destino las implementaciones .NET anteriores. El costo aquí es que no tiene acceso a algunas de las API más recientes.

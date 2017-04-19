@@ -2,7 +2,7 @@
 title: Controlar valores nulos en expresiones de consulta
 description: "Cómo se controlan valores nulos en expresiones de consulta."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

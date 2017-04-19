@@ -16,8 +16,8 @@ helpviewer_keywords:
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e22d81efef735f4b6619054cb15f21790efabf5e
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
+ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Mensajes de error (Visual Basic)
@@ -57,6 +57,7 @@ Al escribir, compilar o ejecutar una aplicación de Visual Basic, pueden produci
 ## <a name="compile-time-errors"></a>Errores en tiempo de compilación  
  Si el compilador de Visual Basic encuentra un problema en el código, se produce un error en tiempo de compilación. En el Editor de código, puede identificar fácilmente qué línea de código provocó el error porque aparece una línea ondulada debajo de la línea de código. Aparece el mensaje de error si selecciona la línea ondulada o abre la **lista de errores**, en la que también se muestran otros mensajes.  
   
- Si un identificador tiene un subrayado ondulado y aparece un subrayado corto debajo del carácter situado más a la derecha, puede generar un código auxiliar para la clase, el constructor, el método, la propiedad, el campo o la enumeración. Para más información, vea [Generar a partir del uso](https://docs.microsoft.com/cpp/misc/generate-from-usage).  
+ Si un identificador tiene un subrayado ondulado y aparece un subrayado corto debajo del carácter situado más a la derecha, puede generar un código auxiliar para la clase, el constructor, el método, la propiedad, el campo o la enumeración. Para más información, vea [Generar a partir del uso](https://docs.microsoft.com/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
   
  Si resuelve las advertencias del compilador de Visual Basic, puede escribir código que se ejecuta con mayor rapidez y con menos errores. Estas advertencias identifican código que puede producir errores cuando se ejecuta la aplicación. Por ejemplo, el compilador generará una advertencia cuando intente invocar un miembro de una variable de objeto sin asignar, volver de una función sin establecer el valor devuelto o ejecutar un bloque `Try` con errores en la lógica para detectar excepciones. Para más información sobre advertencias, incluidas las formas de activarlas y desactivarlas, vea [Configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).
+

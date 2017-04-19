@@ -2,7 +2,7 @@
 title: "Realizar operaciones de combinación externa izquierda"
 description: "Cómo realizar operaciones de combinación externa izquierda."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

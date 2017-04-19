@@ -2,7 +2,7 @@
 title: "Conceptos básicos de las expresiones de consultas"
 description: En este tema se presentan los conceptos relacionados con las expresiones de consulta.
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

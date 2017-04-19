@@ -2,7 +2,7 @@
 title: Agrupar resultados por claves contiguas
 description: "Cómo agrupar resultados por claves contiguas."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
