@@ -18,9 +18,9 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 404c69662c992bfba3399225fdca12376f33baa9
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 8571258a2fa4e7bd5180301e30e0fea8117eede6
+ms.openlocfilehash: 83ffd29d4301ae8848cc01de8e7def045b24a0ca
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="getting-started-with-the-net-framework"></a>Introducción a .NET Framework
@@ -92,3 +92,4 @@ ms.lasthandoff: 04/08/2017
  [Novedades](../../../docs/framework/whats-new/index.md)   
  [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkId=227195)   
  [Guía de desarrollo](../../../docs/framework/development-guide.md)
+
