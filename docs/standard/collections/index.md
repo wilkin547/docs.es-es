@@ -30,7 +30,7 @@ A menudo, los datos similares pueden controlarse de forma más eficaz si se alma
   
  A partir de la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], las colecciones en el <xref:System.Collections.Concurrent> espacio de nombres proporcionan operaciones eficaces de subprocesos para obtener acceso a elementos de la colección desde varios subprocesos. Las clases de colección inmutables en el espacio de nombres System.Collections.Immutable ([paquete NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) son intrínsecamente seguras para subprocesos ya que las operaciones se realizan en una copia de la colección original y no se puede modificar la colección original.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Características comunes de las colecciones  

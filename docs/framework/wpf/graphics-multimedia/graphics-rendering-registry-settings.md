@@ -25,7 +25,7 @@ caps.handback.revision: 17
 # Configuraci&#243;n del Registro en la representaci&#243;n de gr&#225;ficos
 En este tema se proporciona información general sobre la configuración del Registro para la representación de gráficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## Cuándo utilizar los valores del Registro para la representación de gráficos  

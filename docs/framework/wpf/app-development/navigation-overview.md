@@ -43,7 +43,7 @@ caps.handback.revision: 65
 > [!NOTE]
 >  En este tema, el término "explorador" hace referencia únicamente a los exploradores que pueden hospedar aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], que actualmente son [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] y Firefox.  Cuando sólo se admiten determinadas características de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en un explorador concreto, se hace referencia a la versión del explorador.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAMLBrowserApplications"></a>   
 ## Navegación en aplicaciones de WPF  

@@ -21,7 +21,7 @@ caps.handback.revision: 27
 # Informaci&#243;n general sobre propiedades asociadas
 Una propiedad adjunta es un concepto definido por XAML.  Las propiedades asociadas están destinadas a utilizarse como un tipo de propiedad global configurable en cualquier objeto.  En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], las propiedades asociadas son normalmente definido como una forma especializada de propiedad de dependencia que no tiene el “contenedor” de propiedad convencional.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

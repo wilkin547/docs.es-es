@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Informaci&#243;n general sobre objetos Drawing
 En este tema se presentan los objetos <xref:System.Windows.Media.Drawing> y se describe cómo utilizarlos para dibujar con eficacia formas, mapas de bits, texto y multimedia.  Utilice objetos <xref:System.Windows.Media.Drawing> cuando cree imágenes prediseñadas, pinte con <xref:System.Windows.Media.DrawingBrush> o use objetos <xref:System.Windows.Media.Visual>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatisadrawingsection"></a>   
 ## ¿Qué es un objeto Drawing?  

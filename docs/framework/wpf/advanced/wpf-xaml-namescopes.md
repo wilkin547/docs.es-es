@@ -32,7 +32,7 @@ caps.handback.revision: 18
 # &#193;mbitos de nombres XAML de WPF
 Los ámbitos de nombres XAML son un concepto que identifica los objetos definidos en XAML.  Los nombres de un ámbito de nombres XAML se pueden utilizar para establecer relaciones entre los nombres de objetos definidos por XAML y sus equivalentes de instancia en un árbol de objetos.  Normalmente, los ámbitos de nombres XAML en código administrado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se crean al cargar los elementos raíz de la página XAML individual de una aplicación XAML.  La interfaz <xref:System.Windows.Markup.INameScope> define los ámbitos de nombres XAML como objetos de programación. También los implementa la clase práctica <xref:System.Windows.NameScope>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## Ámbitos de nombres en aplicaciones de XAML cargado  

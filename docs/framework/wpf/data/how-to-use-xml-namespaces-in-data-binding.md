@@ -30,8 +30,8 @@ caps.handback.revision: 12
   
  Puede utilizar el elemento <xref:System.Windows.Data.XmlNamespaceMapping> para asignar el espacio de nombres a <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>, como en el ejemplo siguiente.  A continuación, puede utilizar <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> para hacer referencia al espacio de nombres [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  En este ejemplo, <xref:System.Windows.Controls.ListBox> muestra los elementos *title* y *dc:date* de cada *item*.  
   
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]  -->
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  -->  
   
  Observe que la propiedad <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> que se especifica no tiene que coincidir necesariamente con la utilizada en el origen [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]; aunque el prefijo cambie en el origen [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], la asignación sigue funcionando.  
   

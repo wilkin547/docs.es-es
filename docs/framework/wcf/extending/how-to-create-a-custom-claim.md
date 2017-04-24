@@ -59,7 +59,7 @@ La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../inc
          El ejemplo de código siguiente define un tipo de recurso personalizado denominado `MyResourceType`.  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
-         [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  
+         <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  -->  
   
     3.  Elija un derecho definido por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o un valor único para un derecho personalizado.  
   
@@ -70,7 +70,7 @@ La infraestructura del modelo de identidad en [!INCLUDE[indigo1](../../../../inc
          En el ejemplo de código siguiente se crea una demanda personalizada con un tipo de notificación `http://example.org/claims/complexcustomclaim`, un tipo de recurso personalizado `MyResourceType`y con el <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> derecho.  
   
      [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)]
-     [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  
+     <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  -->  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra cómo crear una demanda personalizada con un tipo de recurso primitivo y una demanda personalizada con un tipo de recurso no primitivo.  

@@ -21,7 +21,7 @@ caps.handback.revision: 26
 # Tipograf&#237;a en WPF
 En este tema se introducen las características tipográficas principales de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Estas características incluyen mejoras en la calidad y el rendimiento de la representación de texto, compatibilidad con la tipografía de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], texto internacional mejorado, compatibilidad de fuentes mejorada y nuevas interfaces de programación de aplicaciones \(API\) de texto.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## Mejora de la calidad y el rendimiento del texto  

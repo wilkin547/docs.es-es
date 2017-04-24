@@ -22,7 +22,7 @@ caps.handback.revision: 10
 # Informaci&#243;n general sobre el control RichTextBox
 El control <xref:System.Windows.Controls.RichTextBox> permite mostrar o modificar el contenido dinámico, incluidos párrafos, imágenes, tablas, etc.  En este tema se presenta la clase <xref:System.Windows.Controls.TextBox> y se proporcionan ejemplos de cómo utilizarla en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] y [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## ¿TextBox o RichTextBox?  

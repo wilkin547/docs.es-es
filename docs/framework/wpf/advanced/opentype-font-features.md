@@ -23,7 +23,7 @@ caps.handback.revision: 37
 # Caracter&#237;sticas de las fuentes OpenType
 Este tema proporciona información general de algunas de las características clave de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] tecnología de fuentes en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>Formato de fuente OpenType  

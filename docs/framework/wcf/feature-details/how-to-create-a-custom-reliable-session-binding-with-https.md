@@ -35,7 +35,7 @@ En este tema se muestra el uso de la seguridad de transporte de capa de sockets 
   
 3.  Cree un archivo Web.config para configurar un extremo para el `CalculatorService` con un enlace personalizado denominado "reliableSessionOverHttps" que utilice una sesión confiable y el transporte de HTTPS.  
   
-     [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
   
 4.  Cree un archivo Service.svc que contenga la línea:  
   
@@ -63,7 +63,7 @@ En este tema se muestra el uso de la seguridad de transporte de capa de sockets 
   
 4.  Configure un enlace personalizado denominado "reliableSessionOverHttps" para que use el transporte HTTPS y sesiones confiables.  
   
-     [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
   
 5.  Cree una instancia de `ClientCalculator` en una aplicación y, a continuación, llame a las operaciones del servicio.  
   

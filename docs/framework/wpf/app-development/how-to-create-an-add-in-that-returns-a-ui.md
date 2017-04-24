@@ -36,7 +36,7 @@ En este ejemplo se muestra cómo crear un complemento que devuelve una [!INCLUDE
 ## Ejemplo  
  Para crear un complemento que devuelve una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se necesita un código concreto para cada segmento de la canalización, el complemento y la aplicación host.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Contract"></a>   
 ## Implementar el segmento de canalización del contrato  

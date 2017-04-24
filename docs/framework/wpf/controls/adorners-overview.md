@@ -21,7 +21,7 @@ caps.handback.revision: 34
 # Informaci&#243;n general sobre adornos
 Las etiquetas contextuales son un tipo especial de <xref:System.Windows.FrameworkElement>, que se utiliza para proporcionar indicaciones visuales a un usuario.  Entre otros usos se pueden utilizar para agregar controladores funcionales a los elementos o proporcionar información de estado sobre un control.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="about_Adorners"></a>   
 ## Etiquetas contextuales  

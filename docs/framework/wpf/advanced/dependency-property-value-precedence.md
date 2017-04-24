@@ -24,7 +24,7 @@ caps.handback.revision: 26
 # Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica el modo en que los mecanismos del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pueden afectar al valor de una [propiedad de dependencia](GTMT), y se describe la prioridad por la que ciertos aspectos del sistema de propiedades se aplican al valor efectivo de una propiedad.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

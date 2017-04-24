@@ -35,7 +35,7 @@ caps.handback.revision: 23
 # Extensiones de marcado y XAML de WPF
 En este tema se presenta el concepto de extensiones de marcado para XAML, incluidas sus reglas de sintaxis, propósito y modelo de objetos de clase subyacente.  Las extensiones de marcado son una característica general del lenguaje XAML y de la implementación de .NET de servicios XAML.  En este tema se detallan las extensiones de marcado para uso en XAML de WPF.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## Procesadores de XAML y extensiones de marcado  

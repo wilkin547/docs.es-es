@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # Propiedades de dependencia de tipo de colecci&#243;n
 En este se proporciona orientación y sugerencias de modelos de implementación de una [propiedad de dependencia](GTMT) cuyo tipo sea de colección.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## Implementar una propiedad de dependencia de tipo de colección  
@@ -36,7 +36,7 @@ En este se proporciona orientación y sugerencias de modelos de implementación 
   
  Considere el ejemplo siguiente.  En la sección siguiente del ejemplo se muestra la definición de una clase `Aquarium`.  La clase define la propiedad de dependencia de tipo de colección `AquariumObjects`, que utiliza el tipo <xref:System.Collections.Generic.List%601> genérico con una restricción de tipo <xref:System.Windows.FrameworkElement>.  En la llamada a <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> para la propiedad de dependencia, los metadatos establecen el valor predeterminado en un nuevo objeto <xref:System.Collections.Generic.List%601> genérico.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]
+ <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
  [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
 [!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
 [!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  

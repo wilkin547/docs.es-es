@@ -25,7 +25,7 @@ caps.handback.revision: 11
 # Optimizar el rendimiento: Comportamiento de objetos
 Entender el comportamiento intrínseco de los objetos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le ayudará a alcanzar el equilibrio adecuado entre funcionalidad y rendimiento.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Not_Removing_Event_Handlers"></a>   
 ## No quitar los controladores de eventos de los objetos puede hacer que los objetos se mantengan activos  

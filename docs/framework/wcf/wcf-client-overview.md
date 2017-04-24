@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Por ejemplo, un archivo de configuración generado para el `ISampleService` utilizado en los ejemplos anteriores, contiene la información de extremo siguiente.  
   
- [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
+ <!-- TODO: review snippet reference [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  -->  
   
  Este archivo de configuración especifica un extremo de destino en el elemento `<client>`. [!INCLUDE[crabout](../../../includes/crabout-md.md)]uso de varios extremos de destino, consulte el <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=fullName> o <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=fullName> constructores.  
   

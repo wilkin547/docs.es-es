@@ -25,7 +25,7 @@ caps.handback.revision: 13
 # Recursos y c&#243;digo
 Esta información general se concentra en cómo se puede obtener acceso a los recursos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] o cómo crearlos mediante código en lugar de mediante la sintaxis [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Para obtener más información sobre el uso de recursos en general y sobre los recursos desde la perspectiva de la sintaxis [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consulte [Recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="accessing"></a>   
 ## Acceso a los recursos mediante código  

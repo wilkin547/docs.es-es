@@ -49,7 +49,7 @@ En este ejemplo, se crea una aplicación de consola de cliente para utilizar un 
   
 4.  Svcutil.exe también genera la configuración del cliente que utiliza el <xref:System.ServiceModel.BasicHttpBinding> clase. Al utilizar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], nombre a este archivo como App.config. Observe que la información de enlace y dirección no se especifican en ninguna parte de la implementación del servicio. Además, el código tiene que escribirse para recuperar esa información del archivo de configuración.  
   
-     [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/common/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]  -->  
   
 5.  Cree una instancia de `ClientCalculator` en una aplicación y, a continuación, llame a las operaciones del servicio.  
   

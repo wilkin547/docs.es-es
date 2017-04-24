@@ -36,7 +36,7 @@ Botón que usa una plantilla de control personalizada
  ![Botón con un borde rojo.](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
 Botón que usa una plantilla de control personalizada y tiene el puntero del mouse sobre él  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

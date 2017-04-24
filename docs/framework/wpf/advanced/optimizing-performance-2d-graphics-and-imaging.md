@@ -26,7 +26,7 @@ caps.handback.revision: 7
 # Optimizar el rendimiento: Im&#225;genes y gr&#225;ficos 2D
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona una gama amplia de gráficos 2D y funcionalidad de creación de imágenes que se pueden optimizar para los requisitos de la aplicación.  En este tema se proporciona información sobre la optimización del rendimiento en esas áreas.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drawing_and_Shapes"></a>   
 ## Dibujos y formas  

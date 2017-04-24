@@ -83,8 +83,8 @@ Dado que una página web puede mostrarse en cualquier parte del mundo, las opera
 ## Ejemplo  
  El ejemplo siguiente incluye código fuente HTML y el código de un formulario web de ASP.NET que solicita al usuario que escriba un valor de fecha y hora.  También hay un script de cliente que escribe información sobre la fecha y hora local de la solicitud del usuario y el desfase de la zona horaria del usuario con respecto a la hora UTC en un campo oculto.  Esta información se analiza a continuación en el servidor, que devuelve una página web en la que se muestran los datos especificados por el usuario.  También muestra la fecha y hora de la solicitud del usuario utilizando la hora local del usuario, la hora del servidor y la hora UTC.  
   
- [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
- [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  
+ <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
   
  El script de cliente llama al método `toLocaleString` de JavaScript.  Esto genera una cadena que se ajusta a las convenciones de formato de la configuración regional del usuario, por lo que es más probable que se analice correctamente en el servidor.  
   

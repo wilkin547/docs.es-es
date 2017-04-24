@@ -24,7 +24,7 @@ caps.handback.revision: 29
 # Informaci&#243;n general sobre documentos din&#225;micos
 Los documentos dinámicos se han diseñado para optimizar su presentación y legibilidad.  En lugar de establecerse en un diseño predefinido, este tipo de documentos ajusta y recoloca dinámicamente su contenido basándose en variables de tiempo de ejecución, tales como el tamaño de la ventana, la resolución del dispositivo y las preferencias opcionales del usuario.  Además, ofrecen características de documentos avanzadas, como la paginación y las columnas.  En este tema se ofrece información general sobre los documentos dinámicos y sobre cómo crearlos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_flow_document"></a>   
 ## Qué es un documento dinámico  

@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # Informaci&#243;n general de informaci&#243;n sobre herramientas
 Una información sobre herramientas es una pequeña ventana emergente que aparece cuando el usuario detiene el puntero del mouse sobre un elemento, por ejemplo sobre un control <xref:System.Windows.Controls.Button>.  En este tema se presenta la información sobre herramientas y se aborda cómo crear y personalizar el contenido de la información sobre herramientas.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_tooltip"></a>   
 ## ¿Qué es la información sobre herramientas?  

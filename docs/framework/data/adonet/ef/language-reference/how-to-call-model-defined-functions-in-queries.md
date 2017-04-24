@@ -33,7 +33,7 @@ En este tema se describe cómo llamar a las funciones definidas en el modelo con
  La siguiente función del modelo conceptual devuelve el número de años transcurridos desde que se contrató a un instructor.  Para obtener información sobre cómo agregar la función a un modelo conceptual, vea [How to: Define Custom Functions in the Conceptual Model](http://msdn.microsoft.com/es-es/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
- [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  
+ <!-- TODO: review snippet reference [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  -->  
   
 ## Ejemplo  
  A continuación, agregue el siguiente método a su aplicación y utilice un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para asignarlo a la función del modelo conceptual:  

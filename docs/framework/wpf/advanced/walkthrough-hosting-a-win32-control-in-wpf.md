@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  En este tema se explica cómo crear una aplicación, [Hosting a Win32 ListBox Control in WPF Sample](http://go.microsoft.com/fwlink/?LinkID=159998), que hospeda un control de cuadro de lista de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  Este procedimiento general se puede extender para hospedar cualquier ventana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## Requisitos  

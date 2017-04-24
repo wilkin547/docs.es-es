@@ -52,7 +52,7 @@ caps.handback.revision: 13
   
     1.  El siguiente fragmento de código de configuración del ejemplo muestra cómo establecer la propiedad `TransferMode` en la transmisión por secuencias en `basicHttpBinding` y un enlace HTTP personalizado.  
   
-         [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  
+         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
   
     2.  El siguiente fragmento de código muestra cómo establecer la propiedad `TransferMode` para la transmisión por secuencias en `basicHttpBinding` y un enlace HTTP personalizado.  
   

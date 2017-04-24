@@ -21,7 +21,7 @@ caps.handback.revision: 52
 # Informaci&#243;n general sobre la administraci&#243;n de aplicaciones
 Todas las aplicaciones suelen compartir un conjunto común de funcionalidad que se aplican a la implementación y la administración de la aplicación.  Este tema proporciona información general sobre la funcionalidad de la clase de <xref:System.Windows.Application> para crear y administrar aplicaciones.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## Clase Application  
  En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], la funcionalidad común de ámbito de aplicación se encapsula en la clase de <xref:System.Windows.Application> .  la clase de <xref:System.Windows.Application> incluye la funcionalidad siguiente:  
@@ -133,7 +133,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funcionalidad que 
 ## Duración de la aplicación  
  La duración de una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] está marcada por varios eventos que <xref:System.Windows.Application> provoca para indicar cuándo se inicia la aplicación, cuándo se activa y se desactiva, y cuándo se cierra.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Splash_Screen"></a>   
 ### Pantalla de presentación  

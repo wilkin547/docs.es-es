@@ -27,7 +27,7 @@ En este tema se proporciona información general sobre cómo empaquetar fuentes 
 > [!NOTE]
 >  Como con la mayoría de los tipos de software, los archivos de fuentes se otorgan bajo licencias, no se venden.  Las licencias que rigen el uso de las fuentes varían según el proveedor de que se trate pero, por lo general, la mayoría de las licencias, incluidas las proporcionadas por [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] con aplicaciones y [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], no permiten incrustar las fuentes dentro de aplicaciones ni redistribuirlas de ningún otro modo.  Así pues, como programador, es su responsabilidad asegurarse de disponer de los derechos de licencia necesarios para cualquier fuente que incruste en una aplicación o redistribuya de cualquier otro modo.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="introduction_to_packaging_fonts"></a>   
 ## Introducción al empaquetado de fuentes  

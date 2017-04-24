@@ -33,7 +33,7 @@ caps.handback.revision: 50
 # Informaci&#243;n general sobre XAML (WPF)
 En este tema se describen las características del lenguaje XAML y se muestra cómo usar el código XAML para escribir aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  En este tema se describe el código XAML específicamente tal y como lo implementa por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  El propio código XAML es un concepto de lenguaje más amplio que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_xaml"></a>   
 ## ¿Qué es XAML?  

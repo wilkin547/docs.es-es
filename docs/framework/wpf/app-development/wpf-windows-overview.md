@@ -46,7 +46,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
 > [!NOTE]
 >  Las aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedadas por explorador, incluso las [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y las páginas [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] separadas, no proporcionan ventanas propias.  En su lugar, se hospedan en ventanas proporcionadas por [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)].  Vea [Información general sobre las aplicaciones de explorador XAML de WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="TheWindowClass"></a>   
 ## La clase Window  
@@ -136,7 +136,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
 ## Duración de la ventana  
  Como con cualquier clase, una ventana tiene una duración que comienza cuando se crea por primera vez la instancia, después de lo cual se abre, se activa, se desactiva y, finalmente, se cierra.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Opening_a_Window"></a>   
 ### Abrir una ventana  
@@ -414,7 +414,7 @@ Los usuarios interactúan con las aplicaciones independientes de [!INCLUDE[TLA#t
   
  También puede cambiar el aspecto y comportamiento del borde del área de no cliente configurando el modo de cambio de tamaño de la ventana, su estilo y si aparece como un botón de la barra de tarea del escritorio.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resize_Mode"></a>   
 ### Modo de cambio de tamaño  

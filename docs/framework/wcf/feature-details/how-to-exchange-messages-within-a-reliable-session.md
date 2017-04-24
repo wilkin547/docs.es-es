@@ -35,7 +35,7 @@ En este tema se describen los pasos necesarios para habilitar una sesión confia
   
 3.  Cree un archivo Web.config para configurar un extremo del `CalculatorService` que utiliza el <xref:System.ServiceModel.WSHttpBinding> con sesión confiable habilitada y entrega ordenada de mensajes requerida..  
   
-     [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  -->  
   
 4.  Cree un archivo Service.svc que contenga la línea:  
   
@@ -63,7 +63,7 @@ En este tema se describen los pasos necesarios para habilitar una sesión confia
   
 4.  Svcutil.exe también genera la configuración para el cliente que utiliza la clase <xref:System.ServiceModel.WSHttpBinding>.Este archivo se debería denominar App.config al utilizar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
   
-     [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  -->  
   
 5.  Cree una instancia de `ClientCalculator` en una aplicación y, a continuación, llame a las operaciones del servicio.  
   

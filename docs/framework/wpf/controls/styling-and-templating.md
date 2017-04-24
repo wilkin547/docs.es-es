@@ -35,7 +35,7 @@ caps.handback.revision: 33
   
  Además, es importante entender los recursos, que permiten estilos y plantillas que se reutilice. Para obtener más información acerca de los recursos, consulte [recursos XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Ejemplo de plantillas y estilos  

@@ -22,7 +22,7 @@ caps.handback.revision: 48
 # Informaci&#243;n general sobre la representaci&#243;n de gr&#225;ficos en WPF
 En este tema se proporciona información general sobre la capa visual de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Se centra en el rol de la clase <xref:System.Windows.Media.Visual> para admitir la representación del modelo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="role_of_visual_object"></a>   
 ## Rol de los objetos visuales  

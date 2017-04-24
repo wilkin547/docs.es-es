@@ -22,7 +22,7 @@ caps.handback.revision: 41
 # Realizar pruebas de posicionamiento en la capa visual
 En este tema se proporciona información general sobre la funcionalidad de prueba de posicionamiento que proporciona la capa visual.  La compatibilidad con la prueba de posicionamiento permite determinar si el valor de una geometría o de un punto pertenece al contenido representado de un objeto <xref:System.Windows.Media.Visual>, lo que permite implementar comportamientos de interfaz de usuario tal como un rectángulo de selección para seleccionar varios objetos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="hit_testing_scenarios"></a>   
 ## Escenarios de pruebas de posicionamiento  

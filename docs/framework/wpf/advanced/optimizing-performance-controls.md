@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # Optimizar el rendimiento: Controles
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye muchos de los componentes comunes de interfaz de usuario que se utilizan en la mayoría de las aplicaciones Windows.  Este tema contiene técnicas para mejorar el rendimiento de la interfaz de usuario.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Displaying"></a>   
 ## Mostrar conjuntos de datos de gran tamaño  

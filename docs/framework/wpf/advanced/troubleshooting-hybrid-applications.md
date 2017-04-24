@@ -26,7 +26,7 @@ caps.handback.revision: 25
 # Soluci&#243;n de problemas de aplicaciones h&#237;bridas
 <a name="introduction"></a> En este tema se muestra una lista de algunos problemas comunes que se pueden producir al crear aplicaciones híbridas, que utilizan las dos tecnologías, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overlapping_controls"></a>   
 ## Controles superpuestos  

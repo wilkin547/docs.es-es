@@ -21,7 +21,7 @@ caps.handback.revision: 18
 # Informaci&#243;n general sobre elementos base
 Un porcentaje elevado de clases de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se derivan de cuatro clases a las que se suele hacer referencia en la documentación del [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] como clases de elementos base.  Estas clases son <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement> y <xref:System.Windows.FrameworkContentElement>.  La clase <xref:System.Windows.DependencyObject> también está relacionada, porque es una clase base común de <xref:System.Windows.UIElement> y de <xref:System.Windows.ContentElement>  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="base_apis"></a>   
 ## API de elementos base en las clases de WPF  

@@ -26,7 +26,7 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
   
  En las secciones siguientes se explican muchas características bidireccionales, junto con ejemplos que muestran cómo conseguir la mejor presentación de contenido bidireccional.  La mayoría de los ejemplos utiliza [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], aunque puede aplicar con facilidad los mismos conceptos al código [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] o [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="FlowDirection"></a>   
 ## FlowDirection  

@@ -29,7 +29,7 @@ caps.handback.revision: 20
 # Informaci&#243;n general sobre transformaciones
 En este tema se describe cómo usar las clases <xref:System.Windows.Media.Transform> [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] para girar, escalar, mover \(trasladar\) y sesgar objetos <xref:System.Windows.FrameworkElement>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatIsATransformSection"></a>   
 ## ¿Qué es una transformación?  

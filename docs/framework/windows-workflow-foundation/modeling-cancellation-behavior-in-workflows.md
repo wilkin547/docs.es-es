@@ -84,7 +84,7 @@ Las actividades se pueden cancelar dentro de un flujo de trabajo, por ejemplo, m
   
  En el siguiente ejemplo, se define la invalidación <xref:System.Activities.NativeActivity.Cancel%2A> de una actividad `ParallelForEach` personalizada basada en <xref:System.Activities.NativeActivity>.Cuando se cancela la actividad, esta invalidación controla la lógica de cancelación de la actividad.Este ejemplo forma parte de la muestra de [ParallelForEach no genérico](../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md).  
   
- [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  
+ <!-- TODO: review snippet reference [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  -->  
   
  Las actividades derivadas <xref:System.Activities.NativeActivity> pueden determinar si la propiedad <xref:System.Activities.NativeActivityContext.IsCancellationRequested%2A> ha solicitado la cancelación y marcarse a sí mismas como canceladas llamando al método <xref:System.Activities.NativeActivityContext.MarkCanceled%2A>.La llamada al método <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> no completa la actividad de forma inmediata.Como es habitual, el tiempo de ejecución completará la actividad cuando no tenga ningún trabajo pendiente, pero si se llama al método <xref:System.Activities.NativeActivityContext.MarkCanceled%2A>, el estado final será <xref:System.Activities.ActivityInstanceState> en lugar de <xref:System.Activities.ActivityInstanceState>.  
   

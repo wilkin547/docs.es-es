@@ -26,7 +26,7 @@ En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
  La clase <xref:System.Windows.Input.Keyboard> corresponde principalmente al foco de teclado y la clase <xref:System.Windows.Input.FocusManager>, al foco lógico, aunque no se trata de una distinción absoluta.  Un elemento que tiene el foco de teclado también tiene el foco lógico, pero un elemento que tiene el foco lógico no tiene necesariamente el de teclado.  Esto resulta patente cuando se usa la clase <xref:System.Windows.Input.Keyboard> para establecer el elemento que tiene el foco de teclado, ya que también establece el foco lógico en él.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Keyboard_Focus"></a>   
 ## Foco de teclado  

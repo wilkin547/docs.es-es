@@ -26,7 +26,7 @@ caps.handback.revision: 30
 # Informaci&#243;n general sobre la funci&#243;n de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse \(o cualquier otro dispositivo señalador\) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drag_and_Drop_Support"></a>   
 ## Compatibilidad con arrastrar y colocar en WPF  

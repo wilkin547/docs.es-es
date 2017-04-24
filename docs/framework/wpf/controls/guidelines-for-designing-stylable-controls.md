@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # Instrucciones para el dise&#241;o de controles con estilos
 Este documento resume un conjunto de procedimientos recomendados que se debe tener en cuenta al diseñar un control con estilos y plantillas de fácil uso.  Los vimos a través de muchas pruebas y errores al trabajar en los estilos del control de tema del conjunto del control integrado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Aprendimos que un estilo correcto está formado tanto por una función de un modelo de objetos bien diseñado como por el propio estilo.  El lector al que está dirigido este documento es el autor del control, y no el autor del estilo.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Terminology"></a>   
 ## Terminología  

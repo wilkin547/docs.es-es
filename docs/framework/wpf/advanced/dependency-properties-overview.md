@@ -27,7 +27,7 @@ caps.handback.revision: 29
 # Informaci&#243;n general sobre las propiedades de dependencia
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un conjunto de servicios que se pueden utilizar para extender la funcionalidad de una propiedad de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].  Colectivamente, estos servicios se conocen como el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Una propiedad que está respaldada por el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se conoce como [propiedad de dependencia](GTMT). En esta introducción se describe el sistema de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y las funciones de una [propiedad de dependencia](GTMT). Esto incluye cómo utilizar [propiedades de dependencia](GTMT) existentes en XAML y en el código.  Esta información general también presenta aspectos especializados de las propiedades de dependencia, tales como los metadatos de propiedades de dependencia y cómo crear una propiedad de dependencia propia en una clase personalizada.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

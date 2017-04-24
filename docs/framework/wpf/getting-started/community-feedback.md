@@ -31,7 +31,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  No utilice el vínculo **comentarios** que se encuentra en la parte inferior de cada página para enviar comentarios sobre el producto.  Estos vínculos son solamente para comentarios de documentación.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Blogs"></a>   
 ## Blogs  

@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # Informaci&#243;n general sobre el modelo de contenido de TextElement
 En esta información general del modelo de contenido se describe el contenido compatible con <xref:System.Windows.Documents.TextElement>.  La clase <xref:System.Windows.Documents.Paragraph> es un tipo de <xref:System.Windows.Documents.TextElement>.  Un modelo de contenido describe qué objetos o elementos se pueden contener en otros.  En esta información general se resume el modelo de contenido utilizado para los objetos derivados de <xref:System.Windows.Documents.TextElement>.  Para obtener más información, consulte [Información general sobre documentos dinámicos](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="text_element_classes"></a>   
 ## Diagrama del modelo de contenido  

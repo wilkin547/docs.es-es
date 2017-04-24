@@ -28,7 +28,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  Se presta especial atención al escenario de *control híbrido*.  Un control híbrido tiene un control de una tecnología anidado en un control de otra tecnología.  También se denomina una *interoperación anidada*.  Un *control híbrido de varios niveles* tiene más de un nivel de anidamiento de controles híbridos.  Un ejemplo de una interoperación anidada de varios niveles es un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] que contiene un control de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], que contiene otro control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  No se admiten los controles híbridos de varios niveles.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## Hospedar controles de Windows Forms en WPF  

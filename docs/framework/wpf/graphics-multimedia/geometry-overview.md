@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # Informaci&#243;n general sobre geometr&#237;a
 En esta información general se describe cómo utilizar las clases [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry> para describir formas.  En este tema también se contrastan las diferencias entre los objetos <xref:System.Windows.Media.Geometry> y los elementos <xref:System.Windows.Shapes.Shape>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## ¿Qué es una geometría?  

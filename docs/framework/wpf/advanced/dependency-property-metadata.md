@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # Metadatos de las propiedades de dependencia
 El sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye un sistema de informe de metadatos que va más allá de lo que se puede informar de una propiedad mediante reflexión o características generales de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].  Los metadatos para una [propiedad de dependencia](GTMT) pueden asignarse también de forma única mediante la clase que define una [propiedad de dependencia](GTMT), pueden modificarse cuando la [propiedad de dependencia](GTMT) se agrega a una clase diferente y pueden ser invalidados específicamente por todas las clases derivadas que hereden la [propiedad de dependencia](GTMT) de la clase base de la definición.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

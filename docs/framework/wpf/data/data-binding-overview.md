@@ -28,7 +28,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  En este tema se describen en primer lugar los conceptos fundamentales del enlace de datos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y, a continuación, se explica el uso de la clase <xref:System.Windows.Data.Binding> y otras características del enlace de datos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_data_binding"></a>   
 ## ¿Qué es el enlace de datos?  
@@ -64,7 +64,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 <a name="basic_data_binding_concepts"></a>   
 ## Conceptos básicos del enlace de datos  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Independientemente del elemento que se vaya a enlazar y de la naturaleza del origen de datos, cada enlace sigue siempre el modelo que se muestra en la ilustración siguiente:  
   
@@ -128,7 +128,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 <a name="creating_a_binding"></a>   
 ## Crear un enlace  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Como recapitulación de algunos de los conceptos descritos en las secciones anteriores, recordemos que un enlace se establece mediante el objeto <xref:System.Windows.Data.Binding> y que cada enlace tiene normalmente cuatro componentes: el destino del enlace, la propiedad de destino, el origen del enlace y una ruta de acceso al valor de origen que se va a utilizar.  En esta sección se explica cómo configurar un enlace.  
   
@@ -220,7 +220,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 <a name="binding_to_collections"></a>   
 ## Enlace a colecciones  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Un objeto de origen del enlace se puede tratar como un objeto único cuyas propiedades contienen los datos, o como una recolección de datos de objetos polimórficos que suelen estar agrupados \(como el resultado de una consulta a una base de datos\).  Hasta ahora sólo hemos explicado el enlace a objetos individuales, pero el enlace a una recolección de datos es un escenario común.  Por ejemplo, es habitual utilizar un <xref:System.Windows.Controls.ItemsControl> como <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListView> o <xref:System.Windows.Controls.TreeView> para mostrar una recolección de datos, como en la aplicación que se muestra en la sección [¿Qué es el enlace de datos?](#what_is_data_binding)  
   
@@ -242,7 +242,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ### Vistas de colección  
  Una vez que <xref:System.Windows.Controls.ItemsControl> esté enlazado a una recolección de datos, quizás desee ordenar, filtrar o agrupar los datos.  Para ello, se utilizan vistas de colección, que son clases que implementan la interfaz <xref:System.ComponentModel.ICollectionView>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_are_collection_views"></a>   
 #### ¿Qué son las vistas de colección?  
@@ -369,7 +369,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 <a name="data_validation"></a>   
 ## Validación de datos  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  La mayoría de las aplicaciones que toman datos proporcionados por el usuario requieren lógica de validación para asegurarse de que el usuario ha escrito la información esperada.  Las comprobaciones de validación pueden basarse en el tipo, intervalo, formato u otros requisitos específicos de la aplicación.  En esta sección se describe cómo funciona la validación de datos en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   

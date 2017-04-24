@@ -26,7 +26,7 @@ caps.handback.revision: 27
 # Pintar con im&#225;genes, dibujos y elementos visuales
 En este tema se describe cómo utilizar objetos <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>y <xref:System.Windows.Media.VisualBrush> para pintar una área con una imagen o con un objeto <xref:System.Windows.Media.Drawing> o <xref:System.Windows.Media.Visual>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereqs"></a>   
 ## Requisitos previos  

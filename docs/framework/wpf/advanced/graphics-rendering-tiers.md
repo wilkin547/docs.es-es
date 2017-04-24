@@ -25,7 +25,7 @@ caps.handback.revision: 43
 # Niveles de representaci&#243;n de gr&#225;ficos
 Un nivel de representación define un nivel de rendimiento y funcionalidad del hardware gráfico de un dispositivo en el que se ejecuta una aplicación d[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="graphics_hardware"></a>   
 ## Hardware gráfico  

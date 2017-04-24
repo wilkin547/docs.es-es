@@ -45,7 +45,7 @@ caps.handback.revision: 18
 # Eventos de duraci&#243;n de objetos
 En este tema se describen los eventos específicos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que representan las fases de la duración de un objeto, a saber, creación, uso y destrucción.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

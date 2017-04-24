@@ -42,9 +42,9 @@ Los clientes [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], como los serv
   
  El ejemplo de código siguiente muestra un archivo de configuración del cliente que indica a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que devuelva la información de excepción administrada de un objeto de devolución de llamada de cliente en mensajes SOAP.  
   
- [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]
- [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]
- [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  
+ <!-- TODO: review snippet reference [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]  -->
+ <!-- TODO: review snippet reference [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  -->
+ <!-- TODO: review snippet reference [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  -->  
   
 ## <a name="using-the-clientviabehavior-behavior"></a>Utilizar el comportamiento de ClientViaBehavior  
  Puede usar el <xref:System.ServiceModel.Description.ClientViaBehavior> comportamiento para especificar el identificador uniforme de recursos para el que se debe crear el canal de transporte. Utilice este comportamiento cuando el destino de la red inmediato no es el procesador de impresión previsto del mensaje. Esto habilita conversaciones de varios saltos cuando la aplicación que realiza la llamada no conoce necesariamente el destino último o cuando el encabezado de destino `Via` no es una dirección.  

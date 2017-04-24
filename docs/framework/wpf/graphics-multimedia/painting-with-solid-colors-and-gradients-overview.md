@@ -26,7 +26,7 @@ caps.handback.revision: 18
 # Informaci&#243;n general sobre el dibujo con colores s&#243;lidos y degradados
 En este tema se describe cómo usar los objetos <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush> y <xref:System.Windows.Media.RadialGradientBrush> para pintar con colores sólidos, degradados lineales y degradados radiales.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="solidcolor"></a>   
 ## Pintar un área con un color sólido  

@@ -22,7 +22,7 @@ caps.handback.revision: 29
 # Informaci&#243;n general sobre la creaci&#243;n de controles
 La extensibilidad del modelo de control [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] reduce en gran medida la necesidad de crear un nuevo control.  Sin embargo, en ciertos casos es posible que aún necesite crear un control personalizado.  En este tema se explican las características que minimizan la necesidad de crear un control personalizado y los diferentes modelos de creación de controles de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  En este tema también se muestra cómo crear un nuevo control.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="when_to_write_a_new_control"></a>   
 ## Alternativas a la escritura de un nuevo control  

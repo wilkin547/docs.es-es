@@ -24,7 +24,7 @@ caps.handback.revision: 13
 # Dibujar texto con formato
 En este tema se proporciona información general sobre las características del objeto <xref:System.Windows.Media.FormattedText>.  Este objeto proporciona control de bajo nivel para dibujar texto en aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="technology_overview"></a>   
 ## Información general sobre la tecnología  

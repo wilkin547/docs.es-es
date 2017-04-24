@@ -27,7 +27,7 @@ En este tema se proporciona información general sobre cómo dibujar con objetos
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ofrece varias capas de acceso a los gráficos y a los servicios de representación.  En la capa superior, los objetos <xref:System.Windows.Shapes.Shape> son fáciles de utilizar y proporcionan numerosas características útiles, como diseño y participación en el sistema de eventos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="shapes"></a>   
 ## Objetos de formas  

@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # Metadatos de las propiedades de marco de trabajo
 Las opciones de metadatos de las propiedades de marco de trabajo se comunican para las propiedades de elementos de objeto que se consideran presentes en el [nivel de marco de trabajo de WPF](GTMT) en la arquitectura de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  En general, la designación de [nivel de marco de trabajo de WPF](GTMT) conlleva que determinadas características, tales como la representación, los enlaces de datos y las matizaciones del sistema de propiedades, las administren las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] y los archivos ejecutables de presentación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Estos sistemas consultan los metadatos de las propiedades de marco de trabajo para determinar las particularidades específicas de las características de las propiedades de determinados elementos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

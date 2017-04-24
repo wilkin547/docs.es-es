@@ -25,7 +25,7 @@ caps.handback.revision: 16
 # Devoluciones de llamada y validaci&#243;n de las propiedades de dependencia
 En este tema se describe cómo crear propiedades de dependencia utilizando implementaciones personalizadas alternativas para las características relacionadas con propiedades, tales como la determinación de validación, las devoluciones de llamada que se invocan cada vez que cambia el valor efectivo de la propiedad, y la invalidación de posibles influencias externas para la determinación del valor.  En este tema también se explican los escenarios donde es apropiado expandir los comportamientos del sistema de propiedades predeterminado mediante estas técnicas.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

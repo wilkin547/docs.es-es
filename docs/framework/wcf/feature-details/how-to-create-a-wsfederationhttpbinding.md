@@ -106,7 +106,7 @@ En [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la clase <xref:Syste
  El ejemplo de código siguiente muestra el código para configurar `WSFederationHttpBinding` de manera imperativa.  
   
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)]
- [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
+ <!-- TODO: review snippet reference [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  -->  
   
 ## Vea también  
  [Federación](../../../../docs/framework/wcf/feature-details/federation.md)   

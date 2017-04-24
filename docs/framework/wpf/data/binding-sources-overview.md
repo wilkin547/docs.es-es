@@ -23,7 +23,7 @@ caps.handback.revision: 24
 # Informaci&#243;n general sobre or&#237;genes de enlaces
 En el enlace de datos, el objeto de [origen de enlace](GTMT) hace referencia al objeto del que se obtienen los datos.  En este tema se describen los tipos de objetos que pueden utilizarse como origen de enlace.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="binding_sources"></a>   
 ## Tipos de origen de enlace  

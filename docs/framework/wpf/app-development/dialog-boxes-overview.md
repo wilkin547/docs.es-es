@@ -38,7 +38,7 @@ Aplicaciones independientes tienen normalmente una ventana principal, que tanto 
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]le permite crear varios tipos de cuadros de diálogo, incluidos cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. Este tema describe cada uno y el [Dialog Box Sample](http://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos relacionados.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Cuadros de mensaje  

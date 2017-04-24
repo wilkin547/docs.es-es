@@ -32,7 +32,7 @@ Los mecanismos de seguridad del transporte en [!INCLUDE[indigo1](../../../../inc
  El <xref:System.ServiceModel.BasicHttpBinding> clase se utiliza principalmente para interoperar con servicios Web existentes y muchos de esos servicios se hospedan los servicios de Internet Information Server (IIS). Por consiguiente, la seguridad en el transporte para este enlace está diseñada para la interoperación perfecta con sitios de IIS. Esto se hace estableciendo el modo de seguridad <xref:System.ServiceModel.BasicHttpSecurityMode> y estableciendo el tipo de credencial del cliente. Los valores del tipo de la credencial se corresponden con los mecanismos de seguridad del directorio de IIS. El código siguiente muestra el modo que se ha establecido y el tipo de credencial definido en Windows. Puede utilizar esta configuración cuando el cliente y el servidor están en el mismo dominio de Windows.  
   
  [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)]
- [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
+ <!-- TODO: review snippet reference [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  -->  
   
  O bien, en la configuración:  
   

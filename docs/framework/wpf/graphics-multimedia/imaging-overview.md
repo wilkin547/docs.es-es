@@ -34,7 +34,7 @@ caps.handback.revision: 29
 # Informaci&#243;n general sobre im&#225;genes
 En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)].  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite a los desarrolladores mostrar y transformar imágenes, así como darles formato.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="_wpfImaging"></a>   
 ## Componente de creación de imágenes de WPF  

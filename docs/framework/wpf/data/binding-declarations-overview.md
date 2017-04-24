@@ -26,7 +26,7 @@ caps.handback.revision: 33
 # Informaci&#243;n general sobre declaraciones de enlaces
 En este tema se describen las distintas maneras de declarar un enlace.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prereq"></a>   
 ## Requisitos previos  

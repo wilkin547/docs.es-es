@@ -22,7 +22,7 @@ caps.handback.revision: 12
 # Configuraci&#243;n del Registro de ClearType
 En este tema se proporciona información general sobre la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] utilizada por las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## Información general sobre la tecnología  

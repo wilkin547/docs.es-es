@@ -26,7 +26,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
 > [!NOTE]
 >  La herramienta LocBaml no es una aplicación lista para producción.  Se presenta como un ejemplo que usa algunas de las API de localización y muestra cómo se podría escribir una herramienta de localización.  
 >   
->  [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+>    
   
 <a name="Introduction"></a>   
 ## Información general  

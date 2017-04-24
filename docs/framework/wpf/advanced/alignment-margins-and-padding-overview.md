@@ -25,7 +25,7 @@ caps.handback.revision: 19
 # Informaci&#243;n general sobre alineaci&#243;n, m&#225;rgenes y relleno
 La clase <xref:System.Windows.FrameworkElement> expone varias propiedades que se utilizan para colocar los elementos secundarios de forma precisa.  En este tema se analizan cuatro de las propiedades más importantes: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A> y <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>.  Es importante comprender los efectos de estas propiedades, ya que proporcionan la base para controlar la posición de los elementos en las aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## Introducción al posicionamiento de los elementos  

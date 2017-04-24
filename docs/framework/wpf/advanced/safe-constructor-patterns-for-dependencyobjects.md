@@ -23,7 +23,7 @@ caps.handback.revision: 11
 # Modelos de constructores seguros para objetos DependencyObject
 En general, los constructores de clase no deben llamar a devoluciones de llamada como métodos virtuales o delegados, porque se puede llamar a los constructores como inicialización base de constructores para una clase derivada.  Podría entrarse en el método virtual en un estado de inicialización incompleto de cualquier objeto determinado.  Sin embargo, el propio sistema de propiedades llama y expone internamente devoluciones de llamada, como parte del sistema de propiedades de dependencia.  Una operación tan simple como establecer un valor de propiedad de dependencia con una llamada a <xref:System.Windows.DependencyObject.SetValue%2A>, incluye potencialmente una devolución de llamada en algún punto de la determinación.  Por esta razón, deben extremarse las precauciones al establecer los valores de propiedades de dependencia dentro del cuerpo de un constructor, algo que puede resultar problemático si el tipo se utiliza como clase base.  Existe un modelo concreto para implementar constructores <xref:System.Windows.DependencyObject> que evita los problemas concretos con los estados de las propiedades de dependencia y las devoluciones de llamada inherentes, que se documenta aquí.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## Métodos virtuales del sistema de propiedades  

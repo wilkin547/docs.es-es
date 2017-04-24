@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
  Este tema proporciona recomendaciones de rendimiento de la representación de texto.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Representación de texto en el nivel de glifos  

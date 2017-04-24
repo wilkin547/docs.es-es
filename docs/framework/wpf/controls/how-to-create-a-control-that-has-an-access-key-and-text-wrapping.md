@@ -31,8 +31,8 @@ En este ejemplo se muestra cómo crear un control que tiene una [tecla de acceso
   
  El control <xref:System.Windows.Controls.Label> no admite la función de ajuste de texto.  Si necesita una etiqueta que ajuste el texto en varias líneas, puede anidar otro elemento que sí admita el ajuste de texto y colocarlo dentro de la etiqueta.  En el ejemplo siguiente se muestra cómo utilizar <xref:System.Windows.Controls.TextBlock> para crear una etiqueta que ajusta el texto en varias líneas.  
   
- [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]
- [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
   
  **Agregar una tecla de acceso y ajuste de texto a una etiqueta**  
   
@@ -42,8 +42,8 @@ En este ejemplo se muestra cómo crear un control que tiene una [tecla de acceso
   
  En el ejemplo siguiente se muestra cómo crear un control <xref:System.Windows.Controls.Label> que tiene una tecla de acceso y admite el ajuste de texto.  Para habilitar el ajuste de texto, en el ejemplo se establece la propiedad <xref:System.Windows.Controls.AccessText.TextWrapping%2A> y se utiliza un carácter de subrayado para especificar la tecla de acceso.  \(El carácter que sigue inmediatamente al carácter de subrayado es la tecla de acceso.\)  
   
- [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]
- [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
   
 ## Vea también  
  [How to: Set the Target Property of a Label](http://msdn.microsoft.com/es-es/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

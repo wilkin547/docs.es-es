@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
  En este tema se resume el modelo de contenido para el control [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y los tipos similares.  El modelo de contenido describe qué contenido se puede utilizar en un control. Este tema también incluye las propiedades de contenido para cada modelo de contenido.  Una propiedad de contenido es aquélla que se utiliza para almacenar el contenido del objeto.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## Clases que incluyen contenido arbitrario  

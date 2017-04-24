@@ -48,13 +48,13 @@ Toda comunicación con un servicio de [!INCLUDE[indigo1](../../../includes/indig
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definición de direcciones de puntos de conexión mediante configuración  
  Para definir un extremo en un archivo de configuración, use la [ <> \> ](http://msdn.microsoft.com/es-es/13aa23b7-2f08-4add-8dbf-a99f8127c017) elemento.  
   
- [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
   
  Cuando el <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> método se llama (es decir, cuando la aplicación de hospedaje intenta iniciar el servicio), el sistema busca un [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) elemento con un atributo de nombre que especifica "UE. Samples.HelloService". Si el [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) se encuentra el elemento, el sistema carga la clase especificada y crea los extremos utilizando las definiciones de extremo proporcionadas en el archivo de configuración. Este mecanismo le permite cargar e iniciar un servicio con dos líneas de código, mientras mantiene la información de enlace y dirección fuera de su código. La ventaja de este enfoque es que estas modificaciones se pueden realizar sin tener que recompilar o implementar la aplicación.  
   
  Los encabezados opcionales se declaran en una [ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Lo siguiente es un ejemplo de los elementos utilizados para especificar los puntos de conexión de un servicio en un archivo de configuración que distinga entre dos encabezados: Clientes "Gold" de http://tempuri1.org/ y clientes "Standard" de http://tempuri2.org/. El cliente que llama a este servicio debe tener los pertinentes [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) en su archivo de configuración.  
   
- [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
   
  Los encabezados también se pueden definir como en mensajes individuales en lugar de todos los mensajes en un punto de conexión (como se ha mostrado previamente). Esto se realiza mediante <xref:System.ServiceModel.OperationContextScope> para crear un nuevo contexto en una aplicación cliente para agregar un encabezado personalizado al mensaje saliente, tal como se muestra en el ejemplo siguiente.  
   

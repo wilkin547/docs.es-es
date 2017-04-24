@@ -26,7 +26,7 @@ caps.handback.revision: 10
 # Informaci&#243;n general sobre eventos adjuntos
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] define un componente de lenguaje y un tipo de evento denominado *evento adjunto*.  El concepto de evento adjunto permite agregar un controlador correspondiente a un evento determinado a un elemento arbitrario, en lugar de al elemento que realmente define o hereda el evento.  En este caso, ni el objeto que genera potencialmente el evento ni la instancia de control de destino definen ni "poseen" el evento de ningún modo.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

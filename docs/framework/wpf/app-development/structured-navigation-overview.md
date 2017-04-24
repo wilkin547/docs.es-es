@@ -25,7 +25,7 @@ El contenido que puede ser hospedado por [!INCLUDE[TLA#tla_xbap](../../../../inc
   
  La clase <xref:System.Windows.Controls.Page> no implementa compatibilidad con la navegación estructurada.  En su lugar, la clase <xref:System.Windows.Navigation.PageFunction%601> deriva de <xref:System.Windows.Controls.Page> y la amplía extiende con las estructuras básicas requeridas para la navegación estructurada.  En este tema se muestra cómo establecer navegación estructurada mediante <xref:System.Windows.Navigation.PageFunction%601>.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Structured_Navigation"></a>   
 ## Navegación estructurada  

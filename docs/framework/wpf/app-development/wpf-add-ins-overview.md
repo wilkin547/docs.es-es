@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # Informaci&#243;n general sobre los complementos de WPF
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] incluye un modelo de complementos que los desarrolladores pueden utilizar para crear aplicaciones que admitan la extensibilidad de los complementos.  Este modelo de complementos permite la creación de complementos que se integran con la funcionalidad de la aplicación y la extienden.  En algunos escenarios, las aplicaciones también necesitan mostrar las [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] proporcionadas por los complementos.  En este tema se muestra cómo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aumenta el modelo de complementos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para permitir estos escenarios, la arquitectura subyacente, sus ventajas y sus limitaciones.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Requirements"></a>   
 ## Requisitos previos  

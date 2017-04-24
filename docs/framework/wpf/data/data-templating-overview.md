@@ -24,7 +24,7 @@ caps.handback.revision: 24
 # Informaci&#243;n general sobre plantillas de datos
 El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de plantillas de datos proporciona gran flexibilidad para definir la presentación de los datos. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]los controles tienen funcionalidades integradas para admitir la personalización de la presentación de los datos. Este tema muestra primero cómo definir un <xref:System.Windows.DataTemplate> y, a continuación, presenta otras características de creación de plantillas de datos, como la selección de plantillas basadas en la lógica personalizada y la compatibilidad con la presentación de datos jerárquicos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
@@ -36,7 +36,7 @@ El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>Conceptos básicos de plantillas de datos  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  Para mostrar por qué <xref:System.Windows.DataTemplate> es importante, analicemos un ejemplo de enlace de datos. En este ejemplo, tenemos un <xref:System.Windows.Controls.ListBox> que está enlazado a una lista de `Task` objetos. Cada `Task` objeto tiene una `TaskName` (cadena), un `Description` (cadena), un `Priority` (int) y una propiedad de tipo `TaskType`, que es un `Enum` con valores `Home` y `Work`.  
   

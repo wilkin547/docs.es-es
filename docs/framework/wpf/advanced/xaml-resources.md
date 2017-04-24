@@ -27,7 +27,7 @@ Un recurso es un objeto que se puede reutilizar en diferentes lugares de la apli
 > [!NOTE]
 >  Los archivos de recursos que se describen en este tema son diferentes de los archivos de recursos se describen en [archivos de datos, el contenido y el recurso de aplicación de WPF](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) y diferente de los recursos incrustados o vinculados se describe en [administración de recursos (. NET)](../Topic/Managing%20Application%20Resources%20\(.NET\).md).  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>Uso de recursos en XAML  

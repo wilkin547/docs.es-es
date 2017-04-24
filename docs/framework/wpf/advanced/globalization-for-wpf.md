@@ -24,7 +24,7 @@ caps.handback.revision: 31
 # Globalizaci&#243;n de WPF
 En este tema se presentan las cuestiones que debe tener en cuenta al escribir aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para el mercado global.  En [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)], los elementos de programación de globalización se definen en `System.Globalization`.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="xaml_globalization"></a>   
 ## Globalización XAML  

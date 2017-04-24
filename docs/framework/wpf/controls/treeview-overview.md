@@ -23,7 +23,7 @@ caps.handback.revision: 32
 # Introducci&#243;n a TreeView
 El control <xref:System.Windows.Controls.TreeView> proporciona una manera de mostrar información en una estructura jerárquica con nodos contraíbles.  En este tema se presentan los controles <xref:System.Windows.Controls.TreeView> y <xref:System.Windows.Controls.TreeViewItem> y se proporcionan ejemplos sencillos de su uso.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Simple_TreeView_Control"></a>   
 ## ¿Qué es un control TreeView?  

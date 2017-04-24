@@ -34,7 +34,7 @@ caps.handback.revision: 18
 # Marcar eventos enrutados como controlados y control de clases
 Los controladores para un evento enrutado pueden marcar el evento como controlado dentro de los datos del evento.  Al controlar el evento, de hecho se acortará la ruta.  El control de clases es un concepto de programación admitido por los eventos enrutados.  Un controlador de clases tiene la oportunidad de controlar un evento enrutado determinado en un nivel de clase con un controlador que se invoca antes que cualquier controlador de instancias de cualquier instancia de la clase.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

@@ -23,7 +23,7 @@ caps.handback.revision: 25
 # Informaci&#243;n general sobre GridView
 El modo de vista <xref:System.Windows.Controls.GridView> es uno de los modos de vista de los controles <xref:System.Windows.Controls.ListView>.  La clase <xref:System.Windows.Controls.GridView> y sus clases de respaldo permiten que programadores y usuarios vean las colecciones de elementos en una tabla que normalmente utiliza botones como encabezados de columna interactivos.  En este tema se presenta la clase <xref:System.Windows.Controls.GridView> y se describe su uso.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## ¿Qué es una vista GridView?  

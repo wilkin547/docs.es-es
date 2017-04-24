@@ -27,7 +27,7 @@ caps.handback.revision: 7
 # Seguridad de las propiedades de dependencia
 Generalmente se debe considerar que las propiedades de dependencia son propiedades públicas.  La naturaleza del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] impide la capacidad de realizar garantías de seguridad sobre el valor de una propiedad de dependencia.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AccessSecurity"></a>   
 ## Acceso y seguridad de contenedores y propiedades de a dependencia  

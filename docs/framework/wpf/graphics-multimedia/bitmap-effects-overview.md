@@ -24,7 +24,7 @@ Los efectos de imagen permiten a los diseñadores y programadores aplicar efecto
 > [!IMPORTANT]
 >  En [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] o posterior, la clase <xref:System.Windows.Media.Effects.BitmapEffect> está obsoleta.  Si intenta utilizar la clase <xref:System.Windows.Media.Effects.BitmapEffect>, obtendrá una excepción obsoleta.  La alternativa no obsoleta a la clase <xref:System.Windows.Media.Effects.BitmapEffect> es la clase <xref:System.Windows.Media.Effects.Effect>.  En la mayoría de las situaciones, la clase <xref:System.Windows.Media.Effects.Effect> es significativamente más rápida.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wpf_effects"></a>   
 ## Efectos de imagen en WPF  

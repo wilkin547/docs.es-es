@@ -22,7 +22,7 @@ caps.handback.revision: 7
 # Propiedades de dependencia de s&#243;lo lectura
 En este tema se describen las propiedades de dependencia de sólo lectura; se incluyen las ya existentes, así como los escenarios y las técnicas para crear una personalizada.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## Requisitos previos  

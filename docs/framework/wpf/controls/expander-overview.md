@@ -22,7 +22,7 @@ caps.handback.revision: 19
 # Informaci&#243;n general sobre el control Expander
 Un control <xref:System.Windows.Controls.Expander> proporciona una manera de proporcionar contenido en un área ampliable que se parece una ventana e incluye un encabezado.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="CreatinganExpanderinXAML"></a>   
 ## Crear un ampliador sencillo  

@@ -24,7 +24,7 @@ El enlace de datos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  En este tema se proporcionan recomendaciones sobre el rendimiento del enlace de datos.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## Cómo se resuelven las referencias de enlace de datos  

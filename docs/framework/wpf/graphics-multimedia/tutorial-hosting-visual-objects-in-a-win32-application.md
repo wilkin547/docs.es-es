@@ -25,7 +25,7 @@ caps.handback.revision: 13
   
  Este tutorial describe cómo escribir una aplicación de ejemplo, [Hit Test with Win32 Interoperation Sample](http://go.microsoft.com/fwlink/?LinkID=159995), que hospeda objetos visuales de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en una ventana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## Requisitos  
