@@ -39,7 +39,11 @@ ms.lasthandoff: 04/08/2017
   
  Para compilar este conjunto de aplicaciones, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa un host de servicios. En este tema se proporciona información general sobre estos servicios y se indica dónde buscar más información.  
   
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 762af8e... fix build error
   
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Administración de aplicaciones  
