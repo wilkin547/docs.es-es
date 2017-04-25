@@ -33,13 +33,7 @@ ms.lasthandoff: 04/08/2017
  En este tema se presentan las características de gráficos, animaciones y elementos multimedia de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], que le permiten agregar gráficos, efectos de transición, sonido y vídeo a las aplicaciones.  
   
 > [!NOTE]
-<<<<<<< HEAD
 >  Se desaconseja totalmente el uso de tipos WPF en un servicio de Windows. Si intenta usar tipos WPF en un servicio de Windows, puede que el servicio no funcione como se espera.   
-=======
->  Se recomienda encarecidamente no usar los tipos WPF en un servicio de Windows.  Si intenta utilizar los tipos WPF en un servicio de Windows, el servicio podría no funcionar como se espera.  
-  
-   
->>>>>>> 762af8e... fix build error
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## <a name="whats-new-with-graphics-and-multimedia-in-wpf-4"></a>Novedades de gráficos y multimedia en WPF 4  
