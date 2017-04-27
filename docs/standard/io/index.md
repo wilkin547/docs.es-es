@@ -21,9 +21,9 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 887ddf85b1da556feee211c4b29f0a08550c84ad
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
@@ -150,7 +150,7 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
 -   Los tipos de compresión basada en rutas de acceso <xref:System.IO.Compression.ZipFile> y <xref:System.IO.Compression.ZipFileExtensions> no se encuentran disponibles. Use en su lugar los tipos del espacio de nombres [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
   
- Si es necesario, puede convertir entre las secuencias de .NET Framework y las secuencias de Windows Runtime. Para más información, consulte [How to: Convert Between .NET Framework Streams and Windows Runtime Streams](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) (Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime, y viceversa) o <xref:System.IO.WindowsRuntimeStreamExtensions>.  
+ Si es necesario, puede convertir entre las secuencias de .NET Framework y las secuencias de Windows Runtime. Para más información, vea [Cómo: Convertir flujos de .NET Framework en flujos de Windows en tiempo de ejecución](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) o [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  Para más información sobre las operaciones de E/S en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vea [Inicio rápido: leer y escribir archivos (XAML)](http://go.microsoft.com/fwlink/p/?LinkId=243072) en el Centro de desarrollo de Windows.  
   
@@ -182,3 +182,4 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
 -   [Memory-Mapped Files](../../../docs/standard/io/memory-mapped-files.md) (Archivos asignados a memoria)  
   
  Describe los archivos asignados a memoria, que incluyen el contenido de archivos en disco en memoria virtual. Puede usar archivos asignados a memoria para editar archivos muy grandes y crear memoria compartida para la comunicación entre procesos.
+
