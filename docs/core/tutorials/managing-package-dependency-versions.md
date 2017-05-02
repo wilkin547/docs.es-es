@@ -64,11 +64,11 @@ Si es así, debería corregir el paquete `NETStandard.Library` a la versión `1.
 
 Si es así, debería corregir el paquete `Microsoft.NETCore.App` a la versión `1.0.0`.  Como se trata de un metapaquete mantenido, la clausura de su paquete también se corrige a 1.0.
 
-**¿[Recorta](../deploying/reducing-dependencies.md) las dependencias del metapaquete ** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**
+**¿[Recorta](../deploying/reducing-dependencies.md) las dependencias del metapaquete** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**
 
 Si es así, debe asegurarse de que el metapaquete con el que comienza esté corregido a 1.0.  Los paquetes individuales de los que depende después del recorte también se corrigen a 1.0.
 
-**¿Depende de paquetes externos al metapaquete ** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**
+**¿Depende de paquetes externos al metapaquete** `NETStandard.Library` **o** `Microsoft.NETCore.App` **?**
 
 Si es así, debe corregir las otras dependencias a 1.0.  Consulte las versiones de paquete y los números de compilación correctos al final de este artículo.
 
