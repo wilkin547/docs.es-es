@@ -1,7 +1,7 @@
 # [Fechas, horas y zonas horarias](index.md)
 ## [Información general sobre zonas horarias](time-zone-overview.md)
 ## [Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](choosing-between-datetime.md)
-## [Buscar las zonas horarias definidas en un sistema local](finding-the-time-zones-on-local-system.md)
+## [Búsqueda de las zonas horarias definidas en un sistema local](finding-the-time-zones-on-local-system.md)
 ## [Enumerar zonas horarias presentes en un equipo](enumerate-time-zones.md)
 ## [Acceso a los objetos de zona horaria local y UTC predefinidos](access-utc-and-local.md)
 ## [Crear instancias de un objeto TimeZoneInfo](instantiate-time-zone-info.md)
