@@ -27,11 +27,11 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../.
 ## <a name="impact"></a>Impacto  
  Las aplicaciones recompiladas que tienen como destino [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] y que mostraban anteriormente <xref:System.IO.PathTooLongException> automáticamente porque la ruta de acceso superaba los 260 caracteres mostraran ahora <xref:System.IO.PathTooLongException> solo si se cumplen las siguientes condiciones:  
   
--   La longitud de la ruta de acceso es superior a <xref:System.Int16.MaxValue?displayProperty=fullName> (32 767) caracteres.  
+-   La longitud de la ruta de acceso es superior a  <xref:System.Int16.MaxValue?displayProperty=fullName> (32 767) caracteres.  
   
 -   El sistema operativo devuelve `COR_E_PATHTOOLONG` o su equivalente.  
   
- El comportamiento heredado para las aplicaciones que tienen como destino [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] y versiones anteriores es que el tiempo de ejecución muestra automáticamente un elemento < xref:System.IO.PathTooLongException > cada vez que una ruta de acceso supera los 260 caracteres.  
+ El comportamiento heredado para las aplicaciones que tienen como destino [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] y versiones anteriores es que el tiempo de ejecución muestra automáticamente un elemento <xref:System.IO.PathTooLongException> cada vez que una ruta de acceso supera los 260 caracteres.  
   
 ## <a name="mitigation"></a>Mitigación  
  Para las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], puede rechazar la compatibilidad con el formato largo de ruta de acceso si no la desea agregando lo siguiente a la sección [ \<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:  

@@ -45,12 +45,12 @@ ms.lasthandoff: 04/18/2017
   
  Cuando el tiempo de procesamiento es de unos 500 FLOPS (operaciones de punto flotante) o más, la regla de dos subprocesos no se aplica a <xref:System.Collections.Concurrent.ConcurrentQueue%601>, que en ese caso tiene muy buena escalabilidad. <xref:System.Collections.Generic.Queue%601> no escala bien en este escenario.  
   
- En escenarios mixtos de consumidor-productor, cuando el tiempo de procesamiento es muy pequeño, un < xref:System.Collections.Generic.Queue%601 > que tiene un bloqueo externo escala mejor que <xref:System.Collections.Concurrent.ConcurrentQueue%601>. Sin embargo, cuando el tiempo de procesamiento es de unos 500 FLOPS o más, el elemento <xref:System.Collections.Concurrent.ConcurrentQueue%601> escala mejor.  
+ En escenarios mixtos de consumidor-productor, cuando el tiempo de procesamiento es muy pequeño, un <xref:System.Collections.Generic.Queue%601> que tiene un bloqueo externo escala mejor que <xref:System.Collections.Concurrent.ConcurrentQueue%601>. Sin embargo, cuando el tiempo de procesamiento es de unos 500 FLOPS o más, el elemento <xref:System.Collections.Concurrent.ConcurrentQueue%601> escala mejor.  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack frente a Pila  
  En escenarios productor-consumidor puros, cuando el tiempo de procesamiento es muy pequeño, <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> y <xref:System.Collections.Generic.Stack%601?displayProperty=fullName> con un bloqueo externo probablemente funcionarán más o menos igual con un subproceso dedicado que se inserta y un subproceso dedicado que se extrae. Sin embargo, a medida que aumenta el número de subprocesos, ambos tipos se ralentizan debido a una mayor contención y <xref:System.Collections.Generic.Stack%601> puede funcionar mejor que <xref:System.Collections.Concurrent.ConcurrentStack%601>. Cuando el tiempo de procesamiento es de unos 500 FLOPS o más, ambos tipos escalan con una velocidad similar.  
   
- En escenarios de productor-consumidor mixtos, < xref:System.Collections.Concurrent.ConcurrentStack%601 > es más rápido para cargas de trabajo grandes y pequeñas.  
+ En escenarios de productor-consumidor mixtos, <xref:System.Collections.Concurrent.ConcurrentStack%601> es más rápido para cargas de trabajo grandes y pequeñas.  
   
  El uso de <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> y <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> puede acelerar considerablemente los tiempos de acceso.  
   

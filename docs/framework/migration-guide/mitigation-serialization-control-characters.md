@@ -25,11 +25,11 @@ ms.lasthandoff: 04/18/2017
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Mitigación: Serialización del caracteres de control con DataContractJsonSerializer
 
-A partir de NET Framework 4.7, ha cambiado la forma en la que se serializan los caracteres de control con < xref:System.Runtime.Serialization.Json.DataContractJsonSerializer > para que sean conformes con ECMAScript V6 y V8. 
+A partir de NET Framework 4.7, ha cambiado la forma en la que se serializan los caracteres de control con <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> para que sean conformes con ECMAScript V6 y V8. 
  
 ## <a name="impact"></a>Impacto
 
-En .NET Framework 4.6.2 y versiones anteriores, el elemento <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> no serializaba algunos caracteres de control especiales, como `\b`, `\f`, y `\t`, de forma que era compatible con los estándares de ECMAScript V6 y V8.
+En .NET framework 4.6.2 y versiones anteriores, el elemento <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> no serializaba algunos caracteres de control especiales, como `\b`, `\f`, y `\t`, de forma que era compatible con los estándares de ECMAScript V6 y V8.
 
 Para las aplicaciones destinadas a versiones de .NET Framework a partir de .NET Framework 4.7, la serialización de estos caracteres de control es compatible con ECMAScript V6 y V8. Afecta a las siguientes API:
 
@@ -41,7 +41,7 @@ Para las aplicaciones destinadas a versiones de .NET Framework a partir de .NET 
 
 Para aplicaciones destinadas a versiones de .NET Framework a partir de .NET Framework 4.7, este comportamiento está habilitado de forma predeterminada.
 
-Si no desea este compartimiento, puede rechazar esta característica agregando la siguiente línea a la sección `<runtime>` del archivo app.config o web.config:
+Si  no desea este compartimiento, puede rechazar esta característica agregando la siguiente línea a la sección `<runtime>` del archivo app.config o web.config:
 
 ```xml
 <runtime>
