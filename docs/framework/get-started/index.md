@@ -2,7 +2,7 @@
 title: "Introducción a .NET Framework | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
+ms.prod: .net-framework-4.6
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,9 +18,9 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 8571258a2fa4e7bd5180301e30e0fea8117eede6
-ms.openlocfilehash: 83ffd29d4301ae8848cc01de8e7def045b24a0ca
-ms.lasthandoff: 04/15/2017
+ms.sourcegitcommit: adb9c30b6dc52ea17410423fd76c938e258549eb
+ms.openlocfilehash: 6c069db2e6138f73935a4bdd458fbe94ef57d968
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="getting-started-with-the-net-framework"></a>Introducción a .NET Framework
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/15/2017
   
  Para desarrollar aplicaciones o componentes de .NET Framework, haga lo siguiente:  
   
-1.  Si no está preinstalado en el sistema operativo, instale la versión de .NET Framework que será el destino de su aplicación. La versión de producción más reciente es Framework. NET 4.7, que está preinstalada en Windows 10 Creators Update, pero no está disponible en versiones anteriores del sistema operativo Windows. Para información sobre los requisitos de sistema de .NET Framework, consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md). Para información sobre la instalación de otras versiones de .NET Framework, consulte [Guía de instalación](../../../docs/framework/install/guide-for-developers.md). Hay paquetes adicionales de .NET Framework que se publican fuera de banda. Para información sobre estos paquetes, consulte [.NET Framework y versiones fuera de banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
+1.  Si no está preinstalado en el sistema operativo, instale la versión de .NET Framework que será el destino de su aplicación. La versión de producción más reciente es Framework. NET 4.7, que está preinstalada en Windows 10 Creators Update y puede descargarse en versiones anteriores del sistema operativo Windows. Para información sobre los requisitos de sistema de .NET Framework, consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md). Para información sobre la instalación de otras versiones de .NET Framework, consulte [Guía de instalación](../../../docs/framework/install/guide-for-developers.md). Hay paquetes adicionales de .NET Framework que se publican fuera de banda. Para información sobre estos paquetes, consulte [.NET Framework y versiones fuera de banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
 2.  Seleccione el lenguaje o los lenguajes de .NET Framework que utilizará para desarrollar las aplicaciones. Hay varios lenguajes disponibles, incluido Visual Basic, C#, Visual F# y C++ en Microsoft. (Un lenguaje de programación que permita desarrollar aplicaciones de .NET Framework cumple las [especificaciones de Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862)).  
   
@@ -92,4 +92,3 @@ ms.lasthandoff: 04/15/2017
  [Novedades](../../../docs/framework/whats-new/index.md)   
  [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkId=227195)   
  [Guía de desarrollo](../../../docs/framework/development-guide.md)
-
