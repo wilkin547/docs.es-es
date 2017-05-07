@@ -1,56 +1,74 @@
 ---
-title: "Tipos de datos en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "tipos de datos [Visual Basic], declaración"
-  - "establecimiento de tipos"
-  - "tipos de datos [Visual Basic]"
-  - "código de Visual Basic, tipos de datos"
-  - "tipos de datos [Visual Basic], mejora de la velocidad"
+title: Tipos de datos en Visual Basic | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- data types [Visual Basic], declaring
+- typing
+- data types [Visual Basic]
+- Visual Basic code, data types
+- data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
 caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
----
-# Tipos de datos en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: c86e1bfacbe06d10915bd476a5c6f528fcebe70d
+ms.openlocfilehash: 2642145e496469eb8bcb382408fda2147f48b0d5
+ms.lasthandoff: 04/30/2017
 
-El *tipo de datos* de un elemento de programación hace referencia al tipo de datos que puede contener y a cómo se almacenan dichos datos.  Los tipos de datos se aplican a todos los valores que pueden almacenarse en la memoria del equipo o participar en la evaluación de una expresión.  Cada variable, literal, constante, enumeración, propiedad, parámetro de procedimiento, argumento de procedimiento y valor devuelto por un procedimiento tiene un tipo de datos.  
+---
+# <a name="data-types-in-visual-basic"></a>Tipos de datos en Visual Basic
+El *tipo de datos* de un elemento de programación hace referencia al tipo de datos que puede contener y cómo almacena los datos. Los tipos de datos se aplican a todos los valores que se pueden almacenar en la memoria del equipo o participar en la evaluación de una expresión. Cada variable, literal, constante, enumeración, propiedad, parámetro de procedimiento, argumento de procedimiento y valor devuelto de un procedimiento tiene un tipo de datos.  
   
-## Tipos de datos declarados  
- Un elemento de programación se define con una instrucción de declaración y su tipo de datos se especifica con la cláusula `As`.  La tabla siguiente muestra las instrucciones utilizadas para declarar diversos elementos.  
+## <a name="declared-data-types"></a>Tipos de datos declarados  
+ Define un elemento de programación con una instrucción de declaración y especifica su tipo de datos con la cláusula `As`. En la tabla siguiente se muestran las instrucciones que usa para declarar diversos elementos.  
   
 |Elemento de programación|Declaración de tipos de datos|  
-|------------------------------|-----------------------------------|  
-|Variable|En una [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
-|Literal|Con un carácter de tipo literal; vea "Caracteres de tipo literal" en [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
-|Constante|En una [Const \(Instrucción\)](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
-|Enumeración|En una [Enum \(Instrucción\)](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|Propiedad|En una [Property \(Instrucción\)](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
-|Parámetro de procedimiento|En una [Sub \(Instrucción\)](../../../../visual-basic/language-reference/statements/sub-statement.md), [Function \(Instrucción\)](../../../../visual-basic/language-reference/statements/function-statement.md) o [Operator \(Instrucción\)](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
-|Argumento de procedimiento|En el código de llamada; cada argumento es un elemento de programación que ya se ha declarado o una expresión que contiene los elementos declarados<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
-|Valor devuelto por procedimiento|En una [Function \(Instrucción\)](../../../../visual-basic/language-reference/statements/function-statement.md) o [Operator \(Instrucción\)](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
+|-------------------------|---------------------------|  
+|Variable|En una [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)<br /><br /> `Dim`   `amount As Double`<br /><br /> `Static`   `yourName As String`<br /><br /> `Public`   `billsPaid As Decimal = 0`|  
+|Literal|Con un carácter de tipo literal; consulte "Caracteres de tipo literal" en [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
+|Constante|En una [instrucción Const](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
+|Enumeración|En una [instrucción Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
+|Propiedad|En una [instrucción Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
+|Parámetro de procedimiento|En una [instrucción Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), [instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md) o una [instrucción Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
+|Argumento de procedimiento|En el código de llamada; cada argumento es un elemento de programación que ya se declaró, o bien una expresión que contiene los elementos declarados<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
+|Valor devuelto de un procedimiento|En una [instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md) o una [instrucción Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
   
- Para obtener una lista de tipos de datos de Visual Basic, vea [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Para ver una lista de los tipos de datos de Visual Basic, consulte [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Tipos de datos elementales](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
+ [Tipos de datos básicos](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
  [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
  [Tipos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
+ [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
  [Conversiones de tipos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
  [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+ [Tuplas](tuples.md)     
+ [Solución de problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
  [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
  [Uso eficiente de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
