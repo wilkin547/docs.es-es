@@ -18,9 +18,10 @@ caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
 ms.openlocfilehash: 3a6101e6e2c99ff8321e90dd616230636753d844
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -671,7 +672,7 @@ En las tablas de este artículo se enumeran los miembros de tipo que están obso
 |Tipo|Miembro|Mensaje|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.CompositeScriptReference?displayProperty=fullName>|<xref:System.Web.UI.CompositeScriptReference.IsFromSystemWebExtensions%2A>|Use                                          <xref:System.Web.UI.CompositeScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Esta propiedad ha quedado obsoleta. Establezca la propiedad                                          <!--zz <xref:System.Web.UI.ScriptReference.Path%2A>--> `System.Web.UI.ScriptReference.Path` en cada elemento individual                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> en su lugar.|  
+|<xref:System.Web.UI.ScriptManager?displayProperty=fullName>|<xref:System.Web.UI.ScriptManager.ScriptPath%2A>|Esta propiedad ha quedado obsoleta. Establezca la propiedd                                          <!--zz <xref:System.Web.UI.ScriptReference.Path%2A>--> `System.Web.UI.ScriptReference.Path` en cada elemento individual                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> en su lugar.|  
 |<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IgnoreScriptPath%2A>|Esta propiedad ha quedado obsoleta. En lugar de usar                                          <xref:System.Web.UI.ScriptManager.ScriptPath%2A?displayProperty=fullName>, establezca la propiedad                                          <xref:System.Web.UI.ScriptReference.Path%2A> de cada propiedad                                          <xref:System.Web.UI.ScriptReference?displayProperty=fullName> individual.|  
 |<xref:System.Web.UI.ScriptReference?displayProperty=fullName>|<xref:System.Web.UI.ScriptReference.IsFromSystemWebExtensions%2A>|Use                                          <xref:System.Web.UI.ScriptReference.IsAjaxFrameworkScript%2A?displayProperty=fullName>.|  
 |<xref:System.Web.UI.ScriptReferenceBase?displayProperty=fullName>|<xref:System.Web.UI.ScriptReferenceBase.IsFromSystemWebExtensions%2A>|Use                                          <xref:System.Web.UI.ScriptReferenceBase.IsAjaxFrameworkScript%2A?displayProperty=fullName>.|  
