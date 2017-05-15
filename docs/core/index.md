@@ -10,16 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 132551673f97142a90513d43d7690867c3d00295
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: fe38934a3bd56b7c00e0f4c58c3978a539f23a97
 ms.contentlocale: es-es
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 05/14/2017
 
 ---
 
 # <a name="net-core"></a>Núcleo de .NET
 
-> Consulte los [tutoriales de introducción](getting-started.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando.
+> Consulte los [tutoriales de introducción](get-started.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando.
 
 .NET Core es una plataforma de desarrollo de uso general de cuyo mantenimiento se encargan Microsoft y la comunidad .NET en [GitHub](https://github.com/dotnet/core). Es multiplataforma, admite Windows, macOS y Linux y puede usarse en escenarios de dispositivo, nube, IoT e incrustados. 
 
