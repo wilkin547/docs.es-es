@@ -19,9 +19,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 994da1622246d09930fa9b74d6debac4f7a24b5b
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -54,7 +55,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 -   Actualizar a the .NET Framework 4.6.2. El nuevo compilador de 64 bits incluido con .NET Framework 4.6.2 soluciona estos problemas conocidos.  
   
--   Asegurarse de que su versión Windows está actualizada ejecutando Windows Update. Las actualizaciones de servicio de .NET Framework 4.6 y 4.6.1 solucionan los problemas excepto <xref:System.NullReferenceException> en una operación de conversión unboxing.  
+-   Asegurarse de que su versión Windows está actualizada ejecutando Windows Update. Las actualizaciones de servicio de .NET Framework 4.6 y 4.6.1 solucionan los problemas excepto  <xref:System.NullReferenceException> en una operación de conversión unboxing.  
   
 -   Compilación con el compilador JIT de 64 bits más antiguo. Vea la sección [Mitigación de otros problemas](#Other) sección para obtener más información sobre el procedimiento.  
   
@@ -77,7 +78,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 -   Según el usuario, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` del registro. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.  
   
--   Según el equipo, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` del registro. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.  
+-   Según el equipo, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` del registro. `REG_DWORD` value named `useLegacyJit` to the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` key of the registry. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.  
   
  También puede informar del problema indicándonos el error en [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
