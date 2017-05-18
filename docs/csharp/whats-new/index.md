@@ -32,6 +32,7 @@ ms.lasthandoff: 05/14/2017
 -->
 * [Compatibilidad multiplataforma](../../core/index.md):
     - C#, mediante la compatibilidad con .NET Core, se ejecuta en varias plataformas. Si está interesado en probar C# en macOS o en alguna de las muchas distribuciones de compatibilidad de Linux, puede obtener más información sobre .NET Core.
+
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.
