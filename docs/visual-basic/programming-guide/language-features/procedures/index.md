@@ -1,81 +1,100 @@
 ---
-title: "Procedimientos en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedimientos"
-  - "procedimientos, código estructurado"
-  - "procedimientos, tipos de"
-  - "código estructurado, procedimientos"
-  - "código de Visual Basic, procedimientos"
+title: Procedimientos de Visual Basic | Microsoft Docs
+ms.custom: 
+ms.date: 2017-04-28
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedures, structured code
+- Visual Basic code, procedures
+- procedures, types of
+- structured code, procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
----
-# Procedimientos en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
-Un *procedimiento* es un bloque de instrucciones de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] incluido entre una instrucción de declaración \(`Function`, `Sub`, `Operator`, `Get`, `Set`\) y una declaración `End` correspondiente.  Todas las instrucciones ejecutables de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] deben estar incluidas en algún procedimiento.  
+---
+# <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
+Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] incluido dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una declaración `End` coincidente. Todas las instrucciones ejecutables de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deben formar parte de algún procedimiento.  
   
-## Llamar a un procedimiento  
- Los procedimientos se invocan desde otras partes del código.  Esto se conoce como una *llamada a procedimiento*.  Cuando finaliza la ejecución de un procedimiento, éste devuelve el control al código que lo invocó, que recibe el nombre de *código de llamada*.  El código de llamada es una instrucción o una expresión contenida en una instrucción, que hace referencia al procedimiento por su nombre y le transfiere el control.  
+## <a name="calling-a-procedure"></a>Llamada a un procedimiento  
+ Cuando invoca un procedimiento desde otra parte del código, está realizando una *llamada a procedimiento*. Cuando el procedimiento termina de ejecutarse, devuelve el control al código que lo ha invocado, el cual se conoce como *código de llamada*. El código de llamada es una instrucción, o una expresión de una instrucción, que especifica el procedimiento por el nombre y le transfiere el control.  
   
-## Volver de un procedimiento  
- Los procedimientos devuelven el control al código de llamada cuando finalizan su ejecución.  Para ello, puede utilizar [Return \(Instrucción\)](../../../../visual-basic/language-reference/statements/return-statement.md), la instrucción [Exit \(Instrucción\)](../../../../visual-basic/language-reference/statements/exit-statement.md) apropiada para el procedimiento o la instrucción [End \<palabra clave\> \(Instrucción\)](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) del procedimiento.  El control se devuelve al código de llamada, a continuación del punto de la llamada al procedimiento.  
+## <a name="returning-from-a-procedure"></a>Devolución desde un procedimiento  
+ Un procedimiento devuelve el control al código de llamada cuando termina de ejecutarse. Para ello, puede usar una [instrucción Return](../../../../visual-basic/language-reference/statements/return-statement.md), la [instrucción Exit](../../../../visual-basic/language-reference/statements/exit-statement.md) adecuada para el procedimiento o la instrucción [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) del procedimiento. A continuación, el control pasa al código de llamada seguido del punto de la llamada a procedimiento.  
   
--   Con una instrucción `Return`, el control vuelve inmediatamente al código de llamada.  No se ejecutan las instrucciones siguientes a la instrucción `Return`.  Puede tener más de una instrucción `Return` en el mismo procedimiento.  
+-   Con una instrucción `Return`, el control vuelve inmediatamente al código de llamada. Las instrucciones que siguen la instrucción `Return` no se ejecutan. Puede tener más de una instrucción `Return` en el mismo procedimiento.  
   
--   Con una instrucción `Exit Sub` o `Exit Function`, el control vuelve inmediatamente al código de llamada.  No se ejecutan las instrucciones siguientes a la instrucción `Exit`.  Puede tener más de una instrucción `Exit` en el mismo procedimiento, y puede mezclar las instrucciones `Return` y `Exit` en el mismo procedimiento.  
+-   Con una instrucción `Exit Sub` o `Exit Function`, el control vuelve inmediatamente al código de llamada. Las instrucciones siguientes a la instrucción `Exit` no se ejecutan. Puede tener más de una instrucción `Exit` en el mismo procedimiento. Además, puede combinar instrucciones `Return` y `Exit` en el mismo procedimiento.  
   
--   Si un procedimiento no incluye instrucciones `Return` o `Exit`, concluye con una instrucción `End Sub` o `End Function`, `End Get` o `End Set` a continuación de la última instrucción del cuerpo del procedimiento.  La instrucción `End` devuelve el control inmediatamente al código de llamada.  Puede tener sólo una instrucción `End` en un procedimiento.  
+-   Si un procedimiento no tiene instrucciones `Return` o `Exit`, concluye con una instrucción `End Sub` o `End Function`, `End Get`, o `End Set` posterior a la última instrucción del cuerpo del procedimiento. La instrucción `End` devuelve inmediatamente el control al código de llamada. Solo puede tener una instrucción `End` en un procedimiento.  
   
-## Parámetros y argumentos  
- En la mayoría de los casos, un procedimiento necesita funcionar en datos diferentes cada vez que lo llama.  Puede pasar esta información al procedimiento como parte de la llamada al procedimiento.  El procedimiento define cero o más *parámetros*, cada uno de los cuales representa un valor que el procedimiento espera que le pase.  Cada parámetro de la definición del procedimiento cuenta con un *argumento* correspondiente en la llamada al procedimiento.  Un argumento representa el valor que pasa al parámetro correspondiente en una llamada a procedimiento determinada.  
+## <a name="parameters-and-arguments"></a>Parámetros y argumentos  
+ En la mayoría de los casos, un procedimiento necesita operar en datos diferentes cada vez que se llama. Puede pasar esta información al procedimiento como parte de la llamada a procedimiento. El procedimiento define cero o más *parámetros*, cada uno de los cuales representa un valor que espera que le pase. Cada parámetro de la definición del procedimiento tiene un *argumento* correspondiente en la llamada a procedimiento. Un argumento representa el valor que pasa al parámetro correspondiente en una llamada a procedimiento determinada.  
   
-## Tipos de procedimientos  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] utiliza varios tipos de procedimientos:  
+## <a name="types-of-procedures"></a>Tipos de procedimientos  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] usa varios tipos de procedimientos:  
   
--   [Procedimientos Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md): ejecutan acciones pero no devuelven un valor al código de llamada.  
+-   Los [procedimientos Sub](./sub-procedures.md) realizan acciones, pero no devuelven un valor al código de llamada.  
   
--   Los procedimientos de control de eventos son procedimientos `Sub` que se ejecutan en respuesta a un evento provocado por una acción del usuario o por un suceso en un programa.  
+-   Los procedimientos de control de eventos son procedimientos `Sub` que se ejecutan en respuesta a un evento debido a las acciones del usuario o a un incidente en un programa.  
   
--   [Procedimientos Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md): devuelven un valor al código de llamada.  Pueden realizar otras acciones antes de volver.  
+-   Los [procedimientos Function](./function-procedures.md) devuelven un valor al código de llamada. Pueden realizar otras acciones antes de devolver el valor.
+
+    Algunas funciones escritas en C# devuelven un *valor devuelto de referencia*. Los autores de llamadas a funciones pueden modificar el valor devuelto. Esta modificación se refleja en el estado del objeto al que se ha llamado. A partir de Visual Basic 2017, el código de Visual Basic puede consumir referencias de valores devueltos, aunque no puede devolver un valor por la referencia. Para obtener más información, consulte [Valores devueltos de referencia](ref-return-values.md).
   
--   [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md): devuelven y asignan valores de propiedades en objetos o módulos.  
+-   Los [procedimientos Property](./property-procedures.md) devuelven y asignan valores de propiedades en objetos o módulos.  
   
--   [Procedimientos de operador](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md): definen el comportamiento de un operador estándar cuando uno o los dos operandos son una clase definida recientemente o una estructura.  
+-   Los [procedimientos Operator](./operator-procedures.md) definen el comportamiento de un operador estándar cuando uno de los operandos (o ambos) es una clase definida recientemente o una estructura.  
   
--   [Procedimientos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md): definen uno o varios *parámetros de tipo* además de sus parámetros normales, de forma que el código de llamada puede pasar tipos de datos específicos cada vez que realiza una llamada.  
+-   Los [procedimientos genéricos de Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definen uno o varios *parámetros de tipo* además de sus parámetros normales, por lo que el código de llamada puede pasar tipos de datos determinados cada vez que se hace una llamada.  
   
-## Procedimientos y código estructurado  
- Todas las líneas de código ejecutable de una aplicación deben encontrarse dentro de un procedimiento, por ejemplo, `Main`, `calculate` o `Button1_Click`.  La aplicación se leerá con mayor facilidad si subdivide los procedimientos grandes en procedimientos más pequeños.  
+## <a name="procedures-and-structured-code"></a>Procedimientos y código estructurado  
+ Cada línea de código ejecutable de la aplicación debe formar parte de algún procedimiento, como `Main`, `calculate` o `Button1_Click`. Si subdivide los procedimientos grandes en partes más pequeñas, la aplicación será más legible.  
   
- Los procedimientos son útiles para realizar tareas repetitivas o compartidas, como cálculos de uso frecuente, manipulación de texto y controles, y operaciones con bases de datos.  Se puede llamar a un procedimiento desde distintos lugares del código; de modo que los procedimientos se prestan a servir de bloques de creación de la aplicación.  
+ Los procedimientos son útiles para realizar tareas repetitivas o compartidas, como cálculos usados frecuentemente, la manipulación y el control de texto, o las operaciones de bases de datos. Puede llamar un procedimiento desde muchos lugares diferentes del código, por lo que puede usar los procedimientos como bloques de creación para la aplicación.  
   
- La estructuración del código en procedimientos aporta las siguientes ventajas:  
+ Estructurar el código con procedimientos le ofrece las ventajas siguientes:  
   
--   Los procedimientos permiten desglosar los programas en unidades lógicas independientes.  Es más fácil depurar unidades individuales que todo un programa sin procedimientos.  
+-   Los procedimientos permiten desglosar los programas en unidades lógicas discretas. Puede depurar unidades independientes más fácilmente que todo un programa sin procedimientos.  
   
--   Después de desarrollar los procedimientos para el uso en un programa, puede utilizarlos en otros programas, a menudo con pocas o ninguna modificación.  Esto ayuda a evitar la duplicación del código.  
+-   Después de desarrollar procedimientos para su uso en un programa, se pueden usar en otros, a menudo con poca o ninguna modificación. Esto ayuda a evitar la duplicación de código.  
   
-## Vea también  
- [Cómo: crear un procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure.md)   
- [Procedimientos Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Procedimientos Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedimientos de operador](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Argumentos y parámetros de procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Procedimientos recursivos](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Sobrecarga de procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Procedimientos genéricos en Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cómo: Crear un procedimiento](./how-to-create-a-procedure.md)   
+ [Procedimientos Sub](./sub-procedures.md)   
+ [Procedimientos Function](./function-procedures.md)   
+ [Procedimientos Property](./property-procedures.md)   
+ [Procedimientos Operator](./operator-procedures.md)   
+ [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)   
+ [Procedimientos Recursive](./recursive-procedures.md)   
+ [Sobrecarga de procedimientos](./procedure-overloading.md)   
+ [Procedimientos genéricos de Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
  [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
