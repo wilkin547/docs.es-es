@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3434dc4b13295101970fd4aadb69d56ddbca7142
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: fa0a35df3c2038859a8c2861780fd8dfa98d4429
+ms.contentlocale: es-es
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Cancelar las tareas asincrónicas restantes cuando se completa una (C#)
@@ -34,7 +35,7 @@ Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty
 >  Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior, y .NET Framework 4.5 o posterior, instalado en el equipo.  
   
 ## <a name="downloading-the-example"></a>Descargar el ejemplo  
- Puede descargar los proyectos completos de Windows Presentation Foundation (WPF) de [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación) y después seguir estos pasos.  
+ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]) y después seguir estos pasos.  
   
 1.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
@@ -52,14 +53,14 @@ Mediante el método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty
   
  Si no quiere descargar el proyecto, puede revisar el archivo MainWindow.xaml.cs al final de este tema.  
   
-## <a name="building-the-example"></a>Compilar el ejemplo  
- El ejemplo de este tema amplía el proyecto que se desarrolló en [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Cancelar una tarea asincrónica o una lista de tareas [C#]) para cancelar una lista de tareas. El ejemplo usa la misma interfaz de usuario, aunque el botón **Cancelar** no se usa explícitamente.  
+## <a name="building-the-example"></a>Compilación del ejemplo  
+ El ejemplo de este tema se incorpora al proyecto desarrollado en [Cancel an Async Task or a List of Tasks (C#)](../../../../csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) (Cancelar una tarea asincrónica o una lista de tareas [C#]) para cancelar una lista de tareas. En el ejemplo se usa la misma interfaz de usuario, aunque el botón **Cancelar** no se usa explícitamente.  
   
- Para generar su propio ejemplo, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelAListOfTasks** como el **Proyecto de inicio**. Agregue los cambios de este tema a ese proyecto.  
+ Para generar su propio ejemplo, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelAListOfTasks** como **Proyecto de inicio**. Agregue los cambios de este tema a ese proyecto.  
   
  En el archivo MainWindow.xaml.cs del proyecto **CancelAListOfTasks**, inicie la transición moviendo los pasos de procesamiento para cada sitio web desde el bucle en `AccessTheWebAsync` al siguiente método asincrónico.  
   
-```cs  
+```csharp  
 / ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
@@ -81,13 +82,22 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 2.  Cree una consulta que, cuando se ejecute, genere una colección de tareas genéricas. Cada llamada a `ProcessURLAsync` devuelve una <xref:System.Threading.Tasks.Task%601> donde `TResult` es un entero.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Create a query that, when executed, returns a collection of tasks.  
+    IEnumerable<Task<int>> downloadTasksQuery =  
+        from url in urlList select ProcessURLAsync(url, client, ct);  
+    ```  
+  
 3.  Llame a `ToArray` para ejecutar la consulta e iniciar las tareas. La aplicación del método `WhenAny` en el paso siguiente ejecutaría la consulta e iniciaría las tareas sin usar `ToArray`, pero es posible que otros métodos no lo hagan. La práctica más segura es forzar explícitamente la ejecución de la consulta.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Use ToArray to execute the query and start the download tasks.   
+    Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
+    ```  
+  
 4.  Llame a `WhenAny` en la colección de tareas. `WhenAny` devuelve una `Task(Of Task(Of Integer))` o `Task<Task<int>>`.  Es decir, `WhenAny` devuelve una tarea que se evalúa como una única `Task(Of Integer)` o `Task<int>` cuando se espera. Esa única tarea es la primera tarea de la colección en finalizar. La tarea que finalizó primero se asigna a `firstFinishedTask`. El tipo de `firstFinishedTask` es <xref:System.Threading.Tasks.Task%601>, donde `TResult` es un entero, ya que es el tipo de valor devuelto de `ProcessURLAsync`.  
   
-    ```cs  
+    ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
     // first is assigned to firstFinishedTask.  
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
@@ -95,14 +105,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 5.  En este ejemplo, solo le interesa la tarea que finaliza primero. Por tanto, use <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> para cancelar las tareas restantes.  
   
-    ```cs  
+    ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
 6.  Por último, espere a `firstFinishedTask` para recuperar la longitud del contenido descargado.  
   
-    ```cs  
+    ```csharp  
     var length = await firstFinishedTask;  
     resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
     ```  
@@ -112,11 +122,11 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
 ## <a name="complete-example"></a>Ejemplo completo  
  El código siguiente es el archivo MainWindow.xaml.cs completo para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo.  
   
- Observe que tiene que agregar una referencia para <xref:System.Net.Http>.  
+ Observe que debe agregar una referencia para <xref:System.Net.Http>.  
   
- Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación).  
+ Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]).  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="string-c-reference"></a>string (Referencia de C#)
@@ -125,12 +126,12 @@ Console.WriteLine(a);
 ## <a name="see-also"></a>Vea también  
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Procedimientos recomendados para el uso de cadenas en .NET Framework](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7)   
+ [Procedimientos recomendados para el uso de cadenas en .NET Framework](../../../standard/base-types/best-practices-strings.md)   
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Reference Types](../../../csharp/language-reference/keywords/reference-types.md)  (Tipos de referencia [Referencia de C#])  
  [Value Types](../../../csharp/language-reference/keywords/value-types.md)  (Tipos de valor [Referencia de C#])  
- [Operaciones básicas de cadenas](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
- [Creación de nuevas cadenas](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
+ [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)   
+ [Creación de nuevas cadenas](../../../standard/base-types/creating-new.md)   
  [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
 

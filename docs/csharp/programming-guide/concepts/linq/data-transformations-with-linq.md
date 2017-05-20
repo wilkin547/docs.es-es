@@ -37,10 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b7f8874e9a22ca14bee009cab98e13d96bd9621
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f8db095447a2360f275215c5190f479d11288d3c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
@@ -119,14 +120,14 @@ ms.lasthandoff: 03/13/2017
  Es posible que una secuencia de salida no contenga ningún elemento o propiedades de elemento de la secuencia de origen. En su lugar, es posible que la salida sea una secuencia de valores que se calcula usando los elementos de origen como argumentos de entrada. La siguiente consulta simple, cuando se ejecuta, genera una secuencia de cadenas cuyos valores representan un cálculo basado en la secuencia de origen de elementos de tipo `double`.  
   
 > [!NOTE]
->  No se admite llamar a métodos en expresiones de consulta si la consulta se va a convertir a otro dominio. Por ejemplo, no se puede llamar a un método normal de C# en [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] porque SQL Server no tiene contexto para él. En cambio, se pueden asignar procedimientos almacenados a los métodos y llamar a los primeros. Para obtener más información, vea [Procedimientos almacenados](http://msdn.microsoft.com/library/4d23dd7a-a85f-44ff-a717-af7d0950c0fc).  
+>  No se admite llamar a métodos en expresiones de consulta si la consulta se va a convertir a otro dominio. Por ejemplo, no se puede llamar a un método normal de C# en [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] porque SQL Server no tiene contexto para él. En cambio, se pueden asignar procedimientos almacenados a los métodos y llamar a los primeros. Para obtener más información, vea [Procedimientos almacenados](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## <a name="see-also"></a>Vea también  
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17)   
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)   
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
  [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [select (cláusula)](../../../../csharp/language-reference/keywords/select-clause.md)

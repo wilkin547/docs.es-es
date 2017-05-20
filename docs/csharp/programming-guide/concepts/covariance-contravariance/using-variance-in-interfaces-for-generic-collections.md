@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9bf7f107833800f5ae2843dcefcd195a8a15a1b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 44adda352b5e7d0ef13e51ed114a0f45487f52ea
+ms.contentlocale: es-es
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Usar la varianza en interfaces para las colecciones genéricas (C#)
@@ -35,11 +36,45 @@ Una interfaz covariante permite que sus métodos devuelvan tipos más derivados 
 ## <a name="converting-generic-collections"></a>Convertir colecciones genéricas  
  En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la covarianza en la interfaz <xref:System.Collections.Generic.IEnumerable%601>. El método `PrintFullName` acepta una colección del tipo `IEnumerable<Person>` como parámetro. Pero se puede volver a usar para una colección del tipo `IEnumerable<Employee>` porque `Employee` hereda `Person`.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+// Simple hierarchy of classes.  
+public class Person  
+{  
+    public string FirstName { get; set; }  
+    public string LastName { get; set; }  
+}  
+  
+public class Employee : Person { }  
+  
+class Program  
+{  
+    // The method has a parameter of the IEnumerable<Person> type.  
+    public static void PrintFullName(IEnumerable<Person> persons)  
+    {  
+        foreach (Person person in persons)  
+        {  
+            Console.WriteLine("Name: {0} {1}",  
+            person.FirstName, person.LastName);  
+        }  
+    }  
+  
+    public static void Test()  
+    {  
+        IEnumerable<Employee> employees = new List<Employee>();  
+  
+        // You can pass IEnumerable<Employee>,   
+        // although the method expects IEnumerable<Person>.  
+  
+        PrintFullName(employees);  
+  
+    }  
+}  
+```  
+  
 ## <a name="comparing-generic-collections"></a>Comparar colecciones genéricas  
  En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la contravarianza en la interfaz <xref:System.Collections.Generic.IComparer%601>. La clase `PersonComparer` implementa la interfaz `IComparer<Person>`. Pero se puede volver a usar esta clase para comparar una secuencia de objetos del tipo `Employee` porque `Employee` hereda `Person`.  
   
-```cs  
+```csharp  
 // Simple hierarchy of classes.  
 public class Person  
 {  
