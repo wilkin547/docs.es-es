@@ -114,7 +114,7 @@
 ## [Palabras clave para conversiones](conversion-keywords.md)
 ### [explicit](explicit.md)
 ### [implicit](implicit.md)
-### [operator2](operator.md)
+### [operator](operator.md)
 ## [Palabras clave de acceso](access-keywords.md)
 ### [base](base.md)
 ### [this](this.md)
