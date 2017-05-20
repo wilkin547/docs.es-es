@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>operadores de C#
@@ -66,9 +67,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md): invocación de función.  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md): indización de objeto agregado.  
-  
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md): indización condicional nula.  Devuelve `null` si el operando izquierdo es `null`.  
-  
+   
  [x++](../../../csharp/language-reference/operators/increment-operator.md): incremento de postfijo.  Devuelve el valor de x y, a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno mayor (normalmente agrega el entero 1).  
   
  [x--](../../../csharp/language-reference/operators/decrement-operator.md): decremento de postfijo.  Devuelve el valor de x; a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).  
@@ -222,15 +221,15 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
 ## <a name="arithmetic-overflow"></a>Desbordamiento aritmético  
  Los operadores aritméticos ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md) y [/](../../../csharp/language-reference/operators/division-operator.md)) pueden producir resultados fuera del rango de valores posibles para el tipo numérico implicado. Para obtener detalles debe ir a la sección del operador en cuestión, pero en general:  
   
-- El desbordamiento aritmético de enteros produce <xref:System.OverflowException> o descarta los bits más significativos del resultado. La división de enteros por cero siempre produce una @System.DivideByZeroException.  
+- El desbordamiento aritmético de enteros produce una <xref:System.OverflowException> o descarta los bits más significativos del resultado. La división de enteros por cero siempre produce una @System.DivideByZeroException.  
 
-   Cuando se produce el desbordamiento de enteros, lo que suceda dependerá del contexto de ejecución, que puede ser [comprobado o no comprobado](../../../csharp/language-reference/keywords/checked-and-unchecked.md). En un contexto comprobado, se produce <xref:System.OverflowException>. En un contexto no comprobado, se descartan los bits más significativos del resultado y la ejecución continúa. Por lo tanto, C# ofrece la posibilidad de controlar u omitir el desbordamiento. De forma predeterminada, las operaciones aritméticas se producen en un contexto *no comprobado*. 
+   Cuando se produce el desbordamiento de enteros, lo que suceda dependerá del contexto de ejecución, que puede ser [comprobado o no comprobado](../../../csharp/language-reference/keywords/checked-and-unchecked.md). En un contexto comprobado, se produce una <xref:System.OverflowException>. En un contexto no comprobado, se descartan los bits más significativos del resultado y la ejecución continúa. Por lo tanto, C# ofrece la posibilidad de controlar u omitir el desbordamiento. De forma predeterminada, las operaciones aritméticas se producen en un contexto *no comprobado*. 
 
    Además de los operadores aritméticos, las conversiones de tipo entero a tipo entero también pueden provocar un desbordamiento (por ejemplo, al convertir un [long](../../../csharp/language-reference/keywords/long.md) en un [int](../../../csharp/language-reference/keywords/int.md)) y están sujetas a ejecución comprobada o no comprobada. Sin embargo, los operadores bit a bit y los de desplazamiento nunca producen desbordamiento.  
    
 -   El desbordamiento aritmético de punto flotante o la división por cero nunca producen una excepción, porque los tipos de punto flotante se basan en el estándar IEEE 754 y por tanto tienen disposiciones para representar el infinito y NaN (No es un número).  
   
--   El desbordamiento aritmético [decimal](../../../csharp/language-reference/keywords/decimal.md) siempre produce <xref:System.OverflowException>. La división decimal por cero siempre produce <xref:System.DivideByZeroException>.  
+-   El desbordamiento aritmético [decimal](../../../csharp/language-reference/keywords/decimal.md) siempre produce una excepción <xref:System.OverflowException>. La división decimal por cero siempre produce una <xref:System.DivideByZeroException>.  
   
   
 ## <a name="see-also"></a>Vea también  
