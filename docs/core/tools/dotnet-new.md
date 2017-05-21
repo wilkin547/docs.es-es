@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 14e6b4a2ffe5145a6d5d856c2149569b9ae39ff9
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.contentlocale: es-es
+ms.lasthandoff: 05/05/2017
 
 ---
 
@@ -97,7 +98,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 `-f|--framework`: especifica el [marco de trabajo](../../standard/frameworks.md) de destino. Valores: `netcoreapp1.0` o `netcoreapp1.1` (`Default: netcoreapp1.0`)
 
-`-au|--authentication`: el tipo de autenticación que se va a usar. Valores: `None` o `Individual` (valor predeterminado: `None`)
+`-au|--auth`: el tipo de autenticación que se va a usar. Valores: `None` o `Individual` (valor predeterminado: `None`)
 
 `-uld|--use-local-db`: especifica si se va a usar o no LocalDB en lugar de SQLite. Valores: `true` o `false` (valor predeterminado: `false`)
 
