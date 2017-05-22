@@ -22,10 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 3bbfaf3272444fbd2127f01ae4d5c9ca0db7bd39
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ffe0b574b00e3ce420d83658f5844f26c3f8ea72
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>Recursos de aplicaciones de escritorio
@@ -50,17 +51,17 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
  Para más información, consulte el artículo [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 ## <a name="retrieving-resources"></a>Recuperar recursos  
- En tiempo de ejecución, la aplicación carga los recursos localizados apropiados para cada subproceso, en función de la referencia cultural especificada en la propiedad <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. El valor de esta propiedad se deriva de la siguiente manera:  
+ En tiempo de ejecución, la aplicación carga los recursos adaptados apropiados para cada subproceso, en función de la referencia cultural especificada por la propiedad <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. El valor de esta propiedad se deriva de la siguiente manera:  
   
 -   Asignando directamente un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural adaptada a la propiedad <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
   
--   Si no se ha asignado explícitamente una referencia cultural, recuperando la referencia cultural predeterminada de la UI del subproceso de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
+-   Si no se ha asignado explícitamente una referencia cultural, recuperando la referencia cultural de la interfaz de usuario predeterminada del subproceso de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
   
 -   Si no se ha asignado explícitamente una referencia cultural a la interfaz de usuario predeterminada del subproceso, recuperando la referencia cultural del usuario actual del equipo local llamando a la función `GetUserDefaultUILanguage` de Windows.  
   
- Para más información sobre cómo establecer la referencia cultural de la UI actual, consulte las páginas de referencia <xref:System.Globalization.CultureInfo> y <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Para obtener más información sobre cómo establecer la referencia cultural de la interfaz de usuario actual, vea las páginas de referencia de <xref:System.Globalization.CultureInfo> y de <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
   
- Puede recuperar los recursos para la referencia cultural de la UI actual o para una referencia cultural concreta con la clase <xref:System.Resources.ResourceManager?displayProperty=fullName>. Aunque la clase <xref:System.Resources.ResourceManager> se usa principalmente para recuperar recursos en las aplicaciones de escritorio, el espacio de nombres <xref:System.Resources?displayProperty=fullName> contiene tipos adicionales que puede usar para recuperar recursos. Se incluyen los siguientes:  
+ Puede recuperar los recursos para la referencia cultural de la interfaz de usuario actual o para una referencia cultural concreta usando la clase <xref:System.Resources.ResourceManager?displayProperty=fullName>. Aunque la clase <xref:System.Resources.ResourceManager> se usa principalmente para recuperar recursos en las aplicaciones de escritorio, el espacio de nombres <xref:System.Resources?displayProperty=fullName> contiene tipos adicionales que puede usar para recuperar recursos. Se incluyen los siguientes:  
   
 -   La clase <xref:System.Resources.ResourceReader>, que permite enumerar recursos incrustados en un ensamblado o almacenados en un archivo binario .resources independiente. Resulta útil cuando no se conocen los nombres exactos de los recursos que están disponibles en tiempo de ejecución.  
   
@@ -68,7 +69,7 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
   
 -   La clase <xref:System.Resources.ResourceSet>, que permite recuperar los recursos de una referencia cultural específica sin observar las reglas de reserva. Los recursos se pueden almacenar en un ensamblado o un archivo binario .resources independiente. También se puede desarrollar una implementación de <xref:System.Resources.IResourceReader> que permite usar la clase <xref:System.Resources.ResourceSet> para recuperar recursos de algún otro origen.  
   
--   La clase <xref:System.Resources.ResXResourceSet>, que permite recuperar en la memoria todos los elementos de un archivo de recursos XML.  
+-   La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Globalization.CultureInfo>   
