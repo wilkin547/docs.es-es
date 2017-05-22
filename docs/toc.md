@@ -85,6 +85,7 @@
 # [Guía de .NET Framework](framework/index.md)
 ## [Novedades](framework/whats-new/)
 ## [Primeros pasos](framework/get-started/)
+## [Guía de instalación](framework/install/)
 ## [Guía de migración](framework/migration-guide/)
 ## [Guía de .NET Framework en Docker](framework/docker/index.md)
 ### [Ejecución de aplicaciones de consola en contenedores](framework//docker/console.md)
@@ -185,10 +186,6 @@
 
 ## [Paseo por F](fsharp/tour.md)
 
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## Introducción a la programación funcional
-### [Funciones como valores de primera clase](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Tutoriales
 ### [Primeros pasos](fsharp/tutorials/getting-started/index.md)
@@ -208,6 +205,11 @@
 #### [Creación de un proveedor de tipos](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Seguridad del proveedor de tipos](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Solución de problemas en proveedores de tipos](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
+
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## Introducción a la programación funcional
+### [Funciones como valores de primera clase](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
 ### Programación asincrónica y simultánea
 #### [Programación asincrónica](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
