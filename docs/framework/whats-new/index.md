@@ -880,7 +880,6 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
               // new code
            }
         }
-
         ```
 
          Es conveniente usar un formato coherente para los modificadores porque son un contrato formal que expone una biblioteca. Las siguientes son dos formatos obvios.

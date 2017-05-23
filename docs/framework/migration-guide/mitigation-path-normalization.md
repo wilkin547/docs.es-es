@@ -15,9 +15,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 0579bb975a62e512062b10d39c2967cdcd23438f
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -57,22 +58,19 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../.
  Las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] o posterior pueden rechazar este cambio y utilizar la normalización heredada agregando lo siguiente a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
 </runtime>  
-  
 ```  
   
  Las aplicaciones que tienen como destino [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] o versiones anteriores, pero que se ejecutan en [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] o versiones posteriores pueden habilitar los cambios en la normalización de rutas de acceso agregando la siguiente línea a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo .configuration de la aplicación:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+

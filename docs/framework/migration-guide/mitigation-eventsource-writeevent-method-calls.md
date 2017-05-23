@@ -14,9 +14,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: cde809989d89c10caeb97ec853c8649a108cd72d
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -27,13 +28,11 @@ ms.lasthandoff: 04/18/2017
  Un método de evento ETW definido de la manera siguiente infringe el contrato:  
   
 ```  
-  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info2(string message)  
 {  
    base.WriteEvent(2, message, "-");  
 }  
-  
 ```  
   
  Cuando se incumple este contrato, se produce una excepción <xref:System.IndexOutOfRangeException> en tiempo de ejecución si un objeto <xref:System.Diagnostics.Tracing.EventListener> lee datos <xref:System.Diagnostics.Tracing.EventSource> en proceso.  
@@ -41,13 +40,11 @@ public void Info2(string message)
  La definición de este método de evento ETW debe seguir este patrón:  
   
 ```  
-  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info2(string message)  
 {  
    base.WriteEvent(2, message);  
 }  
-  
 ```  
   
 ## <a name="mitigation"></a>Mitigación  
@@ -56,7 +53,6 @@ public void Info2(string message)
  Puede minimizar la cantidad de código que hay que cambiar definiendo dos métodos para llamar al método <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A>, de la forma siguiente:  
   
 ```  
-  
 [NonEvent]  
 public void Info2(string message)  
 {  
@@ -67,8 +63,8 @@ public void Info2Internal(string message, string prefix)
 {  
    WriteEvent(2, message, prefix);  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+

@@ -17,9 +17,10 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -37,7 +38,6 @@ ms.lasthandoff: 04/18/2017
           <supportedRuntime version="v4.0"/>  
        </startup>  
     </configuration>  
-  
     ```  
   
 -   Puede volver a compilar la aplicación con un compilador que tenga como destino [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Si originalmente usó Visual Studio 2003 para desarrollar y compilar la solución, puede abrir la solución en [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] y usar el cuadro de diálogo **Compatibilidad del proyecto** para convertir la solución y los archivos del proyecto de los formatos utilizados en Visual Studio 2003 a los formatos de Microsoft Build Engine (MSBuild) utilizados en [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)].  
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/18/2017
       <CompatSortNLSVersion enabled="4096"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
  Sin embargo, en algunos casos, tal vez necesite modificar el código fuente y volver a compilar la aplicación.  
@@ -76,3 +75,4 @@ ms.lasthandoff: 04/18/2017
  El impacto de los tipos y miembros desusados es ligeramente distinto en las aplicaciones redestinadas que en las aplicaciones compiladas de nuevo. El uso de tipos y miembros obsoletos no afectará a la aplicación redestinada a menos que el tipo o miembro obsoleto se haya quitado físicamente del ensamblado. Cuando se vuelve a compilar una aplicación que utiliza tipos y miembros obsoletos, normalmente se produce una advertencia del compilador y no un error del compilador. Sin embargo, en algunos casos, se genera un error del compilador y el código que usa el tipo o miembro obsoleto no se compila correctamente. En este caso, debe volver a escribir el código fuente que llama al tipo o miembro obsoleto antes de volver a compilar la aplicación. Para obtener más información sobre los tipos y miembros obsoletos, vea [Lo obsoleto en la biblioteca de clases de .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md).  
   
  Para valorar el impacto de los tipos y miembros en desuso desde la publicación de [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], vea [Lo obsoleto en la biblioteca de clases de .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md). Consulte las listas de tipos y miembros obsoletos de [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+

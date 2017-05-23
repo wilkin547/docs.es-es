@@ -18,9 +18,10 @@ caps.latest.revision: 14
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 86dce70e92c0e424b169b6fc58e87c5652ebcb69
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -64,7 +65,6 @@ Todas las aplicaciones que hospedan Common Language Runtime (CLR) necesitan inic
         <supportedRuntime version="<version>"/>  
       </startup>  
     </configuration>  
-  
     ```  
   
      donde *\<version>* especifica la versión de CLR correspondiente a la versión de .NET Framework que admite la aplicación. Use las siguientes cadenas:  
@@ -94,3 +94,4 @@ Todas las aplicaciones que hospedan Common Language Runtime (CLR) necesitan inic
 ## <a name="see-also"></a>Vea también  
  [Migración desde .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
  [Guía de migración](../../../docs/framework/migration-guide/index.md)
+

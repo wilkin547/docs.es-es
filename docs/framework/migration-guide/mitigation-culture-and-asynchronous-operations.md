@@ -15,9 +15,10 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c2dbf60cacf47be3c448b5683b771840ef85ddaf
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -35,13 +36,11 @@ Para las aplicaciones que tienen como destino [!INCLUDE[net_v46](../../../includ
 -   Optar por el comportamiento anterior de que <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> y <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> no fluyan, mediante la adición del elemento `AppContextSwitchOverrides` siguiente al archivo de configuración de la aplicación:  
   
     ```xml  
-  
     <configuration>  
         <runtime>  
             <AppContextSwitchOverrides value="Switch.System.Globalization.NoAsyncCurrentCulture=true" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   Optar por el comportamiento anterior de que <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> y <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> no fluyan, con la configuración mediante programación del siguiente modificador de compatibilidad:  
@@ -56,3 +55,4 @@ Para las aplicaciones que tienen como destino [!INCLUDE[net_v46](../../../includ
   
 ## <a name="see-also"></a>Vea también  
  [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

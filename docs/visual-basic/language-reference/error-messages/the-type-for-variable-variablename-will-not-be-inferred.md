@@ -33,9 +33,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ab7d69c34a58dc898553868258c4fdf6b81db343
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,7 +62,6 @@ Class Customer
   
     End Sub  
 End Class  
-  
 ```  
   
  De forma predeterminada, este mensaje es una advertencia. Para obtener información sobre cómo ocultar las advertencias o cómo tratar advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
@@ -114,3 +114,4 @@ End Class
  [Cómo: hacer referencia a la instancia actual de un objeto](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)   
  [Inferencia de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+

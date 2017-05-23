@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e4c41cc3813a9f96d944d115c6aaa5c5842a629b
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ Dim myTask = someWebAccessMethodAsync(url)
 ' The application of Await suspends the rest of this method until the task is   
 ' complete.  
 Dim result = Await myTask  
-  
 ```  
   
  Entre el inicio de una tarea y esperar, puede iniciar otras tareas. Las tareas adicionales se ejecutan implícitamente en paralelo, pero no hay subprocesos adicionales se crean.  
@@ -225,3 +225,4 @@ End Class
  [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
  [Cómo: ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+

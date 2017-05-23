@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 09489e2dabd34da0446a623e91cd85de35c3c70b
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -29,10 +30,8 @@ ms.lasthandoff: 03/13/2017
 Cuando use LINQ para consultar colecciones no genéricas <xref:System.Collections.IEnumerable> tales como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de variable de rango para reflejar el tipo específico de los objetos de la colección. Por ejemplo, si tiene una <xref:System.Collections.ArrayList> de objetos `Student`, la [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md) debe tener un aspecto similar a este:  
   
 ```  
-  
 var query = from Student s in arrList  
 ...  
-  
 ```  
   
  Al especificar el tipo de la variable de rango, se convierte cada elemento de la <xref:System.Collections.ArrayList> en un `Student`.  
@@ -103,3 +102,4 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

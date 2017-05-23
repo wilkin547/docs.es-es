@@ -41,7 +41,6 @@ ms.lasthandoff: 04/18/2017
      El archivo de configuración siguiente realiza esta tarea:  
   
     ```xml  
-  
     <configuration>  
         <system.serviceModel>  
             <bindings>  
@@ -58,7 +57,6 @@ ms.lasthandoff: 04/18/2017
             </bindings>  
         </system.ServiceModel>  
     </configuration>  
-  
     ```  
   
 -   Si la vinculación se configura dinámicamente en el código fuente, actualice la propiedad <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> para usar TLS 1.1 (<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) o una versión anterior del protocolo en el código fuente.  

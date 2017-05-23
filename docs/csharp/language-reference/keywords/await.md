@@ -50,7 +50,6 @@ El operador `await` se aplica a una tarea de un método asincrónico para suspen
  En el código siguiente, el método <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> devuelve un `Task\<byte[]>`, `getContentsTask`. La tarea garantiza que la matriz de bytes real se generará cuando finalice la tarea. El operador `await` se aplica a `getContentsTask` para suspender la ejecución en `SumPageSizesAsync` hasta que se complete `getContentsTask`. Mientras tanto, el control vuelve al llamador de `SumPageSizesAsync`. Cuando `getContentsTask` haya finalizado, la expresión `await` se evalúa como una matriz de bytes.  
   
 ```csharp  
-  
 private async Task SumPageSizesAsync()  
 {  
     // To use the HttpClient type in desktop apps, you must include a using directive and add a   
@@ -64,7 +63,6 @@ private async Task SumPageSizesAsync()
     //byte[] urlContents = await client.GetByteArrayAsync(url);  
     // . . .  
 }  
-  
 ```  
   
 > [!IMPORTANT]
@@ -78,7 +76,6 @@ TResult result = await AsyncMethodThatReturnsTaskTResult();
   
 // Keyword await used with a method that returns a Task.  
 await AsyncMethodThatReturnsTask();  
-  
 ```  
   
  Una expresión `await` no bloquea el subproceso en el que se ejecuta. En su lugar, hace que el compilador suscriba el resto del método asincrónico como una continuación de la tarea esperada. A continuación, el control vuelve al llamador del método asincrónico. Cuando la tarea se completa, invoca su continuación y la ejecución del método asincrónico se reanuda donde se quedó.  
@@ -100,7 +97,6 @@ await AsyncMethodThatReturnsTask();
  El ejemplo siguiente de Windows Forms muestra el uso de `await` en un método asincrónico, `WaitAsynchronouslyAsync`. Compare el comportamiento de dicho método con el de `WaitSynchronously`. Sin un operador `await` aplicado a una tarea, `WaitSynchronously` se ejecuta de forma sincrónica a pesar del uso del modificador `async` en su definición y una llamada a <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName> en el cuerpo.  
   
 ```csharp  
-  
 private async void button1_Click(object sender, EventArgs e)  
 {  
     // Call the method that runs asynchronously.  
@@ -137,3 +133,4 @@ public async Task<string> WaitSynchronously()
  [Programación asincrónica con async y await](../../../csharp/programming-guide/concepts/async/index.md)   
  [Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  (Tutorial: Acceso a la web con Async y Await)  
  [async](../../../csharp/language-reference/keywords/async.md)
+

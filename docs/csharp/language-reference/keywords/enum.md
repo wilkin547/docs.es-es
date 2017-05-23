@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,14 +45,12 @@ La palabra clave `enum` se utiliza para declarar una enumeración, un tipo disti
  De manera predeterminada, el primer enumerador tiene el valor 0 y el valor de cada enumerador sucesivo se incrementa en 1. Por ejemplo, en la siguiente enumeración, `Sat` es `0`, `Sun` es `1`, `Mon` es `2`, y así sucesivamente.  
   
 ```  
-  
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Los enumeradores pueden usar inicializadores para invalidar los valores predeterminados, como se muestra en el ejemplo siguiente.  
   
 ```  
-  
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -60,7 +59,6 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier tipo entero excepto [char](../../../csharp/language-reference/keywords/char.md). El tipo subyacente predeterminado de los elementos de enumeración es [int](../../../csharp/language-reference/keywords/int.md). Para declarar una enumeración de otro tipo entero, como [byte](../../../csharp/language-reference/keywords/byte.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.  
   
 ```  
-  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -76,7 +74,6 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  El tipo subyacente especifica la cantidad de almacenamiento asignado a cada enumerador. No obstante, se necesita una conversión explícita para convertir un tipo `enum` a un tipo entero. Por ejemplo, la siguiente instrucción asigna el enumerador `Sun` a una variable de tipo [int](../../../csharp/language-reference/keywords/int.md) mediante una conversión para convertir de `enum` a `int`.  
   
 ```  
-  
 int x = (int)Days.Sun;  
 ```  
   
@@ -122,3 +119,4 @@ int x = (int)Days.Sun;
  [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ TOTAL bytes returned:  890591
  El código siguiente muestra estos cambios marcados con asteriscos. Puede agregar los cambios en el código al final de este tema, o puede descargar la aplicación finalizada de [ejemplos de Async: reentrada en aplicaciones de escritorio de .NET](http://go.microsoft.com/fwlink/?LinkId=266571). El nombre del proyecto es DisableStartButton.  
   
 ```vb  
-  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
     ' This line is commented out to make the results clearer in the output.  
     'ResultsTextBox.Text = ""  
@@ -161,7 +161,6 @@ End Sub
   
         ' *** Declare a System.Threading.CancellationTokenSource.  
         Dim cts As CancellationTokenSource  
-  
     ```  
   
 2.  En `StartButton_Click`, determine si una operación ya está en curso. Si el valor de `cts` es `Nothing`, no hay ninguna operación ya está activa. Si el valor no es `Nothing`, se cancela la operación que ya se está ejecutando.  
@@ -171,7 +170,6 @@ End Sub
     If cts IsNot Nothing Then  
         cts.Cancel()  
     End If  
-  
     ```  
   
 3.  Establezca `cts` en un valor diferente que represente el proceso actual.  
@@ -180,7 +178,6 @@ End Sub
     ' *** Now set cts to cancel the current process if the button is chosen again.  
     Dim newCTS As CancellationTokenSource = New CancellationTokenSource()  
     cts = newCTS  
-  
     ```  
   
 4.  Al final de `StartButton_Click`, el proceso actual está completo, así que establezca el valor de `cts` a `Nothing`.  
@@ -190,7 +187,6 @@ End Sub
     If cts Is newCTS Then  
         cts = Nothing  
     End If  
-  
     ```  
   
  El código siguiente muestra todos los cambios en `StartButton_Click`. Las adiciones se marcan con asteriscos.  
@@ -226,7 +222,6 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
         cts = Nothing  
     End If  
 End Sub  
-  
 ```  
   
  En `AccessTheWebAsync`, realice los siguientes cambios.  
@@ -275,7 +270,6 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ResultsTextBox.Text &=  
         String.Format(vbCrLf & vbCrLf & "TOTAL bytes returned:  " & total & vbCrLf)  
 End Function  
-  
 ```  
   
  Si elige la **iniciar** botón varias veces mientras se ejecuta esta aplicación, se deben producir resultados similares a los siguientes resultados.  
@@ -318,7 +312,6 @@ TOTAL bytes returned:  890591
  La siguiente salida muestra el resultado si el usuario elige el **iniciar** botón sólo una vez. La etiqueta de la letra A, indica que el resultado es desde la primera vez el **iniciar** botón está seleccionado. Los números muestran el orden de las direcciones URL en la lista de destinos de descarga.  
   
 ```  
-  
 #Starting group A.  
 #Task assigned for group A.  
   
@@ -390,7 +383,6 @@ C-8. msdn.microsoft.com/library/ff730837.aspx               148010
 TOTAL bytes returned:  920526  
   
 #Group C is complete.  
-  
 ```  
   
  Los grupos B y C se inician antes de finalizar el grupo A, pero la salida de cada grupo aparece por separado. Toda la salida para el grupo A aparece en primer lugar, seguido por toda la salida para el grupo B y, a continuación, toda la salida para el grupo C. La aplicación siempre muestra los grupos de orden y, para cada grupo, siempre muestra la información acerca de los sitios Web individuales en el orden en que las direcciones URL aparecen en la lista de direcciones URL.  
@@ -705,3 +697,4 @@ End Function
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+

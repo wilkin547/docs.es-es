@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 100fa20e69c9a1cd6133437c29d1d5955e871656
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ Console.ReadLine();
 //12  
 //--------  
 //12  
-  
 ```  
   
  No se puede aplicar el operador de direccionamiento indirecto a un puntero de tipo `void*`. Sin embargo, es posible usar una conversión para convertir un puntero void en cualquier otro tipo de puntero y viceversa.  
@@ -160,3 +160,4 @@ Console.ReadLine();
  [fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md)  (fixed [Instrucción, Referencia de C#])  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)  (stackalloc [Referencia de C#])  
  [Conversión boxing y conversión unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+

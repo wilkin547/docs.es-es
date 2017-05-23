@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 9d5088d70397e21cb555c78b2701960ee69bde66
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>Mitigación: marcos PNG en objetos de icono
@@ -35,7 +35,6 @@ A partir .NET Framework 4.6, el método <xref:System.Drawing.Icon.ToBitmap%2A?di
 ```  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true" />  
-  
 ```  
   
  Si el archivo app.config ya contiene el elemento `AppContextSwitchOverrides` , el nuevo valor se debe combinar con el atributo `value` como este:  
@@ -43,8 +42,8 @@ A partir .NET Framework 4.6, el método <xref:System.Drawing.Icon.ToBitmap%2A?di
 ```  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
-  
 ```  
   
 ## <a name="see-also"></a>Vea también  
  [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

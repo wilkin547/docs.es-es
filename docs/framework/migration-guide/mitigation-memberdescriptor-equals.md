@@ -36,17 +36,14 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../.
 -   Puede rechazar este cambio sin modificar el código fuente agregando lo siguiente a la sección [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:  
   
     ```xml  
-  
     <runtime>  
         <AppContextSwitchOverrides value = "Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />  
      </runtime>  
-  
     ```  
   
 -   Puede modificar el código fuente para restablecer el comportamiento anterior comparando manualmente las propiedades <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> y <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> después de llamar al método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, como hace el siguiente fragmento de código.  
   
     ```csharp  
-  
     if (memberDescriptor1.Equals(memberDescriptor2) &   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)) {  
           // Code to execute if true.  
@@ -54,28 +51,23 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../.
     else {  
           // Code to execute if false.     
     }  
-  
     ```  
   
     ```  
-  
     If memberDescriptor1.Equals(memberDescriptor2) And   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)  
           // Code to execute if True.  
     Else  
           // Code to execute if False.     
     End If  
-  
     ```  
   
  Para aplicaciones que tienen como destino [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] y versiones anteriores, puede habilitar este cambio agregando el siguiente valor al archivo app.config:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Vea también  
