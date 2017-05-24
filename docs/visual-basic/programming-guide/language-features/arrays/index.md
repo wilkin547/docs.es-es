@@ -34,23 +34,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1eeccc9b4f1cb00d434b1af61656b64bb860dbb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 324055a730b977faad637a14362b5c906931c721
+ms.contentlocale: es-es
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
-Una matriz es un conjunto de valores que están relacionados de forma lógica entre sí como, por ejemplo, el número de alumnos de cada curso en una escuela primaria.  Si desea obtener ayuda sobre las matrices en Visual Basic para Aplicaciones (VBA), vea la [referencia del lenguaje](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
+Una matriz es un conjunto de valores que están relacionados de forma lógica entre sí, como, por ejemplo, el número de alumnos de cada curso en una escuela primaria.  Si necesita ayuda sobre las matrices en Visual Basic para Aplicaciones (VBA), vea la [referencia del lenguaje](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
   
- Con las matrices, puede hacer hacer referencia a estos valores relacionados con el mismo nombre y usar un número denominado índice o subíndice para distinguirlos. Los valores individuales se denominan elementos de la matriz. Son contiguos desde el índice 0 hasta el valor de índice más alto.  
+ Con las matrices, puede hacer referencia a estos valores relacionados con el mismo nombre y usar un número denominado índice o subíndice para distinguirlos. Los valores individuales se denominan elementos de la matriz. Son contiguos desde el índice 0 hasta el valor de índice más alto.  
   
  A diferencia de una matriz, una variable que contiene un solo valor se denomina variable *escalar* .  
   
  Veamos algunos ejemplos rápidos antes de la explicación:  
   
 ```vb  
-  
 'Declare a single-dimension array of 5 values  
 Dim numbers(4) As Integer   
   
@@ -121,7 +121,7 @@ Elementos de la matriz "students"
   
  Puede hacer referencia a la matriz como un conjunto usando simplemente el nombre variable de la matriz sin índices.  
   
- La matriz `students` del ejemplo anterior usa un índice y es unidimensional. Una matriz que usa más de un índice o subíndice se denomina multidimensional. Para más información, vea el resto de este tema y [Dimensiones de matrices en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
+ La matriz `students` del ejemplo anterior usa un índice y es unidimensional. Una matriz que usa más de un índice o subíndice se denomina multidimensional. Para más información, vea el resto de este tema y [Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md).  
   
 ##  <a name="BKMK_CreatingAnArray"></a> Creación de una matriz  
  El tamaño de una matriz se puede definir de varias maneras. Puede proporcionar el tamaño cuando se declara la matriz, como se muestra en el ejemplo siguiente.  
@@ -154,7 +154,7 @@ Elementos de la matriz "students"
   
  [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
- Cuando se usa la inferencia de tipos, el tipo de la matriz se determina por el tipo dominante en la lista de valores que se proporciona para el literal de matriz. El tipo dominante es un tipo único al que todos los demás tipos del literal de la matriz se pueden ampliar. Si no se puede determinar este tipo único, el tipo dominante es el tipo único al que todos los demás tipos de la matriz se pueden restringir. Si no se puede determinar ninguno de estos tipos únicos, el tipo dominante es `Object`. Por ejemplo, si la lista de valores que se proporciona al literal de matriz contiene valores de tipo `Integer`, `Long`y `Double`, la matriz resultante es de tipo `Double`. Tanto `Integer` como `Long` se amplían solo a `Double`. Por lo tanto, `Double` es el tipo dominante. Para más información, vea [Conversiones de ampliación y de restricción](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Estas reglas de inferencia se aplican a tipos que se deducen para matrices que son variables locales definidas en un miembro de clase. Aunque puede usar literales de matriz al crear variables de nivel de clase, no se puede usar la inferencia de tipos en el nivel de clase. Como resultado, los literales de matriz que se especifican en el nivel de clase deducen los valores proporcionados para el literal de matriz como tipo `Object`.  
+ Cuando se usa la inferencia de tipos, el tipo de la matriz se determina por el tipo dominante en la lista de valores que se proporciona para el literal de matriz. El tipo dominante es un tipo único al que todos los demás tipos del literal de la matriz se pueden ampliar. Si no se puede determinar este tipo único, el tipo dominante es el tipo único al que todos los demás tipos de la matriz se pueden restringir. Si no se puede determinar ninguno de estos tipos únicos, el tipo dominante es `Object`. Por ejemplo, si la lista de valores que se proporciona al literal de matriz contiene valores de tipo `Integer`, `Long`y `Double`, la matriz resultante es de tipo `Double`. Tanto `Integer` como `Long` se amplían solo a `Double`. Por lo tanto, `Double` es el tipo dominante. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Estas reglas de inferencia se aplican a tipos que se deducen para matrices que son variables locales definidas en un miembro de clase. Aunque puede usar literales de matriz al crear variables de nivel de clase, no se puede usar la inferencia de tipos en el nivel de clase. Como resultado, los literales de matriz que se especifican en el nivel de clase deducen los valores proporcionados para el literal de matriz como tipo `Object`.  
   
  Puede especificar de manera explícita el tipo de los elementos de una matriz que se crea usando un literal de matriz. En este caso, los valores del literal de matriz se deben ampliar al tipo de los elementos de la matriz. En el ejemplo de código siguiente se crea una matriz de tipo `Double` desde una lista de enteros.  
   
@@ -172,7 +172,7 @@ Elementos de la matriz "students"
   
  [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_11.vb)]  
   
- Es posible usar la inferencia de tipos al crear una matriz multidimensional usando literales de matriz anidados. Cuando se usa la inferencia de tipos, el tipo deducido es el tipo dominante para todos los valores de todos los literales de matriz de un nivel de anidamiento. En el ejemplo de código siguiente se crea una matriz bidimensional del tipo `Double` a partir de valores del tipo `Integer` y `Double`.  
+ Es posible usar la inferencia de tipos al crear una matriz multidimensional usando literales de matriz anidados. Cuando se usa la inferencia de tipos, el tipo inferido es el tipo dominante para todos los valores de todos los literales de matriz de un nivel de anidamiento. En el ejemplo de código siguiente se crea una matriz bidimensional del tipo `Double` a partir de valores del tipo `Integer` y `Double`.  
   
  [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_12.vb)]  
   
@@ -181,11 +181,11 @@ Elementos de la matriz "students"
 ##  <a name="BKMK_Iterating"></a> Recorrer en iteración una matriz  
  Cuando recorre en iteración una matriz, tiene acceso a todos los elementos de la matriz desde el índice más bajo hasta el más alto.  
   
- El ejemplo siguiente recorre en iteración una matriz unidimensional mediante el uso de la [Instrucción For...Next](../../../../visual-basic/language-reference/statements/for-next-statement.md). El método <xref:System.Array.GetUpperBound%2A> devuelve el valor máximo que puede tener el índice. El valor de índice mínimo es siempre 0.  
+ El ejemplo siguiente recorre en iteración una matriz unidimensional mediante el uso de la [Instrucción For...Next](../../../../visual-basic/language-reference/statements/for-next-statement.md). El método <xref:System.Array.GetUpperBound%2A> devuelve el valor más alto que puede tener el índice. El valor de índice mínimo es siempre 0.  
   
  [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
- El ejemplo siguiente recorre en iteración una matriz multidimensional mediante el uso de una instrucción `For...Next` . El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(1)` devuelve el valor de índice más alto de la primera dimensión y `GetUpperBound(0)` devuelve el valor de índice más alto de la segunda dimensión.  
+ El ejemplo siguiente recorre en iteración una matriz multidimensional mediante el uso de una instrucción `For...Next` . El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(0)` devuelve el valor de índice más alto de la primera dimensión y `GetUpperBound(1)` devuelve el valor de índice más alto de la segunda dimensión.  
   
  [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
@@ -202,7 +202,7 @@ Elementos de la matriz "students"
   
  Para especificar una matriz como parámetro para un procedimiento `Sub` o `Function` , defina el parámetro como una matriz con un tipo de datos especificado y el número de dimensiones. En la llamada al procedimiento, envíe una variable de matriz con el mismo tipo de datos y número de dimensiones.  
   
- En el ejemplo siguiente, la función `GetNumbers` devuelve un `Integer()`. Este tipo de matriz es una matriz unidimensional de tipo `Integer`. El procedimiento `ShowNumbers` acepta un argumento `Integer()` .  
+ En el ejemplo siguiente, la función `GetNumbers` devuelve `Integer()`. Este tipo de matriz es una matriz unidimensional de tipo `Integer`. El procedimiento `ShowNumbers` acepta un argumento `Integer()` .  
   
  [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_17.vb)]  
   
@@ -211,7 +211,7 @@ Elementos de la matriz "students"
  [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_18.vb)]  
   
 ##  <a name="BKMK_JaggedArrays"></a> Matrices escalonadas  
- Una matriz que contiene otras matrices como elementos se conoce como  matriz de matrices o matriz escalonada. Una matriz escalonada y cada elemento de una matriz escalonada pueden tener una o más dimensiones. A veces la estructura de datos de la aplicación es bidimensional pero no rectangular.  
+ Una matriz que contiene otras matrices como elementos se conoce como matriz de matrices o matriz escalonada. Una matriz escalonada y cada elemento de una matriz escalonada pueden tener una o más dimensiones. A veces la estructura de datos de la aplicación es bidimensional pero no rectangular.  
   
  El ejemplo siguiente tiene una matriz de meses, siendo cada elemento una matriz de días. Puesto que los distintos meses tienen un número diferente de días, los elementos no forman una matriz bidimensional rectangular. Por lo tanto, se usa una matriz escalonada en lugar de una matriz multidimensional.  
   
@@ -224,7 +224,7 @@ Elementos de la matriz "students"
   
  Puede que tenga que crear una matriz de longitud cero en las circunstancias siguientes:  
   
--   Sin arriesgar una excepción <xref:System.NullReferenceException>, el código debe acceder a los miembros de la clase <xref:System.Array>, como <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>, o bien llamar a una función [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] como <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
+-   Sin arriesgarse a una excepción <xref:System.NullReferenceException>, el código debe tener acceso a los miembros de la clase <xref:System.Array>, por ejemplo, <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>, o bien deben llamar a una función [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], por ejemplo, <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
   
 -   Desea que el código usado sea más sencillo al no tener que comprobar `Nothing` como caso especial.  
   
@@ -249,13 +249,13 @@ Dim prices(3, 4, 5) As Long
   
 |||  
 |---|---|  
-|Longitud de la dimensión|El índice de cada dimensión está basado en 0, lo que significa que va desde 0 hasta su límite máximo. Por lo tanto, la longitud de una dimensión determinada supera en 1 el límite máximo declarado para esa dimensión.|  
+|Longitud de la dimensión|El índice de cada dimensión es de base 0, lo que significa que va desde 0 hasta su límite máximo. Por lo tanto, la longitud de una dimensión determinada supera en 1 el límite máximo declarado para esa dimensión.|  
 |Límites de longitud|La longitud de cada dimensión de una matriz se limita al valor máximo del tipo de datos `Integer`, que es (2 ^ 31) - 1. Sin embargo, el tamaño total de una matriz también está limitado por la memoria disponible en el sistema. Si se intenta inicializar una matriz que supera la cantidad de memoria RAM disponible, Common Language Runtime produce una excepción <xref:System.OutOfMemoryException>.|  
 |Tamaño y tamaño de elemento|El tamaño de la matriz es independiente del tipo de datos de sus elementos. El tamaño siempre representa el número total de elementos, no el número de bytes que se usan en el almacenamiento.|  
 |Consumo de memoria|No es seguro dar nada por supuesto en lo que respecta al modo de almacenar una matriz en la memoria. El almacenamiento varía en función de las plataformas de diferentes anchos de datos, por lo que la misma matriz puede utilizar más memoria en un sistema de 64 bits que en un sistema de 32 bits. Según la configuración del sistema cuando inicializa una matriz, Common Language Runtime (CLR) puede asignar el almacenamiento para empaquetar los elementos tan juntos como sea posible o para alinearlos todos en los límites naturales del hardware. Asimismo, una matriz requiere una sobrecarga de almacenamiento para obtener su información de control y esta sobrecarga aumenta con cada dimensión agregada.|  
   
 ##  <a name="BKMK_ArrayTypes"></a> Tipos de matriz y otros tipos  
- Cada matriz tiene un tipo de datos, pero difiere del tipo de datos de sus elementos. No existe ningún tipo de datos para todas las matrices. En su lugar, el tipo de datos de una matriz lo determina el número de dimensiones, o *rango*, de la matriz y el tipo de datos de los elementos de la matriz. Se considera que dos variables de matriz son del mismo tipo de datos sólo cuando tienen el mismo rango y sus elementos tienen el mismo tipo de datos. Las longitudes de las dimensiones de una matriz no influyen en el tipo de datos de la matriz.  
+ Cada matriz tiene un tipo de datos, pero difiere del tipo de datos de sus elementos. No existe ningún tipo de datos para todas las matrices. En su lugar, el tipo de datos de una matriz lo determina el número de dimensiones, o *rango*, de la matriz y el tipo de datos de los elementos de la matriz. Se considera que dos variables de matriz son del mismo tipo de datos solo cuando tienen el mismo rango y sus elementos tienen el mismo tipo de datos. Las longitudes de las dimensiones de una matriz no influyen en el tipo de datos de la matriz.  
   
  Cada matriz hereda la clase <xref:System.Array?displayProperty=fullName> y puede declarar una variable del tipo `Array`, pero no puede crear una matriz del tipo `Array`. Además, la [Instrucción ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) no puede funcionar en una variable declarada de tipo `Array`. Por estas razones y para mayor seguridad del tipo, es aconsejable declarar cada matriz como un tipo específico, como `Integer` en el ejemplo anterior.  
   
@@ -263,7 +263,7 @@ Dim prices(3, 4, 5) As Long
   
 -   Puede llamar al método <xref:System.Object.GetType%2A?displayProperty=fullName> en la variable para recibir un objeto <xref:System.Type> para el tipo en tiempo de ejecución de la variable. El objeto <xref:System.Type> contiene amplia información en sus propiedades y métodos.  
   
--   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.TypeName%2A> para recibir un valor `String` que contiene el nombre de tipo en tiempo de ejecución.  
+-   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.TypeName%2A> para recibir un `String` que contiene el nombre de tipo en tiempo de ejecución.  
   
 -   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.VarType%2A> para recibir un valor `VariantType` que representa la clasificación del tipo de la variable.  
   
@@ -283,7 +283,7 @@ Dim prices(3, 4, 5) As Long
  Para más información sobre las colecciones, vea [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Ejemplo  
- El ejemplo siguiente usa la clase genérica [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Collections.Generic.List%601?displayProperty=fullName> para crear una colección de listas de objetos `Customer`.  
+ En el ejemplo siguiente se usa la clase genérica [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]<xref:System.Collections.Generic.List%601?displayProperty=fullName> para crear una colección de listas de objetos `Customer`.  
   
  [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   
@@ -293,7 +293,7 @@ Dim prices(3, 4, 5) As Long
   
 |Término|Definición|  
 |----------|----------------|  
-|[Dimensiones de matrices en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|Explica el rango y las dimensiones de las matrices.|  
+|[Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|Explica el rango y las dimensiones de las matrices.|  
 |[Cómo: Inicializar una variable de matriz en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)|Describe cómo se llenan las matrices con valores iniciales.|  
 |[Cómo: Ordenar una matriz en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-sort-an-array.md)|Muestra cómo ordenar alfabéticamente los elementos de una matriz.|  
 |[Asignar una matriz a otra](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|Describe las reglas y los pasos para asignar una matriz a otra variable de matriz.|  
@@ -303,3 +303,4 @@ Dim prices(3, 4, 5) As Long
  <xref:System.Array>   
  [Instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)   
  [ReDim (instrucción)](../../../../visual-basic/language-reference/statements/redim-statement.md)
+
