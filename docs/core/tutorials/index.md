@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: 3f8c62a6a3b179e146874761465ad2665c20a6dd
-ms.lasthandoff: 04/11/2017
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 5630e2202f822015437bbb1d3f2cb751825e382b
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -23,11 +23,11 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 ## <a name="building-applications-with-visual-studio-2017"></a>Creación de aplicaciones con Visual Studio 2017
 
 - [Creación de una aplicación Hola mundo de C#](../../csharp/getting-started/with-visual-studio.md)
-- [Depuración de la aplicación Hola mundo de C#](../../csharp/getting-started/debugging-with-visual-studio-2017.md)
-- [Publicación de la aplicación Hola mundo de C#](../../csharp/getting-started/publishing-with-visual-studio-2017.md)
-- [Creación de una biblioteca de clases de C#](../../csharp/getting-started/library-with-visual-studio-2017.md)
+- [Depuración de la aplicación Hola mundo de C#](../../csharp/getting-started/debugging-with-visual-studio.md)
+- [Publicación de la aplicación Hola mundo de C#](../../csharp/getting-started/publishing-with-visual-studio.md)
+- [Creación de una biblioteca de clases de C#](../../csharp/getting-started/library-with-visual-studio.md)
 - [Pruebas de una biblioteca de clases de C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [Consumo de una biblioteca de clases de C# con .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio-2017.md)
+- [Consumo de una biblioteca de clases de C# con .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Creación de una solución completa de C# de .NET Core en Windows](using-on-windows-full-solution.md)
 - [NoSQL tutorial: Build a DocumentDB C# console application on .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started) (Tutorial de NoSQL: Creación de una aplicación de consola de C# de DocumentDB en .NET Core)
 

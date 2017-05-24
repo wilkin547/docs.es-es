@@ -18,9 +18,10 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 77002c3d1b6553156c225b3efba9a2f29009915a
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -103,4 +104,4 @@ En casos poco frecuentes, los cambios en tiempo de ejecución pueden afectar a l
 |Característica|Cambio|Impacto|Ámbito|  
 |-------------|------------|------------|-----------|  
 |Compilación JIT de 64 bits|A partir de .NET Framework 4.6, se utiliza un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta al compilador JIT de 32 bits.|En algunos casos, se produce una excepción inesperada o se observa un comportamiento diferente que si al ejecutar una aplicación con el compilador de 32 bits o el compilador JIT de 64 bits antiguo. **Nota:** Todos estos problemas se han solucionado en el nuevo compilador de 64 bits publicado con .NET Framework 4.6.2. También se han abordado la mayoría en las versiones de servicio de .NET Framework 4.6 y 4.6.1 que se incluyen con Windows Update. <br /><br /> Para obtener más información, vea [Mitigación: nuevo compilador JIT de 64 bits](../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md).|Borde|  
-|Control de excepciones (devolución desde una región `try`)|A diferencia del compilador Just-In-Time JIT64 anterior, el nuevo compilador JIT de 64 bits no admite una instrucción `ret` de nivel de integridad en una región `try`.|La especificación ECMA-335 no permite devolver desde una región `try`, y ningún compilador administrado conocido genera tal IL. Sin embargo, el compilador JIT64 ejecutará dicho IL si se genera mediante la emisión de reflexión.<br /><br /> Si la aplicación genera un IL que incluye un código de operación `ret` en una región `try`, puede:<br /><br /> -Elegir como destino .NET Framework 4.5 o agregar el elemento [ \<useLegacyJIT >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación, usar el compilador JIT antiguo y evitar el cambio.<br />-Actualizar el IL generado para devolver después a la región `try`.<br />-|Borde|
+|Control de excepciones (devolución desde una región `try`)|A diferencia del compilador Just-In-Time JIT64 anterior, el nuevo compilador JIT de 64 bits no admite una instrucción  `ret` de nivel de integridad en una región `try`.|La especificación ECMA-335 no permite devolver desde una región `try`, y ningún compilador administrado conocido genera tal IL. Sin embargo, el compilador JIT64 ejecutará dicho IL si se genera mediante la emisión de reflexión.<br /><br /> Si la aplicación genera un IL que incluye un código de operación `ret` en una región `try`, puede:<br /><br /> -Elegir como destino .NET Framework 4.5 o agregar el elemento [ \<useLegacyJIT >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación, usar el compilador JIT antiguo y evitar el cambio.<br />-Actualizar el IL generado para devolver después a la región `try`.<br />-|Borde|

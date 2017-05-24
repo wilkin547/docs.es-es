@@ -3,16 +3,17 @@ title: "Ejecución de aplicaciones de consola en Docker"
 description: "Aprenda a ejecutar una aplicación de consola existente de .NET Framework en un contenedor de Docker de Windows."
 author: spboyer
 keywords: .NET, contenedor, consola, aplicaciones
-manager: wpickett
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework-4.6
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 6d311674cc50c8a86128cf88c39e3044f70ba183
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.contentlocale: es-es
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -26,7 +27,7 @@ La aplicación de consola de ejemplo es un ejemplo sencillo que toma un argument
 
 Además de la respuesta, se ha agregado `Environment.MachineName` a ella para mostrar la diferencia entre la ejecución local de la aplicación y en un contenedor de Windows. Cuando la aplicación se ejecuta localmente, se debería devolver el nombre del equipo local, mientras que cuando se ejecuta en un contenedor de Windows, se devuelve el identificador de sesión del contenedor.
 
-El ejemplo completo está disponible en el [repositorio dotnet/core-docs de GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
+El [ejemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) está disponible en el repositorio dotnet/docs de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Antes de empezar a trabajar en la migración de la aplicación a un contenedor, debe estar familiarizado con algunos términos de Docker.
 
@@ -51,7 +52,7 @@ La migración de la aplicación de consola se realiza en unos pocos pasos.
 Los contenedores de Windows son compatibles con [Actualización de aniversario de Windows 10](https://www.microsoft.com/en-us/software-download/windows10/) o [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->Si usa Windows Server 2016, debe habilitar los contenedores de forma manual, ya que el instalador de Docker para Windows no habilitará la característica. Asegúrese de que todas las actualizaciones del sistema operativo se hayan ejecutado y luego siga las instrucciones del artículo [Implementación de host de contenedor](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment) para instalar los contenedores y las características de Docker.
+>Si usa Windows Server 2016, debe habilitar los contenedores de forma manual, ya que el instalador de Docker para Windows no habilitará la característica. Asegúrese de que todas las actualizaciones del sistema operativo se hayan ejecutado y luego siga las instrucciones del artículo [Implementación de host de contenedor](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) para instalar los contenedores y las características de Docker.
 
 Para admitir los contenedores de Windows, debe tener Docker para Windows, versión 1.12 Beta 26 o superior. De forma predeterminada, Docker habilita los contenedores basados en Linux. Cambie a los contenedores de Windows al hacer clic con el botón derecho en el icono de Docker de la bandeja del sistema y seleccionar la opción para **cambiar a contenedores de Windows**. Docker ejecutará el proceso de cambio. Es posible que sea necesario reiniciar.
 
@@ -60,7 +61,7 @@ Para admitir los contenedores de Windows, debe tener Docker para Windows, versi�
 ## <a name="building-the-application"></a>Compilación de la aplicación
 Normalmente las aplicaciones de consola se distribuyen a través de un instalador, un FTP o una implementación de recurso compartido de archivos. Al implementar en un contenedor, los activos tienen que compilarse y colocarse en una ubicación que se pueda usar una vez creada la imagen de Docker.
 
-En *build.ps1*, el script usa [MSBuild](https://msdn.microsoft.com/en-us/library/dd393574.aspx) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
+En *build.ps1*, el script usa [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
 
 En la llamada a `Invoke-MSBuild`, `OutputPath` se establece en **publish** y `Configuration` en **Release**. 
 
@@ -144,9 +145,4 @@ Para ejecutar, abra PowerShell y use el comando siguiente:
 
 ## <a name="summary"></a>Resumen
 Con solo agregar un Dockerfile y publicar la aplicación, puede colocar en contenedores las aplicaciones de consola de .NET Framework y aprovechar las ventajas que ofrece la ejecución de varias instancias, el inicio y la detención limpios y otras capacidades de Windows Server 2016 sin realizar cambio alguno en el código de las aplicaciones.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

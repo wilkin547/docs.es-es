@@ -12,10 +12,11 @@ caps.latest.revision: 7
 author: twsouthwick
 ms.author: tasou
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
 ms.openlocfilehash: 06ebf87e02c8fd745d9c2f3a55eca329323a7d91
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-compatibility-diagnostics"></a>Diagnósticos de compatibilidad de .NET
@@ -478,7 +479,7 @@ Los diagnósticos de compatibilidad de .NET son analizadores de Roslyn que ayuda
 |Ámbito|Borde|  
 |Versión|4.5|  
 |Tipo|Tiempo de ejecución|  
-|API afectadas|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|API afectadas|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |Analizadores|CD0043|  
   
 <a name="diagnostic44"></a>   

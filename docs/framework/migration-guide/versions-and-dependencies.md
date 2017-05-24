@@ -16,9 +16,10 @@ caps.latest.revision: 122
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 06ffe36615212baab646198f13c897af5f0041fc
+ms.contentlocale: es-es
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -34,7 +35,7 @@ Cada versión de .NET Framework contiene Common Language Runtime (CLR), las bibl
   
  Consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md) para obtener una lista completa de los sistemas operativos compatibles. Consulte las descargas en la [guía de instalación](../../../docs/framework/install/guide-for-developers.md). Para determinar qué versiones de .NET Framework hay instaladas en un equipo, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   
- En la tabla, las versiones de .NET Framework que están instaladas en versiones del sistema operativo marcadas con ✓ en las columnas **Incluido en/Se puede instalar en Windows** y en las columnas **Incluido en/Se puede instalar en Windows Server** deben [habilitarse en el Panel de control](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md) (en Windows) o habilitarse mediante el Administrador de servidores (en Windows Server).  
+ En la tabla, las versiones de .NET Framework que están instaladas en versiones del sistema operativo marcadas con ✓ en las columnas **Incluido en/Se puede instalar en Windows** y en las columnas **Incluido en/Se puede instalar en Windows Server**  deben [habilitarse en el Panel de control](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md) (en Windows) o habilitarse mediante el Administrador de servidores (en Windows Server).  
   
 |Versión de .NET Framework|Versión de CRL|Características|Incluido en la versión de Visual Studio|✓ Incluido en<br />+ Se puede instalar en<br />Windows|✓ Incluido en<br />+ Se puede instalar en<br />Windows Server|Para determinar la versión de .NET instalada|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 

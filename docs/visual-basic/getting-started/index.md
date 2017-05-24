@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Visual Basic | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d94b01f24ea1c45ecbf6b14ecfdf164d8b8b10c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cambios importantes de Visual Basic en Visual Studio 2015](../../visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)  
+
+[Novedades de Visual Basic](whats-new.md)   
+Aquí se enumeran las características nuevas de cada versión de Visual Basic .NET.
+
+[Cambios importantes de Visual Basic en Visual Studio ](breaking-changes-in-visual-studio.md)  
  Muestra los cambios de esta versión que podrían impedir que una aplicación se compilara o podrían cambiar su comportamiento en tiempo de ejecución.  
   
  [Recursos adicionales para programadores de Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
@@ -48,7 +53,7 @@ Esta sección de la documentación sirve como introducción al desarrollo de apl
  [Aprender Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  Proporciona vínculos a recursos para obtener información sobre cómo programar en Visual Basic.  
   
- [Obtener Visual Basic](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)  
+ [Obtener Visual Basic](https://www.visualstudio.com/downloads/)  
  Ofrece vínculos de descarga para las versiones de Visual Studio que incluyen compatibilidad con Visual Basic, incluidas las versiones gratuitas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -64,7 +69,7 @@ Esta sección de la documentación sirve como introducción al desarrollo de apl
  [Hable con nosotros](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  Explica cómo recibir asistencia y proporcionar información al servicio técnico.  
   
- [Visual Studio](http://msdn.microsoft.com/en-us/06ddebea-2c83-4a45-bb48-6264c797ed93)  
+ [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  Proporciona vínculos a la documentación de [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
   
  [C#](../../csharp/csharp.md)  

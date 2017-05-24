@@ -1,34 +1,55 @@
 ---
-title: "Instrucciones, expresiones y operadores (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lenguaje C#, expresiones"
-  - "lenguaje C#, operadores"
-  - "lenguaje C#, instrucciones"
-  - "expresiones [C#]"
-  - "operadores [C#]"
-  - "instrucciones [C#]"
+title: "Instrucciones, expresiones y operadores (Guía de programación de C#)| Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- expressions [C#]
+- operators [C#]
+- C# language, statements
+- C# language, operators
+- C# language, expressions
+- statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 caps.latest.revision: 22
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 22
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d7c648786e7f507fe2ca58ffd2480da6b204aafa
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
+
 ---
-# Instrucciones, expresiones y operadores (Gu&#237;a de programaci&#243;n de C#)
-El código de C\# que comprende una aplicación consta de instrucciones que comprenden palabras clave, expresiones y operadores.  Esta sección contiene información con respecto a estos elementos fundamentales que constituyen un programa de C\#.  
+# <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrucciones, expresiones y operadores (Guía de programación de C#)
+El código de C# que conforma una aplicación consta de instrucciones basadas en palabras clave, expresiones y operadores. Esta sección contiene información sobre los elementos fundamentales de un programa de C#.  
   
- Para obtener más información, vea:  
+ Para obtener más información, consulte:  
   
 -   [Instrucciones](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
   
 -   [Expresiones](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
+    -   [Miembros con forma de expresión](expression-bodied-members.md)
+ 
 -   [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 -   [Funciones anónimas](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
@@ -45,9 +66,9 @@ El código de C\# que comprende una aplicación consta de instrucciones que comp
   
 -   [Comparaciones de igualdad](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Conversiones de tipos](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

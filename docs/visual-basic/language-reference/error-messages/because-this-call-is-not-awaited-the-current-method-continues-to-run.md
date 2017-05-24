@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -102,13 +103,11 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
         Await Task.Delay(howLong)  
         ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."  
     End Function  
-  
     ```  
   
      En el ejemplo, si elige Call #1 o Call #2, el método asincrónico no esperado (`CalledMethodAsync`) termina después de que se completen su llamador (`CallingMethodAsync`) y el llamador del llamador (`StartButton_Click`). La última línea de la salida siguiente muestra cuándo finaliza el método llamado. La entrada y la salida del controlador de eventos que llama a `CallingMethodAsync` en el ejemplo completo se marcan en la salida.  
   
     ```  
-  
     Entering the Click event handler.  
       Entering calling method.  
         Entering called method, starting and awaiting Task.Delay.  
@@ -138,7 +137,6 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
             <TextBox x:Name="ResultsTextBox" Margin="0,80,0,0" TextWrapping="Wrap" FontFamily="Lucida Console"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
      En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un botón y un cuadro de texto.  
@@ -148,7 +146,6 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
 4.  Reemplace el código en el archivo MainWindow.xaml.vb por el código siguiente.  
   
     ```vb  
-  
     Class MainWindow   
   
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -233,3 +230,4 @@ Dado que no se esperaba esta llamada, la ejecución del método actual continuar
 ## <a name="see-also"></a>Vea también  
  [Await (operador)](../../../visual-basic/language-reference/operators/await-operator.md)   
  [Programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+

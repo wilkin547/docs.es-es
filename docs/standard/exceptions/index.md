@@ -2,11 +2,10 @@
 title: Controlar y generar excepciones | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-4.6
+ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,113 +21,62 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: c3b47e61da914ebbe1106fcf45465a13b0521bb4
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c8c5962db342dba6ff22c409d145af5e628eed3d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 ---
-# <a name="handling-and-throwing-exceptions"></a>Controlar y generar excepciones
-<a name="top"></a> Las aplicaciones tienen que ser capaces de controlar de forma coherente los errores que se producen durante la ejecución. Common Language Runtime proporciona un modelo uniforme de notificación de errores a las a las aplicaciones. Todas las operaciones de .NET Framework indican un error iniciando excepciones.  
-  
- Este tema contiene las siguientes secciones:  
-  
--   [Excepciones en .NET Framework](#exceptions_in_the_net_framework)  
-  
--   [Excepciones vs. métodos tradicionales de control de errores](#exceptions_vs_traditional_errorhandling_methods)  
-  
--   [Cómo administra las excepciones el runtime](#how_the_runtime_manages_exceptions)  
-  
--   [Filtrar excepciones de runtime](#filtering_runtime_exceptions)  
-  
--   [Temas relacionados](#related_topics)  
-  
--   [Referencia](#reference)  
-  
-<a name="exceptions_in_the_net_framework"></a>   
-## <a name="exceptions-in-the-net-framework"></a>Excepciones en .NET Framework  
- Una excepción es cualquier condición de error o comportamiento inesperado que encuentra un programa en ejecución. Las excepciones pueden generarse debido a un error en el código propio o en el código al que se llama (por ejemplo, una biblioteca compartida), a recursos del sistema operativo no disponibles, a condiciones inesperadas que encuentra el Common Language Runtime (por ejemplo, imposibilidad de comprobar el código), etc. La aplicación puede recuperarse de algunas de estas condiciones, pero no de todas. Aunque es posible recuperarse de la mayoría de las excepciones que se producen en la aplicación, no ocurre lo mismo con las excepciones de runtime.  
-  
- En .NET Framework, una excepción es un objeto que hereda de la clase <xref:System.Exception?displayProperty=fullName>. Una excepción se inicia desde un área del código en la que ha producido un problema. La excepción se pasa hacia arriba en la pila hasta que la aplicación la controla o el programa finaliza.  
-  
- [Volver al principio](#top)  
-  
-<a name="exceptions_vs_traditional_errorhandling_methods"></a>   
-## <a name="exceptions-vs-traditional-error-handling-methods"></a>Excepciones vs. métodos tradicionales de control de errores  
- Tradicionalmente, el modelo de control de errores de un lenguaje se basaba en el modo exclusivo del lenguaje de detectar los errores y buscarles controladores, o bien en el mecanismo de control de errores ofrecido por el sistema operativo. El runtime implementa control de excepciones con las características siguientes:  
-  
--   Controla las excepciones independientemente del lenguaje que genera o controla la excepción.  
-  
--   No requiere ninguna sintaxis de lenguaje específica para controlar las excepciones, pero permite que cada lenguaje defina su propia sintaxis.  
-  
--   Permite que las excepciones se inicien en varios procesos en incluso límites de máquina.  
-  
- Las excepciones ofrecen varias ventajas sobre otros métodos de notificación de errores, por ejemplo, los códigos de retorno; los errores no pasan desapercibidos; los valores no válidos no continúan propagándose por el sistema; no es necesario comprobar los códigos de retorno; se puede agregar fácilmente el código de control de excepciones para aumentar la confiabilidad del programa; por último, el control de excepciones del runtime es más rápido que el control de errores de C++ basado en Windows.  
-  
- Dado que los subprocesos de ejecución recorren de forma rutinaria bloques de código administrado y no administrado, el runtime pueden iniciar o detectar las excepciones tanto en código administrado como no administrado. El código no administrado puede incluir excepciones SEH de tipo C++ y HRESULTS basados en COM.  
-  
-<a name="how_the_runtime_manages_exceptions"></a>   
-## <a name="how-the-runtime-manages-exceptions"></a>Cómo administra las excepciones el runtime  
- El runtime usa un modelo de control de excepciones basado en objetos de excepción y bloques protegidos de código. Para representar una excepción cuando se produce, se crea un objeto <xref:System.Exception>.  
-  
- El runtime crea una tabla de información de excepciones para cada ejecutable. Cada método del ejecutable tiene una matriz asociada de información de control de excepciones (que puede estar vacía) en la tabla de información de excepciones. Cada entrada de la matriz describe un bloque protegido de código, los filtros de excepción asociados a ese código y los controladores de excepción (instrucciones `catch`). Esta tabla de excepciones es muy eficiente y no penaliza el rendimiento en el tiempo de procesador ni en el uso de memoria cuando no se producen excepciones. Los recursos solo se usan cuando se produce una excepción.  
-  
- La tabla de información de excepciones representa cuatro tipos de controladores de excepciones para los bloques protegidos:  
-  
--   Un controlador `finally` que se ejecuta cada vez que se cierra el bloque, tanto si se cierra por flujo de control normal o debido a una excepción no controlada.  
-  
--   Un controlador de errores que debe ejecutarse si se produce una excepción, pero que no se ejecuta al finalizar el flujo de control normal.  
-  
--   Un controlador filtrado por tipo que controla las excepciones de una clase especificada o de cualquiera de sus clases derivadas.  
-  
--   Un controlador filtrado por usuario que ejecuta código especificado por el usuario y determina si la excepción debe controlarse con el controlador asociado o debe pasarse al siguiente bloque protegido.  
-  
- Cada lenguaje implementa estos controladores de excepción según sus especificaciones. Por ejemplo, Visual Basic proporciona acceso al controlador filtrado por usuario mediante una comparación de variables (con la palabra clave `When`) en la instrucción `catch`; C# no implementa el controlador filtrado por usuario.  
-  
- Cuando se produce una excepción, el runtime inicia un proceso de dos pasos:  
-  
-1.  El runtime busca la matriz del primer bloque protegido que realiza lo siguiente:  
-  
-    -   Protege una región que contiene la instrucción que se está ejecutando actualmente.  
-  
-    -   Contiene un controlador de excepciones o un filtro que controla la excepción.  
-  
-2.  Si se produce una coincidencia, el runtime crea un objeto <xref:System.Exception> que describe la excepción. A continuación, el runtime ejecuta todas las instrucciones `finally` o las instrucciones de error entre la instrucción donde se produjo la excepción y la instrucción que la controla. Tenga en cuenta que el orden de los controladores de excepciones es importante; el controlador de excepciones más interno es el que se evalúa primero. Observe también que los controladores de excepciones pueden tener acceso a las variables locales y a la memoria local de la rutina que detecta la excepción; sin embargo, se pierden los valores intermedios en el momento en que se inicia la excepción.  
-  
-     Si no hay ninguna coincidencia en el método actual, el runtime explora todos los llamadores del método actual y sigue esta ruta de acceso en dirección ascendente por la pila. Si ningún llamador tiene una coincidencia, el runtime permite que el depurador tenga acceso a la excepción. Si el depurador no se asocia a la excepción, el runtime genera el evento <xref:System.AppDomain.UnhandledException?displayProperty=fullName>. Si no hay ningún agente de escucha para este evento, el runtime vuelca un seguimiento de pila y finaliza la aplicación.  
-  
- [Volver al principio](#top)  
-  
-<a name="filtering_runtime_exceptions"></a>   
-## <a name="filtering-runtime-exceptions"></a>Filtrar excepciones de runtime  
- Puede filtrar las excepciones que detecte y controle por tipo o según los criterios definidos por el usuario.  
-  
- Los controladores filtrados por tipo administran un tipo concreto de excepción (o de sus clases derivadas). En el ejemplo siguiente se muestra un controlador filtrado por tipo que está diseñado para detectar una excepción concreta, que en este caso es <xref:System.IO.FileNotFoundException>.  
-  
- [!code-cpp[CatchException#5](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception3.cpp#5)]
- [!code-csharp[CatchException#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception3.cs#5)]
- [!code-vb[CatchException#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CatchException/VB/catchexception3.vb#5)]  
-  
- Los controladores de excepciones filtradas por usuario detectan y controlan las excepciones en función de los requisitos que se definen para la excepción. Para más información sobre cómo filtrar excepciones de este modo, consulte el artículo sobre el [uso de excepciones específicas en un bloque Catch](../../../docs/standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md).  
-  
- [Volver al principio](#top)  
-  
-<a name="related_topics"></a>   
-## <a name="related-topics"></a>Temas relacionados  
-  
-|Título|Descripción|  
-|-----------|-----------------|  
-|[Clase Exception y propiedades](../../../docs/standard/exceptions/exception-class-and-properties.md)|Describe los elementos de un objeto de excepción.|  
-|[Jerarquía de excepciones](../../../docs/standard/exceptions/exception-hierarchy.md)|Describe las excepciones de las que derivan la mayoría de las excepciones.|  
-|[Fundamentos del control de excepciones](../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Explica cómo controlar excepciones mediante instrucciones catch, throw y finally.|  
-|[Procedimientos recomendados para excepciones](../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Describe los métodos sugeridos para controlar excepciones.|  
-|[Controlar excepciones de interoperabilidad COM](../../../docs/standard/exceptions/handling-com-interop-exceptions.md)|Describe cómo controlar las excepciones iniciadas y detectadas en código no administrado.|  
-|[Asignar resultados HRESULT y excepciones](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Describe la asignación de excepciones entre código administrado y no administrado.|  
-  
-<a name="reference"></a>   
-## <a name="reference"></a>Referencia  
- <xref:System.Exception?displayProperty=fullName>  
-  
- <xref:System.ApplicationException?displayProperty=fullName>  
-  
- <xref:System.SystemException?displayProperty=fullName>
+# <a name="handling-and-throwing-exceptions-in-net"></a>Controlar y generar excepciones en .NET
+
+Las aplicaciones tienen que ser capaces de controlar de forma coherente los errores que se producen durante la ejecución. .NET proporciona un modelo para notificar errores a las aplicaciones de manera uniforme: las operaciones .NET indican errores iniciando excepciones.
+
+## <a name="exceptions"></a>Excepciones
+
+Una excepción es cualquier condición de error o comportamiento inesperado que encuentra un programa en ejecución. Las excepciones pueden iniciarse debido a un error en el código propio o en el código al que se llama (por ejemplo, una biblioteca compartida), a recursos del sistema operativo no disponibles, a condiciones inesperadas que encuentra el runtime (por ejemplo, imposibilidad de comprobar el código), etc. La aplicación puede recuperarse de algunas de estas condiciones, pero no de todas. Aunque es posible recuperarse de la mayoría de las excepciones que se producen en la aplicación, no ocurre lo mismo con las excepciones de runtime.
+
+En .NET, una excepción es un objeto que hereda de la clase [System.Exception](xref:System.Exception). Una excepción se inicia desde un área del código en la que ha producido un problema. La excepción se pasa hacia arriba en la pila hasta que la aplicación la controla o el programa finaliza.
+
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Excepciones vs. métodos tradicionales de control de errores
+
+Tradicionalmente, el modelo de control de errores de un lenguaje se basaba en el modo exclusivo del lenguaje de detectar los errores y buscarles controladores, o bien en el mecanismo de control de errores ofrecido por el sistema operativo. La forma en que .NET implementa el control de excepciones proporciona las siguientes ventajas:
+
+- La administración e iniciación de excepciones funciona de igual modo para los lenguajes de programación. NET.
+
+- No requiere ninguna sintaxis de lenguaje específica para controlar las excepciones, pero permite que cada lenguaje defina su propia sintaxis.
+
+- Las excepciones pueden iniciarse en varios procesos en incluso límites de máquina.
+
+- Se puede agregar el código de control de excepciones a una aplicación para aumentar la confiabilidad del programa.
+
+Las excepciones ofrecen ventajas sobre otros métodos de notificación de errores, por ejemplo, los códigos de retorno. Lo errores no pasan desapercibidos porque si se inicia una excepción y no la controla, el runtime finaliza la aplicación. Los valores no válidos no continúan propagándose por el sistema como resultado de que el código no pueda encontrar un código de retorno de error. 
+
+## <a name="common-exceptions"></a>Excepciones comunes
+
+En la tabla siguiente se muestra algunas excepciones comunes con ejemplos de las causas que las originan.
+
+| Tipo de excepción | Tipo base | Descripción | Ejemplo |
+| -------------- | --------- | ----------- | ------- |
+| @System.Exception | @System.Object | Clase base de todas las excepciones. | Ninguno (utilice una clase derivada de esta excepción). |
+| @System.IndexOutOfRangeException | @System.Exception | El tiempo de ejecución la genera solo cuando una matriz no está correctamente indexada. | La indexación de una matriz fuera de su intervalo válido: `arr[arr.Length+1]` |
+| @System.NullReferenceException | @System.Exception | El tiempo de ejecución la genera solo cuando se hace referencia a un objeto null. | `object o = null; o.ToString();` |
+| @System.InvalidOperationException | @System.Exception | Los métodos la generan si se produce un estado no válido. | Llamada a `Enumerator.GetNext()` después de quitar un elemento de la colección subyacente. |
+| @System.ArgumentException | @System.Exception | Clase base de todas las excepciones de argumento. | Ninguno (utilice una clase derivada de esta excepción). |
+| @System.ArgumentNullException | @System.Exception | Los métodos que no permiten que un argumento sea null la generan. | `String s = null; "Calculate".IndexOf (s);` |
+| @System.ArgumentOutOfRangeException | @System.Exception | Los métodos que comprueban que los argumentos se encuentran en un intervalo determinado la generan. | `String s = "string"; s.Substring(s.Length+1);` |
+
+## <a name="see-also"></a>Vea también
+
+* [Clase Exception y propiedades](exception-class-and-properties.md)
+* [Utilizar el bloque Try/Catch para detectar excepciones](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+* [Cómo: Utilizar excepciones específicas en un bloque Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+* [Cómo: Iniciar excepciones explícitamente](how-to-explicitly-throw-exceptions.md)
+* [Cómo crear excepciones definidas por el usuario](how-to-create-user-defined-exceptions.md)
+* [Utilizar controladores de excepciones filtradas por el usuario](using-user-filtered-exception-handlers.md)
+* [Utilizar bloques Finally](how-to-use-finally-blocks.md)
+* [Controlar excepciones de interoperabilidad COM](handling-com-interop-exceptions.md)
+* [Procedimientos recomendados para excepciones](best-practices-for-exceptions.md)
+
+Para obtener más información acerca de cómo funcionan las excepciones en. NET, consulte [Qué deben saber los desarrolladores sobre las excepciones en runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
+

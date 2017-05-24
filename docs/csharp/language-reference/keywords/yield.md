@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ac24019390be8501e32b944fb1f9527636815eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.contentlocale: es-es
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="yield-c-reference"></a>yield (Referencia de C#)
@@ -41,7 +42,11 @@ Cuando se usa la palabra clave `yield` en una instrucción, se indica que el mé
   
  En el ejemplo siguiente se muestran las dos formas de la instrucción `yield`.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+yield return <expression>;  
+yield break;  
+```  
+  
 ## <a name="remarks"></a>Comentarios  
  Utilice una instrucción `yield return` para devolver cada elemento de uno en uno.  
   
@@ -76,7 +81,14 @@ Cuando se usa la palabra clave `yield` en una instrucción, se indica que el mé
 ## <a name="technical-implementation"></a>Implementación técnica  
  El código siguiente devuelve un valor `IEnumerable<string>` desde un método iterador y, a continuación, recorre sus elementos en iteración.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<string> elements = MyIteratorMethod();  
+foreach (string element in elements)  
+{  
+   ...  
+}  
+```  
+  
  La llamada a `MyIteratorMethod` no ejecuta el cuerpo del método. En su lugar, la llamada devuelve un valor `IEnumerable<string>` en la variable `elements`.  
   
  En una iteración del bucle `foreach`, se llama al método <xref:System.Collections.IEnumerator.MoveNext%2A> para `elements`. Esta llamada ejecuta el cuerpo de `MyIteratorMethod` hasta que se alcanza la siguiente instrucción `yield return`. La expresión devuelta por la instrucción `yield return` determina no solo el valor de la variable `element` para que la use el cuerpo del bucle, sino también la propiedad <xref:System.Collections.Generic.IEnumerator%601.Current%2A> de los elementos, que es un valor `IEnumerable<string>`.  

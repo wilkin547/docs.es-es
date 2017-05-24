@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5c3012ce057387497f97e713eb625ac2f2a7d1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
+ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.contentlocale: es-es
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="c-reference"></a>Referencia de C#
@@ -64,9 +65,10 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  Ofrece punteros a la versión más reciente de la especificación de lenguaje de C# en formato Microsoft Word.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Preguntas más frecuentes de C#](http://go.microsoft.com/fwlink/?LinkId=70367)  
- Ofrece una lista creciente preguntas más frecuentes de C# en el Centro para desarrolladores de C#.  
-  
+<!--
+ [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
+ Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
+-->  
  [Artículos de KB de C# en Microsoft Knowledge Base](http://go.microsoft.com/fwlink/?LinkId=70368)  
  Abre una página de búsqueda de Microsoft para los artículos de Knowledge Base que están disponibles en MSDN.  
   
@@ -78,3 +80,4 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
   
  [Guía de programación de C#](../../csharp/programming-guide/index.md)  
  Incluye información sobre cómo usar el lenguaje de programación de C#.
+

@@ -28,20 +28,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfd3c08f69461d65140ef948672774a7435c326d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: a2c5986dfb9ed4f80e15e8e3ddf061ef858a1e93
+ms.contentlocale: es-es
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introducción al lenguaje C# y .NET Framework
 C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos, que permite a los desarrolladores crear una gran variedad de aplicaciones seguras y sólidas que se ejecutan en [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] .NET. Puede usar C# para crear aplicaciones cliente de Windows, servicios web XML, componentes distribuidos, aplicaciones cliente-servidor, aplicaciones de base de datos y muchas, muchas más cosas. Visual C# proporciona un editor de código avanzado, prácticos diseñadores de interfaz de usuario, un depurador integrado y muchas otras herramientas que facilitan el desarrollo de aplicaciones basadas en el lenguaje C# y [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)].  
   
 > [!NOTE]
->  En la documentación de [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] se supone que comprende los conceptos básicos de programación. Si es un principiante, puede que desee explorar [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)], que está disponible en la Web. También puede aprovechar los libros y recursos web sobre C# para aprender sobre habilidades prácticas de programación.  
+> En la documentación de [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] se supone que comprende los conceptos básicos de programación. Si es un principiante, puede que desee explorar [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)], que está disponible en la Web. También puede aprovechar los libros y recursos web sobre C# para aprender sobre habilidades prácticas de programación.  
   
 ## <a name="c-language"></a>Lenguaje C#  
- La sintaxis de C# es muy expresiva, pero también sencilla y fácil de aprender. Cualquier persona familiarizada con C, C** o Java, reconocerá al instante la sintaxis de llaves de C#. Los desarrolladores que conocen cualquiera de estos lenguajes puede empezar normalmente a trabajar en C# de forma productiva en un espacio muy corto de tiempo. La sintaxis de C# simplifica muchas de las complejidades de C++ y proporciona características eficaces, como tipos de valor que aceptan valores NULL, enumeraciones, delegados, expresiones lambda y acceso directo a memoria, que no se encuentran en Java. C# admite métodos y tipo genéricos, que proporcionan una mayor seguridad de tipos y rendimiento, e iteradores, que permiten a los implementadores de clases de colecciones definir comportamientos de iteración personalizados que son fáciles de usar por el código de cliente. Las expresiones [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)] convierten la consulta fuertemente tipada en una construcción de lenguaje de primera clase.  
+ La sintaxis de C# es muy expresiva, pero también sencilla y fácil de aprender. Cualquier persona familiarizada con C, C++ o Java, reconocerá al instante la sintaxis de llaves de C#. Los desarrolladores que conocen cualquiera de estos lenguajes puede empezar normalmente a trabajar en C# de forma productiva en un espacio muy corto de tiempo. La sintaxis de C# simplifica muchas de las complejidades de C++ y proporciona características eficaces, como tipos de valor que aceptan valores NULL, enumeraciones, delegados, expresiones lambda y acceso directo a memoria, que no se encuentran en Java. C# admite métodos y tipo genéricos, que proporcionan una mayor seguridad de tipos y rendimiento, e iteradores, que permiten a los implementadores de clases de colecciones definir comportamientos de iteración personalizados que son fáciles de usar por el código de cliente. Las expresiones [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)] convierten la consulta fuertemente tipada en una construcción de lenguaje de primera clase.  
   
  En cuanto lenguaje orientado a objetos, C# admite los conceptos de encapsulación, herencia y polimorfismo. Todas las variables y métodos, incluido el método `Main`, el punto de entrada de la aplicación, se encapsulan dentro de las definiciones de clase. Una clase puede heredar directamente de una clase primaria, pero puede implementar cualquier número de interfaces. Los métodos que invalidan los métodos virtuales en una clase primaria requieren la palabra clave `override` como una manera de evitar redefiniciones accidentales. En C#, un struct es como una clase sencilla; es un tipo asignado en la pila que puede implementar interfaces pero que no admite herencia.  
   
@@ -85,15 +86,6 @@ C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos, que pe
  Además de los servicios de tiempo de ejecución, [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] también incluye una amplia biblioteca de más de 4000 clases organizadas en espacios de nombres que proporcionan una gran variedad de funciones útiles para todo, desde la entrada y la salida de archivos, pasando por la manipulación de cadenas para el análisis XML, hasta controles de formularios Windows Forms. La aplicación de C# típica usa la biblioteca de clases [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] de forma extensa para administrar tareas comunes de infraestructura.  
   
  Para más información sobre .NET Framework, consulte [Introducción a Microsoft .NET Framework](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355).  
-  
-## <a name="featured-book-chapters"></a>Capítulos destacados del libro  
- [C# Language Fundamentals](http://go.microsoft.com/fwlink/?LinkId=195416) (Fundamentos del lenguaje C#) en [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) (Aprendizaje de C# 3.0: dominar los fundamentos de C# 3.0)  
-  
- [C# and .NET Programming](http://go.microsoft.com/fwlink/?LinkId=195413) (Programación de C# y .NET) en [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) (Aprendizaje de C# 3.0: dominar los fundamentos de C# 3.0)  
-  
- [Introducing C#](http://go.microsoft.com/fwlink/?LinkId=221226) (Introducción a C#) en [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) (Comenzar con Visual C# 2010)  
-  
- [Visual Studio 2008 and C# Express 2008](http://go.microsoft.com/fwlink/?LinkId=195414) (Visual Studio 2008 y C# Express 2008) en [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412) (Aprendizaje de C# 3.0: dominar los fundamentos de C# 3.0)  
   
 ## <a name="see-also"></a>Vea también  
  [C#](../../csharp/csharp.md)   

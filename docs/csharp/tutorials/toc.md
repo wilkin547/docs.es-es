@@ -1,10 +1,9 @@
 # [Tutoriales](index.md)
-## [🔧 Utilización de Visual Studio para crear, depurar e implementar una aplicación](create-debug-deploy.md)
-## [🔧 Utilización de C# interactivo para explorar y experimentar](exploring-with-csharp-interactive.md)
-## [🔧 Creación de bibliotecas portátiles](creating-portable-libraries.md)
-## [🔧 Programación asincrónica de la interfaz de usuario](asynchronous-ui-programming.md)
-## [🔧 Programación asincrónica del servidor](asynchronous-server-programming.md)
-## [🔧 Programación simultánea](concurrent-programming.md)
+<!--## [🔧 Using C# Interactive to explore and experiment](exploring-with-csharp-interactive.md)-->
+<!--## [🔧 Creating portable libraries](creating-portable-libraries.md)-->
+<!--## [🔧 Asynchronous UI programming](asynchronous-ui-programming.md)-->
+<!--## [🔧 Asynchronous server programming](asynchronous-server-programming.md)-->
+<!--## [🔧 Concurrent programming](concurrent-programming.md)-->
 ## [Herencia en C# y .NET](inheritance.md)
 ## [Aplicación de consola](console-teleprompter.md)
 ## [Cliente REST](console-webapiclient.md)

@@ -14,17 +14,18 @@ ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a47129d3c84d7bfb49929529a50b064c8424b4c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: bcd325d72ac14f2b33860fbc9e2662c33ca2703d
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Cómo: Encadenar llamadas de métodos de eje (LINQ to XML) (C#)
 Un patrón común que puede utilizar en el código consiste en llamar a un método Axis y, después, llamar a uno de los métodos de extensión Axes.  
   
- Hay dos ejes con el nombre de `Elements` que devuelven una colección de elementos: el método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> y el método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>. Puede combinar estos dos ejes para encontrar todos los elementos de un nombre especificado en una profundidad determinada del árbol.  
+ Hay dos métodos Axes con el nombre `Elements` que devuelven una colección de elementos: el método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> y el método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>. Puede combinar estos dos ejes para encontrar todos los elementos de un nombre especificado en una profundidad determinada del árbol.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> y <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> para buscar todos los elementos `Name` en todos los elementos `Address` de todos los elementos `PurchaseOrder`.  
@@ -54,7 +55,7 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- Esto funciona porque una de las implementaciones del eje `Elements` es un método de extensión de <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XContainer>. <xref:System.Xml.Linq.XElement> se deriva de <xref:System.Xml.Linq.XContainer>, por lo que puede llamar al método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> en los resultados de una llamada al método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>.  
+ Esto funciona porque una de las implementaciones del eje `Elements` es un método de extensión en <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XContainer>. <xref:System.Xml.Linq.XElement> se deriva de <xref:System.Xml.Linq.XContainer>, de modo que puede llamar al método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> según los resultados de una llamada al método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>.  
   
 ## <a name="example"></a>Ejemplo  
  A veces, desea recuperar todos los elementos de una profundidad determinada cuando es posible que intervengan (o no) antecesores. Por ejemplo, en el siguiente documento, podría recuperar todos los elementos `ConfigParameter` que son secundarios del elemento `Customer`, pero no el elemento `ConfigParameter` que es un secundario del elemento `Root`.  
@@ -81,7 +82,7 @@ foreach (XElement e in names)
 </Root>  
 ```  
   
- Para ello, puede usar el eje <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> del siguiente modo:  
+ Para ello, puede usar el eje <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> de la siguiente manera:  
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  

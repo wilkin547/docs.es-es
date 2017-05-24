@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -30,10 +31,8 @@ ms.lasthandoff: 03/13/2017
 Cuando se utiliza LINQ a consultas no genérica <xref:System.Collections.IEnumerable>colecciones como <xref:System.Collections.ArrayList>, debe declarar explícitamente el tipo de la variable de rango para reflejar el tipo específico de los objetos de la colección.</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> Por ejemplo, si tiene un <xref:System.Collections.ArrayList>de `Student` objetos, su [cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md) debería tener este aspecto:</xref:System.Collections.ArrayList>  
   
 ```  
-  
 Dim query = From student As Student In arrList   
 ...  
-  
 ```  
   
  Al especificar el tipo de la variable de rango, convierte cada elemento de la <xref:System.Collections.ArrayList>a una `Student`.</xref:System.Collections.ArrayList>  
@@ -97,3 +96,4 @@ End Module
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+

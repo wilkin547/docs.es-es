@@ -34,9 +34,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,7 @@ catch (InvalidCastException e)
  La utilización de los argumentos `catch` es una manera de filtrar las excepciones que desea controlar.  También puede utilizar una expresión de predicado que examine aún más la excepción para decidir si controlarla.  Si la expresión de predicado devuelve false, prosigue la búsqueda de un controlador.  
   
 ```csharp  
-catch (ArgumentException e) when (e.ParamName == “…”)  
+catch (ArgumentException e) when (e.ParamName == "…")  
 {  
 }  
 ```  
@@ -87,7 +88,7 @@ catch (IOException e)
 {  
     // Extract some information from this exception, and then   
     // throw it to the parent method.  
-    whenDo not initialize (e.Source != null)  
+    if (e.Source != null)  
         Console.WriteLine("IOException source: {0}", e.Source);  
     throw;  
 }  
@@ -106,7 +107,6 @@ catch (InvalidCastException e)
  También se puede volver a producir una excepción sin una condición específica es true, tal y como se muestra en el ejemplo siguiente.  
   
 ```csharp  
-  
 catch (InvalidCastException e)  
 {  
     if (e.Data == null)  
@@ -194,3 +194,4 @@ static void Main()
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [Cómo: Iniciar excepciones explícitamente](https://msdn.microsoft.com/library/xhcbs8fz)
+

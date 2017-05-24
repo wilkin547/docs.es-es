@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: afedd3d99aea9f73d175fd2957a7d586ebce6d72
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,6 @@ La palabra clave `unsafe` denota un contexto no seguro, que es necesario para re
  Puede usar el codificador `unsafe` en la declaración de un tipo o miembro. Por consiguiente, toda la extensión textual del tipo o miembro se considera un contexto no seguro. Por ejemplo, el siguiente método se declara con el modificador `unsafe`:  
   
 ```  
-  
       unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
 {  
     // Unsafe context: can use pointers here.  
@@ -52,14 +52,12 @@ La palabra clave `unsafe` denota un contexto no seguro, que es necesario para re
  El ámbito del contexto no seguro se extiende desde la lista de parámetros hasta el final del método, por lo que también pueden usarse punteros en la lista de parámetros:  
   
 ```  
-  
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
 ```  
   
  También puede usarse un bloque no seguro para habilitar el uso de código no seguro en el bloque. Por ejemplo:  
   
 ```  
-  
       unsafe  
 {  
     // Unsafe context: can use pointers here.  
@@ -81,3 +79,4 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  [fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md)  (fixed [Instrucción, Referencia de C#])  
  [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  (Código no seguro y punteros [Guía de programación de C#])  
  [Búferes de tamaño fijo](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+

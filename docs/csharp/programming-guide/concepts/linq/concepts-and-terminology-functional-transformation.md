@@ -14,10 +14,11 @@ ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3e4ff1807605164afc95eaebf37a131d9dddb79c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 87a8efd8e8631ac200a95069f889d6756cbd5a4a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -48,7 +49,7 @@ Este tema presenta los conceptos y la terminología en relación con las transfo
  Para obtener más información sobre la programación funcional, consulte [Functional Programming vs. Imperative Programming (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md) (Diferencias entre la programación funcional y la programación imperativa [C#]).  
   
 #### <a name="domain-specific-fp-languages"></a>Lenguajes de programación funcionales para ciertos campos  
- Aunque todavía no se han adoptado mayoritariamente los lenguajes de programación funcionales, sí han tenido más éxito los lenguajes de programación funcionales específicos para ciertos campos. Por ejemplo, las hojas de estilos en cascada (CSS) se utilizan para definir la apariencia de numerosas paginas web y las hojas de estilos del Lenguaje de transformación basado en hojas de estilo (XSLT) se utilizan muy a menudo para la manipulación de datos XML. Para obtener más información sobre XSLT, consulte [XSLT Transformations](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03) (Transformaciones XSLT).  
+ Aunque todavía no se han adoptado mayoritariamente los lenguajes de programación funcionales, sí han tenido más éxito los lenguajes de programación funcionales específicos para ciertos campos. Por ejemplo, las hojas de estilos en cascada (CSS) se utilizan para definir la apariencia de numerosas paginas web y las hojas de estilos del Lenguaje de transformación basado en hojas de estilo (XSLT) se utilizan muy a menudo para la manipulación de datos XML. Para obtener más información sobre XSLT, consulte [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md) (Transformaciones XSLT).  
   
 ## <a name="terminology"></a>Terminología  
  La siguiente tabla define algunos términos relacionados con las transformaciones funcionales.  
@@ -64,7 +65,7 @@ Este tema presenta los conceptos y la terminología en relación con las transfo
  Para obtener más información, consulte [Lambda Expressions](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) (Expresiones lambda).  
   
  colección  
- Conjunto de datos estructurados, normalmente del mismo tipo. Para ser compatibles con LINQ, las colecciones deben implementar la interfaz <xref:System.Collections.IEnumerable> o <xref:System.Linq.IQueryable> (o una de sus equivalentes genéricas, <xref:System.Collections.Generic.IEnumerator%601> o <xref:System.Linq.IQueryable%601>).  
+ Conjunto de datos estructurados, normalmente del mismo tipo. Para que una colección sea compatible con LINQ, ésta debe implementar la interfaz <xref:System.Collections.IEnumerable> o la interfaz <xref:System.Linq.IQueryable> (o una de sus equivalentes genéricas), <xref:System.Collections.Generic.IEnumerator%601> o <xref:System.Linq.IQueryable%601>).  
   
  Tupla (tipos anónimos)  
  Se trata de un concepto matemático: una tupa es una secuencia finita de objetos, cada uno de los cuales es de un tipo específico. A las tuplas también se las conoce como listas ordenadas. Los tipos anónimos son una implementación del lenguaje para este concepto, lo que permite declarar un tipo de clase sin nombre e instanciar un objeto de este tipo al mismo tiempo.  
