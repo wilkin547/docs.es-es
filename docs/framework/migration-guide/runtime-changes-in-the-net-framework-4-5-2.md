@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 247fbf574f13985fc941f252c0a6e7268194c079
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-452"></a>Cambios en tiempo de ejecución en .NET Framework 4.5.2
@@ -32,7 +33,7 @@ En casos poco frecuentes, los cambios en tiempo de ejecución pueden afectar a l
   
 |Característica|Cambio|Impacto|Ámbito|  
 |-------------|------------|------------|-----------|  
-|Atributo `enableViewStateMac` del [elemento de páginas](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458)|ASP.NET ya no permite a los desarrolladores especificar:<br /><br /> `<pages enableViewStateMac="false" />`<br /><br /> O bien<br /><br /> `<@Page EnableViewStateMac="false" %>`|El código de autenticación de mensajes (MAC) de estado de vista ahora es obligatorio para todas las solicitudes con estado de vista integrado. Solo afecta a aquellas aplicaciones en las que la propiedad <xref:System.Web.UI.Page.EnableViewStateMac%2A> esté establecida específicamente como `false`.<br /><br /> Para obtener más información, consulte [Resolución de errores de código de autenticación de mensajes (MAC) del estado de la vista](http://support.microsoft.com/kb/2915218).|Major|  
+|Atributo `enableViewStateMac` del [elemento de páginas](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458)|ASP.NET ya no permite a los desarrolladores especificar:<br /><br /> `<pages enableViewStateMac="false" />`<br /><br /> O bien<br /><br /> `<@Page EnableViewStateMac="false" %>`|El código de autenticación de mensajes (MAC) de estado de vista ahora es obligatorio para todas las solicitudes con estado de vista integrado. Esto solo afecta a las aplicaciones que establecen de manera explícita la propiedad <xref:System.Web.UI.Page.EnableViewStateMac%2A> en `false`.<br /><br /> Para obtener más información, consulte [Resolución de errores de código de autenticación de mensajes (MAC) del estado de la vista](http://support.microsoft.com/kb/2915218).|Major|  
   
 <a name="EF"></a>   
 ## <a name="entity-framework-runtime-changes"></a>Cambios en tiempo de ejecución de Entity Framework  
