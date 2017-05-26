@@ -1,25 +1,44 @@
 ---
 title: Bienvenido a .NET
-description: "Introducción"
-keywords: .NET
+description: "Introducción a la familia de tecnologías .NET."
+keywords: ".NET, .NET Core, introducción, noticias"
 author: richlander
 ms.author: mairaw
-ms.date: 10/12/2016
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
-ms.openlocfilehash: b29e40d96d5e22ee60e2cd6c88ce438269742a5f
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 315b24896797badd0a7540477f79f3f220e5c300
 ms.contentlocale: es-es
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="welcome-to-net"></a>Bienvenido a .NET
 
-Puede crear muchos tipos de aplicaciones con .NET, como de nube, IoT y juegos. La aplicación puede ejecutarse en Windows, Linux, Android, macOS e iOS. Existen herramientas gratuitas que puede usar para crear aplicaciones o juegos. Puede implementarlos en servidores, escritorios o publicarlos en tiendas de aplicaciones.
+Consulte [Introducción a .NET Core](core/get-started.md) para aprender a crear aplicaciones .NET Core.
+
+Cree muchos tipos de aplicaciones con .NET, como de nube, IoT y juegos, mediante herramientas multiplataforma gratis. Las aplicaciones se pueden ejecutar en Android, iOS, Linux, Mac OS y Windows. Implemente aplicaciones en servidores o equipos de sobremesa y publique en tiendas de aplicaciones para la implementación en dispositivos móviles. .NET es accesible para los estudiantes y aficionados, y todos pueden participar en una comunidad de desarrolladores internacional animada y realizar contribuciones directas a muchas de las tecnologías .NET.
+
+## <a name="news"></a>Noticias
+
+- [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) (Introducción a .NET Standard)
+- [Announcing .NET Core 2.0 Preview 1](https://blogs.msdn.microsoft.com/dotnet/2017/05/10/announcing-net-core-2-0-preview-1/) (Anuncio de .NET Core 2.0 Preview 1)
+- [Announcing ASP.NET 2.0 Preview 1 and Updates for .NET Web Developers](https://blogs.msdn.microsoft.com/webdev/2017/05/10/aspnet-2-preview-1/) (Anuncio de ASP.NET 2.0 Preview 1 1 y actualizaciones para desarrolladores web .NET)
+- [A fresh update to Visual Studio 2017 and the next preview](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/) (Una actualización reciente a Visual Studio 2017 y a la siguiente versión preliminar)
+- [Visual Studio for Mac: now generally available](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/) (Visual Studio para Mac: ahora disponible con carácter general.)
+- [Announcing .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1)](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/) (Anuncio de Herramientas de .NET Core 1.0: .NET Core 1.0.4, .NET Core 1.1.1 y .NET Core SDK 1.0.1)
+- [Announcing Visual Studio 2017 General Availability](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/) (Anuncio de la disponibilidad general de Visual Studio 2017)
+- [What's new for .NET Core and Visual Studio 2017](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108) (Novedades de .NET Core y Visual Studio de 2017) (vídeo)
+- [Announcing the .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) (Anuncio de .NET Framework 4.7)
+- [New Features in C# 7.0](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/) (Nuevas características de C# 7.0)
+- [Announcing F# 4.1 and the Visual F# Tools for Visual Studio 2017](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/) (Anuncio de F # 4.1 y las Herramientas de Visual F # para Visual Studio de 2017)
+- [Open Source Xamarin, Ready for you!](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/) (Código fuente de Xamarin, listo para usted)
+- [The week in .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/) (La semana en .NET)
+- [Creación 2017 en Channel 9: vídeo sobre las tecnologías y noticias más recientes de Microsoft.](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
 ## <a name="documentation"></a>Documentación
 
@@ -34,7 +53,7 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes.  Puede
 
 Además, puede examinar la [Referencia de la API de .NET](https://docs.microsoft.com/dotnet/api).
 
-## <a name="open-source"></a>Código abierto
+## <a name="open-source"></a>Abrir origen
 
 Esta documentación es completamente de [código abierto](https://github.com/dotnet/docs).  Puede contribuir de la manera que quiera, desde crear problemas hasta escribir documentación.  Además, gran parte del propio .NET es de código abierto:
 
@@ -44,4 +63,5 @@ Esta documentación es completamente de [código abierto](https://github.com/dot
 - [Plataforma del compilador de Roslyn (C# y Visual Basic) y herramientas de IDE](https://github.com/dotnet/roslyn)
 - [Compilador de F# y herramientas de IDE](https://github.com/microsoft/visualfsharp)
 
-Existen también muchos otros proyectos principales en el ecosistema de código abierto de .NET que han contribuido en [.NET Foundation](http://dotnetfoundation.org).
+Puede unirse a otras personas que ya están activas en la [Comunidad de .NET](https://www.microsoft.com/net/community), para conocer las novedades o pedir ayuda.
+

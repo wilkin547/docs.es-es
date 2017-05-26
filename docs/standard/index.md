@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
 ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
-ms.lasthandoff: 04/06/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 ---
 

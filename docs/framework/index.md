@@ -20,23 +20,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: a2ef49f9192c7fa414b02e7e41a270606f52bb3c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 
 # <a name="net-framework-guide"></a>Guía de .NET Framework
 
 > [!NOTE]
->  Este conjunto de contenido de .NET Framework incluye información para las versiones 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 y 4.7 de .NET Framework. Para descargar .NET Framework, consulte [Instalar .NET Framework](../../docs/framework/install/guide-for-developers.md). Consulte la lista de las nuevas características y los cambios de .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], sus versiones secundarias y .NET Framework 4.7, consulte las [novedades de .NET Framework](../../docs/framework/whats-new/index.md). Para una lista de las plataformas compatibles, consulte los [requisitos del sistema de .NET Framework](../../docs/framework/get-started/system-requirements.md).  
+> Este conjunto de contenido de .NET Framework incluye información para las versiones 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 y 4.7 de .NET Framework. Para descargar .NET Framework, consulte [Instalar .NET Framework](../../docs/framework/install/guide-for-developers.md). Consulte la lista de las nuevas características y los cambios de .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], sus versiones secundarias y .NET Framework 4.7, consulte las [novedades de .NET Framework](../../docs/framework/whats-new/index.md). Para una lista de las plataformas compatibles, consulte los [requisitos del sistema de .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
-.NET Framework proporciona muchos servicios, incluida la administración de memoria, la seguridad de tipos y memoria, características de seguridad y la implementación de redes y aplicaciones. Proporciona API y estructuras de datos fáciles de usar que abstraen el sistema operativo de Windows de nivel inferior. Con .NET Framework se pueden usar diferentes lenguajes de programación, incluidos C#, F# y Visual Basic.
+.NET Framework es una plataforma de desarrollo para compilar aplicaciones para la Web, Windows, Windows Phone, Windows Server y Microsoft Azure. Consta del Common Language Runtime (CLR) y la biblioteca de clases .NET Framework, que incluye una amplia gama de características y compatibilidad con muchos estándares del sector.
 
- .NET Framework es una plataforma de desarrollo para compilar aplicaciones de Windows, Windows Phone, Windows Server y Microsoft Azure. Consta de Common Language Runtime (CLR) y la biblioteca de clases .NET Framework, que incluye una amplia gama de características y compatibilidad con muchos estándares del sector.  
-
-.NET Framework proporciona muchos servicios, incluida la administración de memoria, la seguridad de tipos y memoria, características de seguridad y la implementación de redes y aplicaciones. Proporciona API y estructuras de datos fáciles de usar que abstraen el sistema operativo de Windows de nivel inferior. Con .NET Framework se pueden usar diferentes lenguajes de programación, incluidos C#, F# y Visual Basic.
+.NET Framework proporciona muchos servicios, como la administración de memoria, la seguridad de tipos y memoria, opciones de seguridad, redes y la implementación de aplicaciones. Proporciona API y estructuras de datos fáciles de usar que abstraen el sistema operativo de Windows de nivel inferior. Con .NET Framework se pueden usar diferentes lenguajes de programación, incluidos C#, F# y Visual Basic.  
 
 Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](../../docs/framework/get-started/index.md). Para una introducción a la arquitectura y las características principales de .NET Framework, consulte la [información general](../../docs/framework/get-started/overview.md).  
 
@@ -48,9 +46,10 @@ Para obtener una introducción general a .NET Framework para usuarios y desarrol
 
 Vea [Repair the .NET Framework](./install/repair.md) (Reparar .NET Framework) para saber cómo reparar la instalación de .NET Framework si se producen errores al instalar .NET Framework.
 
-Para más información sobre cómo descargar .NET Framework, consulte [Instalar .NET Framework](../../docs/framework/install/guide-for-developers.md).  
+Para obtener más información sobre cómo descargar .NET Framework, consulte [Instalación de .NET Framework para desarrolladores](../../docs/framework/install/guide-for-developers.md).  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a>En esta sección
+
 [Novedades](../../docs/framework/whats-new/index.md)  
 Describe las nuevas características clave y los cambios realizados en las versiones más recientes de .NET Framework. Incluye listas de los tipos y miembros obsoletos y proporciona una guía para migrar las aplicaciones desde la versión anterior de .NET Framework.  
   
@@ -71,3 +70,4 @@ Proporciona ejemplos de código y de sintaxis, así como información relacionad
   
 [Bibliotecas de clases y API adicionales](../../docs/framework/additional-apis/index.md)  
 Proporciona documentación sobre las clases que se incluyen en las versiones fuera de banda (OOB), así como las clases que tienen como destino plataformas específicas o implementaciones de .NET Framework.
+

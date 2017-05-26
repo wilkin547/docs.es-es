@@ -2,17 +2,18 @@
 title: "Administración automática de la memoria y recolección de elementos no utilizados"
 description: "Administración automática de la memoria y recolección de elementos no utilizados"
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9cd688d1e62c06274d5d49edcda5146977952b60
 ms.openlocfilehash: 36423ac3248b14a9bb95611d5997d06b927fa88e
+ms.contentlocale: es-es
 ms.lasthandoff: 03/02/2017
 
 ---
