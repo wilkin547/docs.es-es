@@ -36,9 +36,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b6f8b110e087093bd47573a1a4a05752be91e743
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -208,7 +209,7 @@ A partir de C# 7, dado que las instrucciones case no necesitan ser mutuamente ex
 Tenga en cuenta que la cláusula `when` del ejemplo que intenta comprobar si un objeto `Shape` es `null` no se ejecuta. El patrón de tipo correcto para comprobar `null` es `case null:`.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
 

@@ -114,7 +114,7 @@ Console.Write(child1.name);   // Error
  Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo age se ha inicializado a cero de forma predeterminada.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de C#](../../../csharp/language-reference/index.md)   

@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -39,7 +40,7 @@ Puede mostrar datos relacionados mediante dos o más <xref:Microsoft.VisualBasic
   
  Puede mostrar datos relacionados arrastrando elementos de detalle que comparten el mismo nodo de tabla principal desde la **orígenes de datos** ventana hasta un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>control.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Por ejemplo, si tiene un origen de datos que tiene una tabla clientes y una tabla relacionada Orders, vea ambas tablas como nodos de nivel superior en la vista de árbol en el **orígenes de datos** ventana. Expanda el nodo de los clientes para que pueda ver las columnas. Observe que la última columna de la lista es un nodo expansible que representa la tabla Orders. Este nodo representa los pedidos relacionados para un cliente.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-display-related-data-in-two-datarepeater-controls"></a>Para mostrar datos relacionados en dos controles DataRepeater  
   

@@ -34,7 +34,7 @@ Los diversos entornos de tiempo de ejecución .NET implementan versiones concret
 
 En la tabla siguiente se enumeran todas las versiones de .NET Standard y las plataformas compatibles:
 
-[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Para buscar la versión superior de .NET Standard que puede usar como destino, haga lo siguiente:
 1. Busque la fila que indica la plataforma de .NET en la que quiere ejecutar.

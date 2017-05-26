@@ -93,7 +93,7 @@ Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser im
 -   [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   

@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 9bf8f2f5fcc4dfa2b29e368a4e26bf112e08149e
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ El uso más común de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>con
   
  También puede enlazar a un origen de datos en tiempo de ejecución estableciendo la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>propiedad `True` y asignando un origen de datos a la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A>propiedad.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> En este caso, debe administrar toda la interacción con el origen de datos. Para obtener más información, consulte [modo Virtual del control DataRepeater](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md).  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-data-bound-datarepeater"></a>Para crear un DataRepeater enlazado a datos  
   

@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 84af19189fa3fc510c8d4f8e408cbb2a393d8b8f
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -52,7 +53,7 @@ XML IntelliSense en Visual Basic proporciona la finalización de palabras para l
   
  Para obtener más información sobre las capacidades de IntelliSense XML en Visual Basic, consulte [IntelliSense XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md). Para obtener más información sobre la importación de espacios de nombres XML, vea [Imports Statement (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) o [página referencias, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic).  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
  ![vínculo a vídeo](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") para una versión en vídeo de este tema, consulte [vídeo acerca de cómo: habilitar IntelliSense XML en Visual Basic](http://go.microsoft.com/fwlink/?LinkId=102466). Para una demostración en vídeo relacionada, vea [¿cómo puedo Enable XML IntelliSense and Use XML Namespaces?](http://go.microsoft.com/fwlink/?LinkId=143035).  
   
