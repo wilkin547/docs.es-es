@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e68cde6d56d4de584861b8bcf29e072a5fc18928
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Cómo: Leer un valor a partir de una clave del Registro en Visual Basic
@@ -68,14 +69,14 @@ El método `GetValue` del objeto `My.Computer.Registry` se puede usar para leer 
   
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nombre de la clave es `Nothing` (<xref:System.ArgumentNullException>).  
+-   Que el nombre de la clave sea `Nothing` (<xref:System.ArgumentNullException>).  
   
--   El usuario no tiene permiso para leer claves del Registro (<xref:System.Security.SecurityException>).  
+-   Que el usuario tenga permisos para leer de las claves del Registro (<xref:System.Security.SecurityException>).  
   
--   El nombre de la clave supera el límite de 255 caracteres (<xref:System.ArgumentException>).  
+-   Que el nombre de la clave supere el límite de 255 caracteres (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Para ejecutar este proceso, el ensamblado requiere un nivel de privilegios concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Aspectos básicos de seguridad de acceso del código).  
+ Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Aspectos básicos de seguridad de acceso del código).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

@@ -1,81 +1,100 @@
 ---
-title: "C&#243;mo: Declarar un delegado, crear instancias del mismo y utilizarlo (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "delegados [C#], declarar y crear instancias"
+title: "Cómo: Declarar un delegado, crear instancias del mismo y utilizarlo (Guía de programación de C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: f80f50d7d6630aa5738c077cc2f278993e792eb8
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
+
 ---
-# C&#243;mo: Declarar un delegado, crear instancias del mismo y utilizarlo (Gu&#237;a de programaci&#243;n de C#)
-En C\# 1.0 y versiones posteriores, los delegados pueden declararse tal y como se muestra en el ejemplo siguiente.  
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Cómo: Declarar un delegado, crear instancias del mismo y utilizarlo (Guía de programación de C#)
+En C# 1.0 y versiones posteriores, los delegados se pueden declarar como se muestra en el ejemplo siguiente.  
   
  [!code-cs[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
   
  [!code-cs[csProgGuideDelegates#14](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_2.cs)]  
   
- C\# 2.0 proporciona una manera más sencilla de escribir la declaración anterior, tal y como se muestra en el ejemplo siguiente.  
+ C# 2.0 ofrece una forma más sencilla de escribir la declaración anterior, tal como se muestra en el ejemplo siguiente.  
   
  [!code-cs[csProgGuideDelegates#32](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_3.cs)]  
   
- En C\# 2.0 y versiones posteriores, también es posible usar un método anónimo para declarar e inicializar un [delegado](../../../csharp/language-reference/keywords/delegate.md), tal y como se muestra en el ejemplo siguiente.  
+ En C# 2.0 y versiones posteriores, también es posible utilizar un método anónimo para declarar e inicializar un [delegado](../../../csharp/language-reference/keywords/delegate.md), como se muestra en el ejemplo siguiente.  
   
  [!code-cs[csProgGuideDelegates#15](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_4.cs)]  
   
- En C\# 3.0 y versiones posteriores, también se pueden crear declaraciones e instancias de los delegados usando una expresión lambda, tal y como se muestra en el ejemplo siguiente.  
+ En C# 3.0 y versiones posteriores, también se pueden declarar los delegados y crear una instancia de ellos mediante una expresión lambda, como se muestra en el ejemplo siguiente.  
   
  [!code-cs[csProgGuideDelegates#31](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_5.cs)]  
   
  Para obtener más información, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- El siguiente ejemplo ilustra la declaración, creación de instancias y uso de un delegado.  La clase `BookDB` encapsula una base de datos de los libros de una librería.  Expone un método `ProcessPaperbackBooks`, el cual busca todos los libros en edición rústica de la base de datos y llama a un delegado para cada uno.  El tipo `delegate` que se utiliza se denomina `ProcessBookDelegate`.  La clase `Test` utiliza esta clase para imprimir los títulos y el precio medio de los libros en edición rústica.  
+ En el ejemplo siguiente se ilustra cómo declarar un delegado, crear una instancia del mismo y utilizarlo La clase `BookDB` encapsula una base de datos de una librería que mantiene una base de datos de libros. Expone un método `ProcessPaperbackBooks`, que busca todos los libros de bolsillo en la base de datos y llama a un delegado para cada uno. El tipo `delegate` utilizado se denomina `ProcessBookDelegate`. La clase `Test` utiliza esta clase para imprimir los títulos y el precio medio de los libros de bolsillo.  
   
- El uso de delegados promueve una buena separación de la funcionalidad entre la base de datos de la librería y el código del programa cliente.  El código del cliente no tiene conocimiento de cómo están almacenados los libros ni de cómo busca el código de la librería de los libros en rústica.  El código de la librería no conoce qué procesamiento se realiza sobre los libros en rústica después de encontrarlos.  
+ El uso de delegados promueve una separación adecuada de la funcionalidad entre la base de datos de la librería y el código de cliente. El código de cliente no sabe cómo se almacenan los libros ni cómo el código de la biblioteca encuentra los libros de bolsillo. El código de la librería no sabe qué procesamiento se realiza con los libros de bolsillo después de que los encuentra.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-cs[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
   
-## Programación eficaz  
+## <a name="robust-programming"></a>Programación sólida  
   
--   Declarar un delegado.  
+-   Declaración de un delegado.  
   
-     La instrucción siguiente declara un nuevo tipo delegado.  
+     La instrucción siguiente declara un nuevo tipo de delegado.  
   
      [!code-cs[csProgGuideDelegates#16](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_7.cs)]  
   
-     Cada tipo delegado describe el número y tipo de los argumentos, así como el tipo del valor devuelto de los métodos que puede encapsular.  Cuando se necesita un nuevo conjunto de tipos de argumentos o de valor devuelto, se debe declarar un nuevo tipo delegado.  
+     Cada tipo de delegado describe el número y los tipos de argumentos, y el tipo del valor devuelto de los métodos que puede encapsular. Siempre que se necesite un nuevo conjunto de tipos de argumentos o de tipos de valores devueltos, se debe declarar un nuevo tipo de delegado.  
   
--   Crear instancias de un delegado.  
+-   Creación de instancias de un delegado.  
   
-     Una vez declarado un tipo delegado, debe crearse un objeto delegado y asociarlo con un determinado método.  En el ejemplo anterior, esto se hace pasando el método `PrintTitle` al método `ProcessPaperbackBooks` como en el ejemplo siguiente:  
+     Después de haber declarado un tipo de delegado, debe crearse un objeto delegado y asociarse con un método particular. En el ejemplo anterior, esto se hace pasando el método `PrintTitle` al método `ProcessPaperbackBooks` como en el ejemplo siguiente:  
   
      [!code-cs[csProgGuideDelegates#17](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_8.cs)]  
   
-     Esto crea un nuevo objeto delegado asociado con el método [estático](../../../csharp/language-reference/keywords/static.md) `Test.PrintTitle`.  De igual forma, el método no estático `AddBookToTotal` del objeto `totaller` se pasa como en el ejemplo siguiente:  
+     Esto crea un objeto delegado nuevo asociado con el método [estático](../../../csharp/language-reference/keywords/static.md) `Test.PrintTitle`. De forma similar, el método no estático `AddBookToTotal` del objeto `totaller` se pasa como en el ejemplo siguiente:  
   
      [!code-cs[csProgGuideDelegates#18](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_9.cs)]  
   
-     En ambos casos, este nuevo objeto delegado se pasa al método `ProcessPaperbackBooks`.  
+     En ambos casos, se pasa un nuevo objeto delegado al método `ProcessPaperbackBooks`.  
   
-     Una vez que se crea el delegado, el método con el que está asociado no cambia nunca; los objetos delegados son inmutables.  
+     Después de que se ha creado un delegado, el método con el que está asociado nunca cambia; los objetos delegados son inmutables.  
   
--   Llamar a un delegado.  
+-   Llamada a un delegado.  
   
-     Una vez creado un objeto delegado, éste se pasa normalmente a otro código que llamará al delegado.  La llamada a un objeto delegado se realiza mediante el nombre del objeto delegado, seguido por los argumentos entre paréntesis que se pasarán al delegado.  A continuación, se muestra un ejemplo de una llamada a delegado:  
+     Después de haber creado un objeto delegado, este suele pasarse a otro código que llamará al delegado. La llamada a un objeto delegado se realiza mediante la utilización del nombre de dicho objeto, seguido de los argumentos entre paréntesis que se deben pasar al delegado. A continuación se expone un ejemplo de llamada a un delegado:  
   
      [!code-cs[csProgGuideDelegates#19](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_10.cs)]  
   
-     Se puede llamar a un delegado de forma sincrónica, como en este ejemplo, o de forma asincrónica, utilizando los métodos `BeginInvoke` y `EndInvoke`.  
+     Se puede llamar a un delegado de forma sincrónica, como en este ejemplo, o bien de forma asincrónica con los métodos `BeginInvoke` y `EndInvoke`.  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Eventos](../../../csharp/programming-guide/events/index.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)

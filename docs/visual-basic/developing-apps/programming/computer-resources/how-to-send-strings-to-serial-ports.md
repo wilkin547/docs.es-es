@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f0a66d19e2677ee67672c0e26945fd555fed07d2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 14c5de8d0fa8195129b7ae65c1d373834307488a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Cómo: Enviar cadenas a puertos serie en Visual Basic
@@ -45,7 +46,7 @@ En este tema se describe cómo usar `My.Computer.Ports` para enviar cadenas a lo
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se envía una cadena al puerto serie COM1. Es posible que tenga que usar un puerto serie diferente en el equipo.  
   
- Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para obtener más información, vea <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para obtener más información, consulta <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
  El bloque `Using` permite a la aplicación cerrar el puerto serie aun cuando se genere una excepción. Todo el código que manipula el puerto serie debe aparecer dentro de este bloque o dentro un bloque `Try...Catch...Finally`.  
   
@@ -55,7 +56,7 @@ En este tema se describe cómo usar `My.Computer.Ports` para enviar cadenas a lo
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   En este ejemplo se presupone que el equipo está usando `COM1`.  
+-   En este ejemplo se presupone que el equipo usa `COM1`.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  En este ejemplo se presupone que el equipo está usando `COM1`. Para obtener mayor flexibilidad, el código debe permitir al usuario seleccionar el puerto serie deseado entre una lista de puertos disponibles. Para obtener más información, vea [Cómo: Mostrar los puertos serie disponibles en Visual Basic](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
@@ -65,5 +66,5 @@ En este tema se describe cómo usar `My.Computer.Ports` para enviar cadenas a lo
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Devices.Ports>   
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
- [How to: Dial Modems Attached to Serial Ports](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  (Cómo: Marcar a través de módems conectados a puertos serie)  
+ [Cómo: Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

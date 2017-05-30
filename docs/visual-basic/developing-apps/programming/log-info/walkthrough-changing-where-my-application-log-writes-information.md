@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f2563a334248740ff1bd4fc49662229d8f3bf27e
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información (Visual Basic)
@@ -175,13 +176,13 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 1.  Busque el elemento `<add>` del agente de escucha de la sección `<sharedListeners>` .  
   
-2.  El atributo `type` proporciona el nombre del tipo de agente de escucha. Este tipo debe heredarse de la clase <xref:System.Diagnostics.TraceListener>. Use el nombre de tipo con nombre seguro para asegurarse de que se use el tipo correcto. Para obtener más información, consulte la sección "Para hacer referencia a un tipo con nombre seguro" a continuación.  
+2.  El atributo `type` proporciona el nombre del tipo de agente de escucha. Este tipo debe heredar de la clase <xref:System.Diagnostics.TraceListener>. Use el nombre de tipo con nombre seguro para asegurarse de que se use el tipo correcto. Para obtener más información, consulte la sección "Para hacer referencia a un tipo con nombre seguro" a continuación.  
   
      Algunos tipos válidos que puede usar son:  
   
-    -   Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que escribe en un registro de archivo.  
+    -   Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que escribe en un archivo de registro.  
   
-    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, que escribe información en el registro de eventos del equipo especificado con el parámetro `initializeData`.  
+    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData`.  
   
     -   Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, que escriben en el archivo especificado en el parámetro `initializeData`.  
   
@@ -212,5 +213,5 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
  <xref:System.Diagnostics.TraceListener>   
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [Cómo: Escribir información de eventos en un archivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [Cómo: Escribir el registro de eventos de una aplicación](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

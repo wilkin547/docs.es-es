@@ -31,24 +31,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5b36baee302db0214844e0553473a05603090f1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1884195983856b3331b0c40e5b3844b0731e75ac
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-get-the-collection-of-files-in-a-directory-in-visual-basic"></a>Cómo: Obtener la colección de archivos de un directorio en Visual Basic
-Las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> devuelven una colección de cadenas de solo lectura que representan los nombres de los archivos de un directorio:  
+Las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> devuelven una colección de solo lectura de cadenas que representan los nombres de los archivos contenidos en un directorio:  
   
--   Use la sobrecarga <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> para una simple búsqueda de archivos en un directorio específico, sin buscar en los subdirectorios.  
+-   Use la sobrecarga <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%28System.String%29> para realizar una búsqueda de archivos sencilla en un directorio concreto, sin buscar en los subdirectorios.  
   
--   Use la sobrecarga <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> para especificar opciones adicionales para la búsqueda. Puede usar el parámetro `wildCards` para especificar un patrón de búsqueda. Para incluir subdirectorios en la búsqueda, establezca el parámetro `searchType` en <xref:Microsoft.VisualBasic.FileIO.SearchOption?displayProperty=fullName>.  
+-   Use la sobrecarga <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles(System.String,Microsoft.VisualBasic.FileIO.SearchOption,System.String[])> para especificar más opciones de búsqueda. Puede usar el parámetro `wildCards` para especificar un patrón de búsqueda. Para incluir los subdirectorios en la búsqueda, establezca el parámetro `searchType` en <xref:Microsoft.VisualBasic.FileIO.SearchOption?displayProperty=fullName>.  
   
  Si no se encuentran archivos que coincidan con el patrón especificado, se devuelve una colección vacía.  
   
 ### <a name="to-list-files-in-a-directory"></a>Para enumerar los archivos de un directorio  
   
--   Use una de las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> proporcionando el nombre y la ruta de acceso del directorio que se debe buscar en el parámetro `directory`. En el siguiente ejemplo se devuelven todos los archivos contenidos en el directorio y se agregan a `ListBox1`.  
+-   Use una de las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> y proporcione el nombre y la ruta de acceso del directorio para buscar en el parámetro `directory`. En el siguiente ejemplo se devuelven todos los archivos contenidos en el directorio y se agregan a `ListBox1`.  
   
      [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
   
@@ -63,7 +64,7 @@ Las sobrecargas del método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFil
   
 -   `directory` apunta a un archivo existente (<xref:System.IO.IOException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   

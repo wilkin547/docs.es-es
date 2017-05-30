@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e56646b1d8ff3b682a402b4b2fc7442c3338a49
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c535dcce1ad1b9a5fecd3c6a86d7fb522acf079e
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Cómo: Recibir cadenas de puertos serie en Visual Basic
@@ -49,9 +50,9 @@ En este tema se describe cómo usar `My.Computer.Ports` para recibir cadenas de 
   
 2.  Determine el puerto serie que debe proporcionar las cadenas. En este ejemplo se da por supuesto que es `COM1`.  
   
-3.  Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para más información, vea <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+3.  Use el método `My.Computer.Ports.OpenSerialPort` para obtener una referencia al puerto. Para obtener más información, consulta <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
-     El bloque `Try...Catch...Finally` permite a la aplicación cerrar el puerto serie aunque se genere una excepción. Todo el código que manipula el puerto serie debe aparecer dentro de este bloque.  
+     El bloque `Try...Catch...Finally` permite a la aplicación cerrar el puerto serie aun cuando se genere una excepción. Todo el código que manipula el puerto serie debe aparecer dentro de este bloque.  
   
      [!code-vb[VbVbalrMyComputer#39](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_2.vb)]  
   
@@ -59,7 +60,7 @@ En este tema se describe cómo usar `My.Computer.Ports` para recibir cadenas de 
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  Use el método <xref:System.IO.Ports.SerialPort.ReadLine%2A> para leer la siguiente línea disponible desde el puerto serie.  
+5.  Use el método <xref:System.IO.Ports.SerialPort.ReadLine%2A> para leer la siguiente línea de texto disponible desde el puerto serie.  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   

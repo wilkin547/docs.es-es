@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>Mitigación: Asignación de espacio del control de cuadrícula en columnas de estrella
@@ -64,7 +64,7 @@ Toda la información que se indica sobre las columnas y los anchos en este tema 
 
 El nuevo algoritmo cambia el ancho real asignado a las columnas \* en una serie de casos:
 
-- Cuando una o más columnas \* tienen un ancho mínimo o máximo que invalida la asignación proporcional para esa columna. (El ancho mínimo puede derivarse de la declaración <xref:System.Windows.FrameworkElement.MinWidth%2A> explícita o de un mínimo implícito obtenido del contenido de la columna. El ancho máximo solo puede definirse de forma explícita desde una declaración <xref:System.Windows.FrameworkElement.MaxWidth%2A>).
+- Cuando una o más columnas \* tienen un ancho mínimo o máximo que invalida la asignación proporcional para esa columna. (El ancho mínimo puede derivarse de la declaración <xref:System.Windows.FrameworkElement.MinWidth%2A> explícita o de un mínimo implícito obtenido del contenido de la columna. El ancho máximo solo puede definirse de forma explícita, a partir de una declaración <xref:System.Windows.FrameworkElement.MaxWidth%2A>).
 
 - Cuando una o más columnas \* declaran un peso \* extremadamente grande, superior a 10^298.
 

@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12e99815d1fd1b9c57706653e41a360802a6d80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 94842349ae1c0fa3ccbdb2279b05a0faeb2f5d30
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Cómo: Registrar mensajes cuando se inicia o se cierra la aplicación (Visual Basic)
@@ -73,7 +74,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
 2.  En el **declaraciones** menú, elija **Apagar**.  
   
-     La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> después de que se ejecute la aplicación principal, pero antes de que se cierre.  
+     La aplicación genera el evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> después de la ejecución de la aplicación principal, pero antes de que se cierre.  
   
 3.  Agregue el método `My.Application.Log.WriteEntry` al controlador de eventos `Shutdown` .  
   
@@ -88,5 +89,5 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [Página de aplicación, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
+ [Application Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
  [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
