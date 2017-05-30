@@ -200,7 +200,7 @@ Los diagnósticos de compatibilidad de .NET son analizadores de Roslyn que ayuda
 |Ámbito|Borde|  
 |Versión|4.5|  
 |Tipo|Tiempo de ejecución|  
-|API afectadas|<xref:System.Xml.Linq.LoadOptions?displayProperty=fullName>|  
+|API afectadas|<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=fullName>|  
 |Analizadores|CD0019|  
   
 <a name="diagnostic20"></a>   

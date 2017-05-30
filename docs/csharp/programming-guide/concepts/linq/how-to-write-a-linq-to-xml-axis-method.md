@@ -14,10 +14,11 @@ ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d85a92fc4d9f1d2ed53ff01e23c20877b3952b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: afaaaa497a16c1dbf0f3e0e81351f5c614732d44
+ms.contentlocale: es-es
+ms.lasthandoff: 05/30/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
 Puede escribir sus propios métodos de ejes para recuperar recopilaciones de un árbol XML. Una de las mejores formas de hacerlo es escribir un método de extensión que devuelva una recopilación de elementos o atributos. Puede escribir su método de extensión para devolver subconjuntos específicos de elementos o atributos, basándose en los requisitos de su aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo usa dos métodos de extensión. El primer método de extensión, `GetXPath`, opera en <xref:System.Xml.Linq.XObject> y devuelve una expresión XPath que, cuando se evalúa, devuelve el nodo o el atributo. El segundo método de extensión, `Find`, opera en <xref:System.Xml.Linq.XElement>. Devuelve una colección de objetos <xref:System.Xml.Linq.XAttribute> y de objetos <xref:System.Xml.Linq.XElement> que contienen algún texto especificado.  
+ El siguiente ejemplo usa dos métodos de extensión. El primer método de extensión, `GetXPath` funciona en <xref:System.Xml.Linq.XObject> y devuelve una expresión XPath que cuando se evalúa devuelve el nodo o el atributo. El segundo método de extensión, `Find`, funciona en <xref:System.Xml.Linq.XElement>. Devuelve una recopilación de objetos <xref:System.Xml.Linq.XAttribute> y <xref:System.Xml.Linq.XElement> que contienen algún texto especificado.  
   
  En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
