@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 994da1622246d09930fa9b74d6debac4f7a24b5b
+ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
+ms.openlocfilehash: f5bab95cc5a4ff49a0ff81e209f0a71c78914976
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
@@ -55,7 +55,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
   
 -   Actualizar a the .NET Framework 4.6.2. El nuevo compilador de 64 bits incluido con .NET Framework 4.6.2 soluciona estos problemas conocidos.  
   
--   Asegurarse de que su versión Windows está actualizada ejecutando Windows Update. Las actualizaciones de servicio de .NET Framework 4.6 y 4.6.1 solucionan los problemas excepto  <xref:System.NullReferenceException> en una operación de conversión unboxing.  
+-   Asegurarse de que su versión Windows está actualizada ejecutando Windows Update. Las actualizaciones de servicio de .NET Framework 4.6 y 4.6.1 solucionan los problemas excepto <xref:System.NullReferenceException> en una operación de conversión unboxing.  
   
 -   Compilación con el compilador JIT de 64 bits más antiguo. Vea la sección [Mitigación de otros problemas](#Other) sección para obtener más información sobre el procedimiento.  
   
@@ -63,25 +63,24 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
 ## <a name="mitigation-of-other-issues"></a>Mitigación de otros problemas  
  Si detecta cualquier otra diferencia en el comportamiento entre el código compilado con el compilador de 64 bits antiguo y el compilador de 64 bits nuevo, o entre las versiones de depuración y publicación de la aplicación que se compilan con el nuevo compilador JIT de 64 bits, puede realizar el siguiente procedimiento para compilar la aplicación con el compilador JIT de 64 bits anterior:  
   
--   Según la aplicación, puede agregar el elemento [ \<useLegacyJIT >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.  
+-   Según la aplicación, se puede agregar el elemento [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.  
   
     ```xml  
-  
     <?xml version ="1.0"?>  
     <configuration>  
         <runtime>  
-           <useLegacyJIT enabled="1" />  
+           <useLegacyJit enabled="1" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   Según el usuario, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` del registro. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.  
   
--   Según el equipo, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` del registro. `REG_DWORD` value named `useLegacyJit` to the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` key of the registry. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.  
+-   Según el equipo, puede agregar un valor `REG_DWORD` con el nombre `useLegacyJit` a la clave `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` del registro. El valor 1 permite al compilador JIT de 64 bits hereado; un valor de 0 lo deshabilita y habilita el nuevo compilador JIT de 64 bits.  
   
  También puede informar del problema indicándonos el error en [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
   
 ## <a name="see-also"></a>Vea también  
- [Cambios en tiempo de ejecución](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
- [\<Elemento useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+ [Cambios en el tiempo d ejecución](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [Elemento \<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+
