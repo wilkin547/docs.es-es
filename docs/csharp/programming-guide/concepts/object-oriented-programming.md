@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74872957345de77f43f3ac649ed6f809aea5f784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 3f3e6aa047e0de279d15298408c4593c5fb17666
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
@@ -43,7 +44,7 @@ C# proporciona compatibilidad completa para la programación orientada a objetos
   
          [Constructores](#Constructors)  
   
-         [Destructores](#Destructors)  
+         [Finalizadores](#Finalizers)  
   
          [Eventos](#Events)  
   
@@ -197,13 +198,13 @@ public class SampleClass
   
  [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md).  
   
-####  <a name="Destructors"></a> Destructores  
- Los destructores se utilizan para destruir instancias de clases. En .NET Framework, el recolector de elementos no utilizados administra automáticamente la asignación y la liberación de memoria para los objetos administrados en la aplicación. Sin embargo, es posible que aún se necesiten destructores para limpiar cualquiera de los recursos no administrados creados por la aplicación. Solo puede haber un destructor para una clase.  
+####  <a name="Finalizers"></a> Finalizadores  
+ Los finalizadores se usan para destruir instancias de clases. En .NET Framework, el recolector de elementos no utilizados administra automáticamente la asignación y la liberación de memoria para los objetos administrados en la aplicación. En cambio, es posible que aún se necesiten finalizadores para limpiar cualquiera de los recursos no administrados creados por la aplicación. Solo puede haber un finalizador para una clase.  
   
- Para obtener más información sobre los destructores y la recolección de elementos no utilizados en .NET Framework, vea [Garbage Collection](../../../standard/garbagecollection/index.md) (Recolección de elementos no utilizados).  
+ Para obtener más información sobre los finalizadores y la recolección de elementos no utilizados en .NET Framework, vea [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
 ####  <a name="Events"></a> Eventos  
- Cuando ocurre algo interesante, los eventos habilitan una clase u objeto para notificarlo a otras clases u objetos. La clase que envía (o genera) el evento recibe el nombre de *publicador* y las clases que reciben (o controlan) el evento se denominan *suscriptores*. Para obtener más información sobre los eventos y la forma en que se generan y controlan, vea [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+ Cuando ocurre algo interesante, los eventos habilitan una clase u objeto para notificarlo a otras clases u objetos. La clase que envía (o genera) el evento recibe el nombre de *publicador* y las clases que reciben (o controlan) el evento se denominan *suscriptores*. Para obtener más información sobre los eventos y la forma en que se generan y controlan, vea [Eventos](../../../standard/events/index.md).  
   
 -   Para declarar un evento en una clase, use la palabra clave [event](../../../csharp/language-reference/keywords/event.md).  
   
@@ -413,7 +414,7 @@ sampleObject.Field = "Sample string";
  Un *delegado* es un tipo que define una firma de método y que puede proporcionar una referencia a cualquier método con una firma compatible. Puede invocar (o llamar) al método a través del delegado. Los delegados se utilizan para pasar métodos como argumentos a otros métodos.  
   
 > [!NOTE]
->  Los controladores de eventos no son más que métodos que se invocan a través de delegados. Para obtener más información sobre el uso de delegados en el control de eventos, vea [Eventos](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f).  
+>  Los controladores de eventos no son más que métodos que se invocan a través de delegados. Para obtener más información sobre el uso de delegados en el control de eventos, vea [Eventos](../../../standard/events/index.md).  
   
  Para crear un delegado:  
   

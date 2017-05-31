@@ -10,15 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1733538c605cb06c7da4d91a6780caa3ea3bec23
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: ff7e67add731324e01b8f2cc323a66e3a8683ec9
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 
 # <a name="structs"></a>Estructuras
-Un *struct* es un tipo de valor. Cuando se crea un struct, la variable a la que se asigna el struct contiene los datos reales del struct. Cuando el struct se asigna a una nueva variable, se copia. Por lo tanto, la nueva variable y la variable original contienen dos copias independientes de los mismos datos. Los cambios realizados en una copia no afectan a la otra copia.
+Un *struct* es un tipo de valor. Cuando se crea un struct, la variable a la que se asigna el struct contiene los datos reales del struct. Cuando la estructura se asigna a una nueva variable, se copia. Por lo tanto, la nueva variable y la variable original contienen dos copias independientes de los mismos datos. Los cambios realizados en una copia no afectan a la otra copia.
 
 Las variables de tipo de valor contienen directamente sus valores, lo que significa que la memoria se asigna insertada en cualquier contexto en el que se declare la variable. No se produce ninguna asignación del montón independiente ni sobrecarga de la recolección de elementos no utilizados para las variables de tipo de valor.  
   
@@ -34,7 +35,7 @@ Pero se declaran y se les asignan valores como si fueran tipos simples no agrega
   
 Los tipos de valor están *sellados*, lo que significa que, por ejemplo, no puede derivar un tipo de @System.Int32, y no puede definir un struct para que herede de cualquier clase o struct definido por el usuario, porque un struct solo puede heredar de @System.ValueType. A pesar de ello, un struct puede implementar una o más interfaces. Puede convertir un tipo struct en un tipo de interfaz. Esto hace que una operación de conversión *boxing* encapsule el struct dentro de un objeto de tipo de referencia en el montón administrado. Las operaciones de conversión boxing se producen cuando se pasa un tipo de valor a un método que toma @System.Object como parámetro de entrada. Para obtener más información, vea [Conversión boxing y unboxing](./programming-guide/types/boxing-and-unboxing.md ).  
   
-Puede usar palabra clave [struct](./language-reference/keywords/struct.md) para crear sus propios tipos de valor personalizados. Normalmente, un struct se usa como un contenedor para un pequeño conjunto de variables relacionadas, como se muestra en el ejemplo siguiente:  
+Puede usar la palabra clave [struct](./language-reference/keywords/struct.md) para crear sus propios tipos de valor personalizados. Normalmente, un struct se usa como un contenedor para un pequeño conjunto de variables relacionadas, como se muestra en el ejemplo siguiente:  
   
 [!code-csharp[Palabra clave struct](../../samples/snippets/csharp/concepts/structs/struct-keyword.cs)]  
   
@@ -44,7 +45,7 @@ Los structs comparten la mayoría de la sintaxis con las clases, aunque están m
   
 -   Dentro de una declaración de struct, los campos no se pueden inicializar a menos que se declaren como `const` o `static`.  
   
--   Un struct no puede declarar un constructor predeterminado (un constructor sin parámetros) ni un destructor.  
+-   Un struct no puede declarar un constructor predeterminado (un constructor sin parámetros) ni un finalizador.  
   
 -   Los structs se copian en la asignación. Cuando se asigna un struct a una variable nueva, se copian todos los datos y las modificaciones que se realicen en la nueva copia no cambiarán los datos de la copia original. Es importante que lo recuerde al trabajar con colecciones de tipos de valor como Dictionary<string, myStruct>.  
   
@@ -59,7 +60,7 @@ Los structs comparten la mayoría de la sintaxis con las clases, aunque están m
 -   Un struct puede implementar interfaces.
 
 ## <a name="literal-values"></a>Valores literales  
-En C#, los valores literales reciben un tipo del compilador. Para especificar cómo se determina el tipo un literal numérico, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá el tipo `double` para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea las páginas de referencia de los tipos individuales en [Tipos de valor](./language-reference/keywords/value-types.md).  
+En C#, los valores literales reciben un tipo del compilador. Puede especificar cómo debe escribirse un literal numérico; para ello, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá el tipo `double` para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea las páginas de referencia de los tipos individuales en [Tipos de valor](./language-reference/keywords/value-types.md).  
   
 Dado que los literales tienen tipo y todos los tipos derivan en última instancia de @System.Object, puede escribir y compilar código como el siguiente:  
   

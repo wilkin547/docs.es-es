@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2cd8842a9fcc0a075d6504c5f310d8de88dc09c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 2874eaadd23fdfdc1baf9337169ad5a52c05905f
+ms.contentlocale: es-es
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Tutorial: Acceso a web usando Async y Await (C#)
-Puede escribir programas asincrónicos de manera más fácil e intuitiva usando las características que se han introducido en [!INCLUDE[vs_dev11_long](../../../../csharp/includes/vs_dev11_long_md.md)]. Puede escribir código asincrónico parecido al código sincrónico y dejar que el compilador gestione las difíciles funciones de devolución de llamada y continuaciones que normalmente implica el código asincrónico.  
+Puede escribir programas asincrónicos de manera más fácil e intuitiva usando las características async/await. Puede escribir código asincrónico parecido al código sincrónico y dejar que el compilador gestione las difíciles funciones de devolución de llamada y continuaciones que normalmente implica el código asincrónico.  
   
  Para obtener más información sobre la característica Async, consulte [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md) (Programación asincrónica con async y await [C#]).  
   
@@ -130,7 +131,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 2.  Agregue las siguientes directivas `using` en la parte superior del archivo de código si no están ya presentes.  
   
-    ```cs  
+    ```csharp  
     using System.Net.Http;  
     using System.Net;  
     using System.IO;  
@@ -143,7 +144,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 2.  En MainWindow.xaml.cs, copie el código siguiente en el cuerpo de `startButton_Click`:  
   
-    ```cs  
+    ```csharp  
     resultsTextBox.Clear();  
     SumPageSizes();  
     resultsTextBox.Text += "\r\nControl returned to startButton_Click.";  
@@ -163,7 +164,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      Copie los cuatro métodos siguientes y péguelos bajo el controlador de eventos `startButton_Click` en MainWindow.xaml.cs:  
   
-    ```cs  
+    ```csharp  
     private void SumPageSizes()  
     {  
         // Make a list of web addresses.  
@@ -249,7 +250,6 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
      Debería aparecer un resultado similar a la lista siguiente.  
   
     ```  
-  
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832  
     msdn.microsoft.com                                            33964  
     msdn.microsoft.com/library/hh290136.aspx               225793  
@@ -264,7 +264,6 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
     Total bytes returned:  1834802  
   
     Control returned to startButton_Click.  
-  
     ```  
   
      Tenga en cuenta que los recuentos tardan unos segundos en mostrarse. Durante ese tiempo, el subproceso de interfaz de usuario se bloquea mientras espera a que se descarguen los recursos solicitados. Como resultado, no se puede mover, maximizar, minimizar o ni siquiera cerrar la ventana de la pantalla después de elegir el botón **Inicio**. Estos intentos producirán un error hasta que empiecen a aparecer los recuentos de bytes. Si un sitio web no responde, no se le indicará cuál es el sitio que produjo el error. Incluso resulta difícil dejar de esperar y cerrar el programa.  
@@ -281,7 +280,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      Cambie el método al que se llama en la tercera línea de `GetURLContents` de `GetResponse` al método asincrónico basado en tareas <xref:System.Net.WebRequest.GetResponseAsync%2A>.  
   
-    ```cs  
+    ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
@@ -289,15 +288,22 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      Para recuperar el valor `WebResponse` de la tarea, aplique un operador [await](../../../../csharp/language-reference/keywords/await.md) a la llamada a `GetResponseAsync`, como se muestra en el código siguiente.  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+    ```csharp  
+    using (WebResponse response = await webReq.GetResponseAsync())  
+    ```  
+  
      El operador `await` suspende la ejecución del método actual, `GetURLContents`, hasta que se complete la tarea esperada. Mientras tanto, el control devuelve al llamador del método actual. En este ejemplo, el método actual es `GetURLContents` y el llamador es `SumPageSizes`. Cuando la tarea finaliza, el objeto `WebResponse` prometido se genera como valor de la tarea esperada y se asigna a la variable `response`.  
   
-     The previous statement can be separated into the following two statements to clarify what happens.  
+     La instrucción anterior se puede dividir en las dos instrucciones siguientes para aclarar lo que sucede.  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+    ```csharp  
+    //Task<WebResponse> responseTask = webReq.GetResponseAsync();  
+    //using (WebResponse response = await responseTask)  
+    ```  
+  
      La llamada a `webReq.GetResponseAsync` devuelve `Task(Of WebResponse)` o `Task<WebResponse>`. A continuación, se aplica un operador await a la tarea para recuperar el valor `WebResponse`.  
   
-     If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the `await` operator is applied. For examples, see [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Si el método asincrónico debe realizar un trabajo que no depende de la finalización de la tarea, el método puede continuar con ese trabajo entre estas dos instrucciones, después de la llamada al método asincrónico y antes de que se aplique el operador `await`. Para obtener ejemplos, vea [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Cómo: Hacer varias solicitudes web en paralelo usando async y await [C#]) y [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Cómo: Ampliar el tutorial de async usando Task.WhenAll [C#]).  
   
 3.  Dado que ha agregado el operador `await` en el paso anterior, se produce un error del compilador. El operador puede usarse únicamente en los métodos marcados con el modificador [async](../../../../csharp/language-reference/keywords/async.md). Omita el error mientras repita los pasos de conversión para reemplazar la llamada a `CopyTo` con una llamada a `CopyToAsync`.  
   
@@ -305,13 +311,27 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
     -   El método `CopyTo` o `CopyToAsync` copia bytes a su argumento, `content`, y no devuelve un valor significativo. En la versión sincrónica, la llamada a `CopyTo` es una sencilla instrucción que no devuelve un valor. La versión asincrónica, `CopyToAsync`, devuelve un elemento <xref:System.Threading.Tasks.Task>. La tarea funciona como "Task(void)" y permite que se espere al método. Aplique `Await` o `await` a la llamada a `CopyToAsync`, como se muestra en el código siguiente.  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+        ```csharp  
+        await responseStream.CopyToAsync(content);  
+        ```  
+  
          La instrucción anterior abrevia las dos líneas de código siguientes.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+        ```csharp  
+        // CopyToAsync returns a Task, not a Task<T>.  
+        //Task copyTask = responseStream.CopyToAsync(content);  
+  
+        // When copyTask is completed, content contains a copy of  
+        // responseStream.  
+        //await copyTask;  
+        ```  
+  
 4.  Lo único que queda por hacer en `GetURLContents` es ajustar la firma del método. Puede usar el operador `await` únicamente en los métodos marcados con el modificador [async](../../../../csharp/language-reference/keywords/async.md). Agregue el modificador para marcar el método como *método asincrónico*, como se muestra en el código siguiente.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+    ```csharp  
+    private async byte[] GetURLContents(string url)  
+    ```  
+  
 5.  El tipo de valor devuelto de un método asincrónico solo puede ser <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> o `void` en C#. Normalmente, el tipo de valor devuelto `void` se usa solo en un controlador de eventos asincrónico, en el que se requiere `void`. En otros casos, se usa `Task(T)` si el método completado tiene una instrucción [return](../../../../csharp/language-reference/keywords/return.md) que devuelve un valor de tipo T, y se usa `Task` si el método completado no devuelve un valor significativo. Puede considerar que el tipo de valor devuelto `Task` significa "Task(void)".  
   
      Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
@@ -324,7 +344,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      En el código siguiente se muestran estos cambios.  
   
-    ```cs  
+    ```csharp  
     private async Task<byte[]> GetURLContentsAsync(string url)  
     ```  
   
@@ -341,13 +361,13 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      En el código siguiente se muestran estos cambios.  
   
-    ```cs  
+    ```csharp  
     byte[] urlContents = await GetURLContentsAsync(url);  
     ```  
   
      La asignación anterior abrevia las dos líneas de código siguientes.  
   
-    ```cs  
+    ```csharp  
     // GetURLContentsAsync returns a Task<T>. At completion, the task  
     // produces a byte array.  
     //Task<byte[]> getContentsTask = GetURLContentsAsync(url);  
@@ -364,7 +384,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      En el código siguiente se muestran estos cambios.  
   
-    ```cs  
+    ```csharp  
     private async Task SumPageSizesAsync()  
     ```  
   
@@ -381,7 +401,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      Al igual que en los procedimientos anteriores, puede convertir la llamada usando una o dos instrucciones. En el código siguiente se muestran estos cambios.  
   
-    ```cs  
+    ```csharp  
     // One-step async call.  
     await SumPageSizesAsync();  
   
@@ -392,14 +412,14 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 3.  Para evitar volver a entrar accidentalmente en la operación, agregue la instrucción siguiente encima de `startButton_Click` para deshabilitar el botón **Inicio**.  
   
-    ```cs  
+    ```csharp  
     // Disable the button until the operation is complete.  
     startButton.IsEnabled = false;  
     ```  
   
      Puede volver a habilitar el botón al final del controlador de eventos.  
   
-    ```cs  
+    ```csharp  
     // Reenable the button in case you want to run the operation again.  
     startButton.IsEnabled = true;  
     ```  
@@ -408,7 +428,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 4.  Finalmente, agregue el modificador `async` a la declaración de modo que el controlador de eventos pueda esperar `SumPagSizesAsync`.  
   
-    ```cs  
+    ```csharp  
     private async void startButton_Click(object sender, RoutedEventArgs e)  
     ```  
   
@@ -434,7 +454,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
      El primer paso es crear un objeto `HttpClient` en el método `SumPageSizesAsync`. Agregue la siguiente declaración al principio del método.  
   
-    ```cs  
+    ```csharp  
     // Declare an HttpClient object and increase the buffer size. The  
     // default buffer size is 65,536.  
     HttpClient client =  
@@ -443,7 +463,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
   
 2.  En `SumPageSizesAsync,` reemplace la llamada a su método `GetURLContentsAsync` con una llamada al método `HttpClient`.  
   
-    ```  
+    ```csharp  
     byte[] urlContents = await client.GetByteArrayAsync(url);  
     ```  
   
@@ -456,7 +476,7 @@ Puede escribir programas asincrónicos de manera más fácil e intuitiva usando 
 ##  <a name="BKMK_CompleteCodeExamples"></a> Ejemplo  
  El código siguiente contiene el ejemplo completo de la conversión de una solución sincrónica a una asincrónica usando el método `GetURLContentsAsync` asincrónico que escribió. Observe que es muy parecida a la solución sincrónica original.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -605,7 +625,7 @@ namespace AsyncExampleWPF
   
  El código siguiente contiene el ejemplo completo de la solución que usa el método `HttpClient`, `GetByteArrayAsync`.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -729,3 +749,4 @@ namespace AsyncExampleWPF
  [Task-based Asynchronous Programming (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  (Programación asincrónica basada en tareas [TAP])  
  [How to: Extend the async Walkthrough by Using Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  (Cómo: Ampliar el tutorial de async usando Task.WhenAll [C#])  
  [How to: Make Multiple Web Requests in Parallel by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Cómo: Hacer varias solicitudes web en paralelo usando async y await [C#])
+

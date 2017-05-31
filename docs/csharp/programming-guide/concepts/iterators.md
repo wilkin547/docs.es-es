@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe482e4db15ce621e74bdacf9313a3d31ade51b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
@@ -50,7 +51,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 }  
 ```  
   
- El tipo de valor devuelto de un método iterador o de un descriptor de acceso `get` puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
+ El tipo de valor devuelto de un método de iterador o descriptor de acceso `get` puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
   
  Se puede usar una instrucción `yield break` para finalizar la iteración.  
   
@@ -231,9 +232,9 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a> Uso de iteradores con una lista genérica  
- En el ejemplo siguiente, la clase genérica `Stack(Of T)` implementa la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>. El método `Push` asigna valores a una matriz de tipo `T`. El método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> devuelve los valores de la matriz mediante la instrucción `yield return`.  
+ En el ejemplo siguiente, la clase genérica `Stack(Of T)` implementa la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>. El método `Push` asigna valores a una matriz de tipo `T`. El método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> devuelve los valores de la matriz con la instrucción `yield return`.  
   
- Además del método genérico <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>, también se debe implementar el método no genérico <xref:System.Collections.IEnumerable.GetEnumerator%2A>. Esto es porque <xref:System.Collections.Generic.IEnumerable%601> se hereda de <xref:System.Collections.IEnumerable>. La implementación no genérica aplaza la implementación genérica.  
+ Además del método <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> genérico, el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> no genérico también debe implementarse. Esto es porque <xref:System.Collections.Generic.IEnumerable%601> se hereda de <xref:System.Collections.IEnumerable>. La implementación no genérica aplaza la implementación genérica.  
   
  El ejemplo usa iteradores con nombre para admitir distintas formas de recorrer en iteración la misma colección de datos. Estos iteradores con nombre son las propiedades `TopToBottom` y `BottomToTop`, y el método `TopN`.  
   
@@ -348,7 +349,7 @@ public class Stack<T> : IEnumerable<T>
 ```  
   
 ##  <a name="BKMK_SyntaxInformation"></a> Información sobre la sintaxis  
- Un iterador se puede producir como un método o como un descriptor de acceso `get`. Un iterador no puede aparecer en un evento, un constructor de instancia, un constructor estático o un destructor estático.  
+ Un iterador se puede producir como un método o como un descriptor de acceso `get`. Un iterador no puede aparecer en un evento, un constructor de instancia, un constructor estático o un finalizador estático.  
   
  Debe existir una conversión implícita desde el tipo de expresión en la instrucción `yield return` al tipo de valor devuelto por el iterador.  
   
@@ -361,7 +362,7 @@ public class Stack<T> : IEnumerable<T>
   
  Para ver lo que hace el compilador, puede usar la herramienta Ildasm.exe para ver el código de lenguaje intermedio de Microsoft que se genera para un método iterador.  
   
- Cuando se crea un iterador para una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md), no es necesario implementar la interfaz <xref:System.Collections.IEnumerator> completa. Cuando el compilador detecta el iterador, genera automáticamente los métodos `Current`, `MoveNext` y `Dispose` de la interfaz <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
+ Cuando crea un iterador para una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md), no necesita implementar la interfaz <xref:System.Collections.IEnumerator> completa. Cuando el compilador detecta el iterador, genera automáticamente los métodos `Current`, `MoveNext` y `Dispose` de la interfaz <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
   
  En cada iteración sucesiva del bucle `foreach` (o la llamada directa a `IEnumerator.MoveNext`), el cuerpo de código del iterador siguiente se reanuda después de la instrucción `yield return` anterior. Después continúa con la siguiente instrucción `yield return` hasta que se alcanza el final del cuerpo del iterador, o hasta que se encuentra una instrucción `yield break`.  
   
@@ -374,7 +375,7 @@ public class Stack<T> : IEnumerable<T>
   
 -   Modificar la secuencia de lista después de la primera iteración del bucle `foreach`.  
   
--   Evitar que se cargue totalmente una lista grande antes de la primera iteración de un bucle `foreach`. Un ejemplo es una búsqueda paginada para cargar un lote de filas de tabla. Otro ejemplo es el método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, que implementa los iteradores en .NET Framework.  
+-   Evitar que se cargue totalmente una lista grande antes de la primera iteración de un bucle `foreach`. Un ejemplo es una búsqueda paginada para cargar un lote de filas de tabla. Otro ejemplo es el método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>, que implementa iteradores en .NET Framework.  
   
 -   Encapsular la creación de la lista en el iterador. En el método iterador, puede crear la lista y después devolver cada resultado en un bucle.  
   

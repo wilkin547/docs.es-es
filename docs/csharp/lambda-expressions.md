@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 82b912eb393aeaf6e222f2ce20e6a1a99b4a3662
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
+ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.contentlocale: es-es
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -31,11 +32,11 @@ Las expresiones lambda son un código que se puede representar como un delegado 
 
 Una expresión lambda usa `=>`, el [operador de declaración lambda](language-reference/operators/lambda-operator.md), para separar del código ejecutable la lista de parámetros de la lambda. Para crear una expresión lambda, especifique los parámetros de entrada (si existen) a la izquierda del operador lambda y coloque el bloque de expresiones o de instrucciones en el otro lado. Por ejemplo, la expresión lambda de una sola línea `x => x * x` especifica un parámetro denominado `x` y devuelve el valor de `x` al cuadrado. Puede asignar esta expresión a un tipo delegado, como se muestra en el ejemplo siguiente:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda1.cs#1)]
 
 También puede pasarla directamente como un argumento de método:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
 ## <a name="expression-lambdas"></a>Lambdas de expresión ##
 
@@ -47,15 +48,15 @@ También puede pasarla directamente como un argumento de método:
 
 Los paréntesis solo son opcionales si la lambda tiene un parámetro de entrada; de lo contrario, son obligatorios. Para especificar cero parámetros de entrada, utilice paréntesis vacíos:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#1)]
 
 Dos o más parámetros de entrada se separan por comas y se encierran entre paréntesis:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#2)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#2)]
 
 Normalmente, el compilador usa la inferencia de tipos para determinar los tipos de parámetro, aunque a veces resulta difícil o imposible para el compilador deducir los tipos de entrada. Cuando ocurre esto, los tipos se pueden especificar explícitamente, como en el ejemplo siguiente:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
 Observe en el ejemplo anterior que el cuerpo de una lambda de expresión puede estar compuesto de una llamada a método. Pero, si va a crear árboles de expresión que se evaluarán fuera de .NET Framework, como en SQL Server o en Entity Framework (EF), debe evitar usar llamadas a métodos en las expresiones lambda, puesto que los métodos podrían no tener ningún significado fuera del contexto del tiempo de ejecución de .NET. Si opta por usar las llamadas a métodos en este caso, asegúrese de probarlas exhaustivamente para garantizar que las llamadas a métodos se pueden resolver correctamente.
 
@@ -69,7 +70,7 @@ Una lambda de instrucción es similar a un lambda de expresión, salvo que las i
 
 El cuerpo de una lambda de instrucción puede estar compuesto de cualquier número de instrucciones; sin embargo, en la práctica, generalmente no hay más de dos o tres.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/statement1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/statement1.cs#1)]
 
 Las lambdas de instrucción, como los métodos anónimos, no se pueden utilizar para crear árboles de expresión.
 
@@ -77,7 +78,7 @@ Las lambdas de instrucción, como los métodos anónimos, no se pueden utilizar 
 
 Puede crear fácilmente expresiones e instrucciones lambda que incorporen el procesamiento asincrónico mediante las palabras clave [async](language-reference/keywords/async.md) y [await](language-reference/keywords/await.md). Por ejemplo, en el ejemplo se llama a un método `ShowSquares` que se ejecuta de forma asincrónica.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/async1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/async1.cs#1)]
 
 Para obtener más información sobre cómo crear y usar métodos asincrónicos, vea [Programación asincrónica con async y await](programming-guide/concepts/async/index.md).
 
@@ -87,11 +88,11 @@ A partir de C# 7.0, el lenguaje C# proporciona compatibilidad integrada para las
 
 Para definir una tupla, incluya entre paréntesis una lista delimitada por comas de los componentes. En el ejemplo siguiente se usa la tupla con 5 componentes para pasar una secuencia de números a una expresión lambda, que duplica cada valor y devuelve una tupla con 5 componentes que contiene el resultado de las multiplicaciones.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples1.cs#1)]
 
 Normalmente, los campos de una tupla se denominan `Item1`, `Item2`, etc., aunque puede definir una tupla con componentes con nombre, como en el ejemplo siguiente.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/tuples2.cs#1)]
 
 Para obtener más información sobre la compatibilidad de las tuplas en C#, vea [C# Tuple types](tuples.md) (Tipos de tupla de C#).
 
@@ -99,35 +100,35 @@ Para obtener más información sobre la compatibilidad de las tuplas en C#, vea 
 
 LINQ to Objects, entre otras implementaciones, tiene un parámetro de entrada cuyo tipo es uno de la familia @System.Func%601 de delegados genéricos. Estos delegados usan parámetros de tipo para definir el número y el tipo de los parámetros de entrada, así como el tipo de valor devuelto del delegado. Los delegados `Func` son muy útiles para encapsular expresiones definidas por el usuario que se aplican a cada elemento en un conjunto de datos de origen. Por ejemplo, imagínese que tiene el delegado @System.Func%601, cuya sintaxis es la siguiente:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
 Se pueden crear instancias del delegado con un código similar al siguiente:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#2)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#2)]
 
 donde `int` es un parámetro de entrada y `bool` es el valor devuelto. El valor devuelto siempre se especifica en el último parámetro de tipo. Al invocarse el siguiente delegado `Func`, devuelve true o false para indicar si el parámetro de entrada es igual a 5:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
 También puede proporcionar una expresión lambda cuando el tipo de argumento es @System.Linq.Expressions.Expression%601 (por ejemplo, en los operadores de consulta estándar que se definen en el tipo @System.Linq.Queryable). Al especificar un argumento @System.Linq.Expressions.Expression%601, la lambda se compila en un árbol de expresión. En el ejemplo siguiente se usa el operador de consulta estándar [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
 El compilador puede deducir el tipo del parámetro de entrada o también se puede especificar explícitamente. Esta expresión lambda en concreto cuenta aquellos enteros (`n`) que, divididos por dos, dan como resto 1.
 
 El siguiente ejemplo genera una secuencia que contiene todos los elementos de la matriz `numbers` que preceden al 9, ya que ese es el primer número de la secuencia que no cumple la condición.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#5)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#5)]
 
 En el siguiente ejemplo se especifican varios parámetros de entrada encerrándolos entre paréntesis. El método devuelve todos los elementos de la matriz de números hasta que encuentra un número cuyo valor es menor que la posición ordinal en la matriz.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
 ## <a name="type-inference-in-lambda-expressions"></a>Inferencia de tipos en expresiones lambda ##
 
 Al escribir lambdas, no tiene por qué especificar un tipo para los parámetros de entrada, ya que el compilador puede deducir el tipo según el cuerpo de lambda, los tipos de parámetros y otros factores, tal como se describe en la especificación del lenguaje C#. Para la mayoría de los operadores de consulta estándar, la primera entrada es el tipo de los elementos en la secuencia de origen. Si está realizando una consulta sobre `IEnumerable<Customer>`, se deducirá que la variable de entrada será un objeto `Customer`, lo cual significa que se podrá tener acceso a sus métodos y propiedades:
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/infer1.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/infer1.cs#1)]
 
 Las reglas generales para la inferencia de tipos de las lambdas son las siguientes:
 
@@ -143,7 +144,7 @@ Observe que las expresiones lambda, en sí mismas, no tienen tipo, ya que el sis
 
 Las lambdas pueden hacer referencia a las *variables externas* (vea [Métodos anónimos](programming-guide/statements-expressions-operators/anonymous-methods.md)) que están en el ámbito del método que define la función lambda o en el ámbito del tipo que contiene la expresión lambda. Las variables que se capturan de esta manera se almacenan para su uso en la expresión lambda, cuando de otro modo quedarían fuera de ámbito y serían eliminadas por la recolección de elementos no utilizados. Para poder utilizar una variable externa en una expresión lambda, debe estar previamente asignada. En el ejemplo siguiente se muestran estas reglas.
 
-[!CODE [csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/scope.cs#1)]
+[!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/scope.cs#1)]
 
  Las reglas siguientes se aplican al ámbito de las variables en las expresiones lambda:
 

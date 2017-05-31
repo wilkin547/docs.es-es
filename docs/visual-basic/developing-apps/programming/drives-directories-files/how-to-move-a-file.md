@@ -1,65 +1,83 @@
 ---
-title: "C&#243;mo: Mover un archivo en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "archivos, mover"
+title: "Cómo: Mover un archivo en Visual Basic | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- files, moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# C&#243;mo: Mover un archivo en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 44e0e81a28d1475a3f3cf6bcb7372b05eb8037bf
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
+---
+# <a name="how-to-move-a-file-in-visual-basic"></a>Cómo: Mover un archivo en Visual Basic
 El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo a otra carpeta. Si la estructura de destino no existe, se creará.  
   
-### Para mover un archivo  
+### <a name="to-move-a-file"></a>Para mover un archivo  
   
 -   Use el método `MoveFile` para mover el archivo, y especifique el nombre y la ubicación de los archivos de origen y de destino. En este ejemplo se mueve el archivo denominado `test.txt` de `TestDir1` a `TestDir2`. Observe que el nombre del archivo de destino se especifica aunque coincida con el nombre del archivo de origen.  
   
      [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
   
-### Para mover un archivo y cambiarle el nombre  
+### <a name="to-move-a-file-and-rename-it"></a>Para mover un archivo y cambiarle el nombre  
   
 -   Use el método `MoveFile` para mover el archivo, y especifique el nombre y la ubicación del archivo de origen, la ubicación de destino y el nuevo nombre en la ubicación de destino. En este ejemplo se mueve el archivo denominado `test.txt` de `TestDir1` a `TestDir2` y su nombre se cambia a `nexttest.txt`.  
   
      [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
   
-## Programación eficaz  
+## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo \(empieza por \\\\.\\\) \(<xref:System.ArgumentException>\).  
+-   La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  
   
--   La ruta de acceso no es válida porque es `Nothing` \(<xref:System.ArgumentNullException>\).  
+-   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationFileName` es `Nothing` o una cadena vacía \(<xref:System.ArgumentNullException>\).  
+-   `destinationFileName` es `Nothing` o una cadena vacía (<xref:System.ArgumentNullException>).  
   
--   El archivo de origen no es válido o no existe \(<xref:System.IO.FileNotFoundException>\).  
+-   El archivo de origen no es válido o no existe (<xref:System.IO.FileNotFoundException>).  
   
--   La ruta de acceso combinada apunta a un directorio existente, el archivo de destino existe y `overwrite` está establecido en `False`, un archivo del directorio de destino con el mismo nombre está en uso o el usuario no tiene permisos suficientes para acceder al archivo \(<xref:System.IO.IOException>\).  
+-   La ruta de acceso combinada apunta a un directorio existente, el archivo de destino existe y `overwrite` está establecido en `False`, un archivo del directorio de destino con el mismo nombre está en uso o el usuario no tiene permisos suficientes para acceder al archivo (<xref:System.IO.IOException>).  
   
--   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos \(:\) o tiene un formato no válido \(<xref:System.NotSupportedException>\).  
+-   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
--   `showUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException` y el usuario canceló la operación o se produjo un error de E\/S no especificado \(<xref:System.OperationCanceledException>\).  
+-   `showUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException` y el usuario ha cancelado la operación o se ha producido un error de E/S no especificado (<xref:System.OperationCanceledException>).  
   
--   La ruta supera la longitud máxima definida por el sistema \(<xref:System.IO.PathTooLongException>\).  
+-   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
--   El usuario no tiene los permisos necesarios para ver la ruta de acceso \(<xref:System.Security.SecurityException>\).  
+-   El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
   
--   El usuario no tiene el permiso necesario \(<xref:System.UnauthorizedAccessException>\).  
+-   El usuario no tiene los permisos requeridos (<xref:System.UnauthorizedAccessException>).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>   
  [Cómo: Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
- [Cómo: Crear una copia de un archivo en un directorio diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
- [Cómo: Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+ [Cómo: Crear una copia de un archivo en un directorio diferente en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
+ [Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

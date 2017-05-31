@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31b206eb01d778b67acc1a25d3c69e2e1dfd553d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f8d51aa1c50c097577a575be9b5da4b9e0effc55
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="thread-synchronization-c"></a>Sincronización de subprocesos (C#)
@@ -36,11 +37,11 @@ En las secciones siguientes se describen las características y clases que se pu
   
  Para obtener información general sobre la programación multiproceso, vea:  
   
--   [Principios básicos del subprocesamiento administrado](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [Principios básicos del subprocesamiento administrado](../../../../standard/threading/managed-threading-basics.md)  
   
--   [Usar subprocesos y subprocesamiento](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [Usar subprocesos y subprocesamiento](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [Procedimientos recomendados para el subprocesamiento administrado](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [Procedimientos recomendados para el subprocesamiento administrado](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-keyword"></a>La palabra clave lock  
  La instrucción `lock` de C# se puede usar para garantizar que un bloque de código se ejecuta hasta el final sin que lo interrumpan otros subprocesos. Esto se logra obteniendo un bloqueo de exclusión mutua para un objeto determinado durante la ejecución de un bloque de código.  
@@ -66,7 +67,7 @@ public class TestThreading
   
  El argumento suministrado a la palabra clave `lock` debe ser un objeto basado en un tipo de referencia y se usa para definir el ámbito del bloqueo. En el ejemplo anterior, el ámbito del bloqueo se limita a esta función porque no existe ninguna referencia al objeto `lockThis` fuera de la función. Si existiese una referencia de ese tipo, el ámbito del bloqueo se extendería a ese objeto. Estrictamente, el objeto suministrado solo se usa para identificar únicamente el recurso que varios subprocesos comparten, de modo que puede ser una instancia de clase arbitraria. En cambio, en la práctica, este objeto normalmente representa el recurso para el que la sincronización de subprocesos es necesaria. Por ejemplo, si varios subprocesos van a usar un objeto contenedor, se puede pasar el contenedor para bloquearlo. Entonces, el bloque de código sincronizado que sigue al bloqueo tendría acceso al contenedor. Con tal de que otros subprocesos bloqueen el mismo contenedor antes de tener acceso a él, el acceso al objeto se sincroniza de manera segura.  
   
- Generalmente, es mejor evitar el bloqueo en un tipo `public` o en instancias de objeto que estén fuera del control de la aplicación. Por ejemplo, `lock(this)` puede ser problemático si se puede tener acceso a la instancia públicamente, ya que el código que está fuera de su control también puede bloquear el objeto. Esto podría crear situaciones del interbloqueo, en las que dos o más subprocesos esperan a que se libere el mismo objeto. El bloqueo de un tipo de datos público, como opuesto a un objeto, puede crear problemas por la misma razón. El bloqueo de cadenas literales es especialmente arriesgado porque Common Language Runtime (CLR) *interna* las cadenas literales. Esto significa que hay una instancia de un literal de cadena determinado para todo el programa, exactamente el mismo objeto representa el literal en todos los dominios de la aplicación en ejecución, en todos los subprocesos. Como resultado, un bloqueo sobre una cadena que tiene el mismo contenido en cualquier parte del proceso de la aplicación bloquea todas las instancias de esa cadena en la aplicación. Por tanto, es mejor bloquear un miembro privado o protegido que no esté internado. Algunas clases proporcionan específicamente los miembros para bloquear. Por ejemplo, el tipo <xref:System.Array> proporciona <xref:System.Array.SyncRoot%2A>. Muchos tipos de colección también proporcionan un miembro `SyncRoot`.  
+ Generalmente, es mejor evitar el bloqueo en un tipo `public` o en instancias de objeto que estén fuera del control de la aplicación. Por ejemplo, `lock(this)` puede ser problemático si se puede tener acceso a la instancia públicamente, ya que el código que está fuera de su control también puede bloquear el objeto. Esto podría crear situaciones del interbloqueo, en las que dos o más subprocesos esperan a que se libere el mismo objeto. El bloqueo de un tipo de datos público, como opuesto a un objeto, puede crear problemas por la misma razón. El bloqueo de cadenas literales es especialmente arriesgado porque Common Language Runtime (CLR) *interna* las cadenas literales. Esto significa que hay una instancia de un literal de cadena determinado para todo el programa, exactamente el mismo objeto representa el literal en todos los dominios de la aplicación en ejecución, en todos los subprocesos. Como resultado, un bloqueo sobre una cadena que tiene el mismo contenido en cualquier parte del proceso de la aplicación bloquea todas las instancias de esa cadena en la aplicación. Por tanto, es mejor bloquear un miembro privado o protegido que no esté internado. Algunas clases proporcionan específicamente los miembros para bloquear. El tipo <xref:System.Array>, por ejemplo, proporciona <xref:System.Array.SyncRoot%2A>. Muchos tipos de colección también proporcionan un miembro `SyncRoot`.  
   
  Vea los siguientes temas para obtener más información sobre la instrucción `lock`:  
   
@@ -104,11 +105,11 @@ finally
 ## <a name="synchronization-events-and-wait-handles"></a>Eventos de sincronización y controladores de espera  
  El uso de un bloqueo o un monitor es útil para evitar la ejecución simultánea de bloques de código usados por varios subprocesos, pero estas construcciones no permiten que un subproceso comunique un evento a otro. Esto requiere *eventos de sincronización*, que son objetos que tienen uno de dos estados, señalizado y no señalizado, que se pueden usar para activar y suspender subprocesos. Los subprocesos se pueden suspender haciendo que esperen a que se produzca un evento de sincronización que no esté señalizado y se pueden activar cambiando el estado del evento a señalizado. Si un subproceso intenta esperar a que se produzca un evento que ya está señalizado, el subproceso se sigue ejecutando sin retraso.  
   
- Hay dos tipos de eventos de sincronización: <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent>. Solo difieren en que <xref:System.Threading.AutoResetEvent> cambia automáticamente de señalizado a no señalizado siempre que activa un subproceso. A la inversa, <xref:System.Threading.ManualResetEvent> permite que cualquier número de subprocesos esté activado si su estado es señalizado y solo vuelve al estado no señalizado cuando se llama a su método <xref:System.Threading.EventWaitHandle.Reset%2A>.  
+ Existen dos tipos de eventos de sincronización: <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent>. Solo difieren en que <xref:System.Threading.AutoResetEvent> cambia automáticamente de señalizado a no señalizado siempre que activa un subproceso. Por el contrario, <xref:System.Threading.ManualResetEvent> permite que se active cualquier número de subprocesos mediante su estado señalizado, y solo volverá a un estado no señalizado cuando se llame a su método <xref:System.Threading.EventWaitHandle.Reset%2A>.  
   
- Se puede hacer que los subprocesos esperen en eventos llamando a uno de los métodos de espera, como <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> o <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> hace que el subproceso espere hasta que se señalice un único evento, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> bloquea un subproceso hasta que se señalicen uno o varios eventos especificados y <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> bloquea el subproceso hasta que se señalicen todos los eventos indicados. Un evento se señaliza cuando se llama a su método <xref:System.Threading.EventWaitHandle.Set%2A>.  
+ Los subprocesos pueden crearse para que esperen en eventos llamando a uno de los métodos de espera, como <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> o <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> hace que el subproceso espere hasta que un único evento se señaliza, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> bloquea un subproceso hasta que uno o más eventos indicados se señalizan y <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> bloquea el subproceso hasta que todos los eventos indicados se señalizan. Un evento se señaliza cuando se llama a su método <xref:System.Threading.EventWaitHandle.Set%2A>.  
   
- En el ejemplo siguiente, la función `Main` crea e inicia un subproceso. El nuevo subproceso espera a que se produzca un evento mediante el método <xref:System.Threading.WaitHandle.WaitOne%2A>. Se suspende el subproceso hasta que el evento sea señalizado por el subproceso primario que está ejecutando la función `Main`. Cuando el evento se señaliza, el subproceso auxiliar se devuelve. En este caso, como el evento solo se usa para una activación del subproceso, se podrían usar las clases <xref:System.Threading.AutoResetEvent> o <xref:System.Threading.ManualResetEvent>.  
+ En el ejemplo siguiente, la función `Main` crea e inicia un subproceso. El nuevo subproceso espera en un evento con el método <xref:System.Threading.WaitHandle.WaitOne%2A>. Se suspende el subproceso hasta que el evento sea señalizado por el subproceso primario que está ejecutando la función `Main`. Cuando el evento se señaliza, el subproceso auxiliar se devuelve. En este caso, como el evento solo se usa para una activación de subproceso, pueden usarse las clases <xref:System.Threading.AutoResetEvent> o <xref:System.Threading.ManualResetEvent>.  
   
 ```csharp  
 using System;  
@@ -143,11 +144,11 @@ class ThreadingExample
 ```  
   
 ## <a name="mutex-object"></a>Objeto Mutex  
- Una *exclusión mutua* es similar a un monitor; impide la ejecución simultánea de un bloque de código por más de un subproceso a la vez. De hecho, el nombre "mutex" es una manera abreviada del término "mutuamente exclusivo". En cambio, a diferencia de los monitores, una exclusión mutua se puede usar para sincronizar los subprocesos entre varios procesos. Una exclusión mutua se representa mediante la clase <xref:System.Threading.Mutex>.  
+ Una *exclusión mutua* es similar a un monitor; impide la ejecución simultánea de un bloque de código por más de un subproceso a la vez. De hecho, el nombre "mutex" es una manera abreviada del término "mutuamente exclusivo". En cambio, a diferencia de los monitores, una exclusión mutua se puede usar para sincronizar los subprocesos entre varios procesos. La clase <xref:System.Threading.Mutex> representa una exclusión mutua.  
   
  Cuando se usa para la sincronización entre procesos, una exclusión mutua se denomina una *exclusión mutua con nombre* porque va a usarla otra aplicación y, por tanto, no se puede compartir por medio de una variable global o estática. Se debe asignar un nombre para que ambas aplicaciones puedan tener acceso al mismo objeto de exclusión mutua.  
   
- Aunque se puede usar una exclusión mutua para la sincronización de subprocesos dentro de un proceso, normalmente es preferible usar <xref:System.Threading.Monitor> porque los monitores se diseñaron específicamente para .NET Framework y, por tanto, hacen un mejor uso de los recursos. Por el contrario, la clase <xref:System.Threading.Mutex> es un contenedor para una construcción de Win32. Aunque es más eficaz que un monitor, una exclusión mutua requiere transiciones de interoperabilidad que son más costosas a nivel computacional que las requeridas por la clase <xref:System.Threading.Monitor>. Para obtener un ejemplo de uso de la exclusión mutua, vea [Exclusiones mutuas (mutex)](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2).  
+ Aunque se puede usar una exclusión mutua para la sincronización de subprocesos dentro de un proceso, normalmente es preferible usar <xref:System.Threading.Monitor> porque los monitores se diseñaron específicamente para .NET Framework y, por tanto, hacen un mejor uso de los recursos. Por el contrario, la clase <xref:System.Threading.Mutex> es un contenedor para una construcción de Win32. Aunque es más eficaz que un monitor, una exclusión mutua requiere transiciones de interoperabilidad que son más costosas a nivel computacional que las requeridas por la clase <xref:System.Threading.Monitor>. Para obtener un ejemplo de uso de la exclusión mutua, vea [Exclusiones mutuas (mutex)](../../../../standard/threading/mutexes.md).  
   
 ## <a name="interlocked-class"></a>Clase Interlocked  
  Puede usar los métodos de la clase <xref:System.Threading.Interlocked> para evitar problemas que pueden producirse cuando varios subprocesos intentan actualizar o comparar simultáneamente el mismo valor. Los métodos de esta clase le permiten incrementar, reducir, intercambiar y comparar valores, de manera segura, desde cualquier subproceso.  
@@ -177,8 +178,8 @@ class ThreadingExample
  <xref:System.Threading.EventWaitHandle.Set%2A>   
  [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [lock (Instrucción)](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [Exclusiones mutuas (mutex)](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
+ [Exclusiones mutuas (mutex)](../../../../standard/threading/mutexes.md)   
  @System.Threading.Monitor   
- [Operaciones de bloqueo](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [Sincronizar datos para subprocesamiento múltiple](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ [Operaciones de bloqueo](../../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ [Sincronizar datos para subprocesamiento múltiple](../../../../standard/threading/synchronizing-data-for-multithreading.md)

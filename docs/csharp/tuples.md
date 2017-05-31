@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2c81b7e18f36bde5b46c0c6df5c8122cd303931
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
+ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.contentlocale: es-es
+ms.lasthandoff: 04/26/2017
 
 ---
 
 # <a name="c-tuple-types"></a>Tipos de tupla de C# #
 
-Las tuplas de C# son tipos que se definen mediante una sintaxis ligera. Entre otras ventajas, incluyen una sintaxis más sencilla, reglas para conversiones en función de un número (denominadas "aridad") y tipos de campos y reglas coherentes para copias y asignaciones. Como contrapartida, las tuplas no admiten algunas de las expresiones orientadas a objetos que se asocian a la herencia. Puede obtener información general de la sección sobre [tuplas en el tema Novedades de C# 7](csharp-7.md#tuples).
+Las tuplas de C# son tipos que se definen mediante una sintaxis ligera. Entre otras ventajas, incluyen una sintaxis más sencilla, reglas para conversiones en función de un número (denominadas "aridad") y tipos de campos y reglas coherentes para copias y asignaciones. Como contrapartida, las tuplas no admiten algunas de las expresiones orientadas a objetos que se asocian a la herencia. Puede obtener información general de la sección sobre [tuplas en el tema Novedades de C# 7](whats-new/csharp-7.md#tuples).
 
 En este tema, conocerá las reglas del lenguaje que rigen las tuplas en C# 7, distintas formas de usarlas y una guía inicial sobre cómo trabajar con tuplas.
 
@@ -65,7 +66,7 @@ Es importante comprender estos aspectos fundamentales subyacentes de las nuevas 
 
 ## <a name="assignment-and-tuples"></a>Asignación y tuplas
 
-El lenguaje admite la asignación entre tipos de tupla con el mismo número de campos y los mismos tipos para cada uno de esos campos. Los tipos deben ser coincidencias exactas en tiempo de compilación. Otras conversiones no se tienen en cuenta para las asignaciones. Echemos un vistazo a los tipos de asignaciones que se permiten entre los tipos de tupla.
+El lenguaje admite la asignación entre tipos de tupla con el mismo número de campos y conversiones implícitas para los tipos para cada uno de esos campos. Otras conversiones no se tienen en cuenta para las asignaciones. Echemos un vistazo a los tipos de asignaciones que se permiten entre los tipos de tupla.
 
 Tenga en cuenta estas variables que se usan en los ejemplos siguientes:
 
@@ -181,7 +182,7 @@ También es válido usar la palabra clave `var` con alguna de las declaraciones 
 ```
 Tenga en cuenta que no se puede usar un tipo específico fuera de los paréntesis, aunque todos los campos de la tupla tengan el mismo tipo.
 
-### <a name="deconstring-user-defined-types"></a>Deconstruir tipos definidos por el usuario
+### <a name="deconstructing-user-defined-types"></a>Deconstruir tipos definidos por el usuario
 
 Cualquier tipo de tupla puede deconstruirse, tal y como se muestra anteriormente. También resulta fácil habilitar la deconstrucción en cualquier tipo definido por el usuario (clases, structs o incluso interfaces).
 

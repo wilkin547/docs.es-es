@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b12c4b20f65f8cd2b68a55c5d2548b289a560c3c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d65b4050287289df419685127cdbbb18f52ec719
+ms.openlocfilehash: a214f129424fd458decf473ef94ec3c5ed6eed3c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 Los métodos de extensión permiten "agregar" métodos a los tipos existentes sin crear un nuevo tipo derivado, recompilar o modificar de otra manera el tipo original. Los métodos de extensión son una clase especial de método estático, pero se les llama como si fueran métodos de instancia en el tipo extendido. En el caso del código de cliente escrito en C# y Visual Basic, no existe ninguna diferencia aparente entre llamar a un método de extensión y llamar a los métodos realmente definidos en un tipo.  
   
- Los métodos de extensión más comunes son los operadores de consulta estándar [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] que agregan funcionalidad de consulta a los tipos <xref:System.Collections.IEnumerable?displayProperty=fullName> y <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> existentes. Para usar los operadores de consulta estándar, inclúyalos primero en el ámbito con una directiva `using System.Linq`. Después, cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parecerá tener métodos de instancia como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>, y así sucesivamente. Se pueden ver estos métodos adicionales en la finalización de instrucciones de IntelliSense al escribir "punto" después de una instancia de un tipo <xref:System.Collections.Generic.IEnumerable%601> como <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
+ Los métodos de extensión más comunes son los operadores de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] estándar, que agregan funciones de consulta a los tipos <xref:System.Collections.IEnumerable?displayProperty=fullName> y <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> existentes. Para usar los operadores de consulta estándar, inclúyalos primero en el ámbito con una directiva `using System.Linq`. A partir de ese momento, cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parecerá tener métodos de instancia como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A>, etc. Puede ver estos métodos adicionales en la finalización de instrucciones de IntelliSense al escribir "punto" después de una instancia de un tipo <xref:System.Collections.Generic.IEnumerable%601>, como <xref:System.Collections.Generic.List%601> o <xref:System.Array>.  
   
  En el ejemplo siguiente se muestra cómo llamar al método `OrderBy` de operador de consulta estándar en una matriz de enteros. La expresión entre paréntesis es una expresión lambda. Muchos operadores de consulta estándar toman expresiones lambda como parámetros, pero no es un requisito para los métodos de extensión. Para obtener más información, vea [Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) (Expresiones lambda).  
   
@@ -112,3 +113,4 @@ using System.Linq;
  [Extension methods Interoperability between languages](http://go.microsoft.com/fwlink/?LinkId=112386)  (Interoperabilidad de los métodos de extensión entre lenguajes)  
  [Extension methods and Curried Delegates](http://go.microsoft.com/fwlink/?LinkId=112387)  (Métodos de extensión y delegados currificados)  
  [Extension method Binding and Error reporting](http://go.microsoft.com/fwlink/?LinkId=112388) (Enlazar métodos de extensión y notificación de errores)
+

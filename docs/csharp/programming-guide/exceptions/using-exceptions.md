@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8a4bbb2f6d8060cd9196dd510cd89c827c9d697d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: a8c29002ae2287df60996ed2b23068eec1e2739b
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Usar excepciones (Guía de programación de C#)
@@ -59,7 +60,7 @@ En C#, los errores del programa en tiempo de ejecución se propagan a través de
   
  Si no se encuentra ningún bloque `catch` compatible en la pila de llamadas después de iniciar una excepción, sucede una de estas tres acciones:  
   
--   Si la excepción se encuentra en un destructor, se anula el destructor y, si procede, se llama al destructor base.  
+-   Si la excepción se encuentra en un finalizador, este se anula y, si procede, se llama al finalizador base.  
   
 -   Si la pila de llamadas contiene un constructor estático o un inicializador de campo estático, se inicia una excepción <xref:System.TypeInitializationException>, y la excepción original se asigna a la propiedad <xref:System.Exception.InnerException%2A> de la nueva excepción.  
   

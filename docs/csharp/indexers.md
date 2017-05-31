@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3dc9347aa3c4090b71d473d13b5c7ad68f1fbc76
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: a3ee06e9e177fe3c0a41e99361ba9289943c1cf5
+ms.contentlocale: es-es
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -52,8 +53,7 @@ La presencia de argumentos para hacer referencia a un elemento en un conjunto de
 Tendría que definir *indizadores* en el tipo si su API modela alguna colección en la que se definen los argumentos de esa colección. Los indizadores pueden (o no) asignarse directamente a los tipos de colección que forman parte del marco de trabajo principal de .NET. El tipo puede tener otras responsabilidades, además de tener que modelar una colección.
 Los indizadores le permiten proporcionar la API que coincida con la abstracción de su tipo sin tener que exponer la información interna de cómo se almacenan o se calculan los valores de dicha abstracción.
 
-Veamos algunos de los escenarios habituales en los que se usan los *indizadores*.
-El código de todos los ejemplos está disponible en el [repositorio core-docs de GitHub](https://github.com/dotnet/core-docs). También puede obtener acceso directamente a la [carpeta de ejemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers).
+Veamos algunos de los escenarios habituales en los que se usan los *indizadores*. Puede obtener acceso a la [carpeta de ejemplo para indexadores](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers). Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Matrices y vectores
 

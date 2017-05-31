@@ -47,7 +47,7 @@ Esta sección contiene temas que explican cómo registrar información sobre su 
   
  El objeto `Log` proporciona métodos para escribir información en los agentes de escucha de registro de la aplicación y la propiedad avanzada `Log` del objeto `TraceSource` proporciona información de configuración detallada. El archivo de configuración de la aplicación configura el objeto `Log`.  
   
- El objeto `My.Log` solo está disponible para las aplicaciones ASP.NET. Para las aplicaciones cliente, use `My.Application.Log`. Para obtener más información, consulta <xref:Microsoft.VisualBasic.Logging.Log>.  
+ El objeto `My.Log` solo está disponible para las aplicaciones ASP.NET. Para las aplicaciones cliente, use `My.Application.Log`. Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Tareas  
   

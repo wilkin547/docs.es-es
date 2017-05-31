@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 67b30a93fd046a76dca4cc6abe273426d818aaf5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9aaf49c685498bce451eb53a35a56d8a8fde928c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-async-for-file-access-c"></a>Usar Async en acceso a archivos (C#)
@@ -57,7 +58,7 @@ using System.Threading.Tasks;
 ## <a name="use-of-the-filestream-class"></a>Uso de la clase FileStream  
  En los ejemplos de este tema se usa la clase <xref:System.IO.FileStream>, que tiene una opción que hace que la E/S asincrónica se produzca en el nivel del sistema operativo. Si usa esta opción, puede evitar bloquear un subproceso ThreadPool en muchos casos. Para habilitar esta opción, especifique el argumento `useAsync=true` o `options=FileOptions.Asynchronous` en la llamada al constructor.  
   
- Puede usarse esta opción con <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter> si estos se abren directamente especificando la ruta de acceso del archivo. Pero también puede usar esta opción si se les especifica un <xref:System.IO.Stream> que abra la clase <xref:System.IO.FileStream>. Tenga en cuenta que las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario aunque un subproceso ThreadPool se bloquee, porque el subproceso de interfaz de usuario no se bloquea durante la espera.  
+ No puede usar esta opción con <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter> si los abre directamente al especificar una ruta de acceso de archivo. En cambio, puede usar esta opción si les proporciona un <xref:System.IO.Stream> que ha abierto la clase <xref:System.IO.FileStream>. Tenga en cuenta que las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario aunque un subproceso ThreadPool se bloquee, porque el subproceso de interfaz de usuario no se bloquea durante la espera.  
   
 ## <a name="writing-text"></a>Escribir texto  
  En el ejemplo siguiente se escribe texto en un archivo. En cada instrucción await, el método finaliza inmediatamente. Cuando se complete la E/S de archivo, el método se reanuda en la instrucción que sigue a la instrucción await. Tenga en cuenta que el modificador async se encuentra en la definición de métodos que usan la instrucción await.  
@@ -94,7 +95,7 @@ await theTask;
  La primera instrucción devuelve una tarea e inicia el procesamiento de archivos. La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea. Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await. Para obtener más información, vea [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujo de control en programas asincrónicos [C#]).  
   
 ## <a name="reading-text"></a>Leer texto  
- En el ejemplo siguiente se lee texto de un archivo. El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>. A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El método <xref:System.IO.Stream.ReadAsync%2A> devuelve un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de la espera genera un valor `Int32` (`numRead`) tras completarse la operación. Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ En el ejemplo siguiente se lee texto de un archivo. El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>. A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El método <xref:System.IO.Stream.ReadAsync%2A> devuelve un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de la espera genera un valor `Int32` (`numRead`) después de que se complete la operación. Para obtener más información, consulte [Tipos de valor devueltos asincrónicos (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
 ```csharp  
 public async void ProcessRead()  
@@ -188,7 +189,7 @@ public async void ProcessWriteMult()
 }  
 ```  
   
- Cuando se usan los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, se puede especificar un <xref:System.Threading.CancellationToken>, que sirve para cancelar la secuencia intermedia de la operación. Para obtener más información, vea [Ajustar una aplicación asincrónica (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [Cancelación en subprocesos administrados](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3).  
+ Al usar los métodos <xref:System.IO.Stream.WriteAsync%2A> y <xref:System.IO.Stream.ReadAsync%2A>, puede especificar un <xref:System.Threading.CancellationToken>, que puede usar para cancelar la operación en mitad de la secuencia. Para obtener más información, vea [Ajustar una aplicación asincrónica (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) y [Cancelación en subprocesos administrados](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Programación asincrónica con Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   

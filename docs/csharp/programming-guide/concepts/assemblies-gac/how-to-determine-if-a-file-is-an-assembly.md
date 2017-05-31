@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4de303da9215fb07ecbb6bfff78d18dcd246aad3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9565d0af978f1a1bc3744db127ac75911b519ab2
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Cómo: Determinar si un archivo es un ensamblado (C#)
@@ -34,13 +35,13 @@ Un archivo es un ensamblado únicamente si está administrado y contiene una ent
   
 2.  Cargue el archivo que quiere probar.  
   
-3.  Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: Ver el contenido de un ensamblado](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709).  
+3.  Si **ILDASM** notifica que el archivo no es un archivo ejecutable portable (PE), entonces no es un ensamblado. Para obtener más información, vea el tema [Cómo: Ver el contenido de un ensamblado](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Cómo determinar mediante programación si un archivo es un ensamblado  
   
-1.  Llame al método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>, pasando la ruta de acceso completa y el nombre del archivo que se está probando.  
+1.  Llame al método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>; para ello, pase el nombre y la ruta de acceso de archivo completa del archivo que está probando.  
   
-2.  Si se produce una excepción <xref:System.BadImageFormatException>, el archivo no es un ensamblado.  
+2.  Si se genera una excepción <xref:System.BadImageFormatException>, el archivo no es un ensamblado.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se prueba un archivo DLL para ver si es un ensamblado.  
@@ -80,7 +81,7 @@ class TestAssembly
 */  
 ```  
   
- El método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carga el archivo de prueba y después lo libera una vez que se lee la información.  
+ El método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carga el archivo de prueba y, después, lo libera cuando se lee la información.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Reflection.AssemblyName>   

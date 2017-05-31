@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9940012829038f585ad78a10b70fe2941753e40e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: c8d870feccd1fe44caf566ce45349818b6ddf6e9
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acceso (Guía de programación de C#)
@@ -76,7 +77,7 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
   
  Los operadores definidos por el usuario siempre deben declararse como public. Para más información, vea [Operador (Referencia de C#)](../../../csharp/language-reference/keywords/operator.md).  
   
- Los destructores no pueden tener modificadores de accesibilidad.  
+ Los finalizadores no pueden tener modificadores de accesibilidad.  
   
  Para establecer el nivel de acceso de un miembro de clase o estructura, agregue la palabra clave adecuada a la declaración de miembro, como se muestra en el ejemplo siguiente.  
   
@@ -93,7 +94,7 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
  Los delegados se comportan como las clases y las estructuras. De forma predeterminada, tienen acceso interno cuando se declaran directamente en un espacio de nombres y acceso privado cuando están anidados.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   

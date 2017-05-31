@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3a51c6778127c7d2faf9a10b799875308d2850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
@@ -96,7 +97,7 @@ La [especificación del lenguaje C#](http://go.microsoft.com/fwlink/?LinkId=1995
   
      [!code-cs[csProgGuideCodingConventions#6](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_4.cs)]  
   
--   Para anexar cadenas en bucles, especialmente cuando se trabaja con grandes cantidades de texto, use un objeto <xref:System.Text.StringBuilder>.  
+-   Para anexar cadenas en bucles, especialmente cuando se trabaja con grandes cantidades de texto, utilice un objeto <xref:System.Text.StringBuilder>.  
   
      [!code-cs[csProgGuideCodingConventions#7](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_5.cs)]  
   
@@ -215,8 +216,8 @@ La [especificación del lenguaje C#](http://go.microsoft.com/fwlink/?LinkId=1995
      [!code-cs[csProgGuideCodingConventions#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_26.cs)]  
   
 ## <a name="security"></a>Seguridad  
- Siga las instrucciones de [Instrucciones de codificación segura](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177).  
+ Siga las instrucciones de [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Convenciones de código de Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
- [Instrucciones de codificación segura](http://msdn.microsoft.com/library/4f882d94-262b-4494-b0a6-ba9ba1f5f177)
+ [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md)

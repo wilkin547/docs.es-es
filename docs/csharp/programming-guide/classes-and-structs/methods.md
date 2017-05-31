@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e44ef58e85fee164ab3b8be73a35083bd44c5df1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
@@ -91,7 +92,7 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
   
  Usar una variable local, en este caso, `result`, para almacenar un valor es opcional. La legibilidad del código puede ser útil, o puede ser necesaria si debe almacenar el valor original del argumento para todo el ámbito del método.  
   
- La devolución de una matriz multidimensional de un método, M, que modifique el contenido de la matriz no es necesaria si la función que realiza la llamada pasa la matriz a M. Puede devolver la matriz resultante de M para lograr un buen estilo o un flujo funcional de valores, pero no es necesario.  El motivo por el que no es necesario devolver la matriz modificada es que C# pasa todos los tipos de referencia por valor, y el valor de una referencia a la matriz es el puntero a la matriz. En el método M, los cambios en el contenido de la matriz los puede observar cualquier código que tenga una referencia a la matriz, como se muestra en el ejemplo siguiente.  
+ La devolución de una matriz multidimensional de un método, M, que modifique el contenido de la matriz no es necesaria si la función que realiza la llamada pasa la matriz a M. Puede devolver la matriz resultante de M para lograr un buen estilo o un flujo funcional de valores, pero no es necesario.  El motivo por el que no necesita devolver la matriz modificada es que C# pasa todos los tipos de referencia por valor, y el valor de una referencia a la matriz es el puntero a la matriz. En el método M, los cambios en el contenido de la matriz los puede observar cualquier código que tenga una referencia a la matriz, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -111,20 +112,19 @@ static void Main(string[] args)
                 }  
             }  
         }  
-  
 ```  
   
- Para obtener más información, vea [return (Referencia de C#)](../../../csharp/language-reference/keywords/return.md).  
+ Para obtener más información, consulta [return](../../../csharp/language-reference/keywords/return.md).  
   
 ## <a name="async-methods"></a>Métodos asincrónicos  
- Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda. La característica asincrónica se presentó por primera vez en [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)].  
+ Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda. 
   
- Si marca un método con el modificador [async](../../../csharp/language-reference/keywords/async.md), puede usar el operador [await](../../../csharp/language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.  
+ Si marca un método con el modificador [async](../../../csharp/language-reference/keywords/async.md) , puede usar el operador [await](../../../csharp/language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.  
   
 > [!NOTE]
 >  Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.  
   
- El tipo de valor devuelto de un método asincrónico puede ser <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> o void. El tipo de valor devuelto nulo se utiliza principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto nulo. No se puede esperar un método asincrónico que devuelve nulo, y el autor de llamada de un método con tipo de devolución nulo no puede capturar ninguna excepción producida por este.  
+ Un método asincrónico puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, o nulo. El tipo de valor devuelto nulo se utiliza principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto nulo. No se puede esperar un método asincrónico que devuelve nulo, y el autor de llamada de un método con tipo de devolución nulo no puede capturar ninguna excepción producida por este.  
   
  En el ejemplo siguiente, `DelayAsync` es un método asincrónico con un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tiene una instrucción `return` que devuelve un entero. Por lo tanto, la declaración del método de `DelayAsync` debe tener un tipo de valor devuelto de `Task<int>`. Dado que el tipo de valor devuelto es `Task<int>`, la evaluación de la expresión `await` en `DoSomethingAsync` genera un entero, como se demuestra en la siguiente instrucción: `int result = await delayTask`.  
   
@@ -148,19 +148,19 @@ public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);  
 ```  
   
- Si el método devuelve `void` o si es un método asincrónico, el cuerpo del método debe ser una expresión de instrucción (igual que con las expresiones lambda).  Para las propiedades y los indizadores, solo deben leerse, y no se utiliza la palabra clave de descriptor de acceso `get` .  
+ Si el método devuelve `void` o si es un método asincrónico, el cuerpo del método debe ser una expresión de instrucción (igual que con las expresiones lambda).  Para las propiedades y los indexadores, solo deben leerse, y no usa la palabra clave de descriptor de acceso `get`.  
   
 ## <a name="iterators"></a>Iteradores  
- Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md), se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.  
+ Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador utiliza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) , se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.  
   
- Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
+ Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  
   
  El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Para más información, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Para obtener más información, consulta [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
@@ -174,3 +174,4 @@ public Customer this[long id] => store.LookupCustomer(id);
  [out](../../../csharp/language-reference/keywords/out.md)   
  [ref](../../../csharp/language-reference/keywords/ref.md)   
  [Pasar parámetros](passing-parameters.md)
+

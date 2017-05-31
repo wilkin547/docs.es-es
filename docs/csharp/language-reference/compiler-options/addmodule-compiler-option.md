@@ -1,55 +1,74 @@
 ---
-title: "/addmodule (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/addmodule"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/addmodule compiler option [C#]"
-  - "-addmodule compiler option [C#]"
-  - "addmodule compiler option [C#]"
+title: /addmodule (Opciones del compilador de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /addmodule
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /addmodule compiler option [C#]
+- -addmodule compiler option [C#]
+- addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 614dbefbb472ef2cd03fcb1ba7a44f08c450bf4a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
+
 ---
-# /addmodule (C# Compiler Options)
-Esta opción agrega un módulo creado con el modificador target:module para la compilación actual.  
+# <a name="addmodule-c-compiler-options"></a>/addmodule (Opciones del compilador de C#)
+Esta opción agrega un módulo que se ha creado con el modificador target:module para la compilación actual.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 /addmodule:file[;file2]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `file`, `file2`  
- Archivo de salida que contiene metadatos.  Este archivo no puede contener un manifiesto del ensamblado.  Para importar más de un archivo, hay que separar los nombres de archivo con comas o puntos y comas.  
+ Un archivo de salida que contiene metadatos. El archivo no puede contener un manifiesto de ensamblado. Para importar más de un archivo, hay que separar los nombres de archivo con una coma o un punto y coma.  
   
-## Comentarios  
- Todos los módulos agregados mediante **\/addmodule** deben hallarse en el mismo directorio que el archivo de salida en tiempo de ejecución.  Es decir, se puede especificar un módulo de cualquier directorio en el momento de la compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución.  Si dicho módulo no se encuentra en el directorio de la aplicación en tiempo de ejecución, se obtiene la excepción <xref:System.TypeLoadException>.  
+## <a name="remarks"></a>Comentarios  
+ Todos los módulos agregados mediante **/addmodule** deben encontrarse en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, puede especificar un módulo de cualquier directorio en el momento de la compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución. Si dicho módulo no se encuentra en el directorio de la aplicación en tiempo de ejecución, obtendrá <xref:System.TypeLoadException>.  
   
- `file` no puede contener un ensamblado.  Por ejemplo, si el archivo de salida se creó con [\/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), se pueden importar sus metadatos con **\/addmodule**.  
+ `file` no puede contener ningún ensamblado. Por ejemplo, si el archivo de salida se ha credo con [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), se pueden importar sus metadatos con **/addmodule**.  
   
- Si se creó el archivo de salida con una opción **\/target** diferente de **\/target:module**, no se podrán importar sus metadatos con **\/addmodule**, pero sí con [\/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ Si se ha creado el archivo de salida con una opción **/target** diferente de **/target:module**, no se podrán importar sus metadatos con **/addmodule**, pero sí con [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
- Esta opción del compilador no está disponible en Visual Studio; en un proyecto no se puede hacer referencia a un módulo.  Además, esta opción del compilador no se puede modificar mediante programación.  
+ Esta opción del compilador no está disponible en Visual Studio; en un proyecto no se puede hacer referencia a un módulo. Además, esta opción del compilador no se puede modificar mediante programación.  
   
-## Ejemplo  
- Para compilar el archivo de código fuente `input.cs` y agregar metadatos de `metad1.netmodule` y `metad2.netmodule` para generar `out.exe`, ejecute:  
+## <a name="example"></a>Ejemplo  
+ Compile el archivo de código fuente `input.cs` y agregue metadatos de `metad1.netmodule` y `metad2.netmodule` para generar `out.exe`:  
   
 ```  
 csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
 ```  
   
-## Vea también  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/es-es/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Ensamblados de varios archivos](../Topic/Multifile%20Assemblies.md)   
- [Cómo: Compilar un ensamblado de varios archivos](../Topic/How%20to:%20Build%20a%20Multifile%20Assembly.md)
+## <a name="see-also"></a>Vea también  
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [NIB Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [Ensamblados de múltiples archivos](../../../framework/app-domains/multifile-assemblies.md)   
+ [Compilar un ensamblado de varios archivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

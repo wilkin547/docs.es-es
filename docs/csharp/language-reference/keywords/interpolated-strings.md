@@ -26,17 +26,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.contentlocale: es-es
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>Cadenas interpoladas (Referencia de C#)
 
 Se utiliza para construir cadenas.  Una cadena interpolada es similar a una cadena de plantilla que contiene *expresiones interpoladas*.  Una cadena interpolada devuelve una cadena que reemplaza a las expresiones interpoladas que contiene por sus representaciones de cadena.  
 
-Los argumentos de una cadena interpolada son más fáciles de entender que una [cadena de formato compuesto](../../../standard/base-types/composite-format.md#composite-format-string).  Por ejemplo, la cadena interpolada  
+Los argumentos de una cadena interpolada son más fáciles de entender que una [cadena de formato compuesto](../../../standard/base-types/composite-formatting.md#composite-format-string).  Por ejemplo, la cadena interpolada  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 

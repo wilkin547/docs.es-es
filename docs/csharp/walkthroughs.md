@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c4c52096803ff0cbf311afb2a0e38a7f37cf86c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.contentlocale: es-es
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
@@ -43,7 +44,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
 ## <a name="in-this-section"></a>En esta sección  
 
  [Acceso a la Web usando async y await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Muestra cómo crear una solución asincrónica mediante el uso de [async](../csharp/language-reference/keywords/async.md) y [await](../csharp/language-reference/keywords/await.md), introducidos en [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)].  
+ Muestra cómo crear una solución asincrónica mediante el uso de [async](../csharp/language-reference/keywords/async.md) y [await](../csharp/language-reference/keywords/await.md).  
   
  [Crear un componente de Windows Runtime en C# o Visual Basic y llamarlo desde JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  Muestra cómo crear un tipo [!INCLUDE[wrt](../csharp/includes/wrt_md.md)], empaquetarlo en un componente de [!INCLUDE[wrt](../csharp/includes/wrt_md.md)]y, a continuación, llamar al componente desde una aplicación de [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)] creada para Windows mediante JavaScript.  
