@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 175e46e3729190423b85296d7c7c47b136339305
+ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
+ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
@@ -93,56 +93,56 @@ ms.lasthandoff: 04/18/2017
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=fullName>|Use <xref:System.StringComparer?displayProperty=fullName> en su lugar.|  
 |<xref:System.Collections.IHashCodeProvider?displayProperty=fullName>|Use <xref:System.Collections.IEqualityComparer?displayProperty=fullName> en su lugar.|  
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=fullName>|La clase <xref:System.Configuration.Assemblies.AssemblyHash> está desusada.|  
-|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5. Use la clase <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=fullName> en el espacio de nombres System.Runtime.CompilerServices en su lugar.|  
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=fullName>|Hay disponible una API alternativa: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=fullName> en su lugar.|  
+|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5. Use la clase <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=fullName> del espacio de nombres System.Runtime.CompilerServices en su lugar.|  
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=fullName>|Hay una API alternativa disponible: emita el atributo personalizado <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=fullName> en su lugar.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName>|Este atributo está en desuso y se quitará en futuras versiones.|  
-|<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=fullName>|El elemento <xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName> está desusado.|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=fullName>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName> está desusado.|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=fullName> en su lugar.|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=fullName>|Este atributo está en desuso. Los dominios de aplicación ya no tienen en cuenta los límites del contexto de activación en las llamadas de IDispatch.|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=fullName> en su lugar.|  
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=fullName>|Use <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=fullName> en su lugar.|  
-|<xref:System.Security.SecurityCriticalScope?displayProperty=fullName>|<xref:System.Security.SecurityCriticalScope> solo se usa por compatibilidad con la transparencia de .NET 2.0.|  
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=fullName>|<xref:System.Security.SecurityTreatAsSafeAttribute> solo se usa por compatibilidad con la transparencia de .NET 2.0. Use <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=fullName> en su lugar.|  
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=fullName>|Utilice <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=fullName> en su lugar.|  
+|<xref:System.Security.SecurityCriticalScope?displayProperty=fullName>|<xref:System.Security.SecurityCriticalScope> solo se utiliza para la compatibilidad de transparencia con .NET 2.0.|  
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=fullName>|<xref:System.Security.SecurityTreatAsSafeAttribute> solo se utiliza para la compatibilidad de transparencia con .NET 2.0. Utilice <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=fullName> en su lugar.|  
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=fullName>|Este tipo está obsoleto y se quitará en futuras versiones de .NET Framework.|  
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=fullName>|La seguridad declarativa de nivel de ensamblado está obsoleta y CLR ya no la exige de manera predeterminada.|  
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=fullName>|Este tipo está obsoleto y se quitará en futuras versiones de .NET Framework.|  
@@ -163,10 +163,10 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=fullName>|<xref:System.Data.DataSysDescriptionAttribute> está en desuso.|  
-|<xref:System.Data.PropertyAttributes?displayProperty=fullName>|<xref:System.Data.PropertyAttributes> está en desuso.|  
-|<xref:System.Data.TypedDataSetGenerator?displayProperty=fullName>|La clase <xref:System.Data.TypedDataSetGenerator> se eliminará en una versión posterior. Use <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=fullName> en System.Design.dll.|  
-|<xref:System.Xml.XmlDataDocument?displayProperty=fullName>|La clase <xref:System.Xml.XmlDataDocument> se eliminará en una versión posterior.|  
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=fullName>|<xref:System.Data.DataSysDescriptionAttribute> está desusado.|  
+|<xref:System.Data.PropertyAttributes?displayProperty=fullName>|<xref:System.Data.PropertyAttributes> está desusado.|  
+|<xref:System.Data.TypedDataSetGenerator?displayProperty=fullName>|La clase <xref:System.Data.TypedDataSetGenerator> se quitará en futuras versiones. Utilice <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=fullName> en System.Design.dll.|  
+|<xref:System.Xml.XmlDataDocument?displayProperty=fullName>|La clase <xref:System.Xml.XmlDataDocument> se quitará en futuras versiones.|  
   
  [Volver al principio](#introduction)  
   
@@ -175,14 +175,14 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleClientFactory> está en desuso.|  
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleCommand> está en desuso.|  
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleCommandBuilder> está en desuso.|  
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnection> está en desuso.|  
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> está en desuso.|  
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleDataAdapter> está en desuso.|  
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermission> está en desuso.|  
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=fullName> está en desuso.|  
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleClientFactory> está desusado.|  
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleCommand> está desusado.|  
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleCommandBuilder> está desusado.|  
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnection> está desusado.|  
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> está desusado.|  
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleDataAdapter> está desusado.|  
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermission> está desusado.|  
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=fullName> está desusado.|  
   
  [Volver al principio](#introduction)  
   
@@ -191,20 +191,20 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=fullName>|Esta clase está en desuso. Use <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=fullName> en su lugar.|  
-|<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=fullName>|No se recomienda usar este tipo, ya que la edición de enlaces de datos se inicia a través de un elemento <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> en lugar de a través de la cuadrícula de propiedades.|  
-|<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=fullName>|No se recomienda usar este tipo, ya que la edición de enlaces de datos se inicia a través de un elemento <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> en lugar de a través de la cuadrícula de propiedades.|  
-|<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=fullName>|Las alternativas recomendadas son <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> y <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.IHtmlControlDesignerBehavior?displayProperty=fullName>|Las alternativas recomendadas son <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> y <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.ITemplateEditingFrame?displayProperty=fullName>|No se recomienda usar este tipo, ya que la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de plantilla de la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame a <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.IWebFormReferenceManager?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.WebFormsReferenceManager?displayProperty=fullName>. El elemento <xref:System.Web.UI.Design.WebFormsReferenceManager> contiene funcionalidades adicional y permite una mayor extensibilidad. Para obtener <xref:System.Web.UI.Design.WebFormsReferenceManager>, use la propiedad `RootDesigner.ReferenceManager` de su <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.IWebFormsDocumentService?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=fullName>. El elemento <xref:System.Web.UI.Design.WebFormsRootDesigner> contiene funcionalidades adicional y permite una mayor extensibilidad. Para obtener el elemento <xref:System.Web.UI.Design.WebFormsRootDesigner>, use la propiedad <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> de su <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|No se recomienda usar este tipo, ya que la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de plantilla de la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame a <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.ReadWriteControlDesigner?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=fullName> porque usa un elemento <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> para editar el contenido. Las regiones del diseñador permiten un control mejor del contenido que se va a editar.|  
-|<xref:System.Web.UI.Design.TemplateEditingService?displayProperty=fullName>|No se recomienda usar este tipo, ya que la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de plantilla de la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame a <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.TemplateEditingVerb?displayProperty=fullName>|No se recomienda usar este tipo, ya que la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de plantilla de la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame a <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=fullName>|No se recomienda el uso de este tipo porque el host del diseñador inicia el cuadro de diálogo Autoformato. La lista de elementos AutoFormat disponibles se expone mediante el elemento <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> de la propiedad <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName>.|  
-|<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=fullName> porque usa un elemento <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> para editar el contenido. Las regiones del diseñador permiten un control mejor del contenido que se va a editar.|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=fullName>|Esta clase está desusada. Utilice <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=fullName> en su lugar.|  
+|<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=fullName>|No se recomienda el uso de este tipo porque la edición de DataBindings se inicia mediante <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> en lugar de la cuadrícula de propiedades.|  
+|<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=fullName>|No se recomienda el uso de este tipo porque la edición de DataBindings se inicia mediante <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName> en lugar de la cuadrícula de propiedades.|  
+|<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> y <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.IHtmlControlDesignerBehavior?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> y <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.ITemplateEditingFrame?displayProperty=fullName>|No se recomienda el uso de este tipo porque la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de la plantilla en la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame al método <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.IWebFormReferenceManager?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.WebFormsReferenceManager?displayProperty=fullName>. <xref:System.Web.UI.Design.WebFormsReferenceManager> contiene funcionalidad adicional y permite más extensibilidad. Para obtener <xref:System.Web.UI.Design.WebFormsReferenceManager>, utilice la propiedad `RootDesigner.ReferenceManager` de <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.IWebFormsDocumentService?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=fullName>. <xref:System.Web.UI.Design.WebFormsRootDesigner> contiene funcionalidad adicional y permite más extensibilidad. Para obtener <xref:System.Web.UI.Design.WebFormsRootDesigner>, utilice la propiedad <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> de <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|No se recomienda el uso de este tipo porque la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de la plantilla en la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame al método <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.ReadWriteControlDesigner?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=fullName> porque utiliza un objeto <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> para editar el contenido. Las regiones del diseñador permiten un control mejor del contenido que se va a editar.|  
+|<xref:System.Web.UI.Design.TemplateEditingService?displayProperty=fullName>|No se recomienda el uso de este tipo porque la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de la plantilla en la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame al método <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.TemplateEditingVerb?displayProperty=fullName>|No se recomienda el uso de este tipo porque la edición de plantillas se controla en <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>. Para admitir la edición de plantillas, exponga los datos de la plantilla en la propiedad <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> y llame al método <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=fullName>|No se recomienda el uso de este tipo porque el host del diseñador inicia el cuadro de diálogo Autoformato. La lista de autoformatos disponibles se expone en el objeto <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> en la propiedad <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName>.|  
+|<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|La alternativa recomendada es <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=fullName> porque utiliza un objeto <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName> para editar el contenido. Las regiones del diseñador permiten un control mejor del contenido que se va a editar.|  
   
  [Volver al principio](#introduction)  
   
@@ -213,12 +213,12 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=fullName>|Esta interfaz está en desuso. Agregue un elemento <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=fullName> para el tipo de controlador <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=fullName> en su lugar.|  
-|<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=fullName>|Use <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=fullName> en lugar de trabajar con el nuevo modelo de ajustes.|  
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=fullName>|Este atributo está en desuso. Use <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=fullName> en su lugar. Por ejemplo, para especificar un diseñador raíz de CodeDom, utilice `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|  
+|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=fullName>|Esta interfaz está desusada. En su lugar, agregue un objeto <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=fullName> para controlar el tipo <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=fullName>.|  
+|<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=fullName>|Utilice <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=fullName> en su lugar para trabajar con el nuevo modelo de configuración.|  
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=fullName>|Este atributo está obsoleto. Utilice <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=fullName> en su lugar. Por ejemplo, para especificar un diseñador raíz de CodeDom, utilice `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|  
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=fullName>|Esta clase está en desuso.|  
-|<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=fullName>|Esta clase está en desuso. Use los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName> en su lugar.|  
-|<xref:System.Net.GlobalProxySelection?displayProperty=fullName>|Esta clase está en desuso. Use <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=fullName> en su lugar para acceder al proxy predeterminado global y establecerlo. Use "null" en lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=fullName>.|  
+|<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=fullName>|Esta clase está desusada. Utilice los contadores de rendimiento a través de la clase <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName> en su lugar.|  
+|<xref:System.Net.GlobalProxySelection?displayProperty=fullName>|Esta clase está en desuso. Utilice <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=fullName> en su lugar para obtener acceso al proxy global predeterminado y establecerlo. Use "null" en lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=fullName>.|  
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|  
   
  [Volver al principio](#introduction)  
@@ -255,7 +255,7 @@ ms.lasthandoff: 04/18/2017
 |Tipo|Mensaje|  
 |----------|-------------|  
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|  
-|<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este tipo está obsoleto. Para activar el elemento <xref:System.Net.CookieContainer> de http, use la propiedad `AllowCookies` en el enlace de http o en el elemento <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.|  
+|<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Este tipo está obsoleto. Para habilitar el objeto <xref:System.Net.CookieContainer> de HTTP, utilice la propiedad `AllowCookies` del enlace HTTP o del objeto <xref:System.ServiceModel.Channels.HttpTransportBindingElement>.|  
 |<xref:System.ServiceModel.Channels.PeerCustomResolverBindingElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|  
 |<xref:System.ServiceModel.Channels.PeerTransportBindingElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|  
 |<xref:System.ServiceModel.Configuration.NetPeerTcpBindingCollectionElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|  
@@ -282,7 +282,7 @@ ms.lasthandoff: 04/18/2017
 |<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=fullName>|Este tipo está obsoleto. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
 |<xref:System.Web.Security.PassportIdentity?displayProperty=fullName>|Este tipo está obsoleto. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=fullName>|Este tipo está obsoleto. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](http://go.microsoft.com/fwlink/?LinkId=733413).|  
-|<xref:System.Web.UI.ObjectConverter?displayProperty=fullName>|Las alternativas recomendadas son <xref:System.Convert?displayProperty=fullName> y <xref:System.String.Format%2A?displayProperty=fullName>.|  
+|<xref:System.Web.UI.ObjectConverter?displayProperty=fullName>|La alternativa recomendada es <xref:System.Convert?displayProperty=fullName> y <xref:System.String.Format%2A?displayProperty=fullName>.|  
   
  [Volver al principio](#introduction)  
   
@@ -504,9 +504,9 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel>, excepto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Compiler>, excepto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Design>, excepto <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel> excepto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Compiler> excepto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Design> excepto <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
@@ -522,12 +522,12 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------| 
-|System.Activities.Statements.Interop](assetId:///T:System.Activities.Statements.Interop)|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 <xref:System.Activities>.\*.|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 <xref:System.Activities>.\*.|   
+|<xref:System.Activities.Statements.Interop>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>.\*.|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>.\*.|   
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Configuration>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.DebugEngine>, excepto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Hosting>, excepto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.DebugEngine> excepto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Hosting> excepto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Tracking>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
   
  [Volver al principio](#introduction)  
@@ -537,27 +537,27 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Activities?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de Workflow Foundation 4.0 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Activities?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>.\*.|  
   
  [Volver al principio](#introduction)  
   
@@ -566,7 +566,7 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=fullName>|Este tipo no lo utiliza el analizador de XAML. Eche un vistazo a <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>.|  
+|<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=fullName>|Este tipo no lo utiliza el analizador de XAML. Consulte <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>.|  
   
  [Volver al principio](#introduction)  
   
@@ -576,10 +576,10 @@ ms.lasthandoff: 04/18/2017
 |Tipo|Mensaje|  
 |----------|-------------|  
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|  
-|<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=fullName>|Use <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> para la compilación y validación del esquema.|  
-|<xref:System.Xml.XmlValidatingReader?displayProperty=fullName>|Use un elemento <xref:System.Xml.XmlReader?displayProperty=fullName> creado por el método <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> usando la correspondiente instancia <xref:System.Xml.XmlReaderSettings?displayProperty=fullName> en su lugar.|  
+|<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=fullName>|Use <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> para la compilación y validación de esquema.|  
+|<xref:System.Xml.XmlValidatingReader?displayProperty=fullName>|Utilice un objeto <xref:System.Xml.XmlReader?displayProperty=fullName> creado por el método <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> que utilice en su lugar el objeto <xref:System.Xml.XmlReaderSettings?displayProperty=fullName> apropiado.|  
 |<xref:System.Xml.XmlXapResolver?displayProperty=fullName>|El uso de este tipo genera un error del compilador. Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|  
-|<xref:System.Xml.Xsl.XslTransform?displayProperty=fullName>|Esta clase está en desuso. Use <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=fullName> en su lugar.|  
+|<xref:System.Xml.Xsl.XslTransform?displayProperty=fullName>|Esta clase está desusada. Use <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=fullName> en su lugar.|  
   
  [Volver al principio](#introduction)  
   
@@ -588,7 +588,7 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName> está en desuso. Esta interfaz ya no se utiliza.|  
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName> está desusado. Esta interfaz ya no se utiliza.|  
   
  [Volver al principio](#introduction)  
   
@@ -607,8 +607,8 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|Esta clase está en desuso. Utilice <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName> desde el ensamblado  <!--zz <xref:Microsoft.Build?displayProperty=fullName> -->``Microsoft.Build` en su lugar.|  
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=fullName>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName> del ensamblado <xref:Microsoft.Build?displayProperty=fullName> en su lugar.|  
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName> del ensamblado *Microsoft.Build* en su lugar.|  
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=fullName>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName> del ensamblado *Microsoft.Build* en su lugar.|  
   
  [Volver al principio](#introduction)  
   
@@ -617,24 +617,24 @@ ms.lasthandoff: 04/18/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaStartup?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaCodeItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaEngine?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaError?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaItems?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaPersistSite?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaSite?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaError?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaException?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaItemFlag?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaItemType?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
-|<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Consulte la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener ayuda adicional.|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaStartup?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaCodeItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaEngine?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaError?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaItems?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaPersistSite?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaSite?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaError?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaException?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaItemFlag?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaItemType?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
+|<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=fullName>|No se recomienda el uso de este tipo porque está en desuso en Visual Studio 2005; no hay ningún reemplazo para esta característica. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> para obtener información adicional.|  
   
  [Volver al principio](#introduction)  
   
@@ -789,3 +789,4 @@ ms.lasthandoff: 04/18/2017
 ## <a name="see-also"></a>Vea también  
  [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Miembros obsoletos](../../../docs/framework/whats-new/obsolete-members.md)
+
