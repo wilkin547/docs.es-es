@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc931fe2c87620ddb073f53f7e8edccaa1e3b987
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.contentlocale: es-es
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -30,7 +31,10 @@ Este tutorial le enseña varias características de .NET Core y el lenguaje C#. 
 
 Creará una aplicación que emite solicitudes HTTP a un servicio REST en GitHub. Leerá información en formato JSON y convertirá ese paquete JSON en objetos de C#. Por último, verá cómo trabajar con objetos de C#.
 
-Hay muchas características en este tutorial. Vamos a compilarlas una a una. 
+Hay muchas características en este tutorial. Vamos a compilarlas una a una.
+
+Si prefiere seguir el [ejemplo final](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) de este tema, puede descargarlo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
 ## <a name="prerequisites"></a>Requisitos previos
 Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 ## <a name="create-the-application"></a>Crear la aplicación
@@ -121,7 +125,7 @@ using System.Net.Http.Headers;
 Esta primera versión realiza una solicitud web para leer la lista de todos los repositorios en la organización dotnet foundation. (El id. de gitHub para .NET Foundation es "dotnet"). En primer lugar, cree un nuevo @System.Net.Http.HttpClient. Este objeto administra la solicitud y las respuestas. Las siguientes líneas configuran el objeto @System.Net.Http.HttpClient para esta solicitud. En primer lugar, se configura para aceptar las respuestas JSON de GitHub.
 Este formato es simplemente JSON. La siguiente línea agrega un encabezado de agente de usuario a todas las solicitudes desde este objeto. Estos dos encabezados se comprueban mediante el código de servidor de GitHub y son necesarios para recuperar información de GitHub.
 
-Después de haber configurado el objeto @System.Net.Http.HttpClient, realizará una solicitud web y recuperará la respuesta. En esta primera versión, se usa el método de conveniencia <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname>. Este método de conveniencia inicia una tarea que realiza la solicitud web y, a continuación, cuando la solicitud se devuelve, lee la secuencia de respuesta y extrae el contenido de la secuencia. El cuerpo de la respuesta se devuelve como @System.String. La cadena está disponible cuando finaliza la tarea. 
+Después de haber configurado el objeto @System.Net.Http.HttpClient, realizará una solicitud web y recuperará la respuesta. En esta primera versión, usa el método de conveniencia <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname>. Este método de conveniencia inicia una tarea que realiza la solicitud web y, a continuación, cuando la solicitud se devuelve, lee la secuencia de respuesta y extrae el contenido de la secuencia. El cuerpo de la respuesta se devuelve como @System.String. La cadena está disponible cuando finaliza la tarea. 
 
 Las dos últimas líneas de este método esperan a la tarea y, luego, imprimen la respuesta en la consola.
 Compile la aplicación y ejecútela. La advertencia de compilación desaparece ahora, porque `ProcessRepositories` contiene ahora un operador `await`. Verá una pantalla larga de texto con formato de JSON.   
@@ -170,7 +174,7 @@ var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 
 Observe que ahora usa @System.Net.Http.HttpClient.GetStreamAsync(System.String) en lugar de @System.Net.Http.HttpClient.GetStringAsync(System.String). El serializador usa una secuencia en lugar de una cadena como su origen. Vamos a explicar algunas características del lenguaje C# que se usan en la segunda línea anterior. El argumento para @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) es una expresión `await`. Las expresiones Await pueden aparecer prácticamente en cualquier parte del código, aunque hasta ahora, únicamente las ha visto como parte de una instrucción de asignación.
 
-En segundo lugar, el operador `as` convierte el tipo de tiempo de compilación `object` a `List<repo>`. La declaración @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) declara que devuelve un objeto de tipo <xref:System.Object?displayProperty=fullName>. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) devolverá el tipo especificado al construirlo (`List<repo>` en este tutorial). Si la conversión no se realiza correctamente, el operador `as` se evalúa como `null`, en lugar de iniciar una excepción.
+En segundo lugar, el operador `as` convierte el tipo de tiempo de compilación `object` a `List<repo>`. La declaración de @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) declara que devuelve un objeto de tipo <xref:System.Object?displayProperty=fullName>. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) devolverá el tipo especificado al construirlo (`List<repo>` en este tutorial). Si la conversión no se realiza correctamente, el operador `as` se evalúa como `null`, en lugar de iniciar una excepción.
 
 Casi ha terminado con esta sección. Ahora que ha convertido el código JSON a objetos de C#, vamos a mostrar el nombre de cada repositorio. Reemplace las líneas donde pone:
 
@@ -360,7 +364,7 @@ Finalmente, agregue una instrucción más de salida en la consola y ya estará l
 Console.WriteLine(repo.LastPush);
 ```
 
-La versión debe coincidir ahora con la versión terminada que se encuentra [aquí](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+La versión debe coincidir ahora con el [ejemplo terminado](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
  
 ## <a name="conclusion"></a>Conclusión
 

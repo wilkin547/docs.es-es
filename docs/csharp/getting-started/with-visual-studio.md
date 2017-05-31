@@ -2,48 +2,47 @@
 title: "Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017"
 description: "Obtenga información sobre cómo crear una sencilla aplicación de consola .NET Core con Visual Studio 2017."
 keywords: ".NET Core, aplicación de consola .NET Core, Visual Studio 2017"
-author: stevehoag
-ms.author: shoag
-ms.date: 03/07/2017
+author: BillWagner
+ms.author: wiwagn
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f1a20f399b4ab34986d700622ff3bf3859b001bd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
+ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
+ms.contentlocale: es-es
+ms.lasthandoff: 05/16/2017
 
 ---
 
-# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017 #
+# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017
 
-En este tema se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la propia aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
+En este tema se proporciona una introducción detallada para compilar, depurar y publicar una sencilla aplicación de consola .NET Core con Visual Studio 2017. Visual Studio 2017 proporciona un entorno de desarrollo completo para la compilación de aplicaciones .NET Core. Siempre que la aplicación no tenga dependencias específicas de la plataforma, la aplicación puede ejecutarse en cualquier plataforma que tenga como destino .NET Core y en cualquier sistema que tenga instalado .NET Core.
 
-## <a name="prerequisites"></a>Requisitos previos ##
+## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio de 2017](https://www.visualstudio.com/downloads/) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. 
+[Visual Studio de 2017](https://www.visualstudio.com/downloads/) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. 
 
-Para más información, vea la sección [Visual Studio 2017](../../core/windows-prerequisites.md) en el tema de los requisitos previos de Windows.
+Para obtener más información, vea el tema [Requisitos previos para .NET Core en Windows](../../core/windows-prerequisites.md).
 
-## <a name="a-simple-hello-world-application"></a>Una aplicación "Hola mundo" sencilla ##
+## <a name="a-simple-hello-world-application"></a>Una aplicación Hola mundo sencilla
 
-Para empezar, se va a crear una aplicación de consola "Hola mundo" sencilla. Estos son los pasos:
+Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pasos:
 
-1. Abra Visual Studio y, en el menú **Archivo**, elija **Nuevo** > **Proyecto**. En el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Visual C#** en el panel de la izquierda y después elija el nodo **.NET Core**.
+1. Inicie Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "Hola mundo". Seleccione el botón **Aceptar**.
 
-2. En el panel derecho, elija **Aplicación de consola (.NET Core)**. Escriba el nombre del proyecto, `HelloWorld`, y asegúrese de que el cuadro **Crear directorio para la solución** está activado, como se muestra en la figura siguiente.
-
-   ![Captura de pantalla que muestra el cuadro de diálogo Nuevo proyecto con la aplicación de consola seleccionada](./media/with-visual-studio/vs_newproject.jpg)
+   ![Cuadro de diálogo Nuevo proyecto con la aplicación de consola seleccionada](./media/with-visual-studio/newproject.png)
    
-3. Elija el botón **Aceptar** . Visual Studio muestra su entorno de desarrollo con su ventana de código, como se muestra en la figura siguiente. La plantilla de aplicación de consola de C# para .NET Core define automáticamente una clase, `Program`, con un único método, `Main`, que adopta una matriz @System.String como argumento. `Main` es el punto de entrada de la aplicación, el método al que llama automáticamente el tiempo de ejecución cuando inicia la aplicación. Los argumentos de línea de comandos proporcionados cuando se inicia la aplicación están disponibles en la matriz *args*.
+1. Visual Studio carga el entorno de desarrollo. La plantilla de aplicación de consola de C# para .NET Core define automáticamente una clase, `Program`, con un único método, `Main`, que adopta una matriz <xref:System.String> como argumento. `Main` es el punto de entrada de la aplicación, el método que se llama automáticamente mediante el tiempo de ejecución cuando inicia la aplicación. Los argumentos de línea de comandos proporcionados cuando se inicia la aplicación están disponibles en la matriz *args*.
 
-   ![Visual Studio y el nuevo proyecto Hola mundo](./media/with-visual-studio/vs_devenv.jpg)
+   ![Visual Studio y el nuevo proyecto Hola mundo](./media/with-visual-studio/devenv.png)
 
-   La plantilla crea una aplicación muy sencilla "Hola mundo"; llama al método @System.Console.WriteLine(System.String) para mostrar la cadena literal "¡Hola mundo!" en la ventana de consola. Al seleccionar el botón "Hola a todos" con la flecha verde en la barra de herramientas, ahora puede ejecutar el programa en modo de depuración. No obstante, si lo hace, la ventana de consola se mostrará durante muy poco tiempo antes de cerrarse. Esto ocurre porque `Main` finaliza y la aplicación termina en cuanto se ejecuta la única instrucción en el método `Main`.
+   La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> para mostrar la cadena literal "Hola mundo" en la ventana de la consola. Al seleccionar el botón **HelloWorld** con la flecha verde en la barra de herramientas, puede ejecutar el programa en modo de depuración. Si lo hace, la ventana de la consola se mostrará durante poco tiempo antes de cerrarse. Esto ocurre porque el método `Main` finaliza y la aplicación termina en cuanto se ejecuta la única instrucción en el método `Main`.
 
-4. Se va a detener la aplicación existente antes de que cierre la ventana de consola. Agregue el código siguiente inmediatamente después de llamar al método @System.Console.WriteLine(System.String):
+1. Para que la aplicación se pause antes de que se cierre la ventana de la consola, agregue el siguiente código inmediatamente después de la llamada al método <xref:System.Console.WriteLine(System.String)?displayProperty=fullName>:
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -51,45 +50,43 @@ Para empezar, se va a crear una aplicación de consola "Hola mundo" sencilla. Es
    ```
    Este código pide al usuario que presione cualquier tecla y, a continuación, detiene el programa hasta que se presiona una tecla.
 
-5. En la barra de menús, elija **Compilar**, **Compilar solución**. De esta forma, el programa se compila en IL, un lenguaje intermedio que después se convierte en código binario mediante un compilador Just-In-Time (JIT).
+1. En la barra de menús, seleccione **Compilar** > **Compilar solución**. De esta forma, el programa se compila en un lenguaje intermedio (IL) que se convierte en código binario mediante un compilador Just-In-Time (JIT).
 
-6. Seleccione el botón "Hola a todos" con la flecha verde en la barra de herramientas para ejecutar el programa. El resultado se muestra en la ilustración siguiente.
+1. Seleccione el botón **HelloWorld** con la flecha verde en la barra de herramientas para ejecutar el programa.
 
-   ![Imagen](./media/with-visual-studio/simple_hello.jpg)
+   ![Ventana de la consola que muestra Hola mundo Presione cualquier tecla para continuar](./media/with-visual-studio/helloworld1.png)
 
-7. Presione cualquier tecla para cerrar la ventana.
+1. Presione cualquier tecla para cerrar la ventana de consola.
 
-## <a name="enhancing-the-hello-world-application"></a>Mejora de la aplicación "Hola mundo" ##
+## <a name="enhancing-the-hello-world-application"></a>Mejorar la aplicación Hola mundo
 
-Se va a mejorar la aplicación para pedir al usuario su nombre, que luego se mostrará junto con la fecha y hora en la ventana de consola. Para modificar y probar el programa, haga lo siguiente:
+Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la fecha y la hora. Para modificar y probar el programa, haga lo siguiente:
 
-1. Escriba el siguiente código de C# en la ventana de código inmediatamente después del corchete de apertura que sigue a la línea `public static void Main(string[] args)` y antes del primer corchete de cierre.
+1. Escriba el siguiente código de C# en la ventana de código inmediatamente después del corchete de apertura que sigue a la línea `public static void Main(string[] args)` y antes del primer corchete de cierre:
 
-   [!CODE [GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   En la siguiente ilustración se muestra la ventana de código resultante.
+   ![Archivo c-sharp del programa Visual Studio con el método Main actualizado](./media/with-visual-studio/codewindow.png)
 
-   ![Ejecución del programa modificado](./media/with-visual-studio/codewindow.jpg)
+   Este código muestra "What is your name?" en la ventana de la consola y espera a que el usuario escriba una cadena seguida de la tecla Entrar. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=fullName>, que contiene la hora local actual, y lo asigna a una variable denominada `date`. Por último, usa una [cadena de formato compuesto](../../standard/base-types/composite-format.md) para mostrar estos valores en la ventana de la consola.
 
-   Este código muestra "What is your name?" en la consola y espera a que el usuario escriba una cadena seguida de la tecla ENTRAR. Almacena esta cadena a una variable denominada `name`. También recupera el valor de la propiedad @System.DateTime.Now, que contiene la hora local actual, y lo asigna a una variable denominada `date`. A continuación, utiliza una [cadena de formato compuesto](../../standard/base-types/composite-format.md) para mostrar estos valores en la consola.
+1. Compile el programa; para ello, seleccione **Generar** > **Compilar solución**.
 
-2. Compile el programa; para ello, seleccione **Generar** > **Compilar solución**. De esta forma, el programa se compila en IL, un lenguaje intermedio que después se convierte en código binario mediante un compilador Just-In-Time (JIT).
+1. Ejecute el programa en modo de depuración en Visual Studio; para ello, seleccione la flecha verde en la barra de herramientas, presione F5 o seleccione el elemento de menú **Depurar** > **Iniciar depuración**. Responda a la solicitud escribiendo un nombre y presionando la tecla Entrar.
 
-3. Ejecute el programa en modo de depuración en Visual Studio; para ello, seleccione la flecha verde en la barra de herramientas, presione F5 o elija el elemento de menú **Depurar** > **Iniciar depuración**. Después de responder a las preguntas, para lo que debe escribir el nombre y presionar la tecla ENTRAR, la ventana de consola debe tener un aspecto similar al siguiente:
+   ![Ventana de la consola con el resultado del programa modificado](./media/with-visual-studio/helloworld2.png)
 
-   ![Ejecución del programa modificado](./media/with-visual-studio/console.jpg)
+1. Presione cualquier tecla para cerrar la ventana de consola.
 
-4. Presione cualquier tecla para cerrar la ventana de consola. Esto finaliza el modo de depuración.
+Ha creado y ejecutado la aplicación. Para desarrollar una aplicación profesional, realice algunos pasos adicionales para preparar el lanzamiento de la aplicación:
 
-Ahora ha creado y ejecutado esta sencilla aplicación. Para desarrollar una aplicación profesional, todavía hay algunos pasos adicionales que puede realizar para preparar el lanzamiento de la aplicación:
+- Para obtener información sobre la depuración de la aplicación, vea [Depuración de la aplicación Hola a todos en C# con Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Para obtener información sobre la depuración de la aplicación, vea [Depuración de la aplicación Hola mundo](debugging-with-visual-studio-2017.md).
+- Para obtener información sobre el desarrollo y publicación de una versión de distribución de la aplicación, vea [Publicación de la aplicación Hola a todos con Visual Studio 2017](publishing-with-visual-studio.md).
 
-- Para obtener información sobre el desarrollo de una publicación de una versión de distribución de la aplicación, vea [Publicación de la aplicación Hola mundo](publishing-with-visual-studio-2017.md).
+## <a name="related-topics"></a>Temas relacionados
 
-## <a name="related-topics"></a>Temas relacionados ##
+En lugar de una aplicación de consola, también puede crear una biblioteca de clases con .NET Core y Visual Studio 2017. Para consultar una introducción detallada, vea [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017).
 
-En lugar de una aplicación de consola, también puede crear una biblioteca de clases con .NET Core y Visual Studio 2017. Para consultar una introducción detallada, vea [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio-2017.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017).
-
-También puede desarrollar una aplicación de consola .NET Core en Mac, Linux y Windows mediante Visual Studio Code, un editor de código cuya descarga es gratuita. Para obtener un tutorial detallado, vea [Introducción a Visual Studio Code](with-visual-studio-code.md).
+También puede desarrollar una aplicación de consola .NET Core en Mac, Linux y Windows mediante [Visual Studio Code](https://code.visualstudio.com/), un editor de código descargable. Para obtener un tutorial detallado, vea [Introducción a Visual Studio Code](with-visual-studio-code.md).
 

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eca74e69b0377f85deaf4cedbdf7b9edcf1b4b87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.contentlocale: es-es
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
@@ -68,9 +69,9 @@ Cada miembro de una clase tiene asociada una accesibilidad, que controla las reg
 * `protected`
     - Acceso limitado a esta clase o a las clases derivadas de esta clase
 * `internal`
-    - Acceso limitado a este programa
+    - Acceso limitado al ensamblado actual (.exe, .dll, etc.)
 * `protected internal`
-    - Acceso limitado a este programa o a las clases derivadas de esta clase
+    - Acceso limitado a la clase contenedora o a las clases derivadas de la clase contenedora
 * `private`
     - Acceso limitado a esta clase
 
@@ -89,7 +90,7 @@ Un tipo genérico con argumentos de tipo proporcionado, como `Pair<int,string>` 
 
 ## <a name="base-classes"></a>Clases base
 
-Una declaración de clase puede especificar una clase base colocando después del nombre de clase y los parámetros de tipo dos puntos seguidos del nombre de la clase base. Omitir una especificación de la clase base es igual que derivarla del objeto de tipo. En el ejemplo siguiente, la clase base de `Point3D` es `Point` y la clase base de `Point` es `object`:
+Una declaración de clase puede especificar una clase base colocando después del nombre de clase y los parámetros de tipo dos puntos seguidos del nombre de la clase base. Omitir una especificación de la clase base es igual que derivarla del tipo `object`. En el ejemplo siguiente, la clase base de `Point3D` es `Point` y la clase base de `Point` es `object`:
 
 [!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
@@ -127,15 +128,15 @@ La *signatura* de un método debe ser única en la clase en la que se declara el
 
 Los parámetros se usan para pasar valores o referencias a variables a métodos. Los parámetros de un método obtienen sus valores reales de los *argumentos* que se especifican cuando se invoca el método. Hay cuatro tipos de parámetros: parámetros de valor, parámetros de referencia, parámetros de salida y matrices de parámetros.
 
-Un *parámetro de valor* se usa para el paso de parámetros de entrada. Un parámetro de valor corresponde a una variable local que obtiene su valor inicial del argumento que se ha pasado para el parámetro. Las modificaciones en un parámetro de valor no afectan el argumento que se pasa para el parámetro. 
+Un *parámetro de valor* se usa para pasar argumentos de entrada. Un parámetro de valor corresponde a una variable local que obtiene su valor inicial del argumento que se ha pasado para el parámetro. Las modificaciones en un parámetro de valor no afectan el argumento que se pasa para el parámetro. 
 
 Los parámetros de valor pueden ser opcionales; se especifica un valor predeterminado para que se puedan omitir los argumentos correspondientes.
 
-Un *parámetro de referencia* se usa para el paso de parámetros de entrada y salida. El argumento pasado para un parámetro de referencia debe ser una variable, y durante la ejecución del método, el parámetro de referencia representa la misma ubicación de almacenamiento que la variable del argumento. Un parámetro de referencia se declara con el modificador `ref`. En el ejemplo siguiente se muestra el uso de parámetros `ref`.
+Un *parámetro de referencia* se usa para pasar argumentos mediante una referencia. El argumento pasado para un parámetro de referencia debe ser una variable con un valor definitivo, y durante la ejecución del método, el parámetro de referencia representa la misma ubicación de almacenamiento que la variable del argumento. Un parámetro de referencia se declara con el modificador `ref`. En el ejemplo siguiente se muestra el uso de parámetros `ref`.
 
 [!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
-Un *parámetro de salida* se usa para pasar parámetros de salida. Un parámetro de salida es similar a un parámetro de referencia, salvo que el valor inicial del argumento proporcionado por el llamador no es importante. Un parámetro de salida se declara con el modificador `out`. En el ejemplo siguiente se muestra el uso de parámetros `out`.
+Un *parámetro de salida* se usa para pasar argumentos mediante una referencia. Es similar a un parámetro de referencia, excepto que no necesita que asigne un valor explícitamente al argumento proporcionado por el autor de la llamada. Un parámetro de salida se declara con el modificador `out`. En el siguiente ejemplo se muestra el uso de los parámetros `out` con la sintaxis que se ha presentado en C# 7.
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
@@ -201,7 +202,7 @@ Las cuatro clases anteriores se pueden usar para modelar expresiones aritmética
 
 [!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
-El método `Evaluate` de una instancia `Expression` se invoca para evaluar la expresión determinada y generar un valor `double`. El método toma como argumento una clase @`Dctionary` que contiene nombres de variables (como claves de las entradas) y valores (como valores de las entradas). El método `Evaluate` es un método `virtual abstract`, lo que significa que las clases derivadas no abstractas deben invalidarlo para proporcionar una implementación real.
+El método `Evaluate` de una instancia `Expression` se invoca para evaluar la expresión determinada y generar un valor `double`. El método toma un argumento `Dictionary` que contiene nombres de variables (como claves de las entradas) y valores (como valores de las entradas). Como `Evaluate` es un método abstracto, las clases no abstractas que derivan de `Expression` deben invalidar `Evaluate`.
 
 Una implementación de `Constant` de `Evaluate` simplemente devuelve la constante almacenada. Una implementación de `VariableReference` busca el nombre de variable en el diccionario y devuelve el valor resultante. Una implementación de `Operation` evalúa primero los operandos izquierdo y derecho (mediante la invocación recursiva de sus métodos `Evaluate`) y luego realiza la operación aritmética correspondiente.
 

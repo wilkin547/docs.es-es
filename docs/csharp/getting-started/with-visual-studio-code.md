@@ -4,20 +4,21 @@ description: "Aprenda a crear y depurar su primera aplicación .NET Core en C# m
 keywords: "C#, Introducción, Adquisición, Instalación, Visual Studio Code, Multiplataforma"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 5/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4550129f4e6f1eeb3521ad7fe3233f2bda49e5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.contentlocale: es-es
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="getting-started-with-visual-studio-code"></a>Introducción a Visual Studio Code
+# <a name="get-started-with-visual-studio-code"></a>Introducción a Visual Studio Code
 
 .NET Core ofrece una plataforma modular y rápida para crear aplicaciones de servidor que se ejecutan en Windows, Linux y macOS. Use Visual Studio Code con la extensión de C# para disfrutar de una sólida experiencia de edición con compatibilidad total para C# IntelliSense (completado de código inteligente) y para depuración.
 
@@ -94,6 +95,6 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 > Para obtener más información y sugerencias sobre solución de problemas en relación con la depuración de .NET Core con OmniSharp en VS Code, vea [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Instrucciones para configurar el depurador de .NET Core).
 
 ## <a name="see-also"></a>Vea también
-- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
-- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
+[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  (Configuración de Visual Studio Code)  
+[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
 

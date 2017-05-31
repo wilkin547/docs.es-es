@@ -1,6 +1,6 @@
 ---
 title: Variables y tipos de C# | Un paseo por el lenguaje C#
-description: "Obtenga información sobre cómo definir tipos y declarar variables de C.#"
+description: "Obtenga información sobre cómo definir tipos y declarar variables de C#"
 keywords: .NET, CSharp, tipo, tipo de referencia, tipo de valor
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 24d405ad33cb4f11dd9e7ba7edb39f10db8041a1
+ms.contentlocale: es-es
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -89,7 +90,7 @@ Un tipo `interface` define un contrato como un conjunto con nombre de miembros d
 
 Un tipo `delegate` representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son análogos a los tipos de función proporcionados por los lenguajes funcionales. Son similares al concepto de punteros de función en otros lenguajes, pero a diferencia de los punteros de función, los delegados están orientados a objetos y presentan seguridad de tipos.
 
-Todos los tipos de clase, `struct`, `interface` y `delegate` admiten parámetros genéricos, mediante los cuales se pueden parametrizar con otros tipos.
+Los tipos `class`, `struct`, `interface` y `delegate` admiten parámetros genéricos, mediante los cuales se pueden parametrizar con otros tipos.
 
 Un tipo `enum` es un tipo distinto con constantes con nombre. Cada tipo `enum` tiene un tipo subyacente, que debe ser uno de los ocho tipos enteros. El conjunto de valores de un tipo `enum` es igual que el conjunto de valores del tipo subyacente.
 
