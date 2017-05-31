@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f739d778e7bada7f34e42ecfd05364e8cae5d453
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ La opción **/target:library** hace que el compilador cree una biblioteca de ví
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /target:library  
 ```  
   
@@ -68,7 +69,7 @@ La opción **/target:library** hace que el compilador cree una biblioteca de ví
 ## <a name="example"></a>Ejemplo  
  Compilación de `in.cs` y creación de `in.dll`:  
   
-```  
+```console  
 csc /target:library in.cs  
 ```  
   

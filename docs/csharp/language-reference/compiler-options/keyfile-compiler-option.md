@@ -43,7 +43,7 @@ Especifica el nombre de archivo que contiene la clave criptográfica.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /keyfile:file  
 ```  
   

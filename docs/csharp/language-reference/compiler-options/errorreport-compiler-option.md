@@ -46,7 +46,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   

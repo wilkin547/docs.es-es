@@ -48,7 +48,7 @@ La opción **/reference** hace que el compilador importe información de tipo [p
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ La opción **/reference** hace que el compilador importe información de tipo [p
   
  Esto configura los alias externos "GridV1" y "GridV2" que se usan en el programa por medio de una instrucción extern:  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  Una vez hecho esto, se puede hacer referencia al control de cuadrícula de grid.dll anteponiendo GridV1 al nombre del control, de esta forma:  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  Además, se puede hacer referencia al control de cuadrícula de grid20.dll anteponiendo GridV2 al nombre del control, de esta forma:  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

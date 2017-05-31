@@ -43,7 +43,7 @@ Esta opción agrega un módulo que se ha creado con el modificador target:module
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /addmodule:file[;file2]  
 ```  
   
@@ -63,7 +63,7 @@ Esta opción agrega un módulo que se ha creado con el modificador target:module
 ## <a name="example"></a>Ejemplo  
  Compile el archivo de código fuente `input.cs` y agregue metadatos de `metad1.netmodule` y `metad2.netmodule` para generar `out.exe`:  
   
-```  
+```console  
 csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
 ```  
   

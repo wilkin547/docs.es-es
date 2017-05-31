@@ -43,7 +43,7 @@ La opción **/lib** especifica la ubicación de los ensamblados a los que se hac
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
@@ -86,7 +86,7 @@ La opción **/lib** especifica la ubicación de los ensamblados a los que se hac
 ## <a name="example"></a>Ejemplo  
  Compile t2.cs para crear un archivo .exe. El compilador buscará referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   

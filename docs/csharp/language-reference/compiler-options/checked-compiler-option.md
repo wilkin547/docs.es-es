@@ -43,7 +43,7 @@ La opción **/checked** especifica si una instrucción aritmética de enteros qu
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -69,7 +69,7 @@ La opción **/checked** especifica si una instrucción aritmética de enteros qu
 ## <a name="example"></a>Ejemplo  
  El comando siguiente compila `t2.cs`. El uso de `/checked` en el comando especifica que cualquier instrucción de aritmética de enteros del archivo que no esté en el ámbito de la palabra clave `checked` o `unchecked` y que produzca un valor fuera del intervalo del tipo de datos provocará una excepción en tiempo de ejecución.  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

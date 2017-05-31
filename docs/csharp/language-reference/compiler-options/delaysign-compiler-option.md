@@ -43,7 +43,7 @@ Esta opción hace que el compilador reserve espacio en el archivo de salida de m
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /delaysign[ + | - ]  
 ```  
   

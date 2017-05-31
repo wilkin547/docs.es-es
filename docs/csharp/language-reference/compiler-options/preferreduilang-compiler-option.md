@@ -43,7 +43,7 @@ Mediante la opción del compilador `/preferreduilang`, puede especificar el idio
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /preferreduilang: language  
 ```  
   

@@ -46,7 +46,7 @@ Crea un vínculo con un recurso de .NET Framework en el archivo de salida. El ar
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
@@ -76,14 +76,14 @@ Crea un vínculo con un recurso de .NET Framework en el archivo de salida. El ar
 ## <a name="example"></a>Ejemplo  
  Para compilar `in.cs` y vincularlo al archivo de recursos `rf.resource`:  
   
-```  
+```console  
 csc /linkresource:rf.resource in.cs  
 ```  
   
 ## <a name="example"></a>Ejemplo  
  Compile `A.cs` en un archivo DLL, vincúlelo a un archivo DLL nativo N.dll y coloque el resultado en la caché global de ensamblados (GAC). En este ejemplo, A.dll y N.dll residen en la GAC.  
   
-```  
+```console  
 csc /linkresource:N.dll /t:library A.cs  
 gacutil -i A.dll  
 ```  
@@ -91,7 +91,7 @@ gacutil -i A.dll
 ## <a name="example"></a>Ejemplo  
  Este ejemplo hace lo mismo que el anterior, pero usa las opciones de Assembly Linker.  
   
-```  
+```console  
 csc /t:module A.cs  
 al /out:A.dll A.netmodule /link:N.dll   
 gacutil -i A.dll  

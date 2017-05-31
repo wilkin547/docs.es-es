@@ -51,7 +51,7 @@ La opción **/filealign** permite especificar el tamaño de las secciones en el 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /filealign:number  
 ```  
   
