@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
+ms.openlocfilehash: 154f60d8f4c0f45d335c6125d5e6a106688dc8db
+ms.contentlocale: es-es
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -21,12 +22,22 @@ ms.lasthandoff: 03/15/2017
 En este documento se describen los cambios que se han agregado a los archivos de proyecto como parte del cambio de *project.json* a *csproj* y [MSBuild](https://github.com/Microsoft/MSBuild). Para obtener más información sobre la sintaxis y la referencia del archivo de proyecto general, consulte la documentación del [archivo de proyecto de MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference).  
 
 ## <a name="implicit-package-references"></a>Referencias implícitas del paquete
-Ahora se hace una referencia implícita a los metapaquetes basándose en el marco de trabajo de destino especificado en la propiedad `<TargetFramework>` o `<TargetFrameworks>` del archivo del proyecto. Si el marco de trabajo de destino es `netcoreap1.x`, se hace referencia a la versión adecuada del metapaquete `Microsoft.NETCore.App`. En caso contrario, si el marco de trabajo de destino es `netstandard1.x`, se hace referencia a la versión adecuada del metapaquete `NetStandard.Library`.
+Se hace una referencia implícita a los metapaquetes basándose en los marcos de trabajo de destino especificados en la propiedad `<TargetFramework>` o `<TargetFrameworks>` del archivo del proyecto. `<TargetFrameworks>` se ignora si `<TargetFramework>` se especifica, independientemente del orden.
 
-En lo que respecta al resto del comportamiento, las herramientas funcionarán de la forma prevista y la mayoría de los gestos permanecerán iguales (por ejemplo, `dotnet restore`). 
+```xml
+ <PropertyGroup>
+   <TargetFramework>netcoreapp1.1</TargetFramework>
+ </PropertyGroup>
+ ```
+ 
+ ```xml
+ <PropertyGroup>
+   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+ </PropertyGroup>
+ ```
 
 ### <a name="recommendations"></a>Recomendaciones
-Puesto que ahora se hace referencia implícitamente a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library`, estos son los procedimientos recomendados:
+Como se hace referencia implícitamente a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library`, estos son los procedimientos recomendados:
 
 * Nunca tenga una referencia explícita a los metapaquetes `Microsoft.NETCore.App` o `NetStandard.Library` a través de la propiedad `<PackageReference>` en el archivo de proyecto.
 * Si necesita una versión específica del tiempo de ejecución, debe usar la propiedad `<RuntimeFrameworkVersion>` de su proyecto (por ejemplo, `1.0.4`) en lugar de hacer referencia al metapaquete.

@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e30573a60e27314466822935249e2b1b119a9259
+ms.contentlocale: es-es
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +106,7 @@ Con el fin de actualizar el archivo `global.json`, quite la propiedad o establé
 ```
 
 ### <a name="migrating-the-project-file"></a>Migración del archivo del proyecto
-Tanto la CLI como DNX usan el mismo sistema de proyectos básico basado en el archivo `project.json`. La sintaxis y la semántica del archivo del proyecto son prácticamente iguales, con pequeñas diferencias en función de los escenarios. También hay algunos cambios en el esquema que puede ver en el [archivo del esquema](http://json.schemastore.org/project) o en una [referencia de project.json](../tools/project-json.md), que es más descriptiva. 
+Tanto la CLI como DNX usan el mismo sistema de proyectos básico basado en el archivo `project.json`. La sintaxis y la semántica del archivo del proyecto son prácticamente iguales, con pequeñas diferencias en función de los escenarios. También hay algunos cambios en el esquema que puede ver en el [archivo del esquema](http://json.schemastore.org/project).
 
 Si compila una aplicación de consola, debe agregar el siguiente fragmento de código al archivo del proyecto:
 

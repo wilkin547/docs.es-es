@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 7ef4ce7a953265816cd36a0ad08b77c227280bde
+ms.contentlocale: es-es
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -33,7 +34,7 @@ El uso de este enfoque es sencillo. Para Linux, hay una opción de usar un admin
 
 Para las plataformas de Windows, puede utilizar el MSI. 
 
-Todos los archivos binarios se pueden encontrar en la [página de introducción de .NET Core](https://aka.ms/dotnetcoregs) que menciona los lanzamientos estables más recientes. Si desea utilizar las últimas versiones (y potencialmente inestables) o la versión más reciente, puede usar los vínculos del [repositorio CLI](https://github.com/dotnet/cli). 
+Todos los archivos binarios se pueden encontrar en la [Guía de instalación de .NET Core](https://aka.ms/dotnetcoregs) que menciona las versiones estables más recientes. Si desea utilizar las últimas versiones (y potencialmente inestables) o la versión más reciente, puede usar los vínculos del [repositorio CLI](https://github.com/dotnet/cli). 
 
 ## <a name="using-the-installer-script"></a>Uso del script del instalador
 El uso del script del instalador permite la instalación sin derechos administrativos en el servidor de compilación. También permite una automatización muy fácil. El mismo script descargará los archivos ZIP o tarball necesarios y los descomprimirá. También agregará la ubicación de instalación en el equipo local a la ruta de acceso para que las herramientas estén disponibles para su invocación inmediatamente después de la instalación. 
@@ -62,12 +63,12 @@ Travis se puede ejecutar en un trabajo de `osx` (OS X 10.11) y de `linux` (Ubunt
 
 ### <a name="appveyor"></a>AppVeyor
 
-La opción [appveyor.com ci](https://www.appveyor.com/) ya tiene instalado el SDK .NET Core Preview 2 en la imagen de trabajo de compilación `Visual Studio 2015`.
+La opción [appveyor.com ci](https://www.appveyor.com/) ya tiene instalado el SDK .NET Core 1.0.1 en la imagen de trabajo de compilación `Visual Studio 2017`.
 
 Solo use:
 
 ```yaml
-os: Visual Studio 2015
+os: Visual Studio 2017
 ```
 
 Es posible instalar una versión concreta del SDK de .NET Core, para ello, consulte [ejemplo de appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml) para más información. 

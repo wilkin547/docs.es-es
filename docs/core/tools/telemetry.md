@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: c816bf4c93430a009e61ddf2a3673c43f49b8de9
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: eda9e6f30defb93737aa67563aa6e606a8a2fb91
+ms.contentlocale: es-es
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -41,7 +42,7 @@ Comandos de .NET Core (telemetría no habilitada):
 
 ## <a name="behavior"></a>Comportamiento
 
-La característica de telemetría de las herramientas de .NET Core está habilitada de manera predeterminada. Puede optar por no tener la característica de telemetría; para ello, establezca una variable de entorno DOTNET_CLI_TELEMETRY_OPTOUT (por ejemplo, `export` en macOS/Linux, `set` en Windows) en true (por ejemplo, "true", 1).
+La característica de telemetría de las herramientas de .NET Core está habilitada de manera predeterminada. Puede optar por no tener la característica de telemetría; para ello, establezca una variable de entorno DOTNET_CLI_TELEMETRY_OPTOUT (por ejemplo, `export` en macOS/Linux, `set` en Windows) en True (por ejemplo, "True", 1).
 
 ## <a name="data-points"></a>Puntos de datos
 
@@ -52,14 +53,14 @@ La característica recopila los siguientes puntos de datos:
 - En el caso de los proyectos de prueba, el ejecutor de pruebas que se usa.
 - La marca de tiempo de la invocación.
 - El marco de trabajo que se usa.
-- Si los identificadores de entorno de ejecución están presentes en el nodo "runtimes".
+- Si los identificadores de tiempo de ejecución están presentes en el nodo "runtimes".
 - La versión de la CLI que se usa.
 
 La característica no recopilará información personal, como nombres de usuario o correos electrónicos. No examinará el código ni extraerá información a nivel de proyecto alguna que pueda tener un carácter confidencial, como nombre, repositorio o autor (si los definió en el archivo project.json). Queremos saber cómo se usan las herramientas y no lo que compila con ellas. Si ve que se recopila información confidencial, se trata de un error. [Informe de la existencia de un problema](https://github.com/dotnet/cli/issues) y se corregirá.
 
 ## <a name="license"></a>Licencia
 
-La distribución de Microsoft de .NET Core cuenta con licencia en virtud del [CLUF DE LA BIBLIOTECA DE MICROSOFT .NET](https://aka.ms/dotnet-core-eula). Esto incluye la sección "DATOS" que se vuelven a mostrar a continuación, para habilitar la telemetría.
+La distribución de Microsoft de .NET Core cuenta con licencia en virtud del [CLUF DE LA BIBLIOTECA DE MICROSOFT .NET](https://aka.ms/dotnet-core-eula). Esto incluye la sección "DATOS" que se vuelve a mostrar a continuación, para habilitar la telemetría.
 
 Los [paquetes NuGet de .NET](https://www.nuget.org/profiles/dotnetframework) usan esta misma licencia, pero no permiten la telemetría (consulte [Ámbito](#scope) arriba).
 

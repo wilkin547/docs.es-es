@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: da75f5fd56b7ce66b2c46ef488e6e26c55a63ee2
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 9574d76564b34f500674662f2b2bb8f4d50976f5
+ms.contentlocale: es-es
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -31,7 +32,7 @@ Consulte la [notas de la versión de .NET Core](https://github.com/dotnet/core/b
 
 ## <a name="net-core-dependencies"></a>Dependencias de .NET Core
 
-.NET Core requiere OpenSSL cuando se ejecuta en macOS. Una manera fácil de obtener OpenSSL es usar el administrador de paquetes [Homebrew ("brew")](http://brew.sh/) para macOS. Después de instalar *brew*, instale OpenSSL mediante la ejecución de los siguientes comandos en un símbolo del sistema de Terminal (comando):
+.NET Core requiere OpenSSL cuando se ejecuta en macOS. Una manera fácil de obtener OpenSSL es usar el administrador de paquetes [Homebrew ("brew")](https://brew.sh/) para macOS. Después de instalar *brew*, instale OpenSSL mediante la ejecución de los siguientes comandos en un símbolo del sistema de Terminal (comando):
 
 ```Terminal
 brew update
@@ -41,7 +42,7 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-Después de instalar OpenSSL, obtenga el [instalador oficial del SDK de .NET Core para Mac](https://go.microsoft.com/fwlink/?linkid=843444). .NET Core 1.1.1 es la última versión. Para conocer las versiones compatibles a largo plazo y descargas adicionales, visite [.NET Downloads: All downloads](https://www.microsoft.com/net/download/core). (Descargas .NET: todas las descargas). Si tiene problemas con la instalación en macOS, consulte [Known issues & workarounds](https://github.com/dotnet/core/blob/master/cli/known-issues.md) (Problemas conocidos y soluciones temporales).
+Después de instalar OpenSSL, descargue e instale el SDK de .NET Core desde las [descargas de .NET](https://www.microsoft.com/net/download/core). Si tiene problemas con la instalación en macOS, consulte el tema [Known issues & workarounds](https://github.com/dotnet/core/blob/master/cli/known-issues.md) (Problemas conocidos y soluciones alternativas).
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 

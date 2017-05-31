@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 3ca312509d7ba7a7759d1ac294f79cc359419c52
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: cc2e823be1a3d1c0267d98c95b25126bd7d048d4
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="unit-testing-in-net-core-using-dotnet-test"></a>Pruebas unitarias de .NET Core mediante pruebas de dotnet
 
-Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) antes de comenzar.
+Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) antes de comenzar. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="creating-the-source-project"></a>Crear el proyecto de origen
 
@@ -48,7 +49,7 @@ namespace Prime.Services
 
 ### <a name="creating-the-test-project"></a>Crear el proyecto de prueba
 
-Cambie el directorio de nuevo al directorio *unit-testing-using-mstest* y cree el directorio *PrimeServices.Test*. Esta es la estructura de directorios:
+Cambie el directorio de nuevo al directorio *unit-testing-using-dotnet-test* y cree el directorio *PrimeService.Tests*. Esta es la estructura de directorios:
 
 ```
 /unit-testing-using-dotnet-test

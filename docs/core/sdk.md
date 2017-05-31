@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 41093464c0dc2631217d89e2e715d05b78051284
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 5ecc2dd249ab0e1e25e2fcaa4f7548f91085e54a
+ms.contentlocale: es-es
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -32,7 +33,7 @@ Incluye los componentes siguientes:
 ## <a name="acquiring-the-net-core-sdk"></a>Adquisición del SDK de .NET Core
 Del mismo modo que ocurre con todas las herramientas, lo primero que debe hacer es instalar las herramientas en su máquina. Según el escenario, puede usar los instaladores nativos para instalar el SDK, o bien puede usar el script de shell de instalación.
 
-Los instaladores nativos están pensados principalmente para las máquinas de los desarrolladores. El SDK se distribuye mediante el uso del mecanismo de instalación nativo de cada plataforma compatible, por ejemplo, los paquetes DEB en Ubuntu o los conjuntos de MSI en Windows. Estos instaladores instalarán y configurarán el entorno según sea necesario para que el usuario use el SDK inmediatamente después de la instalación. Sin embargo, también se necesitan privilegios administrativos en la máquina. Puede consultar las instrucciones de instalación en la [página de introducción a .NET Core](https://aka.ms/dotnetcoregs).
+Los instaladores nativos están pensados principalmente para las máquinas de los desarrolladores. El SDK se distribuye mediante el uso del mecanismo de instalación nativo de cada plataforma compatible, por ejemplo, los paquetes DEB en Ubuntu o los conjuntos de MSI en Windows. Estos instaladores instalarán y configurarán el entorno según sea necesario para que el usuario use el SDK inmediatamente después de la instalación. Sin embargo, también se necesitan privilegios administrativos en la máquina. Puede ver las instrucciones de instalación en la [Guía de instalación de .NET Core](https://aka.ms/dotnetcoregs).
 
 Por otro lado, los scripts de instalación no requieren privilegios administrativos. Sin embargo, tampoco instalan ningún requisito previo en la máquina; debe instalarlos todos manualmente. Los scripts están pensados principalmente para configurar servidores de compilación o cuando desee instalar las herramientas sin privilegios de administración (tenga en cuenta la salvedad con respecto a los requisitos previos que ya se mencionó). Puede encontrar más información en el [tema de referencia sobre los scripts de instalación](tools/dotnet-install-script.md). Si le interesa saber cómo configurar el SDK en el servidor de compilación de integración continua, consulte el documento sobre el [SDK con servidores de integración continua](tools/using-ci-with-cli.md). 
 
