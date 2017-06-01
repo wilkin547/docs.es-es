@@ -59,7 +59,7 @@ Todas las aplicaciones que hospedan Common Language Runtime (CLR) necesitan inic
   
 2.  Agregue el elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) de la forma siguiente al archivo de configuración de la aplicación:  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

@@ -41,7 +41,7 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v461](../../.
 ## <a name="mitigation"></a>Mitigación  
  Si no desea este comportamiento, puede rechazar la adición de un valor de configuración para la sección [ \<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de rechazo.  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=true" />  
 </runtime>  
@@ -49,7 +49,7 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v461](../../.
   
  Además, las aplicaciones que tienen como destino versiones anteriores de .NET Framework pero que se ejecutan en [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] y versiones posteriores pueden incluirse en este comportamiento agregando un ajuste de configuración a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de inclusión.  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=false" />  
 </runtime>  

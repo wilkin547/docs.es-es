@@ -32,17 +32,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c7dd6ed1875abd37e72baf97950d21a110c5a6a8
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Tutorial: Crear agentes de escucha de registro personalizados (Visual Basic)
 En este tutorial se muestra cómo crear un agente de escucha de registro personalizado y configurarlo para escuchar la salida del objeto `My.Application.Log`.  
   
 ## <a name="getting-started"></a>Introducción  
- Los agentes de escucha de registro deben heredar de la clase <xref:System.Diagnostics.TraceListener>.  
+ Los agentes de escucha de registro deben heredarse de la clase <xref:System.Diagnostics.TraceListener>.  
   
 #### <a name="to-create-the-listener"></a>Para crear el agente de escucha  
   
@@ -50,9 +50,9 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
      [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
-     Los métodos <xref:System.Diagnostics.TraceListener.Write%2A> y <xref:System.Diagnostics.TraceListener.WriteLine%2A>, requeridos por la clase base, llame a `MsgBox` para mostrar su entrada.  
+     Los métodos <xref:System.Diagnostics.TraceListener.Write%2A> y <xref:System.Diagnostics.TraceListener.WriteLine%2A>, requeridos por la clase base, llaman a `MsgBox` para mostrar su entrada.  
   
-     El atributo <xref:System.Security.Permissions.HostProtectionAttribute> se aplica a los métodos <xref:System.Diagnostics.TraceListener.Write%2A> y <xref:System.Diagnostics.TraceListener.WriteLine%2A>, para que sus atributos coincidan con los métodos de clase base. El atributo <xref:System.Security.Permissions.HostProtectionAttribute> permite al host que ejecuta el código determinar que el código expone sincronización de protección de host.  
+     El atributo <xref:System.Security.Permissions.HostProtectionAttribute> se aplica a los métodos <xref:System.Diagnostics.TraceListener.Write%2A> y <xref:System.Diagnostics.TraceListener.WriteLine%2A> para que sus atributos coincidan con los métodos de clase base. El atributo <xref:System.Security.Permissions.HostProtectionAttribute> permite al host que ejecuta el código determinar que el código expone sincronización de protección de host.  
   
     > [!NOTE]
     >  El atributo <xref:System.Security.Permissions.HostProtectionAttribute> solo es eficaz en aplicaciones no administradas que hospedan Common Language Runtime e implementan protección de host, como SQL Server.  
@@ -116,7 +116,7 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
 3.  Agregue este elemento a la sección `<listeners>`:  
   
-    ```  
+    ```xml  
     <add name="SimpleLog" />  
     ```  
   
@@ -124,7 +124,7 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
 5.  Agregue este elemento a dicha sección `<sharedListeners>` :  
   
-    ```  
+    ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   

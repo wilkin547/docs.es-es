@@ -34,7 +34,7 @@ En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], ejecutado en Windows 8 
   
 -   Puede agregar el elemento `<EnableMultiMonitorDisplayClipping>` a la sección `<appSettings>` del archivo de configuración de la aplicación para habilitar o deshabilitar este comportamiento en las aplicaciones que se ejecutan en Windows 8 o versiones posteriores. Por ejemplo, la siguiente sección de configuración deshabilita la representación sin recortes:  
   
-    ```  
+    ```xml  
     <appSettings>  
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>  
       </appSettings>  

@@ -71,7 +71,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para escribir informació
   
 3.  Agregue este elemento a dicha sección `<listeners>` :  
   
-    ```  
+    ```xml  
     <add name="EventLog"/>  
     ```  
   
@@ -79,7 +79,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para escribir informació
   
 5.  Agregue este elemento a dicha sección `<sharedListeners>` :  
   
-    ```  
+    ```xml  
     <add name="EventLog"  
         type="System.Diagnostics.EventLogTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
          initializeData="APPLICATION_NAME"/>  
