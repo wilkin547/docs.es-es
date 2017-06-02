@@ -60,13 +60,13 @@ Los métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
   
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nombre de la clave es `Nothing` (<xref:System.ArgumentNullException>).  
+-   Que el nombre de la clave sea `Nothing` (<xref:System.ArgumentNullException>).  
   
--   El usuario no tiene permiso para eliminar claves del Registro (<xref:System.Security.SecurityException>).  
+-   Que el usuario no tenga permisos para eliminar claves del Registro (<xref:System.Security.SecurityException>).  
   
--   El nombre de la clave supera el límite de 255 caracteres (<xref:System.ArgumentException>).  
+-   Que el nombre de la clave supere el límite de 255 caracteres (<xref:System.ArgumentException>).  
   
--   La clave del Registro es de solo lectura (<xref:System.UnauthorizedAccessException>).  
+-   Que la clave del Registro sea de solo lectura (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Las llamadas del Registro producen errores si no se conceden permisos suficientes en tiempo de ejecución (<xref:System.Security.Permissions.RegistryPermission>) o si el usuario no tiene el acceso correcto (como se determina en las ACL) para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo.  

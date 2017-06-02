@@ -57,11 +57,11 @@ El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> escri
   
 -   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File` señala a una ruta de acceso que no existe (<xref:System.IO.FileNotFoundException> o <xref:System.IO.DirectoryNotFoundException>).  
+-   `File` apunta a una ruta de acceso que no existe (<xref:System.IO.FileNotFoundException> o <xref:System.IO.DirectoryNotFoundException>).  
   
 -   El archivo está en uso por otro proceso o hay un error de E/S (<xref:System.IO.IOException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   

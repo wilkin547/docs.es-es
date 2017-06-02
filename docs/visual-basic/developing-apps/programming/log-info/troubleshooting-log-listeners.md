@@ -62,7 +62,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
      [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
   
-     Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
+     Para obtener más información, consulta <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Cómo: Anexar a archivos de texto en Visual Basic
-El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se puede usar para anexar a un archivo de texto especificando que el parámetro `append` se establece en `True`.  
+El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se puede usar para anexar datos a un archivo de texto especificando que el parámetro `append` está establecido en `True`.  
   
 ### <a name="to-append-to-a-text-file"></a>Para anexar a un archivo de texto  
   
@@ -57,11 +57,11 @@ El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se pue
   
 -   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File` señala a una ruta de acceso que no existe (<xref:System.IO.FileNotFoundException> o <xref:System.IO.DirectoryNotFoundException>).  
+-   `File` apunta a una ruta de acceso que no existe (<xref:System.IO.FileNotFoundException> o <xref:System.IO.DirectoryNotFoundException>).  
   
 -   El archivo está en uso por otro proceso o hay un error de E/S (<xref:System.IO.IOException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   

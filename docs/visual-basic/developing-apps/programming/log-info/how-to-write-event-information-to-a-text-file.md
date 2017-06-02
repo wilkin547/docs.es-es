@@ -62,7 +62,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci√
   
 3.  Agregue este elemento a dicha secci√≥n `<listeners>` :  
   
-    ```xml  
+    ```  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci√
   
 5.  Agregue este elemento a dicha secci√≥n `<sharedListeners>` :  
   
-    ```xml  
+    ```  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   

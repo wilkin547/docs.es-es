@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Cómo: Cargar un archivo en Visual Basic
-Se puede usar el método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> para cargar un archivo y almacenarlo en una ubicación remota. Si el parámetro `ShowUI` se establece en `True`, aparece un cuadro de diálogo que muestra el progreso de la descarga y permite a los usuarios cancelar la operación.  
+El método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> se puede usar para cargar un archivo y almacenarlo en una ubicación remota. Si el parámetro `ShowUI` se establece en `True`, aparece un cuadro de diálogo que muestra el progreso de la descarga y permite a los usuarios cancelar la operación.  
   
 ### <a name="to-upload-a-file"></a>Para cargar un archivo  
   
@@ -65,11 +65,11 @@ Se puede usar el método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%
 ## <a name="robust-programming"></a>Programación sólida  
  Las siguientes condiciones pueden provocar una excepción:  
   
--   La ruta de acceso al archivo local no es válida (<xref:System.ArgumentException>).  
+-   La ruta de acceso de archivo local no es válida (<xref:System.ArgumentException>).  
   
--   Se ha producido un error en la autenticación (<xref:System.Security.SecurityException>).  
+-   Error de autenticación (<xref:System.Security.SecurityException>).  
   
--   Se ha agotado el tiempo de espera de la conexión (<xref:System.TimeoutException>).  
+-   Se agotó el tiempo de espera de la conexión (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   
