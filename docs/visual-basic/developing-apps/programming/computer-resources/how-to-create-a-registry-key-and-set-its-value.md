@@ -75,7 +75,7 @@ El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para c
   
  Cuando se esté leyendo el Registro desde una aplicación Web, el usuario actual dependerá de la autenticación y suplantación implementadas en la aplicación Web.  
   
- Resulta más seguro escribir datos en la carpeta de usuario (<xref:Microsoft.Win32.Registry.CurrentUser>) que en el equipo local (<xref:Microsoft.Win32.Registry.LocalMachine>).  
+ Es más seguro escribir datos en la carpeta de usuario (<xref:Microsoft.Win32.Registry.CurrentUser>) que en el equipo local (<xref:Microsoft.Win32.Registry.LocalMachine>).  
   
  Cuando se crea un valor del Registro, se debe decidir qué hacer si ese valor ya existe. Puede que otro proceso, quizás uno malintencionado, ya haya creado el valor y tenga acceso a él. Al colocar datos en el valor del Registro, estos están a disposición del otro proceso. Para evitar esto, use el método <xref:Microsoft.Win32.RegistryKey.GetValue%2A>. Devuelve `Nothing` si la clave ya no existe.  
   
@@ -83,18 +83,18 @@ El método `CreateSubKey` del objeto `My.Computer.Registry` se puede usar para c
   
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nombre de la clave es `Nothing` (<xref:System.ArgumentNullException>).  
+-   Que el nombre de la clave sea `Nothing` (<xref:System.ArgumentNullException>).  
   
--   El usuario no tiene permiso para crear claves del Registro (<xref:System.Security.SecurityException>).  
+-   Que el usuario no tenga permisos para crear claves del Registro (<xref:System.Security.SecurityException>).  
   
--   El nombre de la clave supera el límite de 255 caracteres (<xref:System.ArgumentException>).  
+-   Que el nombre de la clave supere el límite de 255 caracteres (<xref:System.ArgumentException>).  
   
--   La clave está cerrada (<xref:System.IO.IOException>).  
+-   Que la clave esté cerrada (<xref:System.IO.IOException>).  
   
--   La clave del Registro es de solo lectura (<xref:System.UnauthorizedAccessException>).  
+-   Que la clave del Registro sea de solo lectura (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Para ejecutar este proceso, el ensamblado requiere un nivel de privilegios concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Aspectos básicos de seguridad de acceso del código).  
+ Para ejecutar este proceso, el ensamblado necesita un nivel de privilegio concedido por la clase <xref:System.Security.Permissions.RegistryPermission>. Si ejecuta el proceso en un contexto de confianza parcial, este podría desencadenar una excepción por falta de privilegios. De igual manera, el usuario debe tener las ACL correctas para crear o escribir en la configuración. Por ejemplo, una aplicación local que tenga permiso de seguridad de acceso del código puede que no tenga permiso para el sistema operativo. Para obtener más información, vea [Code Access Security Basics](https://msdn.microsoft.com/library/33tceax8) (Aspectos básicos de seguridad de acceso del código).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

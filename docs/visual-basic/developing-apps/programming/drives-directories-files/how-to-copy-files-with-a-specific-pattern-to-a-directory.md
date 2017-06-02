@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Cómo: Copiar archivos con un modelo específico en un directorio en Visual Basic
-El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> devuelve una colección de solo lectura de cadenas que representan los nombres de ruta de acceso a los archivos. Puede usar el parámetro `wildCards` para especificar un patrón concreto.  
+El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> devuelve una colección de cadenas de solo lectura que representan los nombres de ruta de acceso de los archivos. Puede usar el parámetro `wildCards` para especificar un patrón concreto.  
   
  Si no se encuentran archivos coincidentes, se devuelve una colección vacía.  
   
@@ -76,9 +76,9 @@ El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> d
   
 -   El directorio no existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   El directorio señala a un archivo existente (<xref:System.IO.IOException>).  
+-   El directorio apunta a un archivo existente (<xref:System.IO.IOException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
