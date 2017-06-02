@@ -102,11 +102,11 @@ La implementación de una implementación independiente sin dependencias de terc
 
    Por ejemplo, el ejemplo siguiente indica que la aplicación se ejecuta en sistemas operativos Windows 10 de 64 bits y OS X versión 10.11 de 64 bits.
 
-       ```xml
-        <PropertyGroup>
-          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-        </PropertyGroup>
-       ```
+```xml
+<PropertyGroup>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
    Tenga en cuenta que el elemento `<RuntimeIdentifiers>` puede ir en cualquier `<PropertyGroup>` que tenga en el archivo *csproj*. Más adelante en esta sección aparece un ejemplo completo del archivo *csproj*.
 
 1. Crear una versión de depuración de la aplicación.
