@@ -1,0 +1,1 @@
+Metarchivo mejorado (EMF)

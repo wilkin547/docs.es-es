@@ -1,0 +1,98 @@
+---
+title: "UI Automation Support for the Tab Control Type | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-bcl"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "TabControl type"
+  - "UI Automation, Tab control type"
+  - "control types, Tab"
+ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
+caps.latest.revision: 20
+author: "Xansky"
+ms.author: "mhopkins"
+manager: "markl"
+caps.handback.revision: 20
+---
+# UI Automation Support for the Tab Control Type
+> [!NOTE]
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+  
+ En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] con el tipo de control Tab. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un tipo de control es un conjunto de condiciones que debe cumplir un control para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>. Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los valores de propiedad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. patrones de control.  
+  
+ Un control de ficha es análogo a los divisores de un bloc de notas o las etiquetas de un archivador. Mediante el uso de un control de ficha, una aplicación puede definir varias páginas para la misma área de un cuadro de diálogo o de una ventana.  
+  
+ En las secciones siguientes se definen la estructura de árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control Tab. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplican a todos los controles de ficha, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+  
+<a name="Required_UI_Automation_Tree_Structure"></a>   
+## Estructura de árbol de Automatización de la interfaz de usuario necesaria  
+ En la tabla siguiente se describe la vista de control y la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de ficha y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+  
+|Vista de control|Vista de contenido|  
+|----------------------|------------------------|  
+|Tab<br /><br /> <ul><li>TabItem \(1 o más\)</li><li>ScrollBar \(0 o 1\)<br /><br /> <ul><li>Button \(0 o 2\)</li></ul></li></ul>|Tab<br /><br /> -   TabItem \(1 o más\)|  
+  
+ Los controles Tab tienen elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] secundarios basados en el tipo de control Tab Item. Cuando se agrupan los elementos de ficha \(por ejemplo, como sucede en las aplicaciones de Microsoft Office 2007\), el tipo de control Tab también puede hospedar los tipos de control Groups para los elementos de ficha agrupados, como muestra la siguiente estructura de árbol.  
+  
+|Vista de control|Vista de contenido|  
+|----------------------|------------------------|  
+|Tab<br /><br /> <ul><li>TabItem \(1 o más\)</li><li>Group \(0 o más\)<br /><br /> <ul><li>TabItem \(0 o más\)</li></ul></li><li>ScrollBar \(0 o más\)<br /><br /> <ul><li>Button \(0 o 2\)</li></ul></li></ul>|Tab<br /><br /> <ul><li>TabItem \(1 o más\)</li><li>Group \(0 o más\)<br /><br /> <ul><li>TabItem \(0 o más\)</li></ul></li></ul>|  
+  
+<a name="Required_UI_Automation_Properties"></a>   
+## Propiedades de Automatización de la interfaz de usuario necesarias  
+ En la tabla siguiente se muestran las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que tienen un valor o una definición que es especialmente relevante para el tipo de control Tab. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], vea [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+  
+|Propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|Notas|  
+|-------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas.|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas.|El rectángulo exterior que contiene el control completo.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Vea las notas.|Si el control puede recibir el enfoque del teclado, debe admitir esta propiedad.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vea las notas.|El control de ficha rara vez requiere una propiedad Name.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|No|El control de ficha no tiene un punto donde hacer clic.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Vea las notas.|Los controles de ficha suelen tener una etiqueta de texto estático que se expone a través de esta propiedad.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Pestaña|Este valor es el mismo para todos los marcos de trabajo de la interfaz de usuario.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"ficha"|Cadena localizada que corresponde al tipo de control Tab.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|True|El tipo de control Tab debe poder recibir el foco de teclado. Normalmente, un cliente de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] llama a SetFocus en un control de ficha y uno de sus elementos reenvía el foco del teclado al control de ficha. Es posible que algunos contenedores de ficha obtengan el foco sin haber establecido el foco en uno de sus elementos.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|El control de ficha siempre se incluye en la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|El control de ficha siempre se incluye en la vista de control del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Vea las notas.|El control de ficha siempre debe indicar si está colocado horizontal o verticalmente.|  
+  
+<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
+## Propiedades y patrones de control de Automatización de la interfaz de usuario necesarios  
+ En la tabla siguiente se muestran los patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que se deben admitir por todos los controles de ficha. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+  
+|Patrón de control\/propiedad de patrón|Soporte técnico\/valor|Notas|  
+|--------------------------------------------|----------------------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Sí|Todos los controles de ficha deben admitir el patrón Selection.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|True|Los controles de ficha siempre requieren que se realice una selección.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Los controles de ficha siempre son contenedores de selección única.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Depende|El patrón Scroll se debe admitir en el control de ficha que tiene widgets que permiten el desplazamiento por un conjunto de elementos de ficha.|  
+  
+<a name="Required_UI_Automation_Events"></a>   
+## Eventos de Automatización de la interfaz de usuario necesarios  
+ En la tabla siguiente se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de ficha. Para más información sobre los eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+  
+|Evento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Compatibilidad|Notas|  
+|----------------------------------------------------------------------------------|--------------------|-----------|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>.|Obligatorio|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>.|Obligatorio|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>.|Obligatorio|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>.|Depende|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty>.|Depende|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>.|Depende|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty>.|Depende|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty>.|Depende|Ninguna|  
+|Evento cambiado por propiedad <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty>.|Depende|Ninguno|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Requerido|Ninguna|  
+  
+## Vea también  
+ <xref:System.Windows.Automation.ControlType.Tab>   
+ [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
+ [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)

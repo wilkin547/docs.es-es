@@ -1,0 +1,108 @@
+---
+title: "BasicBinding | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
+caps.latest.revision: 22
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 22
+---
+# BasicBinding
+El ejemplo muestra el uso de `basicHttpBinding` que proporciona a la comunicación HTTP y a la interoperabilidad máxima los servicios Web de primera y segunda generación.  
+  
+> [!NOTE]
+>  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+  
+> [!IMPORTANT]
+>  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>   
+>  `<>InstallDrive:\WF_WCF_Samples`  
+>   
+>  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>   
+>  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\Http`  
+  
+## Detalles del ejemplo  
+ Este ejemplo se basa en el [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
+  
+ Sólo se exige el nombre de la sección de enlace para utilizar el enlace básico con un comportamiento predeterminado.Si desea configurar el enlace básico  y cambiar algunos de sus valores, es necesario definir una configuración de enlace.El extremo debe hacer referencia a la configuración de enlace por nombre utilizando el atributo `bindingConfiguration` del elemento \<`endpoint`\>, como se muestra en el siguiente código de muestra.  
+  
+```  
+<services>  
+    <service   
+        type="Microsoft.ServiceModel.Samples.CalculatorService"  
+        behaviorConfiguration="CalculatorServiceBehavior">  
+       <endpoint address=""  
+             binding="basicHttpBinding"  
+             bindingConfiguration="Binding1"   
+             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+    </service>  
+</services>  
+  
+```  
+  
+ En este ejemplo, la configuración de enlace se denomina `"Binding1"` y se define como se muestra en el ejemplo de código siguiente.  
+  
+```  
+<bindings>  
+   <basicHttpBinding>  
+      <binding name="Binding1"   
+               hostNameComparisonMode="StrongWildcard"   
+               receiveTimeout="00:10:00"  
+               sendTimeout="00:10:00"  
+               openTimeout="00:10:00"  
+               closeTimeout="00:10:00"  
+               maxMessageSize="65536"   
+               maxBufferSize="65536"   
+               maxBufferPoolSize="524288"   
+               transferMode="Buffered"   
+               messageEncoding="Text"   
+               textEncoding="utf-8"  
+               bypassProxyOnLocal="false"  
+               useDefaultWebProxy="true" >  
+         <security mode="None" />  
+      </binding>  
+   </basicHttpBinding>  
+</bindings>  
+  
+```  
+  
+ El elemento de enlace proporciona los atributos para establecer el modo de comparación de nombre de host, tamaño del mensaje máximo, opciones de proxy, tiempos de espera, codificación de mensajes y otras opciones.  
+  
+ Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+  
+```  
+  
+Add(100,15.99) = 115.99  
+Subtract(145,76.54) = 68.46  
+Multiply(9,81.25) = 731.25  
+Divide(22,7) = 3.14285714285714  
+  
+Press <ENTER> to terminate client.  
+```  
+  
+#### Para configurar, compilar y ejecutar el ejemplo  
+  
+1.  Instale [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mediante el siguiente comando.  
+  
+    ```  
+    %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
+  
+    ```  
+  
+2.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+  
+3.  Para compilar el código de la edición .NET de C\# o Visual Basic de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+  
+4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+  
+## Vea también

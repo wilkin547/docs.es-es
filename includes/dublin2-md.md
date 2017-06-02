@@ -1,0 +1,1 @@
+características de hospedaje
