@@ -52,7 +52,7 @@ Use el método `CreateDirectory` del objeto `My.Computer.FileSystem` para crear 
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nombre del directorio es incorrecto. Por ejemplo, contiene caracteres no válidos o está compuesto solo por espacios en blanco (<xref:System.ArgumentException>).  
+-   El nombre del directorio es incorrecto. Por ejemplo, contiene caracteres no válidos o solo tiene espacios en blanco (<xref:System.ArgumentException>).  
   
 -   El directorio principal del directorio que se va a crear es de solo lectura (<xref:System.IO.IOException>).  
   
@@ -60,11 +60,11 @@ Use el método `CreateDirectory` del objeto `My.Computer.FileSystem` para crear 
   
 -   El nombre del directorio es demasiado largo (<xref:System.IO.PathTooLongException>).  
   
--   El nombre del directorio es un signo de dos puntos ":" (<xref:System.NotSupportedException>).  
+-   El nombre del directorio son dos puntos ":" (<xref:System.NotSupportedException>).  
   
 -   El usuario no tiene permiso para crear el directorio (<xref:System.UnauthorizedAccessException>).  
   
--   El usuario no tiene permisos suficientes en una situación de confianza parcial (<xref:System.Security.SecurityException>).  
+-   El usuario no tiene permisos en una situación de confianza parcial (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   

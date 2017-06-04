@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="accessing-user-data-visual-basic"></a>Acceso a los datos de usuario (Visual Basic)
 Esta sección contiene temas que tratan del objeto `My.User` y de las tareas que se pueden realizar con él.  
   
- El objeto `My.User` proporciona acceso a información sobre el usuario que ha iniciado la sesión devolviendo un objeto que implementa la interfaz <xref:System.Security.Principal.IPrincipal>.  
+ El objeto `My.User` proporciona acceso a información sobre los usuarios que han iniciado la sesión devolviendo un objeto que implementa la interfaz <xref:System.Security.Principal.IPrincipal>.  
   
 ## <a name="tasks"></a>Tareas  
   

@@ -38,7 +38,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-retrieve-the-contents-of-the-my-documents-directory-in-visual-basic"></a>Cómo: Recuperar el contenido del directorio Mis documentos en Visual Basic
-El objeto <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> se puede usar para leer desde muchos de los directorios de **Todos los usuarios**, como **Mis documentos** o **Escritorio**.  
+El objeto <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories> se puede usar para leer en muchos de los directorios de **Todos los usuarios**, como **Mis documentos** o **Escritorio**.  
   
 ### <a name="to-read-from-the-my-documents-folder"></a>Para leer de la carpeta Mis documentos  
   

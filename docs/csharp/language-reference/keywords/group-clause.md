@@ -81,7 +81,7 @@ La cláusula `group` devuelve una secuencia de objetos <xref:System.Linq.IGroupi
 group person by new {name = person.surname, city = person.city};  
 ```  
   
- Use un tipo con nombre si debe pasar la variable de consulta a otro método. Para crear una clase especial, use propiedades autoimplementadas para las claves e invalide después los métodos <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A>. También puede usar un struct, en cuyo caso no es estrictamente necesario invalidar esos métodos. Para obtener más información, vea [Cómo: Implementar una clase ligera con propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) y [How to: Query for Duplicate Files in a Directory Tree](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md) (Cómo: Consultar archivos duplicados en un árbol de directorio). El último tema contiene un ejemplo de código que muestra cómo usar una clave compuesta con un tipo con nombre.  
+ Use un tipo con nombre si debe pasar la variable de consulta a otro método. Cree una clase especial usando las propiedades autoimplementadas para las claves y, luego, invalide los métodos <xref:System.Object.Equals%2A> y <xref:System.Object.GetHashCode%2A>. También puede usar un struct, en cuyo caso no es estrictamente necesario invalidar esos métodos. Para obtener más información, vea [Cómo: Implementar una clase ligera con propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) y [How to: Query for Duplicate Files in a Directory Tree](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md) (Cómo: Consultar archivos duplicados en un árbol de directorio). El último tema contiene un ejemplo de código que muestra cómo usar una clave compuesta con un tipo con nombre.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el patrón estándar para ordenar los datos de origen en grupos cuando no se aplica ninguna lógica de consulta adicional a los grupos. Esto se denomina agrupación sin continuación. Los elementos de una matriz de cadenas se agrupan por la primera letra. El resultado de la consulta es un tipo <xref:System.Linq.IGrouping%602> que contiene una propiedad `Key` pública de tipo `char` y una colección <xref:System.Collections.Generic.IEnumerable%601> que contiene cada elemento de la agrupación.  
@@ -103,7 +103,7 @@ group person by new {name = person.surname, city = person.city};
  <xref:System.Linq.Enumerable.GroupBy%2A>   
  <xref:System.Linq.Enumerable.ThenBy%2A>   
  <xref:System.Linq.Enumerable.ThenByDescending%2A>   
- [Palabras clave para consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
+ [Palabras clave de consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Cómo: Crear grupos anidados](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
  [Cómo: Agrupar los resultados de consultas](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   

@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="literals"></a>Literales  
 
- Puede declarar e inicializar una variable `byte` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. Si el literal entero está fuera del intervalo de `byte` (es decir, si es menor que <xref:System.Byte.MinValue?displayProperty=fullName> o mayor que <xref:System.Byte.MaxValue?displayProperty=fullName>, se produce un error de compilación.
+ Puede declarar e inicializar una variable `byte` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. Si el literal entero está fuera del intervalo de `byte` (es decir, si es inferior a <xref:System.Byte.MinValue?displayProperty=fullName> o mayor que <xref:System.Byte.MaxValue?displayProperty=fullName>), se produce un error de compilación.
 
 En el ejemplo siguiente, los enteros que equivalen a 201 que se representan como literales binarios, hexadecimales y decimales se convierten implícitamente de [int](../../../csharp/language-reference/keywords/int.md) a valores `byte`.    
   
@@ -66,7 +66,6 @@ A partir de C# 7, también puede usar el carácter de subrayado, `_`, como un se
  No se pueden convertir implícitamente los tipos numéricos no literales de mayor tamaño de almacenamiento a `byte`. Para más información sobre los tamaños de almacenamiento de los tipos enteros, vea la [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md). Considere, por ejemplo, las dos siguientes variables de `byte` `x` y `y`:  
   
 ```  
-  
 byte x = 10, y = 20;  
 ```  
   
@@ -133,3 +132,4 @@ SampleMethod((byte)5);
  [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

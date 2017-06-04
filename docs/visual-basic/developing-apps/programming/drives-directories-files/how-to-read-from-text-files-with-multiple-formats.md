@@ -45,7 +45,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Cómo: Leer archivos de texto con varios formatos en Visual Basic
-El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una manera de analizar con facilidad y eficiencia archivos de texto estructurados, como los registros. Puede procesar un archivo con varios formatos usando el método `PeekChars` para determinar el formato de cada línea a medida que va analizando el archivo.  
+El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una manera fácil y eficaz de analizar archivos de texto estructurados, como registros. Puede procesar un archivo con varios formatos usando el método `PeekChars` para determinar el formato de cada línea a medida que va analizando el archivo.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Para analizar un archivo de texto con varios formatos  
   
@@ -64,7 +64,7 @@ El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una ma
   
      [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
   
-3.  Cree un nuevo objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>, definiendo su ancho y su formato.  
+3.  Cree un objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> que defina el ancho y el formato.  
   
      [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
   
@@ -84,15 +84,15 @@ El objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> proporciona una ma
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   No se puede analizar una fila con el formato especificado (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). El mensaje de excepción especifica la línea que produce la excepción y la propiedad <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> se asigna al texto contenido en la línea.  
+-   No se puede analizar una fila utilizando el formato especificado (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). El mensaje de excepción especifica la línea que produce la excepción y la propiedad <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> se asigna al texto contenido en la línea.  
   
 -   El archivo especificado no existe (<xref:System.IO.FileNotFoundException>).  
   
 -   Una situación de confianza parcial en la que el usuario no tiene los permisos necesarios para tener acceso al archivo. (<xref:System.Security.SecurityException>).  
   
--   La ruta de acceso es demasiado larga (<xref:System.IO.PathTooLongException>).  
+-   La ruta de acceso del archivo es demasiado larga (<xref:System.IO.PathTooLongException>).  
   
--   El usuario no tiene permisos suficientes para el acceso al archivo (<xref:System.UnauthorizedAccessException>).  
+-   El usuario no tiene permisos suficientes para acceder al archivo (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   

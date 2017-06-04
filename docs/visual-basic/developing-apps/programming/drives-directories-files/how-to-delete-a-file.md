@@ -68,7 +68,7 @@ El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un 
   
 -   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Un nombre de archivo o de carpeta de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
@@ -80,9 +80,9 @@ El método `DeleteFile` del objeto `My.Computer.FileSystem` permite eliminar un 
   
 -   El usuario no tiene permiso para eliminar el archivo o el archivo es de solo lectura (<xref:System.UnauthorizedAccessException>).  
   
--   Existe una situación de confianza parcial en la cual el usuario no tiene los permisos necesarios (<xref:System.Security.SecurityException>).  
+-   Existe una situación de confianza parcial en la que el usuario no tiene suficientes permisos (<xref:System.Security.SecurityException>).  
   
--   El usuario ha cancelado la operación y el parámetro `onUserCancel` está establecido en `ThrowException` (<xref:System.OperationCanceledException>).  
+-   El usuario canceló la operación y `onUserCancel` está establecido en `ThrowException` (<xref:System.OperationCanceledException>).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   

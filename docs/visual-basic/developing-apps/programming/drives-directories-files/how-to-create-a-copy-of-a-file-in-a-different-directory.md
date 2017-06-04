@@ -64,7 +64,7 @@ El método `My.Computer.FileSystem.CopyFile` le permite copiar archivos. Sus par
   
 -   El archivo de destino existe y `overwrite` está establecido en `False` (<xref:System.IO.IOException>).  
   
--   El usuario no tiene permisos suficientes para el acceso al archivo (<xref:System.IO.IOException>).  
+-   El usuario no tiene permisos suficientes para acceder al archivo (<xref:System.IO.IOException>).  
   
 -   Hay un archivo en uso con el mismo nombre en la carpeta de destino (<xref:System.IO.IOException>).  
   
@@ -74,9 +74,9 @@ El método `My.Computer.FileSystem.CopyFile` le permite copiar archivos. Sus par
   
 -   `ShowUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException` y se produce un error de E/S no especificado (<xref:System.OperationCanceledException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
--   El usuario no tiene los permisos requeridos (<xref:System.UnauthorizedAccessException>).  
+-   El usuario no tiene el permiso necesario (<xref:System.UnauthorizedAccessException>).  
   
 -   El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
   

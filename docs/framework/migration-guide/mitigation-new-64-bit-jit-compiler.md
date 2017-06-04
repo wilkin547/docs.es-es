@@ -35,17 +35,17 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
 > [!IMPORTANT]
 >  Todos estos problemas conocidos se han solucionado en el nuevo compilador de 64 bits publicado con .NET Framework 4.6.2. También se han abordado la mayoría en las versiones de servicio de .NET Framework 4.6 y 4.6.1 que se incluyen con Windows Update. Puede eliminar estos problemas asegurándose de que la versión de Windows está actualizada o actualizando a .NET Framework 4.6.2.  
   
--   En determinadas condiciones, una operación de conversión unboxing puede producir un elemento < xref:System.NullReferenceException > en versiones de lanzamiento con la optimización activada.  
+-   En determinadas condiciones, una operación de conversión unboxing puede producir una <xref:System.NullReferenceException> en versiones de lanzamiento con la optimización activada.  
   
--   En algunos casos, la ejecución del código de producción en un cuerpo del método de gran tamaño puede producir un elemento < xref:System.StackOverflowException >.  
+-   En algunos casos, la ejecución del código de producción en un cuerpo del método de gran tamaño puede producir una <xref:System.StackOverflowException>.  
   
 -   En determinadas condiciones, las estructuras que pasan a un método se tratan como tipos de referencia en lugar de tipos de valor en las compilaciones de versión. Una de las manifestaciones de este problema es que los elementos individuales de una colección aparecen en un orden inesperado.  
   
--   En determinadas condiciones, la comparación de los valores < xref:System.UInt16 > con su conjunto de bits altos es incorrecta si se habilita la optimización.  
+-   En determinadas condiciones, la comparación de los valores <xref:System.UInt16> con su conjunto de bits altos es incorrecta si se habilita la optimización.  
   
--   En determinadas condiciones, especialmente al indexar los valores de matriz, la inicialización de la memoria mediante la instrucción IL < xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName > puede inicializar la memoria con un valor incorrecto. Esto puede producir una excepción no controlada o resultados incorrectos.  
+-   En determinadas condiciones, especialmente al indexar los valores de matriz, la inicialización de la memoria mediante la instrucción IL <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> puede inicializar la memoria con un valor incorrecto. Esto puede producir una excepción no controlada o resultados incorrectos.  
   
--   En determinadas condiciones poco frecuentes, una prueba de bits condicional puede devolver el valor < xref:System.Boolean > incorrecto o producir una excepción si se habilitan las optimizaciones del compilador.  
+-   En determinadas condiciones poco frecuentes, una prueba de bits condicional puede devolver el valor <xref:System.Boolean> incorrecto o producir una excepción si se habilitan las optimizaciones del compilador.  
   
 -   En determinadas condiciones, si se utiliza una instrucción `if` para comprobar una condición antes de entrar en un bloque `try` y en la salida del bloque `try`, y se evalúa la misma condición en el bloque `catch` o `finally`, el compilador JIT de 64 bits nuevo quita la condición `if` del bloque `catch` o `finally` cuando optimiza el código. Como resultado, el código dentro de la instrucción `if` en el bloque `catch` o `finally` se ejecuta de forma incondicional.  
   

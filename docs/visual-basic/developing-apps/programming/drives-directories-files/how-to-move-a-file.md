@@ -64,17 +64,17 @@ El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo
   
 -   El archivo de origen no es válido o no existe (<xref:System.IO.FileNotFoundException>).  
   
--   La ruta de acceso combinada apunta a un directorio existente, el archivo de destino existe y `overwrite` está establecido en `False`, un archivo del directorio de destino con el mismo nombre está en uso o el usuario no tiene permisos suficientes para acceder al archivo (<xref:System.IO.IOException>).  
+-   La ruta de acceso combinada apunta a un directorio existente, el archivo de destino existe y `overwrite` está establecido en `False`, un archivo del directorio de destino con el mismo nombre está en uso o el usuario no tiene permisos suficientes para obtener acceso al archivo (<xref:System.IO.IOException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
--   `showUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException` y el usuario ha cancelado la operación o se ha producido un error de E/S no especificado (<xref:System.OperationCanceledException>).  
+-   `showUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException` y el usuario canceló la operación o se produjo un error de E/S no especificado (<xref:System.OperationCanceledException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
   
--   El usuario no tiene los permisos requeridos (<xref:System.UnauthorizedAccessException>).  
+-   El usuario no tiene el permiso necesario (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>   
