@@ -1,77 +1,76 @@
 ---
-title: "Cambiar mayúsculas y minúsculas"
-description: "Cambiar mayúsculas y minúsculas"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 646c5afd-8aec-4393-9c00-f68ad2580c68
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 023f40969095627242d3652add853eb999c30c4b
-ms.lasthandoff: 03/02/2017
-
+title: "Cambiar may&#250;sculas y min&#250;sculas en .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "distinción de mayúsculas y minúsculas"
+  - "minúsculas"
+  - "cadenas [.NET Framework], mayúsculas y minúsculas"
+  - "ToLower (método)"
+  - "ToUpper (método)"
+  - "mayúsculas"
+ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
+caps.latest.revision: 15
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 15
 ---
-
-# <a name="changing-case"></a>Cambiar mayúsculas y minúsculas
-
-Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos. Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario. En la tabla siguiente, se describen dos métodos para cambiar las mayúsculas y minúsculas.
-
-Nombre del método | Uso
------------ | ---
-[String.ToUpper](xref:System.String.ToUpper) | Convierte todos los caracteres de una cadena a mayúsculas.
-[String.ToLower](xref:System.String.ToLower) | Convierte todos los caracteres de una cadena a minúsculas.
-
-> [!WARNING]  
-> Tenga en cuenta que los métodos `String.ToUpper` y `String.ToLower` no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad. 
-
-## <a name="comparing-strings-of-mixed-case"></a>Comparar cadenas con mayúsculas y minúsculas mezcladas
-
-Para comparar cadenas con mayúsculas y minúsculas mezcladas para determinar si son iguales, llame a una de las sobrecargas del método [String](xref:System) `Equals` con un parámetro *comparisonType* y proporcione un valor de [StringComparison.CurrentCultureIgnoreCase](xref:System.StringComparison.CurrentCultureIgnoreCase) o [StringComparison.OrdinalIgnoreCase](xref:System.StringComparison.OrdinalIgnoreCase) para el argumento *comparisonType*. 
-
-Para obtener más información, consulte [Procedimientos recomendados para el uso de cadenas](best-practices.md). 
-
-## <a name="toupper"></a>ToUpper
-
-El método [String.ToUpper](xref:System.String.ToUpper) convierte todos los caracteres de una cadena en mayúsculas. En el siguiente ejemplo, se convierte la cadena "Hello World!" de mayúsculas y minúsculas mezcladas a mayúsculas.
-
-```csharp
-string properString = "Hello World!";
-Console.WriteLine(properString.ToUpper());
-// This example displays the following output:
-//       HELLO WORLD!
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Console.WriteLine(MyString.ToUpper())
-' This example displays the following output:
-'       HELLO WORLD!
-```
-
-## <a name="tolower"></a>ToLower
-
-El método [String.ToLower](xref:System.String.ToLower) es similar al método anterior, pero, en su lugar, convierte todos los caracteres de una cadena en minúsculas. En el siguiente ejemplo, se convierte la cadena "Hello World!" en minúsculas.
-
-```csharp
-string properString = "Hello World!";
-Console.WriteLine(properString.ToLower());
-// This example displays the following output:
-//       hello world!
-```
-
-```vb
-Dim MyString As String = "Hello World!"
-Console.WriteLine(MyString.ToLower())
-' This example displays the following output:
-'       hello world!
-```
-
-## <a name="see-also"></a>Vea también
-
-[Operaciones básicas de cadenas](basic-string-operations.md)
-
+# Cambiar may&#250;sculas y min&#250;sculas en .NET Framework
+Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos.  Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario.  En la tabla siguiente se describen tres métodos para cambiar las mayúsculas y minúsculas.  Los dos primeros métodos proporcionan una sobrecarga que acepta una referencia cultural.  
+  
+|Nombre del método|Uso|  
+|-----------------------|---------|  
+|<xref:System.String.ToUpper%2A?displayProperty=fullName>|Convierte todos los caracteres de una cadena a mayúsculas.|  
+|<xref:System.String.ToLower%2A?displayProperty=fullName>|Convierte todos los caracteres de una cadena a minúsculas.|  
+|<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName>|Convierte una cadena a mayúsculas de tipo título.|  
+  
+> [!WARNING]
+>  Tenga en cuenta que los métodos <xref:System.String.ToUpper%2A?displayProperty=fullName> y <xref:System.String.ToLower%2A?displayProperty=fullName> no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad.  Para obtener más información, consulte la sección [Comparar cadenas con mayúsculas y minúsculas mezcladas](#Comparing).  
+  
+<a name="Comparing"></a>   
+## Comparar cadenas con mayúsculas y minúsculas mezcladas  
+ Para comparar cadenas con mayúsculas y minúsculas mezcladas para determinar su orden, llame a una de las sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=fullName> con un parámetro `comparisonType` y proporcione un valor <xref:System.StringComparison?displayProperty=fullName>, <xref:System.StringComparison?displayProperty=fullName> o <xref:System.StringComparison?displayProperty=fullName> para el argumento `comparisonType`.  Para realizar una comparación usando una referencia cultural específica que no sea la referencia cultural actual, llame a una sobrecarga del método <xref:System.String.CompareTo%2A?displayProperty=fullName> con los parámetros `culture` y `options`, y proporcione el valor <xref:System.Globalization.CompareOptions?displayProperty=fullName> como el argumento `options`.  
+  
+ Para comparar cadenas con mayúsculas y minúsculas mezcladas para determinar si son iguales, llame a una de las sobrecargas del método <xref:System.String.Equals%2A?displayProperty=fullName> con un parámetro `comparisonType` y proporcione un valor <xref:System.StringComparison?displayProperty=fullName>, <xref:System.StringComparison?displayProperty=fullName> o <xref:System.StringComparison?displayProperty=fullName> para el argumento `comparisonType`.  
+  
+ Para obtener más información, consulte [Procedimientos recomendados para el uso de cadenas](../../../docs/standard/base-types/best-practices-strings.md).  
+  
+## ToUpper  
+ El método <xref:System.String.ToUpper%2A?displayProperty=fullName> convierte todos los caracteres de una cadena a mayúsculas.  En el siguiente ejemplo se convierte la cadena "Hello World\!" de mayúsculas y minúsculas mezcladas a mayúsculas.  
+  
+ [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
+ [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
+  
+ El ejemplo anterior tiene en cuenta la referencia cultural de forma predeterminada; aplica las convenciones de mayúsculas y minúsculas de la referencia cultural actual.  Para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural o para aplicar las convenciones de mayúsculas y minúsculas de una referencia cultural determinada, use la sobrecarga del método <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=fullName> y proporcione un valor <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> o un objeto <xref:System.Globalization.CultureInfo?displayProperty=fullName> que representa la referencia cultural especificada al parámetro *culture*.  Para obtener un ejemplo que muestra cómo usar el método <xref:System.String.ToUpper%2A> para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural, consulte [Realizar cambios de mayúsculas y minúsculas sin tener en cuenta la referencia cultural](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+  
+## ToLower  
+ El método <xref:System.String.ToLower%2A?displayProperty=fullName> es similar al método anterior, pero en su lugar convierte todos los caracteres de una cadena a minúsculas.  En el siguiente ejemplo se convierte la cadena "Hello World\!" a minúsculas.  
+  
+ [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
+ [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
+  
+ El ejemplo anterior tiene en cuenta la referencia cultural de forma predeterminada; aplica las convenciones de mayúsculas y minúsculas de la referencia cultural actual.  Para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural o para aplicar las convenciones de mayúsculas y minúsculas de una referencia cultural determinada, use la sobrecarga del método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=fullName> y proporcione un valor <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName> o un objeto <xref:System.Globalization.CultureInfo?displayProperty=fullName> que representa la referencia cultural especificada al parámetro *culture*.  Para obtener un ejemplo que muestra cómo usar el método <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> para realizar un cambio de mayúsculas y minúsculas sin tener en cuenta la referencia cultural, consulte [Realizar cambios de mayúsculas y minúsculas sin tener en cuenta la referencia cultural](../../../ocs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+  
+## ToTitleCase  
+ El método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> convierte el primer carácter de cada palabra a mayúsculas y el resto de los caracteres a minúsculas.  Sin embargo, se da por hecho que las palabras que están completamente en mayúsculas son siglas y no se convierten.  
+  
+ El método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> tiene en cuenta la referencia cultural; es decir, usa las convenciones de mayúsculas y minúsculas de una referencia cultural determinada.  Para llamar al método, recupere primero el objeto <xref:System.Globalization.TextInfo> que representa las convenciones de mayúsculas y minúsculas de la referencia cultural determinada a partir de la propiedad <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=fullName> de una referencia cultural determinada.  
+  
+ En el ejemplo siguiente, se pasa cada cadena de una matriz al método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName>.  Las cadenas incluyen cadenas de título correctas así como acrónimos.  Las cadenas se convierten a mayúsculas de tipo título usando las convenciones de mayúsculas y minúsculas de la referencia cultural Inglés \(Estados Unidos\).  
+  
+ [!code-csharp[System.Globalization.TextInfo.ToTitleCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/cs/totitlecase2.cs#1)]
+ [!code-vb[System.Globalization.TextInfo.ToTitleCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.textinfo.totitlecase/vb/totitlecase2.vb#1)]  
+  
+ Recuerde que, aunque tiene en cuenta la referencia cultural, el método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=fullName> no proporciona reglas de mayúsculas y minúsculas lingüísticamente correctas.  En el ejemplo anterior, el método convierte "a tale of two cities" en "A Tale Of Two Cities".  Sin embargo, el uso lingüísticamente correcto de las mayúsculas y minúsculas de título para la referencia cultural en\-US es "A Tale of Two Cities".  
+  
+## Vea también  
+ [Operaciones básicas de cadenas](../../../docs/standard/base-types/basic-string-operations.md)   
+ [Realizar operaciones de cadenas que no distinguen entre referencias culturales](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

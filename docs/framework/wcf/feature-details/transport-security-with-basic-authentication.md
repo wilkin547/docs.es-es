@@ -1,0 +1,124 @@
+---
+title: "Seguridad de transporte con autenticaci&#243;n b&#225;sica | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
+caps.latest.revision: 18
+author: "BrucePerlerMS"
+ms.author: "bruceper"
+manager: "mbaldwin"
+caps.handback.revision: 18
+---
+# Seguridad de transporte con autenticaci&#243;n b&#225;sica
+La ilustración siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y cliente.  El servidor necesita un certificado X.509 válido que se puede utilizar para Capa de sockets seguros \(SSL\) y los clientes deben confiar en el certificado del servidor.  Además, el servicio web ya tiene una implementación SSL que se puede usar.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo se habilita la autenticación básica en Internet Information Services \(IIS\), vea [http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83822](http://go.microsoft.com/fwlink/?LinkId=83822).  
+  
+ ![Seguridad del transporte con la autenticación básica](../../../../docs/framework/wcf/feature-details/media/securedbyusername.gif "SecuredbyUsername")  
+  
+|Característica|Descripción|  
+|--------------------|-----------------|  
+|Modo de seguridad|Transporte|  
+|Interoperabilidad|Con clientes de servicios Web existentes y servicios|  
+|Autenticación \(servidor\)<br /><br /> Autenticación \(cliente\)|Sí \(utilizar HTTPS\)<br /><br /> Sí \(a través del nombre de usuario\/Contraseña\)|  
+|Integridad|Sí|  
+|Confidencialidad|Sí|  
+|Transporte|HTTPS|  
+|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
+  
+## Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.  Realice una de las siguientes acciones:  
+  
+-   Cree un servicio independiente mediante el código sin configuración.  
+  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
+  
+### Código  
+ El código siguiente muestra cómo crear un extremo de servicio que utiliza un nombre de usuario del dominio de Windows y contraseña para la seguridad de la transferencia.  Tenga en cuenta que el servicio exige un certificado X.509 que autentique al cliente.  Para obtener más información, vea [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) y [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+  
+ [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
+ [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
+  
+## Configuración  
+ Lo siguiente configura un servicio para utilizar la autenticación básica con seguridad de nivel de transporte:  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+    <system.serviceModel>  
+        <bindings>  
+            <wsHttpBinding>  
+                <binding name="UsernameWithTransport">  
+                    <security mode="Transport">  
+                        <transport clientCredentialType="Basic" />  
+                    </security>  
+                </binding>  
+            </wsHttpBinding>  
+        </bindings>  
+        <services>  
+            <service name="BasicAuthentication.Calculator">  
+                <endpoint address="https://localhost/Calculator"  
+                          binding="wsHttpBinding"   
+                          bindingConfiguration="UsernameWithTransport"  
+                          name="BasicEndpoint"   
+                          contract="BasicAuthentication.ICalculator" />  
+            </service>  
+        </services>  
+    </system.serviceModel>  
+</configuration>  
+```  
+  
+## Cliente  
+  
+### Código  
+ El código siguiente muestra el código de cliente que incluye el nombre de usuario y contraseña.  Tenga en cuenta que el usuario debe proporcionar un nombre de usuario de Windows válido y contraseña.  El código para devolver el nombre de usuario y la contraseña no se muestra aquí.  Utilice un cuadro de diálogo u otra interfaz para solicitar la información al usuario.  
+  
+> [!NOTE]
+>  El nombre de usuario y contraseña solo se pueden establecer utilizando el código.  
+  
+ [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
+ [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
+  
+### Configuración  
+ El código siguiente muestra la configuración del cliente.  
+  
+> [!NOTE]
+>  No puede utilizar la configuración para establecer el nombre de usuario y contraseña.  La configuración mostrada aquí se debe aumentar utilizando el código para establecer el nombre de usuario y contraseña.  
+  
+```  
+<?xml version="1.0" encoding="utf-8"?>  
+<configuration>  
+  <system.serviceModel>  
+    <bindings>  
+      <wsHttpBinding>  
+        <binding name="WSHttpBinding_ICalculator" >  
+          <security mode="Transport">  
+            <transport clientCredentialType="Basic" />  
+          </security>  
+        </binding>  
+      </wsHttpBinding>  
+    </bindings>  
+    <client>  
+      <endpoint address="https://machineName/Calculator"   
+                binding="wsHttpBinding"  
+                bindingConfiguration="WSHttpBinding_ICalculator"   
+                contract="ICalculator"  
+                name="WSHttpBinding_ICalculator" />  
+    </client>  
+  </system.serviceModel>  
+</configuration>  
+```  
+  
+## Vea también  
+ <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>   
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>   
+ [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
+ [Cómo: Configurar un puerto con un certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)   
+ [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
+ [\<clientCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)   
+ [Seguridad y protección](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

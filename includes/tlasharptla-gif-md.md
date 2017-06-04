@@ -1,0 +1,1 @@
+Formato de intercambio de gráficos (GIF)

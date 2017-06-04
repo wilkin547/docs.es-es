@@ -1,320 +1,87 @@
 ---
-title: "Efectuar operaciones aritméticas con fechas y horas"
-description: "Efectuar operaciones aritméticas con fechas y horas"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 08/16/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 589ac5ec-8365-4a0d-bc38-72183718110c
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: b872cc4c2b799ddafc9df263795d860754d1ec17
-ms.lasthandoff: 03/02/2017
-
+title: "Efectuar operaciones aritm&#233;ticas con fechas y horas | Microsoft Docs"
+ms.custom: ""
+ms.date: "04/10/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "operaciones aritméticas [.NET Framework], fechas y horas"
+  - "fechas [.NET Framework], operaciones aritméticas"
+  - "fechas [.NET Framework], comparar"
+  - "DateTime (estructura), operaciones aritméticas"
+  - "DateTimeOffset (estructura), operaciones aritméticas"
+  - "zonas horarias [.NET Framework], operaciones aritméticas"
+  - "horas [.NET Framework], operaciones aritméticas"
+ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
+caps.latest.revision: 9
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 9
 ---
-
-# <a name="performing-arithmetic-operations-with-dates-and-times"></a>Efectuar operaciones aritméticas con fechas y horas
-
-Aunque tanto la estructura [System.DateTime](xref:System.DateTime) como la estructura [System.DateTimeOffset](xref:System.DateTimeOffset) proporcionan miembros que realizan operaciones aritméticas en sus valores, los resultados de las operaciones aritméticas son muy diferentes. En este artículo se examinan las diferencias, se relacionan con los grados de reconocimiento de la zona horaria en los datos de fecha y hora, y se explica cómo realizar operaciones con reconocimiento completo de la zona horaria mediante datos de fecha y hora.
-
-## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a>Comparaciones y operaciones aritméticas con valores DateTime
-
-Los valores [System.DateTime](xref:System.DateTime) poseen un grado limitado de reconocimiento de la zona horaria. La propiedad [DateTime.Kind](xref:System.DateTime.Kind) permite asignar un valor [System.DateTimeKind](xref:System.DateTimeKind) a la fecha y hora para indicar si representa la hora local, la hora universal coordinada (UTC) o la hora de una zona horaria no especificada. Pero esta información limitada de zona horaria se omite al realizar comparaciones u operaciones aritméticas con fechas y horas en valores [DateTime](xref:System.DateTime). Esto se muestra en el ejemplo siguiente, que compara la hora local actual con la hora UTC actual.
-
-```csharp
-using System;
-
-public enum TimeComparison
-{
-   EarlierThan = -1,
-   TheSameAs = 0,
-   LaterThan = 1
-}
-
-public class DateManipulation
-{
-   public static void Main()
-   {
-      DateTime localTime = DateTime.Now;
-      DateTime utcTime = DateTime.UtcNow;
-
-      Console.WriteLine("Difference between {0} and {1} time: {2}:{3} hours", 
-                        localTime.Kind.ToString(), 
-                        utcTime.Kind.ToString(), 
-                        (localTime - utcTime).Hours, 
-                        (localTime - utcTime).Minutes);
-      Console.WriteLine("The {0} time is {1} the {2} time.", 
-                        localTime.Kind.ToString(), 
-                        Enum.GetName(typeof(TimeComparison), localTime.CompareTo(utcTime)), 
-                        utcTime.Kind.ToString());  
-   }
-}
-// If run in the U.S. Pacific Standard Time zone, the example displays 
-// the following output to the console:
-//    Difference between Local and Utc time: -7:0 hours
-//    The Local time is EarlierThan the Utc time.
-```
-
-```vb
-Public Enum TimeComparison As Integer
-   EarlierThan = -1
-   TheSameAs = 0
-   LaterThan = 1
-End Enum
-
-Module DateManipulation
-   Public Sub Main()
-      Dim localTime As Date = Date.Now
-      Dim utcTime As Date = Date.UtcNow
-
-      Console.WriteLine("Difference between {0} and {1} time: {2}:{3} hours", _
-                        localTime.Kind.ToString(), _
-                        utcTime.Kind.ToString(), _
-                        (localTime - utcTime).Hours, _
-                        (localTime - utcTime).Minutes)
-      Console.WriteLine("The {0} time is {1} the {2} time.", _
-                        localTime.Kind.ToString(), _ 
-                        [Enum].GetName(GetType(TimeComparison), localTime.CompareTo(utcTime)), _
-                        utcTime.Kind.ToString())  
-      ' If run in the U.S. Pacific Standard Time zone, the example displays 
-      ' the following output to the console:
-      '    Difference between Local and Utc time: -7:0 hours
-      '    The Local time is EarlierThan the Utc time.                                                    
-   End Sub
-End Module
-```
-
-El método [DateTime.CompareTo(DateTime, DateTime)](xref:System.DateTime.Compare(System.DateTime,System.DateTime)) informa de que la hora local es anterior a (o menor que) la hora UTC, y la operación de resta indica que la diferencia entre la hora UTC y la hora local de un sistema de la zona de Hora estándar del Pacífico de los Estados Unidos es de siete horas. Pero, dado que estos dos valores proporcionan representaciones diferentes de un único punto en el tiempo, resulta evidente en este caso que este intervalo de tiempo es totalmente atribuible a la diferencia horaria de la zona horaria local respecto de la hora UTC. 
-
-Por lo general, la propiedad [DateTimeKind](xref:System.DateTimeKind) no afecta a los resultados devueltos por los métodos aritméticos y de comparación de [DateTime](xref:System.DateTime) (como indica la comparación de dos puntos idénticos en el tiempo), aunque puede afectar a la interpretación de los resultados. Por ejemplo:
-
-* El resultado de cualquier operación aritmética realizada en dos valores de fecha y hora cuyas propiedades [DateTimeKind](xref:System.DateTimeKind) sean iguales a [DateTimeKind.Utc](xref:System.DateTimeKind.Utc) refleja el intervalo de tiempo real entre los dos valores. Del mismo modo, la comparación de estos dos valores de fecha y hora refleja con exactitud la relación entre los tiempos.
-
-* El resultado de cualquier operación aritmética o de comparación realizada en dos valores de fecha y hora cuyas propiedades [DateTimeKind](xref:System.DateTimeKind) sean iguales a [DateTimeKind.Local](xref:System.DateTimeKind.Local), o en dos valores de fecha y hora con diferentes valores de la propiedad [DateTimeKind](xref:System.DateTimeKind), refleja la diferencia en el tiempo de reloj de los dos valores. 
-
-* Las operaciones aritméticas o de comparación en valores de fecha y hora local no tienen en cuenta si un valor concreto es ambiguo o no válido, ni tienen en cuenta el efecto de las reglas de ajuste que son consecuencia de la transición de la zona horaria local hacia o desde el horario de verano.
-
-* Las operaciones que comparen o calculen la diferencia entre la hora UTC y una hora local incluyen en el resultado un intervalo de tiempo igual a la diferencia horaria de la zona horaria local respecto de la hora UTC. 
-
-* Las operaciones que comparen o calculen la diferencia entre una hora no especificada y la hora UTC o la hora local reflejan la hora de reloj simple. No se consideran las diferencias de zona horaria y el resultado no refleja la aplicación de reglas de ajuste de zona horaria. 
-
-* Las operaciones que comparen o calculen la diferencia entre dos horas no especificadas pueden incluir un intervalo desconocido que refleje la diferencia entre la hora de dos zonas horarias diferentes.
-
-Hay muchos escenarios en los que las diferencias de zona horaria no afectan a los cálculos de fecha y hora, o en los que el contexto de los datos de fecha y hora define el significado de las operaciones aritméticas o de comparación. Para ver una descripción de algunos, consulte [Choosing Between DateTime, DateTimeOffset, TimeSpan, and TimeZoneInfo](choosing-between-datetime.md) (Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo).
-
-## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a>Comparaciones y operaciones aritméticas con valores DateTimeOffset
-
-Un valor [System.DateTimeOffset](xref:System.DateTimeOffset) incluye no solo una fecha y hora, sino también una diferencia horaria que define sin ambigüedad esa fecha y hora respecto de la hora UTC. Esto permite definir la igualdad de forma ligeramente diferente que en el caso de los valores [System.DateTime](xref:System.DateTime). Mientras que los valores [DateTime](xref:System.DateTime) son iguales si tienen el mismo valor de fecha y hora, los valores [DateTimeOffset](xref:System.DateTimeOffset) son iguales si hacen referencia al mismo punto en el tiempo. Esto hace que un valor [DateTimeOffset](xref:System.DateTimeOffset) sea más preciso y necesite una menor interpretación cuando se usa en comparaciones y en la mayoría de las operaciones aritméticas que determinan el intervalo entre dos fechas y horas. Esta diferencia de comportamiento se muestra en el ejemplo siguiente, que es el equivalente en [DateTimeOffset](xref:System.DateTimeOffset) al ejemplo anterior en el que se comparaban valores DateTime de hora local y de hora UTC.
-
-```csharp
-using System;
-
-public enum TimeComparison
-{
-   EarlierThan = -1,
-   TheSameAs = 0,
-   LaterThan = 1
-}
-
-public class DateTimeOffsetManipulation
-{
-   public static void Main()
-   {
-      DateTimeOffset localTime = DateTimeOffset.Now;
-      DateTimeOffset utcTime = DateTimeOffset.UtcNow;
-
-      Console.WriteLine("Difference between local time and UTC: {0}:{1:D2} hours", 
-                        (localTime - utcTime).Hours, 
-                        (localTime - utcTime).Minutes);
-      Console.WriteLine("The local time is {0} UTC.", 
-                        Enum.GetName(typeof(TimeComparison), localTime.CompareTo(utcTime)));  
-   }
-}
-// Regardless of the local time zone, the example displays 
-// the following output to the console:
-//    Difference between local time and UTC: 0:00 hours.
-//    The local time is TheSameAs UTC.
-```
-
-```vb
-Public Enum TimeComparison As Integer
-   EarlierThan = -1
-   TheSameAs = 0
-   LaterThan = 1
-End Enum
-
-Module DateTimeOffsetManipulation
-   Public Sub Main()
-      Dim localTime As DateTimeOffset = DateTimeOffset.Now
-      Dim utcTime As DateTimeOffset = DateTimeOffset.UtcNow
-
-      Console.WriteLine("Difference between local time and UTC: {0}:{1:D2} hours.", _
-                        (localTime - utcTime).Hours, _
-                        (localTime - utcTime).Minutes)
-      Console.WriteLine("The local time is {0} UTC.", _
-                        [Enum].GetName(GetType(TimeComparison), localTime.CompareTo(utcTime)))  
-   End Sub
-End Module
-' Regardless of the local time zone, the example displays 
-' the following output to the console:
-'    Difference between local time and UTC: 0:00 hours.
-'    The local time is TheSameAs UTC.
-'          Console.WriteLine(e.GetType().Name)
-```
-
-En este ejemplo, el método [DateTimeOffset.CompareTo](xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)) indica que la hora local actual y la hora UTC actual son iguales, y la resta de los valores [DateTimeOffset](xref:System.DateTimeOffset) indica que la diferencia entre las dos horas es [TimeSpan.Zero](xref:System.TimeSpan.Zero). 
-
-La principal limitación de usar valores [DateTimeOffset](xref:System.DateTimeOffset) en una operación aritmética de fecha y hora es que, aunque los valores [DateTimeOffset](xref:System.DateTimeOffset) tienen cierto reconocimiento de la zona horaria, no tienen un reconocimiento completo de la zona horaria. Aunque la diferencia horaria del valor [DateTimeOffset](xref:System.DateTimeOffset) refleja la diferencia horaria de una zona horaria respecto de la hora UTC cuando se asigna por primera vez un valor a una variable [DateTimeOffset](xref:System.DateTimeOffset), se desasocia de la zona horaria a partir de entonces. Dado que ya no está directamente asociada con una hora identificable, la suma y resta de intervalos de fecha y hora no tiene en cuenta las reglas de ajuste de una zona horaria. 
-
-Por ejemplo, la transición al horario de verano en la zona de la hora estándar central de los Estados Unidos se produce a las 2:00 a. m. del 9 de marzo de 2008. Esto significa que la suma de un intervalo de dos horas y media a la hora estándar central 1:30 a. m. del día 9 de marzo de 2008 debería generar la siguiente fecha y hora: 5:00 a. m. del 9 de marzo de 2008. Pero como se muestra en el ejemplo siguiente, el resultado de la suma es 4:00 a. m. del 9 de marzo de 2008. Observe que el resultado de esta operación representa el punto correcto en el tiempo, aunque no es la hora de la zona horaria que nos interesa (es decir, no tiene la diferencia horaria de la zona horaria esperada).
-
-```csharp
-using System;
-
-public class IntervalArithmetic
-{
-   public static void Main()
-   {
-      DateTime generalTime = new DateTime(2008, 3, 9, 1, 30, 0);
-      const string tzName = "Central Standard Time";
-      TimeSpan twoAndAHalfHours = new TimeSpan(2, 30, 0);
-
-      // Instantiate DateTimeOffset value to have correct CST offset
-      try
-      {
-         DateTimeOffset centralTime1 = new DateTimeOffset(generalTime, 
-                    TimeZoneInfo.FindSystemTimeZoneById(tzName).GetUtcOffset(generalTime));
-
-         // Add two and a half hours      
-         DateTimeOffset centralTime2 = centralTime1.Add(twoAndAHalfHours);
-         // Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, 
-                                                    twoAndAHalfHours.ToString(), 
-                                                    centralTime2);  
-      }
-      catch (TimeZoneNotFoundException)
-      {
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.");
-      }
-   }
-}
-// The example displays the following output to the console:
-//    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 4:00:00 AM -06:00
-```
-
-```vb
-Module IntervalArithmetic
-   Public Sub Main()
-      Dim generalTime As Date = #03/09/2008 1:30AM#
-      Const tzName As String = "Central Standard Time"
-      Dim twoAndAHalfHours As New TimeSpan(2, 30, 0)
-
-      ' Instantiate DateTimeOffset value to have correct CST offset
-      Try
-         Dim centralTime1 As New DateTimeOffset(generalTime, _
-                    TimeZoneInfo.FindSystemTimeZoneById(tzName).GetUtcOffset(generalTime))
-
-         ' Add two and a half hours      
-         Dim centralTime2 As DateTimeOffset = centralTime1.Add(twoAndAHalfHours)
-         ' Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, _
-                                                    twoAndAHalfHours.ToString(), _
-                                                    centralTime2)   
-      Catch e As TimeZoneNotFoundException
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.")
-      End Try
-   End Sub
-End Module
-' The example displays the following output to the console:
-'    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 4:00:00 AM -06:00
-```
-
-## <a name="arithmetic-operations-with-times-in-time-zones"></a>Operaciones aritméticas con horas de zonas horarias
-
-La clase [System.TimeZoneInfo](xref:System.TimeZoneInfo) no proporciona métodos que apliquen automáticamente reglas de ajuste al realizar operaciones aritméticas de fecha y hora. Para hacerlo, puede convertir la hora de una zona horaria a la hora UTC, realizar la operación aritmética y, después, convertir la hora UTC de nuevo a la hora de la zona horaria. Para obtener más información, consulte [How to: Use Time Zones in Date and Time Arithmetic](use-time-zones-in-arithmetic.md) (Cómo usar zonas horarias en operaciones aritméticas de fecha y hora).
-
-Por ejemplo, el código siguiente se parece al código anterior que sumaba dos horas y media a la fecha y hora 2:00 a. m. del 9 de marzo de 2008. Pero, dado que convierte una hora estándar central a la hora UTC antes de realizar la operación aritmética de fecha y hora y, después, convierte el resultado en hora UTC de nuevo a la hora estándar central, la hora resultante refleja la transición de la zona de la hora estándar central al horario de verano.
-
-```csharp
-using System;
-
-public class TimeZoneAwareArithmetic
-{
-   public static void Main()
-   {
-      const string tzName = "Central Standard Time";
-
-      DateTime generalTime = new DateTime(2008, 3, 9, 1, 30, 0);
-      TimeZoneInfo cst = TimeZoneInfo.FindSystemTimeZoneById(tzName);
-      TimeSpan twoAndAHalfHours = new TimeSpan(2, 30, 0);
-
-      // Instantiate DateTimeOffset value to have correct CST offset
-      try
-      {
-         DateTimeOffset centralTime1 = new DateTimeOffset(generalTime, 
-                                       cst.GetUtcOffset(generalTime));
-
-         // Add two and a half hours
-         DateTimeOffset utcTime = centralTime1.ToUniversalTime();
-         utcTime += twoAndAHalfHours;
-
-         DateTimeOffset centralTime2 = TimeZoneInfo.ConvertTime(utcTime, cst);
-         // Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, 
-                                                    twoAndAHalfHours.ToString(), 
-                                                    centralTime2);  
-      }
-      catch (TimeZoneNotFoundException)
-      {
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.");
-      }
-   }
-}
-// The example displays the following output to the console:
-//    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 5:00:00 AM -05:00
-```
-
-```vb
-Module TimeZoneAwareArithmetic
-   Public Sub Main()
-      Const tzName As String = "Central Standard Time"
-
-      Dim generalTime As Date = #03/09/2008 1:30AM#
-      Dim cst As TimeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById(tzName) 
-      Dim twoAndAHalfHours As New TimeSpan(2, 30, 0)
-
-      ' Instantiate DateTimeOffset value to have correct CST offset
-      Try
-         Dim centralTime1 As New DateTimeOffset(generalTime, _
-                    cst.GetUtcOffset(generalTime))
-
-         ' Add two and a half hours 
-         Dim utcTime As DateTimeOffset = centralTime1.ToUniversalTime()
-         utcTime += twoAndAHalfHours
-
-         Dim centralTime2 As DateTimeOffset = TimeZoneInfo.ConvertTime(utcTime, cst)
-         ' Display result
-         Console.WriteLine("{0} + {1} hours = {2}", centralTime1, _
-                                                    twoAndAHalfHours.ToString(), _
-                                                    centralTime2)   
-      Catch e As TimeZoneNotFoundException
-         Console.WriteLine("Unable to retrieve Central Standard Time zone information.")
-      End Try
-   End Sub
-End Module
-' The example displays the following output to the console:
-'    3/9/2008 1:30:00 AM -06:00 + 02:30:00 hours = 3/9/2008 5:00:00 AM -05:00
-```
-
-## <a name="see-also"></a>Vea también
-
-[Fechas, horas y zonas horarias](index.md)
-
-[Cómo: Usar zonas horarias en operaciones aritméticas de fecha y hora](use-time-zones-in-arithmetic.md)
-
-
-
+# Efectuar operaciones aritm&#233;ticas con fechas y horas
+Aunque tanto las estructuras <xref:System.DateTime> como <xref:System.DateTimeOffset> proporcionan miembros que efectúan operaciones aritméticas con sus valores, los resultados que arrojan estas operaciones son muy diferentes.  En este tema se estudian esas diferencias, se relacionan con los grados de conocimiento de la zona horaria en los datos de fecha y hora, y se explica cómo realizar operaciones con conocimiento pleno de la zona horaria utilizando datos de fecha y hora.  
+  
+## Operaciones comparativas y aritméticas con valores de DateTime  
+ A partir de la versión 2.0 de .NET Framework, los valores de <xref:System.DateTime> poseen un grado limitado de conocimiento de la zona horaria.  La propiedad <xref:System.DateTime.Kind%2A?displayProperty=fullName> permite asignar un valor de <xref:System.DateTimeKind> a la fecha y la hora para indicar si representa la hora local, la hora universal coordinada \(UTC\) o la hora de una zona horaria no especificada.  Sin embargo, esta información de zona horaria limitada se omite al efectuar comparaciones u operaciones aritméticas de fecha y hora con valores de <xref:System.DateTime>.  En el ejemplo siguiente, donde se compara la hora local actual con la hora UTC actual, se ilustra este punto.  
+  
+ [!code-csharp[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual2.cs#2)]
+ [!code-vb[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual2.vb#2)]  
+  
+ Los informes del método de <xref:System.DateTime.CompareTo%28System.DateTime%29> que la hora local es anterior a \(o menor que\) la hora UTC, y la operación de resta indica que la diferencia entre la hora utc y la hora local para un sistema de la zona horaria estándar del Pacífico de EE.UU. es siete horas.  Sin embargo, debido a que estos dos valores proporcionan representaciones diferentes de un mismo punto de tiempo, en este caso está claro que este intervalo de tiempo es totalmente atribuible a la diferencia entre la zona horaria local con respecto a la hora UTC.  
+  
+ De modo más general, la propiedad <xref:System.DateTime.Kind%2A?displayProperty=fullName> no afecta a los resultados devueltos por la comparación <xref:System.DateTime> ni a los métodos aritméticos \(tal como lo indica la comparación de dos puntos de tiempo idénticos\), aunque puede afectar a la interpretación de esos resultados.  Por ejemplo:  
+  
+-   El resultado de cualquier operación aritmética efectuada con dos valores de fecha y hora cuyas propiedades <xref:System.DateTime.Kind%2A?displayProperty=fullName> sean iguales a <xref:System.DateTimeKind> en ambos casos, refleja el intervalo de tiempo real entre los dos valores.  De igual forma, la comparación de dos valores de fecha y hora de este tipo refleja con precisión la relación entre ambas horas.  
+  
+-   El resultado de cualquier operación aritmética o comparativa realizada con dos valores de fecha y hora cuyas propiedades <xref:System.DateTime.Kind%2A?displayProperty=fullName> sean <xref:System.DateTimeKind> en ambos casos o con dos valores de fecha y hora que tengan valores de propiedad <xref:System.DateTime.Kind%2A?displayProperty=fullName> diferentes refleja la diferencia de la hora que marca el reloj entre los dos valores.  
+  
+-   Las operaciones aritméticas o comparativas con valores de fecha y hora locales no tienen en cuenta si un valor concreto es ambiguo o no válido, ni tampoco el efecto de ninguna regla de ajuste resultante de la transición de la zona horaria local al horario de verano o de invierno.  
+  
+-   Cualquier operación que compara o calcula la diferencia entre la hora UTC y una hora local incluye en el resultado un intervalo de tiempo igual a la diferencia de la zona horaria local con respecto a la hora UTC.  
+  
+-   Cualquier operación que compare o calcule la diferencia entre una hora no especificada y la hora UTC o la hora local refleja simplemente la hora del reloj.  Las diferencias de zonas horarias no se tienen en cuenta y el resultado no refleja la aplicación de reglas de ajuste de la zona horaria.  
+  
+-   Cualquier operación que compare o calcule la diferencia entre dos horas no especificadas puede incluir un intervalo desconocido que refleje las diferencias horarias en dos zonas horarias diferentes.  
+  
+ Hay muchos escenarios en los que las diferencias de zona horaria no afectan a los cálculos de fecha y hora \(para obtener una explicación de algunos de ellos, consulte [Elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)\) o en los que el contexto de los datos de fecha y hora define el significado de las operaciones comparativas o aritméticas.  
+  
+## Operaciones comparativas y aritméticas con valores de DateTimeOffset  
+ Un valor de <xref:System.DateTimeOffset> incluye no sólo una fecha y hora, sino también una diferencia que define sin ambigüedad esa fecha y hora con respecto a la hora UTC.  Esto permite definir la igualdad de un modo diferente que para los valores de <xref:System.DateTime>.  Mientras que los valores de <xref:System.DateTime> son iguales si tienen el mismo valor de fecha y hora, los valores de <xref:System.DateTimeOffset> son iguales si ambos hacen referencia al mismo punto temporal.  Esto hace que un valor de <xref:System.DateTimeOffset> sea más preciso y su interpretación menos necesaria cuando se utiliza en comparaciones y en la mayoría de las operaciones aritméticas que determinan el intervalo entre dos fechas y horas.  En el ejemplo siguiente, que es el equivalente de <xref:System.DateTimeOffset> al ejemplo anterior en el que se comparaban los valores de <xref:System.DateTime> local y UTC, se muestra esta diferencia de comportamiento.  
+  
+ [!code-csharp[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual3.cs#3)]
+ [!code-vb[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual3.vb#3)]  
+  
+ En este ejemplo, el método <xref:System.DateTimeOffset.CompareTo%2A> indica que la hora local y la hora UTC actuales son iguales, y la resta de los valores de <xref:System.DateTimeOffset> indica que la diferencia entre las dos horas es <xref:System.TimeSpan.Zero?displayProperty=fullName>.  
+  
+ La limitación principal de utilizar valores de <xref:System.DateTimeOffset> en las operaciones aritméticas con valores de fecha y hora reside en que, si bien los valores de <xref:System.DateTimeOffset> tienen algún conocimiento de la zona horaria, no tienen conocimiento pleno de ella.  Aunque la diferencia del valor de <xref:System.DateTimeOffset> refleja la diferencia de una zona horaria con respecto a la hora UTC cuando se asigna un valor por primera vez a una variable <xref:System.DateTimeOffset>, en lo sucesivo deja de estar asociada a la zona horaria.  Al no seguir estando directamente asociada con una hora identificable, la adición y resta de intervalos de fecha y hora no tiene en cuenta las reglas de ajuste de la zona horaria.  
+  
+ Para mostrar, la transición al horario de verano en la zona horaria estándar de EE.UU. Central aparece a las 2:00 a.m. el 9 de marzo de 2008.  Esto significa que agregando dos y un intervalo de media hora a una hora estándar Central de 1:30 a.m. el 9 de marzo de 2008, debe generar una fecha y hora de 5:00 a.m. el 9 de marzo de 2008.  Sin embargo, como se muestra en el ejemplo siguiente, el resultado de la suma es 4:00 a.m. el 9 de marzo de 2008.  Tenga en cuenta que este último resultado de la operación sí representa el punto de tiempo correcto, aunque no sea la hora correcta en la zona horaria que nos interesa \(es decir, no tiene la diferencia esperada de la zona horaria\).  
+  
+ [!code-csharp[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual4.cs#4)]
+ [!code-vb[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual4.vb#4)]  
+  
+## Operaciones aritméticas con horas en zonas horarias  
+ La clase <xref:System.TimeZoneInfo> incluye varios métodos de conversión que aplican ajustes automáticamente cuando convierten las horas de una zona horaria en otra.  Entre ellos, se incluyen los siguientes:  
+  
+-   Los métodos <xref:System.TimeZoneInfo.ConvertTime%2A> y <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>, que convierten las horas entre dos zonas horarias.  
+  
+-   Los métodos <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> y <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>, que convierten la hora de una zona horaria concreta en la hora UTC, y viceversa.  
+  
+ Para obtener información detallada, vea [Convertir horas entre zonas horarias](../../../docs/standard/datetime/converting-between-time-zones.md).  
+  
+ La clase <xref:System.TimeZoneInfo> no proporciona ningún método que aplique automáticamente reglas de ajuste cuando se realizan operaciones aritméticas con valores de fecha y hora.  Sin embargo, para hacerlo basta con convertir la hora de una zona horaria en la hora UTC, realizar la operación aritmética y, a continuación, volver a convertir la hora UTC en la hora correspondiente de la zona horaria.  Para obtener información detallada, vea [Cómo: Utilizar zonas horarias en aritmética de fecha y hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).  
+  
+ Por ejemplo, el código siguiente es similar al código anterior en el que se sumaban dos horas y media a las 2:00 a.m. el 9 de marzo de 2008.  Sin embargo, como convierte la hora CST en hora UTC antes de realizar la operación aritmética y, a continuación, vuelve a convertir el resultado de la hora UTC en la hora CST, la hora resultante sí refleja la transición de la zona horaria CST al horario de verano.  
+  
+ [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
+ [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]  
+  
+## Vea también  
+ [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)   
+ [Cómo: Utilizar zonas horarias en aritmética de fecha y hora](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)

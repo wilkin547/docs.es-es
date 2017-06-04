@@ -1,0 +1,35 @@
+---
+title: "4022 - WebhostUnregisterProtocolFailed | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: cdebf42c-d880-4509-82be-8fdc9f88d203
+caps.latest.revision: 3
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 3
+---
+# 4022 - WebhostUnregisterProtocolFailed
+## Propiedades  
+  
+|||  
+|-|-|  
+|Id.|4022|  
+|Palabras clave|ActivationServices|  
+|Nivel|Error|  
+|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+  
+## Descripción  
+ Este evento se genera cuando el protocolo no registrado de host web produce un error.  
+  
+## Mensaje  
+ Código de error:%1  
+  
+## Detalles
