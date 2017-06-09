@@ -88,7 +88,7 @@ ms.lasthandoff: 05/10/2017
  Para obtener más información, vea [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) y [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformar objetos en memoria en XML  
- Las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] facilitan la transformación de datos entre las estructuras de datos en memoria, bases de datos SQL, conjuntos de datos de [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] y documentos o secuencias de XML. En el siguiente ejemplo se transforman objetos de una estructura de datos en memoria en elementos XML.  
+ Las consultas [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] facilitan la transformación de datos entre las estructuras de datos en memoria, bases de datos SQL, conjuntos de datos de [!INCLUDE[vstecado](~/includes/vstecado-md.md)] y documentos o secuencias de XML. En el siguiente ejemplo se transforman objetos de una estructura de datos en memoria en elementos XML.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
