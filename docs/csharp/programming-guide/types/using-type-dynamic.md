@@ -73,7 +73,7 @@ ms.lasthandoff: 05/10/2017
  [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
 ## <a name="dynamic-language-runtime"></a>Dynamic Language Runtime  
- Dynamic Language Runtime (DLR) es una nueva API en [!INCLUDE[net_v40_short](~/includes/net_v40_short_md.md)]. Proporciona la infraestructura que admite el tipo `dynamic` en C# y también la implementación de lenguajes de programación dinámicos como IronPython e IronRuby. Para obtener más información sobre el entorno DLR, vea [Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Información general sobre Dynamic Language Runtime).  
+ Dynamic Language Runtime (DLR) es una nueva API en [!INCLUDE[net_v40_short](~/includes/net-v40-short-md.md)]. Proporciona la infraestructura que admite el tipo `dynamic` en C# y también la implementación de lenguajes de programación dinámicos como IronPython e IronRuby. Para obtener más información sobre el entorno DLR, vea [Dynamic Language Runtime Overview](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md) (Información general sobre Dynamic Language Runtime).  
   
 ## <a name="com-interop"></a>Interoperabilidad COM  
  [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] incluye varias características que mejoran la experiencia de interoperar con API de COM tales como las API de automatización de Office. Entre las mejoras se incluye el uso del tipo `dynamic` y de [argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
