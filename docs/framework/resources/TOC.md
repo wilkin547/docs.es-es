@@ -1,6 +1,0 @@
-# [Recuperar recursos](retrieving-resources-in-desktop-apps.md)
-# [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md)
-# [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md)
-# [Recursos de aplicaciones de escritorio](index.md)
-# [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
-# [Trabajar con archivos .resx mediante programación](working-with-resx-files-programmatically.md)
