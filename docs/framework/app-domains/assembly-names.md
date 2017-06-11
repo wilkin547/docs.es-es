@@ -1,73 +1,77 @@
 ---
-title: "Nombres de ensamblado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ensamblados [.NET Framework], nombres"
-  - "nombres [.NET Framework], ensamblados"
+title: Nombres de ensamblado | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], assemblies
+- assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 caps.latest.revision: 14
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: b284ae993f7d61a6228f8425e0834a53a4366f8c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# Nombres de ensamblado
-El nombre de un ensamblado se almacena en los metadatos y tiene efectos importantes en el ámbito del ensamblado y en su uso en una aplicación.  Un ensamblado con nombre seguro especifica un nombre completo que incluye el nombre del ensamblado, la referencia cultural, la clave pública y el número de versión.  Normalmente se le conoce como el nombre para mostrar y, en el caso de ensamblados cargados, es posible su obtención utilizando la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  
+# <a name="assembly-names"></a>Nombres de ensamblado
+Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  
   
- El motor en tiempo de ejecución utiliza esta información para localizar el ensamblado y distinguirlo de otros ensamblados con el mismo nombre.  Por ejemplo, un ensamblado con nombre seguro denominado `myTypes` podría tener el siguiente nombre completo:  
+ El runtime usa esta información para buscar el ensamblado y distinguirlo de otros ensamblados con el mismo nombre. Por ejemplo, un ensamblado con nombre seguro llamado `myTypes` podría tener el siguiente nombre completo:  
   
 ```  
 myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, ProcessorArchitecture=msil  
 ```  
   
 > [!NOTE]
->  En la versión 2.0 de .NET Framework, se agrega a la identidad del ensamblado a la arquitectura del procesador para permitir versiones específicas de procesador de ensamblados.  Puede crear versiones de un ensamblado cuya identidad sólo se diferencia en la arquitectura del procesador, por ejemplo las versiones específicas del procesador de 32 bits y de 64 bits.  La arquitectura del procesador no es necesaria en los nombres seguros.  Para obtener más información, vea <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>.  
+>  La arquitectura del procesador se ha agregado a la identidad del ensamblado en la versión 2.0 de .NET Framework para permitir versiones específicas de procesador de ensamblados. Puede crear versiones de un ensamblado cuya identidad solo se diferencie por la arquitectura del procesador, por ejemplo versiones específicas del procesador de 32 y 64 bits. La arquitectura del procesador no es necesaria para los nombres seguros. Para obtener más información, consulta <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>.  
   
- En este ejemplo, el nombre completo indica que el ensamblado `myTypes` tiene un nombre seguro con un símbolo \(token\) de clave pública, que la referencia cultural es inglés de EE.UU. y que el número de versión es 1.0.1234.0.  La arquitectura del procesador es "msil", lo que significa que se compilará just\-in\-time \(JIT\) a código de 32 bits o 64 bits en función del tipo de sistema operativo y de procesador.  
+ En este ejemplo, el nombre completo indica que el ensamblado `myTypes` tiene un nombre seguro con un token de clave pública, tiene el valor de referencia cultural de inglés de los Estados Unidos y tiene un número de versión de 1.0.1234.0. Su arquitectura del procesador es "msil", lo que significa que será compilado JIT (just-in-time) para código de 32 o 64 bits según el sistema operativo y el procesador.  
   
- El código que solicita tipos en un ensamblado debe utilizar un nombre de ensamblado completo.  Esto se denomina enlace completo.  Cuando se hace referencia a un ensamblado en .NET Framework, no se admite el enlace parcial, ya que sólo especifica un nombre de ensamblado.  
+ El código que solicite tipos en un ensamblado debe usar un nombre completo de ensamblado. Esto se denomina enlace completo. No se permite el enlace parcial, que especifica solo un nombre de ensamblado, al hacer referencia a ensamblados de .NET Framework.  
   
- Todas las referencias a los ensamblados que componen .NET Framework también deben incluir el nombre completo del ensamblado.  Por ejemplo, para hacer referencia al ensamblado System.Data de .NET Framework versión 1.0, habría que incluir lo siguiente:  
+ Todas las referencias a los ensamblados que componen .NET Framework también deben contener un nombre completo del ensamblado. Por ejemplo, para hacer referencia al ensamblado System.Data de .NET Framework para la versión 1.0 se incluiría:  
   
 ```  
-  
 System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089  
-  
 ```  
   
- Observe que la versión corresponde al número de versión de todos los ensamblados incluidos con .NET Framework 1.0.  En los ensamblados de .NET Framework, el valor de la referencia cultural siempre es neutra y el de clave pública el mismo que aparece en el ejemplo anterior.  
+ Tenga en cuenta que la versión corresponde al número de versión de todos los ensamblados de .NET Framework incluidos con la versión 1.0 de .NET Framework. En el caso de los ensamblados de .NET Framework, el valor de la referencia cultural siempre es neutro y la clave pública es la misma que se muestra en el ejemplo anterior.  
   
- Por ejemplo, para agregar una referencia de ensamblado a un archivo de configuración para configurar un agente de escucha de seguimiento, deberá incluir el nombre completo del ensamblado del sistema .NET Framework:  
+ Por ejemplo, para agregar una referencia de ensamblado en un archivo de configuración para configurar un agente de escucha de seguimiento, se incluiría el nombre completo del ensamblado de .NET Framework del sistema:  
   
-```  
+```xml  
 <add name="myListener" type="System.Diagnostics.TextWriterTraceListener, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" initializeData="c:\myListener.log" />  
 ```  
   
 > [!NOTE]
->  El motor en tiempo de ejecución no distingue mayúsculas y minúsculas en los nombres que se enlazan a un ensamblado, pero conserva lo que se use en el nombre de ensamblado.  Hay varias herramientas en el control de nombres del ensamblado de [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] que distinguen entre mayúsculas y minúsculas.  Para obtener mejores resultados, administre los nombres de ensamblado como si hubiera distinción entre mayúsculas y minúsculas.  
+>  El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas de [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] controlan los nombres de ensamblado sin distinción entre mayúsculas y minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.  
   
-## Dar nombre a los componentes de aplicaciones  
- El motor en tiempo de ejecución no tiene en cuenta el nombre de archivo para determinar la identidad de un ensamblado.  La identidad del ensamblado, formada por el nombre, la versión, la referencia cultural y el nombre seguro del ensamblado, tiene que quedar clara para el motor en tiempo de ejecución.  
+## <a name="naming-application-components"></a>Nombre de los componentes de la aplicación  
+ El runtime no tiene en cuenta el nombre de archivo a la hora de determinar la identidad de un ensamblado. La identidad del ensamblado, que se compone del nombre del ensamblado, la versión, la referencia cultural y el nombre seguro, debe ser clara para el runtime.  
   
- Por ejemplo, si tiene un ensamblado denominado myAssembly.exe que hace referencia a un ensamblado denominado myAssembly.dll, el enlace se realizará correctamente si ejecuta myAssembly.exe.  Sin embargo, si otra aplicación ejecuta myAssembly.exe utilizando el método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, el motor en tiempo de ejecución determina que "myAssembly" ya está cargado cuando myAssembly.exe solicita el enlace a "myAssembly". En este caso, myAssembly.dll no se carga nunca.  Puesto que myAssembly.exe no contiene el tipo solicitado, se produce una excepción <xref:System.TypeLoadException>.  
+ Por ejemplo, si tiene un ensamblado denominado myAssembly.exe que hace referencia a un ensamblado denominado myAssembly.dll, el enlace se produce correctamente si se ejecuta myAssembly.exe. Pero si otra aplicación ejecuta myAssembly.exe con el método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, el runtime determina que "myAssembly" ya se ha cargado cuando myAssembly.exe solicita enlazar a "myAssembly." En este caso, myAssembly.dll nunca se carga. Puesto que myAssembly.exe no contiene el tipo solicitado, se produce una <xref:System.TypeLoadException>.  
   
- Para evitar este problema, asegúrese de que los ensamblados que forman la aplicación no tienen el mismo nombre completo de ensamblado o coloque los ensamblados con el mismo nombre en directorios distintos.  
+ Para evitar este problema, asegúrese de que los ensamblados que componen la aplicación no tengan el mismo nombre de ensamblado o coloque aquellos con el mismo nombre en directorios distintos.  
   
 > [!NOTE]
->  Si coloca un ensamblado en la caché global de ensamblados, el nombre de archivo del ensamblado debe coincidir con el nombre del ensamblado, aunque no es necesario que la extensión de nombre de archivo coincida \(como .exe o .dll\).  Por ejemplo, si el nombre de archivo de un ensamblado es myAssembly.dll, el nombre del ensamblado tiene que ser myAssembly.  Los ensamblados privados que sólo se implementan en el directorio de aplicación raíz pueden tener un nombre que no sea el mismo que el nombre de archivo.  
+>  Si coloca un ensamblado con nombre seguro en la caché global de ensamblados, el nombre de archivo del ensamblado debe coincidir con el nombre del ensamblado (sin incluir la extensión de nombre de archivo, como .exe o .dll). Por ejemplo, si el nombre de archivo de un ensamblado es myAssembly.dll, el nombre del ensamblado debe ser myAssembly. Los ensamblados privados implementados solamente en el directorio de la aplicación raíz pueden tener un nombre de ensamblado diferente al nombre de archivo.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo: Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
  [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)   
  [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)   
  [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)   
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+
