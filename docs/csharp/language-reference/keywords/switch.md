@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6f8b110e087093bd47573a1a4a05752be91e743
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (Referencia de C#)
@@ -176,7 +176,7 @@ La expresión `case` es `true` si se cumple alguna de las siguientes condiciones
 
 - *expr* es una instancia del mismo tipo que *type*.
 
-- *expr* es una instancia de un tipo que deriva de *type*. En otras palabras, el resultado de *expr* puede ser convertido en una instancia de *type*.
+- *expr* es una instancia de un tipo que deriva de *type*. En otras palabras, el resultado de *expr* puede convertirse en una instancia de *type*.
 
 - *expr* tiene un tipo en tiempo de compilación que es una clase base de *type* y *expr* tiene un tipo en tiempo de ejecución que es *type* o se deriva de *type*. El *tipo en tiempo de compilación* de una variable es el tipo de la variable tal como se define en su declaración de tipos. El *tipo en tiempo de ejecución* de una variable es el tipo de la instancia que se asigna a esa variable.
 
