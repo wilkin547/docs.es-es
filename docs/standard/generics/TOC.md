@@ -1,5 +1,0 @@
-# [Interfaces genéricas](interfaces.md)
-# [Colecciones genéricas en .NET Framework](collections.md)
-# [Delegados genéricos para manipular matrices y listas](delegates-for-manipulating-arrays-and-lists.md)
-# [Genéricos](index.md)
-# [Covarianza y contravarianza](covariance-and-contravariance.md)
