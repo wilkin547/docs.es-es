@@ -1,5 +1,5 @@
 ---
-title: Desarrollo de bibliotecas con herramientas multiplataforma
+title: Desarrollo de bibliotecas con entre herramientas de la plataforma | Documentos de Microsoft
 description: Desarrollo de bibliotecas con herramientas multiplataforma
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
+ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
@@ -46,7 +46,7 @@ Si no conoce bien el estándar .NET, consulte la [Biblioteca estándar de .NET](
 
 En ese artículo podrá ver una tabla que asigna las versiones del estándar .NET a diversas implementaciones:
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Este es el significado de la tabla para crear una biblioteca:
 
@@ -237,7 +237,7 @@ Cada uno de ellos contiene los archivos `.dll` para cada destino.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Prueba de las bibliotecas en .NET Core
 
-Es importante poder probar las plataformas.  Puede usar [xUnit](http://xunit.github.io/) o MSTest de fábrica.  Ambos son perfectamente adecuados para las pruebas unitarias de su biblioteca en .NET Core.  Cómo configurar la solución con proyectos de prueba dependerá de la [estructura de la solución](#structuring-a-solution).  En el ejemplo siguiente se presupone que los directorios de origen y de prueba residen en el mismo directorio de nivel superior.
+Es importante poder probar las plataformas.  Puede usar [xUnit](http://xunit.github.io/) o MSTest de fábrica.  Ambos están perfectamente adecuados para la biblioteca en .NET Core de pruebas unitarias.  Cómo configurar la solución con proyectos de prueba dependerá de la [estructura de la solución](#structuring-a-solution).  En el siguiente ejemplo se da por supuesto que los directorios de origen y de prueba residen en el mismo directorio de nivel superior.
 
 > [! INFORMACIÓN] Esto usa algunos [comandos de la CLI de .NET](../tools/index.md).  Vea [dotnet new](../tools/dotnet-new.md) y [dotnet sln](../tools/dotnet-sln.md) para obtener más información.
 
@@ -319,12 +319,13 @@ let doWork data = async {
 Escenarios de consumo similares a este significan que las API a las que se tiene acceso deben tener una estructura distinta para C# y para F#.  Un enfoque común para lograrlo es factorizar toda la lógica de una biblioteca en un proyecto central, con los proyectos de C# y F# definiendo los niveles de API que hacen llamadas a ese proyecto central.  En el resto de la sección se usarán los siguientes nombres:
 
 * **AwesomeLibrary.Core**: un proyecto central que contiene toda la lógica de la biblioteca.
-* **AwesomeLibrary.CSharp**: un proyecto con API públicas pensado para el consumo en C.#
-* **AwesomeLibrary.FSharp**: un proyecto con API públicas pensado para el consumo en F.#
+* **AwesomeLibrary.CSharp** -un proyecto con las API públicas previstos para su uso en C#
+* **AwesomeLibrary.FSharp** -un proyecto con las API públicas previstos para su uso en F #
 
 Puede ejecutar los siguientes comandos en su terminal para generar la misma estructura de esta guía:
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 Esto agregará los tres proyectos anteriores y un archivo de solución que los vincula conjuntamente.  Crear el archivo de solución y vincular los proyectos le permitirá restaurar y crear proyectos desde un nivel superior.
@@ -344,7 +345,7 @@ Esto agregará los tres proyectos anteriores y un archivo de solución que los v
 La mejor manera de hacer referencia a un proyecto es usar la CLI de .NET para agregar una referencia de proyecto.  Desde los directorios del proyecto **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp**, puede ejecutar el siguiente comando:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Los archivos del proyecto para **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp** ahora harán referencia a **AwesomeLibrary.Core** como un destino `ProjectReference`.  Puede comprobar esto inspeccionando los archivos del proyecto y observando lo siguiente en ellos:
@@ -360,3 +361,4 @@ Puede agregar esta sección a cada archivo del proyecto manualmente si prefiere 
 ### <a name="structuring-a-solution"></a>Estructura de una solución
 
 Otro aspecto importante de las soluciones de varios proyectos es establecer una buena estructura de proyecto general. Puede organizar el código de la manera que quiera, y siempre y cuando vincule cada proyecto a su archivo de solución con `dotnet sln add`, podrá ejecutar `dotnet restore` y `dotnet build` en el nivel de solución.
+
