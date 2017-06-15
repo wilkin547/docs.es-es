@@ -1,5 +1,5 @@
 ---
-title: Desarrollo de bibliotecas con entre herramientas de la plataforma | Documentos de Microsoft
+title: Desarrollo de bibliotecas con herramientas multiplataforma| Microsoft Docs
 description: Desarrollo de bibliotecas con herramientas multiplataforma
 keywords: .NET, .NET Core
 author: cartermp
@@ -14,7 +14,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
 ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 
@@ -237,7 +237,7 @@ Cada uno de ellos contiene los archivos `.dll` para cada destino.
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Prueba de las bibliotecas en .NET Core
 
-Es importante poder probar las plataformas.  Puede usar [xUnit](http://xunit.github.io/) o MSTest de fábrica.  Ambos están perfectamente adecuados para la biblioteca en .NET Core de pruebas unitarias.  Cómo configurar la solución con proyectos de prueba dependerá de la [estructura de la solución](#structuring-a-solution).  En el siguiente ejemplo se da por supuesto que los directorios de origen y de prueba residen en el mismo directorio de nivel superior.
+Es importante poder probar las plataformas.  Puede usar [xUnit](http://xunit.github.io/) o MSTest de fábrica.  Ambos son perfectamente adecuados para las pruebas unitarias de su biblioteca en .NET Core.  Cómo configurar la solución con proyectos de prueba dependerá de la [estructura de la solución](#structuring-a-solution).  En el ejemplo siguiente se presupone que los directorios de origen y de prueba residen en el mismo directorio de nivel superior.
 
 > [! INFORMACIÓN] Esto usa algunos [comandos de la CLI de .NET](../tools/index.md).  Vea [dotnet new](../tools/dotnet-new.md) y [dotnet sln](../tools/dotnet-sln.md) para obtener más información.
 
@@ -319,8 +319,8 @@ let doWork data = async {
 Escenarios de consumo similares a este significan que las API a las que se tiene acceso deben tener una estructura distinta para C# y para F#.  Un enfoque común para lograrlo es factorizar toda la lógica de una biblioteca en un proyecto central, con los proyectos de C# y F# definiendo los niveles de API que hacen llamadas a ese proyecto central.  En el resto de la sección se usarán los siguientes nombres:
 
 * **AwesomeLibrary.Core**: un proyecto central que contiene toda la lógica de la biblioteca.
-* **AwesomeLibrary.CSharp** -un proyecto con las API públicas previstos para su uso en C#
-* **AwesomeLibrary.FSharp** -un proyecto con las API públicas previstos para su uso en F #
+* **AwesomeLibrary.CSharp**: un proyecto con API públicas pensado para el consumo en C#
+* **AwesomeLibrary.FSharp**: un proyecto con API públicas pensado para el consumo en F#
 
 Puede ejecutar los siguientes comandos en su terminal para generar la misma estructura de esta guía:
 

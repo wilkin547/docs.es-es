@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: bcebdd1a6462e651619776549754eacfac9f9573
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Cómo: Implementar e invocar un método de extensión personalizado (Guía de programación de C#)
@@ -54,7 +54,7 @@ En este tema se muestra cómo implementar sus propios métodos de extensión par
      Tenga en cuenta que el primer parámetro no se especifica mediante el código de llamada, ya que representa el tipo al que se aplica el operador y el compilador ya conoce el tipo del objeto. Solo tiene que proporcionar argumentos para los parámetros comprendidos entre el 2 y `n`.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se implementa un método de extensión denominado `WordCount` en la clase `CustomExtensions.StringExtension`. El método funciona en la <xref:System.String> (clase), que se especifica como el primer parámetro de método. El espacio de nombres `CustomExtensions` se importa en el espacio de nombres de la aplicación y se llama al método dentro del método `Main`.  
+ En el ejemplo siguiente se implementa un método de extensión denominado `WordCount` en la clase `CustomExtensions.StringExtension`. El método opera en la clase <xref:System.String>, que se especifica como el primer parámetro de método. El espacio de nombres `CustomExtensions` se importa en el espacio de nombres de la aplicación y se llama al método dentro del método `Main`.  
   
  [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
