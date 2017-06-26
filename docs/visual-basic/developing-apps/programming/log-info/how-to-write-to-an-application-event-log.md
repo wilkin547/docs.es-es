@@ -35,10 +35,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ea527f0161a3bff759a8d33e4c5fa1c6c6e1df29
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: f35229004c0b4c2ed75714ee43e5513bed5e0435
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/26/2017
 
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>Cómo: Escribir en el registro de eventos de una aplicación (Visual Basic)
