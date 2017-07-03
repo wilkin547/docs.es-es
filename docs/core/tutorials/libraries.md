@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
-ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: es-es
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,7 +42,7 @@ Además, si desea admitir destinos de .NET Framework anteriores, deberá instala
 
 ## <a name="how-to-target-the-net-standard"></a>Estándar .NET como destino
 
-Si no conoce bien el estándar .NET, consulte la [Biblioteca estándar de .NET](../../standard/library.md) para más información.
+Si no conoce bien el estándar .NET, consulte la [Biblioteca estándar de .NET](../../standard/net-standard.md) para más información.
 
 En ese artículo podrá ver una tabla que asigna las versiones del estándar .NET a diversas implementaciones:
 
