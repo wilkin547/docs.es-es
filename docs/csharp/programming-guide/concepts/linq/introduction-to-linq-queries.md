@@ -38,7 +38,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
 ms.contentlocale: es-es
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introducción a las consultas LINQ (C#)
@@ -62,13 +62,13 @@ Una *consulta* es una expresión que recupera datos de un origen de datos. Las c
  ![Operación completa de consulta LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
   
 ## <a name="the-data-source"></a>El origen de datos  
- En el ejemplo anterior, dado que el origen de datos es una matriz, se admite implícitamente la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> interfaz. Este hecho implica que se puede consultar con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se ejecuta una consulta en un `foreach` (instrucción), y `foreach` requiere <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>. Tipos que admiten <xref:System.Collections.Generic.IEnumerable%601> o una interfaz derivada, como la genérica <xref:System.Linq.IQueryable%601> se denominan *tipos consultables*.  
+ En el ejemplo anterior, como el origen de datos es una matriz, admite implícitamente la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>. Este hecho implica que se puede consultar con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Se ejecuta una consulta en una instrucción `foreach`, y `foreach` requiere <xref:System.Collections.IEnumerable> o bien <xref:System.Collections.Generic.IEnumerable%601>. Los tipos compatibles con <xref:System.Collections.Generic.IEnumerable%601> o una interfaz derivada, como la interfaz genérica <xref:System.Linq.IQueryable%601>, se denominan *tipos consultables*.  
   
- Un tipo consultable no requiere ninguna modificación ni ningún tratamiento especial para actuar como origen de datos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Si el origen de datos no está en la memoria como tipo consultable, el proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] debe representarlo como tal. Por ejemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carga un documento XML en un consultable <xref:System.Xml.Linq.XElement> tipo:  
+ Un tipo consultable no requiere ninguna modificación ni ningún tratamiento especial para actuar como origen de datos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Si el origen de datos no está en la memoria como tipo consultable, el proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] debe representarlo como tal. Por ejemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] carga un documento XML en un tipo <xref:System.Xml.Linq.XElement> consultable:  
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], primero se crea una asignación relacional de objetos en tiempo de diseño ya sea manualmente o mediante las [herramientas de LINQ to SQL](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) de Visual Studio. Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos. En el ejemplo siguiente, `Customers` representa una tabla específica de la base de datos y el tipo de resultado de la consulta, <xref:System.Linq.IQueryable%601>, se deriva de <xref:System.Collections.Generic.IEnumerable%601>.  
+ Con [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], primero se crea una asignación relacional de objetos en tiempo de diseño ya sea manualmente o mediante las [herramientas de LINQ to SQL](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) de Visual Studio. Después, se escriben las consultas en los objetos y, en tiempo de ejecución, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] controla la comunicación con la base de datos. En el ejemplo siguiente, `Customers` representa una tabla específica en una base de datos, y el tipo del resultado de la consulta, <xref:System.Linq.IQueryable%601>, se deriva de <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -80,10 +80,10 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- Para obtener más información sobre cómo crear tipos específicos de orígenes de datos, vea la documentación de los distintos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Sin embargo, la regla básica es muy sencilla: una [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origen de datos es cualquier objeto que admita la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> interfaz o una interfaz que hereda de ella.  
+ Para obtener más información sobre cómo crear tipos específicos de orígenes de datos, vea la documentación de los distintos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Aun así, la regla básica es muy sencilla: un origen de datos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] es cualquier objeto que admita la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> o una interfaz que la haya heredado.  
   
 > [!NOTE]
->  Tipos como <xref:System.Collections.ArrayList> que admiten no genérica <xref:System.Collections.IEnumerable> interfaz también se puede usar como un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] origen de datos. Para obtener más información, vea [How to: Query an ArrayList with LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) (Consultar un objeto ArrayList con LINQ (C#)).  
+>  Los tipos como <xref:System.Collections.ArrayList>, compatibles con la interfaz no genérica <xref:System.Collections.IEnumerable>, también se pueden usar como origen de datos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, vea [How to: Query an ArrayList with LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) (Consultar un objeto ArrayList con LINQ (C#)).  
   
 ##  <a name="query"></a> La consulta  
  La consulta especifica la información que se debe recuperar de los orígenes de datos. Opcionalmente, una consulta también especifica cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. Las consultas se almacenan en una variable de consulta y se inicializan con una expresión de consulta. Para facilitar la escritura de consultas, C# ha incorporado una nueva sintaxis de consulta.  
@@ -109,7 +109,7 @@ IQueryable<Customer> custQuery =
   
  [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
- Para forzar la ejecución inmediata de cualquier consulta y almacenar en caché los resultados, puede llamar a la <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A> métodos.  
+ Para forzar la ejecución inmediata de cualquier consulta y almacenar en caché los resultados correspondientes, puede llamar a los métodos <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A>.  
   
  [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
