@@ -32,21 +32,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4892ed6dcfb3843bd6cb2de2d3e032bfeb1efdf9
-ms.openlocfilehash: 2c2db6fcbbd3d3736d9ab0e1e9190c2516a17937
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
 ms.contentlocale: es-es
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 Un *objeto* es una combinación de código y datos que se pueden tratar como una unidad. Un objeto puede ser una parte de una aplicación, como un control o un formulario. Toda la aplicación también puede ser un objeto.
 
-Cuando se crea una aplicación en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], se trabaja constantemente con objetos. Puede utilizar objetos proporcionados por [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], como controles, formularios y objetos de acceso a datos. También puede utilizar objetos de otras aplicaciones dentro de su aplicación [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Incluso puede crear sus propios objetos y definir propiedades y métodos adicionales para ellos. Los objetos actúan como bloques de compilación prefabricados que permiten escribir un fragmento de código de una vez y utilizarlo una y otra vez.  
+Cuando se crea una aplicación en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], se trabaja constantemente con objetos. Puede utilizar objetos proporcionados por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], como controles, formularios y objetos de acceso a datos. También puede utilizar objetos de otras aplicaciones dentro de su aplicación [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Incluso puede crear sus propios objetos y definir propiedades y métodos adicionales para ellos. Los objetos actúan como bloques de compilación prefabricados que permiten escribir un fragmento de código de una vez y utilizarlo una y otra vez.  
   
 En este tema se proporciona información detallada sobre los objetos.  
 
 ## <a name="objects-and-classes"></a>Objetos y clases
-Cada objeto de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] se define mediante una *clase*. Una clase describe las variables, las propiedades, los procedimientos y los eventos de un objeto. Los objetos son instancias de clases; puede crear tantos objetos como sean necesarios una vez que haya definido una clase.
+Cada objeto de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se define mediante una *clase*. Una clase describe las variables, las propiedades, los procedimientos y los eventos de un objeto. Los objetos son instancias de clases; puede crear tantos objetos como sean necesarios una vez que haya definido una clase.
 
 Para comprender la relación entre un objeto y su clase, piense en las galletas y en su molde. El molde de la galleta es la clase. Define las características de cada galleta, por ejemplo, tamaño y forma. La clase se usa para crear objetos. Los objetos son las galletas.
 
@@ -190,7 +190,7 @@ Por otro lado, los miembros declarados dentro de un módulo son de acceso públi
 ## <a name="reusing-classes-and-objects"></a>Reutilización de clases y objetos  
 Los objetos permiten declarar variables y procedimientos una vez, para luego reutilizarlos siempre que sea necesario. Por ejemplo, si desea agregar un corrector ortográfico a una aplicación, podría definir todas las variables y funciones compatibles para proporcionar la funcionalidad de revisión ortográfica. Si crea el corrector ortográfico como una clase, puede reutilizarlo en otras aplicaciones mediante la incorporación de una referencia al ensamblado compilado. Mejor aún, puede ahorrarse trabajo mediante el uso de una clase de corrector ortográfico que otra persona ya ha desarrollado.
 
-[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] proporciona muchos ejemplos de componentes que están disponibles para su uso. En el ejemplo siguiente se usa la clase <xref:System.TimeZone> en el espacio de nombres <xref:System>. <xref:System.TimeZone> proporciona miembros que permiten recuperar información sobre la zona horaria del equipo actual.
+[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] proporciona muchos ejemplos de componentes que están disponibles para su uso. En el ejemplo siguiente se usa la clase <xref:System.TimeZone> en el espacio de nombres <xref:System>. <xref:System.TimeZone> proporciona miembros que permiten recuperar información sobre la zona horaria del equipo actual.
 
 ```vb
 Public Sub examineTimeZone()
@@ -258,7 +258,7 @@ Asegúrese de que el compilador puede tener acceso a la clase de la que pretende
 Otra forma de relacionar ese objeto es mediante una *relación de contención*. Los objetos contenedores lógicamente encapsulan otros objetos. Por ejemplo, el objeto <xref:System.OperatingSystem> contiene lógicamente un objeto <xref:System.Version>, el cual devuelve a través de su propiedad <xref:System.OperatingSystem.Version%2A>. Tenga en cuenta que el objeto contenedor no contiene ningún otro objeto físicamente.
 
 #### <a name="collections"></a>Colecciones
-Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] admite una sintaxis específica en la [instrucción For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que le permite realizar una iteración por los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
+Un tipo concreto de contención de objeto se representa mediante *colecciones*. Las colecciones son grupos de objetos similares que se pueden enumerar. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] admite una sintaxis específica en la [instrucción For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que le permite realizar una iteración por los elementos de una colección. Además, las colecciones suelen permitir usar un <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos en función de su índice o asociándolos con una cadena única. Las colecciones pueden ser más fáciles de utilizar que las matrices puesto que permiten agregar o quitar elementos sin utilizar índices. Debido a su facilidad de uso, las colecciones se utilizan a menudo para almacenar formularios y controles.
 
 ## <a name="related-topics"></a>Temas relacionados  
  [Tutorial: Definir clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
@@ -281,4 +281,3 @@ Un tipo concreto de contención de objeto se representa mediante *colecciones*. 
 
  [Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Explica cómo deducir tipos y nombres de propiedades en declaraciones de tipos anónimos. Proporciona ejemplos de inferencia correcta e incorrecta.
-

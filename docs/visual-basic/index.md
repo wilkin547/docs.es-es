@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -59,7 +60,7 @@ Visual Basic está diseñado para crear de manera productiva aplicaciones con se
  Contiene información del compilador y del lenguaje Visual Basic.  
 
  [Desarrollo de aplicaciones con Visual Basic](../visual-basic/developing-apps/index.md)  
- Explica distintos aspectos del desarrollo en Visual Basic, como la seguridad, el control de excepciones y el uso de la biblioteca de clases de [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)].
+ Explica distintos aspectos del desarrollo en Visual Basic, como la seguridad, el control de excepciones y el uso de la biblioteca de clases de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
 
  [Interoperabilidad COM](../visual-basic/programming-guide/com-interop/index.md)  
  Se explican los problemas de interoperabilidad relacionados con la creación y uso de objetos del Modelo de objetos componentes (COM) con Visual Basic.  
@@ -74,5 +75,5 @@ Visual Basic está diseñado para crear de manera productiva aplicaciones con se
  [Introducción al desarrollo con Visual Studio](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
  Proporciona vínculos a temas que le ayudarán a entender los conceptos básicos de Visual Studio.  
   
- [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Proporciona acceso a la biblioteca de clases, interfaces y tipos de valor incluidos en el SDK de Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)].
+ [Biblioteca de clases de .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ Proporciona acceso a la biblioteca de clases, interfaces y tipos de valor incluidos en el SDK de Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
