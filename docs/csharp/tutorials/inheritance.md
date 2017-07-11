@@ -1,5 +1,5 @@
 ---
-title: Herencia en C#
+title: Herencia en C# | Microsoft Docs
 description: Aprenda a usar la herencia en bibliotecas y aplicaciones en C#.
 keywords: herencia (C#), clases base, clases derivadas, clases base abstractas
 author: rpetrusha
@@ -12,23 +12,31 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET #
+<a id="inheritance-in-c-and-net" class="xliff"></a>
 
-## <a name="introduction"></a>Introducción ##
+# Herencia en C# y .NET #
+
+<a id="introduction" class="xliff"></a>
+
+## Introducción ##
 
 Este tutorial es una introducción a la herencia en C#. La herencia es una característica de los lenguajes de programación orientados a objetos que permite definir una clase base, que proporciona funcionalidad específica (datos y comportamiento), así como clases derivadas, que heredan o invalidan esa funcionalidad.
 
-## <a name="prerequisites"></a>Requisitos previos ##
+<a id="prerequisites" class="xliff"></a>
+
+## Requisitos previos ##
 
 En este tutorial se supone que ha instalado .NET Core. Para obtener instrucciones de instalación, consulte [.NET Core installation guide](https://www.microsoft.com/net/core) (Guía de instalación de .NET Core). También necesitará un editor de código. En este tutorial se usa [Visual Studio Code](https://code.visualstudio.com), aunque puede elegir el que prefiera.
 
-## <a name="running-the-examples"></a>Ejecución de los ejemplos ##
+<a id="running-the-examples" class="xliff"></a>
+
+## Ejecución de los ejemplos ##
 
 Para crear y ejecutar los ejemplos de este tutorial, use la utilidad [dotnet](../../core/tools/dotnet.md) desde la línea de comandos. Siga estos pasos para cada ejemplo:
 
@@ -42,7 +50,9 @@ Para crear y ejecutar los ejemplos de este tutorial, use la utilidad [dotnet](..
 
 1. Escriba el comando [dotnet run](../../core/tools/dotnet-run.md) para compilar y ejecutar el ejemplo.
 
-## <a name="background-what-is-inheritance"></a>Contexto: ¿Qué es la herencia? ##
+<a id="background-what-is-inheritance" class="xliff"></a>
+
+## Contexto: ¿Qué es la herencia? ##
 
 La *herencia* es uno de los atributos fundamentales de la programación orientada a objetos. Permite definir una clase secundaria que reutiliza (hereda), amplía o modifica el comportamiento de una clase primaria. La clase cuyos miembros son heredados se conoce como *clase base*. La clase que hereda los miembros de la clase base se conoce como *clase derivada*.
 
@@ -117,7 +127,9 @@ La herencia solo se aplica a clases e interfaces. Other type categories (structs
    }
    ```
 
-## <a name="implicit-inheritance"></a>Herencia implícita ##
+<a id="implicit-inheritance" class="xliff"></a>
+
+## Herencia implícita ##
 
 Aparte de los tipos de los que puedan heredar mediante herencia única, todos los tipos del sistema de tipos .NET heredan implícitamente de @System.Object o de un tipo derivado de este. Esto garantiza que la funcionalidad común está disponible para cualquier tipo.
 
@@ -156,7 +168,9 @@ En la tabla siguiente se enumeran las categorías de tipos que se pueden crear e
 | enum | @System.Enum, System.ValueType, @System.Object |
 | delegado | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>Herencia y una relación "is a" ##
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a>
+
+## Herencia y una relación "is a" ##
 
 Normalmente, la herencia se usa para expresar una relación "is a" entre una clase base y una o varias clases derivadas, donde las clases derivadas son versiones especializadas de la clase base; la clase derivada es un tipo de la clase base. Por ejemplo, la clase `Publication` representa una publicación de cualquier tipo y las clases `Book` y `Magazine` representan tipos específicos de publicaciones.
 
@@ -172,11 +186,15 @@ En este caso, no debemos confiar en la herencia para representar marcas y modelo
 
 Una relación "is a" basada en la herencia se aplica mejor a una clase base y a clases derivadas que agregan miembros adicionales a la clase base o que requieren funcionalidad adicional que no está presente en la clase base.
 
-## <a name="designing-the-base-class-and-derived-classes"></a>Diseño de la clase base y las clases derivadas ##
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a>
+
+## Diseño de la clase base y las clases derivadas ##
 
 Veamos el proceso de diseño de una clase base y sus clases derivadas. En esta sección, se definirá una clase base, `Publication`, que representa una publicación de cualquier tipo, como un libro, una revista, un periódico, un diario, un artículo, etc. También definiremos una clase `Book` que se deriva de `Publication`. Podríamos ampliar fácilmente el ejemplo para definir otras clases derivadas, como `Magazine`, `Journal`, `Newspaper` y `Article`.
 
-### <a name="the-base-publication-class"></a>La clase base `Publication` ###
+<a id="the-base-publication-class" class="xliff"></a>
+
+### La clase base `Publication` ###
 
 A la hora de diseñar nuestra clase `Publication`, debemos tomar varias decisiones en cuanto al diseño:
 
@@ -245,7 +263,9 @@ En la siguiente ilustración se muestra la relación entre nuestra clase base `P
 
 ![Las clases de objeto y publicación](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>La clase `Book`. ###
+<a id="the-book-class" class="xliff"></a>
+
+### La clase `Book`. ###
 
 La clase `Book` representa un libro como un tipo especializado de publicación. En el ejemplo siguiente se muestra el código fuente de la clase `Book`.
 
@@ -301,7 +321,9 @@ En el ejemplo siguiente se usan objetos derivados de `Shape`. Se crea una instan
 
 [!code-csharp[Herencia](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Vea también ##
+<a id="see-also" class="xliff"></a>
+
+## Vea también ##
 
 [Clases y objetos](../tour-of-csharp/classes-and-objects.md)</br>
 [Herencia (Guía de programación de C#)](../programming-guide/classes-and-structs/inheritance.md)

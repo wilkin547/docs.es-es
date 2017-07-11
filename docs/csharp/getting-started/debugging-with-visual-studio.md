@@ -1,5 +1,5 @@
 ---
-title: "Depuración de la aplicación Hola a todos en C# con Visual Studio 2017"
+title: "Depuración de la aplicación Hola a todos en C# con Visual Studio 2017 | Microsoft Docs"
 description: "Obtenga información sobre cómo depurar una aplicación Hola a todos, escrita en C# con Visual Studio 2017."
 keywords: ".NET Core, aplicación de consola de .NET Core, depuración de .NET Core"
 author: BillWagner
@@ -11,18 +11,22 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: a3ed6572d0c8f64f89f77527aa21df454b30982c
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 026158029bfc843bd6cd171933091dc9ac6d4dbe
 ms.contentlocale: es-es
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="debugging-your-c-hello-world-application-with-visual-studio-2017"></a>Depuración de la aplicación Hola a todos en C# con Visual Studio 2017
+<a id="debugging-your-c-hello-world-application-with-visual-studio-2017" class="xliff"></a>
+
+# Depuración de la aplicación Hola a todos en C# con Visual Studio 2017
 
 Hasta ahora, ha seguido los pasos descritos en [Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017](.\with-visual-studio.md) para crear y ejecutar una aplicación de consola sencilla. Cuando haya escrito y compilado la aplicación, puede comenzar a probarla. Visual Studio incluye un conjunto completo de herramientas de depuración que puede usar para probar y solucionar problemas de la aplicación.
 
-## <a name="debugging-in-debug-mode"></a>Depuración en modo de depuración
+<a id="debugging-in-debug-mode" class="xliff"></a>
+
+## Depuración en modo de depuración
 
 El modo de *depuración* y *versión* son dos de las configuraciones de compilación predeterminadas de Visual Studio. La configuración de compilación actual se muestra en la barra de herramientas. En la siguiente imagen de la barra de herramientas se muestra que Visual Studio está configurado para compilar la aplicación en el modo de **depuración**.
 
@@ -30,7 +34,9 @@ El modo de *depuración* y *versión* son dos de las configuraciones de compilac
 
 Siempre debe empezar probando el programa en modo de depuración. El modo de depuración desactiva la mayoría de las optimizaciones del compilador y proporciona información más completa durante el proceso de compilación.
 
-## <a name="setting-a-breakpoint"></a>Establecer un punto de interrupción
+<a id="setting-a-breakpoint" class="xliff"></a>
+
+## Establecer un punto de interrupción
 
 Ejecute su programa en el modo de depuración y pruebe algunas características de depuración:
 
@@ -62,7 +68,9 @@ Ejecute su programa en el modo de depuración y pruebe algunas características 
 
 1. Presione cualquier tecla para salir de la aplicación y finalice el modo de depuración.
 
-## <a name="setting-a-conditional-breakpoint"></a>Establecimiento de un punto de interrupción condicional
+<a id="setting-a-conditional-breakpoint" class="xliff"></a>
+
+## Establecimiento de un punto de interrupción condicional
 
 Su programa muestra la cadena que escribe el usuario. ¿Qué sucede si el usuario no escribe nada? Puede probar esto con una característica de depuración útil, el *punto de interrupción condicional*, que interrumpe la ejecución del programa cuando se cumplen una o más condiciones.
 
@@ -104,7 +112,9 @@ Para establecer un punto de interrupción condicional y probar lo que sucede cua
 
 1. Para borrar el punto de interrupción, haga clic en el punto en el margen izquierdo de la ventana de código, o seleccione el elemento de menú **Depurar > Alternar punto de interrupción** con la fila seleccionada.
 
-## <a name="stepping-through-a-program"></a>Ejecución paso a paso de un programa
+<a id="stepping-through-a-program" class="xliff"></a>
+
+## Ejecución paso a paso de un programa
 
 Visual Studio también le permite recorrer línea a línea un programa y supervisar su ejecución. Normalmente, establecería un punto de interrupción y usaría esta característica para seguir el flujo del programa mediante una pequeña parte de su código de programa. Como nuestro programa es pequeño, puede ejecutar paso a paso el programa entero realizando lo siguiente:
 
@@ -132,7 +142,9 @@ Visual Studio también le permite recorrer línea a línea un programa y supervi
 
 1. Presione cualquier tecla para cerrar la ventana de consola y salir del modo de depuración.
 
-## <a name="building-a-release-version"></a>Creación de una versión de lanzamiento
+<a id="building-a-release-version" class="xliff"></a>
+
+## Creación de una versión de lanzamiento
 
 Una vez que ha probado la compilación de depuración de la aplicación, también debe compilar y probar la versión de lanzamiento. La versión de lanzamiento incorpora optimizaciones del compilador que en ocasiones afectan negativamente al comportamiento de una aplicación. Por ejemplo, las optimizaciones del compilador que están diseñadas para mejorar el rendimiento pueden crear condiciones de carrera en aplicaciones multiproceso o asincrónicas.
 

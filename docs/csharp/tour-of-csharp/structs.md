@@ -1,5 +1,5 @@
 ---
-title: Estructuras de C# | Un paseo por el lenguaje C#
+title: 'Estructuras de C#: Un paseo por el lenguaje C# | Microsoft Docs'
 description: "Aprenda los conceptos básicos de los tipos de valores de C #, llamados structs."
 keywords: .NET, C#, struct, tipo de valor
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 38ce3cdf3aaa033d84bb2c1a421cb04c6f928ab4
-ms.openlocfilehash: 04b1784b461961496856d62aa6cb70b5978e2437
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="structs"></a>Estructuras
+<a id="structs" class="xliff"></a>
+
+# Estructuras
 
 Al igual que las clases, los ***structs*** son estructuras de datos que pueden contener miembros de datos y miembros de función, pero a diferencia de las clases, los structs son tipos de valor y no requieren asignación del montón. Una variable de un tipo de struct almacena directamente los datos del struct, mientras que una variable de un tipo de clase almacena una referencia a un objeto asignado dinámicamente. Los tipos struct no admiten la herencia especificada por el usuario y todos los tipos de struct se heredan implícitamente del tipo <xref:System.ValueType>, que a su vez se hereda implícitamente de `object`.
 

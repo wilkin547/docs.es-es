@@ -1,5 +1,5 @@
 ---
-title: Trabajar con LINQ
+title: Trabajar con LINQ | Microsoft Docs
 description: "En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,20 +11,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="working-with-linq"></a>Trabajar con LINQ
+<a id="working-with-linq" class="xliff"></a>
 
-## <a name="introduction"></a>Introducción
+# Trabajar con LINQ
+
+<a id="introduction" class="xliff"></a>
+
+## Introducción
 
 Este tutorial le enseña varias características de .NET Core y el lenguaje C#. Aprenderá lo siguiente:
 
-*    Cómo generar secuencias con LINQ
+*   Cómo generar secuencias con LINQ
 *   Cómo escribir métodos que pueden utilizarse fácilmente en las consultas LINQ.
 *   Cómo distinguir entre la evaluación diligente y diferida.
 
@@ -36,17 +40,23 @@ Para el propósito sobre el que trata este artículo, resulta divertido ocuparno
 
 Este tutorial consta de varios pasos. Después de cada paso, puede ejecutar la aplicación y ver el progreso. También puede ver el [ejemplo completo](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) en el repositorio dotnet/docs de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Requisitos previos
+<a id="prerequisites" class="xliff"></a>
+
+## Requisitos previos
 
 Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core). Puede ejecutar esta aplicación en Windows, Ubuntu Linux, OS X o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 
-## <a name="create-the-application"></a>Crear la aplicación
+<a id="create-the-application" class="xliff"></a>
+
+## Crear la aplicación
 
 El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola a todos".
 
 Si nunca ha usado C# antes, en [este tutorial](console-teleprompter.md) se explica la estructura de un programa con C#. Puede leerlo y después volver aquí para obtener más información sobre LINQ. 
 
-## <a name="creating-the-data-set"></a>Creación del conjunto de datos
+<a id="creating-the-data-set" class="xliff"></a>
+
+## Creación del conjunto de datos
 
 Comencemos por crear una baraja de cartas. Para ello, debe usar una consulta LINQ que tenga dos orígenes (uno para los cuatro palos y otro para los valores trece). Podrá combinar esos orígenes en una baraja de 52 cartas. Una instrucción `Console.WriteLine` dentro de un bucle `foreach` muestra las cartas.
 
@@ -100,7 +110,9 @@ Continúe y ejecute el ejemplo que se ha creado en este punto. Mostrará todas l
 
 ![Ventana de la consola que muestra la aplicación escribiendo 52 cartas](./media/working-with-linq/console.png)
 
-## <a name="manipulating-the-order"></a>Manipulación del orden
+<a id="manipulating-the-order" class="xliff"></a>
+
+## Manipulación del orden
 
 A continuación, se va a crear un método de utilidad que puede llevar a cabo el orden aleatorio. El primer paso consiste en dividir la baraja en dos. Los métodos `Take()` y `Skip()` que forman parte de las API de LINQ ofrecen esa característica:
 
@@ -173,7 +185,9 @@ public static void Main(string[] args)
 }
 ```
 
-## <a name="comparisons"></a>Comparaciones
+<a id="comparisons" class="xliff"></a>
+
+## Comparaciones
 
 Se va a ver cuántos órdenes aleatorios se necesitan para devolver la baraja a su orden original. Debe escribir un método que determine si dos secuencias son iguales. Cuando ya disponga del método, debe colocar el código que ordena la baraja aleatoriamente en un bucle y comprobarlo para ver cuándo la baraja vuelve a tener su orden original.
 
@@ -207,7 +221,9 @@ Console.WriteLine(times);
 
 Ejecute el ejemplo y observe cómo la baraja se reorganiza en cada orden aleatorio, hasta que vuelva a su configuración original después de 8 iteraciones.
 
-## <a name="optimizations"></a>Optimizaciones
+<a id="optimizations" class="xliff"></a>
+
+## Optimizaciones
 
 El ejemplo creado hasta el momento se ejecuta *en orden aleatorio*, donde las cartas superiores e inferiores son las mismas en cada ejecución. Se va a realizar un cambio y realice una ejecución *en orden no aleatorio*, donde las 52 cartas cambian de posición. Si se trata de un orden no aleatorio, intercale la baraja de tal forma que la primera carta de la mitad inferior sea la primera carta de la baraja. Esto significa que la última carta de la mitad superior será la carta inferior. Se trata solo de un cambio de línea. Actualice la llamada al orden aleatorio para cambiar el orden de las mitades superior e inferior de la baraja:
 
@@ -285,7 +301,9 @@ No interprete este ejemplo incorrectamente al pensar que todas las consultas deb
 
 En la práctica, algunos algoritmos se ejecutan mucho mejor con la evaluación diligente y otros, con la evaluación diferida. (En general, la evaluación diferida es una opción mucho más conveniente cuando el origen de datos es un proceso independiente, como un motor de base de datos. En esos casos, la evaluación diferida permite realizar consultas más complejas para ejecutarlas solo con un recorrido de ida y vuelta en el procesamiento de la base de datos). LINQ permite realizar la evaluación diferida y diligente. Piénselo y elija la mejor opción.
 
-## <a name="preparing-for-new-features"></a>Preparación de las nuevas características
+<a id="preparing-for-new-features" class="xliff"></a>
+
+## Preparación de las nuevas características
 
 El código que ha escrito para este ejemplo es un ejemplo de creación de un prototipo sencillo que realiza el trabajo. Se trata de una manera excelente de explorar un espacio de problemas y, para muchas características, puede ser la mejor solución permanente. Ha aprovechado *tipos anónimos* para las cartas, y cada carta se representa mediante cadenas.
 
@@ -329,7 +347,9 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 Realice la compilación y vuelva a ejecutarla. La salida está un poco más limpia, y el código es algo más claro y puede extenderse con más facilidad.
 
-## <a name="conclusion"></a>Conclusión
+<a id="conclusion" class="xliff"></a>
+
+## Conclusión
 
 En este ejemplo se exponen algunos de los métodos utilizados en LINQ, como la forma de crear métodos propios que pueden usarse con facilidad con código habilitado para LINQ. También se presentan las diferencias entre la evaluación diligente y diferida, y el efecto que puede tener la decisión en el rendimiento.
 
