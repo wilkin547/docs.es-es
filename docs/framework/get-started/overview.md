@@ -19,13 +19,16 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: bed74cee6db01a38bc0bc3c6eeffa33b682bbd80
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="overview-of-the-net-framework"></a>Información general acerca de .NET Framework
+<a id="overview-of-the-net-framework" class="xliff"></a>
+
+# Información general acerca de .NET Framework
 .NET Framework es una tecnología que admite la compilación y ejecución de la siguiente generación de aplicaciones y servicios Web XML. El diseño de .NET Framework está enfocado a cumplir los objetivos siguientes:  
   
 -   Proporcionar un entorno coherente de programación orientada a objetos, en el que el código de los objetos se pueda almacenar y ejecutar de forma local, ejecutar de forma local pero distribuida en Internet o ejecutar de forma remota.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 04/18/2017
 -   Basar toda la comunicación en estándares del sector para asegurar que el código de .NET Framework se puede integrar con otros tipos de código.  
   
 > [!NOTE]
->  Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](../../../docs/framework/get-started/index.md). Para descargar .NET Framework, vea [Guía de instalación](../../../docs/framework/install/guide-for-developers.md).  
+>  Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](../../../docs/framework/get-started/index.md).  
   
  .NET Framework consta de dos componentes principales: Common Language Runtime y la biblioteca de clases de .NET Framework. Common Language Runtime es el fundamento de .NET Framework. El motor en tiempo de ejecución se puede considerar como un agente que administra el código en tiempo de ejecución y proporciona servicios centrales, como la administración de memoria, la administración de subprocesos y la comunicación remota, al tiempo que aplica una seguridad estricta a los tipos y otras formas de especificación del código que promueven su seguridad y solidez. De hecho, el concepto de administración de código es un principio básico del motor en tiempo de ejecución. El código destinado al motor en tiempo de ejecución se denomina código administrado, a diferencia del resto de código, que se conoce como código no administrado. La biblioteca de clases es una completa colección orientada a objetos de tipos reutilizables que se pueden emplear para desarrollar aplicaciones que abarcan desde las tradicionales herramientas de interfaz gráfica de usuario (GUI) o de línea de comandos hasta las aplicaciones basadas en las innovaciones más recientes proporcionadas por ASP.NET, como Web Forms y Servicios Web XML.  
   
@@ -58,7 +61,9 @@ ms.lasthandoff: 04/18/2017
   
  En las secciones siguientes se describen con más detalle las características principales de .NET Framework.  
   
-## <a name="features-of-the-common-language-runtime"></a>Características de Common Language Runtime  
+<a id="features-of-the-common-language-runtime" class="xliff"></a>
+
+## Características de Common Language Runtime  
  Common Language Runtime administra la memoria, ejecución de subprocesos, ejecución de código, comprobación de la seguridad del código, compilación y demás servicios del sistema. Estas características son intrínsecas del código administrado que se ejecuta en Common Language Runtime.  
   
  Con respecto a la seguridad, los componentes administrados reciben grados de confianza diferentes, en función de una serie de factores entre los que se incluye su origen (como Internet, red empresarial o equipo local). Esto significa que un componente administrado puede ser capaz o no de realizar operaciones de acceso a archivos, operaciones de acceso al Registro y otras funciones delicadas, incluso si se está utilizando en la misma aplicación activa.  
@@ -77,7 +82,9 @@ ms.lasthandoff: 04/18/2017
   
  Por último, el runtime se puede hospedar en aplicaciones de servidor de gran rendimiento, como Microsoft SQL Server e Internet Information Services (IIS). Esta infraestructura permite utilizar código administrado para escribir lógica empresarial, al tiempo que se disfruta del superior rendimiento de los mejores servidores empresariales del sector que puedan hospedar el motor en tiempo de ejecución.  
   
-## <a name="net-framework-class-library"></a>Biblioteca de clases de .NET Framework  
+<a id="net-framework-class-library" class="xliff"></a>
+
+## Biblioteca de clases de .NET Framework  
  La biblioteca de clases de .NET Framework es una colección de tipos reutilizables que se integran estrechamente con Common Language Runtime. La biblioteca de clases está orientada a objetos, lo que proporciona tipos de los que su propio código administrado puede derivar funciones. Esto ocasiona que los tipos de .NET Framework sean sencillos de utilizar y reduce el tiempo asociado con el aprendizaje de las nuevas características de .NET Framework. Además, los componentes de terceros se pueden integrar sin dificultades con las clases de .NET Framework.  
   
  Por ejemplo, las clases de colección de .NET Framework implementan un conjunto de interfaces que puede usar para desarrollar sus propias clases de colección. Éstas se combinarán fácilmente con las clases de .NET Framework.  
@@ -100,9 +107,11 @@ ms.lasthandoff: 04/18/2017
   
  Por ejemplo, las clases de Windows Forms son un conjunto completo de tipos reutilizables que simplifican enormemente el desarrollo de interfaces GUI para Windows. Si escribe una aplicación Web Form de ASP.NET, puede utilizar las clases de formularios Web Forms.  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)   
- [Guía de instalación](../../../docs/framework/install/guide-for-developers.md)   
+ [Guía de instalación](../../../docs/framework/install/index.md)   
  [Guía de desarrollo](../../../docs/framework/development-guide.md)   
  [Herramientas](../../../docs/framework/tools/index.md)   
  [Ejemplos de .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   

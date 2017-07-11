@@ -1,5 +1,5 @@
 ---
-title: "Ejecución de aplicaciones de consola en Docker"
+title: "Ejecución de aplicaciones de consola en Docker | Microsoft Docs"
 description: "Aprenda a ejecutar una aplicación de consola existente de .NET Framework en un contenedor de Docker de Windows."
 author: spboyer
 keywords: .NET, contenedor, consola, aplicaciones
@@ -10,14 +10,16 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="running-console-applications-in-windows-containers"></a>Ejecución de aplicaciones de consola en contenedores de Windows
+<a id="running-console-applications-in-windows-containers" class="xliff"></a>
+
+# Ejecución de aplicaciones de consola en contenedores de Windows
 
 Las aplicaciones de consola se usan para muchos fines, que abarcan desde la consulta simple de un estado a tareas de procesamiento de imágenes de documentos de ejecución prolongada. En cualquier caso, la posibilidad de iniciar y escalar estas aplicaciones se enfrenta a limitaciones de adquisiciones de hardware, tiempos de inicio o ejecución de varias instancias.
 
@@ -48,7 +50,9 @@ La migración de la aplicación de consola se realiza en unos pocos pasos.
 1. [Creación de un Dockerfile para la imagen](#creating-the-dockerfile)
 1. [Proceso para compilar y ejecutar el contenedor de Docker](#creating-the-image)
 
-## <a name="prerequisites"></a>Requisitos previos
+<a id="prerequisites" class="xliff"></a>
+
+## Requisitos previos
 Los contenedores de Windows son compatibles con [Actualización de aniversario de Windows 10](https://www.microsoft.com/en-us/software-download/windows10/) o [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
@@ -58,7 +62,9 @@ Para admitir los contenedores de Windows, debe tener Docker para Windows, versi�
 
 ![Contenedores de Windows](./media/console/SwitchContainer.png)
 
-## <a name="building-the-application"></a>Compilación de la aplicación
+<a id="building-the-application" class="xliff"></a>
+
+## Compilación de la aplicación
 Normalmente las aplicaciones de consola se distribuyen a través de un instalador, un FTP o una implementación de recurso compartido de archivos. Al implementar en un contenedor, los activos tienen que compilarse y colocarse en una ubicación que se pueda usar una vez creada la imagen de Docker.
 
 En *build.ps1*, el script usa [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx) para compilar la aplicación a fin de completar la tarea de creación de los activos. Algunos parámetros se pasan a MSBuild para finalizar los activos necesarios. El nombre del archivo del proyecto o la solución que se va a compilar, la ubicación de la salida y, por último, la configuración (lanzamiento o depuración).
@@ -73,7 +79,9 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
 Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
 ```
 
-## <a name="creating-the-dockerfile"></a>Creación del Dockerfile
+<a id="creating-the-dockerfile" class="xliff"></a>
+
+## Creación del Dockerfile
 La imagen base usada para una aplicación de consola de .NET Framework es `microsoft/windowsservercore`, disponible públicamente en [Docker Hub](https://hub.docker.com/r/microsoft/windowsservercore/). La imagen base contiene una instalación mínima de Windows Server 2016, .NET Framework 4.6.2 y sirve como imagen base de sistema operativo para los contenedores de Windows.
 
 ```
@@ -83,10 +91,12 @@ ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
 La primera línea del Dockerfile designa la imagen base mediante la instrucción [`FROM`](https://docs.docker.com/engine/reference/builder/#/from). Después, el elemento [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) del archivo copia los activos de la aplicación de la carpeta **publish** en la carpeta raíz del contenedor y, por último, el establecimiento de [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) de la imagen indica que este es el comando o la aplicación que se va a ejecutar cuando se inicie el contenedor. 
 
-## <a name="creating-the-image"></a>Creación de la imagen
+<a id="creating-the-image" class="xliff"></a>
+
+## Creación de la imagen
 Para crear la imagen de Docker, se agrega el código siguiente al script *build.ps1*. Cuando se ejecuta el script, se crea la imagen `console-random-answer-generator` mediante los activos compilados a partir del elemento MSBuild definido en la sección [Compilación de la aplicación](#building-the-application).
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {
@@ -106,7 +116,9 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 console-random-answer-generator   latest              8f7c807db1b5        8 seconds ago       7.33 GB
 ```
 
-## <a name="running-the-container"></a>Ejecución del contenedor
+<a id="running-the-container" class="xliff"></a>
+
+## Ejecución del contenedor
 Puede iniciar el contenedor desde la línea de comandos mediante los comandos de Docker.
 
 ```
@@ -134,7 +146,9 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 Si ejecuta el comando con esta opción y luego examina el resultado del comando `docker ps -a`, observará que el identificador del contenedor (`Environment.MachineName`) no está en la lista.
 
-### <a name="running-the-container-using-powershell"></a>Ejecución del contenedor mediante PowerShell
+<a id="running-the-container-using-powershell" class="xliff"></a>
+
+### Ejecución del contenedor mediante PowerShell
 En los archivos del proyecto de ejemplo también hay un *run.ps1*, que es un ejemplo de cómo usar PowerShell para ejecutar la aplicación que acepta los argumentos.
 
 Para ejecutar, abra PowerShell y use el comando siguiente:
@@ -143,6 +157,8 @@ Para ejecutar, abra PowerShell y use el comando siguiente:
 .\run.ps1 "Is this easy or what?"
 ```
 
-## <a name="summary"></a>Resumen
+<a id="summary" class="xliff"></a>
+
+## Resumen
 Con solo agregar un Dockerfile y publicar la aplicación, puede colocar en contenedores las aplicaciones de consola de .NET Framework y aprovechar las ventajas que ofrece la ejecución de varias instancias, el inicio y la detención limpios y otras capacidades de Windows Server 2016 sin realizar cambio alguno en el código de las aplicaciones.
 
