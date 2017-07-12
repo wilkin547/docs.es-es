@@ -30,18 +30,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: c29504e18aa716cbe106dbbe00c608fd465d9ac2
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: be95d675d22dedcbf45c8eb1e8fd8d9f5ce0b56c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="interoperability-c-programming-guide"></a>Interoperabilidad (Guía de programación de C#)
+<a id="interoperability-c-programming-guide" class="xliff"></a>
+
+# Interoperabilidad (Guía de programación de C#)
 La interoperabilidad permite conservar y aprovechar las inversiones existentes en código no administrado. El código que se ejecuta bajo el control de Common Language Runtime (CLR) se denomina *código administrado*, y el código que se ejecuta fuera de CLR se denomina *código no administrado*. COM, COM+, los componentes de C++, los componentes de ActiveX y la API Win32 de Microsoft son ejemplos de código no administrado.  
   
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] habilita la interoperabilidad con código no administrado a través de los servicios de invocación de plataforma, el espacio de nombres <xref:System.Runtime.InteropServices>, la interoperabilidad de C++ y la interoperabilidad COM (interoperabilidad COM).  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] habilita la interoperabilidad con código no administrado a través de los servicios de invocación de plataforma, el espacio de nombres <xref:System.Runtime.InteropServices>, la interoperabilidad de C++ y la interoperabilidad COM.  
   
-## <a name="in-this-section"></a>En esta sección  
+<a id="in-this-section" class="xliff"></a>
+
+## En esta sección  
  [Información general sobre interoperabilidad](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  Se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
   
@@ -60,10 +65,14 @@ La interoperabilidad permite conservar y aprovechar las inversiones existentes e
  [Clase COM de ejemplo](../../../csharp/programming-guide/interop/example-com-class.md)  
  Muestra cómo exponer una clase de C# como un objeto COM.  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+<a id="c-language-specification" class="xliff"></a>
+
+## Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Interoperating with Unmanaged Code](https://msdn.microsoft.com/library/sd10k43k)  (Interoperabilidad con código no administrado)  
