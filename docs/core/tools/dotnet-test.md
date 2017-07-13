@@ -1,6 +1,6 @@
 ---
 title: 'Comando dotnet-test: CLI de .NET Core | Microsoft Docs'
-description: El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado.
+description: El comando 'dotnet test' se usa para ejecutar pruebas unitarias en un proyecto determinado.
 keywords: dotnet-test, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -11,24 +11,32 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
 ms.contentlocale: es-es
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+<a id="dotnet-test" class="xliff"></a>
 
-## <a name="name"></a>Name
+#dotnet-test
+
+<a id="name" class="xliff"></a>
+
+## Name
 
 `dotnet-test`: controlador de prueba de .NET usado para ejecutar pruebas unitarias.
 
-## <a name="synopsis"></a>Sinopsis
+<a id="synopsis" class="xliff"></a>
+
+## Sinopsis
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-## <a name="description"></a>Descripción
+<a id="description" class="xliff"></a>
+
+## Descripción
 
 El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. Las pruebas unitarias son proyectos de aplicación de consola que tienen dependencias en el marco de pruebas unitarias (por ejemplo, MSTest, NUnit o xUnit) y en el ejecutor de pruebas de dotnet de ese marco de pruebas unitarias. Estas se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
 
@@ -36,7 +44,9 @@ Los proyectos de prueba también deben especificar el ejecutor de pruebas. Para 
 
 [!code-xml[Plantilla de XUnit Basic](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>Opciones
+<a id="options" class="xliff"></a>
+
+## Opciones
 
 `PROJECT`
     
@@ -90,7 +100,9 @@ No compila el proyecto de prueba antes de ejecutarlo.
 
 Establece el nivel de detalle del comando. Los valores permitidos son `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` y `diag[nostic]`.
 
-## <a name="examples"></a>Ejemplos
+<a id="examples" class="xliff"></a>
+
+## Ejemplos
 
 Ejecución de las pruebas en el proyecto en el directorio actual:
 
@@ -100,7 +112,9 @@ Ejecute las pruebas en el proyecto `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-## <a name="filter-option-details"></a>Detalles de la opción de filtro
+<a id="filter-option-details" class="xliff"></a>
+
+## Detalles de la opción de filtro
 
 `--filter <EXPRESSION>`
 
@@ -115,7 +129,7 @@ Ejecute las pruebas en el proyecto `test1`:
 
 `<operator>` describe la relación entre la propiedad y el valor:
 
-| "??" | Función        |
+| Operador | Función        |
 | :------: | --------------- |
 | `=`      | Coincidencia exacta     |
 | `!=`     | Coincidencia no exacta |
@@ -127,16 +141,18 @@ Una expresión sin `<operator>` automáticamente se considera un `contains` en l
 
 Las expresiones se pueden combinar con operadores condicionales:
 
-| "??" | Función |
+| Operador | Función |
 | :------: | :------: |
-| `|`      | O       |
+| <code>&#124;</code>      | O       |
 | `&`      | AND      |
 
 Cuando se utilizan operadores condicionales puede encerrar expresiones entre paréntesis (por ejemplo, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
-Para obtener información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Ejecución de pruebas unitarias selectivas](../testing/selective-unit-tests.md).
+Para información adicional y ejemplos sobre cómo usar el filtrado de pruebas unitarias selectivas, vea [Running selective unit tests](../testing/selective-unit-tests.md) (Ejecución de pruebas unitarias selectivas).
 
-## <a name="see-also"></a>Vea también
+<a id="see-also" class="xliff"></a>
+
+## Vea también
 
 [Marcos y destinos](../../standard/frameworks.md)   
 [Catálogo de identificadores de entorno de ejecución (RID) de .NET Core](../rid-catalog.md)
