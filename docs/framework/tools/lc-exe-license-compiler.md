@@ -33,10 +33,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
 ms.openlocfilehash: 4b20c589622526fd973700ed5b8bdd6f86d9b2ff
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de licencias)
+# Lc.exe (Compilador de licencias)
+<a id="lcexe-license-compiler" class="xliff"></a>
 El Compilador de licencias lee archivos de texto que contienen información sobre licencias y crea un archivo binario que se puede incrustar como recurso en un archivo ejecutable de Common Language Runtime.  
   
  El Diseñador de Windows Forms genera o actualiza automáticamente un archivo de texto .licx siempre que se agrega al formulario un control con licencia. Como parte de la compilación, el sistema del proyecto transforma el archivo de texto .licx en un recurso binario .licenses que proporciona compatibilidad para la licencia de controles .NET. A continuación, el recurso binario se incrustará en los resultados del proyecto.  
@@ -47,7 +48,8 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
   
  En el símbolo del sistema, escriba lo siguiente:  
   
-## <a name="syntax"></a>Sintaxis  
+## Sintaxis
+<a id="syntax" class="xliff"></a>  
   
 ```  
       lc /target:  
@@ -67,7 +69,8 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
 |**@** *file*|Especifica el archivo de respuesta (.rsp).|  
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
-## <a name="example"></a>Ejemplo  
+## Ejemplo
+<a id="example" class="xliff"></a>  
   
 1.  Si usa un control con licencia `MyCompany.Samples.LicControl1` dentro de `Samples.DLL` en una aplicación denominada `HostApp.exe`*,*  puede crear un archivo `HostAppLic.txt` que contenga lo siguiente.  
   
@@ -93,7 +96,8 @@ El Compilador de licencias lee archivos de texto que contienen información sobr
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
-## <a name="response-file-example"></a>Ejemplo de archivo de respuesta  
+## Ejemplo de archivo de respuesta
+<a id="response-file-example" class="xliff"></a>  
  La siguiente lista muestra un ejemplo de un archivo de respuesta, `response.rsp`. Para más información sobre los archivos de respuesta, consulte [Archivos de respuesta](/visualstudio/msbuild/msbuild-response-files).  
   
 ```  
@@ -109,7 +113,8 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## Vea también
+<a id="see-also" class="xliff"></a>  
  [Herramientas](../../../docs/framework/tools/index.md)   
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
