@@ -27,13 +27,11 @@ ms.lasthandoff: 06/12/2017
 
 ---
 
+# Compatibilidad de aplicaciones en .NET Framework
 <a id="application-compatibility-in-the-net-framework" class="xliff"></a>
 
-# Compatibilidad de aplicaciones en .NET Framework
-
-<a id="introduction" class="xliff"></a>
-
 ## Introducción
+<a id="introduction" class="xliff"></a>
 La compatibilidad es un objetivo muy importante de cada versión .NET. La compatibilidad garantiza que cada versión es adicional, por lo que las versiones anteriores siguen funcionando. Por otro lado, los cambios en las funciones anteriores (para mejorar el rendimiento, tratar los problemas de seguridad o corregir errores) pueden provocar problemas de compatibilidad en el código existente o en las aplicaciones existentes que se ejecutan en una versión posterior. .NET Framework reconoce los cambios de redestinación y los cambios en tiempo de ejecución. Los cambios de redestinación afectan a las aplicaciones que se refieren a una versión específica de .NET Framework pero se ejecutan en una versión posterior. Los cambios en tiempo de ejecución afectan a todas las aplicaciones que se ejecutan en una versión determinada.
 
 Cada aplicación se refiere a una versión específica de .NET Framework, que puede especificarse:
@@ -44,21 +42,18 @@ Cada aplicación se refiere a una versión específica de .NET Framework, que pu
 
 Al ejecutarse en una versión más reciente que a la que se refería, .NET Framework usará un comportamiento anómalo para imitar la versión de destino anterior. En otras palabras, la aplicación se ejecutará en la versión más reciente de Framework pero actuará como si se estuviera ejecutando en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo.
 
-<a id="runtime-changes" class="xliff"></a>
-
 ## Cambios en tiempo de ejecución
+<a id="runtime-changes" class="xliff"></a>
 
 Los problemas en tiempo de ejecución son los que aparecen cuando se coloca un nuevo runtime en un equipo y se ejecutan los mismos binarios, pero se observa un comportamiento diferente. Si un binario se ha compilado para .NET Framework 4.0 se ejecutará en el modo de compatibilidad de .NET Framework 4.0 en 4.5 o en versiones posteriores. Muchos de los cambios que afectan a la versión 4.5 no afectarán a un binario compilado para 4.0. Esto es específico del AppDomain y depende de la configuración del ensamblado de entrada.
 
-<a id="retargeting-changes" class="xliff"></a>
-
 ## Cambios de redestinación
+<a id="retargeting-changes" class="xliff"></a>
 
 Los problemas de redestinación son los que aparecen cuando un ensamblado que se refería a la versión 4.0 ahora se establece para referirse a la versión 4.5. Ahora el ensamblado participa en las características nuevas así como en los problemas de compatibilidad potenciales de las características antiguas. De nuevo, esto lo indica el ensamblado de entrada; es decir, la aplicación de consola que usa el ensamblado, o el sitio web que hace referencia a este.
 
-<a id="net-compatibility-diagnostics" class="xliff"></a>
-
 ## Diagnósticos de compatibilidad de .NET
+<a id="net-compatibility-diagnostics" class="xliff"></a>
 
 Los diagnósticos de compatibilidad de .NET son analizadores de Roslyn que ayudan a identificar problemas de compatibilidad de aplicaciones entre versiones de .NET Framework. Esta lista contiene todos los analizadores disponibles, aunque solo se aplicará un subconjunto de ellos a una migración determinada. Los analizadores determinarán qué problemas son aplicables para la migración planeada y serán los únicos que muestren.
 
@@ -90,18 +85,16 @@ Cada problema incluye la siguiente información:
 
 -   Los identificadores de los diagnósticos disponibles.
 
-<a id="usage" class="xliff"></a>
-
 ## Uso
+<a id="usage" class="xliff"></a>
 Para comenzar, seleccione el tipo de cambio de compatibilidad a continuación:
 
 * [Cambios de redestinación](./retargeting/index.md)
 * [Cambios en el runtime](./runtime/index.md)
 
 
-<a id="see-also" class="xliff"></a>
-
 ## Vea también
+<a id="see-also" class="xliff"></a>
 
 * [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
 * [Novedades](../../../docs/framework/whats-new/index.md)
