@@ -4,36 +4,42 @@ description: "El comando dotnet-msbuild proporciona acceso a la línea de comand
 keywords: dotnet-msmsbuild, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 05/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 069909ab3890b75502602f57fc15df19bc7dd614
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: df4b2ddd322e4bd2ebaf444439107e88a983f988
+ms.openlocfilehash: 2267ef0b5785959456ea443405b6708a423d00ba
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="dotnet-msbuild"></a>dotnet-msbuild
+# dotnet-msbuild
+<a id="dotnet-msbuild" class="xliff"></a>
 
-## <a name="name"></a>Name
+## Name
+<a id="name" class="xliff"></a>
 
 `dotnet-msbuild`: compila un proyecto y todas sus dependencias.
 
-## <a name="synopsis"></a>Sinopsis
+## Sinopsis
+<a id="synopsis" class="xliff"></a>
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Descripción
+## Descripción
+<a id="description" class="xliff"></a>
 
 El comando `dotnet msbuild` permite el acceso a una instancia de MSBuild completamente funcional.
 
 El comando tiene exactamente las mismas funcionalidades que el cliente de línea de comandos de MSBuild existente. Las opciones son las mismas. Use la [referencia de línea de comandos de MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference) para más información sobre las opciones disponibles. 
 
-## <a name="examples"></a>Ejemplos
+## Ejemplos
+<a id="examples" class="xliff"></a>
 
 Creación de un proyecto y sus dependencias:
 
@@ -46,3 +52,7 @@ Creación de un proyecto y sus dependencias mediante la configuración de lanzam
 Ejecuta el destino de publicación y publica para el RID `osx.10.11-x64`:
 
 `dotnet msbuild /t:Publish /p:RuntimeIdentifiers=osx.10.11-x64`
+
+Visualización del proyecto completo con todos los destinos incluidos en el SDK:
+
+`dotnet msbuild /pp`

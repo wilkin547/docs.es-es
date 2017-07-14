@@ -1,5 +1,5 @@
 ---
-title: "Creación de imágenes de Docker de .NET Core"
+title: "Creación de imágenes de Docker de .NET Core | Microsoft Docs"
 description: "Descripción de las imágenes de Docker y .NET Core"
 keywords: .NET, .NET Core, Docker
 author: spboyer
@@ -11,19 +11,21 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 007d96cf7d174e7849a2b9c8439cfac893c7aa5c
+ms.sourcegitcommit: 7f6be5a87923a12eef879b2f5acdafc1347588e3
+ms.openlocfilehash: a8ade58a9ff1f5e68865506d91c200681cec2aeb
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 06/26/2017
 
 ---
  
 
-#<a name="building-docker-images-for-net-core-applications"></a>Creación de imágenes de Docker para aplicaciones de .NET Core
+#Creación de imágenes de Docker para aplicaciones de .NET Core
+<a id="building-docker-images-for-net-core-applications" class="xliff"></a>
 
 Para ver una descripción de cómo usar .NET Core y Docker juntos, primero debemos conocer las diferentes imágenes de Docker que se ofrecen y cuándo es mejor usar cada una. Aquí examinaremos las variantes ofrecidas, compilaremos una API web ASP.NET Core, usaremos las herramientas de Yeoman Docker para crear un contenedor depurable y echaremos un vistazo a cómo Visual Studio Code puede ayudar en el proceso. 
 
-## <a name="docker-image-optimizations"></a>Optimizaciones de imágenes de Docker
+## Optimizaciones de imágenes de Docker
+<a id="docker-image-optimizations" class="xliff"></a>
 
 Al crear imágenes de Docker para desarrolladores, nos centramos en tres escenarios principales:
 
@@ -33,13 +35,14 @@ Al crear imágenes de Docker para desarrolladores, nos centramos en tres escenar
 
 ¿Por qué tres imágenes?
 Al desarrollar, compilar y ejecutar aplicaciones en contenedor, tenemos prioridades diferentes.
-- **Desarrollo:** la rapidez con que se pueden iterar los cambios y la posibilidad de depurar los cambios. El tamaño de la imagen no es tan importante, sino que pueda hacer cambios en el código y verlos rápidamente. Algunas de nuestras herramientas, como [yo docker](https://aka.ms/yodocker) para su uso en VS Code emplean esta imagen durante la fase de desarrollo. 
+- **Desarrollo:** la rapidez con que se pueden iterar los cambios y la posibilidad de depurar los cambios. El tamaño de la imagen no es tan importante, sino que pueda hacer cambios en el código y verlos rápidamente. Algunas de las herramientas, como [yo docker](https://aka.ms/yodocker), disponibles para usarlas en Visual Studio Code emplean esta imagen durante la fase de desarrollo. 
 - **Compilación:** lo que es necesario para compilar la aplicación. Esto incluye el compilador y cualquier otra dependencia para optimizar los archivos binarios. Esta imagen no es la imagen que se implementa, sino más bien una imagen que se utiliza para compilar el contenido que se coloca en una imagen de producción. Esta imagen se usaría de la integración continua o el entorno de compilación. Por ejemplo, en lugar de instalar todas las dependencias directamente en un agente de compilación, el agente de compilación crearía una instancia de una imagen de compilación para compilar la aplicación con todas las dependencias necesarias para compilar la aplicación contenida en la imagen. El agente de compilación solo necesita saber cómo ejecutar la imagen de Docker. 
 - **Producción:** la rapidez con que puede implementar e iniciar la imagen. Esta imagen es pequeña, por lo que puede desplazarse rápidamente a través de la red desde el Registro a los hosts de Docker. El contenido está listo para ejecutar, lo que permite el tiempo más rápido desde la ejecución de Docker hasta el procesamiento de los resultados. En el modelo de Docker inmutable, no hay ninguna necesidad de compilación dinámica del código. El contenido que se coloca en esta imagen estaría limitado a los archivos binarios y al contenido necesario para ejecutar la aplicación. Por ejemplo, el resultado publicado mediante `dotnet publish` que contiene los archivos binarios compilados, imágenes y archivos .js y .css. Con el tiempo, verá imágenes que contienen paquetes anteriores a la compilación JIT.  
 
 Aunque hay varias versiones de la imagen de .NET Core, comparten una o varias capas. La cantidad de espacio en disco necesario para almacenar o la diferencia para extraer del Registro es mucho menor que la totalidad porque todas las imágenes comparten la misma capa base y posiblemente otras.  
 
-## <a name="docker-image-variations"></a>Variantes de imagen de Docker
+## Variantes de imagen de Docker
+<a id="docker-image-variations" class="xliff"></a>
 
 Para lograr los objetivos anteriores, proporcionamos variantes de imágenes en [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/).
 
@@ -47,7 +50,8 @@ Para lograr los objetivos anteriores, proporcionamos variantes de imágenes en [
 
 - `microsoft/dotnet:<version>-core` : esta es **microsoft/dotnet:1.0.0-core**, que ejecuta aplicaciones [.NET Core portátiles](../deploying/index.md) y está optimizada para ejecutar la aplicación en **producción**. No contiene el SDK y tiene como fin tomar la salida optimizada de `dotnet publish`. El tiempo de ejecución portátil es ideal para escenarios de contenedor de Docker dado que la ejecución de varios contenedores se beneficia de las capas de imágenes compartidas.  
 
-## <a name="alternative-images"></a>Imágenes nativas
+## Imágenes nativas
+<a id="alternative-images" class="xliff"></a>
 
 Además de los escenarios optimizados de desarrollo, compilación y producción, proporcionamos imágenes adicionales:
 
@@ -76,12 +80,14 @@ microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
 microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
 ```
 
-## <a name="prerequisites"></a>Requisitos previos
+## Requisitos previos
+<a id="prerequisites" class="xliff"></a>
 
 Para la compilación y ejecución, necesita tener instaladas algunas cosas:
 
 - [Núcleo de .NET](http://dot.net)
-- [Docker](https://www.docker.com/products/docker) para ejecutar sus contenedores de Docker localmente. 
+- [Docker](https://www.docker.com/products/docker) para ejecutar sus contenedores de Docker localmente.
+- [Node.js](https://nodejs.org/)
 - [Generador de Yeoman para ASP.NET](https://github.com/omnisharp/generator-aspnet) para crear la aplicación de API web.
 - [Generador de Yeoman para Docker](http://aka.ms/yodocker) de Microsoft.
 
@@ -94,7 +100,8 @@ npm install -g yo generator-aspnet generator-docker
 > [!NOTE]
 > En este ejemplo se usará [Visual Studio Code](http://code.visualstudio.com) en el editor.
 
-## <a name="creating-the-web-api-application"></a>Creación de la aplicación de API web
+## Creación de la aplicación de API web
+<a id="creating-the-web-api-application" class="xliff"></a>
 
 Como punto de referencia, antes de que meter la aplicación en un contenedor, ejecútela localmente. 
 
@@ -125,7 +132,8 @@ Pruebe la aplicación con `dotnet run` y vaya a **http://localhost:5000/api/valu
 
 Use `Ctrl+C` para detener la aplicación.
 
-## <a name="adding-docker-support"></a>Adición de compatibilidad con Docker
+## Adición de compatibilidad con Docker
+<a id="adding-docker-support" class="xliff"></a>
 
 Para agregar compatibilidad con Docker al proyecto es necesario usar el generador Yeoman de Microsoft. Actualmente se admiten proyectos .NET Core, Node.js y Go mediante la creación de un Dockerfile y scripts que ayudan a compilar y ejecutar proyectos dentro de contenedores. También se agregan archivos específicos de Visual Studio Code (launch.json, tasks.json) para la depuración del editor y la compatibilidad con la paleta de comandos.
 
@@ -174,7 +182,8 @@ El generador crea dos Dockerfiles.
 
 **Dockerfile**: esta imagen es la imagen de lanzamiento basada en **microsoft/dotnet:1.0.0-core** y se debe usar en producción. Cuando se compila esta imagen es de 253 MB aproximadamente.
 
-### <a name="creating-the-docker-images"></a>Creación de las imágenes de Docker
+### Creación de las imágenes de Docker
+<a id="creating-the-docker-images" class="xliff"></a>
 Mediante el script `dockerTask.sh` o `dockerTask.ps1`, podemos compilar o componer la imagen y el contenedor para la aplicación de **api** en un entorno específico. Compile la imagen **debug** mediante la ejecución del comando siguiente.
 
 ```bash
@@ -192,7 +201,7 @@ api                 debug                70e89fbc5dbe        a few seconds ago  
 
 Otra manera de generar la imagen y ejecutar la aplicación dentro del contenedor de Docker es abrir la aplicación en Visual Studio Code y usar las herramientas de depuración. 
 
-Seleccione el icono de depuración en la barra de vista del lado izquierdo de VS Code.
+Seleccione el icono de depuración en la barra de vistas del lado izquierdo de Visual Studio Code.
 
 ![icono de depuración de vscode](./media/building-net-docker-images/debugging_debugicon.png)
 
@@ -216,7 +225,8 @@ api                 debug                70e89fbc5dbe        1 hour ago        7
 api                 latest               ef17184c8de6        1 hour ago        260.7 MB
 ```
 
-## <a name="summary"></a>Resumen
+## Resumen
+<a id="summary" class="xliff"></a>
 
 Mediante el generador de Docker para agregar los archivos necesarios a nuestra aplicación de API web se facilita el proceso para crear las versiones de desarrollo y producción de las imágenes.  Las herramientas son multiplataforma. Proporcionan también un script de PowerShell para lograr los mismos resultados en la integración de Windows y Visual Studio Code y ofrecen depuración paso a paso de la aplicación dentro del contenedor. Si comprende las variantes de imagen y los escenarios de destino, puede optimizar el proceso de desarrollo de bucle interior y conseguir imágenes optimizadas para implementaciones de producción.  
 

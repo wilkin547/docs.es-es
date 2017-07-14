@@ -1,5 +1,5 @@
 ---
-title: 'Traslado a .NET Core: bibliotecas'
+title: 'Traslado a .NET Core: bibliotecas | Microsoft Docs'
 description: 'Traslado a .NET Core: bibliotecas'
 keywords: .NET, .NET Core
 author: cartermp
@@ -10,28 +10,31 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 883745ca26a9c0d4bd1db805da603aa6e2c41972
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: 271720298d6432e9fed9ef757df2000c5b7d2482
 ms.contentlocale: es-es
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="porting-to-net-core---libraries"></a>Traslado a .NET Core: bibliotecas
+# Traslado a .NET Core: bibliotecas
+<a id="porting-to-net-core---libraries" class="xliff"></a>
 
 Con el lanzamiento de la versión 1.0 de .NET Core, hay una oportunidad de trasladar el código de biblioteca existente para su ejecución multiplataforma. En este artículo se analizan la Biblioteca estándar de .NET, las tecnologías no disponibles, cómo contabilizar el menor número de API disponibles en .NET Core 1.0, cómo usar las herramientas que acompañan la versión preliminar de .NET Core SDK 2 y los enfoques recomendados para trasladar el código.
 
 El traslado es una tarea que puede demorar, especialmente si tiene una base de código de gran tamaño. También debe estar preparado para adaptar la orientación que se proporciona aquí según corresponda para ajustarla mejor al código. Cada base de código es distinta, por lo que este artículo pretende plantear todos los aspectos de manera flexible; sin embargo, es posible que necesite desviarse de la orientación prescrita.
 
-## <a name="prerequisites"></a>Requisitos previos
+## Requisitos previos
+<a id="prerequisites" class="xliff"></a>
 
 En este artículo se presupone que usa Visual Studio 2017 o posterior en Windows. Los bits necesarios para compilar el código de .NET Core no están disponibles en las versiones anteriores de Visual Studio.
 
 En este artículo se supone, además, que comprende el [proceso de traslado recomendado](index.md) y que solucionó cualquier problema que pudiera existir con las [dependencias de terceros](third-party-deps.md).
 
-## <a name="targeting-the-net-standard-library"></a>Enfoque a la Biblioteca estándar de .NET
+## Enfoque a la Biblioteca estándar de .NET
+<a id="targeting-the-net-standard-library" class="xliff"></a>
 
-La mejor forma de compilar una biblioteca multiplataforma para .NET Core es enfocarse a la [Biblioteca estándar de .NET](../../standard/library.md). La Biblioteca estándar de .NET es la especificación formal de las API de .NET que están pensadas para estar disponibles en todos los entornos de ejecución de .NET. Es compatible con el entorno de ejecución de .NET.
+La mejor forma de compilar una biblioteca multiplataforma para .NET Core es enfocarse a [.NET Standard](../../standard/net-standard.md). La Biblioteca estándar de .NET es la especificación formal de las API de .NET que están pensadas para estar disponibles en todos los entornos de ejecución de .NET. Es compatible con el entorno de ejecución de .NET.
 
 Esto significa que tendrá que encontrar un equilibrio entre las API que puede usar y las plataformas que puede admitir, y elegir la versión del estándar de plataforma .NET que mejor se adapta al equilibrio que desea lograr.
 
@@ -54,23 +57,27 @@ Un factor clave que se debe comprender es que **un proyecto que apunta a una ver
 
 Se recomienda que elija la versión más baja posible del estándar .NET y la use en todo el proyecto.
 
-Más información en [Biblioteca estándar de la plataforma .NET](../../standard/library.md).
+Más información en [Biblioteca estándar de la plataforma .NET](../../standard/net-standard.md).
 
-## <a name="key-technologies-not-yet-available-on-the-net-standard-or-net-core"></a>Tecnologías clave no disponibles todavía en el estándar .NET o .NET Core
+## Tecnologías clave no disponibles todavía en el estándar .NET o .NET Core
+<a id="key-technologies-not-yet-available-on-the-net-standard-or-net-core" class="xliff"></a>
 
 Es posible que use algunas tecnologías disponibles para .NET Framework que no están actualmente disponibles en .NET Core. Cada una de las siguientes subsecciones corresponde a una esas tecnologías. Si es factible adoptarlas, se muestran opciones alternativas.
 
-### <a name="app-domains"></a>Dominios de aplicación
+### Dominios de aplicación
+<a id="app-domains" class="xliff"></a>
 
 Es posible usar AppDomains con distintos fines en .NET Framework. En el caso del aislamiento del código, recomendamos contenedores o procesos independientes como alternativa. Para la carga dinámica de ensamblados, se recomienda la nueva clase @System.Runtime.Loader.AssemblyLoadContext.
 
-### <a name="remoting"></a>Comunicación remota
+### Comunicación remota
+<a id="remoting" class="xliff"></a>
 
 Para la comunicación entre procesos, se pueden usar mecanismos de comunicación entre procesos (IPC) como alternativa a la comunicación remota, como [canalizaciones](https://docs.microsoft.com/dotnet/core/api/system.io.pipes) o [archivos asignados en memoria](https://docs.microsoft.com/dotnet/core/api/system.io.memorymappedfiles.memorymappedfile).
 
 Como alternativa, en los equipos puede usar una solución basada en la nube, de preferencia un protocolo de texto sin formato con poca sobrecarga, como HTTP. [KestrelHttpServer](https://github.com/aspnet/KestrelHttpServer), el servidor web que usa ASP.NET Core, se puede usar como opción aquí. También se puede considerar como opción la generación de proxy remoto a través de [Castle.Core](https://github.com/castleproject/Core).
 
-### <a name="binary-serialization"></a>Serialización binaria
+### Serialización binaria
+<a id="binary-serialization" class="xliff"></a>
 
 Como alternativa a la serialización binaria, es posible elegir entre varias tecnologías de serialización distintas. Debe elegir una que se ajuste a los objetivos de formato y superficie. Las opciones populares son las siguientes:
 
@@ -81,11 +88,13 @@ Como alternativa a la serialización binaria, es posible elegir entre varias tec
 
 Consulte los recursos vinculados para obtener información sobre sus beneficios y elija los más adecuados para sus necesidades. Existe una gran cantidad de otras tecnologías y formatos de serialización, muchos de los cuales son de código abierto.
 
-### <a name="sandboxes"></a>Espacios aislados
+### Espacios aislados
+<a id="sandboxes" class="xliff"></a>
 
 Como alternativa a los espacios aislados, puede usar los límites de seguridad que proporciona el sistema operativo, como cuentas de usuario para ejecutar procesos con el menor conjunto de privilegios.
 
-## <a name="overview-of-projectjson"></a>Información general de `project.json`
+## Información general de `project.json`
+<a id="overview-of-projectjson" class="xliff"></a>
 
 El [modelo de proyecto project.json](../tools/project-json.md) es un modelo de proyecto que acompaña la versión preliminar 2 de .NET Core SDK 1.0. Ofrece algunas ventajas que le gustaría aprovechar hoy:
 
@@ -96,7 +105,8 @@ El [modelo de proyecto project.json](../tools/project-json.md) es un modelo de p
 
 > A pesar de que `project.json` entrará indefectiblemente en desuso, se puede usar hoy para compilar bibliotecas en el estándar .NET.
 
-### <a name="the-project-file-projectjson"></a>El archivo del proyecto: `project.json`
+### El archivo del proyecto: `project.json`
+<a id="the-project-file-projectjson" class="xliff"></a>
 
 Los proyectos de .NET están definidos por un directorio que contiene un archivo `project.json`. En este archivo se declaran los aspectos del proyecto, como las dependencias de paquete, la configuración de compilador y la configuración del entorno de ejecución, etc.
 
@@ -104,7 +114,8 @@ El comando `dotnet restore` lee este archivo de proyecto, restaura todas las dep
 
 Para más información sobre el archivo `project.json`, lea la [referencia de project.json](../tools/project-json.md).
 
-### <a name="the-solution-file-globaljson"></a>Archivo de solución: `global.json`
+### Archivo de solución: `global.json`
+<a id="the-solution-file-globaljson" class="xliff"></a>
 
 `global.json` es un archivo opcional que se puede incluir en una solución que contiene varios proyectos. Habitualmente se encuentra en el directorio raíz de un conjunto de proyectos. Se puede usar para informar al sistema de compilación los distintos subdirectorios que pueden contener proyectos. Está pensado para sistemas de mayor tamaño que constan de varios proyectos.
 
@@ -118,7 +129,8 @@ Por ejemplo, puede organizar el código en las carpetas `/src` y `/test` de prim
 
 A continuación, puede tener varios `project.json` archivos en sus propias subcarpetas dentro de `/src` y `/test`.
 
-### <a name="how-to-multitarget-with-projectjson"></a>Cómo lograr compatibilidad con múltiples versiones con `project.json`
+### Cómo lograr compatibilidad con múltiples versiones con `project.json`
+<a id="how-to-multitarget-with-projectjson" class="xliff"></a>
 
 Muchas bibliotecas son compatibles con múltiples versiones para tener el alcance más amplio posible. Con .NET Core, la compatibilidad con múltiples versiones es una característica "de primera categoría", lo que significa que puede generar fácilmente ensamblados específicos de la plataforma con una compilación única.
 
@@ -210,7 +222,8 @@ Observe que todos los destinos de .NET Framework y el estándar .NET tienen nomb
 
 Como se mencionó anteriormente, si apunta a una PCL, deberá especificar una definición de compilación para que el compilador entienda la operación. No existe ninguna definición predeterminada que el compilador pueda usar.
 
-### <a name="using-projectjson-in-visual-studio"></a>Uso de `project.json` en Visual Studio
+### Uso de `project.json` en Visual Studio
+<a id="using-projectjson-in-visual-studio" class="xliff"></a>
 
 Tiene dos opciones para usar `project.json` en Visual Studio:
 
@@ -219,7 +232,8 @@ Tiene dos opciones para usar `project.json` en Visual Studio:
 
 Hay distintas ventajas y desventajas para cada una de estas opciones.
 
-#### <a name="when-to-pick-an-xproj-project"></a>Cuándo se debe elegir un proyecto Xproj
+#### Cuándo se debe elegir un proyecto Xproj
+<a id="when-to-pick-an-xproj-project" class="xliff"></a>
 
 El sistema de proyecto Xproj nuevo en Visual Studio usa las funcionalidades del modelo de proyecto basado en `project.json` para ofrecer dos características importantes sobre los tipos de proyecto existentes: compatibilidad con múltiples versiones y la capacidad de generar directamente un paquete NuGet en compilación.
 
@@ -237,7 +251,8 @@ Si las necesidades del proyecto son relativamente mínimas y puede aprovechar la
 3. En Visual C#, seleccione ".NET Core".
 4. Seleccione la plantilla "Biblioteca de clases (.NET Core)". 
 
-#### <a name="when-to-pick-a-pcl-project"></a>Cuándo se debe elegir un proyecto PCL
+#### Cuándo se debe elegir un proyecto PCL
+<a id="when-to-pick-a-pcl-project" class="xliff"></a>
 
 Puede apuntar a .NET Core con el sistema de proyecto tradicional en Visual Studio. Para ello, cree una biblioteca de clases portable (PCL) y seleccione ".NET Core" en el cuadro de diálogo de configuración del proyecto. Luego, deberá redestinar el proyecto para basarlo en el estándar .NET:
 
@@ -246,7 +261,8 @@ Puede apuntar a .NET Core con el sistema de proyecto tradicional en Visual Studi
 
 Si tiene necesidades de sistema del proyecto más avanzadas, esta debería ser su opción. Tenga en cuenta que si desea tener compatibilidad con múltiples versiones a través de la generación de ensamblados específicos de la plataforma, como con el sistema de proyecto `xproj`, deberá crear una PCL de tipo "señuelo y engaño", tal como se describe en [How to Make Portable Class Libraries Work for You](https://blogs.msdn.microsoft.com/dsplaisted/2012/08/27/how-to-make-portable-class-libraries-work-for-you/) ("Cómo hacer que las bibliotecas de clases portables funcionen para usted").
 
-## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>Redestinar el código de .NET Framework a .NET Framework 4.6.2
+## Redestinar el código de .NET Framework a .NET Framework 4.6.2
+<a id="retargeting-your-net-framework-code-to-net-framework-462" class="xliff"></a>
 
 Si el código no apunta a .NET Framework 4.6.2, se recomienda que lo redestine. Con esto se garantiza que puede usar las alternativas de API más recientes en los casos donde el estándar .NET no puede admitir las API existentes.
 
@@ -258,13 +274,15 @@ Haga lo siguiente para cada uno de los proyectos de Visual Studio que desea tras
 
 Y listo. Debido a que sus proyectos ahora apuntan a .NET Framework 4.6.2, puede usar esa versión de .NET Framework como la base para trasladar el código.
 
-## <a name="determining-the-portability-of-your-code"></a>Determinar la portabilidad del código
+## Determinar la portabilidad del código
+<a id="determining-the-portability-of-your-code" class="xliff"></a>
 
 El paso siguiente es ejecutar API Portability Analyzer (ApiPort) para generar un informe de portabilidad que puede comenzar a analizar.
 
 Deberá asegurarse de que comprende la [herramienta API Portability (ApiPort)](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/) y que puede generar informes de portabilidad para destinar .NET Core. La manera en que hace esto probablemente variará en función de sus necesidades y preferencias personales. A continuación en este artículo se muestran algunos enfoques distintos. Es probable que combine un poco de cada uno de ellos según cómo está estructurado el código.
 
-### <a name="dealing-primarily-with-the-compiler"></a>Gestionar principalmente el compilador
+### Gestionar principalmente el compilador
+<a id="dealing-primarily-with-the-compiler" class="xliff"></a>
 
 Este puede ser el mejor enfoque para proyectos pequeños o proyectos que no usan muchas API de .NET Framework. El enfoque es muy simple:
 
@@ -276,7 +294,8 @@ Este puede ser el mejor enfoque para proyectos pequeños o proyectos que no usan
 
 A pesar de que este informe es muy poco estructurado, el enfoque centrado en el código puede permitir solucionar rápidamente cualquier problema y es posible que sea el mejor enfoque para las bibliotecas o proyectos más pequeños. Aquí, un proyecto que solo contiene modelos de datos puede ser un candidato ideal.
 
-### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>Permanecer en .NET Framework hasta solucionar los problemas de portabilidad
+### Permanecer en .NET Framework hasta solucionar los problemas de portabilidad
+<a id="staying-on-the-net-framework-until-portability-issues-are-resolved" class="xliff"></a>
 
 Este puede ser el mejor enfoque si prefiere que el código se compile durante todo el proceso. El enfoque es el siguiente:
 
@@ -289,7 +308,8 @@ Este puede ser el mejor enfoque si prefiere que el código se compile durante to
 
 Este enfoque prudente es más estructurado que simplemente solucionar los errores del compilador, pero de todos modos está relativamente centrado en el código y tiene la ventaja de que siempre hay código que se puede compilar. La manera en que puede solucionar ciertos problemas que no se podrían solucionar si solo se usa otra API. Es posible que deba desarrollar un plan más integral para ciertos proyectos, un aspecto que se abarca en el enfoque siguiente.
 
-### <a name="developing-a-comprehensive-plan-of-attack"></a>Desarrollar un plan integral de ataque
+### Desarrollar un plan integral de ataque
+<a id="developing-a-comprehensive-plan-of-attack" class="xliff"></a>
 
 Este puede ser el mejor enfoque para proyectos de mayor tamaño y más complejos, en los que puede ser necesario volver a estructurar el código o reescribir ciertas áreas para admitir .NET Core. El enfoque es el siguiente:
 
@@ -323,11 +343,13 @@ La fase de análisis puede demorar un poco en función del tamaño de la base de
 
 El plan podría significar realizar cambios importantes en la base de código mientras se sigue apuntando a .NET Framework 4.6.2, lo que hace que esta sea una versión más estructurada del enfoque anterior. Cómo ejecuta el plan dependerá de la base de código.
 
-### <a name="mixing-approaches"></a>Combinar informes
+### Combinar informes
+<a id="mixing-approaches" class="xliff"></a>
 
 Es probable que vaya a combinar los enfoques anteriores en función de cada proyecto. Debe hacer lo que corresponda para usted y su base de código.
 
-## <a name="porting-your-tests"></a>Trasladar las pruebas
+## Trasladar las pruebas
+<a id="porting-your-tests" class="xliff"></a>
 
 La mejor forma de asegurarse de que todo funciona correctamente cuando traslada el código es probarlo mientras lo traslada a .NET Core. Para ello, deberá usar un marco de pruebas que compilará y ejecutará pruebas para .NET Core. Actualmente tiene 3 opciones:
 
@@ -339,7 +361,8 @@ La mejor forma de asegurarse de que todo funciona correctamente cuando traslada 
   - [Entrada de blog sobre la migración de MSTest a NUnit.](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 * [MSTest](https://msdn.microsoft.com/library/ms243147.aspx)
 
-## <a name="recommended-approach-to-porting"></a>Enfoque recomendado de traslado
+## Enfoque recomendado de traslado
+<a id="recommended-approach-to-porting" class="xliff"></a>
 
 Finalmente llegamos al traslado mismo del código. En última instancia, el verdadero esfuerzo de traslado va a depender principalmente de la estructura del código .NET Framework. Dicho esto, mostramos un enfoque recomendado que podría funcionar correctamente con la base de código.
 
