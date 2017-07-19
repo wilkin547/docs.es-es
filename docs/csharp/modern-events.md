@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d750209f2d970044aac2f3b8b119412a58595171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
+ms.openlocfilehash: 8fc483fb52babd27f897958b17c0303710c6cce4
+ms.contentlocale: es-es
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 03/13/2017
 En el artículo anterior se describían los patrones de eventos más comunes. .NET Core tiene un patrón menos estricto. En esta versión, la definición `EventHandler<TEventArgs>` ya no tiene la restricción que obliga a que `TEventArgs` sea una clase derivada de `System.EventArgs`.
 
 Esto aumenta la flexibilidad y es compatible con versiones anteriores. Comencemos con la flexibilidad. La clase System.EventArgs introduce un método, `MemberwiseClone()`, que crea una copia superficial del objeto.
-Dicho método debe usar [reflexión](reflection.md) para implementar su funcionalidad para cualquier clase derivada de `EventArgs`. Esta funcionalidad es más fácil de crear en una clase derivada concreta. Esto significa que derivar de System.EventArgs es una restricción que limita los diseños, pero no proporciona ninguna ventaja adicional.
+Dicho método debe usar la reflexión para implementar su función en cualquier clase derivada de `EventArgs`. Esta funcionalidad es más fácil de crear en una clase derivada concreta. Esto significa que derivar de System.EventArgs es una restricción que limita los diseños, pero no proporciona ninguna ventaja adicional.
 De hecho, puede cambiar las definiciones de `FileFoundArgs` y `SearchDirectoryArgs` para que no deriven de `EventArgs`.
 El programa funcionará exactamente igual.
 

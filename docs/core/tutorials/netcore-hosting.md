@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-translationtype: Human Translation
-ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
-ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
-ms.lasthandoff: 03/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
+ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.contentlocale: es-es
+ms.lasthandoff: 04/26/2017
 
 ---
 
@@ -22,7 +23,7 @@ Como todo el código administrado, las aplicaciones de .NET Core se ejecutan med
 
 Hospedar el runtime de .NET Core es un escenario avanzado y, en la mayoría de los casos, los desarrolladores de .NET Core no necesitan preocuparse sobre el hospedaje porque los procesos de compilación de .NET Core proporcionan un host predeterminado para ejecutar aplicaciones de .NET Core. En cambio, en algunas circunstancias especializadas, puede ser útil hospedar explícitamente el runtime de .NET Core, como un medio para invocar código administrado en un proceso nativo o para obtener más control sobre el funcionamiento del runtime.
 
-En este artículo se proporciona información general sobre los pasos necesarios para iniciar el runtime de .NET Core desde código nativo, crear un dominio de aplicación inicial (@System.AppDomain) y ejecutar código administrado en él.
+En este artículo se proporciona información general sobre los pasos necesarios para iniciar el runtime de .NET Core desde código nativo, crear un dominio de aplicación inicial (<xref:System.AppDomain>) y ejecutar código administrado en él.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -30,11 +31,11 @@ Como los hosts son aplicaciones nativas, este tutorial tratará la creación de 
 
 También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://www.microsoft.com/net/core) y [crear una pequeña aplicación de prueba de .NET Core](../../csharp/getting-started/with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
 
-Este tutorial y su [ejemplo asociado](https://github.com/dotnet/docs/tree/master/samples/core/hosting) crean un host de Windows, pero vea las notas al final de este artículo sobre cómo hospedar en UNIX.
+Este tutorial y su ejemplo asociado crean un host de Windows; vea las notas al final de este artículo sobre cómo hospedar en UNIX.
 
 ## <a name="creating-the-host"></a>Creación del host
 
-Un host de ejemplo que muestra los pasos descritos en este artículo está disponible en nuestro repositorio de [ejemplos de .NET Core](https://github.com/dotnet/docs/tree/master/samples/core/hosting). Los comentarios en el archivo host.cpp de ejemplo asocian claramente los pasos numerados de este tutorial con el lugar en el que se realizan en el ejemplo.
+Un [host de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/hosting) que muestra los pasos descritos en este artículo está disponible en el repositorio dotnet/docs de GitHub. Los comentarios en el archivo *host.cpp* de ejemplo asocian claramente los pasos numerados de este tutorial con el lugar en el que se realizan en el ejemplo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Tenga en cuenta que el host de ejemplo está diseñado para usarse con fines de aprendizaje, por lo que es ligero en la comprobación de errores y está diseñado para enfatizar la legibilidad sobre la eficacia. Puede encontrar más ejemplos de host reales en el repositorio [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts). El [host CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), en concreto, es un buen host con fines generales para estudiarlo después de leer el ejemplo más sencillo.
 
@@ -146,3 +147,4 @@ Una vez que se ha compilado el host, este puede probarse ejecutándose desde la 
 Si las cosas no funcionan inicialmente, vuelva a comprobar que *coreclr.dll* está disponible en la ubicación que espera el host, que todas las bibliotecas de Framework necesarias están en la lista TPA y que el valor de bits de CoreCLR (32 o 64 bits) coincide con la manera en que se ha compilado el host.
 
 Hospedar el runtime de .NET Core es un escenario avanzado que muchos desarrolladores no necesitarán, pero para los que necesiten iniciar el código administrado desde un proceso nativo, o que necesiten más control sobre el comportamiento del runtime de .NET Core, puede resultar muy útil. Como .NET Core es capaz de ejecutarse en paralelo, es posible incluso crear hosts que inicialicen varias versiones del runtime de .NET Core y ejecuten aplicaciones en todos ellos en el mismo proceso. 
+

@@ -1,52 +1,79 @@
 ---
-title: "Variables en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "valores [Visual Basic], almacenar"
-  - "variables [Visual Basic]"
+title: Variables en Visual Basic | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
----
-# Variables en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9a19838abed2d947e8e7ebf96fa4603feb208012
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
-Al realizar cálculos con [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], resulta frecuente tener que almacenar valores.  Por ejemplo, puede que necesite calcular varios valores, compararlos y realizar distintas operaciones con ellos, en función del resultado de la comparación.  Si desea comparar los valores, tiene que conservarlos.  
+---
+<a id="variables-in-visual-basic" class="xliff"></a>
+
+# Variables en Visual Basic
+A menudo tiene que almacenar valores al realizar cálculos con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Por ejemplo, tal vez le interese calcular varios valores, compararlos y realizar diversas operaciones con ellos, según el resultado de la comparación. Para poder compararlos, debe conservar los valores.  
   
+<a id="usage" class="xliff"></a>
+
 ## Uso  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], al igual que la mayoría de los lenguajes de programación, usa variables para almacenar los valores.  Una *variable* tiene un nombre \(la palabra que se usa para referirse al valor que contiene la variable\).  Una variable también tiene un tipo de datos, que determina el tipo de datos que puede almacenar la variable.  Una variable puede representar una matriz si tiene que almacenar un conjunto indizado de elementos de datos estrechamente relacionados entre sí.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], al igual que la mayoría de los lenguajes de programación, usa variables para almacenar valores. Las *variables* tienen un nombre (la palabra que se usa para hacer referencia al valor contenido por la variable). Las variables también tienen un tipo de datos (que determina el tipo de datos que puede almacenar la variable). Las variables pueden representar una matriz si tienen que almacenar un conjunto indexado de elementos de datos estrechamente relacionados.  
   
- La inferencia de tipos de variable local permite declarar las variables sin tener que indicar de forma explícita un tipo de datos.  En lugar de ello, el compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización.  Para obtener más información, vea [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) y [Option Infer \(instrucción\)](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ La inferencia de tipo de variable local permite declarar variables sin especificar explícitamente un tipo de datos. En su lugar, el compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización. Para obtener más información, vea [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) (Inferencia de tipo de variable local) y [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) (Instrucción Option Infer).  
   
+<a id="assigning-values" class="xliff"></a>
+
 ## Asignar valores  
- Para efectuar cálculos y asignar el resultado a una variable, se utilizan instrucciones de asignación, como se muestra en el ejemplo siguiente.  
+ Para realizar cálculos y asignar el resultado a una variable debe usar instrucciones de asignación, como se muestra en el ejemplo siguiente.  
   
  [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
->  El signo igual \(`=`\) de este ejemplo es un operador de asignación, no un operador de igualdad.  El valor se asigna a la variable `applesSold`.  
+>  El signo igual (`=`) de este ejemplo es un operador de asignación, no un operador de igualdad. El valor se asigna a la variable `applesSold`.  
   
- Para obtener más información, vea [Cómo: Introducir y extraer los datos de una variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md).  
+ Para obtener más información, vea [How to: Move Data Into and Out of a Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md) (Cómo: Introducir y extraer los datos de una variable).  
   
+<a id="variables-and-properties" class="xliff"></a>
+
 ## Variables y propiedades  
- Es  si el elemento pertenece a esta vista de colección; de lo contrario, es .  Sin embargo, es más complejo que una variable.  Una propiedad utiliza bloques de código que controlan cómo establecer y recuperar su valor.  Para obtener más información, vea [Diferencias entre propiedades y variables en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
+ Al igual que una variable, una *propiedad* representa un valor al que se puede tener acceso, pero es más compleja que una variable. Una propiedad usa bloques de código que controlan cómo establecer y recuperar su valor. Para obtener más información, vea [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md) (Diferencias entre propiedades y variables en Visual Basic).  
   
+<a id="see-also" class="xliff"></a>
+
 ## Vea también  
  [Declaración de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
  [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Solucionar problemas de variables](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
+ [Solución de problemas de variables](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
  [Cómo: Introducir y extraer los datos de una variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
  [Diferencias entre propiedades y variables en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
  [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

@@ -1,19 +1,19 @@
 ---
-title: "Ejecución de aplicaciones de consola en Docker"
+title: "Ejecución de aplicaciones de consola en Docker | Microsoft Docs"
 description: "Aprenda a ejecutar una aplicación de consola existente de .NET Framework en un contenedor de Docker de Windows."
 author: spboyer
 keywords: .NET, contenedor, consola, aplicaciones
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
@@ -86,7 +86,7 @@ La primera línea del Dockerfile designa la imagen base mediante la instrucción
 ## <a name="creating-the-image"></a>Creación de la imagen
 Para crear la imagen de Docker, se agrega el código siguiente al script *build.ps1*. Cuando se ejecuta el script, se crea la imagen `console-random-answer-generator` mediante los activos compilados a partir del elemento MSBuild definido en la sección [Compilación de la aplicación](#building-the-application).
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {

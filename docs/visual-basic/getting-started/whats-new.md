@@ -1,6 +1,6 @@
 ---
 title: Novedades de Visual Basic | Microsoft Docs
-ms.date: 2015-07-20
+ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -15,8 +15,8 @@ helpviewer_keywords:
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
-author: dotnet-bot
-ms.author: dotnetcontent
+author: rpetrusha
+ms.author: ronpet
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -31,55 +31,112 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 55cf69a06a047c12f027007ed7180bf74307f2c9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
-Esta página enumera los nombres de las características clave de cada versión de Visual Basic con descripciones de las características nuevas y mejoradas de la versión más reciente del lenguaje.  
+
+En este tema se enumeran los nombres de las características clave de cada versión de Visual Basic con descripciones detalladas de las características nuevas y mejoradas de la versión más reciente del lenguaje.
   
-## <a name="previous-versions"></a>Versiones anteriores  
- Visual Basic / Visual Studio .NET 2002  
- Primera versión  
-  
- Visual Basic / Visual Studio .NET 2003  
- Operadores de desplazamiento de bits, declaración de variable de bucle  
-  
- Visual Basic / Visual Studio .NET 2005  
-Tipo  `My` y tipos auxiliares (acceso a la aplicación, equipo, sistema de archivos, red)  
-  
- Visual Basic / Visual Studio .NET 2008  
- Language Integrated Query (LINQ), literales XML, inferencia de tipo de variable local, inicializadores de objeto, tipos anónimos, métodos de extensión, inferencia de tipo de variable local `var`, expresiones lambda, operador `if`, métodos parciales, tipos de valor que aceptan valores null  
-  
- Visual Basic / Visual Studio .NET 2010  
- Propiedades autoimplementadas, inicializadores de colección, continuación de línea implícita, dinámica, covarianza/contravarianza genérica, acceso de espacio de nombres global  
-  
- Visual Basic / Visual Studio .NET 2012  
- `Async` / `await`, iteradores, atributos de información de llamador  
-  
- Visual Basic / Visual Studio .NET 2013  
- Vistas previas de tecnología de .NET Compiler Platform («Roslyn»)  
-  
- Visual Basic / Visual Studio .NET 2015  
- Versión actual, véase más abajo  
-  
-## <a name="current-version"></a>Versión actual  
- [Nameof](../../csharp/language-reference/keywords/nameof.md)  
+## <a name="current-version"></a>Versión actual
+
+Visual Basic / Visual Studio .NET 2017   
+Para obtener características nuevas, vea [Visual Basic 2017](#visual-basic-2017).
+
+## <a name="previous-versions"></a>Versiones anteriores
+
+Visual Basic / Visual Studio .NET 2015   
+Para obtener características nuevas, vea [Visual Basic 14](#visual-basic-14).
+
+Visual Basic / Visual Studio .NET 2013  
+Vistas previas de tecnología de .NET Compiler Platform ("Roslyn")
+
+Visual Basic / Visual Studio .NET 2012   
+palabras clave `Async` y `await`, iteradores, atributos de información de autor de llamada
+
+Visual Basic / Visual Studio .NET 2010   
+Propiedades autoimplementadas, inicializadores de colección, continuación de línea implícita, dinámica, covarianza/contravarianza genérica, acceso de espacio de nombres global
+
+Visual Basic / Visual Studio .NET 2008   
+Language Integrated Query (LINQ), literales XML, inferencia de tipo de variable local, inicializadores de objeto, tipos anónimos, métodos de extensión, inferencia de tipo de variable local `var`, expresiones lambda, operador `if`, métodos parciales, tipos de valor que aceptan valores null  
+
+Visual Basic / Visual Studio .NET 2005   
+El tipo `My` y tipos auxiliares (acceso a la aplicación, equipo, sistema de archivos, red)
+
+Visual Basic / Visual Studio .NET 2003   
+Operadores de desplazamiento de bits, declaración de variable de bucle
+
+Visual Basic / Visual Studio .NET 2002   
+La primera versión de Visual Basic .NET
+
+## <a name="visual-basic-2017"></a>Visual Basic 2017
+
+[Tuplas](../programming-guide/language-features/data-types/tuples.md)
+
+Las tuplas son una estructura de datos ligera que se usan normalmente para devolver varios valores de una sola llamada al método. Normalmente, para devolver varios valores de un método, tiene que realizar una de las siguientes acciones:
+
+- Definir un tipo personalizado (`Class` o `Structure`). Esta es una solución pesada.
+
+- Definir uno o más parámetros `ByRef`, además de devolver un valor del método.
+ 
+La compatibilidad de Visual Basic con las tuplas le permite definir rápidamente una tupla, asignar opcionalmente nombres semánticos a sus valores y recuperar sus valores rápidamente. En el ejemplo siguiente se ajusta una llamada al método <xref:System.Int32.TryParse%2A> y se devuelve una tupla.
+
+[!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
+
+Después, puede llamar al método y controlar la tupla devuelta con código como el siguiente.
+
+[!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)] 
+
+**Literales binarios y separadores de dígitos**
+
+Puede definir un literal binario con el prefijo `&B` o `&b`. Además, puede usar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad. En el ejemplo siguiente se usan ambas características para asignar un valor `Byte` y para mostrarlo como un número binario, hexadecimal y decimal.
+
+[!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
+
+Para obtener más información, vea la sección "Asignaciones literales" de los tipos de datos [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) y [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
+
+**Compatibilidad con los valores devueltos de referencia de C#**
+
+A partir de C# 7, C# admite los valores devueltos de referencia. Es decir, cuando el método de llamada recibe un valor devuelto mediante referencia, puede cambiar el valor de esta. Visual Basic no le permite crear métodos con valores devueltos de referencia, pero le permite consumirlos y modificarlos.
+
+Por ejemplo, la siguiente clase `Sentence` escrita en C# incluye un método `FindNext` que busca la siguiente palabra de una frase que comienza por una subcadena especificada. La cadena se devuelve como un valor devuelto de referencia, y una variable `Boolean` que se ha pasado mediante referencia al método indica si la búsqueda se ha realizado correctamente. Esto significa que el autor de la llamada no solo puede leer el valor devuelto; él o ella también puede modificarlo, y esa modificación se refleja en la clase `Sentence`.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+
+En su forma más sencilla, puede modificar la palabra que se ha encontrado en la frase con código como el que se muestra a continuación. Tenga en cuenta que no está asignando un valor al método, sino a la expresión que devuelve el método, que es el valor devuelto de referencia.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#1)]
+
+En cambio, un problema con este código es que si no se detecta una coincidencia, el método devuelve la primera palabra. Como el ejemplo no examina el valor del argumento `Boolean` para determinar si se detecta una coincidencia, modifica la primera palabra si no hay ninguna. En el ejemplo siguiente se corrige esto reemplazando la primera palabra por ella misma si no existe ninguna coincidencia.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
+
+Una solución mejor es usar un método auxiliar en el que el valor devuelto de referencia se pase mediante una referencia. El método auxiliar puede después modificar el argumento que se ha pasado por referencia. En el siguiente ejemplo se realiza esto.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
+
+Para obtener más información, vea [Valores devueltos de referencia](../programming-guide/language-features/procedures/ref-return-values.md).
+
+## <a name="visual-basic-14"></a>Visual Basic 14
+
+[Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Puede obtener el nombre de cadena no calificado de un tipo o miembro para usarlo en un mensaje de error sin codificar de forma rígida una cadena.  Esto permite que el código siga siendo correcto al refactorizarlo.  Esta característica también es útil para enlazar los vínculos MVC del controlador de vista de modelos y desencadenar eventos de propiedad cambiada.  
   
- [Interpolación de cadenas](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Interpolación de cadenas](../../csharp/language-reference/keywords/interpolated-strings.md)  
  Puede usar expresiones de interpolación de cadenas para construir cadenas.  Una expresión de cadena interpolada es similar a una cadena de plantilla que contiene expresiones.  Una cadena interpolada es más fácil de entender con respecto a los argumentos que el [formato compuesto](../../standard/base-types/composite-format.md).  
   
- [Acceso a miembros e indexación condicional null](../../csharp/language-reference/operators/null-conditional-operators.md)  
- Puede probar si hay valores null de forma sintáctica ligera antes de realizar una operación de acceso a miembros (`?.`) o índice (`?[]`).  Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.  Si la referencia de objeto u operando izquierdo es null, la operación devuelve null.  
+[Acceso a miembros e indización condicional null](../../csharp/language-reference/operators/null-conditional-operators.md)  
+Puede probar si hay valores null de forma sintáctica ligera antes de realizar una operación de acceso a miembros (`?.`) o índice (`?[]`).  Estos operadores ayudan a escribir menos código para controlar las comprobaciones de null, especialmente para descender en estructuras de datos.  Si la referencia de objeto u operando izquierdo es null, la operación devuelve null.  
   
- [Literales de cadena multilínea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+[Literales de cadena multilínea](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Los literales de cadena pueden contener secuencias de nueva línea.  Ya no necesita la antigua solución alternativa que consistía en usar `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
   
- Comentarios  
- Puede colocar comentarios después de las continuaciones de línea implícita, dentro de expresiones de inicializador y entre los términos de la expresión LINQ.  
+Comentarios  
+Puede colocar comentarios después de las continuaciones de línea implícita, dentro de expresiones de inicializador y entre los términos de la expresión LINQ.  
   
  Resolución de nombres completos más inteligente  
  Dado código como `Threading.Thread.Sleep(1000)`, Visual Basic solía buscar el espacio de nombres "Threading", detectaba ambigüedad entre System.Threading y System.Windows.Threading y, a continuación, notificaba un error.  Ahora, Visual Basic considera juntos ambos espacios de nombres posibles.  Si aparece la lista de finalización, el editor de Visual Studio muestra los miembros de ambos tipos en la lista de finalización.  
@@ -129,10 +186,10 @@ End Interface
   
 Interface IMock2 : Inherits ICustomer, ITime  
 End Interface  
-  
 ```  
   
  Ahora el compilador usa las reglas de resolución de sobrecarga normales para elegir el `GetDetails` más apropiado que se va a llamar, y se pueden declarar relaciones de interfaz en Visual Basic como las que se muestran en el ejemplo.  
   
 ## <a name="see-also"></a>Vea también  
  [Novedades de Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+

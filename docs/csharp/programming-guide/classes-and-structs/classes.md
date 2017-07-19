@@ -29,14 +29,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a7d66be3ce0a4a24fd95d5b77787dcad5598f4d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
-Una *class* es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Una clase es como un anteproyecto: define los datos y el comportamiento de un tipo. Si la clase no se declara como estática, el código de cliente puede usarla creando *objetos* o *instancias*, que se asignan a una variable. La variable permanece en memoria hasta que todas las referencias a ella están fuera del ámbito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados. Si la clase se declara como [estática](../../../csharp/language-reference/keywords/static.md), solo habrá una copia en la memoria y el código de cliente solo podrá tener acceso a ella a través de la propia clase, y no a través de una *variable de instancia*. Para obtener más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+Una *class* es una construcción que le permite crear sus propios tipos personalizados agrupando las variables de otros tipos, métodos y eventos. Una clase es como un plano. Define los datos y el comportamiento de un tipo. Si la clase no se declara como estática, el código de cliente puede usarla mediante la creación de *objetos* o *instancias* que se asignan a una variable. La variable permanece en memoria hasta que todas las referencias a ella están fuera del ámbito. En ese momento, CLR la marca como apta para la recolección de elementos no utilizados. Si la clase se declara como [estática](../../../csharp/language-reference/keywords/static.md), solo habrá una copia en la memoria y el código de cliente solo podrá tener acceso a ella a través de la propia clase, y no a través de una *variable de instancia*. Para obtener más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  A diferencia de los structs, las clases admiten la *herencia*, una característica fundamental de la programación orientada a objetos. Para obtener más información, vea [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -54,7 +55,7 @@ Una *class* es una construcción que le permite crear sus propios tipos personal
   
  [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
- Cuando se crea una instancia de una clase, se vuelve a pasar al programador una referencia al objeto. En el ejemplo anterior, `object1` es una referencia a un objeto que se basa en `Customer`. Esta referencia apunta al objeto nuevo, pero no contiene los datos del objeto en cuestión. De hecho, puede crear una referencia de objeto sin tener que crear ningún objeto:  
+ Cuando se crea una instancia de una clase, se vuelve a pasar al programador una referencia al objeto. En el ejemplo anterior, `object1` es una referencia a un objeto que se basa en `Customer`. Esta referencia apunta al objeto nuevo, pero no contiene los datos del objeto. De hecho, puede crear una referencia de objeto sin tener que crear ningún objeto:  
   
  [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
@@ -71,7 +72,7 @@ Una *class* es una construcción que le permite crear sus propios tipos personal
   
  Cuando una clase declara una clase base, hereda todos los miembros de la clase base excepto los constructores.  
   
- A diferencia de C++, una clase de C# solo puede heredar directamente de una clase base. A pesar de esto, dado que una clase base puede heredar de otra clase, una clase podría heredar indirectamente varias clases base. Además, una clase puede implementar directamente más de una interfaz. Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ A diferencia de C++, una clase de C# solo puede heredar directamente de una clase base. En cambio, dado que una clase base puede heredar de otra clase, una clase podría heredar indirectamente varias clases base. Además, una clase puede implementar directamente más de una interfaz. Para obtener más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
  Una clase puede declararse [abstracta](../../../csharp/language-reference/keywords/abstract.md). Una clase abstracta contiene métodos abstractos que tienen una definición de firma, pero no tienen ninguna implementación. No se pueden crear instancias de las clases abstractas. Solo se pueden usar a través de las clases derivadas que implementan los métodos abstractos. Por el contrario, la clase [sealed](../../../csharp/language-reference/keywords/sealed.md) no permite que otras clases se deriven de ella. Para obtener más información, vea [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -84,14 +85,14 @@ Una *class* es una construcción que le permite crear sus propios tipos personal
  [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Object-Oriented Programming](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)  (Programación orientada a objetos)  
+ [Object-Oriented Programming](../concepts/object-oriented-programming.md)  (Programación orientada a objetos)  
  [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
  [Miembros](../../../csharp/programming-guide/classes-and-structs/members.md)   
  [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Destructores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md)  (Constructores [Guía de programación de C#])  
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [Objects](../../../csharp/programming-guide/classes-and-structs/objects.md)

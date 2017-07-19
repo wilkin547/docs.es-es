@@ -2,6 +2,7 @@
 title: "Mitigación: CspParameters.ParentWindowHandle espera HWND | Microsoft Docs"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -16,19 +17,20 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: 22c258b06a5cc8fa3fec72665d7e413b0cdd11ee
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Mitigación: CspParameters.ParentWindowHandle espera HWND
 
-La propiedad <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, que se introdujo en .NET Framework 2.0, permite que una aplicación registre un valor de identificador de ventana principal, como que se abra cualquier interfaz de usuario necesaria para tener acceso a la clave (por ejemplo, la solicitud del PIN o un cuadro de diálogo de consentimiento) como elemento secundario modal de la ventana especificada. A partir de las aplicaciones orientadas a .NET Framework 4.7, un identificador de ventana (HWND) puede asignarse a esta propiedad.
+La propiedad <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A>, introducida en .NET Framework 2.0, permite que una aplicación registre un valor de identificador de ventana principal, de modo que cualquier interfaz de usuario necesaria para tener acceso a la clave (por ejemplo, la solicitud del PIN o un cuadro de diálogo de consentimiento) se abra como elemento secundario modal de la ventana especificada. A partir de las aplicaciones orientadas a .NET Framework 4.7, un identificador de ventana (HWND) puede asignarse a esta propiedad.
 
-En versiones de .NET Framework hasta .NET Framework 4.6.2, como valor asignado a la propiedad <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A> se esperaba <xref:System.IntPtr>, que representa la ubicación de la memoria donde reside el valor del identificador de ventana. En Windows 7 y versiones anteriores del sistema operativo Windows, establecer la propiedad en `form.Handle` no tiene ningún efecto, pero en Windows 8 y versiones posteriores, da como resultado <xref:System.Security.Cryptography> con el mensaje "El parámetro no es correcto".
+Hasta la versión de .NET Framework 4.6.2, se esperaba que el valor asignado a la propiedad <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A> fuese <xref:System.IntPtr>, que representa la ubicación de la memoria donde reside el valor del identificador de ventana. En Windows 7 y versiones anteriores del sistema operativo Windows, establecer la propiedad en `form.Handle` no tiene ningún efecto, pero en Windows 8 y versiones posteriores, da como resultado <xref:System.Security.Cryptography> con el mensaje "El parámetro no es correcto".
 
-A partir de las aplicaciones que tienen como destino NET Framework 4.7, una aplicación de Windows Forms puede establecer la propiedad <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A> con un código como el siguiente:
+A partir de las aplicaciones que tienen como destino .NET Framework 4.7, una aplicación de Windows Forms puede establecer la propiedad <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle%2A> con un código como el siguiente:
 
 ```csharp
 cspParameters.ParentWindowHandle = form.Handle;
@@ -44,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>Mitigación
 
-Los desarrolladores que habían identificado que el valor correcto era la dirección de la ubicación de memoria que mantiene el valor `form.Handle` pueden optar por este cambio de comportamiento si establecen el modificador <xref:System.Security.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` en `true`:
+Los desarrolladores que hayan identificado que el valor correcto es la dirección de la ubicación de memoria que mantiene el valor `form.Handle`, pueden rechazar este cambio de comportamiento si establecen el modificador de <xref:System.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` en `true`:
 
-- Configurando mediante programación los modificadores de compatibilidad en la instancia [AppContext](assetID:///T:System.Security.AppContext).
+- Configurando mediante programación los modificadores de compatibilidad en la instancia <xref:System.AppContext>.
 
 - Agregando la siguiente línea a la sección `<runtime>` del archivo app.config:
    
@@ -56,7 +58,7 @@ Los desarrolladores que habían identificado que el valor correcto era la direcc
    </runtime>
    ```
 
-En cambio, los usuarios que deseen optar por el nuevo comportamiento de las aplicaciones ejecutadas en .NET Framework 4.7 pero que están orientadas a una versión anterior de .NET Framework pueden establecer el modificador <xref:System.Security.AppContext> en `false`.
+En cambio, los usuarios que deseen optar por el nuevo comportamiento de las aplicaciones ejecutadas en .NET Framework 4.7, pero que están orientadas a una versión anterior de .NET Framework, pueden establecer el modificador <xref:System.AppContext> en `false`.
  
 ## <a name="see-also"></a>Vea también
 

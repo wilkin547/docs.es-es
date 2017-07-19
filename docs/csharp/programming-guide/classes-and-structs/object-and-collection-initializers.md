@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34c0c1ff1c00eecc27edaff30f119e2f3dac8c1d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 66045a6902e64db394a1f5812658e25a11692027
+ms.openlocfilehash: a4d0e8f348afdf1793804a4062be45d2fb4e7e2b
+ms.contentlocale: es-es
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicializadores de objeto y de colección (Guía de programación de C#)
@@ -44,7 +45,7 @@ Los inicializadores de objeto permiten asignar valores a cualquier campo o propi
 ## <a name="object-initializers-with-anonymous-types"></a>Inicializadores de objeto con tipos anónimos  
  Aunque los inicializadores de objeto se pueden usar en cualquier contexto, resultan especialmente útiles en las expresiones de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]. Las expresiones de consulta usan con frecuencia [tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md), que solo se pueden inicializar con un inicializador de objeto, como se muestra en la siguiente declaración.  
   
-```  
+```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```  
   
@@ -54,13 +55,13 @@ var pet = new { Age = 10, Name = "Fluffy" };
   
  Al ejecutarse esta consulta, la variable `productInfos` incluirá una secuencia de objetos a la que se puede tener acceso en una instrucción `foreach`, como se muestra en este ejemplo:  
   
-```  
+```csharp
 foreach(var p in productInfos){...}  
 ```  
   
  Cada uno de los objetos del nuevo tipo anónimo tiene dos propiedades públicas que reciben los mismos nombres que las propiedades o campos del objeto original. También puede cambiar el nombre de un campo al crear un tipo anónimo; en el ejemplo siguiente se cambia el nombre del campo `UnitPrice` a `Price`.  
   
-```  
+```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
   
@@ -68,11 +69,11 @@ select new {p.ProductName, Price = p.UnitPrice};
  Es un error en tiempo de compilación usar un inicializador de objeto con un struct que acepta valores NULL.  
   
 ## <a name="collection-initializers"></a>Inicializadores de colección  
- Los inicializadores de colección le permiten especificar uno o varios inicializadores de elemento al inicializar una clase de colección que implementa <xref:System.Collections.IEnumerable> o una clase con un método de extensión `Add`. Los inicializadores de elemento pueden ser un valor simple, una expresión o un inicializador de objeto. Si se usa un inicializador de colección, no es necesario especificar varias llamadas al método `Add` de la clase en el código fuente; el compilador agrega las llamadas.  
+ Los inicializadores de colección le permiten especificar uno o varios inicializadores de elemento al inicializar un tipo de colección que implementa <xref:System.Collections.IEnumerable> y tiene `Add` con la firma apropiada como un método de instancia o un método de extensión. Los inicializadores de elemento pueden ser un valor simple, una expresión o un inicializador de objeto. Si se usa un inicializador de colección, no es necesario especificar varias llamadas al método `Add` de la clase en el código fuente; el compilador agrega las llamadas.  
   
  En los ejemplos siguientes se muestran dos inicializadores de colección simples:  
   
-```  
+```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
 ```  
@@ -87,7 +88,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
  Puede especificar elementos indexados si la colección admite la indexación.  
   
-```  
+```csharp
 var numbers = new Dictionary<int, string> {   
     [7] = "seven",   
     [9] = "nine",   
@@ -102,3 +103,4 @@ var numbers = new Dictionary<int, string> {
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+

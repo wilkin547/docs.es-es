@@ -1,0 +1,198 @@
+---
+title: "&lt;basicHttpBinding&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+helpviewer_keywords: 
+  - "basicHttpBinding Element"
+ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
+caps.latest.revision: 43
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 43
+---
+# &lt;basicHttpBinding&gt;
+Representa un enlace que un servicio [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] puede utilizar para configurar y exponer extremos que pueden comunicarse con servicios Web basados en ASMX y clientes y otros servicios que cumplan con el WS\-I Basic Profile 1.1.  
+  
+## Sintaxis  
+  
+```  
+  
+<basicHttpBinding>  
+   <binding   
+       allowCookies="Boolean"  
+       bypassProxyOnLocal="Boolean"  
+       closeTimeout="TimeSpan"   
+       envelopeVersion="None/Soap11/Soap12"  
+       hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
+       maxBufferPoolSize="Integer"  
+       maxBufferSize="Integer"  
+       maxReceivedMessageSize="Integer"  
+       messageEncoding="Text/Mtom"  
+              name="string"   
+       openTimeout="TimeSpan"   
+       proxyAddress="URI"  
+        receiveTimeout="TimeSpan"  
+       sendTimeout="TimeSpan"  
+              textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
+              transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
+       useDefaultWebProxy="Boolean"  
+       <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">  
+           <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"  
+                  proxyCredentialType="None/Basic/Digest/Ntlm/Windows"  
+                                    realm="string" />  
+           <message   
+                 algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
+                            clientCredentialType="UserName/Certificate"/>  
+       </security>  
+       <readerQuotas   
+            maxArrayLength="Integer"  
+            maxBytesPerRead="Integer"  
+            maxDepth="Integer"   
+            maxNameTableCharCount="Integer"      
+            maxStringContentLength="Integer" />  
+   </binding>  
+</basicHttpBinding>  
+```  
+  
+## Atributos y elementos  
+ En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+  
+### Atributos  
+  
+|Atributo|Descripción|  
+|--------------|-----------------|  
+|`allowCookies`|Valor de tipo booleano que indica si el cliente acepta las cookies y las propaga en solicitudes futuras.  De manera predeterminada, es `false`.<br /><br /> Puede utilizar esta propiedad al interactuar con los servicios Web ASMX que utilizan cookies.  De esta manera, puede estar seguro de que las cookies devueltas del servidor se copian automáticamente en todas las solicitudes de cliente futuras para ese servicio.|  
+|`bypassProxyOnLocal`|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales.  De manera predeterminada, es `false`.<br /><br /> Un recurso de Internet es local si tiene una dirección local.  Una dirección local es aquella que se encuentra en el mismo equipo, LAN local o intranet, y se identifica, sintácticamente, por la ausencia de un punto \(.\), como en los URI "http:\/\/webserver\/" y "http:\/\/localhost\/".<br /><br /> Al establecer este atributo se determina si los extremos configurados con BasicHttpBinding utilizan el servidor proxy al obtener acceso a los recursos locales.  Si este atributo es `true`, las solicitudes que se realicen en recursos locales de Internet no usarán el servidor proxy.  Utilice el nombre de host \(en lugar del host local\) si desea que los clientes pasen por un proxy al hablar con los servicios del mismo equipo cuando este atributo está establecido como `true`.<br /><br /> Cuando este atributo es `false`, todas las solicitudes de Internet se realizan a través del servidor proxy.|  
+|`closeTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:01:00.|  
+|`envelopeVersion`|Especifica la versión de SOAP que se utiliza para los mensajes procesados por este enlace.  El único valor válido es Soap11.|  
+|`hostnameComparisonMode`|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI.  Este atributo es del tipo <xref:System.ServiceModel.HostnameComparisonMode>, que indica si se va a utilizar el nombre del host para llegar al servicio cuando coincida en el URI.  El valor predeterminado es <xref:System.ServiceModel.HostnameComparisonMode.StrongWildcard>, que omite el nombre del host en la coincidencia.|  
+|`maxBufferPoolSize`|Un valor entero que especifica la cantidad de memoria máxima que se asigna para el uso realizado por el administrador de los búferes que reciben los mensajes del canal.  El valor predeterminado es 524288 \(0x80000\) bytes.<br /><br /> El administrador de búfer reduce el coste de utilizar los búferes con un grupo de búferes.  Es necesario que los búferes procesen los mensajes del servicio cuando salen del canal.  Si no hay memoria suficiente en el grupo de búferes para procesar la carga de mensajes, el administrador de búfer debe asignar memoria adicional del montón CLR, que aumenta la carga de recolección de elementos no utilizados.  La amplia asignación del montón de elementos no utilizados de CLR es una indicación de que el tamaño del grupo de búferes es demasiado pequeño y de que el rendimiento podría mejorar con una asignación mayor aumentando el límite especificado por este atributo.|  
+|`maxBufferSize`|Un valor entero que especifica el tamaño máximo, en bytes, de un búfer que almacena los mensajes mientras se procesan para un extremo configurado con este enlace.  El valor predeterminado es 65.536 bytes.|  
+|`maxReceivedMessageSize`|Un entero positivo que define el tamaño máximo del mensaje, en bytes, incluidos los encabezados, para un mensaje que se puede recibir en un canal configurado con este enlace.  El remitente recibe un error SOAP cuando el mensaje es demasiado grande para el receptor.  El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento.  El valor predeterminado es 65.536 bytes.|  
+|`messageEncoding`|Define el codificador utilizado para codificar el mensaje SOAP.  Los valores válidos son los siguientes:<br /><br /> -   Text: utiliza un codificador de mensajes de texto.<br />-   Mtom: usa un codificador de Mecanismo de optimización de transmisión del mensaje 1.0 \(MTOM\).<br /><br /> El valor predeterminado es Text.  Este atributo es del tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
+|`name`|Cadena que contiene el nombre de configuración del enlace.  Este valor debe ser único porque se usa como identificación del enlace.  Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio.  Además, este nombre es único entre los enlaces del mismo tipo.  A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre.  Para obtener más información sobre la configuración predeterminada, así como sobre enlaces y comportamientos sin nombre, vea [Configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`namespace`|Especifica el espacio de nombres XML del enlace.  El valor predeterminado es "http:\/\/tempuri.org\/Bindings".  Cada enlace tiene los atributos `name` y `namespace` que, juntos, lo identifican de forma exclusiva en los metadatos del servicio.|  
+|`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:01:00.|  
+|`proxyAddress`|Un URI que contiene la dirección del proxy HTTP.  Si `useSystemWebProxy` se establece como `true`, esta configuración debe ser `null`.  De manera predeterminada, es `null`.|  
+|`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:10:00.|  
+|`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse.  Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>.  El valor predeterminado es 00:01:00.|  
+|`textEncoding`|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace.  Los valores válidos son los siguientes:<br /><br /> -   BigEndianUnicode: codificación Unicode BigEndian.<br />-   Codificación de 16 bits Unicode.<br />-   Codificación de 8 bits UTF8<br /><br /> El valor predeterminado es UTF8.  Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|`transferMode`|Un valor <xref:System.ServiceModel.TransferMode> válido que especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta.|  
+|`useDefaultWebProxy`|Valor de tipo booleano que especifica si se debería utilizar el proxy HTTP configurado automáticamente del sistema, si está disponible.  De manera predeterminada, es `true`.|  
+  
+### Elementos secundarios  
+  
+|Elemento|Descripción|  
+|--------------|-----------------|  
+|[\<seguridad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Define la configuración de seguridad del enlace.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
+|[\<readerQuotas\>](../Topic/%3CreaderQuotas%3E.md)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los extremos configurados con este enlace.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+  
+### Elementos primarios  
+  
+|Elemento|Descripción|  
+|--------------|-----------------|  
+|[\<enlaces\>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+  
+## Comentarios  
+ BasicHttpBinding usa HTTP como transporte para enviar mensajes SOAP 1.1.  Un servicio puede utilizar este enlace para exponer extremos que cumplen con WS\-I BP 1.1, como los que utilizan los clientes ASMX.  De igual forma, un cliente puede utilizar BasicHttpBinding para comunicarse con servicios que exponen extremos que cumplen con WS\-I BP 1.1, como el Servicio Web de ASMX o servicios configurados con BasicHttpBinding.  
+  
+ La seguridad está desactivada de forma predeterminada, pero se puede agregar estableciendo el atributo de modo del elemento secundario [\<seguridad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) en un valor distinto de `None`.  De forma predeterminada, usa una codificación de mensajes "Text" y codificación de texto UTF\-8.  
+  
+## Ejemplo  
+ En el ejemplo siguiente se muestra el uso de la clase <xref:System.ServiceModel.BasicHttpBinding> que proporciona comunicación HTTP e interoperabilidad máxima a los servicios Web de primera y segunda generación.  El enlace se especifica en los archivos de configuración para el cliente y servicio.  El tipo de enlace se especifica en el atributo `binding` del elemento `<endpoint>`.  Si desea configurar el enlace básico  y cambiar algunos de sus valores, es necesario definir una configuración de enlace.  El extremo debe hacer referencia a la configuración de enlace por nombre utilizando el atributo `bindingConfiguration` del elemento `<endpoint>`, como se muestra en el siguiente código de configuración para el servicio.  
+  
+```xml  
+<system.serviceModel>   
+  <services>  
+    <service   
+        type="Microsoft.ServiceModel.Samples.CalculatorService"  
+        behaviorConfiguration="CalculatorServiceBehavior">  
+       <endpoint address=""  
+             binding="basicHttpBinding"  
+             bindingConfiguration="Binding1"   
+             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+    </service>  
+  </services>  
+  <bindings>  
+     <basicHttpBinding>  
+        <binding name="Binding1"   
+               hostNameComparisonMode="StrongWildcard"   
+               receiveTimeout="00:10:00"  
+               sendTimeout="00:10:00"  
+               openTimeout="00:10:00"  
+               closeTimeout="00:10:00"  
+               maxReceivedMessageSize="65536"   
+               maxBufferSize="65536"   
+               maxBufferPoolSize="524288"   
+               transferMode="Buffered"   
+               messageEncoding="Text"   
+               textEncoding="utf-8"  
+               bypassProxyOnLocal="false"  
+               useDefaultWebProxy="true" >  
+              <security mode="None" />  
+         </binding>  
+     </basicHttpBinding>  
+  </bindings>  
+</system.serviceModel>  
+```  
+  
+## Ejemplo  
+ A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre.  La funcionalidad del ejemplo anterior se puede llevar a cabo quitando bindingConfiguration de la dirección del extremo y el nombre del enlace.  
+  
+```xml  
+<system.serviceModel>   
+  <services>  
+    <service   
+        type="Microsoft.ServiceModel.Samples.CalculatorService"  
+        behaviorConfiguration="CalculatorServiceBehavior">  
+       <endpoint address=""  
+             binding="basicHttpBinding"  
+             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
+    </service>  
+  </services>  
+  <bindings>  
+     <basicHttpBinding>  
+        <binding   
+               hostNameComparisonMode="StrongWildcard"   
+               receiveTimeout="00:10:00"  
+               sendTimeout="00:10:00"  
+               openTimeout="00:10:00"  
+               closeTimeout="00:10:00"  
+               maxReceivedMessageSize="65536"   
+               maxBufferSize="65536"   
+               maxBufferPoolSize="524288"   
+               transferMode="Buffered"   
+               messageEncoding="Text"   
+               textEncoding="utf-8"  
+               bypassProxyOnLocal="false"  
+               useDefaultWebProxy="true" >  
+              <security mode="None" />  
+         </binding>  
+     </basicHttpBinding>  
+  </bindings>  
+</system.serviceModel>  
+  
+```  
+  
+ Para obtener más información sobre la configuración predeterminada, así como sobre enlaces y comportamientos sin nombre, vea [Configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+  
+## Vea también  
+ <xref:System.ServiceModel.Channels.Binding>   
+ <xref:System.ServiceModel.Channels.BindingElement>   
+ <xref:System.ServiceModel.BasicHttpBinding>   
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
+ [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ [\<enlace\>](../../../../../docs/framework/misc/binding.md)

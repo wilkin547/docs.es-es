@@ -1,0 +1,122 @@
+---
+title: "Enlazar datos a controles (WCF Data Services) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-oob"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "aplicaciones cliente, Servicios de datos de Microsoft WCF"
+  - "enlace de datos, Servicios de datos de Microsoft WCF"
+  - "Servicios de datos de Microsoft WCF, biblioteca de cliente"
+ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
+caps.latest.revision: 3
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 3
+---
+# Enlazar datos a controles (WCF Data Services)
+Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede enlazar controles como `ComboBox` y `ListView` a una instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601>. Esta colección, que hereda de la clase <xref:System.Collections.ObjectModel.ObservableCollection%601>, contiene los datos de una fuente de [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].  Esta clase representa una colección de datos dinámicos que proporciona notificaciones si se agregan o se quitan elementos.  Al usar una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para el enlace de datos, las bibliotecas de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] administran estos eventos para garantizar que los objetos supervisados por <xref:System.Data.Services.Client.DataServiceContext> sigan estando sincronizados con los datos en el elemento de la interfaz de usuario enlazada.  
+  
+ La clase <xref:System.Data.Services.Client.DataServiceCollection%601>\(indirectamente\) implementa la interfaz <xref:System.Collections.Specialized.INotifyCollectionChanged> para avisar al contexto en el momento en el que se agreguen o quiten objetos de la colección.  Los objetos de tipo de servicio de datos usados con una clase <xref:System.Data.Services.Client.DataServiceCollection%601> también deben implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> para avisar a la clase <xref:System.Data.Services.Client.DataServiceCollection%601> en el momento en el que cambien las propiedades de los objetos en la colección de enlaces.  
+  
+> [!NOTE]
+>  Al utilizar el cuadro de diálogo **Agregar referencia de servicio** o la herramienta[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) con la opción `/dataservicecollection` para generar las clases de servicio de datos de cliente, las clases de datos generadas implementan la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  Para obtener más información, consulta [Cómo: Generar manualmente clases del servicio de datos del cliente](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+  
+## Crear la colección de enlaces  
+ Cree una nueva instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601> llamando a uno de los métodos de constructor de clase con una instancia <xref:System.Data.Services.Client.DataServiceContext> proporcionada y, opcionalmente, una consulta <xref:System.Data.Services.Client.DataServiceQuery%601> o LINQ que, cuando se ejecuta, devuelve una instancia <xref:System.Collections.Generic.IEnumerable%601>.  <xref:System.Collections.Generic.IEnumerable%601> proporciona el origen de objetos para la colección de enlaces, que se materializan de una fuente [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  Para obtener más información, consulta [Materialización de objetos](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md).  De manera predeterminada, <xref:System.Data.Services.Client.DataServiceContext> realiza automáticamente el seguimiento de los cambios realizados en los objetos enlazados y elementos insertados en la colección.  Si necesita realizar el seguimiento de estos cambios manualmente, llame a uno de los métodos de constructor que toma un parámetro `trackingMode` y especifica un valor del campo <xref:System.Data.Services.Client.TrackingMode>.  
+  
+ En el siguiente ejemplo se muestra cómo crear una instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601> basada en un <xref:System.Data.Services.Client.DataServiceContext> proporcionado y una <xref:System.Data.Services.Client.DataServiceQuery%601> que devuelve todos los clientes con pedidos \(en el ejemplo, Orders\) relacionados:  
+  
+ [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders2.cs#customersorders2binding)]
+ [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
+  
+## Enlazar datos a elementos de Windows Presentation Foundation  
+ Dado que la clase <xref:System.Data.Services.Client.DataServiceCollection%601> se hereda de la clase <xref:System.Collections.ObjectModel.ObservableCollection%601>, puede enlazar los objetos a un elemento o control en una aplicación Windows Presentation Foundation \(WPF\) tal como lo haría si usara la clase <xref:System.Collections.ObjectModel.ObservableCollection%601> para el enlace.  Para obtener más información, vea [Enlace de datos \(Windows Presentation Foundation\)](../../../../docs/framework/wpf/data/data-binding-wpf.md).  Una manera de enlazar los datos del servicio de datos a controles WPF es establecer la propiedad `DataContext` del elemento para la instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601> que contiene el resultado de la consulta.  En este caso, usted utiliza la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para establecer el origen del objeto para el control.  Utilice la propiedad <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> para especificar qué propiedad mostrar del objeto enlazado.  Si está enlazando un elemento a un objeto relacionado que devuelve una propiedad de navegación, incluya la ruta de acceso en el enlace definido para la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>.  Esta ruta de acceso es relativa al objeto raíz establecido por la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> del control primario.  En el siguiente ejemplo se establece la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> de un elemento <xref:System.Windows.Controls.StackPanel> para enlazar el control primario a una clase <xref:System.Data.Services.Client.DataServiceCollection%601> de objetos de cliente:  
+  
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
+  
+ En el ejemplo siguiente se muestra la definición de enlace XAML de los controles <xref:System.Windows.Controls.ComboBox> y <xref:System.Windows.Controls.DataGrid> secundarios:  
+  
+ [!code-xml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml#masterdetailxaml)]  
+  
+ Para obtener más información, consulta [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
+  
+ Cuando una entidad participa en una relación de uno a varios o de varios a varios, la propiedad de navegación para la relación devuelve una colección de objetos relacionados.  Cuando usted utiliza el cuadro de diálogo **Agregar referencia de servicio** o la herramienta DataSvcUtil.exe para generar las clases de servicio de datos de cliente, la propiedad de navegación devuelve una instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601>.  Esto le permite enlazar objetos relacionados a un control, así como admitir escenarios de enlace de WPF comunes, como el patrón de enlace principal\-detalle para entidades relacionadas.  En el ejemplo XAML anterior, el código XAML enlaza la clase principal <xref:System.Data.Services.Client.DataServiceCollection%601> al elemento de datos de raíz.  El pedido <xref:System.Windows.Controls.DataGrid> se enlaza a la clase <xref:System.Data.Services.Client.DataServiceCollection%601> de pedidos devueltos desde el objeto Customers seleccionado, que se enlaza a su vez al elemento de datos de raíz de <xref:System.Windows.Window>.  
+  
+## Enlazar datos a controles de Windows Forms  
+ Para enlazar objetos a un control de Windows Form, establezca la propiedad `DataSource` del control en la instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601> que contiene el resultado de la consulta.  
+  
+> [!NOTE]
+>  El enlace de datos solo se admite para los controles que realizan escuchas de los eventos de cambio mediante la implementación de las interfaces <xref:System.ComponentModel.INotifyPropertyChanged> y <xref:System.Collections.Specialized.INotifyCollectionChanged>.  Cuando un control no admite este tipo de notificación de cambios, los cambios que se realizan en la clase <xref:System.Data.Services.Client.DataServiceCollection%601> subyacente no se reflejan en el control enlazado.  
+  
+ En el siguiente ejemplo <xref:System.Data.Services.Client.DataServiceCollection%601> se enlaza a <xref:System.Windows.Forms.ComboBox>:  
+  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabindingspecific)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabindingspecific)]  
+  
+ Cuando utiliza el cuadro de diálogo **Agregar referencia de servicio** para generar las clases de servicio de datos de cliente, también se crea un origen de datos de proyecto basado en el <xref:System.Data.Services.Client.DataServiceContext> generado.  Con este origen de datos, puede crear controles o elementos de la interfaz de usuario que muestren datos del servicio de datos simplemente arrastrando los elementos desde la ventana **Orígenes de datos** hasta el diseñador.  Estos elementos aparecen en la interfaz de usuario de la aplicación y se enlazan al origen de datos.  Para obtener más información, consulta [Cómo: Enlazar datos mediante un origen de datos del proyecto](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md).  
+  
+## Enlazar datos paginados  
+ Un servicio de datos se puede configurar para limitar la cantidad de datos consultados que se devuelven en un único mensaje de respuesta.  Para obtener más información, consulta [Configurar el servicio de datos](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  Cuando el servicio de datos está paginando los datos de respuesta, cada respuesta contiene un vínculo que se utiliza para devolver la página siguiente de resultados.  Para obtener más información, consulta [Cargar contenido aplazado](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  En este caso, debe cargar las páginas explícitamente llamando al método <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> en la clase <xref:System.Data.Services.Client.DataServiceCollection%601>, especificando el URI obtenido de la propiedad <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A>, como en el siguiente ejemplo:  
+  
+ [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
+ [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
+  
+ Los objetos relacionados se cargan de una manera similar.  Para obtener más información, consulta [Cómo: Enlazar datos a elementos de Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
+  
+## Personalizar comportamientos de enlace de datos  
+ La clase <xref:System.Data.Services.Client.DataServiceCollection%601> le permite interceptar los eventos que se provocan al realizar cambios en la colección \(como agregar o quitar un objeto\) o en las propiedades de objeto en una colección.  Puede modificar los eventos de enlace de datos para reemplazar el comportamiento predeterminado, que incluye las siguientes restricciones:  
+  
+-   No se realiza ninguna validación dentro de los delegados.  
+  
+-   Al agregar una entidad, se agregan automáticamente las entidades relacionadas.  
+  
+-   Al eliminar una entidad, no se eliminan las entidades relacionadas.  
+  
+ Al crear una nueva instancia de <xref:System.Data.Services.Client.DataServiceCollection%601>, tiene la opción de especificar los siguientes parámetros, que definen los delegados para los métodos que administran los eventos provocados cuando se cambian los objetos enlazados:  
+  
+-   `entityChanged`: método al que se llama cuando cambia la propiedad de un objeto enlazado.  Este delegado <xref:System.Func%602> acepta un objeto <xref:System.Data.Services.Client.EntityChangedParams> y devuelve un valor booleano que indica si el comportamiento predeterminado, que consiste en llamar a <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> en <xref:System.Data.Services.Client.DataServiceContext>, todavía se debería producir.  
+  
+-   `entityCollectionChanged`: método al que se llama cuando un objeto se agrega o se quita de la colección de enlaces.  Este delegado <xref:System.Func%602> acepta un objeto <xref:System.Data.Services.Client.EntityCollectionChangedParams> y devuelve un valor booleano que indica si el comportamiento predeterminado, que consiste en llamar a <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> para una acción <xref:System.Collections.Specialized.NotifyCollectionChangedAction> o a <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> para una acción <xref:System.Collections.Specialized.NotifyCollectionChangedAction> en <xref:System.Data.Services.Client.DataServiceContext>, aún se debe producir.  
+  
+> [!NOTE]
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] no realiza ninguna validación de los comportamientos personalizados que implementa el usuario en estos delegados.  
+  
+ En el siguiente ejemplo, la acción <xref:System.Collections.Specialized.NotifyCollectionChangedAction> está personalizada para llamar al método <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> y <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> con el fin de quitar las entidades `Orders_Details` que pertenecen a una entidad `Orders` eliminada.  Esta acción personalizada se realiza porque las entidades dependientes no se eliminan automáticamente cuando se elimina la entidad primaria.  
+  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
+  
+ Para obtener más información, consulta [Cómo: Personalizar comportamientos de enlace de datos](../../../../docs/framework/data/wcf/how-to-customize-data-binding-behaviors-wcf-data-services.md).  
+  
+ El comportamiento predeterminado cuando un objeto se quita de una clase <xref:System.Data.Services.Client.DataServiceCollection%601> utilizando el método <xref:System.Collections.ObjectModel.Collection%601.Remove%2A> es que el objeto también se marca como eliminado en <xref:System.Data.Services.Client.DataServiceContext>.  Para cambiar este comportamiento puede especificar un delegado para un método en el parámetro `entityCollectionChanged` al que se llama cuando se produce el evento <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>.  
+  
+## Enlazar datos con clases de datos de cliente personalizadas  
+ Para poder cargar los objetos en la clase <xref:System.Data.Services.Client.DataServiceCollection%601>, los objetos deben implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  Las clases de cliente del servicio de datos que se generan al utilizar el cuadro de diálogo **Agregar referencia de servicio** o la herramienta [DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) implementan esta interfaz.  Si proporciona sus propias clases de datos de cliente, debe utilizar otro tipo de colección para el enlace de datos.  Cuando los objetos cambian, debe administrar los eventos en los controles enlazados a datos para que llamen a los siguientes métodos de la clase <xref:System.Data.Services.Client.DataServiceContext>:  
+  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>: cuando se agrega un nuevo objeto a la colección.  
+  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>: cuando se elimina un objeto de la colección.  
+  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>: cuando se cambia una propiedad en un objeto de la colección.  
+  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>: cuando se agrega un objeto a una colección del objeto relacionado.  
+  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>: cuando se agrega un objeto a una colección de objetos relacionados.  
+  
+ Para obtener más información, consulta [Actualizar el servicio de datos](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+  
+## Vea también  
+ [Cómo: Generar manualmente clases del servicio de datos del cliente](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)   
+ [Cómo: Agregar una referencia a un servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

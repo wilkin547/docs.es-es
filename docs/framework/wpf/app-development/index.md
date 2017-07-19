@@ -17,10 +17,11 @@ caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: aa6ebe6c4ddc9b5cdec267cb2fc114440c189f0c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="application-development"></a>Desarrollo de aplicaciones
@@ -87,15 +88,15 @@ ms.lasthandoff: 04/08/2017
   
  <xref:System.Windows.Window> admite la capacidad de crear un tipo especial de ventana denominado cuadro de diálogo. Se pueden crear los tipos modales y no modales de cuadros de diálogo.  
   
- Para mayor comodidad y para ofrecer las ventajas de reusabilidad, así como una experiencia del usuario coherente en todas las aplicaciones, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expone tres de los cuadros de diálogo comunes de [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> y <xref:System.Windows.Controls.PrintDialog>.  
+ Por comodidad, por las ventajas de reusabilidad y para ofrecer una experiencia de usuario coherente entre las aplicaciones, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expone tres cuadros de diálogo [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] comunes: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> y <xref:System.Windows.Controls.PrintDialog>.  
   
- Un cuadro de mensaje es un tipo especial de cuadro de diálogo para mostrar información de texto importante a los usuarios y plantear preguntas sencillas de Sí/No/Aceptar/Cancelar. Para crear y mostrar cuadros de mensaje se usa la clase <xref:System.Windows.MessageBox>.  
+ Un cuadro de mensaje es un tipo especial de cuadro de diálogo para mostrar información de texto importante a los usuarios y plantear preguntas sencillas de Sí/No/Aceptar/Cancelar. Use la clase <xref:System.Windows.MessageBox> para crear y mostrar cuadros de mensajes.  
   
  Para obtener más información, vea [Información general sobre cuadros de diálogo](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navegación  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] admite la navegación de tipo web con páginas (<xref:System.Windows.Controls.Page>) e hipervínculos (<xref:System.Windows.Documents.Hyperlink>). La navegación se puede implementar de diversas maneras que incluyen las siguientes:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] admite la navegación tipo web mediante páginas (<xref:System.Windows.Controls.Page>) e hipervínculos (<xref:System.Windows.Documents.Hyperlink>). La navegación se puede implementar de diversas maneras que incluyen las siguientes:  
   
 -   Páginas independientes que se hospedan en un explorador web.  
   
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/08/2017
   
  Para facilitar la navegación, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa lo siguiente:  
   
--   <xref:System.Windows.Navigation.NavigationService>, el motor de navegación compartido para procesar las solicitudes de navegación que se usa mediante <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para admitir la navegación dentro de la aplicación.  
+-   <xref:System.Windows.Navigation.NavigationService>, el motor de navegación compartido para procesar solicitudes de navegación que usan <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> y [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para permitir la navegación entre aplicaciones.  
   
 -   Métodos de navegación para iniciar la navegación.  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 04/08/2017
   
  Para obtener más información, vea [Información general sobre navegación](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también admite un tipo especial de navegación denominado navegación estructurada. La navegación estructurada se puede usar para llamar a una o más páginas que devuelven datos de una manera estructurada y previsible, y que es coherente con las funciones de llamada. Esta función depende de la clase <xref:System.Windows.Navigation.PageFunction%601>, que se describe más detalladamente en [Información general sobre la navegación estructurada](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> también sirve para simplificar la creación de topologías de navegación complejas, que se describen en [Información general sobre topologías de navegación](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también admite un tipo especial de navegación denominado navegación estructurada. La navegación estructurada se puede usar para llamar a una o más páginas que devuelven datos de una manera estructurada y previsible, y que es coherente con las funciones de llamada. Esta funcionalidad depende de la clase <xref:System.Windows.Navigation.PageFunction%601>, que se describe más detalladamente en [Información general sobre la navegación estructurada](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> también sirve para simplificar la creación de topologías de navegación complejas, que se describen en [Información general sobre topologías de navegación](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hospedaje  

@@ -4,16 +4,17 @@ description: "Aprenda a restaurar dependencias y herramientas específicas del p
 keywords: dotnet-restore, CLI, comando de la CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 92da0806eb6c365a4622668242edc28d9966ed26
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
+ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.contentlocale: es-es
+ms.lasthandoff: 03/29/2017
 
 ---
 
@@ -37,6 +38,8 @@ Para las dependencias, puede especificar dónde se colocan los paquetes restaura
 
 Para herramientas específicas del proyecto, `dotnet restore` restaura primero el paquete en el que se empaqueta la herramienta y, a continuación, continúa con la restauración de las dependencias de la herramienta especificadas en su project.json.
 
+El comportamiento del comando `dotnet restore` depende de algunas de las opciones de configuración del archivo *Nuget.Config*, si están presentes. Por ejemplo, establecer `globalPackagesFolder` en *NuGet.Config* coloca los paquetes NuGet restaurados en la carpeta especificada. Esta es una alternativa para especificar la opción `--packages` en el comando `dotnet restore`. Para obtener más información, vea la [referencia de NuGet.Config](https://docs.microsoft.com/nuget/schema/nuget-config-file).
+
 ## <a name="arguments"></a>Argumentos
 
 `ROOT` 
@@ -57,7 +60,7 @@ Especifica un origen de paquetes de NuGet que se usará durante la operación de
 
 Especifica un tiempo de ejecución para la restauración del paquete. Se usa para restaurar los paquetes con tiempos de ejecución que no se enumeran explícitamente en la etiqueta `<RuntimeIdentifiers>` del archivo *.csproj*. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). Para proporcionar varios RID; especifique esta opción varias veces.
 
-`--packages <PACKAGES_DIRECTORY]`
+`--packages <PACKAGES_DIRECTORY>`
 
 Especifica el directorio de los paquetes restaurados. 
 
@@ -103,7 +106,7 @@ Restaurar las dependencias y las herramientas para el proyecto en el directorio 
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
 
-Restauración de dependencias y herramientas para el proyecto en el directorio actual y visualización únicamente de los errores en la salida:
+Restaurar las dependencias y herramientas para el proyecto en el directorio actual y mostrar únicamente la salida mínima:
 
-`dotnet restore --verbosity Error`
+`dotnet restore --verbosity minimal`
 

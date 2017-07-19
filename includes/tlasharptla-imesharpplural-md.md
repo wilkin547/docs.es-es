@@ -1,0 +1,1 @@
+Editores de métodos de entrada (IMEs)

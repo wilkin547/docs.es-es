@@ -1,0 +1,1 @@
+Componente Imágenes de Microsoft Windows Presentation Foundation

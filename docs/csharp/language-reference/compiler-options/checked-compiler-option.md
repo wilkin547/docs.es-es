@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c6cfc54c2dbd3e14d874d7684fdc75a972260cc3
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="checked-c-compiler-options"></a>/checked (Opciones del compilador de C#)
@@ -42,7 +43,7 @@ La opción **/checked** especifica si una instrucción aritmética de enteros qu
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -63,12 +64,12 @@ La opción **/checked** especifica si una instrucción aritmética de enteros qu
   
 4.  Modifique la propiedad **Comprobar el desbordamiento y subdesbordamiento aritmético**.  
   
- Para obtener acceso a esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
+ Para acceder a esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  El comando siguiente compila `t2.cs`. El uso de `/checked` en el comando especifica que cualquier instrucción de aritmética de enteros del archivo que no esté en el ámbito de la palabra clave `checked` o `unchecked` y que produzca un valor fuera del intervalo del tipo de datos provocará una excepción en tiempo de ejecución.  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

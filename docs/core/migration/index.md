@@ -10,14 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 7ee369e62027aaf59e4c1a340bbdd30a643e2b75
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: ac870aa302c3e56b59cbfdfd0fc88e06bbaad5fb
 ms.contentlocale: es-es
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="migrating-net-core-projects-to-the-csproj-format"></a>Migración de proyectos de .NET Core al formato .csproj
+<a id="migrating-net-core-projects-to-the-csproj-format" class="xliff"></a>
+
+# Migración de proyectos de .NET Core al formato .csproj
 
 En este documento se tratarán los escenarios de migración para los proyectos de .NET Core y se repasarán los tres siguientes escenarios de migración:
 
@@ -25,7 +27,9 @@ En este documento se tratarán los escenarios de migración para los proyectos d
 2. [Migración desde DNX a csproj](#migration-from-dnx-to-csproj)
 3. [Migración desde proyectos de csproj de .NET Core RC3 y anteriores al formato final](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-## <a name="migration-from-projectjson-to-csproj"></a>Migración desde project.json a csproj
+<a id="migration-from-projectjson-to-csproj" class="xliff"></a>
+
+## Migración desde project.json a csproj
 La migración desde *project.json* a *.csproj* puede realizarse mediante uno de los métodos siguientes:
 
 - [Visual Studio 2017](#visual-studio-2017)
@@ -33,7 +37,9 @@ La migración desde *project.json* a *.csproj* puede realizarse mediante uno de 
  
 Ambos métodos usan el mismo motor subyacente para migrar los proyectos, por lo que los resultados serán los mismos para ambos. En la mayoría de los casos, tan solo será necesario usar una de estas dos formas de migrar *project.json* a *csproj*, y no se requerirá ninguna otra edición manual del archivo del proyecto. El archivo *.csproj* resultante tendrá el mismo nombre que el directorio que lo contiene.
 
-### <a name="visual-studio-2017"></a>Visual Studio 2017
+<a id="visual-studio-2017" class="xliff"></a>
+
+### Visual Studio 2017
 
 Cuando se abre un archivo *.xproj* o un archivo de solución que hace referencia a archivos *.xproj*, aparece el cuadro de diálogo **Actualización unidireccional**. El cuadro de diálogo muestra los proyectos que se van a migrar. Si se abre un archivo de solución, se enumerarán todos los proyectos especificados en el archivo de solución. Revise la lista de proyectos que se van a migrar y haga clic en **Aceptar**.
 
@@ -46,25 +52,31 @@ Los archivos que se migraron (*project.json*, *global.json*, *.xproj* y el archi
 > [!IMPORTANT]
 > Las nuevas herramientas no están disponibles en Visual Studio 2015, por lo que no puede migrar los proyectos mediante esa versión de Visual Studio.
 
-### <a name="dotnet-migrate"></a>dotnet migrate
+<a id="dotnet-migrate" class="xliff"></a>
+
+### dotnet migrate
 
 En el escenario de la línea de comandos, puede usar el comando [`dotnet migrate`](../tools/dotnet-migrate.md). Se migrará un proyecto, una solución o un conjunto de carpetas, en ese orden, dependiendo de lo que se encuentre. Cuando se migra un proyecto, se migra el proyecto y todas sus dependencias.
 
 Los archivos que se migraron (*project.json*, *global.json* y *.xproj*) se moverán a una carpeta *Copia de seguridad*.
 
 > [!NOTE]
-> Si se usa VS Code, el comando `dotnet migrate` no modificará archivos específicos de VS Code como `tasks.json`. Estos archivos deben modificarse de forma manual. Esto también sucede si se usa Project Ryder o cualquier editor o entorno de desarrollo integrado (IDE) que no sea Visual Studio. 
+> Si se usa Visual Studio Code, el comando `dotnet migrate` no modificará archivos específicos de Visual Studio Code, como `tasks.json`. Estos archivos deben modificarse de forma manual. Esto también sucede si se usa Project Ryder o cualquier editor o entorno de desarrollo integrado (IDE) que no sea Visual Studio. 
 
 Consulte [Una asignación entre propiedades project.json y csproj](../tools/project-json-to-csproj.md) para una comparación de los formatos project.json y csproj.
 
-### <a name="common-issues"></a>Problemas comunes
+<a id="common-issues" class="xliff"></a>
+
+### Problemas comunes
 
 - Si se produce un error: "No se encuentra ningún archivo que coincida con el comando dotnet-migrate":
 
 Ejecute `dotnet --version` para ver qué versión está usando. [`dotnet migrate`](../tools/dotnet-migrate.md) requiere .NET Core CLI RC3 o superior.
 Obtendrá este error si tiene un archivo *global.json* en el directorio actual o principal y la versión de `sdk` está establecida en una versión anterior.
 
-## <a name="migration-from-dnx-to-csproj"></a>Migración desde DNX a csproj
+<a id="migration-from-dnx-to-csproj" class="xliff"></a>
+
+## Migración desde DNX a csproj
 Si aún usa DNX para el desarrollo de .NET Core, el proceso de migración debe realizarse en dos fases:
 
 1. Use la [guía de migración de DNX existente](from-dnx.md) para migrar desde DNX a la CLI compatible con project.json.
@@ -73,7 +85,9 @@ Si aún usa DNX para el desarrollo de .NET Core, el proceso de migración debe r
 > [!NOTE]
 > DNX quedó oficialmente en desuso durante la versión Preview 1 de la CLI de .NET Core. 
 
-## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a>Migración desde formatos anteriores de csproj de .NET Core a csproj RTM
+<a id="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj" class="xliff"></a>
+
+## Migración desde formatos anteriores de csproj de .NET Core a csproj RTM
 El formato de csproj de .NET Core ha cambiado y evolucionado con cada nueva versión preliminar de las herramientas. No hay ninguna herramienta que migre el archivo del proyecto de versiones anteriores de csproj a la versión más reciente, por lo que tendrá que editar manualmente el archivo del proyecto. Los pasos reales dependen de la versión del archivo del proyecto que se va a migrar. Tenga en cuenta los siguientes consejos basados en los cambios que se produjeron entre las versiones:
 
 * Quite la propiedad de versión de las herramientas del elemento `<Project>`, si existe. 

@@ -4,16 +4,17 @@ description: "El comando dotnet-sln proporciona una opción conveniente para agr
 keywords: dotnet-sln, CLI, comando de la CLI, .NET Core
 author: spboyer
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 2cdfd02f7735b106fde910b8906ba4dfae860952
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7d7f0864ee1641627c4a55192d81ed76f2f44450
+ms.openlocfilehash: 0a832765d01609aebd10b13387a4317a6a246c30
+ms.contentlocale: es-es
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -27,9 +28,9 @@ ms.lasthandoff: 03/22/2017
 
 ```
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add **/**
+dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove **/**
+dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] list
 dotnet sln [-h|--help]
 ```
@@ -42,13 +43,13 @@ El comando `dotnet sln` proporciona una opción conveniente para agregar, quitar
 
 `add <PROJECT> ...`
 
-`add **/*`
+`add <GLOBBING_PATTERN>`
 
 Agrega un proyecto o varios proyectos al archivo de solución. Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.
 
 `remove <PROJECT> ...`
 
-`remove **/*`
+`remove <GLOBBING_PATTERN>`
 
 Quita un proyecto o varios proyectos del archivo de solución. Se admiten [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) en terminales basados en Unix o Linux.
 
@@ -70,19 +71,27 @@ Imprime una corta ayuda para el comando.
 
 ## <a name="examples"></a>Ejemplos
 
-Agregue un proyecto a una solución:
+Agregue un proyecto de C# a una solución:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-Agregue un proyecto a la solución en el directorio actual:
-
-`dotnet sln add todo-app.csproj`
-
-Quite un proyecto de una solución:
+Quite un proyecto de C# de una solución:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Agregue varios proyectos a una solución mediante el patrón global:
+Agregue varios proyectos de C# a una solución:
 
-`dotnet sln add **/**/*.fsproj`
+`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+
+Quite varios proyectos de C# de una solución:
+
+`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+
+Agregue varios proyectos de C# a una solución mediante un patrón global:
+
+`dotnet sln todo.sln add **/*.csproj`
+
+Quite varios proyectos de C# de una solución mediante un patrón global:
+
+`dotnet sln todo.sln remove **/*.csproj`
 

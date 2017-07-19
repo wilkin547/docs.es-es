@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
-Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] incluido dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una declaración `End` coincidente. Todas las instrucciones ejecutables de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] deben formar parte de algún procedimiento.  
+Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] incluido dentro de una instrucción de declaración (`Function`, `Sub`, `Operator`, `Get`, `Set`) y una declaración `End` coincidente. Todas las instrucciones ejecutables de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] deben formar parte de algún procedimiento.  
   
 ## <a name="calling-a-procedure"></a>Llamada a un procedimiento  
  Cuando invoca un procedimiento desde otra parte del código, está realizando una *llamada a procedimiento*. Cuando el procedimiento termina de ejecutarse, devuelve el control al código que lo ha invocado, el cual se conoce como *código de llamada*. El código de llamada es una instrucción, o una expresión de una instrucción, que especifica el procedimiento por el nombre y le transfiere el control.  
@@ -60,7 +60,7 @@ Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](../../../../c
  En la mayoría de los casos, un procedimiento necesita operar en datos diferentes cada vez que se llama. Puede pasar esta información al procedimiento como parte de la llamada a procedimiento. El procedimiento define cero o más *parámetros*, cada uno de los cuales representa un valor que espera que le pase. Cada parámetro de la definición del procedimiento tiene un *argumento* correspondiente en la llamada a procedimiento. Un argumento representa el valor que pasa al parámetro correspondiente en una llamada a procedimiento determinada.  
   
 ## <a name="types-of-procedures"></a>Tipos de procedimientos  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] usa varios tipos de procedimientos:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa varios tipos de procedimientos:  
   
 -   Los [procedimientos Sub](./sub-procedures.md) realizan acciones, pero no devuelven un valor al código de llamada.  
   

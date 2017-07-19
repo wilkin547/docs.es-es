@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
+ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
+ms.openlocfilehash: 0c6ce1020dbd1488f4abd51e13b887eab0068521
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
@@ -68,7 +68,7 @@ Puede usar como destino .NET Framework 4.7 en Visual Studio 2012 o posterior ins
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Para una lista de las nuevas API agregadas a .NET Framework 4.7, consulte [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Cambios de API de .NET Framework 4.7) en GitHub. Para una lista de las mejoras de características y correcciones de errores en .NET Framework 4.7, consulte [.NET Framework 4.7 List of Changes](http://gutithub.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Lista de cambios de .NET Framework 4.7) en GitHub.  Para más información, vea [Announcing .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) (Anuncio de .NET Framework 4.7) en el Blog de .NET.
+Para una lista de las nuevas API agregadas a .NET Framework 4.7, consulte [.NET Framework 4.7 API Changes](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) (Cambios de API de .NET Framework 4.7) en GitHub. Para una lista de las mejoras de características y correcciones de errores en .NET Framework 4.7, consulte [.NET Framework 4.7 List of Changes](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) (Lista de cambios de .NET Framework 4.7) en GitHub.  Para más información, vea [Announcing .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) (Anuncio de .NET Framework 4.7) en el Blog de .NET.
 
 <a name="Core47" />
 #### <a name="core"></a>Principal
@@ -634,13 +634,11 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
  El ejemplo de código siguiente muestra lo fácil que es generar una firma para una secuencia de bytes mediante la nueva compatibilidad para certificados X509 de ECDSA incluidos en [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  Esto ofrece un contraste marcado para el código necesario para generar una firma en .NET Framework 4.6.
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -743,7 +741,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
          El enlace de modelos asincrónicos se controla con la opción de configuración `aspnet:EnableAsyncModelBinding`.
 
-        ```
+        ```xml
         <appSettings>
            <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
         </appSettings>
@@ -776,7 +774,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
          En .NET Framework 4.5, se introdujo [un algoritmo hash de cadena aleatorio](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). pero no era compatible con ASP.NET porque algunas características de ASP.NET dependían de un código hash estable. En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ya se admiten los algoritmos hash de cadena aleatoria. Para habilitar esta característica, use la opción de configuración `aspnet:UseRandomizedStringHashAlgorithm`.
 
-        ```
+        ```xml
         <appSettings>
            <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
         </appSettings>
@@ -832,13 +830,11 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
         - Mejoras en la API de RSA, de modo que las acciones habituales ya no necesitan ninguna conversión. Por ejemplo, el cifrado de datos con un objeto <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> necesita un código similar al siguiente en las versiones anteriores de .NET Framework.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              El código que usa las nuevas API de criptografía en .NET Framework 4.6 se puede reescribir del siguiente modo para evitar la conversión.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **Compatibilidad con la conversión de fechas y horas a o desde la hora de Unix**
 
@@ -928,7 +924,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
          Se ha mejorado la compatibilidad con HDPI en WPF en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Se han hecho cambios en el redondeo del diseño para reducir las instancias de recorte en los controles que contienen bordes. De forma predeterminada, esta característica solo está habilitada si se establece <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en .NET 4.6.  Las aplicaciones que tienen como destino versiones anteriores de .NET Framework y que se ejecutan en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] pueden participar en el nuevo comportamiento agregando la siguiente línea a la sección [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:
 
-        ```
+        ```xml
         <AppContextSwitchOverrides
         value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
         />
@@ -936,7 +932,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
          Actualmente, las ventanas de WPF que ocupan varios monitores con diferentes valores de PPP (configuración de varios PPP) se representan completamente sin regiones oscurecidas. Puede deshabilitar este comportamiento agregando la siguiente línea a la sección `<appSettings>` del archivo app.config:
 
-        ```
+        ```xml
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
@@ -956,7 +952,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
          WCF ahora admite la versión con SSL TLS 1.1 y TLS 1.2, además de SSL 3.0 y TLS 1.0, al usar NetTcp con la autenticación de cliente y la seguridad de transporte. Ahora se puede seleccionar el protocolo que se quiere usar o bien deshabilitar protocolos antiguos menos seguros; para ello, establezca la propiedad <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> o agregue lo siguiente a un archivo de configuración.
 
-        ```
+        ```xml
         <netTcpBinding>
            <binding>
               <security mode= "None|Transport|Message|TransportWithMessageCredential" >
@@ -981,7 +977,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
              Los usuarios también pueden habilitar una característica que garantiza que los mensajes enviados por canales creados por distintos generadores de canales usen diferentes conexiones HTTP subyacentes. Para habilitar esta característica, los usuarios deben establecer el siguiente valor `appSetting` en `true`:
 
-            ```
+            ```xml
             <appSettings>
                <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
             </appSettings>
@@ -991,7 +987,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
      Ahora puede especificar los segundos durante los que un servicio de flujo de trabajo retendrá una solicitud de operación fuera de servicio cuando haya un marcador que no sea de protocolo pendiente antes de que expire la solicitud. Un marcador "no de protocolo" es un marcador que no está relacionado con las actividades de recepción pendientes. Algunas actividades crean marcadores no de protocolo dentro de su implementación, por lo que es posible que no sea obvio que exista un marcador no de protocolo. Entre ellas se encuentran Estado y Selección. Si tiene un servicio de flujo de trabajo implementado con un equipo de estado o que contiene una actividad de selección, lo más probable es que tenga marcadores no de protocolo. Especifique el intervalo agregando una línea como la siguiente a la sección `appSettings` del archivo app.config:
 
-    ```
+    ```xml
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
     ```
 
@@ -1009,7 +1005,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
      Ahora puede incluir el identificador de transacción distribuida para la transacción que provocó que se produjera una excepción derivada de <xref:System.Transactions.TransactionException>. Para ello, agregue la siguiente clave a la sección `appSettings` del archivo app.config:
 
-    ```
+    ```xml
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
     ```
 
@@ -1041,7 +1037,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
      Esta característica es opcional. Para habilitarla, establezca el elemento `EnableWindowsFormsHighDpiAutoResizing` en `true` en el archivo de configuración de la aplicación (app.config):
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1080,7 +1076,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
      Esta característica es opcional. Para habilitarla, establezca el elemento `EnableWindowsFormsHighDpiAutoResizing` en `true` en el archivo de configuración de la aplicación (app.config):
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1170,7 +1166,7 @@ Para obtener más información sobre la estructura <xref:System.TimeZoneInfo> y 
 
      Para activar esta característica, agregue un nuevo elemento \<appSettings> al archivo de configuración (app.config) y establezca el elemento `EnableWindowsFormsHighDpiAutoResizing` en `true`:
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>

@@ -1,6 +1,6 @@
 ---
-title: Variables y tipos de C# | Un paseo por el lenguaje C#
-description: "Obtenga información sobre cómo definir tipos y declarar variables de C.#"
+title: 'Variables y tipos de C#: Un paseo por el lenguaje C# | Microsoft Docs'
+description: "Obtenga información sobre cómo definir tipos y declarar variables de C#"
 keywords: .NET, CSharp, tipo, tipo de referencia, tipo de valor
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="types-and-variables"></a>Tipos y variables
+<a id="types-and-variables" class="xliff"></a>
+
+# Tipos y variables
 
 Hay dos clases de tipos en C#: *tipos de valor* y *tipos de referencia*. Las variables de tipos de valor contienen directamente los datos, mientras que las variables de los tipos de referencia almacenan referencias a los datos, lo que se conoce como objetos. Con los tipos de referencia, es posible que dos variables hagan referencia al mismo objeto y que, por tanto, las operaciones en una variable afecten al objeto al que hace referencia la otra variable. Con los tipos de valor, cada variable tiene su propia copia de los datos y no es posible que las operaciones en una variable afecten a la otra (excepto en el caso de las variables de parámetro `ref` y `out`).
 
@@ -89,7 +92,7 @@ Un tipo `interface` define un contrato como un conjunto con nombre de miembros d
 
 Un tipo `delegate` representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son análogos a los tipos de función proporcionados por los lenguajes funcionales. Son similares al concepto de punteros de función en otros lenguajes, pero a diferencia de los punteros de función, los delegados están orientados a objetos y presentan seguridad de tipos.
 
-Todos los tipos de clase, `struct`, `interface` y `delegate` admiten parámetros genéricos, mediante los cuales se pueden parametrizar con otros tipos.
+Los tipos `class`, `struct`, `interface` y `delegate` admiten parámetros genéricos, mediante los cuales se pueden parametrizar con otros tipos.
 
 Un tipo `enum` es un tipo distinto con constantes con nombre. Cada tipo `enum` tiene un tipo subyacente, que debe ser uno de los ocho tipos enteros. El conjunto de valores de un tipo `enum` es igual que el conjunto de valores del tipo subyacente.
 

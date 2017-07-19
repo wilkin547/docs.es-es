@@ -10,14 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: 31503e39d8a96092dbce03c17397e1adfec6421e
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
 ms.contentlocale: es-es
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>Implementación de aplicaciones .NET Core
+<a id="net-core-application-deployment" class="xliff"></a>
+
+# Implementación de aplicaciones .NET Core
 
 Puede crear dos tipos de implementaciones para aplicaciones .NET Core:
 
@@ -25,11 +27,15 @@ Puede crear dos tipos de implementaciones para aplicaciones .NET Core:
 
 - Implementación autocontenida. A diferencia de FDD, una implementación autocontenida (SCD) no depende de la presencia de los componentes compartidos en el sistema de destino. Todos los componentes, incluidas las bibliotecas y el entorno de ejecución de .NET Core, se incluyen con la aplicación y están aislados de otras aplicaciones .NET Core. Las SCD incluyen un archivo ejecutable (como *app.exe* en plataformas de Windows para una aplicación denominada `app`), que es una versión con otro nombre del host de .NET Core específico de la plataforma y un archivo *.dll* (como *app.dll*), que es la aplicación real.
 
-## <a name="framework-dependent-deployments-fdd"></a>Implementaciones dependientes de Framework (FDD)
+<a id="framework-dependent-deployments-fdd" class="xliff"></a>
+
+## Implementaciones dependientes de Framework (FDD)
 
 En una FDD, solo se implementa su aplicación y cualquier dependencia de terceros. No tiene que implementar .NET Core, puesto que la aplicación usará la versión de .NET Core que esté presente en el sistema de destino. Este es el modelo de implementación predeterminado para aplicaciones .NET Core.
 
-### <a name="why-create-a-framework-dependent-deployment"></a>¿Por qué crear una implementación dependiente del marco?
+<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
+
+### ¿Por qué crear una implementación dependiente del marco?
 
 La implementación de FDD tienen varias ventajas:
 
@@ -45,11 +51,15 @@ Hay también algunas desventajas:
 
 - Es posible que el entorno de tiempo de ejecución y las bibliotecas .NET Core cambien en futuras versiones sin su conocimiento. En raras ocasiones, esto puede cambiar el comportamiento de la aplicación.
 
-## <a name="self-contained-deployments-scd"></a>Implementaciones autocontenidas (SCD)
+<a id="self-contained-deployments-scd" class="xliff"></a>
 
-En una implementación autocontenida, implementa su aplicación y cualquier dependencia de terceros junto con la versión de .NET Core que ha usado para compilar la aplicación. La creación de una SCD no incluye las [dependencias nativas de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) en diversas plataformas (por ejemplo, OpenSSL en macOS), así que es necesario que estén presentes antes de ejecutar la aplicación.
+## Implementaciones autocontenidas (SCD)
 
-### <a name="why-deploy-a-self-contained-deployment"></a>¿Por qué realizar una implementación autocontenida?
+En una implementación autocontenida, implementa su aplicación y cualquier dependencia de terceros junto con la versión de .NET Core que ha usado para compilar la aplicación. La creación de una SCD no incluye las [dependencias nativas de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) en diversas plataformas, así que es necesario que estén presentes antes de ejecutar la aplicación.
+
+<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+
+### ¿Por qué realizar una implementación autocontenida?
 
 La implementación de una implementación autocontenida tiene dos ventajas principales:
 
@@ -65,7 +75,9 @@ También tiene algunos inconvenientes:
 
 - La implementación de numerosas aplicaciones .NET Core autocontenidas en un sistema puede consumir importantes cantidades de espacio en disco, puesto que cada aplicación duplica archivos de .NET Core.
 
-## <a name="step-by-step-examples"></a>Ejemplos paso a paso
+<a id="step-by-step-examples" class="xliff"></a>
+
+## Ejemplos paso a paso
 
 Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (Implementación de aplicaciones de .NET Core con herramientas de la CLI). Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core con herramientas de la CLI, consulte [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Implementación de aplicaciones de .NET Core con Visual Studio). Cada tema incluye ejemplos de las siguientes implementaciones:
 
@@ -74,7 +86,9 @@ Para ver ejemplos paso a paso de la implementación de aplicaciones .NET Core co
 - Implementación autocontenida
 - Implementación autocontenida con dependencias de terceros
 
-# <a name="see-also"></a>Vea también
+<a id="see-also" class="xliff"></a>
+
+# Vea también
 
 [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)  (Implementación de aplicaciones de .NET Core con herramientas de la CLI)  
 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)  (Implementación de aplicaciones de .NET Core con Visual Studio)  

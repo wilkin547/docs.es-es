@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ce96938ee00df7bfae742369673f75f8d39abd12
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Use la opción **/nowin32manifest** para indicar al compilador que no inserte ni
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /nowin32manifest  
 ```  
   

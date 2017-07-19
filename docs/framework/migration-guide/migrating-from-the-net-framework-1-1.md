@@ -32,7 +32,7 @@ ms.lasthandoff: 04/18/2017
   
 -   Puede redestinar la aplicación para que se ejecute en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Para redestinarla, es necesario agregar un elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) al archivo de configuración de la aplicación que permita ejecutarla en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Un archivo de configuración de este tipo tendrá el formato siguiente:  
   
-    ```  
+    ```xml  
     <configuration>   
        <startup>  
           <supportedRuntime version="v4.0"/>  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="breaking-changes"></a>Cambios importantes  
  Cuando se realiza un cambio importante, en función del cambio concreto, puede haber una solución disponible tanto para las aplicaciones redestinadas como para las que se compilan de nuevo. En algunos casos, puede agregar un elemento secundario al elemento [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) del archivo de configuración de la aplicación para restaurar el comportamiento anterior. Por ejemplo, el archivo de configuración siguiente restaura el comportamiento de comparación y ordenación de cadenas que se utilizaba en [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] y puede usarse tanto con una aplicación redestinada como con una aplicación que se ha compilado de nuevo.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <CompatSortNLSVersion enabled="4096"/>  

@@ -17,18 +17,23 @@ caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e94e4e1036aa474ff011a50daa4a683fbe0ab47d
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 6a6e4c9c2bdacc01f82d3a53aec706809bcfaa5a
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>Cómo: Determinar qué actualizaciones de .NET Framework están instaladas
+<a id="how-to-determine-which-net-framework-updates-are-installed" class="xliff"></a>
+
+# Cómo: Determinar qué actualizaciones de .NET Framework están instaladas
 Las actualizaciones instaladas para cada versión de .NET Framework instalada en un equipo se enumeran en el Registro de Windows. Puede utilizar el Editor del Registro (regedit.exe) para ver esta información.  
   
- En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de la versión instalada, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Para obtener información acerca de la instalación de .NET Framework, vea la [guía de instalación](../../../docs/framework/install/guide-for-developers.md).  
+ En el Editor del Registro, las versiones de .NET Framework y las actualizaciones instaladas para cada versión se almacenan en diferentes subclaves. Para obtener información sobre cómo detectar los números de la versión instalada, consulte [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Para obtener información sobre cómo instalar .NET Framework, consulte [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).  
   
-### <a name="to-find-installed-updates"></a>Para buscar las actualizaciones instaladas  
+<a id="to-find-installed-updates" class="xliff"></a>
+
+### Para buscar las actualizaciones instaladas  
   
 1.  Abra el programa **regedit.exe**. En Windows 8 y versiones posteriores, abra la pantalla Inicio y escriba el nombre. En versiones anteriores de Windows, en el menú **Iniciar**, elija **Ejecutar** y, después, en el cuadro **Abrir**, escriba **regedit.exe**.  
   
@@ -40,16 +45,16 @@ Las actualizaciones instaladas para cada versión de .NET Framework instalada en
   
      Las actualizaciones instaladas se muestran bajo subclaves que identifican la versión de .NET Framework a la que se aplican. Cada actualización se identifica mediante un número de la Knowledge Base (KB).  
   
-## <a name="example"></a>Ejemplo  
+<a id="example" class="xliff"></a>
+
+## Ejemplo  
  El código siguiente determina mediante programación las actualizaciones de .NET Framework instaladas en un equipo. Debe tener credenciales administrativas para ejecutar este ejemplo.  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
- [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  El ejemplo genera un resultado similar al siguiente:  
   
 ```  
-  
 Microsoft .NET Framework 3.5 SP1  
   KB953595  Hotfix for Microsoft .NET Framework 3.5 SP1 (KB953595)  
   SP1  
@@ -73,10 +78,13 @@ Microsoft .NET Framework 4 Extended
   KB2487367  Security Update for Microsoft .NET Framework 4 Extended (KB2487367)  
   KB2533523  Update for Microsoft .NET Framework 4 Extended (KB2533523)  
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
-  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
- [Guía de instalación](../../../docs/framework/install/guide-for-developers.md)   
- [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+<a id="see-also" class="xliff"></a>
+
+## Vea también
+
+[Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
+[Instalar .NET Framework](../../../docs/framework/install/guide-for-developers.md)   
+[Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+

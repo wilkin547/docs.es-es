@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df6e493f4dfb72ac59951832773cc818627f4c2f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 7fea22be3b98c3218d173e5d80f1f22ef7ecf7e2
+ms.contentlocale: es-es
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -29,6 +30,8 @@ También va a crear métodos de iterador, que son los métodos que genera un ite
 + Crear una canalización de datos en la que los datos fluyan de forma eficaz mediante métodos de iterador.
 
 El lenguaje C# proporciona características para ambos escenarios. Este artículo proporciona información general sobre esas características.
+
+Este tutorial consta de varios pasos. Después de cada paso, puede ejecutar la aplicación y ver el progreso. También puede [ver o descargar el ejemplo completo](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) para este tema. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Iteración con foreach
 

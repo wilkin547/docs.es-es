@@ -32,19 +32,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 59851175865939243260702470955fe0dea38495
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e4e92b4e47d7cc743233aff3aaa77232a74e789f
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
-Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas está dirigidos por eventos, lo que significa que el flujo de ejecución está determinado por elementos externos denominados *eventos*.  
+Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas está dirigidos por eventos, lo que significa que el flujo de ejecución está determinado por elementos externos denominados *eventos*.  
   
  Un evento es una señal que comunica a una aplicación que ha sucedido algo importante. Por ejemplo, cuando un usuario hace clic en un control en un formulario, el formulario puede provocar un evento `Click` y llamar a un procedimiento que controla el evento. Los eventos también permiten que las tareas independientes se comuniquen. Por ejemplo, supongamos que la aplicación realiza una tarea de ordenación de manera independiente a la aplicación principal. Si un usuario cancela la ordenación, la aplicación puede enviar un evento de cancelación que indica al proceso de ordenación que se detenga.  
   
 ## <a name="event-terms-and-concepts"></a>Conceptos y términos de eventos  
- En esta sección se describen los términos y conceptos que se utilizan con eventos en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ En esta sección se describen los términos y conceptos que se utilizan con eventos en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ### <a name="declaring-events"></a>Declarar eventos  
  Puede declarar eventos dentro de clases, estructuras, módulos e interfaces con la palabra clave `Event`, como en el ejemplo siguiente:  
@@ -52,7 +52,7 @@ Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](../../../../csharp/include
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Generación de eventos  
- Un evento es como un mensaje que anuncia que ha sucedido algo importante. La acción de difundir el mensaje se denomina *generar* el evento. En [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], los eventos se generan con la instrucción `RaiseEvent`, como en el ejemplo siguiente:  
+ Un evento es como un mensaje que anuncia que ha sucedido algo importante. La acción de difundir el mensaje se denomina *generar* el evento. En [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], los eventos se generan con la instrucción `RaiseEvent`, como en el ejemplo siguiente:  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -64,7 +64,7 @@ Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](../../../../csharp/include
 ### <a name="event-handlers"></a>Controladores de eventos  
  Los *controladores de eventos* son procedimientos que se invocan cuando se produce un evento correspondiente. Puede utilizar cualquier subrutina válida con una firma coincidente como un controlador de eventos. Sin embargo, no se puede utilizar una función como un controlador de eventos, porque no devolverá un valor al origen del evento.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] utiliza una convención de nomenclatura estándar para controladores de eventos que combina el nombre del remitente del evento, un guion bajo y el nombre del evento. Por ejemplo, el evento `Click` de un botón con nombre `button1` se denominaría `Sub button1_Click`.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] utiliza una convención de nomenclatura estándar para controladores de eventos que combina el nombre del remitente del evento, un guion bajo y el nombre del evento. Por ejemplo, el evento `Click` de un botón con nombre `button1` se denominaría `Sub button1_Click`.  
   
 > [!NOTE]
 >  Se recomienda utilizar esta convención de nomenclatura al definir controladores de eventos para sus propios eventos, pero no es necesario; puede utilizar cualquier nombre de subrutina válido.  
@@ -89,7 +89,7 @@ Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](../../../../csharp/include
   
  Aunque la cláusula `Handles` es la forma estándar de asociar un evento con un controlador de eventos, tiene la limitación de que solo puede asociar eventos con controladores de eventos en tiempo de compilación.  
   
- En algunos casos, como con eventos asociados con formularios o controles, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] conecta automáticamente un controlador de eventos vacío y lo asocia con un evento. Por ejemplo, si hace doble clic en un botón de comando de un formulario en modo de diseño, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] crea un controlador de eventos vacío y una variable `WithEvents` para el botón de comando, como en el siguiente código:  
+ En algunos casos, como con eventos asociados con formularios o controles, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] conecta automáticamente un controlador de eventos vacío y lo asocia con un evento. Por ejemplo, si hace doble clic en un botón de comando de un formulario en modo de diseño, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] crea un controlador de eventos vacío y una variable `WithEvents` para el botón de comando, como en el siguiente código:  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
@@ -130,6 +130,6 @@ Aunque puede visualizar un proyecto [!INCLUDE[vsprvs](../../../../csharp/include
 |[Declarar eventos personalizados para evitar bloqueos](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Muestra cómo definir un evento personalizado que permite invocar a sus controladores de eventos de forma asincrónica.|  
 |[Declarar eventos personalizados para conservar memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Muestra cómo definir un evento personalizado que utiliza la memoria solo cuando se controla el evento.|  
 |[Solucionar problemas de controladores de eventos heredados en Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Enumera los problemas habituales que se producen con los controladores de eventos en componentes heredados.|  
-|[Eventos](../../../../standard/events/index.md)|Proporciona una descripción general del modelo de eventos de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].|  
+|[Eventos](../../../../standard/events/index.md)|Proporciona una descripción general del modelo de eventos de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
 |[Crear controladores de eventos en Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Describe cómo trabajar con eventos asociados a objetos de Windows Forms.|  
 |[Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Proporciona información general sobre delegados en Visual Basic.|

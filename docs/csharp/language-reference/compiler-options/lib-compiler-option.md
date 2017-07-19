@@ -1,60 +1,79 @@
 ---
-title: "/lib (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/lib"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lib compiler option [C#]"
-  - "-lib compiler option [C#]"
-  - "/lib compiler option [C#]"
+title: /lib (Opciones del compilador de C#) | Microsoft Docs
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /lib
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- lib compiler option [C#]
+- -lib compiler option [C#]
+- /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 27bcca456a7a5c884c33de6429e06c94afc9536a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
+
 ---
-# /lib (C# Compiler Options)
-La opción **\/lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [\/reference \(Import Metadata\)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+# <a name="lib-c-compiler-options"></a>/lib (Opciones del compilador de C#)
+La opción **/lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [/reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `dir1`  
- Directorio utilizado por el compilador para buscar un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual \(el directorio desde el que se invoca al compilador\) o en el directorio del sistema de Common Language Runtime.  
+ Un directorio para el compilador para buscar un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime.  
   
  `dir2`  
- Uno o varios directorios adicionales para buscar las referencias a ensamblados.  Separe los nombres de directorio adicionales con una coma y sin espacio en blanco entre ellos.  
+ Uno o varios directorios adicionales para buscar las referencias a ensamblados. Separe los nombres de directorio adicionales con una coma y sin espacio en blanco entre ellos.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
-1.  Directorio actual de trabajo.  Es el directorio desde donde se invoca al compilador.  
+1.  Directorio de trabajo actual. Es el directorio desde donde se invoca al compilador.  
   
-2.  Directorio del sistema de Common Language Runtime.  
+2.  El directorio del sistema de Common Language Runtime.  
   
-3.  Directorios especificados por **\/lib**.  
+3.  Directorios especificados por **/lib**.  
   
 4.  Directorios especificados por la variable de entorno LIB.  
   
- Hay que utilizar **\/reference** para especificar una referencia a un ensamblado.  
+ Use **/reference** para especificar una referencia a un ensamblado.  
   
- La opción **\/lib** es sumatoria; si se especifica más de una vez, anexa nuevos valores a los ya existentes.  
+ La opción **/lib** es sumatoria; si se especifica más de una vez se anexa a valores ya existentes.  
   
- Una alternativa al uso de **\/lib** consiste en copiar en el directorio de trabajo los ensamblados requeridos; esto permitirá pasar el nombre del ensamblado a **\/reference**.  A continuación, se pueden eliminar los ensamblados del directorio de trabajo.  Dado que en el manifiesto del ensamblado no se especifica la ruta al ensamblado dependiente, la aplicación puede iniciarse en el equipo de destino y desde allí buscará y utilizará el ensamblado en la caché global de ensamblados.  
+ Una alternativa al uso de **/lib** consiste en copiar en el directorio de trabajo los ensamblados requeridos; esto permitirá pasar el nombre del ensamblado a **/reference**. Después, se pueden eliminar los ensamblados del directorio de trabajo. Dado que en el manifiesto del ensamblado no se especifica la ruta al ensamblado dependiente, la aplicación puede iniciarse en el equipo de destino y desde allí buscará y usará el ensamblado en la caché global de ensamblados.  
   
- El hecho de que el compilador puede hacer referencia al ensamblado, no implica que Common Language Runtime pueda buscar y cargar el ensamblado en tiempo de ejecución.  Vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../Topic/How%20the%20Runtime%20Locates%20Assemblies.md) para obtener los detalles sobre cómo busca el motor en tiempo de ejecución los ensamblados a los que se hace referencia.  
+ El hecho de que el compilador puede hacer referencia al ensamblado no implica que Common Language Runtime pueda buscar y cargar el ensamblado en tiempo de ejecución. Vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../framework/deployment/how-the-runtime-locates-assemblies.md) para obtener los detalles sobre cómo busca el motor en tiempo de ejecución los ensamblados a los que se hace referencia.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
 1.  Abra el cuadro de diálogo **Páginas de propiedades** del proyecto.  
   
@@ -64,13 +83,13 @@ La opción **\/lib** especifica la ubicación de los ensamblados a los que se ha
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
-## Ejemplo  
- Para compilar t2.cs con el fin de crear un archivo .exe.  El compilador busca referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.  
+## <a name="example"></a>Ejemplo  
+ Compile t2.cs para crear un archivo .exe. El compilador buscará referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   
-## Vea también  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/es-es/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vea también  
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [NO ESTÁ EN LA COMPILACIÓN Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

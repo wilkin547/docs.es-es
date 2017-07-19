@@ -14,8 +14,8 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07743cabc00f65b1369c2733e5119cf1eaf47e0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f88f7dcc7880621cf0f482b32ad7c1e5f1b51257
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Tutoriales del lenguaje Visual Basic
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
   
  [Escribir un programa asincrónico](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Muestra cómo crear una solución asincrónica mediante el uso de [Async](../visual-basic/language-reference/modifiers/async.md) y [Await](../visual-basic/language-reference/operators/await-operator.md), introducidos en [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)].  
+ Muestra cómo crear una solución asincrónica mediante el uso de [Async](../visual-basic/language-reference/modifiers/async.md) y [Await](../visual-basic/language-reference/operators/await-operator.md).  
   
  [Declarar y generar eventos](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  Muestra cómo se declaran y generan eventos en [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  

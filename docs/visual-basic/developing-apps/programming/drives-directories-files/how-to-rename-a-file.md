@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a0a31353ce3ee0c48907f9550f6961260f92b64a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a090fa8df6347a98b5c971c26664e6dd1098a594
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Cómo: Cambiar el nombre de un archivo en Visual Basic
@@ -63,7 +64,7 @@ Use el método `RenameFile` del objeto `My.Computer.FileSystem` para cambiar el 
   
 -   Hay un archivo o directorio con el nombre especificado en `newName` (<xref:System.IO.IOException>).  
   
--   La ruta de acceso supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+-   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   

@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 020be199391789360ae9a25858bef54d8259ae56
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: ae705e7df4515cd0c7481f64fa63b2e844a7d564
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="lock-statement-c-reference"></a>lock (Instrucción, Referencia de C#)
 La palabra clave `lock` marca un bloque de instrucciones como una sección crítica. Para ello, obtiene el bloqueo de exclusión mutua para un objeto determinado, ejecuta una instrucción y, después, libera el bloqueo. En el ejemplo siguiente se incluye una instrucción `lock`.  
   
 ```  
-  
 class Account  
 {  
     decimal balance;  
@@ -58,7 +58,6 @@ class Account
         }  
     }  
 }  
-  
 ```  
   
  Para obtener más información, vea [Sincronización de subprocesos](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4).  
@@ -68,7 +67,7 @@ class Account
   
  En la sección [Subprocesamiento](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c) se describen los subprocesos.  
   
- La palabra clave `lock` llama a <xref:System.Threading.Monitor.Enter%2A> al principio del bloque y a <xref:System.Threading.Monitor.Exit%2A> al final del bloque. Se produce una excepción <xref:System.Threading.ThreadInterruptedException> si <xref:System.Threading.Thread.Interrupt%2A> interrumpe un subproceso que está esperando para entrar en una instrucción `lock`.  
+ La palabra clave `lock` llama a <xref:System.Threading.Monitor.Enter%2A> al comienzo del bloque y a <xref:System.Threading.Monitor.Exit%2A> al final de este. Se genera <xref:System.Threading.ThreadInterruptedException> si <xref:System.Threading.Thread.Interrupt%2A> interrumpe un subproceso que está esperando para especificar una instrucción `lock`.  
   
  En general, evite el bloqueo en un tipo `public` o en instancias que estén fuera del control de su código. Las construcciones comunes `lock (this)`, `lock (typeof (MyType))` y `lock ("myLock")` incumplen esta instrucción:  
   
@@ -104,6 +103,7 @@ class Account
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Palabras clave de instrucciones](../../../csharp/language-reference/keywords/statement-keywords.md)   
  @System.Threading.Monitor   
- [Operaciones de bloqueo](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
+ [Operaciones de bloqueo](../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../standard/threading/autoresetevent.md)   
  [Sincronización de subprocesos](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)
+

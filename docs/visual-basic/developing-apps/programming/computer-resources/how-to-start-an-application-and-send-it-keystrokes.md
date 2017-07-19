@@ -1,41 +1,58 @@
 ---
-title: "C&#243;mo: Iniciar una aplicaci&#243;n y enviarle pulsaciones de teclas (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "pulsaciones de teclas, enviar"
-  - "procesos, iniciar y enviar pulsaciones de teclas"
-  - "Ejemplos de SendKeys.SendWait"
-  - "Ejemplo de comandos de shell [Visual Basic]"
+title: "Cómo: Iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- keystrokes, sending
+- Shell command example [Visual Basic]
+- processes, starting and sending keystrokes
+- SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# C&#243;mo: Iniciar una aplicaci&#243;n y enviarle pulsaciones de teclas (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 314d62ae0699e63aab2dff25cce2ce37552e2a20
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
-En este ejemplo se utiliza la función `Shell` para iniciar la aplicación de la calculadora y, a continuación, se multiplican dos números enviando pulsaciones de tecla mediante el método `My.Computer.Keyboard.SendKeys`.  
+---
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Cómo: Iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)
+En el siguiente ejemplo se usa la función `Shell` para iniciar la aplicación calculadora y, después, multiplicar dos números enviando pulsaciones de teclas mediante el método `My.Computer.Keyboard.SendKeys`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
   
-## Programación eficaz  
- Se produce una excepción <xref:System.ArgumentException> si no se puede encontrar una aplicación con el identificador de proceso solicitado.  
+## <a name="robust-programming"></a>Programación sólida  
+ Si no se encuentra una aplicación con el identificador de proceso solicitado, se producirá una excepción <xref:System.ArgumentException>.  
   
-## Seguridad de .NET Framework  
- La llamada a la función `Shell` requiere plena confianza \(clase <xref:System.Security.SecurityException>\).  
+## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+ La llamada a la función `Shell` requiere plena confianza (clase <xref:System.Security.SecurityException>).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>

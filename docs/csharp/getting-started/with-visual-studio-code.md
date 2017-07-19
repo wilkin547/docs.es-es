@@ -1,39 +1,46 @@
 ---
-title: "Introducción a Visual Studio Code | Guía de C#"
-description: "Aprenda a crear y depurar su primera aplicación .NET Core en C# mediante código de VS."
+title: "Introducción a Visual Studio Code: Guía de C# | Microsoft Docs"
+description: "Obtenga información sobre cómo crear y depurar su primera aplicación .NET Core en C# mediante Visual Studio Code."
 keywords: "C#, Introducción, Adquisición, Instalación, Visual Studio Code, Multiplataforma"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 5/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4550129f4e6f1eeb3521ad7fe3233f2bda49e5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
+ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
 
-# <a name="getting-started-with-visual-studio-code"></a>Introducción a Visual Studio Code
+<a id="get-started-with-visual-studio-code" class="xliff"></a>
+
+# Introducción a Visual Studio Code
 
 .NET Core ofrece una plataforma modular y rápida para crear aplicaciones de servidor que se ejecutan en Windows, Linux y macOS. Use Visual Studio Code con la extensión de C# para disfrutar de una sólida experiencia de edición con compatibilidad total para C# IntelliSense (completado de código inteligente) y para depuración.
 
-## <a name="prerequisites"></a>Requisitos previos
+<a id="prerequisites" class="xliff"></a>
+
+## Requisitos previos
 
 1. Instale [Visual Studio Code](https://code.visualstudio.com/).
 2. Instale el [SDK de .NET Core](https://www.microsoft.com/net/download/core).
 3. Instale la [extensión de C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) desde Visual Studio Code Marketplace.
 
-## <a name="hello-world"></a>Hello World
+<a id="hello-world" class="xliff"></a>
+
+## Hello World
 
 Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
 1. Abrir un proyecto:
 
-    * Abra VS Code.
+    * Abra Visual Studio Code.
     * Haga clic en el icono del explorador en el menú de la izquierda y después haga clic en **Abrir carpeta**.
     * Seleccione la carpeta en que desea guardar el proyecto de C# y haga clic en **Seleccionar carpeta**. En el ejemplo, se va a crear una carpeta para el proyecto denominada "Hola mundo". 
 
@@ -42,7 +49,7 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
     * Como alternativa, puede seleccionar **Archivo** > **Abrir carpeta** desde el menú principal para abrir la carpeta del proyecto.
 
 2. Inicializar un proyecto de C#:
-    * Abra el Terminal integrado de VS Code; para ello, presione <kbd>CTRL</kbd>+<kbd>\`</kbd> (comilla simple).
+    * Abra el Terminal integrado de Visual Studio Code escribiendo <kbd>CTRL</kbd>+<kbd>\`</kbd> (comilla simple).
     * En la ventana de terminal, escriba `dotnet new console`.
     * De esta forma, se crea un archivo `Program.cs` en la carpeta con un programa "Hola mundo" sencillo escrito previamente, junto con un nombre de proyecto de C# denominado `HelloWorld.csproj`.
 
@@ -62,12 +69,14 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
 También puede ver un breve tutorial de vídeo para obtener ayuda del programa de instalación en [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) o [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-## <a name="debug"></a>Depuración
-1. Haga clic en el archivo *Program.cs* para abrirlo. La primera vez que abra un archivo de C# en VS Code, [OmniSharp](http://www.omnisharp.net/) se cargará en el editor.
+<a id="debug" class="xliff"></a>
+
+## Depuración
+1. Haga clic en el archivo *Program.cs* para abrirlo. La primera vez que abra un archivo de C# en Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) se cargará en el editor.
 
   ![Abrir el archivo Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. VS Code le pedirá que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**. 
+2. Visual Studio Code le pedirá que agregue los recursos que faltan para compilar y depurar la aplicación. Seleccione **Sí**. 
 
   ![Solicitud de los recursos que faltan](media/with-visual-studio-code/missing-assets.png)
 
@@ -91,9 +100,11 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
 7. Seleccione la flecha verde en la parte superior para continuar la depuración, o presione el cuadrado rojo para detenerla.
 
 > [!TIP] 
-> Para obtener más información y sugerencias sobre solución de problemas en relación con la depuración de .NET Core con OmniSharp en VS Code, vea [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Instrucciones para configurar el depurador de .NET Core).
+> Para obtener más información y sugerencias sobre solución de problemas en relación con la depuración de .NET Core con OmniSharp en Visual Studio Code, vea [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (Instrucciones para configurar el depurador de .NET Core).
 
-## <a name="see-also"></a>Vea también
-- [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Configuración de Visual Studio Code)
-- [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
+<a id="see-also" class="xliff"></a>
+
+## Vea también
+[Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)  (Configuración de Visual Studio Code)  
+[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Depuración en Visual Studio Code)
 

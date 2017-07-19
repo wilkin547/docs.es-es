@@ -1,47 +1,52 @@
 ---
-title: "Operaciones básicas de cadenas"
-description: "Operaciones básicas de cadenas"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/26/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 9658098d-de60-4868-ba5b-0c278748a90f
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: b8bdbeccd226c412e725200fcaf81ec568afc5bc
-ms.lasthandoff: 03/02/2017
-
+title: "Operaciones b&#225;sicas de cadenas en .NET Framework | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "cadenas [.NET Framework], operaciones básicas de cadenas"
+  - "cadenas personalizadas"
+ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
+caps.latest.revision: 13
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 13
 ---
-
-# <a name="basic-string-operations"></a>Operaciones básicas de cadenas
-
-A menudo, las aplicaciones responden a los usuarios mediante la construcción de mensajes basados en los datos proporcionados por el usuario. Por ejemplo, no es raro que los sitios web respondan a un usuario que acaba de iniciar sesión con un saludo especializado que incluye el nombre del usuario. Varios métodos de las clases [System.String](xref:System.String) y [System.Text.StringBuilder](xref:System.Text.StringBuilder) le permiten construir cadenas personalizadas de forma dinámica para mostrarlas en la interfaz de usuario. Estos métodos también le ayudan a realizar una serie de operaciones básicas de cadenas, como crear cadenas nuevas a partir de matrices de bytes, comparar los valores de cadenas y modificar cadenas existentes.
-
-## <a name="in-this-section"></a>En esta sección
-
-[Crear cadenas nuevas](creating-new.md): describe formas básicas para convertir objetos en cadenas y combinar cadenas.
-
-[Recortar y quitar caracteres](trimming.md): describe cómo recortar o quitar caracteres de una cadena. 
-
-[Cadenas de relleno](padding.md): describe cómo insertar caracteres o espacios vacíos en una cadena.
-
-[Comparar cadenas](comparing.md): describe cómo comparar el contenido de dos o más cadenas.
-
-[Cambiar mayúsculas y minúsculas](changing-case.md): describe cómo cambiar las mayúsculas y minúsculas de los caracteres de una cadena.
-
-[Usar la clase StringBuilder](stringbuilder.md): describe cómo crear y modificar objetos de cadena dinámicos con la clase [StringBuilder](xref:System.Text.StringBuilder).
-
-[Cómo: Realizar manipulaciones de cadena básicas](basic-manipulations.md): muestra el uso de operaciones básicas de cadenas.
-
-## <a name="related-sections"></a>Secciones relacionadas
-
-[Conversión de tipos](type-conversion.md): se describe cómo convertir de un tipo a otro.
-
-[Aplicar formato a tipos](formatting-types.md): se describe cómo dar formato a cadenas mediante los especificadores de formato de cadena.
-
-
-
+# Operaciones b&#225;sicas de cadenas en .NET Framework
+Las aplicaciones, con frecuencia, responden al usuario con la construcción de mensajes basados en los datos proporcionados por el usuario.  Por ejemplo, no es raro que los sitios Web respondan a un usuario que acaba de iniciar sesión con un saludo especial que incluye el nombre del usuario.  Hay varios métodos de las clases <xref:System.String?displayProperty=fullName> y <xref:System.Text.StringBuilder?displayProperty=fullName> que permiten construir dinámicamente cadenas personalizadas para mostrarlas en la interfaz de usuario.  Estos métodos ayudan también a realizar una serie de operaciones básicas de cadenas como la creación de nuevas cadenas a partir de matrices de bytes, la comparación de valores de cadenas y la modificación de cadenas existente.  
+  
+## En esta sección  
+ [Crear cadenas nuevas](../../../docs/standard/base-types/creating-new.md)  
+ Describe métodos básicos para convertir objetos en cadenas y combinar cadenas.  
+  
+ [Recortar y quitar caracteres](../../../docs/standard/base-types/trimming.md)  
+ Describe cómo recortar o quitar caracteres de una cadena.  
+  
+ [Cadenas de relleno](../../../docs/standard/base-types/padding.md)  
+ Describe cómo insertar caracteres o espacios vacíos en una cadena.  
+  
+ [Comparar cadenas](../../../docs/standard/base-types/comparing.md)  
+ Describe cómo comparar el contenido de dos o más cadenas.  
+  
+ [Cambiar mayúsculas y minúsculas](../../../docs/standard/base-types/changing-case.md)  
+ Describe cómo cambiar mayúsculas y minúsculas en los caracteres de una cadena.  
+  
+ [Utilizar la clase StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
+ Describe cómo crear y modificar objetos de cadena dinámicos con la clase <xref:System.Text.StringBuilder>.  
+  
+ [Cómo: Realizar manipulaciones de cadena básicas](../../../docs/standard/base-types/basic-manipulations.md)  
+ Muestra el uso de las operaciones básicas de cadenas.  
+  
+## Secciones relacionadas  
+ [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
+ Describe cómo convertir un tipo en otro.  
+  
+ [Aplicar formato a tipos](../../../docs/standard/base-types/formatting-types.md)  
+ Describe cómo aplicar formato a cadenas mediante especificadores de formato.

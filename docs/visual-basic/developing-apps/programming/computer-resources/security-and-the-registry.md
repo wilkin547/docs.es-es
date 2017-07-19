@@ -1,52 +1,69 @@
 ---
-title: "La seguridad y el Registro (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Registro, temas de seguridad"
-  - "seguridad [Visual Basic], Registro"
+title: La seguridad y el Registro (Visual Basic) | Microsoft Docs
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- security [Visual Basic], registry
+- registry, security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# La seguridad y el Registro (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 506271ec92eaf26409b7b380d12f6ae0622f9f90
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
-Esta página describe las implicaciones de seguridad relativas al almacenamiento de datos en el Registro.  
+---
+# <a name="security-and-the-registry-visual-basic"></a>La seguridad y el Registro (Visual Basic)
+En esta página se describen las implicaciones de seguridad relativas al almacenamiento de datos en el Registro.  
   
-## Permisos  
- Aunque la clave del Registro esté protegida por listas de control de acceso \(ACL\), no es seguro almacenar en ella datos secretos \(por ejemplo, contraseñas\) como texto sin formato.  
+## <a name="permissions"></a>Permisos  
+ Aunque la clave del Registro esté protegida por listas de control de acceso (ACL), no es seguro almacenar en ella datos secretos (por ejemplo, contraseñas) como texto sin formato.  
   
- Al trabajar con el Registro se puede comprometer la seguridad, al permitir accesos inadecuados a recursos del sistema o a información reservada.  Para utilizar estas propiedades, debe tener permisos de lectura y escritura de la enumeración <xref:System.Security.Permissions.RegistryPermissionAccess> que controla el acceso a las variables de Registro.  Cualquier código que se ejecute con plena confianza \(bajo la directiva de seguridad predeterminada, cualquier código instalado en el disco duro local del usuario\) tiene los permisos necesarios para tener acceso al Registro.  Para obtener más información, vea la clase <xref:System.Security.Permissions.RegistryPermission>.  
+ Si trabaja con el Registro, puede poner en peligro la seguridad al permitir accesos inadecuados a recursos del sistema o a información protegida. Para usar estas propiedades, debe tener permisos de lectura y escritura de la enumeración <xref:System.Security.Permissions.RegistryPermissionAccess>, que controla el acceso a las variables del Registro. Cualquier código que se ejecute con plena confianza (bajo la directiva de seguridad predeterminada, cualquier código instalado en el disco duro local del usuario) tiene los permisos necesarios para tener acceso al Registro. Para obtener más información, consulte la clase <xref:System.Security.Permissions.RegistryPermission>.  
   
- No deben almacenarse variables de Registro en ubicaciones de memoria donde pueda obtener acceso el código sin <xref:System.Security.Permissions.RegistryPermission>.  Igualmente, al conceder permisos, conceda también los privilegios mínimos necesarios para realizar el trabajo.  
+ No deben almacenarse variables de Registro en ubicaciones de memoria donde pueda obtener acceso el código sin <xref:System.Security.Permissions.RegistryPermission>. Igualmente, al conceder permisos, conceda también los privilegios mínimos necesarios para realizar el trabajo.  
   
- La enumeración <xref:System.Security.Permissions.RegistryPermissionAccess> define los valores de acceso de permiso del Registro.  La siguiente tabla proporciona detalles de sus miembros.  
+ Los valores de acceso de permiso del Registro se definen mediante la enumeración <xref:System.Security.Permissions.RegistryPermissionAccess>. En la tabla siguiente se detallan sus miembros.  
   
 |Valor|Acceso a las variables del Registro|  
-|-----------|-----------------------------------------|  
-|`AllAccess`|Acceso de creación, lectura y escritura|  
-|`Create`|Creación|  
+|-----------|----------------------------------|  
+|`AllAccess`|Creación, lectura y escritura|  
+|`Create`|Crear|  
 |`NoAccess`|Sin acceso|  
-|`Read`|Lectura|  
-|`Write`|Escritura|  
+|`Read`|Leer|  
+|`Write`|Write|  
   
-## Comprobar valores en las claves del Registro  
- A la hora de crear valores de Registro, deberá decidir qué hacer si coinciden con otros ya existentes.  Es posible que otro proceso, probablemente malintencionado, haya creado el valor y tenga acceso a él.  Cuando ponga datos en el valor del Registro, los datos estarán disponibles para el otro proceso.  Para evitar esto, utilice el método `GetValue`.  Devuelve `Nothing` si la clave no existe ya.  
+## <a name="checking-values-in-registry-keys"></a>Comprobar valores en las claves del Registro  
+ Cuando se crea un valor del Registro, se debe decidir qué hacer si ese valor ya existe. Puede que otro proceso, quizás uno malintencionado, ya haya creado el valor y tenga acceso a él. Al colocar datos en el valor del Registro, estos están a disposición del otro proceso. Para evitar esto, use el método `GetValue`. Devuelve `Nothing` si la clave ya no existe.  
   
 > [!IMPORTANT]
 >  Cuando se esté leyendo el Registro desde una aplicación Web, la identidad del usuario actual dependerá de la autenticación y suplantación implementadas en la aplicación Web.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
  [Leer y escribir en el Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

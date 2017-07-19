@@ -1,6 +1,6 @@
 ---
 title: ushort (Referencia de C#) | Microsoft Docs
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.contentlocale: es-es
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort (Referencia de C#)
+
 La palabra clave `ushort` indica un tipo de datos entero que almacena valores según el tamaño y el intervalo que se indican en la tabla siguiente.  
   
 |Tipo|Intervalo|Tamaño|Tipo de .NET Framework|  
@@ -44,25 +46,32 @@ La palabra clave `ushort` indica un tipo de datos entero que almacena valores se
 |`ushort`|De 0 a 65.535|Entero de 16 bits sin signo|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literales  
- Puede declarar e inicializar una variable `ushort` como en este ejemplo:  
+
+Puede declarar e inicializar una variable `ushort` mediante la asignación de un literal decimal, un literal hexadecimal o (a partir de C# 7) un literal binario. Si el literal entero está fuera del intervalo de `ushort` (es decir, si es menor que <xref:System.UInt16.MinValue?displayProperty=fullName> o mayor que <xref:System.UInt16.MaxValue?displayProperty=fullName>, se produce un error de compilación.
+
+En el ejemplo siguiente, los enteros que equivalen a 65 034 que se representan como literales binarios, hexadecimales y decimales se convierten implícitamente de [int](../../../csharp/language-reference/keywords/int.md) a valores `ushort`.    
   
-```  
-  
-ushort myShort = 65535;  
-```  
-  
- En la declaración anterior, el literal entero `65535` se convierte implícitamente de [int](../../../csharp/language-reference/keywords/int.md) a `ushort`. Si el literal entero supera el intervalo de `ushort`, se producirá un error de compilación.  
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+
+> [!NOTE] 
+> Use el prefijo `0x` o `0X` para denotar un literal hexadecimal y el prefijo `0b` o `0B` para denotar un literal binario. Los literales decimales no tienen prefijo.
+
+A partir de C# 7, también puede usar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como se muestra en el ejemplo siguiente.
+
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>Resolución de sobrecarga del compilador
   
  Debe usarse una conversión al llamar a métodos sobrecargados. Por ejemplo, considere los siguientes métodos sobrecargados que usan parámetros `ushort` e [int](../../../csharp/language-reference/keywords/int.md):  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
-  
+ 
  El uso de la conversión `ushort` garantiza que se llama al tipo correcto, por ejemplo:  
   
-```  
+```csharp  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -74,35 +83,32 @@ SampleMethod((ushort)5);
   
  Hay una conversión implícita predefinida de [byte](../../../csharp/language-reference/keywords/byte.md) o [char](../../../csharp/language-reference/keywords/char.md) a `ushort`. De lo contrario, se debe usar una conversión para realizar una conversión explícita. Por ejemplo, considere las dos variables de `ushort` siguientes, `x` y `y`:  
   
-```  
-  
+```csharp 
 ushort x = 5, y = 12;  
 ```  
   
  La instrucción de asignación siguiente producirá un error de compilación porque la expresión aritmética de la derecha del operador de asignación da como resultado `int` de forma predeterminada.  
   
-```  
-  
+```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  Para corregir este problema, use una conversión:  
   
-```  
-  
+```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  Pero es posible usar las instrucciones siguientes cuando la variable de destino tiene el mismo tamaño de almacenamiento o un tamaño de almacenamiento mayor:  
   
-```  
+```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
- Además, observe que no hay ninguna conversión implícita de tipos de punto flotante a `ushort`. Por ejemplo, la instrucción siguiente genera un error del compilador a menos que se use una conversión explícita:  
+ Observe también que no hay ninguna conversión implícita de tipos de punto flotante a `ushort`. Por ejemplo, la instrucción siguiente genera un error del compilador, a menos que se use una conversión explícita:  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  
@@ -111,7 +117,7 @@ ushort y = (ushort)3.0;
   
  Para obtener información sobre expresiones aritméticas con combinaciones de tipos de punto flotante y tipos enteros, vea [float](../../../csharp/language-reference/keywords/float.md) y [double](../../../csharp/language-reference/keywords/double.md).  
   
- Para obtener más información sobre las reglas de conversión numérica implícita, vea la [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
+ Para obtener más información sobre las reglas de conversión numéricas implícitas, vea la [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
@@ -121,7 +127,7 @@ ushort y = (ushort)3.0;
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md)  (Tabla de tipos enteros)  
- [Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md)  (Tabla de tipos integrados)  
+ [Tabla de tipos enteros](../../../csharp/language-reference/keywords/integral-types-table.md)   
+ [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

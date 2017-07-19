@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 587e50d5c81c19d75e9d8bf4779064947a373b71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 49d7f0dc14f6595ed1e96e5072766dc119f22127
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-statement-c-reference"></a>using (Instrucción, Referencia de C#)
@@ -59,12 +60,12 @@ Ofrece una sintaxis adecuada que garantiza el uso correcto de objetos <xref:Syst
  [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [using Directive](../../../csharp/language-reference/keywords/using-directive.md)  (using [Directiva, Referencia de C#])  
- [Recolección de elementos no utilizados](../../../standard/garbagecollection/index.md)   
- [Implementar un método Dispose](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)
+ [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)   
+ [Implementar un método Dispose](../../../standard/garbage-collection/implementing-dispose.md)

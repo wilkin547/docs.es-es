@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b71bf8fe1f4d448bf373fcab4bccd89bca4672b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 346a5311a100e75adacea6100d6e5f1f893812ff
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="creating-custom-attributes-c"></a>Crear atributos personalizados (C#)
@@ -85,7 +86,7 @@ class SampleClass
 ## <a name="see-also"></a>Vea también  
  <xref:System.Reflection>   
  [Guía de programación de C#](../../../../csharp/programming-guide/index.md)   
- [Escribir atributos personalizados](http://msdn.microsoft.com/library/97216f69-bde8-49fd-ac40-f18c500ef5dc)   
+ [Escribir atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)   
  [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  (Reflexión (C#))  
  [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  (Acceso a atributos mediante reflexión (C#))  

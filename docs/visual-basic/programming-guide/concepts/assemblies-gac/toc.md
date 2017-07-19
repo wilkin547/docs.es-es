@@ -1,4 +1,4 @@
-# [Ensamblados y caché global de ensamblados (Visual Basic)](index.md)
+# [Ensamblados y GAC](index.md)
 ## [Ensamblados de confianza](friend-assemblies.md)
 ### [Crear ensamblados de confianza no firmados](how-to-create-unsigned-friend-assemblies.md)
 ### [Crear ensamblados de confianza firmados](how-to-create-signed-friend-assemblies.md)

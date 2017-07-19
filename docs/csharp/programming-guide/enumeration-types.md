@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
 ms.contentlocale: es-es
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeración (Guía de programación de C#)
@@ -96,14 +96,14 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- Para obtener más información sobre las consideraciones que debe tener en cuenta al definir tipos de enumeración con el atributo <xref:System.FlagsAttribute?displayProperty=fullName>, vea <xref:System.Enum?displayProperty=fullName>.  
+ Para obtener más información sobre lo que debe tener en cuenta para definir tipos de enumeraciones con el atributo <xref:System.FlagsAttribute?displayProperty=fullName>, vea <xref:System.Enum?displayProperty=fullName>.  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Usar los métodos System.Enum para detectar y manipular valores de enumeración  
  Todas las enumeraciones son instancias del tipo <xref:System.Enum?displayProperty=fullName>. No se pueden derivar clases nuevas de <xref:System.Enum?displayProperty=fullName>, pero puede usar sus métodos para detectar información relacionada y manipular los valores de una instancia de enumeración.  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
- Para obtener más información, vea <xref:System.Enum?displayProperty=fullName>.  
+ Para obtener más información, consulta <xref:System.Enum?displayProperty=fullName>.  
   
  También puede crear un método nuevo para una enumeración mediante un método de extensión. Para obtener más información, vea [Cómo: Crear un método nuevo para una enumeración](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).  
 

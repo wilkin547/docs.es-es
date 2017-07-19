@@ -35,10 +35,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 324055a730b977faad637a14362b5c906931c721
+ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
+ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
 ms.contentlocale: es-es
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
@@ -54,22 +54,22 @@ Una matriz es un conjunto de valores que están relacionados de forma lógica en
 'Declare a single-dimension array of 5 values  
 Dim numbers(4) As Integer   
   
-‘Declare a single-dimension array and set array element values  
+'Declare a single-dimension array and set array element values  
 Dim numbers = New Integer() {1, 2, 4, 8}  
   
- ‘Redefine the size of an existing array retaining the current values  
+'Redefine the size of an existing array retaining the current values  
 ReDim Preserve numbers(15)  
   
- ‘Redefine the size of an existing array, resetting the values  
+'Redefine the size of an existing array, resetting the values  
 ReDim numbers(15)  
   
-‘Declare a multi-dimensional array  
+'Declare a multi-dimensional array  
 Dim matrix(5, 5) As Double  
   
-‘Declare a multi-dimensional array and set array element values  
+'Declare a multi-dimensional array and set array element values  
 Dim matrix = New Integer(4, 4) {{1, 2}, {3, 4}, {5, 6}, {7, 8}}  
   
- ‘Declare a jagged array  
+'Declare a jagged array  
 Dim sales()() As Double = New Double(11)() {}  
 ```  
   
@@ -102,7 +102,7 @@ Dim sales()() As Double = New Double(11)() {}
 ##  <a name="BKMK_ArrayElements"></a> Elementos de una matriz en una matriz sencilla  
  En el ejemplo siguiente se declara una variable de matriz para albergar el número de alumnos de cada curso en una escuela primaria.  
   
- [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrArrays#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#2)]  
   
  La matriz `students` del ejemplo anterior contiene siete elementos. Los índices de los elementos van del 0 al 6. Usar esta matriz es más fácil que declarar siete variables.  
   
@@ -117,7 +117,7 @@ Elementos de la matriz "students"
   
  El ejemplo siguiente muestra cómo hacer referencia al primero, segundo y último elemento de la matriz `students`.  
   
- [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrArrays#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#3)]  
   
  Puede hacer referencia a la matriz como un conjunto usando simplemente el nombre variable de la matriz sin índices.  
   
@@ -126,55 +126,55 @@ Elementos de la matriz "students"
 ##  <a name="BKMK_CreatingAnArray"></a> Creación de una matriz  
  El tamaño de una matriz se puede definir de varias maneras. Puede proporcionar el tamaño cuando se declara la matriz, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrArrays#12](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#12)]  
   
  También puede usar una cláusula `New` para proporcionar el tamaño de la matriz cuando se crea, como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrArrays#11](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#11)]  
   
  Si tiene una matriz existente, puede volver a definir su tamaño mediante la instrucción `Redim` . Puede especificar que la instrucción `Redim` debe mantener los valores de la matriz o puede especificar que cree una matriz vacía. El ejemplo siguiente muestra los diferentes usos de la instrucción `Redim` para modificar el tamaño de una matriz existente.  
   
- [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrArrays#13](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#13)]  
   
  Para más información, vea [Instrucción ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md).  
   
 ##  <a name="BKMK_StoringValues"></a> Almacenamiento de valores en una matriz  
  Puede tener acceso a cada ubicación en una matriz mediante un índice del tipo `Integer`. Puede almacenar y recuperar los valores en una matriz haciendo referencia a cada ubicación de la matriz usando su índice entre paréntesis. Los índices de matrices multidimensionales se separan mediante comas (,). Necesita un índice para cada dimensión de la matriz. El ejemplo siguiente muestra algunas instrucciones que almacenan valores en las matrices.  
   
- [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrArrays#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#5)]  
   
  El ejemplo siguiente muestra algunas instrucciones que obtienen valores de las matrices.  
   
- [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
+ [!code-vb[VbVbalrArrays#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#6)]  
   
 ##  <a name="BKMK_Populating"></a> Llenado de una matriz con valores iniciales  
  Mediante el uso de un literal de matriz, puede crear una matriz que contiene un conjunto inicial de valores. Un literal de matriz consta de una lista de valores separados por comas entre llaves (`{}`).  
   
  Cuando se crea una matriz mediante un literal de matriz, puede proporcionar el tipo de matriz o usar la inferencia de tipo para determinar el tipo de matriz. El código siguiente muestra ambas opciones.  
   
- [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#3)]  
   
  Cuando se usa la inferencia de tipos, el tipo de la matriz se determina por el tipo dominante en la lista de valores que se proporciona para el literal de matriz. El tipo dominante es un tipo único al que todos los demás tipos del literal de la matriz se pueden ampliar. Si no se puede determinar este tipo único, el tipo dominante es el tipo único al que todos los demás tipos de la matriz se pueden restringir. Si no se puede determinar ninguno de estos tipos únicos, el tipo dominante es `Object`. Por ejemplo, si la lista de valores que se proporciona al literal de matriz contiene valores de tipo `Integer`, `Long`y `Double`, la matriz resultante es de tipo `Double`. Tanto `Integer` como `Long` se amplían solo a `Double`. Por lo tanto, `Double` es el tipo dominante. Para obtener más información, consulta [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md). Estas reglas de inferencia se aplican a tipos que se deducen para matrices que son variables locales definidas en un miembro de clase. Aunque puede usar literales de matriz al crear variables de nivel de clase, no se puede usar la inferencia de tipos en el nivel de clase. Como resultado, los literales de matriz que se especifican en el nivel de clase deducen los valores proporcionados para el literal de matriz como tipo `Object`.  
   
  Puede especificar de manera explícita el tipo de los elementos de una matriz que se crea usando un literal de matriz. En este caso, los valores del literal de matriz se deben ampliar al tipo de los elementos de la matriz. En el ejemplo de código siguiente se crea una matriz de tipo `Double` desde una lista de enteros.  
   
- [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_9.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#4)]  
   
 ###  <a name="BKMK_NestedArrayLiterals"></a> Literales de matriz anidados  
  Es posible crear una matriz multidimensional usando literales de matriz anidados. Los literales de matriz anidados deben tener una dimensión y un número de dimensiones o rango que sea coherente con la matriz resultante. En el ejemplo de código siguiente se crea una matriz bidimensional de enteros usando un literal de matriz.  
   
- [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_10.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#7)]  
   
  En el ejemplo anterior, se produciría un error si el número de elementos en los literales de matriz anidados no coincidiese. También se producirá un error si se declarara de manera explícita que la variable de matriz no es bidimensional.  
   
 > [!NOTE]
 >  Para evitar que se produzca un error al proporcionar literales de matriz anidados de distintas dimensiones, incluya los literales de matriz internos entre paréntesis. Los paréntesis fuerzan la evaluación de la expresión de literal de matriz y los valores resultantes se usan con el literal de matriz exterior, tal como muestra el código siguiente.  
   
- [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_11.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#11](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#11)]  
   
  Es posible usar la inferencia de tipos al crear una matriz multidimensional usando literales de matriz anidados. Cuando se usa la inferencia de tipos, el tipo inferido es el tipo dominante para todos los valores de todos los literales de matriz de un nivel de anidamiento. En el ejemplo de código siguiente se crea una matriz bidimensional del tipo `Double` a partir de valores del tipo `Integer` y `Double`.  
   
- [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_12.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#8)]  
   
  Para consultar ejemplos adicionales, vea [Cómo: Inicializar una variable de matriz en Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md).  
   
@@ -183,19 +183,19 @@ Elementos de la matriz "students"
   
  El ejemplo siguiente recorre en iteración una matriz unidimensional mediante el uso de la [Instrucción For...Next](../../../../visual-basic/language-reference/statements/for-next-statement.md). El método <xref:System.Array.GetUpperBound%2A> devuelve el valor más alto que puede tener el índice. El valor de índice mínimo es siempre 0.  
   
- [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
+ [!code-vb[VbVbalrArrays#41](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#41)]  
   
  El ejemplo siguiente recorre en iteración una matriz multidimensional mediante el uso de una instrucción `For...Next` . El método <xref:System.Array.GetUpperBound%2A> tiene un parámetro que especifica la dimensión. `GetUpperBound(0)` devuelve el valor de índice más alto de la primera dimensión y `GetUpperBound(1)` devuelve el valor de índice más alto de la segunda dimensión.  
   
- [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
+ [!code-vb[VbVbalrArrays#42](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#42)]  
   
  El ejemplo siguiente recorre en iteración una matriz unidimensional mediante el uso de la [Instrucción For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_15.vb)]  
+ [!code-vb[VbVbalrArrays#43](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#43)]  
   
  El ejemplo siguiente recorre en iteración una matriz multidimensional mediante el uso de una instrucción `For Each...Next` . Sin embargo, tiene más control sobre los elementos de una matriz multidimensional si usa una instrucción `For…Next` anidada, como en un ejemplo anterior, en lugar de una instrucción `For Each…Next` .  
   
- [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_16.vb)]  
+ [!code-vb[VbVbalrArrays#44](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#44)]  
   
 ##  <a name="BKMK_ReturnValues"></a> Matrices como valores devueltos y parámetros  
  Para devolver una matriz desde un procedimiento `Function`, especifique el tipo de datos de matriz y el número de dimensiones como tipo de valor devuelto de la [Instrucción Function](../../../../visual-basic/language-reference/statements/function-statement.md). Dentro de la función, declare una variable de matriz local con el mismo tipo de datos y número de dimensiones. En la [Instrucción Return](../../../../visual-basic/language-reference/statements/return-statement.md), incluya la variable de matriz local sin paréntesis.  
@@ -204,27 +204,27 @@ Elementos de la matriz "students"
   
  En el ejemplo siguiente, la función `GetNumbers` devuelve `Integer()`. Este tipo de matriz es una matriz unidimensional de tipo `Integer`. El procedimiento `ShowNumbers` acepta un argumento `Integer()` .  
   
- [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_17.vb)]  
+ [!code-vb[VbVbalrArrays#51](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#51)]  
   
  En el ejemplo siguiente, la función `GetNumbersMultiDim` devuelve un `Integer(,)`. Este tipo de matriz es una matriz bidimensional de tipo `Integer`.  El procedimiento `ShowNumbersMultiDim` acepta un argumento `Integer(,)` .  
   
- [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_18.vb)]  
+ [!code-vb[VbVbalrArrays#52](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#52)]  
   
 ##  <a name="BKMK_JaggedArrays"></a> Matrices escalonadas  
  Una matriz que contiene otras matrices como elementos se conoce como matriz de matrices o matriz escalonada. Una matriz escalonada y cada elemento de una matriz escalonada pueden tener una o más dimensiones. A veces la estructura de datos de la aplicación es bidimensional pero no rectangular.  
   
  El ejemplo siguiente tiene una matriz de meses, siendo cada elemento una matriz de días. Puesto que los distintos meses tienen un número diferente de días, los elementos no forman una matriz bidimensional rectangular. Por lo tanto, se usa una matriz escalonada en lugar de una matriz multidimensional.  
   
- [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_19.vb)]  
+ [!code-vb[VbVbalrArrays#21](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#21)]  
   
 ##  <a name="BKMK_ZeroLength"></a> Matrices de longitud cero  
  Una matriz que no contiene ningún elemento también se denomina matriz de longitud cero. Una variable que contiene una matriz de longitud cero no tiene el valor `Nothing`. Para crear una matriz que no tenga elementos, declare una de las dimensiones de la matriz para que sea -1, tal como se muestra en el ejemplo siguiente.  
   
- [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_20.vb)]  
+ [!code-vb[VbVbalrArrays#14](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#14)]  
   
  Puede que tenga que crear una matriz de longitud cero en las circunstancias siguientes:  
   
--   Sin arriesgarse a una excepción <xref:System.NullReferenceException>, el código debe tener acceso a los miembros de la clase <xref:System.Array>, por ejemplo, <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>, o bien deben llamar a una función [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], por ejemplo, <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
+-   Sin arriesgarse a una excepción <xref:System.NullReferenceException>, el código debe tener acceso a los miembros de la clase <xref:System.Array>, por ejemplo, <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>, o bien deben llamar a una función [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], por ejemplo, <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
   
 -   Desea que el código usado sea más sencillo al no tener que comprobar `Nothing` como caso especial.  
   
@@ -269,12 +269,12 @@ Dim prices(3, 4, 5) As Long
   
  En el ejemplo siguiente se llama a la función `TypeName` para determinar el tipo de la matriz y el tipo de elementos de la matriz. El tipo de matriz es `Integer(,)` y los elementos de la matriz son del tipo `Integer`.  
   
- [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_21.vb)]  
+ [!code-vb[VbVbalrArrays#15](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#15)]  
   
 ##  <a name="BKMK_Collections"></a> Colecciones como alternativa a las matrices  
  Las matrices son muy útiles para crear y trabajar con un número fijo de objetos fuertemente tipados. Las colecciones proporcionan una manera más flexible de trabajar con grupos de objetos. A diferencia de las matrices, el grupo de objetos con el que trabaja puede aumentar y reducirse de manera dinámica a medida que cambian las necesidades de la aplicación.  
   
- Si necesita cambiar el tamaño de una matriz, debe usar la [Instrucción ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md). Al hacerlo, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] crea una nueva matriz y libera la matriz anterior para su eliminación. Esto requiere tiempo de ejecución. Por lo tanto, si el número de elementos con los que trabaja cambia con frecuencia o si no puede predecir el número máximo de elementos que necesita, puede obtener un mejor rendimiento si usa una colección.  
+ Si necesita cambiar el tamaño de una matriz, debe usar la [Instrucción ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md). Al hacerlo, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] crea una nueva matriz y libera la matriz anterior para su eliminación. Esto requiere tiempo de ejecución. Por lo tanto, si el número de elementos con los que trabaja cambia con frecuencia o si no puede predecir el número máximo de elementos que necesita, puede obtener un mejor rendimiento si usa una colección.  
   
  Para algunas colecciones, puede asignar una clave a cualquier objeto que incluya en la colección para, de este modo, recuperar rápidamente el objeto con la clave.  
   
@@ -283,9 +283,9 @@ Dim prices(3, 4, 5) As Long
  Para más información sobre las colecciones, vea [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa la clase genérica [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]<xref:System.Collections.Generic.List%601?displayProperty=fullName> para crear una colección de listas de objetos `Customer`.  
+ En el ejemplo siguiente se usa la clase genérica [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Collections.Generic.List%601?displayProperty=fullName> para crear una colección de listas de objetos `Customer`.  
   
- [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
+ [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
   
  La declaración de la colección `CustomerFile` especifica que solo puede contener elementos del tipo `Customer`. También proporciona una capacidad inicial de 200 elementos. El procedimiento `AddNewCustomer` comprueba la validez del nuevo elemento y, a continuación, lo agrega a la colección. El procedimiento `PrintCustomers` usa un bucle `For Each` para recorrer la colección y mostrar sus elementos.  
   

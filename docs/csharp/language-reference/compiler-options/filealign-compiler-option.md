@@ -39,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 83569fa264ba3ed6e271281885940a70a5354840
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="filealign-c-compiler-options"></a>/filealign (Opciones del compilador de C#)
@@ -50,7 +51,7 @@ La opción **/filealign** permite especificar el tamaño de las secciones en el 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /filealign:number  
 ```  
   
@@ -79,4 +80,4 @@ La opción **/filealign** permite especificar el tamaño de las secciones en el 
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [NO ESTÁ EN LA COMPILACIÓN Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

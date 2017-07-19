@@ -1,5 +1,5 @@
 ---
-title: '#pragma checksum (Referencia de C#) | Microsoft Docs'
+title: '#<a name="pragma-checksum-c-reference--microsoft-docs"></a>pragma checksum (Referencia de C#) | Microsoft Docs'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,18 +29,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5daf71faea5736036e9e3e0178e84ea03c314ff6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7acce171d3867512997d3c6fc3b42c4fc92dda18
+ms.openlocfilehash: f11f6ad4206fc4c83b91da2e6e7ca0be71783134
+ms.contentlocale: es-es
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="pragma-checksum-c-reference"></a>#pragma checksum (Referencia de C#)
-Genera las sumas de comprobación para archivos de código fuente para ayudar en la depuración de páginas [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)].  
+# <a name="pragma-checksum-c-reference"></a>#pragma checksum (Referencia del programador de C#)
+Genera las sumas de comprobación para archivos de código fuente para ayudar en la depuración de páginas [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -57,15 +58,15 @@ Genera las sumas de comprobación para archivos de código fuente para ayudar en
 ## <a name="remarks"></a>Comentarios  
  El depurador de Visual Studio usa una suma de comprobación para asegurarse de que siempre encuentra el código fuente correcto. El compilador calcula la suma de comprobación para un archivo de origen y, después, emite el resultado en el archivo de base de datos del programa (PDB). Después, el depurador usa el archivo PDB para comparar la suma de comprobación que calcula para el archivo de origen.  
   
- Esta solución no funciona para proyectos de [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)], ya que la suma de comprobación calculada es para el archivo de código fuente generado, no para el archivo .aspx. Para solucionar este problema, `#pragma checksum` proporciona compatibilidad con la suma de comprobación para páginas [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)].  
+ Esta solución no funciona para proyectos de [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], ya que la suma de comprobación calculada es para el archivo de código fuente generado, no para el archivo .aspx. Para solucionar este problema, `#pragma checksum` proporciona compatibilidad con la suma de comprobación para páginas [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
- Cuando se crea un proyecto de [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] en [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)], el archivo de código fuente generado contiene una suma de comprobación para el archivo .aspx, desde el que se genera el código fuente. Después, el compilador escribe esta información en el archivo PDB.  
+ Cuando se crea un proyecto de [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] en [!INCLUDE[csprcs](~/includes/csprcs-md.md)], el archivo de código fuente generado contiene una suma de comprobación para el archivo .aspx, desde el que se genera el código fuente. Después, el compilador escribe esta información en el archivo PDB.  
   
  Si el compilador no encuentra ninguna directiva `#pragma checksum` en el archivo, calcula la suma de comprobación y escribe el valor en el archivo PDB.  
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```csharp
 class TestClass  
 {  
     static int Main()  
@@ -79,3 +80,4 @@ class TestClass
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

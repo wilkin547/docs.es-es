@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 10f3693678f5a3eeaa335739bb383e204c80b375
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -49,7 +50,7 @@ La restricción `new` especifica que ningún tipo de argumento en una declaraci�
  Para obtener más información, vea [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md) (Restricciones de tipos de parámetros [Guía de programación de C#]).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Collections.Generic>   

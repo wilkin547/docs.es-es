@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4673690c95d1a1fcea950db272cf0685a9d4c888
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 5cce6b538e27f654c1f4fec732a9c69372f8c9ad
+ms.contentlocale: es-es
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -170,8 +171,7 @@ BlockExpression body = Expression.Block(
 
 El código para crear el árbol de expresión para la función factorial es bastante más largo, más complicado y está lleno de etiquetas, instrucciones Break y otros elementos que nos gustaría evitar en nuestras tareas de codificación diarias. 
 
-En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede ver el código en [la sección de ejemplos](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees).
-Puede probarlo usted mismo: cree y ejecute los ejemplos.
+En esta sección, también he actualizado el código del visitante para visitar cada nodo de este árbol de expresión y escribir información sobre los nodos que se crean en este ejemplo. Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) en el repositorio dotnet/docs de GitHub. Pruébelo compilando y ejecutando los ejemplos. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Examinar las API
 

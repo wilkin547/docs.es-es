@@ -1,59 +1,76 @@
 ---
-title: "C&#243;mo: Escribir informaci&#243;n de eventos en un archivo de texto (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "registro de eventos [Visual Studio], escribir información de eventos"
-  - "eventos [Visual Basic], escribir información de eventos en un archivo de texto"
-  - "archivos de texto, escribir información de eventos en un archivo de texto"
+title: "Cómo: Escribir información de eventos en un archivo de texto (Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- event logs [Visual Studio], writing event information
+- text files, writing event information to a text file
+- events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
----
-# C&#243;mo: Escribir informaci&#243;n de eventos en un archivo de texto (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: ac7256c333c375a0deb8ffe5c31c02fdca09f9b6
+ms.contentlocale: es-es
+ms.lasthandoff: 06/26/2017
 
-Puede utilizar los objetos `My.Application.Log` y `My.Log` para registrar información sobre eventos que se producen en la aplicación.  Este ejemplo muestra cómo utilizar el método `My.Application.Log.WriteEntry` para registrar información de traza en un archivo de registro.  
+---
+# <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Cómo: Escribir información de eventos en un archivo de texto (Visual Basic)
+Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` para registrar información de seguimiento en un archivo de registro.  
   
-### Para agregar y configurar el agente de escucha del registro de archivos  
+### <a name="to-add-and-configure-the-file-log-listener"></a>Para agregar y configurar el agente de escucha de registro de archivos  
   
-1.  Haga clic con el botón secundario en app.config en el **Explorador de soluciones** y elija **Abrir**.  
+1.  Haga clic con el botón derecho en app.config en el **Explorador de soluciones** y seleccione **Abrir**.  
   
-     \-O bien\-  
+     \- o -  
   
-     Si no hay un archivo app.config:  
+     Si no hay ningún archivo app.config:  
   
-    1.  En el menú **Proyecto**, elija **Agregar nuevo elemento**.  
+    1.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
   
-    2.  En el cuadro de diálogo **Agregar nuevo elemento**, elija **Archivo de configuración de aplicaciones**.  
+    2.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
   
     3.  Haga clic en **Agregar**.  
   
-2.  Busque la sección `<listeners>` en el archivo de configuración de la aplicación.  
+2.  Ubique la sección `<listeners>` en el archivo de configuración de la aplicación.  
   
-     Encontrará la sección \<listeners\> en la sección \<source\> con el atributo de nombre "DefaultSource", anidada en la sección \<system.diagnostics\>, anidada a su vez en la sección de nivel superior \<configuration\>.  
+     Encontrará la sección \<listeners> en la sección \<source> con el atributo de nombre "DefaultSource", que está anidada bajo la sección \<system.diagnostics>, anidada bajo la sección de nivel superior \<configuration>.  
   
-3.  Agregue este elemento a esa sección `<listeners>`:  
+3.  Agregue este elemento a dicha sección `<listeners>` :  
   
-    ```  
+    ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  Busque la sección `<sharedListeners>` en la sección `<system.diagnostics>`, anidada bajo la sección de nivel superior `<configuration>`.  
+4.  Busque la sección `<sharedListeners>`, en la sección `<system.diagnostics>`, anidada en la sección de nivel superior `<configuration>`.  
   
-5.  Agregue este elemento a esa sección `<sharedListeners>`:  
+5.  Agregue este elemento a dicha sección `<sharedListeners>` :  
   
-    ```  
+    ```xml  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   
@@ -66,17 +83,17 @@ Puede utilizar los objetos `My.Application.Log` y `My.Log` para registrar inform
      Cambie el valor del atributo `customlocation` al directorio de registro.  
   
     > [!NOTE]
-    >  Para establecer el valor de una propiedad de agente de escucha, utilice un atributo con el mismo nombre que la propiedad, con todas las letras del nombre en minúscula.  Por ejemplo, los atributos `location` y `customlocation` establecen los valores de las propiedades <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> y <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.  
+    >  Para establecer el valor de una propiedad de agente de escucha, use un atributo que tenga el mismo nombre que la propiedad, con todas las letras del nombre en minúscula. Por ejemplo, los atributos `location` y `customlocation` establecen los valores de las propiedades <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> y <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.  
   
-### Para escribir información de evento en el registro de archivos  
+### <a name="to-write-event-information-to-the-file-log"></a>Para escribir información de eventos en el registro de archivo  
   
--   Utilice el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de archivos.  Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
+-   Use el método `My.Application.Log.WriteEntry` o `My.Application.Log.WriteException` para escribir información en el registro de archivo. Para obtener más información, vea [Cómo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) y [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).  
   
-     Después de configurar el agente de escucha del registro de archivos para un ensamblado, el agente recibe todos los mensajes que `My.Application.Log` escribe desde dicho ensamblado.  
+     Después de configurar el agente de escucha de registro de archivo para un ensamblado, este recibe todos los mensajes que `My.Application.Log` escribe desde ese ensamblado.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
  [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [Cómo: Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+ [Registrar excepciones](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

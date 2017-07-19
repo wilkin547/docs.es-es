@@ -1,5 +1,5 @@
 ---
-title: Paquetes, metapaquetes y marcos de trabajo
+title: Paquetes, metapaquetes y marcos | Microsoft Docs
 description: Paquetes, metapaquetes y marcos de trabajo
 keywords: .NET, .NET Core
 author: richlander
@@ -9,20 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: 6a8f57de57e3470b0312b0d248d91d14f613ae94
+ms.contentlocale: es-es
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="packages-metapackages-and-frameworks"></a>Paquetes, metapaquetes y marcos de trabajo
+# Paquetes, metapaquetes y marcos de trabajo
+<a id="packages-metapackages-and-frameworks" class="xliff"></a>
 
 .NET Core es una plataforma conformada por paquetes NuGet. Algunas experiencias del producto se benefician de la definición específica de los paquetes, mientras que otras lo hacen de la definición general de las mismas. Para dar cabida a esta dualidad, el producto se distribuye como un conjunto específico de paquetes y, luego, se describe en fragmentos más generales con un tipo de paquete que recibe informalmente el nombre de "metapaquete".
 
 Cada uno de los paquetes de .NET Core admite su ejecución en varios entornos de ejecución de .NET, que se representan como marcos de trabajo. Algunos de estos son marcos de trabajo tradicionales, como `net46`, que representa a .NET Framework. Otro conjunto son marcos de trabajo nuevos que se pueden considerar "marcos de trabajo basados en paquete", que establecen un modelo nuevo para definir los marcos de trabajo. Estos marcos de trabajo basados en paquete están completamente formadas y definidas como paquetes, lo que establece una fuerte relación entre los paquetes y los marcos de trabajo.
 
-## <a name="packages"></a>Paquetes
+## Paquetes
+<a id="packages" class="xliff"></a>
 
 .NET Core se divide en un conjunto de paquetes, que proporcionan primitivas, tipos de datos de nivel superior, tipos de composición de aplicaciones y utilidades comunes. Cada uno de estos paquetes representa un solo ensamblado con el mismo nombre. Por ejemplo, [System.Runtime](https://www.nuget.org/packages/System.Runtime) contiene System.Runtime.dll. 
 
@@ -37,12 +40,12 @@ Algunas de estas ventajas solo se usan bajo ciertas circunstancias. Por ejemplo,
 
 A continuación se muestra una lista de los paquetes NuGet clave para .NET Core:
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime): el paquete más fundamental de .NET Core, que incluye [Object](http://docs.microsoft.com/dotnet/core/api/System.Object), [String](http://docs.microsoft.com/dotnet/core/api/System.String), [Array](http://docs.microsoft.com/dotnet/core/api/System.Array), [Action](http://docs.microsoft.com/dotnet/core/api/System.Action), además de [IList&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1).
-- [System.Collections](https://www.nuget.org/packages/System.Collections): un conjunto de colecciones genéricas (principalmente), que incluye [List&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) y [Dictionary&lt;K,V&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2).
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http): un conjunto de tipos de comunicación de red HTTP, que incluye [HttpClient](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpClient) y [HttpResponseMessage](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpResponseMessage).
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem): un conjunto de tipos de lectura y escritura en un almacenamiento basado en disco local o en red, y que incluye [File](http://docs.microsoft.com/dotnet/core/api/System.IO.File) y [Directory](http://docs.microsoft.com/dotnet/core/api/System.IO.Directory).
-- [System.Linq](https://www.nuget.org/packages/System.Linq): un conjunto de tipos para consultar objetos, que incluye Enumerable y [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2).
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection): un conjunto de tipos para cargar, inspeccionar y activar tipos, que incluye [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly), [TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) y [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo).
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime): el paquete más fundamental de .NET Core, que incluye <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> y <xref:System.Collections.Generic.IList%601>.
+- [System.Collections](https://www.nuget.org/packages/System.Collections): un conjunto de colecciones genéricas (principalmente), que incluye <xref:System.Collections.Generic.List%601> y <xref:System.Collections.Generic.Dictionary%602>.
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http): un conjunto de tipos de comunicación de red HTTP, que incluye <xref:System.Net.Http.HttpClient> y <xref:System.Net.Http.HttpResponseMessage>.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem): un conjunto de tipos de lectura y escritura en un almacenamiento basado en disco local o en red, y que incluye <xref:System.IO.File> y <xref:System.IO.Directory>.
+- [System.Linq](https://www.nuget.org/packages/System.Linq): un conjunto de tipos para consultar objetos, que incluye `Enumerable` y <xref:System.Linq.ILookup%602>.
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection): un conjunto de tipos para cargar, inspeccionar y activar tipos, que incluye <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> y <xref:System.Reflection.MethodInfo>.
 
 Normalmente, en lugar de incluir paquetes en sus proyectos en una base de paquete a paquete, es mucho más sencillo incluir un *metapaquete*, que es un conjunto de paquetes que a menudo se usan conjuntamente. (Para obtener más información sobre los metapaquetes, vea la siguiente sección). En cambio, cuando necesite un solo paquete, puede incluirlo como en el ejemplo siguiente, que hace referencia al paquete [System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
 
@@ -57,7 +60,8 @@ Normalmente, en lugar de incluir paquetes en sus proyectos en una base de paquet
 </Project>
 ```
 
-## <a name="metapackages"></a>Metapaquetes
+## Metapaquetes
+<a id="metapackages" class="xliff"></a>
 
 Los metapaquetes son una conversión de paquetes NuGet que se usa para describir un conjunto de paquetes que tienen sentido juntos. Para representar este conjunto de paquetes, los transforman en dependencias. De manera opcional, pueden especificar un marco de trabajo a fin de establecer uno para este conjunto de paquetes. 
 
@@ -79,7 +83,8 @@ Los metapaquetes principales de .NET Core son:
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App): describe las bibliotecas que forman parte de la distribución de .NET Core. Establece el [`.NETCoreApp`marco de trabajo](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Depende del `NETStandard.Library` más pequeño.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility): un conjunto de fachadas de compatibilidad que permite que las Bibliotecas de clases portables (PCL) basadas en mscorlib se ejecuten en .NET Core.
 
-## <a name="frameworks"></a>Marcos de trabajo
+## Marcos de trabajo
+<a id="frameworks" class="xliff"></a>
 
 Cada paquete de .NET Core admite un conjunto de marcos en tiempo de ejecución. Los marcos de trabajo describen un conjunto de API disponible (y posiblemente también otras características) en que puede basarse cuando tiene como destino un marco de trabajo determinado. Se crean versiones suyas cada vez que se agregan API nuevas.
 
@@ -95,7 +100,8 @@ El marco de trabajo `.NETFramework,Version=4.6` representa las API disponibles e
 
 El marco de trabajo `.NETStandard,Version=1.3` está basado en paquete. Se basa en paquetes que tienen como destino el marco de trabajo para definir y exponer las API en términos del marco de trabajo.
 
-## <a name="package-based-frameworks"></a>Marcos de trabajo basadas en paquete
+## Marcos de trabajo basadas en paquete
+<a id="package-based-frameworks" class="xliff"></a>
 
 Existe una relación recíproca entre los marcos de trabajo y los paquetes. La primera parte es definir las API disponibles para un marco de trabajo determinado, por ejemplo, `netstandard1.3`. Los paquetes que tienen como destino `netstandard1.3` (o marcos de trabajo compatibles, como `netstandard1.0`) definen las API disponibles para `netstandard1.3`. Esto puede parecer una definición circular, pero no lo es. En virtud de estar "basada en paquete", la definición de API del marco de trabajo proviene de los paquetes. El marco de trabajo mismo no define a ninguna API.
 
@@ -110,9 +116,10 @@ Los dos principales marcos de trabajo basados en paquete que se usan con .NET Co
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET Standard
+### .NET Standard
+<a id="net-standard" class="xliff"></a>
 
-El marco de .NET Standard (moniker del marco de destino: `netstandard`) representa las API definidas por la [Biblioteca estándar de .NET](../standard/library.md) y que se basan en ella. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admitirán en cualquier entorno de ejecución compatible con el estándar .NET, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan. 
+El marco de .NET Standard (moniker del marco de destino: `netstandard`) representa las API definidas por [.NET Standard](../standard/net-standard.md) y que se basan esta especificación. Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo. Se admitirán en cualquier entorno de ejecución compatible con el estándar .NET, como .NET Core, .NET Framework y Mono/Xamarin. Cada uno de estos entornos de ejecución admite un conjunto de versiones del estándar .NET, en función de las API que implementan. 
 
 El marco `netstandard` hace referencia implícitamente al metapaquete `NETStandard.Library`. Por ejemplo, el siguiente archivo del proyecto de MSBuild indica que el proyecto tiene como destino `netstandard1.6`, que hace referencia al metapaquete de la versión 1.6 de la Biblioteca estándar de .NET. 
 
@@ -141,7 +148,8 @@ Puede parecer extraño establecer `netstandard1.3` como destino pero usa la vers
 
 Lo contrario no sería válido: establecer `netstandard1.6` como destino con la versión 1.3.0 de `NETStandard.Library`. No puede establecer como destino un marco de trabajo superior con un metapaquete inferior, debido a que el metapaquete de una versión inferior no expondrá ningún recurso para ese marco de trabajo superior. El esquema de control de versiones para los metapaquetes afirma que estos coinciden con la versión más reciente del marco de trabajo que describen. En virtud del esquema de control de versiones, la primera versión de `NETStandard.Library` es v1.6.0, siempre que contenga recursos de `netstandard1.6`. La versión v1.3.0 se usa en el ejemplo anterior, para lograr una simetría con el ejemplo anterior, pero no existe realmente.
 
-### <a name="net-core-application"></a>Aplicación .NET Core
+### Aplicación .NET Core
+<a id="net-core-application" class="xliff"></a>
 
 El marco de trabajo de la aplicación .NET Core (TFM: `netcoreapp`) representa los paquetes y las API asociadas que se incluyen en la distribución de .NET Core y el modelo de aplicación de consola que proporciona. Las aplicaciones .NET Core deben usar este marco de trabajo, debido a que intentan establecer el modelo de aplicación de consola como destino, al igual que las bibliotecas que se pretende ejecutar solo en .NET Core. Usar este marco de trabajo restringe a las aplicaciones y bibliotecas solo a su ejecución en .NET Core. 
 

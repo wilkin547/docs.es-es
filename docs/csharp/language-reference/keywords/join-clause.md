@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>join (Cláusula, Referencia de C#)
@@ -88,7 +89,7 @@ La cláusula `join` es útil para asociar elementos de secuencias de origen dife
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Uniones en las colecciones de objetos frente a las tablas relacionales  
  En una expresión de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], las operaciones de combinación se efectúan en las colecciones de objetos. Las colecciones de objetos no se pueden "combinar" exactamente igual que dos tablas relacionales. En [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], las cláusulas `join` explícitas solo son necesarias cuando dos secuencias de origen no están unidas por ninguna relación. Cuando se trabaja con [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], las tablas de claves externas se representan en el modelo de objetos como propiedades de la tabla principal. Por ejemplo, en la base de datos Northwind, la tabla Customer (Cliente) tiene una relación de clave externa con la tabla Orders (Pedidos). Al asignar las tablas al modelo de objetos, la clase Customer tiene una propiedad Orders que contiene la colección Orders asociada a ese cliente. De hecho, la combinación ya se ha llevado a cabo automáticamente.  
   
- Para obtener más información sobre las consultas en tablas relacionadas en el contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], vea [Cómo: Asignar relaciones de base de datos](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af).  
+ Para obtener más información sobre las consultas en tablas relacionadas en el contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], vea [Cómo: Asignar relaciones de base de datos](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
 ## <a name="composite-keys"></a>Claves compuestas  
  Puede probar la igualdad de varios valores mediante una clave compuesta. Para obtener más información, vea [Cómo: Realizar una unión usando claves compuestas ](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). Las claves compuestas también se pueden usar en una cláusula `group`.  
@@ -99,7 +100,7 @@ La cláusula `join` es útil para asociar elementos de secuencias de origen dife
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>Comentarios  
- Las cláusulas `join` que no van seguidas de `into` se convierten en una llamada al método <xref:System.Linq.Enumerable.Join%2A>. Las cláusulas `join` que van seguidas de `into` se convierten en una llamada al método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
+ Una cláusula `join` que no va seguida de `into` se convierte en una llamada al método <xref:System.Linq.Enumerable.Join%2A>. Una cláusula `join` que va seguida de `into` se convierte en una llamada al método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
   
 ## <a name="see-also"></a>Vea también  
  [Palabras clave de consultas (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   

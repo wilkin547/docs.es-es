@@ -1,0 +1,46 @@
+---
+title: "Funciones del sistema | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-ado"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
+caps.latest.revision: 2
+author: "JennieHubbard"
+ms.author: "jhubbard"
+manager: "jhubbard"
+caps.handback.revision: 2
+---
+# Funciones del sistema
+El Proveedor de datos .NET Framework para SQL Server \(SqlClient\) proporciona las funciones del sistema siguientes:  
+  
+|Función|Descripción|  
+|-------------|-----------------|  
+|`CHECKSUM (` `value`, \[`value`, \[`value`\]\]`)`|Devuelve el valor de suma.  `CHECKSUM` se ha pensado para utilizarlo en la compilación de índices hash.<br /><br /> **Argumentos**<br /><br /> `value`: Valor de tipo `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `String`, `Binary` o `Guid`.  Puede especificar uno, dos o tres valores.<br /><br /> **Valor devuelto**<br /><br /> Valor absoluto de la expresión especificada.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CURRENT_TIMESTAMP ()`|Genera la fecha actual y la hora en el formato interno de SQL Server para los valores `DateTime` con una precisión de 7 en SQL Server 2008 y una precisión de 3 en SQL Server 2005.<br /><br /> **Valor devuelto**<br /><br /> La fecha y la hora actuales del sistema como un `DateTime`.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
+|`CURRENT_ USER` `()`|Devuelve el nombre del usuario actual.<br /><br /> **Valor devuelto**<br /><br /> Valor de tipo `String` ASCII.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.CURRENT_USER()`|  
+|`DATALENGTH` `(``expression``)`|Devuelve el número de bytes utilizados para representar cualquier expresión.<br /><br /> **Argumentos**<br /><br /> `expression`: valor de tipo `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary` o `Guid`.<br /><br /> **Valor devuelto**<br /><br /> Tamaño de las propiedades en forma de un valor `Int32`.<br /><br /> **Ejemplo**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
+|`HOST_NAME()`|Devuelve el nombre de la estación de trabajo.<br /><br /> **Valor devuelto**<br /><br /> Valor de tipo `String` Unicode.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.HOST_NAME()`|  
+|`ISDATE(` `expression` `)`|Determina si una expresión de entrada es una fecha válida.<br /><br /> **Argumentos**<br /><br /> `expression`: valor de tipo `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary` o `Guid`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.  Uno \(1\) si la expresión de entrada es una fecha válida.  De lo contrario, es cero \(0\).<br /><br /> **Ejemplo**<br /><br /> `SqlServer.ISDATE('1/1/2006')`|  
+|`ISNUMERIC(` `expression` `)`|Determina si una expresión es de un tipo numérico válido.<br /><br /> **Argumentos**<br /><br /> `expression`: valor de tipo `Boolean`, `Byte`, `Int16`, `Int32`, `Int64`, `Single`, `Decimal`, `Double`, `DateTime`, `Time`, `DateTimeOffset`, `String`, `Binary` o `Guid`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.  Uno \(1\) si la expresión de entrada es una fecha válida.  De lo contrario, es cero \(0\).<br /><br /> **Ejemplo**<br /><br /> `SqlServer.ISNUMERIC('21')`|  
+|`NEWID()`|Crea un valor único de tipo Guid.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `Guid`.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.NEWID()`|  
+|`USER_NAME(` `id` `)`|Devuelve un nombre de usuario de base de datos a partir de un número de identificación especificado.<br /><br /> **Argumentos**<br /><br /> `expression`: número de identificación `Int32` asociado al usuario de una base de datos.<br /><br /> **Valor devuelto**<br /><br /> Valor de tipo `String` Unicode.<br /><br /> **Ejemplo**<br /><br /> `SqlServer.USER_NAME(0)`|  
+  
+ Para obtener más información sobre las funciones de cadena que SqlClient admite, consulte la documentación de la versión de SQL Server que especificó en el manifiesto del proveedor SqlClient:  
+  
+|SQL Server 2000|SQL Server 2005|SQL Server 2008|  
+|---------------------|---------------------|---------------------|  
+|[Funciones del sistema \(Transact\-SQL\)](http://go.microsoft.com/fwlink/?LinkId=115918)|[Funciones del sistema \(Transact\-SQL\)](http://go.microsoft.com/fwlink/?LinkId=115917)|[Funciones del sistema \(Transact\-SQL\)](http://go.microsoft.com/fwlink/?LinkId=115919)|  
+  
+## Vea también  
+ [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)   
+ [SqlClient para las funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

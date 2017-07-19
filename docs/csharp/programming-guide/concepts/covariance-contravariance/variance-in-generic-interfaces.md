@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4c4f3ab00b4de2a6f38858dd5f332db3d47eb85b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 7acde09659624fd097471824e6407dc181d88893
+ms.contentlocale: es-es
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianza en interfaces genéricas (C#)
@@ -44,20 +45,59 @@ En .NET Framework 4 se ha presentado la compatibilidad con la varianza para vari
   
  La covarianza permite que un método tenga un tipo de valor devuelto más derivado que los que se definen en los parámetros de tipo genérico de la interfaz. Para ilustrar la característica de la covarianza, considere estas interfaces genéricas: `IEnumerable<Object>` y `IEnumerable<String>`. La interfaz `IEnumerable<String>` no hereda la interfaz `IEnumerable<Object>`. En cambio, el tipo `String` hereda el tipo `Object`, y en algunos casos puede que quiera asignar objetos de estas interfaces entre sí. Esto se muestra en el ejemplo de código siguiente.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<String> strings = new List<String>();  
+IEnumerable<Object> objects = strings;  
+```  
+  
  En versiones anteriores de .NET Framework, este código provoca un error de compilación en C# con `Option Strict On`. Pero ahora puede usar `strings` en lugar de `objects`, como se muestra en el ejemplo anterior, porque la interfaz <xref:System.Collections.Generic.IEnumerable%601> es covariante.  
   
  La contravarianza permite que un método tenga tipos de argumento menos derivados que los que se especifican en el parámetro genérico de la interfaz. Para ilustrar la contravarianza, se presupone que ha creado una clase `BaseComparer` para comparar instancias de la clase `BaseClass`. La clase `BaseComparer` implementa la interfaz `IEqualityComparer<BaseClass>`. Como la interfaz <xref:System.Collections.Generic.IEqualityComparer%601> ahora es contravariante, puede usar `BaseComparer` para comparar instancias de clases que heredan la clase `BaseClass`. Esto se muestra en el ejemplo de código siguiente.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+// Simple hierarchy of classes.  
+class BaseClass { }  
+class DerivedClass : BaseClass { }  
+  
+// Comparer class.  
+class BaseComparer : IEqualityComparer<BaseClass>   
+{  
+    public int GetHashCode(BaseClass baseInstance)  
+    {  
+        return baseInstance.GetHashCode();  
+    }  
+    public bool Equals(BaseClass x, BaseClass y)  
+    {  
+        return x == y;  
+    }  
+}  
+class Program  
+{  
+    static void Test()  
+    {  
+        IEqualityComparer<BaseClass> baseComparer = new BaseComparer();  
+  
+        // Implicit conversion of IEqualityComparer<BaseClass> to   
+        // IEqualityComparer<DerivedClass>.  
+        IEqualityComparer<DerivedClass> childComparer = baseComparer;  
+    }  
+}  
+```  
+  
  Para obtener más ejemplos, vea [Usar la varianza en interfaces para las colecciones genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md).  
   
  La varianza para interfaces genéricas solo es compatible con tipos de referencia. Los tipos de valor no admiten la varianza. Por ejemplo, `IEnumerable<int>` no puede convertirse implícitamente en `IEnumerable<object>`, porque los enteros se representan mediante un tipo de valor.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- También es importante recordar que las clases que implementan las interfaces variantes siguen siendo invariables. Por ejemplo, aunque <xref:System.Collections.Generic.List%601> implemente la interfaz covariante <xref:System.Collections.Generic.IEnumerable%601>, no puede convertir implícitamente `List<Object>` en `List<String>`. Esto se muestra en el siguiente código de ejemplo.  
+```csharp  
+IEnumerable<int> integers = new List<int>();  
+// The following statement generates a compiler errror,  
+// because int is a value type.  
+// IEnumerable<Object> objects = integers;  
+```  
   
-```cs  
+ También es importante recordar que las clases que implementan las interfaces variantes siguen siendo invariables. Por ejemplo, aunque <xref:System.Collections.Generic.List%601> implementa la interfaz covariante <xref:System.Collections.Generic.IEnumerable%601>, no puede convertir `List<Object>` en `List<String>` implícitamente. Esto se muestra en el siguiente código de ejemplo.  
+  
+```csharp  
 // The following line generates a compiler error  
 // because classes are invariant.  
 // List<Object> list = new List<String>();  
@@ -69,5 +109,5 @@ IEnumerable<Object> listObjects = new List<String>();
 ## <a name="see-also"></a>Vea también  
  [Usar la varianza en interfaces para las colecciones genéricas (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)   
  [Crear interfaces genéricas variantes (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
- [Interfaces genéricas](http://msdn.microsoft.com/library/88bf5b04-d371-4edb-ba38-01ec7cabaacf)   
+ [Interfaces genéricas](../../../../standard/generics/interfaces.md)   
  [Varianza en delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

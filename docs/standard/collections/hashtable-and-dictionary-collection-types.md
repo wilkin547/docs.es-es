@@ -20,10 +20,11 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 59aa4bd6160491ac6c6a4f45131531226ec7e58f
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
@@ -35,13 +36,13 @@ La clase <xref:System.Collections.Hashtable?displayProperty=fullName> y las clas
   
  Una función hash es un algoritmo que devuelve un código hash numérico basado en una clave. La clave es el valor de alguna propiedad del objeto que se almacena. Una función hash siempre debe devolver el mismo código hash para la misma clave. Una función hash puede generar el mismo código hash para dos claves diferentes, pero las funciones hash que generan un código hash único para cada clave única tienen un rendimiento mejor al recuperar los elementos de la tabla hash.  
   
- Cada objeto que se usa como un elemento en una colección <xref:System.Collections.Hashtable> debe ser capaz de generar un código hash para sí mismo usando una implementación del método <xref:System.Object.GetHashCode%2A>. Sin embargo, también puede especificar una función hash para todos los elementos de un elemento <xref:System.Collections.Hashtable> mediante un constructor <xref:System.Collections.Hashtable> que acepta una implementación de <xref:System.Collections.IHashCodeProvider> como uno de sus parámetros.  
+ Cada objeto que se usa como un elemento en una colección <xref:System.Collections.Hashtable> debe ser capaz de generar un código hash para sí mismo usando una implementación del método <xref:System.Object.GetHashCode%2A>. Sin embargo, también puede especificar una función hash para todos los elementos de una colección <xref:System.Collections.Hashtable> usando un constructor <xref:System.Collections.Hashtable> que acepta una implementación de <xref:System.Collections.IHashCodeProvider> como uno de sus parámetros.  
   
  Cuando se agrega un objeto a una colección <xref:System.Collections.Hashtable>, se almacena en el depósito que está asociado con el código hash que coincide con el código hash del objeto. Cuando se busca un valor en la colección <xref:System.Collections.Hashtable>, se genera el código hash para ese valor y se busca el depósito asociado con ese código hash.  
   
  Por ejemplo, una función hash para una cadena podría tomar los códigos ASCII de cada carácter de la cadena y sumarlos todos para generar un código hash. La cadena "picnic" tendría un código hash que es diferente del código hash de la cadena "cesta"; por lo tanto, las cadenas "picnic" y "cesta" estarían en depósitos distintos. En cambio, "bolsa" y "lobas" tendrían el mismo código hash y estarían en el mismo cubo.  
   
- Las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tienen la misma funcionalidad que la clase <xref:System.Collections.Hashtable>. Un elemento <xref:System.Collections.Generic.Dictionary%602> de un tipo específico (que no sea <xref:System.Object>) ofrece mejor rendimiento que <xref:System.Collections.Hashtable> para los tipos de valor. Esto se debe a que los elementos de <xref:System.Collections.Hashtable> son del tipo <xref:System.Object> y, por lo tanto, las conversiones boxing y unboxing se suelen producir al almacenar o recuperar un tipo de valor. La clase <xref:System.Collections.Concurrent.ConcurrentDictionary%602> debe usarse cuando varios subprocesos pueden acceder a la colección simultáneamente.  
+ Las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tienen la misma funcionalidad que la clase <xref:System.Collections.Hashtable>. Una clase <xref:System.Collections.Generic.Dictionary%602> de un tipo específico (distinto de <xref:System.Object>) proporciona un rendimiento mejor que una clase <xref:System.Collections.Hashtable> para tipos de valor. Esto se debe a que los elementos de <xref:System.Collections.Hashtable> son del tipo <xref:System.Object> y, por lo tanto, las conversiones boxing y unboxing se suelen producir al almacenar o recuperar un tipo de valor. La clase <xref:System.Collections.Concurrent.ConcurrentDictionary%602> debe usarse cuando varios subprocesos puedan acceder a la colección simultáneamente.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Collections.Hashtable>   

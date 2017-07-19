@@ -1,0 +1,114 @@
+---
+title: "Recursos de aplicaci&#243;n para bibliotecas destinadas a varias plataformas | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - ".NET Framework, recursos cuyo destino son varias plataformas"
+  - "varias plataformas, recursos para"
+  - "recursos [.NET Framework]"
+  - "recursos, para varias plataformas"
+  - "establecer el destino de varias plataformas, recursos para"
+ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
+caps.latest.revision: 20
+author: "mairaw"
+ms.author: "mairaw"
+manager: "wpickett"
+caps.handback.revision: 20
+---
+# Recursos de aplicaci&#243;n para bibliotecas destinadas a varias plataformas
+Puede usar el tipo de proyecto de la [Biblioteca de clases portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) de .NET Framework para garantizar que se pueda obtener acceso a los recursos de las bibliotecas de clases desde varias plataformas.  Este tipo de proyecto está disponible en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] y tiene como destino el subconjunto portable de la biblioteca de clases de .NET Framework.  Mediante la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] se garantiza que se pueda obtener acceso a la biblioteca desde las aplicaciones de escritorio, aplicaciones Silverlight, aplicaciones Windows Phone y aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+  
+ El proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] es solo un subconjunto muy limitado de los tipos del espacio de nombres <xref:System.Resources> disponible para la aplicación, pero podrá usar la clase <xref:System.Resources.ResourceManager> para recuperar recursos.  Sin embargo, si está creando una aplicación mediante el uso de Visual Studio, debe usar el contenedor fuertemente tipado creado con Visual Studio en lugar de utilizar la clase <xref:System.Resources.ResourceManager> directamente.  
+  
+ Para crear un contenedor fuertemente tipado en Visual Studio, establezca el **Modificador de acceso** del archivo de recursos principal como **Public** en el diseñador de recursos de Visual Studio.  Esto crea un archivo \[nombreArchivoRecursos\].designer.cs o \[nombreArchivoRecursos\].designer.vb que incluye el contenedor ResourceManager fuertemente tipado.  Para obtener más información acerca del uso de un contenedor de recursos fuertemente tipado, consulte la sección "Generar una clase de recursos fuertemente tipados" en el tema [Resgen.exe \(Resource File Generator\)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).  
+  
+## Administrador de recursos en la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
+ En un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], todo el acceso a los recursos lo controla la clase <xref:System.Resources.ResourceManager>.  Dado que no se puede tener acceso a los tipos del espacio de nombres <xref:System.Resources>, como <xref:System.Resources.ResourceReader> y <xref:System.Resources.ResourceSet>, desde un proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], estos no pueden utilizarse para obtener acceso a los recursos.  
+  
+ El proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluye los cuatro miembros de <xref:System.Resources.ResourceManager> que se enumeran en la tabla siguiente.  Estos constructores y métodos permiten crear una instancia de un objeto <xref:System.Resources.ResourceManager> y recuperar recursos de cadena.  
+  
+|Miembro `ResourceManager`|Descripción|  
+|-------------------------------|-----------------|  
+|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Crea una instancia de <xref:System.Resources.ResourceManager> para obtener acceso al archivo de recursos con nombre que se encuentra en el ensamblado especificado.|  
+|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Crea una instancia de <xref:System.Resources.ResourceManager> que corresponde al tipo especificado.|  
+|<xref:System.Resources.ResourceManager.GetString%28System.String%29>|Recupera un recurso con nombre para la referencia cultural actual.|  
+|<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|Recupera un recurso con nombre que pertenece a la referencia cultural especificada.|  
+  
+ La exclusión de otros miembros de <xref:System.Resources.ResourceManager> de la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] significa que no pueden recuperarse objetos serializados, datos que no son de cadena e imágenes de un archivo de recursos.  Para usar los recursos de una [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], debe almacenar todos los datos de objeto en formato de cadena.  Por ejemplo, para almacenar valores numéricos en un archivo de recursos, estos pueden convertirse en cadenas. A continuación, podrán recuperarse y convertirse de nuevo en números con los métodos `Parse` o `TryParse` del tipo de datos numérico.  Puede convertir imágenes u otros datos binarios en una representación de cadena mediante una llamada al método <xref:System.Convert.ToBase64String%2A?displayProperty=fullName> y restaurarlos en una matriz de bytes mediante una llamada al método <xref:System.Convert.FromBase64String%2A?displayProperty=fullName>.  
+  
+## Aplicaciones de la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] y la Tienda Windows  
+ Los proyectos de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] almacenan recursos en archivos .resx que, a continuación, se compilan en archivos .resources y se incrustan en el ensamblado principal o en los ensamblados satélite en tiempo de compilación.  Por otro lado, las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] requieren que los recursos se almacenen en archivos .resw, que se compilan en un archivo de índice de recursos del paquete \(PRI\) único.  Sin embargo, a pesar de los formatos de archivo incompatibles, la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] funcionará en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+  
+ Para usar la biblioteca de clases desde una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], agregue una referencia a esta en el proyecto de aplicación de la Tienda Windows.  Visual Studio extraerá los recursos del ensamblado de forma transparente a un archivo .resw y lo usará para generar un archivo PRI desde el que [!INCLUDE[wrt](../../../includes/wrt-md.md)] puede extraer recursos.  En tiempo de ejecución, [!INCLUDE[wrt](../../../includes/wrt-md.md)] ejecuta el código en la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], pero recupera los recursos de la Biblioteca de clases portable desde el archivo PRI.  
+  
+ Si el proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluye recursos localizados, se usa el modelo de concentrador y radio para implementarlos como se haría con una biblioteca en una aplicación de escritorio.  Para consumir el archivo de recursos principal y cualquier archivo de recursos localizado en la aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], se agrega una referencia al ensamblado principal.  En tiempo de compilación, Visual Studio extrae los recursos del archivo de recursos principal y de cualquier archivo de recursos localizado en archivos .resw independientes.  A continuación, compila los archivos .resw en un único archivo PRI al que [!INCLUDE[wrt](../../../includes/wrt-md.md)] obtiene acceso en tiempo de ejecución.  
+  
+<a name="NonLoc"></a>   
+## Ejemplo: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] sin localizar  
+ En el siguiente ejemplo sencillo de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] no localizada, se usan recursos para almacenar los nombres de columnas y para determinar el número de caracteres que se van a reservar para los datos tabulares.  En el ejemplo se usa un archivo denominado LibResources.resx para almacenar los recursos de cadena que se enumeran en la tabla siguiente.  
+  
+|Nombre del recurso|Valor del recurso|  
+|------------------------|-----------------------|  
+|Born|Fecha de nacimiento|  
+|BornLength|12|  
+|Hired|Fecha de contratación|  
+|HiredLength|12|  
+|Id.|Id.|  
+|ID.Length|12|  
+|Nombre|Nombre|  
+|NameLength|25|  
+|Título|Base de datos de empleados|  
+  
+ El código siguiente define una clase `UILibrary` que usa el contenedor del Administrador de recursos denominado `resources` generado por Visual Studio cuando el **Modificador de acceso** del archivo cambia a **Public**.  La clase UILibrary analiza los datos de cadena según sea necesario.  .  Tenga en cuenta que la clase está en el espacio de nombres `MyCompany.Employees`.  
+  
+ [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
+ [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
+  
+ El código siguiente muestra cómo obtener acceso a la clase `UILibrary` y a sus recursos desde una aplicación de modo de consola.  Requiere que se agregue una referencia a UILIbrary.dll al proyecto de aplicación de consola.  
+  
+ [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
+ [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]  
+  
+ El código siguiente muestra cómo obtener acceso a la clase `UILibrary` y a sus recursos desde una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  Requiere que se agregue una referencia a UILIbrary.dll al proyecto de aplicación de la Tienda Windows.  
+  
+ [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
+  
+## Ejemplo: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizada  
+ El siguiente ejemplo de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] localizada incluye recursos para las referencias culturales de francés \(Francia\) e inglés \(Estados Unidos\).  La referencia cultural inglés \(Estados Unidos\) es la predeterminada de la aplicación; sus recursos se muestran en la tabla de la [sección anterior](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc).  El archivo de recursos de la referencia cultural Francés \(Francia\) se denomina LibResources.fr\-FR.resx y consta de los recursos de cadena que se enumeran en la tabla siguiente.  El código fuente para la clase `UILibrary` es el mismo que se muestra en la sección anterior.  
+  
+|Nombre del recurso|Valor del recurso|  
+|------------------------|-----------------------|  
+|Born|Date de naissance|  
+|BornLength|20|  
+|Hired|Date embauché|  
+|HiredLength|16|  
+|Id.|Id.|  
+|Nombre|Nom|  
+|Título|Base de données des employés|  
+  
+ El código siguiente muestra cómo obtener acceso a la clase `UILibrary` y a sus recursos desde una aplicación de modo de consola.  Requiere que se agregue una referencia a UILIbrary.dll al proyecto de aplicación de consola.  
+  
+ [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
+ [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]  
+  
+ El código siguiente muestra cómo obtener acceso a la clase `UILibrary` y a sus recursos desde una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  Requiere que se agregue una referencia a UILIbrary.dll al proyecto de aplicación de la Tienda Windows.  Usa la propiedad estática `ApplicationLanguages.PrimaryLanguageOverride` para establecer el idioma preferido de la aplicación en francés.  
+  
+ [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
+ [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
+  
+## Vea también  
+ <xref:System.Resources.ResourceManager>   
+ [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)   
+ [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

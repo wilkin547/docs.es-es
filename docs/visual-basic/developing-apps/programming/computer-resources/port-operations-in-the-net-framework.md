@@ -30,16 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61b91fe5f3bb016bace838b9eeabb1a59190bfe9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c1a36f120e2c6d896f95967e53838fef85ce7915
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Operaciones de puertos en .NET Framework con Visual Basic
-Puede acceder a los puertos serie del equipo mediante las clases [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] del espacio de nombres <xref:System.IO.Ports?displayProperty=fullName>. La clase más importante, <xref:System.IO.Ports.SerialPort>, proporciona un marco de trabajo para la E/S sincrónica y orientada a eventos, el acceso a los estados de punto de conexión e interrupción y el acceso a las propiedades del controlador serie. Se puede encapsular en un objeto <xref:System.IO.Stream>, accesible mediante la propiedad <xref:System.IO.Ports.SerialPort.BaseStream%2A>. El encapsulamiento de <xref:System.IO.Ports.SerialPort> en un objeto <xref:System.IO.Stream> permite que las clases que usan flujos accedan al puerto serie. El espacio de nombres incluye enumeraciones que simplifican el control de los puertos serie.  
+Puede acceder a los puertos serie del equipo mediante las clases [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] del espacio de nombres <xref:System.IO.Ports?displayProperty=fullName>. La clase más importante, <xref:System.IO.Ports.SerialPort>, proporciona un marco de trabajo para la E/S sincrónica y orientada a eventos, el acceso a los estados de punto de conexión e interrupción y el acceso a las propiedades del controlador serie. Se puede encapsular en un objeto <xref:System.IO.Stream>, al que se puede acceder a través de la propiedad <xref:System.IO.Ports.SerialPort.BaseStream%2A>. Al encapsular <xref:System.IO.Ports.SerialPort> en un objeto <xref:System.IO.Stream> se puede acceder al puerto serie mediante las clases que usan flujos. El espacio de nombres incluye enumeraciones que simplifican el control de los puertos serie.  
   
- La manera más sencilla de crear un objeto <xref:System.IO.Ports.SerialPort> es mediante el método <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
+ La forma más sencilla de crear un objeto <xref:System.IO.Ports.SerialPort> es a través del método <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
 > [!NOTE]
 >  No se pueden usar clases [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] para acceder directamente a otros tipos de puertos, como puertos paralelos, puertos USB, etc.  
@@ -53,7 +54,7 @@ Puede acceder a los puertos serie del equipo mediante las clases [!INCLUDE[dnprd
 |<xref:System.IO.Ports.Parity>|Especifica el bit de paridad para un objeto <xref:System.IO.Ports.SerialPort>.|  
 |<xref:System.IO.Ports.SerialData>|Especifica el tipo de carácter que se ha recibido en el puerto serie del objeto <xref:System.IO.Ports.SerialPort>.|  
 |<xref:System.IO.Ports.SerialError>|Especifica los errores que se producen en el objeto <xref:System.IO.Ports.SerialPort>.|  
-|<xref:System.IO.Ports.SerialPinChange>|Especifica el tipo de cambio que se ha producido en el objeto <xref:System.IO.Ports.SerialPort>.|  
+|<xref:System.IO.Ports.SerialPinChange>|Especifica el tipo de cambio producido en el objeto <xref:System.IO.Ports.SerialPort>.|  
 |<xref:System.IO.Ports.StopBits>|Especifica el número de bits de parada usados en el objeto <xref:System.IO.Ports.SerialPort>.|  
   
 ## <a name="see-also"></a>Vea también  

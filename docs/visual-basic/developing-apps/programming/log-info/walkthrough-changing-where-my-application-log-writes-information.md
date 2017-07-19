@@ -32,9 +32,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -64,7 +65,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci√
   
 3.  Agregue estos elementos a la secci√≥n `<listeners>` .  
   
-    ```  
+    ```xml  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -83,7 +84,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci√
   
 6.  Agregue estos elementos a la secci√≥n `<sharedListeners>` .  
   
-    ```  
+    ```xml  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -114,7 +115,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci√
   
 7.  El contenido del archivo app.config debe ser similar al c√≥digo XML siguiente:  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  

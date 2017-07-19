@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ef53fb9439159c94bb3894c233977088edc8872
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.contentlocale: es-es
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)
@@ -60,7 +61,7 @@ El objeto `My.Application.Log` puede escribir información en varios agentes de 
   
      Si estas secciones no existen, el archivo de configuración del equipo puede configurar los agentes de escucha de registro `My.Application.Log` . En los pasos siguientes se describe cómo determinar qué define el archivo de configuración del equipo:  
   
-    1.  Busque el archivo machine.config del equipo. Normalmente, se encuentra en el directorio *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG*, donde `SystemRoot` es el directorio del sistema operativo y `frameworkVersion` es la versión de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    1.  Busque el archivo machine.config del equipo. Normalmente, se encuentra en el directorio *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , donde `SystemRoot` es el directorio del sistema operativo y `frameworkVersion` es la versión de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
   
          La configuración de machine.config puede reemplazarse por un archivo de configuración de la aplicación.  
   
@@ -78,9 +79,9 @@ El objeto `My.Application.Log` puede escribir información en varios agentes de 
   
 5.  Para muchos tipos de agentes de escucha compartidos, los datos de inicialización del agente de escucha incluyen una descripción de la ubicación a la que el agente de escucha dirige los datos:  
   
-    -   Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> escribe en un registro de archivo, tal y como se describe en la introducción.  
+    -   Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> escribe en un registro de archivos, como se describe en la introducción.  
   
-    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> escribe información en el registro de eventos del equipo especificado con el parámetro `initializeData`. Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, vea [Eventos ETW en .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData`. Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
     -   Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> escriben en el archivo especificado en el parámetro `initializeData`.  
   

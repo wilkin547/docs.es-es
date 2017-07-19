@@ -2,18 +2,19 @@
 title: "Clases | Guía de C#"
 description: "Obtenga información sobre los tipos de clases y cómo crearlas"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b5614123d38ae00cb471ef85d0eb92c03c68bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: f2cfeac321860a609c21046818c36fbc6aa3c636
+ms.contentlocale: es-es
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -25,7 +26,7 @@ Un tipo que se define como una [clase](https://msdn.microsoft.com/library/0b0thc
 
 [!code-csharp[Tipos de referencia](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-Cuando se crea el objeto, se asigna la memoria en el montón administrado y la variable solo contiene una referencia a la ubicación del objeto. Los tipos del montón administrado producen sobrecarga cuando se asignan y cuando los reclama la función de administración de memoria automática de CLR, conocida como *recolección de elementos no utilizados*. En cambio, la recolección de elementos no utilizados también está muy optimizada y no crea problemas de rendimiento en la mayoría de los escenarios. Para obtener más información sobre la recolección de elementos no utilizados, vea [Administración automática de la memoria y recolección de elementos no utilizados](../standard/garbagecollection/gc.md).  
+Cuando se crea el objeto, se asigna la memoria en el montón administrado y la variable solo contiene una referencia a la ubicación del objeto. Los tipos del montón administrado producen sobrecarga cuando se asignan y cuando los reclama la función de administración de memoria automática de CLR, conocida como *recolección de elementos no utilizados*. En cambio, la recolección de elementos no utilizados también está muy optimizada y no crea problemas de rendimiento en la mayoría de los escenarios. Para obtener más información sobre la recolección de elementos no utilizados, vea [Administración automática de la memoria y recolección de elementos no utilizados](../standard/garbage-collection/gc.md).  
   
 Los tipos de referencia admiten completamente la *herencia*, una característica fundamental de la programación orientada a objetos. Al crear una clase, puede heredar de cualquier otra interfaz o clase que no esté definida como [sealed](https://msdn.microsoft.com/library/88c54tsw.aspx); y otras clases pueden heredar de la clase e invalidar sus métodos virtuales. Para obtener más información, vea [Herencia](https://msdn.microsoft.com/library/ms173149.aspx).
 
@@ -80,8 +81,8 @@ Para obtener más información, vea la [Especificación del lenguaje C#](https:/
 [Polimorfismo](https://msdn.microsoft.com/library/ms173152.aspx)   
 [Miembros](https://msdn.microsoft.com/library/ms173113.aspx)   
 [Métodos](https://msdn.microsoft.com/library/ms173114.aspx)   
-[Constructores](https://msdn.microsoft.com/library/ace5hbzh.aspx)   
-[Destructores](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
+[Constructors](https://msdn.microsoft.com/library/ace5hbzh.aspx)  (Constructores [Guía de programación de C#])  
+[Finalizadores](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
 [Objects](https://msdn.microsoft.com/library/ms173110.aspx)
 
 

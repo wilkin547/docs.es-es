@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 353abf8a0c852acbbb2949f9640c1465dec8593b
+ms.contentlocale: es-es
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -82,4 +83,5 @@ La palabra clave `ref` hace que un argumento se pase por referencia, no por valo
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
  [Parámetros de métodos](../../../csharp/language-reference/keywords/method-parameters.md)   
+
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)

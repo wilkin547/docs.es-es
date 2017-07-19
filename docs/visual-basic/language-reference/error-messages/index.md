@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Mensajes de error (Visual Basic)
@@ -50,7 +51,7 @@ Al escribir, compilar o ejecutar una aplicación de Visual Basic, pueden produci
  Para obtener información sobre cómo solucionar un error específico, vea [Recursos adicionales para programadores de Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Errores en tiempo de ejecución  
- Si una aplicación de Visual Basic intenta realizar una acción que el sistema no puede ejecutar, se produce un error en tiempo de ejecución, y [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] produce un objeto `Exception`. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] puede generar errores personalizados de cualquier tipo de datos, incluidos objetos `Exception`, con el uso de la instrucción `Throw`. Una aplicación puede identificar el error y mostrar el número de error y el mensaje de una excepción detectada. Si no se detecta ningún error, la aplicación finaliza.  
+ Si una aplicación de Visual Basic intenta realizar una acción que el sistema no puede ejecutar, se produce un error en tiempo de ejecución, y [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] produce un objeto `Exception`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] puede generar errores personalizados de cualquier tipo de datos, incluidos objetos `Exception`, con el uso de la instrucción `Throw`. Una aplicación puede identificar el error y mostrar el número de error y el mensaje de una excepción detectada. Si no se detecta ningún error, la aplicación finaliza.  
   
  El código puede capturar y examinar los errores en tiempo de ejecución. Si se incluye el código que produce el error en un bloque `Try`, puede capturar cualquier error producido dentro de un bloque `Catch` coincidente. Para obtener información sobre cómo capturar errores en tiempo de ejecución y responder a ellos en el código, vea [Instrucción Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

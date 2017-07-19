@@ -1,0 +1,407 @@
+---
+title: "Gu&#237;a de implementaci&#243;n de .NET Framework para desarrolladores | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "VB"
+  - "CSharp"
+  - "C++"
+  - "jsharp"
+helpviewer_keywords: 
+  - "guía para desarrolladores, implementar .NET Framework"
+  - "implementación de [.NET Framework], guía para desarrolladores"
+ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
+caps.latest.revision: 108
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 107
+---
+# Gu&#237;a de implementaci&#243;n de .NET Framework para desarrolladores
+En este tema se proporciona información a los desarrolladores que quieren instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2 o bien [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1 o 4.6.2 con sus aplicaciones.  
+  
+ Para obtener vínculos de descarga, vea la sección [Paquetes redistribuibles](#redist). También puede descargar los paquetes y paquetes de idioma redistribuibles en estas páginas del Centro de descarga de Microsoft:  
+  
+-   [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] para todos los sistemas operativos \([instalador web](http://go.microsoft.com/fwlink/?LinkId=780597) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=780601)\)  
+  
+-   [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] para todos los sistemas operativos \([instalador web](http://go.microsoft.com/fwlink/?LinkId=671729) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=671744)\)  
+  
+-   [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para todos los sistemas operativos \([instalador web](http://go.microsoft.com/fwlink/?LinkId=528222) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=528232)\)  
+  
+-   .NET Framework 4.5.2 para todos los sistemas operativos \([instalador web](http://go.microsoft.com/fwlink/p/?LinkId=397703) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=397706)\)  
+  
+-   .NET Framework 4.5.1 para todos los sistemas operativos \([instalador web](http://go.microsoft.com/fwlink/p/?LinkId=310158) o [instalador sin conexión](http://go.microsoft.com/fwlink/p/?LinkId=310159)\)  
+  
+-   [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)  
+  
+ Notas importantes:  
+  
+> [!NOTE]
+>  La frase "[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus versiones secundarias" hace referencia a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 y 4.6.2.  
+  
+-   [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1 y 4.6.2 son actualizaciones en contexto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], lo que significa que usan la misma versión en tiempo de ejecución, pero las versiones del ensamblado se actualizan e incluyen nuevos tipos y miembros.  
+  
+-   [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus versiones secundarias se compilan de forma incremental en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Al instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 o 4.6.2 en un sistema que tiene instalado [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], los ensamblados de la versión 4 se reemplazan por versiones más recientes.  
+  
+-   Si hace referencia a un [paquete fuera de banda](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) de Microsoft en su aplicación, el ensamblado se incluirá en el paquete de la aplicación.  
+  
+-   Debe tener privilegios de administrador para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y las versiones secundarias.  
+  
+-   [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] se incluye en [!INCLUDE[win8](../../../includes/win8-md.md)] y [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], por lo que no tiene que implementarlo con su aplicación en esos sistemas operativos. De igual forma, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] se incluye en [!INCLUDE[win81](../../../includes/win81-md.md)] y Windows Server 2012 R2. .NET Framework 4.5.2 no está incluido en ningún sistema operativo.[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] se incluye en Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] se incluye en la actualización de noviembre de Windows 10 y [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] se incluye en la actualización de aniversario de Windows 10.  Para obtener una lista completa de los requisitos de hardware y software, vea [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).  
+  
+-   A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], los usuarios pueden ver una lista de aplicaciones de .NET Framework en ejecución durante la instalación y cerrarlas fácilmente. Esto puede ayudar a evitar el reinicio del sistema causado por las instalaciones de .NET Framework. Vea [Reducir los reinicios del sistema](../../../docs/framework/deployment/reducing-system-restarts.md).  
+  
+-   La desinstalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una de sus versiones secundarias también quita los archivos [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] existentes. Si desea volver a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], deberá reinstalarlo, así como todas sus actualizaciones. \(Vea [Instalar .NET Framework 4](http://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx)\).  
+  
+-   .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible del [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=245484). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft 2749655](http://technet.microsoft.com/security/advisory/2749655).  
+  
+ Para obtener información sobre cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema a través de una red, vea [Guía de implementación para administradores](../../../docs/framework/deployment/guide-for-administrators.md).  
+  
+<a name="deploy_options"></a>   
+## Opciones de implementación para la aplicación  
+ Cuando esté listo para publicar la aplicación en un servidor web u otra ubicación centralizada para que los usuarios puedan instalarla, puede elegir varios métodos de implementación. Algunos de estos se proporcionan con Visual Studio. En la tabla siguiente se muestran las opciones de implementación para una aplicación y se especifica el paquete redistribuible de .NET Framework que admite cada opción. Además, puede escribir un programa de instalación personalizado para su aplicación; para obtener más información, vea la sección [Encadenar la instalación de .NET Framework en la instalación de la aplicación](#chaining).  
+  
+|Estrategia de implementación para la aplicación|Métodos de implementación disponibles|Paquete redistribuible de .NET Framework para utilizar|  
+|-----------------------------------------------------|-------------------------------------------|------------------------------------------------------------|  
+|Instalar desde Internet|-   [InstallShield](#installshield)<br />-   [Conjunto de herramientas de WiX](#wix)<br />-   [Instalación manual](#installing_manually)|[Instalador web](#redist)|  
+|Instalar desde disco|-   [InstallShield](#installshield)<br />-   [Conjunto de herramientas de WiX](#wix)<br />-   [Instalación manual](#installing_manually)|[Instalador sin conexión](#redist)|  
+|Instalar desde una red de área local \(para aplicaciones empresariales\)|-   [ClickOnce](#clickonce)|Ya sea el [instalador web](#redist) \(vea [ClickOnce](#clickonce) para obtener información sobre las restricciones\) o el [instalador sin conexión](#redist)|  
+  
+<a name="redist"></a>   
+## Paquetes redistribuibles  
+ .NET Framework está disponible en dos paquetes redistribuibles: instalador web \(arranque\) e instalador sin conexión \(independiente redistribuible\). En la tabla siguiente se comparan los dos paquetes.  
+  
+||Instalador web|Instalador sin conexión|  
+|-|--------------------|-----------------------------|  
+|Descargar archivo|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462\-KB3151802\-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]:<br />[NDP461\-KB3102438\-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]:<br />[NDP46\-KB3045560\-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452\-KB2901954\-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451\-KB2859818\-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45\_Full\_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]: <br />[NDP462\-KB3151800\-x86\-x64\-AllOS\-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]: <br />[NDP461\-KB3102436\-x86\-x64\-AllOS\-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]: <br />[NDP46\-KB3045557\-x86\-x64\-AllOS\-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452\-KB2901907\-x86\-x64\-AllOS\-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]: <br />[NDP451\-KB2858728\-x86\-x64\-AllOS\-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]: <br />[dotNetFx45\_Full\_x86\_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|  
+|¿Requiere conexión a Internet?|Sí|No|  
+|Tamaño de la descarga|Menor \(incluye solo el instalador para la plataforma de destino\)\*|Mayor\*|  
+|Paquetes de idioma|Se incluye\*\*|Debe [instalarse por separado](#chain_langpack), a menos que utilice el paquete destinado a todos los sistemas operativos|  
+|Método de implementación|Admite todos los métodos:<br /><br /> -   [ClickOnce](#clickonce)<br />-   [InstallShield](#installshield)<br />-   [Windows Installer XML \(WiX\)](#wix)<br />-   [Instalación manual](#installing_manually)<br />-   [Instalación personalizada \(encadenamiento\)](#chaining)|Admite todos los métodos:<br /><br /> -   [ClickOnce](#clickonce)<br />-   [InstallShield](#installshield)<br />-   [Windows Installer XML \(WiX\)](#wix)<br />-   [Instalación manual](#installing_manually)<br />-   [Instalación personalizada \(encadenamiento\)](#chaining)|  
+|Ubicación de descarga para la implementación de ClickOnce|Centro de descarga de Microsoft:<br /><br /> -   [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />-   [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />-   [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />-   [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />-   [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />-   [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Su propio servidor o el Centro de descarga de Microsoft:<br /><br /> -   [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />-   [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />-   [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />-   [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />-   [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />-   [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|  
+  
+ \* El tamaño del instalador sin conexión es mayor porque contiene componentes para todas las plataformas de destino. Cuando termine de ejecutar la instalación, el sistema operativo Windows almacenará en caché solo el instalador que se utilizó. Si se elimina el instalador sin conexión después de la instalación, el espacio en disco utilizado es el mismo que el instalador web utiliza. Si la herramienta que utiliza \(por ejemplo, [InstallShield](#installshield)\) para crear el programa de instalación de la aplicación proporciona una carpeta de archivos de configuración que se quita después de la instalación, el instalador sin conexión se puede eliminar automáticamente colocándolo en la carpeta de configuración.  
+  
+ \*\* Si utiliza el instalador web con la instalación personalizada, puede usar la configuración de idioma predeterminada basada en la configuración de interfaz de usuario multilingüe \(MUI\) del usuario o especificar otro paquete de idioma mediante la opción `/LCID` en la línea de comandos. Vea la sección [Encadenar mediante la interfaz de usuario predeterminada de .NET Framework](#chaining_default) para obtener ejemplos.  
+  
+<a name="deployment_methods"></a>   
+## Métodos de implementación  
+ Hay tres métodos de implementación disponibles:  
+  
+-   Puede establecer una dependencia en .NET Framework. Puede especificar .NET Framework como un requisito previo en la instalación de la aplicación mediante uno de estos métodos:  
+  
+    -   Usar la [implementación de ClickOnce](#clickonce) \(disponible en Visual Studio\)  
+  
+    -   Crear un [proyecto de InstallShield](#installshield) \(disponible con Visual Studio\)  
+  
+    -   Usar el [conjunto de herramientas de Windows Installer \(WiX\)](#wix)  
+  
+-   Puede pedir a los usuarios que [instalen manualmente .NET Framework](#installing_manually).  
+  
+-   Puede encadenar \(incluir\) el proceso de instalación de .NET Framework en la instalación de la aplicación y decidir cómo desea controlar la experiencia de instalación de .NET Framework:  
+  
+    -   [Usar la interfaz de usuario predeterminada](#chaining_default). Deje que el instalador de .NET Framework proporcione la experiencia de instalación.  
+  
+    -   [Personalizar la interfaz de usuario](#chaining_custom) para presentar una experiencia de instalación unificada y supervisar el progreso de instalación de .NET Framework.  
+  
+ Estos métodos de implementación se describen con mayor detalle en las siguientes secciones.  
+  
+## Establecer una dependencia en .NET Framework  
+ Si utiliza ClickOnce, InstallShield o WiX para implementar la aplicación, puede agregar una dependencia en .NET Framework para poder instalarla como parte de la aplicación.  
+  
+<a name="clickonce"></a>   
+### Implementación ClickOnce  
+ La implementación ClickOnce está disponible para proyectos creados en Visual Basic y Visual C\#, pero no está disponible para Visual C\+\+.  
+  
+ En Visual Studio, elija la implementación de ClickOnce y agregue una dependencia en .NET Framework:  
+  
+1.  Abra el proyecto de aplicación que desea publicar.  
+  
+2.  En el Explorador de soluciones, abra el menú contextual del proyecto y, a continuación, elija **Propiedades**.  
+  
+3.  Elija el panel **Publicar**.  
+  
+4.  Elija el botón **Requisitos previos**.  
+  
+5.  En el cuadro de diálogo **Requisitos previos**, asegúrese de que está activada la casilla **Crear programa de instalación para instalar los componentes necesarios**.  
+  
+6.  En la lista de requisitos previos, busque y seleccione la versión de .NET Framework que haya usado para compilar el proyecto.  
+  
+7.  Elija una opción para especificar la ubicación de origen de los requisitos previos y, a continuación, elija **Aceptar**.  
+  
+     Si proporciona una dirección URL para la ubicación de descarga de .NET Framework, puede especificar el sitio Centro de descarga de Microsoft o un sitio propio. Si va a colocar el paquete redistribuible en su propio servidor, debe usar el instalador sin conexión, no el instalador web. Solo puede vincular al instalador web en el Centro de descarga de Microsoft. La dirección URL también puede ser un disco en el que se distribuye su propia aplicación.  
+  
+8.  En el cuadro de diálogo **Páginas de propiedades**, elija **Aceptar**.  
+  
+<a name="installshield"></a>   
+### Implementación de InstallShield  
+ En Visual Studio, para elegir la implementación de InstallShield y agregar una dependencia en .NET Framework:  
+  
+1.  En la barra de menús de Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**.  
+  
+2.  En el panel izquierdo del cuadro de diálogo **Nuevo proyecto**, elija **Otros tipos de proyectos**, **Instalación e implementación**, **InstallShield LE**.  
+  
+3.  En el cuadro **Nombre**, escriba un nombre para el proyecto y, a continuación, elija **Aceptar**.  
+  
+4.  Si va a crear un proyecto de instalación e implementación por primera vez, elija **Ir a InstallShield** o **Habilitar InstallShield Limited Edition** a fin de descargar InstallShield Limited Edition para su versión de Microsoft Visual Studio. Reinicie Visual Studio.  
+  
+5.  Vaya al **Asistente para proyectos** y elija **Archivos de aplicación** para agregar la salida del proyecto. Puede configurar otros atributos del proyecto mediante este asistente.  
+  
+6.  Vaya a **Requisitos de Instalación** y seleccione los sistemas operativos y la versión de .NET Framework que desea instalar.  
+  
+7.  Abra el menú contextual para el proyecto de instalación y elija **Compilar**.  
+  
+<a name="wix"></a>   
+### Implementación de Windows Installer XML \(WiX\)  
+ El conjunto de herramientas de Windows Installer XML \(WiX\) compila paquetes de instalación de Windows desde el código fuente XML. WiX es compatible con un entorno de línea de comandos que se puede integrar en los procesos de compilación para crear paquetes de instalación MSI y MSM. Al utilizar WiX, podrá [especificar .NET Framework como requisito previo](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html) o [crear un encadenador](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) para controlar completamente la experiencia de implementación de .NET Framework. Para obtener más información sobre WiX, vea el sitio web [Conjunto de herramientas de Windows Installer XML \(WiX\)](http://wixtoolset.org/).  
+  
+<a name="installing_manually"></a>   
+## Instalar .NET Framework manualmente  
+ En algunas situaciones, puede no ser práctico instalar automáticamente .NET Framework con la aplicación. En esos casos, puede dejar que los usuarios instalen .NET Framework por su cuenta. El paquete redistribuible está disponible en [dos paquetes](#redist). En el proceso de instalación, ofrezca instrucciones a los usuarios para que localicen e instalen .NET Framework.  
+  
+<a name="chaining"></a>   
+## Encadenar la instalación de .NET Framework en la instalación de la aplicación  
+ Si está creando un programa de instalación personalizado para una aplicación, puede encadenar \(incluir\) el proceso de instalación de .NET Framework en el proceso de instalación de la aplicación. El encadenamiento proporciona dos opciones de interfaz de usuario para la instalación de .NET Framework:  
+  
+-   Utilizar la interfaz de usuario predeterminada proporcionada por el instalador de .NET Framework.  
+  
+-   Crear una interfaz de usuario personalizada para la instalación de .NET Framework para mantener la coherencia con el programa de instalación de la aplicación.  
+  
+ Ambos métodos permiten utilizar el instalador web o el instalador sin conexión. Cada paquete tiene sus ventajas:  
+  
+-   Si utiliza el instalador web, el proceso de instalación de .NET Framework decide qué paquete de instalación es necesario y descarga e instala solo ese paquete desde Internet.  
+  
+-   Si utiliza el instalador sin conexión, puede incluir el conjunto completo de paquetes de instalación de .NET Framework con los discos de redistribución para que los usuarios no tengan que descargar archivos adicionales desde Internet durante la instalación.  
+  
+<a name="chaining_default"></a>   
+### Encadenar mediante la interfaz de usuario predeterminada de .NET Framework  
+ Para encadenar de forma silenciosa el proceso de instalación de .NET Framework y dejar que el instalador de .NET Framework proporcione la interfaz de usuario, agregue el siguiente comando al programa de instalación:  
+  
+```  
+<.NET Framework redistributable> /q /norestart /ChainingPackage <PackageName>  
+```  
+  
+ Por ejemplo, si el programa ejecutable es Contoso.exe y desea instalar el paquete redistribuible sin conexión de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] de forma silenciosa, utilice el comando:  
+  
+```  
+dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso  
+```  
+  
+ Puede utilizar las opciones de línea de comandos adicionales para personalizar la instalación. Por ejemplo:  
+  
+-   Para proporcionar un método para que los usuarios cierren las aplicaciones de .NET Framework que estén en ejecución con el fin de minimizar los reinicios del sistema, establezca el modo pasivo y utilice la opción `/showrmui` de la forma siguiente:  
+  
+    ```  
+    dotNetFx45_Full_x86_x64.exe /norestart /passive /showrmui /ChainingPackage Contoso  
+    ```  
+  
+     Este comando permite reiniciar el administrador para mostrar un cuadro de mensaje que proporciona a los usuarios la oportunidad de cerrar las aplicaciones de .NET Framework antes de instalar el componente.  
+  
+-   Si está utilizando el instalador web, puede utilizar la opción `/LCID` para especificar un paquete de idioma. Por ejemplo, para encadenar el instalador web de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] en el programa de instalación de Contoso e instalar el paquete de idioma japonés, agregue el siguiente comando al proceso de instalación de la aplicación:  
+  
+    ```  
+    dotNetFx45_Full_setup.exe /q /norestart /ChainingPackage Contoso /LCID 1041  
+    ```  
+  
+     Si se omite la opción `/LCID`, el programa de instalación instalará el paquete de idioma que coincida con la configuración de MUI del usuario.  
+  
+    > [!NOTE]
+    >  Los distintos paquetes de idioma pueden tener fechas de versión diferentes. Si el paquete de idioma especificado no está disponible en el centro de descarga, el programa de instalación instalará .NET Framework sin el paquete de idioma. Si .NET Framework ya está instalado en el equipo del usuario, el archivo de instalación solo instalará el paquete de idioma.  
+  
+ Para obtener una lista completa de opciones, vea la sección [Opciones de la línea de comandos](#command_line_options).  
+  
+ Para ver los códigos de retorno comunes, consulte la sección [Códigos de retorno](#return_codes).  
+  
+<a name="chaining_custom"></a>   
+### Encadenar mediante una interfaz de usuario personalizada  
+ Si tiene un paquete de instalación personalizada, puede iniciar en modo silencioso y realizar un seguimiento de la instalación de .NET Framework mientras se muestra su propia vista del progreso de la instalación. Si es este el caso, asegúrese de controlar lo siguiente en el código:  
+  
+-   Compruebe si hay [requisitos de hardware y software para .NET Framework](../../../docs/framework/get-started/system-requirements.md).  
+  
+-   [Detecte](#detect_net) si la versión correcta de .NET Framework está ya instalada en el equipo del usuario.  
+  
+    > [!IMPORTANT]
+    >  Para determinar si ya está instalada la versión correcta de .NET Framework, debe comprobar si está instalada la versión de destino *o* una versión posterior, no si está instalada la versión de destino. En otras palabras, debe evaluar si la clave de versión recuperada del registro es mayor o igual que la clave de versión de la versión de destino, *no* si es igual a la clave de versión de la versión de destino.  
+  
+-   [Detecte](#detect_langpack) si los paquetes de idioma ya están instalados en el equipo del usuario.  
+  
+-   Si desea controlar la implementación, inicie la instalación de forma silenciosa y lleve un seguimiento del proceso de instalación de .NET Framework \(vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)\).  
+  
+-   Si está implementando el instalador sin conexión, [encadene los paquetes de idioma por separado](#chain_langpack).  
+  
+-   Personalice la implementación mediante las [opciones de la línea de comandos](#command_line_options). Por ejemplo, si va a encadenar el instalador web de .NET Framework, pero desea reemplazar el paquete de idioma predeterminado, utilice la opción `/LCID`, tal como se describe en la sección anterior.  
+  
+-   [Solución de problemas](#troubleshooting).  
+  
+<a name="detect_net"></a>   
+### Detectar .NET Framework  
+ El instalador de .NET Framework escribe las claves del Registro cuando la instalación es correcta. Puede probar si tiene [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versión posterior instalada comprobando que en la carpeta `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` del registro hay un valor `DWORD` denominado `Release`. \(Tenga en cuenta que "NET Framework Setup" no comienza con un punto\). La existencia de esta clave indica que [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o una versión posterior se ha instalado en ese equipo. El valor de `Release` indica qué versión de .NET Framework está instalada.  
+  
+> [!IMPORTANT]
+>  Debe comprobar si hay un valor **igual o mayor que** el valor de la palabra clave de la versión al tratar de detectar si hay una versión específica.  
+  
+|Versión|Valor DWORD de la versión|  
+|-------------|-------------------------------|  
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en la actualización de aniversario de Windows 10|394802|  
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] instalado en todas las versiones de sistema operativo diferentes de la actualización de aniversario de Windows 10|394806|  
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en la actualización de noviembre de Windows 10|394254|  
+|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] instalado en todas las versiones del sistema operativo diferentes de la actualización de noviembre de Windows 10|394271|  
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado en Windows 10|393295|  
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] instalado en todas las versiones de sistema operativo diferentes de Windows 10|393297|  
+|.NET Framework 4.5.2|379893|  
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] instalado con [!INCLUDE[win81](../../../includes/win81-md.md)] o Windows Server 2012 R2|378675|  
+|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] instalado en [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|  
+|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|378389|  
+  
+<a name="detect_langpack"></a>   
+### Detectar paquetes de idioma  
+ Puede asegurarse de que se ha instalado un paquete de idioma determinado si comprueba que la carpeta HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full\\*LCID* del Registro tiene un valor DWORD denominado `Release`. \(Tenga en cuenta que "NET Framework Setup" no comienza con un punto\).*LCID* especifica un identificador de configuración regional; vea [Idiomas compatibles](#supported_languages) para obtener una lista de ellos.  
+  
+ Por ejemplo, para detectar si ya está instalado el paquete de idioma japonés completo \(LCID\=1041\), compruebe los siguientes valores en el Registro:  
+  
+```  
+Key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041  
+Name: Release  
+Type: DWORD  
+```  
+  
+ Para determinar si la versión de lanzamiento final de un paquete de idioma está instalada para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 o 4.6.2, compruebe el valor DWORD de la clave RELEASE descrita en la sección anterior, [Detectar .NET Framework](#detect_net).  
+  
+<a name="chain_langpack"></a>   
+### Encadenar los paquetes de idiomas a la instalación de la aplicación  
+ .NET Framework proporciona un conjunto de archivos ejecutables de paquetes de idioma independientes que contienen recursos localizados para referencias culturales específicas. Los paquetes de idioma están disponibles en el Centro de descarga de Microsoft:  
+  
+-   [Paquetes de idioma de .NET Framework 4.6.2](http://go.microsoft.com/fwlink/p/?LinkId=780604)  
+  
+-   [Paquetes de idioma de .NET Framework 4.6.1](http://go.microsoft.com/fwlink/p/?LinkId=671747)  
+  
+-   [Paquetes de idioma de .NET Framework 4.6](http://go.microsoft.com/fwlink/p/?LinkId=528314)  
+  
+-   [Paquetes de idioma de .NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397701)  
+  
+-   [Paquetes de idioma de .NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=322101)  
+  
+-   [Paquetes de idioma de .NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245451)  
+  
+> [!IMPORTANT]
+>  Los paquetes de idioma no contienen los componentes de .NET Framework necesarios para ejecutar una aplicación; debe instalar .NET Framework mediante el instalador web o sin conexión para poder instalar un paquete de idioma.  
+  
+ A partir de [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], los nombres de paquete adoptan la forma NDP\<`version`\>\-KB\<`number`\>\-x86\-x64\-AllOS\-\<`culture`\> .exe, donde `version` es el número de versión de .NET Framework, `number` es un número de artículo de Microsoft Knowledge Base, y `culture` especifica un [país o región](#supported_languages). Un ejemplo de uno de estos paquetes es `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`. Los nombres de paquete se enumeran en la sección [Paquetes redistribuibles](#redist) anterior de este artículo.  
+  
+ Para instalar un paquete de idioma con el instalador sin conexión de .NET Framework, debe encadenarlo al programa de instalación de la aplicación. Por ejemplo, para implementar un instalador sin conexión de [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] con el paquete de idioma japonés, utilice el comando siguiente:  
+  
+```  
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>  
+```  
+  
+ No tiene que encadenar los paquetes de idioma si utiliza el instalador web, ya que el programa de instalación instalará el paquete de idioma que coincida con la configuración de MUI del usuario. Si desea instalar un idioma diferente, puede utilizar la opción `/LCID` para especificar un paquete de idioma.  
+  
+ Para obtener una lista completa de opciones de la línea de comandos, vea la sección [Opciones de la línea de comandos](#command_line_options).  
+  
+<a name="troubleshooting"></a>   
+### Solución de problemas  
+  
+<a name="return_codes"></a>   
+#### Códigos devueltos  
+ En la tabla siguiente se muestra una lista de los códigos de retorno más comunes del instalador redistribuible de .NET Framework. Los códigos devueltos son los mismos para todas las versiones del instalador. Para obtener vínculos a la información detallada, vea la sección siguiente.  
+  
+|Código devuelto|Descripción|  
+|---------------------|-----------------|  
+|0|La instalación se completó correctamente.|  
+|1602|El usuario canceló la instalación.|  
+|1603|Error irrecuperable durante la instalación.|  
+|1641|Para completar la instalación es necesario reiniciar. Este mensaje indica que la instalación se realizó correctamente.|  
+|3010|Para completar la instalación es necesario reiniciar. Este mensaje indica que la instalación se realizó correctamente.|  
+|5100|El equipo del usuario no cumple los requisitos del sistema.|  
+  
+#### Descargar códigos de error  
+ Vea el siguiente contenido en MSDN Library:  
+  
+-   [Códigos de error del Servicio de transferencia inteligente en segundo plano \(BITS\)](http://go.microsoft.com/fwlink/?LinkId=180946)  
+  
+-   [Códigos de error del moniker de dirección URL](http://go.microsoft.com/fwlink/?LinkId=180947)  
+  
+-   [Códigos de error de WinHttp](http://go.microsoft.com/fwlink/?LinkId=180948)  
+  
+#### Otros códigos de error  
+ Vea el siguiente contenido en MSDN Library:  
+  
+-   [Códigos de error de Windows Installer](http://go.microsoft.com/fwlink/?LinkId=180949)  
+  
+-   [Códigos de resultado del Agente de Windows Update](http://go.microsoft.com/fwlink/?LinkId=180951)  
+  
+<a name="uninstalling_net_framework"></a>   
+## Desinstalar .NET Framework  
+ A partir de [!INCLUDE[win8](../../../includes/win8-md.md)], puede desinstalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 o 4.6.2 mediante **Activar o desactivar las características de Windows** en el Panel de control. En versiones anteriores de Windows, puede desinstalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1 o 4.6.2 mediante **Agregar o quitar programas** en el Panel de control.  
+  
+> [!IMPORTANT]
+>  Con Windows 7 y los sistemas operativos anteriores, al desinstalar [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1 o 4.6.2, los archivos de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] no se restauran y si se desinstala [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], los archivos de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] no se restauran. Si desea volver a la versión anterior, debe reinstalarla, así como todas sus actualizaciones.  
+  
+## Apéndice  
+  
+<a name="command_line_options"></a>   
+### Opciones de la línea de comandos  
+ En la tabla siguiente se muestran las opciones que se pueden incluir cuando se encadenan paquetes redistribuibles de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] al programa de instalación de una aplicación.  
+  
+|Opción|Descripción|  
+|------------|-----------------|  
+|**\/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|  
+|**\/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **\/chainingpackage "Lucerne Publishing"**. Para obtener un ejemplo de un paquete de encadenamiento, vea [Obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=181926) en MSDN Library.|  
+|**\/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional \(vea [Idiomas compatibles](#supported_languages)\)|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Note:**  Utilice esta opción solo con el instalador web.|  
+|**\/log** `file` &#124; `folder`|Especifica la ubicación del archivo de registro. El valor predeterminado es la carpeta temporal para el proceso y el nombre de archivo predeterminado se basa en el paquete. Si la extensión de archivo es .txt, se genera un registro de texto. Si especifica cualquier otra extensión o no especifica ninguna, se crea un registro HTML.|  
+|**\/msioptions**|Especifica opciones que se pasarán para los elementos .msi y .msp; por ejemplo: `/msioptions "PROPERTY1='Value'"`.|  
+|**\/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si utiliza esta opción, la aplicación de encadenamiento tiene que capturar el código de retorno y controlar el reinicio \(vea [Obtener información de progreso de un paquete de instalación](http://go.microsoft.com/fwlink/?LinkId=179606) en MSDN Library\).|  
+|**\/passive**|Establece el modo pasivo. Muestra la barra de progreso para indicar que la instalación está en curso, pero no muestra ningún indicador ni mensajes de error al usuario. En este modo, cuando se encadena mediante un programa de instalación, el paquete de encadenamiento debe controlar los [códigos de retorno](#return_codes).|  
+|**\/pipe**|Crea un canal de comunicación para permitir que un paquete encadenado obtenga el progreso.|  
+|**\/promptrestart**|Solo en modo pasivo, si el programa de instalación necesita un reinicio, se lo pide al usuario. Esta opción requiere interacción con el usuario si se requiere un reinicio.|  
+|**\/q**|Establece el modo silencioso.|  
+|**\/repair**|Activa la funcionalidad de reparación.|  
+|**\/serialdownload**|Fuerza que la instalación solo tenga lugar después de que se haya descargado el paquete.|  
+|**\/showfinalerror**|Establece el modo pasivo. Muestra los errores solo si la instalación no es correcta. Esta opción requiere interacción con el usuario si la instalación no es correcta.|  
+|**\/showrmui**|Solo se usa con la opción **\/passive**. Muestra un cuadro de mensaje que pide a los usuarios que cierren las aplicaciones de .NET Framework que se estén ejecutando actualmente. Este cuadro de mensaje se comporta igual en modo pasivo y no pasivo.|  
+|**\/uninstall**|Desinstala el paquete redistribuible de .NET Framework.|  
+  
+<a name="supported_languages"></a>   
+### Idiomas compatibles  
+ En la tabla siguiente se enumeran los paquetes de idioma de .NET Framework que están disponibles para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus versiones secundarias.  
+  
+|LCID|Idioma \(país\/región\)|Referencia cultural|  
+|----------|-----------------------------|-------------------------|  
+|1025|Árabe \(Arabia Saudí\)|ar|  
+|1028|Chino – Tradicional|zh\-Hant|  
+|1029|Checo|cs|  
+|1030|Danés|da|  
+|1031|Alemán – Alemania|de|  
+|1032|Griego|el|  
+|1035|Finlandés|fi|  
+|1036|Francés – Francia|fr|  
+|1037|Hebreo|he|  
+|1038|Húngaro|hu|  
+|1040|Italiano – Italia|it|  
+|1041|Japonés|ja|  
+|1042|Coreano|ko|  
+|1043|Neerlandés – Países Bajos|nl|  
+|1044|Noruego \(Bokmål\)|no|  
+|1045|Polaco|pl|  
+|1046|Portugués – Brasil|pt\-BR|  
+|1049|Ruso|ru|  
+|1053|Sueco|sv|  
+|1055|Turco|tr|  
+|2052|Chino – Simplificado|zh\-Hans|  
+|2070|Portugués – Portugal|pt\-PT|  
+|3082|Español \- España \(alfab. internacional\)|es|  
+  
+## Vea también  
+ [Guía de implementación para administradores](../../../docs/framework/deployment/guide-for-administrators.md)   
+ [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)   
+ [Guía de instalación](../../../docs/framework/install/guide-for-developers.md)   
+ [Solución de problemas](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
+ [Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)   
+ [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

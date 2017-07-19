@@ -1,6 +1,6 @@
 ---
 title: "Guía de programación de C# | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -32,43 +32,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4a4c3f5dbe375f723b70f62ccee1a91d577f4949
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
+ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
+ms.contentlocale: es-es
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="c-programming-guide"></a>Guía de programación de C#
+<a id="c-programming-guide" class="xliff"></a>
+
+# Guía de programación de C#
 Esta sección proporciona información detallada sobre las funcionalidades y características claves del lenguaje C# a las que C# puede acceder a través de .NET Framework.  
   
  En la mayor parte de esta sección se supone que ya sabe algo sobre C# y que conoce los conceptos de programación generales. Si es un principiante de programación o C#, puede visitar el [Centro para desarrolladores de C#](http://go.microsoft.com/fwlink/?linkid=95125), donde encontrará muchos tutoriales, ejemplos y vídeos que le ayudarán a empezar a trabajar.  
   
  Para obtener información sobre determinadas palabras clave, operadores y directivas de preprocesador, vea [Referencia de C#](../../csharp/language-reference/index.md). Para obtener información sobre la especificación del lenguaje C#, vea [Especificación del lenguaje C#](../../csharp/language-reference/language-specification.md).  
   
-## <a name="language-sections"></a>Secciones de lenguaje  
- [Dentro de un programa de C#](../../csharp/programming-guide/inside-a-program/index.md)  
+<a id="program-sections" class="xliff"></a>
+
+## Secciones de programa
+
+[Dentro de un programa de C#](../../csharp/programming-guide/inside-a-program/index.md)  
   
- [Main() y argumentos de la línea de comandos](../../csharp/programming-guide/main-and-command-args/index.md)  
-  
+[Main() y argumentos de la línea de comandos](../../csharp/programming-guide/main-and-command-args/index.md)  
+ 
+<a id="language-sections" class="xliff"></a>
+
+## Secciones de lenguaje  
+[Instrucciones, expresiones y operadores](../../csharp/programming-guide/statements-expressions-operators/index.md)  
+
  [Tipos](../../csharp/programming-guide/types/index.md)  
+
+ [Clases y structs](../../csharp/programming-guide/classes-and-structs/index.md)  
   
+ [Interfaces](../../csharp/programming-guide/interfaces/index.md)  
+
+ [Tipos de enumeración](../../csharp/programming-guide/enumeration-types.md)  
+  
+ [Delegados](../../csharp/programming-guide/delegates/index.md)  
+ 
  [Matrices](../../csharp/programming-guide/arrays/index.md)  
   
  [Cadenas](../../csharp/programming-guide/strings/index.md)  
   
- [Instrucciones, expresiones y operadores](../../csharp/programming-guide/statements-expressions-operators/index.md)  
-  
- [Clases y structs](../../csharp/programming-guide/classes-and-structs/index.md)  
-  
  [Propiedades](../../csharp/programming-guide/classes-and-structs/properties.md)  
   
- [Interfaces](../../csharp/programming-guide/interfaces/index.md)  
-  
  [Indizadores](../../csharp/programming-guide/indexers/index.md)  
-  
- [Tipos de enumeración](../../csharp/programming-guide/enumeration-types.md)  
-  
- [Delegados](../../csharp/programming-guide/delegates/index.md)  
   
  [Eventos](../../csharp/programming-guide/events/index.md)  
   
@@ -88,7 +97,9 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
   
  [Comentarios de documentación XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-## <a name="platform-sections"></a>Secciones de la plataforma  
+<a id="platform-sections" class="xliff"></a>
+
+## Secciones de la plataforma  
  [Dominios de aplicación (C# y Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Ensamblados y Caché global de ensamblados](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
@@ -105,9 +116,8 @@ Esta sección proporciona información detallada sobre las funcionalidades y car
   
  [Reflexión](../../csharp/programming-guide/concepts/reflection.md)  
   
-## <a name="featured-book-chapter"></a>Capítulo destacado del libro  
- [Advanced C#](http://go.microsoft.com/fwlink/?LinkId=195407) (Conceptos avanzados de C#) en [C# 3.0 in a Nutshell, Third Edition: A Desktop Quick Reference](http://go.microsoft.com/fwlink/?LinkId=195406) (Resumen de C# 3.0, tercera edición: una referencia rápida de escritorio)  
-  
-## <a name="see-also"></a>Vea también  
+<a id="see-also" class="xliff"></a>
+
+## Vea también  
  [Referencia de C#](../../csharp/language-reference/index.md)   
  [C#](../../csharp/csharp.md)

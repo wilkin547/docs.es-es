@@ -26,17 +26,19 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3dbadeec14ce9c023af39ae4ff95d0183826e7c1
-ms.openlocfilehash: eb0f0636abb39eabb387388fcdd39df8aca88c34
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/12/2017
 
 ---
-# <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
+# Implementar .NET Framework y aplicaciones
+<a id="deploying-the-net-framework-and-applications" class="xliff"></a>
 Este artículo le ayuda a empezar a implementar .NET Framework con la aplicación. La mayoría de la información está destinada a desarrolladores, OEM y administradores de empresa. Los usuarios que deseen instalar .NET Framework en sus equipos deben leer [Instalar .NET Framework](~/docs/framework/install/index.md).  
   
-## <a name="key-deployment-resources"></a>Recursos de implementación clave  
+## Recursos de implementación clave
+<a id="key-deployment-resources" class="xliff"></a>  
  Use los siguientes vínculos a otros temas de MSDN para obtener información específica sobre la implementación y mantenimiento de .NET Framework.  
   
  **Instalación e implementación**  
@@ -61,9 +63,9 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
 -   Implementar .NET Framework con una aplicación cliente (para desarrolladores):  
   
-    -   [Usar InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield) en un proyecto de instalación e implementación  
+    -   [Usar InstallShield](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment) en un proyecto de instalación e implementación  
   
-    -   [Usar una aplicación ClickOnce de Visual Studio](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
+    -   [Usar una aplicación ClickOnce de Visual Studio](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
   
     -   [Crear un paquete de instalación de WiX](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -85,7 +87,8 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
 -   [Detectar Service Pack y actualizaciones](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
   
-## <a name="features-that-simplify-deployment"></a>Características que simplifican la implementación  
+## Características que simplifican la implementación
+<a id="features-that-simplify-deployment" class="xliff"></a>  
  .NET Framework proporciona algunas características básicas que facilitan la implementación de las aplicaciones:  
   
 -   Aplicaciones carentes de impacto.  
@@ -128,10 +131,12 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
      La identidad no se basa en el usuario sino en el código y no aparece ningún cuadro de diálogo de certificado.  
   
-## <a name="packaging-and-distributing-net-framework-applications"></a>Empaquetar y distribuir aplicaciones de .NET Framework  
+## Empaquetar y distribuir aplicaciones de .NET Framework
+<a id="packaging-and-distributing-net-framework-applications" class="xliff"></a>  
  Parte de la información relacionada con el empaquetado y la implementación de .NET Framework se describe en otras secciones de la documentación. En esas secciones se proporciona información sobre los [ensamblados](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md), que son unidades autodescriptivas que no necesitan entradas del Registro, los [ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md), que garantizan el carácter unívoco del nombre e impiden la simulación de este, y el [control de versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md), que aborda muchos de los problemas asociados a conflictos de archivos DLL. En las siguientes secciones, se proporciona información sobre cómo se empaquetan y se distribuyen las aplicaciones de .NET Framework.  
   
-### <a name="packaging"></a>Empaquetado  
+### Empaquetado
+<a id="packaging" class="xliff"></a>  
  .NET Framework proporciona las siguientes opciones para empaquetar aplicaciones:  
   
 -   Como un solo ensamblado o como una colección de ensamblados.  
@@ -146,7 +151,8 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
      Con esta opción, se crean archivos .msi para usarlos con Windows Installer o se empaqueta la aplicación para utilizarla con otro instalador.  
   
-### <a name="distribution"></a>Distribución  
+### Distribución
+<a id="distribution" class="xliff"></a>  
  .NET Framework proporciona las siguientes opciones para distribuir aplicaciones:  
   
 -   Utilizar XCOPY o FTP.  
@@ -161,26 +167,29 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
   
      Windows Installer 2.0 puede instalar, reparar o quitar ensamblados de .NET Framework de la memoria caché global de ensamblados y de directorios privados.  
   
-### <a name="installation-location"></a>Ubicación de instalación  
+### Ubicación de instalación
+<a id="installation-location" class="xliff"></a>  
  Para determinar la ubicación donde se van a implementar los ensamblados de la aplicación para que el runtime los encuentre, vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
  Las cuestiones de seguridad pueden afectar también al modo en que se implementa la aplicación. Los permisos de seguridad se conceden al código administrado según la ubicación del código. Si se implementa una aplicación o un componente en una ubicación donde reciba poca confianza, como Internet, se verán limitadas las funciones de dicha aplicación o dicho componente. Para obtener más información sobre la implementación y la seguridad, vea [Conceptos básicos sobre la seguridad de acceso del código](../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="related-topics"></a>Temas relacionados  
+## Temas relacionados
+<a id="related-topics" class="xliff"></a>  
   
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Describe la forma en que Common Language Runtime determina el ensamblado que se va a utilizar para llevar a cabo una solicitud de enlace.|  
-|[Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Se abordan las formas de evitar problemas de identidad de tipo que pueden generar <xref:System.InvalidCastException>, <xref:System.MissingMethodException> y otros errores.|  
+|[Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.|  
 |[Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Describe el Administrador de reinicio, que evita, en la medida de lo posible, los reinicios del equipo y explica cómo pueden aprovecharlo las aplicaciones que instalan .NET Framework.|  
 |[Guía de implementación para administradores](../../../docs/framework/deployment/guide-for-administrators.md)|Explica cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red utilizando System Center Configuration Manager (SCCM).|  
 |[Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Explica cómo los desarrolladores de software pueden instalar .NET Framework en los equipos de los usuarios con sus aplicaciones.|  
 |[Implementar aplicaciones, servicios y componentes](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|Describe las opciones de implementación de Visual Studio e incluye instrucciones para publicar una aplicación mediante las tecnologías ClickOnce y Windows Installer.| 
-|[Publicar aplicaciones ClickOnce](http://msdn.microsoft.com/library/eb6dfe79-f54c-4331-8e36-073688e70973)|Describe cómo empaquetar una aplicación de Windows Forms e implementarla con ClickOnce en los equipos cliente en una red.|  
+|[Publicar aplicaciones ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Describe cómo empaquetar una aplicación de Windows Forms e implementarla con ClickOnce en los equipos cliente en una red.|  
 |[Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Describe el modelo de concentrador y de radio que .NET Framework usa para empaquetar e implementar los recursos; aborda las convenciones de nomenclatura de los recursos, el proceso de reserva y las alternativas de empaquetado.|  
 |[Implementar una aplicación interoperativa](../../../docs/framework/interop/deploying-an-interop-application.md)|Explica cómo distribuir e instalar aplicaciones de interoperabilidad, que suelen incluir un ensamblado de cliente de .NET Framework, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados.|  
 |[Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Describe cómo iniciar y seguir en modo silencioso el proceso de instalación de .NET Framework, mientras se muestra la vista del progreso de la instalación.|  
   
-## <a name="see-also"></a>Vea también  
+## Vea también
+<a id="see-also" class="xliff"></a>  
  [Guía de desarrollo](../../../docs/framework/development-guide.md)
 
