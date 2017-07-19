@@ -46,17 +46,17 @@ La palabra clave `ref` hace que un argumento se pase por referencia, no por valo
   
  Para usar un parámetro `ref`, la definición de método y el método de llamada deben utilizar explícitamente la palabra clave `ref`, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csrefKeywordsMethodParams#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-1.cs)]  
   
  Un argumento que se pasa a un parámetro `ref` debe inicializarse antes de pasarlo. En esto difiere de los parámetros `out`, cuyos argumentos no tienen que inicializarse explícitamente antes de pasarlos. Para obtener más información, vea [out](../../../csharp/language-reference/keywords/out.md).  
   
  Los miembros de una clase no pueden tener signaturas que se diferencien solo por `ref` y `out`. Si la única diferencia entre dos miembros de un tipo es que uno de ellos tiene un parámetro `ref` y el otro tiene un parámetro `out`, se produce un error de compilador. El código siguiente, por ejemplo, no se compila.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-2.cs)]  
   
  Sin embargo, la sobrecarga puede realizarse cuando un método tiene un parámetro `ref` o `out` y el otro tiene un parámetro de valor, como se muestra en el ejemplo siguiente.  
   
- [!code-cs[csrefKeywordsMethodParams#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#7](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-3.cs)]  
   
  En otras situaciones que requieran firma coincidente, como ocultar o reemplazar, `ref` y `out` forman parte de la signatura y no coinciden entre sí.  
   
@@ -73,14 +73,15 @@ La palabra clave `ref` hace que un argumento se pase por referencia, no por valo
 ## <a name="example"></a>Ejemplo  
  Los ejemplos anteriores muestran lo que sucede cuando se pasan tipos de valor por referencia. También se puede utilizar la palabra clave `ref` para pasar tipos de referencia. Pasar un tipo de referencia por referencia permite que el método llamado pueda reemplazar el objeto en el método de llamada al que hace referencia el parámetro de referencia. La ubicación de almacenamiento del objeto se pasa al método como el valor del parámetro de referencia. Si cambia el valor de la ubicación de almacenamiento del parámetro (para que apunte a un nuevo objeto), también debe cambiar la ubicación de almacenamiento a la que se refiere el autor de la llamada. En el ejemplo siguiente se pasa una instancia de un tipo de referencia como un parámetro `ref`. Para obtener más información sobre cómo pasar tipos de referencia por valor y por referencia, vea [Pasar parámetros Reference-Type ](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).  
   
- [!code-cs[csrefKeywordsMethodParams#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/ref_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#8](../../../../samples/snippets/csharp/language-reference/keywords/ref/ref-4.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
  [Parámetros de métodos](../../../csharp/language-reference/keywords/method-parameters.md)   
+
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)

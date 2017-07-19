@@ -26,6 +26,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/03/2017
 
 ---
+
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Página de portal)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] permite consultar sobre cualquier objeto enumerable de [!INCLUDE[vstecado](~/includes/vstecado-md.md)] mediante el modelo de programación de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
   
@@ -53,4 +54,5 @@ ms.lasthandoff: 07/03/2017
   
 ## <a name="see-also"></a>Vea también  
  [LINQ y ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)   
+
  [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
