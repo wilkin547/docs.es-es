@@ -1,55 +1,57 @@
 ---
-title: "C&#243;mo: Ver el contenido de un ensamblado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "manifiesto del ensamblado, ver información"
-  - "Ildasm.exe"
-  - "Desensamblador de MSIL"
-  - "ensamblados [.NET Framework], ver contenido"
-  - "ver información de ensamblados"
-  - "MSIL"
-  - "ver información de MSIL"
+title: "Cómo: Ver el contenido de un ensamblado | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly manifest, viewing information
+- Ildasm.exe
+- MSIL Disassembler
+- assemblies [.NET Framework], viewing contents
+- viewing assembly information
+- MSIL
+- viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 38ed309c8d1ef7467b235eb2e751ffb9016a83ab
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# C&#243;mo: Ver el contenido de un ensamblado
-El [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) se puede usar para ver la información del lenguaje intermedio de Microsoft \(MSIL\) de un archivo.  Si el archivo que se examina es un ensamblado, esta información puede incluir los atributos de dicho ensamblado, así como referencias a otros módulos y ensamblados.  Esta información puede resultar útil para determinar si el archivo es un ensamblado o parte de un ensamblado y si tiene referencias a otros módulos o ensamblados.  
+# <a name="how-to-view-assembly-contents"></a>Cómo: Ver el contenido de un ensamblado
+Se puede usar [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver la información del Lenguaje intermedio de Microsoft (MSIL) de un archivo. Si el archivo que se examina es un ensamblado, esta información puede incluir los atributos del ensamblado además de referencias a otros módulos y ensamblados. Esta información puede ser útil para determinar si un archivo es un ensamblado o forma parte de uno y si el archivo tiene referencias a otros módulos o ensamblados.  
   
-### Para mostrar el contenido de un ensamblado mediante Ildasm.exe  
+### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Para mostrar el contenido de un ensamblado mediante Ildasm.exe  
   
-1.  *Nombre del ensamblado*de \<**ildasm** de tipo\> en el símbolo del sistema.  Por ejemplo, con el comando siguiente se desensambla el ensamblado `Hello.exe`.  
+1.  Escriba **ildasm** \<*nombre de ensamblado*> en el símbolo del sistema. Por ejemplo, el comando siguiente desensambla el ensamblado `Hello.exe`.  
   
     ```  
     ildasm Hello.exe  
     ```  
   
-### Para ver información de manifiesto del ensamblado  
+### <a name="to-view-assembly-manifest-information"></a>Para ver información del manifiesto del ensamblado  
   
-1.  Haga doble clic en el icono del MANIFIESTO en la ventana del Desensamblador MSIL.  
+1.  Haga doble clic en el icono del manifiesto en la ventana del Desensamblador de MSIL.  
   
-## Ejemplo  
- El siguiente ejemplo empieza con un programa básico "Hola a todos".  Después de compilar el programa, utilice Ildasm.exe para desensamblar el ensamblado Hello.exe y ver el manifiesto del ensamblado.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente se inicia con un programa básico "Hello, World". Después de compilar el programa, use Ildasm.exe para desensamblar el ensamblado Hello.exe y ver el manifiesto del ensamblado.  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)]
- [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)]
- [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
   
- La ejecución del comando ildasm.exe en el ensamblado Hello.exe y un doble clic en el icono del MANIFIESTO en la ventana de IL DASM generan el resultado siguiente:  
+ Al ejecutar el comando ildasm.exe en el ensamblado Hello.exe y hacer doble clic en el icono del manifiesto en la ventana IL DASM se produce lo siguiente:  
   
 ```  
-  
 // Metadata version: v4.0.30319  
 .assembly extern mscorlib  
 {  
@@ -72,26 +74,26 @@ El [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-
 .subsystem 0x0003       // WINDOWS_CUI  
 .corflags 0x00000001    //  ILONLY  
 // Image base: 0x00600000  
-  
 ```  
   
- En la siguiente tabla se describen las directivas del manifiesto del ensamblado Hello.exe utilizado en el ejemplo.  
+ En la tabla siguiente se explica cada directiva del manifiesto del ensamblado Hello.exe usado en el ejemplo.  
   
 |Directiva|Descripción|  
 |---------------|-----------------|  
-|*nombre del ensamblado* **\>**de**.assembly extern \<**|Especifica otro ensamblado que contiene elementos a los que hace referencia el módulo actual \(en este ejemplo, `mscorlib`\).|  
-|*símbolo* **\>**de **.publickeytoken \<**|Especifica el token de la clave real del ensamblado al que se hace referencia.|  
-|*número de versión* **\>**de **.ver \<**|Especifica el número de versión del ensamblado al que se hace referencia.|  
-|*nombre del ensamblado* **\>**de**.assembly \<**|Especifica el nombre del ensamblado.|  
-|**.hash algorithm \<** *valor int32* **\>**|Especifica el algoritmo de hash utilizado.|  
-|*número de versión* **\>**de **.ver \<**|Especifica el número de versión del ensamblado.|  
-|*nombre de archivo* **\>**de**.module \<**|Especifica el nombre de los módulos que forman el ensamblado.  En este ejemplo, el ensamblado sólo tiene un archivo.|  
-|*valor* **\>**de**.subsystem \<**|Especifica el entorno de aplicación que requiere el programa.  En este ejemplo, el valor 3 indica que este ejecutable se ejecuta desde una consola.|  
-|**.corflags**|En la actualidad, un campo reservado de los metadatos.|  
+|**.assembly extern \<** *nombre del ensamblado* **>**|Especifica otro ensamblado que contiene elementos a los que hace referencia el módulo actual (en este ejemplo, `mscorlib`).|  
+|**.publickeytoken \<** *token* **>**|Especifica el token de la clave real del ensamblado al que se hace referencia.|  
+|**.ver \<** *número de versión* **>**|Especifica el número de versión del ensamblado al que se hace referencia.|  
+|**.assembly \<** *nombre del ensamblado* **>**|Especifica el nombre del ensamblado.|  
+|**.hash algorithm \<** *valor int32* **>**|Especifica el algoritmo hash usado.|  
+|**.ver \<** *número de versión* **>**|Especifica el número de versión del ensamblado.|  
+|**.module \<** *nombre del archivo* **>**|Especifica el nombre de los módulos que componen el ensamblado. En este ejemplo, el ensamblado consta de un único archivo.|  
+|**.subsystem \<** *valor* **>**|Especifica el entorno de aplicación necesario para el programa. En este ejemplo, el valor 3 indica que este ejecutable se ejecuta desde una consola.|  
+|**.corflags**|De momento, un campo reservado de los metadatos.|  
   
- Un manifiesto del ensamblado puede contener varias directivas distintas, dependiendo del contenido del ensamblado.  Para obtener una lista completa de las directivas del manifiesto del ensamblado, consulte la documentación \(en inglés\) de ECMA, especialmente la partición II, sobre definición y semántica de metadatos, y la partición III, sobre el conjunto de instrucciones de CIL.  La documentación está disponible en línea; consulte [ECMA C\# y estándares de Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=99212) MSDN y [Estándar ECMA\-335 \- Common Language Infrastructure \(CLI\)](http://go.microsoft.com/fwlink/?LinkID=65552) en el sitio Web de ECMA International.  
+ Un manifiesto de ensamblado puede contener varias directivas diferentes, según el contenido del ensamblado. Para obtener una lista completa de las directivas del manifiesto del ensamblado, vea la documentación de ECMA, especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)". La documentación está disponible en línea; vea [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) (Estándares de ECMA C# y Common Language Infrastructure) en MSDN y [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) (Estándar ECMA-335: Common Language Infrastructure [CLI]) en el sitio web de Ecma International.  
   
-## Vea también  
- [Application Domains and Assemblies](http://msdn.microsoft.com/es-es/433b04ae-4ba8-4849-9dbd-79194f240346)   
- [Temas "Cómo..." sobre dominios de aplicación y ensamblados](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
- [Ildasm.exe \(IL Disassembler\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+## <a name="see-also"></a>Vea también  
+ [Dominios de aplicación y ensamblados](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
+ [Application Domains and Assemblies How-to Topics](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md) (Temas "Cómo..." sobre dominios de aplicación y ensamblados)   
+ [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+

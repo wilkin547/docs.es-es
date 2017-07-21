@@ -29,8 +29,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
-<a id="mageuiexe-manifest-generation-and-editing-tool-graphical-client" class="xliff"></a>
+# <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 MageUI.exe admite la misma funcionalidad que la herramienta de línea de comandos Mage.exe, pero con una interfaz de usuario (IU) basada en Windows. Con esta herramienta puede crear, editar y firmar manifiestos de implementación y de aplicación. Los nuevos manifiestos que se crean con MageUI.exe tienen [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Cuando el destino es una versión anterior de .NET Framework, se deben usar las versiones anteriores de MageUI.exe. Cuando se agregan o quitan ensamblados de un manifiesto, o cuando se vuelven a firmar manifiestos existentes, MageUI.exe no actualiza el manifiesto para destinarlo a [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Para más información, consulte [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
@@ -40,8 +39,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 > [!NOTE]
 >  MageUI.exe no admite el elemento [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) cuando se guarda un manifiesto de aplicación que ya se ha firmado con un certificado mediante MageUI.exe. En su lugar, debe usar [Mage.exe](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
-## Lista de UIElement
-<a id="uielement-list" class="xliff"></a>  
+## <a name="uielement-list"></a>Lista de UIElement  
  La siguiente tabla enumera los elementos de menú y de barra de herramientas disponibles.  
   
 |Comando|Menú|Acceso directo|Descripción|  
@@ -62,8 +60,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Cerrar todo**|**Ventana**||Cierra todos los archivos que están abiertos en MageUI.exe. Si hay uno o varios archivos sin guardar, MageUI.exe le preguntará si desea guardarlos. MageUI.exe también le pedirá que seleccione una clave de firma para cada archivo sin firmar o modificado.|  
 |**Acerca de**|**Ayuda**||Muestra la información de versión y de copyright de MageUI.exe.|  
   
-## Cuadro de diálogo Preferencias
-<a id="preferences-dialog-box" class="xliff"></a>  
+## <a name="preferences-dialog-box"></a>Cuadro de diálogo Preferencias  
  El cuadro de diálogo **Preferencias** contiene los elementos siguientes.  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -72,8 +69,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Usar certificado de firma predeterminado**|Usa la clave especificada en el cuadro de texto **Archivo de certificado** para firmar todos los archivos. Esta opción elimina el mensaje de solicitud de firma que suele aparecer al guardar un archivo si la opción **Firmar al guardar** está seleccionada. Use el botón de puntos suspensivos (**…**) situado junto al cuadro de texto **Archivo de certificado** para seleccionar un archivo de claves.|  
 |Algoritmo de resumen|Especifica el algoritmo con el que se generarán los resúmenes de dependencia. El valor debe ser "sha256RSA" o "sha1RSA". Usa SHA1 como valor predeterminado. Se usa tanto en los manifiestos de aplicación como de implementación. Si el usuario proporciona un certificado al guardar el manifiesto, usa los algoritmos del certificado para generar los resúmenes de dependencia.|  
   
-## Cuadro de diálogo Opciones de firma
-<a id="signing-options-dialog-box" class="xliff"></a>  
+## <a name="signing-options-dialog-box"></a>Cuadro de diálogo Opciones de firma  
  El cuadro de diálogo **Opciones de firma** aparece cuando se guarda un manifiesto o una licencia de confianza por primera vez, o cuando se modifica un manifiesto o licencia de confianza. Solo aparece si está seleccionada la opción **Firmar al guardar** del cuadro de diálogo **Preferencias**. Debe estar conectado a Internet al firmar un manifiesto que especifica un valor en el cuadro de texto **URI de marca de tiempo**.  
   
  Este cuadro de diálogo contiene los siguientes elementos.  
@@ -89,12 +85,10 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**URI de marca de tiempo**|Muestra el Localizador uniforme de recursos (URI) de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para más información, consulte [Miembros del programa de certificados raíz de Windows](http://go.microsoft.com/fwlink/?LinkId=159000) y [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**No firmar**|Le permite guardar el manifiesto sin agregar una firma de un certificado digital.|  
   
-## Descripciones de pestañas y paneles
-<a id="tab-and-panel-descriptions" class="xliff"></a>  
+## <a name="tab-and-panel-descriptions"></a>Descripciones de pestañas y paneles  
  Cuando se abre un documento con MageUI.exe, aparece dentro de su propia página de pestañas. Cada pestaña contiene un conjunto de paneles de propiedades. Los paneles contienen subconjuntos agrupados de los datos del documento.  
   
-### Pestaña Manifiesto de aplicación
-<a id="application-manifest-tab" class="xliff"></a>  
+### <a name="application-manifest-tab"></a>Pestaña Manifiesto de aplicación  
  La pestaña **Manifiesto de aplicación** muestra el contenido de un manifiesto de aplicación. El manifiesto de aplicación describe todos los archivos incluidos con la implementación y los permisos necesarios para que la aplicación se ejecute en el cliente.  
   
  La pestaña **Manifiesto de aplicación** contiene las siguientes pestañas.  
@@ -107,8 +101,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Archivos**|Especifica todos los archivos que componen esta implementación.|  
 |**Permisos necesarios**|Especifica el conjunto de permisos mínimo requerido por la aplicación para ejecutarse en un cliente.|  
   
-### Pestaña Nombre
-<a id="name-tab" class="xliff"></a>  
+### <a name="name-tab"></a>Pestaña Nombre  
  La pestaña **Nombre** se muestra al crear o abrir por primera vez un manifiesto de aplicación. Identifica de forma única la implementación y, opcionalmente, especifica una plataforma de destino válida.  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -119,8 +112,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Referencia cultural**|Opcional. Es el código ISO de dos partes, país y región, en el que se ejecuta esta aplicación. De manera predeterminada, es `neutral`.|  
 |**Token de clave pública**|Opcional. Es la clave pública con la que se ha firmado este manifiesto de aplicación. Si se trata de un manifiesto nuevo o sin firmar, este campo aparecerá como `Unsigned`.|  
   
-### Pestaña Descripción
-<a id="description-tab" class="xliff"></a>  
+### <a name="description-tab"></a>Pestaña Descripción  
  Esta información normalmente se proporciona dentro del manifiesto de implementación. Estos campos solo pueden modificarse si se selecciona la casilla **Usar manifiesto de la aplicación para la información de confianza** en la pestaña **Opciones de la aplicación**.  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -129,16 +121,14 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Producto**|Nombre completo del producto. Si seleccionó **Instalar localmente** para el elemento **Tipo de aplicación** de la pestaña **Opciones de implementación** del manifiesto de implementación, este nombre aparecerá en el vínculo del menú **Inicio** y en **Agregar o quitar programas** para esta aplicación.|  
 |**Ubicación de soporte técnico**|Es la dirección URL desde la que los clientes pueden obtener ayuda y soporte técnico para la aplicación.|  
   
-### Pestaña Opciones de la aplicación
-<a id="application-options-tab" class="xliff"></a>  
+### <a name="application-options-tab"></a>Pestaña Opciones de la aplicación  
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
 |**Aplicación Explorador de Windows Presentation Foundation**|Especifica si se trata de una aplicación WPF que se ejecuta en el explorador como una aplicación de explorador XAML (XBAP).|  
 |**Usar manifiesto de la aplicación para la información de confianza**|Especifica si este manifiesto contiene información de confianza.|  
   
-### Pestaña Archivos
-<a id="files-tab" class="xliff"></a>  
+### <a name="files-tab"></a>Pestaña Archivos  
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
@@ -149,8 +139,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Opcional**|Los archivos marcados como opcionales no se descargan en la instalación o actualización inicial, pero se pueden descargar en tiempo de ejecución mediante la API a petición System.Deployment. Para más información, consulte [Tutorial: Descargar ensamblados a petición con la API de implementación de ClickOnce mediante el diseñador](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grupo**|Etiqueta para un conjunto de archivos opcionales. Puede aplicar esta etiqueta a un conjunto de archivos y usar la API a petición para descargar un lote de archivos con una sola llamada API.|  
   
-### Pestaña Permisos necesarios
-<a id="permissions-required-tab" class="xliff"></a>  
+### <a name="permissions-required-tab"></a>Pestaña Permisos necesarios  
  Use la pestaña **Permisos necesarios** si necesita conceder a la aplicación más acceso al equipo local del que se concede de forma predeterminada. Para más información, consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -158,8 +147,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para una descripción de estos conjuntos de permisos y ver qué permisos se exigen, consulte [Conjuntos de permisos con nombre](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Detalles**|Es el XML creado para el manifiesto de aplicación para representar el conjunto de permisos. A menos que tenga amplios conocimientos del formato XML del manifiesto de aplicación, no debe modificar manualmente este XML. Para más información, consulte [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
-### Pestaña Manifiesto de implementación
-<a id="deployment-manifest-tab" class="xliff"></a>  
+### <a name="deployment-manifest-tab"></a>Pestaña Manifiesto de implementación  
  La pestaña **Manifiesto de implementación** contiene las siguientes pestañas.  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -170,8 +158,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Opciones de actualización**|Especifica la frecuencia con la que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] debe comprobar si hay actualizaciones de la aplicación.|  
 |**Referencia de aplicación**|Especifica el manifiesto de aplicación para esta implementación.|  
   
-### Pestaña Nombre
-<a id="name-tab" class="xliff"></a>  
+### <a name="name-tab"></a>Pestaña Nombre  
  La pestaña **Nombre** aparece al crear o abrir por primera vez un manifiesto de implementación. Identifica de forma única la implementación y, opcionalmente, especifica una plataforma de destino válida.  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -182,8 +169,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Referencia cultural**|Opcional. Es el código ISO de dos partes, país y región, en el que se ejecuta esta aplicación. De manera predeterminada, es `neutral`.|  
 |**Token de clave pública**|Opcional. Es la clave pública con la que se firmó el manifiesto de implementación. Si se trata de un manifiesto nuevo o sin firmar, este campo aparecerá como `Unsigned`.|  
   
-### Pestaña Descripción
-<a id="description-tab" class="xliff"></a>  
+### <a name="description-tab"></a>Pestaña Descripción  
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
@@ -191,8 +177,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Producto**|Obligatorio. Nombre completo del producto. Si seleccionó **Instalar localmente** para el elemento **Tipo de aplicación** en la pestaña **Opciones de implementación**, este nombre aparecerá en el vínculo del menú **Inicio** y en **Agregar o quitar programas** para esta aplicación.|  
 |**Ubicación de soporte técnico**|Opcional. Es la dirección URL desde la que los clientes pueden obtener ayuda y soporte técnico para la aplicación.|  
   
-### Pestaña Opciones de implementación
-<a id="deployment-options-tab" class="xliff"></a>  
+### <a name="deployment-options-tab"></a>Pestaña Opciones de implementación  
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
@@ -203,8 +188,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Permitir que se pasen los parámetros de la dirección URL a la aplicación**|Obligatorio. Permite la transferencia de datos de parámetros a la aplicación de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] a través de una cadena de consulta anexa a la dirección URL del manifiesto de implementación. El valor predeterminado es que la casilla esté desactivada.|  
 |**Usar la extensión de archivo .deploy**|Obligatorio. Cuando se selecciona, todos los archivos del manifiesto de aplicación deben tener la extensión .deploy. El valor predeterminado es que la casilla esté desactivada.|  
   
-### Pestaña Opciones de actualización
-<a id="update-options-tab" class="xliff"></a>  
+### <a name="update-options-tab"></a>Pestaña Opciones de actualización  
  La pestaña **Opciones de actualización** solo contiene las opciones mencionadas aquí cuando el cuadro de selección **Tipo de aplicación** de la pestaña **Nombre** se establece en **Instalar localmente**.  
   
 |Elemento de la interfaz de usuario|Descripción|  
@@ -215,16 +199,14 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Especifique la versión mínima requerida para esta aplicación**|Opcional. Especifica la instalación obligatoria de una versión concreta de la aplicación para evitar que los usuarios trabajen con una versión anterior.|  
 |**Version**|Obligatorio si se selecciona la casilla **Especifique la versión mínima requerida para esta aplicación**. El número de versión proporcionado debe tener el formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
   
-### Pestaña Referencia de aplicación
-<a id="application-reference-tab" class="xliff"></a>  
+### <a name="application-reference-tab"></a>Pestaña Referencia de aplicación  
  La pestaña **Referencia de la aplicación** contiene los mismos campos que la pestaña **Nombre** descrita anteriormente en este tema. La única excepción es el campo siguiente.  
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
 |**Seleccionar manifiesto**|Le permite elegir el manifiesto de aplicación. El resto de campos de esta página se rellenarán cuando elija un manifiesto de aplicación.|  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
  [Mage.exe (Herramienta de generación y edición de manifiestos)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

@@ -32,8 +32,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Aximp.exe (Importador de controles ActiveX de Windows Forms)
-<a id="aximpexe-windows-forms-activex-control-importer" class="xliff"></a>
+# <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
   
  Windows Forms solo puede hospedar controles de Windows Forms; es decir, clases derivadas de <xref:System.Windows.Forms.Control>. Aximp.exe genera una clase contenedora para un control ActiveX que se puede hospedar en un Windows Form. Esto permite utilizar la misma compatibilidad en tiempo de diseño y la misma metodología de programación que si se tratase de controles usuales de Windows Forms.  
@@ -44,15 +43,13 @@ El Importador de controles ActiveX convierte definiciones de tipos de una biblio
   
  En el símbolo del sistema, escriba lo siguiente:  
   
-## Sintaxis
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## Comentarios
-<a id="remarks" class="xliff"></a>  
+## <a name="remarks"></a>Comentarios  
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
@@ -90,15 +87,13 @@ aximp [options]{file.dll | file.ocx}
   
  Si se utiliza Aximp.exe con shdocvw.dll con el fin de crear un ensamblado .NET para utilizarlo en el desarrollo de aplicaciones, también pueden producirse problemas. En este caso, la aplicación cargará la versión del sistema de shdocvw.dll y la versión generada, por lo que la versión del sistema podría tener prioridad. En este caso, al intentar cargar una página web dentro del control ActiveX WebBrowser, es posible que a los usuarios les aparezca un cuadro de diálogo para abrir o guardar. Cuando el usuario haga clic en **Abrir**, la página web se abrirá en Internet Explorer. Esto solo ocurre en los equipos que ejecutan Internet Explorer versión 6 o una versión anterior. Para evitar este problema, use el control <xref:System.Windows.Forms.WebBrowser> administrado o [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para generar el control shdocvw.dll administrado, como se describe en [How to: Add References to Type Libraries (Cómo: Agregar referencias a bibliotecas de tipos)](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
-## Ejemplo
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>Ejemplo  
  El comando siguiente genera los archivos MediaPlayer.dll y AxMediaPlayer.dll para el control de Media Player `msdxm.ocx`.  
   
 ```  
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Herramientas](../../../docs/framework/tools/index.md)   
  [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

@@ -24,8 +24,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Nombres de ensamblado
-<a id="assembly-names" class="xliff"></a>
+# <a name="assembly-names"></a>Nombres de ensamblado
 Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  
   
  El runtime usa esta información para buscar el ensamblado y distinguirlo de otros ensamblados con el mismo nombre. Por ejemplo, un ensamblado con nombre seguro llamado `myTypes` podría tener el siguiente nombre completo:  
@@ -58,8 +57,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas de [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] controlan los nombres de ensamblado sin distinción entre mayúsculas y minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.  
   
-## Nombre de los componentes de la aplicación
-<a id="naming-application-components" class="xliff"></a>  
+## <a name="naming-application-components"></a>Nombre de los componentes de la aplicación  
  El runtime no tiene en cuenta el nombre de archivo a la hora de determinar la identidad de un ensamblado. La identidad del ensamblado, que se compone del nombre del ensamblado, la versión, la referencia cultural y el nombre seguro, debe ser clara para el runtime.  
   
  Por ejemplo, si tiene un ensamblado denominado myAssembly.exe que hace referencia a un ensamblado denominado myAssembly.dll, el enlace se produce correctamente si se ejecuta myAssembly.exe. Pero si otra aplicación ejecuta myAssembly.exe con el método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName>, el runtime determina que "myAssembly" ya se ha cargado cuando myAssembly.exe solicita enlazar a "myAssembly." En este caso, myAssembly.dll nunca se carga. Puesto que myAssembly.exe no contiene el tipo solicitado, se produce una <xref:System.TypeLoadException>.  
@@ -69,8 +67,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  Si coloca un ensamblado con nombre seguro en la caché global de ensamblados, el nombre de archivo del ensamblado debe coincidir con el nombre del ensamblado (sin incluir la extensión de nombre de archivo, como .exe o .dll). Por ejemplo, si el nombre de archivo de un ensamblado es myAssembly.dll, el nombre del ensamblado debe ser myAssembly. Los ensamblados privados implementados solamente en el directorio de la aplicación raíz pueden tener un nombre de ensamblado diferente al nombre de archivo.  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Cómo: Determinar el nombre completo de un ensamblado](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
  [Crear ensamblados](../../../docs/framework/app-domains/create-assemblies.md)   
  [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)   

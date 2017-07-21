@@ -29,8 +29,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Mage.exe (Herramienta de generación y edición de manifiestos)
-<a id="mageexe-manifest-generation-and-editing-tool" class="xliff"></a>
+# <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 La herramienta de generación y edición de manifiestos (Mage.exe) es una herramienta de línea de comandos que permite crear y editar manifiestos de aplicación y de implementación. Como herramienta de línea de comandos, Mage.exe se puede ejecutar desde scripts por lotes y desde otras aplicaciones basadas en Windows, incluidas las aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .  
   
  También puede usar la aplicación gráfica MageUI.exe en lugar de Mage.exe. Para obtener más información, consulta [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).  
@@ -41,15 +40,13 @@ La herramienta de generación y edición de manifiestos (Mage.exe) es una herram
   
  En el símbolo del sistema, escriba lo siguiente:  
   
-## Sintaxis
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Mage [commands] [commandOptions]  
 ```  
   
-#### Parámetros
-<a id="parameters" class="xliff"></a>  
+#### <a name="parameters"></a>Parámetros  
  En la tabla siguiente se muestran los comandos que admite Mage.exe. Para obtener más información sobre las opciones que admiten estos comandos, vea [Opciones de los comandos New y Update](#NewUpdate) y [Opciones del comando Sign](#Sign).  
   
 |Comando|Descripción|  
@@ -61,8 +58,7 @@ Mage [commands] [commandOptions]
 |**-h, -?, -Help** *[verbose]*|Describe todos los comandos disponibles y sus opciones. Especifique `verbose` para obtener ayuda detallada.|  
   
 <a name="NewUpdate"></a>   
-## Opciones de los comandos New y Update
-<a id="new-and-update-command-options" class="xliff"></a>  
+## <a name="new-and-update-command-options"></a>Opciones de los comandos New y Update  
  En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y `-Update` .  
   
 |Opciones|Valor predeterminado|Se aplica a|Descripción|  
@@ -91,8 +87,7 @@ Mage [commands] [commandOptions]
 |**-wpf, -WPFBrowserApp**  `isWPFApp`|False|Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|Use esta marca solo para aplicaciones de Windows Presentation Foundation (WPF) que se hospedarán en Internet Explorer, y no para aplicaciones ejecutables independientes. Los valores válidos son "true" o "t", y "false" o "f".<br /><br /> Si se trata de un manifiesto de aplicación, inserta el atributo `hostInBrowser` en el elemento `entryPoint` de dicho manifiesto.<br /><br /> Si se trata de un manifiesto de implementación, establece el atributo `install` del elemento `deployment` en false y guarda el manifiesto con una extensión .xbap. Si se especifica este argumento junto con el argumento **-Install** se produce un error, ya que una aplicación hospedada en un explorador no puede ser una aplicación instalada sin conexión.|  
   
 <a name="Sign"></a>   
-## Opciones del comando Sign
-<a id="sign-command-options" class="xliff"></a>  
+## <a name="sign-command-options"></a>Opciones del comando Sign  
  En la siguiente tabla se muestran las opciones que admite el comando `-Sign` y que se aplican a todos los tipos de archivos.  
   
 |Opciones|Descripción|  
@@ -102,8 +97,7 @@ Mage [commands] [commandOptions]
 |**-pwd, -Password** `passwd`|La contraseña usada para firmar un manifiesto con un certificado digital. Se debe usar junto con la opción **-CertFile** .|  
 |**-t, -ToFile** `filePath`|Especifica la ruta de acceso de salida del archivo que se ha creado o modificado.|  
   
-## Comentarios
-<a id="remarks" class="xliff"></a>  
+## <a name="remarks"></a>Comentarios  
  Ninguno de los argumentos de Mage.exe distingue entre mayúsculas y minúsculas. Los comandos y las opciones pueden llevar como prefijo un guion (-) o una barra diagonal (/).  
   
  Todos los argumentos que se usan con el comando **-Sign** se pueden usar en cualquier momento con los comandos **-New** o **-Update** . Los siguientes comandos son equivalentes.  
@@ -158,8 +152,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />  
 ```  
   
-## Ejemplos
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se abre la interfaz de usuario para Mage (MageUI.exe).  
   
 ```  
@@ -216,8 +209,7 @@ mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>  
 ```  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)   
  [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
  [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)   

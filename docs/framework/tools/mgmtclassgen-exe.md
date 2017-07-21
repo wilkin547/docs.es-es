@@ -1,114 +1,118 @@
 ---
-title: "Mgmtclassgen.exe (Management Strongly Typed Class Generator) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "CIM types"
-  - "Management Strongly Typed Class Generator"
-  - "WMI class"
-  - "Mgmtclassgen.exe"
-  - "early-bound managed classes"
+title: "Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- CIM types
+- Management Strongly Typed Class Generator
+- WMI class
+- Mgmtclassgen.exe
+- early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 caps.latest.revision: 21
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 21
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 964f4826a9a4527ddc2a86d14d441d302e20a09e
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# Mgmtclassgen.exe (Management Strongly Typed Class Generator)
-La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows \(WMI\).  La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
+# <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
+La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 mgmtclassgen   
 WMIClass [options]   
 ```  
   
 |Argumento|Descripción|  
-|---------------|-----------------|  
+|--------------|-----------------|  
 |*WMIClass*|Clase de Instrumental de administración de Windows para la que se genera una clase administrada en tiempo de compilación.|  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**\/l**  *lenguaje*|Especifica el lenguaje en el que se genera la clase administrada en tiempo de compilación.  Puede especificar **CS** \(C\#; predeterminado\), **VB** \(Visual Basic\),  **MC** \(C\+\+\) o **JS** \(JScript\) como argumento del lenguaje.|  
-|**\/m**  *equipo*|Especifica el equipo con el que se va a conectar y en el que reside la clase de WMI.  La opción predeterminada es el equipo local.|  
-|**\/n**  *rutaAcceso*|Especifica la ruta de acceso al espacio de nombres de WMI que contiene la clase de WMI.  Si no se especifica esta opción, la herramienta genera código para *WMIClass* en el espacio de nombres **Root\\cimv2** predeterminado.|  
-|**\/o**  *espacioNombresClase*|Especifica el espacio de nombres de .NET en el que se genera la clase de código administrado.  Si no se especifica esta opción, la herramienta genera el espacio de nombres utilizando el espacio de nombres de WMI y el prefijo de esquema.  El prefijo de esquema es la parte del nombre de clase que figura delante del carácter de subrayado.  Por ejemplo, para la clase **Win32\_OperatingSystem** del espacio de nombres **Root\\cimv2**, la herramienta generaría la clase en **ROOT.CIMV2.Win32**.|  
-|**\/p**  *ruta de acceso del archivo*|Especifica la ruta de acceso al archivo donde se guarda el código generado.  Si no se especifica esta opción, la herramienta crea el archivo en el directorio actual.  Asigna un nombre a la clase y al archivo donde se genera la clase utilizando el argumento *WMIClass*.  El nombre de la clase y el nombre del archivo coinciden con el nombre de *WMIClass*. Si *WMIClass* contiene un carácter de subrayado, la herramienta utiliza la parte del nombre de clase que figura detrás del carácter de subrayado.  Por ejemplo, si el nombre de *WMIClass* tiene el formato **Win32\_LogicalDisk**, el nombre de la clase generada y del archivo es "logicaldisk".  Si ya existe un archivo, la herramienta sobrescribe el archivo existente.|  
-|**\/pw**  *contraseña*|Especifica la contraseña que se utiliza al iniciar sesión en el equipo especificado con la opción **\/m**.|  
-|**\/u**  *nombre de usuario*|Especifica el nombre de usuario que se utiliza al iniciar sesión en el equipo especificado con la opción **\/m**.|  
-|**\/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
+|**/l**  *language*|Especifica el lenguaje en el que se genera la clase administrada en tiempo de compilación. Puede especificar **CS** (C#, predeterminado), **VB** (Visual Basic), **MC** (C++) o **JS** (JScript) como argumento del lenguaje.|  
+|**/m**  *machine*|Especifica el equipo con el que se va a conectar y en el que reside la clase de WMI. La opción predeterminada es el equipo local.|  
+|**/n**  *path*|Especifica la ruta de acceso al espacio de nombres de WMI que contiene la clase de WMI. Si no se especifica esta opción, la herramienta genera código para *WMIClass* en el espacio de nombres **Root\cimv2** predeterminado.|  
+|**/o**  *classnamespace*|Especifica el espacio de nombres de .NET en el que se genera la clase de código administrado. Si no se especifica esta opción, la herramienta genera el espacio de nombres utilizando el espacio de nombres de WMI y el prefijo de esquema. El prefijo de esquema es la parte del nombre de clase que figura delante del carácter de subrayado. Por ejemplo, para la clase **Win32_OperatingSystem** del espacio de nombres **Root\cimv2**, la herramienta generaría la clase en **ROOT.CIMV2.Win32**.|  
+|**/p**  *filepath*|Especifica la ruta de acceso al archivo donde se guarda el código generado. Si no se especifica esta opción, la herramienta crea el archivo en el directorio actual. Asigna un nombre a la clase y al archivo donde se genera la clase mediante el argumento *WMIClass*. El nombre de la clase y el nombre del archivo coinciden con el nombre de *WMIClass*. Si *WMIClass* contiene un carácter de subrayado, la herramienta usa la parte del nombre de clase que figura detrás del carácter de subrayado. Por ejemplo, si el nombre de *WMIClass* tiene el formato **Win32_LogicalDisk**, el nombre de la clase generada y del archivo es "logicaldisk". Si ya existe un archivo, la herramienta sobrescribe el archivo existente.|  
+|**/pw**  *password*|Especifica la contraseña que se usa al iniciar sesión en el equipo especificado con la opción **/m**.|  
+|**/u**  *user name*|Especifica el nombre de usuario que se usa al iniciar sesión en el equipo especificado con la opción **/m**.|  
+|**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
-## Comentarios  
- Mgmtclassgen.exe usa el método <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>.  Por tanto, se puede utilizar cualquier proveedor de código personalizado para generar código en lenguajes administrados distintos de C\#, Visual Basic y JScript.  
+## <a name="remarks"></a>Comentarios  
+ Mgmtclassgen.exe usa el método <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>. Por tanto, se puede utilizar cualquier proveedor de código personalizado para generar código en lenguajes administrados distintos de C#, Visual Basic y JScript.  
   
- Tenga en cuenta que las clases generadas se enlazan al esquema para el que se generan.  Si el esquema subyacente cambia, se debe volver a generar la clase para que los cambios se reflejen en el esquema.  
+ Tenga en cuenta que las clases generadas se enlazan al esquema para el que se generan. Si el esquema subyacente cambia, se debe volver a generar la clase para que los cambios se reflejen en el esquema.  
   
- La tabla siguiente muestra cómo se asignan los tipos del Modelo de información común \(CIM\) de WMI a los tipos de datos en una clase generada:  
+ La tabla siguiente muestra cómo se asignan los tipos del Modelo de información común (CIM) de WMI a los tipos de datos en una clase generada:  
   
 |Tipo de CIM|Tipo de datos en la clase generada|  
-|-----------------|----------------------------------------|  
-|CIM\_SINT8|**SByte**|  
-|CIM\_UINT8|**Byte**|  
-|CIM\_SINT16|**Int16**|  
-|CIM\_UINT16|**UInt16**|  
-|CIM\_SINT32|**Int32**|  
-|SIM\_UINT32|**UInt32**|  
-|CIM\_SINT64|**Int64**|  
-|CIM\_UINT64|**UInt64**|  
-|CIM\_REAL32|**Single**|  
-|CIM\_REAL64|**Double**|  
-|CIM\_BOOLEAN|**Boolean**|  
-|CIM\_String|**String**|  
-|CIM\_DATETIME|**DateTime** o **TimeSpan**|  
-|CIM\_REFERENCE|**ManagementPath**|  
-|CIM\_CHAR16|**Char**|  
-|CIM\_OBJECT|**ManagementBaseObject**|  
-|CIM\_IUNKNOWN|**Object**|  
-|CIM\_ARRAY|Matriz de los objetos mencionados anteriormente|  
+|--------------|--------------------------------------|  
+|CIM_SINT8|**SByte**|  
+|CIM_UINT8|**Byte**|  
+|CIM_SINT16|**Int16**|  
+|CIM_UINT16|**UInt16**|  
+|CIM_SINT32|**Int32**|  
+|SIM_UINT32|**UInt32**|  
+|CIM_SINT64|**Int64**|  
+|CIM_UINT64|**UInt64**|  
+|CIM_REAL32|**Single**|  
+|CIM_REAL64|**Double**|  
+|CIM_BOOLEAN|**Boolean**|  
+|CIM_String|**String**|  
+|CIM_DATETIME|**DateTime** o **TimeSpan**|  
+|CIM_REFERENCE|**ManagementPath**|  
+|CIM_CHAR16|**Char**|  
+|CIM_OBJECT|**ManagementBaseObject**|  
+|CIM_IUNKNOWN|**Objeto**|  
+|CIM_ARRAY|Matriz de los objetos mencionados anteriormente|  
   
  Tenga en cuenta los comportamientos siguientes cuando se genera una clase WMI:  
   
--   Es posible que un método o una propiedad públicos estándar tengan el mismo nombre que un método o una propiedad existentes.  Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
+-   Es posible que un método o una propiedad públicos estándar tengan el mismo nombre que un método o una propiedad existentes. Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
   
--   Es posible que el nombre de un método o de una propiedad en una clase generada sea una palabra clave en el lenguaje de programación de destino.  Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
+-   Es posible que el nombre de un método o de una propiedad en una clase generada sea una palabra clave en el lenguaje de programación de destino. Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
   
--   En WMI, los calificadores son modificadores que contienen información para describir una clase, una instancia, una propiedad o un método.  WMI usa calificadores estándar como **Read**, **Write** y **Key** para describir una propiedad en una clase generada.  Por ejemplo, una propiedad que se modifica con un calificador **Read** se define únicamente con un descriptor de acceso **get** de propiedad en la clase generada.  Como las propiedades marcadas con el calificador **Read** están diseñadas para ser de solo lectura, no se define ningún descriptor de acceso **set**.  
+-   En WMI, los calificadores son modificadores que contienen información para describir una clase, una instancia, una propiedad o un método. WMI usa calificadores estándar como **Read**, **Write** y **Key** para describir una propiedad en una clase generada. Por ejemplo, una propiedad que se modifica con un calificador **Read** se define únicamente con un descriptor de acceso **get** de propiedad en la clase generada. Como las propiedades marcadas con el calificador **Read** están diseñadas para ser de solo lectura, no se define ningún descriptor de acceso **set**.  
   
--   Una propiedad numérica se puede modificar mediante los calificadores **Values** y **ValueMaps** para indicar que la propiedad solo se puede establecer en valores permisibles especificados.  Con estos calificadores **Values** y **ValueMaps** se genera una enumeración y se asigna la propiedad a la enumeración.  
+-   Una propiedad numérica se puede modificar mediante los calificadores **Values** y **ValueMaps** para indicar que la propiedad solo se puede establecer en valores permisibles especificados. Con estos calificadores **Values** y **ValueMaps** se genera una enumeración y se asigna la propiedad a la enumeración.  
   
--   WMI utiliza el término singleton para describir una clase que solo puede tener una instancia.  Por tanto, el constructor predeterminado para una clase singleton inicializará la clase en la única instancia de la misma.  
+-   WMI utiliza el término singleton para describir una clase que solo puede tener una instancia. Por tanto, el constructor predeterminado para una clase singleton inicializará la clase en la única instancia de la misma.  
   
--   Una clase WMI puede tener propiedades que sean objetos.  Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos incrustados.  Esto permitirá tener acceso a los objetos incrustados de un modo fuertemente tipado.  Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado.  En este caso, se creará un comentario en el código generado para informar al usuario de este punto.  A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
+-   Una clase WMI puede tener propiedades que sean objetos. Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos incrustados. Esto permitirá tener acceso a los objetos incrustados de un modo fuertemente tipado. Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado. En este caso, se creará un comentario en el código generado para informar al usuario de este punto. A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
   
--   En WMI, el valor de los datos del tipo de datos CIM\_DATETIME puede representar una fecha y hora específicas o un intervalo de tiempo.  Si el valor de los datos representa una fecha y hora, el tipo de datos de la clase generada es **DateTime**.  Si el valor de los datos representa un intervalo de tiempo, el tipo de datos de la clase generada es **TimeSpan**.  
+-   En WMI, el valor de los datos del tipo de datos CIM_DATETIME puede representar una fecha y hora específicas o un intervalo de tiempo. Si el valor de los datos representa una fecha y hora, el tipo de datos de la clase generada es **DateTime**. Si el valor de los datos representa un intervalo de tiempo, el tipo de datos de la clase generada es **TimeSpan**.  
   
  Otra posibilidad consiste en generar una clase fuertemente tipada utilizando la extensión de administración del explorador de servidores en Visual Studio .NET.  
   
- Para obtener más información sobre WMI, vea el tema **Instrumental de administración de Windows** en la documentación de Platform SDK.  
+ Para obtener más información sobre WMI, vea el tema sobre **Instrumental de administración de Windows** en la documentación de Platform SDK.  
   
-## Ejemplos  
- El siguiente comando genera una clase administrada en código de C\# para la clase WMI **Win32\_LogicalDisk** en el espacio de nombres **Root\\cimv2**.  La herramienta escribe la clase administrada en el archivo de código fuente en c:\\disk.cs en el espacio de nombres **ROOT.CIMV2.Win32**.  
+## <a name="examples"></a>Ejemplos  
+ El siguiente comando genera una clase administrada en código de C# para la clase WMI **Win32_LogicalDisk** en el espacio de nombres **Root\cimv2**. La herramienta escribe la clase administrada en el archivo de código fuente en c:\disk.cs en el espacio de nombres **ROOT.CIMV2.Win32**.  
   
 ```  
 mgmtclassgen Win32_LogicalDisk /n root\cimv2 /l CS /p c:\disk.cs  
 ```  
   
- En el ejemplo de código siguiente se muestra la forma de utilizar mediante programación una clase generada.  En primer lugar, se enumera una instancia de la clase y se imprime la ruta de acceso.  A continuación, se crea una instancia de la clase generada que se va a inicializar con una instancia de WMI.  `Process` es la clase generada por **Win32\_Process** y `LogicalDisk` es la clase generada por **Win32\_LogicalDisk** en el espacio de nombres **Root\\cimv2**.  
+ En el ejemplo de código siguiente se muestra la forma de utilizar mediante programación una clase generada. En primer lugar, se enumera una instancia de la clase y se imprime la ruta de acceso. A continuación, se crea una instancia de la clase generada que se va a inicializar con una instancia de WMI. `Process` es la clase generada para **Win32_Process** y `LogicalDisk` es la clase generada para **Win32_LogicalDisk** en el espacio de nombres **Root\cimv2**.  
   
 ```vb  
 Imports System  
@@ -131,7 +135,6 @@ Public Class App
       Console.WriteLine(dskD.Caption)  
    End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -159,9 +162,10 @@ public class App
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Management>   
  <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=fullName>   
  <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=fullName>   
- [Tools](../../../docs/framework/tools/index.md)   
+ [Herramientas](../../../docs/framework/tools/index.md)   
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

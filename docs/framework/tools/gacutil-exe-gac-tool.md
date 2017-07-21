@@ -1,95 +1,99 @@
 ---
-title: "Gacutil.exe (Global Assembly Cache Tool) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "assemblies [.NET Framework], global assembly cache"
-  - "global assembly cache, viewing contents"
-  - "viewing assemblies in global assembly cache"
-  - "global assembly cache, manipulating contents"
-  - "GAC (global assembly cache), Gacutil.exe"
-  - "Gacutil.exe"
-  - "GAC (global assembly cache), viewing contents"
-  - "installing assemblies into global assembly cache"
-  - "removing assemblies from global assembly cache"
-  - "list of assemblies in global assembly cache"
-  - "cache [.NET Framework], global assembly cache"
-  - "GAC (global assembly cache), manipulating contents"
-  - "global assembly cache, Gacutil.exe"
-  - "Global Assembly Cache tool"
+title: "Gacutil.exe (Herramienta Caché global de ensamblados) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- assemblies [.NET Framework], global assembly cache
+- global assembly cache, viewing contents
+- viewing assemblies in global assembly cache
+- global assembly cache, manipulating contents
+- GAC (global assembly cache), Gacutil.exe
+- Gacutil.exe
+- GAC (global assembly cache), viewing contents
+- installing assemblies into global assembly cache
+- removing assemblies from global assembly cache
+- list of assemblies in global assembly cache
+- cache [.NET Framework], global assembly cache
+- GAC (global assembly cache), manipulating contents
+- global assembly cache, Gacutil.exe
+- Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 006048026503c8a3e9d1f1a62a1ae67ff2c03ae9
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# Gacutil.exe (Global Assembly Cache Tool)
+# <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Herramienta Caché global de ensamblados)
 La herramienta Caché global de ensamblados permite ver y manipular el contenido de la caché global de ensamblados y la memoria caché de descarga.  
   
- Esta herramienta se instala automáticamente con Visual Studio.  Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores \(o el Símbolo del sistema de Visual Studio en Windows 7\).  Para obtener más información, vea [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, utilice el Símbolo del sistema para desarrolladores (o el Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
   
 |Argumento|Descripción|  
-|---------------|-----------------|  
-|*assemblyName*|El nombre de un ensamblado.  Puede especificar parte del nombre del ensamblado, como `myAssembly`, o puede especificar un nombre de ensamblado completo, como `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
+|--------------|-----------------|  
+|*assemblyName*|El nombre de un ensamblado. Puede especificar parte del nombre del ensamblado, como `myAssembly`, o puede especificar un nombre de ensamblado completo, como `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5`.|  
 |*assemblyPath*|El nombre de un archivo que contiene un manifiesto del ensamblado.|  
-|*assemblyListFile*|La ruta de acceso a un archivo de texto ANSI donde se enumeran los ensamblados que se van a instalar o desinstalar.  Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo.  La herramienta interpreta las rutas de acceso relativas en relación con la ubicación de *assemblyListFile*.  Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo.  Puede ver algunos ejemplos del contenido de *assemblyListFile* más adelante en este tema.|  
+|*assemblyListFile*|La ruta de acceso a un archivo de texto ANSI donde se enumeran los ensamblados que se van a instalar o desinstalar. Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo. La herramienta interpreta las rutas de acceso relativas en relación con la ubicación de *assemblyListFile*. Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo. Puede ver algunos ejemplos del contenido de *assemblyListFile* más adelante en este tema.|  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**\/cdl**|Elimina el contenido de la memoria caché de descarga.|  
-|**\/f**|Especifique esta opción con las opciones **\/i** o **\/il** para forzar la reinstalación de un ensamblado.  Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.|  
-|**\/h**\[**elp**\]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
-|**\/i** *assemblyPath*|Instala un ensamblado en la caché global de ensamblados.|  
-|**\/if**  *assemblyPath*|Instala un ensamblado en la caché global de ensamblados.  Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.<br /><br /> Especificar esta opción equivale a especificar las opciones **\/i** y **\/f** juntas.|  
-|**\/il** *assemblyListFile*|Instala uno o varios ensamblados especificados en *assemblyListFile* en la caché global de ensamblados.|  
-|**\/ir**  *assemblyPath*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Instala un ensamblado en la caché global de ensamblados y agrega una referencia para contar el ensamblado.  Con esta opción, debe especificar los parámetros *assemblyPath*, *scheme*, *id* y *description*.  Para obtener una descripción de los valores válidos que puede especificar para estos parámetros, vea la opción **\/r**.<br /><br /> Especificar esta opción equivale a especificar las opciones **\/i** y **\/r** juntas.|  
-|**\/l** \[*assemblyName*\]|Enumera el contenido de la caché global de ensamblados.  Si especifica el parámetro *assemblyName* , la herramienta solo enumera los ensamblados que coinciden con el nombre.|  
-|**\/ldl**|Enumera el contenido de la memoria caché de archivos descargados.|  
-|**\/lr** \[*assemblyName*\]|Enumera todos los ensamblados y sus recuentos de referencias correspondientes.  Si especifica el parámetro *assemblyName*, la herramienta solo enumera los ensamblados que coinciden con el nombre y sus recuentos de referencias correspondientes.|  
-|**\/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|  
-|**\/r** \[*assemblyName &#124; assemblyPath*\]<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Especifica una referencia de la que se mantiene un seguimiento a uno o varios ensamblados que se van a instalar o desinstalar.  Especifique esta opción con las opciones **\/i**, **\/il**, **\/u** o **\/ul**.<br /><br /> Para instalar un ensamblado, especifique los parámetros *assemblyPath*, *scheme*, *id* y *description* con esta opción.  Para desinstalar un ensamblado, especifique los parámetros *assemblyName*, *scheme*, *id* y *description*.<br /><br /> Para quitar una referencia a un ensamblado, debe especificar los mismos parámetros *scheme*, *id* y *description* que especificó con las opciones **\/i** y **\/r** \(o **\/ir**\) al instalar el ensamblado.  A la hora de desinstalar un ensamblado, tenga en cuenta que la herramienta también quita el ensamblado de la caché global de ensamblados si se trata de la última referencia que se va a quitar y si Windows Installer no tiene referencias pendientes al ensamblado.<br /><br /> El parámetro *scheme* especifica el tipo de esquema de instalación.  Puede especificar uno de los siguientes valores:<br /><br /> -   UNINSTALL\_KEY: especifique este valor si el instalador agrega la aplicación a Agregar o quitar programas en Microsoft Windows.  Las aplicaciones se agregan por sí mismas a Agregar o quitar programas, ya que agregan una clave del Registro a HKLM\\Software\\Microsoft\\Windows\\CurrentVersion.<br />-   FILEPATH: especifique este valor si el instalador no agrega la aplicación a Agregar o quitar programas.<br />-   OPAQUE: especifique este valor si su escenario de instalación no requiere que se proporcione una clave del Registro o una ruta de acceso de archivo.  Este valor permite especificar información personalizada para el parámetro *id*.<br /><br /> El valor que hay que especificar para el parámetro *id* depende del valor especificado para el parámetro *scheme*:<br /><br /> -   Si especifica UNINSTALL\_KEY para el parámetro *scheme*, especifique el nombre de la aplicación establecida en la clave del Registro de HKLM\\Software\\Microsoft\\Windows\\CurrentVersion.  Por ejemplo, si la clave del Registro es HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\MyApp, especifique MyApp para el parámetro *id*.<br />-   Si especifica FILEPATH para el parámetro *scheme*, especifique la ruta de acceso completa al archivo ejecutable que instala el ensamblado como parámetro *id*.<br />-   Si especifica OPAQUE para el parámetro *scheme*, puede proporcionar cualquier dato como parámetro *id*.  Los datos que especifique deben ir entre comillas \(""\).<br /><br /> El parámetro *description* permite especificar texto descriptivo acerca de la aplicación que se va a instalar.  Esta información se muestra cuando se enumeran las referencias.|  
-|**\/silent**|Suprime la presentación de toda la salida del comando.|  
-|**\/u**  *assemblyName*|Desinstala un ensamblado de la caché global de ensamblados.|  
-|**\/uf**  *assemblyName*|Fuerza la desinstalación de un ensamblado específico mediante la eliminación de todas las referencias a este.<br /><br /> Especificar esta opción equivale a especificar las opciones **\/u** y **\/f** juntas. **Note:**  No puede usar esta opción para quitar un ensamblado instalado con Microsoft Windows Installer.  Si intenta realizar esta operación, la herramienta muestra un mensaje de error.|  
-|**\/ul** *assemblyListFile*|Desinstala uno o varios ensamblados especificados en *assemblyListFile* de la caché global de ensamblados.|  
-|**\/u**\[**ngen**\] *assemblyName*|Desinstala el ensamblado especificado de la caché global de ensamblados.  Si el ensamblado especificado tiene recuentos de referencias, la herramienta muestra dichos recuentos y no quita el ensamblado de la caché global de ensamblados. **Note:**  En la versión 2.0 de .NET Framework, no se admite `/ungen`.  En su lugar, use el comando `uninstall` de [Ngen.exe \(Native Image Generator\)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> En las versiones 1.0 y 1.1 de .NET Framework, si se especifica **\/ungen**, Gacutil.exe quita el ensamblado de la memoria caché de imágenes nativas.  Esta caché almacena las imágenes nativas de los ensamblados creados mediante el [Ngen.exe \(Native Image Generator\)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
-|**\/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Desinstala una referencia a un ensamblado especificado de la caché global de ensamblados.  Para quitar una referencia a un ensamblado, debe especificar los mismos parámetros *scheme*, *id* y *description* que especificó con las opciones **\/i** y **\/r** \(o **\/ir**\) al instalar el ensamblado.  Para obtener una descripción de los valores válidos que puede especificar para estos parámetros, vea la opción **\/r**.<br /><br /> Especificar esta opción equivale a especificar las opciones **\/u** y **\/r** juntas.|  
-|**\/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
+|**/cdl**|Elimina el contenido de la memoria caché de descarga.|  
+|**/f**|Especifique esta opción con las opciones **/i** o **/il** para forzar la reinstalación de un ensamblado. Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.|  
+|**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
+|**/i** *assemblyPath*|Instala un ensamblado en la caché global de ensamblados.|  
+|**/if**  *assemblyPath*|Instala un ensamblado en la caché global de ensamblados. Si ya existe un ensamblado con el mismo nombre en la caché global de ensamblados, la herramienta sobrescribe dicho ensamblado.<br /><br /> Especificar esta opción equivale a especificar las opciones **/i** y **/f** juntas.|  
+|**/il** *assemblyListFile*|Instala uno o varios ensamblados especificados en *assemblyListFile* en la caché global de ensamblados.|  
+|**/ir**  *assemblyPath*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Instala un ensamblado en la caché global de ensamblados y agrega una referencia para contar el ensamblado. Con esta opción, debe especificar los parámetros *assemblyPath*, *scheme*, *id* y *description*. Para obtener una descripción de los valores válidos que puede especificar para estos parámetros, vea la opción **/r**.<br /><br /> Especificar esta opción equivale a especificar las opciones **/i** y **/r** juntas.|  
+|**/l** [*assemblyName*]|Enumera el contenido de la caché global de ensamblados. Si especifica el parámetro *assemblyName*, la herramienta solo enumera los ensamblados que coinciden con el nombre.|  
+|**/ldl**|Enumera el contenido de la memoria caché de archivos descargados.|  
+|**/lr** [*assemblyName*]|Enumera todos los ensamblados y sus recuentos de referencias correspondientes. Si especifica el parámetro *assemblyName*, la herramienta solo enumera los ensamblados que coinciden con el nombre y sus recuentos de referencias correspondientes.|  
+|**/nologo**|Suprime la presentación de la portada de inicio de Microsoft.|  
+|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Especifica una referencia de la que se mantiene un seguimiento a uno o varios ensamblados que se van a instalar o desinstalar. Especifique esta opción con las opciones **/i**, **/il**, **/u** o **/ul**.<br /><br /> Para instalar un ensamblado, especifique los parámetros *assemblyPath*, *scheme*, *id* y *description* con esta opción. Para desinstalar un ensamblado, especifique los parámetros *assemblyName*, *scheme*, *id* y *description*.<br /><br /> Para quitar una referencia a un ensamblado, debe especificar los mismos parámetros *scheme*, *id* y *description* que especificó con las opciones **/i** y **/r** (o **/ir**) al instalar el ensamblado. A la hora de desinstalar un ensamblado, tenga en cuenta que la herramienta también quita el ensamblado de la caché global de ensamblados si se trata de la última referencia que se va a quitar y si Windows Installer no tiene referencias pendientes al ensamblado.<br /><br /> El parámetro *scheme* especifica el tipo de esquema de instalación. Puede especificar uno de los siguientes valores:<br /><br /> - UNINSTALL_KEY: especifique este valor si el instalador agrega la aplicación a Agregar o quitar programas en Microsoft Windows. Las aplicaciones se agregan por sí mismas a Agregar o quitar programas, ya que agregan una clave del Registro a HKLM\Software\Microsoft\Windows\CurrentVersion.<br />- FILEPATH: especifique este valor si el instalador no agrega la aplicación a Agregar o quitar programas.<br />- OPAQUE: especifique este valor si su escenario de instalación no requiere que se proporcione una clave del Registro o una ruta de acceso de archivo. Este valor permite especificar información personalizada para el parámetro *id*.<br /><br /> El valor que hay que especificar para el parámetro *id* depende del valor especificado para el parámetro *scheme*:<br /><br /> - Si especifica UNINSTALL_KEY para el parámetro *scheme*, especifique el nombre de la aplicación establecida en la clave del Registro HKLM\Software\Microsoft\Windows\CurrentVersion. Por ejemplo, si la clave del Registro es HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp, especifique MyApp para el parámetro *id*.<br />- Si especifica FILEPATH para el parámetro *scheme*, especifique la ruta de acceso completa al archivo ejecutable que instala el ensamblado como parámetro *id*.<br />- Si especifica OPAQUE para el parámetro *scheme*, puede proporcionar cualquier dato como parámetro *id*. Los datos que especifique deben ir entre comillas ("").<br /><br /> El parámetro *description* permite especificar texto descriptivo sobre la aplicación que se va a instalar. Esta información se muestra cuando se enumeran las referencias.|  
+|**/silent**|Suprime la presentación de toda la salida del comando.|  
+|**/u**  *assemblyName*|Desinstala un ensamblado de la caché global de ensamblados.|  
+|**/uf**  *assemblyName*|Fuerza la desinstalación de un ensamblado específico mediante la eliminación de todas las referencias a este.<br /><br /> Especificar esta opción equivale a especificar las opciones **/u** y **/f** juntas. **Nota:** No puede usar esta opción para quitar un ensamblado instalado con Microsoft Windows Installer. Si intenta realizar esta operación, la herramienta muestra un mensaje de error.|  
+|**/ul** *assemblyListFile*|Desinstala uno o varios ensamblados especificados en *assemblyListFile* de la caché global de ensamblados.|  
+|**/u**[**ngen**] *assemblyName*|Desinstala el ensamblado especificado de la caché global de ensamblados. Si el ensamblado especificado tiene recuentos de referencias, la herramienta muestra dichos recuentos y no quita el ensamblado de la caché global de ensamblados. **Nota:** En la versión 2.0 de .NET Framework, no se admite `/ungen`. En su lugar, use el comando `uninstall` de [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). <br /><br /> En las versiones 1.0 y 1.1 de .NET Framework, si se especifica **/ungen**, Gacutil.exe quita el ensamblado de la memoria caché de imágenes nativas. Esta caché almacena las imágenes nativas de los ensamblados creados mediante [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
+|**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|Desinstala una referencia a un ensamblado especificado de la caché global de ensamblados. Para quitar una referencia a un ensamblado, debe especificar los mismos parámetros *scheme*, *id* y *description* que especificó con las opciones **/i** y **/r** (o **/ir)** al instalar el ensamblado. Para obtener una descripción de los valores válidos que puede especificar para estos parámetros, vea la opción **/r**.<br /><br /> Especificar esta opción equivale a especificar las opciones **/u** y **/r** juntas.|  
+|**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 >  Debe tener privilegios de administrador para poder usar Gacutil.exe.  
   
  En concreto, Gacutil.exe permite instalar y quitar ensamblados de la memoria caché, así como enumerar el contenido de la misma.  
   
- Gacutil.exe proporciona opciones compatibles con el recuento de referencias, algo parecido al esquema de recuento de referencias de Windows Installer.  Puede usar Gacutil.exe para instalar dos aplicaciones que instalen el mismo ensamblado; la herramienta realiza un seguimiento del número de referencias al ensamblado.  Como consecuencia, el ensamblado permanecerá en el equipo hasta que se desinstalen ambas aplicaciones.  Si usa Gacutil.exe para realizar instalaciones de productos, use las opciones compatibles con el recuento de referencias.  Use las opciones **\/i** y **\/r** de forma conjunta para instalar un ensamblado y agregar una referencia al mismo para contarlo.  Use las opciones **\/u** y **\/r** de forma conjunta para quitar un recuento de referencias de un ensamblado.  Tenga en cuenta que el uso de las opciones **\/i** y **\/u** por separado no es compatible con el recuento de referencias.  Es adecuado usar estas opciones durante el desarrollo del producto, pero no para realizar instalaciones de productos propiamente dichas.  
+ Gacutil.exe proporciona opciones compatibles con el recuento de referencias, algo parecido al esquema de recuento de referencias de Windows Installer. Puede usar Gacutil.exe para instalar dos aplicaciones que instalen el mismo ensamblado; la herramienta realiza un seguimiento del número de referencias al ensamblado. Como consecuencia, el ensamblado permanecerá en el equipo hasta que se desinstalen ambas aplicaciones. Si usa Gacutil.exe para realizar instalaciones de productos, use las opciones compatibles con el recuento de referencias. Use las opciones **/i** y **/r** de forma conjunta para instalar un ensamblado y agregar una referencia para contarlo. Use las opciones **/u** y **/r** de forma conjunta para quitar un recuento de referencias de un ensamblado. Tenga en cuenta que el uso de las opciones **/i** y **/u** por separado no es compatible con el recuento de referencias. Es adecuado usar estas opciones durante el desarrollo del producto, pero no para realizar instalaciones de productos propiamente dichas.  
   
- Use las opciones **\/il** o **\/ul** para instalar o desinstalar una lista de ensamblados almacenados en un archivo de texto ANSI.  El contenido del archivo de texto debe tener el formato correcto.  Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo.  En el siguiente ejemplo se muestra el contenido de un archivo que contiene ensamblados que se van a instalar.  
+ Use las opciones **/il** o **/ul** para instalar o desinstalar una lista de ensamblados almacenados en un archivo de texto ANSI. El contenido del archivo de texto debe tener el formato correcto. Si desea usar un archivo de texto para instalar ensamblados, especifique la ruta de acceso de cada ensamblado en una línea independiente del archivo. En el siguiente ejemplo se muestra el contenido de un archivo que contiene ensamblados que se van a instalar.  
   
 ```  
 myAssembly1.dll  
@@ -97,7 +101,7 @@ myAssembly2.dll
 myAssembly3.dll  
 ```  
   
- Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo.  En el siguiente ejemplo se muestra el contenido de un archivo que contiene ensamblados que se van a desinstalar.  
+ Si desea usar un archivo de texto para desinstalar ensamblados, especifique el nombre completo de cada ensamblado en una línea independiente del archivo. En el siguiente ejemplo se muestra el contenido de un archivo que contiene ensamblados que se van a desinstalar.  
   
 ```  
 myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
@@ -105,7 +109,7 @@ myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
   
-## Ejemplos  
+## <a name="examples"></a>Ejemplos  
  El comando siguiente instala el ensamblado `mydll.dll` en la caché global de ensamblados.  
   
 ```  
@@ -118,9 +122,9 @@ gacutil /i mydll.dll
 gacutil /u hello  
 ```  
   
- Observe que el comando anterior puede quitar más de un ensamblado de la memoria caché de ensamblados porque no se ha especificado el nombre completo del ensamblado.  Por ejemplo, si se han instalado en la memoria caché las versiones 1.0.0.0 y 3.2.2.1 de `hello`, el comando `gacutil /u hello` quita los dos ensamblados.  
+ Observe que el comando anterior puede quitar más de un ensamblado de la memoria caché de ensamblados porque no se ha especificado el nombre completo del ensamblado. Por ejemplo, si se han instalado en la memoria caché las versiones 1.0.0.0 y 3.2.2.1 de `hello`, el comando `gacutil /u hello` quita los dos ensamblados.  
   
- Use el ejemplo siguiente si solo desea quitar un ensamblado.  Este comando solo quita el ensamblado `hello` cuyo número de versión, referencia cultural y clave pública coincide con los especificados.  
+ Use el ejemplo siguiente si solo desea quitar un ensamblado. Este comando solo quita el ensamblado `hello` cuyo número de versión, referencia cultural y clave pública coincide con los especificados.  
   
 ```  
 gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca  
@@ -134,23 +138,23 @@ gacutil /u hello, Version=1.0.0.1, Culture="de",PublicKeyToken=45e343aae32233ca
   
  `gacutil /ul assemblyList.txt`  
   
- El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo.  La aplicación `MyApp` usa el ensamblado `myDll.dll`.  El parámetro `UNINSTALL_KEY MyApp` especifica la clave del Registro que agrega `MyApp` a Agregar o quitar programas en Windows.  El parámetro de descripción se especifica como `My Application Description`.  
+ El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo. La aplicación `myDll.dll` usa el ensamblado `MyApp`. El parámetro `UNINSTALL_KEY MyApp` especifica la clave del Registro que agrega `MyApp` a Agregar o quitar programas en Windows. El parámetro de descripción se especifica como `My Application Description`.  
   
 ```  
 gacutil /i /r myDll.dll UNINSTALL_KEY MyApp "My Application Description"  
 ```  
   
- El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo.  El parámetro de esquema, `FILEPATH`, y el parámetro de identificador, `c:\applications\myApp\myApp.exe`, especifican la ruta de acceso a la aplicación que va a instalar `myDll.dll.` El parámetro de descripción se especifica como `MyApp`.  
+ El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo. El parámetro de esquema, `FILEPATH`, y el parámetro de identificador, `c:\applications\myApp\myApp.exe`, especifican la ruta de acceso a la aplicación que va a instalar `myDll.dll.` El parámetro de descripción se especifica como `MyApp`.  
   
  `gacutil /i /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp`  
   
- El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo.  El parámetro de esquema, `OPAQUE`, permite personalizar los parámetros de identificador y descripción.  
+ El comando siguiente instala `myDll.dll` en la caché global de ensamblados y agrega una referencia para contarlo. El parámetro de esquema, `OPAQUE`, permite personalizar los parámetros de identificador y descripción.  
   
 ```  
 gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert Custom description information here"  
 ```  
   
- El comando siguiente quita la referencia a `myDll.dll` procedente de la aplicación `myApp`.  Si se trata de la última referencia al ensamblado, también quitará el ensamblado de la caché global de ensamblados.  
+ El comando siguiente quita la referencia a `myDll.dll` procedente de la aplicación `myApp`. Si se trata de la última referencia al ensamblado, también quitará el ensamblado de la caché global de ensamblados.  
   
  `gacutil /u /r myDll.dll FILEPATH c:\applications\myApp\myApp.exe MyApp`  
   
@@ -160,8 +164,9 @@ gacutil /i /r mydll.dll OPAQUE "Insert custom application details here" "Insert 
 gacutil /l  
 ```  
   
-## Vea también  
- [Tools](../../../docs/framework/tools/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Herramientas](../../../docs/framework/tools/index.md)   
  [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)   
- [Regasm.exe \(Assembly Registration Tool\)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   
+ [Regasm.exe (Herramienta de registro de ensamblados)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

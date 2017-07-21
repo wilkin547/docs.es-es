@@ -29,8 +29,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Recursos de aplicaciones de escritorio
-<a id="resources-in-desktop-apps" class="xliff"></a>
+# <a name="resources-in-desktop-apps"></a>Recursos de aplicaciones de escritorio
 Casi todas las aplicaciones de calidad de producción tienen que utilizar recursos. Un recurso es cualquier dato no ejecutable que se implemente lógicamente con una aplicación. Los recursos pueden mostrarse en una aplicación como mensajes de error o como parte de la interfaz de usuario. Los recursos pueden contener datos con varios formatos, como objetos almacenados, cadenas e imágenes. (Para poder escribir objetos almacenados en un archivo de recursos, los objetos deben ser serializables). Si los datos se almacenan en un archivo de recursos, es posible modificarlos sin volver a compilar toda la aplicación. Esto también permite almacenar los datos en una sola ubicación y elimina la necesidad de confiar en los datos codificados de forma rígida almacenados en varias ubicaciones.  
   
  .NET Framework proporciona numerosas prestaciones para la creación y localización de recursos en las aplicaciones de escritorio. Además, .NET Framework admite un modelo simple para el empaquetado y la implementación de estos recursos localizados en las aplicaciones de escritorio.  
@@ -39,22 +38,19 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
   
  Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] utilizan un modelo de recursos distinto del modelo de las aplicaciones de escritorio y almacenan los recursos en un único archivo de índice de recursos del paquete (PRI). Para información sobre los recursos en las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Crear y recuperar recursos en aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkId=241674) en el Centro de desarrollo de Windows.  
   
-## Crear y localizar recursos
-<a id="creating-and-localizing-resources" class="xliff"></a>  
+## <a name="creating-and-localizing-resources"></a>Crear y localizar recursos  
  En una aplicación no localizada, puede usar archivos de recursos como repositorio de los datos de la aplicación, especialmente para las cadenas que de otra manera podrían estar codificadas de forma rígida en varias ubicaciones del código fuente. Lo más común es que los recursos se creen como archivos de texto (.txt) o XML (.resx), y se use [Resgen.exe (Generador de archivo de recursos)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilarlos en archivos binarios .resources. Estos archivos después se pueden incrustar en el archivo ejecutable de la aplicación mediante un compilador de lenguaje. Para más información sobre la creación de recursos, consulte [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
   
  También puede localizar los recursos de una aplicación para determinadas referencias culturales. Esto le permite compilar versiones localizadas (traducidas) de las aplicaciones. Cuando desarrolle una aplicación que utiliza recursos adaptados, debe designar una referencia cultural que sirva de referencia cultural neutra o de reserva cuyos recursos se utilizarán si no se dispone de recursos apropiados. Normalmente, los recursos de la referencia cultural neutra se almacenan en el ejecutable de la aplicación. Los recursos restantes para las distintas referencias culturales se almacenan en ensamblados satélite independientes. Para más información, consulte [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
   
-## Empaquetar e implementar recursos
-<a id="packaging-and-deploying-resources" class="xliff"></a>  
+## <a name="packaging-and-deploying-resources"></a>Empaquetar e implementar recursos  
  Los recursos adaptados de una aplicación se implementan en [ensamblados satélite](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Un ensamblado satélite contiene los recursos de una única referencia cultural; no contiene código de la aplicación. En el modelo de implementación de ensamblados satélite, una aplicación se crea con un ensamblado predeterminado (que normalmente es el principal) y un ensamblado satélite para cada referencia cultural que admite la aplicación. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden reemplazar o actualizar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
   
  Es preciso determinar con sumo cuidado qué recursos formarán parte del ensamblado de recursos predeterminado de la aplicación. Como se trata de una parte del ensamblado principal, cualquier cambio que se realice en dicho ensamblado requerirá la reemplazo del ensamblado principal. Si no se proporciona ningún recurso predeterminado, se generará una excepción cuando el [proceso de reserva de recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) intente buscarlo. En una aplicación diseñada correctamente, el uso de recursos jamás deberá producir una excepción.  
   
  Para más información, consulte el artículo [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
-## Recuperar recursos
-<a id="retrieving-resources" class="xliff"></a>  
+## <a name="retrieving-resources"></a>Recuperar recursos  
  En tiempo de ejecución, la aplicación carga los recursos adaptados apropiados para cada subproceso, en función de la referencia cultural especificada por la propiedad <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. El valor de esta propiedad se deriva de la siguiente manera:  
   
 -   Asignando directamente un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural adaptada a la propiedad <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
@@ -75,8 +71,7 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
   
 -   La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  <xref:System.Globalization.CultureInfo>   
  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
  [Elementos esenciales de aplicaciones](../../../docs/standard/application-essentials.md)   

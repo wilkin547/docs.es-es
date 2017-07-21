@@ -1,77 +1,82 @@
 ---
-title: "C&#243;mo: Depurar problemas de activaci&#243;n de CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "activación de direcciones CLR, depurar problemas"
+title: "Cómo: Depurar problemas de activación de CLR | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 caps.latest.revision: 5
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 2df9b03603c5df6bd803187bd1299f5d730bc32c
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# C&#243;mo: Depurar problemas de activaci&#243;n de CLR
-Si tiene problemas cuando intenta que su aplicación se ejecute con la versión correcta del runtime de lenguaje común \(CLR, por sus siglas en inglés\), puede ver y depurar los registros de activación del CLR.  Estos registros pueden ser muy útiles para determinar la causa principal de un problema de activación, cuando la aplicación o bien carga una versión diferente de CLR a la que se esperaba o no la carga.  [Errores de inicialización de .NET Framework: Administrar la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) describe este proceso cuando no hay disponible ningún CLR para una aplicación.  
+# <a name="how-to-debug-clr-activation-issues"></a>Cómo: Depurar problemas de activación de CLR
+Si detecta problemas al intentar que la aplicación se ejecute con la versión correcta de Common Language Runtime (CLR), puede ver y depurar los registros de activación de CLR. Estos registros pueden resultar muy útiles a la hora de determinar la causa de un problema de activación, cuando la aplicación carga una versión de CLR que no es la prevista o simplemente no lo carga. En [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Errores de inicialización de .NET Framework: Administrar la experiencia del usuario) se habla de la experiencia de no encontrar ningún CLR para una aplicación.  
   
- El registro de activación de CLR puede activarse en todo el sistema mediante una clave de registro HKEY\_LOCAL\_MACHINE o una variable de entorno del sistema.  El registro se generará hasta que la entrada del Registro o la variable de entorno se elimine.  Alternativamente, se puede utilizar una variable de entorno de usuario o de proceso local para habilitar el registro con un alcance y duración diferentes.  
+ El registro de activación de CLR se puede habilitar en todo el sistema mediante una clave del Registro HKEY_LOCAL_MACHINE o una variable de entorno del sistema. Se generará el registro hasta que se quite la entrada del Registro o la variable de entorno. También puede emplear una variable de entorno de proceso local o de usuario para habilitar el registro con un ámbito y una duración diferentes.  
   
- Los registros de activación de CLR no deben confundirse con los registros de enlace de ensamblados [](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md "Fuslogvw.exe (Assembly Binding Log Viewer)"), que son completamente diferentes.  
+ Los registros de activación de CLR no se deben confundir con los [registros de enlaces de ensamblados](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que son completamente diferentes.  
   
-## Cómo habilitar el registro de activación de CLR  
+## <a name="to-enable-clr-activation-logging"></a>Para habilitar el registro de activación de CLR  
   
-#### Utilización del registro  
+#### <a name="using-the-registry"></a>Con el Registro  
   
-1.  En el Editor del Registro, navegue a HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework \(en un equipo de 32 bits\) o a HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\.NETFramework \(en un equipo de 64 bits\).  
+1.  En el Editor del Registro, vaya a la carpeta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework (en un equipo de 32 bits) o HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework (en un equipo de 64 bits).  
   
-2.  Agregue un valor de cadena denominado `CLRLoadLogDir`, y establézcalo en la ruta de acceso completa de un directorio existente, donde desee almacenar los registros de activación de CLR.  
+2.  Agregue un valor de cadena denominado `CLRLoadLogDir` y establézcalo en la ruta de acceso completa de un directorio existente donde quiera almacenar los registros de activación de CLR.  
   
- El registro de activación sigue habilitado hasta que se quite el valor de cadena.  
+ El registro de activación permanece habilitado hasta que se quita el valor de cadena.  
   
-#### Utilización de una variable de entorno  
+#### <a name="using-an-environment-variable"></a>Con una variable de entorno  
   
--   Establezca la variable de entorno `COMPLUS_CLRLoadLogDir` a una cadena que representa la ruta de acceso completa de un directorio existente en el que desee almacenar los registros de activación de CLR.  
+-   Establezca la variable de entorno `COMPLUS_CLRLoadLogDir` en una cadena que represente la ruta de acceso completa de un directorio existente donde quiera almacenar los registros de activación de CLR.  
   
-     Cómo se establezca la variable de entorno determinará su alcance:  
+     La manera en que establezca la variable de entorno determina su ámbito:  
   
-    -   Si se establece en el nivel del sistema, el registro de activación estará habilitado para todas las aplicaciones de .NET Framework en ese equipo hasta que se quite la variable de entorno.  
+    -   Si se establece en el nivel de sistema, el registro de activación está habilitado para todas las aplicaciones de .NET Framework del equipo hasta que se quita la variable de entorno.  
   
-    -   Si se establece en el nivel de usuario, el registro de activación se habilitará únicamente para la cuenta de usuario.  El registro continúa hasta que se quite la variable de entorno.  
+    -   Si se establece en el nivel de usuario, el registro de activación está habilitado solo para la cuenta de usuario actual. El registro continúa hasta que se quita la variable de entorno.  
   
-    -   Si se establece en el proceso antes de cargar el CLR, el registro de activación estará habilitado hasta que el proceso finalice.  
+    -   Si se establece desde dentro del proceso antes de cargar el CLR, el registro de activación está habilitado hasta que finaliza el proceso.  
   
-    -   Si se establece en un símbolo del sistema antes de ejecutar una aplicación, el registro de activación se habilita para cualquier aplicación que se ejecute desde dicho símbolo del sistema  
+    -   Si se establece en un símbolo del sistema antes de ejecutar una aplicación, el registro de activación está habilitado para cualquier aplicación que se ejecute desde ese símbolo del sistema.  
   
-     Por ejemplo, para almacenar los registros de activación en el directorio c:\\clrloadlogs con alcance a nivel de procesos, abra una ventana de símbolo del sistema y escriba lo siguiente antes de ejecutar la aplicación:  
+     Por ejemplo, para almacenar los registros de activación en el directorio c:\clrloadlogs con ámbito de nivel de proceso, abra una ventana del símbolo del sistema y escriba lo siguiente antes de ejecutar la aplicación:  
   
     ```  
     set COMPLUS_CLRLoadLogDir=c:\clrloadlogs  
     ```  
   
-## Ejemplo  
- Los registros de activación de CLR ofrecen una gran cantidad de datos sobre la activación de CLR y el uso de las API que alojan CLR.  La mayoría de estos datos los utiliza Microsoft internamente, pero algunos de los datos también pueden ser útiles para los programadores, como se describe en este artículo.  
+## <a name="example"></a>Ejemplo  
+ Los registros de activación de CLR proporcionan una gran cantidad de datos sobre la activación de CLR y el uso de las API de hospedaje de CLR. La mayoría de estos datos son usados internamente por Microsoft, pero algunos también pueden resultar útiles para los desarrolladores, como se explica en este artículo.  
   
- El registro refleja el orden en que se llamaron las APIs que alojan CLR.  También incluye datos útiles sobre el conjunto de runtimes instalados que se han detectado en el equipo.  El formato del registro de activación de CLR no está documentado, pero se puede utilizar para ayudar a los desarrolladores que necesitan resolver problemas de activación de CLR.  
+ El registro refleja el orden en que se ha llamado a las API de hospedaje de CLR. También incluye datos útiles sobre el conjunto de runtimes instalados detectados en el equipo. El formato del registro de activación de CLR no está documentado, pero se puede usar para ayudar a los desarrolladores que necesitan solucionar problemas de activación de CLR.  
   
 > [!NOTE]
->  No se puede abrir un registro de activación hasta que el proceso que utiliza el CLR haya finalizado.  
+>  No se puede abrir un registro de activación hasta que el proceso que usa el CLR ha concluido.  
   
 > [!NOTE]
 >  Los registros de activación de CLR no están localizados; siempre se generan en inglés.  
   
- En el siguiente ejemplo de un registro de activación, la información más útil está resaltada y se describe después del registro.  
+ En el siguiente ejemplo de un registro de activación, la información más útil está resaltada y se explica tras el registro.  
   
 ```  
 532,205950.367,CLR Loading log for C:\Tests\myapp.exe   
@@ -100,37 +105,33 @@ Si tiene problemas cuando intenta que su aplicación se ejecute con la versión 
 532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3   
 532,205950.398,FunctionCall: RealDllMain. Reason: 0   
 532,205950.398,FunctionCall: OnShimDllMainCalled. Reason: 0  
-  
 ```  
   
--   **CLR Loading log** proporciona la ruta de acceso al archivo ejecutable que inició el proceso que cargó el código administrado.  Observe que puede ser un host nativo.  
+-   **Registro de carga CLR** proporciona la ruta de acceso al ejecutable que ha iniciado el proceso de carga del código administrado. Tenga en cuenta que podría ser un host nativo.  
   
     ```  
     532,205950.367,CLR Loading log for C:\Tests\myapp.exe  
-  
     ```  
   
--   **Installed Runtime** es el conjunto de versiones de CLR instaladas en el equipo que son candidatas a la solicitud de activación.  
+-   **Runtime instalado** es el conjunto de versiones de CLR instaladas en el equipo que son aptas para la solicitud de activación.  
   
     ```  
     532,205950.382,Installed Runtime: v4.0.30319. VERSION_ARCHITECTURE: 0  
-  
     ```  
   
--   **built with version** es la versión de CLR que se usa   para compilar el archivo binario que se ha proporcionado a métodos tales como [ICLRMetaHostPolicy::GetRequestedRuntime](../Topic/ICLRMetaHostPolicy::GetRequestedRuntime%20Method.md).  
+-   **se generó con la versión** es la versión de CLR que se ha usado para crear el binario que se ha proporcionado a un método como [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md).  
   
     ```  
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727  
-  
     ```  
   
--   **feature\-on\-demand installation** hace referencia a habilitar .NET Framework 3.5 en Windows 8.  Para obtener más información acerca de los escenarios, consulte [Errores de inicialización de .NET Framework: Administrar la experiencia del usuario](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
+-   **instalación de características previa petición** hace referencia a la habilitación de .NET Framework 3.5 en Windows 8. Vea [.NET Framework Initialization Errors: Managing the User Experience](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) (Errores de inicialización de .NET Framework: Administrar la experiencia del usuario) para más información sobre este escenario.  
   
     ```  
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3  
-  
     ```  
   
-## Vea también  
- [Implementación](../../../docs/framework/deployment/net-framework-and-applications.md)   
- [Cómo: Configurar una aplicación para admitir .NET Framework 4 o 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+## <a name="see-also"></a>Vea también  
+ [Implementación](../../../docs/framework/deployment/index.md)   
+ [Configurar una aplicación para que admita .NET Framework 4 o 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+

@@ -31,8 +31,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Herramientas de .NET Framework
-<a id="net-framework-tools" class="xliff"></a>
+# <a name="net-framework-tools"></a>Herramientas de .NET Framework
 Las herramientas de .NET Framework facilitan la creación, implementación y administración de aplicaciones y componentes dirigidos a .NET Framework.  
   
  La mayoría de las herramientas de .NET Framework que se describen en esta sección se instalan automáticamente con Visual Studio. (Para obtener información acerca de la instalación, consulte [Descargas de Visual Studio](http://go.microsoft.com/fwlink/?LinkID=325532)).  
@@ -44,8 +43,7 @@ Las herramientas de .NET Framework facilitan la creación, implementación y adm
 > [!NOTE]
 >  Algunas herramientas son específicas de los equipos de 32 bits o de los equipos de 64 bits. Asegúrese de ejecutar la versión adecuada de la herramienta para su equipo.  
   
-## En esta sección
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>En esta sección  
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  Genera un archivo que tiene un manifiesto del ensamblado de módulos o archivos de recursos.  
   
@@ -145,8 +143,7 @@ Las herramientas de .NET Framework facilitan la creación, implementación y adm
  [Winres.exe (Editor de recursos de Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Le ayuda a traducir recursos de la interfaz de usuario (IU) (archivos .resx o .resources) usados por Windows Forms. Puede traducir cadenas y, a continuación, ajustar el tamaño, mover y ocultar los controles para dar cabida a las cadenas traducidas.  
   
-## Secciones relacionadas
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Herramientas](http://msdn.microsoft.com/library/f533241c-317c-445e-88ca-c80c8d078fca)  
  Incluye herramientas como la herramienta isXPS Conformance (isXPS.exe) y las herramientas de generación de perfiles de rendimiento.  
   
