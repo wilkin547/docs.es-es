@@ -1,5 +1,5 @@
 ---
-title: '#if (Referencia de C#) | Microsoft Docs'
+title: '#<a name="if-c-reference--microsoft-docs"></a>if (Referencia de C#) | Microsoft Docs'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="if-c-reference"></a>#if (Referencia de C#)
 Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por una directiva [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), compilará el código entre las directivas solo si se ha definido el símbolo especificado.  A diferencia de C y C++, no puede asignar un valor numérico a un símbolo; la instrucción #if en C# es booleana y solo comprueba si el símbolo se ha definido o no. Por ejemplo,  
   
-```  
+```csharp
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -64,7 +64,7 @@ Cuando el compilador de C# encuentra una directiva `#if`, seguida finalmente por
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```csharp
 // preprocessor_if.cs  
 #define DEBUG#define MYTEST  
 using System;  
@@ -90,3 +90,4 @@ public class MyClass
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
