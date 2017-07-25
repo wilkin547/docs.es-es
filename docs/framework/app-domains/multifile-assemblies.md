@@ -1,50 +1,55 @@
 ---
-title: "Ensamblados de varios archivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ensamblados [.NET Framework], de múltiples archivos"
-  - "manifiesto del ensamblado, ensamblados de múltiples archivos"
-  - "módulos de código"
-  - "compiladores de línea de comandos"
-  - "compilar ensamblados"
-  - "punto de entrada de un ensamblado"
-  - "ensamblados de múltiples archivos"
+title: Ensamblados de varios archivos | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- entry point for assembly
+- compiling assemblies
+- command-line compilers
+- assembly manifest, multifile assemblies
+- code modules
+- multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0521e3bcfc7ed4e58434bacf36b43840647ddf50
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# Ensamblados de varios archivos
-Es posible crear ensamblados de múltiples archivos usando compiladores de la línea de comandos o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] con Visual C\+\+.  Uno de los archivos del ensamblado debe contener el manifiesto del ensamblado.  Un ensamblado que inicia una aplicación debe contener también un punto de entrada, como los métodos Main o WinMain.  
+# <a name="multifile-assemblies"></a>Ensamblados de varios archivos
+Puede crear ensamblados de varios archivos mediante compiladores de línea de comandos o [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] con Visual C++. Un archivo del ensamblado debe contener el manifiesto del ensamblado. Los ensamblados que inicien una aplicación también deben contener un punto de entrada, como un método Main o WinMain.  
   
- Por ejemplo, suponga que tiene una aplicación que contiene dos módulos de código, Client.cs y Stringer.cs.  Stringer.cs crea el espacio de nombres `myStringer` al que hace referencia el código en Client.cs.  Client.cs contiene el método `Main`, que es el punto de entrada de la aplicación.  En este ejemplo, se compilan los dos módulos de código y, después, se crea un tercer archivo que contiene el manifiesto del ensamblado, que inicia la aplicación.  El manifiesto del ensamblado hace referencia a los dos módulos, `Client` y `Stringer`.  
+ Por ejemplo, supongamos que tiene una aplicación que contiene dos módulos de código, Client.cs y Stringer.cs. Stringer.cs que crea el espacio de nombres `myStringer` al que hace referencia el código de Client.cs. Client.cs contiene el método `Main`, que es el punto de entrada de la aplicación. En este ejemplo, se compilan los dos módulos de código y, después, se crea un tercer archivo que contiene el manifiesto del ensamblado, que inicia la aplicación. El manifiesto del ensamblado hace referencia a los módulos `Client` y `Stringer`.  
   
 > [!NOTE]
->  Los ensamblados de múltiples archivos sólo pueden tener un punto de entrada, aunque el ensamblado tenga varios módulos de código.  
+>  Los ensamblados de varios archivos pueden tener un único punto de entrada, incluso si el ensamblado tiene varios módulos de código.  
   
- Existen varias razones para crear un ensamblado de varios archivos:  
+ Hay varias razones por las que le puede interesar crear un ensamblado de varios archivos:  
   
--   Para combinar módulos escritos en lenguajes distintos.  Esta es la razón más frecuente para crear ensamblados de varios archivos.  
+-   Para combinar módulos escritos en lenguajes diferentes. Esta es la razón más común para crear un ensamblado de varios archivos.  
   
--   Para optimizar la descarga de una aplicación mediante la colocación de los tipos que se usan poco en un módulo que sólo se descarga cuando se necesitan.  
+-   Para optimizar la descarga de una aplicación al colocar los tipos menos usados en un módulo que solo se descarga cuando es necesario.  
   
     > [!NOTE]
-    >  Si se van a crear aplicaciones que se descargarán mediante la etiqueta `<object>` con Microsoft Internet Explorer, es importante que se creen ensamblados de múltiples archivos.  En este caso, se crea un archivo aparte de los módulos de código, que contiene sólo el manifiesto del ensamblado.  Internet Explorer descarga primero el manifiesto del ensamblado y, a continuación, crea subprocesos de trabajo para descargar los módulos o ensamblados adicionales necesarios.  Mientras se está descargando el archivo que contiene el manifiesto del ensamblado, Internet Explorer no responderá a los datos proporcionados por el usuario.  Cuanto más pequeño sea el archivo que contiene el manifiesto del ensamblado, menos tiempo estará Internet Explorer sin responder al usuario.  
+    >  Si va a crear aplicaciones que se descargarán mediante la etiqueta `<object>` con Microsoft Internet Explorer, es importante que cree ensamblados de varios archivos. En este escenario, debe crear un archivo independiente de los módulos de código que solo contenga el manifiesto del ensamblado. Internet Explorer descarga primero el manifiesto del ensamblado y, después, crea subprocesos de trabajo para descargar los módulos o ensamblados adicionales necesarios. Mientras se descarga el archivo que contiene el manifiesto del ensamblado, Internet Explorer no responde a la entrada del usuario. Cuanto menor sea el archivo que contiene el manifiesto del ensamblado, menos tiempo estará sin responder Internet Explorer.  
   
--   Para combinar módulos de código escritos por varios programadores.  Si bien cada programador puede compilar cada módulo de código en un ensamblado, esto puede hacer que se expongan públicamente algunos tipos que no se exponen si todos los módulos se ubican en un ensamblado de varios archivos.  
+-   Para combinar módulos de código escritos por varios desarrolladores. Aunque cada desarrollador puede compilar cada módulo de código en un ensamblado, esto puede hacer que se expongan públicamente algunos tipos que no se exponen cuando todos los módulos se colocan en un ensamblado de varios archivos.  
   
- Una vez que se ha creado el ensamblado, se puede firmar el archivo que contiene el manifiesto del ensamblado \(y, por lo tanto el ensamblado\) o se puede dar al archivo \(y al ensamblado\) un nombre seguro y colocarlo en la caché global de ensamblados.  
+ Una vez creado el ensamblado, puede firmar el archivo que contiene el manifiesto del ensamblado (y, por tanto, el ensamblado), o bien puede asignarle al archivo (y al ensamblado) un nombre seguro y colocarlo en la caché global de ensamblados.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)

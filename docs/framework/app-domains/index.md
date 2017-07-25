@@ -26,14 +26,12 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Programar con dominios de aplicación y ensamblados
-<a id="programming-with-application-domains-and-assemblies" class="xliff"></a>
+# <a name="programming-with-application-domains-and-assemblies"></a>Programar con dominios de aplicación y ensamblados
 Hosts como Microsoft Internet Explorer, ASP.NET y el shell de Windows cargan Common Language Runtime en un proceso, crean un [dominio de aplicación](../../../docs/framework/app-domains/application-domains.md) en ese proceso y luego cargan y ejecutan el código de usuario en ese dominio de aplicación cuando se ejecuta una aplicación de .NET Framework. En la mayoría de los casos, no tiene que preocuparse por crear dominios de aplicación y cargar ensamblados en ellos porque el host en tiempo de ejecución realiza esas tareas.  
   
  Sin embargo, si crea una aplicación que hospedará Common Language Runtime, crea herramientas o código que desea descargar mediante programación o crea componentes acoplables que se pueden descargar y cargar sobre la marcha, creará sus propios dominios de aplicación. Incluso si no crea un host en tiempo de ejecución, esta sección proporciona información importante sobre cómo trabajar con dominios de aplicación y los ensamblados cargados en estos.  
   
-## En esta sección
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>En esta sección  
  [Temas "Cómo..." sobre dominios de aplicación y ensamblados](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
  Proporciona vínculos a todos los temas de procedimientos que se encuentran en la documentación conceptual para programación con dominios de aplicación y ensamblados.  
   
@@ -43,8 +41,7 @@ Hosts como Microsoft Internet Explorer, ASP.NET y el shell de Windows cargan Com
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Describe cómo crear, firmar y establecer atributos en los ensamblados.  
   
-## Secciones relacionadas
-<a id="related-sections" class="xliff"></a>  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Emitir métodos y ensamblados dinámicos](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Describe la creación de ensamblados dinámicos.  
   

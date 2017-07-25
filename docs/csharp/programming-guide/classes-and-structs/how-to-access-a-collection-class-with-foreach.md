@@ -54,7 +54,6 @@ En el ejemplo de código siguiente se muestra cómo se escribe una clase Collect
  Por ejemplo, cambie las siguientes líneas del ejemplo anterior.  
   
 ```csharp  
-  
 // Change the Tokens class so that it no longer implements IEnumerable.  
 public class Tokens  
 {  
@@ -74,13 +73,11 @@ public class Tokens
         {   }  
     }  
  }  
-  
 ```  
   
  Dado que `Current` devuelve una cadena, el compilador puede detectar cuándo se usa un tipo incompatible en una instrucción `foreach`, como se muestra en el código siguiente.  
   
 ```csharp  
-  
 // Error: Cannot convert type string to int.  
 foreach (int item in f)    
 ```  
@@ -93,3 +90,4 @@ foreach (int item in f)
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Arrays](../../../csharp/programming-guide/arrays/index.md)  (Matrices)  
  [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+

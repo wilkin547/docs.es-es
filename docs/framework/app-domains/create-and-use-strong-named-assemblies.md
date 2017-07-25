@@ -31,8 +31,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Crear y utilizar ensamblados con nombre seguro
-<a id="creating-and-using-strong-named-assemblies" class="xliff"></a>
+# <a name="creating-and-using-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 <a name="top"></a> Un nombre seguro se compone de la identidad del ensamblado, es decir, de su nombre de texto simple, número de versión e información sobre referencia cultural (si se proporciona), más una clave pública y una firma digital. Se genera a partir de un archivo de ensamblado mediante la clave privada correspondiente. (El archivo de ensamblado contiene el manifiesto del ensamblado, que a su vez contiene los nombres y códigos hash de todos los archivos que forman el ensamblado).  
   
  Un ensamblado con nombre seguro solo puede usar tipos de otros ensamblados con nombre seguro. De lo contrario, se pondría en peligro la seguridad del ensamblado con nombre seguro.  
@@ -46,8 +45,7 @@ ms.lasthandoff: 06/12/2017
 -   [Temas relacionados](#related_topics)  
   
 <a name="strong_name_scenario"></a>   
-## Escenario de nombre seguro
-<a id="strong-name-scenario" class="xliff"></a>  
+## <a name="strong-name-scenario"></a>Escenario de nombre seguro  
  En el siguiente escenario se firma un ensamblado con un nombre seguro y después se hace referencia a él con ese nombre.  
   
 1.  El ensamblado A se crea con un nombre seguro mediante uno de los métodos siguientes:  
@@ -68,8 +66,7 @@ ms.lasthandoff: 06/12/2017
  [Volver al principio](#top)  
   
 <a name="bypassing_signature_verification"></a>   
-## Omitir la comprobación de la firma de ensamblados de confianza
-<a id="bypassing-signature-verification-of-trusted-assemblies" class="xliff"></a>  
+## <a name="bypassing-signature-verification-of-trusted-assemblies"></a>Omitir la comprobación de la firma de ensamblados de confianza  
  A partir de [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], las firmas de nombre seguro no se validan cuando un ensamblado se carga en un dominio de aplicación de plena confianza, como el dominio de aplicación predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La característica de omisión de nombres seguros evita en esta situación la sobrecarga innecesaria por comprobación de firmas de nombre seguro de ensamblados de plena confianza, lo que permite cargar los ensamblados con mayor rapidez.  
   
  La característica de omisión se aplica a cualquier ensamblado que esté firmado con un nombre seguro y que:  
@@ -87,8 +84,7 @@ ms.lasthandoff: 06/12/2017
  [Volver al principio](#top)  
   
 <a name="related_topics"></a>   
-## Temas relacionados
-<a id="related-topics" class="xliff"></a>  
+## <a name="related-topics"></a>Temas relacionados  
   
 |Título|Descripción|  
 |-----------|-----------------|  

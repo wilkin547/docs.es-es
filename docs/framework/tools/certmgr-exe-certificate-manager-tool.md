@@ -34,8 +34,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Certmgr.exe (Herramienta de administración de certificados)
-<a id="certmgrexe-certificate-manager-tool" class="xliff"></a>
+# <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  
   
  El administrador de certificados se instala automáticamente con Visual Studio. Para iniciar la herramienta, use los [símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
@@ -49,8 +48,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
   
  En el símbolo del sistema, escriba lo siguiente:  
   
-## Sintaxis
-<a id="syntax" class="xliff"></a>  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
       certmgr [/add | /del | /put] [options]  
@@ -58,8 +56,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
 [/s[/r registryLocation]] [destinationStorename]  
 ```  
   
-#### Parámetros
-<a id="parameters" class="xliff"></a>  
+#### <a name="parameters"></a>Parámetros  
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
@@ -87,8 +84,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
 |**/7**|Guarda el almacén de destino como un objeto PKCS #7.|  
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
-## Comentarios
-<a id="remarks" class="xliff"></a>  
+## <a name="remarks"></a>Comentarios  
  Certmgr.exe realiza las funciones básicas siguientes:  
   
 -   Muestra certificados, listas CTL y listas CRL en la consola.  
@@ -109,8 +105,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
   
  Para más información, consulte [Trabajar con certificados](../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
-## Ejemplos
-<a id="examples" class="xliff"></a>  
+## <a name="examples"></a>Ejemplos  
  El comando siguiente muestra un almacén del sistema predeterminado denominado `my` con salida detallada.  
   
 ```  
@@ -153,8 +148,7 @@ certmgr /del /all /ctl /s my newStore.str
 certmgr /put /c /s my newFile  
 ```  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Herramientas](../../../docs/framework/tools/index.md)   
  [Makecert.exe (herramienta de creación de certificados)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)   
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

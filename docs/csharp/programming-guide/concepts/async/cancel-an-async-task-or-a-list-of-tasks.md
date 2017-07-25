@@ -239,7 +239,6 @@ Puede configurar un botón para cancelar una aplicación asincrónica si no quie
 5.  Si no lo cancela, el programa produce el resultado siguiente.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -255,7 +254,6 @@ Puede configurar un botón para cancelar una aplicación asincrónica si no quie
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
      Si elige el botón **Cancelar** antes de que se completen las descargas, la salida contiene las duraciones de las descargas completadas antes de la cancelación.  
@@ -268,7 +266,6 @@ Puede configurar un botón para cancelar una aplicación asincrónica si no quie
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
 ##  <a name="BKMK_CompleteExamples"></a> Ejemplos completos  
@@ -538,3 +535,4 @@ namespace CancelAListOfTasks
  [Programación asincrónica con Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Ajustar una aplicación asincrónica (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic])
+

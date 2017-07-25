@@ -34,8 +34,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Consideraciones de seguridad sobre ensamblados
-<a id="assembly-security-considerations" class="xliff"></a>
+# <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
   
  La evidencia se utiliza de dos formas distintas:  
@@ -55,8 +54,7 @@ ms.lasthandoff: 06/12/2017
   
  En el momento de la carga, se utiliza la evidencia del ensamblado como entrada para la directiva de seguridad. El administrador del equipo y la empresa y la configuración de directivas de usuario establecen la directiva de seguridad, que determina el conjunto de permisos que se concede a todo el código administrado cuando se ejecuta. La directiva de seguridad se puede establecer para la compañía del ensamblado (si tiene una firma generada utilizando la herramienta de firma), para el sitio y la zona Web (en términos de Internet Explorer) de los que se descargó el ensamblado o para el nombre seguro del ensamblado. Por ejemplo, el administrador de un equipo puede establecer una directiva de seguridad que permita que todo el código descargado desde un sitio Web y firmado por una compañía de software dada pueda tener acceso a una base de datos del equipo, pero no le otorga permiso para escribir en el disco del equipo.  
   
-## Ensamblados con nombre seguro y herramientas de firma
-<a id="strong-named-assemblies-and-signing-tools" class="xliff"></a>  
+## <a name="strong-named-assemblies-and-signing-tools"></a>Ensamblados con nombre seguro y herramientas de firma  
  Se puede firmar un ensamblado de dos formas diferentes y, a la vez, complementarias: con un nombre seguro o utilizando [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md). Al firmar un ensamblado con un nombre seguro, se agrega un cifrado mediante clave pública al archivo que contiene el manifiesto del ensamblado. La firma mediante nombres seguros ayuda a comprobar la unicidad del nombre, impide la simulación de nombres y proporciona a los llamadores alguna identidad cuando se resuelve una referencia.  
   
  Sin embargo, no hay ningún nivel de confianza asociado a un nombre seguro, lo que hace que [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) adquiera un carácter importante. Las dos herramientas de firma requieren que una compañía de software demuestre su identidad a una autoridad de terceros y obtenga un certificado. Este certificado se incrusta en el archivo y el administrador puede utilizarlo para decidir si debe confiar en la autenticidad del código.  
@@ -70,8 +68,7 @@ ms.lasthandoff: 06/12/2017
   
  Debido a que los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad, se puede basar la directiva de seguridad de acceso del código en estas dos formas de evidencia de ensamblado. Los nombres seguros y las firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) garantizan la integridad mediante firmas digitales y certificados. Todas las tecnologías mencionadas (comprobación de código hash, nombres seguros y firmas que utilizan [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)) se combinan para garantizar que el ensamblado no ha sufrido ninguna alteración.  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)   
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)

@@ -21,12 +21,10 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Tecnologías comunes de cliente en .NET Framework
-<a id="common-client-technologies-in-the-net-framework" class="xliff"></a>
+# <a name="common-client-technologies-in-the-net-framework"></a>Tecnologías comunes de cliente en .NET Framework
 En esta sección se describen las diferentes tecnologías que puede usar en aplicaciones cliente.  
   
-## En esta sección
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>En esta sección  
  [Manipulaciones e inercia](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
  Se describe cómo usar las clases de procesador de inercia y manipulaciones en una diversidad de marcos de interfaz de usuario, como Microsoft Windows Presentation Foundation (WPF) o Microsoft XNA.  
   

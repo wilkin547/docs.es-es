@@ -1,188 +1,193 @@
 ---
-title: "Winmdexp.exe Error Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WME1095"
-  - "WME1110"
-  - "WME15"
-  - "WME1094"
-  - "WME1078"
-  - "WME1080"
-  - "WME1014"
-  - "WME1025"
-  - "WME1089"
-  - "WME1111"
-  - "WME1010"
-  - "WME1013"
-  - "WME1055"
-  - "WME1005"
-  - "WME1033"
-  - "WME1003"
-  - "WME1011"
-  - "WME1046"
-  - "WME0013"
-  - "WME1032"
-  - "WME1029"
-  - "WME1048"
-  - "WME1019"
-  - "WME1106"
-  - "WME0012"
-  - "WME1017"
-  - "WME1098"
-  - "WME1039"
-  - "WME20"
-  - "WME1006"
-  - "WME1088"
-  - "WME0004"
-  - "WME10"
-  - "WME12"
-  - "WME0015"
-  - "WME0017"
-  - "WME1026"
-  - "WME1045"
-  - "WME1002"
-  - "WME1051"
-  - "WME1107"
-  - "WME1100"
-  - "WME1072"
-  - "WME1090"
-  - "WME1105"
-  - "WME1022"
-  - "WME11"
-  - "WME17"
-  - "WME1063"
-  - "WME1041"
-  - "WME1057"
-  - "WME1037"
-  - "WME1007"
-  - "WME3"
-  - "WME1096"
-  - "WME0003"
-  - "WME0006"
-  - "WME1065"
-  - "WME1102"
-  - "WME1070"
-  - "WME1113"
-  - "WME1064"
-  - "WME1061"
-  - "WME1066"
-  - "WME1018"
-  - "WME1049"
-  - "WME1027"
-  - "WME1101"
-  - "WME1058"
-  - "WME0005"
-  - "WME1083"
-  - "WME1004"
-  - "WME1073"
-  - "WME1087"
-  - "WME1077"
-  - "WME19"
-  - "WME1086"
-  - "WME1085"
-  - "WME1040"
-  - "WME8"
-  - "WME1081"
-  - "WME1023"
-  - "WME4"
-  - "WME1050"
-  - "WME7"
-  - "WME1091"
-  - "WME14"
-  - "WME0007"
-  - "WME1024"
-  - "WME1012"
-  - "WME1036"
-  - "WME0010"
-  - "WME1104"
-  - "WME1035"
-  - "WME1021"
-  - "WME1075"
-  - "WME5"
-  - "WME13"
-  - "WME1074"
-  - "WME1028"
-  - "WME0014"
-  - "WME1030"
-  - "WME1008"
-  - "WME1052"
-  - "WME1079"
-  - "WME1054"
-  - "WME1093"
-  - "WME1042"
-  - "WME2"
-  - "WME1062"
-  - "WME6"
-  - "WME1001"
-  - "WME0011"
-  - "WME16"
-  - "WME0001"
-  - "WME1020"
-  - "WME1084"
-  - "WME1103"
-  - "WME1092"
-  - "WME1"
-  - "WME0002"
-  - "WME1112"
-  - "WME1016"
-  - "WME1060"
-  - "WME0008"
-  - "WME0016"
-  - "WME1097"
-  - "WME1034"
-  - "WME1108"
-  - "WME1082"
-  - "WME1099"
-  - "WME1069"
-  - "WME1031"
-  - "WME1009"
-  - "WME1068"
-  - "WME1067"
-  - "WME1059"
-  - "WME18"
-  - "WME1038"
-  - "WME0009"
-  - "WME1109"
-  - "WME1056"
-  - "WME1076"
-  - "WME1071"
-  - "WME1044"
-  - "WME1043"
-  - "WME1053"
-  - "WME1015"
-  - "WME1047"
-  - "WME9"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Winmdexp.exe, error messages"
-  - "Windows Runtime Metadata Export Tool, error messages"
-  - "error messages, Winmdexp.exe"
+title: Mensajes de error de Winmdexp.exe | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WME1095
+- WME1110
+- WME15
+- WME1094
+- WME1078
+- WME1080
+- WME1014
+- WME1025
+- WME1089
+- WME1111
+- WME1010
+- WME1013
+- WME1055
+- WME1005
+- WME1033
+- WME1003
+- WME1011
+- WME1046
+- WME0013
+- WME1032
+- WME1029
+- WME1048
+- WME1019
+- WME1106
+- WME0012
+- WME1017
+- WME1098
+- WME1039
+- WME20
+- WME1006
+- WME1088
+- WME0004
+- WME10
+- WME12
+- WME0015
+- WME0017
+- WME1026
+- WME1045
+- WME1002
+- WME1051
+- WME1107
+- WME1100
+- WME1072
+- WME1090
+- WME1105
+- WME1022
+- WME11
+- WME17
+- WME1063
+- WME1041
+- WME1057
+- WME1037
+- WME1007
+- WME3
+- WME1096
+- WME0003
+- WME0006
+- WME1065
+- WME1102
+- WME1070
+- WME1113
+- WME1064
+- WME1061
+- WME1066
+- WME1018
+- WME1049
+- WME1027
+- WME1101
+- WME1058
+- WME0005
+- WME1083
+- WME1004
+- WME1073
+- WME1087
+- WME1077
+- WME19
+- WME1086
+- WME1085
+- WME1040
+- WME8
+- WME1081
+- WME1023
+- WME4
+- WME1050
+- WME7
+- WME1091
+- WME14
+- WME0007
+- WME1024
+- WME1012
+- WME1036
+- WME0010
+- WME1104
+- WME1035
+- WME1021
+- WME1075
+- WME5
+- WME13
+- WME1074
+- WME1028
+- WME0014
+- WME1030
+- WME1008
+- WME1052
+- WME1079
+- WME1054
+- WME1093
+- WME1042
+- WME2
+- WME1062
+- WME6
+- WME1001
+- WME0011
+- WME16
+- WME0001
+- WME1020
+- WME1084
+- WME1103
+- WME1092
+- WME1
+- WME0002
+- WME1112
+- WME1016
+- WME1060
+- WME0008
+- WME0016
+- WME1097
+- WME1034
+- WME1108
+- WME1082
+- WME1099
+- WME1069
+- WME1031
+- WME1009
+- WME1068
+- WME1067
+- WME1059
+- WME18
+- WME1038
+- WME0009
+- WME1109
+- WME1056
+- WME1076
+- WME1071
+- WME1044
+- WME1043
+- WME1053
+- WME1015
+- WME1047
+- WME9
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Winmdexp.exe, error messages
+- Windows Runtime Metadata Export Tool, error messages
+- error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 caps.latest.revision: 5
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 5
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 62745b203ec5c9db121c3c84578f16ba9c35738d
+ms.contentlocale: es-es
+ms.lasthandoff: 06/02/2017
+
 ---
-# Winmdexp.exe Error Messages
-El proceso de compilación llama [Winmdexp.exe \(Windows Runtime Metadata Export Tool\)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) cuando se utiliza la plantilla de **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Componente** en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], por lo que los mensajes de error de Winmdexp.exe aparecen en **Lista de errores**.  Winmdexp.exe funciona en un módulo compilado con la opción de `/target:winmdobj` .  Porque requiere un módulo compilado como entrada, los mensajes de error no aparecen a menos que la compilación se realiza correctamente.  
+# <a name="winmdexpexe-error-messages"></a>Mensajes de error de Winmdexp.exe
+El proceso de compilación llama a [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) cuando se usa la plantilla **Componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)]** en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], por lo que aparecen mensajes de error de Winmdexp.exe en la **lista de errores**. Winmdexp.exe opera en un módulo compilado con la opción `/target:winmdobj`. Dado que requiere un módulo compilado como entrada, sus mensajes de error no aparecen a menos que la compilación se realice correctamente.  
   
- Los mensajes de error están diseñados para contener toda la información que necesita solucionar las condiciones de error señalan.  Sin embargo, algunos problemas requieren más información que cabrá en el mensaje.  Puede encontrar información adicional [Diagnóstico condiciones de error del componente en tiempo de ejecución de Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127) en el centro dev de Windows.  
+ Los mensajes de error están diseñados para contener toda la información que necesita para abordar las condiciones de error sobre las que informan, pero algunos problemas requieren más información de la que cabe en el mensaje. Encontrará información adicional en [Diagnosticar condiciones de error en componentes de Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127) en el Centro de desarrollo de Windows.  
   
- Si el error no se explica en ese caso, y se considere que el mensaje no contiene información suficiente para dirigir el uso de problema el vínculo comentarios en ese caso e incluir el mensaje de error.  O bien, puede almacenar un error en [Microsoft connect el sitio Web](http://go.microsoft.com/fwlink/p/?LinkId=251130).  También puede buscar más información en [Foros de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ Si el error no se trata en este artículo y considera que el mensaje no contiene información suficiente para solucionar el problema, use el vínculo de comentarios del artículo e incluya el mensaje de error. O bien, puede registrar el error en el [sitio web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). También puede buscar más información en los [foros de Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
-## Vea también  
- [Winmdexp.exe \(Windows Runtime Metadata Export Tool\)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
- [Diagnóstico condiciones de error del componente en tiempo de ejecución de Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+## <a name="see-also"></a>Vea también  
+ [Winmdexp.exe (herramienta de exportación de metadatos de Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
+ [Diagnosticar condiciones de error en componentes de Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127)

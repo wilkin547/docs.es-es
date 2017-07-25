@@ -36,8 +36,7 @@ ms.contentlocale: es-es
 ms.lasthandoff: 06/12/2017
 
 ---
-# Servicios de aplicación cliente
-<a id="client-application-services" class="xliff"></a>
+# <a name="client-application-services"></a>Servicios de aplicación cliente
 Los servicios de aplicaciones cliente facilitan la creación de aplicaciones basadas en Windows que usan el inicio de sesión, los roles y los servicios de aplicación de perfiles de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] incluidos en las extensiones de Microsoft ASP.NET 2.0 AJAX. Estos servicios permiten que varias aplicaciones web y basadas en Windows compartan la información del usuario y la funcionalidad de administración de usuarios desde un solo servidor. Por ejemplo, puede usar estos servicios para realizar las tareas siguientes:  
   
 -   Autenticar a un usuario. Puede usar el servicio de autenticación para comprobar la identidad de un usuario.  
@@ -50,8 +49,7 @@ Los servicios de aplicaciones cliente facilitan la creación de aplicaciones bas
   
  Para más información sobre los servicios de la aplicación de [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consulte [Información general sobre los servicios de aplicación ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
-## En esta sección
-<a id="in-this-section" class="xliff"></a>  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre los servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  Describe las características disponibles a través de los proveedores de servicios de aplicaciones cliente.  
   
@@ -64,8 +62,7 @@ Los servicios de aplicaciones cliente facilitan la creación de aplicaciones bas
  [Tutorial: Usar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  Describe cómo combinar todas las características de servicios de aplicaciones cliente en una sola aplicación. Este tutorial proporciona instrucciones completas. Por ejemplo, incluye instrucciones sobre cómo crear una aplicación de servicio web de ASP.NET que se puede usar para probar los servicios de aplicaciones cliente.  
   
-## Referencia
-<a id="reference" class="xliff"></a>  
+## <a name="reference"></a>Referencia  
  <xref:System.Web.ClientServices.ClientFormsIdentity>  
  <xref:System.Web.ClientServices.ClientRolePrincipal>  
  <xref:System.Web.ClientServices.ConnectivityStatus>  
@@ -78,8 +75,7 @@ Los servicios de aplicaciones cliente facilitan la creación de aplicaciones bas
  <xref:System.Web.ClientServices.Providers.SettingsSavedEventArgs>  
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
-## Vea también
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>Vea también  
  [Información general sobre los servicios de aplicaciones ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)   
  [Utilizar la autenticación de formularios con AJAX en ASP.NET](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)   
  [Usar información de funciones con AJAX en ASP.NET](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)   
