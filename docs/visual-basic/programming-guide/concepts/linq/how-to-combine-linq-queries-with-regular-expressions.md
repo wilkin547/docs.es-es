@@ -1,5 +1,5 @@
 ---
-title: "Cómo: combinar consultas LINQ con expresiones regulares (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: Combinar consultas LINQ con expresiones regulares (Visual Basic) | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,14 +20,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
+ms.contentlocale: es-es
+ms.lasthandoff: 07/26/2017
 
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Cómo: combinar consultas LINQ con expresiones regulares (Visual Basic)
-Este ejemplo muestra cómo utilizar el <xref:System.Text.RegularExpressions.Regex>clase para crear una expresión regular para coincidencias más complejas en cadenas de texto.</xref:System.Text.RegularExpressions.Regex> La consulta LINQ facilita filtro en exactamente los archivos que desea buscar con la expresión regular y dar forma los resultados.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Cómo: Combinar consultas LINQ con expresiones regulares (Visual Basic)
+En este ejemplo se muestra cómo usar la clase <xref:System.Text.RegularExpressions.Regex> para crear una expresión regular para coincidencias más complejas en cadenas de texto. Con la consulta LINQ, resulta fácil filtrar por los archivos exactos que se quieren buscar con la expresión regular y dar forma a los resultados.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -38,18 +39,16 @@ Class LinqRegExVB
   
         ' Root folder to query, along with all subfolders.  
         ' Modify this path as necessary so that it accesses your Visual Studio folder.  
-        Dim startFolder As String = "C:\program files\Microsoft Visual Studio 9.0\"  
+        Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio 14.0\"
         ' One of the following paths may be more appropriate on your computer.  
-        'string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 9.0\";  
-        'string startFolder = @"c:\program files\Microsoft Visual Studio 10.0\";  
-        'string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 10.0\";  
+        'Dim startFolder As String = "C:\Program Files (x86)\Microsoft Visual Studio\2017\"
   
         ' Take a snapshot of the file system.  
         Dim fileList As IEnumerable(Of System.IO.FileInfo) = GetFiles(startFolder)  
   
         ' Create a regular expression to find all things "Visual".  
         Dim searchTerm As System.Text.RegularExpressions.Regex =   
-            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|J#|SourceSafe|Studio)")  
+            New System.Text.RegularExpressions.Regex("Visual (Basic|C#|C\+\+|Studio)")  
   
         ' Search the contents of each .htm file.  
         ' Remove the where clause to find even more matches!  
@@ -98,11 +97,12 @@ Class LinqRegExVB
 End Class  
 ```  
   
- Tenga en cuenta que también puede consultar la <xref:System.Text.RegularExpressions.MatchCollection>objeto devuelto por un `RegEx` búsqueda.</xref:System.Text.RegularExpressions.MatchCollection> En este ejemplo se genera solo el valor de cada coincidencia en los resultados. Sin embargo, también es posible usar LINQ para realizar todo tipo de filtrado, ordenación y agrupación en esa colección. Porque <xref:System.Text.RegularExpressions.MatchCollection>es no genérica <xref:System.Collections.IEnumerable>colección, tiene que declarar explícitamente el tipo de la variable de rango en la consulta.</xref:System.Collections.IEnumerable> </xref:System.Text.RegularExpressions.MatchCollection>  
+ Tenga en cuenta que también puede consultar el objeto <xref:System.Text.RegularExpressions.MatchCollection> devuelto por una búsqueda `RegEx`. En este ejemplo se genera solo el valor de cada coincidencia en los resultados. Pero también es posible usar LINQ para realizar todo tipo de filtrado, ordenación y agrupación en esa colección. Dado que <xref:System.Text.RegularExpressions.MatchCollection> no es una colección genérica <xref:System.Collections.IEnumerable>, tendrá que indicar explícitamente el tipo de la variable de rango en la consulta.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
  [LINQ y cadenas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+
