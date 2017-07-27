@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51cce0d7ffd4806365600ee93d57806af96f08a8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 9ba49d25f9e31fc0fcceff5f213a6df703fd41e2
+ms.contentlocale: es-es
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Cómo: Combinar consultas LINQ con expresiones regulares (C#)
@@ -36,18 +37,16 @@ class QueryWithRegEx
     public static void Main()  
     {  
         // Modify this path as necessary so that it accesses your version of Visual Studio.  
-        string startFolder = @"c:\program files\Microsoft Visual Studio 9.0\";  
+        string startFolder = @"C:\Program Files (x86)\Microsoft Visual Studio 14.0\";  
         // One of the following paths may be more appropriate on your computer.  
-        //string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 9.0\";  
-        //string startFolder = @"c:\program files\Microsoft Visual Studio 10.0\";  
-        //string startFolder = @"c:\program files (x86)\Microsoft Visual Studio 10.0\";  
+        //string startFolder = @"C:\Program Files (x86)\Microsoft Visual Studio\2017\";  
   
         // Take a snapshot of the file system.  
         IEnumerable<System.IO.FileInfo> fileList = GetFiles(startFolder);  
   
         // Create the regular expression to find all things "Visual".  
         System.Text.RegularExpressions.Regex searchTerm =  
-            new System.Text.RegularExpressions.Regex(@"Visual (Basic|C#|C\+\+|J#|SourceSafe|Studio)");  
+            new System.Text.RegularExpressions.Regex(@"Visual (Basic|C#|C\+\+|Studio)");  
   
         // Search the contents of each .htm file.  
         // Remove the where clause to find even more matchedValues!  
@@ -111,7 +110,7 @@ class QueryWithRegEx
 }  
 ```  
   
- Tenga en cuenta que también se puede consultar el objeto <xref:System.Text.RegularExpressions.MatchCollection> devuelto por una búsqueda de `RegEx`. En este ejemplo se genera solo el valor de cada coincidencia en los resultados. Pero también es posible usar LINQ para realizar todo tipo de filtrado, ordenación y agrupación en esa colección. Dado que <xref:System.Text.RegularExpressions.MatchCollection> es una colección <xref:System.Collections.IEnumerable> no genérica, tiene que indicar explícitamente el tipo de la variable de rango en la consulta.  
+ Tenga en cuenta que también puede consultar el objeto <xref:System.Text.RegularExpressions.MatchCollection> devuelto por una búsqueda `RegEx`. En este ejemplo se genera solo el valor de cada coincidencia en los resultados. Pero también es posible usar LINQ para realizar todo tipo de filtrado, ordenación y agrupación en esa colección. Dado que <xref:System.Text.RegularExpressions.MatchCollection> no es una colección genérica <xref:System.Collections.IEnumerable>, tendrá que indicar explícitamente el tipo de la variable de rango en la consulta.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
@@ -119,3 +118,4 @@ class QueryWithRegEx
 ## <a name="see-also"></a>Vea también  
  [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+
