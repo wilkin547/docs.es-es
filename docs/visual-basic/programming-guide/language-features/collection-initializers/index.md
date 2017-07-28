@@ -1,5 +1,5 @@
 ---
-title: "Inicializadores de colección (Visual Basic) | Microsoft Docs"
+title: "Inicializadores de colección (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,16 +32,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: 4b0abe2c6356370584356dce1c6fc5731d735810
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="collection-initializers-visual-basic" class="xliff"></a>
-
-# Inicializadores de colección (Visual Basic)
+# <a name="collection-initializers-visual-basic"></a>Inicializadores de colección (Visual Basic)
 Los *inicializadores de colección* proporcionan una sintaxis abreviada que permite crear una colección y rellenarla con un conjunto inicial de valores. Los inicializadores de colección son útiles cuando se crea una colección a partir de un conjunto de valores conocidos, como una lista de opciones de menú o categorías, un conjunto inicial de valores numéricos, una lista estática de cadenas como nombres de días o meses, o ubicaciones geográficas como una lista de estados usada para la validación.  
   
  Para más información sobre las colecciones, vea [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
@@ -53,9 +51,7 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
 > [!NOTE]
 >  C# también proporciona inicializadores de colección. Los inicializadores de colección de C# proporcionan la misma funcionalidad que los inicializadores de colección de Visual Basic. Para obtener más información sobre los inicializadores de colección de C#, vea [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-<a id="syntax" class="xliff"></a>
-
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
  Un inicializador de colección consta de una lista de valores separados por comas que están entre llaves (`{}`), precedidos por la palabra clave `From`, como se muestra en el código siguiente.  
   
  [!code-vb[VbVbalrCollectionInitializers#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#2)]  
@@ -67,9 +63,7 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
 > [!NOTE]
 >  No se puede combinar un inicializador de colección y un inicializador de objeto para inicializar el mismo objeto de colección. Puede usar inicializadores de objeto para inicializar objetos en un inicializador de colección.  
   
-<a id="creating-a-collection-by-using-a-collection-intializer" class="xliff"></a>
-
-## Crear una colección mediante un inicializador de colección  
+## <a name="creating-a-collection-by-using-a-collection-intializer"></a>Crear una colección mediante un inicializador de colección  
  Cuando crea una colección mediante un inicializador de colección, cada valor que se proporciona en el inicializador de colección se pasa al método `Add` correspondiente de la colección. Por ejemplo, si crea <xref:System.Collections.Generic.List%601> mediante un inicializador de colección, cada valor de cadena del inicializador de colección se pasa al método <xref:System.Collections.Generic.List%601.Add%2A>. Si quiere crear una colección mediante un inicializador de colección, el tipo especificado debe ser un tipo de colección válido. Las clases que implementan la interfaz <xref:System.Collections.Generic.IEnumerable%601> o que heredan la clase <xref:System.Collections.CollectionBase> son algunos ejemplos de tipos de colección válidos. El tipo especificado también debe exponer un método `Add` que cumpla los criterios siguientes.  
   
 -   El método `Add` debe estar disponible en el ámbito en el que se llama al inicializador de colección. El método `Add` no tiene que ser público si el inicializador de colección se usa en un escenario en el que se puede obtener acceso a los métodos no públicos de la colección.  
@@ -88,9 +82,7 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
  Si la colección tiene un método `Add` que tiene parámetros que coinciden con el constructor para el objeto `Customer`, los valores de parámetro para el método `Add` se pueden anidar dentro de inicializadores de colección, como se describe en la sección siguiente. Si la colección no tiene un método `Add`, puede crear uno como un método de extensión. Para obtener un ejemplo de cómo crear un método `Add` como un método de extensión para una colección, vea [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md) (Cómo: Crear un método de extensión Add usado por un inicializador de colección). Para obtener un ejemplo de cómo crear una colección personalizada que pueda usarse con un inicializador de colección, vea [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md) (Cómo: Crear una colección usada por un inicializador de colección).  
   
-<a id="nesting-collection-initializers" class="xliff"></a>
-
-## Anidar inicializadores de colección  
+## <a name="nesting-collection-initializers"></a>Anidar inicializadores de colección  
  Puede anidar los valores de un inicializador de colección para identificar una sobrecarga específica de un método `Add` para la colección que se va a crear. Los valores pasados al método `Add` deben separarse con comas e incluirse entre llaves (`{}`), tal como se haría en un literal de matriz o un inicializador de colección.  
   
  Cuando se crea una colección mediante el uso de valores anidados, cada elemento de la lista de valores anidados se pasa como argumento al método `Add` que coincida con los tipos de elementos. Por ejemplo, en el ejemplo de código siguiente se crea un <xref:System.Collections.Generic.Dictionary%602> en que las claves son de tipo `Integer` y los valores son de tipo `String`. Cada una de las listas de valores anidados se asocia al método <xref:System.Collections.Generic.Dictionary%602.Add%2A> para el `Dictionary`.  
@@ -103,18 +95,14 @@ Los *inicializadores de colección* proporcionan una sintaxis abreviada que perm
   
  Solo se envían listas de valores anidados del primer nivel de anidamiento al método `Add` del tipo de colección. Los niveles de anidamiento más profundos se tratan como literales de matriz y no habrá coincidencias de las listas de valores anidados con el método `Add` de ninguna colección.  
   
-<a id="related-topics" class="xliff"></a>
-
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
   
 |Título|Descripción|  
 |---|---|  
 |[Crear un método de extensión Add usado por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Muestra cómo crear un método de extensión denominado `Add` que se puede usar para rellenar una colección con los valores de un inicializador de colección.|  
 |[Crear una colección usada por un inicializador de colección](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Muestra cómo habilitar el uso de un inicializador de colección mediante la inclusión de un método `Add` en una clase de colección que implementa `IEnumerable`.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
  [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  (Matrices)  
  [Inicializadores de objeto: Tipos con nombre y anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   

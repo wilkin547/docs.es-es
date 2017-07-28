@@ -1,5 +1,5 @@
 ---
-title: "Conceptos de programación (Visual Basic) | Microsoft Docs"
+title: "Conceptos de programación (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b4ff0a8e0c3ae2cbf13f7995b5eaddc76084d3f4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 11e93cbb48a0d47dccef8ceb2e501ca5cf4d18f4
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-concepts-visual-basic"></a>Conceptos de programación (Visual Basic)
@@ -51,3 +52,4 @@ En esta sección se explican los conceptos de programación del lenguaje Visual 
 |||  
 |---|---|  
 |[Sugerencias para mejorar el rendimiento](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Se describen varias reglas básicas que pueden ayudarle a aumentar el rendimiento de la aplicación.|
+

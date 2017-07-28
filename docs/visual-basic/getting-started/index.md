@@ -1,5 +1,5 @@
 ---
-title: "Introducción a Visual Basic | Microsoft Docs"
+title: "Introducción a Visual Basic"
 ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Introducción a Visual Basic
@@ -66,17 +66,18 @@ Aquí se enumeran las características nuevas de cada versión de Visual Basic .
  [Tutoriales](../../visual-basic/walkthroughs.md)  
  Proporciona una lista de páginas de Ayuda donde se explican aspectos del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Hable con nosotros](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
+ [Hable con nosotros](/visualstudio/ide/talk-to-us)  
  Explica cómo recibir asistencia y proporcionar información al servicio técnico.  
   
- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
+ [Visual Studio](/visualstudio/)  
  Proporciona vínculos a la documentación de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [C#](../../csharp/csharp.md)  
  Proporciona los vínculos a la documentación sobre desarrollo de aplicaciones con [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
- [Visual C++](https://docs.microsoft.com/cpp/)  
+ [Visual C++](/cpp/)  
  Proporciona vínculos a la documentación de Visual C++.  
   
  [Desarrollo de Office y SharePoint](https://msdn.microsoft.com/library/d2tx7z6d)  
  Proporciona información sobre cómo usar Microsoft Office y [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como parte de una aplicación empresarial.
+

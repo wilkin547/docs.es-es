@@ -1,5 +1,5 @@
 ---
-title: Referencia de C# | Microsoft Docs
+title: Referencia de C#
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
 ms.contentlocale: es-es
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-reference"></a>Referencia de C#
@@ -61,7 +61,7 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  [Errores del compilador de C#](../../csharp/language-reference/compiler-messages/index.md)  
  Incluye fragmentos de código que muestran la causa y la corrección de errores y advertencias del compilador de C#.  
   
- [Especificación del lenguaje C#](../../csharp/language-reference/language-specification.md)  
+ [Especificación del lenguaje C#](../../csharp/language-reference/language-specification/index.md)  
  Ofrece punteros a la versión más reciente de la especificación de lenguaje de C# en formato Microsoft Word.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -75,7 +75,7 @@ En esta sección se proporciona material de referencia sobre palabras clave, ope
  [C#](../../csharp/csharp.md)  
  Ofrece un portal para la documentación de Visual C#.  
   
- [Usar el entorno de desarrollo de Visual C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Usar el entorno de desarrollo de Visual C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Ofrece vínculos para los temas de tareas y conceptos y temas que describen el IDE y el Editor.  
   
  [Guía de programación de C#](../../csharp/programming-guide/index.md)  

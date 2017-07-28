@@ -1,5 +1,5 @@
 ---
-title: "Delegados (Guía de programación de C#) | Microsoft Docs"
+title: "Delegados (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ae5591bcd17a4b7afcdcdfb36717801819f2311f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d3dc2252b086f9df9e64a059a53ec8792e11b45
 ms.contentlocale: es-es
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guía de programación de C#)
@@ -86,9 +86,10 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tip
 ## <a name="featured-book-chapters"></a>Capítulos destacados del libro  
  [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) (Delegados, eventos y expresiones lambda) en [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
- [Delegates and Events](http://go.microsoft.com/fwlink/?LinkId=195418) in [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
+ [Delegates and Events](http://go.microsoft.com/fwlink/?LinkId=195418) (Delegados, eventos y expresiones lambda) en [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Delegate>   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Eventos](../../../csharp/programming-guide/events/index.md)
+

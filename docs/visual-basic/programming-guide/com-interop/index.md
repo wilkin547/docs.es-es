@@ -1,5 +1,5 @@
 ---
-title: Interoperabilidad COM en Visual Basic | Microsoft Docs
+title: Interoperabilidad COM (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6aaa083c7d668659d2e68638b677a20ce22fa214
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29275519a00ad0c33a5b85e592532ce456daefe0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="com-interop-visual-basic" class="xliff"></a>
-
-# Interoperabilidad COM (Visual Basic)
+# <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
 El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. En esta sección se tratan algunos de los problemas relacionados con la creación y el uso de objetos COM con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Introducción a la interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  Proporciona información general sobre la interoperabilidad COM.  
   
@@ -76,9 +72,7 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  [Tutorial: Implementación de la herencia mediante objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Describe cómo usar objetos COM existentes como base para nuevos objetos.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Interoperating with Unmanaged Code](https://msdn.microsoft.com/library/sd10k43k) (Interoperar con código no administrado)  
  Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.  
   
@@ -90,3 +84,4 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
   
  [Aplicar atributos de interoperabilidad](https://msdn.microsoft.com/library/d4w8x20h)  
  Describe los atributos que se pueden usar al trabajar con código no administrado.
+

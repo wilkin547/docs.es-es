@@ -1,5 +1,5 @@
 ---
-title: "Árboles de expresión (C#) | Microsoft Docs"
+title: "Árboles de expresión (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 87195c8936aba485919d6c717fcbfaa1b282bddc
-ms.lasthandoff: 03/31/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be37183163a3747f861cbda7fd7867640ba382a2
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expression-trees-c"></a>Árboles de expresión (C#)
@@ -30,9 +31,9 @@ Los árboles de expresión representan el código en una estructura de datos en 
   
  El código representado en árboles de expresión se puede compilar y ejecutar. Esto permite realizar cambios dinámicos en el código ejecutable, ejecutar consultas LINQ en varias bases de datos y crear consultas dinámicas. Para obtener más información sobre los árboles de expresión en LINQ, consulte [How to: Use Expression Trees to Build Dynamic Queries (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md) (Usar árboles de expresión para generar consultas dinámicas en C#).  
   
- Los árboles de expresión también se usan en Dynamic Language Runtime (DLR) para proporcionar interoperabilidad entre los lenguajes dinámicos y .NET Framework y, asimismo, para permitir que los programadores de compiladores emitan árboles de expresión en lugar de Lenguaje intermedio de Microsoft (MSIL). Para obtener más información sobre el entorno DLR, consulte [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052) (Información general sobre Dynamic Language Runtime).  
+ Los árboles de expresión también se usan en Dynamic Language Runtime (DLR) para proporcionar interoperabilidad entre los lenguajes dinámicos y .NET Framework y, asimismo, para permitir que los programadores de compiladores emitan árboles de expresión en lugar de Lenguaje intermedio de Microsoft (MSIL). Para obtener más información sobre el entorno DLR, vea [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052) (Información general sobre Dynamic Language Runtime).  
   
- Para crear un árbol de expresión en función de una expresión lambda anónima, puede usar el compilador de Visual Basic o de C#. También puede hacerlo manualmente con el espacio de nombres <xref:System.Linq.Expressions>.  
+ Puede hacer que el compilador de Visual Basic o de C# cree un árbol de expresión en función de una expresión lambda anónima, o bien puede crear árboles de expresión manualmente usando el espacio de nombres <xref:System.Linq.Expressions>.  
   
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Crear árboles de expresión a partir de expresiones lambda  
  Cuando una expresión lambda se asigna a una variable de tipo <xref:System.Linq.Expressions.Expression%601>, el compilador emite código para crear un árbol de expresión que represente la expresión lambda.  
@@ -46,7 +47,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>Crear árboles de expresión mediante la API  
- Para crear un árbol de expresión con la API, use la clase <xref:System.Linq.Expressions.Expression>. Esta clase contiene métodos de fábrica estáticos que crean nodos de árbol de expresión de tipos específicos, como, por ejemplo, <xref:System.Linq.Expressions.ParameterExpression>, que representa una variable o un parámetro, o <xref:System.Linq.Expressions.MethodCallExpression>, que representa una llamada de método. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> y el resto de tipos específicos de las expresiones también están definidos en el espacio de nombres <xref:System.Linq.Expressions>. Dichos tipos derivan del tipo abstracto <xref:System.Linq.Expressions.Expression>.  
+ Para crear árboles de expresión mediante la API, use la clase <xref:System.Linq.Expressions.Expression>. Esta clase contiene métodos de fábrica estáticos que crean nodos de árbol de expresión de tipos específicos, como, por ejemplo, <xref:System.Linq.Expressions.ParameterExpression>, que representa una variable o un parámetro, o <xref:System.Linq.Expressions.MethodCallExpression>, que representa una llamada a método. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> y los demás tipos específicos de expresión también se definen en el espacio de nombres <xref:System.Linq.Expressions>. Estos tipos se derivan del tipo abstracto <xref:System.Linq.Expressions.Expression>.  
   
  En el siguiente ejemplo de código se muestra cómo crear un árbol de expresión que represente la expresión lambda `num => num < 5` mediante la API.  
   
@@ -137,7 +138,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
  Los árboles de expresión deben ser inmutables. Esto significa que, si desea modificar un árbol de expresión, deberá construir un nuevo árbol de expresión copiando el ya existente y reemplazando los nodos que hay en él. Puede usar un visitante de árbol de expresión para recorrer el árbol de expresión existente. Para obtener más información, consulte [How to: Modify Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md) (Cómo modificar árboles de expresión en C#).  
   
 ## <a name="compiling-expression-trees"></a>Compilar árboles de expresión  
- El tipo <xref:System.Linq.Expressions.Expression%601> proporciona el método <xref:System.Linq.Expressions.Expression%601.Compile%2A> para compilar el código representado mediante un árbol de expresión en un delegado ejecutable.  
+ El tipo <xref:System.Linq.Expressions.Expression%601> proporciona el método <xref:System.Linq.Expressions.Expression%601.Compile%2A> que compila el código representado por un árbol de expresión en un delegado ejecutable.  
   
  En el siguiente ejemplo de código se indica cómo compilar un árbol de expresión y ejecutar el código resultante.  
   
@@ -165,8 +166,9 @@ Console.WriteLine(expr.Compile()(4));
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Linq.Expressions>   
- [How to: Execute Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  (Ejecutar árboles de expresión en C#)  
+ [Cómo: Ejecutar árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
  [How to: Modify Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  (Modificar árboles de expresión en C#)  
  [Expresiones lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [Dynamic Language Runtime Overview](https://msdn.microsoft.com/library/dd233052)  (Información general sobre Dynamic Language Runtime)  
  [Programming Concepts (C#)](../../../../csharp/programming-guide/concepts/index.md) (Conceptos de programación (C#))
+

@@ -1,5 +1,5 @@
 ---
-title: Objetos y clases de Visual Basic | Microsoft Docs
+title: Objetos y clases de Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b71219fff8354497f34930232952262008f6cc78
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
@@ -281,3 +281,4 @@ Un tipo concreto de contención de objeto se representa mediante *colecciones*. 
 
  [Deducir tipos y nombres de propiedades en declaraciones de tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Explica cómo deducir tipos y nombres de propiedades en declaraciones de tipos anónimos. Proporciona ejemplos de inferencia correcta e incorrecta.
+
