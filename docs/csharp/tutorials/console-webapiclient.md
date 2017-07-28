@@ -1,5 +1,5 @@
 ---
-title: "Creación de un cliente de REST con .NET Core | Microsoft Docs"
+title: "Creación de un cliente de REST con .NET Core"
 description: "Este tutorial le enseña varias características de .NET Core y el lenguaje C#."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,20 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: e39e4f606d4bd1f17f5cb84940a48ef4bd53bd2d
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="rest-client" class="xliff"></a>
+# <a name="rest-client"></a>Cliente REST
 
-# Cliente REST
-
-<a id="introduction" class="xliff"></a>
-
-## Introducción
+## <a name="introduction"></a>Introducción
 Este tutorial le enseña varias características de .NET Core y el lenguaje C#. Aprenderá lo siguiente:
 *   Los aspectos básicos de la interfaz de línea de comandos (CLI) de .NET Core
 *   Información general de las características del lenguaje C#.
@@ -39,22 +35,16 @@ Hay muchas características en este tutorial. Vamos a compilarlas una a una.
 
 Si prefiere seguir el [ejemplo final](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) de este tema, puede descargarlo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-<a id="prerequisites" class="xliff"></a>
-
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
-<a id="create-the-application" class="xliff"></a>
-
-## Crear la aplicación
-El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola mundo".
+## <a name="create-the-application"></a>Crear la aplicación
+El primer paso es crear una nueva aplicación. Abra un símbolo del sistema y cree un nuevo directorio para la aplicación. Conviértalo en el directorio actual. Escriba el comando `dotnet new console` en el símbolo del sistema. Esta acción crea los archivos de inicio para una aplicación básica "Hola a todos".
 
 Antes de comenzar a realizar modificaciones, vamos a recorrer los pasos para ejecutar la aplicación Hola a todos sencilla. Después de crear la aplicación, escriba `dotnet restore` en el símbolo del sistema. Este comando ejecuta el proceso de restauración de paquetes de NuGet. NuGet es un administrador de paquetes .NET. Este comando permite descargar cualquiera de las dependencias que faltan para el proyecto. Como se trata de un nuevo proyecto, ninguna de las dependencias está en su lugar, así que con la primera ejecución se descargará .NET Core Framework. Después de este paso inicial, solo deberá ejecutar `dotnet restore` al agregar nuevos paquetes dependientes, o actualizar las versiones de cualquiera de sus dependencias.  
 
 Después de restaurar los paquetes, ejecutará `dotnet build`. Esta acción ejecuta el motor de compilación y crea la aplicación. Por último, ejecute `dotnet run` para ejecutar la aplicación.
 
-<a id="adding-new-dependencies" class="xliff"></a>
-
-## Adición de nuevas dependencias
+## <a name="adding-new-dependencies"></a>Adición de nuevas dependencias
 Uno de los objetivos de diseño principales para .NET Core es reducir el tamaño de la instalación de .NET Framework. El marco de trabajo de la aplicación .NET Core solo contiene los elementos más comunes del marco completo .NET. Si una aplicación necesita bibliotecas adicionales para algunas de sus características, agregará esas dependencias al archivo de proyecto (*.csproj) de C#. En nuestro ejemplo, deberá agregar el paquete `System.Runtime.Serialization.Json` para que su aplicación pueda procesar respuestas JSON.
 
 Abra el archivo de proyecto `csproj`. La primera línea del archivo debe aparecer como:
@@ -74,9 +64,7 @@ La mayoría de los editores de código proporcionarán la finalización de las d
 
 Una vez realizados estos cambios, debe ejecutar de nuevo `dotnet restore` para que el paquete se instale en su sistema.
 
-<a id="making-web-requests" class="xliff"></a>
-
-## Realización de las solicitudes web
+## <a name="making-web-requests"></a>Realización de las solicitudes web
 Ahora está listo para comenzar a recuperar datos de la Web. En esta aplicación, leerá información de la [API de GitHub](https://developer.github.com/v3/). Vamos a leer información sobre los proyectos que aparecen en el paraguas [.NET Foundation](http://www.dotnetfoundation.org/). Para comenzar, realizará la solicitud a la API de GitHub para recuperar información sobre los proyectos. El punto de conexión que se usará es: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Quiere recuperar toda la información sobre estos proyectos, así que usará una solicitud HTTP GET.
 El explorador también usa solicitudes HTTP GET, por lo que puede pegar esa dirección URL en él para ver la información que recibirá y procesará.
 
@@ -142,9 +130,7 @@ Después de haber configurado el objeto @System.Net.Http.HttpClient, realizará 
 Las dos últimas líneas de este método esperan a la tarea y, luego, imprimen la respuesta en la consola.
 Compile la aplicación y ejecútela. La advertencia de compilación desaparece ahora, porque `ProcessRepositories` contiene ahora un operador `await`. Verá una pantalla larga de texto con formato de JSON.   
 
-<a id="processing-the-json-result" class="xliff"></a>
-
-## Procesamiento del resultado JSON
+## <a name="processing-the-json-result"></a>Procesamiento del resultado JSON
 
 Llegados a este punto, ha escrito el código para recuperar una respuesta de un servidor web y mostrar el texto contiene esa respuesta. A continuación, vamos a convertir esa respuesta JSON en objetos de C#.
 
@@ -206,9 +192,7 @@ foreach (var repo in repositories)
 
 Compile y ejecute la aplicación. Se imprimirán los nombres de los repositorios que forman parte de .NET Foundation.
 
-<a id="controlling-serialization" class="xliff"></a>
-
-## Control de la serialización
+## <a name="controlling-serialization"></a>Control de la serialización
 
 Antes de agregar más características, vamos a abordar el tipo `repo` y hacer que siga convenciones de C# más estándar. Para ello, anotará el tipo `repo` con *atributos* que controlan cómo funciona el serializador de JSON. En su caso, usará estos atributos para definir una asignación entre los nombres de claves JSON y los nombres de miembros y clases de C#. Los dos atributos usados son el atributo `DataContract` y el atributo `DataMember`. Por convención, todas las clases de atributo acaban en el sufijo `Attribute`. Sin embargo, no es necesario usar ese sufijo cuando aplique un atributo. 
 
@@ -305,9 +289,7 @@ public static void Main(string[] args)
 
 El acceso a la propiedad `Result` de una tarea se bloquea hasta que finaliza la tarea. Normalmente, preferiría esperar (`await`) a que finalizara la tarea, como en el método `ProcessRepositories`, pero eso no se permite en el método `Main`.
 
-<a id="reading-more-information" class="xliff"></a>
-
-## Leer más información
+## <a name="reading-more-information"></a>Leer más información
 
 Para terminar esto, vamos a procesar unas cuantas propiedades más del paquete JSON que se envía desde la API de GitHub. No quiere captar toso, sino que con solo agregar unas cuantas propiedades se demostrarán más características del lenguaje C#.
 
@@ -384,9 +366,7 @@ Console.WriteLine(repo.LastPush);
 
 La versión debe coincidir ahora con el [ejemplo terminado](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
  
-<a id="conclusion" class="xliff"></a>
-
-## Conclusión
+## <a name="conclusion"></a>Conclusión
 
 En este tutorial se ha mostrado cómo realizar solicitudes web, analizar el resultado y visualizar las propiedades de los resultados. También ha agregado nuevos paquetes como dependencias en el proyecto. Ha visto algunas de las características del lenguaje C# compatibles con técnicas orientadas a objetos.
 
