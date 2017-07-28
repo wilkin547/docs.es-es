@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Determinar qué versiones de .NET Framework están instaladas | Microsoft Docs"
+title: "Cómo: Determinar qué versiones de .NET Framework están instaladas"
 ms.custom: 
 ms.date: 04/07/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 62
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 24a8d7b017160d5cb28b7478200b8623a1dc4818
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cddee407d1245568054871d71f2840f463859535
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Cómo: Determinar qué versiones de .NET Framework están instaladas
@@ -193,3 +193,4 @@ Los usuarios pueden instalar y ejecutar varias versiones de .NET Framework en s
  [Cómo: Determinar qué actualizaciones de .NET Framework están instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
  [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md)  (Instalar .NET Framework para desarrolladores)  
  [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md)
+

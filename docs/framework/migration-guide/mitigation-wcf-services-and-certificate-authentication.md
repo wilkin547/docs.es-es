@@ -1,5 +1,5 @@
 ---
-title: "Mitigación: Servicios WCF y autenticación de certificados | Microsoft Docs"
+title: "Mitigación: Servicios WCF y autenticación de certificados"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,26 +15,20 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
-
-# Mitigación: Servicios WCF y autenticación de certificados
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigación: Servicios WCF y autenticación de certificados
 .NET Framework 4.6 agrega TLS 1.1 y TLS 1.2 a la lista predeterminada de protocolos SSL de WCF. Cuando los equipos cliente y servidor tienen .NET Framework 4.6 o posterior instalado, se usa TLS 1.2 para la negociación.  
   
-<a id="impact" class="xliff"></a>
-
-## Impacto  
+## <a name="impact"></a>Impacto  
  TLS 1.2 no admite la autenticación de certificado MD5. Como resultado, si un cliente utiliza un certificado SSL que utiliza MD5 para el algoritmo hash, el cliente WCF no se puede conectar al servicio WCF. Para obtener más información, consulte [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md) (Mitigación: servicios de WCF y autenticación de certificados).  
   
-<a id="mitigation" class="xliff"></a>
-
-## Mitigación  
+## <a name="mitigation"></a>Mitigación  
  Puede evitar este problema para que el cliente WCF pueda conectarse a un servidor WCF realizando alguno de los siguientes procedimientos:  
   
 -   Actualizar el certificado para que no use el algoritmo MD5. Esta es la solución recomendada.  
@@ -70,8 +64,6 @@ ms.lasthandoff: 06/12/2017
     > [!CAUTION]
     >  Esta solución no es recomendable, puesto que se considera que el algoritmo hash MD5 no es seguro.  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cambios en el runtime](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 

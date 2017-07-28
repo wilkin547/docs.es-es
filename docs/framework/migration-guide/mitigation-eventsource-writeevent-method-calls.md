@@ -1,5 +1,5 @@
 ---
-title: "Mitigación: Llamadas al método EventSource.WriteEvent| Microsoft Docs"
+title: "Mitigación: Llamadas al método EventSource.WriteEvent"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,15 +14,15 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: cde809989d89c10caeb97ec853c8649a108cd72d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 270f89183bced5d07598b1731f18acf90ec9715a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-eventsourcewriteevent-method-calls"></a>Mitigación: Llamadas al método EventSource.WriteEvent
-[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] fuerza un contrato entre un método de evento ETW de una clase que deriva del método <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> y <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> de su clase base. El método de evento ETW debe pasar al método <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> el identificador de evento seguido de los mismos argumentos que se pasaron al método del evento.  
+[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] fuerza un contrato entre un método de evento ETW de una clase derivada de <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> y el método <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> de su clase base. El método de evento ETW debe pasar al método <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> el identificador de evento seguido de los mismos argumentos que se pasaron al método del evento.  
   
 ## <a name="impact"></a>Impacto  
  Un método de evento ETW definido de la manera siguiente infringe el contrato:  
@@ -35,7 +35,7 @@ public void Info2(string message)
 }  
 ```  
   
- Cuando se incumple este contrato, se produce una excepción <xref:System.IndexOutOfRangeException> en tiempo de ejecución si un objeto <xref:System.Diagnostics.Tracing.EventListener> lee datos <xref:System.Diagnostics.Tracing.EventSource> en proceso.  
+ Cuando se infringe este contrato, se genera una excepción <xref:System.IndexOutOfRangeException> en tiempo de ejecución si un objeto <xref:System.Diagnostics.Tracing.EventListener> lee datos <xref:System.Diagnostics.Tracing.EventSource> en proceso.  
   
  La definición de este método de evento ETW debe seguir este patrón:  
   
@@ -50,7 +50,7 @@ public void Info2(string message)
 ## <a name="mitigation"></a>Mitigación  
  Debe modificar el código existente para que se ajuste al patrón requerido.  
   
- Puede minimizar la cantidad de código que hay que cambiar definiendo dos métodos para llamar al método <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A>, de la forma siguiente:  
+ Puede minimizar la cantidad de código que hay que cambiar definiendo dos métodos para llamar al método <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> , de la forma siguiente:  
   
 ```  
 [NonEvent]  

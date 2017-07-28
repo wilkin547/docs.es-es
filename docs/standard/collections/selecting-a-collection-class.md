@@ -1,5 +1,5 @@
 ---
-title: "Seleccionar una clase de colección | Microsoft Docs"
+title: "Seleccionar una clase de colección"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 403a78e3fc1496b91403b3c42494e34d12607b70
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 26467141e5f7537efddd79e0b04af6203e4a6994
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="selecting-a-collection-class"></a>Seleccionar una clase de colección
@@ -92,3 +92,4 @@ Asegúrese de elegir con cuidado la clase de colección. Usar un tipo incorrecto
  <xref:System.Collections.Specialized>   
  <xref:System.Collections.Generic>   
  [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md)
+

@@ -1,0 +1,1 @@
+Formato de archivo para intercambio de recursos (RIFF)

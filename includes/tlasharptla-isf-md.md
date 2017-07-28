@@ -1,0 +1,1 @@
+Formato serializado de tinta (ISF)

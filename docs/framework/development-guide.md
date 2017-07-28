@@ -1,5 +1,5 @@
 ---
-title: "Guía de desarrollo para .NET Framework | Microsoft Docs"
+title: "Guía de desarrollo para .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,10 +16,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: b630f2dc91068168b1d57b37ad80d79f5e3d1738
-ms.openlocfilehash: 88219e428409a71eb2706c97dca31ccde38bb918
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
@@ -78,7 +79,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>Referencia  
- [Biblioteca de clases .NET Framework](https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7)  
+ [Biblioteca de clases .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Proporciona ejemplos de código y de sintaxis, así como información de uso para cada una de las clases incluidas en los espacios de nombres de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -93,3 +94,4 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
   
  [Ejemplos de .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Proporciona vínculos al sitio web de galería de ejemplos de código de MSDN, que contiene aplicaciones de ejemplo en las que se muestran las tecnologías de .NET Framework.
+

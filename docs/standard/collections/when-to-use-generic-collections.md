@@ -1,5 +1,5 @@
 ---
-title: "Cuándo utilizar colecciones genéricas | Microsoft Docs"
+title: "Cuándo utilizar colecciones genéricas"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,11 +16,11 @@ caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9dcf0802b1d9a1d6b63d108289cbc814b73e8c48
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 465939bca9e0300300efef9842f312800817a5cc
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
@@ -38,7 +38,7 @@ Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ven
   
 -   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> es la clase genérica que se corresponde con <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> no es abstracta y tiene un constructor que hace más fácil exponer una <xref:System.Collections.Generic.List%601> existente como una colección de solo lectura.  
   
--   Las clases genéricas <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601> y <xref:System.Collections.Generic.SortedList%602> se corresponden con las respectivas clases no genéricas de igual nombre.  
+-   Las clases genéricas <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601>y <xref:System.Collections.Generic.SortedList%602> se corresponden con las respectivas clases no genéricas de igual nombre.  
   
 ## <a name="additional-types"></a>Tipos adicionales  
  Hay varios tipos de colección genéricos que no tienen un tipo homólogo no genérico. Entre esos tipos se incluyen los siguientes:  
@@ -54,10 +54,10 @@ Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ven
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> proporciona una rápida inserción y eliminación de elementos no ordenados.  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable?displayProperty=fullName> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. Las consultas LINQ proporcionan un modelo común para el acceso a datos; suelen ser más concisas y legibles que los bucles `foreach` estándar, y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para más información, consulte [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ La característica LINQ to Objects permite usar consultas LINQ para obtener acceso a los objetos en memoria mientras el tipo de objeto implemente la interfaz <xref:System.Collections.IEnumerable?displayProperty=fullName> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> . Las consultas LINQ proporcionan un modelo común para el acceso a datos; suelen ser más concisas y legibles que los bucles `foreach` estándar, y proporcionan capacidades de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para obtener más información, vea [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) y [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="additional-functionality"></a>Funcionalidad adicional  
- Algunos de los tipos genéricos tienen funcionalidades que no se encuentran en los tipos de colección no genéricos. Por ejemplo, la clase <xref:System.Collections.Generic.List%601>, que se corresponde con la clase <xref:System.Collections.ArrayList> no genérica, tiene una serie de métodos que aceptan delegados genéricos, como el delegado <xref:System.Predicate%601> que permite especificar los métodos de búsqueda en la lista, el delegado <xref:System.Action%601> que representa los métodos que actúan en cada elemento de la lista y el delegado <xref:System.Converter%602> que permite definir conversiones entre tipos.  
+ Algunos de los tipos genéricos tienen funcionalidades que no se encuentran en los tipos de colección no genéricos. Por ejemplo, la clase <xref:System.Collections.Generic.List%601> , que se corresponde con la clase <xref:System.Collections.ArrayList> no genérica, tiene una serie de métodos que aceptan delegados genéricos, como el delegado <xref:System.Predicate%601> que permite especificar los métodos de búsqueda en la lista, el delegado <xref:System.Action%601> que representa los métodos que actúan en cada elemento de la lista y el delegado <xref:System.Converter%602> que permite definir conversiones entre tipos.  
   
  La clase <xref:System.Collections.Generic.List%601> permite especificar sus propias implementaciones de interfaz genérica <xref:System.Collections.Generic.IComparer%601> para la ordenación y búsqueda en la lista. Las clases <xref:System.Collections.Generic.SortedDictionary%602> y <xref:System.Collections.Generic.SortedList%602> también tienen esta capacidad. Además, estas clases le permiten especificar los comparadores cuando se crea la colección. De forma similar, las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.ObjectModel.KeyedCollection%602> le permiten especificar sus propios comparadores de igualdad.  
   
@@ -65,3 +65,4 @@ Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ven
  [Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)   
  [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)   
  [Genéricos](../../../docs/standard/generics/index.md)
+
