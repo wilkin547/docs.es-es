@@ -1,5 +1,5 @@
 ---
-title: Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017 | Microsoft Docs
+title: Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 description: "Obtenga información sobre cómo llamar a los miembros de una biblioteca de clases con Visual Studio 2017."
 keywords: ".NET Core, biblioteca de clases de .NET Core, .NET Standard, distribución de biblioteca de clases de .NET Standard"
 author: BillWagner
@@ -11,16 +11,14 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
+# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 
 Una vez que ha seguido los pasos indicados en [Building a C# class library with .NET Core in Visual Studio 2017](./library-with-visual-studio.md) (Creación de una biblioteca de clases de C# con .NET Core en Visual Studio 2017) y en [Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017](testing-library-with-visual-studio.md) para compilar y probar la biblioteca de clases, y ha creado una versión de lanzamiento de la biblioteca, el paso siguiente consiste en hacer que esté disponible para los llamadores. Existen dos maneras de hacerlo:
 
@@ -28,9 +26,7 @@ Una vez que ha seguido los pasos indicados en [Building a C# class library with 
 
 * Si la biblioteca va a ser accesible con carácter general, puede distribuirla como un paquete NuGet.
 
-<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
-
-## Inclusión de una biblioteca como proyecto en una solución
+## <a name="including-a-library-as-a-project-in-a-solution"></a>Inclusión de una biblioteca como proyecto en una solución
 
 Así como se incluyen pruebas unitarias en la misma solución que la biblioteca de clases, se puede incluir la aplicación como parte de esa solución. Por ejemplo, se puede usar la biblioteca de clases en una aplicación de consola que pide al usuario que inserte una cadena e informa de si su primer carácter está en mayúsculas:
 
@@ -66,9 +62,7 @@ Así como se incluyen pruebas unitarias en la misma solución que la biblioteca 
 
 La aplicación que usa esta biblioteca se puede depurar y publicar siguiendo los pasos indicados en [Debugging your C# Hello World Application with Visual Studio 2017](debugging-with-visual-studio.md) (Depuración de la aplicación Hola a todos en C# con Visual Studio 2017) y [Publishing your Hello World Application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicación de la aplicación Hola a todos con Visual Studio 2017).
 
-<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
-
-## Distribución de la biblioteca en un paquete NuGet
+## <a name="distributing-the-library-in-a-nuget-package"></a>Distribución de la biblioteca en un paquete NuGet
 
 Puede hacer que la biblioteca de clases tenga una disponibilidad amplia si la publica como un paquete NuGet. Visual Studio no admite la creación de paquetes NuGet. Para crear uno, se usa la [utilidad de línea de comandos `dotnet`](../../core/tools/dotnet.md):
 
