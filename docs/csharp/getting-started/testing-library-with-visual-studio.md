@@ -1,5 +1,5 @@
 ---
-title: Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017 | Microsoft Docs
+title: Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017
 description: Aprenda a realizar una prueba de una biblioteca de clases escrita en C# con Visual Studio 2017
 keywords: .NET Core, biblioteca de clases de .NET Standard, Visual Studio 2017, prueba unitaria
 author: BillWagner
@@ -10,23 +10,19 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
-ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5254000ab95fb2cb877466a9c387d200b1a81cd6
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017
+# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de clases con .NET Core en Visual Studio 2017
 
 En [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017), ha creado una biblioteca de clases simple que agrega un método de extensión a la clase @System.String. Ahora, creará una prueba unitaria para asegurarse de que funciona según lo esperado. Agregará su proyecto de prueba unitaria a la solución que ha creado en el tema anterior.
 
-<a id="creating-a-unit-test-project" class="xliff"></a>
-
-## Creación de un proyecto de prueba unitaria
+## <a name="creating-a-unit-test-project"></a>Creación de un proyecto de prueba unitaria
 
 Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
@@ -58,9 +54,7 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
    ![Administrador de referencias](./media/testing-library-with-visual-studio/referencemanager.png)
 
-<a id="adding-and-running-unit-test-methods" class="xliff"></a>
-
-## Adición y ejecución de métodos de prueba unitaria
+## <a name="adding-and-running-unit-test-methods"></a>Adición y ejecución de métodos de prueba unitaria
 
 Cuando Visual Studio ejecuta una prueba unitaria, ejecuta cada método marcado con el atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) en una clase de prueba unitaria; la clase a la que se le aplica el atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx). Un método de prueba finaliza cuando se encuentra el primer error, o cuando todas las pruebas contenidas en el método se han realizado correctamente.
 
@@ -104,9 +98,7 @@ Para crear los métodos de prueba:
 
    ![Ventana del Explorador de pruebas](./media/testing-library-with-visual-studio/firsttest.png)
 
-<a id="handling-test-failures" class="xliff"></a>
-
-## Control de errores en las pruebas
+## <a name="handling-test-failures"></a>Control de errores en las pruebas
 
 Su serie de pruebas no tuvo errores, pero vamos a cambiarla un poco para que uno de los métodos de prueba produzca un error:
 
@@ -127,9 +119,7 @@ Su serie de pruebas no tuvo errores, pero vamos a cambiarla un poco para que uno
 
 1. Quite el código que ha agregado (`"Error", `) y vuelva a ejecutar la prueba. Se superarán las pruebas.
 
-<a id="testing-the-release-version-of-the-library" class="xliff"></a>
-
-## Prueba de la versión de la biblioteca
+## <a name="testing-the-release-version-of-the-library"></a>Prueba de la versión de la biblioteca
 
 Ha estado ejecutando sus pruebas con la versión de depuración de la biblioteca. Ahora que todas sus pruebas se han superado y que ha probado adecuadamente la biblioteca, debe ejecutar las pruebas un tiempo adicional con respecto a la compilación de versión de la biblioteca. Varios factores, como las optimizaciones del compilador, a veces pueden producir un comportamiento diferente entre las compilaciones de depuración y versión.
 

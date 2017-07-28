@@ -1,5 +1,5 @@
 ---
-title: "Uso de .NET Core SDK y herramientas de integración continua (CI) | Microsoft Docs"
+title: "Uso de .NET Core SDK y herramientas de integración continua (CI)"
 description: "Información sobre el uso del SDK de .NET Core y sus herramientas en el servidor de compilación."
 keywords: .NET, .NET Core, continuous integration, ci, build, automation, Travis CI, AppVeyor, Visual Studio Team Services, vsts
 author: guardrex
@@ -10,27 +10,23 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5af11b469f906b7c074f127704eb338a78a62b34
-ms.openlocfilehash: a13f6b80248a659bda23baece3638e33a166b5df
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67c08dd9804f6b51961be250033161427159e66e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Uso de .NET Core SDK y herramientas de integración continua (CI)
-<a id="using-net-core-sdk-and-tools-in-continuous-integration-ci" class="xliff"></a>
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Uso de .NET Core SDK y herramientas de integración continua (CI)
 
-## Información general
-<a id="overview" class="xliff"></a>
+## <a name="overview"></a>Información general
 
 En este documento se describe el uso del SDK de .NET Core y sus herramientas en un servidor de compilación. El conjunto de herramientas de .NET Core funciona tanto de forma interactiva, donde un desarrollador escribe comandos en un símbolo del sistema, como de manera automática, donde un servidor de integración continua (CI) ejecuta un script de compilación. Los comandos, las opciones, las entradas y las salidas son los mismos, y solo lo que el usuario especifica sirve para adquirir las herramientas y un sistema para compilar la aplicación. Este documento se centra en escenarios de adquisición de herramientas de integración continua, donde además se ofrecen recomendaciones sobre cómo diseñar y estructurar los scripts de compilación.
 
-## Opciones de instalación para los servidores de compilación de CI
-<a id="installation-options-for-ci-build-servers" class="xliff"></a>
+## <a name="installation-options-for-ci-build-servers"></a>Opciones de instalación para los servidores de compilación de CI
 
-### Uso de instaladores nativos
-<a id="using-the-native-installers" class="xliff"></a>
+### <a name="using-the-native-installers"></a>Uso de instaladores nativos
 
 Los instaladores nativos están disponibles para macOS, Linux y Windows. Los instaladores requieren acceso de administrador (sudo) para el servidor de compilación. El instalador nativo ofrece la ventaja de que instala todas las dependencias nativas necesarias para la ejecución de las herramientas. Además, los instaladores nativos instalan el SDK en todo el sistema.
 
@@ -38,8 +34,7 @@ Los usuarios de macOS deben usar los instaladores PKG. En Linux, se ofrece la po
 
 Los últimos archivos binarios estables se encuentran en [Get Started with .NET Core](https://aka.ms/dotnetcoregs) (Introducción a .NET Core). Si desea utilizar las herramientas de la última versión preliminar, que posiblemente sean inestables, use los vínculos proporcionados en el [repositorio de GitHub sobre la CLI de dotnet](https://github.com/dotnet/cli#installers-and-binaries). Para las distribuciones de Linux, se encuentran disponibles los archivos `tar.gz` (conocidos también como `tarballs`); use los scripts de instalación dentro de los archivos para instalar .NET Core.
 
-### Uso del script del instalador
-<a id="using-the-installer-script" class="xliff"></a>
+### <a name="using-the-installer-script"></a>Uso del script del instalador
 
 El uso del script del instalador permite la instalación sin derechos administrativos en el servidor de compilación y una sencilla automatización para obtener las herramientas. El script se encarga de descargar las herramientas y extraerlas en una ubicación predeterminada o especificada para su uso. También puede especificar la versión de las herramientas que desea instalar y si prefiere instalar el SDK completo o solo el runtime compartido.
 
@@ -48,13 +43,11 @@ El script del instalador se puede automatizar para que se ejecute al principio d
 > [!NOTE]
 > Cuando se utiliza el script del instalador, las dependencias nativas no se instalan automáticamente. Debe instalarlas en caso de el sistema operativo no las incluya. Vea la lista de requisitos previos en el tema [.NET Core native prerequisites](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) (Requisitos previos nativos de .NET Core).
 
-## Ejemplos de configuración de CI
-<a id="ci-setup-examples" class="xliff"></a>
+## <a name="ci-setup-examples"></a>Ejemplos de configuración de CI
 
 En esta sección se explica un procedimiento de instalación manual con un script de PowerShell o de Bash, además de incluir una descripción de varias soluciones de CI de software como servicio (SaaS). Las soluciones de CI de SaaS tratadas son [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [compilación de Visual Studio Team Services](https://www.visualstudio.com/docs/build/overview).
 
-### Instalación manual
-<a id="manual-setup" class="xliff"></a>
+### <a name="manual-setup"></a>Instalación manual
 
 Cada servicio de SaaS tiene sus propios métodos para crear y configurar un proceso de compilación. Si usa una solución de SaaS distinta a las que indican o necesita realizar alguna personalización aparte de la compatibilidad preconfigurada, debe realizar al menos alguna configuración manual.
 
@@ -136,15 +129,13 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 # Run the build process now. Implement your build script here.
 ```
 
-### Travis CI
-<a id="travis-ci" class="xliff"></a>
+### <a name="travis-ci"></a>Travis CI
 
 Puede configurar [Travis CI](https://travis-ci.org/) para instalar el SDK de .NET Core con el lenguaje `csharp` y la clave `dotnet`. Vea los documentos oficiales de Travis CI en [Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/) (Compilación de un proyecto de C#, F# o Visual Basic) para obtener más información. Al acceder a la información de Travis CI, observará que el identificador de lenguaje `language: csharp` de cuyo mantenimiento se encarga la comunidad funciona con todos los lenguajes de .NET, incluidos F# y Mono.
 
 Travis CI se ejecuta tanto en trabajos de macOS (OS X 10.11, OS X 10.12) como de Linux (Ubuntu 14.04) en una *matriz de compilación*, donde debe especificar una combinación de runtime, entorno y exclusiones/inclusiones para aceptar las combinaciones de compilación de la aplicación. Vea el archivo de [ejemplo .travis.yml](https://github.com/dotnet/docs/blob/master/.travis.yml) y [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build) (Personalización de la compilación) en los documentos de Travis CI para obtener más información. Las herramientas basadas en MSBuild incluyen los runtimes LTS (1.0.x) y Current (1.1.x) en el paquete; por tanto, cuando instala el SDK, recibe todo lo que necesita para la compilación.
 
-### AppVeyor
-<a id="appveyor" class="xliff"></a>
+### <a name="appveyor"></a>AppVeyor
 
 [AppVeyor](https://www.appveyor.com/) instala el SDK de .NET Core 1.0.1 con la imagen de trabajo de compilación de `Visual Studio 2017`. Se encuentran disponibles otras imágenes de compilación con diferentes versiones del SDK de .NET Core; vea el [ejemplo de appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml) y el tema [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images) (Imágenes de trabajo de compilación) de los documentos de AppVeyor para obtener más información.
 
@@ -160,8 +151,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### Visual Studio Team Services (VSTS)
-<a id="visual-studio-team-services-vsts" class="xliff"></a>
+### <a name="visual-studio-team-services-vsts"></a>Visual Studio Team Services (VSTS)
 
 Configure Visual Studio Team Services (VSTS) para compilar proyectos de .NET Core con alguno de estos enfoques:
 
@@ -188,15 +178,13 @@ Para usar un script de instalación manual en VSTS, cree una definición de comp
 
    ![Especificar el script de PowerShell que va a ejecutar](./media/using-ci-with-cli/screen4.png)
 
-## Orquestación de la compilación
-<a id="orchestrating-the-build" class="xliff"></a>
+## <a name="orchestrating-the-build"></a>Orquestación de la compilación
 
 En la mayor parte de este documento se describe cómo adquirir las herramientas de .NET Core y configurar varios servicios de CI sin ofrecer información sobre cómo orquestar o *compilar realmente* el código con .NET Core. Las opciones para estructurar el proceso de compilación dependen de muchos factores que no se pueden tratar aquí en términos generales. Explore los recursos y ejemplos proporcionados en las series de documentos de [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) y [VSTS](https://www.visualstudio.com/docs/build/overview) para obtener más información sobre cómo orquestar las compilaciones con cada tecnología.
 
 Dos enfoques generales que se aplican para estructurar el proceso de compilación del código de .NET Core con herramientas de .NET Core consisten en utilizar directamente MSBuild o en usar los comandos de la línea de comandos de .NET Core. El enfoque que debe adoptar depende de lo cómo que se sienta con cada uno de ellos y de los inconvenientes que presente su complejidad. MSBuild ofrece la posibilidad de expresar el proceso de compilación como tareas y objetivos, pero presenta la complejidad añadida de tener que aprender la sintaxis del archivo de proyecto de MSBuild. Quizá sea más sencillo usar las herramientas de línea de comandos de .NET Core, pero, en este caso, es necesario escribir la lógica de orquestación en un lenguaje de scripting como `bash` o PowerShell.
 
-## Vea también
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vea también
 
 [Pasos de adquisición de Ubuntu](https://www.microsoft.com/net/core#linuxubuntu)   
 

@@ -1,5 +1,5 @@
 ---
-title: "Introducción a C# | Microsoft Docs"
+title: "Introducción a C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>Introducción a C#
@@ -47,7 +47,7 @@ Los temas siguientes son de gran ayuda a la hora de empezar a desarrollar aplica
  Proporciona vínculos a sitios Web y grupos de noticias con los que le será más fácil encontrar la solución a los problemas más comunes.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Usar el entorno de desarrollo de Visual C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Usar el entorno de desarrollo de Visual C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Proporciona una guía para utilizar el entorno de desarrollo integrado de [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Guía de programación de C#](../../csharp/programming-guide/index.md)  
@@ -56,12 +56,13 @@ Los temas siguientes son de gran ayuda a la hora de empezar a desarrollar aplica
  [Referencia de C#](../../csharp/language-reference/index.md)  
  Proporciona información de referencia detallada sobre palabras clave, operadores, directivas de preprocesador, opciones del compilador y errores del compilador y advertencias de C#.  
   
- [Ejemplos de Visual Studio](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)  
+ [Ejemplos de Visual Studio](/visualstudio/ide/visual-studio-samples)  
  Proporciona información sobre cómo obtener acceso a los ejemplos en línea.  
   
  [Tutoriales](../../csharp/walkthroughs.md)  
  Proporciona vínculos a los tutoriales de programación que usan C# y una breve descripción de cada uno.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a Visual C# y Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Centro de aprendizaje para desarrolladores sin experiencia](http://go.microsoft.com/fwlink/?LinkId=123826)
+

@@ -1,5 +1,5 @@
 ---
-title: Hospedaje de .NET Core | Microsoft Docs
+title: Hospedaje de .NET Core
 description: "Hospedar el runtime de .NET Core desde código nativo"
 keywords: .NET, .NET Core, hospedaje, hospedaje de .NET Core
 author: mjrousos
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
-ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61c321b512b1920718196319d367f467f9291b2a
 ms.contentlocale: es-es
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -110,9 +110,9 @@ Otra opción, si `ExecuteAssembly` no satisface las necesidades del host, es usa
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
   domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",    // Target managed assembly
+  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
   L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                    // Target entry point (static method)
+  L"Main",                                  // Target entry point (static method)
   (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);

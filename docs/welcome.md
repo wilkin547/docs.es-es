@@ -1,5 +1,5 @@
 ---
-title: Bienvenido a .NET | Microsoft Docs
+title: Bienvenido a .NET
 description: "Introducción a la familia de tecnologías .NET."
 keywords: ".NET, .NET Core, introducción, noticias"
 author: richlander
@@ -9,23 +9,21 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
 ms.contentlocale: es-es
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Bienvenido a .NET
-<a id="welcome-to-net" class="xliff"></a>
+# <a name="welcome-to-net"></a>Bienvenido a .NET
 
 Consulte [Introducción a .NET Core](core/get-started.md) para aprender a crear aplicaciones .NET Core.
 
 Cree muchos tipos de aplicaciones con .NET, como de nube, IoT y juegos, mediante herramientas multiplataforma gratis. Las aplicaciones se pueden ejecutar en Android, iOS, Linux, Mac OS y Windows. Implemente aplicaciones en servidores o equipos de sobremesa y publique en tiendas de aplicaciones para la implementación en dispositivos móviles. .NET es accesible para los estudiantes y aficionados, y todos pueden participar en una comunidad de desarrolladores internacional animada y realizar contribuciones directas a muchas de las tecnologías .NET.
 
-## Noticias
-<a id="news" class="xliff"></a>
+## <a name="news"></a>Noticias
 
 - [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) (Introducción a .NET Standard)
 - [Announcing .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/) (Anuncio de .NET Core 2.0 Preview 2)
@@ -42,8 +40,7 @@ Cree muchos tipos de aplicaciones con .NET, como de nube, IoT y juegos, mediante
 - [The week in .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/) (La semana en .NET)
 - [Creación 2017 en Channel 9: vídeo sobre las tecnologías y noticias más recientes de Microsoft.](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
-## Documentación
-<a id="documentation" class="xliff"></a>
+## <a name="documentation"></a>Documentación
 
 Esta documentación trata la amplitud de .NET en plataformas y lenguajes.  Puede comenzar a trabajar con .NET y sus lenguajes en cualquiera de las siguientes secciones:
 
@@ -54,10 +51,9 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes.  Puede
 - [Guía de F#](fsharp/index.md)
 - [Guía de Visual Basic](visual-basic/index.md)
 
-Además, puede examinar la [Referencia de la API de .NET](https://docs.microsoft.com/dotnet/api).
+Además, puede examinar la [Referencia de la API de .NET](/dotnet/api).
 
-## Abrir origen
-<a id="open-source" class="xliff"></a>
+## <a name="open-source"></a>Abrir origen
 
 Esta documentación es completamente de [código abierto](https://github.com/dotnet/docs).  Puede contribuir de la manera que quiera, desde crear problemas hasta escribir documentación.  Además, gran parte del propio .NET es de código abierto:
 
