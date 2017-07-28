@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Llamar a un servicio web de forma asincrónica (Visual Basic) | Microsoft Docs"
+title: "Cómo: Llamar a un servicio Web de forma asincrónica (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a88c7250ba844603bcbc33d0768a45c40f18f53e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f191ccb5f42f9cfc5dc4e44e58d2338422207aa1
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Cómo: Llamar a un servicio Web de forma asincrónica (Visual Basic)
 En este ejemplo se adjunta un controlador a un evento de controlador asincrónico de servicios web para poder recuperar el resultado de una llamada de método asincrónico. En este ejemplo se usó el servicio web DemoTemperatureService de http://www.xmethods.net.  
   
- Cuando se hace referencia a un servicio web en el proyecto en el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], dicho servicio se agrega al objeto `My.WebServices` y el IDE genera una clase de proxy de cliente para acceder al servicio web especificado.  
+ Cuando se hace referencia a un servicio web en el proyecto en el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], dicho servicio se agrega al objeto `My.WebServices` y el IDE genera una clase de proxy de cliente para acceder al servicio web especificado.  
   
  La clase de proxy permite llamar sincrónicamente a los métodos de servicio web, mientras la aplicación espera a que la función finalice. El proxy crea además otros miembros para ayudar a llamar al método asincrónicamente. Por cada función de servicio web, *NombreDeFunciónDeServicioWeb*, el proxy crea una subrutina *NombreDeFunciónDeServicioWeb*`Async`, un evento *NombreDeFunciónDeServicioWeb*`Completed` y una clase *NombreDeFunciónDeServicioWeb*`CompletedEventArgs`. En este ejemplo se muestra cómo usar los miembros asincrónicos para acceder a la función `getTemp` del servicio web DemoTemperatureService.  
   
@@ -91,3 +92,4 @@ En este ejemplo se adjunta un controlador a un evento de controlador asincrónic
 ## <a name="see-also"></a>Vea también  
  [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  (Acceso a los servicios web de la aplicación)  
  [My.WebServices (objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+

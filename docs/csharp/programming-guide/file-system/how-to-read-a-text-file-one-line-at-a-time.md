@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Leer un archivo de texto línea a línea (Visual C#) | Microsoft Docs"
+title: "Cómo: Leer un archivo de texto línea a línea (Visual C#) |"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 957022bd4c6244321361e39cfbdf52cf4071e2d8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e9327181d82a97559c7be99bb76a2a93118d796b
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Cómo: Leer un archivo de texto línea a línea (Visual C#) |
@@ -76,3 +77,4 @@ System.Console.ReadLine();
  <xref:System.IO?displayProperty=fullName>   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+

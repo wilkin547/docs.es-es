@@ -1,5 +1,5 @@
 ---
-title: Clases usadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic) | Microsoft Docs
+title: Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 En las tablas siguientes se incluyen las clases usadas más comúnmente para las operaciones de E/S de archivos en .NET Framework, clasificadas en clases de E/S de archivos, clases usadas para crear secuencias y clases usadas para leer y escribir en secuencias.  
   
- Para entrar en la documentación de [!INCLUDE[dnprdnlong](../../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](https://msdn.microsoft.com/library/hfa3fa08).  
+ Para entrar en la documentación de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](https://msdn.microsoft.com/library/hfa3fa08).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Clases básicas de E/S para archivos, unidades y directorios  
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
@@ -87,3 +87,4 @@ En las tablas siguientes se incluyen las clases usadas más comúnmente para las
  [E/S de archivos y secuencias](https://msdn.microsoft.com/library/k3352a4t)   
  [E/S de archivos asincrónica](https://msdn.microsoft.com/library/kztecsys)   
  [Fundamentos del sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+

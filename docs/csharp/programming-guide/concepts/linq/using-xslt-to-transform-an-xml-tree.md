@@ -1,5 +1,5 @@
 ---
-title: "Usar XSLT para transformar un árbol XML (C#) | Microsoft Docs"
+title: "Usar XSLT para transformar un árbol XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c4c466b30292d4bee0b209ef217b1378975045eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6ec4a04bebd39ecb6a90dfc48729fa8696a2ab5
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Usar XSLT para transformar un árbol XML (C#)
-Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un documento nuevo y crear un objeto <xref:System.Xml.XmlWriter> que escribirá en el nuevo documento. Después, puede invocar la transformación XSLT pasando <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> a la transformación. Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
+Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un nuevo documento y crear un objeto <xref:System.Xml.XmlWriter> que escribirá en el nuevo documento. A continuación, puede invocar la transformación XSLT y pasar <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> a la transformación. Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -78,3 +79,4 @@ Console.WriteLine(newTree);
  <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
  <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
  [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

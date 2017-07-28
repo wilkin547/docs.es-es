@@ -1,5 +1,5 @@
 ---
-title: "Controlar la reentrada en aplicaciones asincrónicas (C#) | Microsoft Docs"
+title: "Controlar la reentrada en aplicaciones asincrónicas (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7be76ad572be522071d9e8c2ae9cf8c770fd1fd0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd51c81c9589831146942ad9f0eae3642d4678e9
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Controlar la reentrada en aplicaciones asincrónicas (C#)
@@ -157,7 +157,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  Para configurar este escenario, haga los cambios siguientes en el código básico que se proporciona en [Revisión y ejecución de la aplicación de ejemplo](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). También puede descargar la aplicación finalizada de [Async Samples: Reentrancy in .NET Desktop Apps](http://go.microsoft.com/fwlink/?LinkId=266571) (Ejemplos asincrónicos: reentrada en aplicaciones de escritorio de .NET). El nombre de este proyecto es CancelAndRestart.  
   
-1.  Declare una variable <xref:System.Threading.CancellationTokenSource>, `cts`, que esté en ámbito para todos los métodos.  
+1.  Declare una variable de <xref:System.Threading.CancellationTokenSource>, `cts`, que esté en el ámbito de todos los métodos.  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -236,7 +236,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
 -   Agregue un parámetro para aceptar el token de cancelación de `StartButton_Click`.  
   
--   Use el método <xref:System.Net.Http.HttpClient.GetAsync%2A> para descargar los sitios web dado que `GetAsync` acepta un argumento <xref:System.Threading.CancellationToken>.  
+-   Use el método <xref:System.Net.Http.HttpClient.GetAsync%2A> para descargar los sitios web porque `GetAsync` acepta un argumento <xref:System.Threading.CancellationToken>.  
   
 -   Antes de llamar a `DisplayResults` para mostrar los resultados de los sitios web descargados, revise `ct` para comprobar que no se ha cancelado la operación actual.  
   
@@ -593,7 +593,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 6.  En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .  
   
-     Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones** y después seleccione **Ver código**.  
+     Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones** y elija **Ver código**.  
   
 7.  En la vista **XAML** de MainWindow.xaml, reemplace el código por el código siguiente.  
   
@@ -617,7 +617,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 8.  Agregue una referencia para <xref:System.Net.Http>.  
   
-9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después seleccione **Ver código**.  
+9. En el **Explorador de soluciones**, abra el menú contextual de MainWindow.xaml.cs y después elija **Ver código**.  
   
 10. Reemplace el código del archivo MainWindow.xaml.cs por el código siguiente.  
   

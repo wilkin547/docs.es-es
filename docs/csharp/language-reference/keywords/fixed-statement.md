@@ -1,5 +1,5 @@
 ---
-title: "fixed (Instrucción, Referencia de C#) | Microsoft Docs"
+title: "fixed (Instrucción, Referencia de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ba0099b812de1dbcfebe4943c0fe36598f102169
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4e1f810f6e6cfaef3a65c7391f074b414ef18b5a
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fixed-statement-c-reference"></a>fixed (Instrucción, Referencia de C#)
@@ -77,3 +77,4 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Búferes de tamaño fijo](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+

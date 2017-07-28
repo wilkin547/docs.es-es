@@ -1,5 +1,5 @@
 ---
-title: Acceso a los puertos del equipo (Visual Basic) | Microsoft Docs
+title: Acceso a los puertos del equipo (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db4fdbea07000ab92d5329f53d68c61db9d0547d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Acceso a los puertos del equipo (Visual Basic)
@@ -55,7 +55,7 @@ El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener 
  Muestra cómo recibir una cadena desde el puerto serie de un equipo.  
   
  [Operaciones de puertos en .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Describe cómo usar [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] al realizar operaciones de puerto.  
+ Describe cómo usar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] al realizar operaciones de puerto.  
   
 ## <a name="reference"></a>Referencia  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
@@ -70,3 +70,4 @@ El objeto `My.Computer.Ports` proporciona una propiedad y un método para tener 
 ## <a name="related-sections"></a>Secciones relacionadas  
  <xref:System.IO.Ports.SerialPort>  
  Describe la clase <xref:System.IO.Ports.SerialPort> de .NET Framework.
+

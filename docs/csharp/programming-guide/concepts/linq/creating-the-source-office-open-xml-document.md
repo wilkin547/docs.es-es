@@ -1,5 +1,5 @@
 ---
-title: Crear el documento de origen de Office Open XML (C#) | Microsoft Docs
+title: Crear el documento de origen de Office Open XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8ec165719341b946055fc89c2e54482320e92a98
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ea055d35982e364a6b77281aca1d1b03474aa0b
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>Crear el documento de origen de Office Open XML (C#)
@@ -67,3 +67,4 @@ En este tema se muestra cómo crear el documento WordprocessingML XML abierto de
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

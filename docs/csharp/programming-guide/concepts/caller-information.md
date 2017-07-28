@@ -1,5 +1,5 @@
 ---
-title: "Información del llamador (C#) | Microsoft Docs"
+title: "Información del llamador (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 087b547cfc558fb4c82026e9af6ac621809e0ca0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="caller-information-c"></a>Información del llamador (C#)
@@ -65,7 +66,7 @@ public void TraceMessage(string message,
   
  Los atributos de información del llamador no crean un parámetro opcional, sino que influyen en el valor predeterminado que se pasa cuando se omite el argumento.  
   
- Los valores de información del llamador se emiten como literales en el lenguaje intermedio (IL) en tiempo de compilación. A diferencia de los resultados de la propiedad <xref:System.Exception.StackTrace%2A> para las excepciones, los resultados no se ven afectados por ofuscación.  
+ Los valores de información del llamador se emiten como literales en el lenguaje intermedio (IL) en tiempo de compilación. A diferencia de los resultados de la propiedad <xref:System.Exception.StackTrace%2A> para las excepciones, los resultados no se ven afectados por confusión.  
   
  Puede proporcionar explícitamente los argumentos opcionales para controlar la información del llamador u ocultarla.  
   
@@ -74,7 +75,7 @@ public void TraceMessage(string message,
   
 -   Usar el seguimiento y las rutinas de diagnóstico.  
   
--   Implementación de la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> al enlazar los datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el atributo `CallerMemberName`, se debe especificar el nombre de propiedad como un literal.  
+-   Implementar la interfaz <xref:System.ComponentModel.INotifyPropertyChanged> al enlazar datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el atributo `CallerMemberName`, se debe especificar el nombre de propiedad como un literal.  
   
  En el gráfico siguiente se muestran los nombres de miembro que se devuelven cuando se utiliza el atributo `CallerMemberName`.  
   
@@ -93,3 +94,4 @@ public void TraceMessage(string message,
  [Atributos comunes (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
  [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
  [Conceptos de programación (C#)](../../../csharp/programming-guide/concepts/index.md)
+

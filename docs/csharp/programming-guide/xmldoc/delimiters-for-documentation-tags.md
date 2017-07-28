@@ -1,5 +1,5 @@
 ---
-title: "Delimitadores de etiquetas de documentación (Guía de programación de C#) | Microsoft Docs"
+title: "Delimitadores de etiquetas de documentación (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3e31f0c3d815c0454a9be6813ff9a04e5fa4c7de
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores de etiquetas de documentación (Guía de programación de C#)
@@ -43,7 +43,7 @@ El uso de comentarios de documentación XML requiere delimitadores, que le indic
  Delimitador de una sola línea. Este es el formulario que se muestra en los ejemplos de documentación y que usan las plantillas de proyecto de Visual C#. Si hay un carácter de espacio en blanco después del delimitador, ese carácter no se incluye en la salida XML.  
   
 > [!NOTE]
->  El IDE de Visual Studio tiene una característica denominada Smart Comment Editing (Edición de comentarios inteligente) que inserta automáticamente las etiquetas \<summary> y \</summary> y mueve el cursor dentro de estas etiquetas después de escribir el delimitador `///` en el Editor de código. Para obtener acceso a esta función, vaya a [Opciones, Editor de texto, C#, Formato](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting) en las páginas de propiedades del proyecto.  
+>  El IDE de Visual Studio tiene una característica denominada Smart Comment Editing (Edición de comentarios inteligente) que inserta automáticamente las etiquetas \<summary> y \</summary> y mueve el cursor dentro de estas etiquetas después de escribir el delimitador `///` en el Editor de código. Para obtener acceso a esta función, vaya a [Opciones, Editor de texto, C#, Formato](/visualstudio/ide/reference/options-text-editor-csharp-formatting) en las páginas de propiedades del proyecto.  
   
  `/** */`  
  Delimitadores de múltiples líneas.  

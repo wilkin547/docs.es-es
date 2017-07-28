@@ -1,5 +1,5 @@
 ---
-title: Reproducir sonidos (Visual Basic) | Microsoft Docs
+title: Reproducir sonidos (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,11 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c9790c9bcd8731546b5d5e1e4aba7ba6f93fe5b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a15efff54bd54fdaced6c741cd6acf5c8b544cdd
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="playing-sounds-visual-basic"></a>Reproducir sonidos (Visual Basic)
@@ -67,7 +67,7 @@ El objeto `My.Computer.Audio` proporciona métodos para reproducir sonidos.
   
  [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
- El ejemplo de código anterior también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Sonido**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ El ejemplo de código anterior también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Sonido**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
  En general, cuando una aplicación reproduce un sonido en bucle, al final hay que detener el sonido.  
   
@@ -80,7 +80,7 @@ El objeto `My.Computer.Audio` proporciona métodos para reproducir sonidos.
   
  [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
- El ejemplo de código anterior también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Sonido**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ El ejemplo de código anterior también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Sonido**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="playing-system-sounds"></a>Reproducción de sonidos del sistema  
  Use el método `My.Computer.Audio.PlaySystemSound` para reproducir el sonido del sistema especificado.  
@@ -97,3 +97,4 @@ El objeto `My.Computer.Audio` proporciona métodos para reproducir sonidos.
  <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>   
  <xref:Microsoft.VisualBasic.Devices.Audio.Stop%2A>   
  <xref:Microsoft.VisualBasic.AudioPlayMode>
+

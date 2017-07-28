@@ -1,5 +1,5 @@
 ---
-title: "Consultas básicas (LINQ to XML) (C#) | Microsoft Docs"
+title: "Consultas básicas (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
 ms.contentlocale: es-es
-ms.lasthandoff: 05/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
-En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -39,9 +38,10 @@ En esta sección se ofrecen ejemplos de consultas básicas de [!INCLUDE[sqltecxl
 |[How to: Find All Nodes in a Namespace (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md) (Cómo: Buscar todos los nodos de un espacio de nombres (C#))|Muestra cómo encontrar todos los nodos que se encuentren en un espacio de nombres en particular.|  
 |[How to: Sort Elements (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md) (Cómo: Ordenar elementos (C#))|Muestra cómo escribir una consulta que ordene sus resultados.|  
 |[How to: Sort Elements on Multiple Keys (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md) (Cómo: Ordenar elementos en varias claves (C#))|Muestra cómo ordenar por varias claves.|  
-|[How to: Calculate Intermediate Values (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md) (Cómo: Calcular valores intermedios (C#))|Muestra cómo usar la cláusula `Let` para calcular valores intermedios en una consulta [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
+|[How to: Calculate Intermediate Values (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md) (Cómo: Calcular valores intermedios (C#))|Muestra cómo usar la cláusula `Let` para calcular valores intermedios en una consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[How to: Write a Query that Finds Elements Based on Context (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md) (Cómo: Escribir una consulta que busca elementos en función del contexto (C#))|Muestra cómo seleccionar elementos en base a otros elementos del árbol.|  
 |[How to: Debug Empty Query Results Sets (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md) (Cómo: Depurar conjuntos de resultados de consulta vacíos (C#))|Muestra la solución apropiada cuando se depuran consultas sobre un XML que se encuentra en un espacio de nombres predeterminado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+

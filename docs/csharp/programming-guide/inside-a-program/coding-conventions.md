@@ -1,5 +1,5 @@
 ---
-title: "Convenciones de código de C# (Guía de programación de C#) | Microsoft Docs"
+title: "Convenciones de código de C# (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f32fdc0eb1954cdac30c39e05c74d43301d850c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
@@ -60,7 +60,7 @@ La [especificación del lenguaje C#](http://go.microsoft.com/fwlink/?LinkId=1995
 ## <a name="layout-conventions"></a>Convenciones de diseño  
  Un buen diseño utiliza un formato que destaque la estructura del código y haga que el código sea más fácil de leer. Las muestras y ejemplos de Microsoft cumplen las convenciones siguientes:  
   
--   Utilice la configuración del Editor de código predeterminada (sangría automática, sangrías de 4 caracteres, tabulaciones guardadas como espacios). Para obtener más información, vea [Opciones, editor de texto, C#, formato](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+-   Utilice la configuración del Editor de código predeterminada (sangría automática, sangrías de 4 caracteres, tabulaciones guardadas como espacios). Para obtener más información, vea [Opciones, editor de texto, C#, formato](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
 -   Escriba solo una instrucción por línea.  
   
@@ -221,3 +221,4 @@ La [especificación del lenguaje C#](http://go.microsoft.com/fwlink/?LinkId=1995
 ## <a name="see-also"></a>Vea también  
  [Convenciones de código de Visual Basic](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
  [Instrucciones de codificación segura](../../../standard/security/secure-coding-guidelines.md)
+

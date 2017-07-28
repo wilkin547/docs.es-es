@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Mostrar todos los nodos de un árbol (C#) | Microsoft Docs"
+title: "Cómo: Mostrar todos los nodos de un árbol (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0d91ec6807a533a504c643bc1303d1a42953f942
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae2f34e085b0084d5cb589cfdd14562ca6f50bc1
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Cómo: Mostrar todos los nodos de un árbol (C#)
 A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar útil cuando se aprende exactamente cómo afecta al árbol un método o propiedad. Un enfoque para enumerar todos los nodos en formato de texto consiste en generar una expresión XPath que identifique de forma exacta y específica cualquier nodo del árbol.  
   
- No resulta particularmente útil ejecutar expresiones XPath mediante [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Las expresiones XPath tienen un rendimiento menor que las consultas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] y las consultas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] son mucho más eficaces. No obstante, como forma de identificar nodos en el árbol XML, XPath funciona bien.  
+ No resulta particularmente útil ejecutar expresiones XPath mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Las expresiones XPath tienen un rendimiento menor que las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] son mucho más eficaces. No obstante, como forma de identificar nodos en el árbol XML, XPath funciona bien.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestra una función con el nombre `GetXPath` que genera una expresión XPath específica para cualquier nodo en el árbol XML. Genera expresiones XPath adecuadas incluso cuando hay nodos en un espacio de nombres. Las expresiones XPath se generan usando prefijos de espacio de nombres.  
@@ -362,3 +362,4 @@ class Program
   
 ## <a name="see-also"></a>Vea también  
  [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Técnicas de consulta avanzadas (LINQ to XML) (C#))
+

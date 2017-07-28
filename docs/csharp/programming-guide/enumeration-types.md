@@ -1,5 +1,5 @@
 ---
-title: "Tipos de enumeración (Guía de programación de C#) | Microsoft Docs"
+title: "Tipos de enumeración (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 677de7c6e0c0f72b600ce8ee5a8bad265725f6d3
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeración (Guía de programación de C#)
@@ -64,7 +64,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
 -   Se especifica claramente para el código de cliente qué valores son válidos para la variable.  
   
--   En [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)], IntelliSense muestra los valores definidos.  
+-   En [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], IntelliSense muestra los valores definidos.  
   
  Cuando no se especifican valores para los elementos de la lista de enumeradores, los valores se incrementan automáticamente en 1. En el ejemplo anterior, `Days.Sunday` tiene un valor de 0, `Days.Monday` tiene un valor de 1, y así sucesivamente. Cuando cree un nuevo objeto `Days`, tendrá un valor predeterminado de `Days.Sunday` (0) si no le asigna explícitamente un valor. Cuando cree una enumeración, seleccione el valor predeterminado más lógico y asígnele un valor de cero. Esto hará que todas las enumeraciones tengan ese valor predeterminado si no se les asigna explícitamente un valor cuando se crean.  
   
@@ -111,3 +111,4 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
  <xref:System.Enum?displayProperty=fullName>   
  [Guía de programación de C#](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)
+
