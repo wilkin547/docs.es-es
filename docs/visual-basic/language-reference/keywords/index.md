@@ -1,5 +1,5 @@
 ---
-title: Palabras clave de Visual Basic | Microsoft Docs
+title: Palabras clave de Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# Palabras clave de Visual Basic
+# <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
 En las tablas siguientes se enumeran todas las palabras clave del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## Palabras clave reservadas  
+## <a name="reserved-keywords"></a>Palabras clave reservadas  
  Las palabras clave siguientes están *reservadas*, lo que significa que no se pueden usar como nombres para elementos de programación, como variables o procedimientos. Para omitir esta restricción, incluya el nombre entre corchetes (`[``]`). Para obtener más información, vea "Escaped Names" (Nombres con carácter de escape) en [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nombres de elementos declarados).  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ En las tablas siguientes se enumeran todas las palabras clave del lenguaje [!INC
 > [!NOTE]
 >  `EndIf`, `GoSub`, `Variant` y `Wend` se conservan como palabras clave reservadas, aunque ya no se usan en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md) (Cláusula Let).  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## Palabras clave no reservadas  
+## <a name="unreserved-keywords"></a>Palabras clave no reservadas  
  Las palabras clave siguientes no están reservadas, lo que significa que puede usarlas como nombres para los elementos de programación. Aun así, no se recomienda que lo haga, ya que puede hacer que el código sea complicado de leer y producir pequeños errores difíciles de detectar.  
   
 |||||  
@@ -126,9 +120,7 @@ En las tablas siguientes se enumeran todas las palabras clave del lenguaje [!INC
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
   
 |Título|Descripción|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ En las tablas siguientes se enumeran todas las palabras clave del lenguaje [!INC
 |[Resumen del Registro](../../../visual-basic/language-reference/keywords/registry-summary.md)|Enumera las funciones que se usan para leer, guardar y eliminar la configuración del programa.|  
 |[Resumen de manipulación de cadenas](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|Enumera las funciones que se usan para manipular cadenas.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Cadenas en Visual Basic | Microsoft Docs
+title: Cadenas en Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3bfb94cf3b3e40164ccd9ff6021e1b624c963039
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05cb6db768779895ebf3e57a0feb7bb58c65fc2a
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-in-visual-basic" class="xliff"></a>
-
-# Cadenas en Visual Basic
+# <a name="strings-in-visual-basic"></a>Cadenas en Visual Basic
 En esta sección se describen los conceptos básicos del uso de cadenas en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Introducción a las cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  Enumera temas en los que se describen los conceptos básicos del uso de cadenas en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -64,7 +60,6 @@ En esta sección se describen los conceptos básicos del uso de cadenas en [!INC
  [Tutorial: Cifrar y descifrar cadenas en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Muestra cómo cifrar y descifrar cadenas mediante la versión del proveedor de servicios criptográficos del algoritmo 3DES (Triple Data Encryption Standard).  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Características del lenguaje Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)
+

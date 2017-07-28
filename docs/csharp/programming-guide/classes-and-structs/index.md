@@ -1,5 +1,5 @@
 ---
-title: "Clases y estructuras (Guía de programación de C#) | Microsoft Docs"
+title: "Clases y structs (Guía de programación de C#)"
 description: Describe el uso de clases y estructuras (struct) en C#.
 keywords: clases (C#), estructuras (C#), estructuras (struct) (C#), tipos de referencia (C#), tipos de valor (C#)
 ms.date: 2016-01-17
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2076de96c58fb89813495cb59adacb8a0082d93c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Clases y structs (Guía de programación de C#)
@@ -127,3 +127,4 @@ Las clases y estructuras son dos de las construcciones básicas de Common Type S
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Tipos de las colecciones Hashtable y Dictionary | Microsoft Docs
+title: Tipos de las colecciones Hashtable y Dictionary
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 59aa4bd6160491ac6c6a4f45131531226ec7e58f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1c77754efcfa626c2907fd57740133a0db4737d4
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
@@ -52,3 +52,4 @@ La clase <xref:System.Collections.Hashtable?displayProperty=fullName> y las clas
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
  [Tipos de colección utilizados normalmente](../../../docs/standard/collections/commonly-used-collection-types.md)
+

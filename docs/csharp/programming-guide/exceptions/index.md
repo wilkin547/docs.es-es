@@ -1,5 +1,5 @@
 ---
-title: "Excepciones y control de excepciones (Guía de programación de C#) | Microsoft Docs"
+title: "Excepciones y control de excepciones (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e9faf744717980468afb995eceeb31bda93443b9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Excepciones y control de excepciones (Guía de programación de C#)
@@ -66,7 +66,7 @@ Las características de control de excepciones del lenguaje C# le ayudan a afron
   
 -   El código de un bloque `finally` se ejecuta incluso si se produce una excepción. Use un bloque `finally` para liberar recursos, por ejemplo, para cerrar las secuencias o los archivos que se abrieron en el bloque `try`.  
   
--   Las excepciones administradas de .NET Framework se implementan en el mecanismo de control de excepciones estructurado de Win32. Para más información, vea [Control de excepciones estructurado (C/C++)](https://docs.microsoft.com/cpp/cpp/structured-exception-handling-c-cpp) y [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Curso intensivo sobre los aspectos específicos del control de excepciones estructurado de Win32).  
+-   Las excepciones administradas de .NET Framework se implementan en el mecanismo de control de excepciones estructurado de Win32. Para más información, vea [Control de excepciones estructurado (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) y [A Crash Course on the Depths of Win32 Structured Exception Handling](http://go.microsoft.com/fwlink/?LinkId=119654) (Curso intensivo sobre los aspectos específicos del control de excepciones estructurado de Win32).  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  Vea los temas siguientes para obtener más información sobre excepciones y control de excepciones:  
@@ -98,3 +98,4 @@ Las características de control de excepciones del lenguaje C# le ayudan a afron
  [Jerarquía de excepciones](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Escritura segura de código .NET](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [Minivolcados para excepciones concretas](http://go.microsoft.com/fwlink/?LinkId=112408)
+

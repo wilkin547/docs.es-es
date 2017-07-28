@@ -1,5 +1,5 @@
 ---
-title: "Migración desde .NET Framework 1.1 | Microsoft Docs"
+title: "Migración desde .NET Framework 1.1"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,15 +17,15 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5757894a63ed556413147b8ef8c85c2d31ef11a5
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
-[!INCLUDE[win7](../../../includes/win7-md.md)] y las versiones posteriores del sistema operativo Windows no admiten [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. En consecuencia, las aplicaciones que tienen como destino [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] no podrán ejecutarse sin modificaciones en [!INCLUDE[win7](../../../includes/win7-md.md)] o versiones posteriores del sistema operativo. En este tema describen los pasos necesarios para ejecutar una aplicación destinada a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] en [!INCLUDE[win7](../../../includes/win7-md.md)] y versiones posteriores del sistema operativo Windows. Para obtener más información sobre [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] y [!INCLUDE[win8](../../../includes/win8-md.md)], vea [Ejecutar aplicaciones .NET Framework 1.1 en Windows 8 y versiones posteriores](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
+[!INCLUDE[win7](../../../includes/win7-md.md)] y las versiones posteriores del sistema operativo Windows no admiten [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]. En consecuencia, las aplicaciones que tienen como destino [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] no podrán ejecutarse sin modificaciones en [!INCLUDE[win7](../../../includes/win7-md.md)] o versiones posteriores. En este tema describen los pasos necesarios para ejecutar una aplicación destinada a [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] en [!INCLUDE[win7](../../../includes/win7-md.md)] y versiones posteriores del sistema operativo Windows. Para obtener más información sobre [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] y [!INCLUDE[win8](../../../includes/win8-md.md)], vea [Ejecutar aplicaciones .NET Framework 1.1 en Windows 8 y versiones posteriores](../../../docs/framework/install/run-net-framework-1-1-apps.md).  
   
 ## <a name="retargeting-or-recompiling"></a>Redestinar o recompilar  
  Hay dos formas para conseguir que una aplicación compilada con [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] se ejecute en [!INCLUDE[win7](../../../includes/win7-md.md)] o un sistema operativo de Windows posterior:  
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/18/2017
   
 -   En[Cambios en .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkID=186989) se indican los cambios entre [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].  
   
--   En[Problemas de migración de .NET Framework 4](http://msdn.microsoft.com/library/ee941656\(v=vs.100\).aspx) se indican los cambios entre [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+-   En[Problemas de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) se indican los cambios entre [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
 ## <a name="obsolete-types-and-members"></a>Tipos y miembros obsoletos  
  El impacto de los tipos y miembros desusados es ligeramente distinto en las aplicaciones redestinadas que en las aplicaciones compiladas de nuevo. El uso de tipos y miembros obsoletos no afectará a la aplicación redestinada a menos que el tipo o miembro obsoleto se haya quitado físicamente del ensamblado. Cuando se vuelve a compilar una aplicación que utiliza tipos y miembros obsoletos, normalmente se produce una advertencia del compilador y no un error del compilador. Sin embargo, en algunos casos, se genera un error del compilador y el código que usa el tipo o miembro obsoleto no se compila correctamente. En este caso, debe volver a escribir el código fuente que llama al tipo o miembro obsoleto antes de volver a compilar la aplicación. Para obtener más información sobre los tipos y miembros obsoletos, vea [Lo obsoleto en la biblioteca de clases de .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md).  

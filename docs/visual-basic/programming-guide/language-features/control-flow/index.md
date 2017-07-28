@@ -1,5 +1,5 @@
 ---
-title: Flujo de control en Visual Basic | Microsoft Docs
+title: Flujo de control en Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,23 +34,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 86ac374a3c2378d7ac167823ceee008260a4deb0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a764732919c32499a062c9136c261539334688cb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="control-flow-in-visual-basic" class="xliff"></a>
-
-# Flujo de control en Visual Basic
+# <a name="control-flow-in-visual-basic"></a>Flujo de control en Visual Basic
 Si un programa no se regula, procede a través de las instrucciones que contiene de principio a fin. Algunos programas muy simples pueden escribirse únicamente con este flujo unidireccional. Pero gran parte del rendimiento y la utilidad de un lenguaje de programación se debe a la capacidad de cambiar el orden de ejecución mediante instrucciones de control y bucles.  
   
  Las estructuras de control permiten regular el flujo de la ejecución del programa. Mediante el uso de estructuras de control, puede escribir código de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que tome decisiones o repita acciones. Otras estructuras de control permiten garantizar la eliminación de un recurso o ejecutar una serie de instrucciones en la misma referencia de objeto.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Estructuras de decisión](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
  Describe las estructuras de control que se usan para la bifurcación.  
   
@@ -63,8 +59,7 @@ Si un programa no se regula, procede a través de las instrucciones que contiene
  [Estructuras de control anidadas](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
  Trata sobre las estructuras de control contenidas en otras estructuras de control.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Resumen de flujo de control](../../../../visual-basic/language-reference/keywords/control-flow-summary.md)  
  Proporciona vínculos a páginas de referencia del lenguaje sobre este tema.
+

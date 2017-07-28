@@ -1,5 +1,5 @@
 ---
-title: Ejemplos y tutoriales | Microsoft Docs
+title: Ejemplos y tutoriales
 description: "Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core y el lenguaje C# que lo ayuda a conocer más sobre .NET."
 keywords: .NET, .NET Core, ASP.NET, C#, ejemplo, tutorial
 author: BillWagner
@@ -9,31 +9,27 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 65c55837d6ccb93373b84aa4bdef416bdf4fa75a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Ejemplos y tutoriales
-<a id="samples-and-tutorials" class="xliff"></a>
+# <a name="samples-and-tutorials"></a>Ejemplos y tutoriales
 
 La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F #](http://fsharp.org/learn.html). Si le interesa explorar C# con un editor de código en línea, consulte estos [tutoriales interactivos](http://go.microsoft.com/fwlink/p/?LinkId=817234). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#viewing-and-downloading-samples).
 
-## Núcleo de .NET
-<a id="net-core" class="xliff"></a>
+## <a name="net-core"></a>Núcleo de .NET
 
-### Muestras
-<a id="samples" class="xliff"></a>
+### <a name="samples"></a>Muestras
 
 **[Pruebas unitarias de .NET Core mediante pruebas de dotnet](../core/testing/unit-testing-with-dotnet-test.md)**
 
 En esta guía se explica cómo crear una aplicación web de ASP.NET Core y las pruebas unitarias asociadas. Se empieza con la creación de una aplicación de servicio web sencilla y después agrega pruebas. Continúa con la creación de más pruebas para guiar en la implementación de nuevas características. El [ejemplo completo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) está disponible en el repositorio dotnet/docs de GitHub.
 
-### Tutoriales
-<a id="tutorials" class="xliff"></a>
+### <a name="tutorials"></a>Tutoriales
 
 **[Escritura de aplicaciones de consola .NET Core con herramientas de la CLI: una guía paso a paso](../core/tutorials/using-with-xplat-cli.md)**
 
@@ -43,16 +39,13 @@ En esta guía se ofrece información sobre cómo usar las herramientas de la CLI
 
 En este ejemplo se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI, que proporcionan una experiencia eficaz y de bajo nivel que funciona en todos los sistemas operativos compatibles. El [ejemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) está disponible en el repositorio dotnet/docs de GitHub.
 
-## ASP.NET Core
-<a id="aspnet-core" class="xliff"></a>
+## <a name="aspnet-core"></a>ASP.NET Core
 
-Vea los [Tutoriales de ASP.NET Core](https://docs.microsoft.com/aspnet/core/tutorials/). Muchos artículos de la documentación de ASP.NET Core tienen vínculos a los ejemplos escritos para ellos.
+Vea los [Tutoriales de ASP.NET Core](/aspnet/core/tutorials/). Muchos artículos de la documentación de ASP.NET Core tienen vínculos a los ejemplos escritos para ellos.
 
-## lenguaje C#
-<a id="c-language" class="xliff"></a>
+## <a name="c-language"></a>lenguaje C#
 
-### Muestras
-<a id="samples" class="xliff"></a>
+### <a name="samples"></a>Muestras
 
 **[Iteradores](../csharp/iterators.md)**
 
@@ -74,8 +67,7 @@ Este ejemplo muestra muchos de los problemas que pueden resolverse mediante el u
 
 Esta serie de ejemplos muestra muchas de las características de Language Integrated Query (LINQ). El [ejemplo completo](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) está disponible en el repositorio dotnet/docs de GitHub.
 
-### Tutoriales
-<a id="tutorials" class="xliff"></a>
+### <a name="tutorials"></a>Tutoriales
 
 **[Aplicación de consola](../csharp/tutorials/console-teleprompter.md)**
 
@@ -101,8 +93,7 @@ En este tutorial se muestra cómo crear una sencilla aplicación de consola de .
 
 Este tutorial muestra cómo crear una solución completa de .NET Core que incluye una biblioteca reutilizable y pruebas unitarias.
 
-## Implementación de contenedores
-<a id="deploying-to-containers" class="xliff"></a>
+## <a name="deploying-to-containers"></a>Implementación de contenedores
 
 **[Ejecución de aplicaciones de ASP.NET MVC en contenedores de Docker de Windows](../framework/docker/aspnetmvc.md)**
 
@@ -112,8 +103,7 @@ En este tutorial se muestra cómo implementar una aplicación MVC de ASP.NET exi
 
 En este tutorial se muestra cómo implementar una aplicación de consola existente en un contenedor de Windows. El [ejemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) está disponible en el repositorio dotnet/docs de GitHub.
 
-## Consulta y descarga de ejemplos
-<a id="viewing-and-downloading-samples" class="xliff"></a>
+## <a name="viewing-and-downloading-samples"></a>Consulta y descarga de ejemplos
 
 Muchos temas muestran el código fuente y los ejemplos que están disponibles para consultarlos o descargarlos desde GitHub. Para consultar un ejemplo, siga el vínculo de ejemplo. Para descargar el código, siga estas instrucciones:
 

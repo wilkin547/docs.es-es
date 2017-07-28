@@ -1,5 +1,5 @@
 ---
-title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core | Microsoft Docs"
+title: "Herramientas de la interfaz de línea de comandos (CLI) de .NET Core"
 description: "Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI)."
 keywords: CLI, herramientas de la CLI, .NET, .NET Core
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
-translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 978dd62d655d0168b5a9c1c9732bc69ca9b256eb
-ms.lasthandoff: 04/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -68,7 +69,7 @@ La CLI adopta un modelo de extensibilidad que le permite especificar herramienta
 
 ## <a name="command-structure"></a>Estructura de comandos
 
-La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando (o "verbo")](#command-verb) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app*:
+La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando (o "verbo")](#command-verb) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app* :
 
 ```console
 dotnet new console
@@ -99,7 +100,7 @@ Las opciones que se pasan en la línea de comandos son las opciones para el coma
 
 ## <a name="migration-from-projectjson"></a>Migración desde project.json
 
-Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/*.csproj* para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y luego use `dotnet migrate` o actualice directamente los proyectos.
+Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/*.csproj*  para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y luego use `dotnet migrate` o actualice directamente los proyectos.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

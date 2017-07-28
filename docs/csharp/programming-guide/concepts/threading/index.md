@@ -1,5 +1,5 @@
 ---
-title: Subprocesamiento (C#) | Microsoft Docs
+title: Subprocesamiento (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e3f213b43c2f05a5afef1db7aec8b9c2695df989
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45ffa38254717c9aee29c3922bf801f6a90c716e
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="threading-c"></a>Subprocesamiento (C#)
@@ -62,3 +62,4 @@ El subprocesamiento permite a los programas de C# llevar a cabo un procesamiento
 |[Agrupación de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Describe cómo usar un grupo de subprocesos de trabajo administrados por el sistema.|  
 |[Cómo: Usar un grupo de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Muestra el uso sincronizado de varios subprocesos en el grupo de subprocesos.|  
 |[Subprocesamiento](https://msdn.microsoft.com/library/3e8s7xdd)|Describe cómo implementar subprocesamientos en .NET Framework.|
+

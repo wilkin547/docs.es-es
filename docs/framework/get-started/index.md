@@ -1,5 +1,5 @@
 ---
-title: "Introducción a .NET Framework | Microsoft Docs"
+title: "Introducción a .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f5c2441148ba869629a88ab2fcc83131f5205493
 ms.contentlocale: es-es
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>Introducción a .NET Framework
@@ -86,10 +86,11 @@ ms.lasthandoff: 05/19/2017
 |[.NET Framework y versiones fuera de banda](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|Describe las versiones fuera de banda de .NET Framework y cómo utilizarlas en la aplicación.|
 |[Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md)|Muestra los requisitos de hardware y software para ejecutar .NET Framework.|
 |[.NET Core y código abierto](../../../docs/framework/get-started/net-core-and-open-source.md)|Describe qué es .NET Core con respecto a .NET Framework y cómo acceder a los proyectos de .NET Core de código abierto.|
-|[Documentación de .NET Core](https://docs.microsoft.com/dotnet/)|Documentación de referencia de API y conceptual de .NET Core.|
+|[Documentación de .NET Core](/dotnet/)|Documentación de referencia de API y conceptual de .NET Core.|
 
 ## <a name="see-also"></a>Vea también
  [Guía de .NET Framework](../../../docs/framework/index.md)   
  [Novedades](../../../docs/framework/whats-new/index.md)   
  [Explorador de API de .NET](/dotnet/api/)   
  [Guía de desarrollo](../../../docs/framework/development-guide.md)
+

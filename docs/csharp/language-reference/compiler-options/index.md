@@ -1,5 +1,5 @@
 ---
-title: Opciones del compilador de C# | Microsoft Docs
+title: Opciones del compilador de C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c355f42106cfb7790591108b9b0f0938c34fdb32
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-options"></a>Opciones del compilador de C#
@@ -63,11 +64,12 @@ El compilador genera archivos ejecutables (.exe), archivos de biblioteca de vín
  Una lista alfabética de las opciones del compilador.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Página Compilación, Diseñador de proyectos](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)  
+ [Página Compilación, Diseñador de proyectos](/visualstudio/ide/reference/build-page-project-designer-csharp)  
  Configuración de propiedades que controlan cómo se compila, crea y depura el proyecto. Incluye información sobre los pasos de compilación personalizada en proyectos de Visual C#.  
   
- [Compilaciones predeterminadas y personalizadas](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [Compilaciones predeterminadas y personalizadas](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Información sobre los tipos de compilación y las configuraciones.  
   
- [Preparar y administrar compilaciones](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
+ [Preparar y administrar compilaciones](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
  Procedimientos para compilar en el entorno de desarrollo de Visual Studio.
+

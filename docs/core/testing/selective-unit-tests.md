@@ -1,5 +1,5 @@
 ---
-title: Ejecutar pruebas unitarias selectivas | Microsoft Docs
+title: "Ejecución de pruebas unitarias selectivas"
 description: "Muestra cómo usar una expresión de filtro para ejecutar pruebas unitarias selectivas con el comando de prueba de dotnet."
 keywords: .NET, .NET Core, prueba unitaria, prueba selectiva
 author: smadala
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: aceb0dc92b6c355a2b36a541d59cf1cd3cf4d0d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
 ms.contentlocale: es-es
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -49,7 +49,7 @@ namespace MSTestNamespace
 
 | Expresión | Resultado |
 | ---------- | ------ |
-| `dotnet test --filter Method` | Ejecuta pruebas cuyo `FullyQualifiedName` contiene `Method`. Disponible en `vstest 15.1+`. |
+| `dotnet test --filter Method` | Ejecuta pruebas cuyo `FullyQualifiedName` contenga `Method`. Disponible en `vstest 15.1+`. |
 | `dotnet test --filter Name~TestMethod1` | Ejecuta pruebas cuyo nombre contenga `TestMethod1`. |
 | `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | Ejecuta pruebas que están en la clase `MSTestNamespace.UnitTestClass1`.<br>**Nota:** El valor `ClassName` debe tener un espacio de nombres, por lo que `ClassName=UnitTestClass1` no funcionará. |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | Ejecuta todas las pruebas excepto `MSTestNamespace.UnitTestClass1.TestMethod1`. |

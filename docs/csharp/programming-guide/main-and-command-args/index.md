@@ -1,5 +1,5 @@
 ---
-title: "Main() y argumentos de línea de comandos (Guía de programación de C#) | Microsoft Docs"
+title: "Main() y argumentos de línea de comandos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,25 +35,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: eb1d380ee4dfd64081d8fe36880a06e3a450f639
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2950f7718cda66b545935229a64850449850d0
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="main-and-command-line-arguments-c-programming-guide" class="xliff"></a>
-
-# Main() y argumentos de línea de comandos (Guía de programación de C#)
+# <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() y argumentos de línea de comandos (Guía de programación de C#)
 El método `Main` es el punto de entrada de una aplicación Windows o de una aplicación de consola de C#. (Las bibliotecas y servicios no requieren un método `Main` como un punto de entrada). Cuando se inicia la aplicación, el método `Main` es el primero que se invoca.  
   
  Solo puede haber un punto de entrada en un programa de C#. Si hay más de una clase que tiene un método `Main`, debe compilar el programa con la opción del compilador **/main** para especificar qué método `Main` desea utilizar como punto de entrada. Para obtener más información, consulte [/main (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).  
   
  [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
-<a id="overview" class="xliff"></a>
-
-## Información general  
+## <a name="overview"></a>Información general  
   
 -   El método `Main` es el punto de entrada de un programa .exe; es donde se inicia y finaliza el control del programa.  
   
@@ -63,9 +59,7 @@ El método `Main` es el punto de entrada de una aplicación Windows o de una apl
   
 -   El método `Main` se puede declarar con o sin un parámetro `string[]` que contiene los argumentos de línea de comandos. Al usar [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] para crear aplicaciones de Windows Forms, puede agregar el parámetro manualmente o bien usar la clase <xref:System.Environment> para obtener los argumentos de línea de comandos. Los parámetros se leen como argumentos de línea de comandos indizados con cero. A diferencia de C y C++, el nombre del programa no se trata como el primer argumento de línea de comandos.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
 -   [Argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
   
@@ -75,16 +69,13 @@ El método `Main` es el punto de entrada de una aplicación Windows o de una apl
   
 -   [Valores devueltos de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Especificación del lenguaje C#  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Compilar la línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Dentro de un programa de C#](../../../csharp/programming-guide/inside-a-program/index.md)   
  [\<paveover>Aplicaciones de ejemplo de C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)
+

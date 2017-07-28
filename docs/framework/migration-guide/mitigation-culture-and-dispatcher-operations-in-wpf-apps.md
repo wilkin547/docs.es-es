@@ -1,5 +1,5 @@
 ---
-title: "Mitigación: Referencia cultural y operaciones de distribuidor en aplicaciones WPF | Microsoft Docs"
+title: "Mitigación: Referencia cultural y operaciones de distribuidor en aplicaciones WPF"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,11 +15,11 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1aee32c5c50c4ff4309f93bff270e6c3b3c8f7cc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41fc52679884d547809f1c1e9f47e29eb668cb8e
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-culture-and-dispatcher-operations-in-wpf-apps"></a>Mitigación: Referencia cultural y operaciones de distribuidor en aplicaciones WPF
@@ -39,3 +39,4 @@ En las aplicaciones destinadas a .NET Framework 4.6 y .NET Framework 4.6.1, los 
   
 ## <a name="see-also"></a>Vea también  
  [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

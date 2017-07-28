@@ -1,5 +1,5 @@
 ---
-title: Procedimientos de Visual Basic | Microsoft Docs
+title: Procedimientos en Visual Basic
 ms.custom: 
 ms.date: 2017-04-28
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimientos en Visual Basic
@@ -98,3 +98,4 @@ Un *procedimiento* es un bloque de instrucciones [!INCLUDE[vbprvb](~/includes/vb
  [Sobrecarga de procedimientos](./procedure-overloading.md)   
  [Procedimientos genéricos de Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
  [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+
