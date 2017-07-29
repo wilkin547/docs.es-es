@@ -1,5 +1,5 @@
 ---
-title: "Información general de la clase XDocument (C#) | Microsoft Docs"
+title: "Información general de la clase XDocument (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 445b7dff10e25556dabb87867144edece7fc26f9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e8513c8c969f7522866454838c6c08da528c1b6
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xdocument-class-overview-c"></a>Información general de la clase XDocument (C#)
@@ -51,10 +51,10 @@ En este tema se presenta la clase <xref:System.Xml.Linq.XDocument>.
   
  Al serializar un objeto <xref:System.Xml.Linq.XDocument>, aunque `XDocument.Declaration` sea `null`, el resultado generará una declaración XML, siempre y cuando el redactor haya establecido `Writer.Settings.OmitXmlDeclaration` en `false` (valor predeterminado).  
   
- De manera predeterminada, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] establece la versión en "1.0" y la codificación en "utf-8".  
+ De manera predeterminada, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] establece la versión en "1.0" y la codificación en "utf-8".  
   
 ## <a name="using-xelement-without-xdocument"></a>Usar XElement sin XDocument  
- Tal como se indicó anteriormente, la clase <xref:System.Xml.Linq.XElement> es la clase principal de la interfaz de programación [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. En muchos casos, la aplicación no requerirá la creación de un documento. Mediante la clase <xref:System.Xml.Linq.XElement>, puede crear un árbol XML, agregarle otros árboles XML, modificar el árbol XML o guardarlo.  
+ Tal como se indicó anteriormente, la clase <xref:System.Xml.Linq.XElement> es la clase principal de la interfaz de programación [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. En muchos casos, la aplicación no requerirá la creación de un documento. Mediante la clase <xref:System.Xml.Linq.XElement>, puede crear un árbol XML, agregarle otros árboles XML, modificar el árbol XML o guardarlo.  
   
 ## <a name="using-xdocument"></a>Usar XDocument  
  Para construir un objeto <xref:System.Xml.Linq.XDocument>, use la construcción funcional, al igual que cuando se construyen objetos <xref:System.Xml.Linq.XElement>.  
@@ -105,3 +105,4 @@ d.Save("test.xml");
   
 ## <a name="see-also"></a>Vea también  
  [Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

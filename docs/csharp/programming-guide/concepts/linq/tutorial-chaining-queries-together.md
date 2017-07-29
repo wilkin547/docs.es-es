@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: encadenar cadenas juntas (C#) | Microsoft Docs'
+title: 'Tutorial: encadenar cadenas juntas (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 378f0fce5f81ffe4928f75b3316d58ba8bf43644
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6048ce6a5b477daef5271f75ea1e988725452fcd
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Tutorial: encadenar cadenas juntas (C#)
@@ -38,3 +38,4 @@ Este tutorial ilustra el modelo de procesamiento que se usa al encadenar cadenas
   
 ## <a name="see-also"></a>Vea también  
  [Transformaciones funcionales puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+

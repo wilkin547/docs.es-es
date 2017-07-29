@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Cambiar el espacio de nombres de todo un árbol XML (C#) | Microsoft Docs"
+title: "Cómo: Cambiar el espacio de nombres de todo un árbol XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ce710355e410e123fb9c4129e8d7bf339d5beff
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ffebf1bda275eb815ff3e15538fd69de6d3b0c1a
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Cómo: Cambiar el espacio de nombres de todo un árbol XML (C#)
-En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. Se puede establecer la propiedad <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>. La propiedad <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName> no se puede establecer, pero puede copiar con facilidad los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=fullName>, quitar los atributos existentes y agregar atributos nuevos que se encuentran en el nuevo espacio de nombres deseado.  
+En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. Es posible modificar la propiedad <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=fullName>. No es posible modificar la propiedad <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=fullName>, pero es posible copiar con facilidad los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=fullName>, eliminar los atributos existentes y, a continuación, agregar los atributos nuevos que se encuentran en el espacio de nombres deseado.  
   
  Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajar con espacios de nombres XML [C#]).  
   
@@ -91,3 +91,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Vea también  
  [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+

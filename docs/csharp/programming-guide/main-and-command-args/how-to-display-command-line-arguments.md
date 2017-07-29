@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Mostrar argumentos de la línea de comandos (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Mostrar argumentos de la línea de comandos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e46860ecc2f5062abb440a764443ecee19c5153d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf8a57cce252b3596f0a19c9df643427615467c6
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Cómo: Mostrar argumentos de la línea de comandos (Guía de programación de C#)
@@ -43,7 +44,7 @@ A los argumentos proporcionados a un archivo ejecutable en la línea de comandos
 |**executable.exe "one two" three**|"one two"<br /><br /> "three"|  
   
 > [!NOTE]
->  Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de línea de comandos en la [Página Depuración, Diseñador de proyectos](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestran los argumentos de línea de comandos pasados a una aplicación de línea de comandos. La salida que se muestra corresponde a la primera entrada de la tabla anterior.  
@@ -56,3 +57,4 @@ A los argumentos proporcionados a un archivo ejecutable en la línea de comandos
  [Main() y argumentos de línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Cómo: Obtener acceso a argumentos de la línea de comandos mediante foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Valores devueltos de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

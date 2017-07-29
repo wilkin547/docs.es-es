@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Controlar prefijos de espacio de nombres (C#) (LINQ to XML) | Microsoft Docs"
+title: "Cómo: Controlar prefijos de espacio de nombres (C#) (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96bc6d1187aa72f8653cd01b2027306009634fd5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Cómo: Controlar prefijos de espacio de nombres (C#) (LINQ to XML)
@@ -36,9 +37,9 @@ En este tema se describe cómo puede controlar los prefijos de espacios de nombr
   
  Otro motivo habitual para controlar prefijos de espacios de nombres se basa en permitir que los usuarios editen el documento XML manualmente y crear prefijos de fácil escritura. Por ejemplo, tal vez esté generando un documento XSD. Las convenciones de los esquemas sugieren el uso de `xs` o `xsd` como prefijo para el espacio de nombres de esquema.  
   
- Para controlar los prefijos de espacios de nombre, inserta atributos que declaran dichos espacios de nombres. Si declara los espacios de nombres con prefijos específicos, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] intentará respetar los prefijos durante la serialización.  
+ Para controlar los prefijos de espacios de nombre, inserta atributos que declaran dichos espacios de nombres. Si declara los espacios de nombres con prefijos específicos, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] intentará respetar los prefijos durante la serialización.  
   
- Para crear un atributo que declara un espacio de nombres con un prefijo, puede crear un atributo donde el espacio de nombres del nombre del atributo sea <xref:System.Xml.Linq.XNamespace.Xmlns%2A> y el nombre del atributo sea el prefijo del espacio de nombres. El valor del atributo es el URI del espacio de nombres.  
+ Para crear un atributo que declara un espacio de nombres con un prefijo, puede crear un atributo donde el espacio de nombres del nombre del atributo es <xref:System.Xml.Linq.XNamespace.Xmlns%2A> y el nombre del atributo es el prefijo del espacio de nombres. El valor del atributo es el URI del espacio de nombres.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo declara dos espacios de nombres. Especifica que el espacio de nombres `http://www.adventure-works.com` tiene el prefijo `aw` y que el espacio de nombres `www.fourthcoffee.com` tiene el prefijo `fc`.  
@@ -72,3 +73,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

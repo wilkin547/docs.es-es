@@ -1,5 +1,5 @@
 ---
-title: Relaciones entre tipos en operaciones de consulta LINQ (C#) | Microsoft Docs
+title: Relaciones entre tipos en operaciones de consulta LINQ (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -39,21 +39,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad52663fb54ee1adc06a084d26abb3e6ce46e2af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e33936ce2398cea782ec1f4272f22d9c3fc049e8
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relaciones entre tipos en operaciones de consulta LINQ (C#)
-Para escribir las consultas eficazmente, es necesario comprender cómo los tipos de las variables en una operación de consulta completa se relacionan entre sí. Si entiende estas relaciones comprenderá más fácilmente los ejemplos de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] y los ejemplos de código de la documentación. Además, entenderá lo que sucede en segundo plano cuando los tipos de las variables se declaran implícitamente mediante `var`.  
+Para escribir las consultas eficazmente, es necesario comprender cómo los tipos de las variables en una operación de consulta completa se relacionan entre sí. Si entiende estas relaciones comprenderá más fácilmente los ejemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y los ejemplos de código de la documentación. Además, entenderá lo que sucede en segundo plano cuando los tipos de las variables se declaran implícitamente mediante `var`.  
   
- Las operaciones de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] tienen un establecimiento inflexible de tipos en el origen de datos, en la propia consulta y en la ejecución de la consulta. El tipo de las variables de la consulta debe ser compatible con el tipo de los elementos del origen de datos y con el tipo de la variable de iteración de la instrucción `foreach`. Este establecimiento inflexible de tipos garantiza que los errores de tipos se detectan en tiempo de compilación, cuando aún se pueden corregir antes de que los usuarios los detecten.  
+ Las operaciones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tienen un establecimiento inflexible de tipos en el origen de datos, en la propia consulta y en la ejecución de la consulta. El tipo de las variables de la consulta debe ser compatible con el tipo de los elementos del origen de datos y con el tipo de la variable de iteración de la instrucción `foreach`. Este establecimiento inflexible de tipos garantiza que los errores de tipos se detectan en tiempo de compilación, cuando aún se pueden corregir antes de que los usuarios los detecten.  
   
  Para mostrar estas relaciones de tipos, en la mayoría de los ejemplos siguientes se usan tipos explícitos para todas las variables. En el último ejemplo se muestra cómo se aplican los mismos principios incluso al usar tipos implícitos mediante [var](../../../../csharp/language-reference/keywords/var.md).  
   
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Consultas que no transforman los datos de origen  
- La ilustración siguiente muestra una operación de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] to Objects que no realiza ninguna transformación de los datos. El origen contiene una secuencia de cadenas y el resultado de la consulta también es una secuencia de cadenas.  
+ La ilustración siguiente muestra una operación de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects que no realiza ninguna transformación de los datos. El origen contiene una secuencia de cadenas y el resultado de la consulta también es una secuencia de cadenas.  
   
  ![Relación de tipos de datos en una consulta LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
   
@@ -64,7 +65,7 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
 3.  La variable de consulta se procesa en iteración en la instrucción `foreach`. Dado que la variable de consulta es una secuencia de cadenas, la variable de iteración también es una cadena.  
   
 ## <a name="queries-that-transform-the-source-data"></a>Consultas que transforman los datos de origen  
- En la ilustración siguiente se muestra una operación de consulta [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] que realiza una transformación simple de los datos. La consulta usa una secuencia de objetos `Customer` como entrada y selecciona solo la propiedad `Name` en el resultado. Dado que `Name` es una cadena, la consulta genera una secuencia de cadenas como resultado.  
+ En la ilustración siguiente se muestra una operación de consulta [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que realiza una transformación simple de los datos. La consulta usa una secuencia de objetos `Customer` como entrada y selecciona solo la propiedad `Name` en el resultado. Dado que `Name` es una cadena, la consulta genera una secuencia de cadenas como resultado.  
   
  ![Una consulta que transforma el tipo de datos](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
   
@@ -93,3 +94,4 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
   
 ## <a name="see-also"></a>Vea también  
  [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

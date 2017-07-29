@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Mover un archivo en Visual Basic | Microsoft Docs"
+title: "Cómo: Mover un archivo en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e0e81a28d1475a3f3cf6bcb7372b05eb8037bf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a2623ec7e440e8fdf85138cd0b3de9ab18b773c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Cómo: Mover un archivo en Visual Basic
@@ -64,11 +64,11 @@ El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo
   
 -   El archivo de origen no es válido o no existe (<xref:System.IO.FileNotFoundException>).  
   
--   La ruta de acceso combinada apunta a un directorio existente, el archivo de destino existe y `overwrite` está establecido en `False`, un archivo del directorio de destino con el mismo nombre está en uso o el usuario no tiene permisos suficientes para obtener acceso al archivo (<xref:System.IO.IOException>).  
+-   La ruta de acceso combinada apunta a un directorio existente, el archivo de destino existe y `overwrite` está establecido en `False`, un archivo del directorio de destino con el mismo nombre está en uso o el usuario no tiene permisos suficientes para acceder al archivo (<xref:System.IO.IOException>).  
   
 -   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
--   `showUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException` y el usuario canceló la operación o se produjo un error de E/S no especificado (<xref:System.OperationCanceledException>).  
+-   `showUI` está establecido en `True`, `onUserCancel` está establecido en `ThrowException`y el usuario canceló la operación o se produjo un error de E/S no especificado (<xref:System.OperationCanceledException>).  
   
 -   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
@@ -81,3 +81,4 @@ El método `My.Computer.FileSystem.MoveFile` se puede usar para mover un archivo
  [Cómo: Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)   
  [Cómo: Crear una copia de un archivo en un directorio diferente en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)   
  [Analizar rutas de acceso a archivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Usar structs (Guía de programación de C#) | Microsoft Docs"
+title: "Utilizar estructuras (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,20 +28,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8cb5fa79de38294add5cebdd38537636591de126
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67fa4f764e6e40041e4b8e37eccbd1adb2b509d3
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-structs-c-programming-guide"></a>Usar structs (Guía de programación de C#)
-El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../../csharp/language-reference/keywords/class.md) con [Propiedades implementadas automáticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), seguramente un [struct](../../../csharp/language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Como [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] contiene un objeto denominado <xref:System.Drawing.Point>, el struct de este ejemplo se denomina "CoOrds".  
+# <a name="using-structs-c-programming-guide"></a>Utilizar estructuras (Guía de programación de C#)
+El tipo `struct` resulta adecuado para representar objetos pequeños como `Point`, `Rectangle`y `Color`. Aunque es igual de válido representar un punto como un elemento [class](../../../csharp/language-reference/keywords/class.md) con [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), seguramente un [struct](../../../csharp/language-reference/keywords/struct.md) sea más eficaz en algunos escenarios. Por ejemplo, si declara una matriz de 1000 objetos `Point` , se asignará más memoria para hacer referencia a cada objeto y, en este caso, un struct sería menos costoso. Como [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] contiene un objeto denominado <xref:System.Drawing.Point>, denominaremos el struct de este ejemplo "CoOrds".  
   
  [!code-cs[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-structs_1.cs)]  
   
  Definir un constructor (sin parámetros) predeterminado para un struct es un error, como también lo es inicializar un campo de instancia en el cuerpo de un struct. Los miembros del struct solo se pueden inicializar mediante un constructor con parámetros, o bien teniendo acceso individualmente a cada miembro una vez declarado el struct. Los miembros privados o inaccesibles por cualquier otro motivo solo se pueden inicializar en un constructor.  
   
- Cuando se crea un objeto struct con el operador [new](../../../csharp/language-reference/keywords/new.md), se crea el objeto y se llama al constructor apropiado. A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` . En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz. Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen.  
+ Cuando se crea un objeto de struct mediante el operador [new](../../../csharp/language-reference/keywords/new.md) , el objeto se crea y se llama al constructor apropiado. A diferencia de las clases, se pueden crear instancias de structs sin usar el operador `new` . En tal caso, no hay ninguna llamada de constructor, con lo cual la asignación es más eficaz. Pero los campos seguirán sin asignar y el objeto no se podrá usar hasta que todos los campos se inicialicen.  
   
  Cuando un struct contiene un tipo de referencia como miembro, se debe invocar explícitamente el constructor predeterminado de ese miembro, ya que, de lo contrario, el miembro seguirá sin asignar y el struct no se podrá usar (esto genera el error del compilador CS0171).  
   
@@ -75,3 +76,4 @@ El tipo `struct` resulta adecuado para representar objetos pequeños como `Point
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Clases y estructuras](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
+

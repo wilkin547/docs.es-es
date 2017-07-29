@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Enviar cadenas a puertos serie en Visual Basic | Microsoft Docs"
+title: "Cómo: Enviar cadenas a puertos serie en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 14c5de8d0fa8195129b7ae65c1d373834307488a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 602b249d01252bbb1853ed02d9af86697d54b0a5
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Cómo: Enviar cadenas a puertos serie en Visual Basic
-En este tema se describe cómo usar `My.Computer.Ports` para enviar cadenas a los puertos serie del equipo en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+En este tema se describe cómo usar `My.Computer.Ports` para enviar cadenas a los puertos serie del equipo en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se envía una cadena al puerto serie COM1. Es posible que tenga que usar un puerto serie diferente en el equipo.  
@@ -68,3 +68,4 @@ En este tema se describe cómo usar `My.Computer.Ports` para enviar cadenas a lo
  <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
  [Cómo: Marcar a través de módems conectados a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)   
  [Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+

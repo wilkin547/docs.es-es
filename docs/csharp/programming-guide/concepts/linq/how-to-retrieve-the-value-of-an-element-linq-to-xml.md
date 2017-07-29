@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Recuperar el valor de un elemento (LINQ to XML) (C#) | Microsoft Docs"
+title: "Cómo: Recuperar el valor de un elemento (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3f844917ff1d9841c1c6f7f727f593868ec43b8
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 70e60c799157c7aa577bb8abd1fa6aaad746d3d1
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Cómo: Recuperar el valor de un elemento (LINQ to XML) (C#)
-Este tema muestra cómo obtener el valor de los elementos. Existen dos formas principales de hacerlo. Una manera es convertir <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute> al tipo deseado. El operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado y lo asigna a la variable. De manera alternativa, puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> o <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>.  
+Este tema muestra cómo obtener el valor de los elementos. Existen dos formas principales de hacerlo. Una forma consiste en convertir un elemento <xref:System.Xml.Linq.XElement> o un atributo <xref:System.Xml.Linq.XAttribute> al tipo deseado. El operador de conversión explícita convierte el contenido del elemento o del atributo al tipo especificado y lo asigna a la variable. Como alternativa, se puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> o la propiedad <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>.  
   
- Sin embargo, con C#, la conversión suele ser el mejor método. Si convierte el elemento o el atributo a un tipo que admite valores NULL, resulta más fácil escribir el código al recuperar el valor de un elemento (o atributo) que podría existir o no. El último ejemplo de este tema muestra este comportamiento. En cambio, no puede establecer el contenido de un elemento mediante la conversión, como puede mediante la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>.  
+ Sin embargo, con C#, la conversión suele ser el mejor método. Si convierte el elemento o el atributo a un tipo que admite valores NULL, resulta más fácil escribir el código al recuperar el valor de un elemento (o atributo) que podría existir o no. El último ejemplo de este tema muestra este comportamiento. No obstante, no puede establecer el contenido de un elemento mediante la conversión del mismo modo que con la propiedad <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName>.  
   
 ## <a name="example"></a>Ejemplo  
  Para recuperar el valor de un elemento, basta con convertir el objeto <xref:System.Xml.Linq.XElement> al tipo deseado. Siempre puede convertir un elemento a una cadena, como se indica a continuación:  
@@ -58,9 +58,9 @@ Console.WriteLine("Value of e:" + (int)e);
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona operadores de conversión explícita para los tipos de datos siguientes: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` y `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona operadores de conversión explícita para los tipos de datos siguientes: `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` y `GUID?`.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona los mismos operadores de conversión para los objetos <xref:System.Xml.Linq.XAttribute>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona los mismos operadores de conversión para los objetos <xref:System.Xml.Linq.XAttribute>.  
   
 ## <a name="example"></a>Ejemplo  
  Puede usar la propiedad <xref:System.Xml.Linq.XElement.Value%2A> para recuperar el contenido de un elemento:  
@@ -79,7 +79,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Ejemplo  
- A veces, intenta recuperar el valor de un elemento aunque no esté seguro de que exista. En tal caso, al asignar el elemento convertido a un tipo que acepta valores NULL (ya sea `string` o uno de los tipos que aceptan valores NULL en [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]), si el elemento no existe, la variable asignada solo se establece en `null`. El código siguiente muestra que, cuando el elemento podría existir o no, resulta más fácil usar la conversión que la propiedad <xref:System.Xml.Linq.XElement.Value%2A>.  
+ A veces, intenta recuperar el valor de un elemento aunque no esté seguro de que exista. En tal caso, al asignar el elemento convertido a un tipo que acepta valores NULL (ya sea `string` o uno de los tipos que aceptan valores NULL en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]), si el elemento no existe, la variable asignada solo se establece en `null`. El código siguiente demuestra que cuando el elemento podría existir o no, resulta más fácil usar la conversión que la propiedad <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -158,4 +158,5 @@ v4:element does not exist
  Por lo general, puede escribir un código más simple al usar la conversión para recuperar el contenido de los elementos y los atributos.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejes de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])
+

@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Usar las características de documentación XML (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Utilizar las características de documentación XML (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f4e74e2da4a5f8ba0a9964a5eff4f2a492b8981f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eeee77db523bc0ad97f425d4ba8076ae5740dfe8
 ms.contentlocale: es-es
-ms.lasthandoff: 05/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>Cómo: Utilizar las características de documentación XML (Guía de programación de C#)
@@ -119,3 +119,4 @@ En el ejemplo siguiente se proporciona una introducción básica de un tipo que 
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [/doc (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [Comentarios de documentación XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

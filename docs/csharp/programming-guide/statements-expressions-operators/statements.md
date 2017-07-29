@@ -1,5 +1,5 @@
 ---
-title: "Instrucciones (Guía de programación de C#) | Microsoft Docs"
+title: "Instrucciones (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cfbd607f614bd8d287dd33f08dd47b12fa651ced
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4df592821f9bebb318138cffac9045fdbec1e759
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statements-c-programming-guide"></a>Instrucciones (Guía de programación de C#)
@@ -54,7 +54,7 @@ Las acciones que realiza un programa se expresan en instrucciones. Entre las acc
 |[Instrucciones de salto](../../../csharp/language-reference/keywords/jump-statements.md)|Las instrucciones de salto transfieren el control a otra sección de código. Para obtener más información, vea los temas siguientes:<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
 |[Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)|Las instrucciones para el control de excepciones permiten recuperarse correctamente de condiciones excepcionales producidas en tiempo de ejecución. Para obtener más información, vea los temas siguientes:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Checked y unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Las instrucciones checked y unchecked permiten especificar si las operaciones numéricas pueden producir un desbordamiento cuando el resultado se almacena en una variable que es demasiado pequeña para contener el valor resultante. Para obtener más información, vea [checked](../../../csharp/language-reference/keywords/checked.md) y [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
-Instrucción `await`|Si marca un método con el modificador [async](../../../csharp/language-reference/keywords/async.md), puede usar el operador [await](../../../csharp/language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión `await` en el método asincrónico, el control se devuelve al autor de llamada y el progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.<br /><br /> Para obtener un ejemplo sencillo, vea la sección "Métodos asincrónicos" de [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md). Para obtener más información, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md).|  
+|Instrucción `await`|Si marca un método con el modificador [async](../../../csharp/language-reference/keywords/async.md) , puede usar el operador [await](../../../csharp/language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión `await` en el método asincrónico, el control se devuelve al autor de llamada y el progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.<br /><br /> Para obtener un ejemplo sencillo, vea la sección "Métodos asincrónicos" de [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md). Para obtener más información, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md).|  
 |Instrucción `yield return`|Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador usa la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza una instrucción `yield return`, se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.<br /><br /> Para más información, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
 |Instrucción `fixed`|La instrucción fixed impide que el recolector de elementos no utilizados cambie la ubicación de una variable móvil. Para obtener más información, vea [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Instrucción `lock`|La instrucción lock permite limitar el acceso a bloques de código a un solo subproceso de cada vez. Para obtener más información, vea [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
@@ -97,3 +97,4 @@ Instrucción `await`|Si marca un método con el modificador [async](../../../csh
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+

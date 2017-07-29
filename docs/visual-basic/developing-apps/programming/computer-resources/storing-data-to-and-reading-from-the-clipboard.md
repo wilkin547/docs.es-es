@@ -1,5 +1,5 @@
 ---
-title: Almacenar y leer datos en el Portapapeles (Visual Basic) | Microsoft Docs
+title: Almacenar y leer datos en el Portapapeles (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 06a97ffe88fdae344b07d04b6ce560d4c163d431
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3b60942cf3e3a7f588a7838bcae0cb7b6fae2278
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Almacenar y leer datos en el Portapapeles (Visual Basic)
@@ -50,13 +50,13 @@ El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Portapapeles**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Portapapeles**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
  Use el método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> para recuperar una imagen del Portapapeles. En este ejemplo se comprueba si hay una imagen en el Portapapeles antes de recuperarla y asignarla a `PictureBox1`.  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Portapapeles**. Para más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Aplicaciones de Windows Forms > Portapapeles**. Para más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
  Los elementos colocados en el Portapapeles se conservan incluso después de que se cierre la aplicación.  
   
@@ -100,3 +100,4 @@ El Portapapeles se puede usar para almacenar datos, como texto e imágenes. Dado
  <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
  [How to: Read Object Data from an XML File (Cómo: Leer datos de objetos de un archivo XML)](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [Escribir objetos de datos en un archivo XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+

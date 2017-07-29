@@ -1,5 +1,5 @@
 ---
-title: "Modificadores de acceso (Guía de programación de C#) | Microsoft Docs"
+title: "Modificadores de acceso (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: c8d870feccd1fe44caf566ce45349818b6ddf6e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 38b259b4d85d54467cd15cd49e5987f6198e8d99
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificadores de acceso (Guía de programación de C#)
@@ -107,3 +107,4 @@ Todos los tipos y miembros de tipo tienen un nivel de accesibilidad que controla
  [class](../../../csharp/language-reference/keywords/class.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [interface](../../../csharp/language-reference/keywords/interface.md)
+

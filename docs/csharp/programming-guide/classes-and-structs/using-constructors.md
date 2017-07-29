@@ -1,5 +1,5 @@
 ---
-title: "Uso de constructores (Guía de programación de C#) | Microsoft Docs"
+title: "Utilizar constructores (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 47103d13a68c5250c33dbca3e89de2f1f3e13449
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75b55fde2fbd1697aed7eb0665a571c63b9b0b42
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizar constructores (Guía de programación de C#)
@@ -106,7 +106,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- Los constructores se pueden marcar como [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o `protected``internal`. Estos modificadores de acceso definen cómo los usuarios de la clase pueden construir la clase. Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Los constructores se pueden marcar como [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o `protected internal`. Estos modificadores de acceso definen cómo los usuarios de la clase pueden construir la clase. Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
  Un constructor puede declararse estático mediante la palabra clave [static](../../../csharp/language-reference/keywords/static.md). Los constructores estáticos se llaman automáticamente, inmediatamente antes de acceder a los campos estáticos y, por lo general, se usan para inicializar miembros de clase estática. Para obtener más información, vea [Static Constructors](../../../csharp/programming-guide/classes-and-structs/static-constructors.md) (Constructores estáticos [Guía de programación de C#]).  
   
@@ -118,3 +118,4 @@ Console.WriteLine("{0}, {1}", a, b);
  [Clases y estructuras](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md)  (Constructores [Guía de programación de C#])  
  [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

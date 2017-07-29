@@ -1,5 +1,5 @@
 ---
-title: Obtener acceso a datos en aplicaciones de Visual Basic | Microsoft Docs
+title: Obtener acceso a datos en aplicaciones de Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,51 +28,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 227aaf74dff0ae16fc5030ac8031ffa0f9ddf632
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4ff9885f66171ee0454bff058b342d1b5683d3e3
 ms.contentlocale: es-es
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Obtener acceso a datos en aplicaciones de Visual Basic
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] incluye varias características nuevas que ayudan en el desarrollo de aplicaciones que tienen acceso a datos. Los formularios enlazados a datos para aplicaciones Windows se crean arrastrando elementos desde la [ventana Orígenes de datos](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources) hasta el formulario. Se puede enlazar controles a datos arrastrando elementos desde la **ventana de orígenes de datos** a los controles existentes.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] incluye varias características nuevas que ayudan en el desarrollo de aplicaciones que tienen acceso a datos. Los formularios enlazados a datos para aplicaciones Windows se crean arrastrando elementos desde la [ventana Orígenes de datos](/visualstudio/data-tools/add-new-data-sources) hasta el formulario. Se puede enlazar controles a datos arrastrando elementos desde la **ventana de orígenes de datos** a los controles existentes.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Obtener acceso a los datos en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/)  
+ [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/)  
  Proporciona vínculos a páginas que tratan sobre la incorporación de funcionalidad de acceso a datos a sus aplicaciones.
 
- [Visual Studio Data Tools para .NET](https://docs.microsoft.com/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Proporciona vínculos a páginas que describen la creación de aplicaciones que funcionan con datos mediante [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [Visual Studio Data Tools para .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
+ Proporciona vínculos a páginas que describen la creación de aplicaciones que funcionan con datos mediante [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Proporciona vínculos a temas en los que se describe cómo usar LINQ en Visual Basic.  
   
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
- Proporciona información sobre [!INCLUDE[vbtecdlinq](../../csharp/includes/vbtecdlinq_md.md)]. Incluye ejemplos de programación.  
+ Proporciona información sobre [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Incluye ejemplos de programación.  
   
- [Herramientas LINQ to SQL en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+ [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  Proporciona vínculos a temas sobre cómo crear un modelo de objetos [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) en aplicaciones.  
   
- [Trabajar con conjuntos de datos en aplicaciones de n capas](https://docs.microsoft.com/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+ [Trabajar con conjuntos de datos en aplicaciones de n capas](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Proporciona vínculos a temas sobre cómo crear aplicaciones de datos de niveles múltiples.  
      
- [Agregar nuevas conexiones](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)  
- Proporciona vínculos a páginas sobre la conexión de la aplicación a datos con herramientas en tiempo de diseño y objetos de conexión ADO.NET, mediante [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ [Agregar nuevas conexiones](/visualstudio/data-tools/add-new-connections)  
+ Proporciona vínculos a páginas sobre la conexión de la aplicación a datos con herramientas en tiempo de diseño y objetos de conexión ADO.NET, mediante [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
 
- [Herramientas de conjuntos de datos en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+ [Herramientas de conjuntos de datos en Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Proporciona vínculos a páginas que describen cómo cargar datos en los conjuntos de datos y cómo ejecutar instrucciones SQL y procedimientos almacenados.  
   
- [Enlazar controles a los datos en Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
+ [Enlazar controles a los datos en Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
  Proporciona vínculos a páginas que explican cómo se muestran datos en Windows Forms mediante controles enlazados a datos.  
   
- [Editar datos en conjuntos de datos](https://docs.microsoft.com/visualstudio/data-tools/edit-data-in-datasets)  
+ [Editar datos en conjuntos de datos](/visualstudio/data-tools/edit-data-in-datasets)  
  Proporciona vínculos a páginas que describen cómo manipular los datos en las tablas de datos de un conjunto de datos.  
   
- [Validar los datos en conjuntos de datos](https://docs.microsoft.com/visualstudio/data-tools/validate-data-in-datasets)  
+ [Validar los datos en conjuntos de datos](/visualstudio/data-tools/validate-data-in-datasets)  
  Proporciona vínculos a páginas que describen cómo agregar validación a un conjunto de datos durante los cambios de columnas y filas.  
   
- [Guardar los datos de nuevo en la base de datos](https://docs.microsoft.com/visualstudio/data-tools/save-data-back-to-the-database)  
+ [Guardar los datos de nuevo en la base de datos](/visualstudio/data-tools/save-data-back-to-the-database)  
  Proporciona vínculos a páginas que explican cómo enviar datos actualizados de una aplicación a la base de datos.  
   
  [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  

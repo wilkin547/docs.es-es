@@ -1,5 +1,5 @@
 ---
-title: Ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#) | Microsoft Docs
+title: "Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cdff5befdf7825c9d91eed1e8fe978a16fa1fe93
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b074f6f1a1c1e2e6528ed1e63ccbdff57057f374
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)
@@ -91,7 +92,8 @@ public class SortLines
  En este ejemplo también se muestra cómo devolver una variable de consulta desde un método.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto cuyo destino sea .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
+ Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) (LINQ y cadenas [C#])
+ [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+

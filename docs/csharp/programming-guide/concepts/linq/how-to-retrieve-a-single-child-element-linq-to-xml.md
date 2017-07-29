@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Recuperar un único elemento secundario (LINQ to XML) (C#) | Microsoft Docs"
+title: "Cómo: Recuperar un único elemento secundario (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,23 +14,22 @@ ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8cc212a91e4646ef7001d41ba9bb5486cc60052
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 11a53104f73325a905ef5144aabddf8c270fd024
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Cómo: Recuperar un único elemento secundario (LINQ to XML) (C#)
-En este tema se explica cómo recuperar un único elemento secundario, dado el nombre del elemento secundario. Si conoce el nombre del elemento secundario y que solo hay un elemento que tiene ese nombre, puede resultar cómodo recuperar solamente un elemento, en lugar de una colección.  
+En este tema se explica cómo recuperar un único elemento secundario, dado el nombre del elemento secundario. Si conoce el nombre del elemento secundario y que solo hay un elemento que tiene ese nombre, puede resultar cómodo recuperar solamente un elemento, en lugar de una recopilación.  
   
- El método <xref:System.Xml.Linq.XContainer.Element%2A>devuelve el primer elemento secundario <xref:System.Xml.Linq.XElement> con el <xref:System.Xml.Linq.XName> especificado.  
+ El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve el primer <xref:System.Xml.Linq.XElement> secundario con el <xref:System.Xml.Linq.XName> especificado.  
   
  Si desea recuperar un único elemento secundario de Visual Basic, un enfoque común consiste en utilizar la propiedad XML y después recuperar el primer elemento mediante una notación de indizador de matriz.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso del método <xref:System.Xml.Linq.XContainer.Element%2A>. Este ejemplo toma un árbol XML con el nombre `po` y busca el primer elemento con el nombre `Comment`.  
+ En el siguiente ejemplo se muestra el uso del método <xref:System.Xml.Linq.XContainer.Element%2A>. Este ejemplo toma un árbol XML con el nombre `po` y busca el primer elemento con el nombre `Comment`.  
   
  El ejemplo de Visual Basic muestra el uso de la notación del indizador de matriz para recuperar un elemento único.  
   

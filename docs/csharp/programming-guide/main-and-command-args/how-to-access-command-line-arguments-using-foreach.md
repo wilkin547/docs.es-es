@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Obtener acceso a argumentos de la línea de comandos mediante foreach (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Obtener acceso a argumentos de la línea de comandos utilizando Foreach (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2f0e3bce88beafd45a21773a7b26ffb2bb41215d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 766b5cd0879edec1dc409e07c4f62ee693fd615d
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Cómo: Obtener acceso a argumentos de la línea de comandos utilizando Foreach (Guía de programación de C#)
-Otro enfoque para recorrer en iteración la matriz es usar la instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) como se muestra en este ejemplo. La instrucción `foreach` se puede usar para recorrer en iteración una matriz, una clase de colección de .NET Framework o cualquier clase o struct que implemente la interfaz <xref:System.Collections.IEnumerable>.  
+Otro enfoque para recorrer en iteración la matriz es usar la instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) como se muestra en este ejemplo. La instrucción `foreach` se puede utilizar para recorrer en iteración una matriz, una clase de colección de .NET Framework o cualquier clase o struct que implemente la interfaz <xref:System.Collections.IEnumerable>.  
   
 > [!NOTE]
->  Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo imprimir los argumentos de la línea de comandos con `foreach`.  
@@ -55,3 +56,4 @@ Otro enfoque para recorrer en iteración la matriz es usar la instrucción [fore
  [Main() y argumentos de línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Cómo: Mostrar argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [Valores devueltos de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

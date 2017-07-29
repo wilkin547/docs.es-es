@@ -1,5 +1,5 @@
 ---
-title: "Serializar con una declaración XML (C#) | Microsoft Docs"
+title: "Serializar con una declaración XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c0389630c7fc4b8aa394974b7e42cce2a5101a4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36ffb8ddd584785c660896ca77707d504638852f
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>Serializar con una declaración XML (C#)
 En este tema se describe cómo controlar si la serialización genera una declaración XML.  
   
 ## <a name="xml-declaration-generation"></a>Generación de declaración XML  
- Serializar en un <xref:System.IO.File> o <xref:System.IO.TextWriter> usando los métodos <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> o <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> genera una declaración XML. Cuando serializa en un elemento <xref:System.Xml.XmlWriter>, la configuración del sistema de escritura (especificada en un objeto <xref:System.Xml.XmlWriterSettings>) determina si se genera una declaración XML o no.  
+ La serialización en <xref:System.IO.File> o <xref:System.IO.TextWriter> mediante el método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> o el método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> genera una declaración XML. Cuando serializa en <xref:System.Xml.XmlWriter>, la configuración del escritor (especificada en un objeto <xref:System.Xml.XmlWriterSettings>) determina si se genera una declaración XML.  
   
  Si está serializando en una cadena mediante el método `ToString`, el XML resultante no incluirá una declaración XML.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>Serializar con una declaración XML  
- En el ejemplo siguiente se crea un elemento <xref:System.Xml.Linq.XElement>, se guarda el documento en un archivo y, luego, se imprime el archivo en la consola:  
+ En el ejemplo siguiente se crea un <xref:System.Xml.Linq.XElement>, se guarda el documento en un archivo y, a continuación, se imprime el archivo en la consola:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -55,7 +56,7 @@ Console.WriteLine(str);
 ```  
   
 ### <a name="serializing-without-an-xml-declaration"></a>Serializar sin una declaración XML  
- En el ejemplo siguiente se muestra cómo guardar un elemento <xref:System.Xml.Linq.XElement> en un <xref:System.Xml.XmlWriter>.  
+ En el siguiente ejemplo se muestra cómo guardar un <xref:System.Xml.Linq.XElement> en un <xref:System.Xml.XmlWriter>.  
   
 ```csharp  
 StringBuilder sb = new StringBuilder();  
@@ -79,3 +80,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>Vea también  
  [Serializar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

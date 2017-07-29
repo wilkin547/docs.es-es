@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Convertir una cadena en un valor DateTime (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Convertir una cadena en un valor DateTime (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,14 +28,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f31deeb2b29495ab48781c7e673fed37e8ad8dce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Cómo: Convertir una cadena en un valor DateTime (Guía de programación de C#)
-Es habitual que los programas permitan a los usuarios a escribir las fechas como valores de cadena. Para convertir una fecha basada en una cadena en un objeto <xref:System.DateTime?displayProperty=fullName>, puede usar el método <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> o el método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName>, tal como se muestra en el ejemplo siguiente.  
+Es habitual que los programas permitan a los usuarios a escribir las fechas como valores de cadena. Para convertir una fecha basada en una cadena en un objeto <xref:System.DateTime?displayProperty=fullName> , puede usar el método <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> o el método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> , tal como se muestra en el ejemplo siguiente.  
   
  **Referencia cultural**.  Las distintas referencias culturales que hay en el mundo escriben las cadenas de fecha de maneras distintas.  Por ejemplo, en Estados Unidos 01/20/2008 es el 20 de enero de 2008.  En Francia, esta cadena produciría una InvalidFormatException. Esto es porque en Francia la fecha y la hora se leen con el formato día/mes/año y en Estados Unidos con el formato mes/día/año.  
   
@@ -73,3 +74,4 @@ Press any key to continue . . .
   
 ## <a name="see-also"></a>Vea también  
  [Cadenas](../../../csharp/programming-guide/strings/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Solución de problemas: Leer y escribir en archivos de texto (Visual Basic) | Microsoft Docs"
+title: "Solución de problemas: Leer y escribir en archivos de texto (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 739f14a7cb5c559720bfac1a78b5fc50001052cb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7f1d26df53445ee9711ebb2840071d2560c5380d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Solución de problemas: Leer y escribir en archivos de texto (Visual Basic)
@@ -62,3 +62,4 @@ En este tema se tratan problemas habituales que surgen cuando se trabaja con arc
  [Reading from Files in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  (Leer archivos en Visual Basic)  
  [Writing to Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  (Escribir en archivos en Visual Basic)  
  [Análisis de archivos de texto con el objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+

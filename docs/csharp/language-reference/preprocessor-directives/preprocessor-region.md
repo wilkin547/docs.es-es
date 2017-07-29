@@ -1,5 +1,5 @@
 ---
-title: '#region (Referencia de C#) | Microsoft Docs'
+title: '#<a name="region-c-reference"></a>region (Referencia de C#)'
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2924daffcdc44c8f5ba5cf97c5b141c0dd07ca4a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f7685d23bc1d40a0d0b6c9ac9a644019e1186eb7
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="region-c-reference"></a>#region (Referencia de C#)
-`#region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de [esquematización](https://docs.microsoft.com/visualstudio/ide/outlining) del editor de código de Visual Studio. En archivos de código más largos, es conveniente poder contraer u ocultar una o varias regiones para poder centrarse en la parte del archivo en la que se está trabajando actualmente. En el ejemplo siguiente se muestra cómo definir una región:  
+`#region` permite especificar un bloque de código que se puede expandir o contraer cuando se usa la característica de [esquematización](/visualstudio/ide/outlining) del editor de código de Visual Studio. En archivos de código más largos, es conveniente poder contraer u ocultar una o varias regiones para poder centrarse en la parte del archivo en la que se está trabajando actualmente. En el ejemplo siguiente se muestra cómo definir una región:  
   
-```  
+```csharp
 #region MyClass definition  
 public class MyClass   
 {  

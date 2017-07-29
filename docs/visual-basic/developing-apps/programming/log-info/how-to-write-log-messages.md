@@ -1,5 +1,5 @@
 ---
-title: "C처mo: Escribir mensajes de registro (Visual Basic) | Microsoft Docs"
+title: "C처mo: Escribir mensajes de registro (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a340c807707cb63d20c8186a8ec6f81830f1a9ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ffc45b93250ba9e909776352b702be2e8295435d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>C처mo: Escribir mensajes de registro (Visual Basic)
@@ -60,3 +60,4 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
  [Tutorial: Determinar el lugar en el que My.Application.Log escribe la informaci처n](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
  [Tutorial: Cambiar el lugar donde My.Application.Log escribe la informaci처n](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [Tutorial: Filtrar el resultado de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)
+

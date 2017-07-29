@@ -1,5 +1,5 @@
 ---
-title: Cambios importantes de Visual Basic en Visual Studio | Microsoft Docs
+title: Cambios importantes de Visual Basic en Visual Studio
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 12a8222081a1082a36d7b2710686ab33db474652
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9822ea140584a5b978b5fa8802a40db257ad7f8
 ms.contentlocale: es-es
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Cambios importantes de Visual Basic en Visual Studio
@@ -46,4 +46,5 @@ Los cambios de Visual Basic en Visual Studio 2015 no impedirán que una aplicaci
  [Expresiones lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
  [For Each...Next Statement](../../visual-basic/language-reference/statements/for-each-next-statement.md)  (For Each...Next [instrucción])  
  [Introducción](../../visual-basic/getting-started/index.md)   
- [When is a non-breaking language fix breaking?](http://go.microsoft.com/fwlink/?LinkId=259542)
+ [When is a non-breaking language fix breaking?](http://go.microsoft.com/fwlink/?LinkId=259542) ¿Cuándo una corrección de lenguaje que no es innovadora llega a serlo?
+

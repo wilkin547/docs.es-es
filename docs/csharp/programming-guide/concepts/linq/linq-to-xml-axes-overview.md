@@ -1,5 +1,5 @@
 ---
-title: "Información general sobre los ejes de LINQ to XML (C#) | Microsoft Docs"
+title: "Información general sobre los ejes de LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b43d3cb5cc7154c1133c5fa17e5bdacca97a38c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Información general sobre los ejes de LINQ to XML (C#)
@@ -27,9 +26,9 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
   
  Como se describe en [Información general acerca de la clase XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un objeto <xref:System.Xml.Linq.XElement> representa un nodo de elemento único. El contenido de un elemento puede ser complejo (a veces conocido como contenido estructurado) o puede ser un elemento simple. Un elemento simple puede estar vacío o contener un valor. Si el nodo incluye contenido estructurado, puede utilizar diferentes métodos del eje para recuperar enumeraciones con los elementos descendientes. Los métodos de ejes que se utilizan con más frecuencia son <xref:System.Xml.Linq.XContainer.Elements%2A> y <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
- Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
+ Además de los métodos de eje, que devuelven colecciones, existen otros dos métodos que usará con regularidad en consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. El método <xref:System.Xml.Linq.XContainer.Element%2A> devuelve un único <xref:System.Xml.Linq.XElement>. El método <xref:System.Xml.Linq.XElement.Attribute%2A> devuelve un único <xref:System.Xml.Linq.XAttribute>.  
   
- Por diversas razones, las consultas de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y para transformarlos. Las consultas de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] trabajan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601> y los ejes [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
+ Por diversas razones, las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ofrecen el mecanismo más potente para examinar árboles, extraer datos de ellos y para transformarlos. Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] trabajan sobre objetos que implementan <xref:System.Collections.Generic.IEnumerable%601> y los ejes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] devuelven colecciones <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> y <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute>. Para poder realizar las consultas, necesitará estas colecciones.  
   
  A parte de los métodos de ejes que permiten recuperar colecciones de elementos y atributos, existen métodos de ejes que le permiten iterar por un árbol con gran detalle. Por ejemplo, en vez de tratar directamente con los elementos y los atributos, podría trabajar con los nodos del árbol. Los nodos tienen un nivel de granularidad mayor que los elementos y atributos. Si trabaja con nodos, podrá examinar comentarios XML, nodos de texto, instrucciones de procesamiento, etc. Esta funcionalidad resultaría interesante, por ejemplo, para una persona que estuviese escribiendo un procesador de textos y quisiera guardar los documentos en formato XML. No obstante, la mayoría de programadores en XML se centran más en los elementos, los atributos y sus valores.  
   
@@ -69,3 +68,4 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])
+

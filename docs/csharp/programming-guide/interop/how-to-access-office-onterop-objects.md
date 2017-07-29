@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: e793e0b7f21948d16da4dcb618d73c4c3114adcb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ed3716e5c0d8cd143148522a2fb3aed5ec433ab
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
@@ -46,9 +46,9 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
  Para completar este tutorial, es necesario tener Microsoft Office Excel 2007 y Microsoft Office Word 2007 —o una versión posterior— instalados en el equipo.  
   
- Si usa un sistema operativo anterior a [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)], asegúrese de que [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] esté instalado.  
+ Si usa un sistema operativo anterior a [!INCLUDE[windowsver](~/includes/windowsver-md.md)], asegúrese de que [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] esté instalado.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-new-console-application"></a>Para crear una aplicación de consola nueva  
   
@@ -98,7 +98,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 1.  Agregue el método siguiente a la clase `Program` para configurar una hoja de cálculo de Excel.  
   
-     El método [Add](http://go.microsoft.com/fwlink/?LinkId=210910) tiene un parámetro opcional para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el código siguiente no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     El método [Add](http://go.microsoft.com/fwlink/?LinkId=210910) tiene un parámetro opcional para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el código siguiente no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-cs[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -118,7 +118,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] —y versiones posteriores— convierte automáticamente el `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] —y versiones posteriores— convierte automáticamente el `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.  
   
 ### <a name="to-run-the-project"></a>Para ejecutar el proyecto  
   
@@ -132,17 +132,17 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 ### <a name="to-add-a-word-document"></a>Para agregar un documento de Word  
   
-1.  Para ilustrar las formas adicionales en que [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] y versiones posteriores mejoran la programación de Office, el código siguiente abre una aplicación de Word y crea un icono que se vincula a la hoja de cálculo de Excel.  
+1.  Para ilustrar las formas adicionales en que [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] y versiones posteriores mejoran la programación de Office, el código siguiente abre una aplicación de Word y crea un icono que se vincula a la hoja de cálculo de Excel.  
   
-     Pegue el método `CreateIconInWordDoc`, proporcionado más adelante en este paso, en la clase `Program`. `CreateIconInWordDoc` usa argumentos con nombre y opcionales para reducir la complejidad de las llamadas de método a [Add](http://go.microsoft.com/fwlink/?LinkId=210937) y [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099). Estas llamadas incorporan otras dos nuevas características introducidas en [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] que simplifican las llamadas a métodos COM que tienen parámetros de referencia. En primer lugar, puede enviar argumentos a los parámetros de referencia como si fueran parámetros de valor. Es decir, puede enviar valores directamente, sin necesidad de crear una variable para cada parámetro de referencia. El compilador genera variables temporales para contener los valores de argumento y las descarta cuando se regresa de la llamada. En segundo lugar, se puede omitir la palabra clave `ref` en la lista de argumentos.  
+     Pegue el método `CreateIconInWordDoc`, proporcionado más adelante en este paso, en la clase `Program`. `CreateIconInWordDoc` usa argumentos con nombre y opcionales para reducir la complejidad de las llamadas de método a [Add](http://go.microsoft.com/fwlink/?LinkId=210937) y [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099). Estas llamadas incorporan otras dos nuevas características introducidas en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplifican las llamadas a métodos COM que tienen parámetros de referencia. En primer lugar, puede enviar argumentos a los parámetros de referencia como si fueran parámetros de valor. Es decir, puede enviar valores directamente, sin necesidad de crear una variable para cada parámetro de referencia. El compilador genera variables temporales para contener los valores de argumento y las descarta cuando se regresa de la llamada. En segundo lugar, se puede omitir la palabra clave `ref` en la lista de argumentos.  
   
-     El método `Add` tiene cuatro parámetros de referencia, todos ellos opcionales. En [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] o versiones posteriores, puede omitir los argumentos de cualquiera o de todos los parámetros si desea usar sus valores predeterminados. En [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] y versiones anteriores, se debe proporcionar un argumento para cada parámetro; el argumento debe ser una variable, ya que los parámetros son parámetros de referencia.  
+     El método `Add` tiene cuatro parámetros de referencia, todos ellos opcionales. En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] o versiones posteriores, puede omitir los argumentos de cualquiera o de todos los parámetros si desea usar sus valores predeterminados. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, se debe proporcionar un argumento para cada parámetro; el argumento debe ser una variable, ya que los parámetros son parámetros de referencia.  
   
-     El método `PasteSpecial` inserta el contenido del Portapapeles. El método tiene siete parámetros de referencia, todos ellos opcionales. El siguiente código especifica los argumentos para dos de ellos: `Link`, para crear un vínculo con el origen del contenido del Portapapeles, y `DisplayAsIcon`, para mostrar el vínculo como un icono. En [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)], puede usar argumentos con nombre para esos dos y omitir los demás. Aunque se trata de parámetros de referencia, no es necesario utilizar la palabra clave `ref` ni crear variables para enviarlas como argumentos. Puede enviar los valores directamente. En [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] y versiones anteriores, debe enviar un argumento de variable para cada parámetro de referencia.  
+     El método `PasteSpecial` inserta el contenido del Portapapeles. El método tiene siete parámetros de referencia, todos ellos opcionales. El siguiente código especifica los argumentos para dos de ellos: `Link`, para crear un vínculo con el origen del contenido del Portapapeles, y `DisplayAsIcon`, para mostrar el vínculo como un icono. En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], puede usar argumentos con nombre para esos dos y omitir los demás. Aunque se trata de parámetros de referencia, no es necesario utilizar la palabra clave `ref` ni crear variables para enviarlas como argumentos. Puede enviar los valores directamente. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, debe enviar un argumento de variable para cada parámetro de referencia.  
   
      [!code-cs[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
   
-     En [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] o versiones anteriores del lenguaje, es necesario el código siguiente, más complejo.  
+     En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versiones anteriores del lenguaje, es necesario el código siguiente, más complejo.  
   
      [!code-cs[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
   
@@ -164,7 +164,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      Además, programar resulta más fácil porque los tipos requeridos y devueltos por los métodos COM se pueden representar con el tipo `dynamic` en vez de `Object`. Las variables de tipo `dynamic` no se evalúan hasta el tiempo de ejecución, lo que elimina la necesidad de la conversión explícita. Para obtener más información, vea [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
-     En [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)], el comportamiento predeterminado es insertar información de tipos en lugar de utilizar los PIA. Debido a ese comportamiento predeterminado, algunos de los ejemplos anteriores se simplifican dado que no es necesaria la conversión explícita. Por ejemplo, la declaración de `worksheet` en `DisplayInExcel` se escribe como `Excel._Worksheet workSheet = excelApp.ActiveSheet` en lugar de `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Las llamadas a `AutoFit` en el mismo método también requerirían conversión explícita sin el valor predeterminado, porque `ExcelApp.Columns[1]` devuelve un `Object` y `AutoFit` es un método de Excel. En el código siguiente se muestra la conversión.  
+     En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], el comportamiento predeterminado es insertar información de tipos en lugar de utilizar los PIA. Debido a ese comportamiento predeterminado, algunos de los ejemplos anteriores se simplifican dado que no es necesaria la conversión explícita. Por ejemplo, la declaración de `worksheet` en `DisplayInExcel` se escribe como `Excel._Worksheet workSheet = excelApp.ActiveSheet` en lugar de `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Las llamadas a `AutoFit` en el mismo método también requerirían conversión explícita sin el valor predeterminado, porque `ExcelApp.Columns[1]` devuelve un `Object` y `AutoFit` es un método de Excel. En el código siguiente se muestra la conversión.  
   
      [!code-cs[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
@@ -186,7 +186,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 2.  Presione CTRL+F5 para ver el resultado. Otros formatos se enumeran en la enumeración [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967).  
   
-3.  Compare la instrucción del paso 1 con el siguiente código, que muestra los argumentos necesarios en [!INCLUDE[csharp_orcas_long](../../../csharp/programming-guide/interop/includes/csharp_orcas_long_md.md)] o versiones anteriores.  
+3.  Compare la instrucción del paso 1 con el siguiente código, que muestra los argumentos necesarios en [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] o versiones anteriores.  
   
      [!code-cs[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
   
@@ -201,3 +201,4 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
  [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
  [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+

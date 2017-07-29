@@ -1,5 +1,5 @@
 ---
-title: C# | Microsoft Docs
+title: C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8470043d266275cd70d48299be96f1ee6f50682
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9a46179f25c166923f702b745e874406adfdeac
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c"></a>C#
@@ -44,10 +45,10 @@ C# es un lenguaje de programación que se ha diseñado para compilar diversas ap
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a C#](../csharp/getting-started/getting-started-with-csharp.md)  
- Presenta las características de C# para los programadores sin experiencia previa con este lenguaje o con [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)], y ofrece una guía básica para encontrar ayuda sobre [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)].  
+ Presenta las características de C# para los programadores sin experiencia previa con este lenguaje o con [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], y ofrece una guía básica para encontrar ayuda sobre [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Usar el entorno de desarrollo de Visual C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Presenta el entorno de desarrollo de [!INCLUDE[csprcs](../csharp/includes/csprcs_md.md)].  
+ [Usar el entorno de desarrollo de Visual C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ Presenta el entorno de desarrollo de [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Guía de programación de C#](../csharp/programming-guide/index.md)  
  Proporciona información y ejemplos prácticos sobre cómo utilizar las construcciones de lenguaje C#.  
@@ -62,9 +63,10 @@ C# es un lenguaje de programación que se ha diseñado para compilar diversas ap
  Proporciona vínculos a los tutoriales de programación que usan C# y una breve descripción de cada uno.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Especificación del lenguaje C#](../csharp/language-reference/language-specification.md)  
+ [Especificación del lenguaje C#](../csharp/language-reference/language-specification/index.md)  
  Se vincula a la última versión de las características técnicas de C# en formato Microsoft Word.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a Visual C# y Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Desarrollo de .NET](https://msdn.microsoft.com/library/ff361664)
+

@@ -1,5 +1,5 @@
 ---
-title: "Introducción a LINQ (C#) | Microsoft Docs"
+title: "Introducción a LINQ (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: cbc19731f16d839dbd041c271821382bc4031506
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d90ea2503ba94df8ddb750b6f328168ddf22a65a
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-linq-c"></a>Introducción a LINQ (C#)
@@ -52,3 +52,4 @@ Language-Integrated Query (LINQ) es una innovación que se ha presentado en la v
   
 ## <a name="see-also"></a>Vea también  
  [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+

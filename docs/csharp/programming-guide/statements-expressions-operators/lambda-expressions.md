@@ -1,5 +1,5 @@
 ---
-title: "Expresiones lambda (Guía de programación de C#) | Microsoft Docs"
+title: "Expresiones lambda (Guía de programación de C#)"
 ms.date: 2017-03-03
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
 ms.contentlocale: es-es
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expresiones lambda (Guía de programación de C#)
@@ -72,9 +72,9 @@ namespace ConsoleApplication1
   
  El operador `=>` tiene la misma prioridad que la asignación (`=`) y es [asociativa a la derecha](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (vea la sección "Asociatividad" del artículo Operadores).  
   
- Las lambdas se usan en consultas [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] basadas en métodos como argumentos de los métodos de operador de consulta estándar, tales como <xref:System.Linq.Enumerable.Where%2A>.  
+ Las lambdas se usan en consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] basadas en métodos como argumentos de los métodos de operador de consulta estándar, tales como <xref:System.Linq.Enumerable.Where%2A>.  
   
- Cuando se utiliza la sintaxis de método para llamar al método <xref:System.Linq.Enumerable.Where%2A> en la clase <xref:System.Linq.Enumerable> (como se hace en [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects y [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]), el parámetro es un tipo delegado <xref:System.Func%602?displayProperty=fullName>. Una expresión lambda constituye la manera más práctica de crear ese delegado. Cuando se llama al mismo método en, por ejemplo, la clase <xref:System.Linq.Queryable?displayProperty=fullName> (como se hace en [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]), el tipo de parámetro es <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, donde Func es uno de los delegados de Func, que tiene hasta dieciséis parámetros de entrada. De nuevo, una expresión lambda constituye una manera muy concisa de construir ese árbol de expresión. Las lambdas permiten que las llamadas a `Where` tengan un aspecto similar, aunque, de hecho, el tipo de objeto creado a partir de la lambda sea diferente.  
+ Cuando se utiliza la sintaxis de método para llamar al método <xref:System.Linq.Enumerable.Where%2A> en la clase <xref:System.Linq.Enumerable> (como se hace en [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]), el parámetro es un tipo delegado <xref:System.Func%602?displayProperty=fullName>. Una expresión lambda constituye la manera más práctica de crear ese delegado. Cuando se llama al mismo método en, por ejemplo, la clase <xref:System.Linq.Queryable?displayProperty=fullName> (como se hace en [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), el tipo de parámetro es <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, donde Func es uno de los delegados de Func, que tiene hasta dieciséis parámetros de entrada. De nuevo, una expresión lambda constituye una manera muy concisa de construir ese árbol de expresión. Las lambdas permiten que las llamadas a `Where` tengan un aspecto similar, aunque, de hecho, el tipo de objeto creado a partir de la lambda sea diferente.  
   
  En el ejemplo anterior, observe que la signatura de delegado tiene un parámetro de entrada con tipo implícito `int`y devuelve un `int`. La expresión lambda se puede convertir en un delegado de ese tipo porque también tiene un parámetro de entrada (`x`) y un valor devuelto que el compilador puede convertir implícitamente al tipo `int`. (La inferencia de tipos se analiza con más detalle en las secciones siguientes). Cuando el delegado se invoca mediante un parámetro de entrada de 5, devuelve un resultado de 25.  
   
@@ -188,9 +188,9 @@ Func<int, bool> myFunc = x => x == 5;
 bool result = myFunc(4); // returns false of course  
 ```  
   
- También puede proporcionar una expresión lambda cuando el tipo de argumento es `Expression<Func>`, por ejemplo, en los operadores de consulta estándar que se definen en System.Linq.Queryable. Al especificar un argumento `Expression<Func>`, la lambda se compilará en un árbol de expresión.  
+ También puede proporcionar una expresión lambda cuando el tipo de argumento es `Expression<Func>`, por ejemplo, en los operadores de consulta estándar que se definen en System.Linq.Queryable. Al especificar un argumento `Expression<Func>` , la lambda se compilará en un árbol de expresión.  
   
- A continuación, se muestra un operador de consulta estándar, el método <xref:System.Linq.Enumerable.Count%2A>:  
+ A continuación, se muestra un operador de consulta estándar, el método <xref:System.Linq.Enumerable.Count%2A> :  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -290,7 +290,7 @@ class Test
 -   Una expresión lambda no puede contener una instrucción `goto` , `break` o `continue` que esté dentro de la función lambda si el destino de la instrucción de salto está fuera del bloque. También es un error utilizar una instrucción de salto fuera del bloque de la función lambda si el destino está dentro del bloque.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Capítulo destacado del libro  
  [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) (Delegados, eventos y expresiones lambda) en [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  

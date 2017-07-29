@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Buscar un elemento con un atributo específico (C#) | Microsoft Docs"
+title: "Cómo: Buscar un elemento con un atributo específico (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 49db675d7543cd754cd799cc032644ea0a35af4c
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0852db3d3e374b267321dfbf34dff0222d355d5b
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Cómo: Buscar un elemento con un atributo específico (C#)
@@ -55,7 +55,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajar con espacios de nombres XML [C#]).  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md) (Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -86,4 +86,5 @@ foreach (XElement el in address)
  <xref:System.Xml.Linq.XContainer.Elements%2A>   
  [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [Información general sobre operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Operaciones de proyección (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+ [Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])
+

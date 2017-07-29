@@ -1,5 +1,5 @@
 ---
-title: "Archivo XML de ejemplo: Configuración de prueba (LINQ to XML) | Microsoft Docs"
+title: "Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5cd2f2d23186d2d5b5afd6862c7dd7be397e9ecd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbf3e3f2830fcff9a03e32d44976edbf91905d18
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)
-El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Se trata de un archivo de configuración de pruebas.  
+El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Se trata de un archivo de configuración de pruebas.  
   
 ## <a name="testconfigxml"></a>TestConfig.xml  
   
@@ -74,3 +75,4 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
   
 ## <a name="see-also"></a>Vea también  
  [Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

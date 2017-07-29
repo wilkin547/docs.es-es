@@ -1,5 +1,5 @@
 ---
-title: "Campos (Guía de programación de C#) | Microsoft Docs"
+title: "Campos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1e5b1880e6821b2fd4595baad31f7a1bd5599ac4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8eef9bb644a28c69a1db59dcba3c12c9e3fa86b0
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guía de programación de C#)
@@ -76,3 +76,4 @@ Un *campo* es una variable de cualquier tipo que se declara directamente en una 
  [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
  [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+

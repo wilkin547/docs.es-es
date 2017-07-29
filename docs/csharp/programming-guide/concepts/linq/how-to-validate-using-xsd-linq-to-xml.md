@@ -1,5 +1,5 @@
 ---
-title: Validar con XSD (LINQ to XML) (C#) | Microsoft Docs
+title: Validar con XSD (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3a510c91b74df1e5d0ad26655fa33e8447ea850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cec3090541f7bbc306eb41fff409dc890cc55d17
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Validar con XSD (LINQ to XML) (C#)
-El espacio de nombres <xref:System.Xml.Schema> contiene métodos de extensión que facilitan la validación de un árbol XML con un archivo de lenguaje de definición de esquema XML (XSD). Para más información, vea la documentación del método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
+El espacio de nombres <xref:System.Xml.Schema> contiene métodos de extensión que hacen que sea fácil validar un árbol XML contra un archivo de lenguaje de definición de esquemas XML (XSD). Para obtener más información, vea la documentación del método <xref:System.Xml.Schema.Extensions.Validate%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea <xref:System.Xml.Schema.XmlSchemaSet> y luego se validan dos objetos <xref:System.Xml.Linq.XDocument> con el conjunto de esquemas. Uno de los documentos es válido, el otro no.  
+ En el ejemplo siguiente se crea un <xref:System.Xml.Schema.XmlSchemaSet>, a continuación, se validan dos objetos <xref:System.Xml.Linq.XDocument> con el esquema establecido. Uno de los documentos es válido, el otro no.  
   
 ```csharp  
 string xsdMarkup =  
@@ -139,3 +140,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Vea también  
  <xref:System.Xml.Schema.Extensions.Validate%2A>   
  [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))
+

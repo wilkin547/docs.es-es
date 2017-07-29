@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Generar XML a partir de archivos CSV (C#) | Microsoft Docs"
+title: "Cómo: Generar XML a partir de archivos CSV (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8297ec6c462a3b01548b156f10a1470b8a5e6173
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Cómo: Generar XML a partir de archivos CSV (C#)
-Este ejemplo muestra el uso de [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] y [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
+Este ejemplo muestra el uso de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para generar un archivo XML a partir de un archivo de valores separados por comas (CSV).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código realiza una consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] sobre una matriz de cadenas.  
+ El siguiente código realiza una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sobre una matriz de cadenas.  
   
  La consulta usa la cláusula `let` para dividir cada cadena en una matriz de campos.  
   
@@ -121,3 +121,4 @@ Console.WriteLine(cust);
   
 ## <a name="see-also"></a>Vea también  
  [Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Buscar elementos secundarios en función de la posición (XPath-LINQ to XML) (C#) | Microsoft Docs"
+title: "Buscar elementos secundarios en función de la posición (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce711d5e0ce82d4fcb0351c21ac7a769c414b2a4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 247cb8f2be3a005413045198443b132b25241775
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Buscar elementos secundarios en función de la posición (XPath-LINQ to XML) (C#)
@@ -28,7 +28,7 @@ En ocasiones, deseará buscar elementos en función de su posición. Quizá dese
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Existen dos aproximaciones posibles para escribir esta consulta de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] de forma diferida. Puede usar los operadores <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>, o puede buscar la sobrecarga <xref:System.Linq.Enumerable.Where%2A> que toma un índice. Cuando use la sobrecarga <xref:System.Linq.Enumerable.Where%2A>, use una expresión lambda que tome dos argumentos. El siguiente ejemplo muestra ambos métodos para seleccionar elementos en base a la posición.  
+ Existen dos aproximaciones posibles para escribir esta consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] de forma diferida. Puede utilizar los operadores <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>, o bien utilizar la sobrecarga <xref:System.Linq.Enumerable.Where%2A> que recibe un índice. Si utiliza la sobrecarga <xref:System.Linq.Enumerable.Where%2A>, estará utilizando una expresión lambda que recibe dos argumentos. El siguiente ejemplo muestra ambos métodos para seleccionar elementos en base a la posición.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo encontrará el segundo en el cuarto elemento de `Test`. El resultado es una colección de elementos.  
@@ -92,3 +92,4 @@ Results are identical
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

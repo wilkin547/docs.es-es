@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Copiar un directorio en otro directorio en Visual Basic | Microsoft Docs"
+title: "Cómo: Copiar un directorio en otro directorio en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 59efea23743d126e9b1d5a842fc7655ad3350acd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7bcc7f924d26247b0d0ab30a9ea0fc6d6333b652
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Cómo: Copiar un directorio en otro directorio en Visual Basic
@@ -51,7 +51,7 @@ Use el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> p
   
      [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
-     Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+     Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Sistema de archivos - procesamiento de unidades, carpetas y archivos**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
@@ -90,3 +90,4 @@ Use el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> p
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   
  [How to: Find Subdirectories with a Specific Pattern](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  (Cómo: Buscar subdirectorios con un modelo concreto en Visual Basic)  
  [Obtener la colección de archivos de un directorio](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+

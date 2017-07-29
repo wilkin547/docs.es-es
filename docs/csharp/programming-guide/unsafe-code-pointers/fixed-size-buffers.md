@@ -1,5 +1,5 @@
 ---
-title: "Búferes de tamaño fijo (Guía de programación de C#) | Microsoft Docs"
+title: "Búferes de tamaño fijo (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6c5cacb588dc263e5b72e4b3cd93ad10b4b681f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Búferes de tamaño fijo (Guía de programación de C#)
@@ -55,7 +56,7 @@ private fixed char name[30];
   
  [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
- El tamaño de la matriz `char` de 128 elementos es 256 bytes. Los búferes [char](../../../csharp/language-reference/keywords/char.md) de tamaño fijo siempre admiten dos bytes por carácter, independientemente de la codificación. Esto es verdadero, incluso cuando se calculan las referencias de los búferes de caracteres a los métodos API o structs con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Para obtener más información, vea <xref:System.Runtime.InteropServices.CharSet>.  
+ El tamaño de la matriz `char` de 128 elementos es 256 bytes. Los búferes [char](../../../csharp/language-reference/keywords/char.md) de tamaño fijo siempre admiten dos bytes por carácter, independientemente de la codificación. Esto es verdadero, incluso cuando se calculan las referencias de los búferes de caracteres a los métodos API o structs con `CharSet = CharSet.Auto` o `CharSet = CharSet.Ansi`. Para obtener más información, consulta <xref:System.Runtime.InteropServices.CharSet>.  
   
  Otra matriz de tamaño fijo común es la matriz [bool](../../../csharp/language-reference/keywords/bool.md). Los elementos de una matriz `bool` siempre tienen un byte de tamaño. Las matrices `bool` no son adecuadas para crear matrices de bits o búferes.  
   
@@ -77,3 +78,4 @@ private fixed char name[30];
  [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [fixed (instrucción)](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [Interoperabilidad](../../../csharp/programming-guide/interop/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: Refactorizar en funciones puras (C#) | Microsoft Docs
+title: Refactorizar en funciones puras (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d0243dbc1a884cb48eeebd71079c3b17bc520553
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e3bb704cab77d4ad9895624bf7f721920000378
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactorizar en funciones puras (C#)
@@ -89,7 +89,7 @@ public class Program
 }  
 ```  
   
- Esta versión del programa crea el mismo resultado que la primera versión, porque la función `HypenatedConcat` ha cambiado el valor (estado) de su primer parámetro invocando la función de miembro <xref:System.Text.StringBuilder.Append%2A>. Tenga en cuenta que esta modificación se produce a pesar del hecho que `HypenatedConcat` usar el paso de parámetros llamada por valor.  
+ Esta versión del programa crea el mismo resultado que la primera versión porque la función `HypenatedConcat` ha cambiado el valor (estado) de su primer parámetro invocando la función de miembro <xref:System.Text.StringBuilder.Append%2A>. Tenga en cuenta que esta modificación se produce a pesar del hecho que `HypenatedConcat` usar el paso de parámetros llamada por valor.  
   
 > [!IMPORTANT]
 >  Para los tipos de referencia, si pasa un parámetro por valor, tiene como resultado una copia de la referencia a un objeto que se está pasando. Esta copia sigue asociada con los mismos datos de la instancia que la referencia original (hasta que la variable de referencia se asigna a un objeto nuevo). La llamada por referencia no es necesariamente requerida para que una función modifique un parámetro.  
@@ -126,3 +126,4 @@ class Program
 ## <a name="see-also"></a>Vea también  
  [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
  [Diferencias entre la programación funcional y la programación imperativa (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+

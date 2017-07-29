@@ -1,5 +1,5 @@
 ---
-title: Buscar archivos con un nombre o atributo especificados (C#) | Microsoft Docs
+title: Buscar archivos con un nombre o atributo especificados (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c52d03e0cd203fd52bae570c07e3241b7a54add
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2bfb7e19dcb6562dfc9b9efd24bec93774dfbee9
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Buscar archivos con un nombre o atributo especificados (C#)
@@ -85,3 +86,4 @@ class FindFileByExtension
 ## <a name="see-also"></a>Vea también  
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
  [LINQ and File Directories (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md) (LINQ y directorios de archivos [C#])
+

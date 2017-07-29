@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Descargar un archivo en Visual Basic | Microsoft Docs"
+title: "Cómo: Descargar un archivo en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,25 +34,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bd37b52d12876dad6ec4b2a1bb34f4987f933c08
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Cómo: Descargar un archivo en Visual Basic
-Se puede usar el método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> para descargar un archivo remoto y almacenarlo en una ubicación específica. Si el parámetro `ShowUI` se establece en `True`, se abre un cuadro de diálogo que muestra el progreso de la descarga y permite a los usuarios cancelar la operación. De forma predeterminada, no se sobrescriben los archivos existentes que tengan el mismo nombre. Si quiere sobrescribir los archivos existentes, establezca el parámetro `overwrite` en `True`.  
+El método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> se puede usar para descargar un archivo remoto y almacenarlo en una ubicación específica. Si el parámetro `ShowUI` se establece en `True`, se abre un cuadro de diálogo que muestra el progreso de la descarga y permite a los usuarios cancelar la operación. De forma predeterminada, no se sobrescriben los archivos existentes que tengan el mismo nombre. Si quiere sobrescribir los archivos existentes, establezca el parámetro `overwrite` en `True`.  
   
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nombre de la unidad no es válido (<xref:System.ArgumentException>).  
+-   El nombre de unidad no es válido (<xref:System.ArgumentException>).  
   
--   No se proporcionó la autenticación necesaria (<xref:System.UnauthorizedAccessException> o <xref:System.Security.SecurityException>).  
+-   No se ha proporcionado la autenticación necesaria (<xref:System.UnauthorizedAccessException> o <xref:System.Security.SecurityException>).  
   
 -   El servidor no responde en el `connectionTimeout` especificado (<xref:System.TimeoutException>).  
   
--   El sitio web deniega la solicitud (<xref:System.Net.WebException>).  
+-   El sitio web ha denegado la solicitud (<xref:System.Net.WebException>).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

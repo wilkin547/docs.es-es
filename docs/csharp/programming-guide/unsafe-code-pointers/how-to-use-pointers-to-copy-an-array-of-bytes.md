@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Usar punteros para copiar una matriz de bytes (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Utilizar punteros para copiar una matriz de bytes (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b9d6f93a92b48fcbdd70475ae4c1b8a62ddd9125
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 808a74f75e4dcbcec47735d98063138e2c7456e5
 ms.contentlocale: es-es
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Cómo: Utilizar punteros para copiar una matriz de bytes (Guía de programación de C#)
@@ -51,3 +51,4 @@ En el ejemplo siguiente se usan punteros para copiar bytes de una matriz a otra.
  [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [/unsafe (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)   
  [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)
+

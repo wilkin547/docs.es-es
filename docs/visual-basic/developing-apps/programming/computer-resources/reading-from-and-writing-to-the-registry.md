@@ -1,5 +1,5 @@
 ---
-title: Leer y escribir en el Registro (Visual Basic) | Microsoft Docs
+title: Leer y escribir en el Registro (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,17 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a093754423ba8b6942170792655e65e256df49bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 742aeb48f028918040479593a31b1223fba1b02f
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-and-writing-to-the-registry-visual-basic"></a>Leer y escribir en el Registro (Visual Basic)
 En este tema se describen las tareas y los temas conceptuales asociados al Registro.  
   
- Al programar en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], puede tener acceso al Registro mediante las funciones proporcionadas por [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] o mediante las clases de Registro de .NET Framework. El Registro hospeda información del sistema operativo, así como de las aplicaciones hospedadas en el equipo. Si trabaja con el Registro, puede poner en peligro la seguridad al permitir accesos inadecuados a recursos del sistema o a información protegida.  
+ Al programar en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], puede tener acceso al Registro mediante las funciones proporcionadas por [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] o mediante las clases de Registro de .NET Framework. El Registro hospeda información del sistema operativo, así como de las aplicaciones hospedadas en el equipo. Si trabaja con el Registro, puede poner en peligro la seguridad al permitir accesos inadecuados a recursos del sistema o a información protegida.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear una clave del Registro y establecer su valor](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
@@ -55,7 +55,7 @@ En este tema se describen las tareas y los temas conceptuales asociados al Regis
  Describe cómo usar el método `DeleteSubKey` de la propiedad `My.Computer.Registry.CurrentUser` para eliminar una clave del Registro.  
   
  [Leer y escribir en el Registro mediante Microsoft.Win32 Namespace](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
- Describe cómo usar las clases `Registry` y `RegistryKey` de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] para tener acceso al Registro.  
+ Describe cómo usar las clases `Registry` y `RegistryKey` de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para tener acceso al Registro.  
   
  [Seguridad y Registro](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Describe problemas de seguridad que afectan al Registro.  
@@ -66,3 +66,4 @@ En este tema se describen las tareas y los temas conceptuales asociados al Regis
   
  <xref:Microsoft.Win32.Registry>  
  Ofrece información general sobre la clase `Registry`, junto con vínculos a claves y miembros individuales.
+

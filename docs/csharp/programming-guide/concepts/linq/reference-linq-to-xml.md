@@ -1,5 +1,5 @@
 ---
-title: Referencia (LINQ to XML) | Microsoft Docs
+title: Referencia (LINQ to XML)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,21 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5afdbf5566e3c077252a6207ae965e48cf00ae83
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80aed8cce447ba3ea0e702e06bf88ec4840adc5b
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-linq-to-xml"></a>Referencia (LINQ to XML)
 Este tema contiene vínculos a temas de referencia asociados a LINQ to XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
- Si quiere obtener documentación de referencia sobre las clases de LINQ to XML, vea <xref:System.Xml.Linq>.  
+ Si desea obtener documentación de referencia sobre las clases de LINQ to XML, vea <xref:System.Xml.Linq>.  
   
- Si quiere obtener documentación de referencia sobre los métodos de extensión que ayudan a validar árboles XML en un archivo XSD, vea <xref:System.Xml.Schema.Extensions?displayProperty=fullName>.  
+ Si desea obtener documentación de referencia acerca de los métodos de extensión que le permiten validar árboles XML contra un archivo XSD, vea <xref:System.Xml.Schema.Extensions?displayProperty=fullName>.  
   
- Si quiere obtener documentación de referencia sobre los métodos de extensión que permiten evaluar consultas XPath en un árbol XML, vea <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
+ Si desea obtener documentación de referencia acerca de los métodos de extensión que le permiten evaluar consultas XPath sobre un árbol XML, vea <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.  
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+

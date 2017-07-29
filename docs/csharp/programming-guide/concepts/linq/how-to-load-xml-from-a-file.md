@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Cargar un documento XML desde un archivo (C#) | Microsoft Docs"
+title: "Cómo: Cargar un documento XML desde un archivo (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3d93bcde05cf69db3786385cb674bfc32a1e8708
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 683c87608ecc9dea71c55a4b3c426ad3fd9f36fe
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Cómo: Cargar un documento XML desde un archivo (C#)
-En este tema se muestra cómo cargar un documento XML desde un URI mediante el método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
+En este tema se muestra cómo cargar XML de una dirección URI usando el método <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra cómo cargar un documento XML desde un archivo. El siguiente ejemplo carga books.xml y produce el árbol XML en la consola.  
@@ -66,3 +67,4 @@ Console.WriteLine(booksFromFile);
   
 ## <a name="see-also"></a>Vea también  
  [Analizar XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Marcar a través de módems conectados a puertos serie en Visual Basic | Microsoft Docs"
+title: "Cómo: Marcar a través de módems conectados a puertos serie en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,15 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5670e930324740ca1ef16b3d27b0dee0e934d284
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0daaf35cdebac3d69ddc536124d4c86b96955b11
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Cómo: Marcar a través de módems conectados a puertos serie en Visual Basic
-En este tema se describe cómo usar `My.Computer.Ports` para marcar un módem en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+En este tema se describe cómo usar `My.Computer.Ports` para marcar un módem en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Normalmente, el módem se conecta a uno de los puertos serie del equipo. Para que la aplicación se comunique con el módem, debe enviar los comandos al puerto serie adecuado.  
   
@@ -65,7 +65,7 @@ En este tema se describe cómo usar `My.Computer.Ports` para marcar un módem en
 ## <a name="example"></a>Ejemplo  
  [!code-vb[VbVbalrMyComputer#27](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-dial-modems-attached-to-serial-ports_4.vb)]  
   
- Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Fragmentos de código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Este ejemplo de código también está disponible como fragmento de código de IntelliSense. En el selector de fragmentos de código, se encuentra en **Conectividad y redes**. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
  Este ejemplo requiere una referencia al espacio de nombres <xref:System?displayProperty=fullName>.  
@@ -83,3 +83,4 @@ En este tema se describe cómo usar `My.Computer.Ports` para marcar un módem en
  [Cómo: Enviar cadenas a puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
  [Cómo: Recibir cadenas de puertos serie](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)   
  [Mostrar los puertos serie disponibles](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+

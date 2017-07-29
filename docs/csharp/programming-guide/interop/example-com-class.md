@@ -1,5 +1,5 @@
 ---
-title: "Clases COM de ejemplo (Guía de programación de C#) | Microsoft Docs"
+title: "Clases COM de ejemplo (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2525d322bf3284c82356253d1383edbcd3928084
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a759a7dcd211207c8740dd99d592daa509ddec47
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="example-com-class-c-programming-guide"></a>Clases COM de ejemplo (Guía de programación de C#)
@@ -61,4 +62,5 @@ El siguiente es un ejemplo de una clase que se expondría como un objeto COM. Un
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Interoperabilidad](../../../csharp/programming-guide/interop/index.md)   
- [Página Compilar (Diseñador de proyectos) (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)
+ [Página Compilar (Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
+

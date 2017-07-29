@@ -1,5 +1,5 @@
 ---
-title: "Construcción funcional (LINQ to XML) (C#) | Microsoft Docs"
+title: "Construcción funcional (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa522bb2c9d1c570aff237a76fc745bad52c8bfc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fc5dd9ba35ab226b944f8d73593c7351bb5ef224
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>Construcción funcional (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona una manera eficaz de crear elementos XML denominada *construcción funcional*. La construcción funcional es la capacidad de crear un árbol XML en una sola instrucción.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona una manera eficaz de crear elementos XML denominada *construcción funcional*. La construcción funcional es la capacidad de crear un árbol XML en una sola instrucción.  
   
- Hay varias características fundamentales de la interfaz de programación de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] que permiten la construcción funcional:  
+ Hay varias características fundamentales de la interfaz de programación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que permiten la construcción funcional:  
   
 -   El constructor <xref:System.Xml.Linq.XElement> toma varios tipos de argumentos para el contenido. Por ejemplo, puede pasar otro objeto <xref:System.Xml.Linq.XElement>, que se convierte en un elemento secundario. Puede pasar un objeto <xref:System.Xml.Linq.XAttribute>, que se convierte en un atributo del elemento. O bien, puede pasar cualquier otro tipo de objeto, que se convierte en una cadena y en el contenido de texto del elemento.  
   
--   El constructor <xref:System.Xml.Linq.XElement> toma una matriz de `params` del tipo <xref:System.Object>, de manera que puede pasar cualquier número de objetos al constructor. Esto permite crear un elemento que tiene un contenido complejo.  
+-   El constructor <xref:System.Xml.Linq.XElement> toma una matriz de `params` del tipo <xref:System.Object>, de forma que puede pasar cualquier número de objetos al constructor. Esto permite crear un elemento que tiene un contenido complejo.  
   
--   Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, cada elemento de esta se agrega por separado. Esto es importante porque le permite pasar los resultados de una consulta de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] al constructor.  
+-   Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Esto es importante porque le permite pasar los resultados de una consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] al constructor.  
   
  Estas características permiten escribir código para crear un árbol XML. A continuación se muestra un ejemplo:  
   
@@ -54,7 +55,7 @@ XElement contacts =
     );  
 ```  
   
- Estas características también permiten escribir código que usa los resultados de las consultas de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] cuando crea un árbol XML, de la siguiente manera:  
+ Estas características también permiten escribir código que usa los resultados de las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] cuando crea un árbol XML, de la siguiente manera:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -88,3 +89,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>Vea también  
  [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))
+

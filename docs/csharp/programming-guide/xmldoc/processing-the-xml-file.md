@@ -1,5 +1,5 @@
 ---
-title: "Procesar el archivo XML (Guía de programación de C#) | Microsoft Docs"
+title: "Procesar el archivo XML (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 3a585025063847f93dc2c3b3747bd3406f89eae4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 610f3ac5c88fb41a4b55f2990fecdc4c13074e19
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
@@ -107,3 +107,4 @@ El compilador genera una cadena de identificador para cada construcción del có
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [/doc (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [Comentarios de documentación XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

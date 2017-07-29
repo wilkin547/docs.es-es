@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Usar propiedades indexadas en la programación de interoperabilidad COM (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: ae550ba7d3f2767cf7cc64a14bc177d15f426c36
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 19e620415adefd6190d3896377eaf6a7cf944f28
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Cómo: Utilizar propiedades indizadas en la programación de interoperabilidad COM (Guía de programación de C#)
@@ -72,3 +72,4 @@ Las *propiedades indexadas* mejoran la manera en que se usan las propiedades COM
  [How to: Use Named and Optional Arguments in Office Programming](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  [Cómo: Usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)]  
  [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)   
  [Tutorial: Programación de Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+

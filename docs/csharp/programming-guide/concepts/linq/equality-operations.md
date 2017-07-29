@@ -1,5 +1,5 @@
 ---
-title: Operaciones de igualdad (C#) | Microsoft Docs
+title: Operaciones de igualdad (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4d78b7b402a136f02a6fff02e3b2eac73d6a0106
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d987d21a7120d7b999e10e2943d690c6aa117f34
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="equality-operations-c"></a>Operaciones de igualdad (C#)
@@ -36,5 +37,6 @@ Dos secuencias cuyos respectivos elementos sean iguales y que tengan el mismo n�
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Linq>   
- [Información general sobre operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))  
  [How to: Compare the Contents of Two Folders (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md) (Cómo: Comparar el contenido de dos carpetas (LINQ) [C#])
+

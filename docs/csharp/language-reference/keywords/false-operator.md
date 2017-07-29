@@ -1,5 +1,5 @@
 ---
-title: false (Operador, Referencia de C#) | Microsoft Docs
+title: false (Operador, Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 22aaef73efc1d3327774336bf5b2c5475950ce25
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e12de403ca31952837913fdaaa8b221986f0e5fe
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="false-operator-c-reference"></a>false (Operador, Referencia de C#)
 Devuelve el valor [bool](../../../csharp/language-reference/keywords/bool.md) `true` para indicar que un operando es `false` y devuelve `false` en caso contrario.  
   
- Antes de C# 2.0, los operadores `true` y `false` se usaban para crear tipos de valor que aceptan valores NULL definidos por el usuario que eran compatibles con tipos como `SqlBool`. Pero ahora este lenguaje proporciona compatibilidad integrada para tipos de valor que aceptan valores NULL y, siempre que sea posible, deben usarse en lugar de sobrecargar los operadores `true` y `false`. Para más información, consulte [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL).  
+ Antes de C# 2.0, los operadores `true` y `false` se usaban para crear tipos de valor que aceptan valores NULL definidos por el usuario que eran compatibles con tipos como `SqlBool`. Pero ahora este lenguaje proporciona compatibilidad integrada para tipos de valor que aceptan valores NULL y, siempre que sea posible, deben usarse en lugar de sobrecargar los operadores `true` y `false`. Para obtener más información, vea [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#]).  
   
  Con valores booleanos que aceptan valores NULL, la expresión `a != b` no es necesariamente igual a `!(a == b)` porque es posible que uno o los dos valores sean NULL. Debe sobrecargar los operadores `true` y `false` por separado para controlar correctamente los valores NULL en la expresión. En el ejemplo siguiente se muestra cómo sobrecargar y usar los operadores `true` y `false`.  
   
@@ -58,3 +58,4 @@ Devuelve el valor [bool](../../../csharp/language-reference/keywords/bool.md) `t
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Operadores de C#](../../../csharp/language-reference/operators/index.md)   
  [true](../../../csharp/language-reference/keywords/true.md)
+

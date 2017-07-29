@@ -1,5 +1,5 @@
 ---
-title: Transformaciones de datos con LINQ (C#) | Microsoft Docs
+title: Transformaciones de datos con LINQ (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,11 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: b97d55045a999f3714a5af41fc4247e87684b6c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
@@ -131,3 +131,4 @@ ms.lasthandoff: 07/03/2017
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
  [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [select (cláusula)](../../../../csharp/language-reference/keywords/select-clause.md)
+

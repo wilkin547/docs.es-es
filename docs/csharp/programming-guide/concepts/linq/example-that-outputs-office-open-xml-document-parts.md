@@ -1,5 +1,5 @@
 ---
-title: Ejemplo que da como resultado partes de un documento de Office Open XML (C#) | Microsoft Docs
+title: Ejemplo que da como resultado partes de un documento de Office Open XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16b9636a914186fe5f2625b045127c6198939cb0
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7b2135a0894e1fa5a553552fa128809d740dea2
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Ejemplo que da como resultado partes de un documento de Office Open XML (C#)
@@ -27,7 +27,7 @@ Este tema muestra cómo abrir un documento XML abierto de Office y obtener acces
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo abre un documento XML abierto de Office e imprime las partes de documento y estilo de la consola.  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Usa tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -80,3 +80,4 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
   
 ## <a name="see-also"></a>Vea también  
  [Detalles de los documentos de WordprocessingML de Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+

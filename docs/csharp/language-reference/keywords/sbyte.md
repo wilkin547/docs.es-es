@@ -1,5 +1,5 @@
 ---
-title: sbyte (Referencia de C#) | Microsoft Docs
+title: sbyte (Referencia de C#)
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 2de7b352382f1a39ef73788c553d9bd881644019
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69741a5b9556c769156687584041667312550c17
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sbyte-c-reference"></a>sbyte (Referencia de C#)
@@ -121,7 +121,7 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  Para obtener más información sobre las reglas de conversión numéricas implícitas, vea la [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.SByte>   
@@ -132,3 +132,4 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#) | Microsoft Docs"
+title: "Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aabc07212e46b98e86ec0050474a4c2e34449550
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29cdf1ef54545bdbd96395dd4fe1d7c6b9f375e9
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Cómo: Usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (C#)
@@ -52,7 +53,7 @@ Se puede usar anotaciones para facilitar transformaciones de un árbol XML.
   
 -   Existe una regla especial; si un nodo secundario del nuevo elemento está en un espacio de nombres diferente, un espacio de nombres creado con esa finalidad (en este ejemplo, el espacio de nombres es `http://www.microsoft.com/LinqToXmlTransform/2007`), entonces el elemento secundario no se copia al nuevo árbol. En su lugar, si el espacio de nombres es el espacio de nombres especial mencionado anteriormente y el nombre local del elemento es `ApplyTransforms`, los nodos secundarios del elemento del árbol de origen se recorren en iteración y se copian al nuevo árbol (con la excepción que los elementos secundarios anotados se transforman de acuerdo con esas reglas).  
   
--   Esto es parecido a la especificación de transformaciones en XSL. La consulta que selecciona un conjunto de nodos es análoga a la expresión XPath para una plantilla. El código para crear el nuevo <xref:System.Xml.Linq.XElement> que se guarda como anotación es análogo al constructor de secuencias en XSL y el elemento `ApplyTransforms` es análogo en funcionamiento al elemento `xsl:apply-templates` en XSL.  
+-   Esto es parecido a la especificación de transformaciones en XSL. La consulta que selecciona un conjunto de nodos es análoga a la expresión XPath para una plantilla. El código para crear el nuevo <xref:System.Xml.Linq.XElement> que se guarda como anotación es análogo al constructor de secuencias en XSL y el elemento `ApplyTransforms` es análogo en función al elemento `xsl:apply-templates` en XSL.  
   
 -   Una ventaja de este enfoque es que al formular consultas siempre se escriben consultas en el árbol de origen sin modificar. No hay que preocuparse de cómo afectan a las consultas que se están escribiendo las modificaciones del árbol.  
   
@@ -449,3 +450,4 @@ After Transform
   
 ## <a name="see-also"></a>Vea también  
  [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

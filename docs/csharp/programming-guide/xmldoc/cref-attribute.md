@@ -1,5 +1,5 @@
 ---
-title: "Atributo cref (Guía de programación de C#) | Microsoft Docs"
+title: "Atributo cref (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,15 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 781efb81acab79dfbcd72c24761aa3dfdd79940c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cref-attribute-c-programming-guide"></a>Atributo cref (Guía de programación de C#)
-El atributo `cref` en una etiqueta de documentación XML significa "referencia de código". Especifica que el texto interno de la etiqueta es un elemento de código, como un tipo, un método o una propiedad. En herramientas de documentación como [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061), use los atributos `cref` para generar hipervínculos a la página donde se documenta el tipo o miembro de manera automática.  
+El atributo `cref` en una etiqueta de documentación XML significa "referencia de código". Especifica que el texto interno de la etiqueta es un elemento de código, como un tipo, un método o una propiedad. En herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB), use los atributos `cref` para generar hipervínculos a la página donde se documenta el tipo o miembro de manera automática.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestran los atributos `cref` que se usan en las etiquetas [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
@@ -44,7 +44,7 @@ El atributo `cref` en una etiqueta de documentación XML significa "referencia d
   
  Cuando se compila, el programa genera el archivo XML siguiente. Observe que, por ejemplo, el compilador ha transformado el atributo `cref` del método `GetZero` en `"M:TestNamespace.TestClass.GetZero"`. El prefijo "M:" significa "método", una convención reconocida por las herramientas de documentación tales como Sandcastle. Para obtener una lista completa de los prefijos, vea [Procesar el archivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <doc>  
     <assembly>  

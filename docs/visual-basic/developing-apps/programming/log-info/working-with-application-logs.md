@@ -1,5 +1,5 @@
 ---
-title: Trabajar con registros de aplicaciones en Visual Basic | Microsoft Docs
+title: Trabajar con registros de aplicaciones en Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabajar con registros de aplicaciones en Visual Basic
@@ -55,11 +55,11 @@ Los objetos `My.Applicaton.Log` y `My.Log` facilitan la escritura de informació
  ![Configuración de My Log](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>Dónde se registran los mensajes  
- Si el ensamblado no tiene ningún archivo de configuración, los objetos `My.Application.Log` y `My.Log` escriben en la salida de depuración de la aplicación (a través de la clase <xref:System.Diagnostics.DefaultTraceListener>). Además, el objeto `My.Application.Log` escribe en el archivo de registro del ensamblado (a través de la clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), mientras que el objeto `My.Log` escribe en la salida de la página web ASP.NET (a través de la clase <xref:System.Web.WebPageTraceListener>).  
+ Si el ensamblado no tiene ningún archivo de configuración, los objetos `My.Application.Log` y `My.Log` escriben en la salida de depuración de la aplicación (a través de la clase <xref:System.Diagnostics.DefaultTraceListener> ). Además, el objeto `My.Application.Log` escribe en el archivo de registro del ensamblado (a través de la clase <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), mientras que el objeto `My.Log` escribe en la salida de la página web ASP.NET (a través de la clase <xref:System.Web.WebPageTraceListener>).  
   
- La salida de depuración se puede ver en la ventana [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] **Output** window when running your application in debug mode. Para abrir la ventana **Salida** , haga clic en el elemento de menú **Depurar** , seleccione **Windows**, y, después, haga clic en **Salida**. En la ventana **Salida** , seleccione **Depurar** desde el cuadro **Mostrar resultados desde** .  
+ La salida de depuración se puede ver en la ventana [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Output** window when running your application in debug mode. Para abrir la ventana **Salida** , haga clic en el elemento de menú **Depurar** , seleccione **Windows**, y, después, haga clic en **Salida**. En la ventana **Salida** , seleccione **Depurar** desde el cuadro **Mostrar resultados desde** .  
   
- De forma predeterminada, `My.Application.Log` escribe el archivo de registro en la ruta de acceso de los datos de aplicaciones del usuario. Puede obtener la ruta de acceso de la propiedad <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> del objeto <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A>. El formato de la ruta de acceso es el siguiente:  
+ De forma predeterminada, `My.Application.Log` escribe el archivo de registro en la ruta de acceso de los datos de aplicaciones del usuario. Puede obtener la ruta de acceso de la propiedad <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> del objeto <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> . El formato de la ruta de acceso es el siguiente:  
   
  `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`  
   
@@ -84,7 +84,7 @@ Los objetos `My.Applicaton.Log` y `My.Log` facilitan la escritura de informació
   
  En el código siguiente, se muestran ejemplos de los nodos `<sources>`, `<switches>`y `<sharedListeners>` :  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -130,3 +130,4 @@ Los objetos `My.Applicaton.Log` y `My.Log` facilitan la escritura de informació
 ## <a name="see-also"></a>Vea también  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Registrar información de la aplicación](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

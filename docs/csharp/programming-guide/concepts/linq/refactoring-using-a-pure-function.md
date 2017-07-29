@@ -1,5 +1,5 @@
 ---
-title: "Refactorización mediante una función pura (C#) | Microsoft Docs"
+title: "Refactorización mediante una función pura (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1484794352f326cd1045c6ba7c39e064e69146b
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d918c5f37f92f5da7ca535b05b8ff3a97dc851bf
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactorización mediante una función pura (C#)
@@ -29,7 +29,7 @@ En el siguiente ejemplo se refactoriza el ejemplo anterior, [Refactorizar median
   
  Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Usa tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -195,3 +195,4 @@ StyleName:Code >Hello World<
  [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
  [Refactorizar mediante un método de extensión (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
  [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "C처mo: Registrar excepciones en Visual Basic | Microsoft Docs"
+title: "C처mo: Registrar excepciones en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 8a5233f5e39c5e6c423a453cd241be40877d2ba8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: adf2dc683a139d21f24379efc779d4510a2057eb
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>C처mo: Registrar excepciones en Visual Basic
@@ -99,3 +99,4 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
  [C처mo: Escribir mensajes de registro](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Tutorial: Determinar el lugar en el que My.Application.Log escribe la informaci처n](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
  [Tutorial: Cambiar el lugar donde My.Application.Log escribe informaci처n](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+

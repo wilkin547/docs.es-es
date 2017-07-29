@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#) | Microsoft Docs"
+title: "Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81d0ba2403726f76d50465e1776e6e91ea49d355
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7a83c9fc88b6e59cc1c8308d92464591896d312
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Cómo: Hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
   
- Una opción consiste en escribir la aplicación con <xref:System.Xml.XmlReader>. Pero quizás prefiera usar [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, vea [How to: Write a LINQ to XML Axis Method (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md) (Cómo: Escribir un método de eje de LINQ to XML [C#]).  
+ Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>. Pero quizás prefiera usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, vea [How to: Write a LINQ to XML Axis Method (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md) (Cómo: Escribir un método de eje de LINQ to XML [C#]).  
   
- Para escribir su propio método de eje, debe escribir un pequeño método que use <xref:System.Xml.XmlReader> para leer los nodos hasta llegar a uno de los nodos en el que esté interesado. El método llama luego a <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de <xref:System.Xml.XmlReader> y crea instancias de un fragmento XML. A continuación ofrece cada fragmento a través de `yield return` al método que está enumerando su método de eje personalizado. A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
+ Para escribir su propio método de eje, debe escribir un pequeño método que utiliza los nodos <xref:System.Xml.XmlReader> para leer hasta que llega a uno de los nodos en el que está interesado. A continuación el método llama a <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de <xref:System.Xml.XmlReader> y crea una instancia de un fragmento XML. A continuación ofrece cada fragmento a través de `yield return` al método que está enumerando su método de eje personalizado. A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
   
- Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Determinados operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, iteran su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia. Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña.  
+ Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia. Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña.  
   
 ## <a name="example"></a>Ejemplo  
  A veces el problema se pone un poco más interesante. En el siguiente documento XML, el consumidor de su método de eje personalizado también tiene que conocer el nombre del cliente al que pertenece cada elemento.  
@@ -184,3 +185,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>Vea también  
  [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

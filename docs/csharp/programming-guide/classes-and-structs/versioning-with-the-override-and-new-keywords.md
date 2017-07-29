@@ -1,5 +1,5 @@
 ---
-title: "Control de versiones con las palabras clave override y new (Guía de programación de C#) | Microsoft Docs"
+title: "Control de versiones con las palabras clave Override y New (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b464b4c395af093bb9124bb671c5c212c750f497
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
@@ -77,7 +78,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
   
  [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- Si no quiere que el método reemplace al nuevo método de clase base, se aplican las consideraciones siguientes. Para evitar la confusión entre los dos métodos, puede cambiarle el nombre a su método. Esto puede ser un proceso lento y propenso a errores y no resultar práctico en algunos casos. Pero si el proyecto es relativamente pequeño, puede usar opciones de refactorización de Visual Studio para cambiar el nombre del método. Para obtener más información, vea [Refactoring Classes and Types (Class Designer)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer) (Refactorización de clases y tipos [Diseñador de clases]).  
+ Si no quiere que el método reemplace al nuevo método de clase base, se aplican las consideraciones siguientes. Para evitar la confusión entre los dos métodos, puede cambiarle el nombre a su método. Esto puede ser un proceso lento y propenso a errores y no resultar práctico en algunos casos. Pero si el proyecto es relativamente pequeño, puede usar opciones de refactorización de Visual Studio para cambiar el nombre del método. Para obtener más información, vea [Refactoring Classes and Types (Class Designer)](/visualstudio/ide/refactoring-classes-and-types-class-designer) (Refactorización de clases y tipos [Diseñador de clases]).  
   
  También puede evitar la advertencia mediante la palabra clave `new` en la definición de clase derivada:  
   
@@ -105,3 +106,4 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
  [Clases y estructuras](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Methods](../../../csharp/programming-guide/classes-and-structs/methods.md)  (Métodos [Guía de programación de C#])  
  [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+

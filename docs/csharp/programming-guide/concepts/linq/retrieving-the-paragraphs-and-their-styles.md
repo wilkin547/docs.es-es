@@ -1,5 +1,5 @@
 ---
-title: "Recuperar los párrafos y sus estilos (C#) | Microsoft Docs"
+title: "Recuperar los párrafos y sus estilos (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fddaa5e25befc40278888c0b401ad39a61e8e9d4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db420c0aca9edadb8009556ebf476f196ee7641a
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recuperar los párrafos y sus estilos (C#)
@@ -35,7 +35,7 @@ En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de u
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- Esta expresión es similar al origen de la consulta del ejemplo anterior, [Buscar el estilo de párrafo predeterminado (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La principal diferencia es que usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> en lugar del eje <xref:System.Xml.Linq.XContainer.Elements%2A>. La consulta usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> porque en los documentos que tienen secciones los párrafos no serán los elementos secundarios directos del elemento de cuerpo. En su lugar, los párrafos estarán dos niveles por debajo en la jerarquía. Mediante el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>, el código funcionará independientemente de si el documento usa secciones.  
+ Esta expresión es similar al origen de la consulta del ejemplo anterior, [Buscar el estilo de párrafo predeterminado (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La diferencia principal radica en que usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> en lugar del eje <xref:System.Xml.Linq.XContainer.Elements%2A>. La consulta usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> porque en los documentos que tienen secciones, lo párrafos no serán los secundarios directos del elemento de cuerpo; en su lugar, los párrafos estarán dos niveles por debajo en la jerarquía. Mediante el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>, el código funcionará independientemente de que el documento use secciones o no.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta usa una cláusula `let` para determinar el elemento que contiene el nodo de estilo. Si no hay ningún elemento, `styleNode` se establece en `null`:  
@@ -44,7 +44,7 @@ xDoc.Root.Element(w + "body").Descendants(w + "p")
 let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()  
 ```  
   
- La cláusula `let` usa primero el eje <xref:System.Xml.Linq.XContainer.Elements%2A> para encontrar todos los elementos denominados `pPr`, luego usa el método de extensión <xref:System.Xml.Linq.Extensions.Elements%2A> para encontrar todos los elementos secundarios denominados `pStyle` y, por último, usa el operador de consulta estándar <xref:System.Linq.Enumerable.FirstOrDefault%2A> para convertir la colección en un singleton. Si la colección está vacía, `styleNode` se establece en `null`. Se trata de un método útil para buscar el nodo descendiente `pStyle`. Tenga en cuenta que si el nodo secundario `pPr` no existe, el código no produce errores generando una excepción; en su lugar, `styleNode` se establece en `null`, que es el comportamiento deseado de esta cláusula `let`.  
+ La cláusula `let` usa primero el eje <xref:System.Xml.Linq.XContainer.Elements%2A> para encontrar todos los elementos llamados `pPr`, luego usa el método de extensión <xref:System.Xml.Linq.Extensions.Elements%2A> para encontrar todos los elementos secundarios llamados `pStyle` y por último usa el operador de consulta estándar <xref:System.Linq.Enumerable.FirstOrDefault%2A> para convertir la colección en un singleton. Si la colección está vacía, `styleNode` se establece en `null`. Se trata de un método útil para buscar el nodo descendiente `pStyle`. Tenga en cuenta que si el nodo secundario `pPr` no existe, el código no produce errores generando una excepción; en su lugar, `styleNode` se establece en `null`, que es el comportamiento deseado de esta cláusula `let`.  
   
  La consulta proyecta una colección de un tipo anónimo con dos miembros, `StyleName` y `ParagraphNode`.  
   
@@ -53,7 +53,7 @@ let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()
   
  Encontrará instrucciones sobre cómo crear el documento de origen para este ejemplo en [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Usa tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -146,3 +146,4 @@ StyleName:Code
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

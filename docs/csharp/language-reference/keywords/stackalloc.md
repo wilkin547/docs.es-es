@@ -1,5 +1,5 @@
 ---
-title: stackalloc (Referencia de C#) | Microsoft Docs
+title: stackalloc (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53d61cfdcf4d356a28881c57ad923017c2b479ae
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referencia de C#)
@@ -57,7 +57,7 @@ block = stackalloc int[100];
   
  Como implica tipos de puntero, `stackalloc` requiere contexto [unsafe](../../../csharp/language-reference/keywords/unsafe.md). Para obtener más información, vea [Unsafe Code and Pointers](../../../csharp/programming-guide/unsafe-code-pointers/index.md) (Código no seguro y punteros [Guía de programación de C#]).  
   
- `stackalloc` es como [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca) en la biblioteca en tiempo de ejecución de C.  
+ `stackalloc` es como [_alloca](/cpp/c-runtime-library/reference/alloca) en la biblioteca en tiempo de ejecución de C.  
   
  En el ejemplo siguiente se calculan y muestran los 20 primeros números de la secuencia de Fibonacci. Cada número es la suma de los dos números anteriores. En el código, se asigna a la pila, no al montón, un bloque de memoria de tamaño suficiente para contener 20 elementos del tipo `int`. La dirección del bloque se almacena en el puntero `fib`. Esta memoria no está sujeta a la recolección de elementos no utilizados y, por tanto, no necesita fijarse (mediante [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)). La duración del bloque de memoria se limita a la duración del método que lo define. No se puede liberar la memoria antes de que el método vuelva.  
   
@@ -76,3 +76,4 @@ block = stackalloc int[100];
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md)  (Palabras clave de operador [Referencia de C#])  
  [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

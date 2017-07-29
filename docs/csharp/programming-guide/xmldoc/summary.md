@@ -1,5 +1,5 @@
 ---
-title: "&lt;summary&gt; (Guía de programación de C#) | Microsoft Docs"
+title: "&lt;summary&gt; (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,17 +32,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b74e5bf964ff82f88fe2822257a64eccb5697535
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd96e58494196fcfdeb46e9e59481666ec9466f3
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt; (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```xml  
 <summary>description</summary>  
 ```  
   
@@ -51,18 +51,18 @@ ms.lasthandoff: 03/13/2017
  Resumen del objeto.  
   
 ## <a name="remarks"></a>Comentarios  
- La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo. Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) para agregar información adicional a una descripción de tipo. Use el [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para permitir que herramientas de documentación como [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) creen hipervínculos internos a las páginas de documentación de los elementos de código.  
+ La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo. Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) para agregar información adicional a una descripción de tipo. Use el [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para permitir que herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB) creen hipervínculos internos a las páginas de documentación de los elementos de código.  
   
  El texto de la etiqueta \<summary> es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana Examinador de objetos.  
   
- Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061).  
+ Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  En el ejemplo anterior se genera el siguiente archivo XML.  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <doc>  
     <assembly>  
@@ -92,7 +92,7 @@ ms.lasthandoff: 03/13/2017
   
  En el ejemplo anterior se genera el siguiente archivo XML.  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <doc>  
     <assembly>  

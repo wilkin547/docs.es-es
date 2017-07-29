@@ -1,5 +1,5 @@
 ---
-title: "Constructores de instancias (Guía de programación de C#) | Microsoft Docs"
+title: "Constructores de instancias (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 5c579c28c6b298cc0aefe0cb9eb41993b84a23d8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f93f622d5bf99ab7e8b1d8338192ff58472813dd
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Constructores de instancias (Guía de programación de C#)
@@ -86,3 +86,4 @@ Los constructores de instancias se usan para crear e inicializar las variables m
  [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md)  (Constructores [Guía de programación de C#])  
  [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)
+

@@ -1,5 +1,5 @@
 ---
-title: static (Referencia de C#) | Microsoft Docs
+title: static (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 36c9fd396914f2d958615b9f62666a0d0cc47fc1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e46dc2f00d1c185379dba1017ca445b9ae5ae72
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-c-reference"></a>static (Referencia de C#)
@@ -66,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  Las clases y las clases estáticas pueden tener constructores estáticos. Se llama a los constructores estáticos en algún momento entre el inicio del programa y la creación de una instancia de la clase.  
   
 > [!NOTE]
->  La palabra clave `static` tiene usos más limitados que en C++. Para ver una comparación con la palabra clave de C++, vea [Clases de almacenamiento (C++)](https://docs.microsoft.com/cpp/cpp/storage-classes-cpp#static).
+>  La palabra clave `static` tiene usos más limitados que en C++. Para ver una comparación con la palabra clave de C++, vea [Clases de almacenamiento (C++)](/cpp/cpp/storage-classes-cpp#static).
   
  Para demostrar cómo funcionan los miembros estáticos, imagine una clase que represente el empleado de una empresa. Supongamos que la clase contiene un método de recuento de empleados y un campo para almacenar el número de empleados. El método y el campo no pertenecen a ninguna instancia de empleado. En su lugar, pertenecen a la clase de la empresa. Por lo tanto, se deben declarar como miembros estáticos de la clase.  
   
