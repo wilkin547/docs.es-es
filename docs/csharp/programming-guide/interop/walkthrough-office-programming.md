@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Programación de Office (C# y Visual Basic) | Microsoft Docs"
+title: "Tutorial: Programación de Office (C# y Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
@@ -47,9 +47,9 @@ En este tutorial se muestran estas características en el contexto de la program
 
 Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equipo para completar este tutorial.  
   
- Si usa un sistema operativo anterior a [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)], asegúrese de que [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] esté instalado.  
+ Si usa un sistema operativo anterior a [!INCLUDE[windowsver](~/includes/windowsver-md.md)], asegúrese de que [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] esté instalado.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>Para configurar una aplicación complemento de Excel  
   
@@ -73,7 +73,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y luego haga clic en **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-2.  En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalar ensamblados de interoperabilidad primarios de Office](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
+2.  En la pestaña **Ensamblados**, seleccione **Microsoft.Office.Interop.Excel**, versión `<version>.0.0.0` (para obtener una clave de los números de versión de productos de Office, vea [Versiones de Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)), en la lista **Nombre de componente** y, después, mantenga presionada la tecla CTRL y seleccione **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`. Si no ve los ensamblados, asegúrese de que están instalados y que se muestran (vea [Cómo: Instalar ensamblados de interoperabilidad primarios de Office](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).  
   
 3.  Haga clic en **Aceptar**.  
   
@@ -105,7 +105,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
      En este método se utilizan dos características de C# nuevas. Ambas características ya existen en Visual Basic.  
   
-    -   El método [Add](http://go.microsoft.com/fwlink/?LinkId=210910) tiene un *parámetro opcional* para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el ejemplo anterior no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   El método [Add](http://go.microsoft.com/fwlink/?LinkId=210910) tiene un *parámetro opcional* para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el ejemplo anterior no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Para obtener más información, vea [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
@@ -215,3 +215,4 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
  [Tutorial: Crear el primer complemento de VSTO para Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
  [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)   
  [Interoperabilidad](../../../csharp/programming-guide/interop/index.md)
+

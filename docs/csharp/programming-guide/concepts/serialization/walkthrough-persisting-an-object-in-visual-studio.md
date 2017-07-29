@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Conservar un objeto en Visual Studio (C#) | Microsoft Docs'
+title: 'Tutorial: Conservar un objeto en Visual Studio (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f76e40e2503bf857922490d728c3a9f3432aa31f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>Tutorial: Conservar un objeto en Visual Studio (C#)
@@ -44,7 +45,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
   
 ### <a name="to-create-the-loan-class"></a>Para crear la clase Loan  
   
-1.  Cree un nuevo proyecto de bibliotecas de clases y denomínelo "LoanClass". Para más información, vea [Crear soluciones y proyectos](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1.  Cree un nuevo proyecto de bibliotecas de clases y denomínelo "LoanClass". Para más información, vea [Crear soluciones y proyectos](/visualstudio/ide/creating-solutions-and-projects).  
   
 2.  En el **Explorador de soluciones**, abra el menú contextual del archivo Class1 y pulse **Cambiar nombre**. Cambie el nombre del archivo a `Loan` y pulse ENTRAR. Al cambiar el nombre del archivo también se cambiará el nombre de la clase a `Loan`.  
   
@@ -203,7 +204,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
     }  
     ```  
   
-     Tenga en cuenta que primero debe comprobar que existe el archivo. Si existe, cree una clase <xref:System.IO.Stream> para leer el archivo binario y una clase <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para convertir el archivo. También necesita convertir del tipo de secuencia al tipo de objeto Loan.  
+     Tenga en cuenta que primero debe comprobar que existe el archivo. Si existe, cree una clase <xref:System.IO.Stream> para leer el archivo binario y una clase <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para traducirlo. También necesita convertir del tipo de secuencia al tipo de objeto Loan.  
   
  Después, debe agregar código para guardar los datos que se han escrito en los cuadros de texto en la clase `Loan` y, luego, debe serializar la clase en un archivo.  
   

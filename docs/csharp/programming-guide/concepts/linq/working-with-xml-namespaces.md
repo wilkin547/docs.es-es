@@ -1,5 +1,5 @@
 ---
-title: Trabajar con espacios de nombres XML (C#) | Microsoft Docs
+title: Trabajar con espacios de nombres XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3b0a211d7cd699238b86c00c78f9920d4053a2d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98627e6944f774bb74f705c8c8607e856e1c1195
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-xml-namespaces-c"></a>Trabajar con espacios de nombres XML (C#)
-En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] admite espacios de nombres.  
+En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admite espacios de nombres.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Información general sobre los espacios de nombres (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|En este tema se presentan los espacios de nombres, la clase <xref:System.Xml.Linq.XName> y la clase <xref:System.Xml.Linq.XNamespace>.|  
+|[Información general sobre los espacios de nombres (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Este tema presenta los espacios de nombres, la clase <xref:System.Xml.Linq.XName> y la clase <xref:System.Xml.Linq.XNamespace>.|  
 |[Cómo crear un documento con espacios de nombres (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|Muestra cómo crear documentos con espacios de nombres.|  
 |[Cómo controlar prefijos de espacios de nombres (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Muestra cómo controlar los prefijos de los espacios de nombres insertando atributos de espacios de nombres en el árbol XML.|  
 |[Ámbito del espacio de nombres predeterminado de C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Demuestra la forma apropiada de escribir consultas para XML en el espacio de nombres predeterminado.|  
@@ -40,3 +41,4 @@ En los temas de esta sección se describe cómo [!INCLUDE[sqltecxlinq](../../../
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

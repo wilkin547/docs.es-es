@@ -1,5 +1,5 @@
 ---
-title: "Variables locales con tipo implícito (Guía de programación de C#) | Microsoft Docs"
+title: "Variables locales con asignación implícita de tipos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
-ms.openlocfilehash: 21180ce100f81e38b327347e548929a47a2e029d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cc02c0f7ef5fbbbf3c60188426a8027f6a60fb89
 ms.contentlocale: es-es
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales con asignación implícita de tipos (Guía de programación de C#)
@@ -69,7 +69,7 @@ Las variables locales pueden declararse sin proporcionar un tipo explícito. La 
  Para obtener más información, vea [Cómo: Usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).  
   
 ## <a name="var-and-anonymous-types"></a>var y tipos anónimos  
- En muchos casos, el uso de `var` es opcional y es simplemente una comodidad sintáctica. Pero cuando una variable se inicializa con un tipo anónimo, la variable se debe declarar como `var` si necesita acceder más adelante a las propiedades del objeto. Se trata de un escenario común en expresiones de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]. Para obtener más información, consulte [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).  
+ En muchos casos, el uso de `var` es opcional y es simplemente una comodidad sintáctica. Pero cuando una variable se inicializa con un tipo anónimo, la variable se debe declarar como `var` si necesita acceder más adelante a las propiedades del objeto. Se trata de un escenario común en expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, consulte [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) (Tipos anónimos [Guía de programación de C#]).  
   
  Desde el punto de vista del código fuente, un tipo anónimo no tiene nombre. Por lo tanto, si una variable de consulta se ha inicializado con `var`, la única manera de tener acceso a las propiedades de la secuencia de objetos devuelta consiste en usar `var` como el tipo de la variable de iteración en la instrucción `foreach`.  
   

@@ -1,5 +1,5 @@
 ---
-title: . Operador (Referencia de C#) | Microsoft Docs
+title: . Operador (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 45c775fe92e61de7be2356218f33964071e96c07
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdc7c1821548509f3a3750aef2836c034f7aa53b
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-operator-c-reference"></a>. Operador (Referencia de C#)
@@ -72,3 +72,4 @@ El operador punto (`.`) se usa para el acceso a miembros. El operador punto espe
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+

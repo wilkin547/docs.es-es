@@ -1,5 +1,5 @@
 ---
-title: "Proyección de XML en una forma distinta (C#) | Microsoft Docs"
+title: "Proyección de XML en una forma distinta (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2c22dfc18b0ab25157bec1642fc18d8adb442dc7
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5de9010f35ee5a7537e99f19369d0b84422df03
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Proyección de XML en una forma distinta (C#)
@@ -31,7 +31,7 @@ Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es difere
   
  Para obtener instrucciones sobre cómo crear el documento de origen de este ejemplo, vea [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Usa tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=fullName>.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -249,3 +249,4 @@ class Program
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Manipular contenido en un documento de WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

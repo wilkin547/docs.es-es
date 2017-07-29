@@ -1,5 +1,5 @@
 ---
-title: Documentos XML de ejemplo (LINQ to XML) | Microsoft Docs
+title: Documentos XML de ejemplo (LINQ to XML)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f84017dc60724191b7516937622fd2fb5d03c5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4fb20e2c40e6059c6bbf99b7bce5b6dd363df7a3
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documentos XML de ejemplo (LINQ to XML)
-Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los fragmentos de código de la documentación de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los fragmentos de código de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
 >  Las compañías, organizaciones, productos, nombres de dominio, direcciones de correo electrónico, logotipos, personas, lugares y eventos que se citan a modo de ejemplo son ficticios. No se pretende establecer ni se debe inferir ninguna asociación con ninguna empresa, organización, producto, nombre de dominio, dirección de correo electrónico, logotipo, persona, lugar ni evento real.  
@@ -51,3 +52,4 @@ Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los f
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

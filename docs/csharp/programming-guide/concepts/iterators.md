@@ -1,5 +1,5 @@
 ---
-title: Iteradores (C#) | Microsoft Docs
+title: Iteradores (C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,11 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
@@ -53,7 +53,7 @@ public static System.Collections.IEnumerable SomeNumbers()
   
  El tipo de valor devuelto de un método de iterador o descriptor de acceso `get` puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Se puede usar una instrucción `yield break` para finalizar la iteración.  
+ Puede usar una instrucción `yield break` para finalizar la iteración.  
   
  Los iteradores se añadieron a C# en Visual Studio 2005.  
   
@@ -368,7 +368,7 @@ public class Stack<T> : IEnumerable<T>
   
  Los iteradores no admiten el método <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName>. Para volver a recorrer en iteración desde el principio, se debe obtener un nuevo iterador.  
   
- Para obtener más información, vea la [Especificación del lenguaje C#](../../../csharp/language-reference/language-specification.md).  
+ Para obtener más información, vea la [Especificación del lenguaje C#](../../../csharp/language-reference/language-specification/index.md).  
   
 ##  <a name="BKMK_UseOfIterators"></a> Uso de iteradores  
  Los iteradores permiten mantener la simplicidad de un bucle `foreach` cuando se necesita usar código complejo para rellenar una secuencia de lista. Esto puede ser útil si quiere hacer lo siguiente:  
@@ -386,3 +386,4 @@ public class Stack<T> : IEnumerable<T>
  [yield](../../../csharp/language-reference/keywords/yield.md)   
  [Usar foreach con matrices](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
  [Genéricos](../../../csharp/programming-guide/generics/index.md)
+

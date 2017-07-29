@@ -1,5 +1,5 @@
 ---
-title: "Información general sobre interoperabilidad (Guía de programación de C#) | Microsoft Docs"
+title: "Información general sobre interoperabilidad (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 5084c4af3334c39f844fec67a1ab05dd9443bf27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
@@ -50,7 +50,7 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
 >  [Common Language Runtime](../../../standard/clr.md) (CLR) administra el acceso a los recursos del sistema. Si se llama al código no administrado que está fuera de CLR, se omite este mecanismo de seguridad y, por lo tanto, existe un riesgo de seguridad. Por ejemplo, el código no administrado podría llamar directamente a recursos en código no administrado, omitiendo los mecanismos de seguridad de CLR. Para obtener más información, vea [Seguridad de .NET Framework](http://go.microsoft.com/fwlink/?LinkId=37122).  
   
 ## <a name="c-interop"></a>Interoperabilidad de C++  
- Puede usar la interoperabilidad de C++, también conocida como It Just Works (IJW), para encapsular una clase de C++ nativa de modo que el código creado en C# o en otro lenguaje de .NET Framework pueda consumirla. Para ello, escriba código de C++ para encapsular un componente DLL o COM nativo. A diferencia de otros lenguajes de .NET Framework, [!INCLUDE[vcprvc](../../../csharp/programming-guide/interop/includes/vcprvc_md.md)] cuenta con compatibilidad de interoperabilidad que permite que haya código administrado y no administrado en la misma aplicación, e incluso en el mismo archivo. Después, compile el código de C++ mediante el modificador del compilador **/clr** para generar un ensamblado administrado. Finalmente, agregue una referencia al ensamblado en el proyecto de C# y use los objetos encapsulados igual que usaría otras clases administradas.  
+ Puede usar la interoperabilidad de C++, también conocida como It Just Works (IJW), para encapsular una clase de C++ nativa de modo que el código creado en C# o en otro lenguaje de .NET Framework pueda consumirla. Para ello, escriba código de C++ para encapsular un componente DLL o COM nativo. A diferencia de otros lenguajes de .NET Framework, [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] cuenta con compatibilidad de interoperabilidad que permite que haya código administrado y no administrado en la misma aplicación, e incluso en el mismo archivo. Después, compile el código de C++ mediante el modificador del compilador **/clr** para generar un ensamblado administrado. Finalmente, agregue una referencia al ensamblado en el proyecto de C# y use los objetos encapsulados igual que usaría otras clases administradas.  
   
 ## <a name="exposing-com-components-to-c"></a>Exponer componentes COM en C#  
  Puede usar un componente COM de un proyecto de C#. Los pasos generales son los siguientes:  
@@ -59,7 +59,7 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
   
 2.  Agregue al proyecto una referencia a la biblioteca de tipos o al componente COM.  
   
-     Al agregar la referencia, [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] usa [Tlbimp.exe (importador de la biblioteca de tipos)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), que toma una biblioteca de tipos como entrada para generar un ensamblado de interoperabilidad de .NET Framework. El ensamblado, también denominado "contenedor RCW", contiene las clases e interfaces administradas que encapsulan las interfaces y clases COM que se encuentran en la biblioteca de tipos. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] agrega al proyecto una referencia al ensamblado generado.  
+     Al agregar la referencia, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa [Tlbimp.exe (importador de la biblioteca de tipos)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), que toma una biblioteca de tipos como entrada para generar un ensamblado de interoperabilidad de .NET Framework. El ensamblado, también denominado "contenedor RCW", contiene las clases e interfaces administradas que encapsulan las interfaces y clases COM que se encuentran en la biblioteca de tipos. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] agrega al proyecto una referencia al ensamblado generado.  
   
 3.  Cree una instancia de una clase definida en el RCW. Este, a su vez, crea una instancia del objeto COM.  
   
@@ -72,11 +72,11 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
   
 1.  Agregue atributos de interoperabilidad al proyecto de C#.  
   
-     Puede hacer que un ensamblado COM sea visible modificando las propiedades del proyecto de [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)]. Para obtener más información, vea [Información de ensamblado (Cuadro de diálogo)](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box).  
+     Puede hacer que un ensamblado COM sea visible modificando las propiedades del proyecto de [!INCLUDE[csprcs](~/includes/csprcs-md.md)]. Para obtener más información, vea [Información de ensamblado (Cuadro de diálogo)](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
 2.  Genere una biblioteca de tipos COM y regístrela para el uso de COM.  
   
-     Puede modificar las propiedades del proyecto de [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] para registrar automáticamente el ensamblado de C# para la interoperabilidad COM. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] usa [Regasm.exe (herramienta de registro de ensamblados)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb) con el modificador de la línea de comandos `/tlb`, que toma un ensamblado administrado como entrada, para generar una biblioteca de tipos. Esta biblioteca de tipos describe los tipos `public` del ensamblado y agrega entradas del registro para que los clientes COM puedan crear clases administradas.  
+     Puede modificar las propiedades del proyecto de [!INCLUDE[csprcs](~/includes/csprcs-md.md)] para registrar automáticamente el ensamblado de C# para la interoperabilidad COM. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa [Regasm.exe (herramienta de registro de ensamblados)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb) con el modificador de la línea de comandos `/tlb`, que toma un ensamblado administrado como entrada, para generar una biblioteca de tipos. Esta biblioteca de tipos describe los tipos `public` del ensamblado y agrega entradas del registro para que los clientes COM puedan crear clases administradas.  
   
  Para obtener más información, vea [Exponer componentes de .NET Framework en COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) y [Clase COM de ejemplo](../../../csharp/programming-guide/interop/example-com-class.md).  
   
@@ -87,3 +87,4 @@ En el tema se describen métodos para habilitar la interoperabilidad entre el c�
  [Interoperar con código no administrado](https://msdn.microsoft.com/library/sd10k43k)   
  [Interoperabilidad COM avanzada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+

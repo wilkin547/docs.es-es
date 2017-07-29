@@ -1,5 +1,5 @@
 ---
-title: Procesar unidades, directorios y archivos (Visual Basic) | Microsoft Docs
+title: Procesar unidades, directorios y archivos (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,15 +35,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4cbb2ead7075e8cda58ac4ec33d9fb6535d3284a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Procesar unidades, directorios y archivos (Visual Basic)
-Se puede usar [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] para procesar unidades, carpetas y archivos con el objeto `My.Computer.FileSystem`, que proporciona un mejor rendimiento y es más fácil de usar que los métodos tradicionales como las funciones `FileOpen` y `Write` (aunque siguen estando disponibles). En las secciones siguientes se describen estos métodos con detalle.  
+Se puede usar [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para procesar unidades, carpetas y archivos con el objeto `My.Computer.FileSystem`, que proporciona un mejor rendimiento y es más fácil de usar que los métodos tradicionales como las funciones `FileOpen` y `Write` (aunque siguen estando disponibles). En las secciones siguientes se describen estos métodos con detalle.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Acceso a archivos con Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
@@ -53,7 +53,7 @@ Se puede usar [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/li
  Proporciona una visión general de los conceptos de E/S de archivos en .NET Framework, incluidas las secuencias, el almacenamiento aislado, eventos de archivo, atributos de archivo y acceso a archivos.  
   
  [Tutorial: Manipulación de archivos utilizando métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Muestra cómo usar [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] para manipular archivos y carpetas.  
+ Muestra cómo usar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para manipular archivos y carpetas.  
   
  [Tutorial: Manipulación de archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo usar el objeto `My.Computer.FileSystem` para manipular archivos y carpetas.  
@@ -64,3 +64,4 @@ Se puede usar [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/li
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Documentación de referencia para el objeto `My.Computer.FileSystem` y sus miembros.
+

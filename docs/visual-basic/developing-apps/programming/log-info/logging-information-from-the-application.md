@@ -1,5 +1,5 @@
 ---
-title: "Registrar información de la aplicación (Visual Basic) | Microsoft Docs"
+title: "Registrar información de la aplicación (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 25bf4e1d8b9b87c1545272c0d2746dc808d3fa4b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58f21df20425b0164586143ad5af6f363a90c3ef
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Registrar información de la aplicación (Visual Basic)
@@ -47,7 +47,7 @@ Esta sección contiene temas que explican cómo registrar información sobre su 
   
  El objeto `Log` proporciona métodos para escribir información en los agentes de escucha de registro de la aplicación y la propiedad avanzada `Log` del objeto `TraceSource` proporciona información de configuración detallada. El archivo de configuración de la aplicación configura el objeto `Log`.  
   
- El objeto `My.Log` solo está disponible para las aplicaciones ASP.NET. Para las aplicaciones cliente, use `My.Application.Log`. Para obtener más información, vea <xref:Microsoft.VisualBasic.Logging.Log>.  
+ El objeto `My.Log` solo está disponible para las aplicaciones ASP.NET. Para las aplicaciones cliente, use `My.Application.Log`. Para obtener más información, consulta <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Tareas  
   
@@ -67,3 +67,4 @@ Esta sección contiene temas que explican cómo registrar información sobre su 
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Trabajar con registros de aplicaciones](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
  [Solución de problemas: Agentes de escucha de registro](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+
