@@ -1,0 +1,1 @@
+Algunos métodos, operadores especialmente, declaran un tipo para un parámetro pero no especifican un nombre de parámetro. Esta clase de parámetro se denomina *parámetro sin nombre*. En la documentación de estos métodos, el marcador de posición *__unnamed0* representa el parámetro sin nombre.
