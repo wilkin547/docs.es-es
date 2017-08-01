@@ -1,5 +1,5 @@
 ---
-title: 'Microservicios hospedados en Docker: C# | Microsoft Docs'
+title: 'Microservicios hospedados en Docker: C#'
 description: Aprenda a crear microservicios de ASP.NET Core que se ejecutan en contenedores de Docker.
 keywords: .NET, .NET Core, Docker, C#, ASP.NET, microservicios
 author: BillWagner
@@ -10,21 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 40d81a161e6be06a32fb559b70a4e7eeca41e4da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5585db33fb5020ed18c26f32ce0b63f97353d20f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="microservices-hosted-in-docker" class="xliff"></a>
+# <a name="microservices-hosted-in-docker"></a>Microservicios alojados en Docker
 
-# Microservicios alojados en Docker
-
-<a id="introduction" class="xliff"></a>
-
-## Introducción
+## <a name="introduction"></a>Introducción
 
 En este tutorial se describen las tareas necesarias para compilar e implementar un microservicio de ASP.NET Core en un contenedor de Docker. Durante el transcurso de este tutorial, aprenderá a:
 
@@ -42,18 +38,14 @@ Por el camino, también verá algunas características del lenguaje C#:
 
 Puede [ver o descargar la aplicación de ejemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) para este tema. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-<a id="why-docker" class="xliff"></a>
-
-### ¿Por qué Docker?
+### <a name="why-docker"></a>¿Por qué Docker?
 
 Docker facilita la creación de imágenes de máquina estándar para hospedar los servicios de un centro de datos o en la nube pública. Docker le permite configurar la imagen y replicarla según sea necesario para escalar la instalación de la aplicación.
 
 Todo el código de este tutorial funciona en cualquier entorno .NET Core.
 Las tareas adicionales para una instalación de Docker funcionarán para una aplicación de ASP.NET Core. 
 
-<a id="prerequisites" class="xliff"></a>
-
-## Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página de [.NET Core](https://www.microsoft.com/net/core).
 Puede ejecutar esta aplicación en Windows, Ubuntu Linux, macOS o en un contenedor de Docker. Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 
@@ -70,9 +62,7 @@ La opción `-g` indica que es una instalación global y esas herramientas están
 
 `npm install -g generator-aspnet`
 
-<a id="create-the-application" class="xliff"></a>
-
-## Crear la aplicación
+## <a name="create-the-application"></a>Crear la aplicación
 
 Ahora que ha instalado todas las herramientas, cree una nueva aplicación de ASP.NET Core. Para usar el generador de línea de comandos, ejecute el siguiente comando de Yeoman en su shell favorito:
 
@@ -113,9 +103,7 @@ dotnet run
 
 La configuración predeterminada escucha a http://localhost: 5000. Abra un explorador y vaya a esa página. Verá un "¡Hola a todos!". .
 
-<a id="anatomy-of-an-aspnet-core-application" class="xliff"></a>
-
-### Anatomía de una aplicación de ASP.NET Core
+### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomía de una aplicación de ASP.NET Core
 
 Ahora que ha creado la aplicación, echemos un vistazo a cómo se implementa esta funcionalidad. Dos de los archivos generados son especialmente interesantes en este momento: project.json y Startup.cs. 
 
@@ -128,9 +116,7 @@ La aplicación se implementa en Startup.cs. Este archivo contiene la clase de in
 
 Los dos métodos se llaman en la infraestructura de ASP.NET Core para configurar y ejecutar la aplicación. El método `ConfigureServices` describe los servicios que son necesarios para esta aplicación. Va a crear un microservicio de Lean, así que no es necesario configurar ninguna dependencia. El método `Configure` configura los controladores para las solicitudes HTTP entrantes. La plantilla genera un controlador sencillo que responde a cualquier solicitud con el texto "¡Hola a todos!".
 
-<a id="build-a-microservice" class="xliff"></a>
-
-## Creación de un microservicio
+## <a name="build-a-microservice"></a>Creación de un microservicio
 
 El servicio que va a crear proporcionará informes meteorológicos desde cualquier lugar del mundo. En una aplicación de producción, se llamaría a algún servicio para recuperar datos meteorológicos. Para nuestro ejemplo, vamos a generar un pronóstico meteorológico aleatorio. 
 
@@ -144,9 +130,7 @@ Hay una serie de tareas que debe realizar para implementar nuestro servicio de i
 
 Las secciones siguientes le guiarán en cada uno de estos pasos.
 
-<a id="parsing-the-query-string" class="xliff"></a>
-
-### Análisis de la cadena de consulta
+### <a name="parsing-the-query-string"></a>Análisis de la cadena de consulta
 
 Para comenzar, analizará la cadena de consulta. El servicio acepta argumentos "lat" y "long" en la cadena de consulta en este formato:
 
@@ -186,9 +170,7 @@ Para probar fácilmente el código de análisis, actualice la respuesta para inc
 
 En este punto, puede ejecutar la aplicación web y ver si su código de análisis está funcionando. Agregue valores a la solicitud web en un explorador y verá los resultados actualizados.
 
-<a id="build-a-random-weather-forecast" class="xliff"></a>
-
-### Creación de un pronóstico meteorológico aleatorio
+### <a name="build-a-random-weather-forecast"></a>Creación de un pronóstico meteorológico aleatorio
 
 La siguiente tarea consiste en crear un pronóstico meteorológico aleatorio. Comencemos con un contenedor de datos que contiene los valores que desea para un pronóstico meteorológico:
 
@@ -220,9 +202,7 @@ Ahora puede generar el pronóstico de cinco días en el método de respuesta:
 
 [!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generación de un informe meteorológico aleatorio")]
 
-<a id="build-the-json-response" class="xliff"></a>
-
-### Compile la respuesta JSON.
+### <a name="build-the-json-response"></a>Compile la respuesta JSON.
 
 La tarea final de código en el servidor es convertir la matriz WeatherReport en un paquete JSON y devolverlo al cliente. Comencemos creando el paquete JSON. Agregará el serializador NewtonSoft de JSON a la lista de dependencias. Puede hacerlo mediante la CLI de `dotnet`:
 
@@ -238,9 +218,7 @@ El código anterior convierte el objeto de pronóstico (una lista de objetos `We
 
 Ahora, la aplicación se ejecuta y devuelve los pronósticos aleatorios.
 
-<a id="build-a-docker-image" class="xliff"></a>
-
-## Creación de una imagen de Docker
+## <a name="build-a-docker-image"></a>Creación de una imagen de Docker
 
 La tarea final es ejecutar la aplicación en Docker. Vamos a crear un contenedor de Docker que ejecute una imagen de Docker que representa la aplicación.
 
@@ -290,9 +268,7 @@ ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.
 
 Se hace referencia a este puerto configurado en el argumento `--server.urls` para `dotnet` en la última línea del Dockerfile. El comando `ENTRYPOINT` informa a Docker de qué opciones de comando y de línea de comandos inician el servicio. 
 
-<a id="building-and-running-the-image-in-a-container" class="xliff"></a>
-
-## Compilación y ejecución de la imagen en un contenedor
+## <a name="building-and-running-the-image-in-a-container"></a>Compilación y ejecución de la imagen en un contenedor
 
 Vamos a compilar una imagen y ejecutar el servicio dentro de un contenedor de Docker. No desea copiar todos los archivos de su directorio local en la imagen. En su lugar, va a compilar la aplicación en el contenedor. Creará un archivo `.dockerignore` para especificar los directorios que no se copian en la imagen. No desea copiar ninguno de los recursos de compilación. Especifique los directorios de compilación y publicación en el archivo `.dockerignore`:
 
@@ -332,9 +308,7 @@ Para probar el servicio, abra un explorador y vaya a localhost, luego especifiqu
 http://localhost/?lat=35.5&long=40.75
 ```
 
-<a id="attaching-to-a-running-container" class="xliff"></a>
-
-## Asociación de un contenedor en ejecución
+## <a name="attaching-to-a-running-container"></a>Asociación de un contenedor en ejecución
 
 Cuando ejecutó su servicio en una ventana de comandos, ha podido ver información de diagnóstico impresa para cada solicitud. Cuando el contenedor se ejecuta en modo de desconexión, no puede ver esa información. El comando attach de Docker le permite conectarse a un contenedor en ejecución para ver la información de registro.  Ejecute este comando desde una ventana de comandos:
 
@@ -369,9 +343,7 @@ Si desea quitar imágenes no usadas de la máquina, utilice este comando:
 docker rmi weather-microservice
 ```
 
-<a id="conclusion" class="xliff"></a>
-
-## Conclusión 
+## <a name="conclusion"></a>Conclusión 
 
 En este tutorial, ha creado un microservicio de ASP.NET Core y ha agregado unas cuantas características sencillas.
 
