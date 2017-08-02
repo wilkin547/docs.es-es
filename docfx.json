@@ -15,7 +15,9 @@
         ]
       },
       {
-        "files": [ "**/*.md" ],
+        "files": [ 
+          "**/*.md" 
+        ],
         "src": "docs",
         "dest": ".",
         "exclude": [
@@ -80,6 +82,7 @@
         ]
       },
       {
+
         "files": [ "docs/toc.md", "toc.yml", "index.md" ]
       }
     ],
