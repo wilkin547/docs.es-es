@@ -8,6 +8,7 @@
           "api/**/*.md"
         ],
         "exclude": [
+          "toc.md",
           "api/overwrites/**",
           "samples/**/*.*",
           "**/includes/**",
@@ -79,7 +80,11 @@
         ]
       },
       {
-        "files": [ "toc.yml", "index.md" ]
+        "files": [ 
+          "toc.md",
+          "toc.yml", 
+          "index.md" 
+        ]
       }
     ],
     "resource": [
