@@ -8,7 +8,6 @@
           "api/**/*.md"
         ],
         "exclude": [
-          "toc.md",
           "api/overwrites/**",
           "samples/**/*.*",
           "**/includes/**",
@@ -16,10 +15,15 @@
         ]
       },
       {
-        "files": [ "**/*.md" ],
+        "files": [ 
+          "**/*.md" 
+        ],
         "src": "docs",
         "dest": ".",
         "exclude": [
+          "toc.md",
+          "api/overwrites/**",
+          "samples/**/*.*",
           "**/includes/**",
           "***/contributing.md",
           "framework/add-ins/**",
@@ -80,8 +84,13 @@
         ]
       },
       {
+        "files": [
+          "core/**/*.md"
+        ]      
+      },
+      {
         "files": [ 
-          "toc.md",
+          "docs/toc.md",
           "toc.yml", 
           "index.md" 
         ]
