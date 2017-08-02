@@ -22,8 +22,6 @@
         "dest": ".",
         "exclude": [
           "toc.md",
-          "api/overwrites/**",
-          "samples/**/*.*",
           "**/includes/**",
           "***/contributing.md",
           "framework/add-ins/**",
@@ -84,16 +82,8 @@
         ]
       },
       {
-        "files": [
-          "core/**/*.md"
-        ]      
-      },
-      {
-        "files": [ 
-          "docs/toc.md",
-          "toc.yml", 
-          "index.md" 
-        ]
+
+        "files": [ "docs/toc.md", "toc.yml", "index.md" ]
       }
     ],
     "resource": [
