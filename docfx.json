@@ -19,6 +19,7 @@
         "src": "docs",
         "dest": ".",
         "exclude": [
+          "toc.md",
           "**/includes/**",
           "***/contributing.md",
           "framework/add-ins/**",
@@ -79,7 +80,7 @@
         ]
       },
       {
-        "files": [ "toc.yml", "index.md" ]
+        "files": [ "docs/toc.md", "toc.yml", "index.md" ]
       }
     ],
     "resource": [
