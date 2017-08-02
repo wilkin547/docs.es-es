@@ -1,5 +1,5 @@
 ---
-title: 'Variables y tipos de C#: Un paseo por el lenguaje C# | Microsoft Docs'
+title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
 description: "Obtenga información sobre cómo definir tipos y declarar variables de C#"
 keywords: .NET, CSharp, tipo, tipo de referencia, tipo de valor
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f1031384520b9ed37246361da8bbc1b42addb0b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="types-and-variables" class="xliff"></a>
-
-# Tipos y variables
+# <a name="types-and-variables"></a>Tipos y variables
 
 Hay dos clases de tipos en C#: *tipos de valor* y *tipos de referencia*. Las variables de tipos de valor contienen directamente los datos, mientras que las variables de los tipos de referencia almacenan referencias a los datos, lo que se conoce como objetos. Con los tipos de referencia, es posible que dos variables hagan referencia al mismo objeto y que, por tanto, las operaciones en una variable afecten al objeto al que hace referencia la otra variable. Con los tipos de valor, cada variable tiene su propia copia de los datos y no es posible que las operaciones en una variable afecten a la otra (excepto en el caso de las variables de parámetro `ref` y `out`).
 

@@ -1,5 +1,5 @@
 ---
-title: 'Delegados de C#: Un paseo por el lenguaje C# | Microsoft Docs'
+title: 'Delegados de C#: un paseo por el lenguaje C#'
 description: "Conozca los enlaces más recientes con delegados en C#."
 keywords: ". NET, csharp, delegado, lambda, enlace más reciente"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 217fd974f547a4a84b328979ee94ee634038b213
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bb304b2e5c762a44aab931b5e8f7fe9c99805eba
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="delegates" class="xliff"></a>
-
-# Delegados
+# <a name="delegates"></a>Delegados
 
 Un ***tipo de delegado*** representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son similares al concepto de punteros de función en otros lenguajes, pero a diferencia de los punteros de función, los delegados están orientados a objetos y presentan seguridad de tipos.
 
