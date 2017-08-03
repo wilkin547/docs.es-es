@@ -1,31 +1,49 @@
 ---
-title: "Funciones (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic, funciones"
-  - "funciones [Visual Basic]"
+title: Funciones (Visual Basic)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic, functions
+- functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# Funciones (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cbdb4fc7b01f814f1f956b1f7fe2c27e72c1848
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
-Los temas de esta sección contienen tablas de las funciones miembro en tiempo de ejecución de Visual Basic.  
+---
+# <a name="functions-visual-basic"></a>Funciones (Visual Basic)
+En los temas de esta sección, se incluyen tablas de las funciones de miembro en tiempo de ejecución de Visual Basic.  
   
 > [!NOTE]
->  También puede crear funciones y llamarlas.  Para obtener más información, vea [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md) y [Cómo: Crear un procedimiento que devuelve un valor](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md).  
+>  También puede crear funciones y llamarlas. Para obtener más información, consulte [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) [Function (instrucción)] y [How to: Create a Procedure that Returns a Value](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md) (Cómo: Crear un procedimiento que devuelve un valor).  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Funciones de conversión](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [Funciones matemáticas](../../../visual-basic/language-reference/functions/math-functions.md)  
@@ -34,9 +52,10 @@ Los temas de esta sección contienen tablas de las funciones miembro en tiempo d
   
  [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
- [CType \(Función\)](../../../visual-basic/language-reference/functions/ctype-function.md)  
+ [Función CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
+
