@@ -1,6 +1,6 @@
 ---
-title: "Información general sobre el SDK de .NET Core | Microsoft Docs"
-description: "Información general sobre el SDK de .NET Core"
+title: "Información general sobre el SDK de .NET Core"
+description: "Obtenga información sobre el SDK de .NET Core, que es un conjunto de bibliotecas y herramientas utilizadas para crear proyectos .NET Core."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,19 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1b05b7e1a2d274f02cd1222c0a90a59583d37e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Información general sobre el SDK de .NET Core
-<a id="net-core-sdk-overview" class="xliff"></a> 
+# <a name="net-core-sdk-overview"></a>Información general sobre el SDK de .NET Core 
 
-## Introducción
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>Introducción
 El kit de desarrollo de software (SDK) de .NET Core es un conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET Core. Este es el paquete que es más probable que adquieran los desarrolladores. 
 
 Incluye los componentes siguientes:
@@ -32,8 +30,7 @@ Incluye los componentes siguientes:
 3. El controlador `dotnet` para ejecutar los [comandos de la CLI](tools/index.md), así como también ejecutar aplicaciones.
 
 
-## Adquisición del SDK de .NET Core
-<a id="acquiring-the-net-core-sdk" class="xliff"></a>
+## <a name="acquiring-the-net-core-sdk"></a>Adquisición del SDK de .NET Core
 Del mismo modo que ocurre con todas las herramientas, lo primero que debe hacer es instalar las herramientas en su máquina. Según el escenario, puede usar los instaladores nativos para instalar el SDK, o bien puede usar el script de shell de instalación.
 
 Los instaladores nativos están pensados principalmente para las máquinas de los desarrolladores. El SDK se distribuye mediante el uso del mecanismo de instalación nativo de cada plataforma compatible, por ejemplo, los paquetes DEB en Ubuntu o los conjuntos de MSI en Windows. Estos instaladores instalarán y configurarán el entorno según sea necesario para que el usuario use el SDK inmediatamente después de la instalación. Sin embargo, también se necesitan privilegios administrativos en la máquina. Puede ver las instrucciones de instalación en la [Guía de instalación de .NET Core](https://aka.ms/dotnetcoregs).

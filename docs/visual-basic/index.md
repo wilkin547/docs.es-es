@@ -1,5 +1,5 @@
 ---
-title: Visual Basic | Microsoft Docs
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -47,8 +47,7 @@ Visual Basic está diseñado para crear de manera productiva aplicaciones con se
  [Introducción](../visual-basic/getting-started/index.md)   
  Le ayuda a empezar a trabajar, ya que enumera las novedades y lo que está disponible en varias ediciones del producto.  
    
- [Conceptos de programación](../visual-basic/programming-guide/concepts/index.md) 
- Presenta los conceptos de lenguaje que son más útiles para los programadores de Visual Basic.
+ [Conceptos de programación](../visual-basic/programming-guide/concepts/index.md) Presenta los conceptos de lenguaje que son más útiles para los programadores de Visual Basic.
 
  [Convenciones de código y estructura de programas](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Contiene documentación sobre la estructura básica y las convenciones de código de Visual Basic, como convenciones de nomenclatura, comentarios en el código y las limitaciones que Visual Basic presenta.  
@@ -72,8 +71,9 @@ Visual Basic está diseñado para crear de manera productiva aplicaciones con se
  Proporciona vínculos a instrucciones paso a paso para escenarios comunes.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Introducción al desarrollo con Visual Studio](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Introducción al desarrollo con Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Proporciona vínculos a temas que le ayudarán a entender los conceptos básicos de Visual Studio.  
   
  [Biblioteca de clases de .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Proporciona acceso a la biblioteca de clases, interfaces y tipos de valor incluidos en el SDK de Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
+ Proporciona acceso a la biblioteca de clases, interfaces y tipos de valor incluidos en el SDK de Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] .
+

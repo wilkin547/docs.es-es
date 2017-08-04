@@ -1,47 +1,67 @@
 ---
-title: "C&#243;digo no seguro y punteros (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "seguridad [C#], seguridad de tipos"
-  - "Lenguaje C#, código no seguro"
-  - "seguridad de tipos [C#]"
-  - "unsafe (palabra clave) [C#]"
-  - "código no seguro [C#]"
-  - "lenguaje C#, punteros"
-  - "punteros [C#], acerca de los punteros"
+title: "Código no seguro y punteros (Guía de programación de C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- security [C#], type safety
+- C# language, unsafe code
+- type safety [C#]
+- unsafe keyword [C#]
+- unsafe code [C#]
+- C# language, pointers
+- pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 caps.latest.revision: 24
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 24
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75e11b34f0749270650e0e5b5a2a191a1b9e9f9a
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# C&#243;digo no seguro y punteros (Gu&#237;a de programaci&#243;n de C#)
-Para mantener la seguridad de tipos y la seguridad, C\# no admite la aritmética con punteros de manera predeterminada.  Sin embargo, si utiliza la palabra clave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), puede definir un contexto no seguro en el que se pueden utilizar punteros.  Para obtener más información sobre los punteros, vea el tema [Tipos de puntero \(Guía de programación de C\#\)](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
+# <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código no seguro y punteros (Guía de programación de C#)
+Para mantener la seguridad de tipos, C# no admite la aritmética de puntero de forma predeterminada. En cambio, mediante el uso de la palabra clave [unsafe](../../../csharp/language-reference/keywords/unsafe.md), puede definir un contexto no seguro en el que se pueden usar punteros. Para obtener más información sobre los punteros, vea [Tipos de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
   
 > [!NOTE]
->  En el Common Language Runtime \(CLR\), se hace referencia al código no seguro como código no comprobable.  El código no seguro en C\# no es necesariamente peligroso; sólo es código cuya seguridad no puede ser comprobada por el CLR.  Por consiguiente, el CLR sólo ejecutará código no seguro si se encuentra en un ensamblado de plena confianza.  Si utiliza el código no seguro, es su responsabilidad garantizar que su código no introduce riesgos de seguridad o errores de puntero.  
+>  En Common Language Runtime (CLR), el código no seguro se conoce como código no comprobable. El código no seguro en C# no es necesariamente peligroso; solo es código cuya seguridad no puede comprobar CLR. Por lo tanto, CLR solo ejecutará código no seguro si se encuentra en un ensamblado de plena confianza. Si usa código no seguro, es su responsabilidad asegurarse de que el código no presenta riesgos de seguridad o errores de puntero.  
   
-## Información general sobre código no seguro  
+## <a name="unsafe-code-overview"></a>Información general sobre el código no seguro  
  El código no seguro tiene las propiedades siguientes:  
   
 -   Los métodos, tipos y bloques de código se pueden definir como no seguros.  
   
--   En algunos casos, el código no seguro puede aumentar el rendimiento de una aplicación al quitar las comprobaciones de los límites de la matriz  
+-   En algunos casos, el código no seguro puede aumentar el rendimiento de la aplicación al eliminar las comprobaciones de límites de matriz.  
   
--   Se requiere código no seguro al llamar a funciones nativas que requieren punteros.  
+-   El código no seguro es necesario al llamar a funciones nativas que requieren punteros.  
   
--   El uso de código no seguro implica riesgos de seguridad y de estabilidad.  
+-   El código no seguro presenta riesgos para la seguridad y la estabilidad.  
   
--   Para que C\# compile código no seguro, la aplicación se debe compilar con [\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
+-   Para que C# compile código no seguro, la aplicación debe compilarse con [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
   
-## Secciones relacionadas  
- Para obtener más información, vea:  
+## <a name="related-sections"></a>Secciones relacionadas  
+ Para obtener más información, consulte:  
   
 -   [Tipos de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
@@ -49,10 +69,11 @@ Para mantener la seguridad de tipos y la seguridad, C\# no admite la aritmética
   
 -   [Cómo: Utilizar punteros para copiar una matriz de bytes](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [no seguras](../../../csharp/language-reference/keywords/unsafe.md)  
+-   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
-## Especificación del lenguaje C\#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+

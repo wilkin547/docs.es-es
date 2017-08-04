@@ -1,6 +1,6 @@
 ---
-title: "Catálogo de identificadores de entorno de ejecución (RID) de .NET Core | Microsoft Docs"
-description: "Catálogo de identificadores de entorno de ejecución (RID) de .NET Core"
+title: "Catálogo de identificadores de entorno de ejecución (RID) de .NET Core"
+description: "Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -9,19 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 904b9be05cd2e5337272ce7ddce15b1075fbefeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3490fb639efd223dc36190324bdf3a06bc23c10e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
-<a id="net-core-runtime-identifier-rid-catalog" class="xliff"></a>
+# <a name="net-core-runtime-identifier-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
 
-## ¿Qué son los RID?
-<a id="what-are-rids" class="xliff"></a>
+## <a name="what-are-rids"></a>¿Qué son los RID?
 RID es la abreviatura de *identificador de entorno de ejecución*. Los RID se usan para identificar los sistemas operativos de destino donde se ejecutará una aplicación o un recurso (es decir, un ensamblado). Tienen el siguiente aspecto: "ubuntu.14.04-x64", "win7-x64", "osx.10.11-x64". En el caso de los paquetes con dependencias nativas, designará las plataformas en las que se puede restaurar el paquete. 
 
 Es importante tener en cuenta que los RID son, en realidad, cadenas opacas. Esto significa que deben coincidir de manera exacta para que las operaciones las usen en algún trabajo. Como ejemplo, consideremos el caso de [Elementary OS](https://elementary.io/), un clon sencillo de Ubuntu 14.04. A pesar de que .NET Core y la CLI funcionan sobre esa versión de Ubuntu, si intenta usarlas en Elementary OS sin ninguna modificación, se producirá un error en la operación de restauración de cualquier paquete. Esto sucede porque actualmente no tenemos un RID que designe a Elementary OS como plataforma. 
@@ -62,15 +60,13 @@ A pesar de que se ven muy fáciles de usar, hay algunos aspectos especiales de l
 * Debe usar los RID que ya están definidos para la plataforma y este documento así lo muestra.
 * Los RID deben ser específicos para que no supongan nada más allá del valor real del RID. Consulte este documento para determinar los RID que necesita para una plataforma determinada.
 
-## Uso de los RID
-<a id="using-rids" class="xliff"></a>
+## <a name="using-rids"></a>Uso de los RID
 Para usar los RID, debe saber con qué RID cuenta. Se agregan RID nuevos a la plataforma de manera habitual. Para obtener la versión más reciente, revise el archivo [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) que se encuentra en el repositorio CoreFX.
 
 > [!NOTE]
 > Estamos trabajando para que esta información se convierta en un formato más interactivo. Cuando eso suceda, se actualizará esta página para que tenga como destino la herramienta o su documentación de uso. 
 
-## RID de Windows
-<a id="windows-rids" class="xliff"></a>
+## <a name="windows-rids"></a>RID de Windows
 
 * Windows 7/Windows Server 2008 R2
     * `win7-x64`
@@ -89,8 +85,7 @@ Para usar los RID, debe saber con qué RID cuenta. Se agregan RID nuevos a la pl
     * `win10-arm`
     * `win10-arm64`
 
-## RID de Linux
-<a id="linux-rids" class="xliff"></a>
+## <a name="linux-rids"></a>RID de Linux
 
 * Red Hat Enterprise Linux
     * `rhel.7-x64`
@@ -123,8 +118,7 @@ Para usar los RID, debe saber con qué RID cuenta. Se agregan RID nuevos a la pl
     * `linuxmint.17.3-x64`
     * `linuxmint.18-x64`
 
-## RID de OS X
-<a id="os-x-rids" class="xliff"></a>
+## <a name="os-x-rids"></a>RID de OS X
 
 * `osx.10.10-x64`
 * `osx.10.11-x64`

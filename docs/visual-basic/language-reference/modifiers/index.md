@@ -1,28 +1,45 @@
 ---
-title: "Modificadores de Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: Modificadores de Visual Basic
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
 caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
----
-# Modificadores de Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 99618381c1267647e07d9acc64693dcc5def6f3a
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
+---
+# <a name="modifiers-visual-basic"></a>Modificadores de Visual Basic
 Los temas de esta sección documentan los modificadores en tiempo de ejecución de Visual Basic.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
+ [Ensamblado](../../../visual-basic/language-reference/modifiers/assembly.md)  
   
  [Async](../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -32,17 +49,17 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [ByVal](../../../visual-basic/language-reference/modifiers/byval.md)  
   
- [Default](../../../visual-basic/language-reference/modifiers/default.md)  
+ [Predetermiado](../../../visual-basic/language-reference/modifiers/default.md)  
   
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
  [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
   
- [Iterador](../../../visual-basic/language-reference/modifiers/iterator.md)  
+ [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)  
   
  [Key](../../../visual-basic/language-reference/modifiers/key.md)  
   
- [Module \<palabra clave\>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
+ [Module \<keyword>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
@@ -54,11 +71,11 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)  
+ [Opcional](../../../visual-basic/language-reference/modifiers/optional.md)  
   
  [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)  
   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
  [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
@@ -90,7 +107,8 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
+

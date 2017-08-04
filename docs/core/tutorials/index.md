@@ -1,6 +1,6 @@
 ---
-title: Tutoriales de .NET Core | Microsoft Docs
-description: Tutoriales de .NET Core
+title: Tutoriales de .NET Core
+description: Siga los tutoriales para aprender a compilar aplicaciones y bibliotecas de .NET Core en Mac, Linux y Windows.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: es-es
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Pruebas de una biblioteca de clases de C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [Consumo de una biblioteca de clases de C# con .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Creación de una solución completa de C# de .NET Core en Windows](using-on-windows-full-solution.md)
-- [NoSQL tutorial: Build a DocumentDB C# console application on .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started) (Tutorial de NoSQL: Creación de una aplicación de consola de C# de DocumentDB en .NET Core)
+- [NoSQL tutorial: Build a DocumentDB C# console application on .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started) (Tutorial de NoSQL: Creación de una aplicación de consola de C# de DocumentDB en .NET Core)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Creación de aplicaciones con Visual Studio Code
 
@@ -55,5 +55,5 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 - [Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hospedaje de .NET Core desde código nativo](netcore-hosting.md)
 
-Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
+Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).
 

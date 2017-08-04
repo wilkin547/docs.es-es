@@ -1,5 +1,5 @@
 ---
-title: "Serialización (Visual Basic) | Microsoft Docs"
+title: "Serialización (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fb4404bf648f108a3b98952234d29e2bc1d4189
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b88f78b86e79802238b78cfe097a0ccc73bfe778
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serialization-visual-basic"></a>Serialización (Visual Basic)
@@ -42,9 +43,9 @@ La serialización es un proceso que consiste en convertir un objeto en una secue
 ### <a name="making-an-object-serializable"></a>Conversión de un objeto en serializable  
  Para serializar un objeto, necesita el objeto que se va a serializar, una secuencia que contenga el objeto serializado y un <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contiene las clases necesarias para serializar y deserializar objetos.  
   
- Aplique el atributo <xref:System.SerializableAttribute> a un tipo para indicar que se pueden serializar instancias de este tipo. Se produce una excepción <xref:System.Runtime.Serialization.SerializationException> si se intenta serializar, pero el tipo no tiene el atributo <xref:System.SerializableAttribute>.  
+ Aplique el atributo <xref:System.SerializableAttribute> a un tipo para indicar que se pueden serializar instancias de este tipo. Si se intenta serializar pero el tipo no tiene el atributo <xref:System.SerializableAttribute>, se produce una excepción <xref:System.Runtime.Serialization.SerializationException>.  
   
- Si no desea que un campo dentro de la clase sea serializable, aplique el atributo <xref:System.NonSerializedAttribute>. Si un campo de un tipo serializable contiene un puntero, un controlador o alguna otra estructura de datos específica para un entorno concreto y el campo no se puede reconstituir correctamente en un entorno diferente, puede convertirlo en no serializable.  
+ Si no quiere que un campo dentro de la clase sea serializable, aplique el atributo <xref:System.NonSerializedAttribute>. Si un campo de un tipo serializable contiene un puntero, un controlador o alguna otra estructura de datos específica para un entorno concreto y el campo no se puede reconstituir correctamente en un entorno diferente, puede convertirlo en no serializable.  
   
  Si una clase serializada contiene referencias a objetos de otras clases marcadas como <xref:System.SerializableAttribute>, esos objetos también se serializarán.  
   
@@ -63,7 +64,7 @@ La serialización es un proceso que consiste en convertir un objeto en una secue
  La serialización puede realizarse de dos formas, es decir, de manera básica y también personalizada. La serialización básica utiliza .NET Framework para serializar automáticamente el objeto.  
   
 ### <a name="basic-serialization"></a>Serialización básica  
- El único requisito de la serialización básica es que el objeto tenga aplicado el atributo <xref:System.SerializableAttribute>. <xref:System.NonSerializedAttribute> puede utilizarse para impedir la serialización de campos específicos.  
+ El único requisito de la serialización básica es que el objeto tenga aplicado el atributo <xref:System.SerializableAttribute>. <xref:System.NonSerializedAttribute> puede usarse para impedir la serialización de campos específicos.  
   
  Cuando se utiliza la serialización básica, el control de versiones de objetos puede crear problemas, en cuyo caso la serialización personalizada puede ser preferible. La serialización básica es la manera más fácil de realizar la serialización, pero no proporciona mucho control sobre el proceso.  
   
@@ -84,3 +85,4 @@ La serialización es un proceso que consiste en convertir un objeto en una secue
   
  [How to: Write Object Data to an XML File (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Escritura de datos de objetos en un archivo XML [Visual Basic])  
  Se muestra cómo escribir el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.
+

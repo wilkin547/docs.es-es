@@ -1,5 +1,5 @@
 ---
-title: Matrices en Visual Basic | Microsoft Docs
+title: Matrices en Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,17 +34,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: es-es
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 Una matriz es un conjunto de valores que están relacionados de forma lógica entre sí, como, por ejemplo, el número de alumnos de cada curso en una escuela primaria.  Si necesita ayuda sobre las matrices en Visual Basic para Aplicaciones (VBA), vea la [referencia del lenguaje](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
   
- Con las matrices, puede hacer referencia a estos valores relacionados con el mismo nombre y usar un número denominado índice o subíndice para distinguirlos. Los valores individuales se denominan elementos de la matriz. Son contiguos desde el índice 0 hasta el valor de índice más alto.  
+ Con las matrices, puede hacer hacer referencia a estos valores relacionados con el mismo nombre y usar un número denominado índice o subíndice para distinguirlos. Los valores individuales se denominan elementos de la matriz. Son contiguos desde el índice 0 hasta el valor de índice más alto.  
   
  A diferencia de una matriz, una variable que contiene un solo valor se denomina variable *escalar* .  
   
@@ -224,7 +224,7 @@ Elementos de la matriz "students"
   
  Puede que tenga que crear una matriz de longitud cero en las circunstancias siguientes:  
   
--   Sin arriesgarse a una excepción <xref:System.NullReferenceException>, el código debe tener acceso a los miembros de la clase <xref:System.Array>, por ejemplo, <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>, o bien deben llamar a una función [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], por ejemplo, <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
+-   Sin arriesgarse a una excepción <xref:System.NullReferenceException> , el código debe tener acceso a los miembros de la clase <xref:System.Array> , como, por ejemplo, <xref:System.Array.Length%2A> o <xref:System.Array.Rank%2A>, o bien deben llamar a una función [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] como, por ejemplo, <xref:Microsoft.VisualBasic.Information.UBound%2A>.  
   
 -   Desea que el código usado sea más sencillo al no tener que comprobar `Nothing` como caso especial.  
   
@@ -235,13 +235,13 @@ Elementos de la matriz "students"
   
  En el ejemplo siguiente se declara una matriz tridimensional.  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   
  El tamaño total de la matriz en la variable `prices` es (3 + 1) x (4 + 1) x (5 + 1) = 120.  
   
- Puede encontrar el tamaño de una matriz mediante la propiedad <xref:System.Array.Length%2A>. Puede averiguar la longitud de cada dimensión de una matriz multidimensional utilizando el método <xref:System.Array.GetLength%2A>.  
+ Puede encontrar el tamaño de una matriz mediante la propiedad <xref:System.Array.Length%2A>. Puede averiguar la longitud de cada dimensión de una matriz multidimensional utilizando el método <xref:System.Array.GetLength%2A> .  
   
  Puede cambiar el tamaño de una variable de matriz asignando un nuevo objeto de matriz o usando la instrucción `ReDim` .  
   
@@ -250,7 +250,7 @@ Dim prices(3, 4, 5) As Long
 |||  
 |---|---|  
 |Longitud de la dimensión|El índice de cada dimensión es de base 0, lo que significa que va desde 0 hasta su límite máximo. Por lo tanto, la longitud de una dimensión determinada supera en 1 el límite máximo declarado para esa dimensión.|  
-|Límites de longitud|La longitud de cada dimensión de una matriz se limita al valor máximo del tipo de datos `Integer`, que es (2 ^ 31) - 1. Sin embargo, el tamaño total de una matriz también está limitado por la memoria disponible en el sistema. Si se intenta inicializar una matriz que supera la cantidad de memoria RAM disponible, Common Language Runtime produce una excepción <xref:System.OutOfMemoryException>.|  
+|Límites de longitud|La longitud de cada dimensión de una matriz se limita al valor máximo del tipo de datos `Integer`, que es (2 ^ 31) - 1. Sin embargo, el tamaño total de una matriz también está limitado por la memoria disponible en el sistema. Si se intenta inicializar una matriz que supera la cantidad de memoria RAM disponible, Common Language Runtime produce una excepción <xref:System.OutOfMemoryException> .|  
 |Tamaño y tamaño de elemento|El tamaño de la matriz es independiente del tipo de datos de sus elementos. El tamaño siempre representa el número total de elementos, no el número de bytes que se usan en el almacenamiento.|  
 |Consumo de memoria|No es seguro dar nada por supuesto en lo que respecta al modo de almacenar una matriz en la memoria. El almacenamiento varía en función de las plataformas de diferentes anchos de datos, por lo que la misma matriz puede utilizar más memoria en un sistema de 64 bits que en un sistema de 32 bits. Según la configuración del sistema cuando inicializa una matriz, Common Language Runtime (CLR) puede asignar el almacenamiento para empaquetar los elementos tan juntos como sea posible o para alinearlos todos en los límites naturales del hardware. Asimismo, una matriz requiere una sobrecarga de almacenamiento para obtener su información de control y esta sobrecarga aumenta con cada dimensión agregada.|  
   
@@ -265,7 +265,7 @@ Dim prices(3, 4, 5) As Long
   
 -   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.TypeName%2A> para recibir un `String` que contiene el nombre de tipo en tiempo de ejecución.  
   
--   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.VarType%2A> para recibir un valor `VariantType` que representa la clasificación del tipo de la variable.  
+-   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.VarType%2A> para recibir un valor `VariantType` valor que representa la clasificación del tipo de la variable.  
   
  En el ejemplo siguiente se llama a la función `TypeName` para determinar el tipo de la matriz y el tipo de elementos de la matriz. El tipo de matriz es `Integer(,)` y los elementos de la matriz son del tipo `Integer`.  
   
@@ -278,7 +278,7 @@ Dim prices(3, 4, 5) As Long
   
  Para algunas colecciones, puede asignar una clave a cualquier objeto que incluya en la colección para, de este modo, recuperar rápidamente el objeto con la clave.  
   
- Si la colección contiene elementos de un solo tipo de datos, puede usar una de las clases del espacio de nombres <xref:System.Collections.Generic?displayProperty=fullName>. Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella. Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.  
+ Si la colección contiene elementos de un solo tipo de datos, puede usar una de las clases del espacio de nombres <xref:System.Collections.Generic?displayProperty=fullName> . Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella. Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.  
   
  Para más información sobre las colecciones, vea [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   

@@ -1,5 +1,5 @@
 ---
-title: "Ensamblados y caché global de ensamblados (Visual Basic) | Microsoft Docs"
+title: "Ensamblados y caché global de ensamblados (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Ensamblados y caché global de ensamblados (Visual Basic)
@@ -41,7 +42,7 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
   
 -   Mediante programación, puede obtener información sobre un ensamblado mediante reflexión. Para más información, vea [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
--   Si desea cargar un ensamblado solo para inspeccionarlo, utilice un método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   Si quiere cargar un ensamblado solo para inspeccionarlo, use un método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Manifiesto del ensamblado  
  Dentro de cada ensamblado hay un *manifiesto del ensamblado*. De forma similar a una tabla de contenido, el manifiesto del ensamblado contiene lo siguiente:  
@@ -74,3 +75,4 @@ Los ensamblados componen la unidad fundamental de implementación, control de ve
  [Creación y uso de ensamblados con la línea de comandos (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
  [Tutorial: inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
  [Tutorial: inserción de información de tipos desde ensamblados de Microsoft Office en Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+

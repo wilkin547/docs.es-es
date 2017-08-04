@@ -1,5 +1,5 @@
 ---
-title: "Guía de migración a .NET Framework 4.7, 4.6 y 4.5 | Microsoft Docs"
+title: "Guía de migración a .NET Framework 4.7, 4.6 y 4.5 "
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,15 +17,15 @@ caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d745ff3729fed78cdaf7402d8e8847e95a4ed400
-ms.openlocfilehash: aa587b7ca0beaabae8eb44f83355427579241b47
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 820d1966172a93c06c6451c51bc7f360496f46b8
 ms.contentlocale: es-es
-ms.lasthandoff: 04/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Guía de migración a .NET Framework 4.7, 4.6 y 4.5 
-Si ha creado la aplicación con una versión anterior de .NET Framework, normalmente puede actualizarla con facilidad a .NET Framework 4.5 y sus versiones secundarias (4.5.1 y 4.5.2), .NET Framework 4.6 y sus versiones secundarias (4.6.1 y 4.6.2) o .NET Framework 4.7. Abra el proyecto en Visual Studio. Si el proyecto se creó en una versión anterior, se abre automáticamente el cuadro de diálogo **Compatibilidad de proyectos**. Para más información sobre cómo actualizar un proyecto en Visual Studio, consulte [Portar, migrar y actualizar proyectos de Visual Studio](https://docs.microsoft.com/en-us/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) y [Compatibilidad y destinatarios de la plataforma de Visual Studio 2017](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).  
+Si ha creado la aplicación con una versión anterior de .NET Framework, normalmente puede actualizarla con facilidad a .NET Framework 4.5 y sus versiones secundarias (4.5.1 y 4.5.2), .NET Framework 4.6 y sus versiones secundarias (4.6.1 y 4.6.2) o .NET Framework 4.7. Abra el proyecto en Visual Studio. Si el proyecto se creó en una versión anterior, se abre automáticamente el cuadro de diálogo **Compatibilidad de proyectos**. Para más información sobre cómo actualizar un proyecto en Visual Studio, consulte [Portar, migrar y actualizar proyectos de Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) y [Compatibilidad y destinatarios de la plataforma de Visual Studio 2017](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).  
   
  Sin embargo, como se han realizado ciertos cambios en .NET Framework, deberá modificar el código. Es posible que también quiera aprovechar las nuevas funcionalidades de .NET Framework 4.5 y sus versiones secundarias, .NET Framework 4.6 y sus versiones secundarias o en .NET Framework 4.7. El proceso de realizar estos tipos de cambios en la aplicación para adaptarla a una nueva versión de .NET Framework se conoce normalmente como *migración*. Si no es necesario migrar la aplicación, puede ejecutarla en .NET Framework 4.5 o versiones posteriores sin recompilarla.  
   
@@ -49,4 +49,5 @@ Si ha creado la aplicación con una versión anterior de .NET Framework, normalm
  [Novedades](../../../docs/framework/whats-new/index.md)   
  [Lo obsoleto en la biblioteca de clases](../../../docs/framework/whats-new/whats-obsolete.md)   
  [Información sobre versión y ensamblado de .NET Framework](http://go.microsoft.com/fwlink/?LinkId=201701)   
- [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)
+ [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) [Problemas de migración de .NET Framework 4](net-framework-4-migration-issues.md)
+

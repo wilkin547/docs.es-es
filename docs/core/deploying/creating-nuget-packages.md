@@ -1,6 +1,6 @@
 ---
-title: "Creación de un paquete de NuGet con herramientas multiplataforma | Microsoft Docs"
-description: "Creación de un paquete de NuGet con herramientas multiplataforma"
+title: "Creación de un paquete de NuGet con herramientas multiplataforma"
+description: "Obtenga información sobre cómo crear un paquete NuGet con el comando \"dotnet pack\"."
 keywords: .NET, .NET Core, NuGet
 author: cartermp
 ms.author: mairaw
@@ -10,16 +10,15 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 2b2081bce1725fb4a019881521604e4171b85028
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Cómo crear un paquete de NuGet con herramientas multiplataforma
-<a id="how-to-create-a-nuget-package-with-cross-platform-tools" class="xliff"></a>
+# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Cómo crear un paquete de NuGet con herramientas multiplataforma
 
 > [!NOTE]
 > A continuación se muestran ejemplos de línea de comandos mediante Unix.  El comando `dotnet pack`, tal como se muestra aquí, funciona del mismo modo en Windows.
@@ -64,8 +63,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 Y ahora tiene los archivos necesarios para publicar un paquete de NuGet.
 
-## `dotnet pack`No confunda `dotnet publish` con
-<a id="dont-confuse-dotnet-pack-with-dotnet-publish" class="xliff"></a>
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`No confunda `dotnet publish` con
 
 Es importante tener en cuenta que en ningún momento participa el comando `dotnet publish`.  El comando `dotnet publish` es para la implementación de aplicaciones con todas sus dependencias en el mismo paquete, no para generar un paquete de NuGet para distribuir y consumir a través de NuGet.
 
