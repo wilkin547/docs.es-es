@@ -1,5 +1,5 @@
 ---
-title: 'Comando dotnet-migrate: CLI de .NET Core | Microsoft Docs'
+title: 'Comando dotnet-migrate: CLI de .NET Core'
 description: El comando dotnet-migrate migra un proyecto y todas sus dependencias.
 keywords: dotnet-migrate, CLI, comando de la CLI, .NET Core
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: bde4df1c9e84e103c75b0ccc32d7e970b7708b53
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8491d69b2e0df7b3bd2741e34abdb9631777019
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -106,3 +107,4 @@ Migrar todos los proyectos que incluyen el archivo *global.json*:
 Migrar solo el proyecto actual y ninguna dependencia de proyecto a proyecto (P2P). Además, usar una versión específica de SDK:
 
 `dotnet migrate -s -v 1.0.0-preview4`
+

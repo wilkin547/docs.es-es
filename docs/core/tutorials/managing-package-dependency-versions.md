@@ -1,6 +1,6 @@
 ---
-title: "Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0 | Microsoft Docs"
-description: "Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0"
+title: "Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0"
+description: "Obtenga información sobre la administración de versiones de dependencias de paquete para aplicaciones y bibliotecas de .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,21 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3576fecfd4964bc0a4ca9482888cd61e6ac44350
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0
-<a id="how-to-manage-package-dependency-versions-for-net-core-10" class="xliff"></a>
+# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>Cómo administrar las versiones de dependencias de paquete para .NET Core 1.0
 
 En este artículo se analiza lo que debe saber sobre las versiones de paquete para las bibliotecas y aplicaciones de .NET Core.
 
-## Glosario
-<a id="glossary" class="xliff"></a>
+## <a name="glossary"></a>Glosario
 
 **Corrección**: corregir las dependencias significa que usa la misma "familia" de paquetes lanzada en NuGet para .NET Core 1.0.
 
@@ -31,8 +29,7 @@ En este artículo se analiza lo que debe saber sobre las versiones de paquete pa
 
 **Recorte**: acción de quitar de un metapaquete los paquetes de los cuales no depende.  Es importante para los creadores de paquetes NuGet.  Consulte [Reducción de dependencias de paquete con project.json](../deploying/reducing-dependencies.md) para más información. 
 
-## Corrección de las dependencias a .NET Core 1.0
-<a id="fix-your-dependencies-to-net-core-10" class="xliff"></a>
+## <a name="fix-your-dependencies-to-net-core-10"></a>Corrección de las dependencias a .NET Core 1.0
 
 Para restaurar de forma fiable los paquetes y escribir código confiable, es importante que corrija las dependencias a las versiones de los paquetes incluidos con .NET Core 1.0.  Esto significa que cada paquete debe tener una versión única sin calificadores adicionales.
 
@@ -52,13 +49,11 @@ Para restaurar de forma fiable los paquetes y escribir código confiable, es imp
 
 `"System.Text.RegularExpressions":"4.0.10-rc3-24021-00"`
 
-### ¿Por qué es importante?
-<a id="why-does-this-matter" class="xliff"></a>
+### <a name="why-does-this-matter"></a>¿Por qué es importante?
 
 Garantizamos que si corrige las dependencias al contenido que acompaña a .NET Core 1.0, esos paquetes funcionarán completamente en conjunto.  Dicha garantía no existe si usa paquetes no corregidos de esa manera.
 
-### Escenarios
-<a id="scenarios" class="xliff"></a>
+### <a name="scenarios"></a>Escenarios
 
 A pesar de que hay una gran lista de todos los paquetes y sus versiones lanzadas con .NET Core 1.0, puede que no sea necesario consultarla si el código que tiene se encuentra en ciertos escenarios.
 
@@ -78,17 +73,15 @@ Si es así, debe asegurarse de que el metapaquete con el que comienza esté corr
 
 Si es así, debe corregir las otras dependencias a 1.0.  Consulte las versiones de paquete y los números de compilación correctos al final de este artículo.
 
-### Nota sobre el uso de una cadena con asterisco (\*) cuando cree versiones
-<a id="a-note-on-using-a-splat-string--when-versioning" class="xliff"></a>
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>Nota sobre el uso de una cadena con asterisco (\*) cuando cree versiones
 
 Puede que haya adoptado un patrón de creación de versiones que usa una cadena con asterisco (\*) como la siguiente: `"System.Collections":"4.0.11-*"`.
 
 **No debe hacer esto**.  Si usa la cadena con asterisco podría restaurar paquetes de distintas compilaciones, algunas de las cuales podrían ir mucho más allá de .NET Core 1.0.  Esto podría hacer que algunos paquetes no sean compatibles.
 
-## Número de versión y paquetes organizados por metapaquete
-<a id="packages-and-version-numbers-organized-by-metapackage" class="xliff"></a>
+## <a name="packages-and-version-numbers-organized-by-metapackage"></a>Número de versión y paquetes organizados por metapaquete
 
-[Lista de todos los paquetes de la Biblioteca estándar de .NET y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
+[Lista de todos los paquetes del estándar .NET y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
 
 [Lista de todos los paquetes de entorno de ejecución y sus versiones para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 

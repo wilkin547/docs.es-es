@@ -1,6 +1,6 @@
 ---
-title: "Reducción de dependencias de paquete con project.json | Microsoft Docs"
-description: "Reducción de dependencias de paquete con project.json"
+title: "Reducción de dependencias de paquete con project.json"
+description: Reduzca las dependencias de paquete al crear bibliotecas basadas en project.json.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,28 +9,25 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Reducción de dependencias de paquete con project.json
-<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
+# <a name="reducing-package-dependencies-with-projectjson"></a>Reducción de dependencias de paquete con project.json
 
 En este artículo se analiza todo lo que necesita saber sobre cómo reducir las dependencias de paquete cuando se crean bibliotecas `project.json`. Al final de este artículo, habrá aprendido a redactar la biblioteca de manera tal que solo use las dependencias necesarias. 
 
-## Por qué es importante
-<a id="why-its-important" class="xliff"></a>
+## <a name="why-its-important"></a>Por qué es importante
 
-.NET Core es un producto que consta de paquetes NuGet.  Un paquete esencial es el [metapaquete de la Biblioteca estándar de .NET](https://www.nuget.org/packages/NETStandard.Library), que es un paquete NuGet que consta de otros paquetes.  Proporciona el conjunto de paquetes que se garantiza que funcionan con varias implementaciones de .NET, como .NET Framework, .NET Core y Xamarin/Mono.
+.NET Core es un producto que consta de paquetes NuGet.  Un paquete esencial es el [metapaquete .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que es un paquete NuGet que consta de otros paquetes.  Proporciona el conjunto de paquetes que se garantiza que funcionan con varias implementaciones de .NET, como .NET Framework, .NET Core y Xamarin/Mono.
 
 Sin embargo, hay muchas posibilidades de que la biblioteca no use cada uno de los paquetes que contiene.  Cuando se crea una biblioteca y se la distribuye en NuGet, un procedimiento recomendado es "recortar" las dependencias para que solo queden los paquetes que realmente usa.  Esto da como resultado una superficie total menor de los paquetes NuGet.
 
-## Cómo hacerlo
-<a id="how-to-do-it" class="xliff"></a>
+## <a name="how-to-do-it"></a>Cómo hacerlo
 
 Actualmente, no hay ningún comando de `dotnet` oficial que recorte las referencias de paquete.  En lugar de eso, deberá hacerlo de manera manual.  El proceso general tiene el aspecto siguiente:
 
@@ -46,8 +43,7 @@ Una de las siguientes formas le permite saber cuáles son los paquetes que no ne
 1. Prueba y error.  Esto implica quitar un paquete, realizar la restauración, ver si la biblioteca se compila y repetir este proceso.
 2. Mediante el uso de una herramienta como [ILSpy](http://ilspy.net) o [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) para echar un vistazo a las referencias y ver las que realmente usa el código.  De ese modo, puede quitar los paquetes que no corresponden a los tipos que usa.
 
-## Ejemplo
-<a id="example" class="xliff"></a> 
+## <a name="example"></a>Ejemplo 
 
 Imagine que escribió una biblioteca que brindó una funcionalidad adicional a los tipos de colección genéricos.  Dicha biblioteca debería depender de paquetes como `System.Collections`, pero probablemente no dependería para nada de paquetes tales como `System.Net.Http`.  Por lo tanto, sería bueno recortar las dependencias de paquete para que solo queden las que necesita esta biblioteca.
 

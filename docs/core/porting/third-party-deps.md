@@ -1,5 +1,5 @@
 ---
-title: "Migración a .NET Core - Análisis de las dependencias de terceros | Microsoft Docs"
+title: "Migración a .NET Core - Análisis de las dependencias de terceros"
 description: "Migración a .NET Core - Análisis de las dependencias de terceros"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,26 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Migración a .NET Core - Análisis de las dependencias de terceros
-<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Migración a .NET Core - Análisis de las dependencias de terceros
 
 El primer paso en el proceso de conversión es comprender las dependencias de terceros.  Debe averiguar cuáles de ellos, si los hay, todavía no se ejecuta en .NET Core y desarrollar un plan de contingencia para aquellos que no se ejecutan en .NET Core.
 
-## Requisitos previos
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Requisitos previos
 
 En este artículo se supone que usa Windows y Visual Studio, y que tiene un código que se ejecuta en .NET Framework.
 
-## Análisis de paquetes NuGet
-<a id="analyzing-nuget-packages" class="xliff"></a>
+## <a name="analyzing-nuget-packages"></a>Análisis de paquetes NuGet
 
 Es muy fácil analizar los paquetes NuGet para la portabilidad.  Como un paquete NuGet es en sí mismo un conjunto de carpetas que contienen los ensamblados específicos de la plataforma, todo lo que tiene que hacer es comprobar si hay una carpeta que contiene un ensamblado de .NET Core.
 
@@ -58,7 +55,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Estos son los Moniker de la versión de .NET Framework de destino (TFM) que se asignan a las versiones de los perfiles de [la biblioteca estándar de .NET](../../standard/net-standard.md) y de la Biblioteca de clases portables (PCL) que son compatibles con .NET Core.  Tenga en cuenta que `netcoreapp1.0`, mientras sea compatible, es para aplicaciones y no para bibliotecas.  Aunque no hay ningún problema con el uso de una biblioteca que está basada en `netcoreapp1.0`, dicha biblioteca solo está diseñada *para* el consumo por otras aplicaciones `netcoreapp1.0`.
+Estos son los Moniker de la versión de .NET Framework de destino (TFM) que se asignan a las versiones de los perfiles del [estándar .NET](../../standard/net-standard.md) y de la Biblioteca de clases portables (PCL) que son compatibles con .NET Core.  Tenga en cuenta que `netcoreapp1.0`, mientras sea compatible, es para aplicaciones y no para bibliotecas.  Aunque no hay ningún problema con el uso de una biblioteca que está basada en `netcoreapp1.0`, dicha biblioteca solo está diseñada *para* el consumo por otras aplicaciones `netcoreapp1.0`.
 
 También hay algunos TFM heredados utilizados en versiones preliminares de .NET Core que pueden ser compatibles:
 
@@ -77,8 +74,7 @@ dotnet5.5
 > [!NOTE]
 > Para utilizar un paquete destinado a una PCL tradicional o .NET Core de versión preliminar, debe usar la directiva `imports` en su archivo `project.json`.
 
-### Qué hacer cuando su dependencia del paquete NuGet no se ejecuta en .NET Core
-<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
+### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Qué hacer cuando su dependencia del paquete NuGet no se ejecuta en .NET Core
 
 Hay algunas cosas que puede hacer si un paquete NuGet en el que depende no se ejecuta en .NET Core.
 
@@ -94,13 +90,11 @@ Si no puede resolver el problema con las sugerencias anteriores, tendrá que rea
 
 El equipo de .NET le gustaría saber qué bibliotecas son las más importantes para que sean compatibles con .NET Core. También puede enviarnos un correo electrónico a dotnet@microsoft.com sobre las bibliotecas que le gustaría utilizar.
 
-## Análisis de dependencias que no son paquetes NuGet
-<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
+## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>Análisis de dependencias que no son paquetes NuGet
 
 Puede que tenga una dependencia que no sea un paquete NuGet, como un archivo DLL en el sistema de archivos.  La única manera de determinar la portabilidad de esa dependencia es ejecutar la [herramienta ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
 
-## Pasos siguientes
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>Pasos siguientes
 
 Si está realizando la portabilidad de una biblioteca, consulte [Porting your Libraries](libraries.md) (Portabilidad de las bibliotecas).
 
