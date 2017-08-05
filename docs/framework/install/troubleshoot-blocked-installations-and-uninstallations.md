@@ -1,7 +1,7 @@
 ---
 title: "Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -90,5 +90,4 @@ El programa de instalación de .NET Framework no se puede ejecutar en el modo de
 [Instalación de .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md)   
 [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Versiones y dependencias](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-
 
