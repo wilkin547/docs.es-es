@@ -1,5 +1,5 @@
 ---
-title: "Mitigación: Valor de configuración minFreeMemoryPercentageToActiveService | Microsoft Docs"
+title: "Mitigación: Valor de configuración minFreeMemoryPercentageToActiveService"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,18 +14,18 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 783dd4fb28f1590722833ce9a456b9c2c76ecd80
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f7f228890476d45517a21bc09806538139c5e389
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-minfreememorypercentagetoactiveservice-configuration-setting"></a>Mitigación: Valor de configuración minFreeMemoryPercentageToActiveService
 En [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], se produce una excepción si la memoria disponible en el servidor web es menor que el porcentaje especificado por la opción de configuración [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md). En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], este valor se omite.  
   
 ## <a name="impact"></a>Impacto  
- En la mayoría de los casos, el impacto de aplicar la opción [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) s deseable: mejora la estabilidad del sistema evitando las excepciones <xref:System.OutOfMemoryException> que pueden aparecer cuando se inicia un servicio de Windows Communication Foundation (WCF) en un sistema que tiene memoria restringida.  
+ En la mayoría de los casos, el impacto de aplicar la opción [minFreeMemoryPercentageToActivateService](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) es deseable: mejora la estabilidad del sistema al evitar las excepciones <xref:System.OutOfMemoryException> que pueden aparecer cuando se inicia un servicio de Windows Communication Foundation (WCF) en un sistema que tiene memoria restringida.  
   
  Sin embargo, en algunos casos, es posible que un servicio iniciado correctamente con anterioridad no se pueda iniciar. En ese caso, aparece un mensaje de error detallado:  
   

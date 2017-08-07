@@ -1,5 +1,5 @@
 ---
-title: Tipos obsoletos en .NET Framework | Microsoft Docs
+title: Tipos obsoletos en .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 41
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
-ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ab48dedaef24ea209c38939ee87a0321da55cf
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
@@ -491,11 +491,11 @@ ms.lasthandoff: 05/22/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Activities?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Activities?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
   
  [Volver al principio](#introduction)  
   
@@ -504,16 +504,16 @@ ms.lasthandoff: 05/22/2017
   
 |Tipo|Mensaje|  
 |----------|-------------|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel> excepto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Compiler> excepto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Design> excepto <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel> excepto <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Compiler> excepto <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> y <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.ComponentModel.Design> excepto <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
   
  [Volver al principio](#introduction)  
   
@@ -524,11 +524,11 @@ ms.lasthandoff: 05/22/2017
 |----------|-------------| 
 |<xref:System.Activities.Statements.Interop>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>.\*.|  
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>.\*.|   
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Configuration>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.DebugEngine> excepto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Hosting> excepto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
-|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Tracking>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos System.Workflow.\* están desusados. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Configuration>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.DebugEngine> excepto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Hosting> excepto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
+|Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Tracking>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>.\*.|  
   
  [Volver al principio](#introduction)  
   

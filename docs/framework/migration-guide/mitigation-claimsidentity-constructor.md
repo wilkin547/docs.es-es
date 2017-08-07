@@ -1,5 +1,5 @@
 ---
-title: "Mitigación: constructor ClaimsIdentity | Microsoft Docs"
+title: "Mitigación: constructor ClaimsIdentity"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,15 +15,15 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 84016664708b9b7fc61a9535e5f7910417caa6f1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a50cbd69aa1f2c72adc9fc4d10a070f5faa0cf54
 ms.contentlocale: es-es
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-claimsidentity-constructor"></a>Mitigación: constructor ClaimsIdentity
-A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], hay un cambio en cómo el constructor <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=fullName> establece la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=fullName>. Si el argumento <xref:System.Security.Principal.IIdentity> es un objeto <xref:System.Security.Claims.ClaimsIdentity>, la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> de dicho objeto <xref:System.Security.Claims.ClaimsIdentity> no es `null`; la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> se asocia con el método <xref:System.Security.Claims.ClaimsIdentity.Clone%2A?displayProperty=fullName>. En [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> se asocia como una referencia existente.  
+A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], hay un cambio en cómo el constructor <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=fullName> establece la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=fullName>. Si el argumento <xref:System.Security.Principal.IIdentity> es un objeto <xref:System.Security.Claims.ClaimsIdentity> y la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> de ese objeto <xref:System.Security.Claims.ClaimsIdentity> no es `null`, la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> se conecta mediante el método <xref:System.Security.Claims.ClaimsIdentity.Clone%2A?displayProperty=fullName>. En [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A> se asocia como una referencia existente.  
   
 ## <a name="impact"></a>Impacto  
  A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=fullName> del nuevo objeto <xref:System.Security.Claims.ClaimsIdentity> no es igual a la propiedad <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=fullName> del argumento <xref:System.Security.Principal.IIdentity> del constructor. En [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] y en versiones anteriores, sí es igual.  
