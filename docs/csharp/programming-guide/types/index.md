@@ -36,10 +36,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b8b7951c01ac5a82c79a0942fdc99368c2d0175
+ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
+ms.openlocfilehash: 906fa362c249c3e5abbd6f2ed3ba879a81334aeb
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
@@ -140,7 +140,7 @@ char c = 'Z';
  Todas las enumeraciones se heredan de <xref:System.Enum?displayProperty=fullName>, el cual se hereda de <xref:System.ValueType?displayProperty=fullName>. Todas las reglas que se aplican a las estructuras también se aplican a las enumeraciones. Para más información sobre las enumeraciones, vea [Tipos de enumeración](../../../csharp/programming-guide/enumeration-types.md).  
   
 ### <a name="reference-types"></a>Tipos de referencia  
- Un tipo que se define como [clase](../../../csharp/language-reference/keywords/class.md), [delegado](../../../csharp/language-reference/keywords/delegate.md), matriz o [interfaz](../../../csharp/language-reference/keywords/interface.md) es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, la variable contiene el valor [NULL](../../../csharp/language-reference/keywords/null.md) hasta que se crea explícitamente una instancia del objeto mediante el operador [new](../../../csharp/language-reference/keywords/new.md) o se le asigna un objeto creado en otro lugar mediante `new, as shown in the following example:`.  
+ Un tipo que se define como [clase](../../../csharp/language-reference/keywords/class.md), [delegado](../../../csharp/language-reference/keywords/delegate.md), matriz o [interfaz](../../../csharp/language-reference/keywords/interface.md) es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, esta contendrá el valor [null](../../../csharp/language-reference/keywords/null.md) hasta que se cree expresamente una instancia del objeto mediante el operador [new](../../../csharp/language-reference/keywords/new.md), o bien que se le asigne un objeto creado en otro lugar mediante `new`, tal y como se muestra en el ejemplo siguiente:
   
 ```csharp  
 MyClass mc = new MyClass();  
