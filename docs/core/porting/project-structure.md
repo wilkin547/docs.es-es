@@ -17,8 +17,7 @@ ms.lasthandoff: 06/12/2017
 
 ---
 
-# Organización del proyecto para admitir .NET Framework y .NET Core
-<a id="organizing-your-project-to-support-net-framework-and-net-core" class="xliff"></a>
+# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organización del proyecto para admitir .NET Framework y .NET Core
 
 En este artículo se ofrece ayuda a los propietarios del proyecto que quieren compilar su solución en .NET Framework y en .NET Core, en paralelo. Se proporcionan varias opciones para organizar los proyectos a fin de permitir que los desarrolladores alcancen este objetivo. En la lista siguiente se proporcionan algunos escenarios típicos que debe considerar cuando decida cómo va a configurar el diseño del proyecto con .NET Core. Es posible que la lista no abarque todos los aspectos que quiere, pero debe darles prioridad en función de las necesidades del proyecto.
 
@@ -39,8 +38,7 @@ En este artículo se ofrece ayuda a los propietarios del proyecto que quieren co
   * Para mantener la compatibilidad con el desarrollo en proyectos existentes sin tener que hacer una actualización para los desarrolladores o colaboradores que posiblemente no tengan Visual Studio 2017.
   * Para disminuir la posibilidad de generar nuevos errores en proyectos existentes porque esos proyectos no requieren renovación de código.
 
-## Ejemplo
-<a id="example" class="xliff"></a>
+## <a name="example"></a>Ejemplo
 
 Considere el siguiente repositorio:
 
@@ -50,8 +48,7 @@ Considere el siguiente repositorio:
 
 A continuación se describen varias formas de agregar compatibilidad para .NET Core para este repositorio en función de las restricciones y la complejidad de los proyectos existentes.
 
-## Reemplazo de proyectos existentes por un proyecto .NET Core con compatibilidad con múltiples versiones
-<a id="replace-existing-projects-with-a-multi-targeted-net-core-project" class="xliff"></a>
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Reemplazo de proyectos existentes por un proyecto .NET Core con compatibilidad con múltiples versiones
 
 Reorganice el repositorio de manera que se quite cualquier archivo *\*.csproj* existente y se cree un archivo *\*.csproj* único que establezca varios marcos de trabajo como destino. Esta es una opción excelente, porque un proyecto único se puede compilar para distintos marcos de trabajo. También tiene la capacidad de controlar distintas dependencias y opciones de compilación por cada marco de trabajo de destino.
 
@@ -62,8 +59,7 @@ Reorganice el repositorio de manera que se quite cualquier archivo *\*.csproj* e
 Los cambios que debe tener en cuenta son los siguientes:
 * Reemplazo de *packages.config* y *\*.csproj* por un nuevo [.NET Core *\*.csproj*][example-csproj-netcore]. Los paquetes NuGet se especifican con `<PackageReference> ItemGroup`.
 
-## Mantenimiento de los proyectos existentes y creación de un proyecto .NET Core
-<a id="keep-existing-projects-and-create-a-net-core-project" class="xliff"></a>
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Mantenimiento de los proyectos existentes y creación de un proyecto .NET Core
 
 Si hay proyectos existentes que tienen como destino marcos de trabajo anteriores, puede que desee dejarlos intactos y usar un proyecto .NET Core para establecer como destino marcos de trabajo futuros.
 
@@ -75,8 +71,7 @@ Los cambios que debe tener en cuenta son los siguientes:
 * .NET Core y los proyectos existentes se mantienen en carpetas independientes.
     * Mantener los proyectos en carpetas independientes evita que sea necesario tener Visual Studio 2017. Puede crear una solución independiente que solo abra los proyectos anteriores.
 
-## Vea también
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Vea también
 
 Vea la [documentación sobre el traslado de .NET Core][porting-doc] para obtener más orientación sobre cómo migrar a .NET Core.
 
