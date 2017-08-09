@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 4708abcbd14f47089859ea1dba143a6648c845e5
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -83,7 +83,7 @@ Hay dos metapaquetes principales para .NET Core.
 
 - v1.6 a partir de .NET Core 1.0 (estas versiones no coincidirán normalmente o a propósito).
 - Se asigna al marco `netstandard`. 
-- Describe los paquetes que se consideran necesarios para el desarrollo de aplicaciones modernas y que deben implementar las plataformas .NET para que se consideren una plataforma un [.NET Standard](../../standard/net-standard.md).
+- Describe los paquetes que se consideran necesarios para el desarrollo de aplicaciones modernas y que deben implementar las implementaciones de .NET para que se consideren una plataforma de [.NET Standard](../../standard/net-standard.md).
 
 **Microsoft.NETCore.App**
 
@@ -97,7 +97,7 @@ Nota: [`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org/package
 
 Las versiones de marco se actualizan cuando se agregan nuevas API. No tienen ningún concepto de versión de revisión, ya que representan la forma de API y no los problemas de implementación. Las versiones principales y secundarias seguirán las reglas de SemVer especificadas anteriormente.
 
-El marco `netcoreapp` está asociado a la distribución de .NET Core. Seguirá los números de versión que usa .NET Core. Por ejemplo, cuando se lance .NET Core 2.0, tendrá como destino `netcoreapp2.0`. El marco `netstandard` no coincidirá con el esquema de control de versiones de ningún entorno de tiempo de ejecución .NET, ya que es igualmente aplicable a todos ellos.
+El marco `netcoreapp` está asociado a la distribución de .NET Core. Seguirá los números de versión que usa .NET Core. Por ejemplo, cuando se lance .NET Core 2.0, tendrá como destino `netcoreapp2.0`. El marco `netstandard` no coincidirá con el esquema de control de versiones de ninguna implementación de .NET, ya que es igualmente aplicable a todas ellas.
 
 ## <a name="versioning-in-practice"></a>Control de versiones en la práctica
 
