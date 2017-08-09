@@ -13,8 +13,8 @@
 | Windows Phone Silverlight                 | 8.0   |        |       |       |       |        |        |       |
 
 - Las columnas representan las versiones de .NET Standard. Cada celda de encabezado es un vínculo a un documento que muestra qué API se han agregado en esa versión de .NET Standard.
-- Las filas representan las diferentes plataformas de .NET.
-- El número de versión de cada celda indica la versión *mínima* de la plataforma que necesitará para tener como destino dicha versión de .NET Standard.
+- Las filas representan las diferentes implementaciones de .NET.
+- El número de versión de cada celda indica la versión *mínima* de la implementación que necesitará para tener como destino dicha versión de .NET Standard.
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md
