@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -34,7 +34,7 @@ Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
 
 ## <a name="building-applications-with-visual-studio-code"></a>Creación de aplicaciones con Visual Studio Code
 
-- [Introducción a C# con Visual Studio Code](../../csharp/getting-started/with-visual-studio-code.md)
+- [Introducción a C# y Visual Studio Code](with-visual-studio-code.md)
 - [Introducción a .NET Core en macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Creación de aplicaciones con Visual Studio para Mac

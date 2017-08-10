@@ -1,5 +1,5 @@
 ---
-title: "Cómo agregar la funcionalidad de límite y bloqueo a una colección | Microsoft Docs"
+title: "Cómo: Agregar la funcionalidad de límite y bloqueo a una colección"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,14 +15,15 @@ caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: df159b1ab3f7c16564ce493a585246c4c461a8f9
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3258534cb0bf67b180080eca4f7cefc65c609fa4
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>Cómo: Agregar la funcionalidad de límite y bloqueo a una colección
-Este ejemplo muestra cómo agregar la funcionalidad de límite y bloqueo a una clase de colección personalizada implementando la interfaz <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName> en la clase y, después, usando una instancia de clase como mecanismo de almacenamiento interno para <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>. Para obtener más información acerca de la funcionalidad de límite y bloqueo, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
+En este ejemplo se muestra cómo agregar la funcionalidad de límite y bloqueo a una clase de colección personalizada. Para ello, se implementa la interfaz <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=fullName> en la clase y, después, se usa una instancia de clase como mecanismo de almacenamiento interno para <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>. Para obtener más información acerca de la funcionalidad de límite y bloqueo, consulte [Información general sobre BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
   
 ## <a name="example"></a>Ejemplo  
  La clase de colección personalizada es una cola de prioridad básica en la que los niveles de prioridad se representan como una matriz de objetos <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>. No se realiza ningún orden adicional en cada cola.  
@@ -37,3 +38,4 @@ Este ejemplo muestra cómo agregar la funcionalidad de límite y bloqueo a una c
   
 ## <a name="see-also"></a>Vea también  
  [Colecciones seguras para subprocesos](../../../../docs/standard/collections/thread-safe/index.md)
+

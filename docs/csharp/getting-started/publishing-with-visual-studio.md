@@ -18,9 +18,7 @@ ms.lasthandoff: 06/12/2017
 
 ---
 
-<a id="publishing-your-hello-world-application-with-visual-studio-2017" class="xliff"></a>
-
-# Publicación de la aplicación Hola a todos con Visual Studio 2017
+# <a name="publishing-your-hello-world-application-with-visual-studio-2017"></a>Publicación de la aplicación Hola a todos con Visual Studio 2017
 
 En [Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017](with-visual-studio.md), ha compilado una aplicación de consola Hola mundo. En [Depuración de la aplicación Hola a todos en C# con Visual Studio 2017](debugging-with-visual-studio.md), la ha probado con el depurador de Visual Studio. Ahora que está seguro de que funciona como se esperaba, puede publicarla para que otros usuarios puedan ejecutarla. Al realizar la publicación, se crea el conjunto de archivos necesarios para ejecutar la aplicación; y puede implementarlos mediante su copia en un equipo de destino.
 
