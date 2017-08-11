@@ -1,5 +1,5 @@
 ---
-title: "Ejecución de aplicaciones de consola en Docker | Microsoft Docs"
+title: "Ejecución de aplicaciones de consola en Docker"
 description: "Aprenda a ejecutar una aplicación de consola existente de .NET Framework en un contenedor de Docker de Windows."
 author: spboyer
 keywords: .NET, contenedor, consola, aplicaciones
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 

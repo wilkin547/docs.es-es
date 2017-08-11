@@ -1,5 +1,5 @@
 ---
-title: Mantenimiento de .NET Core | Microsoft Docs
+title: Mantenimiento de .NET Core
 description: Mantenimiento de .NET Core
 keywords: .NET, .NET Core
 ms.date: 06/20/2016
@@ -8,11 +8,11 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 48682290-4fd7-40dc-8a7b-bac528eba361
 redirect_url: /dotnet/core/versions/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: b3ec4e85dac45d5f724a3e38de2873358ec2c3ae
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 37935a0ca04672e2a0d367b8f26d99d6571842eb
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 

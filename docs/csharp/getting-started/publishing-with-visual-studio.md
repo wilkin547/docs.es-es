@@ -1,5 +1,5 @@
 ---
-title: "Publicación de la aplicación Hola a todos con Visual Studio 2017 | Microsoft Docs"
+title: "Publicación de la aplicación Hola a todos con Visual Studio 2017"
 description: "La publicación crea el conjunto de archivos que se necesitan para ejecutar la aplicación."
 keywords: ".NET, .NET Core, aplicación de consola, publicación, implementación"
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a19545d3-24af-4a32-9778-cfb5ae938287
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 49fdae2ada3473463dcb120a35cfc8649a38a14d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b1edd9ea1c4307a4709e4fa2661c271d5f1fe91
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 
