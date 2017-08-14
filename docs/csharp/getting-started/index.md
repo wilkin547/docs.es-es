@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
 ms.contentlocale: es-es
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/13/2017
 
 ---
 # <a name="get-started-with-c"></a>Introducción a C# #
@@ -23,15 +23,15 @@ Esta sección proporciona breves y sencillos tutoriales simples que permiten com
 
 Los siguientes temas se encuentran disponibles:
 
-* [Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017](with-visual-studio.md)
+* [Compilación de una aplicación Hola mundo en C# con .NET Core en Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, la última versión de Visual Studio, permite codificar, compilar, ejecutar, depurar, generar perfiles y publicar aplicaciones para Windows desde un entorno de desarrollo integrado.
 
-   El tema le permite crear y ejecutar una aplicación Hola mundo sencilla y, a continuación, modificarla para ejecutar una aplicación Hola mundo algo más interactiva. Una vez que haya terminado de generar y ejecutar la aplicación, también puede aprender cómo [depurarla](debugging-with-visual-studio.md) y [publicarla](publishing-with-visual-studio.md) para que se pueda ejecutar en cualquier plataforma compatible con .NET Core.
+   El tema le permite crear y ejecutar una aplicación Hola mundo sencilla y, a continuación, modificarla para ejecutar una aplicación Hola mundo algo más interactiva. Una vez que haya terminado de generar y ejecutar la aplicación, también puede aprender cómo [depurarla](../../core/tutorials/debugging-with-visual-studio.md) y [publicarla](../../core/tutorials/publishing-with-visual-studio.md) para que se pueda ejecutar en cualquier plataforma compatible con .NET Core.
 
-* [Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017](library-with-visual-studio.md)
+* [Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 
-   Una biblioteca de clases permite definir los tipos y miembros de tipo que se pueden llamar desde otra aplicación. Este tema le permite crear una biblioteca de clases con un único método que determina si una cadena comienza con un carácter en mayúscula. Una vez que haya terminado de compilar la biblioteca, puede desarrollar una [prueba unitaria](testing-library-with-visual-studio.md) para asegurarse de que funciona según lo previsto y, a continuación, puede hacer que esté disponible para [aplicaciones que desean usarla](consuming-library-with-visual-studio.md).
+   Una biblioteca de clases permite definir los tipos y miembros de tipo que se pueden llamar desde otra aplicación. Este tema le permite crear una biblioteca de clases con un único método que determina si una cadena comienza con un carácter en mayúscula. Una vez que haya terminado de compilar la biblioteca, puede desarrollar una [prueba unitaria](../../core/tutorials/testing-library-with-visual-studio.md) para asegurarse de que funciona según lo previsto y, a continuación, puede hacer que esté disponible para [aplicaciones que desean usarla](../../core/tutorials/consuming-library-with-visual-studio.md).
 
 - [Introducción a C# y Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
