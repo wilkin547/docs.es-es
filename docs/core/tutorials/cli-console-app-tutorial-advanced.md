@@ -1,5 +1,5 @@
 ---
-title: "Escritura de aplicaciones de consola .NET Core con herramientas de la CLI: una guía paso a paso avanzada | Microsoft Docs"
+title: "Escritura de aplicaciones de consola .NET Core con herramientas de la CLI: una guía paso a paso avanzada"
 description: "Escritura de aplicaciones de consola .NET Core con herramientas de la CLI: una guía paso a paso avanzada"
 keywords: .NET, .NET Core
 ms.date: 06/20/2016
@@ -9,11 +9,11 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
 redirect_url: /dotnet/core/tutorials/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 008a128110c98f8d4262348b343931b510d1aac1
-ms.openlocfilehash: 23d10dd16abda77a1c545acde56ae63930c2b38a
+ms.translationtype: HT
+ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
+ms.openlocfilehash: 7ac6e7290a65d5706b3c2557ca3d697f2ade84fa
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 

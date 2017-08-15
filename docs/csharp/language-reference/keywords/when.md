@@ -62,7 +62,7 @@ En el ejemplo siguiente se usa la palabra clave `when` para ejecutar condicional
 A partir de 7, las etiquetas `case` ya no tienen que ser mutuamente exclusivas y el orden con el que las etiquetas `case` aparecen en una instrucción `switch` puede determinar el bloque switch que se ejecuta. Puede usarse la palabra clave `when` para especificar una condición de filtro que haga que su etiqueta case asociada se cumpla únicamente si también se cumple la condición de filtro. Su sintaxis es:
 
 ```csharp
-case (expr) where (when-condition):
+case (expr) when (when-condition):
 ```
 donde *expr* es un patrón de constante o un patrón de tipo que se compara con la expresión match y *when-condition* es cualquier expresión booleana. 
 

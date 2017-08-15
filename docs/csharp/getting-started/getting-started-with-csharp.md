@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f88dc299bdc503ae83740e4c1259aa1896481760
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="getting-started-with-c"></a>Introducción a C#
@@ -41,7 +41,7 @@ Los temas siguientes son de gran ayuda a la hora de empezar a desarrollar aplica
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción al lenguaje C# y .NET Framework](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
- Proporciona una visión general del lenguaje C# y la plataforma. NET.  
+ Proporciona información general sobre el lenguaje C# y .NET.  
   
  [Otros recursos para los programadores de Visual C#](../../csharp/getting-started/additional-resources.md)  
  Proporciona vínculos a sitios Web y grupos de noticias con los que le será más fácil encontrar la solución a los problemas más comunes.  

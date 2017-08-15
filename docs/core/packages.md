@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 
 .NET Core es una plataforma conformada por paquetes NuGet. Algunas experiencias del producto se benefician de la definición específica de los paquetes, mientras que otras lo hacen de la definición general de las mismas. Para dar cabida a esta dualidad, el producto se distribuye como un conjunto específico de paquetes y, luego, se describe en fragmentos más generales con un tipo de paquete que recibe informalmente el nombre de "metapaquete".
 
-Cada uno de los paquetes de .NET Core admite su ejecución en varios entornos de ejecución de .NET, que se representan como marcos de trabajo. Algunos de estos son marcos de trabajo tradicionales, como `net46`, que representa a .NET Framework. Otro conjunto son marcos de trabajo nuevos que se pueden considerar "marcos de trabajo basados en paquete", que establecen un modelo nuevo para definir los marcos de trabajo. Estos marcos de trabajo basados en paquete están completamente formadas y definidas como paquetes, lo que establece una fuerte relación entre los paquetes y los marcos de trabajo.
+Cada uno de los paquetes de .NET Core admite su ejecución en varias implementaciones .NET, que se representan como marcos de trabajo. Algunos de estos son marcos de trabajo tradicionales, como `net46`, que representa a .NET Framework. Otro conjunto son marcos de trabajo nuevos que se pueden considerar "marcos de trabajo basados en paquete", que establecen un modelo nuevo para definir los marcos de trabajo. Estos marcos de trabajo basados en paquete están completamente formadas y definidas como paquetes, lo que establece una fuerte relación entre los paquetes y los marcos de trabajo.
 
 ## <a name="packages"></a>Paquetes
 

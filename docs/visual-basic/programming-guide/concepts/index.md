@@ -1,10 +1,7 @@
 ---
 title: "Conceptos de programación (Visual Basic)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -20,10 +17,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11e93cbb48a0d47dccef8ceb2e501ca5cf4d18f4
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 96c9ec0a5bd9f6b0b2a460e8be15b4f936432016
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="programming-concepts-visual-basic"></a>Conceptos de programación (Visual Basic)
@@ -38,12 +35,12 @@ En esta sección se explican los conceptos de programación del lenguaje Visual 
 |[Información general sobre los atributos (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Describe cómo proporcionar información adicional sobre elementos de programación como tipos, campos, métodos y propiedades mediante el uso de atributos.|  
 |[Información del llamador (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Describe cómo obtener información sobre el llamador de un método. Esta información incluye la ruta de acceso al código fuente y el número de línea de dicho código y el nombre de miembro del llamador.|  
 |[Colecciones (Visual Basic)](../../../visual-basic/programming-guide/concepts/collections.md)|Describe algunos de los tipos de colecciones proporcionadas por .NET Framework. Muestra cómo usar colecciones sencillas y colecciones de pares clave-valor.|  
-|[Covarianza y contravarianza (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/covariance-and-contravariance.md)|Describe cómo habilitar la conversión implícita de parámetros de tipo genérico en interfaces y delegados.|  
+|[Covarianza y contravarianza (Visual Basic)](../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)|Describe cómo habilitar la conversión implícita de parámetros de tipo genérico en interfaces y delegados.|  
 |[Árboles de expresión (Visual Basic)](../../../visual-basic/programming-guide/concepts/expression-trees/index.md)|Explica cómo puede utilizar árboles de expresión para habilitar la modificación dinámica de código ejecutable.|  
 |[Iteradores (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)|Describe los iteradores, que se usan para recorrer colecciones y devolver los elementos uno a uno.|  
 |[Language-Integrated Query (LINQ) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/index.md)|Se describen las eficaces funciones de consulta de la sintaxis del lenguaje de Visual Basic, así como el modelo para consultar bases de datos relacionales, documentos XML, conjuntos de datos y colecciones en memoria.|  
 |[Programación orientada a objetos (Visual Basic)](../../../visual-basic/programming-guide/concepts/object-oriented-programming.md)|Describe conceptos comunes orientados a objetos, incluidos la encapsulación, la herencia y el polimorfismo.|  
-|[Reflexión (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Se explica cómo usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades.|  
+|[Reflexión (Visual Basic)](../../../visual-basic/programming-guide/concepts/reflection.md)|Se explica cómo usar la reflexión para crear dinámicamente una instancia de un tipo, enlazar el tipo a un objeto existente u obtener el tipo desde un objeto existente e invocar sus métodos, o acceder a sus campos y propiedades.|
 |[Serialización (Visual Basic)](../../../visual-basic/programming-guide/concepts/serialization/index.md)|Describe los conceptos clave de la serialización binaria, XML y SOAP.|  
 |[Subprocesamiento (Visual Basic)](../../../visual-basic/programming-guide/concepts/threading/index.md)|Proporciona información general sobre el modelo de subprocesos .NET y muestra cómo escribir código que realiza varias tareas al mismo tiempo para mejorar el rendimiento y la capacidad de respuesta de las aplicaciones.|  
   
@@ -51,5 +48,5 @@ En esta sección se explican los conceptos de programación del lenguaje Visual 
   
 |||  
 |---|---|  
-|[Sugerencias para mejorar el rendimiento](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Se describen varias reglas básicas que pueden ayudarle a aumentar el rendimiento de la aplicación.|
+|[Sugerencias para mejorar el rendimiento](../../../framework/performance/performance-tips.md) | Se describen varias reglas básicas que pueden ayudarle a aumentar el rendimiento de la aplicación.|
 

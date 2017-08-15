@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World, su primer programa (Guía de programación de C#)
@@ -123,11 +123,11 @@ En el siguiente procedimiento se crea una versión de C# del programa tradiciona
   
 2.  Siga uno de los pasos siguientes para abrir una ventana del símbolo del sistema:  
   
-    -   En Windows 8, en la pantalla **Inicio**, busque `Developer Command Prompt` y pulse o elija **Símbolo del sistema para desarrolladores de VS2012**.  
+    -   En Windows 10, en el menú **Inicio**, busque `Developer Command Prompt` y pulse o elija **Developer Command Prompt for VS 2017** (Símbolo del sistema para desarrolladores de VS2017).  
   
          Aparecerá una ventana del símbolo del sistema para desarrolladores.  
   
-    -   En Windows 7, abra el menú **Inicio**, expanda la carpeta de la versión actual de Visual Studio, abra el menú contextual de **Visual Studio Tools** y elija **Símbolo del sistema para desarrolladores de VS2012**.  
+    -   En Windows 7, abra el menú **Inicio**, expanda la carpeta de la versión actual de Visual Studio, abra el menú contextual de **Visual Studio Tools** y elija **Developer Command Prompt for VS 2017** (Símbolo del sistema para desarrolladores de VS2017).  
   
          Aparecerá una ventana del símbolo del sistema para desarrolladores.  
   

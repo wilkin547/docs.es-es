@@ -1,5 +1,5 @@
 ---
-title: "Organización del proyecto para admitir .NET Framework y .NET Core | Microsoft Docs"
+title: "Organización del proyecto para admitir .NET Framework y .NET Core"
 description: "Ayuda para los propietarios del proyecto que quieren compilar su solución en .NET Framework y en .NET Core, en paralelo."
 keywords: ".NET, .NET Core, .NET Framework, diseño del proyecto, varios marcos"
 author: conniey
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6565ccd42180a37eba52c286becfecb5bef1890d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 93bec65e3bbee93855d6f5bce5e2d6cea8bb9f3d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 

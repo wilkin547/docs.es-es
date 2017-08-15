@@ -15,10 +15,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: db4689ee58b48fad2e3696e5e64aa187710f4868
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="net-core-and-open-source"></a>.NET Core y código abierto
@@ -26,7 +26,7 @@ En este tema se proporciona una breve descripción de .NET Core y se muestra có
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>¿Qué es .NET Core?  
- .NET Core es una implementación de .NET Platform para uso general, modular, multiplataforma y de código abierto. Contiene muchas de las API de .NET Framework (aunque .NET Core es un conjunto más pequeño), e incluye componentes de entorno en tiempo de ejecución, framework, compilador y herramientas que admiten una variedad de sistemas operativos y destinos de chip. La implementación de .NET Core se debe principalmente a las cargas de trabajo de ASP.NET Core, pero también a la necesidad y la intención de tener un entorno en tiempo de ejecución más moderno. Se puede utilizar en escenarios de dispositivos, nube e incrustados/IoT.  
+ .NET Core es una implementación de .NET Standard para uso general, modular, multiplataforma y de código abierto. Contiene muchas de las API de .NET Framework (aunque .NET Core es un conjunto más pequeño), e incluye componentes de entorno en tiempo de ejecución, marco de trabajo, compilador y herramientas que admiten diversos sistemas operativos y destinos de chip. La implementación de .NET Core se debe principalmente a las cargas de trabajo de ASP.NET Core, pero también a la necesidad y la intención de tener una implementación más moderna. Se puede utilizar en escenarios de dispositivos, nube e incrustados/IoT.  
   
  Para empezar a conocer .NET Core, visite la [página principal de .NET Core](https://www.microsoft.com/net/core).  
   

@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ En este artículo se asume lo siguiente:
 También debe estar familiarizado con el contenido de los temas siguientes:
 
 [Estándar .NET](~/docs/standard/net-standard.md)   
-En este tema se describe la especificación formal de las API de .NET que se prevé que estén disponibles en todos los runtime de .NET.
+En este tema se describe la especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET.
 
 [Paquetes, metapaquetes y marcos de trabajo](~/docs/core/packages.md)   
-En este artículo se trata cómo .NET Core define y usa paquetes y cómo los paquetes admiten el código que se ejecuta en varios runtime de .NET.
+En este artículo se trata cómo .NET Core define y usa paquetes y cómo los paquetes admiten el código que se ejecuta en varias implementaciones de .NET.
 
 [Desarrollo de bibliotecas con herramientas multiplataforma](~/docs/core/tutorials/libraries.md)   
 En este tema se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI.
