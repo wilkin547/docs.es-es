@@ -1,6 +1,6 @@
 ---
 title: "Introducción a Visual Basic"
-ms.date: 2017-08-07
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -30,13 +30,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 168d37a4e4ada31b09ea68b6e0ef5eb41fb1e55f
-ms.openlocfilehash: 5b8a13e850369affe203440c79496047b24053f0
+ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
+ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
 ms.contentlocale: es-es
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/11/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Introducción a Visual Basic
+# <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
@@ -54,7 +54,8 @@ Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a enco
  [Obtener Visual Basic](https://www.visualstudio.com/downloads/)  
  Ofrece vínculos de descarga para las versiones de Visual Studio que incluyen compatibilidad con Visual Basic, incluidas las versiones gratuitas.  
 
- [Visual Basic Fundamentals for Absolute Beginners (Aspectos básicos de Visual Basic para principiantes sin ninguna experiencia)](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Curso de la Academia virtual de Microsoft que enseña los aspectos básicos de programación de Visual Basic.
+ [Aspectos básicos de Visual Basic para principiantes sin ninguna experiencia](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ Curso de la Academia virtual de Microsoft que enseña los aspectos básicos de programación de Visual Basic.
 
  [Programación orientada a objetos](../programming-guide/concepts/object-oriented-programming.md)  
  Proporciona vínculos a páginas que presentan la programación orientada a objetos y describen cómo crear sus propios objetos y cómo utilizar objetos para simplificar la escritura del código.  
