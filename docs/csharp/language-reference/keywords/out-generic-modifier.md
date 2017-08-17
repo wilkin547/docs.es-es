@@ -1,5 +1,5 @@
 ---
-title: "out (Modificador genérico) (Referencia de C#) | Microsoft Docs"
+title: "out (Modificador genérico) (Referencia de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5b488eab5966a556b3e3c91ae8c748d11e61367
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40d2c13ad4218952b143e6403851a1027bd7c161
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (Modificador genérico) (Referencia de C#)
@@ -74,3 +74,4 @@ Para los parámetros de tipo genérico, la palabra clave `out` especifica que el
  [Varianza en interfaces genéricas](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   
  [in (Modificador genérico)](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
+
