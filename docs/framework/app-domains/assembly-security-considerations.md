@@ -1,5 +1,5 @@
 ---
-title: Consideraciones de seguridad sobre ensamblados | Microsoft Docs
+title: Consideraciones de seguridad sobre ensamblados
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 43953c223feb0a2035b60e589fbfca1ef411e6b9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be4fc9f9f2fc9ae57f22a7e59eca05a331ebfb32
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
@@ -72,3 +72,4 @@ ms.lasthandoff: 06/12/2017
  [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md)   
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md)
+

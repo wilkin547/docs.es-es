@@ -1,5 +1,5 @@
 ---
-title: "Reenvío de tipos en Common Language Runtime | Microsoft Docs"
+title: "Reenvío de tipos en Common Language Runtime"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 3515a15432d2b7ff68c19dbd966806d0df3be7a8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 113ff6decccc190c6638fa04745af425c55c6c0b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Reenvío de tipos en Common Language Runtime
@@ -57,3 +57,4 @@ El reenvío de tipos le permite mover un tipo a otro ensamblado sin tener que vo
  <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
  [Reenvío de tipos (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)   
  [#using (directiva)](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+

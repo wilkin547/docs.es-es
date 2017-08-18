@@ -1,13 +1,9 @@
 ---
-title: Retrasar la firma de un ensamblado | Microsoft Docs
-ms.custom: 
-ms.date: 03/30/2017
+title: Retrasar la firma de un ensamblado
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>Retrasar la firma de un ensamblado
@@ -62,8 +58,8 @@ Una organización podría tener un par de claves muy bien guardado al que los de
   
      Con la opción **–Vr** o **–Vk**, puede incluir opcionalmente un archivo .snk para probar la firma de la clave.  
   
-    > [!CAUTION]
-    >  Use la opción **-Vr** o **–Vk** solo durante la fase de desarrollo. Al agregar un ensamblado a la lista de omisiones de comprobación se produce una vulnerabilidad en la seguridad. Puede que un ensamblado malicioso utilice el nombre completo especificado (nombre de ensamblado, versión, referencia cultural y token de clave pública) del ensamblado existente en la lista de omisiones de comprobación para imitar su identidad. Esto permitiría que el ensamblado malintencionado se pasase también por alto durante la comprobación.  
+    > [!WARNING]
+    > Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.
   
     > [!NOTE]
     >  Si usa la firma retardada durante el desarrollo con Visual Studio en un equipo de 64 bits y compila un ensamblado para **Cualquier CPU**, es posible que deba aplicar la opción **-Vr** dos veces. (En Visual Studio, **Cualquier CPU** es un valor de la propiedad de compilación **Destino de la plataforma**. Cuando se compila desde la línea de comandos, es el valor predeterminado). Para ejecutar la aplicación desde la línea de comandos o desde el Explorador de archivos, use la versión de 64 bits de [Sn.exe (herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para aplicar la opción **-Vr** al ensamblado. Para cargar el ensamblado en Visual Studio en tiempo de diseño (por ejemplo, si el ensamblado contiene componentes que usan otros ensamblados de la aplicación), use la versión de 32 bits de la herramienta de nombre seguro. Esto se debe a que el compilador Just-In-Time (JIT) compila el ensamblado en código nativo de 64 bits cuando el ensamblado se ejecuta desde la línea de comandos y en código nativo de 32 bits cuando el ensamblado se carga en el entorno de tiempo de diseño.  
@@ -81,3 +77,4 @@ Una organización podría tener un par de claves muy bien guardado al que los de
  [Cómo: Crear un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe (Herramienta de nombre seguro)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

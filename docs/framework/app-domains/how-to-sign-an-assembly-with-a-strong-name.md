@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Firmar un ensamblado con un nombre seguro| Microsoft Docs"
+title: "Cómo: Firmar un ensamblado con un nombre seguro"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 23
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 548cc4ffd0f894c4f522552c5f032be4c94d3585
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Cómo: Firmar un ensamblado con un nombre seguro
@@ -33,7 +33,7 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 -   Mediante el uso de [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) para vincular un módulo de código de .NET Framework (un archivo .netmodule) a un archivo de claves.  
   
--   Mediante el uso de atributos de ensamblado para insertar la información de nombre seguro en el código. Se puede usar el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute>, dependiendo de dónde esté ubicado el archivo de claves que se va a utilizar.  
+-   Mediante el uso de atributos de ensamblado para insertar la información de nombre seguro en el código. Se puede usar el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> , dependiendo de dónde esté ubicado el archivo de claves que se va a utilizar.  
   
 -   Mediante el uso de opciones del compilador.  
   
@@ -108,3 +108,4 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
  [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md)   
  [Administrar la firma de ensamblados y manifiestos](/visualstudio/ide/managing-assembly-and-manifest-signing)   
  [Página Firma, Diseñador de proyectos](https://msdn.microsoft.com/library/0k50fs3b)
+

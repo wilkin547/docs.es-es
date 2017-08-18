@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión | Microsoft Docs"
+title: "Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 5839e2f596d31faf4843a03f1a34d4f1aeafe144
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 27b6315b30c27d0902d34a013c6cb6c6072dffe7
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión
@@ -109,3 +109,4 @@ La información sobre los tipos genéricos se obtiene de la misma manera que la 
  [Reflexión y tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)   
  [Viewing Type Information (Ver información de tipos)](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)   
  [Genéricos](../../../docs/standard/generics/index.md)
+

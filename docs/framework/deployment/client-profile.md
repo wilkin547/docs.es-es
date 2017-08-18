@@ -1,5 +1,5 @@
 ---
-title: .NET Framework Client Profile | Microsoft Docs
+title: .NET Framework Client Profile
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 44
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3ec7d3a3cf4c43349f0a10cac95cff507b59cfc5
-ms.openlocfilehash: 345a07a1d1b1ff2ac9aa818b10c6b6a3d9355702
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae285c931ccabf8d16250f3260a344f1bbbd6467
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
@@ -47,3 +47,4 @@ El perfil de cliente .NET es un subconjunto de .NET Framework que se proporciona
  [Información general sobre la compatibilidad con múltiples versiones (multi-targeting) en Visual Studio](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)   
  [Solucionar problemas de versión de .NET Framework de destino](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)   
  [Cómo: Usar como destino una versión de .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+

@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente | Microsoft Docs"
+title: "Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 63e751147f8180a99596c74e9e34d766aa397ce5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9acd7e677b981c68b4aad7d10b41d7cef2e2eb06
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Cómo: Implementar el inicio de sesión de usuarios con servicios de aplicaciones cliente
@@ -65,3 +65,4 @@ Puede usar servicios de aplicaciones cliente para validar usuarios a través de 
  [Cómo: Configurar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)   
  [Tutorial: Usar servicios de aplicaciones cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)   
  [Utilizar la autenticación de formularios con AJAX en ASP.NET](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)
+

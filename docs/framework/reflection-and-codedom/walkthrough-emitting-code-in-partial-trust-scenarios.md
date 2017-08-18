@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Emitir código en escenarios de confianza parcial | Microsoft Docs"
+title: "Tutorial: Emitir código en escenarios que no son de plena confianza"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 73618a140daa4146f80472872a54884b7032da9a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db8bb0ae8b1ea45bcc3a4034f73b75758ffc35b3
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emitir código en escenarios que no son de plena confianza
@@ -208,3 +208,4 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
 ## <a name="see-also"></a>Vea también  
  [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)   
  [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Quitar un ensamblado de la caché global de ensamblados | Microsoft Docs"
+title: "Cómo: Quitar un ensamblado de la memoria caché global de ensamblados"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b36a1d27937e87138db1dcb6bcab569941938ebc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2bcc04fe3d428606e23e70d6f565b90f62e6a09
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Cómo: Quitar un ensamblado de la memoria caché global de ensamblados
@@ -65,3 +65,4 @@ gacutil -u hello
  [Trabajar con ensamblados y la memoria caché global de ensamblados](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
  [Cómo: Instalar un ensamblado en la caché global de ensamblados](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
  [Gacutil.exe (Herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+

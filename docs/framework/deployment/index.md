@@ -1,5 +1,5 @@
 ---
-title: Implementar .NET Framework y aplicaciones | Microsoft Docs
+title: Implementar .NET Framework y aplicaciones
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
@@ -175,7 +175,7 @@ Este artículo le ayuda a empezar a implementar .NET Framework con la aplicació
 |[Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Describe el Administrador de reinicio, que evita, en la medida de lo posible, los reinicios del equipo y explica cómo pueden aprovecharlo las aplicaciones que instalan .NET Framework.|  
 |[Guía de implementación para administradores](../../../docs/framework/deployment/guide-for-administrators.md)|Explica cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red utilizando System Center Configuration Manager (SCCM).|  
 |[Guía de implementación para desarrolladores](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Explica cómo los desarrolladores de software pueden instalar .NET Framework en los equipos de los usuarios con sus aplicaciones.|  
-|[Implementar aplicaciones, servicios y componentes](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|Describe las opciones de implementación de Visual Studio e incluye instrucciones para publicar una aplicación mediante las tecnologías ClickOnce y Windows Installer.| 
+|[Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components)|Describe las opciones de implementación de Visual Studio e incluye instrucciones para publicar una aplicación mediante las tecnologías ClickOnce y Windows Installer.| 
 |[Publicar aplicaciones ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Describe cómo empaquetar una aplicación de Windows Forms e implementarla con ClickOnce en los equipos cliente en una red.|  
 |[Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Describe el modelo de concentrador y de radio que .NET Framework usa para empaquetar e implementar los recursos; aborda las convenciones de nomenclatura de los recursos, el proceso de reserva y las alternativas de empaquetado.|  
 |[Implementar una aplicación interoperativa](../../../docs/framework/interop/deploying-an-interop-application.md)|Explica cómo distribuir e instalar aplicaciones de interoperabilidad, que suelen incluir un ensamblado de cliente de .NET Framework, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados.|  

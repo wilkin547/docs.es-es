@@ -1,5 +1,5 @@
 ---
-title: "Mage.exe (Herramienta de generación y edición de manifiestos) | Microsoft Docs"
+title: "Mage.exe (Herramienta de generación y edición de manifiestos)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 68
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: caa06be840f0612e94742e7ea167f02b8b8d657d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
@@ -114,7 +114,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
   
  Si usa la opción **-AppManifest** para rellenar un manifiesto de implementación, Mage.exe supone que el manifiesto de aplicación residirá en el mismo directorio que el manifiesto de implementación, en un subdirectorio con el mismo nombre que la versión actual de la implementación, y configura el manifiesto de implementación adecuadamente. Si el manifiesto de aplicación reside en otro lugar, use la opción **-AppCodeBase** para establecer la ubicación alternativa.  
   
- Debe firmar los manifiestos de implementación y de aplicación antes de implementar la aplicación. Para instrucciones sobre la firma de manifiestos, consulte [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).  
+ Debe firmar los manifiestos de implementación y de aplicación antes de implementar la aplicación. Para obtener instrucciones sobre la firma de manifiestos, consulte [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).  
   
  La opción **-TrustLevel** de los manifiestos de aplicación describe el conjunto de permisos que requiere una aplicación para ejecutarse en el equipo cliente. De manera predeterminada, a las aplicaciones se les asigna un nivel de confianza basado en la *zona* donde residen sus direcciones URL. Las aplicaciones implementadas en una red corporativa se colocan generalmente en la zona Intranet, mientras que las que se implementan en Internet se colocan en la zona Internet. Ambas zonas de seguridad imponen restricciones en el acceso de la aplicación a los recursos locales, siendo la zona Intranet ligeramente más permisiva que la zona Internet. La zona FullTrust otorga a las aplicaciones acceso completo a los recursos locales de un equipo. Si usa la opción **-TrustLevel** para colocar una aplicación en esta zona, el componente de administrador de confianza de CLR pedirá al usuario que decida si quiere otorgar este nivel de confianza mayor. Si va a implementar la aplicación en una red corporativa, puede usar la implementación de aplicaciones de confianza para aumentar el nivel de confianza de la aplicación sin preguntar al usuario.  
   
@@ -215,3 +215,4 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
  [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview)   
  [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
  [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
