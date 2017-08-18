@@ -11,15 +11,19 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3ea221cfe71256ac44238f99f272c55c5810d0c3
+ms.sourcegitcommit: 195b2206eec0a8f070454aed1ddefe56ee92adc9
+ms.openlocfilehash: 7b7cb235e2ba5bc3c9a21603058eb20475766ea7
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>Novedades de C# #
 
+En esta página se brinda una guía básica de las características nueva de cada versión importante del lenguaje C#. Los vínculos a continuación proporcionan información detallada sobre las características principales que se agregaron en cada versión.
+
+> [!IMPORTANT]
+> El lenguaje C# se basa en tipos y métodos de una *biblioteca estándar* para algunas de las características. Un ejemplo es el procesamiento de excepciones. Cada expresión o instrucción `throw` se comprueba para asegurarse de que el objeto que se genera deriva de @System.Exception. Del mismo modo, cada `catch` se comprueba para asegurarse de que el tipo que se captura deriva de @System.Exception. Cada versión puede agregar requisitos nuevos. Para usar las características más recientes del lenguaje en entornos anteriores, es posible que tenga que instalar bibliotecas específicas. Estas están documentadas en la página de cada versión específica. Puede obtener más información sobre las [relaciones entre lenguaje y biblioteca](relationships-between-language-and-library.md) para tener más antecedentes sobre esta dependencia. 
 
 * [C# 7](csharp-7.md):
     - En esta página se describen las características más recientes del lenguaje C#. Trata sobre el lenguaje C# 7, que está disponible en [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/).
