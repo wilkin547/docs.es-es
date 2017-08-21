@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Descargar un dominio de aplicación | Microsoft Docs"
+title: "Cómo: Descargar un dominio de aplicación"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b9146d7565809cc0f92556478f93b9d444538826
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eefaf670202e6b4977d75fffa906f1b07053eb3e
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-unload-an-application-domain"></a>Cómo: Descargar un dominio de aplicación
@@ -39,3 +39,4 @@ Cuando haya terminado de usar un dominio de aplicación, descárguelo con el mé
  [Programar con dominios de aplicación](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [Cómo: Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)   
  [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)
+

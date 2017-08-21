@@ -1,5 +1,5 @@
 ---
-title: Ejecutar aplicaciones de intranet con plena confianza | Microsoft Docs
+title: Ejecutar aplicaciones de Intranet con plena confianza
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: f80832a0c0220183a7386bb0273e5a11d9eee6df
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58eeda82c66ecda6ffd714e808b006634ccba804
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Ejecutar aplicaciones de Intranet con plena confianza
@@ -46,3 +46,4 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las aplicaciones y
   
 ## <a name="see-also"></a>Vea también  
  [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

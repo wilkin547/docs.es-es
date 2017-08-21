@@ -1,5 +1,5 @@
 ---
-title: Crear la clase GamePieceCollection | Microsoft Docs
+title: Crear la clase GamePieceCollection
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 672d2717905195084c381ea692aa426b5e3ca09c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b74702d71113c3a9dac654971e7d02f97016218b
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-the-gamepiececollection-class"></a>Crear la clase GamePieceCollection
@@ -45,3 +45,4 @@ La clase **GamePieceCollection** deriva de la clase List genérica e incorpora m
  [Crear la clase GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)   
  [Crear la clase Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)   
  [Listas de código completas](../../../docs/framework/common-client-technologies/full-code-listings.md)
+

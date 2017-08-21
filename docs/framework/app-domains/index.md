@@ -1,5 +1,5 @@
 ---
-title: "Programar con dominios de aplicación y ensamblados | Microsoft Docs"
+title: "Programar con dominios de aplicación y ensamblados"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 1cfd73bf6d8de9ea4ff9854e6882683514cb3c56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6dcf8e4c9bf2401309b1d80d2306bd619b96460d
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programar con dominios de aplicación y ensamblados
@@ -53,3 +53,4 @@ Hosts como Microsoft Internet Explorer, ASP.NET y el shell de Windows cargan Com
   
  [Información general de la reflexión](../../../docs/framework/reflection-and-codedom/reflection.md)  
  Describe cómo usar la clase **Reflection** para obtener información sobre un ensamblado.
+

@@ -1,5 +1,5 @@
 ---
-title: "Temas de procedimientos sobre dominios de aplicación y ensamblados | Microsoft Docs"
+title: "Temas \"Cómo...\" sobre dominios de aplicación y ensamblados"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: afbedbf1565f698d0bda2afe6e75d68c610f2aa2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 396c3ac263f20608d69949c7ad5d9d5b1dffb555
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Temas "Cómo..." sobre dominios de aplicación y ensamblados
@@ -65,3 +65,4 @@ Las siguientes secciones contienen vínculos a todos los temas de procedimientos
   
 ## <a name="see-also"></a>Vea también  
  [Dominios de aplicación y ensamblados](../../../docs/framework/app-domains/index.md)
+

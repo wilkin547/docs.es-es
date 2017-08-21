@@ -1,5 +1,5 @@
 ---
-title: Recursos de aplicaciones de escritorio | Microsoft Docs
+title: Recursos de aplicaciones de escritorio
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ffe0b574b00e3ce420d83658f5844f26c3f8ea72
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
 ms.contentlocale: es-es
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>Recursos de aplicaciones de escritorio
@@ -79,3 +79,4 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
  [Empaquetar e implementar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
  [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
  [Recuperar recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+

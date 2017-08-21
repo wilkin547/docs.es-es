@@ -1,5 +1,5 @@
 ---
-title: Usar CodeDOM | Microsoft Docs
+title: Usar CodeDOM
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -28,11 +28,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d1712b3f06f9131b1e55ca34a1e40e83b63f280b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd594e9087a158ab8d5372ad72019cf3e04c38af
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-the-codedom"></a>Usar CodeDOM
@@ -118,3 +118,4 @@ CodeDOM proporciona tipos que representan muchos tipos comunes de elementos de c
  Para obtener documentación de cada uno de los tipos CodeDOM, consulte la documentación de referencia del espacio de nombres <xref:System.CodeDom>.  
   
  Para ver un gráfico que localice rápidamente el elemento de CodeDOM que representa un tipo específico de elemento de código, vea [Referencia rápida de CodeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+

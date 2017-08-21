@@ -1,5 +1,5 @@
 ---
-title: Crear ensamblados | Microsoft Docs
+title: Crear ensamblados
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c131e82e2312e2c1b7fe1b6b2b6d0a6dfb626209
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-assemblies"></a>Crear ensamblados
@@ -62,3 +62,4 @@ Para crear ensamblados de un solo archivo o de varios archivos, se puede usar un
  [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+
