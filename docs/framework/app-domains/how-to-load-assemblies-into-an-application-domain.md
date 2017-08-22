@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Cargar ensamblados en un dominio de aplicación | Microsoft Docs"
+title: "Cómo: Cargar ensamblados en un dominio de aplicación"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,17 +17,17 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7caaa27fed13c33508b7decde1d87e723167d96b
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: c319da0f8e6f3cdfb83e659a778136d668699834
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Cómo: Cargar ensamblados en un dominio de aplicación
-Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. El método recomendado consiste en usar el método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` en Visual Basic) de la clase [System.Reflection.Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx). A continuación se indican otras formas de cargar los ensamblados:  
+Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. El método recomendado consiste en usar el método <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` en Visual Basic) de la clase <xref:System.Reflection.Assembly?displayProperty=fullName>. A continuación se indican otras formas de cargar los ensamblados:  
   
--   El método <xref:System.Reflection.Assembly.LoadFrom%2A> de la clase [Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) carga un ensamblado a partir de la ubicación del archivo correspondiente. La carga de ensamblados mediante este método usa un contexto de carga distinto.  
+-   El método <xref:System.Reflection.Assembly.LoadFrom%2A> de la clase <xref:System.Reflection.Assembly> carga un ensamblado a partir de la ubicación del archivo correspondiente. La carga de ensamblados mediante este método usa un contexto de carga distinto.  
   
 -   Los métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> y <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> cargan un ensamblado en el contexto de solo reflexión. Los ensamblados cargados en este contexto pueden examinarse, pero no ejecutarse, lo que permite examinar los ensamblados que tienen como destino otras plataformas. Consulte [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
@@ -57,3 +57,4 @@ Existen numerosas formas de cargar un ensamblado en un dominio de aplicación. E
  [Utilizar dominios de aplicación](../../../docs/framework/app-domains/use.md)   
  [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)   
  [Dominios de aplicación y ensamblados](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+

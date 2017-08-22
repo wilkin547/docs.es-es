@@ -1,5 +1,5 @@
 ---
-title: "Cómo el motor en tiempo de ejecución ubica ensamblados | Microsoft Docs"
+title: "Cómo el motor en tiempo de ejecución ubica ensamblados"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 78805f7139bff90127885af267c8ade9090fbd62
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
@@ -48,7 +48,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
   
  También puede hacer una referencia dinámica a un ensamblado proporcionando el método de llamada únicamente con información parcial sobre el ensamblado, por ejemplo especificando solo el nombre de ensamblado. En este caso, el ensamblado solo se busca en el directorio de la aplicación y no se realiza ninguna otra comprobación. Se hace una referencia parcial mediante cualquiera de los diversos métodos para cargar ensamblados, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> o <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
   
- Por último, puede hacer una referencia dinámica mediante un método como [System.Reflection.Assembly.Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) y facilitar solo información parcial; a continuación, califique la referencia mediante el elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.  
+ Por último, puede hacer una referencia dinámica mediante un método como <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> y facilitar solo información parcial. Después, califique la referencia mediante el elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.  
   
 > [!NOTE]
 >  Este tipo de referencia parcial no debe usarse con ensamblados que se comparten entre varias aplicaciones. Como los valores de configuración se aplican por aplicación y no por ensamblado, un ensamblado compartido que use este tipo de referencia parcial requerirá que cada aplicación que use el ensamblado compartido tenga la información calificadora en su archivo de configuración.  
@@ -66,7 +66,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
   
 4.  [Sondea el ensamblado](#step4) siguiendo estos siguientes pasos:  
   
-    1.  Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>, el tiempo de ejecución comprueba las sugerencias de ubicación.  
+    1.  Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> , el tiempo de ejecución comprueba las sugerencias de ubicación.  
   
     2.  Si se encuentra un código base en los archivos de configuración, el tiempo de ejecución solo comprueba esta ubicación. Si se produce un error en este sondeo, el tiempo de ejecución determina que la solicitud de enlace produjo un error y no se llevan a cabo más sondeos.  
   
@@ -193,7 +193,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nombre, que es el nombre del ensamblado al que se hace referencia.  
   
--   Atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomain.AppendPrivatePath%2A> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath`, seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.  
+-   Atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomain.AppendPrivatePath%2A> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Sondear los directorios de base de la aplicación y de referencia cultural  
  El tiempo de ejecución siempre empieza a sondear en la base de la aplicación, que puede ser una dirección URL o el directorio raíz de la aplicación en un equipo. Si el ensamblado al que se hace referencia no se encuentra en la base de la aplicación y si no se proporciona ninguna información de referencia cultural, el tiempo de ejecución busca cualquier subdirectorio con el nombre del ensamblado. Los directorios sondeados incluyen:  
@@ -265,3 +265,4 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="see-also"></a>Vea también  
  [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [Implementación](../../../docs/framework/deployment/index.md)
+
