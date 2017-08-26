@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>Especificación del lenguaje C# 6.0 (borrador)
@@ -47,7 +47,8 @@ La versión 6.0 de la especificación no se ha aprobado como estándar. Este sit
 Los problemas del borrador de especificación deben crearse en el repositorio [dotnet/csharplang](https://github.com/dotnet/csharplang/issues). O bien, si está interesado en corregir los errores que encuentre, puede enviar una [solicitud de incorporación de cambios](https://github.com/dotnet/csharplang/pulls) en el mismo repositorio.
 
 ## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../language-reference/index.md) [Guía de programación de C#](../../programming-guide/index.md)
+ [Referencia de C#](../../language-reference/index.md)  
+ [Guía de programación de C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [Siguiente](../../../../_csharplang/spec/lexical-structure.md)
