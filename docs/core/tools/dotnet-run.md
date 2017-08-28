@@ -1,32 +1,44 @@
 ---
-title: 'Comando dotnet-run: CLI de .NET Core'
-description: "El comando dotnet-run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente."
-keywords: dotnet-run, CLI, comando de la CLI, .NET Core
-author: blackdwarf
+title: 'Comando dotnet run: CLI de .NET Core'
+description: "El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/22/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0a6fce4f83808076b7cbcabdaa948badde2cf80
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 30dd1a7715c8573062837aaf71344258d0036b5d
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-run"></a>dotnet run
 
-# <a name="dotnet-run"></a>dotnet-run
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name 
+## <a name="name"></a>Nombre
 
-`dotnet-run`: ejecuta el código fuente sin comandos explícitos de compilación o inicio.
+`dotnet run`: ejecuta el código fuente sin comandos explícitos de compilación o inicio.
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
+
+---
 
 ## <a name="description"></a>Descripción
 
@@ -37,45 +49,91 @@ Los archivos de salida se escriben en la ubicación predeterminada, que es `bin/
 Si el proyecto especifica varios marcos, al ejecutar `dotnet run` se produce un error a menos que se use la opción `-f|--framework <FRAMEWORK>` para especificar el marco.
 
 El comando `dotnet run` debe usarse en el contexto de proyectos, no de ensamblados compilados. Si, por el contrario, está intentando ejecutar una DLL de aplicación dependiente del marco de trabajo, debe usar [dotnet](dotnet.md) sin un comando. Por ejemplo, para ejecutar `myapp.dll`, use:
- 
+
 ```
 dotnet myapp.dll
 ```
 
 Para más información sobre el controlador `dotnet`, consulte el tema [Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core ](index.md).
 
-Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias de la aplicación que se encuentran fuera del entorno de tiempo de ejecución compartido desde la caché de NuGet. Dado que se usan dependencias almacenadas en caché, no se recomienda utilizar `dotnet run` para ejecutar aplicaciones en producción. En su lugar, [cree una implementación](../deploying/index.md) mediante el comando [`dotnet publish`](dotnet-publish.md) e implemente la salida publicada. 
+Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias de la aplicación que se encuentran fuera del entorno de tiempo de ejecución compartido desde la caché de NuGet. Dado que se usan dependencias almacenadas en caché, no se recomienda utilizar `dotnet run` para ejecutar aplicaciones en producción. En su lugar, [cree una implementación](../deploying/index.md) mediante el comando [`dotnet publish`](dotnet-publish.md) e implemente la salida publicada.
 
 ## <a name="options"></a>Opciones
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `--`
 
-Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este se pasan a la aplicación que se ejecuta. 
+Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este se pasan a la aplicación que se ejecuta.
+
+`-c|--configuration {Debug|Release}`
+
+Define la configuración de compilación. El valor predeterminado es `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Compila y ejecuta la aplicación con el [marco](../../standard/frameworks.md) especificado. El marco debe especificarse en el archivo de proyecto.
 
 `-h|--help`
 
 Imprime una corta ayuda para el comando.
 
-`-c|--configuration <CONFIGURATION>`
+`--launch-profile <NAME>`
 
-Configuración que se va a usar para compilar el proyecto. El valor predeterminado es `Debug`.
+El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar simplemente `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnetcore/fundamentals/environments) (Trabajo con varios entornos).
+
+`--no-build`
+
+No compila el proyecto antes de ejecutarlo.
+
+`--no-launch-profile`
+
+No intenta usar *launchSettings.json* para configurar la aplicación.
+
+`--no-restore`
+
+No realiza una restauración implícita al ejecutar el comando.
+
+`-p|--project <PATH>`
+
+Especifica la ruta de acceso del archivo del proyecto que se va a ejecutar (nombre de la carpeta o ruta de acceso completa). Si no se especifica, se toma como predeterminado el directorio actual.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Especifica el tiempo de ejecución de destino para el que restaurar los paquetes. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--`
+
+Delimita los argumentos a `dotnet run` a partir de argumentos de la aplicación que se va a ejecutar. Todos los argumentos después de este se pasan a la aplicación que se ejecuta.
+
+`-c|--configuration {Debug|Release}`
+
+Define la configuración de compilación. El valor predeterminado es `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
 Compila y ejecuta la aplicación con el [marco](../../standard/frameworks.md) especificado. El marco debe especificarse en el archivo de proyecto.
+
+`-h|--help`
+
+Imprime una corta ayuda para el comando.
 
 `-p|--project <PATH/PROJECT.csproj>`
 
 Especifica la ruta de acceso y el nombre del archivo de proyecto. (Consulte la NOTA). Si no se especifica, se toma como predeterminado el directorio actual.
 
 > [!NOTE]
-> Use la ruta de acceso y el nombre del archivo del proyecto con la opción `-p|--project`. Una regresión en la CLI impide proporcionar una ruta de carpeta en este momento. Para más información y para realizar un seguimiento de este problema, consulte [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p, no puede iniciar un proyecto [dotnet/cli #5992]).
+> Use la ruta de acceso y el nombre del archivo del proyecto con la opción `-p|--project`. Una regresión en la CLI impide proporcionar una ruta de carpeta con el SDK de .NET Core 1.x. Para obtener más información sobre este problema, consulte [dotnet run -p, can not start a project (dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992) (dotnet run -p, no puede iniciar un proyecto [dotnet/cli #5992]).
+
+---
 
 ## <a name="examples"></a>Ejemplos
 
 Ejecución del proyecto en el directorio actual:
 
-`dotnet run` 
+`dotnet run`
 
 Ejecución del proyecto especificado:
 
