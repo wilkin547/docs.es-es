@@ -1,26 +1,25 @@
 ---
 title: Funciones locales frente a expresiones lambda
-description: "Por qué las funciones locales pueden ser una opción mejor que las expresiones lambda"
+description: "Obtenga información sobre por qué las funciones locales pueden ser una opción mejor que las expresiones lambda."
 keywords: "C#, .NET, .NET Core, Características más recientes, Novedades, funciones locales, expresiones lambda"
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: visual-studio-dev-15
+ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 315d4c5ee1f16c4fe59599c3a37437b112b784f6
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 366d7465433f2786960e22418b8aa46ba10e1fd1
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
+# <a name="local-functions-compared-to-lambda-expressions"></a>Funciones locales frente a expresiones lambda
 
-### <a name="local-functions-compared-to-lambda-expressions"></a>Funciones locales frente a expresiones lambda
-
-A primera vista, las [funciones locales](programming-guide/classes-and/structs/local-functions.md) y las [expresiones lambda](lambda-expressions.md) son muy similares.
+A primera vista, las [funciones locales](programming-guide/classes-and-structs/local-functions.md) y las [expresiones lambda](lambda-expressions.md) son muy similares.
 Dependiendo de sus necesidades, las funciones locales pueden ser una solución mucho mejor y más sencilla.
 
 Vamos a examinar las diferencias entre las implementaciones de la función local y la expresión lambda del algoritmo factorial. Primero la versión que usa una función local:
