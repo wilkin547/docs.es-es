@@ -1,5 +1,5 @@
 ---
-title: Serializar en un objeto XmlReader (invocando XSLT) (C#) | Microsoft Docs
+title: Serializar en un objeto XmlReader (invocando XSLT) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96fed09349264710dc8f0591a0022939e9a4181a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 62127847c6eeefdc60bf8c4cb4cb8fac2fb2b8bb
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>Serializar en un objeto XmlReader (invocando XSLT) (C#)
-Cuando use las funciones de interoperabilidad <xref:System.Xml?displayProperty=fullName> de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], puede usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para crear un objeto <xref:System.Xml.XmlReader>. El módulo que lee desde el objeto <xref:System.Xml.XmlReader> lee los nodos del árbol XML y los procesa.  
+Cuando use las funciones de interoperabilidad <xref:System.Xml?displayProperty=fullName> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], puede usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para crear un objeto <xref:System.Xml.XmlReader>. El módulo que lee desde el objeto <xref:System.Xml.XmlReader> lee los nodos desde el árbol XML y los procesa.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Invocar una transformación XSLT  
- Un uso posible para este método es la invocación de una transformación XSLT. Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un documento y, después, crear un objeto <xref:System.Xml.XmlWriter> para escribir en el nuevo documento. Después, puede invocar la transformación XSLT y pasarla en <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>. Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
+ Un uso posible para este método es la invocación de una transformación XSLT. Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un nuevo documento y crear un objeto <xref:System.Xml.XmlWriter> que escribirá en el nuevo documento. A continuación, puede invocar la transformación XSLT, pasando <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>. Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -77,3 +78,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Vea también  
  [Serializar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

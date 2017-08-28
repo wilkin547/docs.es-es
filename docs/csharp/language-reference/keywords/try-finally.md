@@ -1,5 +1,5 @@
 ---
-title: try-finally (Referencia de C#) | Microsoft Docs
+title: try-finally (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3f7618aa6d4ae3535b2b6cb562349650b3eba1ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 88b9960b8c026d1fcd8eed1815ade57422cd2a15
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-finally-c-reference"></a>try-finally (Referencia de C#)
@@ -56,7 +56,7 @@ Mediante el uso de un bloque `finally`, puede limpiar todos los recursos asignad
   
  Para obtener más información sobre `finally`, vea [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md).  
   
- C# también contiene la [instrucción using](../../../csharp/language-reference/keywords/using-statement.md), que proporciona una funcionalidad similar para objetos <xref:System.IDisposable> en una sintaxis adecuada.  
+ C# también contiene la [instrucción using](../../../csharp/language-reference/keywords/using-statement.md), que proporciona una función similar para objetos <xref:System.IDisposable> en una sintaxis adecuada.  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -65,8 +65,9 @@ Mediante el uso de un bloque `finally`, puede limpiar todos los recursos asignad
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Instrucciones try, throw y catch (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [Instrucciones try, throw y catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [Cómo: Iniciar excepciones explícitamente](https://msdn.microsoft.com/library/xhcbs8fz)
+

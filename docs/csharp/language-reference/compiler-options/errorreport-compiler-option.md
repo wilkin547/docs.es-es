@@ -1,5 +1,5 @@
 ---
-title: -errorreport (Opciones del compilador de C#) | Microsoft Docs
+title: -errorreport (Opciones del compilador de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34e7e3b8c6a9f645ec1b359095c2d289afd1370a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (Opciones del compilador de C#)
@@ -76,7 +76,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
-1.  Abra la página **Propiedades** del proyecto. Para obtener más información, consulte [Compilar (Página, Diseñador de proyectos) (C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1.  Abra la página **Propiedades** del proyecto. Para obtener más información, consulte [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
 2.  Haga clic en la página de propiedades de **Compilar**.  
   
@@ -88,3 +88,4 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+

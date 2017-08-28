@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Leer de un archivo de texto (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Leer de un archivo de texto (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,14 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d545aa7f25da49b3ca0fc50b0c5a55c9c0d2b967
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd0ad3e062c4d4b32fb6140cacba9a4a32674759
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Cómo: Leer de un archivo de texto (Guía de programación de C#)
-Este ejemplo lee el contenido de un archivo de texto mediante los métodos estáticos <xref:System.IO.File.ReadAllText%2A> y <xref:System.IO.File.ReadAllLines%2A> de la clase <xref:System.IO.File?displayProperty=fullName>.  
+En este ejemplo se lee el contenido de un archivo de texto con los métodos estáticos <xref:System.IO.File.ReadAllText%2A> y <xref:System.IO.File.ReadAllLines%2A> de la clase <xref:System.IO.File?displayProperty=fullName>.  
   
  Para obtener un ejemplo en el que se usa <xref:System.IO.StreamReader>, vea [Cómo: Leer un archivo de texto línea a línea](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).  
   
@@ -66,3 +67,4 @@ Este ejemplo lee el contenido de un archivo de texto mediante los métodos está
  <xref:System.IO?displayProperty=fullName>   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+

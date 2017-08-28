@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#) | Microsoft Docs"
+title: "Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf538f555c9b1636980fb68ca1c132504112d9fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 132332f4fd274126bb8bc270cd762e1bdc97106f
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Cómo: Ampliar el tutorial de async usando Task.WhenAll (C#)
@@ -152,7 +153,7 @@ El rendimiento de la solución asincrónica de [Walkthrough: Accessing the Web b
     //}  
     ```  
   
-3.  Defina una [consulta](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) que, cuando la ejecute el método <xref:System.Linq.Enumerable.ToArray%2A>, cree una colección de tareas que descargan el contenido de cada sitio web. Las tareas se inician cuando se evalúa la consulta.  
+3.  Define una [consulta](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) que, cuando la ejecute el método <xref:System.Linq.Enumerable.ToArray%2A>, crea una colección de tareas que descargan el contenido de cada sitio web. Las tareas se inician cuando se evalúa la consulta.  
   
      Agregue el código siguiente en el método `SumPageSizesAsync` después de la declaración de `client` y `urlList`.  
   
@@ -453,5 +454,5 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a la web con async y await [C#])
+ [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [C#])
 

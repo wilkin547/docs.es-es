@@ -1,5 +1,5 @@
 ---
-title: Aplicaciones multiproceso (C#) | Microsoft Docs
+title: Aplicaciones multiproceso (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a36fd71ff41eb219f4c4de36d4fa8da9b8ee179a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multithreaded-applications-c"></a>Aplicaciones multiproceso (C#)
@@ -53,7 +54,7 @@ newThread.Start();
 newThread.Abort();  
 ```  
   
- Además de iniciar y detener subprocesos, puede pausar subprocesos mediante una llamada al método <xref:System.Threading.Thread.Sleep%2A> o <xref:System.Threading.Thread.Suspend%2A>, reanudar un subproceso suspendido mediante el método <xref:System.Threading.Thread.Resume%2A> y destruir un subproceso mediante el método <xref:System.Threading.Thread.Abort%2A>.  
+ Además de iniciar y detener los subprocesos, también puede pausarlos llamando al método <xref:System.Threading.Thread.Sleep%2A> o <xref:System.Threading.Thread.Suspend%2A>, reanudar un subproceso suspendido con el método <xref:System.Threading.Thread.Resume%2A> y destruir un subproceso con el método <xref:System.Threading.Thread.Abort%2A>.  
   
 ### <a name="thread-methods"></a>Métodos de subproceso  
  En la tabla siguiente se muestran algunos de los métodos que puede usar para controlar subprocesos individuales.  
@@ -82,7 +83,7 @@ newThread.Abort();
 |<xref:System.Threading.Thread.ThreadState%2A>|Contiene un valor que describe los estados de un subproceso.|  
   
 ## <a name="thread-priorities"></a>Prioridades de subprocesos  
- Cada subproceso tiene una propiedad de prioridad que determina la cantidad de tiempo de procesador que tiene que ejecutar. El sistema operativo asigna tiempos mayores a los subprocesos de alta prioridad y tiempos menores a los subprocesos de baja prioridad. Los subprocesos nuevos se crean con el valor de `Normal`, pero la propiedad <xref:System.Threading.Thread.Priority%2A> se puede cambiar a cualquier valor de la enumeración <xref:System.Threading.ThreadPriority>.  
+ Cada subproceso tiene una propiedad de prioridad que determina la cantidad de tiempo de procesador que tiene que ejecutar. El sistema operativo asigna tiempos mayores a los subprocesos de alta prioridad y tiempos menores a los subprocesos de baja prioridad. Se crean subprocesos con el valor de `Normal`, pero puede cambiar la propiedad <xref:System.Threading.Thread.Priority%2A> a cualquier valor en la enumeración <xref:System.Threading.ThreadPriority>.  
   
  Vea <xref:System.Threading.ThreadPriority> para obtener una descripción detallada de las diversas prioridades de subprocesos.  
   
@@ -94,3 +95,4 @@ newThread.Abort();
  [Sincronización de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
  [Parámetros y valores devueltos para procedimientos multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
  [Subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
+

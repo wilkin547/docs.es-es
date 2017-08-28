@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Multithreading con el componente BackgroundWorker (C#) | Microsoft Docs'
+title: 'Tutorial: Multithreading con el componente BackgroundWorker (C#)'
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,18 +19,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Tutorial: Multithreading con el componente BackgroundWorker (C#)
 Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms que busque las repeticiones de una palabra en un archivo de texto. Muestra cómo:  
   
--   Definir una clase con un método que el componente <xref:System.ComponentModel.BackgroundWorker> pueda llamar.  
+-   Definir una clase con un método que puede llamarse mediante el componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Controlar eventos provocados por el componente <xref:System.ComponentModel.BackgroundWorker>.  
+-   Controlar eventos que se han generado mediante el componente <xref:System.ComponentModel.BackgroundWorker>.  
   
 -   Iniciar un componente <xref:System.ComponentModel.BackgroundWorker> para ejecutar un método.  
   
@@ -64,7 +65,7 @@ Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms 
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Para crear un componente BackgroundWorker y suscribirse a sus eventos  
   
-1.  Agregue un componente <xref:System.ComponentModel.BackgroundWorker> de la sección **Componentes** del **Cuadro de herramientas** al formulario. Aparecerá en la bandeja de componentes del formulario.  
+1.  Agregue un componente <xref:System.ComponentModel.BackgroundWorker> desde la sección **Componentes** del **cuadro de herramientas** al formulario. Aparecerá en la bandeja de componentes del formulario.  
   
 2.  Establezca las siguientes propiedades para el objeto backgroundWorker1.  
   
@@ -293,3 +294,4 @@ Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms 
 ## <a name="see-also"></a>Vea también  
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  (Subprocesos [C#])  
  [Cómo: Suscribir y cancelar la suscripción a eventos](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+

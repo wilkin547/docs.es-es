@@ -1,6 +1,6 @@
 ---
 title: Expression Trees
-description: Expression Trees
+description: "Obtenga información sobre los árboles de expresión en .NET Core y cómo usarlos para representar código como estructuras que pueda examinar, modificar y ejecutar."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ Probablemente ya ha escrito código que use árboles de expresión. Las API de L
 Eso permite que [Entity Framework](http://docs.efproject.net/en/latest/) convierta la consulta que ha escrito en C# en SQL que se ejecuta en el motor de base de datos. Otro ejemplo es [Moq](https://github.com/Moq/moq), que es un marco simulado popular de .NET.
 
 En las secciones restantes de este tutorial exploraremos lo que son los árboles de expresión, examinaremos las clases de marco que admiten los árboles de expresión y le mostraremos cómo trabajar con ellos. Obtendrá información sobre cómo leer árboles de expresión, cómo crearlos, cómo crear árboles de expresión modificados y cómo ejecutar el código representado en ellos. Después de esta lectura, estará listo para usar estas estructuras para crear algoritmos muy adaptables.
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
-1. [Árboles de expresión en detalle](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+1. [Árboles de expresiones en detalle](expression-trees-explained.md)
+
+    Comprenda la estructura y los conceptos de los *árboles de expresión*.
     
 2. [Tipos de marco que admiten árboles de expresión](expression-classes.md)
     

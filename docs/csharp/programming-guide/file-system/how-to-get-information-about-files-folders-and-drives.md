@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Obtener información sobre archivos, carpetas y unidades (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Obtener información sobre archivos, carpetas y unidades (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16950f835938846804ade1a8ad23d907aa69b9c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6067ea9d51c31c9398c7b1fcd83ca8fa3a4fec76
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Cómo: Obtener información sobre archivos, carpetas y unidades (Guía de programación de C#)
@@ -54,7 +55,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  También puede obtener los nombres de archivos, carpetas o unidades mediante llamadas a <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> y <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
   
- Las clases <xref:System.IO.Directory?displayProperty=fullName> y <xref:System.IO.File?displayProperty=fullName> proporcionan métodos estáticos para recuperar información sobre los directorios y los archivos.  
+ Las clases <xref:System.IO.Directory?displayProperty=fullName> y <xref:System.IO.File?displayProperty=fullName> proporcionan métodos estáticos para recuperar información sobre directorios y archivos.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestran diversas maneras de obtener acceso a información sobre archivos y carpetas.  
@@ -78,3 +79,4 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
  <xref:System.IO?displayProperty=fullName>   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+

@@ -1,6 +1,6 @@
 ---
 title: "Programación asincrónica"
-description: "Programación asincrónica"
+description: "Obtenga información sobre el modelo de programación asincrónico de nivel de lenguaje de C# que proporciona .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
 ms.contentlocale: es-es
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -32,7 +32,7 @@ Para el código enlazado a E/S, se aplica la palabra clave `await` a una operaci
 
 Para el código enlazado a la CPU, se aplica la palabra clave `await` a una operación que se inicia en un subproceso en segundo plano con el método `Task.Run`.
 
-La palabra clave `await` es donde se produce la magia, ya que cede el control al autor de la llamada del método que ha realizado la operación `await`.  Es lo que permite en última instancia que la interfaz de usuario tenga capacidad de respuesta o que un servicio sea elástico.
+La palabra clave `await` es donde ocurre la magia. Genera control para el autor de la llamada del método que ha realizado `await`, y permite en última instancia una interfaz de usuario con capacidad de respuesta o un servicio flexible.
 
 Hay otras formas de abordar el código asincrónico aparte de `async` y `await`, que se describen en el artículo de TAP indicado anteriormente, pero en este documento nos centraremos en las construcciones de nivel de lenguaje de aquí en adelante.
 
@@ -74,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -105,7 +105,7 @@ En los dos primeros ejemplos de esta guía se ha explicado cómo se puede usar `
 
 A continuación, se indican dos preguntas que debe hacerse antes de escribir el código:
 
-1. ¿Estará el código "esperando" algo, como datos de una base de datos?
+1. ¿Estará su código "esperando" algo, como datos de una base de datos?
 
     Si la respuesta es "sí", su trabajo está **enlazado a E/S**.
 
@@ -180,7 +180,6 @@ Es posible que se vea en una situación en la que necesite recuperar varios frag
 En este ejemplo se muestra cómo podría captar datos `User` de un conjunto de elementos `userId`.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -205,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Aquí tiene otra manera de escribir lo mismo de una forma más sucinta, con LINQ:
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

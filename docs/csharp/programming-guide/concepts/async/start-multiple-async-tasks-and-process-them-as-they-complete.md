@@ -1,5 +1,5 @@
 ---
-title: "Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#) | Microsoft Docs"
+title: "Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 0ab1c8d117327c9f5805d184b263a0932ab0bc3f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
 ms.contentlocale: es-es
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)
@@ -67,7 +67,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  En el archivo MainWindow.xaml.cs del proyecto, realice los siguientes cambios en el método `AccessTheWebAsync`.  
   
--   Ejecute la consulta mediante la aplicación de <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.  
+-   Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
         downloadTasks.Remove(firstFinishedTask);  
         ```  
   
-    3.  Espera `firstFinishedTask`, que se devuelve mediante una llamada a `ProcessURLAsync`. La variable `firstFinishedTask` es un objeto <xref:System.Threading.Tasks.Task%601> donde `TReturn` es un entero. La tarea ya está completa, pero la espera para recuperar la longitud del sitio web descargado, como se muestra en el ejemplo siguiente.  
+    3.  Espera `firstFinishedTask`, que se devuelve mediante una llamada a `ProcessURLAsync`. La variable `firstFinishedTask` es un <xref:System.Threading.Tasks.Task%601> donde `TReturn` es un entero. La tarea ya está completa, pero la espera para recuperar la longitud del sitio web descargado, como se muestra en el ejemplo siguiente.  
   
         ```csharp  
         int length = await firstFinishedTask;  
@@ -100,7 +100,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
 >  Puede usar `WhenAny` en un bucle, como se describe en el ejemplo, para solucionar problemas que implican un número reducido de tareas. Sin embargo, otros enfoques son más eficaces si hay que procesar un gran número de tareas. Para obtener más información y ejemplos, vea [Processing Tasks as they complete](http://go.microsoft.com/fwlink/?LinkId=260810) (Procesamiento de tareas a medida que se completan).  
   
 ## <a name="complete-example"></a>Ejemplo completo  
- El código siguiente es el texto completo del archivo MainWindow.xaml.cs para el ejemplo. Los asteriscos marcan los elementos que se han agregado a este ejemplo.  
+ El código siguiente es el texto completo del archivo MainWindow.xaml.cs para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo.  
   
  Observe que debe agregar una referencia para <xref:System.Net.Http>.  
   
@@ -247,3 +247,4 @@ namespace ProcessTasksAsTheyFinish
  [Ajustar una aplicación asincrónica (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Programación asincrónica con async y await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Async Sample: Fine Tuning Your Application](http://go.microsoft.com/fwlink/?LinkId=255046) (Ejemplo asincrónico: Ajustar la aplicación)
+

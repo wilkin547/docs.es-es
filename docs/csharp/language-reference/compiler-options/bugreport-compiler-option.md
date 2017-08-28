@@ -1,63 +1,83 @@
 ---
-title: "/bugreport (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/bugreport"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/bugreport compiler option [C#]"
-  - "-bugreport compiler option [C#]"
-  - "bugreport compiler option [C#]"
+title: -bugreport (Opciones del compilador de C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /bugreport
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /bugreport compiler option [C#]
+- -bugreport compiler option [C#]
+- bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: 20
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 20
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ccfea1aa7e51ad013418f61bc4478034c9a5d830
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# /bugreport (C# Compiler Options)
-Especifica que la información de depuración se debe colocar en un archivo para un análisis posterior.  
+# <a name="bugreport-c-compiler-options"></a>/bugreport (Opciones del compilador de C#)
+Especifica que esa información de depuración debe colocarse en un archivo para su análisis posterior.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /bugreport:file  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `file`  
- Nombre del archivo que va a contener el informe de error.  
+ El nombre del archivo que quiere que contenga su informe de errores.  
   
-## Comentarios  
- La opción **\/bugreport** especifica que la siguiente información se debe colocar en `file`:  
+## <a name="remarks"></a>Comentarios  
+ La opción **/bugreport** especifica que la siguiente información debe colocarse en `file`:  
   
 -   Una copia de todos los archivos de código fuente de la compilación.  
   
--   Una lista de las opciones del compilador utilizadas en la compilación.  
+-   Una lista de las opciones del compilador que se han usado en la compilación.  
   
--   Información de versión acerca del compilador, el motor en tiempo de ejecución y el sistema operativo.  
+-   Información de la versión sobre su compilador, tiempo de ejecución y sistema operativo.  
   
--   Los ensamblados y módulos a los que se hace referencia \(guardados como dígitos hexadecimales\), excepto los ensamblados que se distribuyen con .NET Framework y el SDK.  
+-   Módulos y ensamblados a los que se hace referencia, guardados como dígitos hexadecimales, excepto los ensamblados que se proporcionan con .NET Framework y SDK.  
   
--   Resultados del compilador, si existen.  
+-   Resultados del compilador, si los hay.  
   
--   Descripción del problema, que debe rellenar el usuario.  
+-   Una descripción del problema, que se le pedirá.  
   
--   Descripción de cómo se debería resolver el problema, que debe rellenar el usuario.  
+-   Una descripción de cómo cree que debe corregirse el problema, que se le pedirá.  
   
- Si se utiliza esta opción con **\/errorreport:prompt** o **\/errorreport:send**, se enviará la información del archivo a Microsoft Corporation.  
+ Si esta opción se usa con **/errorreport:prompt** o **/errorreport:send**, la información del archivo se enviará a Microsoft Corporation.  
   
- Puesto que se colocará una copia de todos los archivos de código fuente en `file`, es recomendable reproducir el defecto de código que se sospecha en el programa más corto posible.  
+ Como una copia de todos los archivos de código fuente se colocarán en `file`, puede que quiera reproducir el defecto en el código sospechoso en el programa más corto posible.  
   
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
   
- Observe que el contenido del archivo generado expone código fuente que podría producir la revelación inadvertida de información.  
+ Tenga en cuenta que el contenido del código fuente expuesto del archivo generado puede provocar la divulgación de información involuntaria.  
   
-## Vea también  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [\/errorreport \(Set Error Reporting Behavior\)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/es-es/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vea también  
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [/errorreport (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)   
+ [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+

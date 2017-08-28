@@ -8,10 +8,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: d08c6794acd450556a5f97fced229eb7289b6d58
+ms.sourcegitcommit: fa2e5ecbf41dc2a8cd90aabc6f7291db597e657e
+ms.openlocfilehash: 4c1c0e4ed1b1222abbcd104b2c10a44b1b99be8d
 ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dotnet-command"></a>comando dotnet
@@ -25,9 +25,13 @@ ms.lasthandoff: 08/14/2017
 ## <a name="synopsis"></a>Sinopsis
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-`dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]`
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-`dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]`
+```
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+```
 ---
 
 ## <a name="description"></a>Descripción
@@ -114,7 +118,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 ### <a name="general"></a>General
 
-# <a name="net-core-2xtabnetcore1x"></a>[.NET Core 2.x](#tab/netcore1x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 | Comando                             | Función                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -162,8 +166,8 @@ Comando | Función
 
 Comando | Función
 --- | ---
-[dotnet add package](dotnet-add-package.md) | Agrega un paquete de NuGet.
-[dotnet remove package](dotnet-remove-package.md) | Quita un paquete de NuGet.
+[dotnet add package](dotnet-add-package.md) | Agrega un paquete NuGet.
+[dotnet remove package](dotnet-remove-package.md) | Quita un paquete NuGet.
 
 ### <a name="nuget-commands"></a>Comandos NuGet
 

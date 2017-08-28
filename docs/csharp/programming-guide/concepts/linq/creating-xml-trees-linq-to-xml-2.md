@@ -1,5 +1,5 @@
 ---
-title: "Crear árboles XML en C# (LINQ to XML) | Microsoft Docs"
+title: "Crear árboles XML en C# (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,23 +19,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92ba0d345183ec503d61254355f948f82a18f053
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ac95fcf49736b554c8a3d4d0061f63b3ac4d3f65
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Crear árboles XML en C# (LINQ to XML)
 En esta sección encontrará información acerca de cómo crear árboles XML en C#.  
   
- Para obtener información sobre cómo usar los resultados de las consultas LINQ como contenido de un <xref:System.Xml.Linq.XElement>, vea [Functional Construction (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md) (Construcción funcional (LINQ to XML) (C#)).  
+ Para obtener información sobre cómo usar los resultados de las consultas LINQ como contenido de un <xref:System.Xml.Linq.XElement>, vea [Construcción funcional (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
 ## <a name="constructing-elements"></a>Elementos de construcción  
- Las firmas de los constructores <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XAttribute> le permiten pasar al constructor el contenido del elemento o atributo como argumentos. Dado que uno de los constructores recibe un número variable de argumentos, podrá pasar tantos elementos secundarios como desee. Por supuesto, cada uno de esos elementos secundarios podrá contener sus propios elementos secundarios. Para cualquier elemento, podrá agregar cuantos atributos desee.  
+ Las firmas de los constructores <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XAttribute> le permiten pasar los contenidos del elemento o atributo como argumentos del constructor. Dado que uno de los constructores recibe un número variable de argumentos, podrá pasar tantos elementos secundarios como desee. Por supuesto, cada uno de esos elementos secundarios podrá contener sus propios elementos secundarios. Para cualquier elemento, podrá agregar cuantos atributos desee.  
   
- Al agregar objetos <xref:System.Xml.Linq.XNode> (incluido <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, si el contenido nuevo no tiene ningún elemento primario, los objetos se adjuntan al árbol XML. Si el contenido nuevo ya tiene un elemento primario y forma parte de otro árbol XML, el nuevo contenido se clonará y ese clon se asociará al árbol XML. El último ejemplo de este tema muestra este comportamiento.  
+ Cuando se agregan objetos <xref:System.Xml.Linq.XNode> (incluyendo el objeto <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, si el contenido nuevo no tiene un elemento primario, los objetos simplemente se adjuntan al árbol XML. Si el contenido nuevo ya tiene un elemento primario y forma parte de otro árbol XML, el nuevo contenido se clonará y ese clon se asociará al árbol XML. El último ejemplo de este tema muestra este comportamiento.  
   
- Para crear un <xref:System.Xml.Linq.XElement> `contacts`, puede usar el siguiente código:  
+ Para crear un `contacts`<xref:System.Xml.Linq.XElement>, podría utilizar el siguiente código:  
   
 ```csharp  
 XElement contacts =  
@@ -53,33 +54,33 @@ XElement contacts =
     );  
 ```  
   
- Si se aplica correctamente la sangría, el código que construye los objetos <xref:System.Xml.Linq.XElement> se parece mucho a la estructura del contenido XML subyacente.  
+ Si se aplica correctamente la sangría, el código que construye los objetos <xref:System.Xml.Linq.XElement> se asemeja mucho a la estructura del contenido XML subyacente.  
   
 ## <a name="xelement-constructors"></a>Constructores de XElement  
- La clase <xref:System.Xml.Linq.XElement> usa los siguientes constructores para llevar a cabo una construcción funcional. Observe que existen algunos constructores más para <xref:System.Xml.Linq.XElement>, pero, dado que no se usan para el proceso de construcción funcional, no se detallan aquí.  
+ La clase <xref:System.Xml.Linq.XElement> utiliza los siguientes constructores para llevar a cabo una construcción funcional. Observe que existen algunos constructores más para <xref:System.Xml.Linq.XElement>, pero, dado que no se utilizan para el proceso de construcción funcional, no se detallarán aquí.  
   
 |Constructor|Descripción|  
 |-----------------|-----------------|  
-|`XElement(XName name, object content)`|Crea un <xref:System.Xml.Linq.XElement>. El parámetro `name` especifica el nombre del elemento; `content` especifica el contenido del elemento.|  
-|`XElement(XName name)`|Crea un <xref:System.Xml.Linq.XElement> con el correspondiente <xref:System.Xml.Linq.XName> inicializado con el nombre especificado.|  
-|`XElement(XName name, params object[] content)`|Crea un <xref:System.Xml.Linq.XElement> con el correspondiente <xref:System.Xml.Linq.XName> inicializado con el nombre especificado. Los atributos y/o elementos secundarios se crean a partir de los contenidos de la lista de parámetros.|  
+|`XElement(XName name, object content)`|Crea una interfaz <xref:System.Xml.Linq.XElement>. El parámetro `name` especifica el nombre del elemento; `content` especifica el contenido del elemento.|  
+|`XElement(XName name)`|Crea un <xref:System.Xml.Linq.XElement> cuyo <xref:System.Xml.Linq.XName> se inicializa con el nombre especificado.|  
+|`XElement(XName name, params object[] content)`|Crea un <xref:System.Xml.Linq.XElement> cuyo <xref:System.Xml.Linq.XName> se inicializa con el nombre especificado. Los atributos y/o elementos secundarios se crean a partir de los contenidos de la lista de parámetros.|  
   
  El parámetro `content` es extremadamente flexible. Admite cualquier tipo de objeto que sea un elemento secundario válido de un <xref:System.Xml.Linq.XElement>. Se aplicarán las siguientes reglas a los diferentes tipos de objetos pasados en este parámetros:  
   
 -   Una cadena se agrega como contenido de tipo texto.  
   
--   Se agrega un <xref:System.Xml.Linq.XElement> como elemento secundario.  
+-   Un <xref:System.Xml.Linq.XElement> se agrega como un elemento secundario.  
   
--   Se agrega un <xref:System.Xml.Linq.XAttribute> como atributo.  
+-   Un <xref:System.Xml.Linq.XAttribute> se agrega como un atributo.  
   
--   Se agrega una <xref:System.Xml.Linq.XProcessingInstruction>, un <xref:System.Xml.Linq.XComment> o un <xref:System.Xml.Linq.XText> como contenido secundario.  
+-   Un <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> o un <xref:System.Xml.Linq.XText> se agregan como un contenido secundario.  
   
--   Se enumera un <xref:System.Collections.IEnumerable> y estas reglas se aplican recursivamente a los resultados.  
+-   Un <xref:System.Collections.IEnumerable> es un tipo enumerado y se aplicarán estas reglas recursivamente a los resultados.  
   
 -   Para el resto de tipos, se llamará a su método `ToString` y se agregará el resultado como contenido de tipo texto.  
   
 ### <a name="creating-an-xelement-with-content"></a>Crear un XElement con contenidos  
- Puede crear un <xref:System.Xml.Linq.XElement> que contenga un contenido simple con una única llamada al método. Para ello, especifique el contenido como segundo parámetro, tal y como sigue:  
+ Puede crear un <xref:System.Xml.Linq.XElement> que contenga un contenido simple con una única llamada a método. Para ello, especifique el contenido como segundo parámetro, tal y como sigue:  
   
 ```csharp  
 XElement n = new XElement("Customer", "Adventure Works");  
@@ -108,7 +109,7 @@ Console.WriteLine(n);
  Al número de punto flotante se le aplica la conversión boxing y se pasa al constructor. El número se convierte entonces en una cadena y se utiliza como contenido del elemento.  
   
 ### <a name="creating-an-xelement-with-a-child-element"></a>Crear un XElement con un elemento secundario  
- Si pasa una instancia de la clase <xref:System.Xml.Linq.XElement> para el argumento del contenido, el constructor creará un elemento con un elemento secundario:  
+ Si pasa una instancia de la clase <xref:System.Xml.Linq.XElement> para el argumento del contenido, el constructor creará un elemento que tiene un elemento secundario:  
   
 ```csharp  
 XElement shippingUnit = new XElement("ShippingUnit",  
@@ -126,7 +127,7 @@ Console.WriteLine(shippingUnit);
 ```  
   
 ### <a name="creating-an-xelement-with-multiple-child-elements"></a>Crear un XElement con varios elementos secundarios  
- Puede pasar una serie de objetos <xref:System.Xml.Linq.XElement> para el contenido. Todos los objetos <xref:System.Xml.Linq.XElement> se incluyen como elemento secundario.  
+ Para el contenido, puede pasar tantos objetos <xref:System.Xml.Linq.XElement> como desee. Cada uno de los objetos <xref:System.Xml.Linq.XElement> se incluye como elemento secundario.  
   
 ```csharp  
 XElement address = new XElement("Address",  
@@ -199,8 +200,8 @@ Console.WriteLine(n);
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a>Diferencias entre adjuntar y Clonación  
- Como se ha mencionado anteriormente, al agregar objetos <xref:System.Xml.Linq.XNode> (incluido <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, si el contenido nuevo no tiene un elemento primario, los objetos solo se adjuntan al árbol XML. Si el contenido nuevo ya tiene un elemento primario y forma parte de otro árbol XML, el nuevo contenido se clonará y ese clon se asociará al árbol XML.  
+### <a name="attaching-vs-cloning"></a>Diferencias entre adjuntar y clonar  
+ Como mencionamos anteriormente, cuando se agregan objetos <xref:System.Xml.Linq.XNode> (incluyendo el objeto <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute>, si el contenido nuevo no tiene un elemento primario, los objetos simplemente se adjuntan al árbol XML. Si el contenido nuevo ya tiene un elemento primario y forma parte de otro árbol XML, el nuevo contenido se clonará y ese clon se asociará al árbol XML.  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -236,4 +237,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+ [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))
+

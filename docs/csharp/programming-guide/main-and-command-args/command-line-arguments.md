@@ -1,5 +1,5 @@
 ---
-title: "Argumentos de la línea de comandos (Guía de programación de C#) | Microsoft Docs"
+title: "Argumentos de la línea de comandos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4034f1575321c94f003a12a83df617d4a0d50702
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de la línea de comandos (Guía de programación de C#)
@@ -41,7 +42,7 @@ Puede enviar argumentos al método `Main` definiéndolo de una de las siguientes
  [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Para habilitar los argumentos de la línea de comandos en el método `Main` de una aplicación de Windows Forms, modifique manualmente la firma de `Main` en program.cs. El código generado por el Diseñador de Windows Forms crea un `Main` sin ningún parámetro de entrada. También puede usar <xref:System.Environment.CommandLine%2A?displayProperty=fullName> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> para obtener acceso a los argumentos de la línea de comandos desde cualquier punto de una consola o aplicación de Windows.  
+>  Para habilitar los argumentos de la línea de comandos en el método `Main` de una aplicación de Windows Forms, modifique manualmente la firma de `Main` en program.cs. El código generado por el Diseñador de Windows Forms crea un `Main` sin ningún parámetro de entrada. También puede usar <xref:System.Environment.CommandLine%2A?displayProperty=fullName> o <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName> para tener acceso a los argumentos de la línea de comandos desde cualquier punto en una consola o aplicación Windows.  
   
  El parámetro del método `Main` es una matriz <xref:System.String> que representa los argumentos de la línea de comandos. Normalmente, para determinar si hay argumentos, se prueba la propiedad `Length`; por ejemplo:  
   
@@ -65,7 +66,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);  
 ```  
   
- Para obtener más información, vea <xref:System.Int64.Parse%2A> y <xref:System.Convert>.  
+ Para obtener más información, consulte <xref:System.Int64.Parse%2A> y <xref:System.Convert>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar argumentos de la línea de comandos en una aplicación de consola. La aplicación toma un argumento en tiempo de ejecución, lo convierte en un entero y calcula el factorial del número. Si no se proporciona ningún argumento, la aplicación emite un mensaje en el que se explica el uso correcto del programa.  
@@ -91,7 +92,7 @@ long num = Convert.ToInt64(s);
 5.  El comando genera este resultado: `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  Al ejecutar una aplicación en Visual Studio, puede especificar argumentos de la línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
  Para ver más ejemplos sobre cómo usar los argumentos de la línea de comandos, vea [How to: Create and Use Assemblies Using the Command Line](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4) (Cómo: Crear y usar ensamblados mediante la línea de comandos).  
   
@@ -103,3 +104,4 @@ long num = Convert.ToInt64(s);
  [Cómo: Obtener acceso a argumentos de la línea de comandos utilizando Foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Valores devueltos de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
  [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

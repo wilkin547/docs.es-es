@@ -1,5 +1,5 @@
 ---
-title: "Opciones del compilador de C#, por orden alfabético | Microsoft Docs"
+title: "Opciones del compilador de C#, por orden alfabético"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 91582d214c2f8a72d383a0ac17e409167fda5065
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 291c35f73b47167289a88f0b7655c26699fdc009
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético
@@ -44,14 +44,14 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |------------|-------------|  
 |[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|Leer un archivo de respuesta para ver más opciones.|  
 |[/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Muestra un mensaje de uso a stdout.|  
-|`/additionalfile`|Asigna nombre a otros archivos que no afectan directamente a la generación de código, pero que los analizadores pueden usar para generar errores o advertencias.|  
+|/additionalfile|Asigna nombre a otros archivos que no afectan directamente a la generación de código, pero que los analizadores pueden usar para generar errores o advertencias.|  
 |[/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Vincula los módulos especificados en este ensamblado.|  
-|`/analyzer`|Ejecuta los analizadores de este ensamblado (forma abreviada: /a).|  
+|/analyzer|Ejecuta los analizadores de este ensamblado (forma abreviada: /a).|  
 |[/appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|Especifica la ubicación de app.config en el momento del enlace de ensamblado.|  
 |[/baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Especifica la dirección base de la biblioteca que se compilará.|  
-|[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Crea un archivo 'Informe de errores'. Este archivo se enviará junto con la información de bloqueo si se usa con **/errorreport:prompt** o **/errorreport:send**.|  
+|[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Crea un archivo 'Informe de errores'. Este archivo se enviará junto con la información de bloqueo si se usa con /errorreport:prompt o /errorreport:send.|  
 |[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Hace que el compilador genere comprobaciones de desbordamiento.|  
-|`/checksumalgorithm:<alg>`|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
+|/checksumalgorithm:\<alg>|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
 |[/codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Especifica la página de códigos que se va a utilizar cuando se abren los archivos de código fuente.|  
 |[/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|Emite información de depuración.|  
 |[/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|Define símbolos de compilación condicional.|  
@@ -62,16 +62,16 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[/fullpaths](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|Hace que el compilador genere rutas de acceso completas.|  
 |[/help](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Muestra un mensaje de uso a stdout.|  
 |[/highentropyva](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|Especifica que se admite el ASLR de alta entropía.|  
-|**/incremental**|Habilita la compilación incremental [obsoleto].|  
+|/incremental|Habilita la compilación incremental [obsoleto].|  
 |[/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|Especifica un contenedor de claves de nombre seguro.|  
 |[/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|Especifica un archivo de clave de nombre seguro.|  
-|[/langversion:\<string>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|Especifica el modo de versión de lenguaje: ISO-1, ISO-2, 3, 4, 5, 6 o Default.|  
+|[/langversion:\<string>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|Especifica el modo de versión de lenguaje: valor predeterminado, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 o el más reciente |  
 |[/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|Especifica más directorios donde buscar referencias.|  
 |[/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|Hace que la información de tipo COM de ensamblados específicos esté disponible en el proyecto.|  
 |[/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|Vincula el recurso especificado a este ensamblado.|  
 |[/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|Especifica el tipo que contiene el punto de entrada (se pasan por alto los demás puntos de entrada posibles).|  
 |[/moduleassemblyname](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)|Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.|  
-|`/modulename:<string>`|Especifica el nombre del módulo de origen.|  
+|/modulename:\<string>|Especifica el nombre del módulo de origen.|  
 |[/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|Indica al compilador que no incluya el archivo CSC.RSP de forma automática.|  
 |[/nologo](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|Suprime el mensaje de copyright del compilador.|  
 |[/nostdlib](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|Indica al compilador que no haga referencia a la biblioteca estándar (mscorlib.dll).|  
@@ -79,16 +79,16 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[/nowin32manifest](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md)|Indica al compilador que no incruste un manifiesto de la aplicación en el archivo ejecutable.|  
 |[/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|Habilita o deshabilita las optimizaciones.|  
 |[/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|Especifica el nombre de archivo de salida (nombre predeterminado: nombre base de archivo con la clase principal o del primer archivo).|  
-|`/parallel[+&#124;-]`|Especifica si hay que usar la compilación simultánea (+).|  
+|/parallel[+&#124;-]|Especifica si hay que usar la compilación simultánea (+).|  
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Especifica el nombre y la ubicación de archivo del archivo .pdb.|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Limita las plataformas en las que se puede ejecutar este código: x86, Itanium, x64, anycpu o anycpu32bitpreferred. El valor predeterminado es anycpu.|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifica el idioma que se usará para los resultados del compilador.|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Incluye todos los archivos del directorio y subdirectorios actuales de acuerdo con las especificaciones de los comodines.|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Hace referencia a los metadatos de los archivos de ensamblado especificados.|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Incrusta el recurso especificado.|  
-|`/ruleset:<file>`|Especifica un archivo de conjunto de reglas que deshabilita diagnósticos específicos.|  
+|/ruleset:\<file>|Especifica un archivo de conjunto de reglas que deshabilita diagnósticos específicos.|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Especifica la versión mínima del subsistema que el archivo ejecutable puede usar.|  
-|[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Especifica el formato del archivo de salida con una de las seis opciones siguientes:[/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
+|[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Especifica el formato del archivo de salida con una de las seis opciones siguientes: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
 |[/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|Permite código [no seguro](../../../csharp/language-reference/keywords/unsafe.md).|  
 |[/utf8output](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|Genera mensajes del compilador en codificación UTF-8.|  
 |[/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|Establece el nivel de advertencia (0-4).|  
@@ -102,3 +102,4 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
  [C# Compiler Options Listed by Category](../../../csharp/language-reference/compiler-options/listed-by-category.md)  (Opciones del compilador de C#, por categoría)  
  [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
  [Elemento \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+

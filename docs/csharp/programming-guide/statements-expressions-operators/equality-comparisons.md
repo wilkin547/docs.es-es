@@ -1,5 +1,5 @@
 ---
-title: "Comparaciones de igualdad (Guía de programación de C#) | Microsoft Docs"
+title: "Comparaciones de igualdad (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9f7d8c6e816efe248739d0771d332a784b1e185f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
 ms.contentlocale: es-es
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (Guía de programación de C#)
@@ -66,7 +66,7 @@ if( b == a)
  En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para obtener más información sobre cómo definir la igualdad de valores en sus propias clases y structs, vea [Cómo: Definir la igualdad de valores para un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Igualdad de valores en valores de número de punto flotante  
- Las comparaciones de igualdad de valores de punto flotante ([double](../../../csharp/language-reference/keywords/double.md) y [float](../../../csharp/language-reference/keywords/float.md)) son problemáticas debido a la imprecisión de la aritmética de número de punto flotante en los equipos binarios. Para obtener más información, vea los comentarios del tema <xref:System.Double?displayProperty=fullName>.  
+ Las comparaciones de igualdad de valores de punto flotante ([double](../../../csharp/language-reference/keywords/double.md) y [float](../../../csharp/language-reference/keywords/float.md)) son problemáticas debido a la imprecisión de la aritmética de número de punto flotante en los equipos binarios. Para obtener más información, vea los comentarios en el tema <xref:System.Double?displayProperty=fullName>.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -79,3 +79,4 @@ if( b == a)
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+

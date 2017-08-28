@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Buscar caracteres en una cadena (LINQ) (C#) | Microsoft Docs"
+title: "Cómo: Buscar caracteres en una cadena (LINQ) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 86c763d8f31a7021605d82ecab0664a290934e07
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e78ad4aa493a7f58c43e77772138900e2b20b18a
 ms.contentlocale: es-es
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Cómo: Buscar caracteres en una cadena (LINQ) (C#)
-Dado que la clase <xref:System.String> implementa la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>, cualquier cadena se puede consultar como una secuencia de caracteres. Pero esto no es un uso habitual de LINQ. Para operaciones complejas de coincidencia de patrones, use la clase <xref:System.Text.RegularExpressions.Regex>.  
+Como la clase <xref:System.String> implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> genérica, cualquier cadena puede consultarse como una secuencia de caracteres. Pero esto no es un uso habitual de LINQ. Para operaciones de coincidencia de patrones complejas, use la clase <xref:System.Text.RegularExpressions.Regex>.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se consulta una cadena para determinar el número de dígitos numéricos que contiene. Tenga en cuenta que la consulta se "reutiliza" después de que se ejecute la primera vez. Esto es posible porque la propia consulta no almacena ningún resultado real.  
@@ -77,3 +77,4 @@ class QueryAString
 ## <a name="see-also"></a>Vea también  
  [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
  [Cómo: Combinar consultas LINQ con expresiones regulares (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+

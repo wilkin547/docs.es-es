@@ -1,5 +1,5 @@
 ---
-title: "where (Cláusula, Referencia de C#) | Microsoft Docs"
+title: "where (Cláusula, Referencia de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-clause-c-reference"></a>where (Cláusula, Referencia de C#)
@@ -57,7 +58,7 @@ La cláusula `where` se usa en una expresión de consulta para especificar los e
 ## <a name="remarks"></a>Comentarios  
  La cláusula `where` es un mecanismo de filtrado. Se puede colocar prácticamente en cualquier parte en una expresión de consulta, pero no puede ser la primera ni la última cláusula. Puede que una cláusula `where` aparezca antes o después de una cláusula [group](../../../csharp/language-reference/keywords/group-clause.md), en función de que haya que filtrar los elementos de origen antes o después de agruparlos.  
   
- Si un predicado especificado no es válido para los elementos del origen de datos, se producirá un error en tiempo de compilación. Esta es una de las ventajas de la comprobación estricta de tipos que [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] ofrece.  
+ Si un predicado especificado no es válido para los elementos del origen de datos, se producirá un error en tiempo de compilación. Esta es una de las ventajas de la comprobación estricta de tipos que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] ofrece.  
   
  En tiempo de compilación, la palabra clave `where` se convierte en una llamada al método de operador de consulta estándar <xref:System.Linq.Enumerable.Where%2A>.  
   
@@ -68,3 +69,4 @@ La cláusula `where` se usa en una expresión de consulta para especificar los e
  [Filtrado de datos](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Introducción a LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

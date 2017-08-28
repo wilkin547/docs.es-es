@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Crear ensamblados de confianza sin firmar | Microsoft Docs"
+title: "Cómo: Crear ensamblados de confianza sin firmar(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7d2924f0a619c234871232e155bb6f23e43aee4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 967436204ab0824a510c12dc4c6e288d91d7dfa0
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza sin firmar(C#)
@@ -104,7 +105,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
      El programa imprime dos cadenas: "Class1.Test" y "Class2.Test".  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Hay similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La principal diferencia es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede solicitar permisos de seguridad para ejecutar una sección concreta del código, mientras que el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los tipos y miembros de `internal`.  
+ Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal`.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
@@ -112,3 +113,4 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados s
  [Friend Assemblies (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  (Ensamblados de confianza (C#))  
  [How to: Create Signed Friend Assemblies (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  (Cómo: Crear ensamblados de confianza firmados (C#))  
  [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+

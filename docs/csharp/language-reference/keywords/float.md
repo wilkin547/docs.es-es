@@ -1,5 +1,5 @@
 ---
-title: float (Referencia de C#) | Microsoft Docs
+title: float (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1fb02f84de504112eee826dbee1275fa3ccb7a
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="float-c-reference"></a>float (Referencia de C#)
@@ -73,12 +74,12 @@ float x = 3.5F;
  Para obtener más información sobre estos valores, vea el estándar IEEE para aritmética binaria de punto flotante, disponible en el sitio web [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se incluyen un [int](int.md), un [short](short.md) y un `float` en una expresión matemática cuyo resultado es `float`. (Recuerde que `float` es un alias del tipo <xref:System.Single?displayProperty=fullName>). Observe que no hay ningún [double](double.md) en la expresión.  
+ En el ejemplo siguiente, se incluyen un [int](int.md), un [short](short.md) y un `float` en una expresión matemática cuyo resultado es `float`. (Recuerde que `float` es un alias para el tipo <xref:System.Single?displayProperty=fullName>). Observe que no hay ningún [double](double.md) en la expresión.  
   
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Single>   
@@ -86,7 +87,8 @@ float x = 3.5F;
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  (Conversiones de tipos [Guía de programación de C#])  
  [Palabras clave de C#](index.md)   
- [Integral Types Table](integral-types-table.md)  (Tabla de tipos enteros)  
- [Built-In Types Table](built-in-types-table.md)  (Tabla de tipos integrados)  
+ [Tabla de tipos enteros](integral-types-table.md)   
+ [Tabla de tipos integrados](built-in-types-table.md)   
  [Tabla de conversiones numéricas implícitas](implicit-numeric-conversions-table.md)   
  [Tabla de conversiones numéricas explícitas](explicit-numeric-conversions-table.md)
+

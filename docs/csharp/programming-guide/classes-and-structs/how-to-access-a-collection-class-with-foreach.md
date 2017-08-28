@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Obtener acceso a una clase de colección mediante Foreach (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Obtener acceso a una clase de colección mediante Foreach (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,29 +27,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 841132b5181c5e17d1eabae11d3550811aa959ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ad81ab699b079f4aabb04a886211e94a937335d
 ms.contentlocale: es-es
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>Cómo: Obtener acceso a una clase de colección mediante Foreach (Guía de programación de C#)
 En el ejemplo de código siguiente se muestra cómo se escribe una clase Collection no genérica que se puede usar con la instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md). En el ejemplo se define una clase de tokenizador de cadenas.  
   
 > [!NOTE]
->  En este ejemplo se representa el procedimiento recomendado solo cuando no se puede usar una clase Collection genérica. Para obtener un ejemplo de cómo se implementa una clase Collection genérica con seguridad de tipos que admita <xref:System.Collections.Generic.IEnumerable%601>, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+>  En este ejemplo se representa el procedimiento recomendado solo cuando no se puede usar una clase Collection genérica. Para obtener un ejemplo de cómo se implementa una clase de colección genérica con seguridad de tipos que admita <xref:System.Collections.Generic.IEnumerable%601>, vea [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
  En el ejemplo, el siguiente segmento de código usa la clase `Tokens` para dividir la frase "This is a sample sentence." en tokens usando " " y "-" como separadores. Después, el código muestra esos tokens mediante una instrucción `foreach`.  
   
  [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## <a name="example"></a>Ejemplo  
- Internamente, la clase `Tokens` usa una matriz para almacenar los tokens. Como las matrices implementan las interfaces <xref:System.Collections.IEnumerator> y <xref:System.Collections.IEnumerable>, el ejemplo de código podría haber usado los métodos de enumeración de la matriz (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.Current%2A>) en lugar de definirlos en la clase `Tokens`. Las definiciones de los métodos se incluyen en el ejemplo para clarificar cómo están definidos y qué hace cada uno.  
+ Internamente, la clase `Tokens` usa una matriz para almacenar los tokens. Como las matrices implementan <xref:System.Collections.IEnumerator> y <xref:System.Collections.IEnumerable>, el ejemplo de código podría haber usado los métodos de enumeración de la matriz (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.Current%2A>) en lugar de definirlos en la clase `Tokens`. Las definiciones de los métodos se incluyen en el ejemplo para clarificar cómo están definidos y qué hace cada uno.  
   
  [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
- En C#, no es necesario que una clase Collection implemente <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> para que sea compatible con `foreach`. Si la clase tiene los miembros <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.Current%2A> necesarios, funcionará con `foreach`. Omitir las interfaces tiene la ventaja de que permite definir un tipo de valor devuelto de `Current` que es más específico que <xref:System.Object>. Esto proporciona seguridad de tipos.  
+ En C#, no es necesario para una clase de colección implementar <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> para que sean compatibles con `foreach`. Si la clase tiene los miembros <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.Current%2A> necesarios, funcionará con `foreach`. Omitir las interfaces tiene la ventaja de que permite definir un tipo de valor devuelto de `Current` que es más específico que <xref:System.Object>. Esto proporciona seguridad de tipos.  
   
  Por ejemplo, cambie las siguientes líneas del ejemplo anterior.  
   
@@ -82,7 +82,7 @@ public class Tokens
 foreach (int item in f)    
 ```  
   
- El inconveniente de omitir <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> es que la clase Collection ya no puede interactuar con las instrucciones `foreach` (o equivalentes) de otros lenguajes compatibles con Common Language Runtime.  
+ El inconveniente de omitir <xref:System.Collections.IEnumerable> y <xref:System.Collections.IEnumerator> es que la clase de colección ya no puede interactuar con las instrucciones `foreach` (o equivalentes) de otros lenguajes compatibles con Common Language Runtime.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Collections.Generic>   

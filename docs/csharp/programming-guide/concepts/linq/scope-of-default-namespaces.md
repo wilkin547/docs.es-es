@@ -1,5 +1,5 @@
 ---
-title: "Ámbito del espacio de nombres predeterminado de C# | Microsoft Docs"
+title: "Ámbito del espacio de nombres predeterminado de C#"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,13 +19,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 760716dc81f5cd946ae014ed22b6c5a7df64a5dd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1c8d8106f7e3e01bb546ce24dd4153b90a0142d
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>Ámbito del espacio de nombres predeterminado de C##
+# <a name="scope-of-default-namespaces-in-c"></a>Ámbito del espacio de nombres predeterminado de C#
 Los espacios de nombres predeterminados del árbol XML no se encuentran en el ámbito de las consultas. Si tiene código XML en un espacio de nombres predeterminado, debe declarar una variable <xref:System.Xml.Linq.XNamespace> y combinarla con el nombre local para convertirla en un nombre completo que se usará en la consulta.  
   
  Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
@@ -69,7 +70,7 @@ End of result set
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra la creación de XML en un espacio de nombres y una consulta que se codifica correctamente.  
   
- A diferencia del anterior ejemplo de código incorrecto, el enfoque adecuado al usar C# consiste en declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace> y usarlo cuando se especifiquen objetos <xref:System.Xml.Linq.XName>. En este caso, el argumento del método <xref:System.Xml.Linq.XElement.Elements%2A> es un objeto <xref:System.Xml.Linq.XName>.  
+ A diferencia del anterior ejemplo de código incorrecto, el enfoque adecuado al usar C# consiste en declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace> y usarlo cuando se especifiquen objetos <xref:System.Xml.Linq.XName>. En este caso, el argumento para el método <xref:System.Xml.Linq.XElement.Elements%2A> es un objeto <xref:System.Xml.Linq.XName>.  
   
 ### <a name="code"></a>Código  
   
@@ -106,3 +107,4 @@ End of result set
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

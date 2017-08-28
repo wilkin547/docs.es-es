@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML) | Microsoft Docs"
+title: "Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23cc762b1dcd5e39b923c1a57b6f171c7885f0ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Cómo: Crear un documento con espacios de nombres (C#) (LINQ to XML)
@@ -31,7 +32,7 @@ En este tema se muestra cómo crear documentos con espacios de nombres.
 ## <a name="example"></a>Ejemplo  
  Para crear un elemento o un atributo que se encuentra en un espacio de nombres, primero debe declarar e inicializar un objeto <xref:System.Xml.Linq.XNamespace>. A continuación debe utilizar la sobrecarga del operador de suma para combinar el espacio de nombres con el nombre local, expresado como una cadena.  
   
- En el ejemplo siguiente se crea un documento con un espacio de nombres. De forma predeterminada, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] serializa este documento con un espacio de nombres predeterminado.  
+ En el ejemplo siguiente se crea un documento con un espacio de nombres. De forma predeterminada, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializa este documento con un espacio de nombres predeterminado.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -135,9 +136,9 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Ejemplo  
- Otra manera de conseguir el mismo resultado consiste en usar nombres expandidos en lugar de declarar y crear un objeto <xref:System.Xml.Linq.XNamespace>.  
+ Otro método para conseguir el mismo resultado consiste en usar nombres expandidos en lugar de declarar y crear un objeto <xref:System.Xml.Linq.XNamespace>.  
   
- Este método tiene implicaciones en el rendimiento. Cada vez que pasa una cadena que contiene un nombre expandido a [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] debe analizar el nombre, buscar el espacio de nombres atomizado y buscar el nombre atomizado. Este proceso consume tiempo de la CPU. Si el rendimiento es importante, tal vez quiera declarar y usar explícitamente un objeto <xref:System.Xml.Linq.XNamespace>.  
+ Este método tiene implicaciones en el rendimiento. Cada vez que pasa una cadena que contiene un nombre expandido a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] debe analizar el nombre, buscar el espacio de nombres atomizado y buscar el nombre atomizado. Este proceso consume tiempo de la CPU. Si el rendimiento es importante, tal vez quiera declarar y usar explícitamente un objeto <xref:System.Xml.Linq.XNamespace>.  
   
  Si el rendimiento es un problema importante, vea [Atomización previa de objetos XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) para obtener más información.  
   
@@ -160,3 +161,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Recorrer en iteración un árbol de directorio (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Recorrer en iteración un árbol de directorio (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,17 +28,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c63e18bc7e23a9fda4a005745174bdd6c85b3f08
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Cómo: Recorrer en iteración un árbol de directorio (Guía de programación de C#)
-La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Puede limitarse a recuperar el nombre del archivo o subdirectorio como `string`, o puede recuperar información adicional en forma de un objeto <xref:System.IO.FileInfo?displayProperty=fullName> o <xref:System.IO.DirectoryInfo?displayProperty=fullName>.  
+La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=fullName> o <xref:System.IO.DirectoryInfo?displayProperty=fullName>.  
   
 > [!NOTE]
->  En Windows, los términos "directorio" y "carpeta" se usan indistintamente. La mayor parte de la documentación y del texto de la interfaz de usuario usa el término "carpeta", pero la biblioteca de clases de [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] usa el término "directorio".  
+>  En Windows, los términos "directorio" y "carpeta" se usan indistintamente. La mayor parte de la documentación y del texto de la interfaz de usuario usa el término "carpeta", pero la biblioteca de clases de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa el término "directorio".  
   
  En el caso más simple, en el que sabe con seguridad que tiene permisos de acceso para todos los directorios incluidos en una raíz especificada, puede usar la marca `System.IO.SearchOption.AllDirectories`. Esta marca devuelve todos los subdirectorios anidados que coinciden con el patrón especificado. En el ejemplo siguiente se muestra cómo usar esta marca.  
   
@@ -46,7 +47,7 @@ La frase "recorrer en iteración un árbol de directorios" significa obtener acc
 root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);  
 ```  
   
- El punto débil de este enfoque es que si uno de los subdirectorios incluidos en la raíz especificada produce una excepción <xref:System.IO.DirectoryNotFoundException> o <xref:System.UnauthorizedAccessException>, se produce un error en todo el método y no devuelve ningún directorio. Lo mismo sucede al usar el método <xref:System.IO.DirectoryInfo.GetFiles%2A>. Si tiene que controlar estas excepciones en subcarpetas específicas, debe recorrer manualmente el árbol de directorios, como se muestra en los ejemplos siguientes.  
+ El punto débil de este enfoque es que si uno de los subdirectorios incluidos en la raíz especificada produce una excepción <xref:System.IO.DirectoryNotFoundException> o <xref:System.UnauthorizedAccessException>, se produce un error en todo el método y no devuelve ningún directorio. Sucede lo mismo cuando usa el método <xref:System.IO.DirectoryInfo.GetFiles%2A>. Si tiene que controlar estas excepciones en subcarpetas específicas, debe recorrer manualmente el árbol de directorios, como se muestra en los ejemplos siguientes.  
   
  Al recorrer manualmente un árbol de directorios, puede controlar primero los subdirectorios (*recorrido en preorden*) o los archivos (*recorrido en postorden*). Al realizar un recorrido en preorden, se recorre todo el árbol bajo la carpeta actual antes de recorrer en iteración los archivos que están directamente en esa carpeta. Los ejemplos que se proporcionan más adelante en este documento realizan un recorrido en postorden, pero puede modificarlos fácilmente para que realicen un recorrido en preorden.  
   
@@ -55,7 +56,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Si tiene que realizar diversas operaciones en los archivos y las carpetas, puede dividir estos ejemplos en partes mediante la refactorización de la operación en funciones separadas que se puedan invocar usando un solo delegado.  
   
 > [!NOTE]
->  Los sistemas de archivos NTFS pueden contener *puntos de reanálisis* en forma de *puntos de unión*, *vínculos simbólicos* y *vínculos físicos*. Los métodos de .NET Framework como <xref:System.IO.DirectoryInfo.GetFiles%2A> y <xref:System.IO.DirectoryInfo.GetDirectories%2A> no devolverán ningún subdirectorio situado bajo un punto de reanálisis. Este comportamiento protege frente al riesgo de provocar un bucle infinito cuando dos puntos de reanálisis se hacen referencia entre sí. En general, debería ser muy cuidadoso al tratar con puntos de reanálisis para asegurarse de no modificar o eliminar archivos involuntariamente. Si quiere obtener un control preciso de los puntos de reanálisis, use la invocación de plataforma o código nativo para llamar directamente a los métodos de sistema de archivos Win32 adecuados.  
+>  Los sistemas de archivos NTFS pueden contener *puntos de reanálisis* en forma de *puntos de unión*, *vínculos simbólicos* y *vínculos físicos*. Los métodos de .NET Framework como <xref:System.IO.DirectoryInfo.GetFiles%2A> y <xref:System.IO.DirectoryInfo.GetDirectories%2A> no devolverán ningún subdirectorio en un punto de reanálisis. Este comportamiento protege frente al riesgo de provocar un bucle infinito cuando dos puntos de reanálisis se hacen referencia entre sí. En general, debería ser muy cuidadoso al tratar con puntos de reanálisis para asegurarse de no modificar o eliminar archivos involuntariamente. Si quiere obtener un control preciso de los puntos de reanálisis, use la invocación de plataforma o código nativo para llamar directamente a los métodos de sistema de archivos Win32 adecuados.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo recorrer un árbol de directorios mediante recursividad. El enfoque recursivo resulta elegante, pero puede producir una excepción de desbordamiento de la pila si el árbol de directorios es grande y cuenta con muchos elementos anidados.  
@@ -82,3 +83,4 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  <xref:System.IO>   
  [LINQ and File Directories](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  (LINQ y directorios de archivos)  
  [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+

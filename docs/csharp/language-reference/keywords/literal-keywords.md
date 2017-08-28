@@ -1,22 +1,41 @@
 ---
-title: "Palabras clave de literales (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "palabras clave de literales [C#]"
+title: Palabras clave de literales (Referencia de C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2898c986841573cb355571c864274955ba5aaa21
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# Palabras clave de literales (Referencia de C#)
-C\# dispone de las siguientes palabras clave para literales:  
+# <a name="literal-keywords-c-reference"></a>Palabras clave de literales (Referencia de C#)
+C# tiene las siguientes palabras clave literales:  
   
 -   [null](../../../csharp/language-reference/keywords/null.md)  
   
@@ -26,7 +45,8 @@ C\# dispone de las siguientes palabras clave para literales:
   
 -   [default](../../../csharp/language-reference/keywords/default.md)  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+

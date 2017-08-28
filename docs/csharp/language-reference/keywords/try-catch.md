@@ -1,5 +1,5 @@
 ---
-title: try-catch (Referencia de C#) | Microsoft Docs
+title: try-catch (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referencia de C#)
@@ -47,7 +47,7 @@ La instrucción try-catch consta de un bloque `try` seguido de una o más cláus
 ## <a name="remarks"></a>Comentarios  
  Cuando se produce una excepción, Common Language Runtime (CLR) busca la instrucción `catch` que controla esta excepción. Si el método que se ejecuta actualmente no contiene un bloque `catch`, CLR busca el método que llamó el método actual, y así sucesivamente hasta la pila de llamadas. Si no existe ningún bloque `catch`, CLR muestra al usuario un mensaje de excepción no controlada y detiene la ejecución del programa.  
   
- El bloque `try` contiene el código protegido que puede producir la excepción. El bloque se ejecuta hasta que se produce una excepción o hasta que se completa correctamente. Por ejemplo, el intento siguiente de convertir un objeto `null` genera la excepción <xref:System.NullReferenceException>:  
+ El bloque `try` contiene el código protegido que puede producir la excepción. El bloque se ejecuta hasta que se produce una excepción o hasta que se completa correctamente. Por ejemplo, el intento siguiente de convertir un objeto `null` produce la excepción <xref:System.NullReferenceException>:  
   
 ```csharp  
 object o2 = null;  
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Aunque la cláusula `catch` puede utilizarse sin argumentos para detectar cualquier tipo de excepción, no se recomienda este uso. En general, solo debe convertir las excepciones que sabe cómo recuperar. Por consiguiente, siempre debe especificar un argumento de objeto derivado de <xref:System.Exception?displayProperty=fullName>; por ejemplo:  
+ Aunque la cláusula `catch` puede utilizarse sin argumentos para detectar cualquier tipo de excepción, no se recomienda este uso. En general, solo debe convertir las excepciones que sabe cómo recuperar. Por lo tanto, debe especificar siempre un argumento de objeto derivado de <xref:System.Exception?displayProperty=fullName> Por ejemplo:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -77,7 +77,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
   
  Los filtros de excepción son preferibles para detectar y volver a producir (se explica a continuación) porque los filtros dejan la pila intacta.  Si un controlador posterior vuelca la pila, puede ver la procedencia original de la excepción, más que solo la ubicación en la que se volvió a producir.  Un uso común de las expresiones de filtro de excepciones es el registro.  Puede crear una función de predicado que siempre devuelva false y que también resulte en un registro o puede registrar excepciones a medida que se produzcan sin tener que controlarlas y volver a producirlas.  
   
- Se puede usar una instrucción [throw](../../../csharp/language-reference/keywords/throw.md) en un bloque `catch` para volver a iniciar la excepción detectada por la instrucción `catch`. En el ejemplo siguiente se extrae información de origen de una excepción <xref:System.IO.IOException> y luego se inicia la excepción en el método principal.  
+ Se puede usar una instrucción [throw](../../../csharp/language-reference/keywords/throw.md) en un bloque `catch` para volver a iniciar la excepción detectada por la instrucción `catch`. En el ejemplo siguiente se extrae información de origen de una excepción <xref:System.IO.IOException> y, a continuación, se produce la excepción al método principal.  
   
 ```csharp  
 catch (FileNotFoundException e)  
@@ -142,7 +142,7 @@ static void Main()
  Para obtener más información sobre la captura,vea [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md) (try-catch-finally [Referencia de C#]).  
   
 ## <a name="exceptions-in-async-methods"></a>Excepciones en métodos asincrónicos  
- Un método asincrónico está marcado por un modificador [async](../../../csharp/language-reference/keywords/async.md) y normalmente contiene una o más instrucciones o expresiones await. Una expresión await aplica el operador [await](../../../csharp/language-reference/keywords/await.md) a una <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.  
+ Un método asincrónico está marcado por un modificador [async](../../../csharp/language-reference/keywords/async.md) y normalmente contiene una o más instrucciones o expresiones await. Una expresión await aplica el operador [await](../../../csharp/language-reference/keywords/await.md) a <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.  
   
  Cuando el control alcanza un `await` en el método asincrónico, el progreso del método se suspende hasta que la tarea esperada se completa. Cuando se completa la tarea, la ejecución puede reanudarse en el método. Para más información, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md) y [Controlar el flujo en los programas asincrónicos](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md).  
   
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el control de excepciones en el que varias tareas pueden producir varias excepciones. El bloque `try` espera la tarea que devuelve una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. La tarea se completa cuando se hayan completado las tres tareas a las que se aplica el método WhenAll.  
+ En el ejemplo siguiente se muestra el control de excepciones en el que varias tareas pueden producir varias excepciones. El bloque `try` espera la tarea devuelta por una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. La tarea se completa cuando se hayan completado las tres tareas a las que se aplica el método WhenAll.  
   
- Cada una de las tres tareas produce una excepción. El bloque `catch` se itera por las excepciones, que se encuentran en la propiedad `Exception.InnerExceptions` de la tarea que devuelve <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
+ Cada una de las tres tareas produce una excepción. El bloque `catch` se itera a través de las excepciones, que se encuentran en la propiedad `Exception.InnerExceptions` de la tarea devuelta por <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
@@ -189,8 +189,8 @@ static void Main()
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [try, throw, and catch Statements (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)  (try, throw y catch [Instrucciones, C++])  
- [Exception Handling Statements](../../../csharp/language-reference/keywords/exception-handling-statements.md)  (Instrucciones para el control de excepciones [Referencia de C#])  
+ [Instrucciones try, throw y catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [Cómo: Iniciar excepciones explícitamente](https://msdn.microsoft.com/library/xhcbs8fz)

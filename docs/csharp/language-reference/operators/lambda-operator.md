@@ -1,5 +1,5 @@
 ---
-title: Operador =&gt; (Referencia de C#) | Microsoft Docs
+title: Operador =&gt; (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 287cf223b1e2fc62cdf8a73db95000337cedebef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45d4753724ed094408e8cbc5353998a67071b0e4
 ms.contentlocale: es-es
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="gt-operator-c-reference"></a>Operador =&gt; (Referencia de C#)
@@ -104,3 +104,4 @@ static void Main(string[] args)
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+

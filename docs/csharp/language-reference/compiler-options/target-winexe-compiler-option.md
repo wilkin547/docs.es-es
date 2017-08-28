@@ -1,5 +1,5 @@
 ---
-title: -target:winexe (Opciones del compilador de C#) | Microsoft Docs
+title: -target:winexe (Opciones del compilador de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e9a640c0cfa1d0494457f8ffe94bf15877b24919
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: afb49fc6d45cc904c97988ab1b569f37a4e44a51
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetwinexe-c-compiler-options"></a>/target:winexe (Opciones del compilador de C#)
@@ -78,3 +78,4 @@ csc /target:winexe in.cs
 ## <a name="see-also"></a>Vea también  
  [/target (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  (/target [Opciones del compilador de C#])  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+

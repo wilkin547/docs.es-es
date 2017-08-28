@@ -1,6 +1,6 @@
 ---
 title: "Traducción de árboles de expresión"
-description: "Traducción de árboles de expresión"
+description: "Obtenga información sobre cómo visitar cada nodo en un árbol de expresión, mientras se crea una copia modificada de ese árbol de expresión."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 01cc83bc46d2cbe6beaaa5c3212b18bb8608ec82
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 03/13/2017
 
 [Anterior: Generación de expresiones](expression-trees-building.md)
 
-En esta última sección, aprenderá a visitar cada nodo en un árbol de expresión, mientras se crear una copia modificada de ese árbol de expresión. Se trata de las técnicas que se van a usar en dos escenarios importantes. La primera consiste en comprender los algoritmos que se expresan mediante un árbol de expresión para poder trasladarlo a otro entorno. La segunda es cuando se quiere cambiar el algoritmo que se creó. Esto podría ser para agregar el registro, interceptar las llamadas de método y realizar un seguimiento de ellas, o con otros fines.
+En esta última sección, obtendrá información sobre cómo visitar cada nodo en un árbol de expresión, mientras se crea una copia modificada de ese árbol de expresión. Se trata de las técnicas que se van a usar en dos escenarios importantes. La primera consiste en comprender los algoritmos que se expresan mediante un árbol de expresión para poder trasladarlo a otro entorno. La segunda es cuando se quiere cambiar el algoritmo que se creó. Esto podría ser para agregar el registro, interceptar las llamadas de método y realizar un seguimiento de ellas, o con otros fines.
 
 ## <a name="translating-is-visiting"></a>Trasladar es visitar
 

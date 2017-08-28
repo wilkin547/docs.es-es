@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Crear una copia de un archivo en un directorio diferente en Visual Basic | Microsoft Docs"
+title: "Cómo: Crear una copia de un archivo en un directorio diferente en Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a51633fa65321325e1ae08c1e03cf2392f771cc9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef6fcfaa38343d0fb137571b82f4d2719f3d61ef
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>Cómo: Crear una copia de un archivo en un directorio diferente en Visual Basic
@@ -88,3 +88,4 @@ El método `My.Computer.FileSystem.CopyFile` le permite copiar archivos. Sus par
  [How to: Create a Copy of a File in the Same Directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  (Cómo: Crear una copia de un archivo en el mismo directorio)  
  [Cómo: Copiar un directorio en otro directorio en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)   
  [Cambiar el nombre de un archivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+

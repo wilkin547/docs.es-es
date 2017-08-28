@@ -1,5 +1,5 @@
 ---
-title: "Coincidencia de patrones | Guía de C#"
+title: "Coincidencia de patrones: Guía de C#"
 description: "Información sobre las expresiones de coincidencia de patrones en C#"
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
@@ -9,10 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5b1ef4b6de108e2ea3967630e9e37e52a97245c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +51,7 @@ Este código se simplifica con extensiones de la expresión `is` para asignar un
 
 En esta versión actualizada, la expresión `is` prueba la variable y la asigna a una nueva variable del tipo correcto. Observe también que esta versión incluye el tipo `Rectangle`, que es un elemento `struct`. La nueva expresión `is` funciona con tipos de valor y con tipos de referencia.
 
-Las reglas del lenguaje para las expresiones de coincidencia de patrones ayudan a evitar el uso indebido de los resultados de una expresión de coincidencia. En el ejemplo anterior, las variables `s`,  `c` y `r` solo están en el ámbito y se asignan definitivamente cuando las expresiones de coincidencia de patrones respectivas tienen resultados `true`. Si intenta usar una de las variables en otra ubicación, el código genera errores del compilador.
+Las reglas del lenguaje para las expresiones de coincidencia de patrones ayudan a evitar el uso indebido de los resultados de una expresión de coincidencia. En el ejemplo anterior, las variables `s`, `c` y `r` solo están en el ámbito y se asignan definitivamente cuando las expresiones de coincidencia de patrones respectivas tienen resultados `true`. Si intenta usar una de las variables en otra ubicación, el código genera errores del compilador.
 
 Vamos a examinar detenidamente esas dos reglas, a partir del ámbito. La variable `c` está en el ámbito únicamente en la rama `else` de la primera instrucción `if`. La variable `s` está en el ámbito en el método `ComputeArea`. Eso se debe a que cada rama de una instrucción `if` establece un ámbito independiente para las variables. Pero la propia instrucción `if` no. Eso significa que las variables declaradas en la instrucción `if` están en el mismo ámbito que la instrucción `if` (el método en este caso). Este comportamiento no es específico de la coincidencia de patrones, sino que es el definido para los ámbitos de variable y las instrucciones `if` y `else`.
 
@@ -111,7 +112,7 @@ Por último, puede agregar un caso `null` para garantizar que el argumento no se
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Agregar caso null")]
 
-El caso especial del patrón `null` es interesante porque la constante `null` no tiene un tipo, pero se puede convertir a cualquier tipo de referencia o tipo que acepte valores NULL. 
+El comportamiento especial del patrón `null` es interesante porque la constante `null` del patrón no tiene un tipo, pero se puede convertir a cualquier tipo de referencia o tipo que acepte valores NULL. En lugar de convertir `null` en cualquier tipo, el lenguaje define que un valor `null` no coincidirá con ningún patrón de tipo, independientemente del tipo de tiempo de compilación de la variable. Este comportamiento hace que el nuevo patrón de tipo basado en `switch` sea coherente con la instrucción `is`: las instrucciones `is` siempre devuelven `false` cuando el valor que se está comprobando es `null`. También es más sencillo: una vez que haya comprobado el tipo, no necesita una comprobación de NULL adicional. Puede comprobar esto en que no existen comprobaciones de NULL en ninguno de los bloques de casos de los ejemplos anteriores: no son necesarias, ya que la coincidencia del patrón de tipo garantiza un valor distinto de NULL.
 
 ## <a name="conclusions"></a>Conclusiones
 

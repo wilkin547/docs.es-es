@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#) | Microsoft Docs"
+title: "Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 583168bc8cce2f4bee9a2dd35d1e59c7a0f380a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
@@ -46,7 +47,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
   
 3.  Haga doble clic en el evento que quiera crear, por ejemplo, el evento `Load`.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] crea un método de control de eventos vacío y lo agrega al código. También puede agregar manualmente el código en la vista **Código**. Por ejemplo, las líneas siguientes de código declaran un método de controlador de eventos al que se llamará cuando la clase `Form` genere el evento `Load`.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] crea un método de control de eventos vacío y lo agrega al código. También puede agregar manualmente el código en la vista **Código**. Por ejemplo, las líneas siguientes de código declaran un método de controlador de eventos al que se llamará cuando la clase `Form` genere el evento `Load`.  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

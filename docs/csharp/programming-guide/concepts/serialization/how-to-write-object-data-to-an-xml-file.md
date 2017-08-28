@@ -1,5 +1,5 @@
 ---
-title: Escribir datos de objetos en un archivo XML (C#) | Microsoft Docs
+title: Escribir datos de objetos en un archivo XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197e91be6d3785e437cb33541b2b4c9b4a2cbb84
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b2fde8f823e6b945d074327559013f4e748909
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Escribir datos de objetos en un archivo XML (C#)
-En este ejemplo se escribe el objeto de una clase en un archivo XML usando la clase <xref:System.Xml.Serialization.XmlSerializer>.  
+En este ejemplo se escribe el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -68,9 +69,9 @@ public class XMLWrite
   
 -   La clase que se está serializando no tiene un constructor público sin parámetros.  
   
--   El archivo existe y es de solo lectura (<xref:System.IO.IOException>).  
+-   El archivo ya existe y es de solo lectura (<xref:System.IO.IOException>).  
   
--   La ruta es demasiado larga (<xref:System.IO.PathTooLongException>).  
+-   La ruta de acceso del archivo es demasiado larga (<xref:System.IO.PathTooLongException>).  
   
 -   El disco está lleno (<xref:System.IO.IOException>).  
   
@@ -81,3 +82,4 @@ public class XMLWrite
  <xref:System.IO.StreamWriter>   
  [How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  (Cómo: Leer datos de objetos de un archivo XML [C#])  
  [Serialización (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+

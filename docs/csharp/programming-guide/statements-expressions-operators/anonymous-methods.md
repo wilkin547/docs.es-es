@@ -1,70 +1,90 @@
 ---
-title: "M&#233;todos an&#243;nimos (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "métodos anónimos [C#]"
-  - "delegados [C#], métodos anónimos"
-  - "métodos [C#], anónimos"
+title: "Métodos anónimos (Guía de programación de C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- anonymous methods [C#]
+- methods [C#], anonymous
+- delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92842becf26a15ab1a6f5e9621002abf71dc67bc
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# M&#233;todos an&#243;nimos (Gu&#237;a de programaci&#243;n de C#)
-En versiones de C\# anteriores a la versión 2.0, la única manera de declarar un [delegado](../../../csharp/language-reference/keywords/delegate.md) era utilizar [métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md).  C\# 2.0 introdujo los métodos anónimos, mientras que, en C\# 3.0 y versiones posteriores, las expresiones lambda reemplazan a los métodos anónimos como la manera preferente de escribir código insertado.  No obstante, la información sobre los métodos anónimos de este tema también se aplica a las expresiones lambda.  Hay un caso en el que un método anónimo proporciona una funcionalidad que no se encuentra en las expresiones lambda.  Los métodos anónimos permiten omitir la lista de parámetros.  Esto significa que los métodos anónimos pueden convertirse en delegados con diversas firmas.  Esto no es posible con expresiones lambda.  Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+# <a name="anonymous-methods-c-programming-guide"></a>Métodos anónimos (Guía de programación de C#)
+En las versiones de C# anteriores a 2.0, la única manera de declarar un [delegado](../../../csharp/language-reference/keywords/delegate.md) era usar [métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 introdujo los métodos anónimos y en C# 3.0 y versiones posteriores, las expresiones lambda reemplazan a los métodos anónimos como la manera preferida de escribir código en línea. En cambio, la información sobre los métodos anónimos de este tema también se aplica a las expresiones lambda. Existe un caso en el que un método anónimo proporciona funciones que no se encuentran en las expresiones lambda. Los métodos anónimos le permiten omitir la lista de parámetros. Esto significa que un método anónimo puede convertirse en delegados con una variedad de firmas. Esto no es posible con las expresiones lambda. Para obtener más información específica sobre las expresiones lambda, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- La creación de métodos anónimos es básicamente una forma de pasar un bloque de código como parámetro de delegado.  A continuación se describen dos ejemplos de esto:  
+ Crear métodos anónimos es básicamente una manera de pasar un bloque de código como un parámetro de delegado. Dos ejemplos:  
   
  [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
  [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
- Mediante los métodos anónimos, se reduce la sobrecarga de codificación a la hora de crear instancias de delegados, ya que no es necesario crear un método independiente.  
+ Mediante los métodos anónimos, reduce la sobrecarga de codificación al crear instancias de delegados porque no tiene que crear un método independiente.  
   
- Por ejemplo, especificar un bloque de código en vez de un delegado puede ser útil en el caso de que la creación de un método pueda suponer una sobrecarga innecesaria.  Un buen ejemplo es cuando se inicia un nuevo subproceso.  Esta clase crea un subproceso y también contiene el código que el subproceso ejecuta sin crear un método adicional para el delegado.  
+ Por ejemplo, especificar un bloque de código en lugar de un delegado puede ser útil en una situación en la que tener que crear un método puede parecer una sobrecarga innecesaria. Un buen ejemplo sería cuando inicia un nuevo subproceso. Esta clase crea un subproceso y también contiene el código que el subproceso ejecuta sin crear un método adicional para el delegado.  
   
  [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
-## Comentarios  
- El ámbito de los parámetros de un método anónimo es el *bloque del método anónimo*.  
+## <a name="remarks"></a>Comentarios  
+ El ámbito de los parámetros de un método anónimo es el *bloque de método anónimo*.  
   
- Es un error utilizar una instrucción de salto, como [goto](../../../csharp/language-reference/keywords/goto.md), [break](../../../csharp/language-reference/keywords/break.md) o [continue](../../../csharp/language-reference/keywords/continue.md), en un bloque de método anónimo si el destino está fuera del bloque.  También es un error utilizar una instrucción de salto, como `goto`, `break` o `continue`, fuera de un bloque de método anónimo si el destino está dentro del bloque.  
+ Es un error tener una instrucción de salto, como [goto](../../../csharp/language-reference/keywords/goto.md), [break](../../../csharp/language-reference/keywords/break.md) o [continue](../../../csharp/language-reference/keywords/continue.md), dentro del bloque de método anónimo si el destino está fuera del bloque. También es un error tener una instrucción de salto, como `goto`, `break` o `continue`, fuera del bloque de método anónimo si el destino está dentro del bloque.  
   
- Las variables locales y los parámetros cuyo ámbito contiene una declaración de método anónimo se denominan variables *externas* del método anónimo.  Por ejemplo, en el segmento de código siguiente, `n` es una variable externa:  
+ Las variables locales y los parámetros cuyo ámbito contiene una declaración de método anónimo se denominan variables *externas* del método anónimo. Por ejemplo, en el siguiente segmento de código, `n` es una variable externa:  
   
  [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
- Una referencia a la variable externa `n` se dice que es  *capturado* cuando se crea el delegado.  A diferencia de las variables locales, la duración de una variable capturada se extiende hasta que los delegados que hacen referencia a los métodos anónimos son elegibles para la recolección.  
+ Una referencia a la variable externa `n` se dice que está *capturada* cuando se crea el delegado. A diferencia de las variables locales, la duración de una variable capturada se extiende hasta que los delegados que hacen referencia a los métodos anónimos son aptos para la recolección de elementos no utilizados.  
   
  Un método anónimo no puede tener acceso a los parámetros [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md) de un ámbito externo.  
   
- No se puede obtener acceso a código no seguro dentro del *bloque de método anónimo*.  
+ No se puede tener acceso a ningún código no seguro dentro del *bloque de método anónimo*.  
   
- No se permite el uso de métodos anónimos en el lado izquierdo del operador [is](../../../csharp/language-reference/keywords/is.md).  
+ Los métodos anónimos no se permiten en el lado izquierdo del operador [is](../../../csharp/language-reference/keywords/is.md).  
   
-## Ejemplo  
- El ejemplo siguiente muestra las dos maneras de crear instancias de un delegado:  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestran dos maneras de crear instancias de un delegado:  
   
--   Asociar el delegado a un método anónimo.  
+-   Asociar el delegado con un método anónimo.  
   
--   Asociar el delegado a un método con nombre \(`DoWork`\).  
+-   Asociar el delegado con un método con nombre (`DoWork`).  
   
- En cada uno de los casos, se muestra un mensaje cuando se invoca al delegado.  
+ En cada caso, se muestra un mensaje cuando se invoca al delegado.  
   
  [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)   
  [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [Código no seguro y punteros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Delegados con métodos con nombre y delegados con métodos anónimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+

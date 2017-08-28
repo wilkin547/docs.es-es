@@ -1,6 +1,6 @@
 ---
-title: class (Referencia de C#) | Microsoft Docs
-ms.date: 2015-07-20
+title: class (Referencia de C#)
+ms.date: 2017-07-18
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -31,92 +31,93 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 02491e64813f84d031debdca09161d88aab1b94c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd4fbca0ce7148c571075d31a0e1e4a986d75149
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
-Las clases se declaran mediante la palabra clave `class`, como se muestra en el siguiente ejemplo:  
-  
-```  
-      class TestClass  
-{  
-    // Methods, properties, fields, events, delegates   
-    // and nested classes go here.  
-}  
-```  
-  
-## <a name="remarks"></a>Comentarios  
- Solo la herencia simple se permite en C#. En otras palabras, una clase puede heredar la implementación solo de una clase base. En cambio, una clase puede implementar más de una interfaz. En la tabla siguiente se muestran ejemplos de herencia de clases e implementación de interfaces:  
-  
-|Herencia|Ejemplo|  
-|-----------------|-------------|  
-|Ninguna|`class ClassA { }`|  
-|Single|`class DerivedClass: BaseClass { }`|  
-|Ninguna, implementa dos interfaces|`class ImplClass: IFace1, IFace2 { }`|  
-|Única, implementa una interfaz|`class ImplDerivedClass: BaseClass, IFace1 { }`|  
-  
- Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). De forma predeterminada, las clases son `internal`.  
-  
- Los miembros de clase, incluidas las clases anidadas, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md). Los miembros son [private](../../../csharp/language-reference/keywords/private.md) de forma predeterminada.  
-  
- Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
-  
- Puede declarar clases genéricas que tengan parámetros de tipo. Para obtener más información, consulte [Clases genéricas](../../../csharp/programming-guide/generics/generic-classes.md).  
-  
- Una clase puede contener declaraciones de los miembros siguientes:  
-  
--   [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
-  
--   [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)  
-  
--   [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
-  
--   [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
 
--   [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-  
--   [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-  
--   [Indizadores](../../../csharp/programming-guide/indexers/index.md)  
-  
--   [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-  
--   [Eventos](../../../csharp/programming-guide/events/index.md)  
-  
--   [Delegados](../../../csharp/programming-guide/delegates/index.md)  
-  
--   [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-  
--   [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
-  
--   [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo declarar campos de clase, constructores y métodos. También se muestra la creación de instancias de objeto y la impresión de datos de instancias. En este ejemplo se declaran dos clases, la clase `Child`, que contiene dos campos privados (`name` y `age`) y dos métodos públicos. La segunda clase, `StringTest`, se usa para contener `Main`.  
-  
- [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]  
-  
-## <a name="comments"></a>Comentarios  
- Observe que en el ejemplo anterior solo se puede acceder a los campos privados (`name` y `age`) a través de los métodos públicos de la clase `Child`. Por ejemplo, no puede imprimir el nombre de la clase child, desde el método `Main`, mediante una instrucción como esta:  
-  
-```  
-Console.Write(child1.name);   // Error  
-```  
-  
- El acceso a miembros privados de `Child` desde `Main` solo sería posible si `Main` fuera un miembro de la clase.  
-  
- Los tipos declarados dentro de una clase sin un modificador de acceso adoptan el valor predeterminado de `private`, por lo que los miembros de datos de este ejemplo seguirían siendo `private` si se quitara la palabra clave.  
-  
- Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo age se ha inicializado a cero de forma predeterminada.  
-  
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>Vea también  
+Las clases se declaran mediante la palabra clave `class`, como se muestra en el siguiente ejemplo:
+
+```csharp
+class TestClass
+{
+    // Methods, properties, fields, events, delegates 
+    // and nested classes go here.
+}
+```
+
+## <a name="remarks"></a>Comentarios
+Solo la herencia simple se permite en C#. En otras palabras, una clase puede heredar la implementación solo de una clase base. En cambio, una clase puede implementar más de una interfaz. En la tabla siguiente se muestran ejemplos de herencia de clases e implementación de interfaces:
+
+|Herencia|Ejemplo|
+|-----------------|-------------|
+|Ninguna|`class ClassA { }`|
+|Single|`class DerivedClass: BaseClass { }`|
+|Ninguna, implementa dos interfaces|`class ImplClass: IFace1, IFace2 { }`|
+|Única, implementa una interfaz|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+
+Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). De forma predeterminada, las clases son `internal`.
+
+Los miembros de clase, incluidas las clases anidadas, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md). Los miembros son [private](../../../csharp/language-reference/keywords/private.md) de forma predeterminada.
+
+Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+
+Puede declarar clases genéricas que tengan parámetros de tipo. Para obtener más información, consulte [Clases genéricas](../../../csharp/programming-guide/generics/generic-classes.md).
+
+Una clase puede contener declaraciones de los miembros siguientes:
+
+- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+
+- [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)
+
+- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
+
+- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+
+- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+
+- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+
+- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
+
+- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+
+- [Eventos](../../../csharp/programming-guide/events/index.md)
+
+- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+
+- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)
+
+- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
+
+- [Estructuras](../../../csharp/programming-guide/classes-and-structs/structs.md)
+
+## <a name="example"></a>Ejemplo
+En el ejemplo siguiente se muestra cómo declarar campos de clase, constructores y métodos. También se muestra la creación de instancias de objeto y la impresión de datos de instancias. En este ejemplo, se declaran dos clases. La primera clase, `Child`, contiene dos campos privados (`name` y `age`), dos constructores públicos y un método público. La segunda clase, `StringTest`, se usa para contener `Main`.
+
+[!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+
+## <a name="comments"></a>Comentarios
+Observe que en el ejemplo anterior solo se puede acceder a los campos privados (`name` y `age`) a través del método público de la clase `Child`. Por ejemplo, no puede imprimir el nombre de la clase child, desde el método `Main`, mediante una instrucción como esta:
+
+```csharp
+Console.Write(child1.name);   // Error
+```
+
+El acceso a miembros privados de `Child` desde `Main` solo sería posible si `Main` fuera un miembro de la clase.
+
+Los tipos declarados dentro de una clase sin un modificador de acceso adoptan el valor predeterminado de `private`, por lo que los miembros de datos de este ejemplo seguirían siendo `private` si se quitara la palabra clave.
+
+Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo age se ha inicializado a cero de forma predeterminada.
+
+## <a name="c-language-specification"></a>Especificación del lenguaje C#
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>Vea también
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   

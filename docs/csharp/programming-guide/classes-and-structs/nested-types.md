@@ -1,41 +1,72 @@
 ---
-title: "Tipos anidados (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "tipos anidados [C#]"
+title: "Tipos anidados (Guía de programación de C#)"
+ms.date: 2017-07-10
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 853ec746d9be01ed63d7a229ca86e99d9f192374
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# Tipos anidados (Gu&#237;a de programaci&#243;n de C#)
-Un tipo definido en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md) se denomina tipo anidado.  Por ejemplo:  
+# <a name="nested-types-c-programming-guide"></a>Tipos anidados (Guía de programación de C#)
+Un tipo definido en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md) se denomina tipo anidado. Por ejemplo:  
   
- [!code-cs[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
+[!code-cs[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
   
- Con independencia de si el tipo externo es una clase o struct, los tipos anidados se establecen de forma predeterminada en [private](../../../csharp/language-reference/keywords/private.md), pero pueden definirse como [public](../../../csharp/language-reference/keywords/public.md), protected internal, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md).  En el ejemplo anterior, `Nested` es inaccesible a los tipos externos, pero se puede establecer en public de la manera siguiente:  
+Con independencia de si el tipo externo es una clase o struct, los tipos anidados se establecen de manera predeterminada en [private](../../../csharp/language-reference/keywords/private.md), solo son accesibles desde su tipo contenedor. En el ejemplo anterior, la clase `Nested` es inaccesible a los tipos externos. 
+
+También puede especificar un [modificador de acceso](../../language-reference/keywords/access-modifiers.md) para definir la accesibilidad de un tipo anidado, de la manera siguiente:
+
+- Los tipos anidados de una **clase** pueden ser [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), `protected internal` o [private](../../../csharp/language-reference/keywords/private.md). 
+
+   En cambio, al definir una clase anidada `protected` o `protected internal` dentro de una [clase sellada](../../language-reference/keywords/sealed.md) genera una advertencia del compilador [CS0628](../../misc/cs0628.md), "Nuevo miembro protegido declarado en la clase sealed".
   
- [!code-cs[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
+- Los tipos anidados de un **struct** pueden ser [public](../../../csharp/language-reference/keywords/public.md), [internal](../../../csharp/language-reference/keywords/internal.md) o [private](../../../csharp/language-reference/keywords/private.md).
   
- El tipo anidado o interno puede tener acceso al tipo contenedor o externo.  Para tener acceso al tipo contenedor, páselo como constructor al tipo anidado.  Por ejemplo:  
+En el ejemplo siguiente se convierte la clase `Nested` en public:
+  
+[!code-cs[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
+  
+ El tipo anidado o interno puede tener acceso al tipo contenedor o externo. Para tener acceso al tipo contenedor, páselo como un argumento al constructor del tipo anidado. Por ejemplo:  
   
  [!code-cs[csProgGuideObjects#70](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_3.cs)]  
   
- Un tipo anidado tiene acceso a todos los miembros que estén accesibles para el tipo contenedor.  Puede tener acceso a los miembros privados y protegidos del tipo contenedor, incluidos los miembros protegidos heredados.  
+ Un tipo anidado tiene acceso a todos los miembros que estén accesibles para el tipo contenedor. Puede tener acceso a los miembros privados y protegidos del tipo contenedor, incluidos los miembros protegidos heredados.  
   
- En la declaración anterior, el nombre completo de la clase `Nested` es `Container.Nested`.  Este es el nombre que se utiliza para crear una instancia nueva de la clase anidada, de la siguiente manera:  
+ En la declaración anterior, el nombre completo de la clase `Nested` es `Container.Nested`. Este es el nombre que se utiliza para crear una instancia nueva de la clase anidada, de la siguiente manera:  
   
  [!code-cs[csProgGuideObjects#71](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_4.cs)]  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+
