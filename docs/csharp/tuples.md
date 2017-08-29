@@ -1,5 +1,5 @@
 ---
-title: "Tuplas | Guía de C#"
+title: "Tuplas: Guía de C#"
 description: "Más información sobre tipos de tupla con nombre y sin nombre en C#"
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0efb478491ab4c226ec56519c9a957b19ce0478f
 ms.contentlocale: es-es
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,8 +25,10 @@ Las tuplas de C# son tipos que se definen mediante una sintaxis ligera. Entre ot
 En este tema, conocerá las reglas del lenguaje que rigen las tuplas en C# 7, distintas formas de usarlas y una guía inicial sobre cómo trabajar con tuplas.
 
 > [!NOTE]
-> Las nuevas características de tupla requieren el tipo `System.ValueTuple`. Para Visual Studio 2017, debe agregar el paquete NuGet [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/), disponible en la galería de NuGet.
-> Puede que sin este paquete obtenga un error de compilación similar a `error CS8179: Predefined type 'System.ValueTuple``2' is not defined or imported` o `error CS8137: Cannot define a class or member that utilizes tuples because the compiler required type 'System.Runtime.CompilerServices.TupleElementNamesAttribute' cannot be found.`
+> Las nuevas características de tupla requieren los tipos @System.ValueTuple.
+> Debe agregar el paquete NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) para usarlo en plataformas que no incluyen los tipos.
+>
+> Esto es similar a otras características del lenguaje que se basan en tipos que se han proporcionado en el marco. Algunos ejemplos incluyen `async` y `await` que se basan en la interfaz `INotifyCompletion`, y LINQ que se basa en `IEnumerable<T>`. En cambio, el mecanismo de entrega está cambiando a medida que .NET está pasando a ser más independiente de las plataformas. Puede que .NET Framework no proporcione siempre la misma cadencia que el compilador de lenguaje. Cuando las nuevas características del lenguaje se basan en tipos nuevos, esos tipos estarán disponibles como paquetes NuGet cuando se proporcionen las características del lenguaje. Como estos tipos nuevos se agregan a la API de .NET Standard y se proporcionan como parte del marco, el requisito del paquete NuGet se quitará.
 
 Empecemos por las razones para agregar nueva compatibilidad de tupla. Los métodos devuelven un solo objeto. Las tuplas permiten empaquetar varios valores en ese único objeto más fácilmente. 
 
@@ -107,7 +109,7 @@ Hay una fórmula alternativa que calcula la desviación estándar mediante una s
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Calcular la desviación estándar mediante la suma de cuadrados")]
 
-Este versión enumera la secuencia exactamente una vez. Pero no se trata de código muy reutilizable. A medida que siga trabajando, verá que muchos cálculos estadísticos diferentes usan el número de elementos de la secuencia, la suma de la secuencia y la suma de los cuadrados de la secuencia. Vamos a refactorizar este método y escribir un método de utilidad que genera esos tres valores.
+Esta versión enumera la secuencia exactamente una vez. Pero no se trata de código muy reutilizable. A medida que siga trabajando, verá que muchos cálculos estadísticos diferentes usan el número de elementos de la secuencia, la suma de la secuencia y la suma de los cuadrados de la secuencia. Vamos a refactorizar este método y escribir un método de utilidad que genera esos tres valores.
 
 Aquí es donde las tuplas resultan de gran utilidad. 
 

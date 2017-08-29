@@ -1,69 +1,88 @@
 ---
-title: "/define (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/define"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "-define compiler option [C#]"
-  - "/define compiler option [C#]"
-  - "-d compiler option [C#]"
-  - "define compiler option [C#]"
-  - "/d compiler option [C#]"
-  - "d compiler option [C#]"
+title: -define (Opciones del compilador de C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /define
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- -define compiler option [C#]
+- /define compiler option [C#]
+- -d compiler option [C#]
+- define compiler option [C#]
+- /d compiler option [C#]
+- d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dbe5532114864d9f76c6d9e19b669c46489709b2
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# /define (C# Compiler Options)
-La opción **\/define** define `name` como un símbolo en todos los archivos de código fuente del programa.  
+# <a name="define-c-compiler-options"></a>/define (Opciones del compilador de C#)
+La opción **/define** define `name` como un símbolo en todos los archivos de código fuente de su programa.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /define:name[;name2]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `name`, `name2`  
- Nombre de uno o varios símbolos que desea definir.  
+ El nombre de uno o más símbolos que quiere definir.  
   
-## Comentarios  
- La opción **\/define** produce el mismo efecto que una directiva de preprocesador [\#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md), con la diferencia de que la opción del compilador está activada para todos los archivos del proyecto.  Un símbolo permanece definido en un archivo de código fuente hasta que una directiva [\#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) del archivo de código fuente quita la definición.  Si se utiliza la opción \/define, la directiva `#undef` de un archivo no tiene ningún efecto en otros archivos de código fuente del proyecto.  
+## <a name="remarks"></a>Comentarios  
+ La opción **/define** tiene el mismo efecto que usar una directiva del preprocesador [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) excepto que la opción del compilador está en vigor para todos los archivos del proyecto. Un símbolo permanece definido en un archivo de origen hasta que una directiva [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) en el archivo de origen quita la definición. Cuando usa la opción /define, una directiva `#undef` en un archivo no tiene ningún efecto en otros archivos de código fuente del proyecto.  
   
- Se pueden utilizar símbolos creados por esta opción con [\#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [\#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [\#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) y [\#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) para compilar archivos de código fuente de forma condicional.  
+ Los símbolos creados por esta opción se pueden usar con [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) y [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) para compilar los archivos de origen condicionalmente.  
   
- **\/d** es la forma abreviada de **\/define**.  
+ **/d** es la forma abreviada de **/define**.  
   
- Se pueden definir múltiples símbolos con **\/define** utilizando punto y coma o coma para separar los nombres de símbolos.  Por ejemplo:  
+ Se pueden definir varios símbolos con **/define** mediante un punto y coma o una coma para separar los nombres de símbolos. Por ejemplo:  
   
-```  
+```console  
 /define:DEBUG;TUESDAY  
 ```  
   
- El propio compilador de C\# no define ningún símbolo ni macro que se pueda utilizar en el código fuente; todas las definiciones de símbolos deben estar definidas por el usuario.  
+ El propio compilador de C# no define ningún símbolo o macro que puede usar en su código fuente; todas las definiciones de símbolo deben definirse por el usuario.  
   
 > [!NOTE]
->  La directiva `#define` de C\# no permite que se le proporcione un valor a un símbolo, igual que sucede en otros lenguajes como C\+\+.  Por ejemplo, `#define` no se puede utilizar para crear una macro o definir una constante.  Si tiene que definir una constante, utilice una variable `enum`.  Si desea crear una macro de estilo C\+\+, considere alternativas como el uso de genéricos.  Ya que las macros son notoriamente propensas a errores, C\# no permite su uso, pero proporciona alternativas más seguras.  
+>  El valor `#define` de C# no permite que se le proporcione un valor a un símbolo; como en lenguajes como C++. Por ejemplo, `#define` no puede usarse para crear una macro o para definir una constante. Si necesita definir una constante, use una variable `enum`. Si quiere crear una macro de estilo de C++, considere alternativas como genéricos. Como las macros son notoriamente propensas a errores, C# deshabilita su uso pero proporciona alternativas más seguras.  
   
-### Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
 1.  Abra la página **Propiedades** del proyecto.  
   
-2.  En la ficha **Generar**, escriba el símbolo que se va a definir en el cuadro **Símbolos de compilación condicional**.  Por ejemplo, si está utilizando el ejemplo de código siguiente, escriba solamente `xx` en el cuadro de texto.  
+2.  En la pestaña **Compilar**, escriba el símbolo que va a definirse en el cuadro **Símbolos de compilación condicional**. Por ejemplo, si está usando el ejemplo de código siguiente, simplemente escriba `xx` en el cuadro de texto.  
   
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```csharp  
 // preprocessor_define.cs  
 // compile with: /define:xx  
 // or uncomment the next line  
@@ -82,6 +101,7 @@ public class Test
 }  
 ```  
   
-## Vea también  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/es-es/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>Vea también  
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+

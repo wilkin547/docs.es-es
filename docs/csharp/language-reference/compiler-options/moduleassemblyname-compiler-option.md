@@ -1,58 +1,77 @@
 ---
-title: "/moduleassemblyname (C# Compiler Option) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/moduleassemblyname"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "moduleassemblyname compiler option [C#]"
-  - "/moduleassemblyname compiler option [C#]"
-  - ".moduleassemblyname compiler option [C#]"
+title: "-moduleassemblyname (Opción del compilador de C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /moduleassemblyname
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- moduleassemblyname compiler option [C#]
+- /moduleassemblyname compiler option [C#]
+- .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 caps.latest.revision: 10
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 10
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# /moduleassemblyname (C# Compiler Option)
-Especifica un ensamblado a cuyos tipos no públicos puede tener acceso un .netmodule.  
+# <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname (Opción del compilador de C#)
+Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```console  
 /moduleassemblyname:assembly_name  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `assembly_name`  
- El nombre del ensamblado cuyos tipos privados el .netmodule tiene acceso.  
+ El nombre del ensamblado a cuyos tipos no públicos .netmodule puede tener acceso.  
   
-## Comentarios  
- **\/moduleassemblyname** debe utilizar al compilar un .netmodule, y donde se cumplen las condiciones siguientes:  
+## <a name="remarks"></a>Comentarios  
+ Se debería usar **/moduleassemblyname** al compilar un .netmodule cuando se den las condiciones siguientes:  
   
--   El .netmodule necesita acceso a los tipos privados de un ensamblado existente.  
+-   .netmodule necesita tener acceso a los tipos no públicos de un ensamblado existente.  
   
--   Conoce el nombre del ensamblado donde el .netmodule se compilará.  
+-   Sabe el nombre del ensamblado en el que se compilará .netmodule.  
   
--   El ensamblado existente ha concedido acceso al ensamblado de confianza al ensamblado donde el .netmodule se compilará.  
+-   El ensamblado existente ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará .netmodule.  
   
- Para obtener más información sobre cómo compilar un .netmodule, vea [\/target:module \(Create Module to Add to Assembly\)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Para obtener más información sobre cómo compilar .netmodule, vea [/target:module (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Para obtener más información sobre los ensamblados de confianza, vea [Ensamblados de confianza](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md).  
+ Para obtener más información sobre los ensamblados de confianza, vea [Ensamblados de confianza](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
- Esta opción no está disponible en el entorno de desarrollo; sólo está disponible al compilar desde la línea de comandos.  
+ Esta opción no está disponible en el entorno de desarrollo; solo está disponible cuando se compila desde la línea de comandos.  
   
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
   
-## Ejemplo  
- Este ejemplo compila un ensamblado con un tipo privado que concede acceso de ensamblado de confianza a un ensamblado llamado csman\_an\_assembly.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo compila un ensamblado con un tipo privado que concede acceso de ensamblado de confianza a un ensamblado llamado csman_an_assembly.  
   
-```  
+```csharp  
 // moduleassemblyname_1.cs  
 // compile with: /target:library  
 using System;  
@@ -69,10 +88,10 @@ class An_Internal_Class
 }  
 ```  
   
-## Ejemplo  
- Este ejemplo compila un .netmodule que tiene acceso a un tipo privado del ensamblado moduleassemblyname\_1.dll.  Sabiendo que este .netmodule se compilará en un ensamblado denominado csman\_an\_assembly, se puede especificar **\/moduleassemblyname**, permitiendo que el .netmodule tener acceso a los tipos privados de un ensamblado que ha concedido el acceso del ensamblado de confianza a csman\_an\_assembly.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo compila un .netmodule que tiene acceso a un tipo no público del ensamblado moduleassemblyname_1.dll. Sabiendo que este .netmodule se integrará en un ensamblado denominado csman_an_assembly, se puede especificar **/moduleassemblyname**, lo que permite que .netmodule tenga acceso a los tipos no públicos de un ensamblado que ha concedido acceso de ensamblado de confianza a csman_an_assembly.  
   
-```  
+```csharp  
 // moduleassemblyname_2.cs  
 // compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
 class B {  
@@ -83,10 +102,10 @@ class B {
 }  
 ```  
   
-## Ejemplo  
- Este ejemplo de código compila el ensamblado csman\_an\_assembly, haciendo referencia al ensamblado y el .netmodule anterior\- compilados.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo de código compila el ensamblado csman_an_assembly, haciendo referencia al ensamblado compilado previamente y a .netmodule.  
   
-```  
+```csharp  
 // csman_an_assembly.cs  
 // compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
 class A {  
@@ -97,7 +116,8 @@ class A {
 }  
 ```  
   
-  **Se llama a An\_Internal\_Class.Test**   
-## Vea también  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/es-es/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ **Se ha llamado a An_Internal_Class.Test**   
+## <a name="see-also"></a>Vea también  
+ [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
+ [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+

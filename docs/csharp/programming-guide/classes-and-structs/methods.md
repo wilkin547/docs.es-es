@@ -1,5 +1,5 @@
 ---
-title: "Métodos (Guía de programación de C#) | Microsoft Docs"
+title: "Métodos (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: es-es
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
@@ -80,7 +80,18 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
  Para obtener más información sobre cómo pasar tipos de referencia por valor y por referencia, vea [Pasar parámetros Reference-Type (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) y [Tipos de referencia (Referencia de C#)](../../../csharp/language-reference/keywords/reference-types.md).  
   
 ## <a name="return-values"></a>Valores devueltos  
- Los métodos pueden devolver un valor al autor de llamada. Si el tipo de valor devuelto, el tipo enumerado antes del nombre de método, no es `void`, el método puede devolver el valor mediante la utilización de la palabra clave `return` . Una instrucción con la palabra clave `return` seguida de un valor que coincide con el tipo de valor devuelto devolverá este valor al autor de llamada del método. La palabra clave `return` también detiene la ejecución del método. Si el tipo de valor devuelto es `void`, una instrucción `return` sin un valor también es útil para detener la ejecución del método. Sin la palabra clave `return` , el método dejará de ejecutarse cuando alcance el final del bloque de código. Los métodos con un tipo de valor devuelto no nulo son necesarios para usar la palabra clave `return` para devolver un valor. Por ejemplo, estos dos métodos utilizan la palabra clave `return` para devolver enteros:  
+Los métodos pueden devolver un valor al autor de llamada. Si el tipo de valor devuelto, el tipo enumerado antes del nombre de método, no es `void`, el método puede devolver el valor mediante la utilización de la palabra clave `return` . Una instrucción con la palabra clave `return` seguida de un valor que coincide con el tipo de valor devuelto devolverá este valor al autor de llamada del método. 
+
+El valor puede devolverse al autor de la llamada mediante valor o, a partir de C# 7, [mediante referencia](ref-returns.md). Los valores se devuelven al autor de la llamada mediante referencia si la palabra clave `ref` se usa en la firma del método y sigue cada palabra clave `return`. Por ejemplo, la siguiente firma del método y la instrucción return indican que el método devuelve nombres de variable `estDistance` mediante referencia al autor de la llamada.
+
+```csharp
+public ref double GetEstimatedDistance()
+{
+   return ref estDistance;
+}
+```
+
+La palabra clave `return` también detiene la ejecución del método. Si el tipo de valor devuelto es `void`, una instrucción `return` sin un valor también es útil para detener la ejecución del método. Sin la palabra clave `return` , el método dejará de ejecutarse cuando alcance el final del bloque de código. Los métodos con un tipo de valor devuelto no nulo son necesarios para usar la palabra clave `return` para devolver un valor. Por ejemplo, estos dos métodos utilizan la palabra clave `return` para devolver enteros:  
   
  [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
@@ -91,8 +102,14 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
  [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  Usar una variable local, en este caso, `result`, para almacenar un valor es opcional. La legibilidad del código puede ser útil, o puede ser necesaria si debe almacenar el valor original del argumento para todo el ámbito del método.  
-  
- La devolución de una matriz multidimensional de un método, M, que modifique el contenido de la matriz no es necesaria si la función que realiza la llamada pasa la matriz a M. Puede devolver la matriz resultante de M para lograr un buen estilo o un flujo funcional de valores, pero no es necesario.  El motivo por el que no necesita devolver la matriz modificada es que C# pasa todos los tipos de referencia por valor, y el valor de una referencia a la matriz es el puntero a la matriz. En el método M, los cambios en el contenido de la matriz los puede observar cualquier código que tenga una referencia a la matriz, como se muestra en el ejemplo siguiente.  
+
+Para usar un valor devuelto mediante referencia de un método, debe declarar una variable [local de tipo ref](ref-returns.md#ref-locals) si pretende modificar su valor. Por ejemplo, si el método `Planet.GetEstimatedDistance` devuelve un valor <xref:System.Double> mediante referencia, puede definirlo como una variable local de tipo ref con código como el siguiente:
+
+```csharp
+ref int distance = plant 
+```
+
+Devolver una matriz multidimensional de un método, `M`, que modifica el contenido de la matriz no es necesario si la función de llamada ha pasado la matriz a `M`.  Puede devolver la matriz resultante de `M` para obtener un estilo correcto o un flujo funcional de valores, pero no es necesario porque C# pasa todos los tipos de referencia mediante valor, y el valor de una referencia de matriz es el puntero de la matriz. En el método `M`, los cambios en el contenido de la matriz los puede observar cualquier código que tenga una referencia a la matriz, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 static void Main(string[] args)  
@@ -155,7 +172,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  
   
- El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.  
+ El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.  
   
  Para obtener más información, consulta [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
