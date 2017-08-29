@@ -3,15 +3,15 @@ title: 'Comando dotnet help: CLI de .NET Core'
 description: "El comando dotnet help muestra documentación en línea más detallada para el comando especificado."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: b33d21d7578bb4c1b33c655103f720b32aaf2203
+ms.sourcegitcommit: ca7c88675d54d99fdb3526244daaeffe32f32d45
+ms.openlocfilehash: 0d43db0bb0a62bb598f7db50c3b8e37936451550
 ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dotnet-help-reference"></a>Referencia de dotnet help
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet list <COMMAND_NAME> [-h|--help]`
+`dotnet help <COMMAND_NAME> [-h|--help]`
 
 ## <a name="description"></a>Descripción
 
@@ -44,11 +44,7 @@ Imprime una corta ayuda para el comando.
 
 ## <a name="examples"></a>Ejemplos
 
-Enumerar las referencias del proyecto para el proyecto especificado:
+Se abre la página de documentación del comando [dotnet new](dotnet-new.md):
 
-`dotnet list app/app.csproj reference`
-
-Enumerar las referencias del proyecto para el proyecto en el directorio actual:
-
-`dotnet list reference`
+`dotnet help new`
 
