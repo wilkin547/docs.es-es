@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: LINQ (Language Integrated Query)
+description: "Obtenga información sobre cómo proporciona LINQ capacidades de consulta de nivel de lenguaje y una API para C# y VB que permite escribir código expresivo y declarativo."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 6d9c163255939c3732177ecccb373479ab610447
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -29,7 +30,6 @@ Sintaxis de consulta de nivel de lenguaje:
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
-
 ```
 
 Mismo ejemplo usando la API `IEnumerable<T>`:
@@ -37,7 +37,6 @@ Mismo ejemplo usando la API `IEnumerable<T>`:
 ```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
-
 ```
 
 ## <a name="linq-is-expressive"></a>LINQ es expresivo
@@ -53,7 +52,6 @@ foreach (var pet in pets)
 {
     petLookup.Add(pet.RFID, pet);
 }
-
 ```
 
 La intención de este código no es crear un nuevo `Dictionary<int, Pet>` y agregarle elementos por medio de un bucle, sino convertir una lista existente en un diccionario. LINQ conserva la intención, a diferencia del código imperativo.
@@ -62,7 +60,6 @@ Expresión LINQ equivalente:
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
-
 ```
 
 El código con LINQ tiene la ventaja de poner al mismo nivel la intención y el código cuando se razona como programador. Otra ventaja es la brevedad de código. Imagínese poder reducir gran parte de un código base en 1/3, como hemos visto más arriba. No estaría mal, ¿verdad?
@@ -81,7 +78,6 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
            where (string)el.Element(attributeName) == value
            select el;
 }
-
 ```
 
 Escribir código para recorrer manualmente el documento XML para realizar esta tarea sería bastante más complicado.
@@ -94,7 +90,6 @@ Es una pregunta que surge con frecuencia. Después de todo, esto:
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
-
 ```
 
 es mucho más conciso que esto:
@@ -103,7 +98,6 @@ es mucho más conciso que esto:
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
-
 ```
 
 ¿No es la sintaxis de la API una manera más concisa de hacer la sintaxis de consulta?
@@ -151,7 +145,6 @@ var queryCats = from dog in dogs
 // Summing then lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
-
 ```
 
 *   Reducción de una lista de listas:
@@ -159,7 +152,6 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
-
 ```
 
 *   Unión entre dos conjuntos (con un comparador personalizado):
@@ -195,7 +187,6 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 
 // Gets all the short-haired dogs between two different kennels
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
-
 ```
 
 *   Intersección entre dos conjuntos:
@@ -204,7 +195,6 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
-
 ```
 
 *   Ordenación:
@@ -214,7 +204,6 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
               .ThenBy(direction => direction.EstimatedTime);
-
 ```
 
 *   Por último, un ejemplo más avanzado: determinar si los valores de las propiedades de dos instancias del mismo tipo son iguales (tomado y modificado de [esta entrada de StackOverflow](http://stackoverflow.com/a/844855)):
@@ -239,7 +228,6 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
     return self == to;
 }
-
 ```
 
 ## <a name="plinq"></a>PLINQ
@@ -260,7 +248,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
     return facebookUsers.AsParallel()
                         .Aggregate(seed, threadAccumulator, threadResultAccumulator, resultSelector);
 }
-
 ```
 
 Este código repartirá `facebookUsers` en subprocesos del sistema según sea necesario, sumará el total de "Me gusta" de cada subproceso en paralelo, sumará los resultados calculados por cada subproceso y devolverá ese resultado en una bonita cadena.
@@ -273,7 +260,7 @@ Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente
 
 ## <a name="further-resources"></a>Recursos adicionales:
 
-*   [Ejemplos de LINQ&101;](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+*   [Ejemplos de LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/VB
 *   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un libro electrónico para aprender cómo se implementa LINQ to Objects
 

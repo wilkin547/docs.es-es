@@ -1,25 +1,26 @@
 ---
 title: Independencia del lenguaje y componentes independientes del lenguaje
-description: Independencia del lenguaje y componentes independientes del lenguaje
+description: "Obtenga información sobre cómo puede desarrollar en uno de los muchos lenguajes admitidos en .NET, como C#, C++/CLI, F#, IronPython, VB, Visual COBOL y PowerShell."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
-La plataforma .NET es independiente del lenguaje. Esto significa que, como desarrollador, puede desarrollar en uno de los muchos lenguajes que se centran en la plataforma .NET, como C#, F # y Visual Basic. Puede tener acceso a los tipos y miembros de bibliotecas de clases desarrollados para la plataforma .NET sin tener que conocer el lenguaje en el que se escribieron originalmente y sin tener que seguir las convenciones del lenguaje original. Si es un desarrollador de componentes, puede tener acceso al componente desde cualquier aplicación .NET independientemente de su lenguaje.
+.NET es independiente del lenguaje. Esto significa que, como desarrollador, puede desarrollar en uno de los muchos lenguajes que tienen como destino las implementaciones de .NET, como C#, F# y Visual Basic. Puede tener acceso a los tipos y miembros de bibliotecas de clases desarrollados para implementaciones de .NET sin tener que conocer el lenguaje en el que se escribieron originalmente y sin tener que seguir las convenciones del lenguaje original. Si es un desarrollador de componentes, puede tener acceso al componente desde cualquier aplicación .NET independientemente de su lenguaje.
 
 > [!NOTE]
 > La primera parte de este artículo describe la creación de componentes independientes del lenguaje; es decir, los componentes que pueden usarse en aplicaciones escritas en cualquier lenguaje. También puede crear una aplicación o componente únicos de código fuente escrito en varios lenguajes; consulte [Interoperabilidad entre lenguajes](#cross-language-interoperability) en la segunda parte de este artículo. 
@@ -346,7 +347,7 @@ Tipo no conforme | Descripción | Alternativa conforme a CLS
  
  La biblioteca de clases de .NET Framework o cualquier otra biblioteca de clases puede incluir otros tipos que no sean conformes a CLS; por ejemplo: 
  
- * Tipos de valor a los que se les ha aplicado la conversión boxing. En el siguiente ejemplo de C# se crea una clase con una propiedad pública de tipo `int`*denominada `Value`. Dado que `int`* es un tipo de valor al que se le ha aplicado la conversión boxing, el compilador lo marca como no conforme a CLS.
+ * Tipos de valor a los que se les ha aplicado la conversión boxing. En el siguiente ejemplo de C#, se crea una clase con una propiedad pública de tipo `int`* denominada `Value`. Dado que `int`* es un tipo de valor al que se le ha aplicado la conversión boxing, el compilador lo marca como no conforme a CLS.
 
   ```csharp
   using System;
@@ -1109,7 +1110,7 @@ Las matrices conformes a CLS cumplen las reglas siguientes:
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>Interfaces
 
@@ -1625,9 +1626,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-Los nombres de tipos genéricos se codifican con el formato *name**n*, donde *name* es el nombre del tipo, *`* es un carácter literal y *n* es el número de parámetros declarados en el tipo o, en el caso de tipos genéricos anidados, el número de parámetros de tipo recién incorporados. Esta codificación de nombres de tipo genérico tiene interés fundamentalmente para los desarrolladores que utilizan la reflexión a fin de acceder a los tipos genéricos conformes a CLS de una biblioteca. 
+Los nombres de tipos genéricos se codifican con el formato *name*'*n*, donde *name* es el nombre del tipo, *`* es un carácter literal y *n* es el número de parámetros declarados en el tipo o, en el caso de tipos genéricos anidados, el número de parámetros de tipo recién incorporados. Esta codificación de nombres de tipo genérico tiene interés fundamentalmente para los desarrolladores que utilizan la reflexión a fin de acceder a los tipos genéricos conformes a CLS de una biblioteca. 
 
-Si las restricciones se aplican a un tipo genérico, los tipos utilizados como restricciones también deben ser conformes a CLS. En el ejemplo siguiente se define una clase denominada `BaseClass` que no es conforme a CLS y una clase genérica denominada `BaseCollection` cuyo parámetro de tipo debe derivarse de `BaseClass`. Pero como `BaseClass` no es conforme a CLS, el compilador emite una advertencia. 
+Si las restricciones se aplican a un tipo genérico, los tipos utilizados como restricciones también deben ser conformes a CLS. En el ejemplo siguiente se define una clase denominada `BaseClass` que no es conforme a CLS y una clase genérica denominada `BaseCollection` cuyo parámetro de tipo debe derivarse de `BaseClass`. Sin embargo, puesto que `BaseClass` no es conforme a CLS, el compilador emite una advertencia. 
 
 ```csharp
 using System;
@@ -1659,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 Si un tipo genérico se deriva de un tipo base genérico, es necesario volver a declarar las restricciones para que se pueda garantizar que las restricciones del tipo base también se cumplen. En el ejemplo siguiente se define un objeto `Number<T>` que puede representar cualquier tipo numérico. También se define una clase `FloatingPoint<T>` que representa un valor de punto flotante. Sin embargo, el código fuente no puede compilarse, ya que no aplica la restricción de `Number<T>` (T debe ser un tipo de valor) en `FloatingPoint<T>`.

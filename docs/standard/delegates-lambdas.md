@@ -1,6 +1,6 @@
 ---
 title: Delegados y expresiones lambda
-description: Delegados y expresiones lambda
+description: "Obtenga información sobre cómo los delegados definen un tipo, que especifica una firma de método determinada, que se puede llamar directamente o pasar a otro método y llamar."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -39,7 +40,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   En la línea 4 se crea un tipo delegado de una firma determinada, en este caso un método que toma un parámetro de cadena y luego devuelve un parámetro de cadena.
@@ -71,7 +71,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 En este ejemplo sencillo, tener un método definido fuera del método Main() parece un poco superfluo. Es por ello que .NET Framework 2.0 presentó el concepto de **delegados anónimos**. Con ellos es posible crear delegados "insertados" sin tener que especificar ningún otro tipo o método. Simplemente se inserta la definición del delegado allí donde se necesita.
@@ -104,7 +103,6 @@ public class Program
     }
   }
 }
-
 ```
 
 Observe las líneas resaltadas. Como puede ver, el cuerpo del delegado es simplemente un conjunto de expresiones, como cualquier otro delegado. Pero en lugar de ser una definición independiente, se ha introducido _ad hoc_ en la llamada al método `FindAll()` del tipo `List<T>`.
@@ -136,7 +134,6 @@ public class Program
     }
   }
 }
-
 ```
 
 Si echa un vistazo a las líneas resaltadas, puede ver el aspecto de una expresión lambda. Una vez más, se trata solo de una sintaxis **muy** cómoda para usar delegados, así que lo que sucede en segundo plano es similar a lo que ocurre con el delegado anónimo.
@@ -153,7 +150,6 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>Más información y recursos

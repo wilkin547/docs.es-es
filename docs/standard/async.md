@@ -1,6 +1,6 @@
 ---
 title: "Información general de Async"
-description: "Información general de Async"
+description: "Obtenga información sobre cómo la programación de Async es una técnica clave que ayuda a controlar las operaciones simultáneas y de E/S de bloqueo en varios núcleos."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: db4c9721381a9675b06f0fc6b5381d987816e9a4
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -28,17 +29,16 @@ La programación de Async es una técnica clave que facilita controlar las opera
 
 ## <a name="why-write-async-code"></a>¿Por qué escribir código asincrónico?
 
-Las aplicaciones modernas usan de forma intensiva la E/S de archivos y redes. Tradicionalmente, las API de E/S bloquean de manera predeterminada, lo que da lugar a experiencias de usuario y uso del hardware pobres a menos que quiera aprender y usar patrones exigentes. Las API de Async y el modelo de programación asincrónico de nivel de lenguaje invierten este modelo, de modo que establecen la ejecución de Async como la predeterminada con algunos conceptos nuevos que aprender.
+Las aplicaciones modernas usan de forma intensiva la E/S de archivos y redes. Tradicionalmente, las API de E/S bloquean de manera predeterminada, lo que da lugar a experiencias de usuario y uso del hardware pobres a menos que quiera aprender y usar patrones exigentes. Las API asincrónicas basadas en tareas y el modelo de programación asincrónico de nivel de lenguaje invierten este modelo, de modo que establecen la ejecución asincrónica como la predeterminada con algunos conceptos nuevos que aprender.
 
-El código de Async tiene las siguientes características:
+El código asincrónico tiene las siguientes características:
 
 * Controla más solicitudes del servidor al producir subprocesos que controlan más solicitudes mientras esperan a que devuelvan las solicitudes de E/S.
 * Permite que las interfaces de usuario sean más dinámicas al ceder subprocesos a la interacción de la interfaz de usuario mientras esperan las solicitudes de E/S y al pasar trabajo de ejecución prolongada a otros núcleos de CPU.
 * Muchas de las API de .NET más recientes son asincrónicas.
-* Es muy fácil escribir código asincrónico en .NET.
+* Es fácil escribir código asincrónico en .NET.
 
 ## <a name="whats-next"></a>Pasos adicionales
 
-Para profundizar en los conceptos y programación de Async, consulte [Async en profundidad](async-in-depth.md).
-
+Para profundizar en los conceptos y la programación de Async, consulte [Async en profundidad](async-in-depth.md) y [Task-based asynchronous programming](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md) (Programación asincrónica basada en tareas).
 

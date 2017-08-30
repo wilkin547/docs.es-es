@@ -1,6 +1,6 @@
 ---
 title: Interoperabilidad nativa
-description: Interoperabilidad nativa
+description: "Obtenga información sobre cómo interactuar con componentes nativos en .NET."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="native-interoperability"></a>Interoperabilidad nativa
 
-En este documento se profundiza un poco más en las tres formas de obtener "interoperabilidad nativa" disponibles en la plataforma. NET.
+En este documento se profundiza un poco más en las tres formas de obtener "interoperabilidad nativa" disponibles mediante .NET.
 
 Existen varios motivos por los que puede interesarle llamar a código nativo:
 
@@ -30,7 +31,7 @@ Existen varios motivos por los que puede interesarle llamar a código nativo:
 Por supuesto, la lista anterior no cubre todas las posibles situaciones y escenarios en los que el desarrollador puede querer o necesitar interactuar con componentes nativos. La biblioteca de clases. NET, por ejemplo, usa la compatibilidad con la interoperabilidad nativa para implementar bastantes de sus API, como la compatibilidad con la consola y su manipulación, el acceso al sistema de archivos, etc. Pero es importante tener en cuenta que existe la opción de hacerlo, en caso de que sea necesario.
 
 > [!NOTE]
-> La mayoría de los ejemplos de este documento se presentarán para las tres plataformas compatibles con .NET Core (Windows, Linux y macOS). Pero en algunos ejemplos breves e ilustrativos solo se muestra un ejemplo que usa nombres de archivo y extensiones de Windows (es decir, "dll" en el caso de las bibliotecas). Esto no significa que esas características no estén disponibles en Linux o macOS, sino que simplemente se buscaba una mayor comodidad.
+> La mayoría de los ejemplos de este documento se presentarán para las tres plataformas compatibles con .NET Core (Windows, Linux y macOS). En cambio, en algunos ejemplos breves e ilustrativos solo se muestra un ejemplo que usa nombres de archivo y extensiones de Windows (es decir, "dll" en el caso de las bibliotecas). Esto no significa que esas características no estén disponibles en Linux o macOS, sino que simplemente se buscaba una mayor comodidad.
 
 ## <a name="platform-invoke-pinvoke"></a>Invocación de plataforma (P/Invoke)
 
@@ -53,7 +54,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 El ejemplo anterior es bastante sencillo, pero resalta lo que es necesario para invocar las funciones no administradas desde código administrado. Veamos en detalle el ejemplo:
@@ -84,7 +84,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 Naturalmente, es parecido en Linux. El nombre de la función es el mismo, ya que `getpid(2)` es la llamada del sistema de [POSIX](https://en.wikipedia.org/wiki/POSIX).
@@ -107,7 +106,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>Invocar código administrado desde código no administrado
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,7 +142,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 Antes de examinar nuestro ejemplo, conviene que analicemos las firmas de las funciones no administradas con las que tenemos que trabajar. La función a la que queremos llamar para enumerar todas las ventanas tiene la firma siguiente: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -208,7 +205,6 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 El ejemplo de macOS usa la misma función. La única diferencia es el argumento del atributo `DllImport`, ya que macOS guarda `libc` en un lugar diferente.
@@ -261,7 +257,6 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
 Los dos ejemplos anteriores dependen de parámetros y, en ambos casos, los parámetros se proporcionan como tipos administrados. El tiempo de ejecución hace "lo correcto" y los procesa en sus equivalentes en el otro lado. Dado que este proceso es muy importante para escribir código de interoperabilidad nativa de calidad, vamos a ver lo que sucede cuando el tiempo de ejecución _serializa_ los tipos.
@@ -273,9 +268,8 @@ La **serialización** es el proceso de transformación de tipos cuando tienen qu
 La serialización es necesaria porque los tipos del código administrado y del código no administrado son diferentes. En el código administrado, por ejemplo, tiene `String`, mientras que en el entorno no administrado, las cadenas pueden ser Unicode ("anchas"), no Unicode, terminadas en un valor nulo, ASCII, etc. De forma predeterminada, el subsistema de P/Invoke intentará hacer "lo correcto" según el comportamiento predeterminado que se puede ver en [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Pero en aquellas situaciones en las que necesita un control adicional, puede emplear el atributo `MarshalAs` para especificar qué tipo se espera en el lado no administrado. Por ejemplo, si queremos que la cadena se envíe como una cadena ANSI terminada en un valor nulo, podemos hacerlo de la manera siguiente:
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>Serializar clases y estructuras
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-En el ejemplo anterior se muestra un ejemplo sencillo de una llamada a la función `GetSystemTime()`. La parte interesante se encuentra en la línea 4\. El atributo especifica que los campos de la clase se deben asignar secuencialmente a la estructura en el otro lado (el lado no administrado). Esto significa que la denominación de los campos no es importante. Solo su orden es importante, ya que es necesario que coincida con la estructura no administrada, tal como se muestra a continuación:
+En el ejemplo anterior se muestra un ejemplo sencillo de una llamada a la función `GetSystemTime()`. La parte interesante está en la línea 4. El atributo especifica que los campos de la clase se deben asignar secuencialmente a la estructura en el otro lado (el lado no administrado). Esto significa que la denominación de los campos no es importante. Solo su orden es importante, ya que es necesario que coincida con la estructura no administrada, tal como se muestra a continuación:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,7 +312,6 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 Ya vimos el ejemplo de Linux y macOS para esto en el ejemplo anterior, pero lo mostramos de nuevo a continuación.
@@ -341,7 +333,6 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 La clase `StatClass` representa una estructura que se devuelve mediante la llamada del sistema `stat` en sistemas UNIX. Representa información sobre un archivo determinado. La clase anterior es la representación de estructura estática en código administrado. De nuevo, los campos de la clase deben estar en el mismo orden que la estructura nativa (puede encontrarlos si lee con detenimiento las páginas del manual de su implementación de UNIX favorita) y deben ser del mismo tipo subyacente.
