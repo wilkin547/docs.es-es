@@ -34,10 +34,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 7c5f5274a5685e50fb7f1d06771b0340200d1c3f
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="c-compiler-options"></a>Opciones del compilador de C#
@@ -53,9 +53,6 @@ El compilador genera archivos ejecutables (.exe), archivos de biblioteca de vín
   
  [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Proporciona los pasos para ejecutar vsvars32.bat para habilitar las compilaciones de línea de comandos.  
-  
- [Implementación de aplicaciones de C#](../../../csharp/language-reference/compiler-options/app-deployment.md)  
- Describe las opciones para implementar aplicaciones de C#.  
   
  [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  Una lista de categorías de las opciones del compilador.  

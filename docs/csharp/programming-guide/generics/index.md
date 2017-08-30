@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4899b3604343925e7e4e0535929d041b1a1f1081
+ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
+ms.openlocfilehash: de81058173b0985577474e8601aa84d4e83336a5
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guía de programación de C#)
@@ -72,8 +72,6 @@ Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Langua
 -   [Métodos genéricos](../../../csharp/programming-guide/generics/generic-methods.md)  
   
 -   [Delegados genéricos](../../../csharp/programming-guide/generics/generic-delegates.md)  
-  
--   [Palabra clave predeterminada](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md)  
   
 -   [Diferencias entre plantillas de C++ y tipos genéricos de C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   
