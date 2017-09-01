@@ -45,7 +45,7 @@ El reenvío de tipos le permite mover un tipo a otro ensamblado sin tener que vo
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
     ```  
   
-    ```cpp#  
+    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
