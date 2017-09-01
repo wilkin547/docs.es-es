@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1788a51d1bc61ba5e69774d65c14001851924472
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0cabcc25c4e35027c600e4af2bccfad7f9db1514
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guía de programación de C#)
@@ -89,7 +89,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Resultados del programa  
- Se genera el siguiente resultado al compilar las clases Test y Test2 con la siguiente línea de comandos: `/doc:DocFileName.xml.` En Visual Studio, especifique la opción de comentarios de documentación XML en el panel de compilación del Diseñador de proyectos. Cuando el compilador de C# vea la etiqueta \<include>, buscará los comentarios de documentación en xml_include_tag.doc en lugar del archivo de código fuente actual. Después, el compilador genera DocFileName.xml y este es el archivo que usan las herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB) para generar la documentación final.  
+ Se genera el siguiente resultado al compilar las clases Test y Test2 con la siguiente línea de comandos: `/doc:DocFileName.xml.` En Visual Studio, especifique la opción de comentarios de documentación XML en el panel de compilación del Diseñador de proyectos. Cuando el compilador de C# detecta la etiqueta \<include>, busca los comentarios de documentación en xml_include_tag.doc en lugar del archivo de código fuente actual. Después, el compilador genera DocFileName.xml y este es el archivo que usan las herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB) para generar la documentación final.  
   
 ```xml  
 <?xml version="1.0"?>   

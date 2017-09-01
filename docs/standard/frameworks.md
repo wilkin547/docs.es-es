@@ -4,17 +4,17 @@ description: "Obtenga información sobre las plataforma de destino para las apli
 keywords: .NET, .NET Core, marco de trabajo, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 07/23/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 ms.translationtype: HT
-ms.sourcegitcommit: cf480ffd8e791e3416433f2d13b364743ba42938
-ms.openlocfilehash: 7f1189239f61bc55c5f517ee797e5148082ebbab
+ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
+ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
 ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
@@ -36,8 +36,8 @@ En la tabla siguiente, se definen las plataformas de destino más usadas, cómo 
 
 | Plataforma de destino      | Última versión | Moniker de la plataforma de destino (TFM) | Versión de .NET Standard | Metapaquete |
 | :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
-| Estándar .NET         | 1.6.1          | netstandard1.6                 | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| Aplicación .NET Core | 1.1.2          | netcoreapp1.1                  | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| Estándar .NET         | 2.0.0          | netstandard2.0                 | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
+| Aplicación .NET Core | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
 | .NET Framework        | 4.7            | net47                          | 1.5                   | N/D |
 
 ## <a name="supported-target-framework-versions"></a>Versiones compatibles de las plataformas de destino
@@ -46,8 +46,8 @@ Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla sig
 
 | Plataforma de destino           | TFM |
 | -------------------------- | --- |
-| Estándar .NET              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6 |
-| Núcleo de .NET                  | netcoreapp1.0<br>netcoreapp1.1 |
+| Estándar .NET              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| Núcleo de .NET                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
 | Tienda Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
@@ -57,14 +57,14 @@ Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla sig
 
 ## <a name="how-to-specify-target-frameworks"></a>Cómo especificar plataformas de destino
 
-Las plataformas de destino se especifican en el archivo del proyecto. Cuando especifique una única plataforma de destino, use el elemento **TargetFramework**. El siguiente archivo de proyecto de aplicación de consola muestra cómo elegir como destino .NET Core 1.1:
+Las plataformas de destino se especifican en el archivo del proyecto. Cuando especifique una única plataforma de destino, use el elemento **TargetFramework**. El siguiente archivo de proyecto de aplicación de consola muestra cómo elegir como destino .NET Core 2.0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
