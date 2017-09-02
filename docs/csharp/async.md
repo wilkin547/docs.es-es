@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -128,7 +128,7 @@ En los ejemplos siguientes se muestran distintas maneras en las que puede escrib
 Este fragmento de código descarga el HTML desde www.dotnetfoundation.org y cuenta el número de veces que aparece la cadena ".NET" en el código HTML.  Usa ASP.NET MVC para definir un método de controlador web que realiza esta tarea y devuelve el número.
 
 > [!NOTE]
-> No use nunca expresiones regulares si planea realizar un análisis real de HTML.  Use una biblioteca de análisis si este es su objetivo en el código de producción.
+> Si tiene previsto realizar un análisis HTML en el código de producción, no use expresiones regulares. Use una biblioteca de análisis en su lugar.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
