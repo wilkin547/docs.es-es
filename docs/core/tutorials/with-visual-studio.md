@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 9ade8dc5dad0ac542de8c2ed1249a5361bcffc97
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: 37b81a6d4cf53dcf17158ccc4df6aca488f9a26b
 ms.contentlocale: es-es
-ms.lasthandoff: 08/13/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -88,7 +88,7 @@ Ha creado y ejecutado la aplicación. Para desarrollar una aplicación profesion
 
 ## <a name="related-topics"></a>Temas relacionados
 
-En lugar de una aplicación de consola, también puede crear una biblioteca de clases con .NET Core y Visual Studio 2017. Para consultar una introducción detallada, vea [Building a class library with C# and .NET Core in Visual Studio 2017](../../csharp/getting-started/library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017).
+En lugar de una aplicación de consola, también puede crear una biblioteca de clases con .NET Core y Visual Studio 2017. Para consultar una introducción detallada, vea [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md) (Creación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017).
 
 También puede desarrollar una aplicación de consola .NET Core en Mac, Linux y Windows mediante [Visual Studio Code](https://code.visualstudio.com/), un editor de código descargable. Para obtener un tutorial detallado, vea [Introducción a Visual Studio Code](with-visual-studio-code.md).
 

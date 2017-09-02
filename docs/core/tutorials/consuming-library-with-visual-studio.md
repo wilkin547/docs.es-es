@@ -1,20 +1,16 @@
 ---
 title: Consumo de una biblioteca de clases con .NET Core en Visual Studio 2017
 description: "Obtenga información sobre cómo llamar a los miembros de una biblioteca de clases con Visual Studio 2017."
-keywords: ".NET Core, biblioteca de clases de .NET Core, .NET Standard, distribución de biblioteca de clases de .NET Standard"
 author: BillWagner
-ms.author: wiwang
+ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
+ms.prod: .net-core
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 5a99cb1816d0f9359e7c10c87531b5d93adff961
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
 ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
