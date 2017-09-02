@@ -10,10 +10,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 753c620e1352dfc5fc57c380c66479c8e2d9b0ee
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="ref-returns-and-ref-locals"></a>Valores devueltos y variables locales de tipo ref
@@ -44,7 +44,7 @@ Hay algunas restricciones en el valor que un método puede devolver como un valo
  
 - El valor devuelto no puede ser una constante, un miembro de enumeración o una propiedad de una `class` o `struct`. Si intenta devolver estos, se genera el error del compilador CS8156, "No se puede usar una expresión en este contexto porque no se puede devolver por referencia".
 
-Además, puesto que un método asincrónico puede volver antes de que haya terminado de ejecutarse y se conozca su valor devuelto, los valores devueltos de referencia no se permiten en métodos `async`.
+Además, puesto que un método asincrónico puede volver antes de que haya terminado de ejecutarse, mientras su valor devuelto siga siendo desconocido, los valores devueltos de referencia no se permiten en métodos asincrónicos.
  
 ## <a name="defining-a-ref-return-value"></a>Definir un valor devuelto de tipo ref
 

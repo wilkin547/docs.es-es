@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bf0b4a4130fe69a15e6db438ac1d58b676c9ee8b
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opciones del compilador de C#, por categoría
@@ -55,6 +55,8 @@ Las opciones del compilador siguientes están ordenadas por categoría. Para acc
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Especifica el nombre y la ubicación de archivo del archivo .pdb.|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Especifica la plataforma de salida.|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifica un idioma para los resultados del compilador.|  
+|[/refout](refout-compiler-option.md)|Genere un ensamblado de referencia además del ensamblado principal.|  
+|[/refonly](refonly-compiler-option.md)|Genere un ensamblado de referencia en lugar del ensamblado principal.|  
 |[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Especifica el formato del archivo de salida con una de las seis opciones siguientes: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) o [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
 |/modulename:\<string>|Especifica el nombre del módulo de origen.|  
   

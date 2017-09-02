@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 291c35f73b47167289a88f0b7655c26699fdc009
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opciones del compilador de C#, por orden alfabético
@@ -85,6 +85,8 @@ Las siguientes opciones del compilador están ordenadas alfabéticamente. Para o
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifica el idioma que se usará para los resultados del compilador.|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|Incluye todos los archivos del directorio y subdirectorios actuales de acuerdo con las especificaciones de los comodines.|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|Hace referencia a los metadatos de los archivos de ensamblado especificados.|  
+|[/refout](refout-compiler-option.md)|Genere un ensamblado de referencia además del ensamblado principal.|  
+|[/refonly](refonly-compiler-option.md)|Genere un ensamblado de referencia en lugar del ensamblado principal.|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|Incrusta el recurso especificado.|  
 |/ruleset:\<file>|Especifica un archivo de conjunto de reglas que deshabilita diagnósticos específicos.|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|Especifica la versión mínima del subsistema que el archivo ejecutable puede usar.|  
