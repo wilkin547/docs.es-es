@@ -55,6 +55,11 @@
 <!-- .NET Core Content -->
 # [Guía de .NET Core](core/index.md)
 ## [Introducción](core/get-started.md)
+### [Introducción a C# y Visual Studio Code](core/tutorials/with-visual-studio-code.md)
+### [Build a C# Hello World app with .NET Core in Visual Studio 2017](core/tutorials/with-visual-studio.md) (Compilación de una aplicación Hola mundo de C# con .NET Core en Visual Studio 2017)
+### [Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017](core/tutorials/vb-with-visual-studio.md) (Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017)
+### [Build a class library with C# and .NET Core in Visual Studio 2017](core/tutorials/library-with-visual-studio.md) (Compilación de una biblioteca de clases con C# y .NET Core en Visual Studio 2017)
+### [Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017](core/tutorials/vb-library-with-visual-studio.md)
 ## [Novedades de .NET Core](core/whats-new/index.md)
 ## [Requisitos previos de Windows](core/windows-prerequisites.md)
 ## [Requisitos previos de macOS](core/macos-prerequisites.md)
@@ -187,6 +192,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [Novedades de C#](csharp/whats-new/index.md) 
+### [Novedades de C# 7.1](csharp/whats-new/csharp-7-1.md)
 ### [Novedades de C# 7](csharp/whats-new/csharp-7.md)
 ### [Novedades de C# 6](csharp/whats-new/csharp-6.md)
 ### [Relaciones entre el lenguaje y el marco](csharp/whats-new/relationships-between-language-and-library.md)

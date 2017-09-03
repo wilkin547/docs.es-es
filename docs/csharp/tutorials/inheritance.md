@@ -5,17 +5,17 @@ keywords: herencia (C#), clases base, clases derivadas, clases base abstractas
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: es-es
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
@@ -216,13 +216,13 @@ En el ejemplo siguiente se muestra el código fuente para la clase `Publication`
 
 - Dos propiedades relacionadas con la publicación
 
-  `Title` es una propiedad <xref:System.String> de solo lectura cuyo valor se suministra mediante la llamada al constructor `Publication`, que almacena el valor en un campo privado llamado `pubTitle`.
+  `Title` es una propiedad <xref:System.String> de solo lectura cuyo valor se suministra mediante la llamada al constructor `Publication`.
 
   `Pages` es una propiedad <xref:System.Int32> de solo lectura que indica cuántas páginas en total tiene la publicación. El valor se almacena en un campo privado denominado `totalPages`. Debe ser un número positivo o se inicia una excepción <xref:System.ArgumentOutOfRangeException>.
 
 - Miembros relacionados con el publicador
 
-  Dos propiedades de solo lectura, `Publisher` y `Type`, devuelven el valor de los campos privados `pubName` y `pubType`. Los valores se proporcionan originalmente mediante la llamada al constructor de clase `Publication`.
+  Dos propiedades de solo lectura, `Publisher` y `Type`. Los valores se proporcionan originalmente mediante la llamada al constructor de clase `Publication`.
 
 - Miembros relacionados con la publicación
 
@@ -230,7 +230,7 @@ En el ejemplo siguiente se muestra el código fuente para la clase `Publication`
 
 - Miembros relacionados con copyright
 
-  El método `Copyright` toma el nombre del propietario del copyright y el año del copyright como argumentos y los asigna a los campos privados `copyrName` y `copyrDate`. Los valores se pueden recuperar desde las propiedades `CopyrightName` y `CopyrightDate`.
+  El método `Copyright` toma como argumentos el nombre del propietario del copyright y el año del copyright, y los asigna a las propiedades `CopyrightName` y `CopyrightDate`.
 
 - Una invalidación del método `ToString`
 
@@ -250,13 +250,13 @@ Además de los miembros que hereda de `Publication`, la clase `Book` define los 
 
 - Dos constructores
 
-  Los dos constructores `Book` comparten tres parámetros comunes. Dos, *title* y *publisher*, corresponden a los parámetros del constructor `Publication`. El tercero, *author*, se almacena en un campo privado `authorName`. Un constructor incluye un parámetro *isbn*, que se almacena en un campo privado `id`.
+  Los dos constructores `Book` comparten tres parámetros comunes. Dos, *title* y *publisher*, corresponden a los parámetros del constructor `Publication`. El tercero, *author*, se almacena en un campo privado `authorName`. Un constructor incluye un parámetro *isbn*, que se almacena en la propiedad automática `ISBN`.
 
-  El primer constructor usa [esta](../language-reference/keywords/this.md) palabra clave para llamar al otro constructor. Este es un patrón común en la definición de constructores; los constructores con menos parámetros proporcionan valores predeterminados al llamar al constructor con el mayor número de parámetros.
+  El primer constructor usa [esta](../language-reference/keywords/this.md) palabra clave para llamar al otro constructor. Se trata de un patrón común en la definición de constructores. Los constructores con menos parámetros proporcionan valores predeterminados al llamar al constructor con el mayor número de parámetros.
 
   El segundo constructor usa la palabra clave [base](../language-reference/keywords/base.md) para pasar el título y el nombre del editor al constructor de clase base. Si no realiza una llamada explícita a un constructor de clase base en el código fuente, el compilador de C# proporciona automáticamente una llamada al constructor sin parámetros o predeterminado de la clase base.
 
-- Una propiedad `ISBN` de solo lectura, que devuelve el ISBN (International Standard Book Number) del objeto `Book`, un número exclusivo de 10 y 13 caracteres. El ISBN se proporciona como argumento para uno de los constructores `Book` y se almacena en el campo privado `id`.
+- Una propiedad `ISBN` de solo lectura, que devuelve el ISBN (International Standard Book Number) del objeto `Book`, un número exclusivo de 10 y 13 caracteres. El ISBN se proporciona como argumento para uno de los constructores `Book`. El ISBN se almacena en un campo de respaldo privado, generado automáticamente por el compilador.
 
 - Una propiedad `Author` de solo lectura. El nombre del autor se proporciona como argumento para ambos constructores `Book` y se almacena en el campo privado `authorName`.
 
