@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 56e22638457017688ff380f6683b463b47c53a17
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="nullable-types-c-programming-guide"></a>Tipos que aceptan valores NULL (Guía de programación de C#)
@@ -83,7 +83,7 @@ Para obtener más ejemplos, vea [Utilizar tipos que aceptan valores NULL](../../
 ## <a name="see-also"></a>Vea también  
  <xref:System.Nullable>   
  [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
+ [C#](../../../csharp/index.md)   
  [Referencia de C#](../../../csharp/language-reference/index.md)   
  [¿Qué significa exactamente "elevado"?](http://go.microsoft.com/fwlink/?LinkId=112382)
 
