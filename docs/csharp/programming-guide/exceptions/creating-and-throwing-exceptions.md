@@ -1,5 +1,5 @@
 ---
-title: "Crear y producir excepciones (Guía de programación de C#) | Microsoft Docs"
+title: "Crear y producir excepciones (Guía de programación de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3eab50a6a785676dd397498fbe95348187e2b7e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
@@ -50,19 +50,19 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
   
 -   Se realiza una llamada inadecuada a un objeto, en función del estado del objeto.  
   
-     Un ejemplo podría ser intentar escribir en un archivo de solo lectura. En los casos en los que un estado de objeto no admite una operación, produzca una instancia de <xref:System.InvalidOperationException> o un objeto basado en una derivación de esta clase. Este es un ejemplo de un método que produce un objeto <xref:System.InvalidOperationException>:  
+     Un ejemplo podría ser intentar escribir en un archivo de solo lectura. En los casos en los que un estado de objeto no admite una operación, produzca una instancia de <xref:System.InvalidOperationException> o un objeto basado en una derivación de esta clase. Este es un ejemplo de un método que genera un objeto <xref:System.InvalidOperationException>:  
   
      [!code-cs[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
   
 -   Cuando un argumento de un método genera una excepción.  
   
-     En este caso, se debe detectar la excepción original y se debe crear una instancia de <xref:System.ArgumentException>. La excepción original se debe pasar al constructor de <xref:System.ArgumentException> como el parámetro <xref:System.Exception.InnerException%2A>:  
+     En este caso, se debe detectar la excepción original y se debe crear una instancia de <xref:System.ArgumentException>. La excepción original debe pasarse al constructor de <xref:System.ArgumentException> como el parámetro <xref:System.Exception.InnerException%2A>:  
   
      [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
  Las excepciones contienen una propiedad denominada <xref:System.Exception.StackTrace%2A>. Esta cadena contiene el nombre de los métodos de la pila de llamadas actual, junto con el nombre de archivo y el número de la línea en la que se ha producido la excepción para cada método. Common Language Runtime (CLR) crea automáticamente un objeto <xref:System.Exception.StackTrace%2A> desde el punto de la instrucción `throw`, de manera que todas las excepciones se deben producir desde el punto en el que debe comenzar el seguimiento de la pila.  
   
- Todas las excepciones contienen una propiedad denominada <xref:System.Exception.Message%2A>. Esta cadena debe establecerse para que explique el motivo de la excepción. Tenga en cuenta que no se debe colocar información confidencial en materia de seguridad en el texto del mensaje. Además de <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contiene una propiedad denominada <xref:System.ArgumentException.ParamName%2A> que debe establecerse como el nombre del argumento que ha provocado la excepción que se va a producir. En el caso de un establecedor de propiedad, <xref:System.ArgumentException.ParamName%2A> debe configurarse como `value`.  
+ Todas las excepciones contienen una propiedad denominada <xref:System.Exception.Message%2A>. Esta cadena debe establecerse para que explique el motivo de la excepción. Tenga en cuenta que no se debe colocar información confidencial en materia de seguridad en el texto del mensaje. Además de <xref:System.Exception.Message%2A>, <xref:System.ArgumentException> contiene una propiedad denominada <xref:System.ArgumentException.ParamName%2A> que debe establecerse en el nombre del argumento que ha provocado que se genere la excepción. En el caso de un establecedor de propiedades, <xref:System.ArgumentException.ParamName%2A> debe establecerse en `value`.  
   
  Los miembros de métodos públicos y protegidos deben producir excepciones cada vez que no puedan finalizar sus funciones previstas. La clase de excepciones que se produce debe ser la excepción más específica disponible que se ajuste a las condiciones del error. Estas excepciones se deben documentar como parte de la funcionalidad de la clase, y las clases derivadas o actualizaciones de la clase original deben mantener el mismo comportamiento para la compatibilidad con versiones anteriores.  
   
@@ -73,7 +73,7 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
   
 -   Las excepciones no se deben devolver como un parámetro o valor devuelto en lugar de producirse.  
   
--   No produzca <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> ni <xref:System.IndexOutOfRangeException?displayProperty=fullName> intencionadamente desde su propio código fuente.  
+-   No genere <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> o <xref:System.IndexOutOfRangeException?displayProperty=fullName> de manera intencionada desde su propio código fuente.  
   
 -   No cree excepciones que se puedan producir en el modo de depuración, pero no en el modo de lanzamiento. Para identificar los errores en tiempo de ejecución durante la fase de desarrollo, use la aserción de depuración.  
   
@@ -92,3 +92,4 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
  [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)   
  [Exception Hierarchy](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  (Jerarquía de excepciones)  
  [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

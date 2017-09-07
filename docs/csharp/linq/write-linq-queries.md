@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e08c8e3594bedeab763895c8b6f7d78a2bbf56d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -40,7 +41,7 @@ Este tema muestra las tres formas de escribir una consulta LINQ en C#:
   
  [!code-cs[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
   
- Observe que el tipo de las consultas es <xref:System.Collections.Generic.IEnumerable%601>. Todas estas consultas podrían escribirse mediante `var` como se muestra en el ejemplo siguiente:  
+ Tenga en cuenta que el tipo de las consultas es <xref:System.Collections.Generic.IEnumerable%601>. Todas estas consultas podrían escribirse mediante `var` como se muestra en el ejemplo siguiente:  
   
  `var query = from num in numbers...`  
   
@@ -49,7 +50,7 @@ Este tema muestra las tres formas de escribir una consulta LINQ en C#:
 ## <a name="example"></a>Ejemplo  
   
 ## <a name="method-syntax"></a>Sintaxis de método  
- Algunas operaciones de consulta deben expresarse como una llamada a método. Los métodos más comunes son aquellos que devuelven valores numéricos de singleton, como <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>, etc. A estos métodos siempre se los debe llamar en último lugar en cualquier consulta porque representan un solo valor y no pueden servir como origen para una operación de consulta adicional. En el ejemplo siguiente se muestra una llamada a método en una expresión de consulta:  
+ Algunas operaciones de consulta deben expresarse como una llamada a método. Los más comunes de dichos métodos son los que devuelven valores numéricos de singleton, como <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> y así sucesivamente. A estos métodos siempre se los debe llamar en último lugar en cualquier consulta porque representan un solo valor y no pueden servir como origen para una operación de consulta adicional. En el ejemplo siguiente se muestra una llamada a método en una expresión de consulta:  
   
  [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
@@ -58,7 +59,7 @@ Este tema muestra las tres formas de escribir una consulta LINQ en C#:
   
  [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
- En las consultas anteriores, solo la número 4 se ejecuta inmediatamente. Esto es porque devuelve un solo valor y no una colección genérica <xref:System.Collections.Generic.IEnumerable%601>. El propio método tiene que usar `foreach` para calcular su valor.  
+ En las consultas anteriores, solo la número 4 se ejecuta inmediatamente. Esto se debe a que devuelve un valor único, y no una colección <xref:System.Collections.Generic.IEnumerable%601> genérica. El propio método tiene que usar `foreach` para calcular su valor.  
   
  Cada una de las consultas anteriores puede escribirse mediante tipos implícitos con [var](../language-reference/keywords/var.md), como se muestra en el ejemplo siguiente:  
   
@@ -95,3 +96,4 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   [Tutorial: Escribir consultas en C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [Expresiones de consulta LINQ](index.md)   
  [where (cláusula)](../language-reference/keywords/where-clause.md)
+

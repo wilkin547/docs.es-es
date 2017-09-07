@@ -1,5 +1,5 @@
 ---
-title: "Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic) | Microsoft Docs"
+title: "Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Determinar el lugar en el que My.Application.Log escribe la información (Visual Basic)
@@ -50,7 +50,7 @@ El objeto `My.Application.Log` puede escribir información en varios agentes de 
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Para determinar los agentes de escucha de My.Application.Log  
   
-1.  Busque el archivo de configuración del ensamblado. Si está desarrollando el ensamblado, puede acceder a app.config en [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] desde el **Explorador de soluciones**. De lo contrario, el nombre del archivo de configuración es el nombre del ensamblado con ".config" anexado, que se encuentra en el mismo directorio que el ensamblado.  
+1.  Busque el archivo de configuración del ensamblado. Si está desarrollando el ensamblado, puede acceder a app.config en [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] desde el **Explorador de soluciones**. De lo contrario, el nombre del archivo de configuración es el nombre del ensamblado con ".config" anexado, que se encuentra en el mismo directorio que el ensamblado.  
   
     > [!NOTE]
     >  No todos los ensamblados tienen un archivo de configuración.  
@@ -61,7 +61,7 @@ El objeto `My.Application.Log` puede escribir información en varios agentes de 
   
      Si estas secciones no existen, el archivo de configuración del equipo puede configurar los agentes de escucha de registro `My.Application.Log` . En los pasos siguientes se describe cómo determinar qué define el archivo de configuración del equipo:  
   
-    1.  Busque el archivo machine.config del equipo. Normalmente, se encuentra en el directorio *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , donde `SystemRoot` es el directorio del sistema operativo y `frameworkVersion` es la versión de [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    1.  Busque el archivo machine.config del equipo. Normalmente, se encuentra en el directorio *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* , donde `SystemRoot` es el directorio del sistema operativo y `frameworkVersion` es la versión de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
          La configuración de machine.config puede reemplazarse por un archivo de configuración de la aplicación.  
   
@@ -81,9 +81,9 @@ El objeto `My.Application.Log` puede escribir información en varios agentes de 
   
     -   Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> escribe en un registro de archivos, como se describe en la introducción.  
   
-    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData`. Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData` . Para ver un registro de eventos, puede usar el **Explorador de servidores** o el **Visor de eventos de Windows**. Para obtener más información, consulta [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
-    -   Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> escriben en el archivo especificado en el parámetro `initializeData`.  
+    -   Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> escriben en el archivo especificado en el parámetro `initializeData` .  
   
     -   Un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> escribe en la consola de línea de comandos.  
   
@@ -103,3 +103,4 @@ El objeto `My.Application.Log` puede escribir información en varios agentes de 
  [Tutorial: Cambiar el lugar donde My.Application.Log escribe la información](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [Eventos ETW en .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
  [Solución de problemas: Agentes de escucha de registro](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

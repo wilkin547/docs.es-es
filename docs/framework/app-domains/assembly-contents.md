@@ -1,5 +1,5 @@
 ---
-title: Contenido de los ensamblados | Microsoft Docs
+title: Contenido de los ensamblados
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e1268744a8a5334fafb2c40c111c480dd30ddd9b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 864e90fea6eb3e65a5a35a9eac38eaecf2299e41
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assembly-contents"></a>Contenido de los ensamblados
@@ -62,3 +62,4 @@ Ensamblado de múltiples archivos
  [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [Manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md)   
  [Consideraciones de seguridad sobre ensamblados](../../../docs/framework/app-domains/assembly-security-considerations.md)
+

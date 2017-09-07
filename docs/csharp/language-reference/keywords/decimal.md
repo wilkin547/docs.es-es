@@ -1,5 +1,5 @@
 ---
-title: decimal (Referencia de C#) | Microsoft Docs
+title: decimal (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,24 +30,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c06d14f01302a21427845d0269fc8181a380914
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal (Referencia de C#)
-La palabra clave `decimal` indica un tipo de datos de 128 bits. Comparado con los tipos de punto flotante, el tipo `decimal` tiene una mayor precisión y un intervalo más reducido, lo que lo hace adecuado para los cálculos financieros y monetarios. El intervalo aproximado y la precisión para el tipo `decimal` se muestran en la siguiente tabla.  
+La palabra clave `decimal` indica un tipo de datos de 128 bits. Comparado con otros tipos de punto flotante, el tipo `decimal` tiene una mayor precisión y un intervalo más reducido, lo que lo hace adecuado para los cálculos financieros y monetarios. El intervalo aproximado y la precisión para el tipo `decimal` se muestran en la siguiente tabla.  
   
 |Tipo|Intervalo aproximado|Precisión|Tipo de .NET Framework|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(de -7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0 a 28</sup>)|28-29 dígitos significativos|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|(-7,9 x 10<sup>28</sup> a 7,9 x 10<sup>28</sup>) / (10<sup>0</sup> a 10<sup>28</sup>)|28-29 dígitos significativos|<xref:System.Decimal?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literales  
  Si desea que un literal real numérico se trate como `decimal`, use el sufijo m o M; por ejemplo:  
   
-```  
+```csharp
 decimal myMoney = 300.5m;  
 ```  
   
@@ -56,19 +56,19 @@ decimal myMoney = 300.5m;
 ## <a name="conversions"></a>Conversiones  
  Los tipos enteros se convierten implícitamente en `decimal` y el resultado se evalúa como `decimal`. Por consiguiente, es posible inicializar una variable decimal mediante un literal entero, sin el sufijo, de la manera siguiente:  
   
-```  
+```csharp
 decimal myMoney = 300;  
 ```  
   
- No hay una conversión implícita entre los tipos de punto flotante y el tipo `decimal`; por lo tanto, se debe usar una conversión entre ambos. Por ejemplo:  
+ No hay una conversión implícita entre otros tipos de punto flotante y el tipo `decimal`; por lo tanto, se debe usar una conversión entre ambos. Por ejemplo:  
   
-```  
-      decimal myMoney = 99.9m;  
+```csharp
+decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
 ```  
   
- Asimismo, puede mezclar `decimal` y tipos enteros numéricos en la misma expresión. No obstante, al mezclar `decimal` y tipos de punto flotante sin una conversión se produce un error de compilación.  
+ Asimismo, puede mezclar `decimal` y tipos enteros numéricos en la misma expresión. En cambio, al mezclar `decimal` y otros tipos de punto flotante sin una conversión se produce un error de compilación.  
   
  Para obtener más información sobre las conversiones numéricas implícitas, consulte [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -105,7 +105,7 @@ Console.WriteLine((double)dec + dub);
  [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Decimal>   

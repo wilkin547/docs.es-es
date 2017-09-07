@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Detectar errores de análisis (C#) | Microsoft Docs"
+title: "Cómo: Detectar errores de análisis (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf9469a328d80cca95fc5da2b143a494490089c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 240bc9770475bdf7b6da2102bd8b552a0991eea6
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Cómo: Detectar errores de análisis (C#)
 En este tema se describe cómo detectar XML no válido o mal formado.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] se implementa usando <xref:System.Xml.XmlReader>. Si se pasa a [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] un XML no válido o con un formato incorrecto, la clase <xref:System.Xml.XmlReader> subyacente producirá una excepción. Los diferentes métodos que analizan XML, como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, no detectan la excepción, que puede detectarla luego la aplicación.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se implementa con <xref:System.Xml.XmlReader>. Si se pasa XML no válido o mal formado a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], la clase <xref:System.Xml.XmlReader> subyacente iniciará una excepción. Los diferentes métodos que analizan XML, como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName> no detectan la excepción; la excepción se propaga de forma que la aplicación pueda detectarla.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente código intenta analizar XML no válido:  
@@ -56,7 +57,8 @@ catch (System.Xml.XmlException e)
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- Para obtener información sobre las excepciones que puede esperar que produzcan los métodos <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> y <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, consulte la documentación de <xref:System.Xml.XmlReader>.  
+ Para obtener información acerca de las excepciones que puede esperar que devuelva los métodos <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> y <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, vea la documentación de <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>Vea también  
- [Parsing XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md) (Analizar XML [C#])
+ [Analizar XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

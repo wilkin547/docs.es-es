@@ -1,26 +1,45 @@
 ---
-title: "Tabla de tipos integrados (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "tipos integrados de C#"
-  - "tipos [C#], integrados"
+title: Tabla de tipos integrados (Referencia de C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- types [C#], built-in
+- built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
 caps.latest.revision: 12
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 12
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df13a45544491dee9e592a4ab0b90b5235f12abc
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# Tabla de tipos integrados (Referencia de C#)
-La siguiente tabla muestra las palabras clave para los tipos integrados de C\#, las cuales son alias de tipos predefinidos en el espacio de nombres <xref:System>.  
+# <a name="built-in-types-table-c-reference"></a>Tabla de tipos integrados (Referencia de C#)
+En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>.  
   
-|Tipo de C\#|Tipo de .NET Framework|  
-|-----------------|----------------------------|  
+|Tipo de C#|Tipo de .NET Framework|  
+|--------------|-------------------------|  
 |[bool](../../../csharp/language-reference/keywords/bool.md)|`System.Boolean`|  
 |[byte](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
@@ -28,39 +47,40 @@ La siguiente tabla muestra las palabras clave para los tipos integrados de C\#, 
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
 |[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
 |[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
-|[Valor int.](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
+|[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
-|[Objeto.](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
+|[object](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
 |[short](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
 |[string](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
   
-## Comentarios  
- Todos los tipos de la tabla, excepto `object` y `string`, se conocen como tipos simples.  
+## <a name="remarks"></a>Comentarios  
+ A todos los tipos de la tabla, excepto `object` y `string`, se les hace referencia como tipos simples.  
   
- Las palabras clave de tipos de C\# y sus alias son intercambiables.  Por ejemplo, se puede declarar una variable entera de cualquiera de estas dos formas:  
+ Las palabras clave de tipo de C# y sus alias son intercambiables. Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:  
   
 ```  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
- Para mostrar el tipo real de cualquier tipo de C\#, utilice el método del sistema `GetType()`.  Por ejemplo, la siguiente instrucción muestra el alias de sistema que representa el tipo de `myVariable`:  
+ Para mostrar el tipo actual de cualquier tipo de C#, use el método del sistema `GetType()`. Por ejemplo, la instrucción siguiente muestra el alias de sistema que representa el tipo de `myVariable`:  
   
 ```  
 Console.WriteLine(myVariable.GetType());  
 ```  
   
- También se puede utilizar el operador [typeof](../../../csharp/language-reference/keywords/typeof.md).  
+ También puede usar el operador [typeof](../../../csharp/language-reference/keywords/typeof.md).  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)   
- [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
+ [Value Types](../../../csharp/language-reference/keywords/value-types.md)  (Tipos de valor [Referencia de C#])  
  [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md)   
  [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
  [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+

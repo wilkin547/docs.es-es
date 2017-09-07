@@ -1,5 +1,5 @@
 ---
-title: "Cómo: Crear ensamblados de confianza con signo (C#) | Microsoft Docs"
+title: "Cómo: Crear ensamblados de confianza con signo (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 890cead4b28b8532dd7bd7f571defe7e280e4cdc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Cómo: Crear ensamblados de confianza con signo (C#)
@@ -46,7 +47,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Cree un archivo de C# con el nombre `friend_signed_A` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
+3.  Cree un archivo de C# denominado `friend_signed_A` que incluya el siguiente código. El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.  
   
      La herramienta de nombre seguro genera una nueva clave pública cada vez que se ejecuta. Por tanto, debe reemplazar la clave pública en el código siguiente con la clave pública que acaba de generar, como se muestra en el ejemplo siguiente.  
   
@@ -95,14 +96,14 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
     ```  
   
-     El nombre del ensamblado generado por el compilador debe coincidir con el nombre de ensamblado de confianza pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida (.exe o .dll) mediante la opción `/out` del compilador.  Para obtener más información, consulte [/out (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
+     El nombre del ensamblado generado por el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Debe especificar explícitamente el nombre del ensamblado de salida (.exe o .dll) mediante la opción `/out` del compilador.  Para obtener más información, consulte [/out (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
 7.  Ejecute el archivo friend_signed_B.exe.  
   
      El programa imprime la cadena "Class1.Test".  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Hay similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La principal diferencia es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede solicitar permisos de seguridad para ejecutar una sección concreta del código, mientras que el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los tipos y miembros de `internal`.  
+ Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal`.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
@@ -113,3 +114,4 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
  [Sn.exe (Herramienta de nombre seguro)](https://msdn.microsoft.com/library/k5b5tt23)   
  [Crear y utilizar ensamblados con nombre seguro](https://msdn.microsoft.com/library/xwb8f617)   
  [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+

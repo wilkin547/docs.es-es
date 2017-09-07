@@ -1,24 +1,28 @@
 ---
-title: "Elementos esenciales de aplicaciones .NET Framework | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "desarrollo de .NET Framework"
+title: Elementos esenciales de aplicaciones .NET Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elementos esenciales de aplicaciones .NET Framework
+# <a name="net-framework-application-essentials"></a>Elementos esenciales de aplicaciones .NET Framework
 Esta sección de la documentación de .NET Framework proporciona información sobre las tareas básicas de desarrollo de aplicaciones en .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
@@ -40,8 +44,8 @@ Esta sección de la documentación de .NET Framework proporciona información so
  [Excepciones](../../docs/standard/exceptions/index.md)  
  Describe el control de errores suministrado por .NET Framework y los fundamentos del control de excepciones.  
   
- [Archivo y secuencia I-Os](../../docs/standard/io/index.md)  
- Explica cómo puede realizar el acceso sincrónico y asincrónico a archivos y flujos de datos, y cómo utilizar el almacenamiento aislado.  
+ [E/S de archivos y secuencias](../../docs/standard/io/index.md)  
+ Explica cómo puede realizar el acceso sincrónico y asincrónico a archivos y flujos de datos, y cómo usar el almacenamiento aislado.  
   
  [Fechas, horas y zonas horarias](../../docs/standard/datetime/index.md)  
  Describe cómo trabajar con zonas horarias y conversiones de la zona horaria en aplicaciones que tienen en cuenta la zona horaria.  
@@ -49,10 +53,10 @@ Esta sección de la documentación de .NET Framework proporciona información so
  [Dominios de aplicación y ensamblados](../../docs/framework/app-domains/index.md)  
  Describe cómo crear y trabajar con ensamblados y dominios de aplicación.  
   
- [Serialización](../../docs/framework/serialization/index.md)  
+ [Serialización](../../docs/standard/serialization/index.md)  
  Explica el proceso de convertir el estado de un objeto en un formato que se pueda almacenar o transportar.  
   
- [Recursos en aplicaciones de escritorio](../../docs/framework/resources/index.md)  
+ [Recursos de aplicaciones de escritorio](../../docs/framework/resources/index.md)  
  Describe la compatibilidad de .NET Framework para crear y almacenar recursos. En esta sección también se describe la compatibilidad con los recursos adaptados y el modelo de recursos de ensamblado satélite para empaquetar e implementar dichos recursos adaptados.  
   
  [Globalización y localización](../../docs/standard/globalization-localization/index.md)  
@@ -64,7 +68,7 @@ Esta sección de la documentación de .NET Framework proporciona información so
  [Atributos](../../docs/standard/attributes/index.md)  
  Describe cómo puede utilizar atributos para personalizar los metadatos.  
   
- [Aplicaciones de&64; bits](../../docs/framework/64-bit-apps.md)  
+ [Aplicaciones de 64 bits](../../docs/framework/64-bit-apps.md)  
  Describe temas relacionados con el desarrollo de aplicaciones que se ejecutarán en un sistema operativo Windows de 64 bits.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
@@ -73,3 +77,4 @@ Esta sección de la documentación de .NET Framework proporciona información so
   
  [Seguridad](../../docs/standard/security/index.md)  
  Proporciona información sobre las clases y los servicios de Common Language Runtime y de .NET Framework que facilitan el desarrollo de aplicaciones seguras.
+

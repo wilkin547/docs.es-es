@@ -26,10 +26,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a396280e1095497b86e4792f4debb9cf0435f50
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Operadores condicionales null (C# y Visual Basic)
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- El último ejemplo demuestra que los operadores de condición null se están cortocircuitando.  Si una operación en una cadena de la operación de índice y de acceso a miembros condicional devuelve null, se detiene el resto de la ejecución de la cadena.  Seguirán ejecutándose las demás operaciones de menor prioridad en la expresión.  Por ejemplo, `E` en la siguiente siempre se ejecuta y las operaciones `??` y `==` se ejecutan.  
+ El último ejemplo demuestra que los operadores de condición null se están cortocircuitando.  Si una operación en una cadena de la operación de índice y de acceso a miembros condicional devuelve null, se detiene el resto de la ejecución de la cadena.  Seguirán ejecutándose las demás operaciones de menor prioridad en la expresión.  Por ejemplo, `E` en la siguiente operación se ejecuta en la segunda línea y las operaciones `??` y `==` se ejecutan.  En la primera línea, `??` se cortocircuita y `E` no se ejecuta cuando el lado izquierdo se evalúa como no null.
   
 ```csharp
 A?.B?.C?[0] ?? E  

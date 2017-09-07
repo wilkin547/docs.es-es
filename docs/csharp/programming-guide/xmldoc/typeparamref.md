@@ -1,44 +1,64 @@
 ---
-title: "&lt;typeparamref&gt; (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "typeparamref"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<typeparamref> (etiqueta XML) [C#]"
-  - "typeparamref (etiqueta XML) [C#]"
+title: "&lt;typeparamref&gt; (Guía de programación de C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- typeparamref
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- typeparamref C# XML tag
+- <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce2aba7a14047066decf85675233a48a08bfd605
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;typeparamref&gt; (Gu&#237;a de programaci&#243;n de C#)
-## Sintaxis  
+# <a name="lttypeparamrefgt-c-programming-guide"></a>&lt;typeparamref&gt; (Guía de programación de C#)
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```xml  
 <typeparamref name="name"/>  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `name`  
- Nombre del parámetro de tipo.  Ponga el nombre entre comillas dobles \(" "\).  
+ Nombre del parámetro de tipo. Ponga el nombre entre comillas dobles (" ").  
   
-## Comentarios  
- Para obtener más información sobre los parámetros de tipo en tipos y métodos genéricos, vea [Genéricos](../../../csharp/programming-guide/generics/index.md).  
+## <a name="remarks"></a>Comentarios  
+ Para obtener más información sobre los parámetros de tipo en métodos y tipos genéricos, vea [Genéricos](../../../csharp/programming-guide/generics/index.md).  
   
- Utilice esta etiqueta para permitir a los consumidores del archivo de documentación dar formato a la palabra de una manera distinta, por ejemplo en cursiva.  
+ Use esta etiqueta para permitir que los consumidores del archivo de documentación den formato a la palabra de alguna manera distinta, por ejemplo en cursiva.  
   
- Compile con el parámetro [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-cs[csProgGuideDocComments#13](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/typeparamref_1.cs)]  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

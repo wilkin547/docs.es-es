@@ -1,5 +1,5 @@
 ---
-title: throw (Referencia de C#) | Microsoft Docs
+title: throw (Referencia de C#)
 ms.date: 2015-03-02
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 095a86f5ab2ce50f5931643161a44b5759583e4e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="throw-c-reference"></a>throw (Referencia de C#)
@@ -94,3 +94,4 @@ A partir de C# 7, se puede usar `throw` como una expresión y como una instrucci
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Instrucciones para el control de excepciones](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [Cómo: Iniciar excepciones explícitamente](https://msdn.microsoft.com/library/xhcbs8fz)
+

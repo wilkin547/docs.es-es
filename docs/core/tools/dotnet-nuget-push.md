@@ -1,28 +1,26 @@
 ---
-title: 'Comando dotnet-nuget-push: CLI de .NET Core'
-description: El comando dotnet-nuget-push inserta un paquete en el servidor y lo publica.
-keywords: dotnet-nuget-push, CLI, comando de la CLI, .NET Core
+title: 'Comando dotnet nuget push: CLI de .NET Core'
+description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 83da967d9d7432fcb422b88344ff597d45fc9e85
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-# <a name="dotnet-nuget-push"></a>dotnet-nuget push
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nombre
 
-`dotnet-nuget push`: inserta un paquete en el servidor y lo publica.
+`dotnet nuget push`: inserta un paquete en el servidor y lo publica.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -42,7 +40,7 @@ Especifica la ruta de acceso al paquete y su clave de API para insertar el paque
 
 `-h|--help`
 
-Imprime una corta ayuda para el comando.  
+Imprime una corta ayuda para el comando.
 
 `-s|--source <SOURCE>`
 
@@ -84,11 +82,11 @@ Inserta *foo.nupkg* para adoptar como predeterminado el origen de inserción, y 
 
 Inserta *foo.nupkg* en el origen de inserción personalizado `http://customsource`, y proporciona una clave de API:
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/` 
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
 Inserta *foo.nupkg* en el origen de inserción predeterminado:
 
-`dotnet nuget push foo.nupkg` 
+`dotnet nuget push foo.nupkg`
 
 Inserta *foo.symbols.nupkp* en el origen de símbolos predeterminado:
 

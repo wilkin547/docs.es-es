@@ -1,28 +1,26 @@
 ---
-title: 'Comando dotnet-migrate: CLI de .NET Core'
-description: El comando dotnet-migrate migra un proyecto y todas sus dependencias.
-keywords: dotnet-migrate, CLI, comando de la CLI, .NET Core
-author: blackdwarf
+title: 'Comando dotnet migrate: CLI de .NET Core'
+description: El comando dotnet migrate migra un proyecto y todas sus dependencias.
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8491d69b2e0df7b3bd2741e34abdb9631777019
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-migrate"></a>dotnet migrate
 
-# <a name="dotnet-migrate"></a>dotnet-migrate
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nombre
 
-`dotnet-migrate`: migra un proyecto .NET Core de la versión preliminar 2 a un proyecto del SDK 1.0 de .NET Core.
+`dotnet migrate`: migra un proyecto .NET Core de la versión preliminar 2 a un proyecto del SDK 1.0 de .NET Core.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -41,7 +39,7 @@ La migración se realiza en:
 * Un archivo *solution.sln*, donde se migran los proyectos a los que se hace referencia en la solución.
 * Todos los subdirectorios del directorio dado de manera recursiva.
 
-El comando `dotnet migrate` mantiene el archivo *project.json* migrado dentro de un directorio `backup`, que se crea en caso de que no exista. Este comportamiento se invalida mediante la opción `--skip-backup`. 
+El comando `dotnet migrate` mantiene el archivo *project.json* migrado dentro de un directorio `backup`, que se crea en caso de que no exista. Este comportamiento se invalida mediante la opción `--skip-backup`.
 
 De forma predeterminada, la operación de migración genera el estado del proceso de migración a la salida estándar (STDOUT). Si usa la opción `--report-file <REPORT_FILE>`, la salida se guarda en el archivo especificado. 
 
@@ -64,11 +62,11 @@ Si no se especifica nada, se toma como valor predeterminado el directorio actual
 
 `-h|--help`
 
-Imprime una corta ayuda para el comando.  
+Imprime una corta ayuda para el comando.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-Archivo csproj de plantilla que se utilizará para la migración. De forma predeterminada, se usa la misma plantilla que la descartada por `dotnet new console`. 
+Archivo csproj de plantilla que se utilizará para la migración. De forma predeterminada, se usa la misma plantilla que la descartada por `dotnet new console`.
 
 `-v|--sdk-package-version <VERSION>`
 
@@ -107,4 +105,3 @@ Migrar todos los proyectos que incluyen el archivo *global.json*:
 Migrar solo el proyecto actual y ninguna dependencia de proyecto a proyecto (P2P). Además, usar una versión específica de SDK:
 
 `dotnet migrate -s -v 1.0.0-preview4`
-

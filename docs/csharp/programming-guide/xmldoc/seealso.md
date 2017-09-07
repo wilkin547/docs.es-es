@@ -1,49 +1,69 @@
 ---
-title: "&lt;seealso&gt; (Gu&#237;a de programaci&#243;n de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "cref"
-  - "<seealso>"
-  - "seealso"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<seealso> (etiqueta XML) [C#]"
-  - "cref [C#]"
-  - "cref [C#], véase también"
-  - "referencias cruzadas [C#], etiquetas"
-  - "seealso (etiqueta XML) [C#]"
+title: "&lt;seealso&gt; (Guía de programación de C#)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- cref
+- <seealso>
+- seealso
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- cref [C#], see also
+- seealso C# XML tag
+- cref [C#]
+- cross-references [C#], tags
+- <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
 caps.latest.revision: 11
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 11
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7b4686ba83d2caedcc6c93ad8877d1da671d10d4
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;seealso&gt; (Gu&#237;a de programaci&#243;n de C#)
-## Sintaxis  
+# <a name="ltseealsogt-c-programming-guide"></a>&lt;seealso&gt; (Guía de programación de C#)
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```xml  
 <seealso cref="member"/>  
 ```  
   
-#### Parámetros  
- cref \= "`member`"  
- Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual.  El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member` debe aparecer entre comillas dobles \(" "\).  
+#### <a name="parameters"></a>Parámetros  
+ cref = "`member`"  
+ Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML.`member`  debe aparecer entre comillas dobles (" ").  
   
- Para obtener información sobre cómo crear una referencia de tipo cref a un tipo genérico, vea [\<see\>](../../../csharp/programming-guide/xmldoc/see.md).  
+ Para obtener información sobre cómo crear una referencia cref a un tipo genérico, vea [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
   
-## Comentarios  
- La etiqueta \<seealso\> permite especificar el texto que se desea que aparezca en una sección Vea también.  Utilice [\<see\>](../../../csharp/programming-guide/xmldoc/see.md) para especificar un vínculo desde dentro del texto.  
+## <a name="remarks"></a>Comentarios  
+ La etiqueta \<seealso> le permite especificar el texto que quiere que aparezca en una sección Vea también. Use [\<see>](../../../csharp/programming-guide/xmldoc/see.md) para especificar un vínculo desde dentro del texto.  
   
- Compile con el parámetro [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
   
-## Ejemplo  
- Vea [\<summary\>](../../../csharp/programming-guide/xmldoc/summary.md) para obtener un ejemplo del uso de \<seealso\>.  
+## <a name="example"></a>Ejemplo  
+ Vea [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) para obtener un ejemplo del uso de \<seealso>.  
   
-## Vea también  
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
  [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

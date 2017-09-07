@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.sourcegitcommit: 0dc2fcee3903b80816c98bab47e2b9a2e5ef78b0
+ms.openlocfilehash: 2ec2f07dda8979ca6def0648aae1ef23a8df6369
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="c-operators"></a>operadores de C#
@@ -80,7 +80,7 @@ C# proporciona muchos operadores, que son símbolos que especifican las operacio
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md): deshabilita la comprobación de desbordamiento para operaciones con enteros.  Este es el comportamiento predeterminado del compilador.  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md): devuelve el valor inicializado predeterminado de tipo T, `null` para tipos de referencia, cero para tipos numéricos y cero o `null` en miembros para tipos de estructura.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md): devuelve el valor predeterminado de tipo T, `null` para tipos de referencia, cero para tipos numéricos y cero o `null` en miembros para tipos de estructura.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md): declara y devuelve una instancia de delegado.  
   

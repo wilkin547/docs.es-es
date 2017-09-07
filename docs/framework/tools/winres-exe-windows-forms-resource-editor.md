@@ -1,5 +1,5 @@
 ---
-title: Winres.exe (Editor de recursos de Windows Forms) | Microsoft Docs
+title: Winres.exe (Editor de recursos de Windows Forms)
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Editor de recursos de Windows Forms)
@@ -146,7 +146,7 @@ winres /?
   
 4.  Para guardar la versión adaptada del archivo .resx o .resources, haga clic en el icono **Guardar** o en el mismo comando en el menú **Archivo**. En la herramienta se mostrará la ventana **Seleccionar referencia cultural**.  
   
-5.  Seleccione la referencia cultural adecuada y el modo de archivo y haga clic en **Aceptar**. La herramienta guardará el archivo, utilizando la convención de nomenclatura que el motor en tiempo de ejecución espera para los archivos de recursos adaptados. Por ejemplo, si adapta `TestApp.resources` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resources`. Si adapta `TestApp.resx` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resx`. Para obtener más información sobre las convenciones de nomenclatura de recursos, vea [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos). Para obtener una lista de los nombres de referencias culturales predefinidos que usa el tiempo de ejecución, vea [Clase CultureInfo](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx).  
+5.  Seleccione la referencia cultural adecuada y el modo de archivo y haga clic en **Aceptar**. La herramienta guardará el archivo, utilizando la convención de nomenclatura que el motor en tiempo de ejecución espera para los archivos de recursos adaptados. Por ejemplo, si adapta `TestApp.resources` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resources`. Si adapta `TestApp.resx` para alemán de Alemania, la herramienta guardará el archivo como `TestApp.de-DE.resx`. Para obtener más información sobre las convenciones de nomenclatura de recursos, vea [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos). Para obtener una lista de los nombres de referencias culturales predefinidos que usa el tiempo de ejecución, vea la clase <xref:System.Globalization.CultureInfo>.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -157,3 +157,4 @@ winres /?
  [Herramientas](../../../docs/framework/tools/index.md)   
  [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)   
  [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+

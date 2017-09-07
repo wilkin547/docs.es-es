@@ -1,5 +1,5 @@
 ---
-title: /addmodule (Opciones del compilador de C#) | Microsoft Docs
+title: -addmodule (Opciones del compilador de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 614dbefbb472ef2cd03fcb1ba7a44f08c450bf4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79fdad111b1f059e6a3b00e393ea2474f71db947
 ms.contentlocale: es-es
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="addmodule-c-compiler-options"></a>/addmodule (Opciones del compilador de C#)
@@ -69,6 +69,7 @@ csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs
   
 ## <a name="see-also"></a>Vea también  
  [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB Cómo: Modificar las propiedades y los valores de configuración del proyecto](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)   
  [Ensamblados de múltiples archivos](../../../framework/app-domains/multifile-assemblies.md)   
  [Compilar un ensamblado de varios archivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+

@@ -110,7 +110,7 @@ donde `int` es un parámetro de entrada y `bool` es el valor devuelto. El valor 
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-También puede proporcionar una expresión lambda cuando el tipo de argumento es @System.Linq.Expressions.Expression%601 (por ejemplo, en los operadores de consulta estándar que se definen en el tipo @System.Linq.Queryable). Al especificar un argumento @System.Linq.Expressions.Expression%601, la lambda se compila en un árbol de expresión. En el ejemplo siguiente se usa el operador de consulta estándar [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
+También puede proporcionar una expresión lambda cuando el tipo de argumento es @System.Linq.Expressions.Expression%601 (por ejemplo, en los operadores de consulta estándar que se definen en el tipo @System.Linq.Queryable ). Al especificar un argumento @System.Linq.Expressions.Expression%601, la lambda se compila en un árbol de expresión. En el ejemplo siguiente se usa el operador de consulta estándar [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 

@@ -1,32 +1,51 @@
 ---
-title: "Tipos de valor (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "cs.valuetypes"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "lenguaje C#, tipos de valor"
-  - "tipos [C#], tipos de valor"
-  - "tipos de valor [C#]"
+title: Tipos de valor (Referencia de C#)
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- cs.valuetypes
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- value types [C#]
+- types [C#], value types
+- C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# Tipos de valor (Referencia de C#)
-Los tipos de valor consisten en dos categorías principales:  
+# <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
+Los tipos de valor constan de dos categorías principales:  
   
--   [Structs](../../../csharp/language-reference/keywords/struct.md)  
+-   [Estructuras](../../../csharp/language-reference/keywords/struct.md)  
   
 -   [Enumeraciones](../../../csharp/language-reference/keywords/enum.md)  
   
- Los structs se dividen en las siguientes categorías:  
+ Los structs se dividen en estas categorías:  
   
 -   Tipos numéricos  
   
@@ -40,73 +59,74 @@ Los tipos de valor consisten en dos categorías principales:
   
 -   Structs definidos por el usuario.  
   
-## Características principales de los tipos de valor  
- Variables que están basadas directamente en tipos de valor que contienen valores.  La asignación de una variable de tipo de valor a otra copia el valor contenido.  Esto es diferente de la asignación de variables de tipo de referencia, que copia una referencia en el objeto pero no el propio objeto.  
+## <a name="main-features-of-value-types"></a>Características principales de los tipos de valor  
+ Las variables que se basan en tipos de valor directamente contienen valores. Asignar una variable de tipo de valor a otra copia el valor incluido. Esto difiere de la asignación de variables de tipo de referencia, que copia una referencia al objeto pero no el propio objeto.  
   
- Todos los tipos de valor se derivan implícitamente de la clase <xref:System.ValueType?displayProperty=fullName>.  
+ Todos los tipos de valor se derivan implícitamente de <xref:System.ValueType?displayProperty=fullName>.  
   
- A diferencia de los tipos de referencia, no es posible derivar un nuevo tipo de un tipo de valor.  No obstante, al igual que los tipos de referencia, los structs pueden implementar interfaces.  
+ A diferencia de los tipos de referencia, no puede derivar un tipo nuevo de un tipo de valor. En cambio, como los tipos de referencia, los structs pueden implementar interfaces.  
   
- A diferencia de los tipos de referencia, los tipos de valor no pueden contener el valor `null`.  Sin embargo, la característica [tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md) permite que los tipos de valor se asignarán a `null`.  
+ A diferencia de los tipos de referencia, un tipo de valor no puede contener el valor `null`. En cambio, la característica [tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md) se permite para los tipos de valor que se van a asignar a `null`.  
   
- Cada tipo de valor tiene un constructor implícito predeterminado que inicializa el valor predeterminado de ese tipo.  Para obtener información acerca de los valores predeterminados de los tipos de valor, consulte [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Cada tipo de valor tiene un constructor predeterminado implícito que inicializa el valor predeterminado de ese tipo. Para obtener información sobre los valores predeterminados de los tipos de valor, vea [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md).  
   
-## Características principales de los tipos simples  
- Todos los tipos simples \(aquellos que forman parte integral del lenguaje C\#\) son alias de los tipos del sistema .NET Framework.  Por ejemplo, [int](../../../csharp/language-reference/keywords/int.md) es un alias de <xref:System.Int32?displayProperty=fullName>.  Para una lista completa de alias, vea [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md).  
+## <a name="main-features-of-simple-types"></a>Características principales de los tipos simples  
+ Todos los tipos simples, integrales del lenguaje de C#, son alias de los tipos de sistema de .NET Framework. Por ejemplo, [int](../../../csharp/language-reference/keywords/int.md) es un alias de <xref:System.Int32?displayProperty=fullName>. Para obtener una lista completa de los alias, vea [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md).  
   
- Las expresiones constantes, cuyos operandos son todos constantes de tipos simples, se evalúan en tiempo de compilación.  
+ Las expresiones constantes, cuyos operandos son todos constantes de tipo simple, se evalúan en tiempo de compilación.  
   
- Los tipos simples se pueden inicializar mediante literales.  Por ejemplo, 'A' es un literal del tipo `char` y 2001 es un literal del tipo `int`.  
+ Los tipos simples pueden inicializarse mediante el uso de literales. Por ejemplo, "A" es un literal del tipo `char` y 2001 es un literal del tipo `int`.  
   
-## Inicializar tipos de valor  
- Las variables locales de C\# deben inicializarse para poder utilizarse.  Por ejemplo, podría declarar una variable local sin inicialización, como en el ejemplo siguiente:  
+## <a name="initializing-value-types"></a>Inicializar tipos de valor  
+ Las variables locales en C# deben inicializarse antes de usarse. Por ejemplo, puede declarar una variable local sin inicialización como en el ejemplo siguiente:  
   
 ```  
 int myInt;  
 ```  
   
- No se podrá utilizar hasta que se inicialice.  La inicialización se puede realizar mediante la siguiente instrucción:  
+ No puede usarla antes de inicializarla. Puede inicializarla con la siguiente instrucción:  
   
 ```  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
- Esta instrucción es equivalente a la siguiente instrucción:  
+ Esta instrucción es equivalente a la instrucción siguiente:  
   
 ```  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
- También se puede realizar la declaración y la inicialización en la misma instrucción, tal y como se muestra en los siguientes ejemplos:  
+ Por supuesto, puede tener la declaración y la inicialización en la misma instrucción como en los ejemplos siguientes:  
   
 ```  
 int myInt = new int();  
 ```  
   
- O bien  
+ -O bien-  
   
 ```  
 int myInt = 0;  
 ```  
   
- Con el operador [new](../../../csharp/language-reference/keywords/new.md), se realiza una llamada al constructor predeterminado del tipo específico y se asigna el valor predeterminado a la variable.  En el ejemplo anterior, el constructor predeterminado asigna a `myInt` el valor `0`.  Para obtener más información acerca de los valores asignados mediante constructores predeterminados, consulte [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md).  
+ Con el operador [new](../../../csharp/language-reference/keywords/new.md) se llama al constructor predeterminado del tipo específico y asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor predeterminado ha asignado el valor `0` a `myInt`. Para obtener más información sobre los valores que se han asignado llamando a los constructores predeterminados, vea [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md).  
   
- Con los tipos definidos por el usuario, se utiliza [new](../../../csharp/language-reference/keywords/new.md) para invocar el constructor predeterminado.  Por ejemplo, la siguiente instrucción invoca el constructor predeterminado del struct `Point`:  
+ Con los tipos definidos por el usuario, use [new](../../../csharp/language-reference/keywords/new.md) para invocar al constructor predeterminado. Por ejemplo, la siguiente instrucción invoca al constructor predeterminado del struct `Point`:  
   
 ```  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   
- Después de esta llamada, el struct se considera definitivamente asignada; es decir, todos sus miembros se inicializan con sus valores predeterminados.  
+ Después de esta llamada, el struct se considera asignado definitivamente; es decir, todos sus miembros se inicializan a sus valores predeterminados.  
   
- Para obtener más información acerca del operador new, consulte [new](../../../csharp/language-reference/keywords/new.md).  
+ Para obtener más información sobre el operador new, vea [new](../../../csharp/language-reference/keywords/new.md).  
   
- Para obtener información acerca de cómo dar formato a la presentación de tipos numéricos, consulte [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
+ Para obtener información sobre cómo aplicar formato al resultado de los tipos numéricos, vea [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C\#](../../../csharp/language-reference/keywords/index.md)   
- [Tipos](../../../csharp/language-reference/keywords/types.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
+ [Types](../../../csharp/language-reference/keywords/types.md)  (Tipos [Referencia de C#])  
  [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
  [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)
+

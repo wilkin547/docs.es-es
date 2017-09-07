@@ -1,28 +1,26 @@
 ---
-title: 'Comando dotnet-list reference: CLI de .NET Core'
-description: "El comando dotnet-list reference constituye una opción práctica para enumerar referencias entre proyectos."
-keywords: dotnet-list, CLI, comando de la CLI, .NET Core
-author: spboyer
+title: 'Comando dotnet list reference: CLI de .NET Core'
+description: "El comando dotnet list reference constituye una opción práctica para enumerar referencias entre proyectos."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8f954a0c-03f8-4fbc-a529-b313ab12c623
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 701345e4db51d26b9eefe8f02b6c0526934de5c9
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: b3e903c15a7486faa279d47ad5e2e00c090b19af
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-list-reference"></a>dotnet list reference
 
-# <a name="dotnet-list-reference"></a>dotnet-list reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nombre
 
-`dotnet-list reference`: enumera referencias entre proyectos.
+`dotnet list reference`: enumera referencias entre proyectos.
 
 ## <a name="synopsis"></a>Sinopsis
 

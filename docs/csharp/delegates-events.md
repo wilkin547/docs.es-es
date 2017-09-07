@@ -1,6 +1,6 @@
 ---
 title: Delegados y eventos
-description: Delegados y eventos
+description: "Vea dónde encontrar información sobre delegados y eventos en la documentación de .NET Core."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c9a2d44ae73208543380c52547473a572ba45d04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -21,10 +22,9 @@ ms.lasthandoff: 03/13/2017
 
 Este tema se tratará en los siguientes artículos:
 
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
-1. [Overview of Delegates](delegates-overview.md) (Introducción a los delegados)
+1. [Información general de los delegados](delegates-overview.md)
 
-    This article covers an overview of delegates.
+    En este artículo se trata una introducción a los delegados.
 
 2. [System.Delegate and the `delegate` keyword](delegate-class.md) (System.Delegate y la palabra clave `delegate`)
 
@@ -42,7 +42,7 @@ Este tema se tratará en los siguientes artículos:
 
     En este artículo se trata una introducción a los eventos en .NET.
 
-6. [Patrón de eventos de .NET](event-pattern.md)
+6. [Patrón de eventos estándar de .NET](event-pattern.md)
 
     En este artículo se trata el patrón de eventos estándar de .NET.
 

@@ -1,6 +1,6 @@
 ---
 title: "Tipos de marco que admiten árboles de expresión"
-description: "Tipos de marco que admiten árboles de expresión"
+description: "Obtenga información sobre los tipos de marco que admiten árboles de expresión, la creación de árboles de expresión y las técnicas para trabajar con las API de árboles de expresión."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 64b3b7999b6ff01bdf28cb7902ba50087d191cb4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 03/13/2017
 [Anterior: Árboles de expresiones en detalle](expression-trees-explained.md)
 
 Hay una amplia lista de clases en .NET Core Framework que funcionan con árboles de expresiones.
-Puede ver la lista completa [aquí](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions).
+Puede ver la lista completa [aquí](/dotnet/core/api/System.Linq.Expressions).
 En lugar de analizarla al completo, vamos a explicar cómo se han diseñado las clases del marco.
 
 En el diseño del lenguaje, una expresión es un cuerpo de código que se evalúa y devuelve un valor. Las expresiones pueden ser muy sencillas: la expresión constante `1` devuelve el valor constante de 1. También pueden ser más complicadas: la expresión `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` devuelve una raíz de una ecuación cuadrática (en el caso en el que la ecuación tenga una solución).  

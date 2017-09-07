@@ -1,6 +1,6 @@
 ---
-title: "¿Qué es el &quot;código administrado&quot;?"
-description: "¿Qué es el &quot;código administrado&quot;?"
+title: "¿Qué es el código administrado?"
+description: "Obtenga información sobre cómo el código administrado es código cuya ejecución la administra un tiempo de ejecución, Common Language Runtime (CLR)."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,9 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-translationtype: Human Translation
-ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
-ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -24,7 +26,7 @@ Dicho en pocas palabras, el código administrado es simplemente eso: código cuy
 
 Compare esto con la forma en que ejecutaría un programa escrito en C/C++, también denominado "código no administrado". En un entorno no administrado, el programador se encarga prácticamente de todo. El programa real es, básicamente, un archivo binario que el sistema operativo (SO) carga en la memoria e inicia. Todo lo demás, desde la administración de memoria hasta las consideraciones de seguridad, son responsabilidad del programador.
 
-El código administrado se escribe en uno de los lenguajes de alto nivel que se pueden ejecutar en la plataforma .NET, como C#, Visual Basic, F # y otros. Cuando se compila código escrito en estos lenguajes con su respectivo compilador, no se obtiene código máquina. Se obtiene código de **lenguaje intermedio**, que más adelante el tiempo de ejecución compila y ejecuta. C++ es la única excepción a esta regla, ya que también puede generar archivos binarios nativos y no administrados que se ejecutan en Windows.
+El código administrado se escribe en uno de los lenguajes de alto nivel que se pueden ejecutar en la plataforma .NET, como C#, Visual Basic, F# y otros. Cuando se compila código escrito en estos lenguajes con su respectivo compilador, no se obtiene código máquina. Se obtiene código de **lenguaje intermedio**, que más adelante el tiempo de ejecución compila y ejecuta. C++ es la única excepción a esta regla, ya que también puede generar archivos binarios nativos y no administrados que se ejecutan en Windows.
 
 ## <a name="intermediate-language--execution"></a>Lenguaje intermedio y ejecución
 
@@ -45,9 +47,4 @@ De modo parecido, C# es un lenguaje que permite usar construcciones no administr
 *   [Información general acerca de .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [Código no seguro y punteros](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [Interoperabilidad (Guía de programación de C#)](https://msdn.microsoft.com/library/ms173184.aspx)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

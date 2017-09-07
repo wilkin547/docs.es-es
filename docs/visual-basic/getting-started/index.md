@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
-ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
 ms.contentlocale: es-es
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>Introducción a Visual Basic
 Esta sección de la documentación sirve como introducción al desarrollo de aplicaciones con Visual Basic.  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="get-started-with-visual-basic-and-net-core"></a>Introducción a Visual Basic y .NET Core
+
+[Compilación de una aplicación Hola mundo en Visual Basic con .NET Core en Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
+
+[Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>Información adicional
 
 [Novedades de Visual Basic](whats-new.md)   
 Aquí se enumeran las características nuevas de cada versión de Visual Basic .NET.
@@ -49,7 +55,13 @@ Muestra los cambios de esta versión que podrían impedir que una aplicación se
   
 [Recursos adicionales para programadores de Visual Basic](additional-resources.md)  
 Proporciona una lista de sitios Web y grupos de noticias que le ayudarán a encontrar la solución a los problemas más comunes.  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>Desarrollo de aplicaciones de .NET Core con Visual Basic
+
+[Build a Visual Basic Hello World app with .NET Core in Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md) (Compilación de una aplicación Hola mundo de Visual Basic con .NET Core en Visual Studio 2017) 
+
+[Creación de una biblioteca de clases con Visual Basic y .NET Core en Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>Vea también
  [Obtener Visual Basic](https://www.visualstudio.com/downloads/)  
  Ofrece vínculos de descarga para las versiones de Visual Studio que incluyen compatibilidad con Visual Basic, incluidas las versiones gratuitas.  

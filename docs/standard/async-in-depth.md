@@ -1,6 +1,6 @@
 ---
 title: Async en profundidad
-description: "Explicación detallada sobre cómo funciona el código asincrónico en .NET"
+description: "Obtenga información sobre cómo es sencillo escribir código asincrónico enlazado a E/S y CPU al usar el modelo asincrónico basado en tareas de .NET."
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
+ms.contentlocale: es-es
+ms.lasthandoff: 08/28/2017
 
 ---
 
 # <a name="async-in-depth"></a>Async en profundidad
 
-La escritura de código asincrónico enlazado a E/S y CPU es sencilla al usar el modelo asincrónico basado en tareas de .NET. El modelo se expone mediante los tipos `Task` y `Task<T>` y las palabras claves de lenguaje `async` y `await`. En este artículo, se explica cómo usar Async de .NET y se proporciona información sobre el marco de trabajo de Async usado en segundo plano.
+La escritura de código asincrónico enlazado a E/S y CPU es sencilla al usar el modelo asincrónico basado en tareas de .NET. El modelo se expone mediante los tipos `Task` y `Task<T>` y las palabras claves `async` y `await` en C# y Visual Basic. (Los recursos específicos del idioma se encuentran en la sección [Vea también](#see-also)). En este artículo, se explica cómo usar Async de .NET y se proporciona información sobre el marco de trabajo de Async usado en segundo plano.
 
 ## <a name="task-and-tasklttgt"></a>Task y Task&lt;T&gt;
 
@@ -34,7 +35,7 @@ Las tareas exponen un protocolo de API para supervisar, esperar y acceder al val
 
 Mediante `await`, su aplicación o servicio puede realizar trabajo útil mientras se ejecuta una tarea al ceder el control a su llamador hasta que se realiza la tarea. El código no tiene que depender de las devoluciones de llamada ni eventos para seguir ejecutándose una vez completada la tarea. La integración de la API de tareas y lenguajes se encarga de ello. Si está usando `Task<T>`, la palabra clave `await` "desencapsulará" también el valor devuelto cuando se completa la tarea.  Más adelante se explican los detalles sobre cómo funciona esto.
 
-Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el [artículo Modelo asincrónico basado en tareas (TAP)](https://msdn.microsoft.com/library/hh873175.aspx).
+Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el tema [Task-based Asynchronous Pattern (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP]).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Tareas para una operación enlazada a E/S en profundidad
 
@@ -45,7 +46,7 @@ En el primer ejemplo, se llama a un método asincrónico y se devuelve una tarea
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -147,3 +148,10 @@ Una vez se encuentra `await`, la ejecución de `CalculateResult()` se cede a su 
 ### <a name="why-does-async-help-here"></a>¿Por qué ayuda Async en este caso?
 
 `async` y `await` son el procedimiento recomendado para administrar el trabajo enlazado a la CPU si necesita capacidad de respuesta. Hay varios patrones para usar Async con trabajo enlazado a la CPU. Es importante tener en cuenta que hay un pequeño costo al usar Async y no se recomienda para bucles de pequeñas dimensiones.  Depende de usted determinar cómo escribe el código en torno a esta nueva funcionalidad.
+
+## <a name="see-also"></a>Vea también
+
+[Programación asincrónica en C#](~/docs/csharp/async.md)   
+[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)  (Programación asincrónica en F#)  
+[Programación asincrónica con Async y Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

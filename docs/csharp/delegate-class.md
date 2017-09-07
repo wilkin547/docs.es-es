@@ -1,6 +1,6 @@
 ---
-title: System.Delegate y la palabra clave `delegate`
-description: System.Delegate y la palabra clave `delegate`
+title: System.Delegate y la palabra clave "delegate"
+description: "Obtenga información sobre las clases de .NET Framework que admiten delegados y sobre cómo se asignan a la palabra clave \"delegate\"."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b20c4816582ef3e4d36512c38947f64e86d26541
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -142,3 +143,4 @@ Los métodos que usará más a menudo con los delegados son `Invoke()` y `BeginI
 Ahora que ha visto la sintaxis del lenguaje y las clases que admiten delegados, examinemos cómo se usan, se crean y se invocan delegados fuertemente tipados.
 
 [Siguiente](delegates-strongly-typed.md)
+

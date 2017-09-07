@@ -1,5 +1,5 @@
 ---
-title: "Crear ensamblados satélite para aplicaciones de escritorio | Microsoft Docs"
+title: "Crear ensamblados satélite para aplicaciones de escritorio"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b4ae5474ebf910389148745105adbe9a0ae608bb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
 ms.contentlocale: es-es
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
@@ -61,7 +61,7 @@ Los archivos de recursos desempeñan un papel fundamental en las aplicaciones lo
   
  En la ilustración siguiente se muestran los requisitos de ejemplo de la estructura y la ubicación de los directorios para las aplicaciones que no se instalan en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md). Los elementos con las extensiones .txt y .resources no se incluirán en la aplicación final. Estos son los archivos de recursos intermedios que se usan para crear los ensamblados de recursos satélite finales. En este ejemplo, los archivos .resx se pueden sustituir por archivos .txt. Para obtener más información, vea [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos).  
   
- ![Satellite assemblies](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
+ ![Ensamblados satélite](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 Directorio del ensamblado satélite  
   
 ## <a name="compiling-satellite-assemblies"></a>compilar ensamblados satélite  

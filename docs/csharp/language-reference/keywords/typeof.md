@@ -1,5 +1,5 @@
 ---
-title: typeof (Referencia de C#) | Microsoft Docs
+title: typeof (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0590aa8a339dc58b7215722a530a71f8973864d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdb335e44a5a3634520d3a86495a4508597b4f70
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="typeof-c-reference"></a>typeof (Referencia de C#)
@@ -65,7 +65,7 @@ string s = method.ReturnType.GetInterface
  [!code-cs[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se usa el método <xref:System.Object.GetType%2A> para determinar el tipo que se emplea para contener el resultado de un cálculo numérico. Esto varía en función de los requisitos de almacenamiento del número resultante.  
+ En este ejemplo se usa el método <xref:System.Object.GetType%2A> para determinar el tipo que se usa para contener el resultado de un cálculo numérico. Esto varía en función de los requisitos de almacenamiento del número resultante.  
   
  [!code-cs[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
@@ -79,3 +79,4 @@ string s = method.ReturnType.GetInterface
  [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
  [Palabras clave de operador](../../../csharp/language-reference/keywords/operator-keywords.md)
+

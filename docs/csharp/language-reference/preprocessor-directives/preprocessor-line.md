@@ -1,26 +1,45 @@
 ---
-title: "#line (Referencia de C#) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "#line"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "#line (directiva) [C#]"
+title: '#<a name="line-c-reference"></a>line (Referencia de C#)'
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- '#line'
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
+
 ---
-# #line (Referencia de C#)
-`#line` permite modificar el número de línea del compilador y \(opcionalmente\) el nombre del archivo que aparece en los resultados de errores y advertencias del compilador.  El ejemplo siguiente muestra cómo notificar dos advertencias asociadas a números de líneas.  La directiva `#line 200` hace que el número de línea sea 200 \(si bien el valor predeterminado es \#7\) y, hasta la siguiente directiva \#line, el nombre de archivo será "Special".  La directiva \#line default restablece la numeración de las líneas en la numeración predeterminada, que realiza un recuento de las líneas cuya numeración cambió por la directiva anterior.  
+# <a name="line-c-reference"></a>#line (Referencia de C#)
+`#line` le permite modificar el número de línea del compilador y (opcionalmente) la salida del nombre de archivo de errores y advertencias. En este ejemplo, se muestra cómo notificar dos advertencias asociadas con números de línea. La directiva `#line 200` fuerza el número de línea para que sea 200 (aunque el valor predeterminado es 7) y hasta la siguiente directiva #line, el nombre de archivo se notificará como "Especial". La directiva #line predeterminada devuelve la numeración de líneas a su numeración predeterminada, que cuenta las líneas a las que la directiva anterior ha cambiado el número.  
   
-```  
+```csharp
 class MainClass  
 {  
     static void Main()  
@@ -38,21 +57,21 @@ class MainClass
 }  
 ```  
   
-## Comentarios  
- La directiva `#line` podría utilizarse en un paso intermedio automatizado del proceso de compilación.  Por ejemplo, si se quitaron las líneas del archivo de código fuente original, pero aún se desea que el compilador genere unos resultados basados en la numeración de líneas original del archivo, se pueden quitar las líneas y, a continuación, simular la numeración original mediante `#line`.  
+## <a name="remarks"></a>Comentarios  
+ La directiva `#line` podría usarse en un paso intermedio automatizado en el proceso de compilación. Por ejemplo, si se han eliminado las líneas del archivo de código fuente original, pero aún quiere que el compilador genere unos resultados en función de la numeración de líneas original en el archivo, puede quitar las líneas y, después, simular la numeración de líneas original con `#line`.  
   
- La directiva `#line hidden` oculta las sucesivas líneas del depurador, de manera que cuando el desarrollador avanza por el código, evita cualquier línea que haya entre una directiva `#line hidden` y la siguiente directiva `#line` \(suponiendo que no haya otra directiva `#line hidden`\).  Esta opción también puede utilizarse para permitir a ASP.NET que diferencie entre el código definido por el usuario y el generado por el equipo.  Aunque ASP.NET es el primer usuario de esta característica, es probable que más generadores de código fuente hagan uso de ella.  
+ La directiva `#line hidden` oculta las líneas sucesivas del depurador, de forma que, cuando el desarrollador ejecuta paso a paso el código, cualquier línea entre `#line hidden` y la siguiente directiva `#line` (suponiendo que no sea otra directiva `#line hidden`) se depurará paso a paso por procedimientos. Esta opción también se puede usar para permitir que ASP.NET diferencie entre el código generado por el equipo y el definido por el usuario. Aunque ASP.NET es el consumidor principal de esta característica, es probable que la usen más generadores de código fuente.  
   
- Una directiva `#line hidden` no afecta ni a los nombres de los archivos ni a los números de líneas en la generación de informes de error.  Es decir, si se encuentra un error en un bloque oculto, el compilador informará del nombre del archivo en uso y del número de la línea en que se encuentra el error.  
+ Una directiva `#line hidden` no afecta a los nombres de archivo o números de línea en el informe de errores. Es decir, si se produce un error en un bloque oculto, el compilador notificará el nombre de archivo y número de línea reales del error.  
   
- La directiva `#line filename` especifica el nombre del archivo que debe aparecer en los resultados del compilador.  El nombre predeterminado es el nombre real del archivo de código fuente.  El nombre de archivo debe estar entre comillas \(""\) y debe ir precedido por un número de línea.  
+ La directiva `#line filename` especifica el nombre de archivo que quiere que aparezca en la salida del compilador. De forma predeterminada, se usa el nombre real del archivo de código fuente. El nombre de archivo debe estar entre comillas dobles ("") y debe ir precedido de un número de línea.  
   
  Un archivo de código fuente puede tener cualquier número de directivas `#line`.  
   
-## Ejemplo 1  
- En el ejemplo siguiente se muestra cómo el depurador omite las líneas ocultas en el código.  Cuando ejecute el ejemplo, mostrará tres líneas de texto.  Sin embargo, cuando establezca un punto de interrupción, como se muestra en el ejemplo, y presione F10 para avanzar por el código, observará que el depurador omite la línea oculta.  Observe también que incluso si establece un punto de interrupción en la línea oculta, el depurador seguirá omitiéndola.  
+## <a name="example-1"></a>Ejemplo 1  
+ En el ejemplo siguiente, se muestra cómo el depurador omite las líneas ocultas en el código. Al ejecutar el ejemplo, mostrará tres líneas de texto. En cambio, al establecer un punto de interrupción, como se muestra en el ejemplo, y presionar F10 para recorrer el código, observará que el depurador omite la línea oculta. Tenga también en cuenta que, incluso si configura un punto de interrupción en la línea oculta, el depurador lo omitirá.  
   
-```  
+```csharp
 // preprocessor_linehidden.cs  
 using System;  
 class MainClass   
@@ -68,7 +87,8 @@ class MainClass
 }  
 ```  
   
-## Vea también  
- [Referencia de C\#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C\#](../../../csharp/programming-guide/index.md)   
- [Directivas de preprocesador de C\#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Vea también  
+ [Referencia de C#](../../../csharp/language-reference/index.md)   
+ [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
+ [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

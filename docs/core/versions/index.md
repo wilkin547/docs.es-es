@@ -3,16 +3,16 @@ title: Control de versiones de .NET Core
 description: "Comprenda cómo funciona el control de versiones de .NET Core."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>Control de versiones de .NET Core
@@ -103,7 +103,7 @@ Hay otras entidades aparte de Microsoft que pueden distribuir .NET Core. En conc
 
 ##### <a name="preview-versions"></a>Versiones preliminares
 
-Los mantenedores de paquetes pueden decidir incluir versiones preliminares del entorno de ejecución y del SDK. No incluya dichas versiones preliminares en el paquete `dotnet-sdk` sin versión; puede publicarlas como paquetes con versión con un marcador de versión preliminar adicional anexado a las secciones de versión principal y secundaria del nombre. Por ejemplo, puede haber un paquete `dotnet-sdk-2.0-preview-1-final`.
+Los mantenedores de paquetes pueden decidir incluir versiones preliminares del entorno de ejecución y del SDK. No incluya dichas versiones preliminares en el paquete `dotnet-sdk` sin versión; puede publicarlas como paquetes con versión con un marcador de versión preliminar adicional anexado a las secciones de versión principal y secundaria del nombre. Por ejemplo, puede haber un paquete `dotnet-sdk-2.0-preview1-final`.
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ Cuando hay varios cambios, se incrementa el elemento superior afectado por cambi
 
 ### <a name="preview-versions"></a>Versiones preliminares
 
-Las versiones preliminares tienen un elemento `-preview-[number]-([build]|"final")` anexado a la versión. Por ejemplo: `2.0.0-preview-1-final`.
+Las versiones preliminares tienen un elemento `-preview[number]-([build]|"final")` anexado a la versión. Por ejemplo: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versiones de mantenimiento
 

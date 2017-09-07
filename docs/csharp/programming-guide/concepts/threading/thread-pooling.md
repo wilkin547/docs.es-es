@@ -1,5 +1,5 @@
 ---
-title: "Agrupación de subprocesos (C#) | Microsoft Docs"
+title: "Agrupación de subprocesos (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>Agrupación de subprocesos (C#)
@@ -68,7 +69,7 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>Parámetros y valores devueltos de grupos de subprocesos  
  La devolución de valores desde un subproceso del grupo de subprocesos no es sencilla. La manera estándar de devolver valores desde una llamada de función no está permitida, ya que los procedimientos `Sub` son el único tipo de procedimiento que se puede poner en cola en un grupo de subprocesos. Una manera de proporcionar parámetros y valores devueltos consiste en empaquetar los parámetros, los valores devueltos y los métodos en una clase contenedora, como se describe en [Parameters and Return Values for Multithreaded Procedures (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md) (Parámetros y valores devueltos para procedimientos multiproceso (C#)).  
   
- Una forma más sencilla de proporcionar parámetros y valores devueltos es usar la variable opcional de objeto de estado `ByVal` del método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Si usa esta variable para pasar una referencia a una instancia de una clase, el subproceso del grupo de subprocesos puede modificar los miembros de la instancia y estos pueden usarse como valores devueltos.  
+ Una manera más sencilla de proporcionar parámetros y devolver valores es usar la variable opcional de objeto de estado `ByVal` del método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Si usa esta variable para pasar una referencia a una instancia de una clase, el subproceso del grupo de subprocesos puede modificar los miembros de la instancia y estos pueden usarse como valores devueltos.  
   
  A primera vista, probablemente no sea obvio que se puede modificar un objeto al que hace referencia una variable que se pasa por valor. Esto se puede hacer porque solo se pasa por valor la referencia del objeto. Cuando se realizan cambios en los miembros del objeto al que hace referencia la referencia de objeto, los cambios se aplican a la instancia de clase real.  
   
@@ -82,3 +83,4 @@ private void AnotherLongTask(Object state)
  [Subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Sincronización de subprocesos (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

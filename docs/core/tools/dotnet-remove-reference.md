@@ -1,28 +1,27 @@
 ---
-title: 'Comando dotnet-remove reference: CLI de .NET Core'
-description: "El comando dotnet-remove reference constituye una opción práctica para quitar las referencias entre proyectos."
+title: 'Comando dotnet remove reference: CLI de .NET Core'
+description: "El comando dotnet remove reference constituye una opción práctica para quitar las referencias entre proyectos."
 keywords: dotnet-remove, CLI, comando de la CLI, .NET Core
-author: spboyer
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 889c6b7e-a313-40b1-9fd3-6a6f4c52f1d0
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e22f64370be4b56597a303d79d3aabe1ff22a78a
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 7cb84c2dc7fc4d16b00bd6459132390ab80131f3
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-# <a name="dotnet-remove-reference"></a>dotnet-remove reference
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nombre
 
-`dotnet-remove reference`: quita las referencias de proyecto a proyecto.
+`dotnet remove reference`: quita las referencias de proyecto a proyecto.
 
 ## <a name="synopsis"></a>Sinopsis
 

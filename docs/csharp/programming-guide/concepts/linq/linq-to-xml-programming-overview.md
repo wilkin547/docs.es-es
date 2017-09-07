@@ -1,5 +1,5 @@
 ---
-title: "Información general sobre la programación de LINQ to XML (C#) | Microsoft Docs"
+title: "Información general sobre la programación de LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,25 +19,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f5634392336d2cb74b4df44fba55f8d2ef8b0c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bc22991f53920b045280d3e74b9b8dd73e63c944
+ms.contentlocale: es-es
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>Información general sobre la programación de LINQ to XML (C#)
-Estos temas proporcionan información general de alto nivel acerca de las clases [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], así como información detallada de tres de las clases más importantes.  
+Estos temas proporcionan información general de alto nivel acerca de las clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], así como información detallada de tres de las clases más importantes.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Programación funcional frente a programación basada en procedimientos (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|Proporciona una vista de alto nivel de los dos métodos principales para escribir aplicaciones LINQ to XML.|  
-|[Información general de las clases LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|Proporciona información general acerca de las clases [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
-|[Información general de la clase XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XElement>, que representa elementos XML. <xref:System.Xml.Linq.XElement> es una de las clases fundamentales en la jerarquía de clases [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
+|[Información general de las clases LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|Proporciona información general acerca de las clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Información general de la clase XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XElement>, que representa elementos XML. <xref:System.Xml.Linq.XElement> es una de las clases fundamentales en la jerarquía de clases [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Información general de la clase XAttribute (C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XAttribute>, que representa atributos XML.|  
 |[Información general de la clase XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)|Presenta la clase <xref:System.Xml.Linq.XDocument>, que representa documentos XML.|  
 |[Cómo: Compilar ejemplos de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Contiene las directivas `Using` necesarias para compilar los ejemplos de LINQ to XML.|  
   
 ## <a name="see-also"></a>Vea también  
  [Guía de programación (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

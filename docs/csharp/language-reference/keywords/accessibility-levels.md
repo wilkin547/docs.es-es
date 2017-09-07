@@ -1,5 +1,5 @@
 ---
-title: Niveles de accesibilidad (Referencia de C#) | Microsoft Docs
+title: Niveles de accesibilidad (Referencia de C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30220e92e55ac6101cf8fedd8920755cd25978bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 796802a407c486c1df5332d5b4920467f3a1171b
 ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessibility-levels-c-reference"></a>Niveles de accesibilidad (Referencia de C#)
@@ -43,10 +43,10 @@ Use los modificadores de acceso [public](../../../csharp/language-reference/keyw
 |`public`|El acceso no está restringido.|  
 |`protected`|El acceso está limitado a la clase contenedora o a los tipos derivados de la clase contenedora.|  
 |`internal`|El acceso está limitado al ensamblado actual.|  
-|`protected` `internal`|El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.|  
+|`protected internal`|El acceso está limitado al ensamblado actual o a los tipos derivados de la clase contenedora.|  
 |`private`|El acceso está limitado al tipo contenedor.|  
   
- Solo se permite un modificador de acceso para un miembro o tipo, excepto cuando se usa la combinación `protected` `internal`.  
+ Solo se permite un modificador de acceso para un miembro o tipo, excepto cuando se usa la combinación `protected internal`.  
   
  No se permiten modificadores de acceso en espacios de nombres. Los espacios de nombres no tienen restricciones de acceso.  
   
@@ -59,7 +59,7 @@ Use los modificadores de acceso [public](../../../csharp/language-reference/keyw
 |Miembros de|Accesibilidad de miembro predeterminada|Accesibilidad declarada permitida del miembro|  
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|Ninguna|  
-|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected` `internal`|  
+|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal`|  
 |`interface`|`public`|Ninguna|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
@@ -80,3 +80,4 @@ Use los modificadores de acceso [public](../../../csharp/language-reference/keyw
  [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)
+
