@@ -1,5 +1,5 @@
 ---
-title: "Recolección de elementos no utilizados | Microsoft Docs"
+title: "recolección de elementos no utilizados"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -28,11 +28,11 @@ caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 11ea4186a77a600d1645fe334ba9fd704fe728b4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be94a3e0dee4cb27aee4d5c98ebc1d6ef0704ac9
 ms.contentlocale: es-es
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
@@ -71,3 +71,4 @@ El recolector de elementos no utilizados de .NET administra la asignación y lib
   
 ## <a name="see-also"></a>Vea también  
  [Limpieza de recursos no administrados](../../../docs/standard/garbage-collection/unmanaged.md)
+
