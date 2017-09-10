@@ -14,7 +14,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
 ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
 ms.contentlocale: es-es
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -178,7 +178,7 @@ Para probar la compilación de versión:
 
    ![Barra de herramientas de Visual Studio](./media/testing-library-with-visual-studio/toolbar.png)
 
-1. En el  **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **StringLibrary** y seleccione **Compilar** desde el menú contextual para volver a compilar la biblioteca.
+1. En el ** Explorador de soluciones**, haga clic con el botón derecho en el proyecto **StringLibrary** y seleccione **Compilar** desde el menú contextual para volver a compilar la biblioteca.
 
    ![Menú contextual StringLibrary](./media/testing-library-with-visual-studio/buildlibrary.png)
 
