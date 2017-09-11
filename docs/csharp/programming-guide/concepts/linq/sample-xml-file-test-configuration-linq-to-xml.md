@@ -26,10 +26,10 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)
-El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Se trata de un archivo de configuración de pruebas.  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="8b584-102">Archivo XML de ejemplo: Configuración de prueba (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8b584-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="8b584-103">El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8b584-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="8b584-104">Se trata de un archivo de configuración de pruebas.</span><span class="sxs-lookup"><span data-stu-id="8b584-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="8b584-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="8b584-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +73,6 @@ El siguiente archivo XML se usa en numerosos ejemplos de la documentación de [!
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8b584-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="8b584-106">See Also</span></span>  
+ [<span data-ttu-id="8b584-107">Documentos XML de ejemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8b584-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -29,34 +29,34 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 77a44af571554728620999bbe612227fff498823
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: a67832641e3665dcabee6312d356c9d9488f3489
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
-# <a name="inside-a-c-program"></a>Dentro de un programa de C#
-En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar "Hola mundo".  
+# <a name="inside-a-c-program"></a><span data-ttu-id="92f2b-102">Dentro de un programa de C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-102">Inside a C# Program</span></span>
+<span data-ttu-id="92f2b-103">En esta sección, se describe la estructura general de un programa de C# y se incluye el ejemplo estándar</span><span class="sxs-lookup"><span data-stu-id="92f2b-103">The section discusses the general structure of a C# program, and includes the standard "Hello, World!"</span></span> <span data-ttu-id="92f2b-104">"Hola mundo".</span><span class="sxs-lookup"><span data-stu-id="92f2b-104">example.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a><span data-ttu-id="92f2b-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="92f2b-105">In This Section</span></span>  
   
--   [Hello World, su primer programa](../../../csharp/programming-guide/inside-a-program/hello-world-your-first-program.md)  
+-   [<span data-ttu-id="92f2b-106">Hello World, su primer programa</span><span class="sxs-lookup"><span data-stu-id="92f2b-106">Hello World -- Your First Program</span></span>](../../../csharp/programming-guide/inside-a-program/hello-world-your-first-program.md)  
   
--   [Estructura general de un programa de C#](../../../csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program.md)  
+-   [<span data-ttu-id="92f2b-107">Estructura general de un programa de C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-107">General Structure of a C# Program</span></span>](../../../csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program.md)  
   
-## <a name="related-sections"></a>Secciones relacionadas  
+## <a name="related-sections"></a><span data-ttu-id="92f2b-108">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="92f2b-108">Related Sections</span></span>  
   
--   [Introducción a C#](../../../csharp/getting-started/getting-started-with-csharp.md)  
+-   [<span data-ttu-id="92f2b-109">Introducción a C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-109">Getting Started with C#</span></span>](../../../csharp/getting-started/index.md)  
   
--   [Guía de programación de C#](../../../csharp/programming-guide/index.md)  
+-   [<span data-ttu-id="92f2b-110">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
   
--   [Referencia de C#](../../../csharp/language-reference/index.md)  
+-   [<span data-ttu-id="92f2b-111">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
   
--   [\<paveover>Aplicaciones de ejemplo de C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+-   [<span data-ttu-id="92f2b-112">\<paveover>Aplicaciones de ejemplo de C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-112">\<paveover>C# Sample Applications</span></span>](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a><span data-ttu-id="92f2b-113">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-113">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="92f2b-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="92f2b-114">See Also</span></span>  
+ [<span data-ttu-id="92f2b-115">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="92f2b-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
 

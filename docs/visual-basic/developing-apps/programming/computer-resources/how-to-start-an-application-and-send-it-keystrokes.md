@@ -40,19 +40,19 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Cómo: Iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)
-En el siguiente ejemplo se usa la función `Shell` para iniciar la aplicación calculadora y, después, multiplicar dos números enviando pulsaciones de teclas mediante el método `My.Computer.Keyboard.SendKeys`.  
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a><span data-ttu-id="ee18b-102">Cómo: Iniciar una aplicación y enviarle pulsaciones de teclas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ee18b-102">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>
+<span data-ttu-id="ee18b-103">En el siguiente ejemplo se usa la función `Shell` para iniciar la aplicación calculadora y, después, multiplicar dos números enviando pulsaciones de teclas mediante el método `My.Computer.Keyboard.SendKeys`.</span><span class="sxs-lookup"><span data-stu-id="ee18b-103">This example uses the `Shell` function to start the calculator application and then multiplies two numbers by sending keystrokes using the `My.Computer.Keyboard.SendKeys` method.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
+## <a name="example"></a><span data-ttu-id="ee18b-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ee18b-104">Example</span></span>  
+ <span data-ttu-id="ee18b-105">[!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="ee18b-105">[!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]</span></span>  
   
-## <a name="robust-programming"></a>Programación sólida  
- Si no se encuentra una aplicación con el identificador de proceso solicitado, se producirá una excepción <xref:System.ArgumentException>.  
+## <a name="robust-programming"></a><span data-ttu-id="ee18b-106">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="ee18b-106">Robust Programming</span></span>  
+ <span data-ttu-id="ee18b-107">Si no se encuentra una aplicación con el identificador de proceso solicitado, se producirá una excepción <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="ee18b-107">A <xref:System.ArgumentException> exception is raised if an application with the requested process identifier cannot be found.</span></span>  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- La llamada a la función `Shell` requiere plena confianza (clase <xref:System.Security.SecurityException>).  
+## <a name="net-framework-security"></a><span data-ttu-id="ee18b-108">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ee18b-108">.NET Framework Security</span></span>  
+ <span data-ttu-id="ee18b-109">La llamada a la función `Shell` requiere plena confianza (clase <xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="ee18b-109">The call to the `Shell` function requires full trust (<xref:System.Security.SecurityException> class).</span></span>  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a><span data-ttu-id="ee18b-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="ee18b-110">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>

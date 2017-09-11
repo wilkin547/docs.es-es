@@ -34,33 +34,33 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-directive-c-reference"></a>using (Directiva, Referencia de C#)
-La directiva `using` tiene tres usos:  
+# <a name="using-directive-c-reference"></a><span data-ttu-id="833af-102">using (Directiva, Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="833af-102">using Directive (C# Reference)</span></span>
+<span data-ttu-id="833af-103">La directiva `using` tiene tres usos:</span><span class="sxs-lookup"><span data-stu-id="833af-103">The `using` directive has three uses:</span></span>  
   
--   Permitir el uso de tipos en un espacio de nombres de manera que no tenga que calificar el uso de un tipo en dicho espacio de nombres:  
+-   <span data-ttu-id="833af-104">Permitir el uso de tipos en un espacio de nombres de manera que no tenga que calificar el uso de un tipo en dicho espacio de nombres:</span><span class="sxs-lookup"><span data-stu-id="833af-104">To allow the use of types in a namespace so that you do not have to qualify the use of a type in that namespace:</span></span>  
   
     ```csharp  
     using System.Text;  
     ```  
   
--   Permitirle acceder a los miembros estáticos de un tipo sin tener que calificar el acceso con el nombre del tipo. 
+-   <span data-ttu-id="833af-105">Permitirle acceder a los miembros estáticos de un tipo sin tener que calificar el acceso con el nombre del tipo.</span><span class="sxs-lookup"><span data-stu-id="833af-105">To allow you to access static members of a type without having to qualify the access with the type name.</span></span> 
   
     ```csharp  
     using static System.Math;  
     ```  
      
-    Para obtener más información, vea [using static (Directiva)](using-static.md).
+    <span data-ttu-id="833af-106">Para obtener más información, vea [using static (Directiva)](using-static.md).</span><span class="sxs-lookup"><span data-stu-id="833af-106">For more information, see the [using static directive](using-static.md).</span></span>
 
--   Para crear un alias para un espacio de nombre o un tipo. Esto se conoce como *alias using (Directiva)*.  
+-   <span data-ttu-id="833af-107">Para crear un alias para un espacio de nombre o un tipo.</span><span class="sxs-lookup"><span data-stu-id="833af-107">To create an alias for a namespace or a type.</span></span> <span data-ttu-id="833af-108">Esto se conoce como *alias using (Directiva)*.</span><span class="sxs-lookup"><span data-stu-id="833af-108">This is called a *using alias directive*.</span></span>  
   
     ```csharp  
     using Project = PC.MyCompany.Project;  
     ```  
   
- La palabra clave `using` también se usa para crear *instrucciones using*, que ayudan a garantizar que los objetos <xref:System.IDisposable>, como archivos y fuentes, se tratan correctamente. Consulte [using (Instrucción)](../../../csharp/language-reference/keywords/using-statement.md) para obtener más información.  
+ <span data-ttu-id="833af-109">La palabra clave `using` también se usa para crear *instrucciones using*, que ayudan a garantizar que los objetos <xref:System.IDisposable>, como archivos y fuentes, se tratan correctamente.</span><span class="sxs-lookup"><span data-stu-id="833af-109">The `using` keyword is also used to create *using statements*, which help ensure that <xref:System.IDisposable> objects such as files and fonts are handled correctly.</span></span> <span data-ttu-id="833af-110">Consulte [using (Instrucción)](../../../csharp/language-reference/keywords/using-statement.md) para obtener más información.</span><span class="sxs-lookup"><span data-stu-id="833af-110">See [using Statement](../../../csharp/language-reference/keywords/using-statement.md) for more information.</span></span>  
   
-## <a name="using-static-type"></a>Usar el tipo estático  
- Puede acceder a los miembros estáticos de un tipo sin tener que calificar el acceso con el nombre del tipo:  
+## <a name="using-static-type"></a><span data-ttu-id="833af-111">Usar el tipo estático</span><span class="sxs-lookup"><span data-stu-id="833af-111">Using Static Type</span></span>  
+ <span data-ttu-id="833af-112">Puede acceder a los miembros estáticos de un tipo sin tener que calificar el acceso con el nombre del tipo:</span><span class="sxs-lookup"><span data-stu-id="833af-112">You can access static members of a type without having to qualify the access with the type name:</span></span>  
   
 ```csharp  
 using static System.Console;   
@@ -74,40 +74,40 @@ class Program
 }  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- El ámbito de una directiva `using` se limita al archivo en el que aparece.  
+## <a name="remarks"></a><span data-ttu-id="833af-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="833af-113">Remarks</span></span>  
+ <span data-ttu-id="833af-114">El ámbito de una directiva `using` se limita al archivo en el que aparece.</span><span class="sxs-lookup"><span data-stu-id="833af-114">The scope of a `using` directive is limited to the file in which it appears.</span></span>  
   
- Cree un alias `using` para facilitar la calificación de un identificador como espacio de nombres o tipo. El lado derecho de una directiva de alias using siempre debe ser un tipo completo independientemente de las directivas using que lo precedan.  
+ <span data-ttu-id="833af-115">Cree un alias `using` para facilitar la calificación de un identificador como espacio de nombres o tipo.</span><span class="sxs-lookup"><span data-stu-id="833af-115">Create a `using` alias to make it easier to qualify an identifier to a namespace or type.</span></span> <span data-ttu-id="833af-116">El lado derecho de una directiva de alias using siempre debe ser un tipo completo independientemente de las directivas using que lo precedan.</span><span class="sxs-lookup"><span data-stu-id="833af-116">The right side of a using alias directive must always be a fully-qualified type regardless of the using directives that come before it.</span></span>  
   
- Cree una directiva `using` para usar los tipos de un espacio de nombres sin tener que especificarlo. Una directiva `using` no proporciona acceso a los espacios de nombres que están anidados en el espacio de nombres especificado.  
+ <span data-ttu-id="833af-117">Cree una directiva `using` para usar los tipos de un espacio de nombres sin tener que especificarlo.</span><span class="sxs-lookup"><span data-stu-id="833af-117">Create a `using` directive to use the types in a namespace without having to specify the namespace.</span></span> <span data-ttu-id="833af-118">Una directiva `using` no proporciona acceso a los espacios de nombres que están anidados en el espacio de nombres especificado.</span><span class="sxs-lookup"><span data-stu-id="833af-118">A `using` directive does not give you access to any namespaces that are nested in the namespace you specify.</span></span>  
   
- Los espacios de nombres se dividen en dos categorías: definidos por el sistema y definidos por el usuario. Los espacios de nombres definidos por el usuario son espacios de nombres definidos en el código. Para obtener una lista de los espacios de nombres definidos por el sistema, vea [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195).  
+ <span data-ttu-id="833af-119">Los espacios de nombres se dividen en dos categorías: definidos por el sistema y definidos por el usuario.</span><span class="sxs-lookup"><span data-stu-id="833af-119">Namespaces come in two categories: user-defined and system-defined.</span></span> <span data-ttu-id="833af-120">Los espacios de nombres definidos por el usuario son espacios de nombres definidos en el código.</span><span class="sxs-lookup"><span data-stu-id="833af-120">User-defined namespaces are namespaces defined in your code.</span></span> <span data-ttu-id="833af-121">Para obtener una lista de los espacios de nombres definidos por el sistema, vea [Biblioteca de clases .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195).</span><span class="sxs-lookup"><span data-stu-id="833af-121">For a list of the system-defined namespaces, see [.NET Framework Class Library](http://go.microsoft.com/fwlink/?LinkID=227195).</span></span>  
   
- Para obtener ejemplos de cómo hacer referencia a métodos en otros ensamblados, vea [Crear y usar archivos DLL de C#](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ <span data-ttu-id="833af-122">Para obtener ejemplos de cómo hacer referencia a métodos en otros ensamblados, vea [Crear y usar archivos DLL de C#](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).</span><span class="sxs-lookup"><span data-stu-id="833af-122">For examples on referencing methods in other assemblies, see [Creating and Using C# DLLs](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).</span></span>  
   
-## <a name="example-1"></a>Ejemplo 1  
+## <a name="example-1"></a><span data-ttu-id="833af-123">Ejemplo 1</span><span class="sxs-lookup"><span data-stu-id="833af-123">Example 1</span></span>  
   
- En el ejemplo siguiente se muestra cómo definir y usar un alias `using` para un espacio de nombres:  
+ <span data-ttu-id="833af-124">En el ejemplo siguiente se muestra cómo definir y usar un alias `using` para un espacio de nombres:</span><span class="sxs-lookup"><span data-stu-id="833af-124">The following example shows how to define and use a `using` alias for a namespace:</span></span>  
   
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
+ <span data-ttu-id="833af-125">[!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="833af-125">[!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]</span></span>  
   
- Una directiva de alias using no puede tener un tipo genérico abierto en el lado derecho. Por ejemplo, no puede crear un alias using para List\<T>, pero puede crear uno para List\<int>.  
+ <span data-ttu-id="833af-126">Una directiva de alias using no puede tener un tipo genérico abierto en el lado derecho.</span><span class="sxs-lookup"><span data-stu-id="833af-126">A using alias directive cannot have an open generic type on the right hand side.</span></span> <span data-ttu-id="833af-127">Por ejemplo, no puede crear un alias using para List\<T>, pero puede crear uno para List\<int>.</span><span class="sxs-lookup"><span data-stu-id="833af-127">For example, you cannot create a using alias for a List\<T>, but you can create one for a List\<int>.</span></span>  
   
-## <a name="example-2"></a>Ejemplo 2  
+## <a name="example-2"></a><span data-ttu-id="833af-128">Ejemplo 2</span><span class="sxs-lookup"><span data-stu-id="833af-128">Example 2</span></span>  
   
- En el ejemplo siguiente se muestra cómo definir una directiva `using` y un alias `using` para una clase:  
+ <span data-ttu-id="833af-129">En el ejemplo siguiente se muestra cómo definir una directiva `using` y un alias `using` para una clase:</span><span class="sxs-lookup"><span data-stu-id="833af-129">The following example shows how to define a `using` directive and a `using` alias for a class:</span></span>  
   
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
+ <span data-ttu-id="833af-130">[!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="833af-130">[!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a><span data-ttu-id="833af-131">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="833af-131">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Using Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  (Usar espacios de nombres)  
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  (Espacios de nombres)  
- [using (instrucción)](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="833af-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="833af-132">See Also</span></span>  
+ <span data-ttu-id="833af-133">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="833af-133">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="833af-134">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="833af-134">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="833af-135">[Using Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)  (Usar espacios de nombres)</span><span class="sxs-lookup"><span data-stu-id="833af-135">[Using Namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md) </span></span>  
+ <span data-ttu-id="833af-136">[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="833af-136">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="833af-137">[Palabras clave del espacio de nombres](../../../csharp/language-reference/keywords/namespace-keywords.md) </span><span class="sxs-lookup"><span data-stu-id="833af-137">[Namespace Keywords](../../../csharp/language-reference/keywords/namespace-keywords.md) </span></span>  
+ <span data-ttu-id="833af-138">[Namespaces](../../../csharp/programming-guide/namespaces/index.md)  (Espacios de nombres)</span><span class="sxs-lookup"><span data-stu-id="833af-138">[Namespaces](../../../csharp/programming-guide/namespaces/index.md) </span></span>  
+ [<span data-ttu-id="833af-139">using (instrucción)</span><span class="sxs-lookup"><span data-stu-id="833af-139">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)
 

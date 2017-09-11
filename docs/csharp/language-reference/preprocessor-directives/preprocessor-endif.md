@@ -36,8 +36,8 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="endif-c-reference"></a>#endif (Referencia de C#)
-`#endif` especifica el final de una directiva condicional, que comienza con la directiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Por ejemplo,  
+# <a name="endif-c-reference"></a><span data-ttu-id="88446-102">#endif (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="88446-102">#endif (C# Reference)</span></span>
+<span data-ttu-id="88446-103">`#endif` especifica el final de una directiva condicional, que comienza con la directiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md).</span><span class="sxs-lookup"><span data-stu-id="88446-103">`#endif` specifies the end of a conditional directive, which began with the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive.</span></span> <span data-ttu-id="88446-104">Por ejemplo,</span><span class="sxs-lookup"><span data-stu-id="88446-104">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -47,11 +47,11 @@ ms.lasthandoff: 07/28/2017
 #endif  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Una directiva condicional que empieza con una directiva `#if` debe terminar de forma explícita con una directiva `#endif`. Vea [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para obtener un ejemplo de cómo usar `#endif`.  
+## <a name="remarks"></a><span data-ttu-id="88446-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="88446-105">Remarks</span></span>  
+ <span data-ttu-id="88446-106">Una directiva condicional que empieza con una directiva `#if` debe terminar de forma explícita con una directiva `#endif`.</span><span class="sxs-lookup"><span data-stu-id="88446-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="88446-107">Vea [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) para obtener un ejemplo de cómo usar `#endif`.</span><span class="sxs-lookup"><span data-stu-id="88446-107">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="88446-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="88446-108">See Also</span></span>  
+ <span data-ttu-id="88446-109">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="88446-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="88446-110">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="88446-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="88446-111">Directivas de preprocesador de C#</span><span class="sxs-lookup"><span data-stu-id="88446-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

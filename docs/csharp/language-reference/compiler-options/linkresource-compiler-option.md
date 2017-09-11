@@ -41,55 +41,55 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="linkresource-c-compiler-options"></a>/linkresource (Opciones del compilador de C#)
-Crea un vínculo con un recurso de .NET Framework en el archivo de salida. El archivo de recursos no se agrega al archivo de salida. Esta opción difiere de la opción [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), la cual sí inserta un archivo de recursos en el archivo de salida.  
+# <a name="linkresource-c-compiler-options"></a><span data-ttu-id="f2df2-102">/linkresource (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="f2df2-102">/linkresource (C# Compiler Options)</span></span>
+<span data-ttu-id="f2df2-103">Crea un vínculo con un recurso de .NET Framework en el archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="f2df2-103">Creates a link to a .NET Framework resource in the output file.</span></span> <span data-ttu-id="f2df2-104">El archivo de recursos no se agrega al archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="f2df2-104">The resource file is not added to the output file.</span></span> <span data-ttu-id="f2df2-105">Esta opción difiere de la opción [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md), la cual sí inserta un archivo de recursos en el archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="f2df2-105">This differs from the [/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) option which does embed a resource file in the output file.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="f2df2-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f2df2-106">Syntax</span></span>  
   
 ```console  
 /linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="f2df2-107">Argumentos</span><span class="sxs-lookup"><span data-stu-id="f2df2-107">Arguments</span></span>  
  `filename`  
- El archivo de recursos de .NET Framework con el que quiere crear un vínculo desde el ensamblado.  
+ <span data-ttu-id="f2df2-108">El archivo de recursos de .NET Framework con el que quiere crear un vínculo desde el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="f2df2-108">The .NET Framework resource file to which you want to link from the assembly.</span></span>  
   
- `identifier` (opcional)  
- El nombre lógico del recurso; nombre que se usa para cargar el recurso. El valor predeterminado es el nombre del archivo.  
+ <span data-ttu-id="f2df2-109">`identifier` (opcional)</span><span class="sxs-lookup"><span data-stu-id="f2df2-109">`identifier` (optional)</span></span>  
+ <span data-ttu-id="f2df2-110">El nombre lógico del recurso; nombre que se usa para cargar el recurso.</span><span class="sxs-lookup"><span data-stu-id="f2df2-110">The logical name for the resource; the name that is used to load the resource.</span></span> <span data-ttu-id="f2df2-111">El valor predeterminado es el nombre del archivo.</span><span class="sxs-lookup"><span data-stu-id="f2df2-111">The default is the name of the file.</span></span>  
   
- `accessibility-modifier` (opcional)  
- La accesibilidad del recurso: pública o privada. El valor predeterminado es que sea pública.  
+ <span data-ttu-id="f2df2-112">`accessibility-modifier` (opcional)</span><span class="sxs-lookup"><span data-stu-id="f2df2-112">`accessibility-modifier` (optional)</span></span>  
+ <span data-ttu-id="f2df2-113">La accesibilidad del recurso: pública o privada.</span><span class="sxs-lookup"><span data-stu-id="f2df2-113">The accessibility of the resource: public or private.</span></span> <span data-ttu-id="f2df2-114">El valor predeterminado es que sea pública.</span><span class="sxs-lookup"><span data-stu-id="f2df2-114">The default is public.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- De manera predeterminada, los recursos vinculados son públicos en el ensamblado cuando se crean con el compilador de C#. Para que sean privados, especifique el modificador de accesibilidad `private`. No se permite ningún otro modificador distinto de `public` o `private`.  
+## <a name="remarks"></a><span data-ttu-id="f2df2-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f2df2-115">Remarks</span></span>  
+ <span data-ttu-id="f2df2-116">De manera predeterminada, los recursos vinculados son públicos en el ensamblado cuando se crean con el compilador de C#.</span><span class="sxs-lookup"><span data-stu-id="f2df2-116">By default, linked resources are public in the assembly when they are created with the C# compiler.</span></span> <span data-ttu-id="f2df2-117">Para que sean privados, especifique el modificador de accesibilidad `private`.</span><span class="sxs-lookup"><span data-stu-id="f2df2-117">To make the resources private, specify `private` as the accessibility modifier.</span></span> <span data-ttu-id="f2df2-118">No se permite ningún otro modificador distinto de `public` o `private`.</span><span class="sxs-lookup"><span data-stu-id="f2df2-118">No other modifier other than `public` or `private` is allowed.</span></span>  
   
- **/linkresource** requiere una de las opciones [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) distinta de **/target:module**.  
+ <span data-ttu-id="f2df2-119">**/linkresource** requiere una de las opciones [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) distinta de **/target:module**.</span><span class="sxs-lookup"><span data-stu-id="f2df2-119">**/linkresource** requires one of the [/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) options other than **/target:module**.</span></span>  
   
- Si `filename` es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) o en el entorno de desarrollo, se puede obtener acceso a él con miembros del espacio de nombres <xref:System.Resources>. Para obtener más información, consulta <xref:System.Resources.ResourceManager?displayProperty=fullName>. Para todos los demás recursos, use los métodos `GetManifestResource`* de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.  
+ <span data-ttu-id="f2df2-120">Si `filename` es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) o en el entorno de desarrollo, se puede obtener acceso a él con miembros del espacio de nombres <xref:System.Resources>.</span><span class="sxs-lookup"><span data-stu-id="f2df2-120">If `filename` is a .NET Framework resource file created, for example, by [Resgen.exe](http://msdn.microsoft.com/library/8ef159de-b660-4bec-9213-c3fbc4d1c6f4) or in the development environment, it can be accessed with members in the <xref:System.Resources> namespace.</span></span> <span data-ttu-id="f2df2-121">Para obtener más información, consulta <xref:System.Resources.ResourceManager?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="f2df2-121">For more information, see <xref:System.Resources.ResourceManager?displayProperty=fullName>.</span></span> <span data-ttu-id="f2df2-122">Para todos los demás recursos, use los métodos `GetManifestResource`* de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="f2df2-122">For all other resources, use the `GetManifestResource`* methods in the <xref:System.Reflection.Assembly> class to access the resource at run time.</span></span>  
   
- El archivo especificado en `filename` puede tener cualquier formato. Por ejemplo, se puede hacer que una DLL nativa forme parte de un ensamblado para que se pueda instalar en la caché global de ensamblados y sea accesible desde código administrado del ensamblado. En el segundo de los siguientes ejemplos se muestra cómo hacerlo. También es posible realizar lo mismo en Assembly Linker. En el tercer ejemplo se muestra cómo hacerlo. Para obtener más información, vea [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) y [Trabajar con ensamblados y la memoria caché global de ensamblados](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
+ <span data-ttu-id="f2df2-123">El archivo especificado en `filename` puede tener cualquier formato.</span><span class="sxs-lookup"><span data-stu-id="f2df2-123">The file specified in `filename` can be any format.</span></span> <span data-ttu-id="f2df2-124">Por ejemplo, se puede hacer que una DLL nativa forme parte de un ensamblado para que se pueda instalar en la caché global de ensamblados y sea accesible desde código administrado del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="f2df2-124">For example, you may want to make a native DLL part of the assembly, so that it can be installed into the global assembly cache and accessed from managed code in the assembly.</span></span> <span data-ttu-id="f2df2-125">En el segundo de los siguientes ejemplos se muestra cómo hacerlo.</span><span class="sxs-lookup"><span data-stu-id="f2df2-125">The second of the following examples shows how to do this.</span></span> <span data-ttu-id="f2df2-126">También es posible realizar lo mismo en Assembly Linker.</span><span class="sxs-lookup"><span data-stu-id="f2df2-126">You can do the same thing in the Assembly Linker.</span></span> <span data-ttu-id="f2df2-127">En el tercer ejemplo se muestra cómo hacerlo.</span><span class="sxs-lookup"><span data-stu-id="f2df2-127">The third of the following examples shows how to do this.</span></span> <span data-ttu-id="f2df2-128">Para obtener más información, vea [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) y [Trabajar con ensamblados y la memoria caché global de ensamblados](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).</span><span class="sxs-lookup"><span data-stu-id="f2df2-128">For more information, see [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) and [Working with Assemblies and the Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).</span></span>  
   
- **/linkres** es la forma abreviada de **/linkresource**.  
+ <span data-ttu-id="f2df2-129">**/linkres** es la forma abreviada de **/linkresource**.</span><span class="sxs-lookup"><span data-stu-id="f2df2-129">**/linkres** is the short form of **/linkresource**.</span></span>  
   
- Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
+ <span data-ttu-id="f2df2-130">Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="f2df2-130">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Para compilar `in.cs` y vincularlo al archivo de recursos `rf.resource`:  
+## <a name="example"></a><span data-ttu-id="f2df2-131">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f2df2-131">Example</span></span>  
+ <span data-ttu-id="f2df2-132">Para compilar `in.cs` y vincularlo al archivo de recursos `rf.resource`:</span><span class="sxs-lookup"><span data-stu-id="f2df2-132">Compile `in.cs` and link to resource file `rf.resource`:</span></span>  
   
 ```console  
 csc /linkresource:rf.resource in.cs  
 ```  
   
-## <a name="example"></a>Ejemplo  
- Compile `A.cs` en un archivo DLL, vincúlelo a un archivo DLL nativo N.dll y coloque el resultado en la caché global de ensamblados (GAC). En este ejemplo, A.dll y N.dll residen en la GAC.  
+## <a name="example"></a><span data-ttu-id="f2df2-133">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f2df2-133">Example</span></span>  
+ <span data-ttu-id="f2df2-134">Compile `A.cs` en un archivo DLL, vincúlelo a un archivo DLL nativo N.dll y coloque el resultado en la caché global de ensamblados (GAC).</span><span class="sxs-lookup"><span data-stu-id="f2df2-134">Compile `A.cs` into a DLL, link to a native DLL N.dll, and put the output in the Global Assembly Cache (GAC).</span></span> <span data-ttu-id="f2df2-135">En este ejemplo, A.dll y N.dll residen en la GAC.</span><span class="sxs-lookup"><span data-stu-id="f2df2-135">In this example, both A.dll and N.dll will reside in the GAC.</span></span>  
   
 ```console  
 csc /linkresource:N.dll /t:library A.cs  
 gacutil -i A.dll  
 ```  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo hace lo mismo que el anterior, pero usa las opciones de Assembly Linker.  
+## <a name="example"></a><span data-ttu-id="f2df2-136">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f2df2-136">Example</span></span>  
+ <span data-ttu-id="f2df2-137">Este ejemplo hace lo mismo que el anterior, pero usa las opciones de Assembly Linker.</span><span class="sxs-lookup"><span data-stu-id="f2df2-137">This example does the same thing as the previous one, but by using Assembly Linker options.</span></span>  
   
 ```console  
 csc /t:module A.cs  
@@ -97,9 +97,9 @@ al /out:A.dll A.netmodule /link:N.dll
 gacutil -i A.dll  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex)   
- [Trabajar con ensamblados y la memoria caché global de ensamblados](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="f2df2-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="f2df2-138">See Also</span></span>  
+ <span data-ttu-id="f2df2-139">[Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="f2df2-139">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ <span data-ttu-id="f2df2-140">[Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) </span><span class="sxs-lookup"><span data-stu-id="f2df2-140">[Al.exe (Assembly Linker)](https://msdn.microsoft.com/library/c405shex) </span></span>  
+ <span data-ttu-id="f2df2-141">[Trabajar con ensamblados y la memoria caché global de ensamblados](../../../framework/app-domains/working-with-assemblies-and-the-gac.md) </span><span class="sxs-lookup"><span data-stu-id="f2df2-141">[Working with Assemblies and the Global Assembly Cache](../../../framework/app-domains/working-with-assemblies-and-the-gac.md) </span></span>  
+ [<span data-ttu-id="f2df2-142">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="f2df2-142">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

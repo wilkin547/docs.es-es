@@ -1,1 +1,1 @@
-Metarchivo mejorado (EMF)
+<span data-ttu-id="03947-101">Metarchivo mejorado (EMF)</span><span class="sxs-lookup"><span data-stu-id="03947-101">Enhanced Metafile (EMF)</span></span>

@@ -37,26 +37,26 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltvaluegt-c-programming-guide"></a>&lt;value&gt; (Guía de programación de C#)
-## <a name="syntax"></a>Sintaxis  
+# <a name="ltvaluegt-c-programming-guide"></a><span data-ttu-id="9b714-102">&lt;value&gt; (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="9b714-102">&lt;value&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="9b714-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9b714-103">Syntax</span></span>  
   
 ```xml  
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="9b714-104">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9b714-104">Parameters</span></span>  
  `property-description`  
- Una descripción de la propiedad.  
+ <span data-ttu-id="9b714-105">Una descripción de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="9b714-105">A description for the property.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- La etiqueta \<value> le permite describir el valor que representa una propiedad. Tenga en cuenta que cuando agrega una propiedad mediante un asistente de código en el entorno de desarrollo .NET de Visual Studio, agregará una etiqueta [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) para la nueva propiedad. Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.  
+## <a name="remarks"></a><span data-ttu-id="9b714-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9b714-106">Remarks</span></span>  
+ <span data-ttu-id="9b714-107">La etiqueta \<value> le permite describir el valor que representa una propiedad.</span><span class="sxs-lookup"><span data-stu-id="9b714-107">The \<value> tag lets you describe the value that a property represents.</span></span> <span data-ttu-id="9b714-108">Tenga en cuenta que cuando agrega una propiedad mediante un asistente de código en el entorno de desarrollo .NET de Visual Studio, agregará una etiqueta [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) para la nueva propiedad.</span><span class="sxs-lookup"><span data-stu-id="9b714-108">Note that when you add a property via code wizard in the Visual Studio .NET development environment, it will add a [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) tag for the new property.</span></span> <span data-ttu-id="9b714-109">Después, debe agregar manualmente una etiqueta \<value> para describir el valor que representa esa propiedad.</span><span class="sxs-lookup"><span data-stu-id="9b714-109">You should then manually add a \<value> tag to describe the value that the property represents.</span></span>  
   
- Compile con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación a un archivo.  
+ <span data-ttu-id="9b714-110">Compile con [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación a un archivo.</span><span class="sxs-lookup"><span data-stu-id="9b714-110">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]  
+## <a name="example"></a><span data-ttu-id="9b714-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9b714-111">Example</span></span>  
+ <span data-ttu-id="9b714-112">[!code-cs[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="9b714-112">[!code-cs[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="9b714-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="9b714-113">See Also</span></span>  
+ <span data-ttu-id="9b714-114">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9b714-114">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="9b714-115">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="9b714-115">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

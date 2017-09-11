@@ -18,20 +18,20 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="translating-expression-trees"></a>Traducción de árboles de expresión
+# <a name="translating-expression-trees"></a><span data-ttu-id="d128e-104">Traducción de árboles de expresión</span><span class="sxs-lookup"><span data-stu-id="d128e-104">Translating Expression Trees</span></span>
 
-[Anterior: Generación de expresiones](expression-trees-building.md)
+[<span data-ttu-id="d128e-105">Anterior: Generación de expresiones</span><span class="sxs-lookup"><span data-stu-id="d128e-105">Previous -- Building Expressions</span></span>](expression-trees-building.md)
 
-En esta última sección, obtendrá información sobre cómo visitar cada nodo en un árbol de expresión, mientras se crea una copia modificada de ese árbol de expresión. Se trata de las técnicas que se van a usar en dos escenarios importantes. La primera consiste en comprender los algoritmos que se expresan mediante un árbol de expresión para poder trasladarlo a otro entorno. La segunda es cuando se quiere cambiar el algoritmo que se creó. Esto podría ser para agregar el registro, interceptar las llamadas de método y realizar un seguimiento de ellas, o con otros fines.
+<span data-ttu-id="d128e-106">En esta última sección, obtendrá información sobre cómo visitar cada nodo en un árbol de expresión, mientras se crea una copia modificada de ese árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="d128e-106">In this final section, you'll learn how to visit each node in an expression tree while building a modified copy of that expression tree.</span></span> <span data-ttu-id="d128e-107">Se trata de las técnicas que se van a usar en dos escenarios importantes.</span><span class="sxs-lookup"><span data-stu-id="d128e-107">These are the techniques that you will use in two important scenarios.</span></span> <span data-ttu-id="d128e-108">La primera consiste en comprender los algoritmos que se expresan mediante un árbol de expresión para poder trasladarlo a otro entorno.</span><span class="sxs-lookup"><span data-stu-id="d128e-108">The first is to understand the algorithms expressed by an expression tree so that it can be translated into another environment.</span></span> <span data-ttu-id="d128e-109">La segunda es cuando se quiere cambiar el algoritmo que se creó.</span><span class="sxs-lookup"><span data-stu-id="d128e-109">The second is when you want to change the algorithm that has been created.</span></span> <span data-ttu-id="d128e-110">Esto podría ser para agregar el registro, interceptar las llamadas de método y realizar un seguimiento de ellas, o con otros fines.</span><span class="sxs-lookup"><span data-stu-id="d128e-110">This might be to add logging, intercept method calls and track them, or other purposes.</span></span>
 
-## <a name="translating-is-visiting"></a>Trasladar es visitar
+## <a name="translating-is-visiting"></a><span data-ttu-id="d128e-111">Trasladar es visitar</span><span class="sxs-lookup"><span data-stu-id="d128e-111">Translating is Visiting</span></span>
 
-El código que se compila para trasladar un árbol de expresión es una extensión de lo que ya se vio para visitar todos los nodos de un árbol. Al trasladar un árbol de expresión, se visitan todos los nodos y mientras se visitan, se crea el árbol nuevo. El nuevo árbol puede contener referencias a los nodos originales o a nodos nuevos que se colocaron en el árbol.
+<span data-ttu-id="d128e-112">El código que se compila para trasladar un árbol de expresión es una extensión de lo que ya se vio para visitar todos los nodos de un árbol.</span><span class="sxs-lookup"><span data-stu-id="d128e-112">The code you build to translate an expression tree is an extension of what you've already seen to visit all the nodes in a tree.</span></span> <span data-ttu-id="d128e-113">Al trasladar un árbol de expresión, se visitan todos los nodos y mientras se visitan, se crea el árbol nuevo.</span><span class="sxs-lookup"><span data-stu-id="d128e-113">When you translate an expression tree, you visit all the nodes, and while visiting them, build the new tree.</span></span> <span data-ttu-id="d128e-114">El nuevo árbol puede contener referencias a los nodos originales o a nodos nuevos que se colocaron en el árbol.</span><span class="sxs-lookup"><span data-stu-id="d128e-114">The new tree may contain references to the original nodes, or new nodes that you have placed in the tree.</span></span>
 
-Vamos a verlo en acción mediante la visita a un árbol de expresión y la creación de un árbol nuevo con varios nodos de reemplazo. En este ejemplo, se van a sustituir todas las constantes con una constante que es diez veces mayor.
-De lo contrario, el árbol de expresión se mantendrá intacto. En lugar de leer el valor de la constante y reemplazarlo con una constante nueva, este cambio se hará reemplazando el nodo constante con un nuevo nodo que realiza la multiplicación.
+<span data-ttu-id="d128e-115">Vamos a verlo en acción mediante la visita a un árbol de expresión y la creación de un árbol nuevo con varios nodos de reemplazo.</span><span class="sxs-lookup"><span data-stu-id="d128e-115">Let's see this in action by visiting an expression tree, and creating a new tree with some replacement nodes.</span></span> <span data-ttu-id="d128e-116">En este ejemplo, se van a sustituir todas las constantes con una constante que es diez veces mayor.</span><span class="sxs-lookup"><span data-stu-id="d128e-116">In this example, let's replace any constant with a constant that is ten times larger.</span></span>
+<span data-ttu-id="d128e-117">De lo contrario, el árbol de expresión se mantendrá intacto.</span><span class="sxs-lookup"><span data-stu-id="d128e-117">Otherwise, we'll leave the expression tree intact.</span></span> <span data-ttu-id="d128e-118">En lugar de leer el valor de la constante y reemplazarlo con una constante nueva, este cambio se hará reemplazando el nodo constante con un nuevo nodo que realiza la multiplicación.</span><span class="sxs-lookup"><span data-stu-id="d128e-118">Rather than reading the value of the constant, and replacing it with a new constant, we'll make this replacement by replacing the constant node with a new node that performs the multiplication.</span></span>
 
-Aquí, una vez que se encuentre un nodo constante, se crea un nuevo nodo de multiplicación cuyos elementos secundarios son la constante original y la constante `10`:
+<span data-ttu-id="d128e-119">Aquí, una vez que se encuentre un nodo constante, se crea un nuevo nodo de multiplicación cuyos elementos secundarios son la constante original y la constante `10`:</span><span class="sxs-lookup"><span data-stu-id="d128e-119">Here, once you find a constant node, you create a new multiplication node whose children are the original constant, and the constant `10`:</span></span>
 
 ```csharp
 private static Expression ReplaceNodes(Expression original)
@@ -51,7 +51,7 @@ private static Expression ReplaceNodes(Expression original)
 }
 ```
 
-Al reemplazar el nodo original con el sustituto, se crea un árbol nuevo que contiene las modificaciones. Se puede comprobar mediante la compilación y ejecución del árbol reemplazado.
+<span data-ttu-id="d128e-120">Al reemplazar el nodo original con el sustituto, se crea un árbol nuevo que contiene las modificaciones.</span><span class="sxs-lookup"><span data-stu-id="d128e-120">By replacing the original node with the substitute, a new tree is formed that contains our modifications.</span></span> <span data-ttu-id="d128e-121">Se puede comprobar mediante la compilación y ejecución del árbol reemplazado.</span><span class="sxs-lookup"><span data-stu-id="d128e-121">We can verify that by compiling and executing the replaced tree.</span></span>
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -65,14 +65,14 @@ var answer = func();
 Console.WriteLine(answer);
 ```
 
-La creación de un árbol nuevo es una combinación de visitar los nodos del árbol existente y crear nodos nuevos e insertarlos en el árbol.
+<span data-ttu-id="d128e-122">La creación de un árbol nuevo es una combinación de visitar los nodos del árbol existente y crear nodos nuevos e insertarlos en el árbol.</span><span class="sxs-lookup"><span data-stu-id="d128e-122">Building a new tree is a combination of visiting the nodes in the existing tree, and creating new nodes and inserting them into the tree.</span></span>
 
-En este ejemplo se muestra la importancia de la inmutabilidad de los árboles de expresión. Observe que el nuevo árbol creado anteriormente contiene una mezcla de los nodos recién creados y los nodos del árbol existente. Es seguro, ya que no se pueden modificar los nodos en el árbol existente. Esto puede producir eficiencias de memoria significativas.
-Los mismos nodos se pueden usar en un árbol o en varios árboles de expresión. Dado que los nodos no se pueden modificar, se puede volver a usar el mismo nodo siempre que sea necesario.
+<span data-ttu-id="d128e-123">En este ejemplo se muestra la importancia de la inmutabilidad de los árboles de expresión.</span><span class="sxs-lookup"><span data-stu-id="d128e-123">This example shows the importance of expression trees being immutable.</span></span> <span data-ttu-id="d128e-124">Observe que el nuevo árbol creado anteriormente contiene una mezcla de los nodos recién creados y los nodos del árbol existente.</span><span class="sxs-lookup"><span data-stu-id="d128e-124">Notice that the new tree created above contains a mixture of newly created nodes, and nodes from the existing tree.</span></span> <span data-ttu-id="d128e-125">Es seguro, ya que no se pueden modificar los nodos en el árbol existente.</span><span class="sxs-lookup"><span data-stu-id="d128e-125">That's safe, because the nodes in the existing tree cannot be modified.</span></span> <span data-ttu-id="d128e-126">Esto puede producir eficiencias de memoria significativas.</span><span class="sxs-lookup"><span data-stu-id="d128e-126">This can result in significant memory efficiencies.</span></span>
+<span data-ttu-id="d128e-127">Los mismos nodos se pueden usar en un árbol o en varios árboles de expresión.</span><span class="sxs-lookup"><span data-stu-id="d128e-127">The same nodes can be used throughout a tree, or in multiple expression trees.</span></span> <span data-ttu-id="d128e-128">Dado que los nodos no se pueden modificar, se puede volver a usar el mismo nodo siempre que sea necesario.</span><span class="sxs-lookup"><span data-stu-id="d128e-128">Since nodes can't be modified, the same node can be reused whenever its needed.</span></span>
 
-## <a name="traversing-and-executing-an-addition"></a>Recorrer y ejecutar una adición
+## <a name="traversing-and-executing-an-addition"></a><span data-ttu-id="d128e-129">Recorrer y ejecutar una adición</span><span class="sxs-lookup"><span data-stu-id="d128e-129">Traversing and Executing an Addition</span></span>
 
-Vamos a comprobarlo mediante la creación de un segundo visitante que recorre el árbol de nodos de adición y calcula el resultado. Para ello, se pueden realizar algunas modificaciones en el visitante visto hasta el momento. En esta nueva versión, el visitante devolverá la suma parcial de la operación de adición hasta este punto. Para una expresión constante, es simplemente el valor de la expresión constante. Para una expresión de adición, el resultado es la suma de los operandos izquierdo y derecho, una vez que se recorren esos árboles.
+<span data-ttu-id="d128e-130">Vamos a comprobarlo mediante la creación de un segundo visitante que recorre el árbol de nodos de adición y calcula el resultado.</span><span class="sxs-lookup"><span data-stu-id="d128e-130">Let's verify this by building a second visitor that walks the tree of addition nodes and computes the result.</span></span> <span data-ttu-id="d128e-131">Para ello, se pueden realizar algunas modificaciones en el visitante visto hasta el momento.</span><span class="sxs-lookup"><span data-stu-id="d128e-131">You can do this by making a couple modifications to the vistor that you've seen so far.</span></span> <span data-ttu-id="d128e-132">En esta nueva versión, el visitante devolverá la suma parcial de la operación de adición hasta este punto.</span><span class="sxs-lookup"><span data-stu-id="d128e-132">In this new version, the visitor will return the partial sum of the addition operation up to this point.</span></span> <span data-ttu-id="d128e-133">Para una expresión constante, es simplemente el valor de la expresión constante.</span><span class="sxs-lookup"><span data-stu-id="d128e-133">For a constant expression, that is simply the value of the constant expression.</span></span> <span data-ttu-id="d128e-134">Para una expresión de adición, el resultado es la suma de los operandos izquierdo y derecho, una vez que se recorren esos árboles.</span><span class="sxs-lookup"><span data-stu-id="d128e-134">For an addition expression, the result is the sum of the left and right operands, once those trees have been traversed.</span></span>
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -97,11 +97,11 @@ var theSum = aggregate(sum);
 Console.WriteLine(theSum);
 ```
 
-Aquí hay gran cantidad de código, pero los conceptos son muy accesibles.
-Este código visita los elementos secundarios en una primera búsqueda de profundidad. Cuando encuentra un nodo constante, el visitante devuelve el valor de la constante. Después de que el visitante visite los dos secundarios, esos elementos secundarios habrán calculado la suma calculada para ese subárbol. El nodo de adición ahora puede calcular la suma.
-Una vez que se visiten todos los nodos en el árbol de expresión, se habrá calculado la suma. Se puede hacer el seguimiento de la ejecución ejecutando el ejemplo en el depurador y realizando el seguimiento de la ejecución.
+<span data-ttu-id="d128e-135">Aquí hay gran cantidad de código, pero los conceptos son muy accesibles.</span><span class="sxs-lookup"><span data-stu-id="d128e-135">There's quite a bit of code here, but the concepts are very approachable.</span></span>
+<span data-ttu-id="d128e-136">Este código visita los elementos secundarios en una primera búsqueda de profundidad.</span><span class="sxs-lookup"><span data-stu-id="d128e-136">This code visits children in a depth first search.</span></span> <span data-ttu-id="d128e-137">Cuando encuentra un nodo constante, el visitante devuelve el valor de la constante.</span><span class="sxs-lookup"><span data-stu-id="d128e-137">When it encounters a constant node, the visitor returns the value of the constant.</span></span> <span data-ttu-id="d128e-138">Después de que el visitante visite los dos secundarios, esos elementos secundarios habrán calculado la suma calculada para ese subárbol.</span><span class="sxs-lookup"><span data-stu-id="d128e-138">After the visitor has visited both children, those children will have computed the sum computed for that sub-tree.</span></span> <span data-ttu-id="d128e-139">El nodo de adición ahora puede calcular la suma.</span><span class="sxs-lookup"><span data-stu-id="d128e-139">The addition node can now compute its sum.</span></span>
+<span data-ttu-id="d128e-140">Una vez que se visiten todos los nodos en el árbol de expresión, se habrá calculado la suma.</span><span class="sxs-lookup"><span data-stu-id="d128e-140">Once all the nodes in the expression tree have been visited, the sum will have been computed.</span></span> <span data-ttu-id="d128e-141">Se puede hacer el seguimiento de la ejecución ejecutando el ejemplo en el depurador y realizando el seguimiento de la ejecución.</span><span class="sxs-lookup"><span data-stu-id="d128e-141">You can trace the execution by running the sample in the debugger and tracing the execution.</span></span>
 
-Vamos a facilitar el seguimiento de cómo se analizan los nodos y cómo se calcula la suma mediante el recorrido del árbol. Esta es una versión actualizada del método agregado que incluye gran cantidad de información de seguimiento:
+<span data-ttu-id="d128e-142">Vamos a facilitar el seguimiento de cómo se analizan los nodos y cómo se calcula la suma mediante el recorrido del árbol.</span><span class="sxs-lookup"><span data-stu-id="d128e-142">Let's make it easier to trace how the nodes are analyzed and how the sum is computed by travsersing the tree.</span></span> <span data-ttu-id="d128e-143">Esta es una versión actualizada del método agregado que incluye gran cantidad de información de seguimiento:</span><span class="sxs-lookup"><span data-stu-id="d128e-143">Here's an updated version of the Aggregate method that includes quite a bit of tracing information:</span></span>
 
 ```csharp
 private static int Aggregate(Expression exp)
@@ -130,7 +130,7 @@ private static int Aggregate(Expression exp)
 }
 ```
 
-Al ejecutarla en la misma expresión, produce el siguiente resultado:
+<span data-ttu-id="d128e-144">Al ejecutarla en la misma expresión, produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="d128e-144">Running it on the same expression yields the following output:</span></span>
 
 ```
 10
@@ -159,15 +159,15 @@ Computed sum: 10
 10
 ```
 
-Realice el seguimiento del resultado y siga el código anterior. Debería poder averiguar cómo el código visita cada nodo y calcula la suma mientras recorre el árbol y busca la suma.
+<span data-ttu-id="d128e-145">Realice el seguimiento del resultado y siga el código anterior.</span><span class="sxs-lookup"><span data-stu-id="d128e-145">Trace the output and follow along in the code above.</span></span> <span data-ttu-id="d128e-146">Debería poder averiguar cómo el código visita cada nodo y calcula la suma mientras recorre el árbol y busca la suma.</span><span class="sxs-lookup"><span data-stu-id="d128e-146">You should be able to work out how the code visits each node and computes the sum as it goes through the tree and finds the sum.</span></span>
 
-Ahora, veremos una ejecución diferente, con la expresión proporcionada por `sum1`:
+<span data-ttu-id="d128e-147">Ahora, veremos una ejecución diferente, con la expresión proporcionada por `sum1`:</span><span class="sxs-lookup"><span data-stu-id="d128e-147">Now, let's look at a different run, with the expression given by `sum1`:</span></span>
 
 ```csharp
 Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 ```
 
-Este es el resultado de examinar esta expresión:
+<span data-ttu-id="d128e-148">Este es el resultado de examinar esta expresión:</span><span class="sxs-lookup"><span data-stu-id="d128e-148">Here's the output from examining this expression:</span></span>
 
 ```
 Found Addition Expression
@@ -195,14 +195,14 @@ Computed sum: 10
 10
 ```
 
-Aunque la respuesta final es la misma, el recorrido del árbol es completamente diferente. Los nodos se recorren en un orden diferente, porque el árbol se construyó con diferentes operaciones que se producen en primer lugar.
+<span data-ttu-id="d128e-149">Aunque la respuesta final es la misma, el recorrido del árbol es completamente diferente.</span><span class="sxs-lookup"><span data-stu-id="d128e-149">While the final answer is the same, the tree traversal is completely different.</span></span> <span data-ttu-id="d128e-150">Los nodos se recorren en un orden diferente, porque el árbol se construyó con diferentes operaciones que se producen en primer lugar.</span><span class="sxs-lookup"><span data-stu-id="d128e-150">The nodes are traveled in a different order, because the tree was constructed with different operations occurring first.</span></span>
 
-## <a name="learning-more"></a>Obtener más información
+## <a name="learning-more"></a><span data-ttu-id="d128e-151">Obtener más información</span><span class="sxs-lookup"><span data-stu-id="d128e-151">Learning More</span></span>
 
-En este ejemplo se muestra un pequeño subconjunto del código que se compilaría para recorrer e interpretar los algoritmos representados por un árbol de expresión. Para obtener una descripción completa de todo el trabajo necesario para compilar una biblioteca de propósito general que traduce árboles de expresión a otro lenguaje, lea [esta serie](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) de Matt Warren. Describe en detalle cómo traducir cualquier código que es posible encontrar en un árbol de expresión.
+<span data-ttu-id="d128e-152">En este ejemplo se muestra un pequeño subconjunto del código que se compilaría para recorrer e interpretar los algoritmos representados por un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="d128e-152">This sample shows a small subset of the code you would build to traverse and interpret the algorithms represented by an expression tree.</span></span> <span data-ttu-id="d128e-153">Para obtener una descripción completa de todo el trabajo necesario para compilar una biblioteca de propósito general que traduce árboles de expresión a otro lenguaje, lea [esta serie](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) de Matt Warren.</span><span class="sxs-lookup"><span data-stu-id="d128e-153">For a complete discussion of all the work necessary to build a general purpose library that translates expression trees into another language, please read [this series](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) by Matt Warren.</span></span> <span data-ttu-id="d128e-154">Describe en detalle cómo traducir cualquier código que es posible encontrar en un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="d128e-154">It goes into great detail on how to translate any of the code you might find in an expression tree.</span></span>
 
-Espero que haya visto la verdadera eficacia de los árboles de expresión.
-Puede examinar un conjunto de código, realizar los cambios que quiera en ese código y ejecutar la versión modificada. Como los árboles de expresión son inmutables, se pueden crear árboles nuevos mediante el uso de los componentes de árboles existentes. Esto minimiza la cantidad de memoria necesaria para crear árboles de expresión modificados.
+<span data-ttu-id="d128e-155">Espero que haya visto la verdadera eficacia de los árboles de expresión.</span><span class="sxs-lookup"><span data-stu-id="d128e-155">I hope you've now seen the true power of expression trees.</span></span>
+<span data-ttu-id="d128e-156">Puede examinar un conjunto de código, realizar los cambios que quiera en ese código y ejecutar la versión modificada.</span><span class="sxs-lookup"><span data-stu-id="d128e-156">You can examine a set of code, make any changes you'd like to that code, and execute the changed version.</span></span> <span data-ttu-id="d128e-157">Como los árboles de expresión son inmutables, se pueden crear árboles nuevos mediante el uso de los componentes de árboles existentes.</span><span class="sxs-lookup"><span data-stu-id="d128e-157">Because the expression trees are immutable, you can create new trees by using the components of existing trees.</span></span> <span data-ttu-id="d128e-158">Esto minimiza la cantidad de memoria necesaria para crear árboles de expresión modificados.</span><span class="sxs-lookup"><span data-stu-id="d128e-158">This minimizes the amount of memory needed to create modified expression trees.</span></span>
 
-[Siguiente: Resumen](expression-trees-summary.md)
+[<span data-ttu-id="d128e-159">Siguiente: Resumen</span><span class="sxs-lookup"><span data-stu-id="d128e-159">Next -- Summing up</span></span>](expression-trees-summary.md)
 

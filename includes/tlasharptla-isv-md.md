@@ -1,1 +1,1 @@
-proveedor de software independiente (ISV)
+<span data-ttu-id="9626f-101">proveedor de software independiente (ISV)</span><span class="sxs-lookup"><span data-stu-id="9626f-101">independent software vendor (ISV)</span></span>

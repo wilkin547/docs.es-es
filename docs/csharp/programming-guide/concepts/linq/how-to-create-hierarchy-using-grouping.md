@@ -21,13 +21,13 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Cómo: Crear una jerarquía mediante la agrupación (C#)
-Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agrupación.  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a><span data-ttu-id="908f4-102">Cómo: Crear una jerarquía mediante la agrupación (C#)</span><span class="sxs-lookup"><span data-stu-id="908f4-102">How to: Create Hierarchy Using Grouping (C#)</span></span>
+<span data-ttu-id="908f4-103">Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agrupación.</span><span class="sxs-lookup"><span data-stu-id="908f4-103">This example shows how to group data, and then generate XML based on the grouping.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo agrupa primero los datos por categorías y, a continuación, genera un nuevo archivo XML en el que la jerarquía XML refleja la agrupación.  
+## <a name="example"></a><span data-ttu-id="908f4-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="908f4-104">Example</span></span>  
+ <span data-ttu-id="908f4-105">Este ejemplo agrupa primero los datos por categorías y, a continuación, genera un nuevo archivo XML en el que la jerarquía XML refleja la agrupación.</span><span class="sxs-lookup"><span data-stu-id="908f4-105">This example first groups data by a category, then generates a new XML file in which the XML hierarchy reflects the grouping.</span></span>  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ <span data-ttu-id="908f4-106">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="908f4-106">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -47,7 +47,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="908f4-107">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="908f4-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -86,6 +86,6 @@ Console.WriteLine(newData);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Técnicas de consulta avanzadas (LINQ to XML) (C#))
+## <a name="see-also"></a><span data-ttu-id="908f4-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="908f4-108">See Also</span></span>  
+ <span data-ttu-id="908f4-109">[Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md) (Técnicas de consulta avanzadas (LINQ to XML) (C#))</span><span class="sxs-lookup"><span data-stu-id="908f4-109">[Advanced Query Techniques (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)</span></span>
 

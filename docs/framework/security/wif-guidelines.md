@@ -21,11 +21,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="wif-guidelines"></a>Instrucciones WIF
--   [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+# <a name="wif-guidelines"></a><span data-ttu-id="f8bff-102">Instrucciones WIF</span><span class="sxs-lookup"><span data-stu-id="f8bff-102">WIF Guidelines</span></span>
+-   [<span data-ttu-id="f8bff-103">Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5</span><span class="sxs-lookup"><span data-stu-id="f8bff-103">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
   
--   [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+-   [<span data-ttu-id="f8bff-104">Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="f8bff-104">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
   
-## <a name="see-also"></a>Vea también  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="f8bff-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="f8bff-105">See Also</span></span>  
+ [<span data-ttu-id="f8bff-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="f8bff-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
 

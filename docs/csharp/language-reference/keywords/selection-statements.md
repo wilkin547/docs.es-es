@@ -34,24 +34,24 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="selection-statements-c-reference"></a>Instrucciones de selección (Referencia de C#)
-Una instrucción de selección hace que el control del programa se transfiera a un determinado flujo dependiendo de si cierta condición es `true` o no.  
+# <a name="selection-statements-c-reference"></a><span data-ttu-id="da879-102">Instrucciones de selección (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="da879-102">Selection Statements (C# Reference)</span></span>
+<span data-ttu-id="da879-103">Una instrucción de selección hace que el control del programa se transfiera a un determinado flujo dependiendo de si cierta condición es `true` o no.</span><span class="sxs-lookup"><span data-stu-id="da879-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
   
- Las siguientes palabras clave se usan en instrucciones de selección:  
+ <span data-ttu-id="da879-104">Las siguientes palabras clave se usan en instrucciones de selección:</span><span class="sxs-lookup"><span data-stu-id="da879-104">The following keywords are used in selection statements:</span></span>  
   
--   [if](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="da879-105">if</span><span class="sxs-lookup"><span data-stu-id="da879-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="da879-106">else</span><span class="sxs-lookup"><span data-stu-id="da879-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="da879-107">switch</span><span class="sxs-lookup"><span data-stu-id="da879-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [case](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="da879-108">case</span><span class="sxs-lookup"><span data-stu-id="da879-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [default](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="da879-109">default</span><span class="sxs-lookup"><span data-stu-id="da879-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palabras clave de instrucciones](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="da879-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="da879-110">See Also</span></span>  
+ <span data-ttu-id="da879-111">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="da879-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="da879-112">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="da879-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="da879-113">[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="da879-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="da879-114">Palabras clave de instrucciones</span><span class="sxs-lookup"><span data-stu-id="da879-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
 

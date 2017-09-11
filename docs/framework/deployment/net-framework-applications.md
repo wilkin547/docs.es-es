@@ -29,16 +29,16 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="deploying-net-framework-applications"></a>Implementar aplicaciones de .NET Framework
-Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.  
+# <a name="deploying-net-framework-applications"></a><span data-ttu-id="718c9-102">Implementar aplicaciones de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="718c9-102">Deploying .NET Framework Applications</span></span>
+<span data-ttu-id="718c9-103">Esta sección de la documentación de .NET Framework proporciona información esencial para implementar aplicaciones de .NET Framework, incluidas las directrices para cargar ensamblados, resolver referencias de ensamblados y mejorar el rendimiento de la aplicación mediante la generación de imágenes nativas.</span><span class="sxs-lookup"><span data-stu-id="718c9-103">This section of the .NET Framework documentation provides essential information for deploying .NET Framework applications, including guidelines for loading assemblies, resolving assembly references, and improving the performance of your application through native image generation.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- Describe cómo Common Language Runtime busca y establece vínculos con los ensamblados que conforman la aplicación.  
+## <a name="in-this-section"></a><span data-ttu-id="718c9-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="718c9-104">In This Section</span></span>  
+ [<span data-ttu-id="718c9-105">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="718c9-105">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ <span data-ttu-id="718c9-106">Describe cómo Common Language Runtime busca y establece vínculos con los ensamblados que conforman la aplicación.</span><span class="sxs-lookup"><span data-stu-id="718c9-106">Describes how the common language runtime locates and binds to the assemblies that make up your application.</span></span>  
   
- [Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.  
+ [<span data-ttu-id="718c9-107">Procedimientos recomendados para cargar ensamblados</span><span class="sxs-lookup"><span data-stu-id="718c9-107">Best Practices for Assembly Loading</span></span>](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+ <span data-ttu-id="718c9-108">Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.</span><span class="sxs-lookup"><span data-stu-id="718c9-108">Discusses ways to avoid problems of type identity that can lead to <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, and other errors.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Guía de desarrollo](../../../docs/framework/development-guide.md)
+## <a name="see-also"></a><span data-ttu-id="718c9-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="718c9-109">See Also</span></span>  
+ [<span data-ttu-id="718c9-110">Guía de desarrollo</span><span class="sxs-lookup"><span data-stu-id="718c9-110">Development Guide</span></span>](../../../docs/framework/development-guide.md)
 

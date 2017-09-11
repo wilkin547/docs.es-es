@@ -1,1 +1,1 @@
-Para obtener más información, consulte
+<span data-ttu-id="82103-101">Para obtener más información, consulte</span><span class="sxs-lookup"><span data-stu-id="82103-101">For more information, see</span></span>

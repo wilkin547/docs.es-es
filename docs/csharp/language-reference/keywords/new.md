@@ -37,20 +37,20 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="new-c-reference"></a>new (Referencia de C#)
-En C#, la palabra clave `new` puede usarse como un operador, un modificador o una restricción.  
+# <a name="new-c-reference"></a><span data-ttu-id="a9b95-102">new (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="a9b95-102">new (C# Reference)</span></span>
+<span data-ttu-id="a9b95-103">En C#, la palabra clave `new` puede usarse como un operador, un modificador o una restricción.</span><span class="sxs-lookup"><span data-stu-id="a9b95-103">In C#, the `new` keyword can be used as an operator, a modifier, or a constraint.</span></span>  
   
- [new (operador)](../../../csharp/language-reference/keywords/new-operator.md)  
- Se usa para crear objetos e invocar constructores.  
+ [<span data-ttu-id="a9b95-104">new (operador)</span><span class="sxs-lookup"><span data-stu-id="a9b95-104">new Operator</span></span>](../../../csharp/language-reference/keywords/new-operator.md)  
+ <span data-ttu-id="a9b95-105">Se usa para crear objetos e invocar constructores.</span><span class="sxs-lookup"><span data-stu-id="a9b95-105">Used to create objects and invoke constructors.</span></span>  
   
- [new (modificador)](../../../csharp/language-reference/keywords/new-modifier.md)  
- Se usa para ocultar un miembro heredado de un miembro de clase base.  
+ [<span data-ttu-id="a9b95-106">new (modificador)</span><span class="sxs-lookup"><span data-stu-id="a9b95-106">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)  
+ <span data-ttu-id="a9b95-107">Se usa para ocultar un miembro heredado de un miembro de clase base.</span><span class="sxs-lookup"><span data-stu-id="a9b95-107">Used to hide an inherited member from a base class member.</span></span>  
   
- [new (restricción)](../../../csharp/language-reference/keywords/new-constraint.md)  
- Se usa para restringir tipos que pueden usarse como argumentos para un parámetro de tipo en una declaración genérica.  
+ [<span data-ttu-id="a9b95-108">new (restricción)</span><span class="sxs-lookup"><span data-stu-id="a9b95-108">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)  
+ <span data-ttu-id="a9b95-109">Se usa para restringir tipos que pueden usarse como argumentos para un parámetro de tipo en una declaración genérica.</span><span class="sxs-lookup"><span data-stu-id="a9b95-109">Used to restrict types that might be used as arguments for a type parameter in a generic declaration.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9b95-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="a9b95-110">See Also</span></span>  
+ <span data-ttu-id="a9b95-111">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="a9b95-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="a9b95-112">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="a9b95-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="a9b95-113">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="a9b95-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

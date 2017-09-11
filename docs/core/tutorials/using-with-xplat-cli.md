@@ -11,29 +11,29 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
+ms.sourcegitcommit: 9b63485ca10fe9f6d63c7134128bbfceaede6302
+ms.openlocfilehash: b853f74ea2daa60bd68502f07f243c814c8c1947
 ms.contentlocale: es-es
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introducción a .NET Core en Windows/Linux/macOS con la línea de comandos
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a><span data-ttu-id="6c0e2-104">Introducción a .NET Core en Windows/Linux/macOS con la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="6c0e2-104">Getting started with .NET Core on Windows/Linux/macOS using the command line</span></span>
 
-Este tema le mostrará cómo empezar a desarrollar aplicaciones multiplataforma en su equipo con las herramientas de la CLI de .NET Core.
+<span data-ttu-id="6c0e2-105">Este tema le mostrará cómo empezar a desarrollar aplicaciones multiplataforma en su equipo con las herramientas de la CLI de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-105">This topic will show you how to start developing cross-platforms apps in your machine using the .NET Core CLI tools.</span></span>
 
-Si no está familiarizado con el conjunto de herramientas de la CLI de .NET Core, vea la [información general del SDK de .NET Core](../tools/index.md).
+<span data-ttu-id="6c0e2-106">Si no está familiarizado con el conjunto de herramientas de la CLI de .NET Core, vea la [información general del SDK de .NET Core](../tools/index.md).</span><span class="sxs-lookup"><span data-stu-id="6c0e2-106">If you're unfamiliar with the .NET Core CLI toolset, read the [.NET Core SDK overview](../tools/index.md).</span></span>
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a><span data-ttu-id="6c0e2-107">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="6c0e2-107">Prerequisites</span></span>
 
-- [SDK 1.0 de .NET Core](https://www.microsoft.com/net/download/core).
-- Un editor de texto o un editor de código de su elección.
+- <span data-ttu-id="6c0e2-108">[SDK 1.0 de .NET Core](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="6c0e2-108">[.NET Core SDK 1.0](https://www.microsoft.com/net/download/core).</span></span>
+- <span data-ttu-id="6c0e2-109">Un editor de texto o un editor de código de su elección.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-109">A text editor or code editor of your choice.</span></span>
 
-## <a name="hello-console-app"></a>Hola, aplicación de consola
+## <a name="hello-console-app"></a><span data-ttu-id="6c0e2-110">Hola, aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="6c0e2-110">Hello, Console App!</span></span>
 
-Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) del repositorio dotnet/docs de GitHub. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+<span data-ttu-id="6c0e2-111">Puede [ver o descargar el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) del repositorio dotnet/docs de GitHub.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-111">You can [view or download the sample code](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) from the dotnet/docs GitHub repository.</span></span> <span data-ttu-id="6c0e2-112">Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="6c0e2-112">For download instructions, see [Samples and Tutorials](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).</span></span>
 
-Abra un símbolo del sistema y cree una carpeta denominada *Hello*. Vaya a la carpeta que ha creado y escriba lo siguiente:
+<span data-ttu-id="6c0e2-113">Abra un símbolo del sistema y cree una carpeta denominada *Hello*.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-113">Open a command prompt and create a folder named *Hello*.</span></span> <span data-ttu-id="6c0e2-114">Vaya a la carpeta que ha creado y escriba lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-114">Navigate to the folder you created and type the following:</span></span>
 
 ```
 $ dotnet new console
@@ -41,64 +41,64 @@ $ dotnet restore
 $ dotnet run
 ```
 
-Veamos un tutorial rápido:
+<span data-ttu-id="6c0e2-115">Veamos un tutorial rápido:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-115">Let's do a quick walkthrough:</span></span>
 
 1. `$ dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) crea un archivo de proyecto `Hello.csproj` actualizado con las dependencias necesarias para compilar una aplicación de consola.  Además, se crea un archivo `Program.cs`, un archivo básico que contiene el punto de entrada para la aplicación.
+   <span data-ttu-id="6c0e2-116">[`dotnet new`](../tools/dotnet-new.md) crea un archivo de proyecto `Hello.csproj` actualizado con las dependencias necesarias para compilar una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-116">[`dotnet new`](../tools/dotnet-new.md) creates an up-to-date `Hello.csproj` project file with the dependencies necessary to build a console app.</span></span>  <span data-ttu-id="6c0e2-117">Además, se crea un archivo `Program.cs`, un archivo básico que contiene el punto de entrada para la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-117">It also creates a `Program.cs`, a basic file containing the entry point for the application.</span></span>
    
-   `Hello.csproj`:
+   <span data-ttu-id="6c0e2-118">`Hello.csproj`:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-118">`Hello.csproj`:</span></span>
 
    [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
 
-   El archivo de proyecto especifica todo lo que es necesario para restaurar las dependencias y compilar el programa.
+   <span data-ttu-id="6c0e2-119">El archivo de proyecto especifica todo lo que es necesario para restaurar las dependencias y compilar el programa.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-119">The project file specifies everything that's needed to restore dependencies and build the program.</span></span>
 
-   * La etiqueta `OutputType` especifica que estamos creando un archivo ejecutable, es decir, una aplicación de consola.
-   * La etiqueta `TargetFramework` especifica la implementación .NET a la que nos dirigimos. En un escenario avanzado, puede especificar varios marcos de destino y compilar en todos ellos en una sola operación. En este tutorial, nos centraremos solo en .NET Core 1.0.
+   * <span data-ttu-id="6c0e2-120">La etiqueta `OutputType` especifica que estamos creando un archivo ejecutable, es decir, una aplicación de consola.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-120">The `OutputType` tag specifies that we're building an executable, in other words a console application.</span></span>
+   * <span data-ttu-id="6c0e2-121">La etiqueta `TargetFramework` especifica la implementación .NET a la que nos dirigimos.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-121">The `TargetFramework` tag specifies what .NET implementation we're targeting.</span></span> <span data-ttu-id="6c0e2-122">En un escenario avanzado, puede especificar varios marcos de destino y compilar en todos ellos en una sola operación.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-122">In an advance scenario, you can specify multiple target frameworks and build to all those in a single operation.</span></span> <span data-ttu-id="6c0e2-123">En este tutorial, nos centraremos solo en .NET Core 1.0.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-123">In this tutorial, we'll stick to building only for .NET Core 1.0.</span></span>
 
-   `Program.cs`:
+   <span data-ttu-id="6c0e2-124">`Program.cs`:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-124">`Program.cs`:</span></span>
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   <span data-ttu-id="6c0e2-125">[!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]</span><span class="sxs-lookup"><span data-stu-id="6c0e2-125">[!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]</span></span>   
 
-   El programa se inicia mediante `using System`, lo que significa "llevar cada cosa del espacio de nombres `System` al ámbito de este archivo". El espacio de nombres `System` incluye construcciones básicas, como `string` o tipos numéricos.
+   <span data-ttu-id="6c0e2-126">El programa se inicia mediante `using System`, lo que significa "llevar cada cosa del espacio de nombres `System` al ámbito de este archivo".</span><span class="sxs-lookup"><span data-stu-id="6c0e2-126">The program starts by `using System`, which means "bring everything in the `System` namespace into scope for this file".</span></span> <span data-ttu-id="6c0e2-127">El espacio de nombres `System` incluye construcciones básicas, como `string` o tipos numéricos.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-127">The `System` namespace includes basic constructs such as `string`, or numeric types.</span></span>
 
-   Después, definimos un espacio de nombres denominado `Hello`. Puede cambiar esto por cualquier cosa que desee. Se define una clase denominada `Program` dentro del espacio de nombres, con un método `Main` que toma una matriz de cadenas como argumento. Esta matriz contiene la lista de argumentos que se ha pasado cuando se llama al programa compilado. Tal y como está, esta matriz no se usa: todo lo que hace el programa es escribir "¡Hola a todos!" en la consola. Después, realizaremos cambios en el código que usará este argumento.
+   <span data-ttu-id="6c0e2-128">Después, definimos un espacio de nombres denominado `Hello`.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-128">We then define a namespace called `Hello`.</span></span> <span data-ttu-id="6c0e2-129">Puede cambiar esto por cualquier cosa que desee.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-129">You can change this to anything you want.</span></span> <span data-ttu-id="6c0e2-130">Se define una clase denominada `Program` dentro del espacio de nombres, con un método `Main` que toma una matriz de cadenas como argumento.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-130">A class named `Program` is defined within that namespace, with a `Main` method that takes an array of strings as its argument.</span></span> <span data-ttu-id="6c0e2-131">Esta matriz contiene la lista de argumentos que se ha pasado cuando se llama al programa compilado.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-131">This array contains the list of arguments passed in when the compiled program is called.</span></span> <span data-ttu-id="6c0e2-132">Tal y como está, esta matriz no se usa: todo lo que hace el programa es escribir "¡Hola a todos!"</span><span class="sxs-lookup"><span data-stu-id="6c0e2-132">As it is, this array is not used: all the program is doing is to write "Hello World!"</span></span> <span data-ttu-id="6c0e2-133">en la consola.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-133">to the console.</span></span> <span data-ttu-id="6c0e2-134">Después, realizaremos cambios en el código que usará este argumento.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-134">Later, we'll make changes to the code that will make use of this argument.</span></span>
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md) llama a [NuGet](https://www.nuget.org/) (el administrador de paquetes de .NET) para restaurar el árbol de dependencias. NuGet analiza el archivo *Hello.csproj*, descarga las dependencias descritas en el archivo (o las toma de la memoria caché del equipo) y escribe el archivo *obj/project.assets.json*.  El archivo *project.assets.json* es necesario para realizar la compilación y ejecución.
+   <span data-ttu-id="6c0e2-135">[`dotnet restore`](../tools/dotnet-restore.md) llama a [NuGet](https://www.nuget.org/) (el administrador de paquetes de .NET) para restaurar el árbol de dependencias.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-135">[`dotnet restore`](../tools/dotnet-restore.md) calls into [NuGet](https://www.nuget.org/) (.NET package manager) to restore the tree of dependencies.</span></span> <span data-ttu-id="6c0e2-136">NuGet analiza el archivo *Hello.csproj*, descarga las dependencias descritas en el archivo (o las toma de la memoria caché del equipo) y escribe el archivo *obj/project.assets.json*.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-136">NuGet analyzes the *Hello.csproj* file, downloads the dependencies stated in the file (or grabs them from a cache on your machine), and writes the *obj/project.assets.json* file.</span></span>  <span data-ttu-id="6c0e2-137">El archivo *project.assets.json* es necesario para realizar la compilación y ejecución.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-137">The *project.assets.json* file is necessary to be able to compile and run.</span></span>
    
-   El archivo *project.assets.json* es un conjunto completo y persistente del gráfico de dependencias de NuGet y cualquier otra información que describa una aplicación.  Este archivo se lee por otras herramientas, como [`dotnet build`](../tools/dotnet-build.md) y [`dotnet run`](../tools/dotnet-run.md), que les permite procesar el código fuente con un conjunto correcto de las dependencias de NuGet y resoluciones de enlace.
+   <span data-ttu-id="6c0e2-138">El archivo *project.assets.json* es un conjunto completo y persistente del gráfico de dependencias de NuGet y cualquier otra información que describa una aplicación.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-138">The *project.assets.json* file is a persisted and complete set of the graph of NuGet dependencies and other information describing an app.</span></span>  <span data-ttu-id="6c0e2-139">Este archivo se lee por otras herramientas, como [`dotnet build`](../tools/dotnet-build.md) y [`dotnet run`](../tools/dotnet-run.md), que les permite procesar el código fuente con un conjunto correcto de las dependencias de NuGet y resoluciones de enlace.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-139">This file is read by other tools, such as [`dotnet build`](../tools/dotnet-build.md) and [`dotnet run`](../tools/dotnet-run.md), enabling them to process the source code with a correct set of NuGet dependencies and binding resolutions.</span></span>
    
 3. `$ dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md) llama a [`dotnet build`](../tools/dotnet-build.md) para asegurarse de que los destinos de la compilación se han creado y, después, llama a `dotnet <assembly.dll>` para ejecutar la aplicación de destino.
+   <span data-ttu-id="6c0e2-140">[`dotnet run`](../tools/dotnet-run.md) llama a [`dotnet build`](../tools/dotnet-build.md) para asegurarse de que los destinos de la compilación se han creado y, después, llama a `dotnet <assembly.dll>` para ejecutar la aplicación de destino.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-140">[`dotnet run`](../tools/dotnet-run.md) calls [`dotnet build`](../tools/dotnet-build.md) to ensure that the build targets have been built, and then calls `dotnet <assembly.dll>` to run the target application.</span></span>
    
     ```
     $ dotnet run
     Hello World!
     ```
 
-    También puede ejecutar [`dotnet build`](../tools/dotnet-build.md) para compilar el código sin ejecutar las aplicaciones de consola de compilación. El resultado es una aplicación compilada como un archivo DLL que se puede ejecutar con `dotnet bin\Debug\netcoreapp1.0\Hello.dll` en Windows (use `/` para otros sistemas que no sean de Windows). También puede especificar argumentos para la aplicación como verá posteriormente en el tema.
+    <span data-ttu-id="6c0e2-141">También puede ejecutar [`dotnet build`](../tools/dotnet-build.md) para compilar el código sin ejecutar las aplicaciones de consola de compilación.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-141">Alternatively, you can also execute [`dotnet build`](../tools/dotnet-build.md) to compile the code without running the build console applications.</span></span> <span data-ttu-id="6c0e2-142">El resultado es una aplicación compilada como un archivo DLL que se puede ejecutar con `dotnet bin\Debug\netcoreapp1.0\Hello.dll` en Windows (use `/` para otros sistemas que no sean de Windows).</span><span class="sxs-lookup"><span data-stu-id="6c0e2-142">This results in a compiled application as a DLL file that can be run with `dotnet bin\Debug\netcoreapp1.0\Hello.dll` on Windows (use `/` for non-Windows systems).</span></span> <span data-ttu-id="6c0e2-143">También puede especificar argumentos para la aplicación como verá posteriormente en el tema.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-143">You may also specify arguments to the application as you'll see later on the topic.</span></span>
 
     ```
     $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
     Hello World!
     ```
 
-    Como escenario avanzado, es posible compilar la aplicación como un conjunto autocontenido de archivos específicos de la plataforma que se puede implementar y ejecutar en una máquina que no tiene necesariamente instalado .NET Core. Consulte [Implementación de aplicaciones .NET Core](../deploying/index.md) para más información.
+    <span data-ttu-id="6c0e2-144">Como escenario avanzado, es posible compilar la aplicación como un conjunto autocontenido de archivos específicos de la plataforma que se puede implementar y ejecutar en una máquina que no tiene necesariamente instalado .NET Core.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-144">As an advanced scenario, it's possible to build the application as a self-contained set of platform-specific files that can be deployed and run to a machine that doesn't necessarily have .NET Core installed.</span></span> <span data-ttu-id="6c0e2-145">Consulte [Implementación de aplicaciones .NET Core](../deploying/index.md) para más información.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-145">See [.NET Core Application Deployment](../deploying/index.md) for details.</span></span>
 
-### <a name="augmenting-the-program"></a>Aumento del programa
+### <a name="augmenting-the-program"></a><span data-ttu-id="6c0e2-146">Aumento del programa</span><span class="sxs-lookup"><span data-stu-id="6c0e2-146">Augmenting the program</span></span>
 
-Cambiemos un poco el programa. Los números Fibonacci son divertidos, así que vamos a agregarlos además de usar el argumento para saludar a la persona que ejecuta la aplicación.
+<span data-ttu-id="6c0e2-147">Cambiemos un poco el programa.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-147">Let's change the program a bit.</span></span> <span data-ttu-id="6c0e2-148">Los números Fibonacci son divertidos, así que vamos a agregarlos además de usar el argumento para saludar a la persona que ejecuta la aplicación.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-148">Fibonacci numbers are fun, so let's add that in addition to use the argument to greet the person running the app.</span></span>
 
-1. Reemplace el contenido de su archivo *Program.cs* por el código siguiente:
+1. <span data-ttu-id="6c0e2-149">Reemplace el contenido de su archivo *Program.cs* por el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-149">Replace the contents of your *Program.cs*  file with the following code:</span></span>
 
-   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   <span data-ttu-id="6c0e2-150">[!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]</span><span class="sxs-lookup"><span data-stu-id="6c0e2-150">[!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]</span></span>   
 
-2. Ejecute [`dotnet build`](../tools/dotnet-build.md) para compilar los cambios.
+2. <span data-ttu-id="6c0e2-151">Ejecute [`dotnet build`](../tools/dotnet-build.md) para compilar los cambios.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-151">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-3. Ejecute el programa pasando un parámetro a la aplicación:
+3. <span data-ttu-id="6c0e2-152">Ejecute el programa pasando un parámetro a la aplicación:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-152">Run the program passing a parameter to the app:</span></span>
 
    ```
    $ dotnet run -- John
@@ -121,23 +121,23 @@ Cambiemos un poco el programa. Los números Fibonacci son divertidos, así que v
    15: 377
    ```
 
-Y listo.  Puede aumentar `Program.cs` como desee.
+<span data-ttu-id="6c0e2-153">Y listo.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-153">And that's it!</span></span>  <span data-ttu-id="6c0e2-154">Puede aumentar `Program.cs` como desee.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-154">You can augment `Program.cs` any way you like.</span></span>
 
-## <a name="working-with-multiple-files"></a>Trabajar con varios archivos
+## <a name="working-with-multiple-files"></a><span data-ttu-id="6c0e2-155">Trabajar con varios archivos</span><span class="sxs-lookup"><span data-stu-id="6c0e2-155">Working with multiple files</span></span>
 
-Los archivos únicos están bien para los programas sencillos de uso único, pero si está compilando una aplicación más compleja, probablemente va a tener varios archivos de origen en su proyecto. Vamos a crear el ejemplo de Fibonacci anterior almacenando en caché algunos valores de Fibonacci y agregando algunas características recursivas. 
+<span data-ttu-id="6c0e2-156">Los archivos únicos están bien para los programas sencillos de uso único, pero si está compilando una aplicación más compleja, probablemente va a tener varios archivos de origen en su proyecto. Vamos a crear el ejemplo de Fibonacci anterior almacenando en caché algunos valores de Fibonacci y agregando algunas características recursivas.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-156">Single files are fine for simple one-off programs, but if you're building a more complex app, you're probably going to have multiple source files on your project Let's build off of the previous Fibonacci example by caching some Fibonacci values and add some recursive features.</span></span> 
 
-1. Agregue un archivo nuevo dentro del directorio *Hello* denominado *FibonacciGenerator.cs* con el código siguiente:
+1. <span data-ttu-id="6c0e2-157">Agregue un archivo nuevo dentro del directorio *Hello* denominado *FibonacciGenerator.cs* con el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-157">Add a new file inside the *Hello* directory named *FibonacciGenerator.cs* with the following code:</span></span>
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   <span data-ttu-id="6c0e2-158">[!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]</span><span class="sxs-lookup"><span data-stu-id="6c0e2-158">[!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]</span></span>   
 
-2. Cambie el método `Main` en su archivo *Program.cs* para crear una instancia de la nueva clase y llamar a su método como se muestra en el ejemplo siguiente:
+2. <span data-ttu-id="6c0e2-159">Cambie el método `Main` en su archivo *Program.cs* para crear una instancia de la nueva clase y llamar a su método como se muestra en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-159">Change the `Main` method in your *Program.cs* file to instantiate the new class and call its method as in the following example:</span></span>
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   <span data-ttu-id="6c0e2-160">[!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]</span><span class="sxs-lookup"><span data-stu-id="6c0e2-160">[!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]</span></span>
 
-3. Ejecute [`dotnet build`](../tools/dotnet-build.md) para compilar los cambios.
+3. <span data-ttu-id="6c0e2-161">Ejecute [`dotnet build`](../tools/dotnet-build.md) para compilar los cambios.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-161">Execute [`dotnet build`](../tools/dotnet-build.md) to compile the changes.</span></span>
 
-4. Ejecute su aplicación con la ejecución de [`dotnet run`](../tools/dotnet-run.md). A continuación se muestra el resultado del programa:
+4. <span data-ttu-id="6c0e2-162">Ejecute su aplicación con la ejecución de [`dotnet run`](../tools/dotnet-run.md).</span><span class="sxs-lookup"><span data-stu-id="6c0e2-162">Run your app by executing [`dotnet run`](../tools/dotnet-run.md).</span></span> <span data-ttu-id="6c0e2-163">A continuación se muestra el resultado del programa:</span><span class="sxs-lookup"><span data-stu-id="6c0e2-163">The following shows the program output:</span></span>
 
    ```
    0
@@ -157,11 +157,11 @@ Los archivos únicos están bien para los programas sencillos de uso único, per
    377
    ```
 
-Y listo. Ahora, puede empezar a usar los conceptos básicos que ha aprendido aquí para crear sus propios programas.
+<span data-ttu-id="6c0e2-164">Y listo.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-164">And that's it!</span></span> <span data-ttu-id="6c0e2-165">Ahora, puede empezar a usar los conceptos básicos que ha aprendido aquí para crear sus propios programas.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-165">Now, you can start using the basic concepts learned here to create your own programs.</span></span>
 
-Tenga en cuenta que los comandos y los pasos que se muestran en este tutorial para ejecutar la aplicación se usan solo durante el desarrollo. Una vez que esté listo para implementar la aplicación, querrá echar un vistazo a las diferentes [estrategias de implementación](../deploying/index.md) para aplicaciones de .NET Core y al comando [`dotnet publish`](../tools/dotnet-publish.md).
+<span data-ttu-id="6c0e2-166">Tenga en cuenta que los comandos y los pasos que se muestran en este tutorial para ejecutar la aplicación se usan solo durante el desarrollo.</span><span class="sxs-lookup"><span data-stu-id="6c0e2-166">Note that the commands and steps shown in this tutorial to run your application are used during development time only.</span></span> <span data-ttu-id="6c0e2-167">Una vez que esté listo para implementar la aplicación, querrá echar un vistazo a las diferentes [estrategias de implementación](../deploying/index.md) para aplicaciones de .NET Core y al comando [`dotnet publish`](../tools/dotnet-publish.md).</span><span class="sxs-lookup"><span data-stu-id="6c0e2-167">Once you're ready to deploy your app, you'll want to take a look at the different [deployment strategies](../deploying/index.md) for .NET Core apps and the [`dotnet publish`](../tools/dotnet-publish.md) command.</span></span>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a><span data-ttu-id="6c0e2-168">Vea también</span><span class="sxs-lookup"><span data-stu-id="6c0e2-168">See also</span></span>
 
-[Organización y prueba de proyectos con las herramientas de la CLI de .NET Core](testing-with-cli.md)
+[<span data-ttu-id="6c0e2-169">Organización y prueba de proyectos con las herramientas de la CLI de .NET Core</span><span class="sxs-lookup"><span data-stu-id="6c0e2-169">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
 

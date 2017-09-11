@@ -37,14 +37,14 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="equals-c-reference"></a>equals (Referencia de C#)
-La palabra clave contextual `equals` se usa en una cláusula `join` en una expresión de consulta para comparar los elementos de dos secuencias. Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../csharp/language-reference/keywords/join-clause.md).  
+# <a name="equals-c-reference"></a><span data-ttu-id="26cdb-102">equals (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="26cdb-102">equals (C# Reference)</span></span>
+<span data-ttu-id="26cdb-103">La palabra clave contextual `equals` se usa en una cláusula `join` en una expresión de consulta para comparar los elementos de dos secuencias.</span><span class="sxs-lookup"><span data-stu-id="26cdb-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="26cdb-104">Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../csharp/language-reference/keywords/join-clause.md).</span><span class="sxs-lookup"><span data-stu-id="26cdb-104">For more information, see [join clause](../../../csharp/language-reference/keywords/join-clause.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso de la palabra clave `equals` en una cláusula `join`.  
+## <a name="example"></a><span data-ttu-id="26cdb-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="26cdb-105">Example</span></span>  
+ <span data-ttu-id="26cdb-106">En el ejemplo siguiente se muestra el uso de la palabra clave `equals` en una cláusula `join`.</span><span class="sxs-lookup"><span data-stu-id="26cdb-106">The following example shows the use of the `equals` keyword in a `join` clause.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]  
+ <span data-ttu-id="26cdb-107">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="26cdb-107">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="26cdb-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="26cdb-108">See Also</span></span>  
+ [<span data-ttu-id="26cdb-109">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="26cdb-109">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
 

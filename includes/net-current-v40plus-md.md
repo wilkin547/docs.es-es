@@ -1,1 +1,1 @@
-Disponible desde la versión 4
+<span data-ttu-id="ec15c-101">Disponible desde la versión 4</span><span class="sxs-lookup"><span data-stu-id="ec15c-101">Available since 4</span></span>

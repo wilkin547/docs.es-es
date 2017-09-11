@@ -21,19 +21,19 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Buscar elementos secundarios en función de la posición (XPath-LINQ to XML) (C#)
-En ocasiones, deseará buscar elementos en función de su posición. Quizá desee buscar el segundo elemento o buscar el tercero en el quinto elemento.  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a><span data-ttu-id="02949-102">Buscar elementos secundarios en función de la posición (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="02949-102">How to: Find Child Elements Based on Position (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="02949-103">En ocasiones, deseará buscar elementos en función de su posición.</span><span class="sxs-lookup"><span data-stu-id="02949-103">Sometimes you want to find elements based on their position.</span></span> <span data-ttu-id="02949-104">Quizá desee buscar el segundo elemento o buscar el tercero en el quinto elemento.</span><span class="sxs-lookup"><span data-stu-id="02949-104">You might want to find the second element, or you might want to find the third through the fifth element.</span></span>  
   
- La expresión XPath es:  
+ <span data-ttu-id="02949-105">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="02949-105">The XPath expression is:</span></span>  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Existen dos aproximaciones posibles para escribir esta consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] de forma diferida. Puede utilizar los operadores <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>, o bien utilizar la sobrecarga <xref:System.Linq.Enumerable.Where%2A> que recibe un índice. Si utiliza la sobrecarga <xref:System.Linq.Enumerable.Where%2A>, estará utilizando una expresión lambda que recibe dos argumentos. El siguiente ejemplo muestra ambos métodos para seleccionar elementos en base a la posición.  
+ <span data-ttu-id="02949-106">Existen dos aproximaciones posibles para escribir esta consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] de forma diferida.</span><span class="sxs-lookup"><span data-stu-id="02949-106">There are two approaches to writing this [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query in a lazy way.</span></span> <span data-ttu-id="02949-107">Puede utilizar los operadores <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>, o bien utilizar la sobrecarga <xref:System.Linq.Enumerable.Where%2A> que recibe un índice.</span><span class="sxs-lookup"><span data-stu-id="02949-107">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="02949-108">Si utiliza la sobrecarga <xref:System.Linq.Enumerable.Where%2A>, estará utilizando una expresión lambda que recibe dos argumentos.</span><span class="sxs-lookup"><span data-stu-id="02949-108">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="02949-109">El siguiente ejemplo muestra ambos métodos para seleccionar elementos en base a la posición.</span><span class="sxs-lookup"><span data-stu-id="02949-109">The following example shows both methods of selecting based on position.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo encontrará el segundo en el cuarto elemento de `Test`. El resultado es una colección de elementos.  
+## <a name="example"></a><span data-ttu-id="02949-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="02949-110">Example</span></span>  
+ <span data-ttu-id="02949-111">Este ejemplo encontrará el segundo en el cuarto elemento de `Test`.</span><span class="sxs-lookup"><span data-stu-id="02949-111">This example finds the second through the fourth `Test` element.</span></span> <span data-ttu-id="02949-112">El resultado es una colección de elementos.</span><span class="sxs-lookup"><span data-stu-id="02949-112">The result is a collection of elements.</span></span>  
   
- En este ejemplo se usa el siguiente documento XML: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md) (Archivo XML de muestra: Configuración de prueba [LINQ to XML]).  
+ <span data-ttu-id="02949-113">En este ejemplo se usa el siguiente documento XML: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md) (Archivo XML de muestra: Configuración de prueba [LINQ to XML]).</span><span class="sxs-lookup"><span data-stu-id="02949-113">This example uses the following XML document: [Sample XML File: Test Configuration (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  
@@ -66,7 +66,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="02949-114">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="02949-114">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -90,6 +90,6 @@ Results are identical
 </Test>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="02949-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="02949-115">See Also</span></span>  
+ [<span data-ttu-id="02949-116">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="02949-116">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

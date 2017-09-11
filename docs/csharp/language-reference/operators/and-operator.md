@@ -40,25 +40,25 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="amp-operator-c-reference"></a>Operador &amp; (Referencia de C#)
-El operador & puede funcionar como un operador unario o binario.  
+# <a name="amp-operator-c-reference"></a><span data-ttu-id="9e4e6-102">Operador &amp; (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9e4e6-102">&amp; Operator (C# Reference)</span></span>
+<span data-ttu-id="9e4e6-103">El operador & puede funcionar como un operador unario o binario.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-103">The & operator can function as either a unary or a binary operator.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- El operador & unario devuelve la dirección de su operando (necesita un contexto [no seguro](../../../csharp/language-reference/keywords/unsafe.md)).  
+## <a name="remarks"></a><span data-ttu-id="9e4e6-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9e4e6-104">Remarks</span></span>  
+ <span data-ttu-id="9e4e6-105">El operador & unario devuelve la dirección de su operando (necesita un contexto [no seguro](../../../csharp/language-reference/keywords/unsafe.md)).</span><span class="sxs-lookup"><span data-stu-id="9e4e6-105">The unary & operator returns the address of its operand (requires [unsafe](../../../csharp/language-reference/keywords/unsafe.md) context).</span></span>  
   
- Los operadores & binarios están predefinidos para los tipos enteros y `bool`. Para los tipos enteros, & calcula el AND bit a bit lógico de sus operandos. Para operandos `bool`, & calcula el AND lógico de sus operandos; es decir, el resultado es `true` si y solo si ambos operandos son `true`.  
+ <span data-ttu-id="9e4e6-106">Los operadores & binarios están predefinidos para los tipos enteros y `bool`.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-106">Binary & operators are predefined for the integral types and `bool`.</span></span> <span data-ttu-id="9e4e6-107">Para los tipos enteros, & calcula el AND bit a bit lógico de sus operandos.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-107">For integral types, & computes the logical bitwise AND of its operands.</span></span> <span data-ttu-id="9e4e6-108">Para operandos `bool`, & calcula el AND lógico de sus operandos; es decir, el resultado es `true` si y solo si ambos operandos son `true`.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-108">For `bool` operands, & computes the logical AND of its operands; that is, the result is `true` if and only if both its operands are `true`.</span></span>  
   
- El operador `&` evalúa ambos operadores independientemente del valor del primero. Por ejemplo:  
+ <span data-ttu-id="9e4e6-109">El operador `&` evalúa ambos operadores independientemente del valor del primero.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-109">The `&` operator evaluates both operators regardless of the first one's value.</span></span> <span data-ttu-id="9e4e6-110">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="9e4e6-110">For example:</span></span>  
   
- [!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
+ <span data-ttu-id="9e4e6-111">[!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="9e4e6-111">[!code-cs[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]</span></span>  
   
- Los tipos definidos por el usuario pueden sobrecargar el operador binario `&` (consulte [operator](../../../csharp/language-reference/keywords/operator.md)). Las operaciones de tipos enteros suelen estar permitidas en la enumeración. Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si lo hay, también se sobrecarga de modo implícito.  
+ <span data-ttu-id="9e4e6-112">Los tipos definidos por el usuario pueden sobrecargar el operador binario `&` (consulte [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="9e4e6-112">User-defined types can overload the binary `&` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="9e4e6-113">Las operaciones de tipos enteros suelen estar permitidas en la enumeración.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-113">Operations on integral types are generally allowed on enumeration.</span></span> <span data-ttu-id="9e4e6-114">Cuando se sobrecarga un operador binario, el operador de asignación correspondiente, si lo hay, también se sobrecarga de modo implícito.</span><span class="sxs-lookup"><span data-stu-id="9e4e6-114">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
+## <a name="example"></a><span data-ttu-id="9e4e6-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9e4e6-115">Example</span></span>  
+ <span data-ttu-id="9e4e6-116">[!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="9e4e6-116">[!code-cs[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="9e4e6-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="9e4e6-117">See Also</span></span>  
+ <span data-ttu-id="9e4e6-118">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9e4e6-118">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9e4e6-119">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9e4e6-119">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="9e4e6-120">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="9e4e6-120">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

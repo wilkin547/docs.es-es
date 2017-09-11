@@ -34,15 +34,15 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cref-attribute-c-programming-guide"></a>Atributo cref (Guía de programación de C#)
-El atributo `cref` en una etiqueta de documentación XML significa "referencia de código". Especifica que el texto interno de la etiqueta es un elemento de código, como un tipo, un método o una propiedad. En herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB), use los atributos `cref` para generar hipervínculos a la página donde se documenta el tipo o miembro de manera automática.  
+# <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="7e661-102">Atributo cref (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="7e661-102">cref Attribute (C# Programming Guide)</span></span>
+<span data-ttu-id="7e661-103">El atributo `cref` en una etiqueta de documentación XML significa "referencia de código".</span><span class="sxs-lookup"><span data-stu-id="7e661-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="7e661-104">Especifica que el texto interno de la etiqueta es un elemento de código, como un tipo, un método o una propiedad.</span><span class="sxs-lookup"><span data-stu-id="7e661-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="7e661-105">En herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB), use los atributos `cref` para generar hipervínculos a la página donde se documenta el tipo o miembro de manera automática.</span><span class="sxs-lookup"><span data-stu-id="7e661-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestran los atributos `cref` que se usan en las etiquetas [\<see>](../../../csharp/programming-guide/xmldoc/see.md).  
+## <a name="example"></a><span data-ttu-id="7e661-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7e661-106">Example</span></span>  
+ <span data-ttu-id="7e661-107">En el ejemplo siguiente se muestran los atributos `cref` que se usan en las etiquetas [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="7e661-107">The following example shows `cref` attributes used in [\<see>](../../../csharp/programming-guide/xmldoc/see.md) tags.</span></span>  
   
- [!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ <span data-ttu-id="7e661-108">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="7e661-108">[!code-cs[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]</span></span>  
   
- Cuando se compila, el programa genera el archivo XML siguiente. Observe que, por ejemplo, el compilador ha transformado el atributo `cref` del método `GetZero` en `"M:TestNamespace.TestClass.GetZero"`. El prefijo "M:" significa "método", una convención reconocida por las herramientas de documentación tales como Sandcastle. Para obtener una lista completa de los prefijos, vea [Procesar el archivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
+ <span data-ttu-id="7e661-109">Cuando se compila, el programa genera el archivo XML siguiente.</span><span class="sxs-lookup"><span data-stu-id="7e661-109">When compiled, the program produces the following XML file.</span></span> <span data-ttu-id="7e661-110">Observe que, por ejemplo, el compilador ha transformado el atributo `cref` del método `GetZero` en `"M:TestNamespace.TestClass.GetZero"`.</span><span class="sxs-lookup"><span data-stu-id="7e661-110">Notice that the `cref` attribute for the `GetZero` method, for example, has been transformed by the compiler to `"M:TestNamespace.TestClass.GetZero"`.</span></span> <span data-ttu-id="7e661-111">El prefijo "M:" significa "método", una convención reconocida por las herramientas de documentación tales como Sandcastle.</span><span class="sxs-lookup"><span data-stu-id="7e661-111">The "M:" prefix means "method" and is a convention that is recognized by documentation tools such as Sandcastle.</span></span> <span data-ttu-id="7e661-112">Para obtener una lista completa de los prefijos, vea [Procesar el archivo XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="7e661-112">For a complete list of prefixes, see [Processing the XML File](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -141,7 +141,7 @@ El atributo `cref` en una etiqueta de documentación XML significa "referencia d
 </doc>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Comentarios de documentación XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
- [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="7e661-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="7e661-113">See Also</span></span>  
+ <span data-ttu-id="7e661-114">[Comentarios de documentación XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md) </span><span class="sxs-lookup"><span data-stu-id="7e661-114">[XML Documentation Comments](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md) </span></span>  
+ [<span data-ttu-id="7e661-115">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="7e661-115">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

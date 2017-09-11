@@ -37,15 +37,15 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="on-c-reference"></a>on (Referencia de C#)
-La palabra clave contextual `on` se usa en la [cláusula join](../../../csharp/language-reference/keywords/join-clause.md) de una expresión de consulta para especificar la condición de combinación.  
+# <a name="on-c-reference"></a><span data-ttu-id="a6237-102">on (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="a6237-102">on (C# Reference)</span></span>
+<span data-ttu-id="a6237-103">La palabra clave contextual `on` se usa en la [cláusula join](../../../csharp/language-reference/keywords/join-clause.md) de una expresión de consulta para especificar la condición de combinación.</span><span class="sxs-lookup"><span data-stu-id="a6237-103">The `on` contextual keyword is used in the [join clause](../../../csharp/language-reference/keywords/join-clause.md) of a query expression to specify the join condition.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso de `on` en una cláusula `join`.  
+## <a name="example"></a><span data-ttu-id="a6237-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a6237-104">Example</span></span>  
+ <span data-ttu-id="a6237-105">En el ejemplo siguiente se muestra el uso de `on` en una cláusula `join`.</span><span class="sxs-lookup"><span data-stu-id="a6237-105">The following example shows the use of `on` in a `join` clause.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]  
+ <span data-ttu-id="a6237-106">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="a6237-106">[!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="a6237-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="a6237-107">See Also</span></span>  
+ <span data-ttu-id="a6237-108">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="a6237-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="a6237-109">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="a6237-109">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
 

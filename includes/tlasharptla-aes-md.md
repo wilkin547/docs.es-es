@@ -1,1 +1,1 @@
-Estándar de cifrado avanzado (AES)
+<span data-ttu-id="349e7-101">Estándar de cifrado avanzado (AES)</span><span class="sxs-lookup"><span data-stu-id="349e7-101">Advanced Encryption Standard (AES)</span></span>

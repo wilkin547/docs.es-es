@@ -17,7 +17,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="getting-started-with-aspnet-core"></a>Introducción a ASP.NET Core    
+# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="33de2-104">Introducción a ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="33de2-104">Getting started with ASP.NET Core</span></span>    
     
-Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](/aspnet/core/).
+<span data-ttu-id="33de2-105">Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, le sugerimos que lea completamente la [documentación de ASP.NET Core](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="33de2-105">For tutorials about developing ASP.NET Core web applications, we suggest you head over to [ASP.NET Core documentation](/aspnet/core/).</span></span>
 

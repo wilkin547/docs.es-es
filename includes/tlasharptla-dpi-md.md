@@ -1,1 +1,1 @@
-puntos por pulgada (dpi)
+<span data-ttu-id="fe065-101">puntos por pulgada (dpi)</span><span class="sxs-lookup"><span data-stu-id="fe065-101">dots per inch (dpi)</span></span>

@@ -21,17 +21,17 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Cómo: Buscar nodos del mismo nivel (XPath-LINQ to XML) (C#)
-Quizás desea buscar todos los elementos relacionados de un nodo que tienen un nombre específico. La recopilación resultante puede incluir el nodo de contexto si también tiene el nombre específico.  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a><span data-ttu-id="ac983-102">Cómo: Buscar nodos del mismo nivel (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ac983-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="ac983-103">Quizás desea buscar todos los elementos relacionados de un nodo que tienen un nombre específico.</span><span class="sxs-lookup"><span data-stu-id="ac983-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="ac983-104">La recopilación resultante puede incluir el nodo de contexto si también tiene el nombre específico.</span><span class="sxs-lookup"><span data-stu-id="ac983-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- La expresión XPath es:  
+ <span data-ttu-id="ac983-105">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="ac983-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a>Ejemplo  
- Este ejemplo primero busca un elemento `Book` y después busca todos los elementos secundarios con el nombre `Book`. La colección resultante incluye el nodo de contexto.  
+## <a name="example"></a><span data-ttu-id="ac983-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ac983-106">Example</span></span>  
+ <span data-ttu-id="ac983-107">Este ejemplo primero busca un elemento `Book` y después busca todos los elementos secundarios con el nombre `Book`.</span><span class="sxs-lookup"><span data-stu-id="ac983-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="ac983-108">La colección resultante incluye el nodo de contexto.</span><span class="sxs-lookup"><span data-stu-id="ac983-108">The resulting collection includes the context node.</span></span>  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ <span data-ttu-id="ac983-109">En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: libros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ac983-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -61,7 +61,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="ac983-110">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="ac983-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -86,6 +86,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="ac983-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="ac983-111">See Also</span></span>  
+ [<span data-ttu-id="ac983-112">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="ac983-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

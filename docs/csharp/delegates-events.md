@@ -18,40 +18,40 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="delegates--events"></a>Delegados y eventos
+# <a name="delegates--events"></a><span data-ttu-id="ff047-104">Delegados y eventos</span><span class="sxs-lookup"><span data-stu-id="ff047-104">Delegates & events</span></span>
 
-Este tema se tratará en los siguientes artículos:
+<span data-ttu-id="ff047-105">Este tema se tratará en los siguientes artículos:</span><span class="sxs-lookup"><span data-stu-id="ff047-105">This topic will be covered under the following articles:</span></span>
 
-1. [Información general de los delegados](delegates-overview.md)
+1. [<span data-ttu-id="ff047-106">Información general de los delegados</span><span class="sxs-lookup"><span data-stu-id="ff047-106">Overview of Delegates</span></span>](delegates-overview.md)
 
-    En este artículo se trata una introducción a los delegados.
+    <span data-ttu-id="ff047-107">En este artículo se trata una introducción a los delegados.</span><span class="sxs-lookup"><span data-stu-id="ff047-107">This article covers an overview of delegates.</span></span>
 
-2. [System.Delegate and the `delegate` keyword](delegate-class.md) (System.Delegate y la palabra clave `delegate`)
+2. <span data-ttu-id="ff047-108">[System.Delegate and the `delegate` keyword](delegate-class.md) (System.Delegate y la palabra clave `delegate`)</span><span class="sxs-lookup"><span data-stu-id="ff047-108">[System.Delegate and the `delegate` keyword](delegate-class.md)</span></span>
 
-    En este artículo se tratan las clases de .NET Core Framework que admiten delegados y cómo se asignan a la palabra clave `delegate`.
+    <span data-ttu-id="ff047-109">En este artículo se tratan las clases de .NET Core Framework que admiten delegados y cómo se asignan a la palabra clave `delegate`.</span><span class="sxs-lookup"><span data-stu-id="ff047-109">This article covers the classes in the .NET Core Framework that support delegates and how that maps to the `delegate` keyword.</span></span>
 
-3. [Delegados fuertemente tipados](delegates-strongly-typed.md)
+3. [<span data-ttu-id="ff047-110">Delegados fuertemente tipados</span><span class="sxs-lookup"><span data-stu-id="ff047-110">Strongly Typed Delegates</span></span>](delegates-strongly-typed.md)
 
-    En este artículo se tratan los tipos y técnicas para usar delegados fuertemente tipados.
+    <span data-ttu-id="ff047-111">En este artículo se tratan los tipos y técnicas para usar delegados fuertemente tipados.</span><span class="sxs-lookup"><span data-stu-id="ff047-111">This article covers the types and techniques for using strongly typed delegates.</span></span>
 
-4. [Patrones comunes para delegados](delegates-patterns.md)
+4. [<span data-ttu-id="ff047-112">Patrones comunes para delegados</span><span class="sxs-lookup"><span data-stu-id="ff047-112">Common Patterns for Delegates</span></span>](delegates-patterns.md)
 
-    En este artículo se tratan los procedimientos comunes para delegados.
+    <span data-ttu-id="ff047-113">En este artículo se tratan los procedimientos comunes para delegados.</span><span class="sxs-lookup"><span data-stu-id="ff047-113">This article covers common practices for delegates.</span></span>
 
-5. [Overview of Events](events-overview.md) (Introducción a los eventos)
+5. <span data-ttu-id="ff047-114">[Overview of Events](events-overview.md) (Introducción a los eventos)</span><span class="sxs-lookup"><span data-stu-id="ff047-114">[Overview of Events](events-overview.md)</span></span>
 
-    En este artículo se trata una introducción a los eventos en .NET.
+    <span data-ttu-id="ff047-115">En este artículo se trata una introducción a los eventos en .NET.</span><span class="sxs-lookup"><span data-stu-id="ff047-115">This article covers an overview of events in .NET.</span></span>
 
-6. [Patrón de eventos estándar de .NET](event-pattern.md)
+6. [<span data-ttu-id="ff047-116">Patrón de eventos estándar de .NET</span><span class="sxs-lookup"><span data-stu-id="ff047-116">Standard .NET event patterns</span></span>](event-pattern.md)
 
-    En este artículo se trata el patrón de eventos estándar de .NET.
+    <span data-ttu-id="ff047-117">En este artículo se trata el patrón de eventos estándar de .NET.</span><span class="sxs-lookup"><span data-stu-id="ff047-117">This article covers the standard event pattern in .NET.</span></span>
 
-7. [Patrón de eventos actualizado de .NET](modern-events.md)
+7. [<span data-ttu-id="ff047-118">Patrón de eventos actualizado de .NET</span><span class="sxs-lookup"><span data-stu-id="ff047-118">The Updated .NET Event Pattern</span></span>](modern-events.md)
 
-    En este artículo se tratan varias actualizaciones del patrón de eventos de .NET en versiones recientes.
+    <span data-ttu-id="ff047-119">En este artículo se tratan varias actualizaciones del patrón de eventos de .NET en versiones recientes.</span><span class="sxs-lookup"><span data-stu-id="ff047-119">This article covers several updates to the .NET event pattern in recent releases.</span></span>
 
-8. [Distinguishing Delegates from Events](distinguish-delegates-events.md) (Distinción de delegados y eventos)
+8. <span data-ttu-id="ff047-120">[Distinguishing Delegates from Events](distinguish-delegates-events.md) (Distinción de delegados y eventos)</span><span class="sxs-lookup"><span data-stu-id="ff047-120">[Distinguishing Delegates from Events](distinguish-delegates-events.md)</span></span>
 
-    En este artículo se trata cómo debe distinguir entre el uso de eventos y delegados en sus diseños.
+    <span data-ttu-id="ff047-121">En este artículo se trata cómo debe distinguir entre el uso de eventos y delegados en sus diseños.</span><span class="sxs-lookup"><span data-stu-id="ff047-121">This article discusses how you should distinguish between using events and delegates in your designs.</span></span>
  
 

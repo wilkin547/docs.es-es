@@ -1,1 +1,1 @@
-Automatización de la interfaz de usuario de Microsoft
+<span data-ttu-id="5115f-101">Automatización de la interfaz de usuario de Microsoft</span><span class="sxs-lookup"><span data-stu-id="5115f-101">Microsoft UI Automation</span></span>

@@ -41,16 +41,16 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="c-special-characters"></a>Caracteres especiales de C#
+# <a name="c-special-characters"></a><span data-ttu-id="984b8-102">Caracteres especiales de C#</span><span class="sxs-lookup"><span data-stu-id="984b8-102">C# Special Characters</span></span>
 
-Los caracteres especiales son caracteres contextuales predefinidos que el elemento de programa modifica (una cadena literal, un identificador o un nombre de atributo) para que se antepongan. C# admite los siguientes caracteres especiales: 
+<span data-ttu-id="984b8-103">Los caracteres especiales son caracteres contextuales predefinidos que el elemento de programa modifica (una cadena literal, un identificador o un nombre de atributo) para que se antepongan.</span><span class="sxs-lookup"><span data-stu-id="984b8-103">Special characters are predefined, contextual characters that modifies the program element (a literal string, an identifier, or an attribute name) to which they are prepended.</span></span> <span data-ttu-id="984b8-104">C# admite los siguientes caracteres especiales:</span><span class="sxs-lookup"><span data-stu-id="984b8-104">C# supports the following special characters:</span></span> 
 
-- [@](../../../csharp/language-reference/tokens/verbatim.md), el carácter de identificador textual. 
+- <span data-ttu-id="984b8-105">[@](../../../csharp/language-reference/tokens/verbatim.md), el carácter de identificador textual.</span><span class="sxs-lookup"><span data-stu-id="984b8-105">[@](../../../csharp/language-reference/tokens/verbatim.md), the verbatim identifier character.</span></span> 
 
-- [$](../../../csharp/language-reference/tokens/interpolated.md), el carácter de cadena interpolada.
+- <span data-ttu-id="984b8-106">[$](../../../csharp/language-reference/tokens/interpolated.md), el carácter de cadena interpolada.</span><span class="sxs-lookup"><span data-stu-id="984b8-106">[$](../../../csharp/language-reference/tokens/interpolated.md), the interpolated string character.</span></span>
 
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a><span data-ttu-id="984b8-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="984b8-107">See Also</span></span>  
+ <span data-ttu-id="984b8-108">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="984b8-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="984b8-109">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="984b8-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
 
 

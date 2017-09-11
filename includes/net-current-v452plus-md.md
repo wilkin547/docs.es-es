@@ -1,1 +1,1 @@
-Disponible desde la versión 4.5.2
+<span data-ttu-id="966ff-101">Disponible desde la versión 4.5.2</span><span class="sxs-lookup"><span data-stu-id="966ff-101">Available since 4.5.2</span></span>

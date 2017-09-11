@@ -1,1 +1,1 @@
-Framework
+<span data-ttu-id="5a8d3-101">Framework</span><span class="sxs-lookup"><span data-stu-id="5a8d3-101">Framework</span></span>

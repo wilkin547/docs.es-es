@@ -36,36 +36,36 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="operators-visual-basic"></a>Operadores (Visual Basic)
-## <a name="in-this-section"></a>En esta sección  
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+# <a name="operators-visual-basic"></a><span data-ttu-id="03100-102">Operadores (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03100-102">Operators (Visual Basic)</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="03100-103">En esta sección</span><span class="sxs-lookup"><span data-stu-id="03100-103">In This Section</span></span>  
+ [<span data-ttu-id="03100-104">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="03100-104">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
   
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="03100-105">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="03100-105">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
   
- [Tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
+ [<span data-ttu-id="03100-106">Tipos de datos de resultados de operador</span><span class="sxs-lookup"><span data-stu-id="03100-106">Data Types of Operator Results</span></span>](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)  
   
- [DirectCast (operador)](../../../visual-basic/language-reference/operators/directcast-operator.md)  
+ [<span data-ttu-id="03100-107">DirectCast (operador)</span><span class="sxs-lookup"><span data-stu-id="03100-107">DirectCast Operator</span></span>](../../../visual-basic/language-reference/operators/directcast-operator.md)  
   
- [TryCast (operador)](../../../visual-basic/language-reference/operators/trycast-operator.md)  
+ [<span data-ttu-id="03100-108">TryCast (operador)</span><span class="sxs-lookup"><span data-stu-id="03100-108">TryCast Operator</span></span>](../../../visual-basic/language-reference/operators/trycast-operator.md)  
   
- [New (operador)](../../../visual-basic/language-reference/operators/new-operator.md)  
+ [<span data-ttu-id="03100-109">New (operador)</span><span class="sxs-lookup"><span data-stu-id="03100-109">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)  
   
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="03100-110">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="03100-110">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
   
- [Operadores de asignación](../../../visual-basic/language-reference/operators/assignment-operators.md)  
+ [<span data-ttu-id="03100-111">Operadores de asignación</span><span class="sxs-lookup"><span data-stu-id="03100-111">Assignment Operators</span></span>](../../../visual-basic/language-reference/operators/assignment-operators.md)  
   
- [Operadores de desplazamiento de bits](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [<span data-ttu-id="03100-112">Operadores de desplazamiento de bits</span><span class="sxs-lookup"><span data-stu-id="03100-112">Bit Shift Operators</span></span>](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
   
- [Operadores de comparación](../../../visual-basic/language-reference/operators/comparison-operators.md)  
+ [<span data-ttu-id="03100-113">Operadores de comparación</span><span class="sxs-lookup"><span data-stu-id="03100-113">Comparison Operators</span></span>](../../../visual-basic/language-reference/operators/comparison-operators.md)  
   
- [Operadores de concatenación](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [<span data-ttu-id="03100-114">Operadores de concatenación</span><span class="sxs-lookup"><span data-stu-id="03100-114">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
   
- [Operadores lógicos y operadores bit a bit](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
+ [<span data-ttu-id="03100-115">Operadores lógicos y operadores bit a bit</span><span class="sxs-lookup"><span data-stu-id="03100-115">Logical/Bitwise Operators</span></span>](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)  
   
- [Operadores varios](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)  
+ [<span data-ttu-id="03100-116">Operadores varios</span><span class="sxs-lookup"><span data-stu-id="03100-116">Miscellaneous Operators</span></span>](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="03100-117">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="03100-117">Related Sections</span></span>  
+ [<span data-ttu-id="03100-118">Referencia del lenguaje Visual Basic</span><span class="sxs-lookup"><span data-stu-id="03100-118">Visual Basic Language Reference</span></span>](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)
+ [<span data-ttu-id="03100-119">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="03100-119">Visual Basic</span></span>](../../../visual-basic/index.md)
 

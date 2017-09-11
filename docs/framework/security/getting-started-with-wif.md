@@ -21,11 +21,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="getting-started-with-wif"></a>Introducción a WIF
--   [Crear mi primera aplicación web de ASP.NET para notificaciones](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+# <a name="getting-started-with-wif"></a><span data-ttu-id="eeac5-102">Introducción a WIF</span><span class="sxs-lookup"><span data-stu-id="eeac5-102">Getting Started With WIF</span></span>
+-   [<span data-ttu-id="eeac5-103">Crear mi primera aplicación web de ASP.NET para notificaciones</span><span class="sxs-lookup"><span data-stu-id="eeac5-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
--   [Compilar mi primer servicio WCF con reconocimiento de notificaciones](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+-   [<span data-ttu-id="eeac5-104">Compilar mi primer servicio WCF con reconocimiento de notificaciones</span><span class="sxs-lookup"><span data-stu-id="eeac5-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
-## <a name="see-also"></a>Vea también  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="eeac5-105">Vea también</span><span class="sxs-lookup"><span data-stu-id="eeac5-105">See Also</span></span>  
+ [<span data-ttu-id="eeac5-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="eeac5-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
 

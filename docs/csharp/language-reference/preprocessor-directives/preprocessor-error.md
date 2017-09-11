@@ -36,19 +36,19 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="error-c-reference"></a>#error (Referencia de C#)
-`#error` le permite generar un error desde una ubicación específica en el código. Por ejemplo:  
+# <a name="error-c-reference"></a><span data-ttu-id="9d86f-102">#error (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9d86f-102">#error (C# Reference)</span></span>
+<span data-ttu-id="9d86f-103">`#error` le permite generar un error desde una ubicación específica en el código.</span><span class="sxs-lookup"><span data-stu-id="9d86f-103">`#error` lets you generate an error from a specific location in your code.</span></span> <span data-ttu-id="9d86f-104">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="9d86f-104">For example:</span></span>  
   
 ```csharp
 #error Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Un uso común de `#error` es en una directiva condicional.  
+## <a name="remarks"></a><span data-ttu-id="9d86f-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9d86f-105">Remarks</span></span>  
+ <span data-ttu-id="9d86f-106">Un uso común de `#error` es en una directiva condicional.</span><span class="sxs-lookup"><span data-stu-id="9d86f-106">A common use of `#error` is in a conditional directive.</span></span>  
   
- También es posible generar una advertencia definida por el usuario con [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).  
+ <span data-ttu-id="9d86f-107">También es posible generar una advertencia definida por el usuario con [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).</span><span class="sxs-lookup"><span data-stu-id="9d86f-107">It is also possible to generate a user-defined warning with [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="9d86f-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9d86f-108">Example</span></span>  
   
 ```csharp
 // preprocessor_error.cs  
@@ -65,8 +65,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="9d86f-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d86f-109">See Also</span></span>  
+ <span data-ttu-id="9d86f-110">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9d86f-110">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9d86f-111">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9d86f-111">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="9d86f-112">Directivas de preprocesador de C#</span><span class="sxs-lookup"><span data-stu-id="9d86f-112">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

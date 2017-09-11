@@ -26,18 +26,18 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-execute-expression-trees-c"></a>Cómo: Ejecutar árboles de expresiones (C#)
-En este tema se muestra cómo ejecutar un árbol de expresión. La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.  
+# <a name="how-to-execute-expression-trees-c"></a><span data-ttu-id="12971-102">Cómo: Ejecutar árboles de expresiones (C#)</span><span class="sxs-lookup"><span data-stu-id="12971-102">How to: Execute Expression Trees (C#)</span></span>
+<span data-ttu-id="12971-103">En este tema se muestra cómo ejecutar un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="12971-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="12971-104">La ejecución de un árbol de expresión puede devolver un valor o simplemente realizar una acción, como llamar a un método.</span><span class="sxs-lookup"><span data-stu-id="12971-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  
   
- Solo se pueden ejecutar los árboles de expresiones que representan expresiones lambda. Los árboles de expresiones que representan expresiones lambda son de tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>. Para ejecutar estos árboles de expresiones, llame al método <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> para crear un delegado ejecutable y, después, invoque el delegado.  
+ <span data-ttu-id="12971-105">Solo se pueden ejecutar los árboles de expresiones que representan expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="12971-105">Only expression trees that represent lambda expressions can be executed.</span></span> <span data-ttu-id="12971-106">Los árboles de expresiones que representan expresiones lambda son de tipo <xref:System.Linq.Expressions.LambdaExpression> o <xref:System.Linq.Expressions.Expression%601>.</span><span class="sxs-lookup"><span data-stu-id="12971-106">Expression trees that represent lambda expressions are of type <xref:System.Linq.Expressions.LambdaExpression> or <xref:System.Linq.Expressions.Expression%601>.</span></span> <span data-ttu-id="12971-107">Para ejecutar estos árboles de expresiones, llame al método <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> para crear un delegado ejecutable y, después, invoque el delegado.</span><span class="sxs-lookup"><span data-stu-id="12971-107">To execute these expression trees, call the <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> method to create an executable delegate, and then invoke the delegate.</span></span>  
   
 > [!NOTE]
->  Si el tipo del delegado es desconocido, es decir, la expresión lambda es de tipo <xref:System.Linq.Expressions.LambdaExpression> y no <xref:System.Linq.Expressions.Expression%601>, debe llamar al método <xref:System.Delegate.DynamicInvoke%2A> en el delegado en lugar de invocarlo directamente.  
+>  <span data-ttu-id="12971-108">Si el tipo del delegado es desconocido, es decir, la expresión lambda es de tipo <xref:System.Linq.Expressions.LambdaExpression> y no <xref:System.Linq.Expressions.Expression%601>, debe llamar al método <xref:System.Delegate.DynamicInvoke%2A> en el delegado en lugar de invocarlo directamente.</span><span class="sxs-lookup"><span data-stu-id="12971-108">If the type of the delegate is not known, that is, the lambda expression is of type <xref:System.Linq.Expressions.LambdaExpression> and not <xref:System.Linq.Expressions.Expression%601>, you must call the <xref:System.Delegate.DynamicInvoke%2A> method on the delegate instead of invoking it directly.</span></span>  
   
- Si un árbol de expresión no representa una expresión lambda, puede crear una nueva expresión lambda que tenga el árbol de expresión original como su cuerpo llamando al método <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>. Luego puede ejecutar la expresión lambda tal y como se ha descrito anteriormente en esta sección.  
+ <span data-ttu-id="12971-109">Si un árbol de expresión no representa una expresión lambda, puede crear una nueva expresión lambda que tenga el árbol de expresión original como su cuerpo llamando al método <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29>.</span><span class="sxs-lookup"><span data-stu-id="12971-109">If an expression tree does not represent a lambda expression, you can create a new lambda expression that has the original expression tree as its body, by calling the <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> method.</span></span> <span data-ttu-id="12971-110">Luego puede ejecutar la expresión lambda tal y como se ha descrito anteriormente en esta sección.</span><span class="sxs-lookup"><span data-stu-id="12971-110">Then, you can execute the lambda expression as described earlier in this section.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se muestra cómo ejecutar un árbol de expresión que representa la elevación de un número a una potencia mediante la creación de una expresión lambda y su posterior ejecución. Se muestra el resultado, que representa el número elevado a la potencia.  
+## <a name="example"></a><span data-ttu-id="12971-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="12971-111">Example</span></span>  
+ <span data-ttu-id="12971-112">En el ejemplo de código siguiente se muestra cómo ejecutar un árbol de expresión que representa la elevación de un número a una potencia mediante la creación de una expresión lambda y su posterior ejecución.</span><span class="sxs-lookup"><span data-stu-id="12971-112">The following code example demonstrates how to execute an expression tree that represents raising a number to a power by creating a lambda expression and executing it.</span></span> <span data-ttu-id="12971-113">Se muestra el resultado, que representa el número elevado a la potencia.</span><span class="sxs-lookup"><span data-stu-id="12971-113">The result, which represents the number raised to the power, is displayed.</span></span>  
   
 ```csharp  
 // The expression tree to execute.  
@@ -59,13 +59,13 @@ Console.WriteLine(result);
 // 8  
 ```  
   
-## <a name="compiling-the-code"></a>Compilar el código  
+## <a name="compiling-the-code"></a><span data-ttu-id="12971-114">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="12971-114">Compiling the Code</span></span>  
   
--   Agregue una referencia de proyecto a System.Core.dll si todavía no existe.  
+-   <span data-ttu-id="12971-115">Agregue una referencia de proyecto a System.Core.dll si todavía no existe.</span><span class="sxs-lookup"><span data-stu-id="12971-115">Add a project reference to System.Core.dll if it is not already referenced.</span></span>  
   
--   Incluya el espacio de nombres System.Linq.Expressions.  
+-   <span data-ttu-id="12971-116">Incluya el espacio de nombres System.Linq.Expressions.</span><span class="sxs-lookup"><span data-stu-id="12971-116">Include the System.Linq.Expressions namespace.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Cómo: Modificar árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a><span data-ttu-id="12971-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="12971-117">See Also</span></span>  
+ <span data-ttu-id="12971-118">[Árboles de expresiones (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) </span><span class="sxs-lookup"><span data-stu-id="12971-118">[Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) </span></span>  
+ [<span data-ttu-id="12971-119">Cómo: Modificar árboles de expresiones (C#)</span><span class="sxs-lookup"><span data-stu-id="12971-119">How to: Modify Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
 

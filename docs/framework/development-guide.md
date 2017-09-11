@@ -23,75 +23,75 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
-En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework. Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  
+# <a name="net-framework-development-guide"></a><span data-ttu-id="18ec9-102">Guía de desarrollo para .NET Framework</span><span class="sxs-lookup"><span data-stu-id="18ec9-102">.NET Framework Development Guide</span></span>
+<span data-ttu-id="18ec9-103">En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18ec9-103">This section explains how to create, configure, debug, secure, and deploy your .NET Framework apps.</span></span> <span data-ttu-id="18ec9-104">Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.</span><span class="sxs-lookup"><span data-stu-id="18ec9-104">The section also provides information about technology areas such as dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Elementos esenciales de aplicaciones](../../docs/standard/application-essentials.md)  
- Proporciona información sobre las tareas básicas de desarrollo de aplicaciones, como la programación con dominios de aplicación y ensamblados, el uso de tipos base de análisis, formato y atributos, el uso de colecciones, el control de eventos y excepciones, el uso de archivos y secuencias de datos y el uso de genéricos.  
+## <a name="in-this-section"></a><span data-ttu-id="18ec9-105">En esta sección</span><span class="sxs-lookup"><span data-stu-id="18ec9-105">In This Section</span></span>  
+ [<span data-ttu-id="18ec9-106">Elementos esenciales de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="18ec9-106">Application Essentials</span></span>](../../docs/standard/application-essentials.md)  
+ <span data-ttu-id="18ec9-107">Proporciona información sobre las tareas básicas de desarrollo de aplicaciones, como la programación con dominios de aplicación y ensamblados, el uso de tipos base de análisis, formato y atributos, el uso de colecciones, el control de eventos y excepciones, el uso de archivos y secuencias de datos y el uso de genéricos.</span><span class="sxs-lookup"><span data-stu-id="18ec9-107">Provides information about basic app development tasks, such as programming with app domains and assemblies, using attributes, formatting and parsing base types, using collections, handling events and exceptions, using files and data streams, and using generics.</span></span>  
   
- [Datos y modelado](../../docs/framework/data/index.md)  
- Ofrece información acerca de cómo acceder a los datos utilizando ADO.NET, Language-Integrated Query (LINQ), Data Services de WCF y XML.  
+ [<span data-ttu-id="18ec9-108">Datos y modelado</span><span class="sxs-lookup"><span data-stu-id="18ec9-108">Data and Modeling</span></span>](../../docs/framework/data/index.md)  
+ <span data-ttu-id="18ec9-109">Ofrece información acerca de cómo acceder a los datos utilizando ADO.NET, Language-Integrated Query (LINQ), Data Services de WCF y XML.</span><span class="sxs-lookup"><span data-stu-id="18ec9-109">Provides information about how to access data using ADO.NET, Language Integrated Query (LINQ), WCF Data Services, and XML.</span></span>  
   
- [Aplicaciones cliente](../../docs/framework/develop-client-apps.md)  
- Explica cómo crear aplicaciones basadas en Windows mediante Windows Presentation Foundation (WPF) o Windows Forms.  
+ [<span data-ttu-id="18ec9-110">Aplicaciones cliente</span><span class="sxs-lookup"><span data-stu-id="18ec9-110">Client Applications</span></span>](../../docs/framework/develop-client-apps.md)  
+ <span data-ttu-id="18ec9-111">Explica cómo crear aplicaciones basadas en Windows mediante Windows Presentation Foundation (WPF) o Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="18ec9-111">Explains how to create Windows-based apps by using Windows Presentation Foundation (WPF) or Windows Forms.</span></span>  
   
- [Aplicaciones web con ASP.NET](../../docs/framework/develop-web-apps-with-aspnet.md)  
- Proporciona vínculos a información sobre el uso de ASP.NET para compilar aplicaciones web empresariales utilizando el mínimo código.  
+ [<span data-ttu-id="18ec9-112">Aplicaciones web con ASP.NET</span><span class="sxs-lookup"><span data-stu-id="18ec9-112">Web Applications with ASP.NET</span></span>](../../docs/framework/develop-web-apps-with-aspnet.md)  
+ <span data-ttu-id="18ec9-113">Proporciona vínculos a información sobre el uso de ASP.NET para compilar aplicaciones web empresariales utilizando el mínimo código.</span><span class="sxs-lookup"><span data-stu-id="18ec9-113">Provides links to information about using ASP.NET to build enterprise-class web apps with a minimum of coding.</span></span>  
   
- [Aplicaciones orientadas a servicios con WCF](../../docs/framework/wcf/index.md)  
- Describe cómo utilizar Windows Communication Foundation (WCF) para compilar aplicaciones orientadas a servicios que sean seguras y confiables.  
+ [<span data-ttu-id="18ec9-114">Aplicaciones orientadas a servicios con WCF</span><span class="sxs-lookup"><span data-stu-id="18ec9-114">Service-Oriented Applications with WCF</span></span>](../../docs/framework/wcf/index.md)  
+ <span data-ttu-id="18ec9-115">Describe cómo utilizar Windows Communication Foundation (WCF) para compilar aplicaciones orientadas a servicios que sean seguras y confiables.</span><span class="sxs-lookup"><span data-stu-id="18ec9-115">Describes how to use Windows Communication Foundation (WCF) to build service-oriented apps that are secure and reliable.</span></span>  
   
- [Creación de flujos de trabajo con Windows Workflow Foundation](windows-workflow-foundation/index.md)     
- Proporciona información sobre el modelo de programación, las muestras y las herramientas para usar Windows Workflow Foundation (WF).   
+ <span data-ttu-id="18ec9-116">[Creación de flujos de trabajo con Windows Workflow Foundation](windows-workflow-foundation/index.md)   </span><span class="sxs-lookup"><span data-stu-id="18ec9-116">[Building workflows with Windows Workflow Foundation](windows-workflow-foundation/index.md)   </span></span>  
+ <span data-ttu-id="18ec9-117">Proporciona información sobre el modelo de programación, las muestras y las herramientas para usar Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="18ec9-117">Provides information about the programming model, samples, and tools for using Windows Workflow Foundation (WF).</span></span>   
 
- [Aplicaciones de servicios de Windows](../../docs/framework/windows-services/index.md)  
- Explica cómo puede utilizar Visual Studio y .NET Framework para crear una aplicación que se instala como servicio, iniciarla, detenerla y controlar su comportamiento de cualquier otro modo.  
+ [<span data-ttu-id="18ec9-118">Aplicaciones de servicios de Windows</span><span class="sxs-lookup"><span data-stu-id="18ec9-118">Windows Service Applications</span></span>](../../docs/framework/windows-services/index.md)  
+ <span data-ttu-id="18ec9-119">Explica cómo puede utilizar Visual Studio y .NET Framework para crear una aplicación que se instala como servicio, iniciarla, detenerla y controlar su comportamiento de cualquier otro modo.</span><span class="sxs-lookup"><span data-stu-id="18ec9-119">Explains how you can use Visual Studio and the .NET Framework to create an app that is installed as a service, and start, stop, and otherwise control its behavior.</span></span>  
   
- [Procesamiento paralelo y simultaneidad](../../docs/standard/parallel-processing-and-concurrency.md)  
- Proporciona información sobre el subprocesamiento administrado, la programación paralela y patrones asincrónicos de diseño de programación.  
+ [<span data-ttu-id="18ec9-120">Procesamiento paralelo y simultaneidad</span><span class="sxs-lookup"><span data-stu-id="18ec9-120">Parallel Processing and Concurrency</span></span>](../../docs/standard/parallel-processing-and-concurrency.md)  
+ <span data-ttu-id="18ec9-121">Proporciona información sobre el subprocesamiento administrado, la programación paralela y patrones asincrónicos de diseño de programación.</span><span class="sxs-lookup"><span data-stu-id="18ec9-121">Provides information about managed threading, parallel programming, and asynchronous programming design patterns.</span></span>  
   
- [Programación para redes en .NET Framework](../../docs/framework/network-programming/index.md)  
- Describe la implementación por capas, extensible y administrada de servicios de Internet que se pueden integrar rápida y fácilmente en sus aplicaciones.  
+ [<span data-ttu-id="18ec9-122">Programación para redes en .NET Framework</span><span class="sxs-lookup"><span data-stu-id="18ec9-122">Network Programming in the .NET Framework</span></span>](../../docs/framework/network-programming/index.md)  
+ <span data-ttu-id="18ec9-123">Describe la implementación por capas, extensible y administrada de servicios de Internet que se pueden integrar rápida y fácilmente en sus aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="18ec9-123">Describes the layered, extensible, and managed implementation of Internet services that you can quickly and easily integrate into your apps.</span></span>  
   
- [Configurar aplicaciones de .NET Framework](configure-apps/index.md)    
- Explica cómo puede utilizar archivos de configuración para cambiar valores sin tener que volver a compilar las aplicaciones de .NET Framework.  
+ <span data-ttu-id="18ec9-124">[Configurar aplicaciones de .NET Framework](configure-apps/index.md)  </span><span class="sxs-lookup"><span data-stu-id="18ec9-124">[Configuring .NET Framework Apps](configure-apps/index.md)  </span></span>  
+ <span data-ttu-id="18ec9-125">Explica cómo puede utilizar archivos de configuración para cambiar valores sin tener que volver a compilar las aplicaciones de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18ec9-125">Explains how you can use configuration files to change settings without having to recompile your .NET Framework apps.</span></span>  
   
- [Compilar aplicaciones con .NET Native](../../docs/framework/net-native/index.md)  
- Explica cómo usar la tecnología de precompilación de [!INCLUDE[net_native](../../includes/net-native-md.md)] para compilar e implementar aplicaciones de la Tienda Windows. [!INCLUDE[net_native](../../includes/net-native-md.md)] compila aplicaciones escritas en código administrado (C#) y que destinan .NET Framework a código nativo.  
+ [<span data-ttu-id="18ec9-126">Compilar aplicaciones con .NET Native</span><span class="sxs-lookup"><span data-stu-id="18ec9-126">Compiling Apps with .NET Native</span></span>](../../docs/framework/net-native/index.md)  
+ <span data-ttu-id="18ec9-127">Explica cómo usar la tecnología de precompilación de [!INCLUDE[net_native](../../includes/net-native-md.md)] para compilar e implementar aplicaciones de la Tienda Windows.</span><span class="sxs-lookup"><span data-stu-id="18ec9-127">Explains how you can use the [!INCLUDE[net_native](../../includes/net-native-md.md)] precompilation technology to build and deploy Windows Store apps.</span></span> [!INCLUDE[net_native](../../includes/net-native-md.md)]<span data-ttu-id="18ec9-128"> compila aplicaciones escritas en código administrado (C#) y que destinan .NET Framework a código nativo.</span><span class="sxs-lookup"><span data-stu-id="18ec9-128"> compiles apps that are written in managed code (C#) and that target the .NET Framework to native code.</span></span>  
   
- [Seguridad](../../docs/standard/security/index.md)  
- Proporciona información sobre las clases y servicios en .NET Framework que proporcionan un desarrollo seguro para aplicaciones.  
+ [<span data-ttu-id="18ec9-129">Seguridad</span><span class="sxs-lookup"><span data-stu-id="18ec9-129">Security</span></span>](../../docs/standard/security/index.md)  
+ <span data-ttu-id="18ec9-130">Proporciona información sobre las clases y servicios en .NET Framework que proporcionan un desarrollo seguro para aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="18ec9-130">Provides information about the classes and services in the .NET Framework that facilitate secure app development.</span></span>  
   
- [Depurar, trazar y generar perfiles](../../docs/framework/debug-trace-profile/index.md)  
- Explica cómo probar, optimizar y generar perfiles de aplicaciones de .NET Framework y el entorno de la aplicación. En esta sección se incluye información tanto para administradores como para programadores.  
+ [<span data-ttu-id="18ec9-131">Depurar, trazar y generar perfiles</span><span class="sxs-lookup"><span data-stu-id="18ec9-131">Debugging, Tracing, and Profiling</span></span>](../../docs/framework/debug-trace-profile/index.md)  
+ <span data-ttu-id="18ec9-132">Explica cómo probar, optimizar y generar perfiles de aplicaciones de .NET Framework y el entorno de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="18ec9-132">Explains how to test, optimize, and profile .NET Framework apps and the app environment.</span></span> <span data-ttu-id="18ec9-133">En esta sección se incluye información tanto para administradores como para programadores.</span><span class="sxs-lookup"><span data-stu-id="18ec9-133">This section includes information for administrators as well as developers.</span></span>  
   
- [Desarrollo de varias plataformas](../../docs/standard/cross-platform/index.md)  
- Proporciona información sobre cómo usar .NET Framework para compilar ensamblados que se pueden compartir entre varias plataformas y varios dispositivos, como teléfonos, escritorio y web.  
+ [<span data-ttu-id="18ec9-134">Desarrollo de varias plataformas</span><span class="sxs-lookup"><span data-stu-id="18ec9-134">Developing for Multiple Platforms</span></span>](../../docs/standard/cross-platform/index.md)  
+ <span data-ttu-id="18ec9-135">Proporciona información sobre cómo usar .NET Framework para compilar ensamblados que se pueden compartir entre varias plataformas y varios dispositivos, como teléfonos, escritorio y web.</span><span class="sxs-lookup"><span data-stu-id="18ec9-135">Provides information about how you can use the .NET Framework to build assemblies that can be shared across multiple platforms and multiple devices such as phones, desktop, and web.</span></span>  
   
- [Implementación](../../docs/framework/deployment/index.md)  
- Explica cómo empaquetar y distribuir la aplicación de .NET Framework, e incluye guías de implementación para desarrolladores y administradores.  
+ [<span data-ttu-id="18ec9-136">Implementación</span><span class="sxs-lookup"><span data-stu-id="18ec9-136">Deployment</span></span>](../../docs/framework/deployment/index.md)  
+ <span data-ttu-id="18ec9-137">Explica cómo empaquetar y distribuir la aplicación de .NET Framework, e incluye guías de implementación para desarrolladores y administradores.</span><span class="sxs-lookup"><span data-stu-id="18ec9-137">Explains how to package and distribute your .NET Framework app, and includes deployment guides for both developers and administrators.</span></span>  
   
- [Rendimiento](../../docs/framework/performance/index.md)  
- Proporciona información sobre el almacenamiento en caché, la inicialización diferida, la confiabilidad y eventos ETW.  
+ [<span data-ttu-id="18ec9-138">Rendimiento</span><span class="sxs-lookup"><span data-stu-id="18ec9-138">Performance</span></span>](../../docs/framework/performance/index.md)  
+ <span data-ttu-id="18ec9-139">Proporciona información sobre el almacenamiento en caché, la inicialización diferida, la confiabilidad y eventos ETW.</span><span class="sxs-lookup"><span data-stu-id="18ec9-139">Provides information about caching, lazy initialization, reliability, and ETW events.</span></span>  
   
  <!--zz [Advanced Reading for the .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
-## <a name="reference"></a>Referencia  
- [Biblioteca de clases .NET Framework](/dotnet/api/?view=netframework-4.7)  
- Proporciona ejemplos de código y de sintaxis, así como información de uso para cada una de las clases incluidas en los espacios de nombres de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+## <a name="reference"></a><span data-ttu-id="18ec9-140">Referencia</span><span class="sxs-lookup"><span data-stu-id="18ec9-140">Reference</span></span>  
+ [<span data-ttu-id="18ec9-141">Biblioteca de clases .NET Framework</span><span class="sxs-lookup"><span data-stu-id="18ec9-141">.NET Framework Class Library</span></span>](/dotnet/api/?view=netframework-4.7)  
+ <span data-ttu-id="18ec9-142">Proporciona ejemplos de código y de sintaxis, así como información de uso para cada una de las clases incluidas en los espacios de nombres de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="18ec9-142">Supplies syntax, code examples, and usage information for each class that is contained in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces.</span></span>  
   
-## <a name="related-sections"></a>Secciones relacionadas  
- [Introducción](../../docs/framework/get-started/index.md)  
- Proporciona información general completa de .NET Framework y vínculos a recursos adicionales.  
+## <a name="related-sections"></a><span data-ttu-id="18ec9-143">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="18ec9-143">Related Sections</span></span>  
+ [<span data-ttu-id="18ec9-144">Introducción</span><span class="sxs-lookup"><span data-stu-id="18ec9-144">Getting Started</span></span>](../../docs/framework/get-started/index.md)  
+ <span data-ttu-id="18ec9-145">Proporciona información general completa de .NET Framework y vínculos a recursos adicionales.</span><span class="sxs-lookup"><span data-stu-id="18ec9-145">Provides a comprehensive overview of the .NET Framework and links to additional resources.</span></span>  
   
- [Novedades](../../docs/framework/whats-new/index.md)  
- Describe las nuevas características clave y los cambios realizados en la versión más reciente de .NET Framework. Incluye las listas de los tipos y miembros nuevos y obsoletos, y proporciona una guía para migrar las aplicaciones desde la versión anterior de .NET Framework.  
+ [<span data-ttu-id="18ec9-146">Novedades</span><span class="sxs-lookup"><span data-stu-id="18ec9-146">What's New</span></span>](../../docs/framework/whats-new/index.md)  
+ <span data-ttu-id="18ec9-147">Describe las nuevas características clave y los cambios realizados en la versión más reciente de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18ec9-147">Describes key new features and changes in the latest version of the .NET Framework.</span></span> <span data-ttu-id="18ec9-148">Incluye las listas de los tipos y miembros nuevos y obsoletos, y proporciona una guía para migrar las aplicaciones desde la versión anterior de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18ec9-148">Includes lists of new and obsolete types and members, and provides a guide for migrating your apps from the previous version of the .NET Framework.</span></span>  
   
- [Herramientas](../../docs/framework/tools/index.md)  
- Describe las herramientas que ayudan a desarrollar, configurar e implementar aplicaciones con las tecnologías de .NET Framework.  
+ [<span data-ttu-id="18ec9-149">Herramientas</span><span class="sxs-lookup"><span data-stu-id="18ec9-149">Tools</span></span>](../../docs/framework/tools/index.md)  
+ <span data-ttu-id="18ec9-150">Describe las herramientas que ayudan a desarrollar, configurar e implementar aplicaciones con las tecnologías de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18ec9-150">Describes the tools that help you develop, configure, and deploy apps by using .NET Framework technologies.</span></span>  
   
- [Ejemplos de .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Proporciona vínculos al sitio web de galería de ejemplos de código de MSDN, que contiene aplicaciones de ejemplo en las que se muestran las tecnologías de .NET Framework.
+ [<span data-ttu-id="18ec9-151">Ejemplos de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="18ec9-151">.NET Framework Samples</span></span>](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
+ <span data-ttu-id="18ec9-152">Proporciona vínculos al sitio web de galería de ejemplos de código de MSDN, que contiene aplicaciones de ejemplo en las que se muestran las tecnologías de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18ec9-152">Provides links to the MSDN Code Samples Gallery for sample apps that demonstrate .NET Framework technologies.</span></span>
 

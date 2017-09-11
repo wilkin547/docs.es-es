@@ -39,36 +39,36 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="delegate-c-reference"></a>delegado (Referencia de C#)
-La declaración de un tipo delegado es similar a una firma de método. Tiene un valor devuelto y un número cualquiera de parámetros de cualquier tipo:  
+# <a name="delegate-c-reference"></a><span data-ttu-id="fe18e-102">delegado (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="fe18e-102">delegate (C# Reference)</span></span>
+<span data-ttu-id="fe18e-103">La declaración de un tipo delegado es similar a una firma de método.</span><span class="sxs-lookup"><span data-stu-id="fe18e-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="fe18e-104">Tiene un valor devuelto y un número cualquiera de parámetros de cualquier tipo:</span><span class="sxs-lookup"><span data-stu-id="fe18e-104">It has a return value and any number of parameters of any type:</span></span>  
   
 ```  
 public delegate void TestDelegate(string message);  
 public delegate int TestDelegate(MyType m, long num);  
 ```  
   
- Un `delegate` es un tipo de referencia que puede usarse para encapsular un método con nombre o anónimo. Los delegados son similares a los punteros de función en C++; pero son más seguros y proporcionan mayor seguridad de tipos. Para las aplicaciones de delegados, vea [Delegados](../../../csharp/programming-guide/delegates/index.md) y [Delegados genéricos](../../../csharp/programming-guide/generics/generic-delegates.md).  
+ <span data-ttu-id="fe18e-105">Un `delegate` es un tipo de referencia que puede usarse para encapsular un método con nombre o anónimo.</span><span class="sxs-lookup"><span data-stu-id="fe18e-105">A `delegate` is a reference type that can be used to encapsulate a named or an anonymous method.</span></span> <span data-ttu-id="fe18e-106">Los delegados son similares a los punteros de función en C++; pero son más seguros y proporcionan mayor seguridad de tipos.</span><span class="sxs-lookup"><span data-stu-id="fe18e-106">Delegates are similar to function pointers in C++; however, delegates are type-safe and secure.</span></span> <span data-ttu-id="fe18e-107">Para las aplicaciones de delegados, vea [Delegados](../../../csharp/programming-guide/delegates/index.md) y [Delegados genéricos](../../../csharp/programming-guide/generics/generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="fe18e-107">For applications of delegates, see [Delegates](../../../csharp/programming-guide/delegates/index.md) and [Generic Delegates](../../../csharp/programming-guide/generics/generic-delegates.md).</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Los delegados son la base de los [eventos](../../../csharp/programming-guide/events/index.md).  
+## <a name="remarks"></a><span data-ttu-id="fe18e-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="fe18e-108">Remarks</span></span>  
+ <span data-ttu-id="fe18e-109">Los delegados son la base de los [eventos](../../../csharp/programming-guide/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="fe18e-109">Delegates are the basis for [Events](../../../csharp/programming-guide/events/index.md).</span></span>  
   
- Se pueden crear instancias de un delegado asociándolo a un método con nombre o anónimo. Para obtener más información, vea [Métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) y [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+ <span data-ttu-id="fe18e-110">Se pueden crear instancias de un delegado asociándolo a un método con nombre o anónimo.</span><span class="sxs-lookup"><span data-stu-id="fe18e-110">A delegate can be instantiated by associating it either with a named or anonymous method.</span></span> <span data-ttu-id="fe18e-111">Para obtener más información, vea [Métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) y [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span><span class="sxs-lookup"><span data-stu-id="fe18e-111">For more information, see [Named Methods](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) and [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span></span>  
   
- Para crear instancias del delegado debe usarse un método o una expresión lambda que tenga un tipo de valor devuelto y parámetros de entrada compatibles. Para obtener más información sobre el grado de variación permitida en la firma de método, vea [Varianza en delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca). Para el uso con métodos anónimos, el delegado y el código que se van a asociar se declaran juntos. En esta sección se describen las dos maneras de crear instancias de delegados.  
+ <span data-ttu-id="fe18e-112">Para crear instancias del delegado debe usarse un método o una expresión lambda que tenga un tipo de valor devuelto y parámetros de entrada compatibles.</span><span class="sxs-lookup"><span data-stu-id="fe18e-112">The delegate must be instantiated with a method or lambda expression that has a compatible return type and input parameters.</span></span> <span data-ttu-id="fe18e-113">Para obtener más información sobre el grado de variación permitida en la firma de método, vea [Varianza en delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca).</span><span class="sxs-lookup"><span data-stu-id="fe18e-113">For more information on the degree of variance that is allowed in the method signature, see [Variance in Delegates](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca).</span></span> <span data-ttu-id="fe18e-114">Para el uso con métodos anónimos, el delegado y el código que se van a asociar se declaran juntos.</span><span class="sxs-lookup"><span data-stu-id="fe18e-114">For use with anonymous methods, the delegate and the code to be associated with it are declared together.</span></span> <span data-ttu-id="fe18e-115">En esta sección se describen las dos maneras de crear instancias de delegados.</span><span class="sxs-lookup"><span data-stu-id="fe18e-115">Both ways of instantiating delegates are discussed in this section.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]  
+## <a name="example"></a><span data-ttu-id="fe18e-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fe18e-116">Example</span></span>  
+ <span data-ttu-id="fe18e-117">[!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="fe18e-117">[!code-cs[csrefKeywordsTypes#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/delegate_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a><span data-ttu-id="fe18e-118">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="fe18e-118">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)   
- [Delegados](../../../csharp/programming-guide/delegates/index.md)   
- [Eventos](../../../csharp/programming-guide/events/index.md)   
- [Delegados con métodos con nombre y delegados con métodos anónimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)   
- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+## <a name="see-also"></a><span data-ttu-id="fe18e-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="fe18e-119">See Also</span></span>  
+ <span data-ttu-id="fe18e-120">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-120">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="fe18e-121">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-121">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="fe18e-122">[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-122">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="fe18e-123">[Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-123">[Reference Types](../../../csharp/language-reference/keywords/reference-types.md) </span></span>  
+ <span data-ttu-id="fe18e-124">[Delegados](../../../csharp/programming-guide/delegates/index.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-124">[Delegates](../../../csharp/programming-guide/delegates/index.md) </span></span>  
+ <span data-ttu-id="fe18e-125">[Eventos](../../../csharp/programming-guide/events/index.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-125">[Events](../../../csharp/programming-guide/events/index.md) </span></span>  
+ <span data-ttu-id="fe18e-126">[Delegados con métodos con nombre y delegados con métodos anónimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) </span><span class="sxs-lookup"><span data-stu-id="fe18e-126">[Delegates with Named vs. Anonymous Methods](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md) </span></span>  
+ [<span data-ttu-id="fe18e-127">Métodos anónimos</span><span class="sxs-lookup"><span data-stu-id="fe18e-127">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
 

@@ -38,28 +38,28 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (Opciones del compilador de C#)
-Mediante la opción del compilador `/preferreduilang`, puede especificar el idioma en el que el compilador de C# muestra el resultado, como los mensajes de error.  
+# <a name="preferreduilang-c-compiler-options"></a><span data-ttu-id="c852d-102">/preferreduilang (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="c852d-102">/preferreduilang (C# Compiler Options)</span></span>
+<span data-ttu-id="c852d-103">Mediante la opción del compilador `/preferreduilang`, puede especificar el idioma en el que el compilador de C# muestra el resultado, como los mensajes de error.</span><span class="sxs-lookup"><span data-stu-id="c852d-103">By using the `/preferreduilang` compiler option, you can specify the language in which the C# compiler displays output, such as error messages.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="c852d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c852d-104">Syntax</span></span>  
   
 ```console  
 /preferreduilang: language  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="c852d-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="c852d-105">Arguments</span></span>  
  `language`  
- El [nombre del idioma](http://go.microsoft.com/fwlink/p/?LinkId=236992) del idioma que se va a usar para los resultados del compilador.  
+ <span data-ttu-id="c852d-106">El [nombre del idioma](http://go.microsoft.com/fwlink/p/?LinkId=236992) del idioma que se va a usar para los resultados del compilador.</span><span class="sxs-lookup"><span data-stu-id="c852d-106">The [language name](http://go.microsoft.com/fwlink/p/?LinkId=236992) of the language to use for compiler output.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Puede usar la opción del compilador `/preferreduilang` para especificar el idioma que quiere que use el compilador de C# para los mensajes de error y otros resultados de la línea de comandos. Si el paquete de idioma para el idioma no está instalado, se usa la configuración del idioma del sistema operativo en su lugar, y no se notifica ningún error.  
+## <a name="remarks"></a><span data-ttu-id="c852d-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c852d-107">Remarks</span></span>  
+ <span data-ttu-id="c852d-108">Puede usar la opción del compilador `/preferreduilang` para especificar el idioma que quiere que use el compilador de C# para los mensajes de error y otros resultados de la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="c852d-108">You can use the `/preferreduilang` compiler option to specify the language that you want the C# compiler to use for error messages and other command-line output.</span></span> <span data-ttu-id="c852d-109">Si el paquete de idioma para el idioma no está instalado, se usa la configuración del idioma del sistema operativo en su lugar, y no se notifica ningún error.</span><span class="sxs-lookup"><span data-stu-id="c852d-109">If the language pack for the language is not installed, the language setting of the operating system is used instead, and no error is reported.</span></span>  
   
 ```csharp  
 csc.exe /preferreduilang:ja-JP  
 ```  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a><span data-ttu-id="c852d-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c852d-110">Requirements</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="c852d-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="c852d-111">See Also</span></span>  
+ [<span data-ttu-id="c852d-112">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="c852d-112">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

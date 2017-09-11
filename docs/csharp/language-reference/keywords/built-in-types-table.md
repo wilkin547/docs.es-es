@@ -35,52 +35,52 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="built-in-types-table-c-reference"></a>Tabla de tipos integrados (Referencia de C#)
-En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>.  
+# <a name="built-in-types-table-c-reference"></a><span data-ttu-id="24650-102">Tabla de tipos integrados (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="24650-102">Built-In Types Table (C# Reference)</span></span>
+<span data-ttu-id="24650-103">En la siguiente tabla se muestran las palabras clave para los tipos de C# integrados, que son alias de los tipos predefinidos en el espacio de nombres <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="24650-103">The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace.</span></span>  
   
-|Tipo de C#|Tipo de .NET Framework|  
+|<span data-ttu-id="24650-104">Tipo de C#</span><span class="sxs-lookup"><span data-stu-id="24650-104">C# Type</span></span>|<span data-ttu-id="24650-105">Tipo de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="24650-105">.NET Framework Type</span></span>|  
 |--------------|-------------------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|`System.Boolean`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`System.Char`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
-|[object](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
-|[string](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
+|[<span data-ttu-id="24650-106">bool</span><span class="sxs-lookup"><span data-stu-id="24650-106">bool</span></span>](../../../csharp/language-reference/keywords/bool.md)|`System.Boolean`|  
+|[<span data-ttu-id="24650-107">byte</span><span class="sxs-lookup"><span data-stu-id="24650-107">byte</span></span>](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
+|[<span data-ttu-id="24650-108">sbyte</span><span class="sxs-lookup"><span data-stu-id="24650-108">sbyte</span></span>](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
+|[<span data-ttu-id="24650-109">char</span><span class="sxs-lookup"><span data-stu-id="24650-109">char</span></span>](../../../csharp/language-reference/keywords/char.md)|`System.Char`|  
+|[<span data-ttu-id="24650-110">decimal</span><span class="sxs-lookup"><span data-stu-id="24650-110">decimal</span></span>](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
+|[<span data-ttu-id="24650-111">double</span><span class="sxs-lookup"><span data-stu-id="24650-111">double</span></span>](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
+|[<span data-ttu-id="24650-112">float</span><span class="sxs-lookup"><span data-stu-id="24650-112">float</span></span>](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
+|[<span data-ttu-id="24650-113">int</span><span class="sxs-lookup"><span data-stu-id="24650-113">int</span></span>](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
+|[<span data-ttu-id="24650-114">uint</span><span class="sxs-lookup"><span data-stu-id="24650-114">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
+|[<span data-ttu-id="24650-115">long</span><span class="sxs-lookup"><span data-stu-id="24650-115">long</span></span>](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
+|[<span data-ttu-id="24650-116">ulong</span><span class="sxs-lookup"><span data-stu-id="24650-116">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
+|[<span data-ttu-id="24650-117">object</span><span class="sxs-lookup"><span data-stu-id="24650-117">object</span></span>](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
+|[<span data-ttu-id="24650-118">short</span><span class="sxs-lookup"><span data-stu-id="24650-118">short</span></span>](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
+|[<span data-ttu-id="24650-119">ushort</span><span class="sxs-lookup"><span data-stu-id="24650-119">ushort</span></span>](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
+|[<span data-ttu-id="24650-120">string</span><span class="sxs-lookup"><span data-stu-id="24650-120">string</span></span>](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
   
-## <a name="remarks"></a>Comentarios  
- A todos los tipos de la tabla, excepto `object` y `string`, se les hace referencia como tipos simples.  
+## <a name="remarks"></a><span data-ttu-id="24650-121">Comentarios</span><span class="sxs-lookup"><span data-stu-id="24650-121">Remarks</span></span>  
+ <span data-ttu-id="24650-122">A todos los tipos de la tabla, excepto `object` y `string`, se les hace referencia como tipos simples.</span><span class="sxs-lookup"><span data-stu-id="24650-122">All of the types in the table, except `object` and `string`, are referred to as simple types.</span></span>  
   
- Las palabras clave de tipo de C# y sus alias son intercambiables. Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:  
+ <span data-ttu-id="24650-123">Las palabras clave de tipo de C# y sus alias son intercambiables.</span><span class="sxs-lookup"><span data-stu-id="24650-123">The C# type keywords and their aliases are interchangeable.</span></span> <span data-ttu-id="24650-124">Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:</span><span class="sxs-lookup"><span data-stu-id="24650-124">For example, you can declare an integer variable by using either of the following declarations:</span></span>  
   
 ```  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
- Para mostrar el tipo actual de cualquier tipo de C#, use el método del sistema `GetType()`. Por ejemplo, la instrucción siguiente muestra el alias de sistema que representa el tipo de `myVariable`:  
+ <span data-ttu-id="24650-125">Para mostrar el tipo actual de cualquier tipo de C#, use el método del sistema `GetType()`.</span><span class="sxs-lookup"><span data-stu-id="24650-125">To display the actual type for any C# type, use the system method `GetType()`.</span></span> <span data-ttu-id="24650-126">Por ejemplo, la instrucción siguiente muestra el alias de sistema que representa el tipo de `myVariable`:</span><span class="sxs-lookup"><span data-stu-id="24650-126">For example, the following statement displays the system alias that represents the type of `myVariable`:</span></span>  
   
 ```  
 Console.WriteLine(myVariable.GetType());  
 ```  
   
- También puede usar el operador [typeof](../../../csharp/language-reference/keywords/typeof.md).  
+ <span data-ttu-id="24650-127">También puede usar el operador [typeof](../../../csharp/language-reference/keywords/typeof.md).</span><span class="sxs-lookup"><span data-stu-id="24650-127">You can also use the [typeof](../../../csharp/language-reference/keywords/typeof.md) operator.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Value Types](../../../csharp/language-reference/keywords/value-types.md)  (Tipos de valor [Referencia de C#])  
- [Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md)   
- [Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [Tablas de referencia para tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+## <a name="see-also"></a><span data-ttu-id="24650-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="24650-128">See Also</span></span>  
+ <span data-ttu-id="24650-129">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="24650-129">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="24650-130">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="24650-130">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="24650-131">[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="24650-131">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="24650-132">[Value Types](../../../csharp/language-reference/keywords/value-types.md)  (Tipos de valor [Referencia de C#])</span><span class="sxs-lookup"><span data-stu-id="24650-132">[Value Types](../../../csharp/language-reference/keywords/value-types.md) </span></span>  
+ <span data-ttu-id="24650-133">[Tabla de valores predeterminados](../../../csharp/language-reference/keywords/default-values-table.md) </span><span class="sxs-lookup"><span data-stu-id="24650-133">[Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md) </span></span>  
+ <span data-ttu-id="24650-134">[Tabla de formatos de presentación para valores numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md) </span><span class="sxs-lookup"><span data-stu-id="24650-134">[Formatting Numeric Results Table](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md) </span></span>  
+ <span data-ttu-id="24650-135">[dynamic](../../../csharp/language-reference/keywords/dynamic.md) </span><span class="sxs-lookup"><span data-stu-id="24650-135">[dynamic](../../../csharp/language-reference/keywords/dynamic.md) </span></span>  
+ [<span data-ttu-id="24650-136">Tablas de referencia para tipos</span><span class="sxs-lookup"><span data-stu-id="24650-136">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
 

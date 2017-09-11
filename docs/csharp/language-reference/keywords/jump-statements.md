@@ -35,22 +35,22 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="jump-statements-c-reference"></a>Instrucciones de salto (Referencia de C#)
-La creación de una rama se realiza mediante instrucciones de salto, que producen una transferencia inmediata del control del programa. Las siguientes palabras clave se usan en instrucciones de salto:  
+# <a name="jump-statements-c-reference"></a><span data-ttu-id="254fb-102">Instrucciones de salto (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="254fb-102">Jump Statements (C# Reference)</span></span>
+<span data-ttu-id="254fb-103">La creación de una rama se realiza mediante instrucciones de salto, que producen una transferencia inmediata del control del programa.</span><span class="sxs-lookup"><span data-stu-id="254fb-103">Branching is performed using jump statements, which cause an immediate transfer of the program control.</span></span> <span data-ttu-id="254fb-104">Las siguientes palabras clave se usan en instrucciones de salto:</span><span class="sxs-lookup"><span data-stu-id="254fb-104">The following keywords are used in jump statements:</span></span>  
   
--   [break](../../../csharp/language-reference/keywords/break.md)  
+-   [<span data-ttu-id="254fb-105">break</span><span class="sxs-lookup"><span data-stu-id="254fb-105">break</span></span>](../../../csharp/language-reference/keywords/break.md)  
   
--   [continue](../../../csharp/language-reference/keywords/continue.md)  
+-   [<span data-ttu-id="254fb-106">continue</span><span class="sxs-lookup"><span data-stu-id="254fb-106">continue</span></span>](../../../csharp/language-reference/keywords/continue.md)  
   
--   [goto](../../../csharp/language-reference/keywords/goto.md)  
+-   [<span data-ttu-id="254fb-107">goto</span><span class="sxs-lookup"><span data-stu-id="254fb-107">goto</span></span>](../../../csharp/language-reference/keywords/goto.md)  
   
--   [return](../../../csharp/language-reference/keywords/return.md)  
+-   [<span data-ttu-id="254fb-108">return</span><span class="sxs-lookup"><span data-stu-id="254fb-108">return</span></span>](../../../csharp/language-reference/keywords/return.md)  
   
--   [throw](../../../csharp/language-reference/keywords/throw.md)  
+-   [<span data-ttu-id="254fb-109">throw</span><span class="sxs-lookup"><span data-stu-id="254fb-109">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palabras clave de instrucciones](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="254fb-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="254fb-110">See Also</span></span>  
+ <span data-ttu-id="254fb-111">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="254fb-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="254fb-112">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="254fb-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="254fb-113">[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="254fb-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="254fb-114">Palabras clave de instrucciones</span><span class="sxs-lookup"><span data-stu-id="254fb-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
 

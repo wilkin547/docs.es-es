@@ -1,1 +1,1 @@
-Archivo DLL
+<span data-ttu-id="0db9e-101">Archivo DLL</span><span class="sxs-lookup"><span data-stu-id="0db9e-101">DLL</span></span>

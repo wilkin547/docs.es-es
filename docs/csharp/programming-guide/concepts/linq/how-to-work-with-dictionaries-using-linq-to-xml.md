@@ -21,11 +21,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Cómo: Trabajar con diccionarios mediante LINQ to XML (C#)
-A menudo resulta cómodo convertir variedades de estructuras de datos a XML y de XML a otras estructuras de datos. Este tema muestra una implementación específica de este enfoque general convirtiendo un <xref:System.Collections.Generic.Dictionary%602> a XML y de XML.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a><span data-ttu-id="2ad32-102">Cómo: Trabajar con diccionarios mediante LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="2ad32-102">How to: Work with Dictionaries Using LINQ to XML (C#)</span></span>
+<span data-ttu-id="2ad32-103">A menudo resulta cómodo convertir variedades de estructuras de datos a XML y de XML a otras estructuras de datos.</span><span class="sxs-lookup"><span data-stu-id="2ad32-103">It is often convenient to convert varieties of data structures to XML, and XML back to other data structures.</span></span> <span data-ttu-id="2ad32-104">Este tema muestra una implementación específica de este enfoque general convirtiendo un <xref:System.Collections.Generic.Dictionary%602> a XML y de XML.</span><span class="sxs-lookup"><span data-stu-id="2ad32-104">This topic shows a specific implementation of this general approach by converting a <xref:System.Collections.Generic.Dictionary%602> to XML and back.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En este ejemplo se usa una forma de construcción funcional en la que una consulta proyecta nuevos objetos <xref:System.Xml.Linq.XElement> y la colección resultante se pasa como argumento al constructor del objeto raíz <xref:System.Xml.Linq.XElement>.  
+## <a name="example"></a><span data-ttu-id="2ad32-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2ad32-105">Example</span></span>  
+ <span data-ttu-id="2ad32-106">En este ejemplo se usa una forma de construcción funcional en la que una consulta proyecta nuevos objetos <xref:System.Xml.Linq.XElement> y la colección resultante se pasa como argumento al constructor del objeto raíz <xref:System.Xml.Linq.XElement>.</span><span class="sxs-lookup"><span data-stu-id="2ad32-106">This example uses a form of functional construction in which a query projects new <xref:System.Xml.Linq.XElement> objects, and the resulting collection is passed as an argument to the constructor of the Root <xref:System.Xml.Linq.XElement> object.</span></span>  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -40,7 +40,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="2ad32-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="2ad32-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -51,8 +51,8 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
-## <a name="example"></a>Ejemplo  
- El siguiente código genera un diccionario de XML.  
+## <a name="example"></a><span data-ttu-id="2ad32-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2ad32-108">Example</span></span>  
+ <span data-ttu-id="2ad32-109">El siguiente código genera un diccionario de XML.</span><span class="sxs-lookup"><span data-stu-id="2ad32-109">The following code creates a dictionary from XML.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -69,7 +69,7 @@ foreach (string str in dict.Keys)
     Console.WriteLine("{0}:{1}", str, dict[str]);  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="2ad32-110">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="2ad32-110">This code produces the following output:</span></span>  
   
 ```  
 Child1:Value1  
@@ -78,6 +78,6 @@ Child3:Value3
 Child4:Value4  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2ad32-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ad32-111">See Also</span></span>  
+ [<span data-ttu-id="2ad32-112">Proyecciones y transformaciones (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2ad32-112">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
 

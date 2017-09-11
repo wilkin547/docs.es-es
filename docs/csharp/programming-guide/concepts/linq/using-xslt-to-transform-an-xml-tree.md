@@ -26,10 +26,10 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a>Usar XSLT para transformar un árbol XML (C#)
-Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un nuevo documento y crear un objeto <xref:System.Xml.XmlWriter> que escribirá en el nuevo documento. A continuación, puede invocar la transformación XSLT y pasar <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> a la transformación. Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a><span data-ttu-id="b8fd4-102">Usar XSLT para transformar un árbol XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b8fd4-102">Using XSLT to Transform an XML Tree (C#)</span></span>
+<span data-ttu-id="b8fd4-103">Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un nuevo documento y crear un objeto <xref:System.Xml.XmlWriter> que escribirá en el nuevo documento.</span><span class="sxs-lookup"><span data-stu-id="b8fd4-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="b8fd4-104">A continuación, puede invocar la transformación XSLT y pasar <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter> a la transformación.</span><span class="sxs-lookup"><span data-stu-id="b8fd4-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="b8fd4-105">Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.</span><span class="sxs-lookup"><span data-stu-id="b8fd4-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="b8fd4-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b8fd4-106">Example</span></span>  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -66,7 +66,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="b8fd4-107">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="b8fd4-107">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -75,8 +75,8 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
- [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="b8fd4-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="b8fd4-108">See Also</span></span>  
+ <span data-ttu-id="b8fd4-109"><xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="b8fd4-109"><xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName></span></span>   
+ <span data-ttu-id="b8fd4-110"><xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="b8fd4-110"><xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName></span></span>   
+ [<span data-ttu-id="b8fd4-111">Programación avanzada de LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="b8fd4-111">Advanced LINQ to XML Programming (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
 

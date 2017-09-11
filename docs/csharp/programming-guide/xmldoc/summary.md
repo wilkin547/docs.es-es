@@ -39,28 +39,28 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltsummarygt-c-programming-guide"></a>&lt;summary&gt; (Guía de programación de C#)
-## <a name="syntax"></a>Sintaxis  
+# <a name="ltsummarygt-c-programming-guide"></a><span data-ttu-id="c049b-102">&lt;summary&gt; (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="c049b-102">&lt;summary&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="c049b-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c049b-103">Syntax</span></span>  
   
 ```xml  
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="c049b-104">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c049b-104">Parameters</span></span>  
  `description`  
- Resumen del objeto.  
+ <span data-ttu-id="c049b-105">Resumen del objeto.</span><span class="sxs-lookup"><span data-stu-id="c049b-105">A summary of the object.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo. Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) para agregar información adicional a una descripción de tipo. Use el [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para permitir que herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB) creen hipervínculos internos a las páginas de documentación de los elementos de código.  
+## <a name="remarks"></a><span data-ttu-id="c049b-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c049b-106">Remarks</span></span>  
+ <span data-ttu-id="c049b-107">La etiqueta \<summary> debe usarse para describir un tipo o un miembro de tipo.</span><span class="sxs-lookup"><span data-stu-id="c049b-107">The \<summary> tag should be used to describe a type or a type member.</span></span> <span data-ttu-id="c049b-108">Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) para agregar información adicional a una descripción de tipo.</span><span class="sxs-lookup"><span data-stu-id="c049b-108">Use [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md) to add supplemental information to a type description.</span></span> <span data-ttu-id="c049b-109">Use el [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para permitir que herramientas de documentación como [Sandcastle](https://github.com/EWSoftware/SHFB) creen hipervínculos internos a las páginas de documentación de los elementos de código.</span><span class="sxs-lookup"><span data-stu-id="c049b-109">Use the [cref Attribute](../../../csharp/programming-guide/xmldoc/cref-attribute.md) to enable documentation tools such as [Sandcastle](https://github.com/EWSoftware/SHFB) to create internal hyperlinks to documentation pages for code elements.</span></span>  
   
- El texto de la etiqueta \<summary> es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana Examinador de objetos.  
+ <span data-ttu-id="c049b-110">El texto de la etiqueta \<summary> es la única fuente de información sobre el tipo en IntelliSense y también se muestra en la ventana Examinador de objetos.</span><span class="sxs-lookup"><span data-stu-id="c049b-110">The text for the \<summary> tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser Window.</span></span>  
   
- Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos. Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [Sandcastle](https://github.com/EWSoftware/SHFB).  
+ <span data-ttu-id="c049b-111">Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.</span><span class="sxs-lookup"><span data-stu-id="c049b-111">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span> <span data-ttu-id="c049b-112">Para crear la documentación final basada en el archivo generado por el compilador, puede crear una herramienta personalizada o usar una herramienta como [Sandcastle](https://github.com/EWSoftware/SHFB).</span><span class="sxs-lookup"><span data-stu-id="c049b-112">To create the final documentation based on the compiler-generated file, you can create a custom tool, or use a tool such as [Sandcastle](https://github.com/EWSoftware/SHFB).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
+## <a name="example"></a><span data-ttu-id="c049b-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c049b-113">Example</span></span>  
+ <span data-ttu-id="c049b-114">[!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="c049b-114">[!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]</span></span>  
   
- En el ejemplo anterior se genera el siguiente archivo XML.  
+ <span data-ttu-id="c049b-115">En el ejemplo anterior se genera el siguiente archivo XML.</span><span class="sxs-lookup"><span data-stu-id="c049b-115">The previous example produces the following XML file.</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -85,12 +85,12 @@ ms.lasthandoff: 07/28/2017
 </doc>  
 ```  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo hacer una referencia `cref` a un tipo genérico.  
+## <a name="example"></a><span data-ttu-id="c049b-116">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c049b-116">Example</span></span>  
+ <span data-ttu-id="c049b-117">En el ejemplo siguiente se muestra cómo hacer una referencia `cref` a un tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="c049b-117">The following example shows how to make a `cref` reference to a generic type.</span></span>  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
+ <span data-ttu-id="c049b-118">[!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="c049b-118">[!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]</span></span>  
   
- En el ejemplo anterior se genera el siguiente archivo XML.  
+ <span data-ttu-id="c049b-119">En el ejemplo anterior se genera el siguiente archivo XML.</span><span class="sxs-lookup"><span data-stu-id="c049b-119">The previous example produces the following XML file.</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -116,7 +116,7 @@ ms.lasthandoff: 07/28/2017
 </doc>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="c049b-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="c049b-120">See Also</span></span>  
+ <span data-ttu-id="c049b-121">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="c049b-121">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="c049b-122">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="c049b-122">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

@@ -37,14 +37,14 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="by-c-reference"></a>by (Referencia de C#)
-La palabra clave contextual `by` se usa en la cláusula `group` en una expresión de consulta para especificar cómo deben agruparse los elementos devueltos. Para obtener más información, vea [group (Cláusula)](../../../csharp/language-reference/keywords/group-clause.md).  
+# <a name="by-c-reference"></a><span data-ttu-id="0e52c-102">by (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="0e52c-102">by (C# Reference)</span></span>
+<span data-ttu-id="0e52c-103">La palabra clave contextual `by` se usa en la cláusula `group` en una expresión de consulta para especificar cómo deben agruparse los elementos devueltos.</span><span class="sxs-lookup"><span data-stu-id="0e52c-103">The `by` contextual keyword is used in the `group` clause in a query expression to specify how the returned items should be grouped.</span></span> <span data-ttu-id="0e52c-104">Para obtener más información, vea [group (Cláusula)](../../../csharp/language-reference/keywords/group-clause.md).</span><span class="sxs-lookup"><span data-stu-id="0e52c-104">For more information, see [group clause](../../../csharp/language-reference/keywords/group-clause.md).</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso de la palabra clave contextual `by` en una cláusula `group` para especificar que los estudiantes deben agruparse según la primera letra del apellido de cada estudiante.  
+## <a name="example"></a><span data-ttu-id="0e52c-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="0e52c-105">Example</span></span>  
+ <span data-ttu-id="0e52c-106">En el ejemplo siguiente se muestra el uso de la palabra clave contextual `by` en una cláusula `group` para especificar que los estudiantes deben agruparse según la primera letra del apellido de cada estudiante.</span><span class="sxs-lookup"><span data-stu-id="0e52c-106">The following example shows the use of the `by` contextual keyword in a `group` clause to specify that the students should be grouped according to the first letter of the last name of each student.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
+ <span data-ttu-id="0e52c-107">[!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="0e52c-107">[!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="0e52c-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="0e52c-108">See Also</span></span>  
+ [<span data-ttu-id="0e52c-109">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="0e52c-109">LINQ Query Expressions</span></span>](../../../csharp/programming-guide/linq-query-expressions/index.md)
 

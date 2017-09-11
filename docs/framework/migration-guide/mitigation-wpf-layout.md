@@ -21,33 +21,33 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-wpf-layout"></a>Mitigación: diseño de WPF
-El diseño de los controles WPF puede cambiar ligeramente.  
+# <a name="mitigation-wpf-layout"></a><span data-ttu-id="266ed-102">Mitigación: diseño de WPF</span><span class="sxs-lookup"><span data-stu-id="266ed-102">Mitigation: WPF Layout</span></span>
+<span data-ttu-id="266ed-103">El diseño de los controles WPF puede cambiar ligeramente.</span><span class="sxs-lookup"><span data-stu-id="266ed-103">The layout of WPF controls can change slightly.</span></span>  
   
-## <a name="impact"></a>Impacto  
- Debido a este cambio:  
+## <a name="impact"></a><span data-ttu-id="266ed-104">Impacto</span><span class="sxs-lookup"><span data-stu-id="266ed-104">Impact</span></span>  
+ <span data-ttu-id="266ed-105">Debido a este cambio:</span><span class="sxs-lookup"><span data-stu-id="266ed-105">As a result of this change:</span></span>  
   
--   El ancho o alto de los elementos puede aumentar o disminuir un píxel como máximo.  
+-   <span data-ttu-id="266ed-106">El ancho o alto de los elementos puede aumentar o disminuir un píxel como máximo.</span><span class="sxs-lookup"><span data-stu-id="266ed-106">The width or height of elements may grow or shrink by at most one pixel.</span></span>  
   
--   La posición de un objeto se puede mover un píxel como máximo.  
+-   <span data-ttu-id="266ed-107">La posición de un objeto se puede mover un píxel como máximo.</span><span class="sxs-lookup"><span data-stu-id="266ed-107">The placement of an object can move by at most one pixel.</span></span>  
   
--   Los elementos centrados pueden estar descentrados como máximo en un píxel en vertical o en horizontal.  
+-   <span data-ttu-id="266ed-108">Los elementos centrados pueden estar descentrados como máximo en un píxel en vertical o en horizontal.</span><span class="sxs-lookup"><span data-stu-id="266ed-108">Centered elements can be vertically or horizontally off center by at most one pixel.</span></span>  
   
- De forma predeterminada, este nuevo diseño solo está habilitado para las aplicaciones que tienen como destino .NET Framework 4.6.  
+ <span data-ttu-id="266ed-109">De forma predeterminada, este nuevo diseño solo está habilitado para las aplicaciones que tienen como destino .NET Framework 4.6.</span><span class="sxs-lookup"><span data-stu-id="266ed-109">By default, this new layout is enabled only for apps that target the .NET Framework 4.6.</span></span>  
   
-## <a name="mitigation"></a>Mitigación  
- Dado que esta modificación tiende a eliminar el recorte de la parte derecha o inferior de los controles WPF en PPP altos, las aplicaciones destinadas a versiones anteriores de .NET Framework que se ejecutan en .NET Framework 4.6 pueden optar por este nuevo comportamiento agregando la siguiente línea a la sección `<runtime>` del archivo app.config:  
+## <a name="mitigation"></a><span data-ttu-id="266ed-110">Mitigación</span><span class="sxs-lookup"><span data-stu-id="266ed-110">Mitigation</span></span>  
+ <span data-ttu-id="266ed-111">Dado que esta modificación tiende a eliminar el recorte de la parte derecha o inferior de los controles WPF en PPP altos, las aplicaciones destinadas a versiones anteriores de .NET Framework que se ejecutan en .NET Framework 4.6 pueden optar por este nuevo comportamiento agregando la siguiente línea a la sección `<runtime>` del archivo app.config:</span><span class="sxs-lookup"><span data-stu-id="266ed-111">Since this modification tends to eliminate clipping of the right or bottom of WPF controls at high DPIs, apps that target earlier versions of the .NET Framework but are running on the .NET Framework 4.6 can opt into this new behavior by adding the following line to the `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- Las aplicaciones que tienen como destino .NET Framework 4.6 y que desean que los controles WPF efectúen la representación con el algoritmo de diseño anterior pueden hacerlo agregando la siguiente línea a la sección `<runtime>` del archivo app.config:  
+ <span data-ttu-id="266ed-112">Las aplicaciones que tienen como destino .NET Framework 4.6 y que desean que los controles WPF efectúen la representación con el algoritmo de diseño anterior pueden hacerlo agregando la siguiente línea a la sección `<runtime>` del archivo app.config:</span><span class="sxs-lookup"><span data-stu-id="266ed-112">Apps that target the .NET Framework 4.6 but want WPF controls to render using the previous layout algorithm can do so by adding the following line to the  `<runtime>` section of the app.config file:</span></span>  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Cambios de redestinación](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a><span data-ttu-id="266ed-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="266ed-113">See Also</span></span>  
+ [<span data-ttu-id="266ed-114">Cambios de redestinación</span><span class="sxs-lookup"><span data-stu-id="266ed-114">Retargeting Changes</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
 

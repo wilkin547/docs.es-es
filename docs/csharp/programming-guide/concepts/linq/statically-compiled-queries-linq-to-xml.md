@@ -21,13 +21,13 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="statically-compiled-queries-linq-to-xml-c"></a>Consultas compiladas estáticamente (LINQ to XML) (C#)
-Una de las ventajas de rendimiento más importantes de LINQ to XML, a diferencia de <xref:System.Xml.XmlDocument>, es que las consultas LINQ to XML se compilan estáticamente, mientras que las consultas XPath deben interpretarse durante la ejecución. Esta característica está incorporada en LINQ to XML, de modo que no tiene que efectuar pasos adicionales para aprovecharla, pero resulta útil comprender la distinción a la hora de elegir entre las dos tecnologías. Este tema explica la diferencia.  
+# <a name="statically-compiled-queries-linq-to-xml-c"></a><span data-ttu-id="8f000-102">Consultas compiladas estáticamente (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8f000-102">Statically Compiled Queries (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="8f000-103">Una de las ventajas de rendimiento más importantes de LINQ to XML, a diferencia de <xref:System.Xml.XmlDocument>, es que las consultas LINQ to XML se compilan estáticamente, mientras que las consultas XPath deben interpretarse durante la ejecución.</span><span class="sxs-lookup"><span data-stu-id="8f000-103">One of the most important performance benefits LINQ to XML, as opposed to <xref:System.Xml.XmlDocument>, is that queries in LINQ to XML are statically compiled, whereas XPath queries must be interpreted at run time.</span></span> <span data-ttu-id="8f000-104">Esta característica está incorporada en LINQ to XML, de modo que no tiene que efectuar pasos adicionales para aprovecharla, pero resulta útil comprender la distinción a la hora de elegir entre las dos tecnologías.</span><span class="sxs-lookup"><span data-stu-id="8f000-104">This feature is built in to LINQ to XML, so you do not have to perform extra steps to take advantage of it, but it is helpful to understand the distinction when choosing between the two technologies.</span></span> <span data-ttu-id="8f000-105">Este tema explica la diferencia.</span><span class="sxs-lookup"><span data-stu-id="8f000-105">This topic explains the difference.</span></span>  
   
-## <a name="statically-compiled-queries-vs-xpath"></a>Comparación de consultas compiladas de forma estática y XPath  
- En el ejemplo siguiente se muestra cómo obtener los elementos descendientes con un nombre especificado y con un atributo con un valor especificado.  
+## <a name="statically-compiled-queries-vs-xpath"></a><span data-ttu-id="8f000-106">Comparación de consultas compiladas de forma estática y XPath</span><span class="sxs-lookup"><span data-stu-id="8f000-106">Statically Compiled Queries vs. XPath</span></span>  
+ <span data-ttu-id="8f000-107">En el ejemplo siguiente se muestra cómo obtener los elementos descendientes con un nombre especificado y con un atributo con un valor especificado.</span><span class="sxs-lookup"><span data-stu-id="8f000-107">The following example shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- A continuación figura la expresión XPath equivalente:  
+ <span data-ttu-id="8f000-108">A continuación figura la expresión XPath equivalente:</span><span class="sxs-lookup"><span data-stu-id="8f000-108">The following is the equivalent XPath expression:</span></span>  
   
 ```  
 //Address[@Type='Shipping']  
@@ -45,7 +45,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- El compilador reescribe la expresión de consulta de este ejemplo con la sintaxis de consulta basada en métodos. En el ejemplo siguiente, que está escrito en la sintaxis de consulta basada en métodos, se producen los mismos resultados que en el anterior:  
+ <span data-ttu-id="8f000-109">El compilador reescribe la expresión de consulta de este ejemplo con la sintaxis de consulta basada en métodos.</span><span class="sxs-lookup"><span data-stu-id="8f000-109">The query expression in this example is re-written by the compiler to method-based query syntax.</span></span> <span data-ttu-id="8f000-110">En el ejemplo siguiente, que está escrito en la sintaxis de consulta basada en métodos, se producen los mismos resultados que en el anterior:</span><span class="sxs-lookup"><span data-stu-id="8f000-110">The following example, which is written in method-based query syntax, produces the same results as the previous one:</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -59,7 +59,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- El método <xref:System.Linq.Enumerable.Where%2A> es una extensión del método. Para más información, vea [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Dado que <xref:System.Linq.Enumerable.Where%2A> es un método de extensión, la consulta anterior se compila como si estuviera escrita como se muestra a continuación:  
+ <span data-ttu-id="8f000-111">El método <xref:System.Linq.Enumerable.Where%2A> es una extensión del método.</span><span class="sxs-lookup"><span data-stu-id="8f000-111">The <xref:System.Linq.Enumerable.Where%2A> method is an extension method.</span></span> <span data-ttu-id="8f000-112">Para más información, vea [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="8f000-112">For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span> <span data-ttu-id="8f000-113">Dado que <xref:System.Linq.Enumerable.Where%2A> es un método de extensión, la consulta anterior se compila como si estuviera escrita como se muestra a continuación:</span><span class="sxs-lookup"><span data-stu-id="8f000-113">Because <xref:System.Linq.Enumerable.Where%2A> is an extension method, the query above is compiled as though it were written as follows:</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -73,13 +73,13 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este ejemplo produce exactamente los mismos resultados que los dos ejemplos anteriores. Esto ilustra el hecho de que las consultas se compilan de forma efectiva en llamadas a método vinculadas estáticamente. Esto, combinado con la semántica de ejecución aplazada de los iteradores, mejora el rendimiento. Para obtener más información sobre la semántica de ejecución aplazada de iteradores, vea [Ejecución aplazada y evaluación diferida en LINQ to XML](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ <span data-ttu-id="8f000-114">Este ejemplo produce exactamente los mismos resultados que los dos ejemplos anteriores.</span><span class="sxs-lookup"><span data-stu-id="8f000-114">This example produces exactly the same results as the previous two examples.</span></span> <span data-ttu-id="8f000-115">Esto ilustra el hecho de que las consultas se compilan de forma efectiva en llamadas a método vinculadas estáticamente.</span><span class="sxs-lookup"><span data-stu-id="8f000-115">This illustrates the fact that queries are effectively compiled into statically linked method calls.</span></span> <span data-ttu-id="8f000-116">Esto, combinado con la semántica de ejecución aplazada de los iteradores, mejora el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="8f000-116">This, combined with the deferred execution semantics of iterators, improves performance.</span></span> <span data-ttu-id="8f000-117">Para obtener más información sobre la semántica de ejecución aplazada de iteradores, vea [Ejecución aplazada y evaluación diferida en LINQ to XML](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8f000-117">For more information about the deferred execution semantics of iterators, see [Deferred Execution and Lazy Evaluation in LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).</span></span>  
   
 > [!NOTE]
->  Estos ejemplos son representativos del código que el compilador podría escribir. La implementación real podría diferir ligeramente de estos ejemplos, pero el rendimiento será el mismo o similar a estos ejemplos.  
+>  <span data-ttu-id="8f000-118">Estos ejemplos son representativos del código que el compilador podría escribir.</span><span class="sxs-lookup"><span data-stu-id="8f000-118">These examples are representative of the code that the compiler might write.</span></span> <span data-ttu-id="8f000-119">La implementación real podría diferir ligeramente de estos ejemplos, pero el rendimiento será el mismo o similar a estos ejemplos.</span><span class="sxs-lookup"><span data-stu-id="8f000-119">The actual implementation might differ slightly from these examples, but the performance will be the same or similar to these examples.</span></span>  
   
-## <a name="executing-xpath-expressions-with-xmldocument"></a>Ejecutar expresiones XPath con XmlDocument  
- En el ejemplo de código siguiente se usa <xref:System.Xml.XmlDocument> para lograr los mismos resultados que en los ejemplos anteriores:  
+## <a name="executing-xpath-expressions-with-xmldocument"></a><span data-ttu-id="8f000-120">Ejecutar expresiones XPath con XmlDocument</span><span class="sxs-lookup"><span data-stu-id="8f000-120">Executing XPath Expressions with XmlDocument</span></span>  
+ <span data-ttu-id="8f000-121">En el ejemplo de código siguiente se usa <xref:System.Xml.XmlDocument> para lograr los mismos resultados que en los ejemplos anteriores:</span><span class="sxs-lookup"><span data-stu-id="8f000-121">The following example uses <xref:System.Xml.XmlDocument> to accomplish the same results as the previous examples:</span></span>  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("PurchaseOrders.xml");  
@@ -91,20 +91,20 @@ foreach (XmlNode n in nl)
 reader.Close();  
 ```  
   
- Esta consulta devuelve el mismo resultado que los ejemplos que usan LINQ to XML; la única diferencia es que LINQ to XML aplica sangría al XML impreso, mientras que <xref:System.Xml.XmlDocument> no.  
+ <span data-ttu-id="8f000-122">Esta consulta devuelve el mismo resultado que los ejemplos que usan LINQ to XML; la única diferencia es que LINQ to XML aplica sangría al XML impreso, mientras que <xref:System.Xml.XmlDocument> no.</span><span class="sxs-lookup"><span data-stu-id="8f000-122">This query returns the same output as the examples that use LINQ to XML; the only difference is that LINQ to XML indents the printed XML, whereas <xref:System.Xml.XmlDocument> does not.</span></span>  
   
- No obstante, el enfoque de <xref:System.Xml.XmlDocument> generalmente no funciona tan bien como LINQ to XML, porque el método <xref:System.Xml.XmlNode.SelectNodes%2A> debe realizar lo siguiente internamente cada vez que se le llama:  
+ <span data-ttu-id="8f000-123">No obstante, el enfoque de <xref:System.Xml.XmlDocument> generalmente no funciona tan bien como LINQ to XML, porque el método <xref:System.Xml.XmlNode.SelectNodes%2A> debe realizar lo siguiente internamente cada vez que se le llama:</span><span class="sxs-lookup"><span data-stu-id="8f000-123">However, the <xref:System.Xml.XmlDocument> approach generally does not perform as well as LINQ to XML, because the <xref:System.Xml.XmlNode.SelectNodes%2A> method must do the following internally every time it is called:</span></span>  
   
--   Analiza la cadena que contiene la expresión XPath, y divide la cadena en tokens.  
+-   <span data-ttu-id="8f000-124">Analiza la cadena que contiene la expresión XPath, y divide la cadena en tokens.</span><span class="sxs-lookup"><span data-stu-id="8f000-124">It parses the string that contains the XPath expression, breaking the string into tokens.</span></span>  
   
--   Valida los tokens para asegurarse de que la expresión XPath es válida.  
+-   <span data-ttu-id="8f000-125">Valida los tokens para asegurarse de que la expresión XPath es válida.</span><span class="sxs-lookup"><span data-stu-id="8f000-125">It validates the tokens to make sure that the XPath expression is valid.</span></span>  
   
--   Traduce la expresión a un árbol de expresión interno.  
+-   <span data-ttu-id="8f000-126">Traduce la expresión a un árbol de expresión interno.</span><span class="sxs-lookup"><span data-stu-id="8f000-126">It translates the expression into an internal expression tree.</span></span>  
   
--   Recorre en iteración los nodos, y selecciona de forma adecuada los nodos del conjunto de resultados basándose en la evaluación de la expresión.  
+-   <span data-ttu-id="8f000-127">Recorre en iteración los nodos, y selecciona de forma adecuada los nodos del conjunto de resultados basándose en la evaluación de la expresión.</span><span class="sxs-lookup"><span data-stu-id="8f000-127">It iterates through the nodes, appropriately selecting the nodes for the result set based on the evaluation of the expression.</span></span>  
   
- Esto es bastante más que el trabajo realizado por la consulta LINQ to XML correspondiente. La diferencia de rendimiento específica varía para distintos tipos de consultas, pero en general las consultas LINQ to XML efectúan menos operaciones y, por lo tanto, se ejecutan mejor, que si se evalúan las expresiones XPath con <xref:System.Xml.XmlDocument>.  
+ <span data-ttu-id="8f000-128">Esto es bastante más que el trabajo realizado por la consulta LINQ to XML correspondiente.</span><span class="sxs-lookup"><span data-stu-id="8f000-128">This is significantly more than the work done by the corresponding LINQ to XML query.</span></span> <span data-ttu-id="8f000-129">La diferencia de rendimiento específica varía para distintos tipos de consultas, pero en general las consultas LINQ to XML efectúan menos operaciones y, por lo tanto, se ejecutan mejor, que si se evalúan las expresiones XPath con <xref:System.Xml.XmlDocument>.</span><span class="sxs-lookup"><span data-stu-id="8f000-129">The specific performance difference varies for different types of queries, but in general LINQ to XML queries do less work, and therefore perform better, than evaluating XPath expressions using <xref:System.Xml.XmlDocument>.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Rendimiento (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8f000-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f000-130">See Also</span></span>  
+ [<span data-ttu-id="8f000-131">Rendimiento (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8f000-131">Performance (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
 

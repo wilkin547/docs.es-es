@@ -35,24 +35,24 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="iteration-statements-c-reference"></a>Instrucciones de iteración (Referencia de C#)
-Puede crear bucles con las instrucciones de iteración. Las instrucciones de iteración producen instrucciones insertadas que se ejecutarán varias veces, según los criterios de la finalización de bucle. Estas instrucciones se ejecutan en orden, excepto cuando se detecta una [instrucción de salto](../../../csharp/language-reference/keywords/jump-statements.md).  
+# <a name="iteration-statements-c-reference"></a><span data-ttu-id="ce2f4-102">Instrucciones de iteración (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="ce2f4-102">Iteration Statements (C# Reference)</span></span>
+<span data-ttu-id="ce2f4-103">Puede crear bucles con las instrucciones de iteración.</span><span class="sxs-lookup"><span data-stu-id="ce2f4-103">You can create loops by using the iteration statements.</span></span> <span data-ttu-id="ce2f4-104">Las instrucciones de iteración producen instrucciones insertadas que se ejecutarán varias veces, según los criterios de la finalización de bucle.</span><span class="sxs-lookup"><span data-stu-id="ce2f4-104">Iteration statements cause embedded statements to be executed a number of times, subject to the loop-termination criteria.</span></span> <span data-ttu-id="ce2f4-105">Estas instrucciones se ejecutan en orden, excepto cuando se detecta una [instrucción de salto](../../../csharp/language-reference/keywords/jump-statements.md).</span><span class="sxs-lookup"><span data-stu-id="ce2f4-105">These statements are executed in order, except when a [jump statement](../../../csharp/language-reference/keywords/jump-statements.md) is encountered.</span></span>  
   
- Las siguientes palabras clave se usan en instrucciones de iteración:  
+ <span data-ttu-id="ce2f4-106">Las siguientes palabras clave se usan en instrucciones de iteración:</span><span class="sxs-lookup"><span data-stu-id="ce2f4-106">The following keywords are used in iteration statements:</span></span>  
   
--   [do](../../../csharp/language-reference/keywords/do.md)  
+-   [<span data-ttu-id="ce2f4-107">do</span><span class="sxs-lookup"><span data-stu-id="ce2f4-107">do</span></span>](../../../csharp/language-reference/keywords/do.md)  
   
--   [for](../../../csharp/language-reference/keywords/for.md)  
+-   [<span data-ttu-id="ce2f4-108">for</span><span class="sxs-lookup"><span data-stu-id="ce2f4-108">for</span></span>](../../../csharp/language-reference/keywords/for.md)  
   
--   [foreach](../../../csharp/language-reference/keywords/foreach-in.md)  
+-   [<span data-ttu-id="ce2f4-109">foreach</span><span class="sxs-lookup"><span data-stu-id="ce2f4-109">foreach</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
   
--   [in](../../../csharp/language-reference/keywords/foreach-in.md)  
+-   [<span data-ttu-id="ce2f4-110">in</span><span class="sxs-lookup"><span data-stu-id="ce2f4-110">in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
   
--   [while](../../../csharp/language-reference/keywords/while.md)  
+-   [<span data-ttu-id="ce2f4-111">while</span><span class="sxs-lookup"><span data-stu-id="ce2f4-111">while</span></span>](../../../csharp/language-reference/keywords/while.md)  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Palabras clave de instrucciones](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="ce2f4-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="ce2f4-112">See Also</span></span>  
+ <span data-ttu-id="ce2f4-113">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="ce2f4-113">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="ce2f4-114">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ce2f4-114">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ce2f4-115">[Palabras clave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="ce2f4-115">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="ce2f4-116">Palabras clave de instrucciones</span><span class="sxs-lookup"><span data-stu-id="ce2f4-116">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
 

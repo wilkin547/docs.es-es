@@ -1,1 +1,1 @@
-escritorio
+<span data-ttu-id="74e04-101">escritorio</span><span class="sxs-lookup"><span data-stu-id="74e04-101">desktop</span></span>

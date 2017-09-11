@@ -24,33 +24,33 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigación: Compatibilidad del lápiz y la entrada táctil basados en el puntero
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="81284-102">Mitigación: Compatibilidad del lápiz y la entrada táctil basados en el puntero</span><span class="sxs-lookup"><span data-stu-id="81284-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
 
-Las aplicaciones de WPF que se destinan a .NET Framework 4.7 y que se ejecutan en sistemas Windows a partir de Windows 10 Creators Update pueden habilitar la pila de lápiz/entada táctil de WPF basado en `WM_POINTER`.
+<span data-ttu-id="81284-103">Las aplicaciones de WPF que se destinan a .NET Framework 4.7 y que se ejecutan en sistemas Windows a partir de Windows 10 Creators Update pueden habilitar la pila de lápiz/entada táctil de WPF basado en `WM_POINTER`.</span><span class="sxs-lookup"><span data-stu-id="81284-103">WPF applications that target the .NET Framework 4.7 and are running on Windows Systems starting with Windows 10 Creators Update can enable an optional `WM_POINTER`-based WPF touch/stylus stack.</span></span>
 
-## <a name="impact"></a>Impacto
+## <a name="impact"></a><span data-ttu-id="81284-104">Impacto</span><span class="sxs-lookup"><span data-stu-id="81284-104">Impact</span></span>
 
-Los desarrolladores que no habiliten explícitamente la compatibilidad del lápiz o la entrada táctil basados en puntero no deberían percibir ningún cambio en el comportamiento del lápiz o de la entrad táctil de WPF.
+<span data-ttu-id="81284-105">Los desarrolladores que no habiliten explícitamente la compatibilidad del lápiz o la entrada táctil basados en puntero no deberían percibir ningún cambio en el comportamiento del lápiz o de la entrad táctil de WPF.</span><span class="sxs-lookup"><span data-stu-id="81284-105">Developers who do not explicitly enable pointer-based touch/stylus support should see no change in WPF touch/stylus behavior.</span></span>
 
-A continuación se muestran problemas conocidos actuales con la pila de lápiz o de entrada táctil basados en `WM_POINTER`:
+<span data-ttu-id="81284-106">A continuación se muestran problemas conocidos actuales con la pila de lápiz o de entrada táctil basados en `WM_POINTER`:</span><span class="sxs-lookup"><span data-stu-id="81284-106">The following are current known issues with the optional `WM_POINTER`-based touch/stylus stack:</span></span>
 
-- No se admiten las entradas manuscritas en tiempo real.
+- <span data-ttu-id="81284-107">No se admiten las entradas manuscritas en tiempo real.</span><span class="sxs-lookup"><span data-stu-id="81284-107">No support for real-time inking.</span></span>
 
-   A pesar de que los complementos de lápiz y entrada manuscrita siguen funcionando, se procesan en el subproceso de la interfaz de usuario, que puede provocar un rendimiento deficiente.
+   <span data-ttu-id="81284-108">A pesar de que los complementos de lápiz y entrada manuscrita siguen funcionando, se procesan en el subproceso de la interfaz de usuario, que puede provocar un rendimiento deficiente.</span><span class="sxs-lookup"><span data-stu-id="81284-108">While inking and stylus plugins still work, they are processed on the UI thread, which can lead to poor performance.</span></span>
 
-- El comportamiento cambia debido a las modificaciones en la promoción de los eventos de lápiz o de entrada táctil a los eventos de mouse.
+- <span data-ttu-id="81284-109">El comportamiento cambia debido a las modificaciones en la promoción de los eventos de lápiz o de entrada táctil a los eventos de mouse.</span><span class="sxs-lookup"><span data-stu-id="81284-109">Behavioral changes due to changes in promotion from touch/stylus events to mouse events.</span></span>
 
-  - La manipulación puede comportarse de manera diferente.
+  - <span data-ttu-id="81284-110">La manipulación puede comportarse de manera diferente.</span><span class="sxs-lookup"><span data-stu-id="81284-110">Manipulation may behave differently.</span></span>
 
-  - Arrastrar y colocar no mostrará la información adecuada para la entrada táctil. (Esto no afecta a la entrada de lápiz).
+  - <span data-ttu-id="81284-111">Arrastrar y colocar no mostrará la información adecuada para la entrada táctil.</span><span class="sxs-lookup"><span data-stu-id="81284-111">Drag/Drop will not show appropriate feedback for touch input.</span></span> <span data-ttu-id="81284-112">(Esto no afecta a la entrada de lápiz).</span><span class="sxs-lookup"><span data-stu-id="81284-112">(This does not affect stylus input.)</span></span>
 
-  - Arrastrar y colocar ya no se puede iniciar en los eventos de lápiz/entrada táctil.
+  - <span data-ttu-id="81284-113">Arrastrar y colocar ya no se puede iniciar en los eventos de lápiz/entrada táctil.</span><span class="sxs-lookup"><span data-stu-id="81284-113">Drag/Drop can no longer be initiated on touch/stylus events.</span></span>
 
-      Esto puede hacer que la aplicación de detenga hasta que se detecte la entrada del mouse. En su lugar, los desarrolladores deben iniciar Arrastrar y colocar en los eventos del mouse.
+      <span data-ttu-id="81284-114">Esto puede hacer que la aplicación de detenga hasta que se detecte la entrada del mouse.</span><span class="sxs-lookup"><span data-stu-id="81284-114">This can potentially hang the application until mouse input is detected.</span></span> <span data-ttu-id="81284-115">En su lugar, los desarrolladores deben iniciar Arrastrar y colocar en los eventos del mouse.</span><span class="sxs-lookup"><span data-stu-id="81284-115">Instead, developers should initiate drag and drop from mouse events.</span></span>
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Inclusión de la compatibilidad del lápiz o la entrada táctil basados en WM_POINTER
+## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a><span data-ttu-id="81284-116">Inclusión de la compatibilidad del lápiz o la entrada táctil basados en WM_POINTER</span><span class="sxs-lookup"><span data-stu-id="81284-116">Opting in to WM_POINTER-based touch/stylus support</span></span>
 
-Los desarrolladores que deseen habilitar esta pila pueden agregar lo siguiente al archivo app.config de la aplicación:
+<span data-ttu-id="81284-117">Los desarrolladores que deseen habilitar esta pila pueden agregar lo siguiente al archivo app.config de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="81284-117">Developers who wish to enable this stack can add the following to their application's app.config file:</span></span>
 
 ```xml
 <configuration>
@@ -60,9 +60,9 @@ Los desarrolladores que deseen habilitar esta pila pueden agregar lo siguiente a
 </configuration>
 ```
 
-Si se quita esta entrada o se establece su valor en `false`, se desactiva esta pila opcional.
+<span data-ttu-id="81284-118">Si se quita esta entrada o se establece su valor en `false`, se desactiva esta pila opcional.</span><span class="sxs-lookup"><span data-stu-id="81284-118">Removing this entry or setting its value to `false` turns this optional stack off.</span></span>
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a><span data-ttu-id="81284-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="81284-119">See also</span></span>
 
-[Cambios de redestinación en .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+[<span data-ttu-id="81284-120">Cambios de redestinación en .NET Framework 4.7</span><span class="sxs-lookup"><span data-stu-id="81284-120">Retargeting Changes in the .NET Framework 4.7</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
 

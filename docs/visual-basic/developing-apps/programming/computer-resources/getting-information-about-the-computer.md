@@ -37,20 +37,20 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="getting-information-about-the-computer-visual-basic"></a>Obtener información sobre el equipo (Visual Basic)
-El objeto `My.Computer.Info` proporciona propiedades para obtener información sobre la memoria, los ensamblados cargados, el nombre y el sistema operativo del equipo.  
+# <a name="getting-information-about-the-computer-visual-basic"></a><span data-ttu-id="34efe-102">Obtener información sobre el equipo (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="34efe-102">Getting Information about the Computer (Visual Basic)</span></span>
+<span data-ttu-id="34efe-103">El objeto `My.Computer.Info` proporciona propiedades para obtener información sobre la memoria, los ensamblados cargados, el nombre y el sistema operativo del equipo.</span><span class="sxs-lookup"><span data-stu-id="34efe-103">The `My.Computer.Info` object provides properties for getting information about the computer's memory, loaded assemblies, name, and operating system.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- En esta tabla se muestran las tareas que se realizan normalmente mediante el objeto `My.Computer.Info` y señala a temas que muestran cómo realizar cada una de ellas.  
+## <a name="remarks"></a><span data-ttu-id="34efe-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="34efe-104">Remarks</span></span>  
+ <span data-ttu-id="34efe-105">En esta tabla se muestran las tareas que se realizan normalmente mediante el objeto `My.Computer.Info` y señala a temas que muestran cómo realizar cada una de ellas.</span><span class="sxs-lookup"><span data-stu-id="34efe-105">This table lists tasks commonly accomplished through the `My.Computer.Info` object and points to topics demonstrating how to perform each.</span></span>  
   
-|Para|Vea|  
+|<span data-ttu-id="34efe-106">Para</span><span class="sxs-lookup"><span data-stu-id="34efe-106">To</span></span>|<span data-ttu-id="34efe-107">Vea</span><span class="sxs-lookup"><span data-stu-id="34efe-107">See</span></span>|  
 |---|---|   
-|Determinar cuánto espacio de la dirección virtual está disponible para el equipo en el que se instala la aplicación|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|  
-|Determinar el tipo de plataforma del equipo en el que se está ejecutando la aplicación|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|  
-|Determinar el sistema operativo del equipo en el que se está ejecutando la aplicación|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|  
-|Determinar qué Service Pack se ha instalado en el equipo en el que se está ejecutando la aplicación|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
-|Determinar la `UICulture` instalada en el equipo en el que se está ejecutando la aplicación|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
+|<span data-ttu-id="34efe-108">Determinar cuánto espacio de la dirección virtual está disponible para el equipo en el que se instala la aplicación</span><span class="sxs-lookup"><span data-stu-id="34efe-108">Determine how much virtual address space is available for the computer on which the application is installed</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|  
+|<span data-ttu-id="34efe-109">Determinar el tipo de plataforma del equipo en el que se está ejecutando la aplicación</span><span class="sxs-lookup"><span data-stu-id="34efe-109">Determine the platform type of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|  
+|<span data-ttu-id="34efe-110">Determinar el sistema operativo del equipo en el que se está ejecutando la aplicación</span><span class="sxs-lookup"><span data-stu-id="34efe-110">Determine the operating system of the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName%2A>|  
+|<span data-ttu-id="34efe-111">Determinar qué Service Pack se ha instalado en el equipo en el que se está ejecutando la aplicación</span><span class="sxs-lookup"><span data-stu-id="34efe-111">Determine what service packs have been installed on the computer on which the application is running</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|  
+|<span data-ttu-id="34efe-112">Determinar la `UICulture` instalada en el equipo en el que se está ejecutando la aplicación</span><span class="sxs-lookup"><span data-stu-id="34efe-112">Determine the installed `UICulture` on the computer on which the application is running.</span></span>|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a><span data-ttu-id="34efe-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="34efe-113">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
 

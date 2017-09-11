@@ -26,40 +26,40 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="creating-assemblies"></a>Crear ensamblados
-Para crear ensamblados de un solo archivo o de varios archivos, se puede usar un IDE, como [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], o los compiladores y las herramientas que proporciona el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. El ensamblado más sencillo es un solo archivo que tiene un nombre simple y se carga en un solo dominio de aplicación. Este ensamblado no se somete a la comprobación de versión y no pueden hacer referencia a él otros ensamblados fuera del directorio de la aplicación. Para desinstalar la aplicación que se compone del ensamblado, basta con eliminar el directorio en el que reside. Muchos desarrolladores solo necesitan un ensamblado de estas características para implementar una aplicación.  
+# <a name="creating-assemblies"></a><span data-ttu-id="89cad-102">Crear ensamblados</span><span class="sxs-lookup"><span data-stu-id="89cad-102">Creating Assemblies</span></span>
+<span data-ttu-id="89cad-103">Para crear ensamblados de un solo archivo o de varios archivos, se puede usar un IDE, como [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], o los compiladores y las herramientas que proporciona el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span><span class="sxs-lookup"><span data-stu-id="89cad-103">You can create single-file or multifile assemblies using an IDE, such as [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], or the compilers and tools provided by the [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].</span></span> <span data-ttu-id="89cad-104">El ensamblado más sencillo es un solo archivo que tiene un nombre simple y se carga en un solo dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="89cad-104">The simplest assembly is a single file that has a simple name and is loaded into a single application domain.</span></span> <span data-ttu-id="89cad-105">Este ensamblado no se somete a la comprobación de versión y no pueden hacer referencia a él otros ensamblados fuera del directorio de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="89cad-105">This assembly cannot be referenced by other assemblies outside the application directory and does not undergo version checking.</span></span> <span data-ttu-id="89cad-106">Para desinstalar la aplicación que se compone del ensamblado, basta con eliminar el directorio en el que reside.</span><span class="sxs-lookup"><span data-stu-id="89cad-106">To uninstall the application made up of the assembly, you simply delete the directory where it resides.</span></span> <span data-ttu-id="89cad-107">Muchos desarrolladores solo necesitan un ensamblado de estas características para implementar una aplicación.</span><span class="sxs-lookup"><span data-stu-id="89cad-107">For many developers, an assembly with these features is all that is needed to deploy an application.</span></span>  
   
- Puede crear un ensamblado de varios archivos a partir de varios módulos de código y archivos de recursos. También puede crear un ensamblado que compartan varias aplicaciones. Un ensamblado compartido debe tener un nombre seguro y puede implementarse en la caché global de ensamblados.  
+ <span data-ttu-id="89cad-108">Puede crear un ensamblado de varios archivos a partir de varios módulos de código y archivos de recursos.</span><span class="sxs-lookup"><span data-stu-id="89cad-108">You can create a multifile assembly from several code modules and resource files.</span></span> <span data-ttu-id="89cad-109">También puede crear un ensamblado que compartan varias aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="89cad-109">You can also create an assembly that can be shared by multiple applications.</span></span> <span data-ttu-id="89cad-110">Un ensamblado compartido debe tener un nombre seguro y puede implementarse en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="89cad-110">A shared assembly must have a strong name and can be deployed in the global assembly cache.</span></span>  
   
- Existen varias opciones al agrupar módulos de código y recursos en ensamblados, en función de los factores siguientes:  
+ <span data-ttu-id="89cad-111">Existen varias opciones al agrupar módulos de código y recursos en ensamblados, en función de los factores siguientes:</span><span class="sxs-lookup"><span data-stu-id="89cad-111">You have several options when grouping code modules and resources into assemblies, depending on the following factors:</span></span>  
   
--   Control de versiones  
+-   <span data-ttu-id="89cad-112">Control de versiones</span><span class="sxs-lookup"><span data-stu-id="89cad-112">Versioning</span></span>  
   
-     Agrupar módulos con la misma información de versión.  
+     <span data-ttu-id="89cad-113">Agrupar módulos con la misma información de versión.</span><span class="sxs-lookup"><span data-stu-id="89cad-113">Group modules that should have the same version information.</span></span>  
   
--   Implementación  
+-   <span data-ttu-id="89cad-114">Implementación</span><span class="sxs-lookup"><span data-stu-id="89cad-114">Deployment</span></span>  
   
-     Agrupar módulos de código y recursos compatibles con el modelo de implementación.  
+     <span data-ttu-id="89cad-115">Agrupar módulos de código y recursos compatibles con el modelo de implementación.</span><span class="sxs-lookup"><span data-stu-id="89cad-115">Group code modules and resources that support your model of deployment.</span></span>  
   
--   Reutilización  
+-   <span data-ttu-id="89cad-116">Reutilización</span><span class="sxs-lookup"><span data-stu-id="89cad-116">Reuse</span></span>  
   
-     Agrupar módulos si se pueden usar juntos lógicamente con el mismo fin. Por ejemplo, un ensamblado formado por tipos y clases que se usan con poca frecuencia para el mantenimiento de programas puede colocarse en el mismo ensamblado. Además, los tipos que está previsto compartir con varias aplicaciones deben agruparse en un ensamblado y el ensamblado debe firmarse con un nombre seguro.  
+     <span data-ttu-id="89cad-117">Agrupar módulos si se pueden usar juntos lógicamente con el mismo fin.</span><span class="sxs-lookup"><span data-stu-id="89cad-117">Group modules if they can be logically used together for some purpose.</span></span> <span data-ttu-id="89cad-118">Por ejemplo, un ensamblado formado por tipos y clases que se usan con poca frecuencia para el mantenimiento de programas puede colocarse en el mismo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="89cad-118">For example, an assembly consisting of types and classes used infrequently for program maintenance can be put in the same assembly.</span></span> <span data-ttu-id="89cad-119">Además, los tipos que está previsto compartir con varias aplicaciones deben agruparse en un ensamblado y el ensamblado debe firmarse con un nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="89cad-119">In addition, types that you intend to share with multiple applications should be grouped into an assembly and the assembly should be signed with a strong name.</span></span>  
   
--   Seguridad  
+-   <span data-ttu-id="89cad-120">Seguridad</span><span class="sxs-lookup"><span data-stu-id="89cad-120">Security</span></span>  
   
-     Agrupar módulos que contienen tipos que requieren los mismos permisos de seguridad.  
+     <span data-ttu-id="89cad-121">Agrupar módulos que contienen tipos que requieren los mismos permisos de seguridad.</span><span class="sxs-lookup"><span data-stu-id="89cad-121">Group modules containing types that require the same security permissions.</span></span>  
   
--   Ámbito  
+-   <span data-ttu-id="89cad-122">Ámbito</span><span class="sxs-lookup"><span data-stu-id="89cad-122">Scoping</span></span>  
   
-     Agrupar módulos que contienen tipos cuya visibilidad se debe restringir al mismo ensamblado.  
+     <span data-ttu-id="89cad-123">Agrupar módulos que contienen tipos cuya visibilidad se debe restringir al mismo ensamblado.</span><span class="sxs-lookup"><span data-stu-id="89cad-123">Group modules containing types whose visibility should be restricted to the same assembly.</span></span>  
   
- Deben tenerse en cuenta consideraciones especiales cuando los ensamblados de Common Language Runtime se ponen a disposición de aplicaciones COM no administradas. Para obtener más información sobre cómo trabajar con código no administrado, vea [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md) (Exponer componentes de .NET Framework en COM).  
+ <span data-ttu-id="89cad-124">Deben tenerse en cuenta consideraciones especiales cuando los ensamblados de Common Language Runtime se ponen a disposición de aplicaciones COM no administradas.</span><span class="sxs-lookup"><span data-stu-id="89cad-124">Special considerations must be made when making common language runtime assemblies available to unmanaged COM applications.</span></span> <span data-ttu-id="89cad-125">Para obtener más información sobre cómo trabajar con código no administrado, vea [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md) (Exponer componentes de .NET Framework en COM).</span><span class="sxs-lookup"><span data-stu-id="89cad-125">For more information about working with unmanaged code, see [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md)   
- [Cómo: Compilar un ensamblado de un solo archivo](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   
- [Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Ensamblados de múltiples archivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="89cad-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="89cad-126">See Also</span></span>  
+ <span data-ttu-id="89cad-127">[Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md) </span><span class="sxs-lookup"><span data-stu-id="89cad-127">[Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) </span></span>  
+ <span data-ttu-id="89cad-128">[Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md) </span><span class="sxs-lookup"><span data-stu-id="89cad-128">[Assembly Versioning](../../../docs/framework/app-domains/assembly-versioning.md) </span></span>  
+ <span data-ttu-id="89cad-129">[Cómo: Compilar un ensamblado de un solo archivo](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md) </span><span class="sxs-lookup"><span data-stu-id="89cad-129">[How to: Build a Single-File Assembly](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md) </span></span>  
+ <span data-ttu-id="89cad-130">[Cómo: Compilar un ensamblado de varios archivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md) </span><span class="sxs-lookup"><span data-stu-id="89cad-130">[How to: Build a Multifile Assembly](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md) </span></span>  
+ <span data-ttu-id="89cad-131">[Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) </span><span class="sxs-lookup"><span data-stu-id="89cad-131">[How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) </span></span>  
+ [<span data-ttu-id="89cad-132">Ensamblados de múltiples archivos</span><span class="sxs-lookup"><span data-stu-id="89cad-132">Multifile Assemblies</span></span>](../../../docs/framework/app-domains/multifile-assemblies.md)
 

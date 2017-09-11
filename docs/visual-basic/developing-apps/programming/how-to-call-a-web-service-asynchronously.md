@@ -36,25 +36,25 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Cómo: Llamar a un servicio Web de forma asincrónica (Visual Basic)
-En este ejemplo se adjunta un controlador a un evento de controlador asincrónico de servicios web para poder recuperar el resultado de una llamada de método asincrónico. En este ejemplo se usó el servicio web DemoTemperatureService de http://www.xmethods.net.  
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a><span data-ttu-id="1dc19-102">Cómo: Llamar a un servicio Web de forma asincrónica (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1dc19-102">How to: Call a Web Service Asynchronously (Visual Basic)</span></span>
+<span data-ttu-id="1dc19-103">En este ejemplo se adjunta un controlador a un evento de controlador asincrónico de servicios web para poder recuperar el resultado de una llamada de método asincrónico.</span><span class="sxs-lookup"><span data-stu-id="1dc19-103">This example attaches a handler to a Web service's asynchronous handler event, so that it can retrieve the result of an asynchronous method call.</span></span> <span data-ttu-id="1dc19-104">En este ejemplo se usó el servicio web DemoTemperatureService de http://www.xmethods.net.</span><span class="sxs-lookup"><span data-stu-id="1dc19-104">This example used the DemoTemperatureService Web service at http://www.xmethods.net.</span></span>  
   
- Cuando se hace referencia a un servicio web en el proyecto en el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], dicho servicio se agrega al objeto `My.WebServices` y el IDE genera una clase de proxy de cliente para acceder al servicio web especificado.  
+ <span data-ttu-id="1dc19-105">Cuando se hace referencia a un servicio web en el proyecto en el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], dicho servicio se agrega al objeto `My.WebServices` y el IDE genera una clase de proxy de cliente para acceder al servicio web especificado.</span><span class="sxs-lookup"><span data-stu-id="1dc19-105">When you reference a Web service in your project in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Integrated Development Environment (IDE), it is added to the `My.WebServices` object, and the IDE generates a client proxy class to access a specified Web service</span></span>  
   
- La clase de proxy permite llamar sincrónicamente a los métodos de servicio web, mientras la aplicación espera a que la función finalice. El proxy crea además otros miembros para ayudar a llamar al método asincrónicamente. Por cada función de servicio web, *NombreDeFunciónDeServicioWeb*, el proxy crea una subrutina *NombreDeFunciónDeServicioWeb*`Async`, un evento *NombreDeFunciónDeServicioWeb*`Completed` y una clase *NombreDeFunciónDeServicioWeb*`CompletedEventArgs`. En este ejemplo se muestra cómo usar los miembros asincrónicos para acceder a la función `getTemp` del servicio web DemoTemperatureService.  
+ <span data-ttu-id="1dc19-106">La clase de proxy permite llamar sincrónicamente a los métodos de servicio web, mientras la aplicación espera a que la función finalice.</span><span class="sxs-lookup"><span data-stu-id="1dc19-106">The proxy class allows you to call the Web service methods synchronously, where your application waits for the function to complete.</span></span> <span data-ttu-id="1dc19-107">El proxy crea además otros miembros para ayudar a llamar al método asincrónicamente.</span><span class="sxs-lookup"><span data-stu-id="1dc19-107">In addition, the proxy creates additional members to help call the method asynchronously.</span></span> <span data-ttu-id="1dc19-108">Por cada función de servicio web, *NombreDeFunciónDeServicioWeb*, el proxy crea una subrutina *NombreDeFunciónDeServicioWeb*`Async`, un evento *NombreDeFunciónDeServicioWeb*`Completed` y una clase *NombreDeFunciónDeServicioWeb*`CompletedEventArgs`.</span><span class="sxs-lookup"><span data-stu-id="1dc19-108">For each Web service function, *NameOfWebServiceFunction*, the proxy creates a *NameOfWebServiceFunction*`Async` subroutine, a *NameOfWebServiceFunction*`Completed` event, and a *NameOfWebServiceFunction*`CompletedEventArgs` class.</span></span> <span data-ttu-id="1dc19-109">En este ejemplo se muestra cómo usar los miembros asincrónicos para acceder a la función `getTemp` del servicio web DemoTemperatureService.</span><span class="sxs-lookup"><span data-stu-id="1dc19-109">This example demonstrates how to use the asynchronous members to access the `getTemp` function of the DemoTemperatureService Web service.</span></span>  
   
 > [!NOTE]
->  Este código no funciona en aplicaciones web, ya que ASP.NET no admite el objeto `My.WebServices`.  
+>  <span data-ttu-id="1dc19-110">Este código no funciona en aplicaciones web, ya que ASP.NET no admite el objeto `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="1dc19-110">This code does not work in Web applications, because ASP.NET does not support the `My.WebServices` object.</span></span>  
   
-### <a name="to-call-a-web-service-asynchronously"></a>Para llamar a un servicio web asincrónicamente  
+### <a name="to-call-a-web-service-asynchronously"></a><span data-ttu-id="1dc19-111">Para llamar a un servicio web asincrónicamente</span><span class="sxs-lookup"><span data-stu-id="1dc19-111">To call a Web service asynchronously</span></span>  
   
-1.  Haga referencia al servicio web DemoTemperatureService de http://www.xmethods.net. La dirección es  
+1.  <span data-ttu-id="1dc19-112">Haga referencia al servicio web DemoTemperatureService de http://www.xmethods.net.</span><span class="sxs-lookup"><span data-stu-id="1dc19-112">Reference the DemoTemperatureService Web service at http://www.xmethods.net.</span></span> <span data-ttu-id="1dc19-113">La dirección es</span><span class="sxs-lookup"><span data-stu-id="1dc19-113">The address is</span></span>  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  
     ```  
   
-2.  Agregue un controlador de eventos para el evento `getTempCompleted`:  
+2.  <span data-ttu-id="1dc19-114">Agregue un controlador de eventos para el evento `getTempCompleted`:</span><span class="sxs-lookup"><span data-stu-id="1dc19-114">Add an event handler for the `getTempCompleted` event:</span></span>  
   
     ```  
     Private Sub getTempCompletedHandler(ByVal sender As Object,   
@@ -65,15 +65,15 @@ En este ejemplo se adjunta un controlador a un evento de controlador asincrónic
     ```  
   
     > [!NOTE]
-    >  La instrucción `Handles` no se puede usar para asociar un controlador de eventos con los eventos del objeto `My.WebServices`.  
+    >  <span data-ttu-id="1dc19-115">La instrucción `Handles` no se puede usar para asociar un controlador de eventos con los eventos del objeto `My.WebServices`.</span><span class="sxs-lookup"><span data-stu-id="1dc19-115">You cannot use the `Handles` statement to associate an event handler with the `My.WebServices` object's events.</span></span>  
   
-3.  Agregue un campo para saber si el controlador de eventos se ha agregado al evento `getTempCompleted`:  
+3.  <span data-ttu-id="1dc19-116">Agregue un campo para saber si el controlador de eventos se ha agregado al evento `getTempCompleted`:</span><span class="sxs-lookup"><span data-stu-id="1dc19-116">Add a field to track if the event handler has been added to the `getTempCompleted` event:</span></span>  
   
     ```  
     Private handlerAttached As Boolean = False  
     ```  
   
-4.  Agregue un método para agregar el controlador de eventos al evento `getTempCompleted` (en caso necesario) y para llamar al método `getTempAsynch`:  
+4.  <span data-ttu-id="1dc19-117">Agregue un método para agregar el controlador de eventos al evento `getTempCompleted` (en caso necesario) y para llamar al método `getTempAsynch`:</span><span class="sxs-lookup"><span data-stu-id="1dc19-117">Add a method to add the event handler to the `getTempCompleted` event, if necessary, and to call the `getTempAsynch` method:</span></span>  
   
     ```  
     Sub CallGetTempAsync(ByVal zipCode As Integer)  
@@ -87,9 +87,9 @@ En este ejemplo se adjunta un controlador a un evento de controlador asincrónic
     End Sub  
     ```  
   
-     Llame al método `getTemp` para llamar al método web `CallGetTempAsync` asincrónicamente. Cuando el método web finalice, su valor devuelto se pasa al controlador de eventos `getTempCompletedHandler`.  
+     <span data-ttu-id="1dc19-118">Llame al método `getTemp` para llamar al método web `CallGetTempAsync` asincrónicamente.</span><span class="sxs-lookup"><span data-stu-id="1dc19-118">To call the `getTemp` Web method asynchronously, call the `CallGetTempAsync` method.</span></span> <span data-ttu-id="1dc19-119">Cuando el método web finalice, su valor devuelto se pasa al controlador de eventos `getTempCompletedHandler`.</span><span class="sxs-lookup"><span data-stu-id="1dc19-119">When the Web method finishes, its return value is passed to the `getTempCompletedHandler` event handler.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  (Acceso a los servicios web de la aplicación)  
- [My.WebServices (objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="1dc19-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="1dc19-120">See Also</span></span>  
+ <span data-ttu-id="1dc19-121">[Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  (Acceso a los servicios web de la aplicación)</span><span class="sxs-lookup"><span data-stu-id="1dc19-121">[Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md) </span></span>  
+ [<span data-ttu-id="1dc19-122">My.WebServices (objeto)</span><span class="sxs-lookup"><span data-stu-id="1dc19-122">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 

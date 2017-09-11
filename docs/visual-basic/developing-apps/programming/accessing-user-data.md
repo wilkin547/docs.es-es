@@ -42,19 +42,19 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="accessing-user-data-visual-basic"></a>Acceso a los datos de usuario (Visual Basic)
-Esta sección contiene temas que tratan del objeto `My.User` y de las tareas que se pueden realizar con él.  
+# <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="5c2d9-102">Acceso a los datos de usuario (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5c2d9-102">Accessing User Data (Visual Basic)</span></span>
+<span data-ttu-id="5c2d9-103">Esta sección contiene temas que tratan del objeto `My.User` y de las tareas que se pueden realizar con él.</span><span class="sxs-lookup"><span data-stu-id="5c2d9-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  
   
- El objeto `My.User` proporciona acceso a información sobre los usuarios que han iniciado la sesión devolviendo un objeto que implementa la interfaz <xref:System.Security.Principal.IPrincipal>.  
+ <span data-ttu-id="5c2d9-104">El objeto `My.User` proporciona acceso a información sobre los usuarios que han iniciado la sesión devolviendo un objeto que implementa la interfaz <xref:System.Security.Principal.IPrincipal>.</span><span class="sxs-lookup"><span data-stu-id="5c2d9-104">The `My.User` object provides access to information about the logged-on user by returning an object that implements the <xref:System.Security.Principal.IPrincipal> interface.</span></span>  
   
-## <a name="tasks"></a>Tareas  
+## <a name="tasks"></a><span data-ttu-id="5c2d9-105">Tareas</span><span class="sxs-lookup"><span data-stu-id="5c2d9-105">Tasks</span></span>  
   
-|Para|Vea|  
+|<span data-ttu-id="5c2d9-106">Para</span><span class="sxs-lookup"><span data-stu-id="5c2d9-106">To</span></span>|<span data-ttu-id="5c2d9-107">Vea</span><span class="sxs-lookup"><span data-stu-id="5c2d9-107">See</span></span>|  
 |--------|---------|  
-|Obtener el nombre de inicio de sesión del usuario|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
-|Obtener el nombre de dominio del usuario si la aplicación usa la autenticación de Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
-|Determinar el rol del usuario|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
+|<span data-ttu-id="5c2d9-108">Obtener el nombre de inicio de sesión del usuario</span><span class="sxs-lookup"><span data-stu-id="5c2d9-108">Get the user's login name</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
+|<span data-ttu-id="5c2d9-109">Obtener el nombre de dominio del usuario si la aplicación usa la autenticación de Windows</span><span class="sxs-lookup"><span data-stu-id="5c2d9-109">Get the user's domain name, if the application uses Windows authentication</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
+|<span data-ttu-id="5c2d9-110">Determinar el rol del usuario</span><span class="sxs-lookup"><span data-stu-id="5c2d9-110">Determine the user's role</span></span>|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a><span data-ttu-id="5c2d9-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="5c2d9-111">See Also</span></span>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>
 

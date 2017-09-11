@@ -35,18 +35,18 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>Cómo: Convertir una cadena en un valor DateTime (Guía de programación de C#)
-Es habitual que los programas permitan a los usuarios a escribir las fechas como valores de cadena. Para convertir una fecha basada en una cadena en un objeto <xref:System.DateTime?displayProperty=fullName> , puede usar el método <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> o el método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> , tal como se muestra en el ejemplo siguiente.  
+# <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a><span data-ttu-id="1a70c-102">Cómo: Convertir una cadena en un valor DateTime (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="1a70c-102">How to: Convert a String to a DateTime (C# Programming Guide)</span></span>
+<span data-ttu-id="1a70c-103">Es habitual que los programas permitan a los usuarios a escribir las fechas como valores de cadena.</span><span class="sxs-lookup"><span data-stu-id="1a70c-103">It is common for programs to enable users to enter dates as string values.</span></span> <span data-ttu-id="1a70c-104">Para convertir una fecha basada en una cadena en un objeto <xref:System.DateTime?displayProperty=fullName> , puede usar el método <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> o el método estático <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> , tal como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1a70c-104">To convert a string-based date to a <xref:System.DateTime?displayProperty=fullName> object, you can use the <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> method or the <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> static method, as shown in the following example.</span></span>  
   
- **Referencia cultural**.  Las distintas referencias culturales que hay en el mundo escriben las cadenas de fecha de maneras distintas.  Por ejemplo, en Estados Unidos 01/20/2008 es el 20 de enero de 2008.  En Francia, esta cadena produciría una InvalidFormatException. Esto es porque en Francia la fecha y la hora se leen con el formato día/mes/año y en Estados Unidos con el formato mes/día/año.  
+ <span data-ttu-id="1a70c-105">**Referencia cultural**.</span><span class="sxs-lookup"><span data-stu-id="1a70c-105">**Culture**.</span></span>  <span data-ttu-id="1a70c-106">Las distintas referencias culturales que hay en el mundo escriben las cadenas de fecha de maneras distintas.</span><span class="sxs-lookup"><span data-stu-id="1a70c-106">Different cultures in the world write date strings in different ways.</span></span>  <span data-ttu-id="1a70c-107">Por ejemplo, en Estados Unidos 01/20/2008 es el 20 de enero de 2008.</span><span class="sxs-lookup"><span data-stu-id="1a70c-107">For example, in the US 01/20/2008 is January 20th, 2008.</span></span>  <span data-ttu-id="1a70c-108">En Francia, esta cadena produciría una InvalidFormatException.</span><span class="sxs-lookup"><span data-stu-id="1a70c-108">In France this will throw an InvalidFormatException.</span></span> <span data-ttu-id="1a70c-109">Esto es porque en Francia la fecha y la hora se leen con el formato día/mes/año y en Estados Unidos con el formato mes/día/año.</span><span class="sxs-lookup"><span data-stu-id="1a70c-109">This is because France reads date-times as Day/Month/Year, and in the US it is Month/Day/Year.</span></span>  
   
- Por lo tanto, una cadena como 20/01/2008 se analizará como el 20 de enero de 2008 en Francia y generará una InvalidFormatException en Estados Unidos.  
+ <span data-ttu-id="1a70c-110">Por lo tanto, una cadena como 20/01/2008 se analizará como el 20 de enero de 2008 en Francia y generará una InvalidFormatException en Estados Unidos.</span><span class="sxs-lookup"><span data-stu-id="1a70c-110">Consequently, a string like 20/01/2008 will parse to January 20th, 2008 in France, and then throw an InvalidFormatException in the US.</span></span>  
   
- Para determinar la configuración de la referencia cultural actual, puede usar System.Globalization.CultureInfo.CurrentCulture.  
+ <span data-ttu-id="1a70c-111">Para determinar la configuración de la referencia cultural actual, puede usar System.Globalization.CultureInfo.CurrentCulture.</span><span class="sxs-lookup"><span data-stu-id="1a70c-111">To determine your current culture settings, you can use System.Globalization.CultureInfo.CurrentCulture.</span></span>  
   
- Vea el ejemplo siguiente para obtener un ejemplo de conversión de una cadena a dateTime.  
+ <span data-ttu-id="1a70c-112">Vea el ejemplo siguiente para obtener un ejemplo de conversión de una cadena a dateTime.</span><span class="sxs-lookup"><span data-stu-id="1a70c-112">See the example below for a simple example of converting a string to dateTime.</span></span>  
   
- Para obtener más ejemplos de cadenas de fecha, vea <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.  
+ <span data-ttu-id="1a70c-113">Para obtener más ejemplos de cadenas de fecha, vea <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="1a70c-113">For more examples of date strings, see <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>.</span></span>  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -69,9 +69,9 @@ Press any key to continue . . .
  */  
 ```  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
+## <a name="example"></a><span data-ttu-id="1a70c-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1a70c-114">Example</span></span>  
+ <span data-ttu-id="1a70c-115">[!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="1a70c-115">[!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Cadenas](../../../csharp/programming-guide/strings/index.md)
+## <a name="see-also"></a><span data-ttu-id="1a70c-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="1a70c-116">See Also</span></span>  
+ [<span data-ttu-id="1a70c-117">Cadenas</span><span class="sxs-lookup"><span data-stu-id="1a70c-117">Strings</span></span>](../../../csharp/programming-guide/strings/index.md)
 

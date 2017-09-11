@@ -36,99 +36,99 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Cómo: Usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)
-Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a><span data-ttu-id="383fc-102">Cómo: Usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="383fc-102">How to: Use Named and Optional Arguments in Office Programming (C# Programming Guide)</span></span>
+<span data-ttu-id="383fc-103">Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#.</span><span class="sxs-lookup"><span data-stu-id="383fc-103">Named arguments and optional arguments, introduced in [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], enhance convenience, flexibility, and readability in C# programming.</span></span> <span data-ttu-id="383fc-104">Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="383fc-104">In addition, these features greatly facilitate access to COM interfaces such as the Microsoft Office automation APIs.</span></span>  
   
- En el ejemplo siguiente, el método [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) tiene dieciséis parámetros que representan las características de una tabla, como el número de columnas y filas, el formato, los bordes, las fuentes y los colores. Los dieciséis parámetros son opcionales, ya que la mayoría de las veces no interesa especificar valores concretos para todos ellos. Pero si no hay argumentos opcionales y con nombre, es necesario proporcionar un valor o un valor de marcador de posición para cada parámetro. Con los argumentos opcionales y con nombre, puede especificar valores solamente para los parámetros necesarios para el proyecto.  
+ <span data-ttu-id="383fc-105">En el ejemplo siguiente, el método [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) tiene dieciséis parámetros que representan las características de una tabla, como el número de columnas y filas, el formato, los bordes, las fuentes y los colores.</span><span class="sxs-lookup"><span data-stu-id="383fc-105">In the following example, method [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) has sixteen parameters that represent characteristics of a table, such as number of columns and rows, formatting, borders, fonts, and colors.</span></span> <span data-ttu-id="383fc-106">Los dieciséis parámetros son opcionales, ya que la mayoría de las veces no interesa especificar valores concretos para todos ellos.</span><span class="sxs-lookup"><span data-stu-id="383fc-106">All sixteen parameters are optional, because most of the time you do not want to specify particular values for all of them.</span></span> <span data-ttu-id="383fc-107">Pero si no hay argumentos opcionales y con nombre, es necesario proporcionar un valor o un valor de marcador de posición para cada parámetro.</span><span class="sxs-lookup"><span data-stu-id="383fc-107">However, without named and optional arguments, a value or a placeholder value has to be provided for each parameter.</span></span> <span data-ttu-id="383fc-108">Con los argumentos opcionales y con nombre, puede especificar valores solamente para los parámetros necesarios para el proyecto.</span><span class="sxs-lookup"><span data-stu-id="383fc-108">With named and optional arguments, you specify values only for the parameters that are required for your project.</span></span>  
   
- Debe tener Microsoft Office Word instalado en el equipo para completar estos procedimientos.  
+ <span data-ttu-id="383fc-109">Debe tener Microsoft Office Word instalado en el equipo para completar estos procedimientos.</span><span class="sxs-lookup"><span data-stu-id="383fc-109">You must have Microsoft Office Word installed on your computer to complete these procedures.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-new-console-application"></a>Para crear una aplicación de consola nueva  
+### <a name="to-create-a-new-console-application"></a><span data-ttu-id="383fc-110">Para crear una aplicación de consola nueva</span><span class="sxs-lookup"><span data-stu-id="383fc-110">To create a new console application</span></span>  
   
-1.  Inicie Visual Studio.  
+1.  <span data-ttu-id="383fc-111">Inicie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="383fc-111">Start Visual Studio.</span></span>  
   
-2.  En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
+2.  <span data-ttu-id="383fc-112">En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.</span><span class="sxs-lookup"><span data-stu-id="383fc-112">On the **File** menu, point to **New**, and then click **Project**.</span></span>  
   
-3.  En el panel **Templates Categories** (Categorías de plantillas), expanda **Visual C#** y haga clic en **Windows**.  
+3.  <span data-ttu-id="383fc-113">En el panel **Templates Categories** (Categorías de plantillas), expanda **Visual C#** y haga clic en **Windows**.</span><span class="sxs-lookup"><span data-stu-id="383fc-113">In the **Templates Categories** pane, expand **Visual C#**, and then click **Windows**.</span></span>  
   
-4.  En la parte superior del panel **Plantillas**, asegúrese de que **.NET Framework 4** aparece en el cuadro **Plataforma de destino**.  
+4.  <span data-ttu-id="383fc-114">En la parte superior del panel **Plantillas**, asegúrese de que **.NET Framework 4** aparece en el cuadro **Plataforma de destino**.</span><span class="sxs-lookup"><span data-stu-id="383fc-114">Look in the top of the **Templates** pane to make sure that **.NET Framework 4** appears in the **Target Framework** box.</span></span>  
   
-5.  En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
+5.  <span data-ttu-id="383fc-115">En el panel **Plantillas**, haga clic en **Aplicación de consola**.</span><span class="sxs-lookup"><span data-stu-id="383fc-115">In the **Templates** pane, click **Console Application**.</span></span>  
   
-6.  Escriba un nombre para el proyecto en el campo **Nombre**.  
+6.  <span data-ttu-id="383fc-116">Escriba un nombre para el proyecto en el campo **Nombre**.</span><span class="sxs-lookup"><span data-stu-id="383fc-116">Type a name for your project in the **Name** field.</span></span>  
   
-7.  Haga clic en **Aceptar**.  
+7.  <span data-ttu-id="383fc-117">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="383fc-117">Click **OK**.</span></span>  
   
-     El proyecto nuevo aparece en el **Explorador de soluciones**.  
+     <span data-ttu-id="383fc-118">El proyecto nuevo aparece en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="383fc-118">The new project appears in **Solution Explorer**.</span></span>  
   
-### <a name="to-add-a-reference"></a>Para agregar una referencia  
+### <a name="to-add-a-reference"></a><span data-ttu-id="383fc-119">Para agregar una referencia</span><span class="sxs-lookup"><span data-stu-id="383fc-119">To add a reference</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
+1.  <span data-ttu-id="383fc-120">En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="383fc-120">In **Solution Explorer**, right-click your project's name and then click **Add Reference**.</span></span> <span data-ttu-id="383fc-121">Aparecerá el cuadro de diálogo **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="383fc-121">The **Add Reference** dialog box appears.</span></span>  
   
-2.  En la página **.NET**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente**.  
+2.  <span data-ttu-id="383fc-122">En la página **.NET**, seleccione **Microsoft.Office.Interop.Word** en la lista **Nombre de componente**.</span><span class="sxs-lookup"><span data-stu-id="383fc-122">On the **.NET** page, select **Microsoft.Office.Interop.Word** in the **Component Name** list.</span></span>  
   
-3.  Haga clic en **Aceptar**.  
+3.  <span data-ttu-id="383fc-123">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="383fc-123">Click **OK**.</span></span>  
   
-### <a name="to-add-necessary-using-directives"></a>Para agregar las directivas using necesarias  
+### <a name="to-add-necessary-using-directives"></a><span data-ttu-id="383fc-124">Para agregar las directivas using necesarias</span><span class="sxs-lookup"><span data-stu-id="383fc-124">To add necessary using directives</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Program.cs** y, después, haga clic en **Ver código**.  
+1.  <span data-ttu-id="383fc-125">En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo **Program.cs** y, después, haga clic en **Ver código**.</span><span class="sxs-lookup"><span data-stu-id="383fc-125">In **Solution Explorer**, right-click the **Program.cs** file and then click **View Code**.</span></span>  
   
-2.  Agregue las directivas `using` siguientes a la parte superior del archivo de código.  
+2.  <span data-ttu-id="383fc-126">Agregue las directivas `using` siguientes a la parte superior del archivo de código.</span><span class="sxs-lookup"><span data-stu-id="383fc-126">Add the following `using` directives to the top of the code file.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
+     <span data-ttu-id="383fc-127">[!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-127">[!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]</span></span>  
   
-### <a name="to-display-text-in-a-word-document"></a>Para mostrar texto en un documento de Word  
+### <a name="to-display-text-in-a-word-document"></a><span data-ttu-id="383fc-128">Para mostrar texto en un documento de Word</span><span class="sxs-lookup"><span data-stu-id="383fc-128">To display text in a Word document</span></span>  
   
-1.  En la clase `Program` en Program.cs, agregue el método siguiente para crear una aplicación de Word y un documento de Word. El método [Add](http://go.microsoft.com/fwlink/?LinkId=145381) tiene cuatro parámetros opcionales. En este ejemplo se usan los valores predeterminados. Por lo tanto, no se necesitan argumentos en la instrucción de llamada.  
+1.  <span data-ttu-id="383fc-129">En la clase `Program` en Program.cs, agregue el método siguiente para crear una aplicación de Word y un documento de Word.</span><span class="sxs-lookup"><span data-stu-id="383fc-129">In the `Program` class in Program.cs, add the following method to create a Word application and a Word document.</span></span> <span data-ttu-id="383fc-130">El método [Add](http://go.microsoft.com/fwlink/?LinkId=145381) tiene cuatro parámetros opcionales.</span><span class="sxs-lookup"><span data-stu-id="383fc-130">The [Add](http://go.microsoft.com/fwlink/?LinkId=145381) method has four optional parameters.</span></span> <span data-ttu-id="383fc-131">En este ejemplo se usan los valores predeterminados.</span><span class="sxs-lookup"><span data-stu-id="383fc-131">This example uses their default values.</span></span> <span data-ttu-id="383fc-132">Por lo tanto, no se necesitan argumentos en la instrucción de llamada.</span><span class="sxs-lookup"><span data-stu-id="383fc-132">Therefore, no arguments are necessary in the calling statement.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
+     <span data-ttu-id="383fc-133">[!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-133">[!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]</span></span>  
   
-2.  Agregue el código siguiente al final del método para definir dónde se muestra texto en el documento y qué texto se muestra.  
+2.  <span data-ttu-id="383fc-134">Agregue el código siguiente al final del método para definir dónde se muestra texto en el documento y qué texto se muestra.</span><span class="sxs-lookup"><span data-stu-id="383fc-134">Add the following code at the end of the method to define where to display text in the document, and what text to display.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
+     <span data-ttu-id="383fc-135">[!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-135">[!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]</span></span>  
   
-### <a name="to-run-the-application"></a>Para ejecutar la aplicación  
+### <a name="to-run-the-application"></a><span data-ttu-id="383fc-136">Para ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="383fc-136">To run the application</span></span>  
   
-1.  Agregue la instrucción siguiente a Main.  
+1.  <span data-ttu-id="383fc-137">Agregue la instrucción siguiente a Main.</span><span class="sxs-lookup"><span data-stu-id="383fc-137">Add the following statement to Main.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
+     <span data-ttu-id="383fc-138">[!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-138">[!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]</span></span>  
   
-2.  Presione CTRL+F5 para ejecutar el proyecto. Aparecerá un documento de Word con el texto especificado.  
+2.  <span data-ttu-id="383fc-139">Presione CTRL+F5 para ejecutar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="383fc-139">Press CTRL+F5 to run the project.</span></span> <span data-ttu-id="383fc-140">Aparecerá un documento de Word con el texto especificado.</span><span class="sxs-lookup"><span data-stu-id="383fc-140">A Word document appears that contains the specified text.</span></span>  
   
-### <a name="to-change-the-text-to-a-table"></a>Para convertir el texto en tabla  
+### <a name="to-change-the-text-to-a-table"></a><span data-ttu-id="383fc-141">Para convertir el texto en tabla</span><span class="sxs-lookup"><span data-stu-id="383fc-141">To change the text to a table</span></span>  
   
-1.  Use el método `ConvertToTable` para incluir el texto en una tabla. El método tiene 16 parámetros opcionales. IntelliSense coloca los parámetros opcionales entre corchetes, tal como se muestra en la ilustración siguiente.  
+1.  <span data-ttu-id="383fc-142">Use el método `ConvertToTable` para incluir el texto en una tabla.</span><span class="sxs-lookup"><span data-stu-id="383fc-142">Use the `ConvertToTable` method to enclose the text in a table.</span></span> <span data-ttu-id="383fc-143">El método tiene 16 parámetros opcionales.</span><span class="sxs-lookup"><span data-stu-id="383fc-143">The method has sixteen optional parameters.</span></span> <span data-ttu-id="383fc-144">IntelliSense coloca los parámetros opcionales entre corchetes, tal como se muestra en la ilustración siguiente.</span><span class="sxs-lookup"><span data-stu-id="383fc-144">IntelliSense encloses optional parameters in brackets, as shown in the following illustration.</span></span>  
   
-     ![Lista de parámetros para el método ConvertToTable.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-Parámetros de ConvertToTable  
+     <span data-ttu-id="383fc-145">![Lista de parámetros para el método ConvertToTable.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")</span><span class="sxs-lookup"><span data-stu-id="383fc-145">![List of parameters for ConvertToTable method.](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")</span></span>  
+<span data-ttu-id="383fc-146">Parámetros de ConvertToTable</span><span class="sxs-lookup"><span data-stu-id="383fc-146">ConvertToTable parameters</span></span>  
   
-     Los argumentos opcionales y con nombre permiten especificar valores solo para los parámetros que quiere cambiar. Agregue el código siguiente al final del método `DisplayInWord` para crear una tabla simple. El argumento especifica que las comas de la cadena de texto de `range` separan las celdas de la tabla.  
+     <span data-ttu-id="383fc-147">Los argumentos opcionales y con nombre permiten especificar valores solo para los parámetros que quiere cambiar.</span><span class="sxs-lookup"><span data-stu-id="383fc-147">Named and optional arguments enable you to specify values for only the parameters that you want to change.</span></span> <span data-ttu-id="383fc-148">Agregue el código siguiente al final del método `DisplayInWord` para crear una tabla simple.</span><span class="sxs-lookup"><span data-stu-id="383fc-148">Add the following code to the end of method `DisplayInWord` to create a simple table.</span></span> <span data-ttu-id="383fc-149">El argumento especifica que las comas de la cadena de texto de `range` separan las celdas de la tabla.</span><span class="sxs-lookup"><span data-stu-id="383fc-149">The argument specifies that the commas in the text string in `range` separate the cells of the table.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
+     <span data-ttu-id="383fc-150">[!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-150">[!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]</span></span>  
   
-     En versiones anteriores de C#, la llamada a `ConvertToTable` requiere un argumento de referencia para cada parámetro, tal como se muestra en el código siguiente.  
+     <span data-ttu-id="383fc-151">En versiones anteriores de C#, la llamada a `ConvertToTable` requiere un argumento de referencia para cada parámetro, tal como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="383fc-151">In earlier versions of C#, the call to `ConvertToTable` requires a reference argument for each parameter, as shown in the following code.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
+     <span data-ttu-id="383fc-152">[!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-152">[!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]</span></span>  
   
-2.  Presione CTRL+F5 para ejecutar el proyecto.  
+2.  <span data-ttu-id="383fc-153">Presione CTRL+F5 para ejecutar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="383fc-153">Press CTRL+F5 to run the project.</span></span>  
   
-### <a name="to-experiment-with-other-parameters"></a>Para experimentar con otros parámetros  
+### <a name="to-experiment-with-other-parameters"></a><span data-ttu-id="383fc-154">Para experimentar con otros parámetros</span><span class="sxs-lookup"><span data-stu-id="383fc-154">To experiment with other parameters</span></span>  
   
-1.  Para cambiar la tabla de modo que tenga una columna y tres filas, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5.  
+1.  <span data-ttu-id="383fc-155">Para cambiar la tabla de modo que tenga una columna y tres filas, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="383fc-155">To change the table so that it has one column and three rows, replace the last line in `DisplayInWord` with the following statement and then type CTRL+F5.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
+     <span data-ttu-id="383fc-156">[!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-156">[!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]</span></span>  
   
-2.  Para especificar un formato predefinido para la tabla, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5. El formato puede ser cualquiera de las constantes [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382).  
+2.  <span data-ttu-id="383fc-157">Para especificar un formato predefinido para la tabla, reemplace la última línea de `DisplayInWord` por la instrucción siguiente y escriba CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="383fc-157">To specify a predefined format for the table, replace the last line in `DisplayInWord` with the following statement and then type CTRL+F5.</span></span> <span data-ttu-id="383fc-158">El formato puede ser cualquiera de las constantes [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382).</span><span class="sxs-lookup"><span data-stu-id="383fc-158">The format can be any of the [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) constants.</span></span>  
   
-     [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
+     <span data-ttu-id="383fc-159">[!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-159">[!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el código siguiente se incluye el ejemplo completo.  
+## <a name="example"></a><span data-ttu-id="383fc-160">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="383fc-160">Example</span></span>  
+ <span data-ttu-id="383fc-161">En el código siguiente se incluye el ejemplo completo.</span><span class="sxs-lookup"><span data-stu-id="383fc-161">The following code includes the full example.</span></span>  
   
- [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
+ <span data-ttu-id="383fc-162">[!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]</span><span class="sxs-lookup"><span data-stu-id="383fc-162">[!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+## <a name="see-also"></a><span data-ttu-id="383fc-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="383fc-163">See Also</span></span>  
+ [<span data-ttu-id="383fc-164">Argumentos opcionales y con nombre</span><span class="sxs-lookup"><span data-stu-id="383fc-164">Named and Optional Arguments</span></span>](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
 

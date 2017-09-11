@@ -36,31 +36,31 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="anonymous-functions-c-programming-guide"></a>Funciones anónimas (Guía de programación de C#)
-Una función anónima es una instrucción o expresión "alineada" que se puede usar siempre que se espera un tipo delegado. Se puede usar para inicializar un delegado con nombre o se puede pasar como un parámetro de método en lugar de un tipo delegado con nombre.  
+# <a name="anonymous-functions-c-programming-guide"></a><span data-ttu-id="11cce-102">Funciones anónimas (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="11cce-102">Anonymous Functions (C# Programming Guide)</span></span>
+<span data-ttu-id="11cce-103">Una función anónima es una instrucción o expresión "alineada" que se puede usar siempre que se espera un tipo delegado.</span><span class="sxs-lookup"><span data-stu-id="11cce-103">An anonymous function is an "inline" statement or expression that can be used wherever a delegate type is expected.</span></span> <span data-ttu-id="11cce-104">Se puede usar para inicializar un delegado con nombre o se puede pasar como un parámetro de método en lugar de un tipo delegado con nombre.</span><span class="sxs-lookup"><span data-stu-id="11cce-104">You can use it to initialize a named delegate or pass it instead of a named delegate type as a method parameter.</span></span>  
   
- Hay dos tipos de funciones anónimas, que se describen por separado en los temas siguientes:  
+ <span data-ttu-id="11cce-105">Hay dos tipos de funciones anónimas, que se describen por separado en los temas siguientes:</span><span class="sxs-lookup"><span data-stu-id="11cce-105">There are two kinds of anonymous functions, which are discussed individually in the following topics:</span></span>  
   
--   [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+-   <span data-ttu-id="11cce-106">[Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="11cce-106">[Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
   
--   [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+-   [<span data-ttu-id="11cce-107">Métodos anónimos</span><span class="sxs-lookup"><span data-stu-id="11cce-107">Anonymous Methods</span></span>](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
     > [!NOTE]
-    >  Las expresiones lambda se pueden enlazar a árboles de expresión y también a delegados.  
+    >  <span data-ttu-id="11cce-108">Las expresiones lambda se pueden enlazar a árboles de expresión y también a delegados.</span><span class="sxs-lookup"><span data-stu-id="11cce-108">Lambda expressions can be bound to expression trees and also to delegates.</span></span>  
   
-## <a name="the-evolution-of-delegates-in-c"></a>La evolución de los delegados en C#  
- En C# 1.0, una instancia de un delegado se creaba al inicializarla de forma explícita con un método que se definía en otro lugar en el código. C# 2.0 introdujo el concepto de métodos anónimos como una manera de escribir bloques de instrucciones insertados sin nombre que se podían ejecutar en la invocación de un delegado. C# 3.0 introdujo las expresiones lambda, que son similares en concepto a los métodos anónimos, pero más expresivas y concisas. Estas dos características se conocen colectivamente como *funciones anónimas*. En general, las aplicaciones destinadas a la versión 3.5 y posteriores de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] deberían usar expresiones lambda.  
+## <a name="the-evolution-of-delegates-in-c"></a><span data-ttu-id="11cce-109">La evolución de los delegados en C#</span><span class="sxs-lookup"><span data-stu-id="11cce-109">The Evolution of Delegates in C#</span></span>  
+ <span data-ttu-id="11cce-110">En C# 1.0, una instancia de un delegado se creaba al inicializarla de forma explícita con un método que se definía en otro lugar en el código.</span><span class="sxs-lookup"><span data-stu-id="11cce-110">In C# 1.0, you created an instance of a delegate by explicitly initializing it with a method that was defined elsewhere in the code.</span></span> <span data-ttu-id="11cce-111">C# 2.0 introdujo el concepto de métodos anónimos como una manera de escribir bloques de instrucciones insertados sin nombre que se podían ejecutar en la invocación de un delegado.</span><span class="sxs-lookup"><span data-stu-id="11cce-111">C# 2.0 introduced the concept of anonymous methods as a way to write unnamed inline statement blocks that can be executed in a delegate invocation.</span></span> <span data-ttu-id="11cce-112">C# 3.0 introdujo las expresiones lambda, que son similares en concepto a los métodos anónimos, pero más expresivas y concisas.</span><span class="sxs-lookup"><span data-stu-id="11cce-112">C# 3.0 introduced lambda expressions, which are similar in concept to anonymous methods but more expressive and concise.</span></span> <span data-ttu-id="11cce-113">Estas dos características se conocen colectivamente como *funciones anónimas*.</span><span class="sxs-lookup"><span data-stu-id="11cce-113">These two features are known collectively as *anonymous functions*.</span></span> <span data-ttu-id="11cce-114">En general, las aplicaciones destinadas a la versión 3.5 y posteriores de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] deberían usar expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="11cce-114">In general, applications that target version 3.5 and later of the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] should use lambda expressions.</span></span>  
   
- En el ejemplo siguiente se muestra la evolución de la creación de delegados desde C# 1.0 a C# 3.0:  
+ <span data-ttu-id="11cce-115">En el ejemplo siguiente se muestra la evolución de la creación de delegados desde C# 1.0 a C# 3.0:</span><span class="sxs-lookup"><span data-stu-id="11cce-115">The following example demonstrates the evolution of delegate creation from C# 1.0 to C# 3.0:</span></span>  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
+ <span data-ttu-id="11cce-116">[!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="11cce-116">[!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificación del lenguaje C#  
+## <a name="c-language-specification"></a><span data-ttu-id="11cce-117">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="11cce-117">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones, expresiones y operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md)   
- [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [Delegados](../../../csharp/programming-guide/delegates/index.md)   
- [Árboles de expresión](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+## <a name="see-also"></a><span data-ttu-id="11cce-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="11cce-118">See Also</span></span>  
+ <span data-ttu-id="11cce-119">[Instrucciones, expresiones y operadores](../../../csharp/programming-guide/statements-expressions-operators/index.md) </span><span class="sxs-lookup"><span data-stu-id="11cce-119">[Statements, Expressions, and Operators](../../../csharp/programming-guide/statements-expressions-operators/index.md) </span></span>  
+ <span data-ttu-id="11cce-120">[Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="11cce-120">[Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="11cce-121">[Delegados](../../../csharp/programming-guide/delegates/index.md) </span><span class="sxs-lookup"><span data-stu-id="11cce-121">[Delegates](../../../csharp/programming-guide/delegates/index.md) </span></span>  
+ [<span data-ttu-id="11cce-122">Árboles de expresión</span><span class="sxs-lookup"><span data-stu-id="11cce-122">Expression Trees</span></span>](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
 

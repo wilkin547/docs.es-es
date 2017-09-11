@@ -38,21 +38,21 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>Operador ++ (Referencia de C#)
-El operador de incremento (`++`) incrementa su operando en 1. El operador de incremento puede aparecer antes o después de su operando: `++variable` y `variable++`.  
+# <a name="-operator-c-reference"></a><span data-ttu-id="39451-102">Operador ++ (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="39451-102">++ Operator (C# Reference)</span></span>
+<span data-ttu-id="39451-103">El operador de incremento (`++`) incrementa su operando en 1.</span><span class="sxs-lookup"><span data-stu-id="39451-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="39451-104">El operador de incremento puede aparecer antes o después de su operando: `++variable` y `variable++`.</span><span class="sxs-lookup"><span data-stu-id="39451-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- La primera forma es una operación de incremento de prefijo. El resultado de la operación es el valor del operando después del incremento.  
+## <a name="remarks"></a><span data-ttu-id="39451-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="39451-105">Remarks</span></span>  
+ <span data-ttu-id="39451-106">La primera forma es una operación de incremento de prefijo.</span><span class="sxs-lookup"><span data-stu-id="39451-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="39451-107">El resultado de la operación es el valor del operando después del incremento.</span><span class="sxs-lookup"><span data-stu-id="39451-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
   
- La segunda forma es una operación de incremento de postfijo. El resultado de la operación es el valor del operando antes del incremento.  
+ <span data-ttu-id="39451-108">La segunda forma es una operación de incremento de postfijo.</span><span class="sxs-lookup"><span data-stu-id="39451-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="39451-109">El resultado de la operación es el valor del operando antes del incremento.</span><span class="sxs-lookup"><span data-stu-id="39451-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
   
- Los tipos numéricos y de enumeración poseen operadores de incremento predefinidos. Los tipos definidos por el usuario pueden sobrecargar el operador `++` . Las operaciones de tipos enteros suelen estar permitidas en la enumeración.  
+ <span data-ttu-id="39451-110">Los tipos numéricos y de enumeración poseen operadores de incremento predefinidos.</span><span class="sxs-lookup"><span data-stu-id="39451-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="39451-111">Los tipos definidos por el usuario pueden sobrecargar el operador `++` .</span><span class="sxs-lookup"><span data-stu-id="39451-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="39451-112">Las operaciones de tipos enteros suelen estar permitidas en la enumeración.</span><span class="sxs-lookup"><span data-stu-id="39451-112">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="39451-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="39451-113">Example</span></span>  
+ <span data-ttu-id="39451-114">[!code-cs[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="39451-114">[!code-cs[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de C#](../../../csharp/language-reference/index.md)   
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Operadores de C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="39451-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="39451-115">See Also</span></span>  
+ <span data-ttu-id="39451-116">[Referencia de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="39451-116">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="39451-117">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="39451-117">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="39451-118">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="39451-118">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

@@ -26,12 +26,12 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)
-En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a><span data-ttu-id="c182f-102">Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c182f-102">How to: Split a File Into Many Files by Using Groups (LINQ) (C#)</span></span>
+<span data-ttu-id="c182f-103">En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.</span><span class="sxs-lookup"><span data-stu-id="c182f-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="c182f-104">Para crear los archivos de datos</span><span class="sxs-lookup"><span data-stu-id="c182f-104">To create the data files</span></span>  
   
-1.  Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:  
+1.  <span data-ttu-id="c182f-105">Copie estos nombres en un archivo de texto denominado names1.txt y guárdelo en la carpeta del proyecto:</span><span class="sxs-lookup"><span data-stu-id="c182f-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +46,7 @@ En este ejemplo se muestra una manera de combinar el contenido de dos archivos y
     Garcia, Debra  
     ```  
   
-2.  Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.  
+2.  <span data-ttu-id="c182f-106">Copie estos nombres en un archivo de texto denominado names2.txt y guárdelo en la carpeta del proyecto: tenga en cuenta que los dos archivos tienen algunos nombres en común.</span><span class="sxs-lookup"><span data-stu-id="c182f-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +61,7 @@ En este ejemplo se muestra una manera de combinar el contenido de dos archivos y
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="c182f-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="c182f-107">Example</span></span>  
   
 ```csharp  
 class SplitWithGroups  
@@ -139,12 +139,12 @@ class SplitWithGroups
  */  
 ```  
   
- El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.  
+ <span data-ttu-id="c182f-108">El programa escribe un archivo independiente para cada grupo en la misma carpeta que los archivos de datos.</span><span class="sxs-lookup"><span data-stu-id="c182f-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
+## <a name="compiling-the-code"></a><span data-ttu-id="c182f-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="c182f-109">Compiling the Code</span></span>  
+ <span data-ttu-id="c182f-110">Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.</span><span class="sxs-lookup"><span data-stu-id="c182f-110">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="c182f-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="c182f-111">See Also</span></span>  
+ <span data-ttu-id="c182f-112">[LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="c182f-112">[LINQ and Strings (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+ [<span data-ttu-id="c182f-113">LINQ y directorios de archivos (C#)</span><span class="sxs-lookup"><span data-stu-id="c182f-113">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
 

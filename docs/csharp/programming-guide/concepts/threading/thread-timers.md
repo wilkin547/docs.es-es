@@ -26,11 +26,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="thread-timers-c"></a>Temporizadores de subprocesos (C#)
-La clase <xref:System.Threading.Timer?displayProperty=fullName> es útil para ejecutar una tarea periódicamente en un subproceso independiente. Por ejemplo, podría usar un temporizador de subprocesos para comprobar el estado y la integridad de una base de datos o para hacer copias de seguridad de archivos importantes.  
+# <a name="thread-timers-c"></a><span data-ttu-id="5d538-102">Temporizadores de subprocesos (C#)</span><span class="sxs-lookup"><span data-stu-id="5d538-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="5d538-103">La clase <xref:System.Threading.Timer?displayProperty=fullName> es útil para ejecutar una tarea periódicamente en un subproceso independiente.</span><span class="sxs-lookup"><span data-stu-id="5d538-103">The <xref:System.Threading.Timer?displayProperty=fullName> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="5d538-104">Por ejemplo, podría usar un temporizador de subprocesos para comprobar el estado y la integridad de una base de datos o para hacer copias de seguridad de archivos importantes.</span><span class="sxs-lookup"><span data-stu-id="5d538-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a>Ejemplo de temporizador de subprocesos  
- El ejemplo siguiente inicia una tarea cada dos segundos y usa un marcador para iniciar el método <xref:System.IDisposable.Dispose%2A>, que detiene el temporizador. En este ejemplo se publica el estado en la ventana de salida.  
+## <a name="thread-timer-example"></a><span data-ttu-id="5d538-105">Ejemplo de temporizador de subprocesos</span><span class="sxs-lookup"><span data-stu-id="5d538-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="5d538-106">El ejemplo siguiente inicia una tarea cada dos segundos y usa un marcador para iniciar el método <xref:System.IDisposable.Dispose%2A>, que detiene el temporizador.</span><span class="sxs-lookup"><span data-stu-id="5d538-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="5d538-107">En este ejemplo se publica el estado en la ventana de salida.</span><span class="sxs-lookup"><span data-stu-id="5d538-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -84,9 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- Los temporizadores de subprocesos resultan especialmente útiles cuando el objeto <xref:System.Windows.Forms.Timer?displayProperty=fullName> no se encuentra disponible; como cuando se desarrollan aplicaciones de consola.  
+ <span data-ttu-id="5d538-108">Los temporizadores de subprocesos resultan especialmente útiles cuando el objeto <xref:System.Windows.Forms.Timer?displayProperty=fullName> no se encuentra disponible; como cuando se desarrollan aplicaciones de consola.</span><span class="sxs-lookup"><span data-stu-id="5d538-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=fullName> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading>   
- [Aplicaciones multiproceso (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+## <a name="see-also"></a><span data-ttu-id="5d538-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="5d538-109">See Also</span></span>  
+ <span data-ttu-id="5d538-110"><xref:System.Threading></span><span class="sxs-lookup"><span data-stu-id="5d538-110"><xref:System.Threading></span></span>   
+ [<span data-ttu-id="5d538-111">Aplicaciones multiproceso (C#)</span><span class="sxs-lookup"><span data-stu-id="5d538-111">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
 

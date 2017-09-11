@@ -21,15 +21,15 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Cómo: Buscar elementos de un espacio de nombres (XPath-LINQ to XML) (C#)
-Las expresiones XPath pueden buscar nodos en un espacio de nombres específico. Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre. Para analizar una expresión XPath que contiene prefijos de espacio de nombre, debe pasar un objeto a los métodos XPath que implementan <xref:System.Xml.IXmlNamespaceResolver>. Este ejemplo usa <xref:System.Xml.XmlNamespaceManager>.  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="dc948-102">Cómo: Buscar elementos de un espacio de nombres (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="dc948-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="dc948-103">Las expresiones XPath pueden buscar nodos en un espacio de nombres específico.</span><span class="sxs-lookup"><span data-stu-id="dc948-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="dc948-104">Las expresiones XPath usan prefijos de espacio de nombres para especificar espacios de nombre.</span><span class="sxs-lookup"><span data-stu-id="dc948-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="dc948-105">Para analizar una expresión XPath que contiene prefijos de espacio de nombre, debe pasar un objeto a los métodos XPath que implementan <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="dc948-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="dc948-106">Este ejemplo usa <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="dc948-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- La expresión XPath es:  
+ <span data-ttu-id="dc948-107">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="dc948-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se lee un árbol XML que contiene dos espacios de nombres. Usa un objeto <xref:System.Xml.XmlReader> para leer el documento XML. Después obtiene un objeto <xref:System.Xml.XmlNameTable> de <xref:System.Xml.XmlReader> y un objeto <xref:System.Xml.XmlNamespaceManager> de <xref:System.Xml.XmlNameTable>. Utiliza <xref:System.Xml.XmlNamespaceManager> al seleccionar elementos.  
+## <a name="example"></a><span data-ttu-id="dc948-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dc948-108">Example</span></span>  
+ <span data-ttu-id="dc948-109">En el ejemplo siguiente se lee un árbol XML que contiene dos espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="dc948-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="dc948-110">Usa un objeto <xref:System.Xml.XmlReader> para leer el documento XML.</span><span class="sxs-lookup"><span data-stu-id="dc948-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="dc948-111">Después obtiene un objeto <xref:System.Xml.XmlNameTable> de <xref:System.Xml.XmlReader> y un objeto <xref:System.Xml.XmlNamespaceManager> de <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="dc948-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="dc948-112">Utiliza <xref:System.Xml.XmlNamespaceManager> al seleccionar elementos.</span><span class="sxs-lookup"><span data-stu-id="dc948-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -51,7 +51,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="dc948-113">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="dc948-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -86,6 +86,6 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="dc948-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="dc948-114">See Also</span></span>  
+ [<span data-ttu-id="dc948-115">LINQ to XML para usuarios de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="dc948-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

@@ -31,48 +31,48 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae869fa04d2dfb963694f258624c5cd594ff1184
+ms.sourcegitcommit: 9ad2eff6eb527f00ce23f463e811aa748def62d0
+ms.openlocfilehash: c391c6de51d41577d61278f43d58fade5b7c139f
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
- # <a name="when-c-reference"></a>when (Referencia de C#)
+ # <a name="when-c-reference"></a><span data-ttu-id="d1cb0-102">when (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="d1cb0-102">when (C# Reference)</span></span>
 
-Puede usar la palabra clave contextual `when` para especificar una condición de filtro en dos contextos:
+<span data-ttu-id="d1cb0-103">Puede usar la palabra clave contextual `when` para especificar una condición de filtro en dos contextos:</span><span class="sxs-lookup"><span data-stu-id="d1cb0-103">You can use the `when` contextual keyword to specify a filter condition in two contexts:</span></span>
 
-- En la instrucción `catch` de un bloque [try/catch](try-catch.md) o [try/catch/finally](try-catch-finally.md).
-- En la etiqueta `case` de una instrucción [switch](switch.md).
+- <span data-ttu-id="d1cb0-104">En la instrucción `catch` de un bloque [try/catch](try-catch.md) o [try/catch/finally](try-catch-finally.md).</span><span class="sxs-lookup"><span data-stu-id="d1cb0-104">In the `catch` statement of a [try/catch](try-catch.md) or [try/catch/finally](try-catch-finally.md) block.</span></span>
+- <span data-ttu-id="d1cb0-105">En la etiqueta `case` de una instrucción [switch](switch.md).</span><span class="sxs-lookup"><span data-stu-id="d1cb0-105">In the `case` label of a [switch](switch.md) statement.</span></span>
 
-## <a name="when-in-a-catch-statement"></a>`when` en una instrucción `catch`
+## <a name="when-in-a-catch-statement"></a><span data-ttu-id="d1cb0-106">`when` en una instrucción `catch`</span><span class="sxs-lookup"><span data-stu-id="d1cb0-106">`when` in a `catch` statement</span></span>
 
-A partir de C# 6, puede usarse `When` en una instrucción `catch` para especificar una condición que debe cumplirse para que el controlador de una excepción específica se ejecute. Su sintaxis es:
+<span data-ttu-id="d1cb0-107">A partir de C# 6, puede usarse `When` en una instrucción `catch` para especificar una condición que debe cumplirse para que el controlador de una excepción específica se ejecute.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-107">Starting with C# 6, `When` can be used in a `catch` statement to specify a condition that must be true for the handler for a specific exception to execute.</span></span> <span data-ttu-id="d1cb0-108">Su sintaxis es:</span><span class="sxs-lookup"><span data-stu-id="d1cb0-108">Its syntax is:</span></span>
 
 ```csharp
 catch ExceptionType [e] when (expr)
 ```
-donde *expr* es una expresión que se evalúa como un valor booleano. Si devuelve `true`, el controlador de excepciones se ejecuta; si devuelve `false`, no se ejecuta. 
+<span data-ttu-id="d1cb0-109">donde *expr* es una expresión que se evalúa como un valor booleano.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-109">where *expr* is an expression that evaluates to a Boolean value.</span></span> <span data-ttu-id="d1cb0-110">Si devuelve `true`, el controlador de excepciones se ejecuta; si devuelve `false`, no se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-110">If it returns `true`, the exception handler executes; if `false`, it does not.</span></span> 
 
-En el ejemplo siguiente se usa la palabra clave `when` para ejecutar condicionalmente controladores para una @System.Net.HttpRequestException según el texto del mensaje de excepción.
+<span data-ttu-id="d1cb0-111">En el ejemplo siguiente se usa la palabra clave `when` para ejecutar condicionalmente controladores para una @System.Net.HttpRequestException según el texto del mensaje de excepción.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-111">The following example uses the `when` keyword to conditionally execute handlers for an @System.Net.HttpRequestException depending on the text of the exception message.</span></span>
 
- [!code-cs[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]  
+ <span data-ttu-id="d1cb0-112">[!code-cs[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]</span><span class="sxs-lookup"><span data-stu-id="d1cb0-112">[!code-cs[when-with-catch](../../../../samples/snippets/csharp/language-reference/keywords/when/catch.cs)]</span></span>  
   
-## <a name="when-in-a-switch-statement"></a>`when` en una instrucción `switch`
+## <a name="when-in-a-switch-statement"></a><span data-ttu-id="d1cb0-113">`when` en una instrucción `switch`</span><span class="sxs-lookup"><span data-stu-id="d1cb0-113">`when` in a `switch` statement</span></span>
 
-A partir de 7, las etiquetas `case` ya no tienen que ser mutuamente exclusivas y el orden con el que las etiquetas `case` aparecen en una instrucción `switch` puede determinar el bloque switch que se ejecuta. Puede usarse la palabra clave `when` para especificar una condición de filtro que haga que su etiqueta case asociada se cumpla únicamente si también se cumple la condición de filtro. Su sintaxis es:
+<span data-ttu-id="d1cb0-114">A partir de 7, las etiquetas `case` ya no tienen que ser mutuamente exclusivas y el orden con el que las etiquetas `case` aparecen en una instrucción `switch` puede determinar el bloque switch que se ejecuta.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-114">Starting with 7, `case` labels no longer need be mutually exclusive, and the order in which `case` labels appear in a `switch` statement can determine which switch block executes.</span></span> <span data-ttu-id="d1cb0-115">Puede usarse la palabra clave `when` para especificar una condición de filtro que haga que su etiqueta case asociada se cumpla únicamente si también se cumple la condición de filtro.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-115">The `when` keyword can be used to specify a filter condition that causes its associated case label to be true only if the filter condition is also true.</span></span> <span data-ttu-id="d1cb0-116">Su sintaxis es:</span><span class="sxs-lookup"><span data-stu-id="d1cb0-116">Its syntax is:</span></span>
 
 ```csharp
 case (expr) when (when-condition):
 ```
-donde *expr* es un patrón de constante o un patrón de tipo que se compara con la expresión match y *when-condition* es cualquier expresión booleana. 
+<span data-ttu-id="d1cb0-117">donde *expr* es un patrón de constante o un patrón de tipo que se compara con la expresión match y *when-condition* es cualquier expresión booleana.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-117">where *expr* is a constant pattern or type pattern that is compared to the match expression, and *when-condition* is any Boolean expression.</span></span> 
 
-En el ejemplo siguiente se usa la palabra clave `when` para probar objetos `Shape` que tienen un área de cero, así como para probar una serie de objetos `Shape` que tienen un área mayor que cero. 
+<span data-ttu-id="d1cb0-118">En el ejemplo siguiente se usa la palabra clave `when` para probar objetos `Shape` que tienen un área de cero, así como para probar una serie de objetos `Shape` que tienen un área mayor que cero.</span><span class="sxs-lookup"><span data-stu-id="d1cb0-118">The following example uses the `when` keyword to test for `Shape` objects that have an area of zero, as well as to test for a variety of `Shape` objects that have an area greater than zero.</span></span> 
 
- [!code-cs[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]  
+ <span data-ttu-id="d1cb0-119">[!code-cs[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="d1cb0-119">[!code-cs[when-with-case#1](../../../../samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]</span></span>  
 
-## <a name="see-also"></a>Vea también 
-  [switch (Instrucción)](switch.md)  
-  [try/catch (Instrucción)](try-catch.md)  
-  [try/catch/finally (Instrucción)](try-catch-finally.md) 
+## <a name="see-also"></a><span data-ttu-id="d1cb0-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="d1cb0-120">See also</span></span> 
+  [<span data-ttu-id="d1cb0-121">switch (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="d1cb0-121">switch statement</span></span>](switch.md)  
+  [<span data-ttu-id="d1cb0-122">try/catch (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="d1cb0-122">try/catch statement</span></span>](try-catch.md)  
+  [<span data-ttu-id="d1cb0-123">try/catch/finally (Instrucción)</span><span class="sxs-lookup"><span data-stu-id="d1cb0-123">try/catch/finally statement</span></span>](try-catch-finally.md) 
 
 

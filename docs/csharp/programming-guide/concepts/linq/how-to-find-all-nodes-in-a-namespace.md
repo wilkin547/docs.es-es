@@ -21,11 +21,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Cómo: Buscar todos los nodos de un espacio de nombres (C#)
-Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="2be37-102">Cómo: Buscar todos los nodos de un espacio de nombres (C#)</span><span class="sxs-lookup"><span data-stu-id="2be37-102">How to: Find All Nodes in a Namespace (C#)</span></span>
+<span data-ttu-id="2be37-103">Puede filtrar en el espacio de nombres de cada elemento o atributo para buscar todos los nodos de ese espacio de nombres particular.</span><span class="sxs-lookup"><span data-stu-id="2be37-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea un árbol XML con dos espacios de nombres. A continuación, recorre en iteración los árboles y muestra los nombres de todos los elementos y atributos de esos espacios de nombres.  
+## <a name="example"></a><span data-ttu-id="2be37-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2be37-104">Example</span></span>  
+ <span data-ttu-id="2be37-105">En el ejemplo siguiente se crea un árbol XML con dos espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="2be37-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="2be37-106">A continuación, recorre en iteración los árboles y muestra los nombres de todos los elementos y atributos de esos espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="2be37-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -47,7 +47,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="2be37-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="2be37-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -55,10 +55,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a>Ejemplo  
- El archivo XML al que tiene acceso la siguiente consulta contiene pedidos de compra en dos espacios de nombres diferentes. La consulta crea un nuevo árbol con solo los elementos de uno de los espacios de nombres.  
+## <a name="example"></a><span data-ttu-id="2be37-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2be37-108">Example</span></span>  
+ <span data-ttu-id="2be37-109">El archivo XML al que tiene acceso la siguiente consulta contiene pedidos de compra en dos espacios de nombres diferentes.</span><span class="sxs-lookup"><span data-stu-id="2be37-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="2be37-110">La consulta crea un nuevo árbol con solo los elementos de uno de los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="2be37-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedidos de compra consolidados](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ <span data-ttu-id="2be37-111">En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Pedidos de compra consolidados](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="2be37-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -71,7 +71,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- Este código genera el siguiente resultado:  
+ <span data-ttu-id="2be37-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="2be37-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +107,6 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="2be37-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="2be37-113">See Also</span></span>  
+ [<span data-ttu-id="2be37-114">Consultas básicas (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="2be37-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
 

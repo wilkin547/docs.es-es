@@ -16,15 +16,15 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-porting-to-net-core---nuget-packages"></a>🔧 Traslado a .NET Core: paquetes NuGet
+# <a name="-porting-to-net-core---nuget-packages"></a><span data-ttu-id="7f2cd-104">🔧 Traslado a .NET Core: paquetes NuGet</span><span class="sxs-lookup"><span data-stu-id="7f2cd-104">🔧 Porting to .NET Core - NuGet packages</span></span>
 
-> **Nota:**
+> <span data-ttu-id="7f2cd-105">**Nota:**</span><span class="sxs-lookup"><span data-stu-id="7f2cd-105">**Note**</span></span>
 > 
-> ¡Este tema no se ha escrito todavía! 
+> <span data-ttu-id="7f2cd-106">¡Este tema no se ha escrito todavía!</span><span class="sxs-lookup"><span data-stu-id="7f2cd-106">This topic hasn’t been written yet!</span></span> 
 >
-> Le agradecemos sus comentarios para facilitar el ámbito y el enfoque.
+> <span data-ttu-id="7f2cd-107">Le agradecemos sus comentarios para facilitar el ámbito y el enfoque.</span><span class="sxs-lookup"><span data-stu-id="7f2cd-107">We welcome your input to help shape the scope and approach.</span></span>
 > 
-> Más información sobre cómo puede contribuir en [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> <span data-ttu-id="7f2cd-108">Más información sobre cómo puede contribuir en [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="7f2cd-108">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
         
   

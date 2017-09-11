@@ -1,1 +1,1 @@
-Bloc de notas de Microsoft
+<span data-ttu-id="cd8f6-101">Bloc de notas de Microsoft</span><span class="sxs-lookup"><span data-stu-id="cd8f6-101">Microsoft Notepad</span></span>

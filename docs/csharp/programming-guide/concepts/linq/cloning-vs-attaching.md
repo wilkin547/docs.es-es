@@ -26,11 +26,11 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cloning-vs-attaching-c"></a>Diferencias entre clonación y adjunción (C#)
-Cuando se asocian objetos <xref:System.Xml.Linq.XNode> (incluyendo el objeto <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute> a un árbol nuevo, si el contenido nuevo no tiene un elemento primario, los objetos simplemente se adjuntan al árbol XML. Si el nuevo contenido ya tiene un elemento primario y forma parte de otro árbol XML, se clona el nuevo contenido. Es nuevo contenido clonado se adjunta al árbol XML.  
+# <a name="cloning-vs-attaching-c"></a><span data-ttu-id="f4ed8-102">Diferencias entre clonación y adjunción (C#)</span><span class="sxs-lookup"><span data-stu-id="f4ed8-102">Cloning vs. Attaching (C#)</span></span>
+<span data-ttu-id="f4ed8-103">Cuando se asocian objetos <xref:System.Xml.Linq.XNode> (incluyendo el objeto <xref:System.Xml.Linq.XElement>) o <xref:System.Xml.Linq.XAttribute> a un árbol nuevo, si el contenido nuevo no tiene un elemento primario, los objetos simplemente se adjuntan al árbol XML.</span><span class="sxs-lookup"><span data-stu-id="f4ed8-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="f4ed8-104">Si el nuevo contenido ya tiene un elemento primario y forma parte de otro árbol XML, se clona el nuevo contenido.</span><span class="sxs-lookup"><span data-stu-id="f4ed8-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="f4ed8-105">Es nuevo contenido clonado se adjunta al árbol XML.</span><span class="sxs-lookup"><span data-stu-id="f4ed8-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- El siguiente código demuestra qué ocurre si agrega un elemento que tiene elemento primario a un árbol y qué ocurre si agrega un elemento que no tenga elemento primario a un árbol.  
+## <a name="example"></a><span data-ttu-id="f4ed8-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f4ed8-106">Example</span></span>  
+ <span data-ttu-id="f4ed8-107">El siguiente código demuestra qué ocurre si agrega un elemento que tiene elemento primario a un árbol y qué ocurre si agrega un elemento que no tenga elemento primario a un árbol.</span><span class="sxs-lookup"><span data-stu-id="f4ed8-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -58,13 +58,13 @@ Console.WriteLine("Child2 was {0}",
     "attached" : "cloned");  
 ```  
   
- Este ejemplo produce el siguiente resultado:  
+ <span data-ttu-id="f4ed8-108">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="f4ed8-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))
+## <a name="see-also"></a><span data-ttu-id="f4ed8-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="f4ed8-109">See Also</span></span>  
+ <span data-ttu-id="f4ed8-110">[Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))</span><span class="sxs-lookup"><span data-stu-id="f4ed8-110">[Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)</span></span>
 

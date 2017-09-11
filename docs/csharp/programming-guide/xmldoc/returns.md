@@ -38,26 +38,26 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt; (Guía de programación de C#)
-## <a name="syntax"></a>Sintaxis  
+# <a name="ltreturnsgt-c-programming-guide"></a><span data-ttu-id="42e2c-102">&lt;returns&gt; (Guía de programación de C#)</span><span class="sxs-lookup"><span data-stu-id="42e2c-102">&lt;returns&gt; (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="42e2c-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="42e2c-103">Syntax</span></span>  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>Parámetros  
+#### <a name="parameters"></a><span data-ttu-id="42e2c-104">Parámetros</span><span class="sxs-lookup"><span data-stu-id="42e2c-104">Parameters</span></span>  
  `description`  
- Descripción del valor devuelto.  
+ <span data-ttu-id="42e2c-105">Descripción del valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="42e2c-105">A description of the return value.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- La etiqueta \<returns> debe usarse en el comentario de una declaración de método para describir el valor devuelto.  
+## <a name="remarks"></a><span data-ttu-id="42e2c-106">Comentarios</span><span class="sxs-lookup"><span data-stu-id="42e2c-106">Remarks</span></span>  
+ <span data-ttu-id="42e2c-107">La etiqueta \<returns> debe usarse en el comentario de una declaración de método para describir el valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="42e2c-107">The \<returns> tag should be used in the comment for a method declaration to describe the return value.</span></span>  
   
- Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.  
+ <span data-ttu-id="42e2c-108">Compile con el parámetro [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación y generar un archivo con ellos.</span><span class="sxs-lookup"><span data-stu-id="42e2c-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+## <a name="example"></a><span data-ttu-id="42e2c-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="42e2c-109">Example</span></span>  
+ <span data-ttu-id="42e2c-110">[!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="42e2c-110">[!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación de C#](../../../csharp/programming-guide/index.md)   
- [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="42e2c-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="42e2c-111">See Also</span></span>  
+ <span data-ttu-id="42e2c-112">[Guía de programación de C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="42e2c-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="42e2c-113">Etiquetas recomendadas para los comentarios de documentación</span><span class="sxs-lookup"><span data-stu-id="42e2c-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
 

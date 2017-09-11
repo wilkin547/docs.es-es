@@ -1,1 +1,1 @@
-Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.
+<span data-ttu-id="c885b-101">Este tipo admite la infraestructura de .NET Framework y no está prevista su utilización directa desde el código.</span><span class="sxs-lookup"><span data-stu-id="c885b-101">This type supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>

@@ -18,16 +18,16 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="order-the-results-of-a-join-clause"></a>Ordenar los resultados de una cláusula join
-En este ejemplo se muestra cómo ordenar los resultados de una operación de combinación. Observe que la ordenación se realiza después de la combinación. Aunque puede usar una cláusula `orderby` con una o varias de las secuencias de origen antes de la combinación, normalmente no se recomienda. Algunos proveedores LINQ podrían no conservar esa ordenación después de la combinación.  
+# <a name="order-the-results-of-a-join-clause"></a><span data-ttu-id="a84b4-104">Ordenar los resultados de una cláusula join</span><span class="sxs-lookup"><span data-stu-id="a84b4-104">Order the results of a join clause</span></span>
+<span data-ttu-id="a84b4-105">En este ejemplo se muestra cómo ordenar los resultados de una operación de combinación.</span><span class="sxs-lookup"><span data-stu-id="a84b4-105">This example shows how to order the results of a join operation.</span></span> <span data-ttu-id="a84b4-106">Observe que la ordenación se realiza después de la combinación.</span><span class="sxs-lookup"><span data-stu-id="a84b4-106">Note that the ordering is performed after the join.</span></span> <span data-ttu-id="a84b4-107">Aunque puede usar una cláusula `orderby` con una o varias de las secuencias de origen antes de la combinación, normalmente no se recomienda.</span><span class="sxs-lookup"><span data-stu-id="a84b4-107">Although you can use an `orderby` clause with one or more of the source sequences before the join, generally we do not recommend it.</span></span> <span data-ttu-id="a84b4-108">Algunos proveedores LINQ podrían no conservar esa ordenación después de la combinación.</span><span class="sxs-lookup"><span data-stu-id="a84b4-108">Some LINQ providers might not preserve that ordering after the join.</span></span>  
   
-## <a name="example"></a>Ejemplo  
- Esta consulta crea una combinación agrupada y luego ordena los grupos según el elemento categoría, que todavía está en el ámbito. Dentro del inicializador de tipo anónimo, una subconsulta ordena todos los elementos coincidentes de la secuencia de productos.  
+## <a name="example"></a><span data-ttu-id="a84b4-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a84b4-109">Example</span></span>  
+ <span data-ttu-id="a84b4-110">Esta consulta crea una combinación agrupada y luego ordena los grupos según el elemento categoría, que todavía está en el ámbito.</span><span class="sxs-lookup"><span data-stu-id="a84b4-110">This query creates a group join, and then sorts the groups based on the category element, which is still in scope.</span></span> <span data-ttu-id="a84b4-111">Dentro del inicializador de tipo anónimo, una subconsulta ordena todos los elementos coincidentes de la secuencia de productos.</span><span class="sxs-lookup"><span data-stu-id="a84b4-111">Inside the anonymous type initializer, a sub-query orders all the matching elements from the products sequence.</span></span>  
   
- [!code-cs[csProgGuideLINQ#81](../../../samples/snippets/csharp/concepts/linq/how-to-order-the-results-of-a-join-clause_1.cs)]  
+ <span data-ttu-id="a84b4-112">[!code-cs[csProgGuideLINQ#81](../../../samples/snippets/csharp/concepts/linq/how-to-order-the-results-of-a-join-clause_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="a84b4-112">[!code-cs[csProgGuideLINQ#81](../../../samples/snippets/csharp/concepts/linq/how-to-order-the-results-of-a-join-clause_1.cs)]</span></span>  
  
-## <a name="see-also"></a>Vea también  
- [Expresiones de consulta LINQ](index.md)   
- [orderby (Cláusula)](../language-reference/keywords/orderby-clause.md)   
- [join (cláusula)](../language-reference/keywords/join-clause.md) 
+## <a name="see-also"></a><span data-ttu-id="a84b4-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="a84b4-113">See also</span></span>  
+ <span data-ttu-id="a84b4-114">[Expresiones de consulta LINQ](index.md) </span><span class="sxs-lookup"><span data-stu-id="a84b4-114">[LINQ query expressions](index.md) </span></span>  
+ <span data-ttu-id="a84b4-115">[orderby (Cláusula)](../language-reference/keywords/orderby-clause.md) </span><span class="sxs-lookup"><span data-stu-id="a84b4-115">[orderby clause](../language-reference/keywords/orderby-clause.md) </span></span>  
+ [<span data-ttu-id="a84b4-116">join (cláusula)</span><span class="sxs-lookup"><span data-stu-id="a84b4-116">join clause</span></span>](../language-reference/keywords/join-clause.md) 
 

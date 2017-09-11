@@ -40,20 +40,20 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="fullpaths-c-compiler-options"></a>/fullpaths (Opciones del compilador de C#)
-La opción **/fullpaths** hace que el compilador especifique una ruta de acceso completa al archivo cuando se muestran los errores de compilación y las advertencias.  
+# <a name="fullpaths-c-compiler-options"></a><span data-ttu-id="be670-102">/fullpaths (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="be670-102">/fullpaths (C# Compiler Options)</span></span>
+<span data-ttu-id="be670-103">La opción **/fullpaths** hace que el compilador especifique una ruta de acceso completa al archivo cuando se muestran los errores de compilación y las advertencias.</span><span class="sxs-lookup"><span data-stu-id="be670-103">The **/fullpaths** option causes the compiler to specify the full path to the file when listing compilation errors and warnings.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="be670-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="be670-104">Syntax</span></span>  
   
 ```console  
 /fullpaths  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- De manera predeterminada, los errores y advertencias que se producen de la compilación especifican el nombre del archivo en el que se ha detectado el error. La opción **/fullpaths** hace que el compilador especifique una ruta de acceso completa al archivo.  
+## <a name="remarks"></a><span data-ttu-id="be670-105">Comentarios</span><span class="sxs-lookup"><span data-stu-id="be670-105">Remarks</span></span>  
+ <span data-ttu-id="be670-106">De manera predeterminada, los errores y advertencias que se producen de la compilación especifican el nombre del archivo en el que se ha detectado el error.</span><span class="sxs-lookup"><span data-stu-id="be670-106">By default, errors and warnings that result from compilation specify the name of the file in which an error was found.</span></span> <span data-ttu-id="be670-107">La opción **/fullpaths** hace que el compilador especifique una ruta de acceso completa al archivo.</span><span class="sxs-lookup"><span data-stu-id="be670-107">The **/fullpaths** option causes the compiler to specify the full path to the file.</span></span>  
   
- Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
+ <span data-ttu-id="be670-108">Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.</span><span class="sxs-lookup"><span data-stu-id="be670-108">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="be670-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="be670-109">See Also</span></span>  
+ [<span data-ttu-id="be670-110">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="be670-110">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

@@ -38,45 +38,45 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="keyfile-c-compiler-options"></a>/keyfile (Opciones del compilador de C#)
-Especifica el nombre de archivo que contiene la clave criptográfica.  
+# <a name="keyfile-c-compiler-options"></a><span data-ttu-id="59d00-102">/keyfile (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="59d00-102">/keyfile (C# Compiler Options)</span></span>
+<span data-ttu-id="59d00-103">Especifica el nombre de archivo que contiene la clave criptográfica.</span><span class="sxs-lookup"><span data-stu-id="59d00-103">Specifies the filename containing the cryptographic key.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="59d00-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="59d00-104">Syntax</span></span>  
   
 ```console  
 /keyfile:file  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a><span data-ttu-id="59d00-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="59d00-105">Arguments</span></span>  
   
-|Término|Definición|  
+|<span data-ttu-id="59d00-106">Término</span><span class="sxs-lookup"><span data-stu-id="59d00-106">Term</span></span>|<span data-ttu-id="59d00-107">Definición</span><span class="sxs-lookup"><span data-stu-id="59d00-107">Definition</span></span>|  
 |----------|----------------|  
-|`file`|El nombre del archivo que contiene la clave de nombre seguro.|  
+|`file`|<span data-ttu-id="59d00-108">El nombre del archivo que contiene la clave de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="59d00-108">The name of the file containing the strong name key.</span></span>|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando se usa esta opción, el compilador inserta la clave pública del archivo especificado en el manifiesto del ensamblado y, después, firma el último ensamblado con la clave privada. Para generar un archivo de clave, escriba sn -k `file` en la línea de comandos.  
+## <a name="remarks"></a><span data-ttu-id="59d00-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="59d00-109">Remarks</span></span>  
+ <span data-ttu-id="59d00-110">Cuando se usa esta opción, el compilador inserta la clave pública del archivo especificado en el manifiesto del ensamblado y, después, firma el último ensamblado con la clave privada.</span><span class="sxs-lookup"><span data-stu-id="59d00-110">When this option is used, the compiler inserts the public key from the specified file into the assembly manifest and then signs the final assembly with the private key.</span></span> <span data-ttu-id="59d00-111">Para generar un archivo de clave, escriba sn -k `file` en la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="59d00-111">To generate a key file, type sn -k `file` at the command line.</span></span>  
   
- Si se compila con la opción **/target:module**, el nombre del archivo de claves se mantiene en el módulo y se incorpora en el ensamblado que se crea al compilar un ensamblado con la opción [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ <span data-ttu-id="59d00-112">Si se compila con la opción **/target:module**, el nombre del archivo de claves se mantiene en el módulo y se incorpora en el ensamblado que se crea al compilar un ensamblado con la opción [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="59d00-112">If you compile with **/target:module**, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).</span></span>  
   
- También puede pasar la información de cifrado al compilador con [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) para firmar el ensamblado de forma parcial.  
+ <span data-ttu-id="59d00-113">También puede pasar la información de cifrado al compilador con [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="59d00-113">You can also pass your encryption information to the compiler with [/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span></span> <span data-ttu-id="59d00-114">Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) para firmar el ensamblado de forma parcial.</span><span class="sxs-lookup"><span data-stu-id="59d00-114">Use [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) if you want a partially signed assembly.</span></span>  
   
- Si se especifica tanto /keyfile como /keycontainer (ya sea mediante una opción de línea de comandos o mediante un atributo personalizado) en la misma compilación, el compilador probará primero el contenedor de claves. Si lo consigue, el ensamblado se firma con la información del contenedor de claves. Si el compilador no encuentra el contenedor de claves, probará el archivo especificado con /keyfile. Si lo consigue, el ensamblado se firma con la información del archivo de clave y la información de la clave se instalará en el contenedor de claves (similar a sn -i) de modo que, en la próxima compilación, el contenedor de claves será válido.  
+ <span data-ttu-id="59d00-115">Si se especifica tanto /keyfile como /keycontainer (ya sea mediante una opción de línea de comandos o mediante un atributo personalizado) en la misma compilación, el compilador probará primero el contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="59d00-115">In case both /keyfile and /keycontainer are specified (either by command line option or by custom attribute) in the same compilation, the compiler will first try the key container.</span></span> <span data-ttu-id="59d00-116">Si lo consigue, el ensamblado se firma con la información del contenedor de claves.</span><span class="sxs-lookup"><span data-stu-id="59d00-116">If that succeeds, then the assembly is signed with the information in the key container.</span></span> <span data-ttu-id="59d00-117">Si el compilador no encuentra el contenedor de claves, probará el archivo especificado con /keyfile.</span><span class="sxs-lookup"><span data-stu-id="59d00-117">If the compiler does not find the key container, it will try the file specified with /keyfile.</span></span> <span data-ttu-id="59d00-118">Si lo consigue, el ensamblado se firma con la información del archivo de clave y la información de la clave se instalará en el contenedor de claves (similar a sn -i) de modo que, en la próxima compilación, el contenedor de claves será válido.</span><span class="sxs-lookup"><span data-stu-id="59d00-118">If that succeeds, the assembly is signed with the information in the key file and the key information will be installed in the key container (similar to sn -i) so that on the next compilation, the key container will be valid.</span></span>  
   
- Tenga en cuenta que un archivo de clave puede contener solo la clave pública.  
+ <span data-ttu-id="59d00-119">Tenga en cuenta que un archivo de clave puede contener solo la clave pública.</span><span class="sxs-lookup"><span data-stu-id="59d00-119">Note that a key file might contain only the public key.</span></span>  
   
- Para obtener más información, vea [Crear y usar ensamblados con nombre seguro](https://msdn.microsoft.com/library/xwb8f617) y [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md) (Retrasar la firma de un ensamblado).  
+ <span data-ttu-id="59d00-120">Para obtener más información, vea [Crear y usar ensamblados con nombre seguro](https://msdn.microsoft.com/library/xwb8f617) y [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md) (Retrasar la firma de un ensamblado).</span><span class="sxs-lookup"><span data-stu-id="59d00-120">For more information, see [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) and [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="59d00-121">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="59d00-121">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Abra la página **Propiedades** del proyecto.  
+1.  <span data-ttu-id="59d00-122">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="59d00-122">Open the **Properties** page for the project.</span></span>  
   
-2.  Haga clic en la página de propiedades **Firma**.  
+2.  <span data-ttu-id="59d00-123">Haga clic en la página de propiedades **Firma**.</span><span class="sxs-lookup"><span data-stu-id="59d00-123">Click the **Signing** property page.</span></span>  
   
-3.  Modifique la propiedad **Seleccione un archivo de clave de nombre seguro**.  
+3.  <span data-ttu-id="59d00-124">Modifique la propiedad **Seleccione un archivo de clave de nombre seguro**.</span><span class="sxs-lookup"><span data-stu-id="59d00-124">Modify the **Choose a strong name key file** property.</span></span>  
   
- Puede tener acceso mediante programación a esta opción del compilador con <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
+ <span data-ttu-id="59d00-125">Puede tener acceso mediante programación a esta opción del compilador con <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.</span><span class="sxs-lookup"><span data-stu-id="59d00-125">You can programmatically access this compiler option with <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="59d00-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="59d00-126">See Also</span></span>  
+ <span data-ttu-id="59d00-127">[Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="59d00-127">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="59d00-128">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="59d00-128">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

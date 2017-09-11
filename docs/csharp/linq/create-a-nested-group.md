@@ -18,19 +18,19 @@ ms.contentlocale: es-es
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="create-a-nested-group"></a>Crear un grupo anidado
+# <a name="create-a-nested-group"></a><span data-ttu-id="59209-104">Crear un grupo anidado</span><span class="sxs-lookup"><span data-stu-id="59209-104">Create a nested group</span></span>
 
-En el ejemplo siguiente se muestra cómo crear grupos anidados en una expresión de consulta LINQ. Cada grupo creado a partir del nivel académico o del año de los estudiantes se subdivide en grupos según sus nombres.  
+<span data-ttu-id="59209-105">En el ejemplo siguiente se muestra cómo crear grupos anidados en una expresión de consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="59209-105">The following example shows how to create nested groups in a LINQ query expression.</span></span> <span data-ttu-id="59209-106">Cada grupo creado a partir del nivel académico o del año de los estudiantes se subdivide en grupos según sus nombres.</span><span class="sxs-lookup"><span data-stu-id="59209-106">Each group that is created according to student year or grade level is then further subdivided into groups based on the individuals' names.</span></span>  
   
-## <a name="example"></a>Ejemplo
+## <a name="example"></a><span data-ttu-id="59209-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="59209-107">Example</span></span>
 
  > [!NOTE]
- > Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo de [Query a collection of objects](query-a-collection-of-objects.md) (Consultar una colección de objetos). 
+ > <span data-ttu-id="59209-108">Este ejemplo contiene referencias a objetos que se definen en el código de ejemplo de [Query a collection of objects](query-a-collection-of-objects.md) (Consultar una colección de objetos).</span><span class="sxs-lookup"><span data-stu-id="59209-108">This example contains references to objects that are defined in the sample code in [Query a collection of objects](query-a-collection-of-objects.md).</span></span> 
 
- [!code-cs[csProgGuideLINQ#24](../../../samples/snippets/csharp/concepts/linq/how-to-create-a-nested-group_1.cs)]  
+ <span data-ttu-id="59209-109">[!code-cs[csProgGuideLINQ#24](../../../samples/snippets/csharp/concepts/linq/how-to-create-a-nested-group_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="59209-109">[!code-cs[csProgGuideLINQ#24](../../../samples/snippets/csharp/concepts/linq/how-to-create-a-nested-group_1.cs)]</span></span>  
   
- Tenga en cuenta que se necesitan tres bucles `foreach` anidados para recorrer en iteración los elementos internos de un grupo anidado.  
+ <span data-ttu-id="59209-110">Tenga en cuenta que se necesitan tres bucles `foreach` anidados para recorrer en iteración los elementos internos de un grupo anidado.</span><span class="sxs-lookup"><span data-stu-id="59209-110">Note that three nested `foreach` loops are required to iterate over the inner elements of a nested group.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones de consulta LINQ](index.md)
+## <a name="see-also"></a><span data-ttu-id="59209-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="59209-111">See also</span></span>  
+ [<span data-ttu-id="59209-112">Expresiones de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="59209-112">LINQ Query Expressions</span></span>](index.md)
 
