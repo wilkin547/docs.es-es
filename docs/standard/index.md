@@ -1,83 +1,71 @@
 ---
-title: Acerca de .NET
+title: "Guía de la plataforma .NET"
 description: "Más información sobre la plataforma. NET."
 keywords: .NET, .NET Core
-author: richlander
+author: cartermp
 ms.author: ronpet
-ms.date: 10/31/2016
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
-ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="net-platform-guide"></a>Guía de la plataforma .NET
+# <a name="net-guide"></a><span data-ttu-id="19682-104">Guía de .NET</span><span class="sxs-lookup"><span data-stu-id="19682-104">.NET Guide</span></span>
 
-> [!NOTE]
-> Consulte los [tutoriales sobre "Introducción a .NET Core" ](../core/getting-started.md) para aprender a crear una aplicación .NET Core sencilla. En unos minutos su primera aplicación estará lista y funcionando.
+<span data-ttu-id="19682-105">En esta guía de .NET encontrará mucha información sobre .NET.</span><span class="sxs-lookup"><span data-stu-id="19682-105">The .NET Guide provides a large amount of information about .NET.</span></span>  <span data-ttu-id="19682-106">En función de cómo de familiarizado esté con .NET, es posible que quiera ver varias secciones de esta guía y otras también incluidas en la documentación de .NET.</span><span class="sxs-lookup"><span data-stu-id="19682-106">Depending on your familiarity with .NET, you may wish to explore different sections of this guide and other sections of the .NET documentation.</span></span>
 
-.NET es una plataforma de desarrollo de uso general. Puede usarse para cualquier tipo de carga de trabajo o aplicación donde se usen soluciones de uso general. Tiene varias características clave que son atractivas para muchos desarrolladores, incluida la administración automática de la memoria y los lenguajes de programación modernos, que facilitan más la creación eficaz de aplicaciones de alta calidad. .NET hace posible un entorno de programación de alto nivel con muchas características útiles, a la vez que proporciona acceso de bajo nivel a la memoria nativa y a las API.
+## <a name="new-to-net"></a><span data-ttu-id="19682-107">Nuevo a .NET</span><span class="sxs-lookup"><span data-stu-id="19682-107">New to .NET</span></span>
 
-C#, F# y Visual Basic son lenguajes populares que se basan y confían en la plataforma .NET. Los lenguajes .NET son famosos por sus características clave, tales como su modelo de programación asincrónica, Language Integrated Query, los tipos genéricos y la reflexión de sistemas de tipos. Los lenguajes también proporcionan opciones excelentes para paradigmas de programación funcionales y orientados en objetos.
+<span data-ttu-id="19682-108">Si no está familiarizado con .NET, consulte el artículo [Introducción](get-started.md).</span><span class="sxs-lookup"><span data-stu-id="19682-108">If you're new to .NET, check out the [Get Started](get-started.md) article.</span></span>
 
-Estos lenguajes son muy diversos, desde el punto de vista de la filosofía y la sintaxis, pero también por la simetría proporcionada a través de un sistema de tipos compartidos. Este sistema de tipos está proporcionado por el entorno de tiempo de ejecución subyacente. .NET se diseñó teniendo en mente la idea de "Common Language Runtime" que podría admitir los requisitos de distintos lenguajes, por ejemplo, lenguajes de tipo dinámico o estático, y permitir la interoperabilidad entre ellos. Por ejemplo, es posible pasar una colección de objetos de `People` de un lenguaje a otro sin pérdida alguna de capacidad o semántica.
+<span data-ttu-id="19682-109">Si prefiere una guía paso a paso sobre las características principales de .NET, consulte [Paseo por .NET](tour.md).</span><span class="sxs-lookup"><span data-stu-id="19682-109">If you prefer to have a guided tour through major features of .NET, check out the [Tour of .NET](tour.md).</span></span>
 
-Hay disponibles varias [implementaciones y productos de .NET](components.md) basados en [estándares .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertos que especifican los fundamentos de la plataforma. Se optimizan independientemente para diferentes tipos de aplicaciones (por ejemplo, para escritorio, móviles, juegos o la nube) y admiten muchos chips (por ejemplo, x86/x64, ARM) y sistemas operativos (por ejemplo, Windows, Linux, iOS Android y macOS). El código abierto también es una parte importante del ecosistema de .NET, con varias implementaciones de .NET y muchas bibliotecas disponibles bajo licencias con aprobación de OSI.
+<span data-ttu-id="19682-110">También puede consultar [Componentes de la arquitectura .NET](components.md) para obtener información general sobre los diferentes componentes de .NET y su funcionamiento conjunto.</span><span class="sxs-lookup"><span data-stu-id="19682-110">You can also read about [.NET Architectural Components](components.md) to get an overview of the various "pieces" of .NET and how they fit together.</span></span>
 
-- Más información sobre [C#](../csharp/index.md)
-- Más información sobre [F#](../fsharp/index.md)
-- Examinar la [biblioteca de API de .NET](../../api/index.md)
-- [Introducción a Common Language Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/intro-to-clr.md)
+## <a name="new-to-net-core"></a><span data-ttu-id="19682-111">Nuevo a .NET Core</span><span class="sxs-lookup"><span data-stu-id="19682-111">New to .NET Core</span></span>
 
-<a name="fundamentals"></a>Aspectos básicos
-------------
+<span data-ttu-id="19682-112">Si acaba de empezar a usar .NET Core, consulte [Introducción a .NET Core](../core/get-started.md).</span><span class="sxs-lookup"><span data-stu-id="19682-112">If you're new to .NET Core, check out [Get Started with .NET Core](../core/get-started.md).</span></span>
 
-**Varios idiomas**: .NET proporciona un sistema de tipos bien definido, formatos de archivo, tiempo de ejecución, framework y herramientas que pueden usar varios lenguajes, tanto para su propia ejecución como para interoperar con otros lenguajes usando los mismos componentes de .NET como su divisa compartida.
+## <a name="new-to-net-standard"></a><span data-ttu-id="19682-113">Nuevo a .NET Standard</span><span class="sxs-lookup"><span data-stu-id="19682-113">New to .NET Standard</span></span>
 
-**Memoria administrada**: .NET le administra automáticamente memoria a través de un recolector de elementos no utilizados. Garantiza que siempre haga referencia a objetos activos, lo que le evita problemas desagradables como saturaciones del búfer e infracciones de acceso. Esto incluye la comprobación de límites de matriz.
+<span data-ttu-id="19682-114">Si acaba de empezar a usar .NET Standard, consulte [.NET Standard](net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="19682-114">If you're new to .NET Standard, check out [.NET Standard](net-standard.md).</span></span>
 
-**Seguridad de tipos**: el principal modelo de .NET para la funcionalidad y representación de memoria es "tipos". Los tipos definen la forma y, opcionalmente, el comportamiento. El tiempo de ejecución garantiza que el código de llamada solo pueda funcionar con tipos conforme a su definición y a la visibilidad especificada de los miembros, de modo que proporciona resultados coherentes, fiables y seguros.
+## <a name="porting-net-framework-code-to-net-core"></a><span data-ttu-id="19682-115">Portabilidad del código de .NET Framework a .NET Core</span><span class="sxs-lookup"><span data-stu-id="19682-115">Porting .NET Framework Code to .NET Core</span></span>
 
-<a name="features"></a>Características
---------
+<span data-ttu-id="19682-116">Si tiene pensado trasladar una aplicación, un servicio o un componente de un sistema a .NET Core, consulte [Portabilidad a .NET Core desde .NET Framework](../core/porting/index.md).</span><span class="sxs-lookup"><span data-stu-id="19682-116">If you're looking to port an application, service, or some component of a system to .NET Core, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>
 
-**Tipos de valores definidos por el usuario**: los tipos de valores son una categoría de tipos útil debido a que ofrecen la semántica de "paso por valor" en lugar de "paso por referencia", tal y como ocurre con las clases. Los tipos de valores son obviamente más útiles para los datos numéricos. .NET permite tipos de valores para los tipos primitivos, como enteros, y los tipos definidos por el usuario.
+## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a><span data-ttu-id="19682-117">Portabilidad de paquetes NuGet de .NET Framework a .NET Standard o .NET Core</span><span class="sxs-lookup"><span data-stu-id="19682-117">Porting a NuGet package from .NET Framework to .NET Standard or .NET Core</span></span>
 
-**Tipos genéricos**: los tipos genéricos son tipos con uno o más parámetros de tipo que se pueden especificar para cada instancia. Esto es útil para muchos tipos, que de no ser así podrían exponer el contenido como el tipo Objeto o requerir varias definiciones de tipo. Por ejemplo, una determinada instancia de un tipo de colección se puede realizar de forma específica para personas, ubicaciones de GPS o cadenas.
+<span data-ttu-id="19682-118">Si tiene pensado trasladar un paquete NuGet a .NET Standard, consulte [Portabilidad a .NET Core desde .NET Framework](../core/porting/index.md).</span><span class="sxs-lookup"><span data-stu-id="19682-118">If you're looking to port a NuGet package to .NET Standard, check out [Porting to .NET Core from .NET Framework](../core/porting/index.md).</span></span>  <span data-ttu-id="19682-119">Las herramientas de .NET Standard y .NET Core son compartidas, de modo que el contenido sirve tanto para la portabilidad a .NET Standard como a .NET Core.</span><span class="sxs-lookup"><span data-stu-id="19682-119">Tooling for .NET Standard and .NET Core are shared, so the content will be relevant for porting to .NET Standard as well as .NET Core.</span></span>
 
-**Reflexión**: .NET define un formato de metadatos que describe los tipos dentro de un archivo binario. El subsistema de reflexión usa estos datos, exponiendo las API para leer y crear instancias de tipos en tiempo de ejecución. Este recurso es muy útil para escenarios dinámicos donde no es conveniente conocer la implementación exacta de un programa antes de tiempo.
+## <a name="interested-in-major-net-concepts"></a><span data-ttu-id="19682-120">Conceptos principales de .NET</span><span class="sxs-lookup"><span data-stu-id="19682-120">Interested in Major .NET Concepts</span></span>
 
-**Generación de códigos flexible**: .NET no prescribe un enfoque específico para transformar archivos binarios de .NET en código máquina. Se han usado muchos enfoques correctamente, incluida la interpretación, la compilación just-in-time (JIT), la compilación ahead-of-time (AOT) con reserva JIT y la compilación de AOT sin reserva JIT. Cada una de estas estrategias puede ser valiosa y es posible usarlas conjuntamente.
+<span data-ttu-id="19682-121">Si está interesado en algunos de los conceptos principales de. NET, consulte:</span><span class="sxs-lookup"><span data-stu-id="19682-121">If you're interested in some of the major concepts of .NET, check out:</span></span>
 
-**Multiplataforma**: .NET esté destinado a ser una multiplataforma desde sus inicios. El formato binario y el conjunto de instrucciones son independientes del sistema operativo, de la CPU y del tamaño del puntero. Un archivo binario de .NET concreto compilado en 2000 para ejecutarse en un equipo de Windows de 32 bits puede ejecutarse en el dispositivo iOS ARM64 en 2016 sin ninguna modificación.
+* [<span data-ttu-id="19682-122">Componentes de la arquitectura .NET</span><span class="sxs-lookup"><span data-stu-id="19682-122">.NET Architectural Components</span></span>](components.md)
+* [<span data-ttu-id="19682-123">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="19682-123">.NET Standard</span></span>](net-standard.md)
+* [<span data-ttu-id="19682-124">Interoperabilidad nativa</span><span class="sxs-lookup"><span data-stu-id="19682-124">Native Interoperability</span></span>](native-interop.md)
+* [<span data-ttu-id="19682-125">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="19682-125">Garbage Collection</span></span>](garbagecollection/index.md)
+* [<span data-ttu-id="19682-126">Tipos base de .NET</span><span class="sxs-lookup"><span data-stu-id="19682-126">Base Types in .NET</span></span>](base-types/index.md)
+* [<span data-ttu-id="19682-127">Colecciones</span><span class="sxs-lookup"><span data-stu-id="19682-127">Collections</span></span>](collections/index.md)
+* [<span data-ttu-id="19682-128">Fechas, horas y zonas horarias</span><span class="sxs-lookup"><span data-stu-id="19682-128">Dates, times, and time zones</span></span>](datetime/index.md)
+* [<span data-ttu-id="19682-129">Programación asincrónica</span><span class="sxs-lookup"><span data-stu-id="19682-129">Asynchronous Programming</span></span>](async.md)
 
-<a name="open-source"></a>Abrir origen
------------
+<span data-ttu-id="19682-130">Consulte también la guía correspondiente a cada lenguaje de programación para obtener más información sobre los tres lenguajes principales de .NET:</span><span class="sxs-lookup"><span data-stu-id="19682-130">Additionally, check out each language guide to learn about the three major .NET languages:</span></span>
 
-Las implementaciones [.NET Core](https://github.com/dotnet/core) y [Mono](https://github.com/mono/mono) de .NET son código abierto, con la licencia MIT. La documentación usa la licencia [Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/). .NET Core y Mono están patrocinados por Microsoft y cuentan con muchos colaboradores de la comunidad. 
+* [<span data-ttu-id="19682-131">Guía de C#</span><span class="sxs-lookup"><span data-stu-id="19682-131">C# Guide</span></span>](../csharp/index.md)
+* [<span data-ttu-id="19682-132">Guía de F#</span><span class="sxs-lookup"><span data-stu-id="19682-132">F# Guide</span></span>](../fsharp/index.md)
+* [<span data-ttu-id="19682-133">Guía de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="19682-133">Visual Basic Guide</span></span>](../visual-basic/index.md)
 
-Estos tiempos de ejecución de uso general pueden usarse como base para la investigación académica o los productos comerciales o de enseñanza y aprendizaje. Su naturaleza abierta también significa que cualquier persona puede contribuir al código de producto ascendente, dado un error o la necesidad de una nueva característica.
+## <a name="api-reference"></a><span data-ttu-id="19682-134">Referencia de API</span><span class="sxs-lookup"><span data-stu-id="19682-134">API Reference</span></span>
 
-<a name="projects"></a>Proyectos
---------
-
-- [CoreCLR](https://github.com/dotnet/coreclr): runtime de .NET, usado por .NET Core.
-- [Mono](https://github.com/mono/mono): runtime de .NET, usado por Xamarin y otros.
-- [CoreFX](https://github.com/dotnet/coreclr): bibliotecas de clases de .NET, usadas por .NET Core y en cierta medida por Mono mediante el uso compartido de código fuente.
-- [Roslyn](https://github.com/dotnet/roslyn): compiladores de C# y Visual Basic, usados por la mayoría de las plataformas y herramientas de .NET. Expone las API para leer, escribir y analizar código fuente.
-- [F#](https://github.com/microsoft/visualfsharp): compilador de F#.
-- [Xamarin SDK](http://open.xamarin.com): herramientas y bibliotecas necesarias para escribir Android, iOS y macOS en C# y F#.
-
-<a name="standardized"></a>Normalizado
-------------
-
-.NET se especifica a través de [normas ECMA](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) abiertas que destacan sus capacidades y que se pueden usar para realizar una nueva implementación. Existen otras implementaciones de .NET, y después de las de Microsoft, Mono y Unity son las más populares.
-
+<span data-ttu-id="19682-135">Para obtener más información sobre la gran variedad de API disponibles, consulte la [Referencia de API de .NET](../../api/index.md).</span><span class="sxs-lookup"><span data-stu-id="19682-135">Check out the [.NET API Reference](../../api/index.md) to see the breadth of APIs avaialable.</span></span>
 
