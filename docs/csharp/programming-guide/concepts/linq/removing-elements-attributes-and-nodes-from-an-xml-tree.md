@@ -1,10 +1,7 @@
 ---
 title: "Quitar elementos, atributos y nodos de un árbol XML (C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
@@ -15,10 +12,10 @@ caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Quitar elementos, atributos y nodos de un árbol XML (C#)
@@ -32,8 +29,8 @@ Puede modificar un árbol XML mediante la eliminación de elementos, atributos y
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|Quita un elemento <xref:System.Xml.Linq.XAttribute> de su elemento primario.|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|Quita los nodos secundarios de un elemento <xref:System.Xml.Linq.XContainer> de la colección.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|Quita un elemento <xref:System.Xml.Linq.XAttribute> de su elemento primario.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|Quita los nodos secundarios de un elemento <xref:System.Xml.Linq.XContainer> de la colección.|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|Quita el contenido y los atributos de un elemento <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|Quita los atributos de un elemento <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|Si pasa `null` para el valor, quita el atributo.|  

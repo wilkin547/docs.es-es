@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5a4b84756be7d33c478d8115b812795dba182cdf
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="local-functions-c-programming-guide"></a>Funciones locales (Guía de programación de C#)
@@ -54,7 +54,7 @@ A diferencia de una definición de método, una definición de función local no
 
 - El modificador de acceso de miembro. Dado que todas las funciones locales son privadas, incluido un modificador de acceso, como la palabra clave `private`, se genera el error del compilador CS0106, "El modificador 'private' no es válido para este elemento".
  
-- La palabra clave [static](..\..\language-reference\keywords\static.md). Al incluir la palabra clave `static`, se genera el error del compilador CS0106, "El modificador 'static' no es válido para este elemento".
+- La palabra clave [static](../../language-reference/keywords/static.md). Al incluir la palabra clave `static`, se genera el error del compilador CS0106, "El modificador 'static' no es válido para este elemento".
 
 Además, los atributos no se pueden aplicar a la función local o a sus parámetros y parámetros de tipo. 
  
