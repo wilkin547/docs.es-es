@@ -1,106 +1,112 @@
 ---
-title: "Derivar de WebRequest | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest (clase), protocolos acoplables"
-  - "controlador de solicitudes específicas de protocolos"
-  - "enviar datos, protocolos acoplables"
-  - "protocolos acoplables, criterios de clase"
-  - "Internet, protocolos acoplables"
-  - "recibir datos, protocolos acoplables"
-  - "protocolos, acoplables"
+title: Derivar de WebRequest
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, pluggable protocols
+- protocol-specific request handler
+- sending data, pluggable protocols
+- pluggable protocols, class criteria
+- Internet, pluggable protocols
+- receiving data, pluggable protocols
+- protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Derivar de WebRequest
-La clase de <xref:System.Net.WebRequest> es una clase base abstracta que proporciona los métodos y propiedades básicos para crear un controlador protocolo\- específico de la solicitud que ajusta el modelo conectable de protocolo de .NET Framework.  Las aplicaciones que utilizan la clase de **WebRequest** pueden solicitar datos utilizando cualquier protocolo compatible sin necesidad de especificar el protocolo utilizado.  
+# <a name="deriving-from-webrequest"></a>Derivar de WebRequest
+La clase <xref:System.Net.WebRequest> es una clase base abstracta que proporciona las propiedades y métodos básicos para crear un controlador de solicitudes específico del protocolo adecuado al modelo de protocolo acoplable de .NET Framework. Las aplicaciones que usan la clase **WebRequest** pueden solicitar datos mediante cualquier protocolo admitido sin necesidad de especificar el protocolo empleado.  
   
- Dos criterios se deben cumplir para que una clase protocolo\- concreta se utiliza como protocolo conectable: la clase debe implementar la interfaz de <xref:System.Net.IWebRequestCreate> , y debe registrar con el método de <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> .  La clase debe reemplazar todos los métodos y propiedades abstractos de **WebRequest** para proporcionar la interfaz conectable.  
+ Para usar una clase específica del protocolo como protocolo acoplable se deben cumplir dos criterios: la clase debe implementar la interfaz <xref:System.Net.IWebRequestCreate> y se debe registrar con el método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>. La clase debe invalidar todos los métodos y propiedades abstractos de **WebRequest** para proporcionar la interfaz acoplable.  
   
- Las instancias de **WebRequest** están pensados para el único uso; si desea realizar otra solicitud, cree un nuevo **WebRequest**.  **WebRequest** admite la interfaz de <xref:System.Runtime.Serialization.ISerializable> que permite a los desarrolladores para serializar una plantilla **WebRequest** y después volver a crear la plantilla para las solicitudes adicionales.  
+ Las instancias de **WebRequest** están diseñadas para un solo uso; si quiere realizar otra solicitud, cree una nueva instancia de **WebRequest**. **WebRequest** admite la interfaz <xref:System.Runtime.Serialization.ISerializable> para permitir que los desarrolladores serialicen una plantilla **WebRequest** y luego vuelvan a crear la plantilla para otras solicitudes.  
   
-## Método Create de IWebRequest  
- El método de <xref:System.Net.IWebRequestCreate.Create%2A> es responsable de inicializar una nueva instancia de la clase protocolo\- concreta.  Cuando se crea un nuevo **WebRequest** , las coincidencias del método de <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> que el URI solicitado con los prefijos URI registrado con el método de **RegisterPrefix** .  El método de **Crear** descendientes protocolo\- concreto adecuado debe devolver una instancia inicializada descendientes capaz de realizar una transacción estándar de solicitud y respuesta para el protocolo sin necesidad de ningún campos protocolo\- específicos modificados.  
+## <a name="iwebrequest-create-method"></a>Método Create de IWebRequest  
+ El método <xref:System.Net.IWebRequestCreate.Create%2A> es responsable de inicializar una nueva instancia de la clase específica del protocolo. Cuando se crea una instancia de **WebRequest**, el método <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> combina el URI solicitado con los prefijos URI registrados con el método **RegisterPrefix**. El método **Create** del descendiente correcto específico del protocolo debe devolver una instancia inicializada del descendiente capaz de realizar una transacción estándar de solicitud/respuesta para el protocolo sin necesidad de modificar ningún campo específico del protocolo.  
   
-## Propiedad de ConnectionGroupName  
- La propiedad de <xref:System.Net.WebRequest.ConnectionGroupName%2A> se utiliza para llamar a un grupo de conexiones a un recurso para poder hacer solicitudes varias sobre una única conexión.  Para implementar la conexión compartida, debe utilizar un método protocolo\- específico de agrupación y conexiones de la asignación.  Por ejemplo, la clase proporcionada de <xref:System.Net.ServicePointManager> implementa la conexión compartida para la clase de <xref:System.Net.HttpWebRequest> .  La clase de **ServicePointManager** crea <xref:System.Net.ServicePoint> que proporciona una conexión a un servidor específico para cada grupo de conexión.  
+## <a name="connectiongroupname-property"></a>Propiedad ConnectionGroupName  
+ La propiedad <xref:System.Net.WebRequest.ConnectionGroupName%2A> se usa para asignar nombre a un grupo de conexiones a un recurso de modo que se puedan realizar varias solicitudes en una única conexión. Para implementar el uso compartido de conexiones, debe usar un método específico del protocolo de agrupación y asignación de conexiones. Por ejemplo, la clase <xref:System.Net.ServicePointManager> proporcionada implementa el uso compartido de conexiones para la clase <xref:System.Net.HttpWebRequest>. La clase **ServicePointManager** crea un elemento <xref:System.Net.ServicePoint> que proporciona una conexión a un servidor concreto para cada grupo de conexiones.  
   
-## Propiedad de ContentLength  
- La propiedad de <xref:System.Net.WebRequest.ContentLength%2A> especifica el número de bytes de los datos que se enviará al servidor al cargar datos.  
+## <a name="contentlength-property"></a>Propiedad ContentLength  
+ La propiedad <xref:System.Net.WebRequest.ContentLength%2A> especifica el número de bytes de datos que se va a enviar al servidor al cargar datos.  
   
- La propiedad de <xref:System.Net.WebRequest.Method%2A> establecido normalmente para indicar que está teniendo lugar una carga cuando la propiedad de **ContentLength** se establece en un valor mayor que cero.  
+ Normalmente, se debe establecer la propiedad <xref:System.Net.WebRequest.Method%2A> para indicar que una carga tiene lugar cuando la propiedad **ContentLength** está establecida en un valor mayor que cero.  
   
-## Propiedad ContentType  
- La propiedad de <xref:System.Net.WebRequest.ContentType%2A> proporciona la información especial que el protocolo necesita enviar al servidor para identificar el tipo de contenido que está enviando.  Normalmente es el tipo de contenido de MIME de los datos cargado.  
+## <a name="contenttype-property"></a>Propiedad ContentType  
+ La propiedad <xref:System.Net.WebRequest.ContentType%2A> proporciona toda la información especial que el protocolo necesita que se envíe al servidor para identificar el tipo de contenido que se está enviando. Suele ser el tipo de contenido MIME de los datos cargados.  
   
-## Propiedad credentials  
- La propiedad de <xref:System.Net.WebRequest.Credentials%2A> contiene la información necesaria para autenticar la solicitud al servidor.  Debe implementar los detalles del proceso de autenticación para el protocolo.  La clase de <xref:System.Net.AuthenticationManager> es responsable de autenticar solicitudes y proporcionar un token de autenticación.  La clase que proporciona las credenciales utilizadas por el protocolo debe implementar la interfaz de <xref:System.Net.ICredentials> .  
+## <a name="credentials-property"></a>Propiedad Credentials  
+ La propiedad <xref:System.Net.WebRequest.Credentials%2A> contiene información necesaria para autenticar la solicitud en el servidor. Debe implementar los detalles del proceso de autenticación del protocolo. La clase <xref:System.Net.AuthenticationManager> es responsable de autenticar las solicitudes y de proporcionar un token de autenticación. La clase que proporciona las credenciales usadas por el protocolo debe implementar la interfaz <xref:System.Net.ICredentials>.  
   
-## Propiedad headers  
- La propiedad de <xref:System.Net.WebRequest.Headers%2A> contiene una colección arbitraria de pares de nombre\/valor de metadatos asociados a la solicitud.  Los metadatos requerido por el protocolo que se puede expresar como un par de nombre\/valor puede estar incluida en la propiedad de **Headers** .  Esta información debe establecerse normalmente antes de llamar a los métodos de <xref:System.Net.WebRequest.GetRequestStream%2A> o de <xref:System.Net.WebRequest.GetResponse%2A> ; la solicitud se ha realizado una vez, los metadatos se considera de solo lectura.  
+## <a name="headers-property"></a>Propiedad Headers  
+ La propiedad <xref:System.Net.WebRequest.Headers%2A> contiene una colección arbitraria de pares nombre-valor de metadatos asociados a la solicitud. Los metadatos que necesita el protocolo y que se pueden expresar como un par nombre-valor se pueden incluir en la propiedad **Headers**. Normalmente, esta información se debe establecer antes de llamar a los métodos <xref:System.Net.WebRequest.GetRequestStream%2A> o <xref:System.Net.WebRequest.GetResponse%2A>; una vez que se ha realizado la solicitud, los metadatos se consideran de solo lectura.  
   
- No es necesario usar la propiedad de **Headers** para utilizar los metadatos del encabezado.  Los metadatos Protocolo\-específicos se pueden exponer como propiedades; por ejemplo, la propiedad de <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> expone el encabezado HTTP de **User\-Agent** .  Cuando expone metadatos de encabezado como una propiedad, no debe permitir que la misma propiedad se establezca mediante la propiedad de **Headers** .  
+ No es necesario usar la propiedad **Headers** para usar los metadatos de encabezado. Los metadatos específicos del protocolo pueden exponerse como propiedades; por ejemplo, la propiedad <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> expone el encabezado HTTP **Usuario-Agente**. Cuando se exponen metadatos de encabezado como una propiedad, no se debe permitir que se establezca la misma propiedad mediante la propiedad **Headers**.  
   
-## Propiedad de método  
- La propiedad de <xref:System.Net.WebRequest.Method%2A> contiene el verbo o action que la solicitud está solicitando al servidor efectuara.  El valor predeterminado de la propiedad de **Method** debe habilitar una acción estándar de solicitud y respuesta sin requerir ninguna propiedad protocolo\- específicas establecer.  Por ejemplo, los valores predeterminados del método de [HttpWebResponse](frlrfSystemNetHttpWebResponseClassMethodTopic) A GET, que solicita un recurso de un servidor web y devuelve la respuesta.  
+## <a name="method-property"></a>Propiedad Method  
+ La propiedad <xref:System.Net.WebRequest.Method%2A> contiene el verbo o la acción que la solicitud pide al servidor que realice. El valor predeterminado de la propiedad **Method** debe habilitar una acción estándar de solicitud/respuesta sin necesidad de establecer ninguna propiedad específica del protocolo. Por ejemplo, el método <xref:System.Net.HttpWebResponse.Method%2A> tiene como valor predeterminado GET, que solicita un recurso de un servidor web y devuelve la respuesta.  
   
- La propiedad de **ContentLength** establecido normalmente en un valor mayor que cero cuando la propiedad de **Method** se establece en un verbo o a una acción que indica que está teniendo lugar una carga.  
+ Normalmente, si la propiedad **Method** está establecida en un verbo o acción que indica que se está realizando una carga, la propiedad **ContentLength** se debe establecer en un valor mayor que cero.  
   
-## Propiedad de PreAuthenticate  
- Las aplicaciones establecen la propiedad de <xref:System.Net.WebRequest.PreAuthenticate%2A> para indicar que la información de autenticación debe enviarse con la solicitud inicial en lugar de espera un desafío de autenticación.  La propiedad de **PreAuthenticate** solo es significativa si el protocolo admite las credenciales de autenticación enviadas con la solicitud inicial.  
+## <a name="preauthenticate-property"></a>Propiedad PreAuthenticate  
+ Las aplicaciones establecen la propiedad <xref:System.Net.WebRequest.PreAuthenticate%2A> para indicar que la información de autenticación se debe enviar con la solicitud inicial en lugar de esperar un desafío de autenticación. La propiedad **PreAuthenticate** solo es significativa si el protocolo admite las credenciales de autenticación enviadas con la solicitud inicial.  
   
-## Propiedad proxy  
- La propiedad de <xref:System.Net.WebRequest.Proxy%2A> contiene una interfaz de <xref:System.Net.IWebProxy> que se utiliza para obtener acceso al recurso solicitado.  La propiedad de **Proxy** solo es significativa si los soportes de protocolo proxied solicitudes.  Debe establecer el proxy predeterminado si uno es requerido por el protocolo.  
+## <a name="proxy-property"></a>Propiedad Proxy  
+ La propiedad <xref:System.Net.WebRequest.Proxy%2A> contiene una interfaz <xref:System.Net.IWebProxy> que se usa para acceder al recurso solicitado. La propiedad **Proxy** solo es significativa si el protocolo admite solicitudes con proxy. Si el protocolo necesita un proxy, debe establecer el proxy predeterminado.  
   
- En algunos entornos, por ejemplo detrás de un firewall corporativo, el protocolo se podría requerir utilizar un proxy.  En ese caso, debe implementar la interfaz de **IWebProxy** para crear una clase de proxy que sea adecuada para el protocolo.  
+ En algunos entornos, como detrás de un firewall corporativo, es posible que el protocolo exija usar un proxy. En ese caso, debe implementar la interfaz **IWebProxy** para crear una clase de proxy que funcione para el protocolo.  
   
-## Propiedad de RequestUri  
- La propiedad de <xref:System.Net.WebRequest.RequestUri%2A> contiene el URI que se pasó al método de **WebRequest.Create** .  Es de solo lectura y no se puede cambiar una vez creado **WebRequest** .  Si el protocolo admite la redirección, la respuesta puede proceder de un recurso identificado por otro URI.  Si necesita proporcionar acceso al identificador URI que respondió, debe proporcionar una propiedad adicional que contiene ese URI.  
+## <a name="requesturi-property"></a>Propiedad RequestUri  
+ La propiedad <xref:System.Net.WebRequest.RequestUri%2A> contiene el URI que se ha pasado al método **WebRequest.Create**. Es de solo lectura y no se puede cambiar una vez que se ha creado **WebRequest**. Si el protocolo admite la redirección, la respuesta puede proceder de un recurso identificado por otro URI. Si tiene que proporcionar acceso al URI que ha respondido, debe proporcionar una propiedad adicional que contenga ese URI.  
   
-## Propiedad de tiempo de espera  
- La propiedad de <xref:System.Net.WebRequest.Timeout%2A> contiene el tiempo, en milisegundos, de esperar antes de los tiempos de espera y los tiros de solicitud una excepción.  **Timeout** sólo se aplica a las solicitudes sincrónicas realizadas con el método de <xref:System.Net.WebRequest.GetResponse%2A> ; las solicitudes asincrónicas deben utilizar el método de <xref:System.Net.WebRequest.Abort%2A> para cancelar una solicitud pendiente.  
+## <a name="timeout-property"></a>Propiedad de tiempo de espera  
+ La propiedad <xref:System.Net.WebRequest.Timeout%2A> contiene el tiempo, en milisegundos, que se espera antes de que se agote el tiempo de espera de la solicitud y se produzca una excepción. **Timeout** se aplica solo a las solicitudes sincrónicas realizadas con el método <xref:System.Net.WebRequest.GetResponse%2A>; las solicitudes asincrónicas deben usar el método <xref:System.Net.WebRequest.Abort%2A> para cancelar una solicitud pendiente.  
   
- Establecer la propiedad de **Timeout** es significativo únicamente si la clase protocolo\- concreta implementa un proceso de tiempo de espera.  
+ El establecimiento de la propiedad **Timeout** solo es significativo si la clase específica del protocolo implementa un proceso de tiempo de espera.  
   
-## Método abort  
- El método de <xref:System.Net.WebRequest.Abort%2A> cancela una solicitud asincrónica pendiente en un servidor.  Después de que la solicitud ha cancelado, llamando a **GetResponse**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**, **BeginGetRequestStream**, o **EndGetRequestStream** producirán <xref:System.Net.WebException> con la propiedad de <xref:System.Net.WebException.Status%2A> establecida en [RequestCanceled](frlrfSystemNetWebExceptionStatusClassTopic).  
+## <a name="abort-method"></a>Abort (Método)  
+ El método <xref:System.Net.WebRequest.Abort%2A> cancela una solicitud asincrónica pendiente a un servidor. Después de cancelar la solicitud, una llamada a **GetResponse**, **BeginGetResponse**, **EndGetResponse**, **GetRequestStream**, **BeginGetRequestStream** o **EndGetRequestStream** produce una <xref:System.Net.WebException> con la propiedad <xref:System.Net.WebException.Status%2A> establecida en <xref:System.Net.WebExceptionStatus>.  
   
-## Métodos de BeginGetRequestStream y de EndGetRequestStream  
- El método de <xref:System.Net.WebRequest.BeginGetRequestStream%2A> inicia una solicitud asincrónica para la secuencia que se utiliza para cargar datos en el servidor.  El método de <xref:System.Net.WebRequest.EndGetRequestStream%2A> completa la solicitud asincrónica y devuelve la secuencia solicitada.  Estos métodos implementan el método de **GetRequestStream** mediante el modelo asincrónico de .NET Framework estándar de.  
+## <a name="begingetrequeststream-and-endgetrequeststream-methods"></a>Métodos BeginGetRequestStream y EndGetRequestStream  
+ El método <xref:System.Net.WebRequest.BeginGetRequestStream%2A> inicia una solicitud asincrónica para el flujo que se usa para cargar datos en el servidor. El método <xref:System.Net.WebRequest.EndGetRequestStream%2A> completa la solicitud asincrónica y devuelve el flujo solicitado. Estos métodos implementan el método **GetRequestStream** mediante el modelo asincrónico estándar de .NET Framework.  
   
-## Métodos de BeginGetResponse y de EndGetResponse  
- El método de <xref:System.Net.WebRequest.BeginGetResponse%2A> inicia una solicitud asincrónica a un servidor.  El método de <xref:System.Net.WebRequest.EndGetResponse%2A> completa la solicitud asincrónica y devuelve la respuesta solicitada.  Estos métodos implementan el método de **GetResponse** mediante el modelo asincrónico de .NET Framework estándar de.  
+## <a name="begingetresponse-and-endgetresponse-methods"></a>Métodos BeginGetResponse y EndGetResponse  
+ El método <xref:System.Net.WebRequest.BeginGetResponse%2A> inicia una solicitud asincrónica a un servidor. El método <xref:System.Net.WebRequest.EndGetResponse%2A> completa la solicitud asincrónica y devuelve la respuesta solicitada. Estos métodos implementan el método **GetResponse** mediante el modelo asincrónico estándar de .NET Framework.  
   
-## Método de GetRequestStream  
- El método de <xref:System.Net.WebRequest.GetRequestStream%2A> devuelve una secuencia que se utiliza para escribir datos en el servidor solicitado.  La secuencia devuelta debe ser un solo escritura transmitir que no busca; está pensado como una secuencia de datos unidireccional que se escribe en el servidor.  La secuencia devuelve false para las propiedades de <xref:System.IO.Stream.CanRead%2A> y de <xref:System.IO.Stream.CanSeek%2A> y lo true para la propiedad de <xref:System.IO.Stream.CanWrite%2A> .  
+## <a name="getrequeststream-method"></a>Método GetRequestStream  
+ El método <xref:System.Net.WebRequest.GetRequestStream%2A> devuelve un flujo que se usa para escribir datos en el servidor solicitado. El flujo devuelto debe ser un flujo de solo escritura que no busque; está diseñado como flujo unidireccional de datos que se escriben en el servidor. El flujo devuelve false para las propiedades <xref:System.IO.Stream.CanRead%2A> y <xref:System.IO.Stream.CanSeek%2A> y true para la propiedad <xref:System.IO.Stream.CanWrite%2A>.  
   
- El método de **GetRequestStream** abra normalmente una conexión al servidor y, antes de devolver la secuencia, envía la información de encabezado que indica que los datos se están enviando al servidor.  Dado que inicia **GetRequestStream** la solicitud, establecer ninguna propiedad de **Encabezado** o la propiedad de **ContentLength** no se permite normalmente después de llamar a **GetRequestStream**.  
+ El método **GetRequestStream** normalmente abre una conexión al servidor y, antes de devolver el flujo, envía la información de encabezado que indica que los datos se están enviando al servidor. Dado que **GetRequestStream** inicia la solicitud, el establecimiento de cualquier propiedad **Header** o **ContentLength** normalmente no se permite después de llamar a **GetRequestStream**.  
   
-## Método de GetResponse  
- El método de <xref:System.Net.WebRequest.GetResponse%2A> devuelve un descendiente protocolo\- específico de la clase de <xref:System.Net.WebResponse> que representa la respuesta del servidor.  A menos que la solicitud se haya iniciada ya por el método de **GetRequestStream** , el método de **GetResponse** crea una conexión al recurso identificado por **RequestUri**, envía la información de encabezado que indica el tipo de solicitud que se crea, y después recibe la respuesta del recurso.  
+## <a name="getresponse-method"></a>Método GetResponse  
+ El método <xref:System.Net.WebRequest.GetResponse%2A> devuelve un descendiente específico del protocolo de la clase <xref:System.Net.WebResponse> que representa la respuesta del servidor. A menos que la solicitud ya haya sido iniciada por el método **GetRequestStream**, el método **GetResponse** crea una conexión al recurso identificado por **RequestUri**, envía información de encabezado que indica el tipo de solicitud realizada y luego recibe la respuesta del recurso.  
   
- Una vez que se llama al método de **GetResponse** , todas las propiedades se deben considerar de sólo lectura.  Las instancias de **WebRequest** están pensados para el único uso; si desea realizar otra solicitud, debe crear un nuevo **WebRequest**.  
+ Una vez que se ha llamado al método **GetResponse**, todas las propiedades deben considerarse de solo lectura. Las instancias de **WebRequest** están diseñadas para un solo uso; si quiere realizar otra solicitud, debe crear una nueva instancia de **WebRequest**.  
   
- El método de **GetResponse** es responsable de crear un descendiente adecuado de **WebResponse** para contener la respuesta de entrada.  
+ El método **GetResponse** es responsable de crear un descendiente **WebResponse** adecuado para contener la respuesta entrante.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Net.WebRequest>   
  <xref:System.Net.HttpWebRequest>   
  <xref:System.Net.FileWebRequest>   
- [Programar protocolos acoplables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
  [Derivar de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+

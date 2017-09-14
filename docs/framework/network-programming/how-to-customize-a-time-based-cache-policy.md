@@ -1,34 +1,39 @@
 ---
-title: "C&#243;mo: personalizar una directiva de cach&#233; de duraci&#243;n definida | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "directivas de caché de duración definida"
-  - "personalizar directivas de caché de duración definida"
-  - "caché [.NET Framework], directivas de duración definida"
+title: "Cómo: personalizar una directiva de caché de duración definida"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- customizing time-based cache policies
+- cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 24319898cba225a86fcdee3a0aaedc73d4c6220c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo: personalizar una directiva de cach&#233; de duraci&#243;n definida
-Al crear una directiva Tiempo\- basada de caché, puede personalizar el almacenamiento en caché comportamiento especificando los valores para la edad máxima, la actualización mínima, el deterioro máximo, o la fecha de sincronización de la memoria caché.  El objeto de <xref:System.Net.Cache.HttpRequestCachePolicy> proporciona varios constructores que permiten especificar combinaciones válidas de estos valores.  
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Cómo: personalizar una directiva de caché de duración definida
+Al crear una directiva de caché de duración definida, puede personalizar el comportamiento de almacenamiento en caché. Para ello, especifique valores de antigüedad máxima, actualización mínima, obsolescencia máxima o una fecha de sincronización de caché. El objeto <xref:System.Net.Cache.HttpRequestCachePolicy> proporciona varios constructores que permiten especificar combinaciones válidas de estos valores.  
   
-### Para crear una directiva Tiempo\- basada de caché que utiliza una fecha de sincronización de caché  
+### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Para crear una directiva de caché de duración definida que use una fecha de sincronización de caché  
   
--   Cree una directiva Tiempo\- basada de caché que utilice una fecha de sincronización de caché pasando un objeto de <xref:System.DateTime> al constructor de <xref:System.Net.Cache.HttpRequestCachePolicy> .  
+-   Para crear una directiva de caché de duración definida que use una fecha de sincronización de caché, pase un objeto <xref:System.DateTime> al constructor <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -50,16 +55,16 @@ Al crear una directiva Tiempo\- basada de caché, puede personalizar el almacena
     End Function  
     ```  
   
- El resultado es similar al siguiente:  
+ La salida será similar a la siguiente:  
   
 ```  
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
   
-### Para crear una directiva Tiempo\- basada de caché basado en actualización mínima  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Para crear una directiva de caché de duración definida basada en la actualización mínima  
   
--   Cree una directiva Tiempo\- basada de caché que está basada en actualización mínima especificando <xref:System.Net.Cache.HttpCacheAgeControl> como valor del parámetro de `cacheAgeControl` y pasando un objeto de <xref:System.TimeSpan> al constructor de <xref:System.Net.Cache.HttpRequestCachePolicy> .  
+-   Para crear una directiva de caché de duración definida basada en la actualización mínima, especifique <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> como el valor del parámetro `cacheAgeControl` y pase un objeto <xref:System.TimeSpan> al constructor <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -87,12 +92,11 @@ CreateMinFreshPolicy(new TimeSpan(1,0,0));
   
 ```  
 Level:Default MinFresh:3600  
-  
 ```  
   
-### Para crear una directiva Tiempo\- basada de caché basado en actualización mínima y edad máxima  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Para crear una directiva de caché de duración definida basada en la actualización mínima y la antigüedad máxima  
   
--   Cree una directiva Tiempo\- basada de caché que está basada en actualización mínima y edad máxima especificando <xref:System.Net.Cache.HttpCacheAgeControl> como valor del parámetro de `cacheAgeControl` y pasando dos objetos de <xref:System.TimeSpan> al constructor de <xref:System.Net.Cache.HttpRequestCachePolicy> , uno para especificar la edad máxima para que los recursos y un segundo especifican la actualización mínima permitida para un objeto devuelto de caché.  
+-   Para crear una directiva de caché de duración definida basada en la actualización mínima y la antigüedad máxima, especifique <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> como el valor del parámetro `cacheAgeControl` y pase dos objetos <xref:System.TimeSpan> al constructor <xref:System.Net.Cache.HttpRequestCachePolicy>, uno para especificar la antigüedad máxima de los recursos y otro para especificar la actualización mínima permitida para un objeto devuelto desde la memoria caché.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
@@ -122,9 +126,10 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## Vea también  
- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+## <a name="see-also"></a>Vea también  
+ [Cache Management for Network Applications (Administración de la memoria caché para aplicaciones de red)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)   
- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> \(Elemento, Configuración de red\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md)  (Directivas de caché de duración definida)  
+ [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

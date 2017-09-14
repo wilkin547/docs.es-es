@@ -1,33 +1,38 @@
 ---
-title: "Temas de procedimientos de programaci&#243;n de red | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "recursos de red"
-  - "redes [.NET Framework], procedimientos de programación"
-  - "procedimientos de redes [.NET Framework]"
-  - "red"
+title: "Temas de procedimientos de programación de red"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- network resources
+- networks [.NET Framework], programming how-tos
+- networking how-tos [.NET Framework]
+- network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6e63c65f0ebef37e854bd3cfd62a33e396470a57
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Temas de procedimientos de programaci&#243;n de red
-La lista siguiente incluye los vínculos a los temas " cómo… " incluidos en la documentación conceptual para la programación de la red.  
+# <a name="network-programming-how-to-topics"></a>Temas de procedimientos de programación de red
+La lista siguiente incluye vínculos a los temas de procedimientos relacionados con la programación de red que se pueden encontrar en la documentación conceptual.  
   
- **Solicitar datos:**  
+ **Solicitud de datos:**  
   
 -   [Cómo: solicitar una página web y recuperar los resultados como una secuencia](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
@@ -37,7 +42,7 @@ La lista siguiente incluye los vínculos a los temas " cómo… " incluidos en l
   
 -   [Cómo: recuperar una WebResponse específica de protocolo que coincida con una WebRequest](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)  
   
- **Conectable y protocolos de aplicación:**  
+ **Protocolos acoplables y de aplicaciones:**  
   
 -   [Cómo: registrar un protocolo personalizado mediante WebRequest](../../../docs/framework/network-programming/how-to-register-a-custom-protocol-using-webrequest.md)  
   
@@ -47,7 +52,7 @@ La lista siguiente incluye los vínculos a los temas " cómo… " incluidos en l
   
 -   [Cómo: asignar la información de usuario para agrupar conexiones](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)  
   
--   [Cómo crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+-   [Cómo: crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
   
 -   [Cómo: descargar archivos mediante FTP](../../../docs/framework/network-programming/how-to-download-files-with-ftp.md)  
   
@@ -59,11 +64,11 @@ La lista siguiente incluye los vínculos a los temas " cómo… " incluidos en l
   
 -   [Cómo: modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
- **Traza de la red:**  
+ **Seguimiento de red:**  
   
--   [Cómo: Configurar la traza de la red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
+-   [Cómo: configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
   
- **El almacenamiento en caché de configuración:**  
+ **Configurar almacenamiento en caché:**  
   
 -   [Cómo establecer en una aplicación una directiva de caché basada en la ubicación](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
@@ -73,11 +78,11 @@ La lista siguiente incluye los vínculos a los temas " cómo… " incluidos en l
   
 -   [Cómo establecer una directiva de caché para una solicitud](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- **Mediante proxy:**  
+ **Uso de servidores proxy:**  
   
 -   [Cómo: habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Cómo: Reemplazar una selección del Proxy Global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [Cómo: reemplazar una selección del proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
  **Información de red:**  
   
@@ -85,9 +90,10 @@ La lista siguiente incluye los vínculos a los temas " cómo… " incluidos en l
   
 -   [Cómo: obtener información sobre el protocolo y la interfaz](../../../docs/framework/network-programming/how-to-get-interface-and-protocol-information.md)  
   
--   [Cómo: hacer ping a un Host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
+-   [Cómo: hacer ping a un host](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## Vea también  
- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Ejemplos de programación de red](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>Vea también  
+ [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
+ [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)   
  [Ejemplos de red para .NET en la galería de código de MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+

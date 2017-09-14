@@ -1,28 +1,33 @@
 ---
-title: "How to: Perform Lazy Initialization of Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "lazy initialization in .NET, how to perform"
+title: "Cómo: Realizar la inicialización diferida de objetos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab1ae0eae8d78d4b7f14444e78ff5a741fe02d95
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Perform Lazy Initialization of Objects
-La clase <xref:System.Lazy%601?displayProperty=fullName> simplifica la creación de instancias e inicialización diferida de los objetos.  Al inicializar los objetos de manera diferida, se puede evitar su creación en caso de que no sean necesarios o se puede aplazar su inicialización hasta el primer acceso.  Para obtener más información, vea [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Cómo: Realizar la inicialización diferida de objetos
+La clase <xref:System.Lazy%601?displayProperty=fullName> simplifica el trabajo de creación de instancias e inicialización diferida de los objetos. Al inicializar los objetos de manera diferida, se puede evitar su creación en caso de que no sean necesarios o se puede aplazar su inicialización hasta el primer acceso. Para obtener más información, vea [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md).  
   
-## Ejemplo  
- En el ejemplo siguiente, se muestra cómo inicializar un valor con <xref:System.Lazy%601>.  Es posible que la variable Lazy no sea necesaria, según si otro código establece la variable `someCondition` en true o false.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente, se muestra cómo inicializar un valor con <xref:System.Lazy%601>. Es posible que la variable Lazy no sea necesaria, dependiendo de si otro código establece la variable `someCondition` en True o False.  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -72,12 +77,12 @@ End Sub
 }  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=fullName> para inicializar un tipo que solo es visible en la instancia de objeto actual en el subproceso actual.  
   
- [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
- [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
+ [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)] [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Threading.LazyInitializer?displayProperty=fullName>   
- [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md)
+ [Inicialización diferida](../../../docs/framework/performance/lazy-initialization.md)
+

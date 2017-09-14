@@ -1,53 +1,59 @@
 ---
-title: "Runtime Information ETW Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "runtime information events [.NET Framework]"
-  - "ETW, runtime information events"
+title: "Eventos ETW de información en tiempo de ejecución"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- runtime information events [.NET Framework]
+- ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 caps.latest.revision: 6
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 6
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9a01b1f47969d7ddec250fa8bcafe5e1a851b5c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Runtime Information ETW Events
-Estos eventos ETW registran información sobre el runtime, incluidos SKU, número de versión, manera en que se activó el runtime, parámetros de línea de comandos con los que se inició, el GUID \(si es aplicable\) y otra información pertinente.  Si hay varios runtime ejecutándose dentro de un proceso, la información proporcionada por estos eventos \(ClrInstanceID\) ayuda a eliminar la ambigüedad entre los runtime.  
+# <a name="runtime-information-etw-events"></a>Eventos ETW de información en tiempo de ejecución
+Estos eventos ETW registran información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante. Si se están ejecutando varios tiempos de ejecución dentro de un proceso, la información proporcionada por estos eventos (ClrInstanceID) ayuda a eliminar la ambigüedad de los tiempos de ejecución.  
   
- En la siguiente tabla se muestran los dos eventos de información de runtime.  Los eventos se pueden generar con cualquier palabra clave o máscara. \(Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)\).  
+ En la tabla siguiente se muestran los dos eventos de información en tiempo de ejecución. Los eventos se pueden generar bajo cualquier palabra clave o máscara. (Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)).  
   
-|Evento|Identificador de evento|Proveedor|Descripción|  
-|------------|-----------------------------|---------------|-----------------|  
-|`RuntimeInformationEvent`|187|CLRRuntime|Se produce al cargar un runtime.|  
-|`RuntimeInformationDCStart`|187|CLRRundown|Enumera los runtime cargados.|  
+|Evento|Id. de evento|Proveedor|Descripción|  
+|-----------|--------------|--------------|-----------------|  
+|`RuntimeInformationEvent`|187|CLRRuntime|Se genera cuando se carga un tiempo de ejecución.|  
+|`RuntimeInformationDCStart`|187|CLRRundown|Enumera los tiempos de ejecución que se han cargado.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
 |Sku|win:UInt16|1 – CLR de escritorio.<br /><br /> 2 – CoreCLR.|  
-|BclVersion – Major Version|win:UInt16|Versión principal de mscorlib.dll.|  
-|BclVersion – Minor Version|win:UInt16|Versión secundaria de mscorlib.dll.|  
-|BclVersion – Build Number|win:UInt16|Número de compilación de mscorlib.dll.|  
-|BclVersion – QFE|win:UInt16|Número de versión de la revisión de mscorlib.dll.|  
-|VMVersion – Major Version|win:UInt16|Versión de clr.dll o coreclr.dll, que depende de SKU.|  
-|VMVersion – Minor Version|win:UInt16|Versión secundaria de clr.dll o coreclr.dll, que depende de SKU.|  
-|VMVersion – Build Number|win:UInt16|Número de compilación de clr.dll o coreclr.dll.|  
-|VMVersion – QFE|win:UInt16|Número de versión de la revisión de clr.dll o coreclr.dll.|  
+|BclVersion – Versión principal|win:UInt16|Versión principal de mscorlib.dll.|  
+|BclVersion – Versión secundaria|win:UInt16|Número de versión secundaria de mscorlib.dll.|  
+|BclVersion – Número de compilación|win:UInt16|Número de compilación de mscorlib.dll.|  
+|BclVersion – QFE|win:UInt16|Número de versión de revisión de mscorlib.dll.|  
+|VMVersion – Versión principal|win:UInt16|Versión de clr.dll o coreclr.dll, en función de la SKU.|  
+|VMVersion – Versión secundaria|win:UInt16|Versión secundaria de clr.dll o coreclr.dll, en función de la SKU.|  
+|VMVersion – Número de compilación|win:UInt16|Número de compilación de clr.dll o coreclr.dll.|  
+|VMVersion – QFE|win:UInt16|Número de versión de revisión de clr.dll o coreclr.dll.|  
 |StartupFlags|win:UInt32|Marcas de inicio definidas en mscoree.h.|  
-|StartupMode|win:UInt8|0x01 \- Ejecutable administrado.<br /><br /> 0x02 \- CLR hospedado.<br /><br /> 0x04 \- Interoperabilidad administrada de C\+\+.<br /><br /> 0x08 \- Activado por COM.<br /><br /> 0x10 \- Otros.|  
-|CommandLine|win:UnicodeString|No null solo si StartupMode\=0x01.|  
-|ComObjectGUID|win:GUID|No null solo si StartupMode\=0x08.|  
-|RuntimeDLLPath|win:UnicodeString|Ruta de acceso al archivo .dll de CLR cargado en el proceso.|  
+|StartupMode|win:UInt8|0x01: ejecutable administrado.<br /><br /> 0x02: CLR hospedado.<br /><br /> 0x04: interoperabilidad administrada de C++.<br /><br /> 0x08: activado para COM.<br /><br /> 0x10: otros.|  
+|CommandLine|win:UnicodeString|Distinto de NULL únicamente si StartupMode=0x01.|  
+|ComObjectGUID|win:GUID|Distinto de NULL únicamente si StartupMode=0x08.|  
+|RuntimeDLLPath|win:UnicodeString|Ruta de acceso al archivo .dll de CLR que se ha cargado en el proceso.|  
   
-## Vea también  
- [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vea también  
+ [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+

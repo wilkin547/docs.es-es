@@ -1,31 +1,36 @@
 ---
-title: "C&#243;mo establecer una directiva de cach&#233; para una solicitud | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "solicitar directivas de caché"
+title: "Cómo establecer una directiva de caché para una solicitud"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo establecer una directiva de cach&#233; para una solicitud
-El ejemplo siguiente muestra cómo establecer una directiva de caché para una solicitud.  La entrada de ejemplo es un URI como http:\/\/www.contoso.com\/.  
+# <a name="how-to-set-cache-policy-for-a-request"></a>Cómo establecer una directiva de caché para una solicitud
+En el ejemplo siguiente se muestra cómo establecer una directiva de caché para una solicitud. La entrada de ejemplo es un URI como http://www.contoso.com/.  
   
-## Ejemplo  
- El ejemplo de código siguiente crea una directiva de caché que permite que el recurso solicitado se utilice de la memoria caché si no ha estado en caché para más de un día.  El ejemplo muestra un mensaje que indica si se utilizó el recurso de memoria caché\- para el ejemplo, `"The response was retrieved from the cache : False."`— y envíe el recurso.  Una solicitud se puede satisfacer mediante cualquier caché entre el cliente y el servidor.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se crea una directiva de caché que permite que el recurso solicitado se use de la memoria caché si no ha estado en caché durante más de un día. El ejemplo muestra un mensaje que indica si se ha usado el recurso de la memoria caché; por ejemplo, `"The response was retrieved from the cache : False."`, y luego muestra el recurso. Una solicitud se puede satisfacer mediante cualquier caché entre el cliente y el servidor.  
   
 ```csharp  
 using System;  
@@ -110,12 +115,12 @@ Namespace Examples.System.Net.Cache
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## Vea también  
- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+## <a name="see-also"></a>Vea también  
+ [Cache Management for Network Applications (Administración de la memoria caché para aplicaciones de red)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)   
- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> \(Elemento, Configuración de red\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md)  (Directivas de caché de duración definida)  
+ [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

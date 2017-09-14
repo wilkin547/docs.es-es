@@ -1,44 +1,50 @@
 ---
-title: "Procedimientos recomendados para las clases System.Net | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "enviar datos, procedimientos recomendados"
-  - "solicitar datos de Internet, procedimientos recomendados"
-  - "clase WebRequest, procedimientos recomendados"
-  - "solicitudes de datos, procedimientos recomendados"
-  - "clase WebResponse, procedimientos recomendados"
-  - "procedimientos recomendados, solicitudes de datos"
-  - "recibir datos, procedimientos recomendados"
+title: Procedimientos recomendados para las clases System.Net
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data, best practices
+- requesting data from Internet, best practices
+- WebRequest class, best practices
+- data requests, best practices
+- WebResponse class, best practices
+- best practices, data requests
+- receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4fb997efc1ba23620cad4a63bd7fa683020a9056
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Procedimientos recomendados para las clases System.Net
-Las recomendaciones siguientes le ayudarán a utilizar las clases de <xref:System.Net> al mejor ventaja:  
+# <a name="best-practices-for-systemnet-classes"></a>Procedimientos recomendados para las clases System.Net
+Las siguientes recomendaciones le ayudarán a usar las clases incluidas en <xref:System.Net> para su beneficio:  
   
--   Utilice <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> siempre que sea posible en lugar de convertir los tipos a las clases descendientes.  Las aplicaciones que utilizan **WebRequest** y **WebResponse** pueden aprovecharse de nuevos protocolos de Internet sin necesidad de código extenso cambian.  
+-   Use <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> siempre que sea posible en lugar de la conversión de tipos en clases descendientes. Las aplicaciones que usan **WebRequest** y **WebResponse** pueden aprovechar los nuevos protocolos de Internet sin necesidad de grandes cambios de código.  
   
--   Al escribir las aplicaciones ASP.NET que se ejecutan en un servidor con las clases de **System.Net** , suele ser mejor, desde el punto de vista de rendimiento, utilizar los métodos asincrónicos para <xref:System.Net.WebRequest.GetResponse%2A> y <xref:System.Net.WebResponse.GetResponseStream%2A>.  
+-   Al escribir aplicaciones ASP.NET que se ejecutan en un servidor mediante las clases **System.Net**, a menudo es mejor, desde la perspectiva del rendimiento, usar los métodos asincrónicos de <xref:System.Net.WebRequest.GetResponse%2A> y <xref:System.Net.WebResponse.GetResponseStream%2A>.  
   
--   El número de conexiones abrió un recurso de internet puede tener un impacto significativo en el rendimiento y rendimiento de la red.  **System.Net** utiliza dos conexiones por la aplicación para el host de forma predeterminada.  Establecer la propiedad de <xref:System.Net.ServicePoint.ConnectionLimit%2A> en <xref:System.Net.ServicePoint> para una aplicación puede aumentar este número para un host concreto.  Establecer la propiedad de <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=fullName> puede aumentar este valor predeterminado para todos los hosts.  
+-   El número de conexiones abiertas a un recurso de Internet puede tener un impacto considerable en el rendimiento de red. **System.Net** usa dos conexiones por aplicación y por host de forma predeterminada. El establecimiento de la propiedad <xref:System.Net.ServicePoint.ConnectionLimit%2A> en el <xref:System.Net.ServicePoint> de la aplicación puede aumentar este número para un host determinado. El establecimiento de la propiedad <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=fullName> puede aumentar este valor predeterminado para todos los hosts.  
   
--   Al escribir protocolos, intente de socket\- nivel para utilizar [TCPClient](frlrfsystemnetsocketstcpclientclasstopic) o [UDPClient](frlrfsystemnetsocketsudpclientclasstopic) siempre que sea posible en lugar de escribir directamente a <xref:System.Net.Sockets.Socket>.  Estas dos clases de cliente encapsulan la creación TCP y de sockets UDP sin que sea necesario controlar los detalles de la conexión.  
+-   Cuando escriba protocolos de nivel de socket, procure usar <xref:System.Net.Sockets.TcpClient> o <xref:System.Net.Sockets.UdpClient> siempre que sea posible en lugar de escribir directamente en un <xref:System.Net.Sockets.Socket>. Estas dos clases de cliente encapsulan la creación de sockets TCP y UDP sin que sea necesario controlar los detalles de la conexión.  
   
--   Al tener acceso a los sitios que requieren las credenciales, utilice la clase de <xref:System.Net.CredentialCache> para crear una caché de credenciales en lugar de proporcionandolas con cada solicitud.  La clase de **CredentialCache** busca la caché para buscar la credencial adecuada para mostrar con una solicitud, aliviándole de la responsabilidad de crear y mostrar las credenciales basándose en la dirección URL.  
+-   Al acceder a sitios que requieren credenciales, use la clase <xref:System.Net.CredentialCache> para crear una memoria caché de credenciales en lugar de proporcionarlas con cada solicitud. La clase **CredentialCache** busca en la memoria caché para encontrar la credencial adecuada que debe presentar con una solicitud, lo cual elimina la responsabilidad de crear y presentar credenciales según la dirección URL.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)
+

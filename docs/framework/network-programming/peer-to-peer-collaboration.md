@@ -1,51 +1,61 @@
 ---
-title: "Colaboraci&#243;n de punto a punto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Colaboración de punto a punto"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b17fc74b2143f7307316a167330d06c87b9d4c3d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Colaboraci&#243;n de punto a punto
-La conexión de red punto a punto es el uso de los equipos relativamente eficaces \(equipos\) que existen en el borde de internet para algo más que las tareas informáticas cliente\- basadas en.  \(PC\) Del personal moderno tiene un procesador muy rápido, memoria completa, y un disco duro grande, ninguno cuyo se usan completamente al realizar tareas informáticas comunes como correo electrónico y examinar web.  El equipo moderno con facilidad puede actuar como un cliente y servidor \(par\) para muchos tipos de aplicaciones.  
+# <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
+La función de las redes punto a punto es permitir que los equipos PC que existen en el perímetro de Internet puedan realizar tareas informáticas que van más allá de las simplemente basadas en el cliente. Los equipos PC modernos cuentan con un procesador muy rápido, una memoria amplia y un disco duro grande, si bien ninguna de estas características se usa en su totalidad para realizar las tareas informáticas habituales, como el correo electrónico y la exploración web. Estos equipos pueden actuar fácilmente como cliente y servidor (del mismo nivel) para varios tipos de aplicaciones.  
   
--   El Collaboration entre iguales Infrastructure es una implementación simplificada de Microsoft Windows Infrastructure entre iguales que aprovecha el servicio de Equipos a mi sobre en Windows Vista y plataformas posteriores.  Es más apropiado para aplicaciones par\- habilitadas en una subred para la que el servicio de Equipos a mi alrededor funcione, aunque puede mantener extremos o los contactos de Internet también.  En el administrador de contacto común utilizado por Live Messenger y otras aplicaciones Vivo\- con conocimiento pleno de determinar extremos, disponibilidad, y presencia contact.  
+-   La infraestructura de colaboración de punto a punto es una implementación simplificada de la infraestructura punto a punto de Microsoft Windows que aprovecha el servicio Equipos a mi alrededor de Windows Vista y plataformas posteriores. Está concebida para aplicaciones habilitadas para el mismo nivel dentro de una subred para la que funciona el servicio Equipos a mi alrededor, aunque también puede ofrecer servicio a puntos de conexión de Internet o contactos. Incorpora el Administrador de contactos común que usan Live Messenger y otras aplicaciones compatibles con Live para determinar puntos de conexión de contacto, disponibilidad y presencia.  
   
-## Aplicaciones de colaboración  
- Una aplicación entre iguales típica de colaboración consta de los pasos siguientes:  
+-  
   
--   El par determina la identidad de un par que interesan en hospedar una sesión de colaboración  
+## <a name="collaboration-applications"></a>Aplicaciones de colaboración  
+ Una aplicación de colaboración de punto a punto típica consta de los siguientes pasos:  
   
--   Se envía una solicitud de hospedar una sesión, de algún modo, y el par de host acuerdan administrar actividad de colaboración.  
+-   Un elemento de mismo nivel determina la identidad de otro elemento de mismo nivel que está interesado en hospedar una sesión de colaboración.  
   
--   El host llama los contactos de la subred \(solicitante incluida\) a una sesión.  
+-   Se envía una solicitud para hospedar una sesión y el host de mismo nivel acepta administrar la actividad de colaboración.  
   
--   Todos los pares que desean colaborar pueden agregar el host a los administradores de contacto.  
+-   El host invita a los contactos en la subred (incluido el solicitante) a una sesión.  
   
--   La mayoría de los pares envían respuestas de una llamada, están permitidos o rechazados, de nuevo el par host a su puntualmente.  
+-   Todos los elementos de mismo nivel que quieran colaborar pueden agregar el host a sus administradores de contactos.  
   
--   Todos los pares que desean colaborar suscribirán el par de host.  
+-   En el momento adecuado, la mayoría de los elementos de mismo nivel enviarán al host respuestas a la invitación, para aceptarla como para rechazarla.  
   
--   Aunque los pares están realizando la actividad inicial de colaboración, el elemento host puede agregar a interlocutores remotos al administrador de contacto.  También procesa todas las respuestas de la llamada para determinar quién ha aceptado, que ha rechazado, y que no ha atendido.  Puede cancelar invitaciones a las que no han abiertas, o realizar alguna otra actividad.  
+-   Todos los equipos de mismo nivel que quieran colaborar se suscribirán al host de mismo nivel.  
   
--   En este punto, el elemento host puede iniciar una sesión de colaboración con todos los pares llama, o registrar una aplicación con la infraestructura de colaboración.  Las aplicaciones entre PROYECTOS utilizan el Collaboration entre iguales Infraestructura y el espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> para coordinar las comunicaciones para juegos, los boletines electrónicos, la comunicación, y otras aplicaciones serverless de la presencia.  
+-   Mientras los equipos de mismo nivel están realizando su actividad de colaboración inicial, el host de mismo nivel puede agregar equipos de mismo nivel remotos a su administrador de contactos. También procesa todas las respuestas a la invitación para determinar quién la ha aceptado, quién la ha rechazado y quién no ha respondido.  Puede cancelar las invitaciones a los que no hayan respondido, o realizar otra actividad.  
   
-## Seguridad entre iguales de red  
- En un dominio de Active Directory, controladores de dominio proporcionan servicios de autenticación mediante Kerberos.  En un entorno del mismo nivel serverless, los pares deben proporcionar su propia autenticación.  Para la conexión de red entre iguales, cada nodo puede actuar como CA, quitar el requisito de un certificado raíz en el almacén de raíces de confianza de raíz de cada par.  La autenticación se proporciona utilizando los certificados autofirmados, con formato como certificados X.509.  Éstos son los certificados creados por cada par, que genera el par de claves pública y privada y el certificado que se firma utilizando la clave privada.  El certificado autofirmado se utiliza para la autenticación y proporcionar información sobre la entidad del mismo nivel.  Como la autenticación X.509, la autenticación del mismo nivel de red se basa en una cadena de certificados que seguimiento de traza a una clave pública que confirmada.  
+-   En este momento, el host de mismo nivel puede iniciar una sesión de colaboración con todos los equipos de mismo nivel invitados o registrar una aplicación con la infraestructura de colaboración.  Las aplicaciones de P2P usan la infraestructura de colaboración punto a punto y el espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> para coordinar las comunicaciones de juegos, tablones de anuncios, conferencias y otras aplicaciones de presencia sin servidor.  
   
-## Vea también  
+-  
+  
+## <a name="peer-to-peer-networking-security"></a>Seguridad de redes punto a punto  
+ En un dominio de Active Directory, los controladores de dominio proporcionan servicios de autenticación mediante Kerberos. En un entorno de equipos de mismo nivel sin servidor, estos deben proporcionar su propia autenticación. En las redes punto a punto, cualquier nodo puede actuar como una entidad de certificación, eliminando el requisito de un certificado raíz en el almacén raíz de confianza de cada elemento de mismo nivel. La autenticación se proporciona mediante certificados autofirmados, con formato de certificados X.509. Estos son los certificados que crea cada elemento de mismo nivel, lo que genera el par de claves pública y privada, y el certificado que se firma con la clave privada. El certificado autofirmado se usa para la autenticación y para proporcionar información sobre la entidad de mismo nivel. Al igual que la autenticación X.509, la autenticación de redes de mismo nivel se basa en una cadena de certificados que tiene su origen en una clave pública que sea de confianza.  
+  
+## <a name="see-also"></a>Vea también  
  <xref:System.Net.PeerToPeer.Collaboration>   
  [Acerca del espacio de nombres System.Net.PeerToPeer.Collaboration](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+

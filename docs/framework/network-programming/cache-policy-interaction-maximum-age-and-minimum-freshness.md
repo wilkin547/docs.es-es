@@ -1,47 +1,53 @@
 ---
-title: "Interacci&#243;n de la directiva de cach&#233;, antig&#252;edad m&#225;xima y actualizaci&#243;n m&#237;nima | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "directivas de caché de duración definida"
-  - "Revalidar la directiva"
-  - "caché [.NET Framework], directivas de duración definida"
-  - "actualización de los recursos almacenados en caché"
-  - "directiva de antigüedad máxima"
-  - "directiva de actualización mínima"
-  - "antigüedad de los recursos almacenados en caché"
+title: "Interacción de la directiva de caché, antigüedad máxima y actualización mínima"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- time-based cache policies
+- Revalidate policy
+- cache [.NET Framework], time-based policies
+- freshness of cached resources
+- maximum age policy
+- minimum freshness policy
+- age of cached resources
 ms.assetid: 6567d451-ecec-496c-95a3-a415b99ba52a
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29bc33db40e396d28347d1fc491b94541eb75f33
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Interacci&#243;n de la directiva de cach&#233;, antig&#252;edad m&#225;xima y actualizaci&#243;n m&#237;nima
-Para asegurarse de que el contenido más reciente se devuelto a la aplicación cliente, la interacción de la directiva de caché del cliente y los requisitos de volver a validar de servidor generan siempre a la directiva más conservadora de caché.  Todos los ejemplos de este tema muestran la directiva de caché para un recurso que está almacenado en memoria caché el 1 de enero y expira el 4 de enero.  
+# <a name="cache-policy-interactionmaximum-age-and-minimum-freshness"></a>Interacción de la directiva de caché, antigüedad máxima y actualización mínima
+Para garantizar que se devuelva a la aplicación cliente el contenido más actualizado, la interacción de la directiva de caché de cliente y los requisitos de revalidación de servidor siempre da como resultado la directiva de caché más conservadora. Todos los ejemplos de este tema muestran la directiva de caché de un recurso que se ha almacenado en caché el 1 de enero y expira el 4 de enero.  
   
- Los ejemplos siguientes muestran la directiva de caché que los resultados de interacción age máxima \(`maxAge`\) y los valores mínimos de la actualización \(`minFresh`\).  
+ Los ejemplos siguientes muestran la directiva de caché que resulta de la interacción de los valores de antigüedad máxima (`maxAge`) y actualización mínima (`minFresh`).  
   
--   Si la directiva de caché establece `maxAge` \= 2 días y `minFresh` no se especifica, el contenido el 3 de enero volverá.  
+-   Si la directiva de caché establece `maxAge` = 2 días y `minFresh` no está especificado, el contenido se vuelve a validar el 3 de enero.  
   
--   Si la directiva de caché establece `maxAge` \= 2 días y `minFresh` \= 1 día, como `maxAge`, el contenido es nuevo hasta el 3 de enero.  Como `minFresh`, el contenido es nuevo hasta el 3 de enero.  Por consiguiente, el contenido se debe el 3 de enero volverá.  
+-   Si la directiva de caché establece `maxAge` = 2 días y `minFresh` = 1 día, según `maxAge`, el contenido está actualizado hasta el 3 de enero. Según `minFresh`, el contenido está actualizado hasta el 3 de enero. Por lo tanto, el contenido se debe volver a validar el 3 de enero.  
   
--   Si la directiva de caché establece `maxAge`\= 2 días y `minFresh` \= 2 días, como `maxAge`, el contenido es nuevo hasta el 3 de enero.  Como `minFresh` el contenido es nuevo hasta el 2 de enero.  Por consiguiente, el contenido se debe el 2 de enero volverá.  
+-   Si la directiva de caché establece `maxAge` = 2 días y `minFresh` = 2 días, según `maxAge`, el contenido está actualizado hasta el 3 de enero. Según `minFresh`, el contenido está actualizado hasta el 2 de enero. Por lo tanto, el contenido se debe volver a validar el 2 de enero.  
   
-## Vea también  
- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+## <a name="see-also"></a>Vea también  
+ [Cache Management for Network Applications (Administración de la memoria caché para aplicaciones de red)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)   
- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md)  (Directivas de caché de duración definida)  
  [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
- [Interacción de la directiva de caché, antigüedad máxima y obsolencia máxima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)
+ [Cache Policy Interaction—Maximum Age and Maximum Staleness](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md) (Interacción de la directiva de caché: antigüedad máxima y obsolescencia máxima)
+

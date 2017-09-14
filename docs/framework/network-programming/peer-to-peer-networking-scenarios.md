@@ -1,74 +1,88 @@
 ---
-title: "Escenarios de redes punto a punto | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Escenarios de redes punto a punto
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: edf493f0999dc78e6b1065176f1638b23667d9b3
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Escenarios de redes punto a punto
-La conexión de red punto a punto habilita o amplía los escenarios siguientes:  
+# <a name="peer-to-peer-networking-scenarios"></a>Escenarios de redes punto a punto
+Las redes punto a punto habilitan o mejoran los escenarios siguientes:  
   
-## Comunicaciones en tiempo real \(RTC\)  
+## <a name="real-time-communications-rtc"></a>Comunicaciones en tiempo real (RTC)  
   
--   Mensajería instantánea de Serverless  
+-   Mensajería instantánea sin servidor  
   
- RTC existe actual.  Los usuarios de sistemas pueden charlar y tener voz o conversaciones de vídeo con sus pares actual.  Sin embargo, muchos de los programas existentes y de los protocolos de comunicaciones confían en los servidores para funcionar.  Si va a combinar en una red inalámbrica ad hoc o es una parte de una red aislada, no puede utilizar estas funciones RTC.  La tecnología entre iguales permite la expansión de las tecnologías RTC en estos entornos de conexión de red adicionales.  
+ RTC existe en la actualidad. En la actualidad, los usuarios de equipos pueden chatear y tener conversaciones de voz o vídeo con sus colegas. Pero muchos de los programas existentes y sus protocolos de comunicaciones se basan en servidores para funcionar. Si participa en una red inalámbrica ad hoc o forma parte de una red aislada, no podrá usar estas instalaciones de RTC. La tecnología punto a punto permite la extensión de las tecnologías de RTC a estos entornos de red adicionales.  
   
--   Servicio de contacto con contrincantes y gameplay en tiempo real  
+-   Emparejamiento y juegos en tiempo real  
   
- Similar a RTC, el juego en tiempo real de juego existe actual.  Hay muchos sitios Web\- basados de juego que abastecen a la comunidad de juego a través de internet.  Proporcionan la capacidad de buscar otros videojugadores con intereses similares y reproducir un juego juntos.  El problema es que los sitios de juego sólo existen en internet y se apropiados hacia el videojugador ávido que desea reproducir contra los mejores videojugadores universal.  Estos sitios siguen y proporcionan estadísticas para ayudar en el proceso.  Sin embargo, estos sitios no permiten que un videojugador configurar un juego ad hoc entre amigos en diferentes entornos de conexión de red.  La conexión de red punto a punto puede proporcionar esta capacidad.  
+ Similar a RTC, los juegos en tiempo real existen en la actualidad. Hay muchos sitios de juegos basados en web destinados a la comunidad de videojuegos a través de Internet. Ofrecen la capacidad de buscar a otros jugadores con los mismos intereses y jugar a un juego juntos. El problema es que los sitios de juegos existen únicamente en Internet y están orientados hacia el jugador que quiere competir con los mejores jugadores del mundo. Estos sitios realizan un seguimiento y proporcionan estadísticas para ayudar en el proceso. Pero estos sitios no permiten que el jugador configure un juego ad-hoc entre amigos en una variedad de entornos de red. Las redes punto a punto pueden proporcionar esta funcionalidad.  
   
-## Colaboración  
+## <a name="collaboration"></a>Colaboración  
   
--   Áreas de trabajo del proyecto que resuelven un objetivo  
+-   Áreas de trabajo de proyecto para resolver un objetivo  
   
- Las aplicaciones compartidas en el área de trabajo permiten la creación de grupos de trabajo ad hoc y después permiten los propietarios de grupo de trabajo rellenen el área de trabajo compartida con las herramientas y la contenten que permitirá al grupo debe resolver un problema.  Esto podría incluir paneles de mensajes, las herramientas de productividad, y los archivos.  
+ Las aplicaciones de área de trabajo compartida permiten la creación de grupos de trabajo ad hoc y, después, permiten que los propietarios del grupo de trabajo rellenen el área de trabajo compartida con las herramientas y el contenido que permitirá que el grupo resuelva un problema. Podría tratarse de paneles de mensajes, herramientas de productividad y archivos.  
   
--   Compartir archivos con otros  
+-   Compartir archivos con otros usuarios  
   
- Un subconjunto de uso compartido del área de trabajo del proyecto es la capacidad de compartir los archivos.  Aunque esta capacidad existe actual con la versión actual de Windows, puede mejorar en la conexión de red punto a punto para crear contenido de archivo disponibles de una manera sencilla y fácil de usar.  Permitiendo acceso fácil a la riqueza increíble de contenido en el borde de internet o en entornos de computación ad hoc incrementa el valor de computación en red.  
+ Un subconjunto del uso compartido de áreas de trabajo de proyecto es la capacidad para compartir archivos. Aunque esta capacidad existe en la actualidad con la versión actual de Windows, se puede mejorar a través de las redes punto a punto para que el contenido de archivo esté disponible de una forma sencilla y descriptiva. Permitir el acceso sencillo a la increíble cantidad de contenido en el perímetro de Internet o en los entornos informáticos ad hoc aumenta el valor de la informática de red.  
   
 -   Compartir experiencias  
   
- Con la conectividad inalámbricos cada vez más frecuente, la conexión de red de par\-a\- par permite que esté conectado en un grupo de pares y pueda compartir sus experiencias \(como una puesta de sol, un concierto de rock, o una pasan de vacaciones\) mientras se producen.  
+ Con el uso cada vez más frecuente de la conectividad inalámbrica, las redes punto a punto permiten que un grupo de compañeros estén en línea y compartan sus experiencias en el momento en el que ocurren (por ejemplo, una puesta de sol, un concierto de rock o un crucero de vacaciones).  
   
-## Distribución de contenido  
+## <a name="content-distribution"></a>Distribución de contenido  
   
 -   Mensajes de texto  
   
- La conexión de red punto a punto puede permitir la difusión de información basada en texto en forma de archivos o mensajes a un grupo de usuarios grande.  Un ejemplo es una lista de noticias.  
+ Las redes punto a punto pueden permitir la divulgación de información basada en texto en forma de archivos o mensajes a un grupo grande de usuarios. Un ejemplo es una lista de noticias.  
+  
+-  
   
 -   Audio y vídeo  
   
- La conexión de red entre iguales también puede permitir la difusión de información de audio o vídeo a un grupo de usuarios grande, como una reunión grande de concierto o de su empresa.  Para distribuir el contenido actual, debe configurar los servidores de alta capacidad obtener y distribuir la carga en cientos o a miles de usuarios.  Con conexión de red punto a punto, solo unos cuantos de pares obtendría realmente su contenido de servidores centralizados.  Estos pares inundarían esta información desproteger algunas más personas que la envían a otras, y así sucesivamente.  La carga de distribuir el contenido se distribuye a pares en nube.  Un par que desea recibir el contenido produce el par que distribuye más próximo y obtiene el contenido de ellos.  
+ Las redes punto a punto también pueden permitir la divulgación de información de audio o vídeo a un grupo grande de usuarios (por ejemplo, un concierto o una reunión de empresa grande). Para distribuir el contenido en la actualidad, debe configurar servidores de alta capacidad para recopilar y distribuir la carga a cientos o miles de usuarios. Con las redes punto a punto, solo un conjunto de equipos del mismo nivel obtienen realmente el contenido desde los servidores centralizados. Estos equipos podrían enviar la información a otros pocos usuarios que la enviarían a otros usuarios y así sucesivamente. La carga de distribuir el contenido se distribuye a los equipos del mismo nivel en la nube. Un equipo del mismo nivel que quiera recibir el contenido buscaría el equipo de distribución más cercano y obtendría el contenido de él.  
   
--   Distribución de actualizaciones del producto  
+-  
   
- La conexión de red entre iguales también puede proporcionar un mecanismo eficaz para distribuir el software como actualizaciones del producto \(los actualizaciones de seguridad y los Service Pack\).  Un par que tiene una conexión a un servidor de distribución de software puede obtener la actualización del producto y difundirla a los otros miembros del grupo.  
+-   Distribución de actualizaciones de productos  
   
-## Procesamiento distribuido  
+ Las redes punto a punto también pueden proporcionar un mecanismo eficaz para distribuir software, como actualizaciones de productos (actualizaciones de seguridad y Service Pack). Un equipo del mismo nivel que tiene una conexión a un servidor de distribución de software puede obtener la actualización del producto y propagarla a los demás miembros de su grupo.  
+  
+-  
+  
+## <a name="distributed-processing"></a>Procesamiento distribuido  
   
 -   División y distribución de una tarea  
   
- Una tarea de computación grande se puede primero dividir en las tareas informáticas más pequeñas independientes apropiadas a los recursos de computación de un par.  Un par podría hacer dividir de la tarea de computación grande.  A continuación, la conexión de red punto a punto puede distribuir las tareas individuales a pares diferentes en el grupo.  Cada par realiza la tarea de software y sacar el resultado a un punto de acumulación centralizado.  
+ Una tarea informática grande puede dividirse primero en tareas independientes más pequeñas adecuadas para los recursos informáticos de un equipo del mismo nivel. Un equipo del mismo nivel podría realizar la división de la tarea informática grande. Después, las redes punto a punto pueden distribuir las tareas individuales a los diferentes equipos del mismo nivel en el grupo. Cada equipo del mismo nivel realiza su tarea informática e informa de su resultado a un punto de acumulación centralizado.  
   
--   Agregación de los recursos del equipo  
+-   Agregación de recursos del equipo  
   
- Otra manera de utilizar la conexión de red punto a punto para el procesamiento distribuido es ejecutar los programas de cada par que se ejecutan durante el tiempo de procesador inactivos y forma parte de una tarea de computación más grande que sea coordinada por un servidor central.  Agregando los procesadores de varios equipos, conexión de red punto a punto puede activar un grupo de equipos del mismo nivel en un procesador paralelo grande para las tareas informáticas grandes.  
+ Otra manera de usar las redes punto a punto para el procesamiento distribuido es ejecutar programas en cada equipo del mismo nivel que se ejecuten en momentos de inactividad del procesador y formen parte de una tarea informática mayor coordinada por un servidor central. Al agregar los procesadores de varios equipos, las redes punto a punto pueden convertir un grupo de equipos del mismo nivel en un procesador paralelo grande para tareas informáticas voluminosas.  
   
-## Vea también  
+-  
+  
+## <a name="see-also"></a>Vea también  
  <xref:System.Net.PeerToPeer.Collaboration>
+

@@ -1,102 +1,107 @@
 ---
-title: "Garbage Collection ETW Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "GC events"
-  - "garbage collection events [.NET Framework]"
-  - "ETW, garbage collection events (CLR)"
+title: "Eventos ETW de recolección de elementos no utilizados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GC events
+- garbage collection events [.NET Framework]
+- ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 caps.latest.revision: 21
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 06fc335e4b8011afd92e698b20e4b84572b153c3
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Garbage Collection ETW Events
+# <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 <a name="top"></a> Estos eventos recopilan información sobre la recolección de elementos no utilizados. Ayudan en el diagnóstico y depuración, así como en la determinación de cuántas veces se realizó la recolección de elementos no utilizados, cuánta memoria se liberó durante la recolección de elementos no utilizados, etc.  
   
  Esta categoría consta de los siguientes eventos:  
   
--   [Evento GCStart\_V1](#gcstart_v1_event)  
+-   [Evento GCStart_V1](#gcstart_v1_event)  
   
--   [Evento GCEnd\_V1](#gcend_v1_event)  
+-   [Evento GCEnd_V1](#gcend_v1_event)  
   
--   [Evento GCHeapStats\_V1](#gcheapstats_v1_event)  
+-   [Evento GCHeapStats_V1](#gcheapstats_v1_event)  
   
--   [Evento GCCreateSegment\_V1](#gccreatesegment_v1_event)  
+-   [Evento GCCreateSegment_V1](#gccreatesegment_v1_event)  
   
--   [Evento GCFreeSegment\_V1](#gcfreesegment_v1_event)  
+-   [Evento GCFreeSegment_V1](#gcfreesegment_v1_event)  
   
--   [Evento GCRestartEEBegin\_V1](#gcrestarteebegin_v1_event)  
+-   [Evento GCRestartEEBegin_V1](#gcrestarteebegin_v1_event)  
   
--   [Evento GCRestartEEEnd\_V1](#gcrestarteeend_v1_event)  
+-   [Evento GCRestartEEEnd_V1](#gcrestarteeend_v1_event)  
   
--   [Evento GCSuspendEE\_V1](#gcsuspendee_v1_event)  
+-   [Evento GCSuspendEE_V1](#gcsuspendee_v1_event)  
   
--   [Evento GCSuspendEE\_V1](#gcsuspendeeend_v1_event)  
+-   [Evento GCSuspendEE_V1](#gcsuspendeeend_v1_event)  
   
--   [Evento GCAllocationTick\_V2](#gcallocationtick_v2_event)  
+-   [Evento GCAllocationTick_V2](#gcallocationtick_v2_event)  
   
--   [Evento GCFinalizersBegin\_V1](#gcfinalizersbegin_v1_event)  
+-   [Evento GCFinalizersBegin_V1](#gcfinalizersbegin_v1_event)  
   
--   [Evento GCFinalizersEnd\_V1](#gcfinalizersend_v1_event)  
+-   [Evento GCFinalizersEnd_V1](#gcfinalizersend_v1_event)  
   
--   [Evento GCCreateConcurrentThread\_V1](#gccreateconcurrentthread_v1_event)  
+-   [Evento GCCreateConcurrentThread_V1](#gccreateconcurrentthread_v1_event)  
   
--   [Evento GCCreateConcurrentThread\_V1](#gcterminateconcurrentthread_v1_event)  
+-   [Evento GCCreateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## Evento GCStart\_V1  
- En la tabla siguiente se muestra la palabra clave y el nivel. \(Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)\).  
+## <a name="gcstartv1-event"></a>Evento GCStart_V1  
+ En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)).  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCStart_V1`|1|Se ha iniciado una recolección de elementos no utilizados.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |Recuento|win:UInt32|Recolección de elementos no utilizados número *n*.|  
 |Profundidad|win:UInt32|Generación que se está recopilando.|  
-|Motivo|win:UInt32|¿Por qué se desencadenó la recolección de elementos no utilizados:<br /><br /> 0x0: asignación del montón de objetos pequeños.<br /><br /> 0x1: provocada.<br /><br /> 0x2: memoria insuficiente.<br /><br /> 0x3: vacía.<br /><br /> 0x4: asignación del montón de objetos grandes.<br /><br /> 0x5: espacio insuficiente \(para montón de objetos pequeños\).<br /><br /> 0x6: espacio insuficiente \(para montón de objetos grandes\).<br /><br /> 0x7: provocada pero no forzada como bloqueo.|  
+|Motivo|win:UInt32|¿Por qué se desencadenó la recolección de elementos no utilizados:<br /><br /> 0x0: asignación del montón de objetos pequeños.<br /><br /> 0x1: provocada.<br /><br /> 0x2: memoria insuficiente.<br /><br /> 0x3: vacía.<br /><br /> 0x4: asignación del montón de objetos grandes.<br /><br /> 0x5: espacio insuficiente (para montón de objetos pequeños).<br /><br /> 0x6: espacio insuficiente (para montón de objetos grandes).<br /><br /> 0x7: provocada pero no forzada como bloqueo.|  
 |Tipo|win:UInt32|0x0: el bloqueo de la recolección de elementos no utilizados se produjo fuera de recolección de elementos no utilizados en segundo plano.<br /><br /> 0x1: recolección de elementos no utilizados en segundo plano.<br /><br /> 0x2: el bloqueo de la recolección de elementos no utilizados se produjo durante la recolección de elementos no utilizados en segundo plano.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
  [Volver al principio](#top)  
   
 <a name="gcend_v1_event"></a>   
-## Evento GCEnd\_V1  
+## <a name="gcendv1-event"></a>Evento GCEnd_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCEnd_V1`|2|La recolección de elementos no utilizados ha finalizado.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |Recuento|win:UInt32|Recolección de elementos no utilizados número *n*.|  
 |Profundidad|win:UInt32|Generación que se recopiló.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
@@ -104,23 +109,23 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## Evento GCHeapStats\_V1  
+## <a name="gcheapstatsv1-event"></a>Evento GCHeapStats_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Descripción|  
-|------------|-------------------|-----------------|  
+|-----------|--------------|-----------------|  
 |`GCHeapStats_V1`|4|Muestra las estadísticas del montón al final de cada recolección de elementos no utilizados.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |GenerationSize0|win:UInt64|Tamaño, en bytes, de la memoria de la generación 0.|  
 |TotalPromotedSize0|win:UInt64|Número de bytes que se promueven de generación 0 a generación 1.|  
 |GenerationSize1|win:UInt64|Tamaño, en bytes, de la memoria de la generación 1.|  
@@ -131,7 +136,7 @@ caps.handback.revision: 20
 |TotalPromotedSize3|win:UInt64|Número de bytes que sobrevivieron en el montón de objetos grandes después de la última recolección.|  
 |FinalizationPromotedSize|win:UInt64|Tamaño total, en bytes, de los objetos que están listos para la finalización.|  
 |FinalizationPromotedCount|win:UInt64|Número de objetos que están listos para la finalización.|  
-|PinnedObjectCount|win:UInt32|Número de objetos anclados \(inamovibles\).|  
+|PinnedObjectCount|win:UInt32|Número de objetos anclados (inamovibles).|  
 |SinkBlockCount|win:UInt32|Número de bloques de sincronización en uso.|  
 |GCHandleCount|win:UInt32|Número de controles de recolección de elementos no utilizados en uso.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
@@ -139,23 +144,23 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## Evento GCCreateSegment\_V1  
+## <a name="gccreatesegmentv1-event"></a>Evento GCCreateSegment_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCCreateSegment_V1`|5|Se ha creado un nuevo segmento de recopilación de elementos no utilizados. Además, si se habilita el seguimiento en un proceso que ya se está ejecutando, se genera este evento para cada segmento existente.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |Dirección|win:UInt64|Dirección del segmento.|  
 |Tamaño|win:UInt64|Tamaño del segmento.|  
 |Tipo|win:UInt32|0x0: montón de objetos pequeños.<br /><br /> 0x1: montón de objetos grandes.<br /><br /> 0x2: montón de solo lectura.|  
@@ -166,40 +171,40 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## Evento GCFreeSegment\_V1  
+## <a name="gcfreesegmentv1-event"></a>Evento GCFreeSegment_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCFreeSegment_V1`|6|Se ha liberado un segmento de recolección de elementos no utilizados.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |Dirección|win:UInt64|Dirección del segmento.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
  [Volver al principio](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## Evento GCRestartEEBegin\_V1  
+## <a name="gcrestarteebeginv1-event"></a>Evento GCRestartEEBegin_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCRestartEEBegin_V1`|7|Ha comenzado la reanudación de la suspensión de Common Language Runtime.|  
   
  Sin datos del evento.  
@@ -207,17 +212,17 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## Evento GCRestartEEEnd\_V1  
+## <a name="gcrestarteeendv1-event"></a>Evento GCRestartEEEnd_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCRestartEEEnd_V1`|3|Ha finalizado la reanudación de la suspensión de Common Language Runtime.|  
   
  Sin datos del evento.  
@@ -225,41 +230,41 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## Evento GCSuspendEE\_V1  
+## <a name="gcsuspendeev1-event"></a>Evento GCSuspendEE_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCSuspendEE_V1`|9|Inicio de la suspensión del motor de ejecución de la recolección de elementos no utilizados.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |Motivo|win:UInt16|0x0: otros.<br /><br /> 0x1: recolección de elementos no utilizados.<br /><br /> 0x2: cierre del dominio de aplicación.<br /><br /> 0x3: eliminación de código nativo.<br /><br /> 0x4: cierre.<br /><br /> 0x5: depurador.<br /><br /> 0x6: preparación para la recolección de elementos no utilizados.|  
-|Recuento|win:UInt32|Número de subprocesos que se suspenden.|  
+|Recuento|win:UInt32|El recuento de GC en el momento. Normalmente, verá un evento Inicio de GC posterior después de esto, y su recuento será este recuento + 1 a medida que aumentamos el índice de GC durante una recolección de elementos no utilizados.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
  [Volver al principio](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## Evento GCSuspendEE\_V1  
+## <a name="gcsuspendeeendv1-event"></a>Evento GCSuspendEE_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCSuspendEEEnd_V1`|8|Final de la suspensión del motor de ejecución de la recolección de elementos no utilizados.|  
   
  Sin datos del evento.  
@@ -267,45 +272,45 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## Evento GCAllocationTick\_V2  
+## <a name="gcallocationtickv2-event"></a>Evento GCAllocationTick_V2  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCAllocationTick_V2`|10|Cada vez se asignan aproximadamente 100 KB.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
-|AllocationAmount|win:UInt32|Tamaño de la asignación, en bytes. Este valor es preciso para las asignaciones que son menores que la longitud de ULONG \(4.294.967.295 bytes\). Si la asignación es mayor, este campo contiene un valor truncado. Use `AllocationAmount64` para asignaciones muy grandes.|  
-|AllocationKind|win:UInt32|0x0: asignación de objetos pequeños \(la asignación está en un montón de objetos pequeños\).<br /><br /> 0x1: asignación de objetos grandes \(la asignación está en un montón de objetos grandes\).|  
+|----------------|---------------|-----------------|  
+|AllocationAmount|win:UInt32|Tamaño de la asignación, en bytes. Este valor es preciso para las asignaciones que son menores que la longitud de ULONG (4.294.967.295 bytes). Si la asignación es mayor, este campo contiene un valor truncado. Use `AllocationAmount64` para asignaciones muy grandes.|  
+|AllocationKind|win:UInt32|0x0: asignación de objetos pequeños (la asignación está en un montón de objetos pequeños).<br /><br /> 0x1: asignación de objetos grandes (la asignación está en un montón de objetos grandes).|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
 |AllocationAmount64|win:UInt64|Tamaño de la asignación, en bytes. Este valor es preciso para asignaciones muy grandes.|  
-|TypeId|win:Pointer|Dirección de la MethodTable. Cuando durante este evento se asignaron varios tipos de objetos, esta es la dirección de la MethodTable que corresponde al último objeto asignado \(es decir, el objeto que hizo que se supere el umbral de 100 KB\).|  
-|TypeName|win:UnicodeString|Nombre del tipo que se asignó. Cuando durante este evento se asignaron varios tipos de objetos, este es el tipo del último objeto asignado \(es decir, el objeto que hizo que se supere el umbral de 100 KB\).|  
-|HeapIndex|win:UInt32|Montón al que se ha asignado el objeto. Este valor es 0 \(cero\) cuando se ejecuta con la recolección de elementos no utilizados de estación de trabajo.|  
+|TypeId|win:Pointer|Dirección de la MethodTable. Cuando durante este evento se asignaron varios tipos de objetos, esta es la dirección de la MethodTable que corresponde al último objeto asignado (es decir, el objeto que hizo que se supere el umbral de 100 KB).|  
+|TypeName|win:UnicodeString|Nombre del tipo que se asignó. Cuando durante este evento se asignaron varios tipos de objetos, este es el tipo del último objeto asignado (es decir, el objeto que hizo que se supere el umbral de 100 KB).|  
+|HeapIndex|win:UInt32|Montón al que se ha asignado el objeto. Este valor es 0 (cero) cuando se ejecuta con la recolección de elementos no utilizados de estación de trabajo.|  
   
  [Volver al principio](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## Evento GCFinalizersBegin\_V1  
+## <a name="gcfinalizersbeginv1-event"></a>Evento GCFinalizersBegin_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCFinalizersBegin_V1`|14|Inicio de los finalizadores en ejecución.|  
   
  Sin datos del evento.  
@@ -313,41 +318,41 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## Evento GCFinalizersEnd\_V1  
+## <a name="gcfinalizersendv1-event"></a>Evento GCFinalizersEnd_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCFinalizersEnd_V1`|13|Final de los finalizadores en ejecución.|  
   
  En la siguiente tabla se muestran los datos del evento.  
   
 |Nombre de campo|Tipo de datos|Descripción|  
-|---------------------|-------------------|-----------------|  
+|----------------|---------------|-----------------|  
 |Recuento|win:UInt32|Número de finalizadores que se ejecutó.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
  [Volver al principio](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## Evento GCCreateConcurrentThread\_V1  
+## <a name="gccreateconcurrentthreadv1-event"></a>Evento GCCreateConcurrentThread_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
-|`ThreadingKeyword` \(0x10000\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
+|`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCCreateConcurrentThread_V1`|11|El subproceso de recolección de elementos no utilizados simultánea se creó.|  
   
  Sin datos del evento.  
@@ -355,21 +360,22 @@ caps.handback.revision: 20
  [Volver al principio](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## Evento GCCreateConcurrentThread\_V1  
+## <a name="gcterminateconcurrentthreadv1-event"></a>Evento GCCreateConcurrentThread_V1  
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
-|------------------------------------------|-----------|  
-|`GCKeyword` \(0x1\)|Informativo \(4\)|  
-|`ThreadingKeyword` \(0x10000\)|Informativo \(4\)|  
+|-----------------------------------|-----------|  
+|`GCKeyword` (0x1)|Informativo (4)|  
+|`ThreadingKeyword` (0x10000)|Informativo (4)|  
   
  En la siguiente tabla se muestra la información del evento.  
   
 |Evento|Id. de evento|Se genera cuando|  
-|------------|-------------------|----------------------|  
+|-----------|--------------|-----------------|  
 |`GCTerminateConcurrentThread_V1`|12|El subproceso de recolección de elementos no utilizados simultánea finalizó.|  
   
  Sin datos del evento.  
   
-## Vea también  
- [CLR ETW Events](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Vea también  
+ [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
+

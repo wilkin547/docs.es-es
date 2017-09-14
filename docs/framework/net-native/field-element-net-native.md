@@ -1,33 +1,36 @@
 ---
-title: "Elemento &lt;Field&gt; (.NET Native) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;Field&gt; (.NET Native)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84b0e28fb09f730999a8cad6e5002338957ef6a2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Elemento &lt;Field&gt; (.NET Native)
+# <a name="ltfieldgt-element-net-native"></a>Elemento &lt;Field&gt; (.NET Native)
 Aplica la directiva de reflexión en tiempo de ejecución a un campo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  
-  
 <Field Name="field_name"  
        Browse="policy_type"  
        Dynamic="policy_type"  
        Serialize="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -46,13 +49,13 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*NombreMétodo*|Nombre de campo. El tipo del campo es definido por el elemento primario [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) o [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) elemento.|  
+|*method_name*|Nombre de campo. El tipo del campo está definido por el elemento primario [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) o [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*policy_setting*|La configuración que se aplica a este tipo de política para el campo. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, consulte [configuración de directiva de directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md).|  
+|*policy_setting*|La configuración que se aplica a este tipo de política para el campo. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -61,13 +64,14 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
  Si la directiva de un campo no se define explícitamente, entonces hereda la directiva de tiempo de ejecución de su elemento primario.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [Referencia del archivo de configuración de tiempo de ejecución de directivas (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [Configuración de la directiva de directiva en tiempo de ejecución](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+ [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución)
+

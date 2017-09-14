@@ -1,28 +1,33 @@
 ---
-title: "C&#243;mo: descargar archivos mediante FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Cómo: descargar archivos mediante FTP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 caps.latest.revision: 5
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 5
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd72ac27b2aaaf2afe7e2c307fcc1b40cde841da
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo: descargar archivos mediante FTP
-Este ejemplo muestra cómo descargar un archivo de un servidor FTP.  
+# <a name="how-to-download-files-with-ftp"></a>Cómo: descargar archivos mediante FTP
+En este ejemplo se muestra cómo descargar un archivo de un servidor FTP.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```csharp  
 using System;  
@@ -58,11 +63,12 @@ namespace Examples.System.Net
 }  
 ```  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias al espacio de nombres **System.Net** .  
+-   Referencias al espacio de nombres **System.Net**.  
   
-## Programación eficaz  
+## <a name="robust-programming"></a>Programación sólida  
   
-## Seguridad de .NET Framework
+## <a name="net-framework-security"></a>Seguridad de .NET Framework
+

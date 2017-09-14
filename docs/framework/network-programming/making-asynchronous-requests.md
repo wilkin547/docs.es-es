@@ -1,56 +1,61 @@
 ---
-title: "Realizar solicitudes asincr&#243;nicas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Internet, acceso asincrónico"
-  - "Redes"
-  - "solicitudes asincrónicas, recursos de Internet"
-  - "Recursos de red"
-  - "clase WebRequest, acceso asincrónico"
+title: "Realizar solicitudes asincrónicas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, asynchronous access
+- Networking
+- asynchronous requests, Internet resources
+- Network Resources
+- WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Realizar solicitudes asincr&#243;nicas
-Las clases de <xref:System.Net> utilizan el modelo de programación asincrónica estándar de.NET framework para el acceso asincrónico a los recursos de internet.  Los métodos de <xref:System.Net.WebRequest.BeginGetResponse%2A> y de <xref:System.Net.WebRequest.EndGetResponse%2A> de la clase de <xref:System.Net.WebRequest> comienzan y completan las solicitudes asincrónicas para un recurso de internet.  
+# <a name="making-asynchronous-requests"></a>Realizar solicitudes asincrónicas
+Las clases <xref:System.Net> usan el modelo de programación asincrónica estándar de .NET Framework para obtener acceso asincrónico a recursos de Internet. Los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A> de la clase <xref:System.Net.WebRequest> inician y completan las solicitudes asincrónicas para un recurso de Internet.  
   
 > [!NOTE]
->  Mediante llamadas sincrónicas en métodos de devolución de llamada asincrónicos puede provocar pérdidas graves de rendimiento.  Las solicitudes de internet realizadas con **WebRequest** y sus descendientes deben utilizar <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> para leer la secuencia devuelta por el método de <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> .  
+>  El uso de llamadas sincrónicas en métodos de devolución de llamada asincrónica puede afectar gravemente al rendimiento. Las solicitudes de Internet realizadas con **WebRequest** y sus descendientes deben usar <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> para leer la secuencia devuelta por el método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>.  
   
- El ejemplo siguiente muestra cómo utilizar llamadas asincrónicas a la clase de **WebRequest** .  El ejemplo es un programa de consola que toma un identificador URI de la línea de comandos, solicita el recurso en el URI, y después datos imprime en la consola cuando se recibe de internet.  
+ En el código de ejemplo siguiente se muestra cómo usar llamadas asincrónicas con la clase **WebRequest**. El ejemplo es un programa de consola que toma un URI de la línea de comandos, solicita el recurso en el URI y, después, imprime datos en la consola cuando se reciben desde Internet.  
   
- El programa define dos clases para su propio uso, la clase de **RequestState** , que pasa datos a través de llamadas asincrónicas, y la clase de **ClientGetAsync** , que implementa la solicitud asincrónica a un recurso de internet.  
+ El programa define dos clases para su propio uso: la clase **RequestState**, que pasa datos a través de llamadas asincrónicas, y la clase **ClientGetAsync**, que implementa la solicitud asincrónica en un recurso de Internet.  
   
- La clase de **RequestState** mantiene el estado de la solicitud a través de llamadas a los métodos asincrónicos que mantienen la solicitud.  Contiene **WebRequest** y las instancias de <xref:System.IO.Stream> que contienen la solicitud actual el recurso y la secuencia recibidos en respuesta, un búfer que contiene los datos recibidos actualmente del recurso de internet, y <xref:System.Text.StringBuilder> que contiene la respuesta completa.  **RequestState**se pasa como el parámetro *de estado* cuando el método de <xref:System.AsyncCallback> se registra con **WebRequest.BeginGetResponse**.  
+ La clase **RequestState** conserva el estado de la solicitud en las llamadas a los métodos asincrónicos que dan servicio a la solicitud. Contiene la clase **WebRequest** e instancias <xref:System.IO.Stream> que incluyen la solicitud actual al recurso y la secuencia recibida en respuesta, un búfer que contiene los datos recibidos actualmente del recurso de Internet y un elemento <xref:System.Text.StringBuilder> con la respuesta completa. Se pasa una clase **RequestState** como parámetro de *estado* cuando el método <xref:System.AsyncCallback> está registrado con **WebRequest.BeginGetResponse**.  
   
- La clase de **ClientGetAsync** implementa una solicitud asincrónica a un recurso de internet y escribir la respuesta resultante en la consola.  Contiene los métodos y propiedades descritos en la siguiente lista.  
+ La clase **ClientGetAsync** implementa una solicitud asincrónica a un recurso de Internet y escribe la respuesta resultante en la consola. Contiene los métodos y las propiedades que se describen en la lista siguiente.  
   
--   La propiedad de `allDone` contiene una instancia de la clase de <xref:System.Threading.ManualResetEvent> que señala la finalización de la solicitud.  
+-   La propiedad `allDone` contiene una instancia de la clase <xref:System.Threading.ManualResetEvent> que indica la finalización de la solicitud.  
   
--   El método de `Main()` lee la línea de comandos e inicia la solicitud para el recurso de internet especificado.  Crea **WebRequest**`wreq` y **RequestState**`rs`, llama a **BeginGetResponse** para iniciar procesa la solicitud, y después llamar al método de `allDone.WaitOne()`de modo que no deja la aplicación hasta que se complete la devolución de llamada.  Después de que la respuesta se lea del recurso de internet, `Main()` la escribe en la consola y los extremos de la aplicación.  
+-   El método `Main()` lee la línea de comandos y comienza la solicitud para el recurso de Internet especificado. Crea la clase **WebRequest** `wreq` y **RequestState** `rs`, llama a **BeginGetResponse** para empezar a procesar la solicitud y, después, llama al método `allDone.WaitOne()` para que la aplicación no se cierre hasta que se complete la devolución de llamada. Una vez que se ha leído la respuesta del recurso de Internet, `Main()` lo escribe en la consola y la aplicación finaliza.  
   
--   El método de `showusage()` escribe una línea de comandos de ejemplo en la consola.  Llama `Main()` cuando no se proporciona ningún URI en la línea de comandos.  
+-   El método `showusage()` escribe una línea de comandos de ejemplo en la consola. Lo llama `Main()` cuando no se proporciona ningún URI en la línea de comandos.  
   
--   El método de `RespCallBack()` implementa el método de devolución de llamada asincrónico para la solicitud de internet.  Crea la instancia de **WebResponse** que contiene la respuesta del recurso de internet, obtiene la secuencia de respuesta, y después inicia leer los datos de la secuencia de forma asincrónica.  
+-   El método `RespCallBack()` implementa el método de devolución de llamada asincrónica para la solicitud de Internet. Crea la instancia **WebResponse** que contiene la respuesta del recurso de Internet, obtiene la secuencia de respuesta y, después, comienza a leer de manera asincrónica los datos de la secuencia.  
   
--   El método de `ReadCallBack()` implementa el método de devolución de llamada asincrónico para leer la secuencia de respuesta.  Transfiere los datos recibidos del recurso de internet en la propiedad de **ResponseData** de la instancia de **RequestState** , inicia otra lectura asincrónica de respuesta transmitir hasta que se devuelve no más de datos.  Una vez que se ha leído todos los datos, `ReadCallBack()` cierre la respuesta transmitir y llama al método de `allDone.Set()` para indicar que toda la respuesta está presente en **ResponseData**.  
+-   El método `ReadCallBack()` implementa el método de devolución de llamada asincrónica para leer la secuencia de respuesta. Transfiere los datos recibidos del recurso de Internet a la propiedad **ResponseData** de la instancia **RequestState** y, después, comienza otra lectura asincrónica de la secuencia de respuesta hasta que no se devuelvan más datos. Una vez que se han leído todos los datos, `ReadCallBack()` cierra la secuencia de respuesta y llama al método `allDone.Set()` para indicar que la respuesta completa está presente en **ResponseData**.  
   
     > [!NOTE]
-    >  Es fundamental que se cierran todas las secuencias de red.  Si no cierra cada secuencia de solicitud y respuesta, se ejecutará la aplicación de conexiones al servidor y no podrá procesar solicitudes adicionales.  
+    >  Es fundamental que todas las secuencias de red estén cerradas. Si no cierra todas las secuencias de solicitud y respuesta, la aplicación se quedará sin conexiones con el servidor y no podrá procesar más solicitudes.  
   
 ```csharp  
 using System;  
@@ -341,5 +346,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)
+
