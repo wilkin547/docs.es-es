@@ -1,38 +1,43 @@
 ---
-title: "Passing Structures | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "platform invoke, calling unmanaged functions"
+title: Pasar estructuras
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- platform invoke, calling unmanaged functions
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e0cd4b8c76eca00ad7fbfcb03162a6705f72768
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Passing Structures
-Muchas funciones no administradas esperan que el usuario pase, como parámetro de la función, miembros de estructuras \(tipos definidos por el usuario en Visual Basic\) o miembros de clases definidos en código administrado.  Al pasar estructuras o clases al código no administrado mediante la invocación de plataforma, debe proporcionarse información adicional para mantener la distribución y alineación originales.  En este tema se presenta el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que se utiliza para definir tipos con formato.  Para estructuras y clases administradas, se puede seleccionar entre varios comportamientos de distribución previsibles que proporciona la enumeración **LayoutKind**.  
+# <a name="passing-structures"></a>Pasar estructuras
+Muchas funciones no administradas esperan que el usuario pase, como parámetro de la función, miembros de estructuras (tipos definidos por el usuario en Visual Basic) o miembros de clases definidos en código administrado. Al pasar estructuras o clases al código no administrado mediante la invocación de plataforma, debe proporcionarse información adicional para mantener la distribución y alineación originales. En este tema se presenta el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que se utiliza para definir tipos con formato. Para estructuras y clases administradas, se puede seleccionar entre varios comportamientos de distribución previsibles que proporciona la enumeración **LayoutKind**.  
   
- Un punto fundamental de los conceptos presentados en este tema es la importante diferencia que hay entre los tipos de estructura y clase.  Las estructuras son tipos de valor y las clases son tipos de referencia. Las clases siempre proporcionan al menos un nivel de direccionamiento indirecto de memoria \(un puntero a un valor\).  Esta diferencia es importante porque las funciones no administradas exigen a menudo direccionamiento indirecto, como muestran los prototipos de la primera columna en la tabla siguiente.  Las declaraciones administradas de estructura y clase de las columnas restantes muestran el grado hasta el que se puede ajustar el nivel de direccionamiento indirecto en la declaración.  Se proporcionan declaraciones para Visual Basic y Visual C\#.  
+ Un punto fundamental de los conceptos presentados en este tema es la importante diferencia que hay entre los tipos de estructura y clase. Las estructuras son tipos de valor y las clases son tipos de referencia. Las clases siempre proporcionan al menos un nivel de direccionamiento indirecto de memoria (un puntero a un valor). Esta diferencia es importante porque las funciones no administradas exigen a menudo direccionamiento indirecto, como muestran los prototipos de la primera columna en la tabla siguiente. Las declaraciones administradas de estructura y clase de las columnas restantes muestran el grado hasta el que se puede ajustar el nivel de direccionamiento indirecto en la declaración. Se proporcionan declaraciones para Visual Basic y Visual C#.  
   
-|Prototipo no administrado|Declaración administrada:                <br /> ningún direccionamiento indirecto               <br />  `Structure MyType`  <br />  `struct MyType;`|Declaración administrada:                <br /> uno nivel de direccionamiento indirecto               <br />  `Class MyType`  <br />  `class MyType;`|  
-|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> No requiere ningún nivel de direccionamiento indirecto.|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> No agrega ningún nivel de direccionamiento indirecto.|No es posible porque ya hay un nivel de direccionamiento indirecto.|  
-|`DoWork(MyType* x);`<br /><br /> Requiere un nivel de direccionamiento indirecto.|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|`DoWork(ByVal x As MyType)`  <br />  `DoWork(MyType x)`<br /><br /> No agrega ningún nivel de direccionamiento indirecto.|  
-|`DoWork(MyType** x);`<br /><br /> Requiere dos niveles de direccionamiento indirecto.|No es posible porque no se puede usar **ByRef** **ByRef** ni `ref` `ref`.|`DoWork(ByRef x As MyType)`  <br />  `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|  
+|Prototipo no administrado|Declaración administrada: <br />ningún direccionamiento indirecto<br />`Structure MyType`<br />`struct MyType;`|Declaración administrada: <br />uno nivel de direccionamiento indirecto<br />`Class MyType`<br />`class MyType;`|  
+|-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
+|`DoWork(MyType x);`<br /><br /> No requiere ningún nivel de direccionamiento indirecto.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> No agrega ningún nivel de direccionamiento indirecto.|No es posible porque ya hay un nivel de direccionamiento indirecto.|  
+|`DoWork(MyType* x);`<br /><br /> Requiere un nivel de direccionamiento indirecto.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> No agrega ningún nivel de direccionamiento indirecto.|  
+|`DoWork(MyType** x);`<br /><br /> Requiere dos niveles de direccionamiento indirecto.|No es posible porque no se puede usar **ByRef** **ByRef** ni `ref` `ref`.|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> Agrega un nivel de direccionamiento indirecto.|  
   
  La tabla describe las siguientes directrices para las declaraciones de invocación de plataforma:  
   
@@ -42,8 +47,8 @@ Muchas funciones no administradas esperan que el usuario pase, como parámetro d
   
 -   Utilice una clase pasada por referencia cuando la función no administrada requiera dos niveles de direccionamiento indirecto.  
   
-## Declarar y pasar estructuras  
- En el siguiente ejemplo se muestra la forma de definir las estructuras `Point` y `Rect` en código administrado y la forma de pasar los tipos como parámetros a la función **PtInRect** en el archivo User32.dll.  **PtInRect** tiene el siguiente prototipo no administrado:  
+## <a name="declaring-and-passing-structures"></a>Declarar y pasar estructuras  
+ En el siguiente ejemplo se muestra la forma de definir las estructuras `Point` y `Rect` en código administrado y la forma de pasar los tipos como parámetros a la función **PtInRect** en el archivo User32.dll. **PtInRect** tiene la siguiente firma no administrada:  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -70,7 +75,6 @@ Class Win32API
     Declare Auto Function PtInRect Lib "user32.dll" _  
     (ByRef r As Rect, p As Point) As Boolean  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -96,8 +100,8 @@ class Win32API {
 }  
 ```  
   
-## Declarar y pasar clases  
- Los miembros de una clase pueden pasarse a una función no administrada de un archivo DLL, siempre que la clase tenga una distribución de miembro fija.  En el ejemplo siguiente se muestra la forma de pasar miembros de la clase `MySystemTime`, que están definidos en orden secuencial, a **GetSystemTime** en el archivo User32.dll.  **GetSystemTime** tiene el siguiente prototipo no administrado:  
+## <a name="declaring-and-passing-classes"></a>Declarar y pasar clases  
+ Los miembros de una clase pueden pasarse a una función no administrada de un archivo DLL, siempre que la clase tenga una distribución de miembro fija. En el ejemplo siguiente se muestra la forma de pasar miembros de la clase `MySystemTime`, que están definidos en orden secuencial, a **GetSystemTime** en el archivo User32.dll. **GetSystemTime** tiene la siguiente firma no administrada:  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
@@ -142,7 +146,6 @@ Public Class TestPlatformInvoke
         Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -184,8 +187,9 @@ public class TestPlatformInvoke
 }  
 ```  
   
-## Vea también  
- [Calling a DLL Function](../../../docs/framework/interop/calling-a-dll-function.md)   
- [Clase StructLayoutAttribute](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [Clase StructLayoutAttribute](frlrfSystemRuntimeInteropServicesStructLayoutAttributeClassTopic)   
- [Clase FieldOffsetAttribute](frlrfSystemRuntimeInteropServicesFieldOffsetAttributeClassTopic)
+## <a name="see-also"></a>Vea también  
+ [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.StructLayoutAttribute>   
+ <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+

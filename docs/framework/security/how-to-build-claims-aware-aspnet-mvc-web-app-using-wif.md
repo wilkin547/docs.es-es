@@ -1,81 +1,87 @@
 ---
-title: "C&#243;mo: crear aplicaciones web MVC de ASP.NET para notificaciones mediante WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: crear aplicaciones web MVC de ASP.NET para notificaciones mediante WIF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7065455e3459ad37a8e296107ca8c6991334b328
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo: crear aplicaciones web MVC de ASP.NET para notificaciones mediante WIF
-## Se aplica a  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Cómo: crear aplicaciones web MVC de ASP.NET para notificaciones mediante WIF
+## <a name="applies-to"></a>Se aplica a  
   
--   Base \(WIF\) de identidad de Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
 -   ASP.NET® MVC  
   
-## Resumen  
- En este procedimiento proporciona los procedimientos paso a paso detallados para crear la aplicación Web demanda\- reconozca simple de ASP.NET MVC.  También proporciona instrucciones cómo probar la aplicación Web demanda\- reconozca simple de ASP.NET MVC para la implementación correcta de la autenticación demanda\- basada en.  En este procedimiento no tiene instrucciones detalladas para crear un Servicio de token de seguridad \(STS\), y las supone que ha configurado un STS.  
+## <a name="summary"></a>Resumen  
+ Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación web de ASP.NET MVC para notificaciones. También proporciona instrucciones sobre cómo probar la aplicación web sencilla de ASP.NET MVC para notificaciones para obtener una implementación correcta de la autenticación basada en notificaciones. Este tema de procedimientos no tiene instrucciones detalladas para crear un Servicio de tokens de seguridad (STS) y presupone que ya ha configurado uno.  
   
-## Contenido  
+## <a name="contents"></a>Contenido  
   
 -   Objetivos  
   
 -   Resumen de pasos  
   
--   Paso 1 \- cree la aplicación sencilla de ASP.NET MVC  
+-   Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
   
--   Paso 2 \- aplicación de Configurar ASP.NET MVC para la autenticación Demanda\- Basada  
+-   Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
--   Paso 3 \- pruebe la solución  
+-   Paso 3: Probar la solución  
   
 -   Elementos relacionados  
   
-## Objetivos  
+## <a name="objectives"></a>Objetivos  
   
--   Configure la aplicación Web de ASP.NET MVC para la autenticación demanda\-basada  
+-   Configurar una aplicación web de ASP.NET MVC para la autenticación basada en notificaciones  
   
--   Pruebe la aplicación Web demanda\- reconozca correcta de ASP.NET MVC  
+-   Probar una aplicación web de ASP.NET MVC para notificaciones correcta  
   
-## Resumen de pasos  
+## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1 \- cree la aplicación sencilla de ASP.NET MVC  
+-   Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
   
--   Paso 2 \- aplicación de Configurar ASP.NET MVC para la autenticación Demanda\- Basada  
+-   Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
--   Paso 3 \- pruebe la solución  
+-   Paso 3: Probar la solución  
   
-## Paso 1 \- cree la aplicación sencilla de ASP.NET MVC  
- En este paso, creará una nueva aplicación de ASP.NET MVC.  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a>Paso 1: Crear una aplicación sencilla de ASP.NET MVC  
+ En este paso se crea una aplicación de ASP.NET MVC.  
   
-#### Para crear la aplicación sencilla de ASP.NET MVC  
+#### <a name="to-create-simple-aspnet-mvc-application"></a>Para crear una aplicación sencilla de ASP.NET MVC  
   
-1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo**y, a continuación **Proyecto**.  
+1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.  
   
-2.  En la ventana de **Nuevo proyecto** , haga clic en **Aplicación web de ASP.NET MVC 3**.  
+2.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación web de ASP.NET MVC 3**.  
   
-3.  En **Nombre**, entre en `TestApp` y presione **Aceptar**.  
+3.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
   
-4.  En el cuadro de diálogo **Nuevo proyecto de ASP.NET MVC 3** , **Aplicación de Internet** seleccione de las plantillas disponibles, asegúrese **Motor de vistas** se establece en **\*\*\* Sintaxis razor \*\*\***, y haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Nuevo proyecto de ASP.NET MVC 3**, seleccione **Aplicación de Internet** de las plantillas disponibles; asegúrese de que **Motor de vista** se establece en **Razor** y, después, haga clic en **Aceptar**.  
   
-5.  Cuando se abre el proyecto nuevo, haga clic con el botón secundario en el proyecto de **\*\*\* TestApp \*\*\*** en **Explorador de soluciones** y seleccione la opción de **Propiedades** .  
+5.  Cuando se abre el nuevo proyecto, haga clic con el botón derecho en el proyecto **TestApp** en el **Explorador de soluciones** y seleccione la opción **Propiedades**.  
   
-6.  En la página de propiedades del proyecto, haga clic en la pestaña de **Web** a la izquierda y asegúrese de que la opción de **Usar servidor web de IIS local** está activada.  
+6.  En la página de propiedades del proyecto, haga clic en la pestaña **Web** situada a la izquierda y asegúrese de que la opción **Usar servidor web de IIS local** está seleccionada.  
   
-## Paso 2 \- aplicación de Configurar ASP.NET MVC para la autenticación Demanda\- Basada  
- En este paso se agregará entradas de configuración *al archivo de configuración Web.config* de la aplicación Web de ASP.NET MVC para facilitar demanda\- monitores.  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Paso 2: Configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
+ En este paso agregará entradas de configuración al archivo de configuración *Web.config* de su aplicación web de ASP.NET MVC para notificaciones.  
   
-#### Para configurar la aplicación de ASP.NET MVC para la autenticación demanda\-basada  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Para configurar una aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
-1.  Agregue las definiciones de sección de configuración siguientes al *archivo de configuración Web.config* .  Éstos definen las secciones de configuración requeridas por la base de la identidad de Windows.  Agregue las definiciones inmediatamente después del elemento que abre de **\*\*\* \<configuration\> \*\*\*** :  
+1.  Agregue las siguientes definiciones de la sección de configuración al archivo de configuración *Web.config*. Estas definen las secciones de configuración necesarias para Windows Identity Foundation. Agregue las definiciones inmediatamente después del elemento de apertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -84,7 +90,7 @@ caps.handback.revision: 6
     </configSections>  
     ```  
   
-2.  Agregue un elemento de **\<location\>** que habilita el acceso a los metadatos de la federación de la aplicación:  
+2.  Agregue un elemento **\<location>** que permita el acceso a los metadatos de federación de la aplicación:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -96,7 +102,7 @@ caps.handback.revision: 6
     </location>  
     ```  
   
-3.  Agregue las siguientes entradas de configuración dentro de los elementos de **\<system.web\>** denegar a usuarios, deshabilite la autenticación nativa, y permite a WIF para administrar la autenticación.  
+3.  Agregue las siguientes entradas de configuración dentro de los elementos **\<system.web>** para denegar usuarios, deshabilitar la autenticación nativa y habilitar WIF para administrar la autenticación.  
   
     ```xml  
     <authorization>  
@@ -105,7 +111,7 @@ caps.handback.revision: 6
     <authentication mode="None" />  
     ```  
   
-4.  Agregue las entradas relacionadas base siguiente de la configuración de la identidad de Windows y asegúrese de que la dirección URL de la aplicación ASP.NET y coincidencia del número de puerto los valores en la entrada de **\<audienceUris\>** , el atributo de **dominio kerberos** de elemento de **\<wsFederation\>** , y el atributo de **respuesta** de elemento de **\<wsFederation\>** .  Asegúrese también de que el valor de **\*\*\* el emisor \*\*\*** ajusta su dirección URL de \(STS\) del Servicio de token de seguridad.  
+4.  Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -129,16 +135,16 @@ caps.handback.revision: 6
     </system.identityModel.services>  
     ```  
   
-5.  Agregue la referencia al ensamblado de [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True) .  
+5.  Agregue una referencia al ensamblado <xref:System.IdentityModel>.  
   
-6.  Compile la solución para asegurarse de que hay errores.  
+6.  Compile la solución y asegúrese de que existan errores.  
   
-## Paso 3 \- pruebe la solución  
- En este paso probará su aplicación Web ASP.NET MVC configurada para la autenticación demanda\- basada en.  Para realizar la prueba básica agregará código simple que muestra peticiones en el token emitido por el Servicio de token de seguridad \(STS\).  
+## <a name="step-3--test-your-solution"></a>Paso 3: Probar la solución  
+ En este paso probará la aplicación web de ASP.NET MVC configurada para la autenticación basada en notificaciones. Para realizar una prueba básica, agregará código simple que muestra notificaciones en el token emitido mediante el servicio de token de seguridad (STS).  
   
-#### Para probar la aplicación ASP.NET MVC para la autenticación demanda\- basada  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Para probar su aplicación de ASP.NET MVC para la autenticación basada en notificaciones  
   
-1.  En **Explorador de soluciones**, expanda la carpeta de **Controladores** y abra *el archivo de HomeController.cs* en el editor.  Agregue el código siguiente al método de **Índice** :  
+1.  En el **Explorador de soluciones**, expanda la carpeta **Controladores** y abra el archivo *HomeController.cs* en el editor. Agregue el código siguiente al método **Index**:  
   
     ```csharp  
     public ActionResult Index()  
@@ -147,13 +153,11 @@ caps.handback.revision: 6
   
         return View();  
     }  
-  
     ```  
   
-2.  En **Explorador de soluciones** expanda las carpetas de **Vistas** y de **Inicio** y *archivo* abierto de Index.cshtml en el editor.  Elimine su contenido y agregue el siguiente marcado:  
+2.  En el **Explorador de soluciones**, expanda **Vistas** y, después, las carpetas **Inicio**, y abra el archivo *Index.cshtml* en el editor. Elimine su contenido y agregue el siguiente marcado:  
   
     ```html  
-  
     @{  
         ViewBag.Title = "Home Page";  
     }  
@@ -217,13 +221,13 @@ caps.handback.revision: 6
         </tr>  
     }  
     </table>  
-  
     ```  
   
-3.  Ejecute la solución presionando la tecla de **F5** .  
+3.  Presione la tecla **F5** para ejecutar la solución.  
   
-4.  Se debe mostrar en la página que muestra las peticiones en el token que se ha emitido por el Servicio de token de seguridad.  
+4.  Debe estar presente en la página que muestra las notificaciones del token que ha emitido mediante el servicio de token de seguridad.  
   
-## Elementos relacionados  
+## <a name="related-items"></a>Elementos relacionados  
   
--   [Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [Crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+
