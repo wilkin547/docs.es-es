@@ -1,30 +1,35 @@
 ---
-title: "Ejemplo de sockets de servidor asincr&#243;nicos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "sockets, sockets de servidor asincrónicos"
-  - "sockets, ejemplos de código"
-  - "sockets de servidor asincrónicos"
+title: "Ejemplo de sockets de servidor asincrónicos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Ejemplo de sockets de servidor asincr&#243;nicos
-El programa de ejemplo siguiente se crea un servidor que recibe solicitudes de conexión de clientes.  Compila el servidor con un socket asincrónico, de modo que la ejecución de la aplicación de servidor no se suspende mientras espera una conexión desde un cliente.  La aplicación recibe una cadena de cliente, muestra la cadena en la consola y, a continuación repite la cadena de nuevo al cliente.  La cadena de cliente debe contener la cadena “\<EOF\>” para indicar el final del mensaje.  
+# <a name="asynchronous-server-socket-example"></a>Ejemplo de sockets de servidor asincrónicos
+El programa de ejemplo siguiente crea un servidor que recibe solicitudes de conexión de clientes. El servidor se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de servidor mientras se espera una conexión desde un cliente. La aplicación recibe una cadena desde el cliente, la muestra en la consola y luego la devuelve al cliente. La cadena del cliente debe contener la cadena "\<EOF>" para indicar el final del mensaje.  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ejemplo de sockets de cliente asincrónicos](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
- [Usar un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
+ [Using an Asynchronous Server Socket (Empleo de un socket de servidor asincrónico)](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Ejemplos de código de socket](../../../docs/framework/network-programming/socket-code-examples.md)
+

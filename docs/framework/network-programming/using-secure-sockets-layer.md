@@ -1,46 +1,51 @@
 ---
-title: "Usar la capa de sockets seguros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "Redes"
-  - "SSL"
-  - "Capa de sockets seguros"
-  - "solicitar datos de Internet, capa de sockets seguros"
-  - "enviar datos, capa de sockets seguros"
-  - "Recursos de red"
-  - "solicitudes de datos, capa de sockets seguros"
-  - "recibir datos, capa de sockets seguros"
-  - "Internet, capa de sockets seguros"
+title: Usar la capa de sockets seguros
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- SSL
+- Secure Sockets Layer
+- requesting data from Internet, Secure Sockets Layer
+- sending data, Secure Sockets Layer
+- Network Resources
+- data requests, Secure Sockets Layer
+- receiving data, Secure Sockets Layer
+- Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb625971f0c0b52bcdcfc9b41d4c0f88814aef08
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Usar la capa de sockets seguros
-Las clases de <xref:System.Net> utilizan la capa de sockets seguros \(SSL\) para cifrar la conexión para varios protocolos de red.  
+# <a name="using-secure-sockets-layer"></a>Usar la capa de sockets seguros
+Las clases <xref:System.Net> usan la Capa de sockets seguros (SSL) para cifrar la conexión de varios protocolos de red.  
   
- Para las conexiones HTTP, utilice SSL de las clases de <xref:System.Net.WebRequest> y de <xref:System.Net.WebResponse> de comunicarse con los hosts de web que SSL admiten.  La decisión de utilizar SSL es realizada por la clase de <xref:System.Net.WebRequest> , según el identificador URI proporcionado.  Si el URI comienza con “https: ”, Se utiliza SSL; si el URI comienza con “http: ”, se utiliza una conexión sin cifrar.  
+ Para las conexiones http, las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> usan SSL para comunicarse con hosts web que admiten SSL. Es la clase <xref:System.Net.WebRequest> la que toma la decisión de usar SSL, según el URI que se le proporcione. Si el URI comienza con "https:", se usa SSL; si el URI comienza con "http:", se usa una conexión no cifrada.  
   
- Para utilizar SSL con el Protocolo de transferencia de archivos \(FTP\), establezca la propiedad de <xref:System.Net.FtpWebRequest.EnableSsl> en true antes de llamar a <xref:System.Net.FtpWebRequest.GetResponse>.  De igual forma, utilizar SSL con el Protocolo simple de transferencia de correo \(SMTP\), establezca la propiedad de <xref:System.Net.Mail.SmtpClient.EnableSsl> en true antes de enviar correo electrónico.  
+ Para usar SSL con el protocolo de transferencia de archivos (FTP), establezca la propiedad <xref:System.Net.FtpWebRequest.EnableSsl> en true antes de llamar a <xref:System.Net.FtpWebRequest.GetResponse>. Del mismo modo, para usar SSL con el Protocolo simple de transferencia de correo (SMTP), establezca la propiedad <xref:System.Net.Mail.SmtpClient.EnableSsl> en true antes de enviar el correo electrónico.  
   
- La clase de <xref:System.Net.Security.SslStream> proporciona una abstracción secuencia\- basados en SSL, y proporciona muchas maneras de configurar el control de manos de SSL.  
+ La clase <xref:System.Net.Security.SslStream> proporciona una abstracción basada en flujos para SSL y ofrece varias maneras de configurar el protocolo de enlace SSL.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Código  
+### <a name="code"></a>Código  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -64,12 +69,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias al espacio de nombres **System.Net** .  
+-   Referencias al espacio de nombres **System.Net**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)   
- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)   
+ [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
  [Selección y validación de certificados](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+

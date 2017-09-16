@@ -1,46 +1,51 @@
 ---
-title: "Usar un socket de cliente asincr&#243;nico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protocolos de aplicaciones, sockets"
-  - "enviar datos, sockets"
-  - "solicitudes de datos, sockets"
-  - "sockets de cliente asincrónicos"
-  - "Socket (clase), sockets de cliente asincrónicos"
-  - "solicitar datos de Internet, sockets"
-  - "sockets, sockets de cliente asincrónicos"
-  - "recibir datos, sockets"
-  - "protocolos, sockets"
-  - "Internet, sockets"
-  - "sockets de cliente"
+title: "Usar un socket de cliente asincrónico"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- data requests, sockets
+- asynchronous client sockets
+- Socket class, asynchronous client sockets
+- requesting data from Internet, sockets
+- sockets, asynchronous client sockets
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3f8bffcd94f3fb9c516e2201bd932480ab51c1a5
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Usar un socket de cliente asincr&#243;nico
-Un socket de cliente asíncrono no suspende la aplicación mientras espera operaciones de red para completar.  En su lugar, utiliza el modelo de programación asincrónica de .NET Framework estándar para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original.  Sockets asincrónicos son adecuados para las aplicaciones que utilizan intensivo de red o que no pueden esperar operaciones de red para completar antes de continuar.  
+# <a name="using-an-asynchronous-client-socket"></a>Usar un socket de cliente asincrónico
+Un socket de cliente asincrónico no suspende la aplicación mientras espera a que finalicen las operaciones de red. En lugar de eso, usa el modelo de programación asincrónico estándar de .NET Framework para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original. Los sockets asincrónicos son adecuados para aplicaciones que hacen un uso intensivo de la red o que no pueden esperar a que finalicen las operaciones de red antes de continuar.  
   
- La clase de <xref:System.Net.Sockets.Socket> sigue .NET Framework que llama al modelo para los métodos asincrónicos; por ejemplo, el método sincrónico de <xref:System.Net.Sockets.Socket.Receive%2A> corresponde a <xref:System.Net.Sockets.Socket.BeginReceive%2A> y métodos asincrónicos de <xref:System.Net.Sockets.Socket.EndReceive%2A> .  
+ La clase <xref:System.Net.Sockets.Socket> sigue el patrón de nombres de .NET Framework para los métodos asincrónicos; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Receive%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginReceive%2A> y <xref:System.Net.Sockets.Socket.EndReceive%2A>.  
   
- Las operaciones asincrónicas requieren un método de devolución de llamada devolver el resultado de la operación.  Si su aplicación no necesita conocer el resultado, no se requiere ningún método de devolución de llamada.  El código de ejemplo de esta sección muestra cómo utilizar un método para iniciar la conexión con un dispositivo de red y un método de devolución de llamada para completar la conexión, un método para iniciar el envío de datos y un método de devolución de llamada para completar el envío, y un método empiece a recibe datos y un método de devolución de llamada al final que recibe datos.  
+ Las operaciones asincrónicas necesitan un método de devolución de llamada para devolver el resultado de la operación. Si la aplicación no necesita conocer el resultado, no se necesita ningún método de devolución de llamada. El código de ejemplo de esta sección muestra cómo usar un método para iniciar la conexión a un dispositivo de red y un método de devolución de llamada para completar la conexión, un método para empezar a enviar datos y un método de devolución de llamada para completar el envío y un método para iniciar la recepción de datos y un método de devolución de llamada para finalizar la recepción de datos.  
   
- Varios subprocesos de uso asincrónico de sockets de sistema subproceso el conjunto para procesar las conexiones de red.  Un subproceso es responsable de iniciar el enviar o recibir de datos; otros subprocesos completan la conexión al dispositivo de red y envían o reciben los datos.  En los ejemplos siguientes, las instancias de la clase de <xref:System.Threading.ManualResetEvent?displayProperty=fullName> se utilizan para suspender la ejecución del subproceso principal y señalado cuando la ejecución puede continuar.  
+ Los sockets asincrónicos usan varios subprocesos del grupo de subprocesos del sistema para procesar las conexiones de red. Un subproceso es responsable de iniciar el envío o la recepción de datos; otros subprocesos completan la conexión al dispositivo de red y envían o reciben los datos. En los ejemplos siguientes se usan instancias de la clase <xref:System.Threading.ManualResetEvent?displayProperty=fullName> para suspender la ejecución del subproceso principal e indicar cuándo puede continuar la ejecución.  
   
- En el ejemplo siguiente, conectar un socket asincrónico en un dispositivo de red, el método de `Connect`inicializa **Socket** y después llamar al método de [BeginConnect](frlrfsystemnetsocketssocketclassconnecttopic) , pasando un extremo remoto que representa el dispositivo de red, el método de devolución de llamada conectarse, y un objeto de estado \(el cliente **Socket**\), que se utiliza para pasar información de estado entre las llamadas asincrónicas.  El ejemplo implementa el método de `Connect` para conectarse **Socket** especificado al extremo especificada.  Se supone **ManualResetEvent** global denominado `connectDone`.  
+ En el ejemplo siguiente, para conectar un socket asincrónico a un dispositivo de red, el método `Connect` inicializa un **socket** y luego llama al método <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=fullName>, pasando un punto de conexión remoto que representa al dispositivo de red, el método de devolución de llamada de conexión y un objeto de estado (el **socket** de cliente), que se usa para pasar información de estado entre llamadas asincrónicas. El ejemplo implementa el método `Connect` para conectar el **socket** especificado al punto de conexión indicado. Asume un elemento global **ManualResetEvent** denominado `connectDone`.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -60,7 +65,7 @@ public static void Connect(EndPoint remoteEP, Socket client) {
 }  
 ```  
   
- El método de devolución de llamada conectarse `ConnectCallback` implementa el delegado de <xref:System.AsyncCallback> .  Conecta con el dispositivo remoto cuando el dispositivo remoto está disponible y a continuación designa el subproceso de la aplicación que la conexión se ha finalizado estableciendo **ManualResetEvent**`connectDone`.  El código siguiente implementa el método de `ConnectCallback` .  
+ El método de devolución de llamada de conexión `ConnectCallback` implementa el delegado <xref:System.AsyncCallback>. Se conecta al dispositivo remoto cuando este está disponible y luego indica al subproceso de aplicación que la conexión está completada al establecer **ManualResetEvent** `connectDone`. El código siguiente implementa el método `ConnectCallback`.  
   
 ```vb  
 Private Shared Sub ConnectCallback(ar As IAsyncResult)  
@@ -80,7 +85,6 @@ Private Shared Sub ConnectCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ConnectCallback  
-  
 ```  
   
 ```csharp  
@@ -103,7 +107,7 @@ private static void ConnectCallback(IAsyncResult ar) {
 }  
 ```  
   
- El método `Send` de ejemplo codifica los datos de la cadena especificada en formato ASCII y los envía de forma asincrónica al dispositivo de red representado por el socket especificado.  El ejemplo siguiente se implementa el método de `Send` .  
+ El método de ejemplo `Send` codifica los datos de cadena especificados en formato ASCII y los envía de forma asincrónica al dispositivo de red representado por el socket especificado. El ejemplo siguiente implementa el método `Send`.  
   
 ```vb  
 Private Shared Sub Send(client As Socket, data As [String])  
@@ -114,7 +118,6 @@ Private Shared Sub Send(client As Socket, data As [String])
     client.BeginSend(byteData, 0, byteData.Length, SocketFlags.None, _  
         AddressOf SendCallback, client)  
 End Sub 'Send  
-  
 ```  
   
 ```csharp  
@@ -128,7 +131,7 @@ private static void Send(Socket client, String data) {
 }  
 ```  
   
- El método de devolución de llamada `SendCallback` send implementa el delegado de <xref:System.AsyncCallback> .  Envía los datos cuando el dispositivo de red está listo para recibir.  El ejemplo siguiente se muestra la implementación del método de `SendCallback` .  Se supone **ManualResetEvent** global denominado `sendDone`.  
+ El método de devolución de llamada de envío `SendCallback` implementa el delegado <xref:System.AsyncCallback>. Envía los datos cuando el dispositivo de red está listo para recibir. El siguiente ejemplo muestra la implementación del método `SendCallback`. Asume un elemento global **ManualResetEvent** denominado `sendDone`.  
   
 ```vb  
 Private Shared Sub SendCallback(ar As IAsyncResult)  
@@ -146,7 +149,6 @@ Private Shared Sub SendCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'SendCallback  
-  
 ```  
   
 ```csharp  
@@ -167,7 +169,7 @@ private static void SendCallback(IAsyncResult ar) {
 }  
 ```  
   
- Leer datos de un socket de cliente requiere un objeto de estados que pase valores entre las llamadas asincrónicas.  La clase siguiente es un objeto de estados de ejemplo para recibir datos de un socket de cliente.  Contiene un campo para que el socket de cliente, un búfer para los datos recibidos, y <xref:System.Text.StringBuilder> lleven presionada la cadena de los datos entrantes.  Agregar estos campos en el objeto de estado permite que sus valores se conservarían a través de varias llamadas para leer datos de socket de cliente.  
+ La lectura de los datos de un socket de cliente requiere un objeto de estado que pase valores entre llamadas asincrónicas. La clase siguiente es un objeto de estado de ejemplo para recibir datos de un socket de cliente. Contiene un campo para el socket de cliente, un búfer para los datos recibidos y un <xref:System.Text.StringBuilder> para contener la cadena de datos entrante. La colocación de estos campos en el objeto de estado permite conservar sus valores en varias llamadas para leer datos desde el socket de cliente.  
   
 ```vb  
 Public Class StateObject  
@@ -180,7 +182,6 @@ Public Class StateObject
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
-  
 ```  
   
 ```csharp  
@@ -196,7 +197,7 @@ public class StateObject {
 }  
 ```  
   
- El método de `Receive` de ejemplo prepara el objeto de estado y después llamar al método de **BeginReceive** para leer los datos de socket de cliente de forma asincrónica.  El ejemplo siguiente se implementa el método de `Receive` .  
+ El método de ejemplo `Receive` configura el objeto de estado y luego llama al método **BeginReceive** para leer los datos desde el socket de cliente de forma asincrónica. El ejemplo siguiente implementa el método `Receive`.  
   
 ```vb  
 Private Shared Sub Receive(client As Socket)  
@@ -212,7 +213,6 @@ Private Shared Sub Receive(client As Socket)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'Receive  
-  
 ```  
   
 ```csharp  
@@ -231,9 +231,9 @@ private static void Receive(Socket client) {
 }  
 ```  
   
- El método de devolución de llamada `ReceiveCallback` receive implementa el delegado de **AsyncCallback** .  Recibe los datos del dispositivo de red y compila una cadena de mensaje.  Lee uno o más bytes de datos de red en el búfer de datos y después llamar al método de **BeginReceive** de nuevo hasta que los datos enviados por el cliente se complete.  Una vez que todos los datos se lee del cliente, `ReceiveCallback` designa el subproceso de la aplicación que los datos son completado estableciendo **ManualResetEvent** `sendDone`.  
+ El método de devolución de llamada de recepción `ReceiveCallback` implementa el delegado **AsyncCallback**. Recibe los datos del dispositivo de red y genera una cadena de mensaje. Lee uno o más bytes de datos de la red al búfer de datos y luego llama al método **BeginReceive** de nuevo hasta que los datos enviados por el cliente están completos. Una vez que se han leído todos los datos del cliente, `ReceiveCallback` indica al subproceso de aplicación que los datos están completos al establecer **ManualResetEvent** `sendDone`.  
   
- El ejemplo de código siguiente se implementa el método de `ReceiveCallback`.  Supone una cadena global denominada `response` que contendrá la cadena recibida y **ManualResetEvent** global denominados `receiveDone`.  El servidor debe cerrar el socket de cliente correctamente para finalizar la sesión de la red.  
+ El código de ejemplo siguiente implementa el método `ReceiveCallback`. Asume una cadena global denominada `response` que contiene la cadena recibida y un elemento global **ManualResetEvent** denominado `receiveDone`. El servidor debe cerrar el socket de cliente correctamente para finalizar la sesión de red.  
   
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
@@ -266,7 +266,6 @@ Private Shared Sub ReceiveCallback(ar As IAsyncResult)
         Console.WriteLine(e.ToString())  
     End Try  
 End Sub 'ReceiveCallback  
-  
 ```  
   
 ```csharp  
@@ -298,7 +297,8 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## Vea también  
- [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)   
+## <a name="see-also"></a>Vea también  
+ [Using a Synchronous Client Socket (Usar un socket de cliente sincrónico)](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
+ [Listening with Sockets (Escucha con sockets)](../../../docs/framework/network-programming/listening-with-sockets.md)   
  [Ejemplo de sockets de cliente asincrónicos](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+
