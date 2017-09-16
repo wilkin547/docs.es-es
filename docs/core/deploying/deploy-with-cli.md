@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 005355868eefdbf21e3107f6db5230d7952276b2
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 3d799c6f824bd5cf08c0e939b069a21092395268
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
@@ -46,7 +46,7 @@ La implementación de una implementación dependiente del marco sin dependencias
 
    Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el código siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
-   [!code-cs[implementación1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Actualizar las herramientas y las dependencias del proyecto.
  
@@ -85,7 +85,7 @@ La implementación de una implementación dependiente de la plataforma con una o
 
 1. Si no lo ha hecho ya, descargue el paquete de NuGet que contiene la dependencia de terceros. Para descargar el paquete, ejecute el comando `dotnet restore` después de agregar la dependencia. Como la dependencia se resuelve fuera de la caché local de NuGet en tiempo de publicación, debe estar disponible en el sistema.
 
-Tenga en cuenta que una implementación dependiente de la plataforma con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md#what-are-rids) que admita la dependencia nativa (y que exista en su paquete de NuGet).
+Tenga en cuenta que una implementación dependiente de la plataforma con dependencias de terceros solo será tan portátil como sus dependencias de terceros. Por ejemplo, si una biblioteca de terceros solo admite macOS, la aplicación no se puede portar a sistemas Windows. Esto ocurre si la dependencia de terceros propiamente dicha depende del código nativo. Un buen ejemplo de esto es [el servidor Kestrel](/aspnet/core/fundamentals/servers/kestrel), que requiere una dependencia nativa de [libuv](https://github.com/libuv/libuv). Cuando se crea una FDD para una aplicación con esta clase de dependencia de terceros, el resultado publicado contiene una carpeta para cada [identificador en tiempo de ejecución (RID)](../rid-catalog.md) que admita la dependencia nativa (y que exista en su paquete de NuGet).
 
 ## <a name="simpleSelf"></a> Implementación independiente sin dependencias de terceros
 
@@ -103,7 +103,7 @@ La implementación de una implementación independiente sin dependencias de terc
 
    Abra el archivo *Program.cs* en el editor y reemplace el código generado automáticamente por el código siguiente. Pide al usuario que escriba texto y muestra las palabras individuales escritas por el usuario. Se usa la expresión regular `\w+` para separar las palabras en el texto de entrada.
 
-   [!code-cs[implementación1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Definir las plataformas de destino de la aplicación.
 

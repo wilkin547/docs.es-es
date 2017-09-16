@@ -8,10 +8,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 30dd1a7715c8573062837aaf71344258d0036b5d
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
 ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="dotnet-run"></a>dotnet run
@@ -80,7 +80,7 @@ Imprime una corta ayuda para el comando.
 
 `--launch-profile <NAME>`
 
-El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar simplemente `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnetcore/fundamentals/environments) (Trabajo con varios entornos).
+El nombre del perfil de inicio (si lo hay) que se usará al iniciar la aplicación. Los perfiles de inicio se definen en el archivo *launchSettings.json* y se suelen denominar simplemente `Development`, `Staging` y `Production`. Para obtener más información, consulte [Working with multiple environments](/aspnet/core/fundamentals/environments) (Trabajo con varios entornos).
 
 `--no-build`
 
