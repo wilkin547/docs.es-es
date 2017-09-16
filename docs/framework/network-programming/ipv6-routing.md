@@ -1,48 +1,54 @@
 ---
-title: "Enrutamiento de IPv6 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: Enrutamiento de IPv6
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5cbd5188bb33fd6d38633ca4670689a94f110a2
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Enrutamiento de IPv6
-Un mecanismo de enrutamiento flexible es una ventaja de IPv6.  Debido a la manera en que los id. de red IPv4 estaban y se asignan, las tablas de enrutamiento grandes es necesario mantenida por los enrutadores que están en las redes troncales de internet.  Estos enrutadores deben conocer todas las rutas para reenviar los paquetes que potencialmente se dirigen a un nodo de internet.  Con la capacidad de agregar direcciones IPv6, permite el direccionamiento flexible y reducen drásticamente el tamaño de tablas de enrutamiento.  En esta nueva arquitectura de direccionamiento, los enrutadores intermedios deben mantener un seguimiento sólo la parte local de la red para reenviar los mensajes correctamente.  
+# <a name="ipv6-routing"></a>Enrutamiento de IPv6
+Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a la manera en que se asignaban y todavía se asignan los identificadores de red IPv4, los enrutadores que se encuentran en las redes troncales de Internet deben mantener grandes tablas de enrutamiento. Estos enrutadores deben conocer todas las rutas con el fin de reenviar los paquetes que se dirigen potencialmente a cualquier nodo de Internet. Con su capacidad para agregar direcciones, IPv6 permite el direccionamiento flexible y reduce drásticamente el tamaño de las tablas de enrutamiento. En esta nueva arquitectura de direccionamiento, los enrutadores intermedios deben realizar un seguimiento únicamente de la parte local de su red para reenviar los mensajes de forma adecuada.  
   
-## Detección de vecinos  
- Algunas de las características proporcionadas por la detección de vecinos son:  
+## <a name="neighbor-discovery"></a>Detección de equipos cercanos  
+ Algunas de las características proporcionadas por la detección de equipos cercanos son las siguientes:  
   
--   Detección de enrutador.  Esto permite a los hosts que identifican los enrutadores locales.  
+-   Detección de enrutadores. Permite que los hosts identifiquen los enrutadores locales.  
   
--   Resolución de direcciones.  Esto permite que los nodos satisfacen una dirección de nivel de vínculo para una dirección correspondiente para el próximo salto \(un reemplazo para el Protocolo de resolución de direcciones \[ARP\]\).  
+-   Resolución de direcciones. Permite que los nodos resuelvan una dirección de nivel de vínculo para una dirección de próximo salto correspondiente (sustitución del Protocolo de resolución de direcciones, también denominado ARP).  
   
--   Configuración automática de dirección.  Esto permite a los hosts automáticamente configurar el sitio\- local y direcciones globales.  
+-   Configuración automática de direcciones. Permite a los hosts configurar automáticamente las direcciones globales y locales del sitio.  
   
- La detección de vecinos utiliza el Protocolo de mensajes de control de Internet para los mensajes de IPv6 \(ICMPv6\) que incluyen:  
+ La detección de equipos cercanos usa mensajes del Protocolo de mensajes de control de Internet para IPv6 (ICMPv6) que incluyen:  
   
--   Anuncios de enrutador.  Enviado por un enrutador en una base seudo\-periódica o en respuesta a una solicitación de enrutador.  Anuncios de enrutador de los enrutadores de IPv6 para anunciar de su disponibilidad, de prefijos de dirección, y otros parámetros.  
+-   Anuncio de enrutador. Enviado por un enrutador de forma seudoperiódica o en respuesta a una convocatoria de enrutador. Los enrutadores IPv6 usan anuncios de enrutador para anunciar su disponibilidad, prefijos de direcciones y otros parámetros.  
   
--   Solicitación de enrutador.  Enviado por un host solicitar que los enrutadores en el vínculo envía un anuncio de enrutador inmediatamente.  
+-   Convocatoria de enrutador. Enviada por un host para solicitar que los enrutadores del vínculo envíen inmediatamente un anuncio de enrutador.  
   
--   Solicitud de vecino.  Enviado por los nodos para la resolución de direcciones, detección duplicada de la dirección, o comprobar que un vecino todavía es alcanzable.  
+-   Convocatoria de vecino. Enviada por los nodos para la resolución de direcciones, la detección de direcciones duplicadas o la comprobación de que un vecino sigue siendo accesible.  
   
--   Anuncio vecino.  Enviado por nodos para responder a una solicitud de vecino o para notificar a los vecinos de un cambio en dirección de nivel de vínculo.  
+-   Anuncio de vecino. Enviada por los nodos para responder a una convocatoria de vecino o para notificar a los vecinos un cambio en la dirección de nivel de vínculo.  
   
--   Redirección.  Enviado por los enrutadores para indicar un mejor dirección para el próximo saltar a un destino determinado para un nodo de envío.  
+-   Redireccionamiento. Enviado por los enrutadores para indicar una dirección mejor de próximo salto a un destino determinado para un nodo de envío.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
  [Sockets](../../../docs/framework/network-programming/sockets.md)
+

@@ -4,17 +4,17 @@ description: "Explore estos tutoriales de C# para obtener información sobre có
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43d6efd6535e4002be79af1c51dd58e6d26d218d
+ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
+ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
@@ -30,8 +30,6 @@ Los siguientes tutoriales le permiten crear programas de C# mediante [.NET Core]
 * [Working with LINQ](working-with-linq.md) (Trabajar con LINQ): muestra muchas de las características de LINQ y los elementos del lenguaje compatibles.
 
 * [Microservices hosted in Docker](microservices.md) (Microservicios hospedados en Docker): muestra la creación de un microservicio de ASP.NET Core y el hospedaje en Docker.
-
-* [Inheritance](inheritance.md) (Herencia): muestra cómo la herencia de clases y de interfaz proporcionan la reutilización de código en C#.
 
 * [String Interpolation](string-interpolation.md) (Interpolación de cadena): muestra muchos de los usos de la interpolación de cadena `$` en C#.
 

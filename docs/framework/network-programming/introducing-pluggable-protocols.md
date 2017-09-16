@@ -1,83 +1,89 @@
 ---
-title: "Escribir protocolos acoplables | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "solicitudes de datos, protocolos acoplables"
-  - "clase WebRequest, protocolos acoplables"
-  - "respuesta a una solicitud de Internet, protocolos acoplables"
-  - "URI"
-  - "Windows Sockets"
-  - "modelo de solicitud/respuesta"
-  - "enviar datos, protocolos acoplables"
-  - "protocolos acoplables"
-  - "clase WebClient, acerca de la clase WebClient"
-  - "protocolos acoplables, acerca de los protocolos acoplables"
-  - "Internet, protocolos acoplables"
-  - "identificadores de rutas de acceso"
-  - "Identificador uniforme de recursos"
-  - "desarrollo de aplicaciones [.NET Framework], protocolos acoplables"
-  - "solicitar datos de Internet, protocolos acoplables"
-  - "recibir datos, protocolos acoplables"
-  - "protocolos, acoplables"
-  - "identificadores de servidores"
-  - "identificadores de esquemas"
+title: Escribir protocolos acoplables
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- data requests, pluggable protocols
+- WebRequest class, pluggable protocols
+- response to Internet request, pluggable protocols
+- URI
+- Windows Sockets
+- request/response model
+- sending data, pluggable protocols
+- pluggable protocols
+- WebClient class, about WebClient class
+- pluggable protocols, about pluggable protocols
+- Internet, pluggable protocols
+- path identifiers
+- Uniform Resource Identifier
+- application development [.NET Framework], pluggable protocols
+- requesting data from Internet, pluggable protocols
+- receiving data, pluggable protocols
+- protocols, pluggable
+- server identifiers
+- scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69a6b5a45317d3dc25522cc44ad8d710a5fc5cd9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
 # Escribir protocolos acoplables
-Microsoft.NET framework proporciona una implementación por capas, extensible, y administrada de servicios de Internet que se pueden integrar rápida y fácilmente en las aplicaciones.  Las clases de acceso a Internet en <xref:System.Net> y espacios de nombres de <xref:System.Net.Sockets> se pueden utilizar para implementar las aplicaciones basadas Web\- y Herramienta de creación de HTML\- basadas en.  
+Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las clases de acceso a Internet de los espacios de nombres <xref:System.Net> y <xref:System.Net.Sockets> se pueden usar para implementar aplicaciones basadas en Internet y en web.  
   
-## Aplicaciones de internet  
- Las aplicaciones de internet pueden clasificarse ampliamente en dos tipos: las aplicaciones cliente que solicitan información y las aplicaciones de servidor que respondan a información pregunte clientes.  Está World Wide Web la aplicación de servidor clásica de cliente de internet, donde los exploradores de uso de las personas tener acceso a los documentos y otros datos almacenados en los servidores web en todo el mundo.  
+## Aplicaciones de Internet  
+ Las aplicaciones de Internet se pueden clasificar de forma general en dos tipos: aplicaciones de cliente que solicitan información y aplicaciones de servidor que responden a solicitudes de información de los clientes. La aplicación cliente-servidor de Internet clásica es la World Wide Web, donde las personas usan exploradores para obtener acceso a documentos y otros datos almacenados en servidores web de todo el mundo.  
   
- Las aplicaciones no se limitan a una sola de estos roles; por ejemplo, el servidor de aplicaciones conocido de nivel intermedio responde a las solicitudes de clientes solicitando datos de otro servidor, en este caso actúa como un servidor y cliente.  
+ Las aplicaciones no se limitan a uno solo de estos roles. Por ejemplo, el familiar servidor de aplicaciones de nivel intermedio responde a las solicitudes de los clientes, para lo que solicita datos de otro servidor, en cuyo caso actúa como servidor y cliente.  
   
- La aplicación cliente realiza una solicitud identifica el recurso de internet solicitado y el protocolo de comunicación para usarla en la solicitud y respuesta.  Si es necesario, el cliente también proporciona cualquier dato adicional necesario para completar la solicitud, como ubicación de proxy o información de autenticación \(nombre de usuario, contraseña, etc.\).  La solicitud se forma una vez, la solicitud se puede enviar al servidor.  
+ La aplicación cliente realiza una solicitud, para lo que identifica el recurso de Internet solicitado y el protocolo de comunicación que se usará para la solicitud y la respuesta. Si es necesario, el cliente también proporciona todos los datos adicionales que sean necesarios para completar la solicitud, como la ubicación del proxy o la información de autenticación (nombre de usuario, contraseña, etc.). Una vez generada la solicitud, se puede enviar al servidor.  
   
-## Identificador de recursos  
- .NET Framework utiliza un Identificador uniforme de recursos \(URI\) para identificar el recurso de internet y el protocolo de comunicación solicitados.  El URI contiene al menos tres, y posiblemente cuatro, fragmentos: el identificador de esquema, que identifica el protocolo de comunicaciones para la solicitud y la respuesta; el identificador del servidor, que consta de un nombre de host de \(DNS\) de Domain Name System o dirección TCP que identifica de forma única el servidor en internet; el identificador de la ruta, que busca la información solicitada en el servidor; y una cadena de consulta opcional, que pasa la información del cliente en el servidor.  Por ejemplo, ¿el URI “http:\/\/www.contoso.com\/whatsnew.aspx?date\=today” consta del identificador “http” de esquemas, el identificador “www.contoso.com” del servidor, la ruta de acceso “\/whatsnew.aspx”, y la cadena de consulta “? date\=today”.  
+## Identificación de recursos  
+ .NET Framework usa un identificador uniforme de recursos (URI) para identificar el recurso de Internet solicitado y el protocolo de comunicación. El URI consta de al menos tres y, posiblemente, cuatro fragmentos: el identificador de esquema, que identifica el protocolo de comunicaciones para la solicitud y la respuesta; el identificador de servidor, que consta de un nombre de host del Sistema de nombres de dominio (DNS) o una dirección TCP que identifica de forma única el servidor en Internet; el identificador de la ruta de acceso, que busca la información solicitada en el servidor; y una cadena de consulta opcional, que pasa información del cliente al servidor. Por ejemplo, el URI "http://www.contoso.com/whatsnew.aspx?date=today" consta del identificador de esquema "http", el identificador de servidor "www.contoso.com", la ruta de acceso "/whatsnew.aspx" y la cadena de consulta "?date=today".  
   
- Después de que el servidor ha recibido la solicitud y haya procesado la respuesta, devuelve la respuesta a la aplicación cliente.  La respuesta incluye información complementario, como el tipo de contenido \(texto sin formato o datos XML, por ejemplo\).  
+ Una vez que el servidor ha recibido la solicitud y procesado la respuesta, devuelve la respuesta a la aplicación cliente. La respuesta incluye información adicional, como el tipo de contenido (por ejemplo, texto sin formato o datos XML).  
   
 ## Solicitudes y respuestas en .NET Framework  
- Las clases específicas de las aplicaciones de .NET Framework para proporcionar los tres partes de información necesarios para obtener acceso a recursos de internet a través de un modelo de solicitud y respuesta: la clase de <xref:System.Uri> , que contiene el URI del recurso de internet está buscando; la clase de <xref:System.Net.WebRequest> , que contiene una solicitud para el recurso; y la clase de <xref:System.Net.WebResponse> , que proporciona un contenedor para la respuesta de entrada.  
+ .NET Framework usa clases específicas para proporcionar los tres elementos de información necesarios para obtener acceso a recursos de Internet a través de un modelo de solicitud/respuesta: la clase <xref:System.Uri>, que contiene el URI del recurso de Internet que se busca; la clase <xref:System.Net.WebRequest>, que contiene una solicitud para el recurso; y la clase <xref:System.Net.WebResponse>, que proporciona un contenedor para la respuesta entrante.  
   
- Las aplicaciones cliente crean instancias de `WebRequest` pasando el identificador URI del recurso de la red al método de <xref:System.Net.WebRequest.Create%2A> .  Este método estático crea `WebRequest` para un protocolo concreto, como HTTP.  `WebRequest` se devuelve que proporciona acceso a las propiedades que controlan la solicitud al servidor y acceso al flujo de datos se envía que cuando se realiza la solicitud.  El método de <xref:System.Net.WebRequest.GetResponse%2A> en `WebRequest` envía la solicitud de la aplicación cliente en el servidor identificado en el URI.  En los casos en los que la respuesta puede ser retrasada, la solicitud se puede hacer de forma asincrónica utilizando el método de <xref:System.Net.WebRequest.BeginGetResponse%2A> en **WebRequest**, y la respuesta se puede devolver en un momento posterior mediante el método de <xref:System.Net.WebRequest.EndGetResponse%2A> .  
+ Las aplicaciones cliente crean instancias `WebRequest`, para lo que pasan el URI del recurso de red al método <xref:System.Net.WebRequest.Create%2A>. Este método estático crea una `WebRequest` para un protocolo específico, como HTTP. La `WebRequest` que se devuelve proporciona acceso a las propiedades que controlan la solicitud al servidor y el acceso al flujo de datos que se envía cuando se realiza la solicitud. El método <xref:System.Net.WebRequest.GetResponse%2A> de la `WebRequest` envía la solicitud de la aplicación cliente al servidor identificado en el URI. En los casos en los que la respuesta se retrasa, la solicitud se puede realizar de forma asincrónica con el método <xref:System.Net.WebRequest.BeginGetResponse%2A> en la **WebRequest**, y la respuesta se puede devolver más adelante mediante el método <xref:System.Net.WebRequest.EndGetResponse%2A>.  
   
- Los métodos de **GetResponse** y de **EndGetResponse** devuelven **WebResponse** que proporciona acceso a los datos devueltos por el servidor.  Puesto que los datos se proporciona para la aplicación que solicita como secuencia por el método de <xref:System.Net.WebResponse.GetResponseStream%2A> , se puede utilizar en flujos de datos de una aplicación donde se utiliza.  
+ Los métodos **GetResponse** y **EndGetResponse** devuelven una **WebResponse** que proporciona acceso a los datos devueltos por el servidor. Dado que estos datos se proporcionan a la aplicación solicitante como un flujo mediante el método <xref:System.Net.WebResponse.GetResponseStream%2A>, se pueden usar en una aplicación en cualquier lugar en el que se usen flujos de datos.  
   
- Las clases de **WebRequest** y de **WebResponse** son la base de protocolos conectables \(una implementación de servicios de red que permite desarrollar aplicaciones que utilizan recursos de internet sin preocuparse de los detalles específicos de protocolo de aplicaciones de que cada recurso.  Las clases descendientes de **WebRequest** se registran con la clase de **WebRequest** para controlar los detalles de crear conexiones reales a los recursos de internet.  
+ Las clases **WebRequest** y **WebResponse** son la base de los protocolos acoplables, que consisten en una implementación de servicios de red que permite desarrollar aplicaciones que usan recursos de Internet sin preocuparse sobre los detalles específicos del protocolo que cada recurso usa. Las clases descendientes de **WebRequest** se registran con la clase **WebRequest** para administrar los detalles del establecimiento de conexiones a los recursos de Internet.  
   
- Por ejemplo, la clase de <xref:System.Net.HttpWebRequest> administra los detalles de conexión con un recurso de internet mediante HTTP.  De forma predeterminada, cuando el método de **WebRequest.Create** encuentra un URI que comienza con “HTTP: ” o “https: ” \(identificadores de protocolo para HTTP y seguro HTTP\), **WebRequest** que se devuelve se puede utilizar tal cual, o se puede convertir a **HttpWebRequest** para tener acceso a las propiedades protocolo\- concretas.  En la mayoría de los casos, **WebRequest** proporciona toda la información necesaria para crear una solicitud.  
+ Por ejemplo, la clase <xref:System.Net.HttpWebRequest> administra los detalles de la conexión a un recurso de Internet mediante HTTP. De forma predeterminada, cuando el método **WebRequest.Create** encuentra un URI que empieza por "http:" o "https:" (identificadores de protocolo para HTTP y HTTP seguro), la **WebRequest** que se devuelve se puede usar tal cual o se puede convertir en **HttpWebRequest** para obtener acceso a propiedades específicas del protocolo. En la mayoría de los casos, la **WebRequest** proporciona toda la información necesaria para realizar una solicitud.  
   
- Cualquier protocolo que se puede representar como una transacción de solicitud y respuesta se puede utilizar en **WebRequest**.  Puede derivar clases protocolo\- específicas de **WebRequest** y de **WebResponse** y después registrarlos para su uso en la aplicación con el método estático de <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> .  
+ Todos los protocolos que se pueden representar como una transacción de solicitud/respuesta se pueden usar en una **WebRequest**. Puede derivar clases específicas del protocolo de **WebRequest** y de **WebResponse** y, después, registrarlas para que las use la aplicación con el método estático <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>.  
   
- Cuando la autorización de cliente para las solicitudes de internet se requiere, la propiedad de <xref:System.Net.WebRequest.Credentials%2A> de **WebRequest** proporciona las credenciales necesarias.  Estas credenciales pueden ser pares de nombre sencillo y contraseña para HTTP autenticación implícita o básica, o un nombre y una contraseña y un dominio establecido en NTLM o la autenticación Kerberos.  Un conjunto de credenciales se puede almacenar en una instancia de [NetworkCredentials](frlrfsystemnetnetworkcredentialclasstopic) , o los conjuntos múltiples pueden almacenarse simultáneamente en una instancia de <xref:System.Net.CredentialCache> .  **CredentialCache** utiliza el URI de solicitud y el esquema de autenticación que el servidor admite para determinar qué credenciales a enviar al servidor.  
+ Cuando se requiere la autorización del cliente para las solicitudes de Internet, la propiedad <xref:System.Net.WebRequest.Credentials%2A> de la **WebRequest** proporciona las credenciales necesarias. Estas credenciales pueden ser un simple par de nombre y contraseña para la autenticación implícita o HTTP básico, o bien un conjunto de nombre, contraseña y dominio para la autenticación Kerberos o NTLM. Se puede almacenar un conjunto de credenciales en una instancia <xref:System.Net.NetworkCredential> o varios conjuntos simultáneamente en una instancia <xref:System.Net.CredentialCache>. **CredentialCache** usa el URI de la solicitud y el esquema de autenticación admitido por el servidor para determinar qué credenciales se deben enviar al servidor.  
   
-## Solicitudes simples con WebClient  
- Para las aplicaciones que necesitan realizar las solicitudes simples para los recursos de internet, la clase de <xref:System.Net.WebClient> proporciona métodos comunes para cargar datos a o descargar datos de un servidor de Internet.  **WebClient** se basa en la clase **WebRequest** para proporcionar acceso a los recursos de internet; por consiguiente, la clase de **WebClient** puede utilizar cualquier protocolo conectable registrado.  
+## Solicitudes sencillas con WebClient  
+ Para las aplicaciones que necesitan realizar solicitudes sencillas de recursos de Internet, la clase <xref:System.Net.WebClient> proporciona métodos comunes para cargar datos en un servidor de Internet o descargarlos de él. **WebClient** se basa en la clase **WebRequest** para proporcionar acceso a recursos de Internet. Por lo tanto, la clase **WebClient** puede usar cualquier protocolo acoplable registrado.  
   
- Para las aplicaciones que no pueden utilizar el modelo de solicitud y respuesta, o para las aplicaciones que necesitan escuchar en la red así como enviar solicitudes, el espacio de nombres **System.Net.Sockets** proporciona clases de [TCPClient](frlrfsystemnetsocketstcpclientclasstopic), de [TCPListener](frlrfsystemnetsocketstcplistenerclasstopic), y de [UDPClient](frlrfsystemnetsocketsudpclientclasstopic) .  Estas clases controlan los detalles del establecimiento de las conexiones mediante diferentes protocolos de transporte, y exponen la conexión de red a la aplicación como una secuencia.  
+ Para las aplicaciones que no pueden usar el modelo de solicitud/respuesta o para las aplicaciones que necesitan escuchar en la red y enviar solicitudes, el espacio de nombres **System.Net.Sockets** proporciona las clases <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> y <xref:System.Net.Sockets.UdpClient>. Estas clases controlan los detalles del establecimiento de las conexiones mediante diferentes protocolos de transporte y exponen la conexión de red a la aplicación como un flujo.  
   
- Los desarrolladores familiarizados con Windows Sockets se comunican o los que necesitan un control proporcionado programando en el nivel de socket encontrarán que las clases de **System.Net.Sockets** satisfacen sus necesidades.  Las clases de **System.Net.Sockets** son un punto de transición de administrado a código nativo dentro de las clases de **System.Net** .  En la mayoría de los casos, **System.Net.Sockets** ordena datos de calcular las referencias en sus homólogos de 32 bits de Windows, así como administra las comprobaciones de seguridad necesaria.  
+ Los programadores que están familiarizados con la interfaz de Windows Sockets o que necesitan el control que proporciona la programación en el nivel de socket constatarán que las clases **System.Net.Sockets** se adaptan a sus necesidades. Las clases **System.Net.Sockets** son una transición del código administrado al código nativo dentro de las clases **System.Net**. En la mayoría de los casos, las clases **System.Net.Sockets** serializan los datos en sus homólogos de 32 bits de Windows, además de controlar todas las comprobaciones de seguridad necesarias.  
   
 ## Vea también  
- [Programar protocolos acoplables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)   
- [Ejemplos de programación de red](../../../docs/framework/network-programming/network-programming-samples.md)   
- [Los ejemplos de red para .NET en MSDN codifican la galería](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
+ [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)   
+ [Ejemplos de red para .NET en la galería de código de MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+

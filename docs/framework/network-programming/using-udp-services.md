@@ -1,52 +1,57 @@
 ---
-title: "Usar servicios UDP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protocolos, UDP"
-  - "recursos de red, UDP"
-  - "solicitar datos de Internet, UDP"
-  - "UDP"
-  - "recibir datos, UDP"
-  - "Internet, UDP"
-  - "difundir mensajes a varias direcciones"
-  - "solicitudes de datos, UDP"
-  - "UdpClient (clase), acerca de la clase UdpClient"
-  - "enviar datos, UDP"
-  - "protocolos de aplicaciones, UDP"
+title: Usar servicios UDP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- protocols, UDP
+- network resources, UDP
+- requesting data from Internet, UDP
+- UDP
+- receiving data, UDP
+- Internet, UDP
+- broadcasting messages to multiple addresses
+- data requests, UDP
+- UdpClient class, about UdpClient class
+- sending data, UDP
+- application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2986feda76b035e3651712609364b4194378a64c
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Usar servicios UDP
-La clase de <xref:System.Net.Sockets.UdpClient> comunica con servicios de red mediante UDP.  Las propiedades y métodos de la clase de <xref:System.Net.Sockets.UdpClient> resumen los detalles de crear <xref:System.Net.Sockets.Socket> para solicitar y recibir datos mediante UDP.  
+# <a name="using-udp-services"></a>Usar servicios UDP
+La clase <xref:System.Net.Sockets.UdpClient> se comunica con los servicios de red mediante UDP. Las propiedades y métodos de la clase <xref:System.Net.Sockets.UdpClient> abstraen los detalles de la creación de un <xref:System.Net.Sockets.Socket> para solicitar y recibir datos mediante UDP.  
   
- El Protocolo de datagramas de usuario \(UDP\) es un protocolo simple que crea un mejor esfuerzo para entregar datos a un host remoto.  Sin embargo, dado que el protocolo UDP es un protocolo sin conexión, los datagramas de UDP enviados al extremo remoto no está garantizado proteger, ni son garantizaron para proteger en la misma secuencia en la que se envían.  Las aplicaciones que utilizan UDP se debe preparar para controlar missing, el duplicado, y datagramas de la hacia fuera\-de\- secuencia.  
+ El Protocolo de datagramas de usuario (UDP) es un protocolo simple que hace todo lo posible para entregar datos a un host remoto. Pero como el protocolo UDP es un protocolo sin conexión, no se garantiza que lleguen los datagramas de UDP enviados al punto de conexión remoto, ni tampoco se garantiza que lleguen en la misma secuencia en la que se envían. Las aplicaciones que usan UDP deben estar preparadas para controlar los datagramas que faltan, los datagramas duplicados y los datagramas que están fuera de secuencia.  
   
- Para enviar un datagrama mediante UDP, debe conocer la dirección de red de un dispositivo de red que hospeda el servicio que necesite y el número de puerto UDP que el servicio utiliza para comunicarse.  Internet Assigned Numbers Authority \(Iana\) define los números de puerto para los servicios comunes \(vea www.iana.org\/assignments\/port\-numbers\).  Los servicios no en la lista de IANA pueden tener números de puerto en el intervalo de 1.024 a 65.535.  
+ Para enviar un datagrama mediante UDP, debe conocer la dirección de red del dispositivo de red que hospeda el servicio que necesita, así como el número de puerto UDP que usa el servicio para comunicarse. Internet Assigned Numbers Authority (Iana) define los números de puerto para los servicios comunes (vea www.iana.org/assignments/port-numbers). Los servicios que no están en la lista de Iana pueden tener números de puerto en el intervalo comprendido entre 1024 y 65 535.  
   
- Utilizan las direcciones de red especiales para admitir los mensajes de difusión de UDP en redes IP\- basadas en.  La siguiente discusión utiliza la familia de la dirección de la versión 4 de IP utilizada en internet como ejemplo.  
+ Se usan direcciones de red especiales para admitir mensajes de difusión de UDP en redes basadas en IP. En la siguiente explicación se usa como ejemplo la versión 4 de la familia de direcciones IP, usada en Internet.  
   
- Las direcciones de la versión 4 de IP utilizan 32 bits para especificar una dirección de red.  Para las direcciones de C de la clase mediante una máscara de red de 255.255.255.0, estos bits se dividen en cuatro octetos.  Cuando se expresados en decimal, los cuatro octetos constituyen la notación familiar de puntear\- patio, como 192.168.100.2.  Los dos primeros octetos \(192,168 en este ejemplo\) forman el número de red, el tercer octeto \(100\) definen la subred, y el octeto final que \(2\) es el identificador del host.  
+ Las direcciones IP de la versión 4 usan 32 bits para especificar una dirección de red. Para las direcciones de clase C que usan una máscara de red de 255.255.255.0, estos bits se dividen en cuatro octetos. Cuando se expresa en formato decimal, los cuatro octetos forman la conocida notación de cuatro dígitos separados por puntos, como 192.168.100.2. Los dos primeros octetos (192.168 en este ejemplo) forman el número de red, el tercer octeto (100) define la subred y el último octeto (2) es el identificador de host.  
   
- Estableciendo todos los bits de una dirección IP en una, o 255.255.255.255, formularios la dirección de difusión limitada.  El envío de un datagrama de UDP esta dirección entrega el mensaje a cualquier hospedados en el segmento de red local.  Dado que los mensajes nunca hacia delante enviados a esta dirección, sólo los hosts enrutadores en el segmento de red reciben el mensaje de difusión.  
+ Al establecer todos los bits de una dirección IP en uno, o 255.255.255.255, se crea la dirección de difusión limitada. El envío de un datagrama UDP a esta dirección entrega el mensaje a todos los hosts del segmento de red local. Dado que los enrutadores nunca reenvían los mensajes enviados a esta dirección, solo los hosts del segmento de red recibirán el mensaje de difusión.  
   
- Las difusiones se pueden dirigir a partes específicas de una red estableciendo todos los bits de identificador del host.  Por ejemplo, para enviar una difusión para todos los hosts de la red identificada por Direcciones IP que comienza con 192.168.1, use la dirección 192.168.1.255.  
+ Las difusiones se pueden dirigir a partes específicas de una red estableciendo todos los bits del identificador de host. Por ejemplo, para enviar una difusión a todos los hosts de la red identificada por las direcciones IP que empiezan por 192.168.1, use la dirección 192.168.1.255.  
   
- El ejemplo de código siguiente se utiliza <xref:System.Net.Sockets.UdpClient> para escuchar los datagramas de UDP enviados a la dirección de difusión dirigida 192.168.1.255 en el puerto 11.000.  El cliente recibe una cadena de mensaje y escribe el mensaje en la consola.  
+ En el siguiente ejemplo de código se usa <xref:System.Net.Sockets.UdpClient> para efectuar escuchas para los datagramas UDP enviados a la dirección de difusión dirigida 192.168.1.255 en el puerto 11.000. El cliente recibe una cadena de mensaje y escribe el mensaje en la consola.  
   
 ```vb  
 Imports System  
@@ -134,7 +139,7 @@ public class UDPListener
 }  
 ```  
   
- El ejemplo de código siguiente se utiliza <xref:System.Net.Sockets.UdpClient> para enviar los datagramas de UDP la dirección de difusión dirigida 192.168.1.255, utilizando el puerto 11.000.  El cliente envía la cadena de mensaje especificada en la línea de comandos.  
+ En el siguiente ejemplo de código se usa <xref:System.Net.Sockets.UdpClient> para enviar datagramas UDP a la dirección de difusión dirigida 192.168.1.255 mediante el puerto 11.000. El cliente envía la cadena de mensaje especificada en la línea de comandos.  
   
 ```vb  
 Imports System  
@@ -181,7 +186,8 @@ class Program
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Net.Sockets.UdpClient>   
  <xref:System.Net.IPAddress>   
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+ 
+

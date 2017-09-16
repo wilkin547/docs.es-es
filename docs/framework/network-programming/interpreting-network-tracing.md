@@ -1,42 +1,47 @@
 ---
-title: "Interpretar el seguimiento de red | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "TraceMode (atributo)"
-  - "datos hexadecimales, resultado del seguimiento de red"
-  - "seguimiento de red, analizar"
-  - "protocolonly"
-  - "texto, resultado del seguimiento de red"
-  - "includehex"
+title: Interpretar el seguimiento de red
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- TraceMode attribute
+- hexidecimal data, network tracing output
+- network tracing, analyzing
+- protocolonly
+- text, network tracing output
+- includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8c451a84117208457942d1c3794628963a49e93
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Interpretar el seguimiento de red
-Cuando se habilita la traza de la red, puede utilizar el seguimiento para capturar las llamadas que la aplicación crea a diferente <xref:System.Net> miembros de clase.  La salida de las llamadas puede ser similar a los ejemplos siguientes.  
+# <a name="interpreting-network-tracing"></a>Interpretar el seguimiento de red
+Cuando está habilitado el seguimiento de red, puede usarlo para capturar las llamadas que la aplicación realiza a diversos miembros de clase <xref:System.Net>. La salida de estas llamadas puede ser similar a los ejemplos siguientes.  
   
 ```  
 [588]   (4357)   Entering Socket#33574638::Send()  
 [588]   (4387)   Exiting Socket#33574638::Send()-> 61#61  
 ```  
   
- En el ejemplo anterior, \[588\] es el identificador único del subproceso actual.  \(4357\) y \(4387\) son las marcas de tiempo que representan el número de milisegundos transcurridos desde que la aplicación iniciada.  Los datos que sigue la marca de tiempo se muestra la aplicación que entra y salir del método **Socket.Send**.  El objeto que ejecuta el método de **Enviar** tiene 33574638 como identificador único.  El seguimiento de la salida del método incluye el valor devuelto \(61 en el ejemplo anterior\).  
+ En el ejemplo anterior, [588] es el identificador único del subproceso actual. (4357) y (4387) son marcas de tiempo que indican el número de milisegundos que han transcurrido desde que se ha iniciado la aplicación. Los datos que aparecen después de la marca de tiempo muestran la aplicación que entra y sale del método **Socket.Send**. El objeto que ejecuta el método **Send** tiene como identificador único 33574638. El seguimiento de salida del método incluye el valor devuelto (61 en el ejemplo anterior).  
   
- Los seguimientos de red pueden capturar el tráfico de red del que se envía o es recibido por la aplicación mediante protocolos en la aplicación como protocolo HTTP \(Hypertext Transfer Protocol\).  Estos datos se pueden capturar como texto y, opcionalmente, datos hexadecimales.  Los datos hexadecimal está disponible cuando se especifica **includehex** como valor del atributo de **tracemode** .  \(Para obtener información detallada sobre este atributo, vea [Cómo: Configurar la traza de la red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).\) El seguimiento del ejemplo siguiente se generó utilizando **includehex**.  
+ Los seguimientos de red pueden capturar el tráfico de red que se envía desde la aplicación o que se recibe en esta mediante protocolos de nivel de aplicación, como el Protocolo de transferencia de hipertexto (HTTP). Estos datos se pueden capturar como texto y, opcionalmente, como datos hexadecimales. Los datos hexadecimales están disponibles cuando se especifica **includehex** como valor del atributo **tracemode**. (Para obtener información detallada sobre este atributo, vea [How to: Configure Network Tracing](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) (Cómo: configurar el seguimiento de red)). El seguimiento del ejemplo siguiente se ha generado con **includehex**.  
   
  `[1692]   (1142)   00000000 : 47 45 54 20 2F 77 70 61-64 2E 64 61 74 20 48 54 : GET /wpad.dat HT`  
   
@@ -46,7 +51,7 @@ Cuando se habilita la traza de la red, puede utilizar el seguimiento para captur
   
  `[1692]   (1142)   00000030 : 6F 6E 3A 20 43 6C 6F 73-65 0D 0A 0D 0A     : on: Close....`  
   
- Para omitir datos hexadecimales, especifique **protocolonly** como valor para el atributo de **tracemode** .  El ejemplo siguiente muestra el seguimiento cuando se especifica **protocolonly** .  
+ Para omitir los datos hexadecimales, especifique **protocolonly** como valor del atributo **tracemode**. En el ejemplo siguiente se muestra el seguimiento cuando se especifica **protocolonly**.  
   
  `[2444]   (594)   Data from ConnectStream#33574638::WriteHeaders<<GET /wpad.dat HTTP/1.1`  
   
@@ -54,7 +59,8 @@ Cuando se habilita la traza de la red, puede utilizar el seguimiento para captur
   
  `Connection: Close`  
   
-## Vea también  
- [Habilitación del seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)   
- [Cómo: Configurar la traza de la red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
- [Traza de la red en .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+## <a name="see-also"></a>Vea también  
+ [Habilitar el seguimiento de red](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [Cómo: configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)   
+ [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)
+

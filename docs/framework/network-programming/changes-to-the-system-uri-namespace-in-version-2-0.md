@@ -1,31 +1,36 @@
 ---
-title: "Cambios realizados en el espacio de nombres System.Uri de la versi&#243;n 2.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "Cambios realizados en el espacio de nombres System.Uri de la versión 2.0"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Cambios realizados en el espacio de nombres System.Uri de la versi&#243;n 2.0
-Varios cambios se realizaron en la clase de <xref:System.Uri?displayProperty=fullName> .  Estos cambios corrigen un comportamiento incorrecto, utilidad mejorada, y ampliaron seguridad.  
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Cambios realizados en el espacio de nombres System.Uri de la versión 2.0
+Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=fullName>. Estos cambios han corregido un comportamiento incorrecto, han mejorado el uso y también la seguridad.  
   
-## Miembros obsoletos y desusado  
+## <a name="obsolete-and-deprecated-members"></a>Miembros obsoletos y en desuso  
  Constructores:  
   
--   Todos los constructores que tienen un parámetro de `dontEscape`.  
+-   Todos los constructores que tienen un parámetro `dontEscape`.  
   
  Métodos:  
   
@@ -45,39 +50,40 @@ Varios cambios se realizaron en la clase de <xref:System.Uri?displayProperty=ful
   
 -   <xref:System.Uri.EscapeString%2A>  
   
-## Cambios  
+## <a name="changes"></a>Cambios  
   
--   Para esquemas de URI que se sabe que no tenga una parte de la consulta \(archivo, FTP, etc.\), “?” el carácter siempre se filtra y no se considera el principio de una parte de <xref:System.Uri.Query%2A> .  
+-   En los esquemas URI que se sabe que no tienen un elemento de consulta (archivo, ftp y otros), el carácter "?" siempre tiene escape y no se considera el principio de un elemento <xref:System.Uri.Query%2A>.  
   
--   Para los URI implícitos de archivo \(con el formato "c:\\directory\\file@name.txt"\), el carácter del fragmento \(“\# "\) se convierte siempre a menos que se solicita el unescaping completo o <xref:System.Uri.LocalPath%2A> es `true`.  
+-   En los URI de archivo implícitos (con formato "c:\directory\file@name.txt"), el carácter de fragmento ("#") siempre tiene escape a menos que se solicite no escape completo o <xref:System.Uri.LocalPath%2A> sea `true`.  
   
--   Compatibilidad hostname UNC se quitó; la especificación IDN para representar nombres de host internacionales se adoptada.  
+-   Se ha quitado la compatibilidad de nombre de host UNC; se ha adoptado la especificación de IDN para representar nombres de host internacionales.  
   
--   <xref:System.Uri.LocalPath%2A> siempre devuelve una cadena completamente sin escape.  
+-   <xref:System.Uri.LocalPath%2A> siempre devuelve una cadena totalmente sin escape.  
   
--   ¿<xref:System.Uri.ToString%2A> no hace unescape como “% ASCII”, “? ”, o un carácter “\#”.  
+-   <xref:System.Uri.ToString%2A> no quita el escape de un carácter "%", "?" o "#" con escape.  
   
--   <xref:System.Uri.Equals%2A> ahora incluye parte de <xref:System.Uri.Query%2A> en la comprobación de la igualdad.  
+-   <xref:System.Uri.Equals%2A> ahora incluye el elemento <xref:System.Uri.Query%2A> en la comparación de igualdad.  
   
--   ¡“\=\=” De los operadores y “\! \=” son reemplazados y vinculados a <xref:System.Uri.Equals%2A> el método.  
+-   Los operadores "==" y "!=" se han reemplazado y vinculado al método <xref:System.Uri.Equals%2A>.  
   
 -   <xref:System.Uri.IsLoopback%2A> ahora genera resultados coherentes.  
   
--   El URI “`file:///path`” se traduce ya no en “file:\/\/path”.  
+-   El URI "`file:///path`" ya no se traduce en "file://path".  
   
--   “\#” ahora se reconoce como terminador del nombre de host.  Es decir, “http:\/\/consoto.com\#fragment” ahora se convierte en “http:\/\/contoso.com\/\#fragment”.  
+-   "#" ahora se reconoce como un terminador de nombre de host. Es decir, "http://consoto.com#fragment" ahora se ha convertido en "http://contoso.com/#fragment".  
   
--   Un error al combinar un URI base con un fragmento se ha corregido.  
+-   Se ha corregido un error al combinar un URI base con un fragmento.  
   
--   Un error en <xref:System.Uri.HostNameType%2A> es fijo.  
+-   Se ha corregido un error en <xref:System.Uri.HostNameType%2A>.  
   
--   Un error al analizar de NNTP es fijo.  
+-   Se ha corregido un error en el análisis de NNTP.  
   
--   UN URI http del formulario: contoso.com ahora una excepción de análisis.  
+-   Un URI con formato HTTP:contoso.com ahora produce una excepción de análisis.  
   
--   El marco correctamente administra userinfo en un URI.  
+-   El marco de trabajo administra correctamente la información de usuario de un URI.  
   
--   Se corrige la compresión de ruta de acceso de URI de modo que un URI dañado no pueda recorrer el sistema de archivos a la raíz.  
+-   Se ha corregido la compresión de la ruta de acceso URI para que un URI roto no pueda recorrer el sistema de archivos por encima de la raíz.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Uri?displayProperty=fullName>
+

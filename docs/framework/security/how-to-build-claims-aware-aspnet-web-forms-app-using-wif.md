@@ -1,73 +1,79 @@
 ---
-title: "C&#243;mo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF
-## Se aplica a  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Cómo: crear aplicaciones de formularios Web de ASP.NET para notificaciones mediante WIF
+## <a name="applies-to"></a>Se aplica a  
   
--   Base \(WIF\) de identidad de Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   Formularios Web Forms de ASP.NET®  
+-   Formularios Web Forms ASP.NET®  
   
-## Resumen  
- En este procedimiento proporciona los procedimientos paso a paso detallados para crear la aplicación demanda\- reconozca simple de formularios Web Forms de ASP.NET.  También proporciona instrucciones sobre cómo probar la aplicación demanda\- reconozca simple de formularios Web Forms de ASP.NET para la implementación correcta de autenticación federada.  En este procedimiento no tiene instrucciones detalladas para crear un Servicio de token de seguridad \(STS\), y las supone que ha configurado un STS.  
+## <a name="summary"></a>Resumen  
+ Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones. También proporciona instrucciones sobre cómo probar la aplicación sencilla de formularios Web Forms ASP.NET para notificaciones para obtener una implementación correcta de la autenticación federada. Este tema de procedimientos no tiene instrucciones detalladas para crear un Servicio de tokens de seguridad (STS) y presupone que ya ha configurado uno.  
   
-## Contenido  
+## <a name="contents"></a>Contenido  
   
 -   Objetivos  
   
 -   Resumen de pasos  
   
--   Paso 1 \- cree una aplicación de formularios Web Forms de ASP.NET Simple  
+-   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2 \- aplicación de formularios Web Forms de Configurar ASP.NET para la autenticación Demanda\- Basada  
+-   Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
--   Paso 3 \- pruebe la solución  
+-   Paso 3: Probar la solución  
   
-## Objetivos  
+## <a name="objectives"></a>Objetivos  
   
--   Configure la aplicación de formularios Web Forms de ASP.NET para la autenticación demanda\- basada  
+-   Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
--   Pruebe la aplicación demanda\- reconozca correcta de formularios Web Forms de ASP.NET  
+-   Probar una aplicación de formularios Web Forms ASP.NET para notificaciones correcta  
   
-## Resumen de pasos  
+## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1 \- cree la aplicación sencilla de formularios Web Forms de ASP.NET  
+-   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2 \- aplicación de formularios Web Forms de Configurar ASP.NET para la autenticación de Federated  
+-   Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación federada  
   
--   Paso 3 \- pruebe la solución  
+-   Paso 3: Probar la solución  
   
-## Paso 1 \- cree una aplicación de formularios Web Forms de ASP.NET Simple  
- En este paso, creará una nueva aplicación de formularios Web Forms de ASP.NET.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+ En este paso creará una aplicación de formularios Web Forms ASP.NET.  
   
-#### Para crear una aplicación ASP.NET simple  
+#### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
   
-1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo**y, a continuación **Proyecto**.  
+1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.  
   
-2.  En la ventana de **Nuevo proyecto** , haga clic en **Aplicación de formularios Web Forms de ASP.NET**.  
+2.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
   
-3.  En **Nombre**, entre en `TestApp` y presione **Aceptar**.  
+3.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
   
-## Paso 2 \- aplicación de formularios Web Forms de Configurar ASP.NET para la autenticación Demanda\- Basada  
- En este paso se agregará entradas de configuración *al archivo de configuración Web.config* de la aplicación de formularios Web Forms de ASP.NET para facilitar demanda\- monitores.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Paso 2: Configurar una aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
+ En este paso agregará entradas de configuración al archivo de configuración *Web.config* de su aplicación de formularios Web Forms ASP.NET para notificaciones.  
   
-#### Para configurar la aplicación de ASP.NET para la autenticación demanda\-basada  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Para configurar la aplicación ASP.NET para la autenticación basada en notificaciones  
   
-1.  Agregue las siguientes entradas de la sección de configuración *al archivo de configuración Web.config* inmediatamente después del elemento que abre de **\*\*\* \<configuration\> \*\*\*** :  
+1.  Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>**:  
   
     ```xml  
     <configSections>  
@@ -76,7 +82,7 @@ caps.handback.revision: 7
     </configSections>  
     ```  
   
-2.  Agregue un elemento de **\<location\>** que habilita el acceso a los metadatos de la federación de la aplicación:  
+2.  Agregue un elemento **\<location>** que permita el acceso a los metadatos de federación de la aplicación:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -88,7 +94,7 @@ caps.handback.revision: 7
     </location>  
     ```  
   
-3.  Agregue las siguientes entradas de configuración dentro de los elementos de **\<system.web\>** denegar a usuarios, deshabilite la autenticación nativa, y permite a WIF para administrar la autenticación.  
+3.  Agregue las siguientes entradas de configuración dentro de los elementos **\<system.web>** para denegar usuarios, deshabilitar la autenticación nativa y habilitar WIF para administrar la autenticación.  
   
     ```xml  
     <authorization>  
@@ -97,9 +103,9 @@ caps.handback.revision: 7
     <authentication mode="None" />  
     ```  
   
-4.  Agregue un elemento de **\<system.webServer\>** que definir módulos para la autenticación federada.  Observe que el atributo *PublicKeyToken* debe coincidir con el atributo *PublicKeyToken* para las entradas de **\<configSections\>** agregó anteriormente:  
+4.  Agregue un elemento **\<system.webServer>** que defina los módulos para la autenticación federada. Tenga en cuenta que el atributo *PublicKeyToken* debe ser el mismo que el atributo *PublicKeyToken* para las entradas **\<configSections>** que se han agregado anteriormente:  
   
-    ```  
+    ```xml  
     <system.webServer>  
       <modules>  
         <add name="WSFederationAuthenticationModule" type="System.IdentityModel.Services.WSFederationAuthenticationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler" />  
@@ -108,7 +114,7 @@ caps.handback.revision: 7
     </system.webServer>  
     ```  
   
-5.  Agregue las entradas relacionadas base siguiente de la configuración de la identidad de Windows y asegúrese de que la dirección URL de la aplicación ASP.NET y coincidencia del número de puerto los valores en la entrada de **\<audienceUris\>** , el atributo de **dominio kerberos** de elemento de **\<wsFederation\>** , y el atributo de **respuesta** de elemento de **\<wsFederation\>** .  Asegúrese también de que el valor de **\*\*\* el emisor \*\*\*** ajusta su dirección URL de \(STS\) del Servicio de token de seguridad.  
+5.  Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -132,16 +138,16 @@ caps.handback.revision: 7
     </system.identityModel.services>  
     ```  
   
-6.  Agregue la referencia al ensamblado de [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True) .  
+6.  Agregue una referencia al ensamblado <xref:System.IdentityModel>.  
   
-7.  Compile la solución para asegurarse de que hay errores.  
+7.  Compile la solución y asegúrese de que no existan errores.  
   
-## Paso 3 \- pruebe la solución  
- En este paso probará la aplicación de formularios Web Forms de ASP.NET configurada para la autenticación demanda\- basada en.  Para realizar una prueba básica, agregará código que muestra peticiones en el token emitido por el Servicio de token de seguridad \(STS\).  
+## <a name="step-3--test-your-solution"></a>Paso 3: Probar la solución  
+ En este paso probará la aplicación de formularios Web Forms ASP.NET configurada para la autenticación basada en notificaciones. Para realizar una prueba básica, agregará código que muestra notificaciones en el token emitido mediante el servicio de token de seguridad (STS).  
   
-#### Para probar la aplicación web form de ASP.NET para la autenticación demanda\- basada  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Para probar su aplicación de formularios Web Forms ASP.NET para la autenticación basada en notificaciones  
   
-1.  Abra el archivo de **Default.aspx** bajo el proyecto de **TestApp** y reemplace el marcado existente con el marcado siguiente:  
+1.  Abra el archivo **Default.aspx** en el proyecto **TestApp** y reemplace su marcado existente por el marcado siguiente:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -163,12 +169,12 @@ caps.handback.revision: 7
     </html>  
     ```  
   
-2.  Guarde **Default.aspx**, y vuelva a abrir el código subyacente de **Default.aspx.cs**denominado archivo.  
+2.  Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** se puede ocultar debajo de **Default.aspx** en el explorador de soluciones.  Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo adyacente.  
+    >  **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
   
-3.  Reemplace la existencia codificada en el método de **Page\_Load** de **Default.aspx.cs** con el código siguiente:  
+3.  Reemplace el código existente en el método **Page_Load** de **Default.aspx.cs** por el código siguiente:  
   
     ```csharp  
     using System;  
@@ -207,8 +213,9 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  Guarde **Default.aspx.cs**, compile la solución.  
+4.  Guarde **Default.aspx.cs** y compile la solución.  
   
-5.  Ejecute la solución presionando la tecla de **F5** .  
+5.  Presione la tecla **F5** para ejecutar la solución.  
   
-6.  Se debe mostrar en la página que muestra las peticiones en el token que se ha emitido por el Servicio de token de seguridad.
+6.  Debe estar presente en la página que muestra las notificaciones del token que ha emitido mediante el servicio de token de seguridad.
+

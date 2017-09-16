@@ -1,55 +1,61 @@
 ---
-title: "Autenticaci&#243;n de Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "autenticación [.NET Framework], clases"
-  - "IAuthenticationModule (interfaz)"
-  - "ICredentialLookup (interfaz)"
-  - "CredentialCache (clase), acerca de la clase CredentialCache"
-  - "recibir datos, autenticación"
-  - "AuthenticationManager (clase), acerca de la clase AuthenticationManager"
-  - "Internet, autenticación"
-  - "enviar datos, autenticación"
-  - "recursos de red, autenticación"
-  - "autenticación de usuario, clases para autenticación"
-  - "NetworkCredential (clase), acerca de la clase NetworkCredential"
-  - "autenticación de cliente, clases para autenticación"
+title: "Autenticación de Internet"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- authentication [.NET Framework], classes
+- IAuthenticationModule interface
+- ICredentialLookup interface
+- CredentialCache class, about CredentialCache class
+- receiving data, authentication
+- AuthenticationManager class, about AuthenticationManager class
+- Internet, authentication
+- sending data, authentication
+- network resources, authentication
+- user authentication, classes for authentication
+- NetworkCredential class, about NetworkCredential class
+- client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a26811b5dd62e30b371af88bc79d06843ef58d05
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Autenticaci&#243;n de Internet
-Las clases de <xref:System.Net> admiten una variedad de mecanismos de autenticación del cliente, incluidos los métodos de autenticación estándar de internet básica, implícita, operan, NTLM, y los métodos de autenticación Kerberos, así como personalizados que puede crear.  
+# <a name="internet-authentication"></a>Autenticación de Internet
+Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cliente, incluidos los métodos de autenticación de Internet estándares básico, implícito, negociado, NTLM y autenticación Kerberos, así como métodos personalizados que puede crear.  
   
- Las credenciales de autenticación se almacenan en las clases de <xref:System.Net.NetworkCredential> y de <xref:System.Net.CredentialCache> , que implementa la interfaz de <xref:System.Net.ICredentials> .  Cuando una de estas clases se consulta para las credenciales, devuelve una instancia de la clase de **NetworkCredential** .  El proceso de autenticación es administrado por la clase de <xref:System.Net.AuthenticationManager> , y el proceso de autenticación real realiza una clase de módulo de autenticación que implemente la interfaz de <xref:System.Net.IAuthenticationModule> .  Debe registrar un módulo de autenticación personalizada con **AuthenticationManager** antes de poderse utilizar; los módulos para el básica, implícita, operan, NTLM, y los métodos de autenticación Kerberos se registran de forma predeterminada.  
+ Las credenciales de autenticación se almacenan en las clases <xref:System.Net.NetworkCredential> y <xref:System.Net.CredentialCache>, que implementan la interfaz <xref:System.Net.ICredentials>. Cuando se consulta una de estas clases para obtener las credenciales, devuelve una instancia de la clase **NetworkCredential**. El proceso de autenticación se administra mediante la clase <xref:System.Net.AuthenticationManager> y el proceso de autenticación real se realiza mediante una clase del módulo de autenticación que implementa la interfaz <xref:System.Net.IAuthenticationModule>. Debe registrar un módulo de autenticación personalizado con **AuthenticationManager** para que se pueda usar. Los módulos para los métodos de autenticación básico, implícito, negociado, NTLM y Kerberos están registrados de forma predeterminada.  
   
- **NetworkCredential** almacena un conjunto de credenciales asociadas a un único recurso de internet identificado por un identificador URI y las devuelve en respuesta a cualquier llamada al método de <xref:System.Net.NetworkCredential.GetCredential%2A> .  La clase de **NetworkCredential** se utiliza normalmente en aplicaciones que tienen acceso a un número limitado de recursos de internet o las aplicaciones que utilizan el mismo conjunto de credenciales en todos los casos.  
+ **NetworkCredential** almacena un conjunto de credenciales asociadas a un único recurso de Internet identificado por un URI y las devuelve en respuesta a las llamadas al método <xref:System.Net.NetworkCredential.GetCredential%2A>. La clase **NetworkCredential** la suelen usar las aplicaciones que tienen acceso a un número limitado de recursos de Internet o las aplicaciones que usan el mismo conjunto de credenciales en todos los casos.  
   
- La clase de **CredentialCache** almacena una colección de credenciales para los distintos recursos web.  Cuando se llama al método de <xref:System.Net.CredentialCache.GetCredential%2A> , **CredentialCache** devuelve el conjunto adecuado de credenciales, determinado por el identificador URI del recurso web y el esquema de autenticación solicitado.  Las aplicaciones que utilizan diversos recursos de internet con diferentes esquemas de autenticación se benefician de utilizar la clase de **CredentialCache** , ya que almacena todas las credenciales y las proporcionan como se solicitan.  
+ La clase **CredentialCache** almacena una colección de credenciales para diversos recursos web. Cuando se llama al método <xref:System.Net.CredentialCache.GetCredential%2A>, **CredentialCache** devuelve el conjunto apropiado de credenciales, según lo determinado por el URI del recurso web y el esquema de autenticación solicitado. Las aplicaciones que usan diversos recursos de Internet con diferentes esquemas de autenticación se benefician del uso de la clase **CredentialCache**, ya que almacena todas las credenciales y las proporciona cuando se solicitan.  
   
- Cuando un recurso de internet solicita la autenticación, el método de <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> envía <xref:System.Net.WebRequest> a **AuthenticationManager** junto con la solicitud para las credenciales.  La solicitud se autentica según el proceso siguiente:  
+ Cuando un recurso de Internet solicita autenticación, el método <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> envía la <xref:System.Net.WebRequest> a **AuthenticationManager** junto con la solicitud de credenciales. La solicitud se autentica según el proceso siguiente:  
   
-1.  **AuthenticationManager** llama al método de <xref:System.Net.IAuthenticationModule.Authenticate%2A> en cada uno de los módulos registrados de autenticación en el orden que se registraron.  **AuthenticationManager** utiliza el primer módulo que no devuelve **null** para realizar el proceso de autenticación.  Detalles del proceso varían según el tipo de módulo de autenticación existente.  
+1.  **AuthenticationManager** llama al método <xref:System.Net.IAuthenticationModule.Authenticate%2A> en cada uno de los módulos de autenticación registrados en el orden en el que se han registrado. **AuthenticationManager** usa el primer módulo que no devuelve **null** para llevar a cabo el proceso de autenticación. Los detalles del proceso varían según el tipo de módulo de autenticación implicado.  
   
-2.  Cuando se completa el proceso de autenticación, el módulo de autenticación devuelve <xref:System.Net.Authorization> a **WebRequest** que contiene la información necesaria para tener acceso al recurso de internet.  
+2.  Una vez completado el proceso de autenticación, el módulo de autenticación devuelve una <xref:System.Net.Authorization> a la **WebRequest** que contiene la información necesaria para tener acceso al recurso de Internet.  
   
- Algunos esquemas de autenticación pueden autenticar un usuario sin crear primero una solicitud para un recurso.  Una aplicación puede ahorrar tiempo preauthenticating al usuario al recurso, lo eliminando por lo menos una acción de ida y vuelta al servidor.  O bien, puede realizar la autenticación durante el inicio del programa para ser mayor capacidad del usuario más adelante.  Los esquemas de autenticación que pueden utilizar el preauthentication establecen la propiedad de [CanPreAuthenticate](frlrfsystemnetiauthenticationmoduleclasspreauthenticatetopic) a **true**.  
+ Algunos esquemas de autenticación pueden autenticar a un usuario sin realizar primero una solicitud para un recurso. Una aplicación puede ahorrar tiempo si autentica previamente al usuario con el recurso, lo que elimina al menos un recorrido de ida y vuelta al servidor. O bien, puede realizar la autenticación durante el inicio del programa para que responda mejor al usuario más adelante. Los esquemas de autenticación que pueden usar la autenticación previa establecen la propiedad <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> en **true**.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Autenticación básica e implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [Autenticación de NTLM y Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [NTLM and Kerberos Authentication (Autenticación NTLM y Kerberos)](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
  [Seguridad en la programación para redes](../../../docs/framework/network-programming/security-in-network-programming.md)
+

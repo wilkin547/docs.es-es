@@ -51,7 +51,7 @@ Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
 La estructura de una cadena interpolada es la siguiente:  
   
 ```  
-$"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text> ..."  
+$"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."  
 ```  
 
 donde: 

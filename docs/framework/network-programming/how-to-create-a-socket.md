@@ -1,41 +1,46 @@
 ---
-title: "C&#243;mo crear un socket | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protocolos de aplicaciones, sockets"
-  - "Redes"
-  - "enviar datos, sockets"
-  - "solicitudes de datos, sockets"
-  - "solicitar datos de Internet, sockets"
-  - "Socket (clase), crear sockets"
-  - "Recursos de red"
-  - "recibir datos, sockets"
-  - "protocolos, sockets"
-  - "Internet, sockets"
-  - "sockets, crear"
+title: "Cómo crear un socket"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- Networking
+- sending data, sockets
+- data requests, sockets
+- requesting data from Internet, sockets
+- Socket class, creating sockets
+- Network Resources
+- receiving data, sockets
+- protocols, sockets
+- Internet, sockets
+- sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo crear un socket
-Antes de poder utilizar un socket para comunicarse con dispositivos remotos, el socket se debe inicializar con información de protocolo y dirección de red.  El constructor para la clase de <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de la dirección, el tipo de socket, y el tipo de protocolo que el socket utiliza para hacer las conexiones.  
+# <a name="how-to-create-a-socket"></a>Cómo crear un socket
+Para poder usar un socket a fin de comunicarse con dispositivos remotos, es necesario inicializarlo con la información del protocolo y de la dirección de red. El constructor para la clase <xref:System.Net.Sockets.Socket> tiene parámetros que especifican la familia de direcciones, el tipo de socket y el tipo de protocolo que el socket usa para establecer conexiones.  
   
-## Ejemplo  
- El ejemplo siguiente crea un socket que se puede utilizar para comunicar en una red de TCP\/IP\-based, como internet.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se crea un socket que se puede usar para comunicarse en una red basada en TCP/IP, como Internet.  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -45,10 +50,9 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Stream, ProtocolType.Tcp)  
-  
 ```  
   
- Para utilizar UDP en lugar de TCP, cambie el tipo de protocolo, como en el ejemplo siguiente:  
+ Para usar UDP en lugar de TCP, cambie el tipo de protocolo, como en el ejemplo siguiente:  
   
 ```csharp  
 Socket s = new Socket(AddressFamily.InterNetwork,   
@@ -58,17 +62,17 @@ Socket s = new Socket(AddressFamily.InterNetwork,
 ```vb  
 Dim s as New Socket(AddressFamily.InterNetwork, _  
    SocketType.Dgram, ProtocolType.Udp)  
-  
 ```  
   
- La enumeración de <xref:System.Net.Sockets.AddressFamily> especifica familias estándar de dirección utilizadas por la clase de **Socket** para resolver direcciones de red \(por ejemplo, el miembro de **AddressFamily.InterNetwork** especifica la familia de la dirección de la versión 4 de IP\).  
+ La enumeración <xref:System.Net.Sockets.AddressFamily> especifica las familias de direcciones estándar usadas por la clase **Socket** para resolver direcciones de red (por ejemplo, el miembro **AddressFamily.InterNetwork** especifica la familia de direcciones IP de versión 4).  
   
- La enumeración de <xref:System.Net.Sockets.SocketType> especifica el tipo de socket \(por ejemplo, el miembro de **SocketType.Stream** indica un socket estándar para enviar y recibir datos con el control de flujo\).  
+ La enumeración <xref:System.Net.Sockets.SocketType> especifica el tipo de socket (por ejemplo, el miembro **SocketType.Stream** indica un socket estándar para enviar y recibir datos con control de flujo).  
   
- La enumeración de <xref:System.Net.Sockets.ProtocolType> especifica el protocolo de red para utilizar cuando se comunica en **Socket** \(por ejemplo, **ProtocolType.Tcp** indica que el socket utiliza TCP; **ProtocolType.Udp** indica que el socket utiliza UDP\).  
+ La enumeración <xref:System.Net.Sockets.ProtocolType> especifica el protocolo de red que se va a usar al comunicarse en el **Socket** (por ejemplo, **ProtocolType.Tcp** indica que el socket usa TCP y **ProtocolType.Udp** indica que el socket usa UDP).  
   
- Después de crear **Socket** , puede iniciar una conexión a un extremo remoto o recibir conexiones de dispositivos remotos.  
+ Una vez que se ha creado un **socket**, puede iniciar una conexión con un punto de conexión remoto o recibir conexiones procedentes de dispositivos remotos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar sockets de cliente](../../../docs/framework/network-programming/using-client-sockets.md)   
  [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+

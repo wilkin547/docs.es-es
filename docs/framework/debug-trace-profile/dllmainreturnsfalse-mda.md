@@ -1,52 +1,57 @@
 ---
-title: "dllMainReturnsFalse MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "managed debugging assistants (MDAs), DllMain returns false"
-  - "DllMainReturnsFalse MDA"
-  - "DllMain function"
-  - "MDAs (managed debugging assistants), DllMain returns false"
+title: MDA de dllMainReturnsFalse
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- managed debugging assistants (MDAs), DllMain returns false
+- DllMainReturnsFalse MDA
+- DllMain function
+- MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 caps.latest.revision: 12
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 12
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be2fcbd608e15ecc9b0b17529558999d0dfa85c9
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# dllMainReturnsFalse MDA
-El asistente para la depuración administrada \(MDA\) de `dllMainReturnsFalse` se activa si la función `DllMain` administrada de un ensamblado de usuario, conocida como DLL\_PROCESS\_ATTACH, devuelve FALSE.  
+# <a name="dllmainreturnsfalse-mda"></a>MDA de dllMainReturnsFalse
+El asistente para la depuración administrada (MDA) `dllMainReturnsFalse` se activa si la función administrada `DllMain` de un ensamblado de usuario denominado con la razón DLL_PROCESS_ATTACH devuelve FALSE.  
   
-## Síntomas  
- La función `DllMain` devolvió FALSE, indicando que no se ejecutó correctamente.  Esto puede producir problemas indeterminados debido a que las funciones `DllMain` normalmente contienen código de inicialización importante.  
+## <a name="symptoms"></a>Síntomas  
+ La función `DllMain` devuelve FALSE, lo que indica que no se ha ejecutado correctamente. Esto puede causar problemas indeterminados, ya que las funciones `DllMain` normalmente contienen código de inicialización importante.  
   
-## Motivo  
- Se llama a la función `DllMain` con DLL\_PROCESS\_ATTACH para la inicialización del archivo DLL en carga.  Si devuelve FALSE, significa que se ha producido un error en la inicialización del archivo DLL.  
+## <a name="cause"></a>Motivo  
+ La función `DllMain` se denomina con la razón DLL_PROCESS_ATTACH para la inicialización del archivo DLL tras la carga. Si devuelve FALSE, significa que se ha producido un error en la inicialización del archivo DLL.  
   
-## Resolución  
- Analice el código de la función `DllMain` del archivo DLL con error e identifique la causa del error de inicialización.  
+## <a name="resolution"></a>Resolución  
+ Analice el código de la función `DllMain` del archivo DLL erróneo e identifique la causa del error de inicialización.  
   
-## Efecto en el Runtime  
- Este MDA no tiene efecto en el CLR.  Sólo informa acerca de los datos relacionados con el valor devuelto para `DllMain`.  
+## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+ Este MDA no tiene ningún efecto en el CLR. Solo notifica datos sobre el valor devuelto de `DllMain`.  
   
-## Resultados  
- Mensaje que indica que la función `DllMain`, denominada DLL\_PROCESS\_ATTACH, devolvió FALSE.  Hay que observar que este MDA sólo se activa si `DllMain` se implementa en código administrado.  
+## <a name="output"></a>Salida  
+ Un mensaje que indica que una función `DllMain`, denominada con la razón DLL_PROCESS_ATTACH, ha devuelto FALSE. Tenga en cuenta que este MDA solo se activa si `DllMain` se implementa en código administrado.  
   
-## Configuration  
+## <a name="configuration"></a>Configuración  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <dllMainReturnsFalse />  
@@ -54,5 +59,6 @@ El asistente para la depuración administrada \(MDA\) de `dllMainReturnsFalse` s
 </mdaConfig>  
 ```  
   
-## Vea también  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vea también  
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

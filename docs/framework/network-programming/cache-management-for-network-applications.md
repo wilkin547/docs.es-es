@@ -1,50 +1,56 @@
 ---
-title: "Administraci&#243;n de la memoria cach&#233; para aplicaciones de red | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "caché [.NET Framework], aplicaciones de red"
-  - "recursos de red, almacenamiento en caché"
-  - "Internet, almacenamiento en caché"
+title: "Administración de la memoria caché para aplicaciones de red"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- cache [.NET Framework], network applications
+- network resources, caching
+- Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bdd1416de418dfb9b8b5c68da205817ae6d6225b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Administraci&#243;n de la memoria cach&#233; para aplicaciones de red
-Este tema y los subtemas relacionados describen el almacenamiento en caché de los recursos recopilados mediante <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, y las clases de <xref:System.Net.FtpWebRequest> .  
+# <a name="cache-management-for-network-applications"></a>Administración de la memoria caché para aplicaciones de red
+Este tema y los temas secundarios relacionados describen el almacenamiento en caché de los recursos obtenidos mediante las clases <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> y <xref:System.Net.FtpWebRequest>.  
   
- Una caché proporciona almacenamiento temporal de recursos que han sido solicitados por una aplicación.  Si una aplicación solicita el mismo recurso más de una vez, el recurso se puede devolver desde la caché, lo que evita la sobrecarga de re\- solicitar del servidor.  El almacenamiento en caché puede mejorar el rendimiento de la aplicación reduciendo el tiempo necesario para obtener un recurso solicitado.  El almacenamiento en caché también puede reducir el tráfico de red se reduce el número de viajes al servidor.  Mientras el almacenamiento en memoria caché mejora el rendimiento, aumenta el riesgo de que el recurso devuelto a la aplicación está obsoleto, lo que significa que no es idéntico al recurso que se habría enviado por el servidor si almacenados en caché se ocultarse.  
+ Una memoria caché proporciona almacenamiento temporal de recursos solicitados por una aplicación. Si una aplicación solicita el mismo recurso más de una vez, este se puede devolver desde la memoria caché, con lo que se evita la sobrecarga de volver a solicitarlo desde el servidor. El almacenamiento en caché puede mejorar el rendimiento de la aplicación al reducir el tiempo necesario para obtener un recurso solicitado. El almacenamiento en caché también puede disminuir el tráfico de red al reducir el número de viajes al servidor. Aunque el almacenamiento en caché mejora el rendimiento, aumenta el riesgo de que el recurso devuelto a la aplicación esté obsoleto, lo que significa que no es idéntico al recurso que habría enviado el servidor si no se estuviera usando el almacenamiento en caché.  
   
- El almacenamiento en caché puede permitir que los usuarios no autorizados o procesos lean datos confidenciales.  Una respuesta autenticada se almacena en caché que se puede recuperar de caché sin una autorización adicional.  Si está habilitado el almacenamiento en caché, vaya a <xref:System.Net.WebRequest.CachePolicy%2A> a <xref:System.Net.Cache.RequestCacheLevel> o a <xref:System.Net.Cache.RequestCacheLevel> para deshabilitar el almacenamiento en caché para esta solicitud.  
+ El almacenamiento en caché puede permitir que usuarios o procesos no autorizados lean datos confidenciales. Se puede recuperar una respuesta autenticada almacenada en caché sin ninguna autorización adicional. Si el almacenamiento en caché está habilitado, cambie <xref:System.Net.WebRequest.CachePolicy%2A> a <xref:System.Net.Cache.RequestCacheLevel.BypassCache> o <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore> para deshabilitar el almacenamiento en caché de esta solicitud.  
   
- Debido a los problemas de seguridad, el almacenamiento en caché es **not** recomendado para los escenarios de nivel medio.  
+ Por motivos de seguridad, el almacenamiento en caché **no** se recomienda para escenarios de nivel intermedio.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)  
- Explica qué es una directiva de caché y cómo definir uno.  
+ Explica qué es una directiva de caché y cómo definirla.  
   
- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- Define cada tipo de directiva ubicación\- basada de caché esté disponible para los recursos de Protocolo de transferencia de hipertexto \(HTTP y https\).  
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ Define cada tipo de directiva de caché basada en la ubicación disponible para recursos de protocolo de transferencia de hipertexto (http y https).  
   
- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- Describe las consideraciones que se pueden utilizar para personalizar una directiva Tiempo\- basada de caché.  
+ [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md) (Directivas de caché de duración definida)  
+ Describe los criterios que pueden usarse para personalizar una directiva de caché basada en el tiempo.  
   
  [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- Describe cómo crear mediante programación las directivas y las solicitudes de caché que utilizan el almacenamiento en caché.  
+ Explica cómo crear directivas de caché mediante programación y solicitudes que usen el almacenamiento en caché.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Net.Cache>  
- Define los tipos y enumeraciones utilizados para definir directivas de los recursos recopilados mediante <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, y las clases de <xref:System.Net.FtpWebRequest> .
+ Define los tipos y las enumeraciones usados para definir directivas de caché para los recursos obtenidos mediante las clases <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> y <xref:System.Net.FtpWebRequest>.
+

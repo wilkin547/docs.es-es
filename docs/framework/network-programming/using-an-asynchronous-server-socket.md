@@ -1,42 +1,47 @@
 ---
-title: "Usar un socket de servidor asincr&#243;nico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "protocolos de aplicaciones, sockets"
-  - "enviar datos, sockets"
-  - "Socket (clase), sockets de servidor asincrónicos"
-  - "solicitudes de datos, sockets"
-  - "Sockets, sockets de servidor asincrónicos"
-  - "solicitar datos de Internet, sockets"
-  - "sockets de servidor"
-  - "recibir datos, sockets"
-  - "sockets de servidor asincrónicos"
-  - "protocolos, sockets"
-  - "Internet, sockets"
+title: "Usar un socket de servidor asincrónico"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- Socket class, asynchronous server sockets
+- data requests, sockets
+- sockets, asynchronous server sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- asynchronous server sockets
+- protocols, sockets
+- Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Usar un socket de servidor asincr&#243;nico
-Sockets asincrónicos de servidor utilizan el modelo de programación asincrónica de .NET Framework para procesar solicitudes del servicio de red.  La clase de <xref:System.Net.Sockets.Socket> sigue el modelo de nombres asincrónico de .NET Framework estándar; por ejemplo, el método sincrónico de <xref:System.Net.Sockets.Socket.Accept%2A> corresponde a <xref:System.Net.Sockets.Socket.BeginAccept%2A> y métodos asincrónicos de <xref:System.Net.Sockets.Socket.EndAccept%2A> .  
+# <a name="using-an-asynchronous-server-socket"></a>Usar un socket de servidor asincrónico
+Los sockets de servidor asincrónico usan el modelo de programación asincrónico de .NET Framework para procesar las solicitudes de servicio de red. La clase <xref:System.Net.Sockets.Socket> sigue el patrón estándar de nomenclatura asincrónico de .NET Framework; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Accept%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginAccept%2A> y <xref:System.Net.Sockets.Socket.EndAccept%2A>.  
   
- Un socket asincrónico de servidor requiere un método iniciar aceptar solicitudes de conexión de red, un método de devolución de llamada de controlar las solicitudes de conexión e iniciar recibiendo datos de red, y un método de devolución de llamada para finalizar recibir los datos.  Todos estos métodos se describen más adelante en esta sección.  
+ Un socket de servidor asincrónico requiere un método para comenzar a aceptar solicitudes de conexión de la red, un método de devolución de llamada para controlar las solicitudes de conexión y comenzar a recibir datos de la red, así como un método de devolución de llamada para dejar de recibir los datos. Todos estos métodos se describen más adelante en la presente sección.  
   
- En el ejemplo siguiente, iniciar aceptar solicitudes de conexión de red, el método `StartListening` inicializa **Socket** y utilice el método de **BeginAccept** para iniciar aceptar nuevas conexiones.  Se llama al método de devolución de llamada de aceptar cuando una nueva solicitud de conexión se recibe en el socket.  Es responsable de obtener la instancia de **Socket** que administrará la conexión y asignar ese **Socket** desactivado el subproceso que procesará la solicitud.  El método de devolución de llamada de aceptar implementa el delegado de <xref:System.AsyncCallback> ; devuelve un vacío y toma un único parámetro de <xref:System.IAsyncResult>escrito.  El ejemplo siguiente es el shell de un método de devolución de llamada de aceptar.  
+ En el ejemplo siguiente, para comenzar a aceptar solicitudes de conexión de la red, el método `StartListening` inicializa la clase **Socket** y luego usa el método **BeginAccept** para empezar a aceptar conexiones nuevas. Cuando se recibe una nueva solicitud de conexión en el socket, se llama al método de devolución de llamada de aceptación. Este método es responsable de obtener la instancia **Socket** que controlará la conexión y de rechazar esa clase **Socket** en el subproceso que procesará la solicitud. El método de devolución de llamada de aceptación implementa el delegado <xref:System.AsyncCallback>; no se devuelve ningún valor y toma un único parámetro de tipo <xref:System.IAsyncResult>. El ejemplo siguiente es el shell de un método de devolución de llamada de aceptación.  
   
 ```vb  
 Sub acceptCallback(ar As IAsyncResult)  
@@ -50,7 +55,7 @@ void acceptCallback( IAsyncResult ar) {
 }  
 ```  
   
- El método de **BeginAccept** toma dos parámetros, el delegado de **AsyncCallback** que señala al método de devolución de llamada de aceptar y un objeto que se utiliza para pasar información de estado al método de devolución de llamada.  En el ejemplo siguiente, **Socket** que escucha se pasa al método de devolución de llamada con el parámetro *de estado* .  Este ejemplo crea un delegado de **AsyncCallback** y comienza aceptar conexiones de red.  
+ El método **BeginAccept** toma dos parámetros, un delegado **AsyncCallback** que señala al método de devolución de llamada de aceptación y un objeto que se usa para pasar información de estado al método de devolución de llamada. En el ejemplo siguiente se pasa la clase **Socket** que escucha al método de devolución de llamada a través del parámetro *state*. En este ejemplo se crea un delegado **AsyncCallback** y se empiezan a aceptar conexiones de la red.  
   
 ```vb  
 listener.BeginAccept( _  
@@ -64,9 +69,9 @@ listener.BeginAccept(
     listener);  
 ```  
   
- Los subprocesos asincrónicos de los sockets de sistema subproceso el conjunto para procesar las conexiones entrantes.  Un subproceso es responsable de aceptar conexiones, otro subproceso se utiliza para administrar cada conexión entrante, y otro subproceso es responsable de recibir datos de la conexión.  Éstos podrían ser el mismo subproceso, dependiendo de que el subproceso es asignado por el grupo de subprocesos.  En el ejemplo siguiente, la clase de <xref:System.Threading.ManualResetEvent?displayProperty=fullName> suspende la ejecución del subproceso principal y de paso cuando la ejecución puede continuar.  
+ Los sockets asincrónicos usan subprocesos del grupo de subprocesos del sistema para procesar las conexiones entrantes. Un subproceso es responsable de aceptar conexiones, otro subproceso se usa para controlar cada conexión entrante y otro subproceso es responsable de recibir los datos de la conexión. Podría tratarse del mismo subproceso dependiendo del subproceso que esté asignado por el grupo de subprocesos. En el ejemplo siguiente, la clase <xref:System.Threading.ManualResetEvent?displayProperty=fullName> suspende la ejecución del subproceso principal e indica cuándo puede continuar la ejecución.  
   
- El ejemplo siguiente se muestra un método asincrónico que cree un socket asincrónico de TCP\/IP en el equipo local e inicie aceptar conexiones.  Se supone que hay **ManualResetEvent** global denominado `allDone`, que el método es un miembro de una clase denominada `SocketListener`, y un método de devolución de llamada denominado `acceptCallback` está definido.  
+ En el ejemplo siguiente se muestra un método asincrónico que crea un socket de TCP/IP asincrónico en el equipo local y comienza a aceptar conexiones. Presupone que hay un **ManualResetEvent** global denominado `allDone`, que el método es miembro de una clase denominada `SocketListener` y que hay definido un método de devolución de llamada denominado `acceptCallback`.  
   
 ```vb  
 Public Sub StartListening()  
@@ -97,7 +102,6 @@ Public Sub StartListening()
     End Try  
     Console.WriteLine("Closing the listener...")  
 End Sub 'StartListening  
-  
 ```  
   
 ```csharp  
@@ -132,7 +136,7 @@ public void StartListening() {
 }  
 ```  
   
- El método de devolución de llamada de aceptación \(`acceptCallback` en el ejemplo anterior\) es responsable de indicar el subproceso principal de la aplicación para continuar procesando, establecer la conexión con el cliente, e iniciar la lectura asincrónica de datos del cliente.  El ejemplo siguiente es la primera parte de una implementación del método de `acceptCallback` .  Esta sección método designa el subproceso de aplicación principal para continuar procesando y establece la conexión al cliente.  Se supone **ManualResetEvent** global denominado `allDone`.  
+ El método de devolución de llamada de aceptación (`acceptCallback` en el ejemplo anterior) es responsable de indicar el subproceso de aplicación principal para continuar el procesamiento, de establecer la conexión con el cliente y de iniciar la lectura asincrónica de datos desde el cliente. El siguiente ejemplo es la primera parte de una implementación del método `acceptCallback`. Esta sección del método indica al subproceso de aplicación principal que continúe el procesamiento y establezca la conexión con el cliente. Presupone que hay un **ManualResetEvent** global denominado `allDone`.  
   
 ```vb  
 Public Sub acceptCallback(ar As IAsyncResult)  
@@ -156,7 +160,7 @@ public void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- Leer datos de un socket de cliente requiere un objeto de estados que pase valores entre las llamadas asincrónicas.  El ejemplo siguiente implementa un objeto de estados para recibir una cadena de cliente remoto.  Contiene los campos del socket de cliente, un búfer de datos para recibir datos, y <xref:System.Text.StringBuilder> para crear la cadena de datos enviada por el cliente.  Agregar estos campos en el objeto de estado permite que sus valores se conservarían a través de varias llamadas para leer datos de socket de cliente.  
+ La lectura de los datos de un socket de cliente requiere un objeto de estado que pase valores entre llamadas asincrónicas. En el ejemplo siguiente se implementa un objeto de estado para recibir una cadena del cliente remoto. Contiene campos para el socket de cliente, un búfer de datos para recibir los datos y un <xref:System.Text.StringBuilder> para crear la cadena de datos enviada por el cliente. La colocación de estos campos en el objeto de estado permite conservar sus valores en varias llamadas para leer datos desde el socket de cliente.  
   
 ```vb  
 Public Class StateObject  
@@ -176,9 +180,9 @@ public class StateObject {
 }  
 ```  
   
- La sección del método de `acceptCallback` inicial recibir los datos de socket de cliente primero inicializa una instancia de la clase de `StateObject` y después llamar al método de <xref:System.Net.Sockets.Socket.BeginReceive%2A> para empezar a leer los datos de socket de cliente de forma asincrónica.  
+ La sección del método `acceptCallback` que comienza a recibir los datos del socket de cliente primero inicializa una instancia de la clase `StateObject` y luego llama al método <xref:System.Net.Sockets.Socket.BeginReceive%2A> para empezar a leer los datos del socket de cliente de forma asincrónica.  
   
- El ejemplo siguiente se muestra el método completo de `acceptCallback` .  Se supone que hay **ManualResetEvent** global denominado `allDone,` que la clase de `StateObject` está definido, y que el método de `readCallback` está definido en una clase denominada `SocketListener`.  
+ En el siguiente ejemplo se muestra el método `acceptCallback` completo. Se presupone que hay un **ManualResetEvent** global denominado `allDone,`, que se ha definido la clase `StateObject` y que se ha definido el método `readCallback` en una clase denominada `SocketListener`.  
   
 ```vb  
 Public Shared Sub acceptCallback(ar As IAsyncResult)  
@@ -195,7 +199,6 @@ Public Shared Sub acceptCallback(ar As IAsyncResult)
     handler.BeginReceive(state.buffer, 0, state.BufferSize, 0, _  
         AddressOf AsynchronousSocketListener.readCallback, state)  
 End Sub 'acceptCallback  
-  
 ```  
   
 ```csharp  
@@ -215,9 +218,9 @@ public static void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- El método final que necesita implementarse para el servidor asincrónico de socket es el método de devolución de llamada de lectura que devuelve los datos enviados por el cliente.  Como el método de devolución de llamada de aceptar, el método de devolución de llamada de lectura es un delegado de **AsyncCallback** .  Este método lee uno o más bytes de socket de cliente en el búfer de datos y después llamar al método de **BeginReceive** de nuevo hasta que los datos enviados por el cliente se complete.  Una vez que el mensaje completo se ha leído de cliente, la cadena se muestra en la consola y el socket de servidor que administra la conexión al cliente se cierra.  
+ El método final que debe implementarse para el servidor de socket asincrónico es el método de devolución de llamada de lectura que devuelve los datos enviados por el cliente. Al igual que el método de devolución de llamada de aceptación, el método de devolución de llamada de lectura es un delegado **AsyncCallback**. Este método lee uno o más bytes del socket de cliente en el búfer de datos y luego vuelve a llamar al método **BeginReceive** hasta que los datos enviados por el cliente están completos. Una vez que se ha leído todo el mensaje desde el cliente, la cadena se muestra en la consola y se cierra el socket de servidor que controla la conexión con el cliente.  
   
- El ejemplo siguiente se implementa el método de `readCallback` .  Se supone que la clase de `StateObject` está definida.  
+ El ejemplo siguiente implementa el método `readCallback`. Se presupone que se ha definido la clase `StateObject`.  
   
 ```vb  
 Public Shared Sub readCallback(ar As IAsyncResult)  
@@ -242,7 +245,6 @@ Public Shared Sub readCallback(ar As IAsyncResult)
         End If  
     End If  
 End Sub 'readCallback  
-  
 ```  
   
 ```csharp  
@@ -271,8 +273,9 @@ public static void readCallback(IAsyncResult ar) {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Usar un socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Ejemplo de sockets de servidor asincrónicos](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Threading](../../../docs/standard/threading/index.md)   
+ [Subprocesamiento](../../../docs/standard/threading/index.md)   
  [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+

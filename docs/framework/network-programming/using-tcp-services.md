@@ -1,43 +1,48 @@
 ---
-title: "Usar Servicios TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "solicitar datos de Internet, TCP"
-  - "recibir datos, TCP"
-  - "TcpClient (clase), acerca de la clase TcpClient"
-  - "solicitudes de datos, TCP"
-  - "protocolos de aplicaciones, TCP"
-  - "recursos de red, TCP"
-  - "enviar datos, TCP"
-  - "TCP"
-  - "protocolos, TCP"
-  - "Internet, TCP"
+title: Usar Servicios TCP
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, TCP
+- receiving data, TCP
+- TcpClient class, about TcpClient class
+- data requests, TCP
+- application protocols, TCP
+- network resources, TCP
+- sending data, TCP
+- TCP
+- protocols, TCP
+- Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Usar Servicios TCP
-La clase de <xref:System.Net.Sockets.TcpClient> solicita los datos de un recurso de internet mediante el TCP.  Los métodos y las propiedades de **TcpClient** resumen los detalles para crear <xref:System.Net.Sockets.Socket> para solicitar y recibir datos mediante TCP.  Dado que la conexión al dispositivo remoto se representa como una secuencia, los datos se pueden leer y escribir con .NET Framework secuencia\- que administra las técnicas.  
+# <a name="using-tcp-services"></a>Usar Servicios TCP
+La clase <xref:System.Net.Sockets.TcpClient> solicita datos de un recurso de Internet mediante TCP. Los métodos y propiedades de **TcpClient** abstraen los detalles para crear un <xref:System.Net.Sockets.Socket> a fin de solicitar y recibir datos mediante TCP. Dado que la conexión al dispositivo remoto se representa como una secuencia, los datos se pueden leer y escribir empleando técnicas de control de secuencias de .NET Framework.  
   
- El protocolo TCP establece una conexión con un extremo remoto y a las aplicaciones que conexión para enviar y recibir los paquetes de datos.  TCP es responsable de asegurarse de que los paquetes de datos se envían al extremo y se ensambla en el orden correcto cuando llegan.  
+ El protocolo TCP establece una conexión con un punto de conexión remoto y luego usa esa conexión para enviar y recibir paquetes de datos. El protocolo TCP es responsable de garantizar que los paquetes de datos se envíen al punto de conexión y que se monten en el orden correcto cuando lleguen.  
   
- Para establecer una conexión TCP, debe conocer la dirección del dispositivo de red que hospeda el servicio que necesite y debe conocer el puerto TCP que el servicio utiliza para comunicarse.  Internet Assigned Numbers Authority \(Iana\) define los números de puerto para los servicios comunes \(vea www.iana.org\/assignments\/port\-numbers\).  Los servicios no en la lista de IANA pueden tener números de puerto en el intervalo de 1.024 a 65.535.  
+ Para establecer una conexión TCP, debe conocer la dirección del dispositivo de red que hospeda el servicio que necesita, así como el puerto TCP que usa el servicio para comunicarse. Internet Assigned Numbers Authority (Iana) define los números de puerto para los servicios comunes (vea www.iana.org/assignments/port-numbers). Los servicios que no están en la lista de Iana pueden tener números de puerto en el intervalo comprendido entre 1024 y 65 535.  
   
- El ejemplo siguiente se muestra la configuración de **TcpClient** para conectarse a un servidor de en el puerto TCP 13.  
+ En el ejemplo siguiente se muestra cómo configurar un **TcpClient** para conectarse a un servidor horario en el puerto TCP 13.  
   
 ```vb  
 Imports System  
@@ -74,7 +79,6 @@ Public Class TcpTimeClient
         Return 0  
     End Function 'Main  
 End Class 'TcpTimeClient  
-  
 ```  
   
 ```csharp  
@@ -108,9 +112,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> se utiliza para controlar un puerto TCP para las solicitudes entrantes y después para crear **Socket** o **TcpClient** que administra la conexión al cliente.  El método de <xref:System.Net.Sockets.TcpListener.Start%2A> permite escuchar, y el método de <xref:System.Net.Sockets.TcpListener.Stop%2A> deshabilita escuchar en el puerto.  El método de <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> acepta solicitudes de conexión entrante y crea **TcpClient** para controlar la solicitud, y el método de <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> acepta solicitudes de conexión entrante y crea **Socket** para controlar la solicitud.  
+ <xref:System.Net.Sockets.TcpListener> se usa para supervisar un puerto TCP para las solicitudes entrantes y para luego crear un **Socket** o un **TcpClient** que administre la conexión al cliente. El método <xref:System.Net.Sockets.TcpListener.Start%2A> habilita las escuchas, mientras que el método <xref:System.Net.Sockets.TcpListener.Stop%2A> deshabilita las escuchas en el puerto. El método <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> acepta las solicitudes de conexión entrantes y crea un **TcpClient** para gestionar la solicitud, mientras que el método <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> acepta las solicitudes de conexión entrantes y crea un **Socket** para gestionar la solicitud.  
   
- El ejemplo siguiente muestra cómo crear un servidor horario de red mediante **TcpListener** al puerto TCP 13 de presentación.  Cuando se acepta una solicitud de conexión entrante, el servidor horario responde con la fecha y hora actual del servidor host.  
+ En el ejemplo siguiente se muestra cómo crear un servidor horario de red mediante un **TcpListener** para supervisar el puerto TCP 13. Cuando se acepta una solicitud de conexión entrante, el servidor horario responde con la fecha y hora actuales del servidor host.  
   
 ```vb  
 Imports System  
@@ -202,5 +206,6 @@ public class TcpTimeServer {
 }  
 ```  
   
-## Vea también  
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+## <a name="see-also"></a>Vea también  
+ 
+

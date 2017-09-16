@@ -21,10 +21,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1c77754efcfa626c2907fd57740133a0db4737d4
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
@@ -42,7 +42,7 @@ La clase <xref:System.Collections.Hashtable?displayProperty=fullName> y las clas
   
  Por ejemplo, una función hash para una cadena podría tomar los códigos ASCII de cada carácter de la cadena y sumarlos todos para generar un código hash. La cadena "picnic" tendría un código hash que es diferente del código hash de la cadena "cesta"; por lo tanto, las cadenas "picnic" y "cesta" estarían en depósitos distintos. En cambio, "bolsa" y "lobas" tendrían el mismo código hash y estarían en el mismo cubo.  
   
- Las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tienen la misma funcionalidad que la clase <xref:System.Collections.Hashtable>. Una clase <xref:System.Collections.Generic.Dictionary%602> de un tipo específico (distinto de <xref:System.Object>) proporciona un rendimiento mejor que una clase <xref:System.Collections.Hashtable> para tipos de valor. Esto se debe a que los elementos de <xref:System.Collections.Hashtable> son del tipo <xref:System.Object> y, por lo tanto, las conversiones boxing y unboxing se suelen producir al almacenar o recuperar un tipo de valor. La clase <xref:System.Collections.Concurrent.ConcurrentDictionary%602> debe usarse cuando varios subprocesos puedan acceder a la colección simultáneamente.  
+ Las clases <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tienen la misma funcionalidad que la clase <xref:System.Collections.Hashtable>. Una clase <xref:System.Collections.Generic.Dictionary%602> de un tipo específico (distinto de <xref:System.Object>) proporciona un rendimiento mejor que una clase <xref:System.Collections.Hashtable> para tipos de valor. Esto se debe a que los elementos de <xref:System.Collections.Hashtable> son del tipo <xref:System.Object> y, por lo tanto, las conversiones boxing y unboxing se suelen producir al almacenar o recuperar un tipo de valor. La clase <xref:System.Collections.Concurrent.ConcurrentDictionary%602> debe usarse cuando varios subprocesos puedan tener acceso a la colección simultáneamente.  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Collections.Hashtable>   

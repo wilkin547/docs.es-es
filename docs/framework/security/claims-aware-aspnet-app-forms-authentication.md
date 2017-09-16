@@ -1,31 +1,37 @@
 ---
-title: "C&#243;mo: compilar aplicaciones ASP.NET para notificaciones mediante la autenticaci&#243;n basada en formularios | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: compilar aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 987157bc3663330d9c610c1016787890e9dc6137
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo: compilar aplicaciones ASP.NET para notificaciones mediante la autenticaci&#243;n basada en formularios
-## Se aplica a  
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Cómo: compilar aplicaciones ASP.NET para notificaciones mediante la autenticación basada en formularios
+## <a name="applies-to"></a>Se aplica a  
   
--   Base \(WIF\) de identidad de Microsoft® Windows®  
+-   Microsoft® Windows® Identity Foundation (WIF)  
   
--   Formularios Web Forms de ASP.NET®  
+-   Formularios Web Forms ASP.NET®  
   
-## Resumen  
- En este procedimiento proporciona los procedimientos paso a paso detallados para crear una aplicación demanda\- reconozca simple de formularios Web Forms de ASP.NET que utilice la autenticación de formularios.  También proporciona instrucciones sobre cómo probar la aplicación para comprobar que las peticiones se muestran cuando un usuario firma en con la autenticación de formularios.  
+## <a name="summary"></a>Resumen  
+ Este tema de procedimientos proporciona procedimientos paso a paso para crear una sencilla aplicación de formularios Web Forms ASP.NET para notificaciones que usa la autenticación de formularios. También proporciona instrucciones para probar la aplicación a fin de comprobar que las notificaciones se presentan cuando un usuario inicia sesión con la autenticación de formularios.  
   
-## Contenido  
+## <a name="contents"></a>Contenido  
   
 -   Objetivos  
   
@@ -33,48 +39,48 @@ caps.handback.revision: 6
   
 -   Resumen de pasos  
   
--   Paso 1 \- cree una aplicación de formularios Web Forms de ASP.NET Simple  
+-   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2 \- la aplicación de formularios Web Forms de Configurar ASP.NET para las peticiones Utilizar la autenticación  
+-   Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios  
   
--   Paso 3 \- pruebe la solución  
+-   Paso 3: Probar la solución  
   
-## Objetivos  
+## <a name="objectives"></a>Objetivos  
   
--   Configurar una aplicación de formularios Web Forms de ASP.NET para las peticiones mediante la autenticación de formularios  
+-   Configurar una aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios  
   
--   Pruebe la aplicación de formularios Web Forms de ASP.NET para ver si funciona correctamente  
+-   Probar la aplicación de formularios Web Forms ASP.NET para ver si funciona correctamente  
   
-## Información general  
- En .NET 4,5, WIF y la autorización demanda\- basada se ha incluido como parte integrante del marco.  Anteriormente, si deseara peticiones de un usuario de ASP.NET, se requieren instalar WIF, y después convierte interfaces a los objetos de la entidad de seguridad como `Thread.CurrentPrincipal` o `HttpContext.Current.User`.  Ahora, las peticiones son ocupa automáticamente estos objetos de entidad de seguridad.  
+## <a name="overview"></a>Información general  
+ En .NET 4.5, WIF y su autorización basada en notificaciones se han incluido como parte integral del marco. Anteriormente, si quería notificaciones de un usuario de ASP.NET, tenía que instalar WIF y, después, convertir las interfaces a objetos de entidad de seguridad como `Thread.CurrentPrincipal` o `HttpContext.Current.User`. Ahora, estos objetos de entidad de seguridad sirven las notificaciones automáticamente.  
   
- La autenticación de formularios se ha beneficiado include de WIF en .NET 4,5 porque todos los usuarios autenticados por los formularios automáticamente tienen peticiones asociadas a ellos.  Puede usar estas peticiones inmediatamente en una aplicación ASP.NET que utilice la autenticación de formularios, como en este procedimiento se muestran.  
+ La autenticación de formularios se ha beneficiado de la inclusión de WIF en .NET 4.5, ya que todos los usuarios autenticados mediante formularios automáticamente tienen notificaciones asociadas. Puede empezar a usar estas notificaciones inmediatamente en una aplicación de ASP.NET que use la autenticación de formularios, como se muestra en este tema de procedimientos.  
   
-## Resumen de pasos  
+## <a name="summary-of-steps"></a>Resumen de pasos  
   
--   Paso 1 \- cree una aplicación de formularios Web Forms de ASP.NET Simple  
+-   Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
   
--   Paso 2 \- la aplicación de formularios Web Forms de Configurar ASP.NET para las peticiones Utilizar la autenticación  
+-   Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios  
   
--   Paso 3 \- pruebe la solución  
+-   Paso 3: Probar la solución  
   
-## Paso 1 \- cree una aplicación de formularios Web Forms de ASP.NET Simple  
- En este paso, creará una nueva aplicación de formularios Web Forms de ASP.NET.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
+ En este paso creará una aplicación de formularios Web Forms ASP.NET.  
   
-#### Para crear una aplicación ASP.NET simple  
+#### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
   
-1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo**y, a continuación **Proyecto**.  
+1.  Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.  
   
-2.  En la ventana de **Nuevo proyecto** , haga clic en **Aplicación de formularios Web Forms de ASP.NET**.  
+2.  En la ventana **Nuevo proyecto**, haga clic en **Aplicación de formularios Web Forms ASP.NET**.  
   
-3.  En **Nombre**, entre en `TestApp` y presione **Aceptar**.  
+3.  En **Nombre**, escriba `TestApp` y haga clic en **Aceptar**.  
   
-## Paso 2 \- la aplicación de formularios Web Forms de Configurar ASP.NET para las peticiones Utilizar la autenticación  
- En este paso se agregará una entrada de configuración al archivo de configuración *Web.config* y editará el Default.aspxfile para mostrar la información de las peticiones de una cuenta.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios  
+ En este paso se agrega una entrada de configuración al archivo de configuración *Web.config* y se edita el archivo *Default.aspx* para que muestre la información de notificaciones de una cuenta.  
   
-#### Para configurar la aplicación ASP.NET para las peticiones mediante la autenticación de formularios  
+#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de formularios  
   
-1.  En *el archivo Default.aspx* , reemplace el marcado existente con el siguiente:  
+1.  En el archivo *Default.aspx*, reemplace el marcado existente por el siguiente:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>  
@@ -91,12 +97,11 @@ caps.handback.revision: 6
             </asp:GridView>  
         </p>  
     </asp:Content>  
-  
     ```  
   
-     Este paso agrega un control GridView a la *página Default.aspx* que se rellena con las demandas recuperadas de la autenticación de formularios.  
+     Este paso agrega un control GridView a la página *Default.aspx* que se va a rellenar con las notificaciones recuperadas de la autenticación de formularios.  
   
-2.  Guarde el archivo *Default.aspx* , vuelva a abrir el código\- detrás de Default.aspx.cs denominado archivo.  Reemplace la existencia codificada con lo siguiente:  
+2.  Guarde el archivo *Default.aspx* y abra su archivo de código subyacente denominado *Default.aspx.cs*. Reemplace el código existente por el siguiente:  
   
     ```csharp  
     using System;  
@@ -121,15 +126,16 @@ caps.handback.revision: 6
     }  
     ```  
   
-     El código anterior mostrará peticiones sobre un usuario autenticado, incluidos los usuarios identificados por la autenticación de formularios.  
+     El código anterior muestra notificaciones sobre un usuario autenticado, incluidos los usuarios identificados mediante la autenticación de formularios.  
   
-## Paso 3 \- pruebe la solución  
- En este paso probará la aplicación de formularios Web Forms de ASP.NET, y comprueba que las peticiones se muestran cuando un usuario firma en con la autenticación de formularios.  
+## <a name="step-3--test-your-solution"></a>Paso 3: Probar la solución  
+ En este paso se prueba la aplicación de formularios Web Forms ASP.NET y se comprueba que se presentan notificaciones cuando un usuario inicia sesión con la autenticación de formularios.  
   
-#### Para probar la aplicación de formularios Web Forms de ASP.NET para las peticiones mediante la autenticación de formularios  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios  
   
-1.  Presione **F5** para compilar y ejecutar la aplicación.  Debe mostrar con *Default.aspx, que*tiene **Registrar** y **Inicio de sesión** vínculos en la parte superior derecha de la página.  Haga clic en **Registrarse**.  
+1.  Presione **F5** para compilar y ejecutar la aplicación. Debe aparecer *Default.aspx*, que tiene los vínculos **Registrarse** e **Iniciar sesión** en la parte superior derecha de la página. Haga clic en **Registrarse**.  
   
-2.  En la página de **Registrar** , cree una cuenta de usuario, y haga clic en **Registrar**.  La cuenta se realizará utilizando la autenticación de formularios, y en automáticamente se firmarán.  
+2.  En la página **Registrarse**, cree una cuenta de usuario y luego haga clic en **Registrarse**. Se crea la cuenta mediante la autenticación de formularios y la sesión se inicia automáticamente.  
   
-3.  Cuando se ha redirigido a la página principal, debería ver una tabla debajo de la dirección de **Las peticiones** que incluye **Emisor**, **OriginalIssuer**, **Tipo**, **Valor**, e información de las peticiones de **ValueType** sobre su cuenta.
+3.  Después de que se le haya redirigido a la página principal, debería ver una tabla debajo del título **Sus notificaciones** con la información de notificaciones **Emisor**, **OriginalIssuer**, **Tipo**, **Valor** y **ValueType** sobre la cuenta.
+

@@ -1,51 +1,56 @@
 ---
-title: "Habilitaci&#243;n del seguimiento de red | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "destinos de seguimiento"
-  - "envío de seguimiento al archivo de registro"
-  - "agentes de escucha de seguimiento, seguimiento de red"
-  - "seguimiento de red, habilitar"
-  - "CLR Debugger"
-  - "agentes de escucha predeterminados"
-  - "registros, seguimiento"
-  - "destino para la salida de seguimiento"
+title: "Habilitación del seguimiento de red"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- trace destinations
+- sending traces to log file
+- trace listeners, network tracing
+- network tracing, enabling
+- CLR Debugger
+- default listeners
+- logs, trace
+- destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15cee0244dc06f6eea03b333e01380953a616947
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Habilitaci&#243;n del seguimiento de red
-La traza de la red proporciona acceso a información sobre las invocaciones de método y el tráfico de red generado por una aplicación administrada.  Debe completar las tareas siguientes para habilitar la traza de la red en su aplicación:  
+# <a name="enabling-network-tracing"></a>Habilitación del seguimiento de red
+El seguimiento de red proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Para habilitar el seguimiento de red en la aplicación tiene que realizar las tareas siguientes:  
   
--   Compile el código con la traza habilitada.  Vea [How to: Compile Conditionally with Trace and Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) para obtener más información sobre el compilador necesarios para habilitar la traza.  
+-   Compilar el código con el seguimiento habilitado. Vea [How to: Compile Conditionally with Trace and Debug (Cómo: Compilar de forma condicional con Trace y Debug)](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) para obtener más información sobre los modificadores del compilador necesarios para habilitar el seguimiento.  
   
--   Especifique un destino para el resultado de la traza.  
+-   Especificar un destino para la salida del seguimiento.  
   
--   Configure el comportamiento de la traza de la red.  Vea [Cómo: Configurar la traza de la red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) para obtener información detallada.  
+-   Configurar el comportamiento del seguimiento de red. Vea [How to: Configure Network Tracing (Cómo: Configurar el seguimiento de red)](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) para obtener información detallada.  
   
- El más común seguimiento los destinos, también denominados agentes de escucha, es el agente de escucha predeterminado y el archivo de registro.  
+ Los destinos de seguimiento más comunes, que también se conocen como agentes de escucha de seguimiento, son el agente de escucha predeterminado y el archivo de registro.  
   
- La traza utiliza el agente de escucha predeterminado si no especifica un agente de escucha.  Puede ver los mensajes enviados al agente de escucha predeterminado ejecutando el código en un depurador código\- habilitado administrado como el depurador CLR enviado con .NET Framework SDK, o DBwin32.exe enviado con Windows SDK.  Mediante el depurador CLR, los mensajes de traza aparecen en la ventana de **Resultado** .  
+ Si no se especifica un agente de escucha de seguimiento, el seguimiento usa el agente de escucha predeterminado. Puede ver los mensajes enviados al agente de escucha predeterminado si ejecuta el código en un depurador administrado habilitado para código, como CLR Debugger, que se distribuye con .NET Framework SDK, o DBwin32.exe, incluido en Windows SDK. Si se usa CLR Debugger, los mensajes de seguimiento aparecen en la ventana **Resultados**.  
   
- Si prefiere utilizar un archivo para recibir trazas, puede especificar un archivo de registro mediante opciones de configuración, como se muestra en el ejemplo siguiente.  \(Para obtener una descripción general de archivos de configuración, vea [archivos de configuración](../../../docs/framework/configure-apps/index.md).\)  
+ Si prefiere usar un archivo para recibir los seguimientos, puede especificar un archivo de registro mediante los valores de configuración, como se muestra en el ejemplo siguiente. (Para una descripción general de los archivos de configuración, vea [Archivos de configuración](../../../docs/framework/configure-apps/index.md)).  
   
- Para enviar un seguimiento en un archivo de registro, agregue el siguiente nodo al nodo de `<system.diagnostics>` del archivo de configuración adecuado \(aplicación o equipo\).  Puede cambiar el nombre del archivo \(trace.log\) para satisfacer sus necesidades.  
+ Para enviar los seguimientos a un archivo de registro, agregue el siguiente nodo al nodo `<system.diagnostics>` del archivo de configuración adecuado (aplicación o equipo). Puede cambiar el nombre del archivo (trace.log) de modo que satisfaga sus necesidades.  
   
-```  
+```xml  
 <system.diagnostics>  
   <trace autoflush="true" indentsize="4">  
     <listeners>  
@@ -55,7 +60,8 @@ La traza de la red proporciona acceso a información sobre las invocaciones de m
 </system.diagnostics>  
 ```  
   
-## Vea también  
- [Interpretar el seguimiento de red](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [Traza de la red en .NET Framework](../../../docs/framework/network-programming/network-tracing.md)   
- [Introduction to Instrumentation and Tracing](http://msdn.microsoft.com/es-es/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+## <a name="see-also"></a>Vea también  
+ [Interpreting Network Tracing (Interpretar el seguimiento de red)](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
+ [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)   
+ [Introducción a la instrumentación y el seguimiento](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+

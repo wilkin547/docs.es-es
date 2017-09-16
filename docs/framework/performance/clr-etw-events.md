@@ -1,75 +1,81 @@
 ---
-title: "CLR ETW Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CLR ETW events"
-  - "ETW, common language runtime"
-  - "ETW, CLR events"
+title: Eventos ETW de CLR
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CLR ETW events
+- ETW, common language runtime
+- ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 caps.latest.revision: 45
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 45
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 57253982ec28b022cea102867f7b49788e10d422
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# CLR ETW Events
-Los temas de esta sección describen la traza de eventos para Windows \(ETW\).  Cada evento tiene asociados una palabra clave y un nivel, que se describen en el tema [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).  El CLR tiene dos proveedores para los eventos:  
+# <a name="clr-etw-events"></a>Eventos ETW de CLR
+Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW). Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). CLR tiene dos proveedores para los eventos:  
   
--   El proveedor de runtime, que genera eventos, en función de las palabras clave \(categorías de eventos\) que están habilitadas.  El GUID del proveedor en tiempo de ejecución de CLR es e13c0d23\-ccbc\-4e12\-931b\-d9cc2eee27e4.  
+-   El proveedor en tiempo de ejecución genera eventos en función de las palabras clave (categorías de eventos) que están habilitadas. El GUID del proveedor en tiempo de ejecución de CLR es e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
--   El proveedor del informe detallado, que tiene usos específicos.  El GUID del proveedor de informe detallado de CLR es a669021c\-c450\-4609\-a035\-5af59af4df18.  
+-   El proveedor de informe detallado, que es para fines especiales. El GUID del proveedor de informe detallado de CLR es a669021c-c450-4609-a035-5af59af4df18.  
   
- Para obtener más información sobre los proveedores, vea [CLR ETW Providers](../../../docs/framework/performance/clr-etw-providers.md).  
+ Para más información, vea [Proveedores ETW de CLR](../../../docs/framework/performance/clr-etw-providers.md).  
   
-## En esta sección  
- [Runtime Information Events](../../../docs/framework/performance/runtime-information-etw-events.md)  
- Captura información sobre el runtime, incluidos SKU, número de versión, manera en que se activó el runtime, parámetros de línea de comandos con los que se inició, el GUID \(si es aplicable\) y otra información pertinente.  
+## <a name="in-this-section"></a>En esta sección  
+ [Eventos de información en tiempo de ejecución](../../../docs/framework/performance/runtime-information-etw-events.md)  
+ Capturan información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante.  
   
- [Exception Thrown\_V1 Event](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
- Captura información sobre las excepciones que se producen.  
+ [Evento de excepción Thrown_V1](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
+ Captura información de excepciones.  
   
- [Contention Events](../../../docs/framework/performance/contention-etw-events.md)  
- Captura información sobre la contención para bloqueos del monitor o bloqueos nativos que se utilizan en el runtime.  
+ [Eventos de contención](../../../docs/framework/performance/contention-etw-events.md)  
+ Capturan información sobre la contención para bloqueos de monitor o nativos que use el tiempo de ejecución.  
   
- [Thread Pool Events](../../../docs/framework/performance/thread-pool-etw-events.md)  
- Captura información sobre los grupos de subprocesos de trabajo y los grupos de subprocesos de E\/S.  
+ [Eventos de grupos de subprocesos](../../../docs/framework/performance/thread-pool-etw-events.md)  
+ Capturan información sobre grupos de subprocesos de trabajo y de E/S.  
   
- [Loader Events](../../../docs/framework/performance/loader-etw-events.md)  
- Captura información sobre la carga y descarga de dominios de aplicación, ensamblados y módulos.  
+ [Eventos de cargador](../../../docs/framework/performance/loader-etw-events.md)  
+ Capturan información sobre la carga y descarga de dominios, ensamblados y módulos de aplicación.  
   
- [Method Events](../../../docs/framework/performance/method-etw-events.md)  
- Captura información sobre los métodos CLR para la resolución del símbolo.  
+ [Eventos de método](../../../docs/framework/performance/method-etw-events.md)  
+ Capturan información sobre métodos CLR para resolución de símbolo.  
   
- [Garbage Collection Events](../../../docs/framework/performance/garbage-collection-etw-events.md)  
- Captura información relativa a la recolección de elementos no utilizados, para ayudar en el diagnóstico y la depuración.  
+ [Eventos de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md)  
+ Capturan información relativa a la recolección de elementos no utilizados, para facilitar la depuración y el diagnóstico.  
   
- [JIT Tracing Events](../../../docs/framework/performance/jit-tracing-etw-events.md)  
- Captura información sobre la inclusión de Just\-In\-Time \(JIT\) y las llamadas de cola.  
+ [Eventos de traza JIT](../../../docs/framework/performance/jit-tracing-etw-events.md)  
+ Capturan información sobre inclusión en línea JIT y llamadas de cola.  
   
- [Interop Events](../../../docs/framework/performance/interop-etw-events.md)  
- Captura información sobre la generación de código auxiliar del lenguaje intermedio de Microsoft \(MSIL\) y su almacenamiento en memoria caché.  
+ [Eventos de interoperabilidad](../../../docs/framework/performance/interop-etw-events.md)  
+ Capturan información sobre generación de código auxiliar y almacenamiento en memoria caché del lenguaje intermedio de Microsoft (MSIL).  
   
- [ARM Events](../../../docs/framework/performance/application-domain-resource-monitoring-arm-etw-events.md)  
- Captura información de diagnóstico detallada sobre el estado de un dominio de aplicación.  
+ [Eventos ARM](../../../docs/framework/performance/application-domain-resource-monitoring-arm-etw-events.md)  
+ Capturan información de diagnóstico detallada sobre el estado de un dominio de aplicación.  
   
- [Security Events](../../../docs/framework/performance/security-etw-events.md)  
- Captura información sobre el nombre seguro y la comprobación de Authenticode.  
+ [Eventos de seguridad](../../../docs/framework/performance/security-etw-events.md)  
+ Capturan información sobre verificación de nombres seguros y Authenticode.  
   
- [Stack Event](../../../docs/framework/performance/stack-etw-event.md)  
- Captura información que se utiliza con otros eventos para generar trazas de pila una vez generado un evento.  
+ [Evento de pila](../../../docs/framework/performance/stack-etw-event.md)  
+ Captura información usada con otros eventos para generar seguimientos de pilas después de que se haya generado un evento.  
   
-## Vea también  
- [Mejorar la optimización de depuración y de rendimiento con ETW](http://go.microsoft.com/fwlink/?LinkId=179696)   
+## <a name="see-also"></a>Vea también  
+ [Improve Debugging And Performance Tuning With ETW (Mejora de la depuración y el ajuste del rendimiento con ETW)](http://go.microsoft.com/fwlink/?LinkId=179696)   
  [Blog de rendimiento de Windows](http://go.microsoft.com/fwlink/?LinkId=179509)   
- [Controlling .NET Framework Logging](../../../docs/framework/performance/controlling-logging.md)   
- [CLR ETW Providers](../../../docs/framework/performance/clr-etw-providers.md)   
- [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)   
- [ETW Events in the Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+ [Controlling .NET Framework Logging (Controlar el registro de .NET Framework)](../../../docs/framework/performance/controlling-logging.md)   
+ [Proveedores ETW de CLR](../../../docs/framework/performance/clr-etw-providers.md)   
+ [Palabras clave y niveles ETW de CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)   
+ [Eventos ETW en Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+

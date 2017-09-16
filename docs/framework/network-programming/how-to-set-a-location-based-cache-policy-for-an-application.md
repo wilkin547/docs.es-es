@@ -1,42 +1,47 @@
 ---
-title: "C&#243;mo establecer en una aplicaci&#243;n una directiva de cach&#233; basada en la ubicaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "información acerca del comportamiento del caché de definición"
-  - "directivas de caché basadas en la ubicación"
-  - "caché local"
-  - "solicitar directivas de caché"
-  - "caché [.NET Framework], directivas basadas en la ubicación"
+title: "Cómo establecer en una aplicación una directiva de caché basada en la ubicación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- expliciting defining cache behavior
+- location-based cache policies
+- local cache
+- request cache policies
+- cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bcfd166b108dc0cf99381869e39952b09fcfca6b
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# C&#243;mo establecer en una aplicaci&#243;n una directiva de cach&#233; basada en la ubicaci&#243;n
-Las directivas Ubicación\- basadas de caché permiten una aplicación para definir explícitamente almacenar en memoria caché el comportamiento según la ubicación del recurso solicitado.  Este tema muestra cómo establecer la directiva de caché mediante programación.  Para obtener información sobre cómo establecer la directiva para una aplicación mediante los archivos de configuración, vea [\<requestCaching\> \(Elemento, Configuración de red\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>Cómo establecer en una aplicación una directiva de caché basada en la ubicación
+Las directivas de caché basadas en la ubicación permiten que una aplicación defina explícitamente el comportamiento de caché basándose en la ubicación del recurso solicitado. En este tema se muestra cómo establecer la directiva de caché mediante programación. Para obtener información sobre cómo establecer la directiva de una aplicación con los archivos de configuración, vea [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
   
-### Para establecer una directiva ubicación\- basada en caché para una aplicación  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>Para establecer en una aplicación una directiva de caché basada en la ubicación  
   
-1.  Cree un objeto de <xref:System.Net.Cache.RequestCachePolicy> o de <xref:System.Net.Cache.HttpRequestCachePolicy> .  
+1.  Cree un objeto <xref:System.Net.Cache.RequestCachePolicy> o <xref:System.Net.Cache.HttpRequestCachePolicy>.  
   
-2.  Establezca el objeto de directiva como valor predeterminado para el dominio de aplicación.  
+2.  Establezca el objeto de directiva como el valor predeterminado para el dominio de aplicación.  
   
-### Para establecer una directiva que toma los recursos solicitados de caché  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>Para establecer una directiva que toma recursos solicitados de una caché  
   
--   Cree una directiva que toma los recursos solicitados de caché si está disponible, y otra manera, envía solicitudes al servidor, estableciendo caché nivel a <xref:System.Net.Cache.HttpRequestCacheLevel>.  Una solicitud se puede satisfacer mediante cualquier caché entre el cliente y el servidor, incluidas las memorias caché remotas.  
+-   Cree una directiva que tome recursos solicitados de una caché si están disponibles, y en caso contrario, que envíe solicitudes al servidor estableciendo el nivel de caché en <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>. Una solicitud se puede satisfacer mediante cualquier caché entre el cliente y el servidor, incluidas las memorias caché remotas.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -45,7 +50,6 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
             (HttpRequestCacheLevel.CacheIfAvailable);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
-  
     ```  
   
     ```vb  
@@ -56,9 +60,9 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
     End Sub  
     ```  
   
-### Para establecer una directiva que evita que cualquier caché proporcione recursos  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>Para establecer una directiva que impida que cualquier caché proporcione recursos  
   
--   Cree una directiva que impida que cualquier caché proporcione recursos solicitados estableciendo caché nivel a <xref:System.Net.Cache.HttpRequestCacheLevel>.  Este nivel de directiva quita el recurso de la memoria caché local si está presente e indica a memorias caché remotas que también quitar el recurso.  
+-   Cree una directiva que impida que cualquier caché proporcione recursos solicitados estableciendo el nivel de caché en <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>. Este nivel de directiva quita el recurso de la caché local si está presente e indica a las memorias caché remotas que también deben quitar el recurso.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -77,9 +81,9 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
     End Sub  
     ```  
   
-### Para establecer una directiva que devuelve los recursos solicitados sólo si se encuentran en la memoria caché local  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>Para establecer una directiva que devuelve recursos solicitados solo si están en la caché local  
   
--   Cree una directiva que devuelve los recursos solicitados sólo si se encuentran en la memoria caché local estableciendo caché nivel a <xref:System.Net.Cache.HttpRequestCacheLevel>.  Si el recurso solicitado no está en la caché, se produce una excepción de <xref:System.Net.WebException> .  
+-   Cree una directiva que devuelva recursos solicitados solo si se encuentran en la caché local estableciendo el nivel de caché en <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>. Si el recurso solicitado no está en la caché, se genera una excepción <xref:System.Net.WebException>.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -98,9 +102,9 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
     End Sub  
     ```  
   
-### Para establecer una directiva que impide la caché local proporcione recursos  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>Para establecer una directiva que impida que la caché local proporcione recursos  
   
--   Cree una directiva que impida la caché local proporcione recursos solicitados estableciendo caché nivel a <xref:System.Net.Cache.HttpRequestCacheLevel>.  Si el recurso solicitado está en caché intermedia y volverá a correctamente, la memoria caché intermedia puede proporcionar el recurso solicitado.  
+-   Cree una directiva que impida que la caché local proporcione recursos solicitados estableciendo el nivel de caché en <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>. Si el recurso solicitado está en una caché intermedia y se ha vuelto a validar correctamente, la caché intermedia puede proporcionar el recurso solicitado.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -119,9 +123,9 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
     End Sub  
     ```  
   
-### Para establecer una directiva que evita que cualquier caché proporcione recursos solicitados  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>Para establecer una directiva que impida que cualquier caché proporcione recursos solicitados  
   
--   Cree una directiva que impida que cualquier caché proporcione recursos solicitados estableciendo caché nivel a <xref:System.Net.Cache.HttpRequestCacheLevel>.  El recurso devuelto por el servidor puede almacenar en memoria caché.  
+-   Cree una directiva que impida que cualquier caché proporcione recursos solicitados estableciendo el nivel de caché en <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>. El recurso que ha devuelto el servidor puede almacenarse en la caché.  
   
     ```csharp  
     public static void SendToServer()  
@@ -140,9 +144,9 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
     End Sub  
     ```  
   
-### Para establecer una directiva que permite que cualquier caché proporcione recursos solicitados si el recurso del servidor no es más reciente que la copia en caché  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>Para establecer una directiva que permita que cualquier caché proporcione recursos solicitados si el recurso del servidor no es más reciente que la copia almacenada en caché  
   
--   Cree una directiva que permite que cualquier caché proporcione recursos solicitados si el recurso del servidor no es más reciente que la copia en caché estableciendo caché nivel a <xref:System.Net.Cache.HttpRequestCacheLevel>.  
+-   Cree una directiva que permita que cualquier caché proporcione recursos solicitados si el recurso del servidor no es más reciente que la copia almacenada en caché estableciendo el nivel de caché en <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>.  
   
     ```csharp  
     public static void CheckServer()  
@@ -161,9 +165,10 @@ Las directivas Ubicación\- basadas de caché permiten una aplicación para defi
     End Sub  
     ```  
   
-## Vea también  
- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+## <a name="see-also"></a>Vea también  
+ [Cache Management for Network Applications (Administración de la memoria caché para aplicaciones de red)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)   
- [directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [directivas de caché de duración definida](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> \(Elemento, Configuración de red\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [Time-Based Cache Policies](../../../docs/framework/network-programming/time-based-cache-policies.md)  (Directivas de caché de duración definida)  
+ [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

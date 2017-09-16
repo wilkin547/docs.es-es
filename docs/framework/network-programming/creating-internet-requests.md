@@ -1,42 +1,48 @@
 ---
-title: "Crear solicitudes de Internet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "WebRequest (clase), enviar y recibir datos"
-  - "Redes"
-  - "HttpWebResponse (clase), enviar y recibir datos"
-  - "solicitar datos de Internet, crear solicitudes"
-  - "Recursos de red"
-  - "Internet, solicitar datos"
-  - "solicitudes de datos, crear solicitudes"
+title: Crear solicitudes de Internet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- WebRequest class, sending and receiving data
+- Networking
+- HttpWebResponse class, sending and receiving data
+- requesting data from Internet, creating requests
+- Network Resources
+- Internet, requesting data
+- data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5bc99f08542718ccd449c069c91082d8227f9a4
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Crear solicitudes de Internet
-Las aplicaciones crean instancias de <xref:System.Net.WebRequest> con el método de <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> .  Éste es un método estático que crea una clase derivada de **WebRequest** según el esquema de URI pasado a él.  
+# <a name="creating-internet-requests"></a>Crear solicitudes de Internet
+Las aplicaciones crean instancias <xref:System.Net.WebRequest> con el método <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>. Este es un método estático que crea una clase derivada de **WebRequest** según el esquema de URI que se ha pasado.  
   
-## Web, archivos y solicitudes de FTP  
- .NET Framework proporciona la clase de <xref:System.Net.HttpWebRequest> , que se deriva de **WebRequest**, las solicitudes http del identificador y HTTPS.  En la mayoría de los casos, la clase de **WebRequest** proporciona todas las propiedades que debe realizar una solicitud; al menos en caso necesario, puede convertir los objetos de **WebRequest** creados por el método de **WebRequest.Create** al tipo de **HttpWebRequest** para tener acceso a las propiedades Http\- específicas de la solicitud.  De igual forma, los controladores de objeto de **HttpWebResponse** las respuestas de solicitudes HTTP y HTTPS.  Para tener acceso a las propiedades Http\- específicas de **HttpWebResponse** opóngase, necesita convertir los objetos de **WebResponse** al tipo de **HttpWebResponse** .  
+## <a name="web-file-and-ftp-requests"></a>Web, archivos y solicitudes de FTP  
+ .NET Framework proporciona la clase <xref:System.Net.HttpWebRequest>, que se deriva de **WebRequest**, para controlar las solicitudes HTTP y HTTPS. En la mayoría de los casos, la clase de **WebRequest** proporciona todas las propiedades que debe realizar una solicitud; en cambio, en caso necesario, puede convertir los objetos **WebRequest** creados por el método **WebRequest.Create** al tipo de **HttpWebRequest** para tener acceso a las propiedades específicas de HTTP de la solicitud. De igual forma, el objeto **HttpWebResponse** controla las respuestas de las solicitudes HTTP y HTTPS. Para tener acceso a las propiedades específicas de HTTP del objeto **HttpWebResponse**, necesita convertir los objetos **WebResponse** al tipo **HttpWebResponse**.  
   
- .NET Framework también proporciona clases de <xref:System.Net.FileWebRequest> y de <xref:System.Net.FileWebResponse> a las solicitudes de los recursos que utilizan “file: ” Esquema de URI.  Igualmente, <xref:System.Net.FtpWebRequest> y las clases de <xref:System.Net.FtpWebResponse> se proporcionan las solicitudes de los recursos que utilizan “FTP: ” esquema.  Si la solicitud es para un recurso que usa cualquiera de estos esquemas, puede utilizar el método de **WebRequest.Create** para obtener un objeto con el que realizar la solicitud.  
+ .NET Framework también proporciona las clases <xref:System.Net.FileWebRequest> y <xref:System.Net.FileWebResponse> para controlar las solicitudes de los recursos que usan el esquema de URI "file:". Igualmente, las clases <xref:System.Net.FtpWebRequest> y <xref:System.Net.FtpWebResponse> se proporcionan para controlar las solicitudes de los recursos que usan el esquema "ftp:". Si la solicitud es para un recurso que usa cualquiera de estos esquemas, puede usar el método **WebRequest.Create** para obtener un objeto con el que realizar la solicitud.  
   
- Para controlar las solicitudes que utilizan otros protocolos en la aplicación, debe implementar las clases protocolo\- específicas derivadas de **WebRequest** y de **WebResponse**.  Para obtener más información, vea [Protocolos conectables de programación](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
+ Para controlar las solicitudes que usan otros protocolos de nivel de aplicación, debe implementar las clases específicas de protocolo derivadas de **WebRequest** y **WebResponse**. Para obtener más información, vea [Programming Pluggable Protocols](../../../docs/framework/network-programming/programming-pluggable-protocols.md) (Programar protocolos acoplables).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Cómo solicitar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
  [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)
+
