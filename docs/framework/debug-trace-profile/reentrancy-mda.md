@@ -1,62 +1,67 @@
 ---
-title: "reentrancy MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "unmanaged code, debugging"
-  - "transitioning threads unmanaged to managed code"
-  - "reentrancy MDA"
-  - "reentrancy without an orderly transition"
-  - "managed debugging assistants (MDAs), reentrancy"
-  - "illegal reentrancy"
-  - "MDAs (managed debugging assistants), reentrancy"
-  - "threading [.NET Framework], managed debugging assistants"
-  - "managed code, debugging"
-  - "native debugging, MDAs"
+title: MDA de reentrada
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- unmanaged code, debugging
+- transitioning threads unmanaged to managed code
+- reentrancy MDA
+- reentrancy without an orderly transition
+- managed debugging assistants (MDAs), reentrancy
+- illegal reentrancy
+- MDAs (managed debugging assistants), reentrancy
+- threading [.NET Framework], managed debugging assistants
+- managed code, debugging
+- native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: beefdb130c953c30d50d948ef9add7ad9d867e45
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# reentrancy MDA
-El asistente para la depuración administrada \(MDA\) `reentrancy` se activa cuando se intenta realizar una transición desde código nativo a código administrado en los casos en los que no se realizó un cambio anterior a un código nativo mediante una transición ordenada.  
+# <a name="reentrancy-mda"></a>MDA de reentrada
+El Asistente para la depuración administrada (MDA) `reentrancy` se activa cuando se realiza un intento de realizar la transición de código nativo a código administrado en casos donde no se realizó un cambio anterior desde código administrado a código nativo a través de una transición ordenada.  
   
-## Síntomas  
+## <a name="symptoms"></a>Síntomas  
  El montón de objetos está dañado o se producen otros errores graves al realizar la transición de código nativo a código administrado.  
   
- Los subprocesos que cambian entre código nativo y administrado en cualquier dirección deben seguir una transición ordenada.  Sin embargo, determinados puntos de extensibilidad de bajo nivel del sistema operativo, como el controlador de excepciones vectorizadas, permiten pasar de código administrado a código nativo sin realizar una transición ordenada.  Estos cambios se realizan bajo el control de sistema operativo, en lugar de bajo el control de Common Language Runtime \(CLR\).  Cualquier código nativo que se ejecute dentro de estos puntos de extensibilidad debe evitar las llamadas de vuelta al código administrado.  
+ Los subprocesos que cambian entre código nativo y administrado en cualquier dirección deben realizar una transición ordenada. Pero ciertos puntos de extensibilidad de bajo nivel en el sistema operativo, por ejemplo el controlador de excepciones orientado, permiten pasar de código administrado a código nativo sin realizar una transición ordenada.  Estos modificadores están bajo el control del sistema operativo, en lugar de bajo el control de Common Language Runtime (CLR).  Cualquier código nativo que se ejecute dentro de estos puntos de extensibilidad debe evitar realizar llamadas a código administrado.  
   
-## Motivo  
- Un punto de extensibilidad de sistema operativo de bajo nivel, como el controlador de excepciones vectorizadas, se ha activado al ejecutar el código administrado.  El código de aplicación que se invoca a través de ese punto de extensibilidad está intentando llamar de vuelta al código administrado.  
+## <a name="cause"></a>Motivo  
+ Se ha activado un punto de extensibilidad de bajo nivel del sistema operativo, como el controlador de excepciones orientado, mientras se ejecuta código administrado.  El código de aplicación que se invoca a través de ese punto de extensibilidad está intentando devolver la llamada al código administrado.  
   
- Este problema siempre está causado por el código de aplicación.  
+ Este problema siempre está causado por código de aplicación.  
   
-## Resolución  
- Examine el seguimiento de la pila para conocer el subproceso que ha activado el MDA.  El subproceso está intentando llamar al código administrado de manera no válida.  El seguimiento de la pila debería mostrar el código de aplicación que utiliza este punto de extensibilidad, el código del sistema operativo que proporciona este punto de extensibilidad y el código administrado que interrumpió el punto de extensibilidad.  
+## <a name="resolution"></a>Resolución  
+ Examine el seguimiento de la pila para el subproceso que ha activado este MDA.  El subproceso está intentando llamar de forma no autorizada al código administrado.  El seguimiento de la pila debe mostrar el código de aplicación que usa este punto de extensibilidad, el código del sistema operativo que proporciona este punto de extensibilidad y el código administrado que el punto de extensibilidad ha interrumpido.  
   
- Por ejemplo, verá que se activa el MDA en un intento de llamar al código administrado desde dentro de un controlador de excepciones vectorizado.  En la pila verá el código de control de excepciones del sistema operativo y parte del código administrado que desencadena una excepción como por ejemplo <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
+ Por ejemplo, verá que el MDA se activa en un intento de llamar a código administrado desde dentro de un controlador de excepciones orientado.  En la pila verá el código de control de excepciones del sistema operativo y algún código administrado que desencadena una excepción como <xref:System.DivideByZeroException> o <xref:System.AccessViolationException>.  
   
- En este ejemplo, la resolución correcta consiste en implementar completamente el controlador de excepciones vectorizado en código no administrado.  
+ En este ejemplo, la solución correcta consiste en implementar el controlador de excepciones orientado completamente en código no administrado.  
   
-## Efecto en el Runtime  
- Este MDA no tiene efecto en el CLR.  
+## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+ Este MDA no tiene ningún efecto en el CLR.  
   
-## Resultados  
- El MDA informa de que se está intentando una reentrada no válida.  Examine la pila del subproceso para determinar por qué ocurre esto y cómo corregir el problema.  A continuación se incluyen resultados de ejemplo.  
+## <a name="output"></a>Salida  
+ El MDA informa de que se ha intentado una reentrada ilegal.  Examine la pila del subproceso para determinar por qué sucede esto y cómo corregir el problema. A continuación se incluye la salida del ejemplo.  
   
 ```  
 Additional Information: Attempting to call into managed code without   
@@ -66,9 +71,9 @@ low-level native extensibility points. Managed Debugging Assistant
 ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.  
 ```  
   
-## Configuration  
+## <a name="configuration"></a>Configuración  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <reentrancy />  
@@ -76,8 +81,8 @@ ConsoleApplication1\bin\Debug\ConsoleApplication1.vshost.exe'.
 </mdaConfig>  
 ```  
   
-## Ejemplo  
- En el ejemplo de código siguiente hace que se inicie una excepción <xref:System.AccessViolationException>.  En versiones de Windows que admiten el control de excepciones vectorizado, esto hará que se llame al controlador de excepciones vectorizado.  Si está habilitado el MDA `reentrancy`, el MDA se activará durante el intento de llamada a `MyHandler` desde el código de compatibilidad del control de excepciones vectorizado del sistema operativo.  
+## <a name="example"></a>Ejemplo  
+ El siguiente código de ejemplo hace que se inicie una excepción <xref:System.AccessViolationException>.  En versiones de Windows que admiten el control de excepciones orientado, esto hará que se llame al controlador de excepciones orientado.  Si el MDA `reentrancy` está habilitado, se activará durante el intento de llamada a `MyHandler` desde el código de soporte de control de excepciones orientado del sistema operativo.  
   
 ```  
 using System;  
@@ -114,5 +119,6 @@ public class Reenter
 }  
 ```  
   
-## Vea también  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vea también  
+ [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

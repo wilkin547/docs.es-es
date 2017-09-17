@@ -39,7 +39,7 @@ El espacio de nombres <xref:System.Net.NetworkInformation> permite recopilar inf
  Puede usar la clase <xref:System.Net.NetworkInformation.Ping> para determinar si un host remoto está funcionando en la red y es accesible. Para más información, vea [How to: Ping a Host](../../../docs/framework/network-programming/how-to-ping-a-host.md) (Cómo: hacer ping a un host).  
   
 ## <a name="see-also"></a>Vea también  
- [Network Programming Samples](../../../docs/framework/network-programming/network-programming-samples.md)  (Ejemplos de programación para redes)  
+ [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)   
  [Ejemplo de tecnología de información de red](http://go.microsoft.com/fwlink/?LinkID=179564)   
  [NetStat Tool Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179562)  (Ejemplo de tecnología de la herramienta NetStat)  
  [Ping Client Technology Sample](http://go.microsoft.com/fwlink/?LinkID=179565) (Ejemplo de tecnología para hacer ping en un cliente)

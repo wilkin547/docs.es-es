@@ -77,7 +77,7 @@ Una directiva de caché de duración definida define la actualización de las en
 -   [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
+ [Cache Management for Network Applications (Administración de la memoria caché para aplicaciones de red)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)   
  [Directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   

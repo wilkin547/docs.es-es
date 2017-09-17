@@ -1,44 +1,49 @@
 ---
-title: "Default Marshaling Behavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interop marshaling, default"
-  - "interoperation with unmanaged code, marshaling"
-  - "marshaling behavior"
+title: "Comportamiento de serialización predeterminado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interop marshaling, default
+- interoperation with unmanaged code, marshaling
+- marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4fad3c0021c14d11cd88a209c7a56cdb58e75fe6
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Default Marshaling Behavior
-La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada.  Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
+# <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
+La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
   
- En esta sección se identifican las características predeterminadas de comportamiento del servicio de serialización de interoperabilidad,  y se muestra información detallada sobre la serialización de matrices, tipos booleanos, tipos de caracteres, delegados, clases, objetos, cadenas y estructuras.  
+ En esta sección se identifican las características predeterminadas de comportamiento del servicio de serialización de interoperabilidad, y se muestra información detallada sobre la serialización de matrices, tipos booleanos, tipos de caracteres, delegados, clases, objetos, cadenas y estructuras.  
   
 > [!NOTE]
->  No se admite la serialización de tipos genéricos.  Para obtener más información, vea el artículo sobre cómo [Interoperating Using Generic Types](http://msdn.microsoft.com/es-es/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  No se admite la serialización de tipos genéricos. Para más información, vea [Interoperar mediante tipos genéricos](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
   
-## Administración de memoria con el serializador de interoperabilidad  
- El serializador de interoperabiliad siempre intenta liberar memoria asignada por código no administrado.  Este comportamiento cumple con las reglas de administración de memoria COM, pero difiere de las reglas que rigen C\+\+ nativo.  
+## <a name="memory-management-with-the-interop-marshaler"></a>Administración de memoria con el serializador de interoperabilidad  
+ El serializador de interoperabiliad siempre intenta liberar memoria asignada por código no administrado. Este comportamiento cumple con las reglas de administración de memoria COM, pero difiere de las reglas que rigen C++ nativo.  
   
- Se puede producir confusión si se prevé un comportamiento de C\+\+ nativo \(sin liberación de memoria\) al usar invocación de plataforma, que automáticamente libera memoria para los punteros.  Por ejemplo, la llamada al siguiente método no administrado desde una DLL de C\+\+ no libera automáticamente memoria.  
+ Se puede producir confusión si se prevé un comportamiento de C++ nativo (sin liberación de memoria) al usar invocación de plataforma, que automáticamente libera memoria para los punteros. Por ejemplo, la llamada al siguiente método no administrado desde una DLL de C++ no libera automáticamente memoria.  
   
-### Prototipo no administrado  
+### <a name="unmanaged-signature"></a>Prototipo no administrado  
   
 ```  
 BSTR MethodOne (BSTR b) {  
@@ -46,52 +51,52 @@ BSTR MethodOne (BSTR b) {
 }  
 ```  
   
- Sin embargo, si define el método como prototipo de invocación de una plataforma, reemplaza cada tipo **BSTR** por un tipo <xref:System.String>, y llama a `MethodOne`, Common Language Runtime intenta liberar `b` dos veces.  Puede cambiar el comportamiento del serialización mediante tipos <xref:System.IntPtr> en lugar de tipos **String**.  
+ Sin embargo, si define el método como un prototipo de invocación de plataforma, reemplaza cada tipo **BSTR** por un tipo <xref:System.String> y llama a `MethodOne`, Common Language Runtime intenta liberar `b` dos veces. Puede cambiar el comportamiento de serialización mediante tipos <xref:System.IntPtr> en lugar de tipos **String**.  
   
- El runtime usa siempre el método **CoTaskMemFree** para liberar memoria.  Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado.  De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar memoria, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria kernel.  Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/es-es/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](http://msdn.microsoft.com/en-us/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
   
-## Serialización predeterminada para clases  
- Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces.  En algunos casos, la interfaz usada para serializar la clase se conoce como la interfaz de clase.  Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, vea el artículo de [introducción a la interfaz de clase](http://msdn.microsoft.com/es-es/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+## <a name="default-marshaling-for-classes"></a>Serialización predeterminada para clases  
+ Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para serializar la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, vea [Presentar la interfaz de clase](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
-### Pasar clases a COM  
- Cuando una clase administrada se pasa a COM, el serializador de interoperabilidad automáticamente encapsula la clase con un proxy COM y pasa la interfaz de clase generada por el proxy a la llamada de método COM.  El proxy delega entonces todas las llamadas en la interfaz de clase al objeto administrado.  El proxy también expone otras interfaces que no están implementadas explícitamente por la clase.  El proxy implementa automáticamente interfaces como **IUnknown** e **IDispatch** en nombre de la clase.  
+### <a name="passing-classes-to-com"></a>Pasar clases a COM  
+ Cuando una clase administrada se pasa a COM, el serializador de interoperabilidad automáticamente encapsula la clase con un proxy COM y pasa la interfaz de clase generada por el proxy a la llamada de método COM. El proxy delega entonces todas las llamadas en la interfaz de clase al objeto administrado. El proxy también expone otras interfaces que no están implementadas explícitamente por la clase. El proxy implementa automáticamente interfaces como **IUnknown** e **IDispatch** en nombre de la clase.  
   
-### Pasar clases a código de .NET  
- Las coclases no suelen usarse como argumentos de método en COM.  En lugar de la coclase, normalmente se pasa una interfaz predeterminada.  
+### <a name="passing-classes-to-net-code"></a>Pasar clases a código de .NET  
+ Las coclases no suelen usarse como argumentos de método en COM. En lugar de la coclase, normalmente se pasa una interfaz predeterminada.  
   
- Cuando una interfaz se pasa a código administrado, el serializador de interoperabilidad es responsable de encapsular la interfaz en el contenedor adecuado y pasar este contenedor al método administrado.  Determinar qué contenedor se usará puede resultar difícil.  Cada instancia de un objeto COM tiene un solo contenedor, independientemente de cuántas interfaces implemente el objeto.  Por ejemplo, un único objeto COM que implementa cinco interfaces distintas tiene un solo contenedor.  El mismo contenedor expone las cinco interfaces.  Si se crean dos instancias del objeto COM, también se crean dos instancias del contenedor.  
+ Cuando una interfaz se pasa a código administrado, el serializador de interoperabilidad es responsable de encapsular la interfaz en el contenedor adecuado y pasar este contenedor al método administrado. Determinar qué contenedor se usará puede resultar difícil. Cada instancia de un objeto COM tiene un solo contenedor, independientemente de cuántas interfaces implemente el objeto. Por ejemplo, un único objeto COM que implementa cinco interfaces distintas tiene un solo contenedor. El mismo contenedor expone las cinco interfaces. Si se crean dos instancias del objeto COM, también se crean dos instancias del contenedor.  
   
- Para que el contenedor mantenga el mismo tipo a lo largo del tiempo, el serializador de interoperabilidad debe identificar el contenedor correcto la primera vez que una interfaz expuesta por el objeto se pasa a través del serializador.  El serializador identifica el objeto examinando una de las interfaces que implementa el objeto.  
+ Para que el contenedor mantenga el mismo tipo a lo largo del tiempo, el serializador de interoperabilidad debe identificar el contenedor correcto la primera vez que una interfaz expuesta por el objeto se pasa a través del serializador. El serializador identifica el objeto examinando una de las interfaces que implementa el objeto.  
   
- Por ejemplo, el serializador determina que el contenedor de clase se debe usar para encapsular la interfaz que se pasó a código administrado.  Cuando la interfaz pasa primero por el serializador, este comprueba si la interfaz procede de un objeto conocido.  Esta comprobación se produce en dos situaciones:  
+ Por ejemplo, el serializador determina que el contenedor de clase se debe usar para encapsular la interfaz que se pasó a código administrado. Cuando la interfaz pasa primero por el serializador, este comprueba si la interfaz procede de un objeto conocido. Esta comprobación se produce en dos situaciones:  
   
--   Se está implementando una interfaz mediante otro objeto administrado que se pasó a COM en otro lugar.  El serializador puede identificar inmediatamente las interfaces expuestas por los objetos administrados y es capaz de hacer coincidir la interfaz con el objeto administrado que proporciona la implementación.  El objeto administrado se pasa a continuación al método y no se necesita ningún contenedor.  
+-   Se está implementando una interfaz mediante otro objeto administrado que se pasó a COM en otro lugar. El serializador puede identificar inmediatamente las interfaces expuestas por los objetos administrados y es capaz de hacer coincidir la interfaz con el objeto administrado que proporciona la implementación. El objeto administrado se pasa a continuación al método y no se necesita ningún contenedor.  
   
--   Un objeto que ya se ha encapsulado se está implementando en la interfaz.  Para determinar si este es el caso, el serializador consulta al objeto su interfaz **IUnknown** y compara la interfaz devuelta con las interfaces de otros objetos que ya están encapsulados.  Si la interfaz es la misma que la de otro contenedor, los objetos tienen la misma identidad y el contenedor existente se pasa al método.  
+-   Un objeto que ya se ha encapsulado se está implementando en la interfaz. Para determinar si este es el caso, el serializador consulta al objeto su interfaz **IUnknown** y compara la interfaz devuelta con las interfaces de otros objetos que ya están encapsulados. Si la interfaz es la misma que la de otro contenedor, los objetos tienen la misma identidad y el contenedor existente se pasa al método.  
   
  Si no es una interfaz de un objeto conocido, el serializador realiza lo siguiente:  
   
-1.  El serializador consulta al objeto la interfaz **IProvideClassInfo2**.  Si se proporciona, el serializador usa el CLSID devuelto de **IProvideClassInfo2.GetGUID** para identificar la coclase que proporciona la interfaz.  Con el CLSID, el serializador puede ubicar el contenedor en el Registro si previamente se ha registrado el ensamblado.  
+1.  El serializador consulta al objeto la interfaz **IProvideClassInfo2**. Si se proporciona, el serializador usa el CLSID devuelto de **IProvideClassInfo2.GetGUID** para identificar la coclase que proporciona la interfaz. Con el CLSID, el serializador puede ubicar el contenedor en el Registro si previamente se ha registrado el ensamblado.  
   
-2.  El serializador consulta a la interfaz la interfaz **IProvideClassInfo**.  Si se proporciona, el serializador usa el **ITypeInfo** devuelto desde **Iprovideclassinfo2.GetClassinfo** para determinar el CLSID de la clase que expone la interfaz.  El serializador puede usar el CLSID para buscar los metadatos del contenedor.  
+2.  El serializador consulta a la interfaz la interfaz **IProvideClassInfo**. Si se proporciona, el serializador usa el **ITypeInfo** devuelto desde **IProvideClassInfo.GetClassinfo** para determinar el CLSID de la clase que expone la interfaz. El serializador puede usar el CLSID para buscar los metadatos del contenedor.  
   
-3.  Si el serializador sigue sin poder identificar la clase, encapsula la interfaz en una clase de contenedor genérico denominado **System.\_\_ComObject**.  
+3.  Si el serializador sigue sin poder identificar la clase, encapsula la interfaz en una clase de contenedor genérica denominada **System.__ComObject**.  
   
-## Serialización predeterminada para delegados  
+## <a name="default-marshaling-for-delegates"></a>Serialización predeterminada para delegados  
  Un delegado administrado se serializa como una interfaz COM o como un puntero de función según el mecanismo de llamada:  
   
 -   Para invocación de plataforma, se serializa un delegado como un puntero de función no administrada de forma predeterminada.  
   
--   Para interoperabilidad COM, se serializa un delegado como una interfaz COM de tipo **\_Delegate** de forma predeterminada.  La interfaz **\_Delegate** se define en la biblioteca de tipos Mscorlib.tlb y contiene el método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName>, lo que permite llamar al método al que hace referencia el delegado.  
+-   Para interoperabilidad COM, se serializa un delegado como una interfaz COM de tipo **_Delegate** de forma predeterminada. La interfaz **_Delegate** se define en la biblioteca de tipos Mscorlib.tlb y contiene el método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=fullName>, que permite llamar al método al que hace referencia el delegado.  
   
- En la siguiente tabla se muestran las opciones de serialización para el tipo de datos de delegado administrado.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para serializar los delegados.  
+ En la siguiente tabla se muestran las opciones de serialización para el tipo de datos de delegado administrado. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para serializar los delegados.  
   
 |Tipo de enumeración|Descripción de formato no administrado|  
-|-------------------------|--------------------------------------------|  
+|----------------------|-------------------------------------|  
 |**UnmanagedType.FunctionPtr**|Es un puntero de función no administrada.|  
-|**UnmanagedType.Interface**|Es una interfaz de tipo **\_Delegate**, tal como se define en Mscorlib.tlb.|  
+|**UnmanagedType.Interface**|Una interfaz de tipo **_Delegate**, como se define en Mscorlib.tlb.|  
   
- Considere el siguiente código de ejemplo en el que los métodos de `DelegateTestInterface` se exportan a una biblioteca de tipos COM.  Observe que solo los delegados marcados con la palabra clave **ref** \(o **ByRef**\) se pasan como parámetros In\/Out.  
+ Considere el siguiente código de ejemplo en el que los métodos de `DelegateTestInterface` se exportan a una biblioteca de tipos COM. Observe que solo los delegados marcados con la palabra clave **ref** (o **ByRef**) se pasan como parámetros In/Out.  
   
 ```csharp  
 using System;  
@@ -106,7 +111,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
 }  
 ```  
   
-### Representación de biblioteca de tipos  
+### <a name="type-library-representation"></a>Representación de biblioteca de tipos  
   
 ```  
 importlib("mscorlib.tlb");  
@@ -124,7 +129,7 @@ interface DelegateTest : IDispatch {
 > [!NOTE]
 >  Una referencia al puntero de función para un delegado administrado mantenido por código no administrado no impide que Common Language Runtime realice la recolección de elementos no utilizados en el objeto administrado.  
   
- Por ejemplo, el código siguiente es incorrecto porque la referencia al objeto `cb`, que se pasa al método `SetChangeHandler`, no mantiene a `cb` activo más allá de la vida del método `Test`.  Una vez recopilados los elementos no utilizados del objeto `cb`, el puntero de función pasado a `SetChangeHandler` deja de ser válido.  
+ Por ejemplo, el código siguiente es incorrecto porque la referencia al objeto `cb`, que se pasa al método `SetChangeHandler`, no mantiene a `cb` activo más allá de la vida del método `Test`. Una vez recopilados los elementos no utilizados del objeto `cb`, el puntero de función pasado a `SetChangeHandler` deja de ser válido.  
   
 ```csharp  
 public class ExternalAPI {  
@@ -147,7 +152,7 @@ internal class DelegateTest {
 }  
 ```  
   
- Para compensar la recolección inesperada de elementos no utilizados, el llamador debe asegurarse de que el objeto `cb` se mantiene activo mientras el puntero de función no administrada está en uso.  Opcionalmente, puede hacer que el código no administrado le notifique al código administrado si el puntero de función ya no es necesario, como se muestra en el ejemplo siguiente.  
+ Para compensar la recolección inesperada de elementos no utilizados, el llamador debe asegurarse de que el objeto `cb` se mantiene activo mientras el puntero de función no administrada está en uso. Opcionalmente, puede hacer que el código no administrado le notifique al código administrado si el puntero de función ya no es necesario, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 internal class DelegateTest {  
@@ -166,8 +171,8 @@ internal class DelegateTest {
 }  
 ```  
   
-## Serialización predeterminada para tipos de valor  
- La mayoría de los tipos de valor, como enteros y números de punto flotante, [pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md) y no requieren serialización.  Otros tipos [no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md), tienen representaciones distintas en memoria administrada y no administrada y requieren serialización.  Hay también otros tipos que requieren un formato explícito en el límite de interoperación.  
+## <a name="default-marshaling-for-value-types"></a>Serialización predeterminada para tipos de valor  
+ La mayoría de los tipos de valor, como enteros y números de punto flotante, [pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md) y no requieren serialización. Otros tipos que [no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md) tienen representaciones distintas en memoria administrada y no administrada, y requieren serialización. Hay también otros tipos que requieren un formato explícito en el límite de interoperación.  
   
  En este tema se proporciona la siguiente información sobre tipos de valor con formato:  
   
@@ -177,11 +182,11 @@ internal class DelegateTest {
   
  Además de describir tipos con formato, en este tema se identifican [tipos de valor System](#cpcondefaultmarshalingforvaluetypesanchor1) que tienen un comportamiento de serialización poco habitual.  
   
- Un tipo con formato es un tipo complejo que contiene información que controla explícitamente la distribución de sus miembros en la memoria.  La información de distribución de miembros se proporciona mediante el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>.  La distribución puede ser uno de los siguientes valores de enumeración <xref:System.Runtime.InteropServices.LayoutKind>:  
+ Un tipo con formato es un tipo complejo que contiene información que controla explícitamente la distribución de sus miembros en la memoria. La información de distribución de miembros se proporciona mediante el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La distribución puede ser uno de los siguientes valores de enumeración <xref:System.Runtime.InteropServices.LayoutKind>:  
   
 -   **LayoutKind.Automatic**  
   
-     Indica que Common Language Runtime puede volver a ordenar los miembros del tipo para lograr una mayor eficacia.  Sin embargo, cuando un tipo de valor se pasa a código no administrado, la distribución de los miembros es predecible.  Si se intenta serializar automáticamente una estructura de este tipo, se produce una excepción.  
+     Indica que Common Language Runtime puede volver a ordenar los miembros del tipo para lograr una mayor eficacia. Sin embargo, cuando un tipo de valor se pasa a código no administrado, la distribución de los miembros es predecible. Si se intenta serializar automáticamente una estructura de este tipo, se produce una excepción.  
   
 -   **LayoutKind.Sequential**  
   
@@ -192,7 +197,7 @@ internal class DelegateTest {
      Indica que los miembros se distribuyen según el <xref:System.Runtime.InteropServices.FieldOffsetAttribute> proporcionado con cada campo.  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
-### Tipos de valor utilizados en la invocación de plataforma  
+### <a name="value-types-used-in-platform-invoke"></a>Tipos de valor utilizados en la invocación de plataforma  
  En el ejemplo siguiente, los tipos `Point` y `Rect` proporcionan información de distribución de miembros mediante **StructLayoutAttribute**.  
   
 ```vb  
@@ -207,7 +212,6 @@ End Structure
    <FieldOffset(8)> Public right As Integer  
    <FieldOffset(12)> Public bottom As Integer  
 End Structure  
-  
 ```  
   
 ```csharp  
@@ -227,7 +231,7 @@ public struct Rect {
 }  
 ```  
   
- Al serializar a código no administrado, estos tipos con formato se serializan como estructuras de estilo C.  Esto proporciona una manera sencilla de llamar a una API no administrada que tiene argumentos de estructura.  Por ejemplo, las estructuras `POINT` y `RECT` se pueden pasar a la función **PtInRect** de la API Win32 de Microsoft del modo siguiente:  
+ Al serializar a código no administrado, estos tipos con formato se serializan como estructuras de estilo C. Esto proporciona una manera sencilla de llamar a una API no administrada que tiene argumentos de estructura. Por ejemplo, las estructuras `POINT` y `RECT` se pueden pasar a la función **PtInRect** de la API Win32 de Microsoft del modo siguiente:  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -240,7 +244,6 @@ Class Win32API
    Declare Auto Function PtInRect Lib "User32.dll" _  
     (ByRef r As Rect, p As Point) As Boolean  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -250,15 +253,15 @@ class Win32API {
 }  
 ```  
   
- El tipo de valor `Rect` se debe pasar por referencia porque la API no administrada espera que un puntero a un `RECT` se pase a la función.  El tipo de valor `Point` se pasa por valor porque la API no administrada espera que `POINT` se pase en la pila.  Esta diferencia sutil es muy importante.  Las referencias se pasan a código no administrado como punteros.  Los valores se pasan a código no administrado en la pila.  
+ El tipo de valor `Rect` se debe pasar por referencia porque la API no administrada espera que un puntero a un `RECT` se pase a la función. El tipo de valor `Point` se pasa por valor porque la API no administrada espera que `POINT` se pase en la pila. Esta diferencia sutil es muy importante. Las referencias se pasan a código no administrado como punteros. Los valores se pasan a código no administrado en la pila.  
   
 > [!NOTE]
->  Cuando un tipo con formato se serializa como una estructura, solo son accesibles los campos dentro del tipo.  Si el tipo tiene métodos, propiedades o eventos, son inaccesibles desde código no administrado.  
+>  Cuando un tipo con formato se serializa como una estructura, solo son accesibles los campos dentro del tipo. Si el tipo tiene métodos, propiedades o eventos, son inaccesibles desde código no administrado.  
   
- Las clases también se pueden serializar a código no administrado como estructuras de estilo C, a condición de que tengan una distribución de miembros fija.  La información de distribución de miembros para una clase también se proporciona con el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>.  La diferencia principal entre los tipos de valor con distribución fija y las clases con distribución fija es la forma en la que se serializan a código no administrado.  Los tipos de valor se pasan por valor \(en la pila\) y, por consiguiente, el llamador no ve los cambios realizados por el destinatario en los miembros del tipo.  Los tipos de referencia se pasan por referencia \(se pasa una referencia al tipo en la pila\); en consecuencia, el llamador ve todos los cambios realizados por el destinatario en miembros de un tipo que pueden transferirse en bloque de bits.  
+ Las clases también se pueden serializar a código no administrado como estructuras de estilo C, a condición de que tengan una distribución de miembros fija. La información de distribución de miembros para una clase también se proporciona con el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La diferencia principal entre los tipos de valor con distribución fija y las clases con distribución fija es la forma en la que se serializan a código no administrado. Los tipos de valor se pasan por valor (en la pila) y, por consiguiente, el llamador no ve los cambios realizados por el destinatario en los miembros del tipo. Los tipos de referencia se pasan por referencia (se pasa una referencia al tipo en la pila); en consecuencia, el llamador ve todos los cambios realizados por el destinatario en miembros de un tipo que pueden transferirse en bloque de bits.  
   
 > [!NOTE]
->  Si un tipo de referencia tiene miembros de tipos que no pueden transferirse en bloque de bits, se requiere una conversión doble: la primera vez cuando se pasa un argumento al lado no administrado y la segunda vez en la devolución de la llamada.  Debido a esta sobrecarga adicional, los parámetros In\/Out deben aplicarse explícitamente a un argumento si el llamador desea ver los cambios realizados por el destinatario.  
+>  Si un tipo de referencia tiene miembros de tipos que no pueden transferirse en bloque de bits, se requiere una conversión doble: la primera vez cuando se pasa un argumento al lado no administrado y la segunda vez en la devolución de la llamada. Debido a esta sobrecarga adicional, los parámetros In/Out deben aplicarse explícitamente a un argumento si el llamador desea ver los cambios realizados por el destinatario.  
   
  En el ejemplo siguiente, la clase `SystemTime` tiene distribución de miembros secuencial y puede pasarse a la función **GetSystemTime** de la API Win32.  
   
@@ -273,7 +276,6 @@ class Win32API {
    Public wSecond As System.UInt16  
    Public wMilliseconds As System.UInt16  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -303,7 +305,6 @@ Public Class Win32
    Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
    As SystemTime)  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -313,9 +314,9 @@ class Win32API {
 }  
 ```  
   
- Tenga en cuenta que el argumento `SystemTime` no se tipifica como argumento de referencia porque `SystemTime` es una clase, no un tipo de valor.  A diferencia de los tipos de valor, las clases siempre se pasan por referencia.  
+ Tenga en cuenta que el argumento `SystemTime` no se tipifica como argumento de referencia porque `SystemTime` es una clase, no un tipo de valor. A diferencia de los tipos de valor, las clases siempre se pasan por referencia.  
   
- En el ejemplo de código siguiente se muestra otra clase `Point` que tiene un método denominado `SetXY`.  Puesto que el tipo tiene una distribución secuencial, puede pasarse a código no administrado y serializarse como una estructura.  Sin embargo, el miembro `SetXY` no es invocable desde código no administrado, aunque el objeto se pase por referencia.  
+ En el ejemplo de código siguiente se muestra otra clase `Point` que tiene un método denominado `SetXY`. Puesto que el tipo tiene una distribución secuencial, puede pasarse a código no administrado y serializarse como una estructura. Sin embargo, el miembro `SetXY` no es invocable desde código no administrado, aunque el objeto se pase por referencia.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class Point  
@@ -325,7 +326,6 @@ class Win32API {
       Me.y = y  
    End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -340,8 +340,8 @@ public class Point {
 ```  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
-### Tipos de valor utilizados en la interoperabilidad COM  
- Los tipos con formato también pueden pasarse a llamadas de métodos de interoperabilidad COM.  De hecho, cuando se exportan a una biblioteca de tipos, los tipos de valor se convierten automáticamente en estructuras.  Como se muestra en el ejemplo siguiente, el tipo de valor `Point` se convierte en una definición de tipo \(typedef\) con el nombre `Point`.  Todas las referencias al tipo de valor `Point` en otro lugar de la biblioteca de tipos se reemplazan por el typedef `Point`.  
+### <a name="value-types-used-in-com-interop"></a>Tipos de valor utilizados en la interoperabilidad COM  
+ Los tipos con formato también pueden pasarse a llamadas de métodos de interoperabilidad COM. De hecho, cuando se exportan a una biblioteca de tipos, los tipos de valor se convierten automáticamente en estructuras. Como se muestra en el ejemplo siguiente, el tipo de valor `Point` se convierte en una definición de tipo (typedef) con el nombre `Point`. Todas las referencias al tipo de valor `Point` en otro lugar de la biblioteca de tipos se reemplazan por el typedef `Point`.  
   
  **Representación de biblioteca de tipos**  
   
@@ -358,45 +358,45 @@ interface _Graphics {
 }  
 ```  
   
- Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM.  Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor.  Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila.  El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto \(**Point \*\***\) en cualquier dirección.  
+ Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**Point \*\***) en ninguna dirección.  
   
 > [!NOTE]
 >  Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  
   
 <a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
-### Tipos de valor System  
- El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime.  Por ejemplo, la estructura <xref:System.Int32?displayProperty=fullName> de tipo de valor representa la forma de conversión boxing de **ELEMENT\_TYPE\_I4**.  En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing.  Por lo tanto, **System.Int32** se serializa como **ELEMENT\_TYPE\_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**.  La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  
+### <a name="system-value-types"></a>Tipos de valor System  
+ El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime. Por ejemplo, la estructura <xref:System.Int32?displayProperty=fullName> de tipo de valor representa la forma de conversión boxing de **ELEMENT_TYPE_I4**. En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing. Por tanto, **System.Int32** se serializa como **ELEMENT_TYPE_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**. La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  
   
 |Tipo de valor System|Tipo de elemento|  
-|--------------------------|----------------------|  
-|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT\_TYPE\_BOOLEAN**|  
-|<xref:System.SByte?displayProperty=fullName>|**ELEMENT\_TYPE\_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**ELEMENT\_TYPE\_UI1**|  
-|<xref:System.Char?displayProperty=fullName>|**ELEMENT\_TYPE\_CHAR**|  
-|<xref:System.Int16?displayProperty=fullName>|**ELEMENT\_TYPE\_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT\_TYPE\_U2**|  
-|<xref:System.Int32?displayProperty=fullName>|**ELEMENT\_TYPE\_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT\_TYPE\_U4**|  
-|<xref:System.Int64?displayProperty=fullName>|**ELEMENT\_TYPE\_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT\_TYPE\_U8**|  
-|<xref:System.Single?displayProperty=fullName>|**ELEMENT\_TYPE\_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**ELEMENT\_TYPE\_R8**|  
-|<xref:System.String?displayProperty=fullName>|**ELEMENT\_TYPE\_STRING**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT\_TYPE\_I**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT\_TYPE\_U**|  
+|-----------------------|------------------|  
+|<xref:System.Boolean?displayProperty=fullName>|**ELEMENT_TYPE_BOOLEAN**|  
+|<xref:System.SByte?displayProperty=fullName>|**ELEMENT_TYPE_I1**|  
+|<xref:System.Byte?displayProperty=fullName>|**ELEMENT_TYPE_UI1**|  
+|<xref:System.Char?displayProperty=fullName>|**ELEMENT_TYPE_CHAR**|  
+|<xref:System.Int16?displayProperty=fullName>|**ELEMENT_TYPE_I2**|  
+|<xref:System.UInt16?displayProperty=fullName>|**ELEMENT_TYPE_U2**|  
+|<xref:System.Int32?displayProperty=fullName>|**ELEMENT_TYPE_I4**|  
+|<xref:System.UInt32?displayProperty=fullName>|**ELEMENT_TYPE_U4**|  
+|<xref:System.Int64?displayProperty=fullName>|**ELEMENT_TYPE_I8**|  
+|<xref:System.UInt64?displayProperty=fullName>|**ELEMENT_TYPE_U8**|  
+|<xref:System.Single?displayProperty=fullName>|**ELEMENT_TYPE_R4**|  
+|<xref:System.Double?displayProperty=fullName>|**ELEMENT_TYPE_R8**|  
+|<xref:System.String?displayProperty=fullName>|**ELEMENT_TYPE_STRING**|  
+|<xref:System.IntPtr?displayProperty=fullName>|**ELEMENT_TYPE_I**|  
+|<xref:System.UIntPtr?displayProperty=fullName>|**ELEMENT_TYPE_U**|  
   
- Hay algunos tipos de valores del espacio de nombres **System** que se tratan de forma diferente.  Dado que el código no administrado ya tiene formatos establecidos para estos tipos, el serializador tiene reglas especiales para serializarlos.  En la tabla siguiente se enumeran los tipos de valor especiales del espacio de nombres **System**, así como el tipo no administrado al que se serializan.  
+ Hay algunos tipos de valor del espacio de nombres **System** que se tratan de forma diferente. Dado que el código no administrado ya tiene formatos establecidos para estos tipos, la serialización tiene reglas especiales para serializarlos. En la tabla siguiente se enumeran los tipos de valor especiales del espacio de nombres **System**, así como el tipo no administrado al que se serializan.  
   
 |Tipo de valor System|Tipo IDL|  
-|--------------------------|--------------|  
+|-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=fullName>|**DATE**|  
 |<xref:System.Decimal?displayProperty=fullName>|**DECIMAL**|  
 |<xref:System.Guid?displayProperty=fullName>|**GUID**|  
-|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE\_COLOR**|  
+|<xref:System.Drawing.Color?displayProperty=fullName>|**OLE_COLOR**|  
   
- El código siguiente muestra la definición de los tipos no administrados **DATE**, **GUID**, **DECIMAL** y **OLE\_COLOR** en la biblioteca de tipos Stdole2.  
+ El código siguiente muestra la definición de los tipos no administrados **DATE**, **GUID**, **DECIMAL** y **OLE_COLOR** de la biblioteca de tipos Stdole2.  
   
-#### Representación de biblioteca de tipos  
+#### <a name="type-library-representation"></a>Representación de biblioteca de tipos  
   
 ```  
 typedef double DATE;  
@@ -427,7 +427,6 @@ Public Interface IValueTypes
    Sub M3(d As System.Decimal)  
    Sub M4(d As System.Drawing.Color)  
 End Interface  
-  
 ```  
   
 ```csharp  
@@ -439,7 +438,7 @@ public interface IValueTypes {
 }  
 ```  
   
-#### Representación de biblioteca de tipos  
+#### <a name="type-library-representation"></a>Representación de biblioteca de tipos  
   
 ```  
 […]  
@@ -451,9 +450,10 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## Vea también  
- [Blittable and Non\-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Copying and Pinning](../../../docs/framework/interop/copying-and-pinning.md)   
- [Default Marshaling for Arrays](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
- [Default Marshaling for Objects](../../../docs/framework/interop/default-marshaling-for-objects.md)   
- [Default Marshaling for Strings](../../../docs/framework/interop/default-marshaling-for-strings.md)
+## <a name="see-also"></a>Vea también  
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
+ [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)   
+ [Serialización predeterminada para matrices](../../../docs/framework/interop/default-marshaling-for-arrays.md)   
+ [Serialización predeterminada para objetos](../../../docs/framework/interop/default-marshaling-for-objects.md)   
+ [Serialización predeterminada para cadenas](../../../docs/framework/interop/default-marshaling-for-strings.md)
+

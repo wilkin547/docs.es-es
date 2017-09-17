@@ -73,6 +73,6 @@ La herramienta XML Schema Definition (Xsd.exe) le permite generar un esquema XML
  [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
  [Herramienta Definición de esquemas XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)   
  <xref:System.Xml.Serialization.XmlSerializer>   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

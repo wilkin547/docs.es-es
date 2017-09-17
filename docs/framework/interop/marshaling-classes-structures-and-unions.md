@@ -1,80 +1,85 @@
 ---
-title: "Marshaling Classes, Structures, and Unions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "data marshaling, classes"
-  - "marshaling, unions"
-  - "marshaling, structures"
-  - "marshaling, samples"
-  - "data marshaling, structures"
-  - "platform invoke, marshaling data"
-  - "marshaling, classes"
-  - "data marshaling, unions"
-  - "data marshaling, samples"
-  - "data marshaling, platform invoke"
-  - "marshaling, platform invoke"
+title: "Serialización de clases, estructuras y uniones"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- data marshaling, classes
+- marshaling, unions
+- marshaling, structures
+- marshaling, samples
+- data marshaling, structures
+- platform invoke, marshaling data
+- marshaling, classes
+- data marshaling, unions
+- data marshaling, samples
+- data marshaling, platform invoke
+- marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 caps.latest.revision: 10
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92146a13438067c25a36d589f7ec7fb148ed825d
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Marshaling Classes, Structures, and Unions
-Las clases y las estructuras son similares en .NET Framework.  Ambas pueden tener campos, propiedades y eventos,  además de métodos estáticos y no estáticos.  Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
+# <a name="marshaling-classes-structures-and-unions"></a>Serialización de clases, estructuras y uniones
+Las clases y las estructuras son similares en .NET Framework. Ambas pueden tener campos, propiedades y eventos, además de métodos estáticos y no estáticos. Una diferencia importante entre ellas es que las estructuras son tipos de valor y las clases son tipos de referencia.  
   
  En la tabla siguiente se enumeran las opciones de serialización para clases, estructuras y uniones, se describe su uso y se proporciona un vínculo al ejemplo de invocación de la plataforma correspondiente.  
   
 |Tipo|Descripción|Ejemplo|  
-|----------|-----------------|-------------|  
-|Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In\/Out, al igual que el caso administrado.|SysTime \(ejemplo\)|  
+|----------|-----------------|------------|  
+|Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|SysTime (ejemplo)|  
 |Estructura por valor.|Pasa las estructuras como parámetros In.|Ejemplo Structs|  
-|Estructura por referencia.|Pasa estructuras como parámetros In\/Out.|OSInfo \(ejemplo\)|  
-|Estructura con estructuras anidadas \(simplificada\).|Pasa una clase que representa una estructura con estructuras anidadas en la función no administrada.  La estructura se simplifica en una gran estructura en el prototipo administrado.|FindFile \(ejemplo\)|  
+|Estructura por referencia.|Pasa estructuras como parámetros In/Out.|OSInfo (ejemplo)|  
+|Estructura con estructuras anidadas (simplificada).|Pasa una clase que representa una estructura con estructuras anidadas en la función no administrada. La estructura se simplifica en una gran estructura en el prototipo administrado.|FindFile (ejemplo)|  
 |Estructura con un puntero a otra estructura.|Pasa una estructura que contiene un puntero a una segunda estructura como miembro.|Ejemplo Structs|  
-|Matriz de estructuras con enteros por valor.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In\/Out.  Los miembros de la matriz se pueden cambiar.|Ejemplo Arrays|  
-|Matriz de estructuras con enteros y cadenas por referencia.|Pasa una matriz de estructuras que contienen enteros y cadenas como un parámetro Out.  La función llamada asigna memoria para la matriz.|Ejemplo OutArrayOfStructs|  
-|Uniones con tipos de valor.|Pasa uniones con tipos de valor \(entero y doble\).|Unions \(ejemplo\)|  
-|Uniones con tipos mixtos.|Pasa uniones con tipos mixtos \(entero y cadena\).|Unions \(ejemplo\)|  
-|Valores NULL en la estructura.|Pasa una referencia NULL \(**Nothing** en Visual Basic\) en lugar de una referencia a un tipo de valor.|HandleRef \(ejemplo\)|  
+|Matriz de estructuras con enteros por valor.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out. Los miembros de la matriz se pueden cambiar.|Ejemplo Arrays|  
+|Matriz de estructuras con enteros y cadenas por referencia.|Pasa una matriz de estructuras que contienen enteros y cadenas como un parámetro Out. La función llamada asigna memoria para la matriz.|Ejemplo OutArrayOfStructs|  
+|Uniones con tipos de valor.|Pasa uniones con tipos de valor (entero y doble).|Unions (ejemplo)|  
+|Uniones con tipos mixtos.|Pasa uniones con tipos mixtos (entero y cadena).|Unions (ejemplo)|  
+|Valores NULL en la estructura.|Pasa una referencia nula (**Nothing** en Visual Basic) en lugar de una referencia a un tipo de valor.|HandleRef (ejemplo)|  
   
-## Ejemplo Structs  
+## <a name="structures-sample"></a>Ejemplo Structs  
  En este ejemplo se muestra cómo pasar una estructura que apunta a una segunda estructura, cómo pasar una estructura con otra estructura insertada y cómo pasar una estructura con una matriz insertada.  
   
  En el ejemplo Structs se usan las siguientes funciones no administradas, junto con su declaración de función original:  
   
--   **TestStructInStruct** exportada desde PinvokeLib.dll.  
+-   **TestStructInStruct** se exporta desde PinvokeLib.dll.  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   **TestStructInStruct3** exportada desde PinvokeLib.dll.  
+-   **TestStructInStruct3** se exporta desde PinvokeLib.dll.  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   **TestArrayInStruct** exportada desde PinvokeLib.dll.  
+-   **TestArrayInStruct** se exporta desde PinvokeLib.dll.  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/es-es/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada y no administrada que contiene implementaciones para las funciones enumeradas anteriormente y cuatro estructuras: **MYPERSON** y **MYPERSON2**, **MYPERSON3** y **MYARRAYSTRUCT**.  Estas estructuras contienen los siguientes elementos:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada y no administrada que contiene implementaciones para las funciones enumeradas anteriormente y cuatro estructuras: **MYPERSON**, **MYPERSON2**, **MYPERSON3** y **MYARRAYSTRUCT**. Estas estructuras contienen los siguientes elementos:  
   
 ```  
 typedef struct _MYPERSON  
@@ -102,19 +107,19 @@ typedef struct _MYARRAYSTRUCT
 } MYARRAYSTRUCT;  
 ```  
   
- Las estructuras administradas `MyPerson`,  `MyPerson2`, `MyPerson3` y `MyArrayStruct` tienen las características siguientes:  
+ Las estructuras administradas `MyPerson`, `MyPerson2`, `MyPerson3` y `MyArrayStruct` tienen las características siguientes:  
   
--   `MyPerson` contiene solo miembros de cadena.  El campo [CharSet](../../../docs/framework/interop/specifying-a-character-set.md) establece las cadenas en formato ANSI cuando se pasan a la función no administrada.  
+-   `MyPerson` contiene solo miembros de cadena. El campo [CharSet](../../../docs/framework/interop/specifying-a-character-set.md) establece las cadenas en formato ANSI cuando se pasan a la función no administrada.  
   
--   `MyPerson2` contiene un **IntPtr** a la `MyPerson` estructura.  El tipo **IntPtr** reemplaza el puntero original a la estructura no administrada porque las aplicaciones de .NET Framework no usan punteros a menos que el código se marque como **unsafe**.  
+-   `MyPerson2` contiene un **IntPtr** a la estructura `MyPerson`. El tipo **IntPtr** reemplaza el puntero original a la estructura no administrada porque las aplicaciones de .NET Framework no usan punteros a menos que el código se marque como **unsafe**.  
   
--   `MyPerson3` contiene `MyPerson` como una estructura insertada.  Una estructura insertada en otra estructura se puede simplificar mediante la colocación de los elementos de la estructura insertada directamente en la estructura principal. También se puede dejar como estructura insertada, como se hace en este ejemplo.  
+-   `MyPerson3` contiene `MyPerson` como una estructura insertada. Una estructura insertada en otra estructura se puede simplificar mediante la colocación de los elementos de la estructura insertada directamente en la estructura principal. También se puede dejar como estructura insertada, como se hace en este ejemplo.  
   
--   `MyArrayStruct` contiene una matriz de enteros.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> establece el valor de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValArray**, que se usa para indicar el número de elementos de la matriz.  
+-   `MyArrayStruct` contiene una matriz de enteros. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> establece el valor de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValArray**, que se usa para indicar el número de elementos de la matriz.  
   
  En todas las estructuras de este ejemplo, el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se aplica para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene prototipos administrados para los métodos `TestStructInStruct`, `TestStructInStruct3` y `TestArrayInStruct` llamados por la clase `App`.  Cada prototipo declara un único parámetro, como sigue:  
+ La clase `LibWrap` contiene prototipos administrados para los métodos `TestStructInStruct`, `TestStructInStruct3` y `TestArrayInStruct` llamados por la clase `App`. Cada prototipo declara un único parámetro, como sigue:  
   
 -   `TestStructInStruct` declara una referencia al tipo `MyPerson2` como su parámetro.  
   
@@ -122,20 +127,16 @@ typedef struct _MYARRAYSTRUCT
   
 -   `TestArrayInStruct` declara una referencia al tipo `MyArrayStruct` como su parámetro.  
   
- Las estructuras como argumentos para los métodos se pasan por valor a menos que el parámetro contenga la palabra clave **ref** \(**ByRef** en Visual Basic\).  Por ejemplo, el método `TestStructInStruct` pasa una referencia \(el valor de una dirección\) a un objeto de tipo `MyPerson2` a código no administrado.  Para manipular la estructura a la que apunta `MyPerson2`, en el ejemplo se crea un búfer de un tamaño especificado y se devuelve su dirección mediante la combinación de los métodos <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=fullName> y <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>.  A continuación, se copia el contenido de la estructura administrada en el búfer no administrado.  Por último, se usa el método <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=fullName> para calcular referencias de datos desde el búfer no administrado a un objeto administrado y el método <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=fullName> para liberar el bloque de memoria no administrada.  
+ Las estructuras como argumentos para los métodos se pasan por valor a menos que el parámetro contenga la palabra clave **ref** (**ByRef** en Visual Basic). Por ejemplo, el método `TestStructInStruct` pasa una referencia (el valor de una dirección) a un objeto de tipo `MyPerson2` a código no administrado. Para manipular la estructura a la que apunta `MyPerson2`, en el ejemplo se crea un búfer de un tamaño especificado y se devuelve su dirección mediante la combinación de los métodos <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=fullName> y <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>. A continuación, se copia el contenido de la estructura administrada en el búfer no administrado. Por último, se usa el método <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=fullName> para calcular referencias de datos desde el búfer no administrado a un objeto administrado y el método <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=fullName> para liberar el bloque de memoria no administrada.  
   
-### Declaración de prototipos  
- [!code-cpp[Conceptual.Interop.Marshaling#23](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/structures.cpp#23)]
- [!code-csharp[Conceptual.Interop.Marshaling#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/structures.cs#23)]
- [!code-vb[Conceptual.Interop.Marshaling#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#23)]  
+### <a name="declaring-prototypes"></a>Declaración de prototipos  
+ [!code-cpp[Conceptual.Interop.Marshaling#23](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/structures.cpp#23)] [!code-csharp[Conceptual.Interop.Marshaling#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/structures.cs#23)] [!code-vb[Conceptual.Interop.Marshaling#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#23)]  
   
-### Llamadas a funciones  
- [!code-cpp[Conceptual.Interop.Marshaling#24](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/structures.cpp#24)]
- [!code-csharp[Conceptual.Interop.Marshaling#24](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/structures.cs#24)]
- [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
+### <a name="calling-functions"></a>Llamadas a funciones  
+ [!code-cpp[Conceptual.Interop.Marshaling#24](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/structures.cpp#24)] [!code-csharp[Conceptual.Interop.Marshaling#24](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/structures.cs#24)] [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
-## FindFile \(ejemplo\)  
- En este ejemplo se muestra cómo pasar una estructura que contiene una segunda estructura insertada a una función no administrada.  También se muestra cómo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para declarar una matriz de longitud fija dentro de la estructura.  En este ejemplo, los elementos de la estructura insertada se agregan a la estructura primaria.  Para obtener un ejemplo de una estructura insertada que no esté simplificada, vea [Ejemplo Structs](http://msdn.microsoft.com/es-es/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
+## <a name="findfile-sample"></a>FindFile (ejemplo)  
+ En este ejemplo se muestra cómo pasar una estructura que contiene una segunda estructura insertada a una función no administrada. También se muestra cómo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para declarar una matriz de longitud fija dentro de la estructura. En este ejemplo, los elementos de la estructura insertada se agregan a la estructura primaria. Para obtener un ejemplo de una estructura insertada que no esté simplificada, vea [Ejemplo Structs](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
   
  En el ejemplo FindFile se usa la siguiente función no administrada, que se muestra con su declaración de función original:  
   
@@ -163,22 +164,18 @@ typedef struct _WIN32_FIND_DATA
 } WIN32_FIND_DATA, *PWIN32_FIND_DATA;  
 ```  
   
- En este ejemplo, la clase `FindData` contiene un miembro de datos correspondiente para cada elemento de la estructura original y de la estructura insertada.  En lugar de dos búferes de caracteres originales, la clase sustituye cadenas.  **MarshalAsAttribute** establece el valor de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValTStr**, que se usa para identificar las matrices de caracteres de longitud fija insertadas que aparecen en las estructuras no administradas.  
+ En este ejemplo, la clase `FindData` contiene un miembro de datos correspondiente para cada elemento de la estructura original y de la estructura insertada. En lugar de dos búferes de caracteres originales, la clase sustituye cadenas. **MarshalAsAttribute** establece el valor de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValTStr**, que se usa para identificar las matrices de caracteres de longitud fija insertadas que aparecen en las estructuras no administradas.  
   
- La clase `LibWrap` contiene un prototipo administrado del método `FindFirstFile`, que pasa la clase `FindData` como un parámetro.  El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada.  
+ La clase `LibWrap` contiene un prototipo administrado del método `FindFirstFile`, que pasa la clase `FindData` como un parámetro. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada.  
   
-### Declaración de prototipos  
- [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
- [!code-csharp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/findfile.cs#17)]
- [!code-vb[Conceptual.Interop.Marshaling#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/findfile.vb#17)]  
+### <a name="declaring-prototypes"></a>Declaración de prototipos  
+ [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)] [!code-csharp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/findfile.cs#17)] [!code-vb[Conceptual.Interop.Marshaling#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/findfile.vb#17)]  
   
-### Llamadas a funciones  
- [!code-cpp[Conceptual.Interop.Marshaling#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#18)]
- [!code-csharp[Conceptual.Interop.Marshaling#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/findfile.cs#18)]
- [!code-vb[Conceptual.Interop.Marshaling#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/findfile.vb#18)]  
+### <a name="calling-functions"></a>Llamadas a funciones  
+ [!code-cpp[Conceptual.Interop.Marshaling#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#18)] [!code-csharp[Conceptual.Interop.Marshaling#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/findfile.cs#18)] [!code-vb[Conceptual.Interop.Marshaling#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/findfile.vb#18)]  
   
-## Unions \(ejemplo\)  
- En este ejemplo se muestra cómo pasar estructuras que solo contienen tipos de valor y estructuras que contienen un tipo de valor y una cadena como parámetros para una función no administrada que espera recibir una unión.  Una unión representa una ubicación de memoria que puede ser compartida por dos o más variables.  
+## <a name="unions-sample"></a>Unions (ejemplo)  
+ En este ejemplo se muestra cómo pasar estructuras que solo contienen tipos de valor y estructuras que contienen un tipo de valor y una cadena como parámetros para una función no administrada que espera recibir una unión. Una unión representa una ubicación de memoria que puede ser compartida por dos o más variables.  
   
  En el ejemplo Unions se usa la siguiente función no administrada, que se muestra con su declaración de función original:  
   
@@ -188,7 +185,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/es-es/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene una implementación para la función enumerada anteriormente y dos uniones **MYUNION** y **MYUNION2**.  Las uniones contienen los siguientes elementos:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene una implementación para la función enumerada anteriormente y dos uniones, **MYUNION** y **MYUNION2**. Las uniones contienen los siguientes elementos:  
   
 ```  
 union MYUNION  
@@ -204,23 +201,19 @@ union MYUNION2
 };  
 ```  
   
- En código administrado, las uniones se definen como estructuras.  La estructura `MyUnion` contiene dos tipos de valor como miembros: un entero y un doble.  El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> está establecido para controlar la posición exacta de cada miembro de datos.  El atributo <xref:System.Runtime.InteropServices.FieldOffsetAttribute> proporciona la posición física de los campos dentro de la representación no administrada de una unión.  Observe que ambos miembros tienen los mismos valores de desplazamiento, por lo que pueden definir la misma parte de memoria.  
+ En código administrado, las uniones se definen como estructuras. La estructura `MyUnion` contiene dos tipos de valor como miembros: un entero y un doble. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> está establecido para controlar la posición exacta de cada miembro de datos. El atributo <xref:System.Runtime.InteropServices.FieldOffsetAttribute> proporciona la posición física de los campos dentro de la representación no administrada de una unión. Observe que ambos miembros tienen los mismos valores de desplazamiento, por lo que pueden definir la misma parte de memoria.  
   
- `MyUnion2_1` y `MyUnion2_2` contienen un tipo de valor \(entero\) y una cadena, respectivamente.  En código administrado, los tipos de valor y los tipos de referencia no pueden superponerse.  En este ejemplo se usa la sobrecarga de métodos para permitir que el llamador utilice ambos tipos cuando llama a la misma función no administrada.  El diseño de `MyUnion2_1` es explícito y tiene un valor de desplazamiento preciso.  Por el contrario, `MyUnion2_2` tiene un diseño secuencial porque no se permiten diseños explícitos con tipos de referencia.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> establece el valor de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValTStr**, que se usa para identificar las matrices de caracteres de longitud fija insertadas que aparecen en la representación no administrada de la unión.  
+ `MyUnion2_1` y `MyUnion2_2` contienen un tipo de valor (entero) y una cadena, respectivamente. En código administrado, los tipos de valor y los tipos de referencia no pueden superponerse. En este ejemplo se usa la sobrecarga de métodos para permitir que el llamador utilice ambos tipos cuando llama a la misma función no administrada. El diseño de `MyUnion2_1` es explícito y tiene un valor de desplazamiento preciso. Por el contrario, `MyUnion2_2` tiene un diseño secuencial porque no se permiten diseños explícitos con tipos de referencia. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> establece el valor de la enumeración <xref:System.Runtime.InteropServices.UnmanagedType> en **ByValTStr**, que se usa para identificar las matrices de caracteres de longitud fija insertadas que aparecen en la representación no administrada de la unión.  
   
- La clase `LibWrap` contiene los prototipos para los métodos `TestUnion` y `TestUnion2`.  `TestUnion2` se sobrecarga para declarar `MyUnion2_1` o `MyUnion2_2` como parámetros.  
+ La clase `LibWrap` contiene los prototipos para los métodos `TestUnion` y `TestUnion2`. `TestUnion2` se sobrecarga para declarar `MyUnion2_1` o `MyUnion2_2` como parámetros.  
   
-### Declaración de prototipos  
- [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
- [!code-csharp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#28)]
- [!code-vb[Conceptual.Interop.Marshaling#28](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#28)]  
+### <a name="declaring-prototypes"></a>Declaración de prototipos  
+ [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)] [!code-csharp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#28)] [!code-vb[Conceptual.Interop.Marshaling#28](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#28)]  
   
-### Llamadas a funciones  
- [!code-cpp[Conceptual.Interop.Marshaling#29](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#29)]
- [!code-csharp[Conceptual.Interop.Marshaling#29](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
- [!code-vb[Conceptual.Interop.Marshaling#29](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]  
+### <a name="calling-functions"></a>Llamadas a funciones  
+ [!code-cpp[Conceptual.Interop.Marshaling#29](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#29)] [!code-csharp[Conceptual.Interop.Marshaling#29](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)] [!code-vb[Conceptual.Interop.Marshaling#29](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]  
   
-## SysTime \(ejemplo\)  
+## <a name="systime-sample"></a>SysTime (ejemplo)  
  En este ejemplo se muestra cómo pasar un puntero a una clase a una función no administrada que espera recibir un puntero a una estructura.  
   
  En el ejemplo SysTime se usa la siguiente función no administrada, que se muestra con su declaración de función original:  
@@ -246,21 +239,19 @@ typedef struct _SYSTEMTIME {
 } SYSTEMTIME, *PSYSTEMTIME;  
 ```  
   
- En este ejemplo, la clase `SystemTime` contiene los elementos de la estructura original representados como miembros de clase.  El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
+ En este ejemplo, la clase `SystemTime` contiene los elementos de la estructura original representados como miembros de clase. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In\/Out de forma predeterminada.  El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada.  Para que el llamador reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](http://msdn.microsoft.com/es-es/241ac5b5-928e-4969-8f58-1dbc048f9ea2).  La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.  
+ La clase `LibWrap` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.  
   
-### Ejemplos de código  
- [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
- [!code-csharp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/systime.cs#25)]
- [!code-vb[Conceptual.Interop.Marshaling#25](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/systime.vb#25)]  
+### <a name="code-samples"></a>Ejemplos de código  
+ [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)] [!code-csharp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/systime.cs#25)] [!code-vb[Conceptual.Interop.Marshaling#25](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/systime.vb#25)]  
   
-## OutArrayOfStructs \(ejemplo\)  
+## <a name="outarrayofstructs-sample"></a>OutArrayOfStructs (ejemplo)  
  En este ejemplo se muestra cómo pasar una matriz de estructuras que contiene enteros y cadenas como parámetros Out a una función no administrada.  
   
  En el ejemplo se muestra cómo llamar a una función nativa mediante la clase <xref:System.Runtime.InteropServices.Marshal> y código no seguro.  
   
- En el ejemplo se usan funciones de contenedor e invocaciones de plataforma definidas en [PinvokeLib.dll](http://msdn.microsoft.com/es-es/5d1438d7-9946-489d-8ede-6c694a08f614), también proporcionadas en los archivos de origen.  Se usa la función `TestOutArrayOfStructs` y la estructura `MYSTRSTRUCT2`.  La estructura contiene los siguientes elementos:  
+ En este ejemplo se usan funciones de contenedor e invocaciones de plataforma definidas en [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614), que también se proporciona en los archivos de origen. Se usa la función `TestOutArrayOfStructs` y la estructura `MYSTRSTRUCT2`. La estructura contiene los siguientes elementos:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -270,11 +261,11 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI.  El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI.  `MyUnsafeStruct` es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
+ La clase `MyStruct` contiene un objeto de cadena de caracteres ANSI. El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> especifica el formato ANSI. `MyUnsafeStruct` es una estructura que contiene un tipo <xref:System.IntPtr> en lugar de una cadena.  
   
- La clase `LibWrap` contiene el método de prototipo `TestOutArrayOfStructs` sobrecargado.  Si un método declara un puntero como parámetro, la clase se debe marcar con la palabra clave `unsafe`.  Dado que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] no puede usar código no seguro, el método sobrecargado, el modificador unsafe y la estructura `MyUnsafeStruct` son innecesarios.  
+ La clase `LibWrap` contiene el método de prototipo `TestOutArrayOfStructs` sobrecargado. Si un método declara un puntero como parámetro, la clase se debe marcar con la palabra clave `unsafe`. Dado que [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] no puede usar código no seguro, el método sobrecargado, el modificador unsafe y la estructura `MyUnsafeStruct` son innecesarios.  
   
- La clase `App` implementa el método `UsingMarshaling`, que realiza todas las tareas necesarias para pasar la matriz.  La matriz se marca con la palabra clave `out` \(`ByRef` en Visual Basic\) para indicar que los datos se pasan del destinatario al llamador.  La implementación usa los siguientes métodos de la clase <xref:System.Runtime.InteropServices.Marshal>:  
+ La clase `App` implementa el método `UsingMarshaling`, que realiza todas las tareas necesarias para pasar la matriz. La matriz se marca con la palabra clave `out` (`ByRef` en Visual Basic) para indicar que los datos se pasan del destinatario al llamador. La implementación usa los siguientes métodos de la clase <xref:System.Runtime.InteropServices.Marshal>:  
   
 -   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> para calcular las referencias de datos desde el búfer no administrado a un objeto administrado.  
   
@@ -282,20 +273,17 @@ typedef struct _MYSTRSTRUCT2
   
 -   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> para liberar la memoria reservada para la matriz.  
   
- Como se mencionó anteriormente, C\# permite código no seguro, pero [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] no.  En el ejemplo de C\#, `UsingUnsafePointer` es una implementación de método alternativo que usa punteros en lugar de la clase <xref:System.Runtime.InteropServices.Marshal> para devolver la matriz que contiene la estructura `MyUnsafeStruct`.  
+ Como se mencionó anteriormente, C# permite código no seguro, pero [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] no. En el ejemplo de C#, `UsingUnsafePointer` es una implementación de método alternativo que usa punteros en lugar de la clase <xref:System.Runtime.InteropServices.Marshal> para devolver la matriz que contiene la estructura `MyUnsafeStruct`.  
   
-### Declaración de prototipos  
- [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]
- [!code-csharp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#20)]
- [!code-vb[Conceptual.Interop.Marshaling#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#20)]  
+### <a name="declaring-prototypes"></a>Declaración de prototipos  
+ [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)] [!code-csharp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#20)] [!code-vb[Conceptual.Interop.Marshaling#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#20)]  
   
-### Llamadas a funciones  
- [!code-cpp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#21)]
- [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
- [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
+### <a name="calling-functions"></a>Llamadas a funciones  
+ [!code-cpp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#21)] [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)] [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## Vea también  
- [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)   
- [Platform Invoke Data Types](http://msdn.microsoft.com/es-es/16014d9f-d6bd-481e-83f0-df11377c550f)   
- [Marshaling Strings](../../../docs/framework/interop/marshaling-strings.md)   
- [Marshaling Arrays of Types](http://msdn.microsoft.com/es-es/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+## <a name="see-also"></a>Vea también  
+ [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)   
+ [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)   
+ [Serialización de cadenas](../../../docs/framework/interop/marshaling-strings.md)   
+ [Serialización de matrices de tipos](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+

@@ -275,6 +275,6 @@ public class Order{
  [Cómo: Serializar un objeto como secuencia XML con codificación SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)   
  [Cómo: Invalidar la serialización XML SOAP codificada](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)   
  [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

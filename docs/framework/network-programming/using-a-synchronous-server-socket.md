@@ -88,7 +88,7 @@ handler.Close();
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar un socket de servidor asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
+ [Using an Asynchronous Server Socket (Empleo de un socket de servidor asincrónico)](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [Ejemplo de sockets de servidor sincrónicos](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
  [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
 

@@ -43,7 +43,7 @@ La herramienta de definición de esquema XML ([XML Schema Definition Tool (Xsd.e
  [Introducción a la serialización XML](../../../docs/standard/serialization/introducing-xml-serialization.md)   
  [Herramienta Definición de esquemas XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)   
  <xref:System.Xml.Serialization.XmlSerializer>   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)   
  [Cómo: Utilizar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)   
  [Compatibilidad con enlaces del esquema XML en .NET Framework](http://msdn.microsoft.com/en-us/8f0619dd-f1fc-4895-ae21-6d45d0382cc1)

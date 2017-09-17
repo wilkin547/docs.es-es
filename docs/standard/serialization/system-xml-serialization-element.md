@@ -29,7 +29,7 @@ ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="ltsystemxmlserializationgt-element"></a>&lt;system.xml.serialization&gt; (Elemento)
-El elemento de nivel superior para controlar la serialización XML. Para más información sobre archivos de configuración, vea [Configuration File Schema (Esquema de archivos de configuración)](../../../docs/framework/configure-apps/file-schema/index.md).  
+El elemento de nivel superior para controlar la serialización XML. Para obtener más información sobre los archivos de configuración, vea [Configuration File Schema](../../../docs/framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
  \<configuration>  
 \<system.xml.serialization>  

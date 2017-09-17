@@ -1,34 +1,39 @@
 ---
-title: "COM Interop Sample: COM Client and .NET Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, samples"
-  - "COM interop, samples"
+title: 'Ejemplo de interoperabilidad COM: cliente COM y servidor .NET'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e8f87b17cc451b05186eee1e3228c38a05c945fd
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop Sample: COM Client and .NET Server
-En este ejemplo se muestra la interoperabilidad entre un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas.  En este ejemplo, el cliente crea una instancia de la clase administrada `Loan` y la llama, pasa cuatro argumentos \(uno de los cuales es igual a cero\) a la instancia y muestra los cálculos.  A lo largo de esta sección se muestran fragmentos de código de este ejemplo.  
+# <a name="com-interop-sample-com-client-and-net-server"></a>Ejemplo de interoperabilidad COM: cliente COM y servidor .NET
+En este ejemplo se muestra la interoperación de un [cliente COM](#cpconcominteropsamplecomclientnetserveranchor1) y un [servidor .NET](#cpconcominteropsamplecomclientnetserveranchor2) que realiza cálculos de hipotecas. En este ejemplo, el cliente crea y llama a una instancia de la clase administrada `Loan`, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos. A lo largo de esta sección aparecen ejemplos de código de este ejemplo.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
-## Cliente COM  
+## <a name="com-client"></a>Cliente COM  
   
 ```cpp  
 // ConLoan.cpp : Defines the entry point for the console application.  
@@ -95,7 +100,7 @@ int main(int argc, char* argv[])
 ```  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor2"></a>   
-## Servidor .NET  
+## <a name="net-server"></a>Servidor .NET  
   
 ```vb  
 Imports System  
@@ -270,7 +275,6 @@ Namespace LoanLib
     End Class  
   
 End Namespace  
-  
 ```  
   
 ```csharp  
@@ -397,5 +401,6 @@ namespace LoanLib {
 }  
 ```  
   
-## Vea también  
- [Exposing .NET Framework Components to COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>Vea también  
+ [Exponer componentes de .NET Framework en COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+

@@ -104,5 +104,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>Vea también  
  [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)   
- [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+ [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 

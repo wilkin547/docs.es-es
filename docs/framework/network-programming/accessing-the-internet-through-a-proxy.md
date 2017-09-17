@@ -45,7 +45,7 @@ Si el sitio usa un proxy para proporcionar acceso a Internet, debe configurar un
   
 -   [Cómo: Habilitar un elemento WebRequest para usar un proxy para comunicarse con Internet](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Cómo: Reemplazar una selección del proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [Cómo: reemplazar una selección del proxy global](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)   

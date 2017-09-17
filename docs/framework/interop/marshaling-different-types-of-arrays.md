@@ -1,44 +1,49 @@
 ---
-title: "Marshaling Different Types of Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "marshaling, Arrays sample"
-  - "data marshaling, Arrays sample"
+title: "Cálculo de referencias de tipos diferentes de matrices"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- marshaling, Arrays sample
+- data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 caps.latest.revision: 15
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3a91c74cf6734776fd6356c201e6754f34a8fbcf
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Marshaling Different Types of Arrays
-Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In\/Out. Para obtener más información, consulte [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md).  
+# <a name="marshaling-different-types-of-arrays"></a>Serialización de tipos diferentes de matrices
+Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md).  
   
  En la tabla siguiente se muestran las opciones de cálculo de referencias de matrices y se describe su uso.  
   
 |Matriz|Descripción|  
-|------------|-----------------|  
+|-----------|-----------------|  
 |De enteros por valor.|Pasa una matriz de enteros como un parámetro In.|  
-|De enteros por referencia.|Pasa una matriz de enteros como un parámetro In\/Out.|  
-|De enteros por valor \(bidimensional\).|Pasa una matriz multidimensional de enteros como un parámetro In.|  
+|De enteros por referencia.|Pasa una matriz de enteros como un parámetro In/Out.|  
+|De enteros por valor (bidimensional).|Pasa una matriz multidimensional de enteros como un parámetro In.|  
 |De cadenas por valor.|Pasa una matriz de cadenas como un parámetro In.|  
 |De estructuras con enteros.|Pasa una matriz de estructuras que contienen enteros como un parámetro In.|  
-|De estructuras con cadenas.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In\/Out. Los miembros de la matriz se pueden cambiar.|  
+|De estructuras con cadenas.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out. Los miembros de la matriz se pueden cambiar.|  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo pasar los siguientes tipos de matrices:  
   
 -   Matriz de enteros por valor.  
@@ -53,7 +58,7 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
   
 -   Matriz de estructuras con cadenas.  
   
- A menos que una matriz se calcule explícitamente por referencia, el comportamiento predeterminado calcula las referencias de la matriz como un parámetro In. Puede cambiar este comportamiento aplicando explícitamente los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute>.  
+ A menos que una matriz se calcule explícitamente por referencia, el comportamiento predeterminado calcula las referencias de la matriz como un parámetro In. Puede cambiar este comportamiento aplicando explícitamente los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> .  
   
  En el ejemplo Arrays se usan las siguientes funciones no administradas, que se muestran con su declaración de función original:  
   
@@ -93,25 +98,34 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/es-es/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**. Estas estructuras contienen los siguientes elementos:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) es una biblioteca personalizada no administrada que contiene implementaciones de las funciones enumeradas anteriormente y dos variables de estructura: **MYSTRSTRUCT** y **MYSTRSTRUCT2**. Estas estructuras contienen los siguientes elementos:  
   
 ```  
-typedef struct _MYPOINT { int x; int y; } MYPOINT; typedef struct _MYPERSON { char* first; char* last; } MYPERSON;  
+typedef struct _MYPOINT  
+{  
+   int x;   
+   int y;   
+} MYPOINT;  
+  
+typedef struct _MYPERSON  
+{  
+   char* first;   
+   char* last;   
+} MYPERSON;  
 ```  
   
  En este ejemplo, las estructuras `MyPoint` y `MyPerson` contienen tipos insertados. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.  
   
- La clase `LibWrap` contiene un conjunto de métodos llamados por la clase `App`. Para obtener detalles específicos sobre cómo pasar matrices, consulte los comentarios del ejemplo siguiente. Una matriz, que es un tipo de referencia, se pasa como un parámetro In de forma predeterminada. Para que el llamador reciba los resultados, se deben aplicar **InAttribute** y **OutAttribute** de manera explícita al argumento que contiene la matriz.  
+ La clase `LibWrap` contiene un conjunto de métodos llamados por la clase `App` . Para obtener detalles específicos sobre cómo pasar matrices, consulte los comentarios del ejemplo siguiente. Una matriz, que es un tipo de referencia, se pasa como un parámetro In de forma predeterminada. Para que el llamador reciba los resultados, se deben aplicar **InAttribute** y **OutAttribute** de manera explícita al argumento que contiene la matriz.  
   
-### Declaración de prototipos  
- [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
- [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
+### <a name="declaring-prototypes"></a>Declaración de prototipos  
+ [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)] [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
-### Llamadas a funciones  
- [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
- [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
+### <a name="calling-functions"></a>Llamadas a funciones  
+ [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)] [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## Vea también  
- [Calcular las referencias de matrices de tipos](http://msdn.microsoft.com/es-es/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)   
- [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/es-es/16014d9f-d6bd-481e-83f0-df11377c550f)   
- [Creating Prototypes in Managed Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a>Vea también  
+ [Calcular las referencias de matrices de tipos](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)   
+ [Tipos de datos de invocación de plataforma](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)   
+ [Creación de prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+

@@ -1,57 +1,62 @@
 ---
-title: "openGenericCERCall MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), CER calls"
-  - "open generic CER calls"
-  - "constrained execution regions"
-  - "openGenericCERCall MDA"
-  - "CER calls"
-  - "managed debugging assistants (MDAs), CER calls"
-  - "generics [.NET Framework], open generic CER calls"
+title: MDA de openGenericCERCall
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), CER calls
+- open generic CER calls
+- constrained execution regions
+- openGenericCERCall MDA
+- CER calls
+- managed debugging assistants (MDAs), CER calls
+- generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 347f9efcf1b0cdaf9cd37bcf6045a42341e4f643
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# openGenericCERCall MDA
-El asistente para la depuración administrada `openGenericCERCall` se activa para advertir de que se está procesando un gráfico de un área de ejecución restringida \(CER\) con variables de tipo genérico en el método raíz en la compilación JIT o en el tiempo de generación de imagen nativa, y al menos una de las variables de tipo genérico es un tipo de referencia a objeto.  
+# <a name="opengenericcercall-mda"></a>MDA de openGenericCERCall
+El asistente para la depuración administrada `openGenericCERCall` se activa para advertir que se está procesando un gráfico de región de ejecución restringida (CER) con variables de tipo genérico en el método raíz en la compilación JIT o en tiempo de generación de imágenes nativas y al menos una de las variables de tipo genérico es un tipo de referencia de objeto.  
   
-## Síntomas  
- El código de la CER no se ejecuta cuando se anula un subproceso o cuando se descarga un dominio de aplicación.  
+## <a name="symptoms"></a>Síntomas  
+ El código de la CER no se ejecuta cuando se anula un subproceso o se descarga un dominio de aplicación.  
   
-## Motivo  
- En tiempo de compilación JIT, la creación de una instancia que contiene un tipo de referencia a objeto sólo es representativa porque el código resultante es compartido y cada una de las variables de tipo de referencia a objeto podrían ser de cualquier tipo de referencia a objeto.  Esto puede impedir la preparación por adelantado de algunos recursos en tiempo de ejecución.  
+## <a name="cause"></a>Motivo  
+ En tiempo de compilación JIT, una instancia que contiene un tipo de referencia de objeto solo es representativa porque el código resultante es compartido, y cada una de las variables de tipo de referencia de objeto puede ser cualquier tipo de referencia de objeto. Esto puede impedir la preparación de algunos recursos de tiempo de ejecución antes de tiempo.  
   
- En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano.  Éstas se denominan entradas del diccionario genéricas.  Por ejemplo, para la instrucción `List<T> list = new List<T>();` en la que `T` es una variable de tipo genérico, el motor en tiempo de ejecución debe consultar y posiblemente realizar la creación exacta de instancias en tiempo de ejecución, por ejemplo, `List<Object>, List<String>`, `` y así sucesivamente.  Esto puede producir errores por una variedad de motivos que escapan al control del desarrollador, como que no haya memoria suficiente.  
+ En concreto, los métodos con variables de tipo genérico pueden asignar lentamente recursos en segundo plano. Estas se denominan entradas de diccionario genéricas. Por ejemplo, en el caso de la instrucción `List<T> list = new List<T>();` donde `T` es una variable de tipo genérico, el tiempo de ejecución debe buscar y posiblemente crear las instancias exactas en tiempo de ejecución, como `List<Object>, List<String>` y así sucesivamente. Esto puede producir un error por diferentes motivos que se escapan al control del desarrollador, como memoria insuficiente.  
   
- Este MDA sólo se debería activar en tiempo de compilación JIT, no cuando hay una creación de instancias exacta.  
+ Solo se debería activar este MDA en tiempo de compilación JIT, no cuando hay una creación de instancias exactas.  
   
- Cuando se activa este MDA, los posibles síntomas son que las CER no funcionan a causa de la creación de instancias incorrecta.  De hecho, el tiempo de ejecución no ha intentado implementar una CER en las circunstancias que hicieron que se activara el MDA.  Por tanto, si el desarrollador utiliza una creación de instancias compartida de la CER, no se detectan los errores de compilación JIT, los errores de carga de tipos genéricos o las anulaciones de subprocesos dentro del área de la CER deseada.  
+ Cuando se activa este MDA, los posibles síntomas son que las CER no están habilitadas para la creación de instancias incorrectas. De hecho, el tiempo de ejecución no ha intentado implementar una CER en las circunstancias que provocaron que se activara el MDA. Por tanto, si el desarrollador usa una instancia compartida de la CER, no se detectan los errores de compilación de JIT, los errores de carga de tipos genéricos o las anulaciones de subprocesos dentro de la CER deseada.  
   
-## Resolución  
- No utilice variables de tipo genérico que son del tipo de referencia a objeto para los métodos que pueden contener una CER.  
+## <a name="resolution"></a>Resolución  
+ No use variables de tipo genérico que son del tipo de referencia de objeto para los métodos que puede contener una CER.  
   
-## Efecto en el Runtime  
- Este MDA no tiene efecto en el CLR.  
+## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+ Este MDA no tiene ningún efecto en el CLR.  
   
-## Resultados  
- Lo siguiente es un ejemplo de resultado de este MDA.  
+## <a name="output"></a>Resultado  
+ A continuación se muestra un ejemplo de resultado de este MDA.  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
   
@@ -61,9 +66,9 @@ El asistente para la depuración administrada `openGenericCERCall` se activa par
   
  `declaringType name="OpenGenericCERCall"`  
   
-## Configuration  
+## <a name="configuration"></a>Configuración  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <openGenericCERCall/>  
@@ -71,8 +76,8 @@ El asistente para la depuración administrada `openGenericCERCall` se activa par
 </mdaConfig>  
 ```  
   
-## Ejemplo  
- No se ejecuta el código CER.  
+## <a name="example"></a>Ejemplo  
+ No se ejecuta el código de la CER.  
   
 ```  
 using System;  
@@ -116,7 +121,8 @@ class Program
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

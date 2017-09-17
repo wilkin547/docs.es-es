@@ -74,13 +74,13 @@ ms.lasthandoff: 09/14/2017
   
 -   [.NET Native y compilación:](../../../docs/framework/net-native/net-native-and-compilation.md) cómo compila .NET Native el proyecto de código nativo.  
   
--   [Reflexión y .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
+-   [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)  
   
-    -   [API basadas en la reflexión](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+    -   [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md) (API basadas en Reflection)  
   
     -   [Referencia de la API de reflexión](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
-    -   [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+    -   [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 -   [Serialización y metadatos](../../../docs/framework/net-native/serialization-and-metadata.md)  
   

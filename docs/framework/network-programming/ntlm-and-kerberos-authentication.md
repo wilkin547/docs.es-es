@@ -75,6 +75,6 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  La autenticación NTLM no funciona a través de un servidor proxy.  
   
 ## <a name="see-also"></a>Vea también  
- [Basic and Digest Authentication](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  (Autenticación básica e implícita)  
+ [Autenticación básica e implícita](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
  [Internet Authentication](../../../docs/framework/network-programming/internet-authentication.md) (Autenticación de Internet)
 

@@ -1,87 +1,93 @@
 ---
-title: "How to: Create COM Wrappers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM,wrappers creating"
-  - "COM,wrappers Visual Studio"
+title: "Cómo: Crear contenedores COM"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- COM,wrappers creating
+- COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e99b084ddb565a8ae00ee917eaf7fca2c659ab64
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# How to: Create COM Wrappers
-Puede crear contenedores del Modelo de objetos componentes \(COM\) mediante las características [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] o las herramientas Tlbimp.exe y Regasm.exe de .NET Framework.  Ambos métodos generan dos tipos de contenedores COM:  
+# <a name="how-to-create-com-wrappers"></a>Cómo: Crear contenedores COM
+Puede crear contenedores del Modelo de objetos componentes (COM) mediante características de [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] o las herramientas Tlbimp.exe y Regasm.exe de .NET Framework. Ambos métodos generan dos tipos de contenedores COM:  
   
--   Un [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md) de una biblioteca de tipos para ejecutar un objeto COM en código administrado.  
+-   Un [contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) desde una biblioteca de tipos para ejecutar un objeto COM en código administrado.  
   
--   Un [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md) con la configuración del Registro necesaria para ejecutar un objeto administrado en una aplicación nativa.  
+-   Un [contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md) con la configuración del Registro necesaria para ejecutar un objeto administrado en una aplicación nativa.  
   
- En [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], puede agregar el contenedor COM como una referencia a su proyecto.  
+ En [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], puede agregar el contenedor COM como una referencia al proyecto.  
   
-## Ajustar objetos COM en una aplicación administrada  
+## <a name="wrapping-com-objects-in-a-managed-application"></a>Encapsulación de objetos COM en una aplicación administrada  
   
-#### Para crear un contenedor invocable en tiempo de ejecución usando Visual Studio  
+#### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Para crear un contenedor RCW con Visual Studio  
   
 1.  Abra el proyecto de la aplicación administrada.  
   
 2.  En el menú **Proyecto**, haga clic en **Mostrar todos los archivos**.  
   
-3.  Haga clic en la opción **Agregar referencia** del menú **Proyecto**.  
+3.  En el menú **Proyecto**, haga clic en **Agregar referencia**.  
   
-4.  En el cuadro de diálogo Agregar referencia, haga clic en la ficha **COM**, seleccione el componente que desea utilizar y haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo Agregar referencia, haga clic en la pestaña **COM**, seleccione el componente que quiera usar y haga clic en **Aceptar**.  
   
-     En el **Explorador de soluciones**, observe que el componente COM está agregado a la carpeta Referencias de su proyecto.  
+     En el **Explorador de soluciones**, tenga en cuenta que el componente COM se agrega a la carpeta Referencias del proyecto.  
   
- Ya puede escribir el código para tener acceso al objeto COM.  Puede comenzar declarando el objeto, por ejemplo, con una instrucción `Imports` para [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] o una instrucción `Using` para [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
+ Ahora puede escribir código para tener acceso al objeto COM. Puede comenzar declarando el objeto, por ejemplo con una instrucción `Imports` para [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] o una instrucción `Using` para [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
->  Si desea programar los componentes de Microsoft Office, instale primero los [Ensamblados de interoperabilidad primarios de Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) \(PIAs\) del Centro de descarga de Microsoft.  En el paso 4, seleccione la última versión de la biblioteca de objetos disponible para el producto de Office que desee, como **Microsoft Word 11.0 Object Library**.  [](http://msdn.microsoft.com/es-es/c9d2a8b9-69df-4c0b-90ca-4d85bae063c4)  
+>  Si quiere programar componentes de Microsoft Office, instale primero los [ensamblados de interoperabilidad primarios de Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) (PIA) desde el Centro de descarga de Microsoft. En el paso 4, seleccione la versión más reciente de la biblioteca de objetos disponible para el producto de Office que quiere, como la **biblioteca de objetos de Microsoft Word 11.0**.  
   
-#### Para crear un contenedor invocable en tiempo de ejecución usando las herramientas de .NET Framework  
+#### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Para crear un contenedor RCW mediante las herramientas de .NET Framework  
   
--   Ejecute la herramienta [Tlbimp.exe \(Type Library Importer\)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+-   Ejecute la herramienta [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
   
- Esta herramienta crea un ensamblado que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original.  
+ Esta herramienta crea un ensamblado que contiene los metadatos de tiempo de ejecución para los tipos definidos en la biblioteca de tipos original.  
   
-## Ajustar objetos administrados en una aplicación nativa  
+## <a name="wrapping-managed-objects-in-a-native-application"></a>Encapsular objetos administrados en una aplicación nativa  
   
-#### Para crear un contenedor CCW mediante Visual Studio  
+#### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Para crear un contenedor CCW con Visual Studio  
   
-1.  Cree un proyecto de biblioteca de clases para la clase administrada que desea ejecutar en código nativo.  La clase debe tener un constructor predeterminado.  
+1.  Cree un proyecto de biblioteca de clases para la clase administrada que quiera ejecutar en código nativo. La clase debe tener un constructor predeterminado.  
   
-     Compruebe que tiene un número de versión de cuatro partes completo para el ensamblado en el archivo AssemblyInfo.  Este número es necesario para mantener el control de versiones en el Registro de Windows.  Para obtener más información acerca de los números de versiones, vea [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md).  
+     Compruebe que dispone de un número de versión de cuatro partes completo para el ensamblado en el archivo AssemblyInfo. Este número es necesario para mantener el control de versiones en el Registro de Windows. Para más información sobre los números de versión, vea [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md).  
   
 2.  En el menú **Proyecto**, haga clic en **Propiedades**.  
   
-3.  Haga clic en la ficha **Compilar**.  
+3.  Haga clic en la pestaña **Compilar**.  
   
 4.  Active la casilla **Registrar para interoperabilidad COM**.  
   
- Al compilar el proyecto, el ensamblado se registra automáticamente para la interoperabilidad COM.  Si está compilando una aplicación nativa en [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], puede utilizar el ensamblado haciendo clic en **Agregar referencia** en el menú **Proyecto**.  
+ Al compilar el proyecto, el ensamblado se registra automáticamente para la interoperabilidad COM. Si va a compilar una aplicación nativa en [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], puede usar el ensamblado haciendo clic en **Agregar referencia** en el menú **Proyecto**.  
   
-#### Para crear un contenedor CCW usando las herramientas de .NET Framework  
+#### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>Para crear un contenedor CCW mediante las herramientas de .NET Framework  
   
--   Ejecute la herramienta [Regasm.exe \(Assembly Registration Tool\)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
+-   Ejecute la herramienta [Regasm.exe (Herramienta de registro de ensamblados)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md).  
   
- Esta herramienta lee los metadatos del ensamblado y agrega las entradas necesarias al Registro.  Como resultado, los clientes COM pueden crear de forma transparente las clases de .NET Framework.  Puede utilizar el ensamblado como si fuera una clase COM nativa.  
+ Esta herramienta lee los metadatos de ensamblado y agrega las entradas necesarias al Registro. Como resultado, los clientes COM pueden crear clases de .NET Framework de forma transparente. Puede usar el ensamblado como si fuera una clase COM nativa.  
   
- Puede ejecutar Regasm.exe en un ensamblado situado en cualquier directorio y, a continuación, ejecutar [Gacutil.exe \(Global Assembly Cache Tool\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para moverlo a la caché global de ensamblados.  Al mover el ensamblado, no se invalidan las entradas del Registro de la ubicación porque siempre se examina la caché global de ensamblados si no se encuentra el ensamblado en otra parte.  
+ Puede ejecutar Regasm.exe en un ensamblado que se encuentre en cualquier directorio y, después, ejecutar [Gacutil.exe (herramienta de la caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para moverlo a la caché global de ensamblados. Al mover el ensamblado no se invalidan las entradas del registro de ubicación, porque siempre se examina la caché global de ensamblados si el ensamblado no se encuentra en otra parte.  
   
-## Vea también  
- [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md)   
- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
+## <a name="see-also"></a>Vea también  
+ [Contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md)   
+ [Contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md)
+

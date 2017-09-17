@@ -298,7 +298,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Using a Synchronous Client Socket (Usar un socket de cliente sincrónico)](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
+ [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
  [Listening with Sockets (Escucha con sockets)](../../../docs/framework/network-programming/listening-with-sockets.md)   
  [Ejemplo de sockets de cliente asincrónicos](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
 
