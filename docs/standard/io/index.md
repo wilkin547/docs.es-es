@@ -1,5 +1,5 @@
 ---
-title: E/S de archivos y flujos | Microsoft Docs
+title: E/S de archivos y secuencias
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
 ms.contentlocale: es-es
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
@@ -39,20 +39,20 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
 -   <xref:System.IO.File>: proporciona métodos estáticos para crear, copiar, eliminar, mover y abrir archivos, y ayuda a crear un objeto <xref:System.IO.FileStream>.  
   
--   <xref:System.IO.FileInfo>: proporciona métodos estáticos para crear, copiar, eliminar, mover y abrir archivos, y ayuda a crear un objeto <xref:System.IO.FileStream>.  
+-   <xref:System.IO.FileInfo>: proporciona métodos de instancia para crear, copiar, eliminar, mover y abrir archivos, y ayuda a crear un objeto <xref:System.IO.FileStream>.  
   
--   <xref:System.IO.Directory>: proporciona métodos estáticos para crear, mover y enumerar en directorios y subdirectorios.  
+-   <xref:System.IO.Directory>: proporciona métodos estáticos para crear, mover y enumerar directorios y subdirectorios.  
   
--   <xref:System.IO.DirectoryInfo>: : proporciona métodos de instancia para crear, mover y enumerar en directorios y subdirectorios.  
+-   <xref:System.IO.DirectoryInfo>: proporciona métodos de instancia para crear, mover y enumerar directorios y subdirectorios.  
   
 -   <xref:System.IO.Path>: proporciona métodos y propiedades para procesar cadenas de directorio entre plataformas.  
   
- Además de estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> para la E/S de archivos.  
+ Además de usar estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> para la E/S de archivos.  
   
  Vea [How to: Copy Directories](../../../docs/standard/io/how-to-copy-directories.md)(Cómo: Copiar directorios), [Cómo: Crear una lista de directorios](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) y [How to: Enumerate Directories and Files](../../../docs/standard/io/how-to-enumerate-directories-and-files.md) (Cómo: Enumerar directorios y archivos).  
   
 ## <a name="streams"></a>Secuencias  
- La clase base abstracta <xref:System.IO.Stream> es compatible con bytes de lectura y escritura. Todas las clases que representan flujos se heredan de la clase <xref:System.IO.Stream>. La clase <xref:System.IO.Stream> y sus clases derivadas proporcionan una visión genérica de los repositorios y los orígenes de datos, y evitan que el programador tenga que ocuparse de los detalles específicos del sistema operativo y los dispositivos subyacentes.  
+ La clase base abstracta <xref:System.IO.Stream> es compatible con bytes de lectura y escritura. Todas las clases que representan secuencias heredan de la clase <xref:System.IO.Stream>. La clase <xref:System.IO.Stream> y sus clases derivadas proporcionan una visión genérica de los repositorios y los orígenes de datos, y evitan que el programador tenga que ocuparse de los detalles específicos del sistema operativo y los dispositivos subyacentes.  
   
  Las secuencias comprenden tres operaciones fundamentales:  
   
@@ -62,7 +62,7 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
 -   Búsqueda: consulta y modificación de la posición actual en una secuencia.  
   
- Dependiendo del repositorio o el origen de datos subyacente, una secuencia puede admitir solo algunas de estas características. Por ejemplo, la clase <xref:System.IO.Pipes.PipeStream> no admite búsquedas. Las propiedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> y <xref:System.IO.Stream.CanSeek%2A> de un flujo especifican las operaciones que el flujo admite.  
+ Dependiendo del repositorio o el origen de datos subyacente, una secuencia puede admitir solo algunas de estas características. Por ejemplo, la clase <xref:System.IO.Pipes.PipeStream> no admite operaciones de búsqueda. Las propiedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> y <xref:System.IO.Stream.CanSeek%2A> de una secuencia especifican las operaciones que admite.  
   
  Estas son algunas de las clases de secuencias de uso general:  
   
@@ -70,28 +70,28 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>: para leer y escribir en un archivo en almacenamiento aislado.  
   
--   <xref:System.IO.MemoryStream>: para leer y escribir en la memoria como memoria auxiliar.  
+-   <xref:System.IO.MemoryStream>: para leer y escribir en la memoria como una memoria auxiliar.  
   
 -   <xref:System.IO.BufferedStream>: para mejorar el rendimiento de las operaciones de lectura y escritura.  
   
--   <xref:System.Net.Sockets.NetworkStream>: para leer y escribir sobre sockets de red.  
+-   <xref:System.Net.Sockets.NetworkStream>: para leer y escribir sobre los sockets de red.  
   
 -   <xref:System.IO.Pipes.PipeStream>: para leer y escribir sobre canalizaciones anónimas y con nombre.  
   
--   <xref:System.Security.Cryptography.CryptoStream>: para vincular flujos de datos a transformaciones criptográficas.  
+-   <xref:System.Security.Cryptography.CryptoStream>: para vincular secuencias de datos con transformaciones criptográficas.  
   
  Para obtener un ejemplo de cómo trabajar con flujos de forma asincrónica, vea [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica).  
   
 ## <a name="readers-and-writers"></a>Lectores y escritores  
- El espacio de nombres <xref:System.IO?displayProperty=fullName> también proporciona tipos para leer caracteres codificados de flujos y escribirlos en ellos. Normalmente, las secuencias están diseñadas para la entrada y salida de bytes. Los tipos de lectura y escritura controlan la conversión de caracteres codificados en bytes y a la inversa, para que la secuencia pueda completar la operación. Cada clase de lectura y escritura se asocia a una secuencia, que se puede recuperar mediante la propiedad `BaseStream` de la clase.  
+ El espacio de nombres <xref:System.IO?displayProperty=fullName> también proporciona tipos para leer los caracteres codificados de las secuencias y escribirlos en ellas. Normalmente, las secuencias están diseñadas para la entrada y salida de bytes. Los tipos de lectura y escritura controlan la conversión de caracteres codificados en bytes y a la inversa, para que la secuencia pueda completar la operación. Cada clase de lectura y escritura se asocia a una secuencia, que se puede recuperar mediante la propiedad `BaseStream` de la clase.  
   
  Estas son algunas clases de lectura y escritura de uso general:  
   
 -   <xref:System.IO.BinaryReader> y <xref:System.IO.BinaryWriter>: para leer y escribir tipos de datos primitivos como valores binarios.  
   
--   <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter>: para leer y escribir caracteres mediante un valor de codificación que convierta caracteres en bytes y a la inversa.  
+-   <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter>: para leer y escribir caracteres utilizando un valor de codificación para convertir los caracteres en bytes y a la inversa.  
   
--   <xref:System.IO.StringReader> y <xref:System.IO.StringWriter>: para leer y escribir caracteres en cadenas y a la inversa.  
+-   <xref:System.IO.StringReader> y <xref:System.IO.StringWriter>: para leer y escribir caracteres en cadenas.  
   
 -   <xref:System.IO.TextReader> y <xref:System.IO.TextWriter>: sirven como clases base abstractas para otros lectores y escritores que leen y escriben caracteres y cadenas, pero no datos binarios.  
   
@@ -100,12 +100,12 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
 ## <a name="asynchronous-io-operations"></a>Operaciones de E/S asincrónicas  
  Leer o escribir una gran cantidad de datos puede requerir muchos recursos. Estas tareas se deben realizar de forma asincrónica si la aplicación necesita seguir respondiendo al usuario. Con las operaciones de E/S sincrónicas, el subproceso de la interfaz de usuario está bloqueado hasta que se completa la operación que usa gran cantidad de recursos.  Use operaciones de E/S asincrónicas al desarrollar aplicaciones para la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para evitar crear la impresión de que la aplicación ha dejado de responder.  
   
- Los miembros asincrónicos incluyen `Async` en sus nombres, como, por ejemplo, los métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A>. Estos métodos se usan con las palabras clave `async` y `await`.  
+ Los miembros asincrónicos contienen `Async` en sus nombres, como los métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A>. Estos métodos se usan con las palabras clave `async` y `await`.  
   
  Para más información, consulte [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md) (E/S de archivos asincrónica).  
   
 ## <a name="compression"></a>Compresión  
- La compresión se refiere al proceso de reducir el tamaño de un archivo para su almacenamiento. La descompresión es el proceso de extraer el contenido de un archivo comprimido para que esté en un formato utilizable. El espacio de nombres <xref:System.IO.Compression?displayProperty=fullName> contiene tipos para comprimir y descomprimir archivos y flujos.  
+ La compresión se refiere al proceso de reducir el tamaño de un archivo para su almacenamiento. La descompresión es el proceso de extraer el contenido de un archivo comprimido para que esté en un formato utilizable. El espacio de nombres <xref:System.IO.Compression?displayProperty=fullName> contiene tipos para comprimir y descomprimir archivos y secuencias.  
   
  Las clases siguientes se utilizan con frecuencia al comprimir y descomprimir archivos y secuencias:  
   
@@ -117,9 +117,9 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
 -   <xref:System.IO.Compression.ZipFileExtensions>: para crear y extraer entradas en un paquete comprimido.  
   
--   <xref:System.IO.Compression.DeflateStream>: para comprimir y descomprimir flujos con el algoritmo Deflate.  
+-   <xref:System.IO.Compression.DeflateStream>: para comprimir y descomprimir secuencias utilizando el algoritmo de deflación (Deflate).  
   
--   <xref:System.IO.Compression.GZipStream>: para comprimir y descomprimir flujos con formato de datos gzip.  
+-   <xref:System.IO.Compression.GZipStream>: para comprimir y descomprimir secuencias con formato de datos gzip.  
   
  Vea [How to: Compress and Extract Files](../../../docs/standard/io/how-to-compress-and-extract-files.md) (Cómo: Comprimir y extraer archivos).  
   
@@ -143,20 +143,20 @@ La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferen
   
  Estas son algunas diferencias importantes que se deben tener en cuenta al utilizar operaciones de E/S en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:  
   
--   Los tipos relacionados específicamente con operaciones de archivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> y <xref:System.IO.DirectoryInfo>, no se incluyen en las aplicaciones de la [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. En su lugar, use los tipos del espacio de nombres [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) de [!INCLUDE[wrt](../../../includes/wrt-md.md)], como [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) y [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Los tipos relacionados específicamente con las operaciones de archivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> y <xref:System.IO.DirectoryInfo>, no se incluyen en [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. En su lugar, use los tipos del espacio de nombres [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) de [!INCLUDE[wrt](../../../includes/wrt-md.md)], como [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) y [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   El almacenamiento aislado no está disponible; use en su lugar [datos de aplicaciones](http://go.microsoft.com/fwlink/?LinkId=229175).  
   
--   Use métodos asincrónicos tales como <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A> para evitar el bloqueo del subproceso de UI.  
+-   Use métodos asincrónicos, como <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A>, para evitar bloquear el subproceso de interfaz de usuario.  
   
--   Los tipos de compresión basada en rutas de acceso <xref:System.IO.Compression.ZipFile> y <xref:System.IO.Compression.ZipFileExtensions> no se encuentran disponibles. Use en su lugar los tipos del espacio de nombres [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+-   Los tipos de compresión que se basan en rutas de acceso <xref:System.IO.Compression.ZipFile> y <xref:System.IO.Compression.ZipFileExtensions> no están disponibles. Use en su lugar los tipos del espacio de nombres [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
   
  Si es necesario, puede convertir entre las secuencias de .NET Framework y las secuencias de Windows Runtime. Para más información, vea [Cómo: Convertir flujos de .NET Framework en flujos de Windows en tiempo de ejecución](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) o [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  Para más información sobre las operaciones de E/S en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], vea [Inicio rápido: leer y escribir archivos (XAML)](http://go.microsoft.com/fwlink/p/?LinkId=243072) en el Centro de desarrollo de Windows.  
   
 ## <a name="io-and-security"></a>E/S y seguridad  
- Cuando se utilizan las clases del espacio de nombres <xref:System.IO?displayProperty=fullName>, se deben seguir los requisitos de seguridad del sistema operativo como las listas de control de acceso (ACL) para controlar el acceso a los archivos y directorios. Este requisito es adicional a los requisitos de <xref:System.Security.Permissions.FileIOPermission>. Se pueden administrar las listas de control de acceso mediante programación. Para más información, consulte [How to: Add or Remove Access Control List Entries](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md) (Cómo: Agregar o quitar entradas de la lista de control de acceso).  
+ Cuando se utilizan las clases del espacio de nombres <xref:System.IO?displayProperty=fullName>, se deben seguir los requisitos de seguridad del sistema operativo como las listas de control de acceso (ACL) para controlar el acceso a los archivos y directorios. Este requisito es adicional a cualquier requisito <xref:System.Security.Permissions.FileIOPermission>. Se pueden administrar las listas de control de acceso mediante programación. Para más información, consulte [How to: Add or Remove Access Control List Entries](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md) (Cómo: Agregar o quitar entradas de la lista de control de acceso).  
   
  Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. Use en su lugar [almacenamiento aislado](../../../docs/standard/io/isolated-storage.md) para las aplicaciones tradicionales de .NET Framework, o [datos de aplicaciones](http://go.microsoft.com/fwlink/?LinkId=229175) para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
