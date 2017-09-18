@@ -66,7 +66,6 @@
 ## [Novedades de .NET Core](core/whats-new/index.md)
 ## [Tutoriales](core/tutorials/index.md)
 ### [Creación de una solución completa de .NET Core en Windows con Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
-### [Introducción a C# y Visual Studio Code](core/tutorials/with-visual-studio-code.md)
 ### [Introducción a .NET Core en macOS](core/tutorials/using-on-macos.md)
 ### [Introducción a .NET Core en macOS con Visual Studio para Mac](core/tutorials/using-on-mac-vs.md)
 ### [Creación de una solución completa de .NET Core en macOS con Visual Studio para Mac](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -96,7 +95,10 @@
 ## [Pruebas unitarias](core/testing/index.md)
 ### [Pruebas unitarias con pruebas de dotnet y xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Pruebas unitarias con pruebas de dotnet y MSTest](core/testing/unit-testing-with-mstest.md)
+### [Pruebas unitarias de F# con pruebas de dotnet y xUnit]()
+### [Pruebas unitarias de F# con pruebas de dotnet y MSTest]()
 ### [Ejecución de pruebas unitarias selectivas](core/testing/selective-unit-tests.md)
+### [Proyectos de .NET Core de Live Unit Testing con Visual Studio]()
 ## [Control de versiones](core/versions/index.md)
 ### [Compatibilidad de .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
