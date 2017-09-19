@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="blockingcollection-overview"></a>Información general sobre BlockingCollection
@@ -50,7 +50,8 @@ ms.lasthandoff: 07/28/2017
   
  Varios subprocesos o tareas pueden agregar elementos a la colección de forma simultánea y, si la colección alcanza su capacidad máxima especificada, los subprocesos de producción se bloquearán hasta que se quite un elemento. Varios consumidores pueden quitar elementos de forma simultánea y, si la colección está vacía, los subprocesos de consumo se bloquearán hasta que un productor agregue un elemento. Un subproceso de producción puede llamar a <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A> para indicar que no se agregarán más elementos. Los consumidores supervisan la propiedad <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> para saber cuándo está vacía la colección y no se agregarán más elementos. En el ejemplo siguiente, se muestra una clase BlockingCollection sencilla con una capacidad limitada de 100. Una tarea de producción agrega elementos a la colección siempre que alguna condición externa sea true y después llama a <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>. La tarea de consumidor toma elementos hasta que la propiedad <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> es true.  
   
- [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)] [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
+ [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
+ [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
  Para ver un ejemplo completo, consulte [Cómo: Agregar y tomar elementos de forma individual en una clase BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
   
@@ -60,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="cancelling-add-and-take-operations"></a>Cancelar operaciones de agregar y tomar  
  Las operaciones de agregar y tomar se realizan normalmente en un bucle. Puede cancelar un bucle al pasar <xref:System.Threading.CancellationToken> a los métodos <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> o <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, y después comprobar el valor de la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token en cada iteración. Si el valor es true, puede decidir si responde a la solicitud de cancelación limpiando algún recurso y saliendo del bucle. En el ejemplo siguiente, se muestra una sobrecarga de <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> que toma un token de cancelación y el código que lo usa:  
   
- [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)] [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
+ [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
+ [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
  Para obtener un ejemplo de cómo agregar soporte de cancelación, consulte el segundo ejemplo de [Cómo: Agregar y tomar elementos de forma individual en una clase BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
   
