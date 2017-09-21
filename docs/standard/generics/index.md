@@ -1,5 +1,5 @@
 ---
-title: "Genéricos en .NET Framework | Microsoft Docs"
+title: "Genéricos en .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -32,14 +32,15 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 83ab82e7ef31b26321f513da668de25ed9690e04
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef0b251add573c7aaed75b866523b5fdcd3d8e5a
+ms.contentlocale: es-es
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="generics-in-the-net-framework"></a>Genéricos en .NET Framework
-<a name="top"></a> Los genéricos permiten personalizar un método, clase, estructura o interfaz con respecto a los datos precisos sobre los que se actúa. Por ejemplo, en lugar de usar la clase <xref:System.Collections.Hashtable>, que permite cualquier tipo de clave y valor, puede usar la clase genérica <xref:System.Collections.Generic.Dictionary%602> y especificar el tipo permitido para la clave y el tipo permitido para el valor. Entre las ventajas de los genéricos están una mayor reutilización del código y la seguridad de tipos.  
+<a name="top"></a> Los genéricos permiten personalizar un método, clase, estructura o interfaz con respecto a los datos precisos sobre los que se actúa. Por ejemplo, en lugar de utilizar la clase <xref:System.Collections.Hashtable> , que permite cualquier tipo de clave y valor, puede utilizar la clase genérica <xref:System.Collections.Generic.Dictionary%602> y especificar el tipo permitido para la clave y el tipo permitido para el valor. Entre las ventajas de los genéricos están una mayor reutilización del código y la seguridad de tipos.  
   
  En este tema se proporciona información general sobre los genéricos en .NET Framework, así como un resumen de los métodos o tipos genéricos. Contiene las siguientes secciones:  
   
@@ -59,15 +60,11 @@ ms.lasthandoff: 04/08/2017
 ## <a name="defining-and-using-generics"></a>Definición y uso de genéricos  
  Los genéricos son clases, estructuras, interfaces y métodos que tienen marcadores de posición (parámetros de tipo) para uno o varios de los tipos que almacenan o utilizan. Una clase de colección genérica puede usar un parámetro de tipo como marcador de posición para el tipo de objetos que almacena; los parámetros de tipo aparecen como los tipos de sus campos y los tipos de parámetros de sus métodos. Un método genérico puede usar su parámetro de tipo como el tipo de su valor devuelto o como el tipo de uno de sus parámetros formales. El código siguiente ilustra una definición de clase genérica simple.  
   
- [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)]
- [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)]
- [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
+ [!code-cpp[Conceptual.Generics.Overview#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#2)] [!code-csharp[Conceptual.Generics.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#2)] [!code-vb[Conceptual.Generics.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#2)]  
   
  Cuando cree una instancia de una clase genérica, especifique los tipos reales que hay que sustituir para los parámetros de tipo. Esto establece una nueva clase genérica, a la que se hace referencia como clase genérica construida, con los tipos que elija sustituidos en todas partes en la que aparecen los parámetros de tipo. El resultado es una clase con seguridad de tipos que se adapta a su elección de tipos, como se muestra en el código siguiente.  
   
- [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)]
- [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)]
- [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
+ [!code-cpp[Conceptual.Generics.Overview#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#3)] [!code-csharp[Conceptual.Generics.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#3)] [!code-vb[Conceptual.Generics.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#3)]  
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>Terminología de los genéricos  
@@ -89,15 +86,11 @@ ms.lasthandoff: 04/08/2017
   
 -   Una *definición de método genérico* es un método con dos listas de parámetros: una lista de parámetros de tipo genérico y una lista de parámetros formales. Los parámetros de tipo pueden aparecer como el tipo de valor devuelto o como los tipos de los parámetros formales, como se muestra en el siguiente código.  
   
- [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
- [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
- [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
+ [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)] [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)] [!code-vb[Conceptual.Generics.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#4)]  
   
- Los métodos genéricos pueden aparecer en tipos genéricos o no genéricos. Es importante tener en cuenta que un método no es genérico solo porque pertenezca a un tipo genérico, ni siquiera porque tenga parámetros formales cuyos tipos sean los parámetros genéricos del tipo envolvente. Un método solo es genérico si tiene su propia lista de parámetros de tipo. En el siguiente código, solo es genérico el método `G`.  
+ Los métodos genéricos pueden aparecer en tipos genéricos o no genéricos. Es importante tener en cuenta que un método no es genérico solo porque pertenezca a un tipo genérico, ni siquiera porque tenga parámetros formales cuyos tipos sean los parámetros genéricos del tipo envolvente. Un método solo es genérico si tiene su propia lista de parámetros de tipo. En el siguiente código, solo es genérico el método `G` .  
   
- [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)]
- [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)]
- [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
+ [!code-cpp[Conceptual.Generics.Overview#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#5)] [!code-csharp[Conceptual.Generics.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#5)] [!code-vb[Conceptual.Generics.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source.vb#5)]  
   
  [Volver al principio](#top)  
   
@@ -109,30 +102,28 @@ ms.lasthandoff: 04/08/2017
   
 -   Menos código que, además, se reutiliza más fácilmente. No es necesario heredar de un tipo base y reemplazar a los miembros. Por ejemplo, <xref:System.Collections.Generic.LinkedList%601> está listo para su uso inmediato. Por ejemplo, puede crear una lista vinculada de cadenas con la siguiente declaración de variable:  
   
-     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
-     [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
-     [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
+     [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)] [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)] [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
 -   Mejor rendimiento. Los tipos de colección genéricos suelen comportarse mejor en el almacenamiento y manipulación de tipos de valor porque no es necesario realizar una conversión boxing de los tipos de valor.  
   
--   Los delegados genéricos permiten devoluciones de llamada con seguridad de tipos sin necesidad de crear varias clases de delegado. Por ejemplo, el delegado genérico <xref:System.Predicate%601> le permite crear un método que implementa sus propios criterios de búsqueda para un tipo concreto y usar su método con métodos del tipo <xref:System.Array>, como <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A> y <xref:System.Array.FindAll%2A>.  
+-   Los delegados genéricos permiten devoluciones de llamada con seguridad de tipos sin necesidad de crear varias clases de delegado. Por ejemplo, el delegado genérico <xref:System.Predicate%601> le permite crear un método que implementa sus propios criterios de búsqueda para un tipo concreto y utilizar su método con métodos del tipo <xref:System.Array> , como <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>y <xref:System.Array.FindAll%2A>.  
   
 -   Los genéricos optimizan el código generado dinámicamente. Cuando se utilizan genéricos con código generado dinámicamente, no es necesario generar el tipo. Esto aumenta el número de escenarios en los que puede utilizar métodos dinámicos ligeros en lugar de generar ensamblados completos. Para obtener más información, vea el tema sobre cómo definir y ejecutar métodos dinámicos y DynamicMethod.  
   
  Las siguientes son algunas limitaciones de los genéricos:  
   
--   Los tipos genéricos pueden derivarse de la mayoría de las clases base, como <xref:System.MarshalByRefObject> (y pueden usarse restricciones para exigir que los parámetros de tipo genérico se deriven de clases base como <xref:System.MarshalByRefObject>). Sin embargo, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] no es compatible con los tipos genéricos enlazados a un contexto. Un tipo genérico puede derivarse de <xref:System.ContextBoundObject>, pero al intentar crear una instancia de dicho tipo, se genera una <xref:System.TypeLoadException>.  
+-   Los tipos genéricos pueden derivarse de la mayoría de las clases base, como <xref:System.MarshalByRefObject> (y pueden utilizarse restricciones para exigir que los parámetros de tipo genérico se deriven de clases base como <xref:System.MarshalByRefObject>). Sin embargo, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] no es compatible con los tipos genéricos enlazados a un contexto. Un tipo genérico puede derivarse de <xref:System.ContextBoundObject>, pero al intentar crear una instancia de dicho tipo, se genera una <xref:System.TypeLoadException>.  
   
 -   Las enumeraciones no pueden tener parámetros de tipo genérico. Una enumeración solo puede ser genérica a propósito (por ejemplo, porque está anidada en un tipo genérico definido mediante Visual Basic, C# o C++). Para más información, vea "Enumeraciones" en [Common Type System](../../../docs/standard/base-types/common-type-system.md).  
   
 -   Los métodos dinámicos ligeros no pueden ser genéricos.  
   
--   En Visual Basic, C# y C++, no se pueden crear instancias de un tipo anidado incluido en un tipo genérico, a menos que los tipos se hayan asignado a los parámetros de tipo de todos los tipos envolventes. Dicho de otro modo: en la reflexión, un tipo anidado definido mediante estos lenguajes incluye los parámetros de tipo de todos sus tipos envolventes. Esto permite que los parámetros de tipo de tipos envolventes se usen en las definiciones de miembro de un tipo anidado. Para más información, consulte "Tipos anidados" en <xref:System.Type.MakeGenericType%2A>.  
+-   En Visual Basic, C# y C++, no se pueden crear instancias de un tipo anidado incluido en un tipo genérico, a menos que los tipos se hayan asignado a los parámetros de tipo de todos los tipos envolventes. Dicho de otro modo: en la reflexión, un tipo anidado definido mediante estos lenguajes incluye los parámetros de tipo de todos sus tipos envolventes. Esto permite que los parámetros de tipo de tipos envolventes se usen en las definiciones de miembro de un tipo anidado. Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
     >  Un tipo anidado definido mediante la emisión de código en un ensamblado dinámico o mediante el uso de [Ilasm.exe (Ensamblado de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no necesita incluir los parámetros de tipo de sus tipos envolventes. Sin embargo, si no los incluye, los parámetros de tipo no estarán en el ámbito de la clase anidada.  
   
-     Para más información, consulte "Tipos anidados" en <xref:System.Type.MakeGenericType%2A>.  
+     Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
   
  [Volver al principio](#top)  
   
@@ -140,17 +131,17 @@ ms.lasthandoff: 04/08/2017
 ## <a name="class-library-and-language-support"></a>Biblioteca de clases y lenguajes compatibles  
  .NET Framework ofrece una serie de clases de colección genérica en los espacios de nombres siguientes:  
   
--   El espacio de nombres <xref:System.Collections.Generic> cataloga la mayoría de los tipos de colección genéricos proporcionados por .NET Framework, como las clases genéricas <xref:System.Collections.Generic.List%601> y <xref:System.Collections.Generic.Dictionary%602>.  
+-   El espacio de nombres <xref:System.Collections.Generic> cataloga la mayoría de los tipos de colección genéricos proporcionados por .NET Framework, como las clases genéricas <xref:System.Collections.Generic.List%601> y <xref:System.Collections.Generic.Dictionary%602> .  
   
--   El espacio de nombres <xref:System.Collections.ObjectModel> cataloga tipos de colección genéricos adicionales, como la clase genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, que son útiles para exponer modelos de objetos a los usuarios de las clases.  
+-   El espacio de nombres <xref:System.Collections.ObjectModel> cataloga tipos de colección genéricos adicionales, como la clase genérica <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> , que son útiles para exponer modelos de objetos a los usuarios de las clases.  
   
- Las interfaces genéricas para implementar comparaciones de orden e igualdad se proporcionan en el espacio de nombres <xref:System>, junto con los tipos de delegado genérico para controladores de eventos, conversiones y predicados de búsqueda.  
+ Las interfaces genéricas para implementar comparaciones de orden e igualdad se proporcionan en el espacio de nombres <xref:System> , junto con los tipos de delegado genérico para controladores de eventos, conversiones y predicados de búsqueda.  
   
- Se agregó compatibilidad con genéricos a los siguientes espacios de nombres: a <xref:System.Reflection> para examinar tipos y métodos genéricos; a <xref:System.Reflection.Emit> para emitir ensamblados dinámicos que contengan tipos y métodos genéricos; y a <xref:System.CodeDom> para generar gráficos de origen que incluyan genéricos.  
+ Se ha agregado compatibilidad con genéricos a los siguientes espacios de nombres: a <xref:System.Reflection> para examinar tipos y métodos genéricos; a <xref:System.Reflection.Emit> para emitir ensamblados dinámicos que contengan tipos y métodos genéricos; y a <xref:System.CodeDom> para generar gráficos de origen que incluyan genéricos.  
   
- Common Language Runtime proporciona nuevos códigos de operación y prefijos para admitir tipos genéricos en Lenguaje intermedio de Microsoft (MSIL), incluidos <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained> y <xref:System.Reflection.Emit.OpCodes.Readonly>.  
+ Common language runtime proporciona nuevos opcode y prefijos para admitir tipos genéricos en el lenguaje intermedio de Microsoft (MSIL), incluidos <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained>y <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# y Visual Basic proporcionan compatibilidad completa para definir y utilizar genéricos. Para más información sobre la compatibilidad de lenguaje, consulte [Tipos genéricos en Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introducción a los genéricos](~/docs/csharp/programming-guide/generics/introduction-to-generics.md) e [Información general sobre genéricos en Visual C++](http://msdn.microsoft.com/library/21f10637-0fce-4916-b925-6c86a126d3aa).  
+ Visual C++, C# y Visual Basic proporcionan compatibilidad completa para definir y utilizar genéricos. Para más información sobre la compatibilidad de lenguaje, consulte [Tipos genéricos en Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introducción a los genéricos](~/docs/csharp/programming-guide/generics/introduction-to-generics.md) e [Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).  
   
  [Volver al principio](#top)  
   
@@ -174,7 +165,7 @@ ms.lasthandoff: 04/08/2017
 |[Definición de un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica cómo generar ensamblados dinámicos que incluyan métodos y tipos genéricos.|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Describe los genéricos a los usuarios de Visual Basic e incluye temas sobre el uso y la definición de tipos genéricos.|  
 |[Introducción a los genéricos](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Proporciona información general sobre la definición y uso de tipos genéricos para usuarios de C#.|  
-|[Información general sobre genéricos en Visual C++](http://msdn.microsoft.com/library/21f10637-0fce-4916-b925-6c86a126d3aa)|Describe los genéricos a los usuarios de C++ e incluye las diferencias entre genéricos y plantillas.|  
+|[Información general sobre genéricos en Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Describe los genéricos a los usuarios de C++ e incluye las diferencias entre genéricos y plantillas.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Referencia  
@@ -185,3 +176,4 @@ ms.lasthandoff: 04/08/2017
  <xref:System.Reflection.Emit.OpCodes?displayProperty=fullName>  
   
  [Volver al principio](#top)
+

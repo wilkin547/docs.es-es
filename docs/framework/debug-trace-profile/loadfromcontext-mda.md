@@ -1,60 +1,65 @@
 ---
-title: "loadFromContext MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), LoadFrom context"
-  - "managed debugging assistants (MDAs), LoadFrom context"
-  - "LoadFrom context"
-  - "LoadFromContext MDA"
+title: MDA de loadFromContext
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), LoadFrom context
+- managed debugging assistants (MDAs), LoadFrom context
+- LoadFrom context
+- LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 caps.latest.revision: 8
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 8
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d693272adeb0b1bcfea196edb1a23e8b448516cb
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# loadFromContext MDA
-El asistente para la depuración administrada \(MDA\) de `loadFromContext` se activa si se carga un ensamblado en el contexto `LoadFrom`.  Esta situación puede producirse como consecuencia de llamar a <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> o a otros métodos similares.  
+# <a name="loadfromcontext-mda"></a>MDA de loadFromContext
+El asistente para la depuración administrada (MDA) `loadFromContext` se activa si se carga un ensamblado en el contexto de `LoadFrom`. Esta situación puede producirse como resultado de llamar a <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> u otros métodos similares.  
   
-## Síntomas  
- El uso de algunos métodos de cargador puede dar lugar a que se carguen ensamblados en el contexto `LoadFrom`.  El uso de este contexto puede tener como consecuencia un comportamiento inesperado para la serialización, conversión y resolución de dependencia.  En general, se recomienda que los ensamblados se carguen en el contexto `Load` para evitar estos problemas.  Es difícil determinar en qué contexto se ha cargado un ensamblado sin este MDA.  
+## <a name="symptoms"></a>Síntomas  
+ El uso de algunos métodos de cargador puede dar lugar a ensamblados que se carguen en el contexto de `LoadFrom`. El uso de este contexto puede provocar un comportamiento inesperado para la serialización, conversión y resolución de dependencias. Por lo general, se recomienda que los ensamblados se carguen en el contexto de `Load` para evitar estos problemas. Sin este MDA es difícil determinar en qué contexto se ha cargado un ensamblado.  
   
-## Motivo  
- Por lo general, se ha cargado un ensamblado en el contexto `LoadFrom` si se cargó desde una ruta de acceso fuera del contexto `Load`, como la caché global de ensamblados o la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName>.  
+## <a name="cause"></a>Motivo  
+ Por lo general, un ensamblado se carga en el contexto de `LoadFrom` si se cargó desde una ruta de acceso fuera del contexto de `Load`, como la caché global de ensamblados o la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=fullName>.  
   
-## Resolución  
- Configure las aplicaciones de manera que ya no se necesiten llamadas <xref:System.Reflection.Assembly.LoadFrom%2A>.  Puede utilizar las técnicas siguientes para realizar esa operación:  
+## <a name="resolution"></a>Resolución  
+ Configure las aplicaciones para que las llamadas a <xref:System.Reflection.Assembly.LoadFrom%2A> ya no sean necesarias. Puede usar las técnicas siguientes para hacerlo:  
   
--   Instale los ensamblados en la caché global de ensamblados.  
+-   Instalar ensamblados en la caché global de ensamblados.  
   
--   Coloque los ensamblados en el directorio <xref:System.AppDomainSetup.ApplicationBase%2A> para <xref:System.AppDomain>.  En el caso del dominio predeterminado, el directorio <xref:System.AppDomainSetup.ApplicationBase%2A> es el que contiene el archivo ejecutable que inició el proceso.  Esto también podría requerir la creación de un nuevo <xref:System.AppDomain> si no resulta práctico mover el ensamblado.  
+-   Coloque los ensamblados en el directorio <xref:System.AppDomainSetup.ApplicationBase%2A> del <xref:System.AppDomain>. En el caso del dominio predeterminado, el directorio <xref:System.AppDomainSetup.ApplicationBase%2A> es el que contiene el archivo ejecutable que inició el proceso. Es posible que esto también requiera crear un <xref:System.AppDomain> si no es conveniente mover el ensamblado.  
   
--   Agregue una ruta de búsqueda al archivo de configuración de la aplicación \(.config\) o a dominios de aplicación secundarios si los ensamblados dependientes se encuentran en directorios secundarios con respecto al archivo ejecutable.  
+-   Agregue una ruta de acceso de sondeo al archivo de configuración (.config) de la aplicación o a dominios de aplicación secundarios si los ensamblados dependientes se encuentran en directorios secundarios en relación con el archivo ejecutable.  
   
- En cada caso, el código se puede cambiar para utilizar el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ En cada caso, se puede cambiar el código para usar el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
   
-## Efecto en el Runtime  
- El MDA no tiene ningún efecto en el CLR.  Informa del contexto que se utilizó como resultado de una solicitud de carga.  
+## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+ El MDA no tiene ningún efecto en el CLR. Informa del contexto que se usó como resultado de una solicitud de carga.  
   
-## Resultados  
- El MDA informa de que el ensamblado se cargó en el contexto `LoadFrom`.  Especifica el nombre sencillo del ensamblado y la ruta de acceso.  También sugiere mitigaciones para evitar el uso del contexto `LoadFrom`.  
+## <a name="output"></a>Resultado  
+ El MDA informa de que el ensamblado se cargó en el contexto de `LoadFrom`. Especifica el nombre simple del ensamblado y la ruta de acceso. También sugiere mitigaciones para evitar el uso del contexto de `LoadFrom`.  
   
-## Configuration  
+## <a name="configuration"></a>Configuración  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <loadFromContext />  
@@ -62,8 +67,8 @@ El asistente para la depuración administrada \(MDA\) de `loadFromContext` se ac
 </mdaConfig>  
 ```  
   
-## Ejemplo  
- En el siguiente ejemplo de código se muestra una situación en la que se puede activar este MDA:  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se muestra una situación que puede activar este MDA:  
   
 ```  
 using System.Reflection;  
@@ -82,5 +87,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## Vea también  
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Vea también  
+ [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

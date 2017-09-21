@@ -779,6 +779,6 @@ public class Test
  [Controlar la serialización XML mediante atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)   
  [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
  [XmlSerializer (clase)](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

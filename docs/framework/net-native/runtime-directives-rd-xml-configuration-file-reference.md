@@ -470,6 +470,6 @@ Un archivo de directivas de tiempo de ejecución (.rd.xml) es un archivo de conf
  Para más información, vea la sección "Diferencias en los serializadores" en [Migrar la aplicación de la Tienda Windows a .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md)  (Elementos de directivas en tiempo de ejecución)  
+ [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)   
  [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)
 

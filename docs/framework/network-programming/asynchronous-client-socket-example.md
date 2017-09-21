@@ -1,30 +1,35 @@
 ---
-title: "Ejemplo de sockets de cliente asincr&#243;nicos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "sockets de cliente asincrónicos"
-  - "sockets, ejemplos de código"
-  - "sockets, sockets de cliente asincrónicos"
+title: "Ejemplo de sockets de cliente asincrónicos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- asynchronous client sockets
+- sockets, code examples
+- sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Ejemplo de sockets de cliente asincr&#243;nicos
-El programa de ejemplo siguiente crea un cliente que se conecte a un servidor.  Compila el cliente con un socket asincrónico, de modo que la ejecución de la aplicación cliente no se suspende mientras el servidor devuelve una respuesta.  La aplicación envía una cadena al servidor y muestra la cadena devuelta por el servidor en la consola.  
+# <a name="asynchronous-client-socket-example"></a>Ejemplo de sockets de cliente asincrónicos
+El programa de ejemplo siguiente crea un cliente que se conecta a un servidor. El cliente se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de cliente mientras se espera una respuesta del servidor. La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.  
   
 ```vb  
 Imports System  
@@ -328,7 +333,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ejemplo de sockets de servidor asincrónicos](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Usar un socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
+ [Using a Synchronous Server Socket (Empleo de un socket de servidor sincrónico)](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [Ejemplos de código de socket](../../../docs/framework/network-programming/socket-code-examples.md)
+

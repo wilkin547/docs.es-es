@@ -41,7 +41,7 @@ En .NET Framework, el desarrollo administrado admite metaprogramación a través
   
 -   [Referencia de la API de reflexión](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])  
+-   [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Compiling Apps with .NET Native](../../../docs/framework/net-native/index.md)  (Compilar aplicaciones con .NET Native)  

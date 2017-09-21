@@ -188,6 +188,6 @@ public class Book
  [XmlSerializer (clase)](xref:System.Xml.Serialization.XmlSerializer)   
  [Atributos que controlan la serialización XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)   
  [Cómo: Especificar un nombre de elemento alternativo para una secuencia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

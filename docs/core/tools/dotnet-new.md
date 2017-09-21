@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 335902f26148d8201b7311b57370fd37280c68dd
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
 ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="dotnet-new"></a>dotnet new
@@ -137,6 +137,10 @@ Filtra plantillas en función de los tipos disponibles. Los valores predefinidos
 `-u|--uninstall <PATH|NUGET_ID>`
 
 Desinstala un paquete de plantillas u origen en los parámetros `PATH` o `NUGET_ID` proporcionados.
+
+> [!NOTE]
+> Para desinstalar una plantilla mediante `PATH`, debe usar el nombre completo de la ruta de acceso. Por ejemplo, *C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, pero *./GarciaSoftware.ConsoleTemplate.CSharp* desde la carpeta contenedora no lo hará.
+> Además, no debe incluir una barra diagonal para finalizar el directorio en la ruta de acceso a la plantilla.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

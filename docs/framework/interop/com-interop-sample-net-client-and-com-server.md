@@ -1,36 +1,41 @@
 ---
-title: "COM Interop Sample: .NET Client and COM Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "interoperation with unmanaged code, samples"
-  - "COM interop, samples"
+title: 'Ejemplo de interoperabilidad COM: cliente .NET y servidor COM'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop Sample: .NET Client and COM Server
-En este ejemplo se muestra la forma en que un [cliente .NET](#cpconcominteropsamplenetclientcomserveranchor1), compilado para tener acceso a un [servidor COM](#cpconcominteropsamplenetclientcomserveranchor2), crea una instancia de una coclase COM y llama a los miembros de la clase para realizar los cálculos de una hipoteca.  
+# <a name="com-interop-sample-net-client-and-com-server"></a>Ejemplo de interoperabilidad COM: cliente .NET y servidor COM
+En este ejemplo se muestra cómo un [cliente .NET](#cpconcominteropsamplenetclientcomserveranchor1), creado para tener acceso a un [servidor COM](#cpconcominteropsamplenetclientcomserveranchor2), crea una instancia de una coclase COM y llama a los miembros de clase para realizar cálculos de hipotecas.  
   
- En este ejemplo, el cliente crea una instancia de la coclase **Loan** y la llama, pasa cuatro argumentos \(uno de los cuales es igual a cero\) a la instancia y muestra los cálculos.  A lo largo de esta sección se muestran fragmentos de código relativos a este ejemplo.  
+ En este ejemplo, el cliente crea y llama a una instancia de la coclase **Loan**, pasa cuatro argumentos (uno de ellos igual a cero) a la instancia y muestra los cálculos. A lo largo de esta sección aparecen fragmentos de código de este ejemplo.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## Cliente .NET  
+## <a name="net-client"></a>Cliente .NET  
   
 ```vb  
 Imports System  
@@ -101,7 +106,6 @@ Public Class LoanApp
         End While  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -161,7 +165,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## COM Server  
+## <a name="com-server"></a>Servidor COM  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -306,5 +310,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## Vea también  
- [Exposing COM Components to the .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>Vea también  
+ [Exponer componentes COM en .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+

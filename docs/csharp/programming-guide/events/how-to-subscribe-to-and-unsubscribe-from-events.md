@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
 ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Cómo: Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)

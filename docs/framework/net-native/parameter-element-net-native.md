@@ -69,7 +69,7 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
+|*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -87,5 +87,5 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
  [Elemento \<Method>](../../../docs/framework/net-native/method-element-net-native.md)   
  [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])  
  [Runtime Directive Policy Settings](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  (Configuración de directiva de la directiva en tiempo de ejecución)  
- [Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md) (Elementos de directivas en tiempo de ejecución)
+ [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
 

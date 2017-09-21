@@ -138,6 +138,6 @@ ms.lasthandoff: 08/21/2017
 |`Required All`|Requiere que la cadena de herramientas conserve todos los tipos y miembros (se usen o no) y habilita la directiva para estos.|✓||  
   
 ## <a name="see-also"></a>Vea también  
- [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  (Referencia del archivo de configuración de directivas en tiempo de ejecución [rd.xml])  
- [Runtime Directive Elements](../../../docs/framework/net-native/runtime-directive-elements.md) (Elementos de directivas en tiempo de ejecución)
+ [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [Runtime Directive Elements (Elementos de directivas en tiempo de ejecución)](../../../docs/framework/net-native/runtime-directive-elements.md)
 

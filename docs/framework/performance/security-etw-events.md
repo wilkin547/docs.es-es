@@ -84,5 +84,5 @@ ms.lasthandoff: 08/21/2017
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ## <a name="see-also"></a>Vea también  
- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
 

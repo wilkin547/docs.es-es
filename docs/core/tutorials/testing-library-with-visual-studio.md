@@ -14,7 +14,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
 ms.openlocfilehash: 30e46ae97563add2bdf34948349cf2d6214d0de8
 ms.contentlocale: es-es
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -112,7 +112,7 @@ Para crear los métodos de prueba:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp) 
 1. Reemplace el código de la ventana de código *UnitTest1.cs* por el código siguiente:
 
-   [!CODE-csharp[Prueba 1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!CODE-csharp[Test#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
    Observe que la prueba de caracteres en mayúsculas del método `TestStartsWithUpper` incluye la letra mayúscula griega alfa (U+0391) y la letra mayúscula cirílica EM (U+041C), y la prueba de caracteres en minúsculas del método `TestDoesNotStartWithUpper` incluye la letra griega minúscula alfa (U+03B1) y la letra cirílica minúscula Ghe (U+0433).
 
@@ -122,7 +122,7 @@ Para crear los métodos de prueba:
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
 1. Reemplace el código de la ventana de código *UnitTest1.vb* por el código siguiente:
 
-    [!CODE-vb[Prueba 1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+    [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
    Observe que la prueba de caracteres en mayúsculas del método `TestStartsWithUpper` incluye la letra mayúscula griega alfa (U+0391) y la letra mayúscula cirílica EM (U+041C), y la prueba de caracteres en minúsculas del método `TestDoesNotStartWithUpper` incluye la letra griega minúscula alfa (U+03B1) y la letra cirílica minúscula Ghe (U+0433).
 

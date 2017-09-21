@@ -1,55 +1,60 @@
 ---
-title: "Default Marshaling for Strings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "strings, interop marshaling"
-  - "interop marshaling, strings"
+title: "Cálculo de referencias predeterminado para cadenas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- strings, interop marshaling
+- interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 15
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5e78bebf15630589a90a684f2299565728728c7
+ms.contentlocale: es-es
+ms.lasthandoff: 08/21/2017
+
 ---
-# Default Marshaling for Strings
+# <a name="default-marshaling-for-strings"></a>Serialización predeterminada para cadenas
 Las clases <xref:System.String?displayProperty=fullName> y <xref:System.Text.StringBuilder?displayProperty=fullName> tienen un comportamiento de cálculo de referencias similar.  
   
- Las referencias de las cadenas se calculan como un tipo `BSTR` de estilo COM o como una cadena terminada en NULL \(una matriz de caracteres que termina con un carácter NULL\).  Las referencias de los caracteres dentro de la cadena se pueden calcular como ANSI o Unicode \(el valor predeterminado en los sistemas Windows\).  
+ Las referencias de las cadenas se calculan como un tipo `BSTR` de estilo COM o como una cadena terminada en NULL (una matriz de caracteres que termina con un carácter NULL). Las referencias de los caracteres dentro de la cadena se pueden calcular como ANSI o Unicode (el valor predeterminado en los sistemas Windows).  
   
- En este tema se proporciona la siguiente información sobre el cálculo de referencias de tipos de cadena:  
+ En este tema se proporciona la siguiente información sobre la serialización de tipos de cadena:  
   
 -   [Cadenas usadas en interfaces](#cpcondefaultmarshalingforstringsanchor1)  
   
--   [Cadenas usadas en la plataforma de invocación](#cpcondefaultmarshalingforstringsanchor5)  
+-   [Cadenas usadas en la invocación de plataforma](#cpcondefaultmarshalingforstringsanchor5)  
   
 -   [Cadenas usadas en estructuras](#cpcondefaultmarshalingforstringsanchor2)  
   
 -   [Búferes de cadenas de longitud fija](#cpcondefaultmarshalingforstringsanchor3)  
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>   
-## Cadenas usadas en interfaces  
- En la siguiente tabla se muestran las opciones de cálculo de referencias para el tipo de datos de cadena cuando las referencias se calculan como un argumento de método a código no administrado.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas a interfaces COM.  
+## <a name="strings-used-in-interfaces"></a>Cadenas usadas en interfaces  
+ En la siguiente tabla se muestran las opciones de cálculo de referencias para el tipo de datos de cadena cuando las referencias se calculan como un argumento de método a código no administrado. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas a interfaces COM.  
   
 |Tipo de enumeración|Descripción del formato no administrado|  
-|-------------------------|---------------------------------------------|  
-|`UnmanagedType.BStr` \(valor predeterminado\)|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
+|----------------------|-------------------------------------|  
+|`UnmanagedType.BStr` (valor predeterminado)|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
   
- Esta tabla se aplica a cadenas.  Sin embargo, para <xref:System.Text.StringBuilder>, las únicas opciones permitidas son `UnmanagedType.LPStr` y `UnmanagedType.LPWStr`.  
+ Esta tabla se aplica a cadenas. Sin embargo, para <xref:System.Text.StringBuilder>, las únicas opciones permitidas son `UnmanagedType.LPStr` y `UnmanagedType.LPWStr`.  
   
  En el ejemplo siguiente se muestran las cadenas declaradas en la interfaz `IStringWorker`.  
   
@@ -83,22 +88,22 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor5"></a>   
-## Cadenas usadas en la plataforma de invocación  
- La invocación de plataforma copia los argumentos de cadena y los convierte del formato de .NET Framework \(Unicode\) al formato no administrado de la plataforma.  Las cadenas son inmutables y no se vuelven a copiar desde la memoria no administrada a la memoria administrada cuando finaliza la llamada.  
+## <a name="strings-used-in-platform-invoke"></a>Cadenas usadas en la plataforma de invocación  
+ La invocación de plataforma copia los argumentos de cadena y los convierte del formato de .NET Framework (Unicode) al formato no administrado de la plataforma. Las cadenas son inmutables y no se vuelven a copiar desde la memoria no administrada a la memoria administrada cuando finaliza la llamada.  
   
- En la tabla siguiente se enumeran las opciones de cálculo de referencias cuando las referencias de cadenas se calculan como un argumento de método de una llamada de invocación de plataforma.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas.  
+ En la tabla siguiente se enumeran las opciones de cálculo de referencias cuando las referencias de cadenas se calculan como un argumento de método de una llamada de invocación de plataforma. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas.  
   
-|Tipo de enumeración|Descripción del formato no administrado|  
-|-------------------------|---------------------------------------------|  
+|Tipo de enumeración|Descripción de formato no administrado|  
+|----------------------|-------------------------------------|  
 |`UnmanagedType.AnsiBStr`|`BSTR` de estilo COM con una longitud fija y caracteres ANSI.|  
 |`UnmanagedType.BStr`|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
-|`UnmanagedType.LPTStr` \(valor predeterminado\)|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
+|`UnmanagedType.LPTStr`|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
 |`UnmanagedType.TBStr`|`BSTR` de estilo COM con una longitud fija y caracteres dependientes de la plataforma.|  
-|`VBByRefStr`|Un valor que permite a Visual Basic .NET cambiar una cadena del código no administrado y reflejar los resultados en el código administrado.  Este valor solo se admite con la invocación de plataforma.|  
+|`VBByRefStr`|Un valor que permite a Visual Basic .NET cambiar una cadena del código no administrado y reflejar los resultados en el código administrado. Este valor solo se admite con la invocación de plataforma. Este es el valor predeterminado en Visual Basic para las cadenas `ByVal`.|  
   
- Esta tabla se aplica a cadenas.  Sin embargo, para <xref:System.Text.StringBuilder>, las únicas opciones permitidas son `LPStr`, `LPTStr` y `LPWStr`.  
+ Esta tabla se aplica a cadenas. Sin embargo, para <xref:System.Text.StringBuilder>, las únicas opciones permitidas son `LPStr`, `LPTStr` y `LPWStr`.  
   
  La siguiente definición de tipo muestra el uso correcto de `MarshalAsAttribute` para llamadas de invocación de plataforma.  
   
@@ -117,7 +122,6 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -144,22 +148,22 @@ String s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
-## Cadenas usadas en estructuras  
- Las cadenas son miembros válidos de las estructuras; sin embargo, los búferes <xref:System.Text.StringBuilder> no son válidos en las estructuras.  En la siguiente tabla se muestran las opciones de cálculo de referencias para el tipo de datos de cadena cuando las referencias del tipo se calculan como un campo.  El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas a un campo.  
+## <a name="strings-used-in-structures"></a>Cadenas usadas en estructuras  
+ Las cadenas son miembros válidos de las estructuras; sin embargo, los búferes <xref:System.Text.StringBuilder> no son válidos en las estructuras. En la siguiente tabla se muestran las opciones de cálculo de referencias para el tipo de datos de cadena cuando las referencias del tipo se calculan como un campo. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para calcular referencias de cadenas a un campo.  
   
-|Tipo de enumeración|Descripción del formato no administrado|  
-|-------------------------|---------------------------------------------|  
+|Tipo de enumeración|Descripción de formato no administrado|  
+|----------------------|-------------------------------------|  
 |`UnmanagedType.BStr`|`BSTR` de estilo COM con una longitud fija y caracteres Unicode.|  
 |`UnmanagedType.LPStr`|Puntero a una matriz de caracteres Unicode terminada en NULL.|  
 |`UnmanagedType.LPTStr`|Un puntero a una matriz terminada en NULL de caracteres dependientes de la plataforma.|  
 |`UnmanagedType.LPWStr`|Puntero a una matriz de caracteres Unicode terminada en null.|  
 |`UnmanagedType.ByValTStr`|Una matriz de longitud fija de caracteres; el tipo de la matriz se determina por el juego de caracteres de la estructura contenedora.|  
   
- El tipo `ByValTStr` se usa para matrices de caracteres de longitud fija insertadas que aparecen dentro de una estructura.  Otros tipos se aplican a referencias de cadenas incluidas en estructuras que contienen punteros a cadenas.  
+ El tipo `ByValTStr` se usa para matrices de caracteres de longitud fija insertadas que aparecen dentro de una estructura. Otros tipos se aplican a referencias de cadenas incluidas en estructuras que contienen punteros a cadenas.  
   
- El argumento `CharSet` del atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> que se aplica a la estructura contenedora determina el formato de carácter de las cadenas en las estructuras.  Las siguientes estructuras de ejemplo contienen referencias de cadena y cadenas insertadas, así como caracteres ANSI, Unicode y dependientes de la plataforma.  
+ El argumento `CharSet` del atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> que se aplica a la estructura contenedora determina el formato de carácter de las cadenas en las estructuras. Las siguientes estructuras de ejemplo contienen referencias de cadena y cadenas insertadas, así como caracteres ANSI, Unicode y dependientes de la plataforma.  
   
-### Representación de la biblioteca de tipos  
+### <a name="type-library-representation"></a>Representación de la biblioteca de tipos  
   
 ```  
 struct StringInfoA {  
@@ -199,7 +203,6 @@ Structure StringInfoT
 <MarshalAs(UnmanagedType.ByValTStr, SizeConst := 256)> _  
 Public f2 As String  
 End Structure  
-  
 ```  
   
 ```csharp  
@@ -222,12 +225,12 @@ struct StringInfoT {
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor3"></a>   
-## Búferes de cadenas de longitud fija  
- En algunas circunstancias, se debe pasar un búfer de caracteres de longitud fija a código no administrado para su manipulación.  En este caso no basta con pasar una cadena porque el destinatario no puede modificar el contenido del búfer que se pasa.  Aunque la cadena se pase por referencia, no hay ninguna manera de inicializar el búfer con un tamaño determinado.  
+## <a name="fixed-length-string-buffers"></a>Búferes de cadenas de longitud fija  
+ En algunas circunstancias, se debe pasar un búfer de caracteres de longitud fija a código no administrado para su manipulación. En este caso no basta con pasar una cadena porque el destinatario no puede modificar el contenido del búfer que se pasa. Aunque la cadena se pase por referencia, no hay ninguna manera de inicializar el búfer con un tamaño determinado.  
   
- La solución consiste en pasar un búfer <xref:System.Text.StringBuilder> como argumento en lugar de una cadena.  El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`.  También puede inicializarse con una longitud fija.  Por ejemplo, si inicializa un búfer `StringBuilder` con una capacidad de `N`, el contador de referencias proporcionará un búfer con un tamaño de \(`N`\+ 1\) caracteres.  \+ 1 tiene en cuenta el hecho de que la cadena no administrada tiene un terminador NULL mientras que `StringBuilder` no.  
+ La solución consiste en pasar un búfer <xref:System.Text.StringBuilder> como argumento en lugar de una cadena. El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`. También puede inicializarse con una longitud fija. Por ejemplo, si inicializa un búfer `StringBuilder` con una capacidad de `N`, el contador de referencias proporcionará un búfer con un tamaño de (`N`+ 1) caracteres. + 1 tiene en cuenta el hecho de que la cadena no administrada tiene un terminador NULL mientras que `StringBuilder` no.  
   
- Por ejemplo, la función `GetWindowText` de la API Win32 de Microsoft \(definida en Windows.h\) es un búfer de caracteres de longitud fija que debe pasarse a código no administrado para su manipulación.  `LpString` apunta a un búfer asignado por el llamador de tamaño `nMaxCount`.  Se espera que el llamador asigne el búfer y establezca el argumento `nMaxCount` en el tamaño del búfer asignado.  El siguiente código muestra la declaración de función `GetWindowText`, tal y como se define en Windows.h.  
+ Por ejemplo, la función `GetWindowText` de la API Win32 de Microsoft (definida en Windows.h) es un búfer de caracteres de longitud fija que debe pasarse a código no administrado para su manipulación. `LpString` apunta a un búfer asignado por el llamador de tamaño `nMaxCount`. Se espera que el llamador asigne el búfer y establezca el argumento `nMaxCount` en el tamaño del búfer asignado. El siguiente código muestra la declaración de función `GetWindowText`, tal y como se define en Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -237,7 +240,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`.  En el ejemplo de código siguiente se muestra cómo inicializar `StringBuilder` con una longitud fija.  
+ El destinatario puede desreferenciar y modificar un `StringBuilder`, siempre que no exceda la capacidad del `StringBuilder`. En el ejemplo de código siguiente se muestra cómo inicializar `StringBuilder` con una longitud fija.  
   
 ```vb  
 Public Class Win32API  
@@ -252,7 +255,6 @@ Public Class Window
    Return sb.ToString()  
    End Function  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -271,8 +273,9 @@ public class Window {
 }  
 ```  
   
-## Vea también  
- [Default Marshaling Behavior](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable and Non\-Blittable Types](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [Directional Attributes](http://msdn.microsoft.com/es-es/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Copying and Pinning](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>Vea también  
+ [Comportamiento de serialización predeterminado](../../../docs/framework/interop/default-marshaling-behavior.md)   
+ [Tipos que pueden o que no pueden transferirse en bloque de bits](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
+ [Atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [Copiar y fijar](../../../docs/framework/interop/copying-and-pinning.md)
+

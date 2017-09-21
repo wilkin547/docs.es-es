@@ -50,5 +50,5 @@ El evento de pila se debe usar junto con otros eventos para generar seguimientos
 |Pila|win:Pointer|Columnas de punteros de instrucción.|  
   
 ## <a name="see-also"></a>Vea también  
- [Eventos ETW de CLR](../../../docs/framework/performance/clr-etw-events.md)
+ [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
 

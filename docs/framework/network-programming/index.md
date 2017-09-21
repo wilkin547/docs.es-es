@@ -39,7 +39,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)  
  Explica cómo utilizar protocolos conectables para cargar y descargar datos de recursos de Internet.  
   
- [Programar protocolos acoplables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
+ [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  Explica cómo derivar clases específicas del protocolo para implementar protocolos conectables.  
   
  [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)  
@@ -51,7 +51,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Configuración de aplicaciones de Internet](../../../docs/framework/network-programming/configuring-internet-applications.md)  
  Explica cómo utilizar archivos de configuración de .NET Framework para configurar aplicaciones de Internet.  
   
- [Traza de la red en .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
+ [Network Tracing in the .NET Framework (Seguimiento de red en .NET Framework)](../../../docs/framework/network-programming/network-tracing.md)  
  Explica cómo utilizar el seguimiento de la red para obtener información sobre las invocaciones de método y el tráfico de red generado por una aplicación administrada.  
   
  [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
@@ -96,7 +96,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  [Aislamiento de red para aplicaciones de la Tienda Windows](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  Describe el impacto de aislamiento de red cuando se usan las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Http>y <xref:System.Net.Http.Headers> en aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] .  
   
- [Ejemplos de programación de red](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)  
  Vínculos a ejemplos de programación de red descargables que utilizan las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>y <xref:System.Net.Sockets> .  
   
 ## <a name="reference"></a>Referencia  
@@ -149,7 +149,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Proporciona compatibilidad con la configuración de la autenticación mediante la protección extendida de las aplicaciones.  
   
 ## <a name="see-also"></a>Vea también  
- [Temas de procedimientos de programación de red](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
+ [Temas de procedimientos de programación de redes](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
  [Ejemplos de programación de red](../../../docs/framework/network-programming/network-programming-samples.md)   
  [Ejemplos de red para .NET en la galería de código de MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)   
  [Ejemplo de HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)

@@ -189,6 +189,6 @@ public string MyToken;
  [Serialización](../../../docs/standard/serialization/index.md)   
  <xref:System.Xml.Serialization.XmlSerializer>   
  [Ejemplos de serialización XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ [Cómo: serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
  [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 

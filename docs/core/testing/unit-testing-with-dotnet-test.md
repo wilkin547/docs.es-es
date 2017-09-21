@@ -1,28 +1,31 @@
 ---
-title: Prueba unitaria de .NET Core mediante pruebas de dotnet y xUnit
-description: "Aprenda los conceptos de pruebas unitarias en .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y xUnit."
+title: "Prueba unitaria del código C# en .NET Core mediante pruebas de dotnet y xUnit"
+description: "Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y xUnit."
 author: ardalis
 ms.author: wiwagn
-ms.date: 03/21/2017
+ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.translationtype: HT
-ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
-ms.openlocfilehash: d989ee731d7ffd0439bac69afe1458e2aa10733a
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
 ms.contentlocale: es-es
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/14/2017
 
 ---
-# <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de .NET Core mediante pruebas de dotnet y xUnit
+# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de C# en .NET Core mediante pruebas de dotnet y xUnit
 
 Este tutorial le guía por una experiencia interactiva de creación de una solución de ejemplo paso a paso para aprender los conceptos de pruebas unitarias. Si prefiere seguir el tutorial con una solución precompilada, [vea o descargue el código de ejemplo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/) antes de comenzar. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Crear el proyecto de origen
 
-Abra una ventana del Shell. Cree un directorio denominado *unit-testing-using-dotnet-test* que contenga la solución. Dentro de este nuevo directorio, cree un directorio *PrimeService*. Esta es la estructura de directorios hasta el momento:
+Abra una ventana del Shell. Cree un directorio denominado *unit-testing-using-dotnet-test* que contenga la solución.
+En este directorio nuevo, ejecute [`dotnet new sln`](../tools/dotnet-new.md) para crear una solución nueva. Esto permite facilitar la administración de la biblioteca de clases y del proyecto de prueba unitaria.
+En el directorio de la solución, cree un directorio *PrimeService*. Esta es la estructura de directorios y archivos hasta el momento:
 
 ```
 /unit-testing-using-dotnet-test
+    unit-testing-using-dotnet-test.sln
     /PrimeService
 ```
 
@@ -43,12 +46,15 @@ namespace Prime.Services
 }
 ```
 
+Cambie nuevamente el directorio al directorio *unit-testing-using-dotnet-test*. Ejecute [`dotnet sln add .\PrimeService\PrimeService.csproj`](../tools/dotnet-sln.md) para agregar el proyecto de biblioteca de clases a la solución.
+
 ## <a name="creating-the-test-project"></a>Crear el proyecto de prueba
 
-Cambie el directorio de nuevo al directorio *unit-testing-using-dotnet-test* y cree el directorio *PrimeService.Tests*. Esta es la estructura de directorios:
+A continuación, cree el directorio *PrimeService.Tests*. En el esquema siguiente se muestra la estructura de directorios:
 
 ```
 /unit-testing-using-dotnet-test
+    unit-testing-using-dotnet-test.sln
     /PrimeService
         Source Files
         PrimeService.csproj
@@ -59,7 +65,7 @@ Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un p
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
   <PackageReference Include="xunit" Version="2.2.0" />
   <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
 </ItemGroup>
@@ -71,33 +77,26 @@ El proyecto de prueba requiere otros paquetes para crear y ejecutar pruebas unit
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-Otra opción consiste en editar el archivo *PrimeService.Tests.csproj*. Directamente en el primer nodo `<ItemGroup>`, agregue otro nodo `<ItemGroup>` con una referencia al proyecto de biblioteca:
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\PrimeService\PrimeService.csproj" />
-</ItemGroup>
-```
-
 Puede ver todo el archivo en el [repositorio de muestras](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj) en GitHub.
 
-A continuación se muestra el diseño de la solución final:
+Aquí se muestra el diseño de solución final:
 
 ```
-/unit-testing-using-mstest
+/unit-testing-using-dotnet-test
+    unit-testing-using-dotnet-test.sln
     /PrimeService
         Source Files
         PrimeService.csproj
     /PrimeService.Tests
-        PrimeService
+        Test Source Files
         PrimeServiceTests.csproj
 ```
 
+Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-using-dotnet-test*. 
+
 ## <a name="creating-the-first-test"></a>Crear la primera prueba
 
-Antes de compilar la biblioteca o las pruebas, ejecute [`dotnet restore`](../tools/dotnet-restore.md) en el directorio *PrimeService.Tests*. Este comando restaura todos los paquetes de NuGet necesarios para cada proyecto.
-
-El enfoque de TDD requiere la escritura de una prueba con errores, después la valida y finalmente repite el proceso. Quite *UnitTest1.cs* del directorio *PrimeService.Tests* y cree un nuevo archivo de C# denominado *PrimeService_IsPrimeShould.cs* con el siguiente contenido:
+El enfoque de TDD requiere la escritura de una prueba con errores, después la valida y finalmente repite el proceso. Quite *UnitTest1.cs* del directorio *PrimeService.Tests* y cree un archivo de C# nuevo denominado *PrimeService_IsPrimeShould.cs*. Agregue el código siguiente:
 
 ```csharp
 using Xunit;
@@ -119,34 +118,34 @@ namespace Prime.UnitTests.Services
         {
             var result = _primeService.IsPrime(1);
 
-            Assert.False(result, $"1 should not be prime");
+            Assert.False(result, "1 should not be prime");
         }
     }
 }
 ```
 
-El atributo `[Fact]` indica un método como una única prueba. Ejecute [`dotnet test`](../tools/dotnet-test.md) para generar las pruebas y la biblioteca de clases y, a continuación, ejecute las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas y proporciona un argumento de línea de comandos al ejecutor de pruebas que indica el ensamblado que contiene las pruebas.
+El atributo `[Fact]` indica un método de prueba que el ejecutor de pruebas ejecuta. En *unit-testing-using-dotnet-test*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
 
-La prueba produce un error. Todavía no ha creado la implementación. Escriba el código más simple en la clase `PrimeService` para pasar esta prueba:
+La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `PrimeService` que funciona:
 
 ```csharp
-public bool IsPrime(int candidate) 
+public bool IsPrime(int candidate)
 {
-    if (candidate == 1) 
-    { 
+    if (candidate == 1)
+    {
         return false;
-    } 
+    }
     throw new NotImplementedException("Please create a test first");
-} 
+}
 ```
 
-En el directorio *PrimeService.Tests*, ejecute `dotnet test` de nuevo. El comando `dotnet test` ejecuta una compilación del proyecto `PrimeService` y luego del proyecto `PrimeService.Tests`. Después de compilar ambos proyectos, se ejecuta esta única prueba. Pasa.
+En el directorio *unit-testing-using-dotnet-test*, vuelva a ejecutar `dotnet test`. El comando `dotnet test` ejecuta una compilación del proyecto `PrimeService` y luego del proyecto `PrimeService.Tests`. Después de compilar ambos proyectos, se ejecuta esta única prueba. Pasa.
 
 ## <a name="adding-more-features"></a>Agregar más características
 
-Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregarlas como nuevas pruebas con el atributo `[Fact]`, pero enseguida este proceso se hace tedioso. Hay otros atributos de xUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `[Theory]` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el atributo `[InlineData]` para especificar valores para esas entradas. 
- 
-En lugar de crear nuevas pruebas, aproveche estos dos atributos para crear una teoría que prueba algunos valores inferiores a 2, que es el número primo más bajo:
+Ahora que la prueba se ha superado, es el momento de escribir más. Hay algunos otros casos simples para números primos: 0, -1. Puede agregar esos casos como nuevas pruebas con el atributo `[Fact]`, pero enseguida este proceso se hace tedioso. Hay otros atributos de xUnit que le permiten escribir un conjunto de pruebas similares.  Un atributo `[Theory]` representa un conjunto de pruebas que ejecutan el mismo código, pero tienen diferentes argumentos de entrada. Puede usar el atributo `[InlineData]` para especificar valores para esas entradas.
+
+En lugar de crear pruebas nuevas, aplique estos dos atributos para crear una sola teoría. La teoría es un método que prueba varios valores menores que dos, que es el número primo menor:
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
@@ -156,7 +155,7 @@ Ejecute `dotnet test`, y dos de estas pruebas no se superarán. Para superar tod
 if (candidate < 2)
 ```
 
-Puede continuar recorriendo en iteración agregando más pruebas, más teorías y más código en la biblioteca principal. Acabará con la [versión terminada de las pruebas](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) y con la [implementación completa de la biblioteca](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
+Puede continuar recorriendo en iteración agregando más pruebas, más teorías y más código en la biblioteca principal. Ya tiene la [versión terminada de las pruebas](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) y la [implementación completa de la biblioteca](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs).
 
-Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca. Ha estructurado la solución para que el proceso de agregar nuevos paquetes y pruebas sea continuo y pueda concentrar la mayor parte de su tiempo y esfuerzo en solucionar los objetivos de la aplicación.
+Ha creado una biblioteca pequeña y un conjunto de pruebas unitarias para esa biblioteca. Ha estructurado la solución, por lo que agregar pruebas y paquetes nuevos sigue el flujo de trabajo actual. Ha centrado la mayor parte del tiempo y del esfuerzo en resolver los objetivos de la aplicación.
 

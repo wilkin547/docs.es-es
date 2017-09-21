@@ -45,7 +45,7 @@ El espacio de nombres <xref:System.Net.Sockets> contiene una implementación adm
  La clase **Socket** admite dos modos básicos, el modo sincrónico y el modo asincrónico. En el modo sincrónico, las llamadas a funciones que efectúan operaciones de red (como <xref:System.Net.Sockets.Socket.Send%2A> y <xref:System.Net.Sockets.Socket.Receive%2A>) esperan a que finalice la operación antes de devolver el control al programa que realiza la llamada. En el modo asincrónico, estas llamadas vuelven inmediatamente.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
+ [Cómo: crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
     
  [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)
 

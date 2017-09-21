@@ -80,7 +80,7 @@ En esta sección se incluyen descripciones y vínculos a ejemplos de programaci�
  <xref:System.Net.Sockets>  
   
 ## <a name="see-also"></a>Vea también  
- [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)   
+ [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
  [Temas de procedimientos de programación de redes](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
  [Ejemplos de redes para .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
 
