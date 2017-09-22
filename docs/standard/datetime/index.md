@@ -85,5 +85,5 @@ En [How to: Let users resolve ambiguous times](../../../docs/standard/datetime/l
 
 ## <a name="reference"></a>Referencia
 
-<xref:System.TimeZoneInfo?displayProperty=fullName>
+<xref:System.TimeZoneInfo?displayProperty=nameWithType>
 

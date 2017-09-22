@@ -39,7 +39,7 @@ La concatenación hace referencia a la operación de anexar una secuencia a otra
   
 |Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|Concatena dos secuencias para formar una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=fullName>|  
+|Concat|Concatena dos secuencias para formar una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Linq>   

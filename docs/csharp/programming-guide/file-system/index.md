@@ -62,5 +62,5 @@ Los temas siguientes tratan cómo usar C# y .NET Framework para realizar diversa
   
  [Archivos, carpetas y unidades](../../../csharp/programming-guide/file-system/index.md)  
   
- <xref:System.IO?displayProperty=fullName>
+ <xref:System.IO?displayProperty=nameWithType>
 

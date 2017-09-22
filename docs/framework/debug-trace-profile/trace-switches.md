@@ -45,13 +45,13 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
 ## <a name="trace-levels"></a>Niveles de seguimiento  
  Al usar **TraceSwitch**hay que tener en cuenta algunas consideraciones adicionales. Un objeto **TraceSwitch** tiene cuatro propiedades que devuelven valores **Boolean** que indican si el modificador está establecido al menos en un nivel determinado:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Los niveles permiten limitar la cantidad de información de seguimiento para recibir solo la información necesaria para solucionar un problema. Configure los modificadores de seguimiento en el nivel de seguimiento adecuado para especificar el nivel de detalle que quiere en la salida del seguimiento. Puede recibir mensajes de error, mensajes de advertencia, mensajes informativos, mensajes de seguimiento detallados o ningún mensaje.  
   
