@@ -39,11 +39,11 @@ Una operación de ordenación ordena los elementos de una secuencia según uno o
   
 |Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OrderBy|Ordena valores en orden ascendente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=fullName>|  
-|OrderByDescending|Ordena valores en orden descendente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=fullName>|  
-|ThenBy|Realiza una ordenación secundaria en orden ascendente.|`orderby …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=fullName>|  
-|ThenByDescending|Realiza una ordenación secundaria en orden descendente.|`orderby …, … descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=fullName>|  
-|Reverse|Invierte el orden de los elementos de una colección.|No es aplicable.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=fullName>|  
+|OrderBy|Ordena valores en orden ascendente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
+|OrderByDescending|Ordena valores en orden descendente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
+|ThenBy|Realiza una ordenación secundaria en orden ascendente.|`orderby …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
+|ThenByDescending|Realiza una ordenación secundaria en orden descendente.|`orderby …, … descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
+|Reverse|Invierte el orden de los elementos de una colección.|No es aplicable.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   

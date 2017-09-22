@@ -53,21 +53,21 @@ El recolector de elementos no utilizados de .NET administra la asignación y lib
 |[Referencias débiles](../../../docs/standard/garbage-collection/weak-references.md)|Describe las características que permiten al recolector de elementos no utilizados recoger un objeto y, mientras tanto, permitir que la aplicación tenga acceso a ese objeto.|  
   
 ## <a name="reference"></a>Referencia  
- <xref:System.GC?displayProperty=fullName>  
+ <xref:System.GC?displayProperty=nameWithType>  
   
- <xref:System.GCCollectionMode?displayProperty=fullName>  
+ <xref:System.GCCollectionMode?displayProperty=nameWithType>  
   
- <xref:System.GCNotificationStatus?displayProperty=fullName>  
+ <xref:System.GCNotificationStatus?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCLatencyMode?displayProperty=fullName>  
+ <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>  
   
- <xref:System.Object.Finalize%2A?displayProperty=fullName>  
+ <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
   
- <xref:System.IDisposable?displayProperty=fullName>  
+ <xref:System.IDisposable?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Vea también  
  [Limpieza de recursos no administrados](../../../docs/standard/garbage-collection/unmanaged.md)

@@ -35,8 +35,8 @@ El término "proyección" hace referencia a la operación de transformar un obje
   
 |Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Seleccionar|Proyecta valores basados en una función de transformación.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=fullName>|  
-|SelectMany|Proyecta secuencias de valores que se basan en una función de transformación y después los convierte en una secuencia.|Use varias cláusulas `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=fullName>|  
+|Seleccionar|Proyecta valores basados en una función de transformación.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|SelectMany|Proyecta secuencias de valores que se basan en una función de transformación y después los convierte en una secuencia.|Use varias cláusulas `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   

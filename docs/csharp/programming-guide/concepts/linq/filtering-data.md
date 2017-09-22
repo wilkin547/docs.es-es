@@ -39,8 +39,8 @@ El filtrado hace referencia a la operación de restringir el conjunto de resulta
   
 |Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|Selecciona valores en función de su capacidad para convertirse en un tipo especificado.|No es aplicable.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
-|Where|Selecciona valores basados en una función de predicado.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>|  
+|OfType|Selecciona valores en función de su capacidad para convertirse en un tipo especificado.|No es aplicable.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|Where|Selecciona valores basados en una función de predicado.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
  En el siguiente ejemplo se usa la cláusula `where` para filtrar de una matriz aquellas cadenas que tienen una longitud específica.  

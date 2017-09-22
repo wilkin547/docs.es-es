@@ -52,10 +52,10 @@ Esta sección proporciona vínculos a información de referencia sobre diversos 
  Proporciona vínculos a la especificación completa del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que contiene información detallada sobre todos los aspectos del lenguaje.  
   
 ## <a name="reference"></a>Referencia  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  Este espacio de nombres contiene clases para los controles Power Packs de Visual Basic. Power Packs de Visual Basic son controles adicionales de Windows Forms.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  Este espacio de nombres proporciona un componente que permite imprimir un facsímil tal y como aparece en pantalla.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

@@ -36,13 +36,13 @@ En este tema se describe cómo controlar los espacios en blanco a la hora de ser
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>Tratamiento de los espacios en blanco en los métodos que serializan árboles XML  
  Los siguientes métodos de las clases <xref:System.Xml.Linq.XElement> y <xref:System.Xml.Linq.XDocument> serializan un árbol XML. Es posible serializar un árbol XML en un archivo, un <xref:System.IO.TextReader> o un <xref:System.Xml.XmlReader>. El método `ToString` serializa en una cadena.  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=nameWithType>  
   
  Si el método no recibe un <xref:System.Xml.Linq.SaveOptions> como argumento, entonces el método realizará un formato (sangría) del XML serializado. En ese caso, se descartarán todos los espacios en blanco del árbol XML que no sean significativos.  
   

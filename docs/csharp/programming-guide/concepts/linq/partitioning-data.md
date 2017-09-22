@@ -39,10 +39,10 @@ Partición en LINQ es la operación de dividir una secuencia de entrada en dos s
   
 |Nombre de operador|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|Omite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=fullName>|  
-|SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=fullName>|  
-|Take|Admite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=fullName>|  
-|TakeWhile|Admite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=fullName>|  
+|Skip|Omite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|SkipWhile|Omite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|Take|Admite los elementos hasta una determinada posición de una secuencia.|No es aplicable.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|TakeWhile|Admite los elementos según una función de predicado hasta que un elemento no satisface la condición.|No es aplicable.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Vea también  
  <xref:System.Linq>   

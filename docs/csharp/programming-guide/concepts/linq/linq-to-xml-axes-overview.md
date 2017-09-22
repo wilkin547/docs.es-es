@@ -37,34 +37,34 @@ Tras crear un árbol XML o haber cargado un documento XML en un árbol XML, pued
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios dependientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran después de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren después de este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran antes que este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren antes que este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus antecesores. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus descendientes. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los antecesores que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los descendientes que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios dependientes de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos secundarios que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran después de este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren después de este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentran antes que este elemento. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que se encuentren antes que este elemento y que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus antecesores. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de este elemento y de sus descendientes. Una sobrecarga devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement> de los elementos que tengan el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>Método para recuperar un único elemento  
  El siguiente método recupera un único elemento secundario a partir del objeto <xref:System.Xml.Linq.XElement>.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>|Devuelve el objeto del primer elemento <xref:System.Xml.Linq.XElement> secundario que tenga el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Devuelve el objeto del primer elemento <xref:System.Xml.Linq.XElement> secundario que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Método para recuperar una colección de atributos  
  El siguiente método recupera atributos a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> de todos los atributos.|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Devuelve un <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> de todos los atributos.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Método para recuperar un único atributo  
  El siguiente método recupera un único atributo a partir de un objeto <xref:System.Xml.Linq.XElement>.  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Devuelve el <xref:System.Xml.Linq.XAttribute> que tenga el <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="see-also"></a>Vea también  
  [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])
