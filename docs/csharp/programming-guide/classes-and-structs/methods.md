@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
@@ -149,7 +149,7 @@ static void Main(string[] args)
   
  [!code-cs[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- Un método asincrónico no puede declarar ningún parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md), pero puede llamar a los métodos que tienen estos parámetros.  
+ Un método aisncrónico no puede declarar ningún parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out.md) , pero puede llamar a los métodos que tienen estos parámetros.  
   
  Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md), [Flujo de control en programas asincrónicos](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devuelto de Async](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

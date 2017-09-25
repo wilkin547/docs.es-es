@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 784308f3073114cd0c07cf15edae527a2654edec
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="indexers-c-programming-guide"></a>Indizadores (Guía de programación de C#)
@@ -43,7 +43,7 @@ Los indizadores permiten indizar las instancias de una clase o struct como matri
  
  En el ejemplo siguiente se define una clase genérica con métodos de descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) sencillos para asignar y recuperar valores. La clase `Program` crea una instancia de esta clase para almacenar cadenas.  
   
- [!code-cs[indizadores 1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
+ [!code-cs[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
 >  Para obtener más ejemplos, vea [Secciones relacionadas](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections).  
@@ -52,13 +52,13 @@ Los indizadores permiten indizar las instancias de una clase o struct como matri
  
 Es habitual que un descriptor de acceso get o set de un indizador conste de una única instrucción que devuelve o establece un valor. Los miembros con forma de expresión proporcionan una sintaxis simplificada para admitir este escenario. A partir de C# 6, un indizador de solo lectura puede implementarse como un miembro con forma de expresión, como se muestra en el ejemplo siguiente.
 
-[!code-cs[indizadores 2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
+[!code-cs[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
 Tenga en cuenta que `=>` presenta el cuerpo de la expresión y que la palabra clave `get` no se utiliza. 
 
 A partir de C# 7, los descriptores de acceso get y set se pueden implementar como miembros con forma de expresión. En este caso, sí deben utilizarse las palabras clave `get` y `set`. Por ejemplo:
 
-[!code-cs[indizadores 3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
+[!code-cs[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
 ## <a name="indexers-overview"></a>Información general sobre los indizadores  
   

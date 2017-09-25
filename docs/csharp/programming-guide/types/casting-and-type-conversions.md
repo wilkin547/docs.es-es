@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 20743c07c8e9c6b7ec24cf52a28bb9f451ba9df5
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: f5844cab81f194b9301a394117e92305eaa45e62
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
@@ -55,7 +55,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
   
 -   **Conversiones definidas por el usuario**: las conversiones definidas por el usuario se realizan por medio de métodos especiales que se pueden definir para habilitar las conversiones explícitas e implícitas entre tipos personalizados que no tienen una relación de clase base-clase derivada. Para obtener más información, vea [Operadores de conversión](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
--   **Conversiones con clases auxiliares**: para realizar conversiones entre tipos no compatibles, como enteros y objetos <xref:System.DateTime?displayProperty=fullName>, o cadenas hexadecimales y matrices de bytes, puede usar la clase <xref:System.BitConverter?displayProperty=fullName>, la clase <xref:System.Convert?displayProperty=fullName> y los métodos `Parse` de los tipos numéricos integrados, como <xref:System.Int32.Parse%2A?displayProperty=fullName>. Para obtener más información, vea [Cómo: Convertir una matriz de bytes en un valor int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Cómo: Convertir una cadena en un número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) y [Cómo: Convertir cadenas hexadecimales en tipos numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+-   **Conversiones con clases auxiliares**: para realizar conversiones entre tipos no compatibles, como enteros y objetos <xref:System.DateTime?displayProperty=nameWithType>, o cadenas hexadecimales y matrices de bytes, puede usar la clase <xref:System.BitConverter?displayProperty=nameWithType>, la clase <xref:System.Convert?displayProperty=nameWithType> y los métodos `Parse` de los tipos numéricos integrados, como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obtener más información, vea [Cómo: Convertir una matriz de bytes en un valor int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Cómo: Convertir una cadena en un número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) y [Cómo: Convertir cadenas hexadecimales en tipos numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Conversiones implícitas  
  Para los tipos numéricos integrados, se puede realizar una conversión implícita cuando el valor que se va a almacenar se puede encajar en la variable sin truncarse ni redondearse. Por ejemplo, una variable de tipo [long](../../../csharp/language-reference/keywords/long.md) (entero de 8 bytes) puede almacenar cualquier valor que un [int](../../../csharp/language-reference/keywords/int.md) (4 bytes en un equipo de 32 bits) pueda almacenar. En el ejemplo siguiente, el compilador convierte implícitamente el valor de la derecha a un tipo `long` antes de asignarlo a `bigNum`.  
