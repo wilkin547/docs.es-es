@@ -1,34 +1,40 @@
 ---
-title: "Tipo de datos booleanos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Tipos de datos booleanos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
 caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fb9c76193203255b943b1f1e5f8109b4bdd4bd40
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
+
 ---
-# Tipo de datos booleanos
-Los operadores booleanos funcionan tal como cabía esperar en Common Language Runtime \(CLR\), con la salvedad de que no hay equivalencia para el comportamiento de cortocircuito.  Por ejemplo, el operador `AndAlso` de Visual Basic se comporta como el operador `And`.  El operador `&&` de C\# se comporta como el operador `&`.  
+# <a name="boolean-data-types"></a>Tipos de datos booleanos
+Los operadores booleanos funcionan tal como cabía esperar en Common Language Runtime (CLR), con la salvedad de que no hay equivalencia para el comportamiento de cortocircuito. Por ejemplo, el operador `AndAlso` de Visual Basic se comporta como el operador `And`. El operador `&&` de C# se comporta como el operador `&`.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite los operadores siguientes.  
   
-|Visual Basic|C\#|  
+|Visual Basic|C#|  
 |------------------|---------|  
-|[And \(Operador\)](../Topic/And%20Operator%20\(Visual%20Basic\).md)|[& \(Operador\)](../Topic/&%20Operator%20\(C%23%20Reference\).md)|  
-|[AndAlso \(Operador\)](../Topic/AndAlso%20Operator%20\(Visual%20Basic\).md)|[&& \(Operador\)](../Topic/&&%20Operator%20\(C%23%20Reference\).md)|  
-|[Or \(Operador\)](../Topic/Or%20Operator%20\(Visual%20Basic\).md)|[&#124; \(Operador\)](../Topic/%7C%20Operator%20\(C%23%20Reference\).md)|  
-|[OrElse \(Operador\)](../Topic/OrElse%20Operator%20\(Visual%20Basic\).md)|[&#124;&#124; \(Operador\)](../Topic/%7C%7C%20Operator%20\(C%23%20Reference\).md)|  
-|[Xor \(Operador\)](../Topic/Xor%20Operator%20\(Visual%20Basic\).md)|[^ \(Operador\)](../Topic/%5E%20Operator%20\(C%23%20Reference\).md)|  
-|[Not \(Operador\)](../Topic/Not%20Operator%20\(Visual%20Basic\).md)|[Operador \!](../Topic/!%20Operator%20\(C%23%20Reference\).md)|  
+|[And (operador)](~/docs/visual-basic/language-reference/operators/and-operator.md)|[Operador &](~/docs/csharp/language-reference/operators/and-operator.md)|  
+|[AndAlso (operador)](~/docs/visual-basic/language-reference/operators/andalso-operator.md)|[Operador &&](~/docs/csharp/language-reference/operators/conditional-and-operator.md)|  
+|[OR (operador)](~/docs/visual-basic/language-reference/operators/or-operator.md)|[&#124; Operador](~/docs/csharp/language-reference/operators/or-operator.md)|  
+|[OrElse (operador)](~/docs/visual-basic/language-reference/operators/orelse-operator.md)|[&#124; &#124; Operador](~/docs/csharp/language-reference/operators/conditional-or-operator.md)|  
+|[XOR (operador)](~/docs/visual-basic/language-reference/operators/xor-operator.md)|[Operador ^](~/docs/csharp/language-reference/operators/xor-operator.md)|  
+|[NOT (operador)](~/docs/visual-basic/language-reference/operators/not-operator.md)|[Operador !](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Funciones y tipos de datos](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
