@@ -15,8 +15,9 @@
         ]
       },
       {
-        "files": [ 
-          "**/*.md" 
+        "files": [
+          "**/*.md",
+          "**/*.yml"
         ],
         "src": "docs",
         "dest": ".",
@@ -56,7 +57,17 @@
         ]
       },
       {
-        "files": [ "docs/toc.md", "toc.yml", "index.md" ]
+        "files": [
+          "core/**/*.md",
+          "core/**/*.yml"
+        ]
+      },
+      {
+        "files": [
+          "docs/toc.md",
+          "toc.yml",
+          "index.md"
+        ]
       }
     ],
     "resource": [
@@ -83,15 +94,16 @@
         "apidoc/*.md"
       ]
     },
-    "externalReference": [
-    ],
+    "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/dotnet/toc.json",
-      "_displayLangs": [ "csharp" ],
+      "_displayLangs": [
+        "csharp"
+      ],
       "author": "dotnet-bot",
       "ms.author": "dotnetcontent",
       "manager": "wpickett",
-      "searchScope": [ ".NET" ],
+      "searchScope": [".NET"],
       "uhfHeaderId": "MSDocsHeader-DotNet",
       "apiPlatform": "dotnet"
     },
@@ -104,7 +116,9 @@
       }
     },
     "dest": "_site",
-    "template": [ "docs.html" ],
+    "template": [
+      "docs.html"
+    ],
     "xref": [
       "dotnet-xref/_zip/dotnet.zip",
       "dotnet-xref/_zip/vs.110.zip",
