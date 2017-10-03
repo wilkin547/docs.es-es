@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 762941794184605f90443ed8f36c88ecfa50aa84
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="new-constraint-c-reference"></a>Restricción new (Referencia de C#)
@@ -47,7 +47,7 @@ La restricción `new` especifica que ningún tipo de argumento en una declaraci�
   
  [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
   
- Para obtener más información, vea [Constraints on Type Parameters](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md) (Restricciones de tipos de parámetros [Guía de programación de C#]).  
+ Para obtener más información, vea [Restricciones de tipos de parámetros](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

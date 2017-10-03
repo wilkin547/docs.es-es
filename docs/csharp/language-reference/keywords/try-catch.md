@@ -35,10 +35,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referencia de C#)
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Aunque la cláusula `catch` puede utilizarse sin argumentos para detectar cualquier tipo de excepción, no se recomienda este uso. En general, solo debe convertir las excepciones que sabe cómo recuperar. Por lo tanto, debe especificar siempre un argumento de objeto derivado de <xref:System.Exception?displayProperty=fullName> Por ejemplo:  
+ Aunque la cláusula `catch` puede utilizarse sin argumentos para detectar cualquier tipo de excepción, no se recomienda este uso. En general, solo debe convertir las excepciones que sabe cómo recuperar. Por lo tanto, debe especificar siempre un argumento de objeto derivado de <xref:System.Exception?displayProperty=nameWithType> Por ejemplo:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -150,7 +150,7 @@ static void Main()
   
  Para detectar la excepción, espere la tarea en un bloque `try` y detéctela en el bloque asociado `catch`. Para obtener un ejemplo, vea la sección "Ejemplo".  
   
- Una tarea puede encontrarse en un estado de error debido a que ocurrieron varias excepciones en el método asincrónico esperado. Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Cuando espera una tarea de este tipo, solo se captura una de las excepciones y no puede predecir qué excepción se capturará. Para obtener un ejemplo, vea la sección "Ejemplo".  
+ Una tarea puede encontrarse en un estado de error debido a que ocurrieron varias excepciones en el método asincrónico esperado. Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cuando espera una tarea de este tipo, solo se captura una de las excepciones y no puede predecir qué excepción se capturará. Para obtener un ejemplo, vea la sección "Ejemplo".  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, el bloque `try` contiene una llamada al método `ProcessString` que puede causar una excepción. La cláusula `catch` contiene el controlador de excepciones que muestra un mensaje en la pantalla. Cuando la  instrucción `throw` se llama desde dentro `MyMethod`, el sistema busca la instrucción `catch` y muestra el mensaje `Exception caught`.  
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el control de excepciones en el que varias tareas pueden producir varias excepciones. El bloque `try` espera la tarea devuelta por una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. La tarea se completa cuando se hayan completado las tres tareas a las que se aplica el método WhenAll.  
+ En el ejemplo siguiente se muestra el control de excepciones en el que varias tareas pueden producir varias excepciones. El bloque `try` espera la tarea devuelta por una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. La tarea se completa cuando se hayan completado las tres tareas a las que se aplica el método WhenAll.  
   
- Cada una de las tres tareas produce una excepción. El bloque `catch` se itera a través de las excepciones, que se encuentran en la propiedad `Exception.InnerExceptions` de la tarea devuelta por <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
+ Cada una de las tres tareas produce una excepción. El bloque `catch` se itera a través de las excepciones, que se encuentran en la propiedad `Exception.InnerExceptions` de la tarea devuelta por <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   

@@ -1,83 +1,94 @@
 ---
-title: "&lt;textMessageEncoding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;textMessageEncoding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
 caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c69b7647fa03cf8a6f83a7e3869da4c7a09161ba
+ms.contentlocale: es-es
+ms.lasthandoff: 09/25/2017
+
 ---
-# &lt;textMessageEncoding&gt;
+# <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 Especifica la codificación de caracteres y la versión del mensaje utilizadas para los mensajes XML basados en texto.  
   
-## Sintaxis  
+ \<system.serviceModel >  
+\<enlaces >  
+\<customBinding >  
+\<enlace >  
+\<textMessageEncoding >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <textMessageEncoding maxReadPoolSize="Integer"  
    maxWritePoolSize="Integer"  
    messageVersion="Soap11Addressing10/Soap12Addressing10"  
-      writeEncoding=”UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+      writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|maxReadPoolSize|Un entero que especifica cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores.  Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor.  El valor predeterminado es 64.|  
-|maxWritePoolSize|Un entero que especifica cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores.  Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor.  El valor predeterminado es 16.|  
-|messageVersion|Especifica la versión SOAP de los mensajes enviados utilizando el enlace.  Los valores válidos son<br /><br /> -   Soap11Addressing10<br />-   Soap12Addressing10<br /><br /> El valor predeterminado es Soap12Addressing10.  Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
-|writeEncoding|Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace.  Los valores válidos son<br /><br /> -   UnicodeFffeTextEncoding: codificación de Unicode BigEndian<br />-   Utf16TextEncoding: Codificación Unicode<br />-   Utf8TextEncoding: codificación de 8 bits.<br /><br /> El valor predeterminado es Utf8TextEncoding.  Este atributo es del tipo <xref:System.Text.Encoding>.|  
+|---------------|-----------------|  
+|maxReadPoolSize|Un entero que especifica cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 64.|  
+|maxWritePoolSize|Un entero que especifica cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 16.|  
+|messageVersion|Especifica la versión SOAP de los mensajes enviados utilizando el enlace. Los valores válidos son<br /><br /> -Soap11Addressing10<br />-Soap12Addressing10<br /><br /> El valor predeterminado es Soap12Addressing10. Este atributo es del tipo <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|writeEncoding|Especifica el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son<br /><br /> -UnicodeFffeTextEncoding: Codificación de Unicode BigEndian<br />-Utf16TextEncoding: Codificación de Unicode<br />-Utf8TextEncoding: codificación de 8 bits<br /><br /> El valor predeterminado es Utf8TextEncoding. Este atributo es del tipo <xref:System.Text.Encoding>.|  
   
-### Elementos secundarios  
-  
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<readerQuotas\>](../Topic/%3CreaderQuotas%3E.md)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los extremos configurados con este enlace.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-  
-### Elementos primarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enlace\>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|-------------|-----------------|  
+|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
-## Comentarios  
- La codificación es el proceso de transformación de un mensaje en una secuencia de bytes.  La descodificación es el proceso inverso.  Windows Communication Foundation \(WCF\) incluye tres tipos de codificación para los mensajes SOAP: Texto, Binario y Mecanismo de optimización de transmisión del mensaje \(MTOM\).  
+### <a name="parent-elements"></a>Elementos primarios  
   
- La codificación de texto representada por el elemento `textMessageEncoding` es el codificador más interoperable, pero el menos eficaz para los mensajes XML.  El codificador de texto crea mensajes basados en texto en la conexión.  Los mensajes generados por este codificador son adecuados para la interoperabilidad basada en WS \- \*.  Un servicio web o un cliente de servicios web, por lo general, pueden entender XML textual.  Sin embargo, transmitir bloques grandes de datos binarios como texto es el método menos eficaz para codificar mensajes XML.  
+|Elemento|Descripción|  
+|-------------|-----------------|  
+|[\<enlace >](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## Ejemplo  
+## <a name="remarks"></a>Comentarios  
+ La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, Binario y Mecanismo de optimización de transmisión del mensaje (MTOM).  
   
-```  
+ La codificación de texto representada por el elemento `textMessageEncoding` es el codificador más interoperable, pero el menos eficaz para los mensajes XML.  El codificador de texto crea mensajes basados en texto en la conexión. Los mensajes generados por este codificador son adecuados para la interoperabilidad basada en WS - *. Un servicio web o un cliente de servicios web, por lo general, pueden entender XML textual. Sin embargo, transmitir bloques grandes de datos binarios como texto es el método menos eficaz para codificar mensajes XML.  
+  
+## <a name="example"></a>Ejemplo  
+  
+```xml  
 <textMessageEncoding maxReadPoolSize="211"  
     maxWritePoolSize="2132"  
     messageVersion="Soap12Addressing10"  
-    textEncoding=”utf-8” />  
+    textEncoding="utf-8" />  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Configuration.TextMessageEncodingElement>   
  <xref:System.ServiceModel.Channels.CustomBinding>   
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>   
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>   
- [Elección de un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
+ [Elegir un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)   
  [Codificación de mensajes](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)   
  [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
  [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
  [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+

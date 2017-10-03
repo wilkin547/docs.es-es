@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: ea3104b1850fd2014ef0d4b8fcd31098d2c4b9d4
 ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
@@ -73,7 +73,7 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
   
 -   Las excepciones no se deben devolver como un parámetro o valor devuelto en lugar de producirse.  
   
--   No genere <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> o <xref:System.IndexOutOfRangeException?displayProperty=fullName> de manera intencionada desde su propio código fuente.  
+-   No genere <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> o <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> de manera intencionada desde su propio código fuente.  
   
 -   No cree excepciones que se puedan producir en el modo de depuración, pero no en el modo de lanzamiento. Para identificar los errores en tiempo de ejecución durante la fase de desarrollo, use la aserción de depuración.  
   

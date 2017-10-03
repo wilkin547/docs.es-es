@@ -27,10 +27,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
 ms.contentlocale: es-es
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
@@ -42,13 +42,13 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
 >  Puede ver la información de enlace en el archivo de registro usando el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
 ## <a name="initiating-the-bind"></a>Iniciar el enlace  
- El proceso de buscar y enlazar a un ensamblado comienza cuando el tiempo de ejecución intenta resolver una referencia a otro ensamblado. Esta referencia puede ser estática o dinámica. El compilador registra las referencias estáticas en los metadatos del manifiesto del ensamblado en tiempo de compilación. Las referencias dinámicas se construyen sobre la marcha como resultado de llamar a varios métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ El proceso de buscar y enlazar a un ensamblado comienza cuando el tiempo de ejecución intenta resolver una referencia a otro ensamblado. Esta referencia puede ser estática o dinámica. El compilador registra las referencias estáticas en los metadatos del manifiesto del ensamblado en tiempo de compilación. Las referencias dinámicas se construyen sobre la marcha como resultado de llamar a varios métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   
  La mejor manera de hacer referencia a un ensamblado es usar una referencia completa, incluido el nombre del ensamblado, la versión, la referencia cultural y el token de clave pública (si existe). El tiempo de ejecución usa esta información para buscar el ensamblado, siguiendo los pasos descritos más adelante en esta sección. El tiempo de ejecución usa el mismo proceso de resolución, sin tener en cuenta si la referencia es para un ensamblado estático o dinámico.  
   
- También puede hacer una referencia dinámica a un ensamblado proporcionando el método de llamada únicamente con información parcial sobre el ensamblado, por ejemplo especificando solo el nombre de ensamblado. En este caso, el ensamblado solo se busca en el directorio de la aplicación y no se realiza ninguna otra comprobación. Se hace una referencia parcial mediante cualquiera de los diversos métodos para cargar ensamblados, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> o <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
+ También puede hacer una referencia dinámica a un ensamblado proporcionando el método de llamada únicamente con información parcial sobre el ensamblado, por ejemplo especificando solo el nombre de ensamblado. En este caso, el ensamblado solo se busca en el directorio de la aplicación y no se realiza ninguna otra comprobación. Se hace una referencia parcial mediante cualquiera de los diversos métodos para cargar ensamblados, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>.  
   
- Por último, puede hacer una referencia dinámica mediante un método como <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> y facilitar solo información parcial. Después, califique la referencia mediante el elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.  
+ Por último, puede hacer una referencia dinámica mediante un método como <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> y facilitar solo información parcial. Después, califique la referencia mediante el elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.  
   
 > [!NOTE]
 >  Este tipo de referencia parcial no debe usarse con ensamblados que se comparten entre varias aplicaciones. Como los valores de configuración se aplican por aplicación y no por ensamblado, un ensamblado compartido que use este tipo de referencia parcial requerirá que cada aplicación que use el ensamblado compartido tenga la información calificadora en su archivo de configuración.  
@@ -66,7 +66,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
   
 4.  [Sondea el ensamblado](#step4) siguiendo estos siguientes pasos:  
   
-    1.  Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> , el tiempo de ejecución comprueba las sugerencias de ubicación.  
+    1.  Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , el tiempo de ejecución comprueba las sugerencias de ubicación.  
   
     2.  Si se encuentra un código base en los archivos de configuración, el tiempo de ejecución solo comprueba esta ubicación. Si se produce un error en este sondeo, el tiempo de ejecución determina que la solicitud de enlace produjo un error y no se llevan a cabo más sondeos.  
   
@@ -258,7 +258,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>Otras ubicaciones sondeadas  
- La ubicación del ensamblado también puede determinarse mediante el contexto de enlace actual. Esto suele ocurrir cuando se usa el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> y en escenarios de interoperabilidad COM. Si un ensamblado usa el método <xref:System.Reflection.Assembly.LoadFrom%2A> para hacer referencia a otro ensamblado, la ubicación del ensamblado que realiza la llamada se considera una pista sobre dónde se encontrará el ensamblado al que se hace referencia. Si se encuentra una coincidencia, se carga dicho ensamblado. Si no se encuentra ninguna coincidencia, el tiempo de ejecución prosigue con la semántica de búsqueda y, a continuación, consulta a Windows Installer para proporcionar el ensamblado. Si no se proporciona ningún ensamblado que coincida con la solicitud de enlace, se produce una excepción. Esta excepción es una <xref:System.TypeLoadException> en código administrado si se hacía referencia a un tipo, o una <xref:System.IO.FileNotFoundException> si no se encontró un ensamblado que se estuviera cargando.  
+ La ubicación del ensamblado también puede determinarse mediante el contexto de enlace actual. Esto suele ocurrir cuando se usa el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> y en escenarios de interoperabilidad COM. Si un ensamblado usa el método <xref:System.Reflection.Assembly.LoadFrom%2A> para hacer referencia a otro ensamblado, la ubicación del ensamblado que realiza la llamada se considera una pista sobre dónde se encontrará el ensamblado al que se hace referencia. Si se encuentra una coincidencia, se carga dicho ensamblado. Si no se encuentra ninguna coincidencia, el tiempo de ejecución prosigue con la semántica de búsqueda y, a continuación, consulta a Windows Installer para proporcionar el ensamblado. Si no se proporciona ningún ensamblado que coincida con la solicitud de enlace, se produce una excepción. Esta excepción es una <xref:System.TypeLoadException> en código administrado si se hacía referencia a un tipo, o una <xref:System.IO.FileNotFoundException> si no se encontró un ensamblado que se estuviera cargando.  
   
  Por ejemplo, si Assembly1 hace referencia a Assembly2 y Assembly1 se descargó desde http://www.code.microsoft.com/utils, dicha ubicación se considera una pista sobre dónde buscar Assembly2.dll. A continuación, el tiempo de ejecución sondea el ensamblado en http://www.code.microsoft.com/utils/Assembly2.dll y en http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si no se encuentra Assembly2 en ninguna de estas ubicaciones, el tiempo de ejecución consulta a Windows Installer.  
   
