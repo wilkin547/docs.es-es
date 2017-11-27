@@ -1,35 +1,33 @@
 ---
-title: "&#39;&lt;nombredetipo&gt;&#39; es un tipo y no se puede usar como expresi&#243;n | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30108"
-  - "vbc30108"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30108"
+title: "&#39; &lt;typename&gt;&#39; es un tipo y no se puede usar como una expresión."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30108
+- vbc30108
+helpviewer_keywords: BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2cffc528055b78fccb9953ee781dbec0af416002
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;&lt;nombredetipo&gt;&#39; es un tipo y no se puede usar como expresi&#243;n
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los errores de nombre de tipo se producen en un lugar donde es necesaria una expresión.  Las expresiones deben constar de una combinación de variables, constantes, literales, propiedades y llamadas al procedimiento `Function`.  
+# <a name="39lttypenamegt39-is-a-type-and-cannot-be-used-as-an-expression"></a>&#39; &lt;typename&gt;&#39; es un tipo y no se puede usar como una expresión.
+Aparece un nombre de tipo cuando se necesita una expresión. Las expresiones deben constar de la combinación de variables, constantes, literales, propiedades y llamadas al procedimiento `Function` .  
   
- **Identificador de error:** BC30108  
+ **Id. de error:** BC30108  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Quite el nombre de tipo y construya la expresión utilizando elementos válidos.  
+-   Quite el nombre de tipo y construya la expresión con elementos válidos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Operadores y expresiones](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

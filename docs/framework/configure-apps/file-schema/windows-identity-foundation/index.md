@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Esquema de configuración de Windows Identity Foundation
 En los temas de esta sección se proporciona información sobre el esquema de configuración de Windows Identity Foundation (WIF). También puede configurar una aplicación para usar WIF a través de clases que expone el marco de trabajo. Estas clases se indican en las secciones que tratan sobre los elementos correspondientes del esquema. A continuación se muestra la estructura básica de etiquetas XML expuesta por el esquema de configuración de WIF. Los atributos se omiten. Los comentarios resaltados indican los componentes principales del esquema.  
@@ -124,4 +122,3 @@ En los temas de esta sección se proporciona información sobre el esquema de co
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  En [Configuration, Administration, And Management](http://msdn.microsoft.com/en-us/1e03c389-de2c-4096-aaff-86b087e1bea0) (Configuración, administración y dirección) se describe cómo configurar y administrar aplicaciones y servicios de WIF.
-

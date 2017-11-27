@@ -1,61 +1,60 @@
 ---
-title: "&lt;include&gt; (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "<include> (etiqueta XML)"
-  - "include (etiqueta XML)"
+title: '&lt;incluir&gt; (Visual Basic)'
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- include XML tag
+- <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 22eebaa8da8ef082e132cfdf8cb68498bfe16d73
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;include&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Hace referencia a otro archivo que describe los tipos y miembros de su código fuente.  
+# <a name="ltincludegt-visual-basic"></a>&lt;incluir&gt; (Visual Basic)
+Hace referencia a otro archivo que describe los tipos y miembros en el código fuente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
+```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `filename`  
- Obligatorio.  Nombre del archivo que contiene la documentación.  El nombre de archivo se puede completar con una ruta de acceso.  Agregue `filename` entre comillas \(" "\).  
+ Obligatorio. El nombre del archivo que contiene la documentación. El nombre de archivo se puede calificar con una ruta de acceso. Incluya `filename` comillas dobles ("").  
   
  `tagpath`  
- Obligatorio.  Ruta de acceso de las etiquetas de `filename` que conduce a la etiqueta `name`.  Agregue la ruta entre comillas \(" "\).  
+ Obligatorio. La ruta de acceso de las etiquetas de `filename` que conduce a la etiqueta `name`. Escriba la ruta de acceso entre comillas dobles ("").  
   
  `name`  
- Obligatorio.  Especificador de nombres de la etiqueta que precede a los comentarios.  `Name` tendrá un `id`.  
+ Obligatorio. El especificador de nombre en la etiqueta que precede a los comentarios. `Name`tendrá un `id`.  
   
  `id`  
- Obligatorio.  Identificador para la etiqueta que precede a los comentarios.  Agregue el identificador entre comillas simples \(' '\).  
+ Obligatorio. El identificador de la etiqueta que precede a los comentarios. Incluya el identificador entre comillas simples (' ').  
   
-## Comentarios  
- Utilice la etiqueta `<include>` para hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros del código fuente.  Ésta es una alternativa al método habitual de colocar los comentarios de la documentación directamente en el archivo de código fuente.  
+## <a name="remarks"></a>Comentarios  
+ Use la `<include>` etiqueta para hacer referencia a comentarios colocados en otro archivo que describen los tipos y miembros en el código fuente. Esto es una alternativa a colocar los comentarios de documentación directamente en el archivo de código fuente.  
   
- La etiqueta `<include>` utiliza la recomendación W3C XML Path Language \(XPath\) Versión 1.0.  Para obtener más información sobre formas de personalizar el uso de `<include>`, puede ver http:\/\/www.w3.org\/TR\/xpath.  
+ La `<include>` etiqueta utilizará la recomendación de la versión 1.0 de W3C XML Path Language (XPath). Para obtener más información para formas de personalizar su `<include>` utilizar está disponible en http://www.w3.org/TR/xpath.  
   
-## Ejemplo  
- Este ejemplo utiliza la etiqueta `<include>` para importar comentarios de documentación del miembro de un archivo denominado `commentFile.xml`.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se utiliza la `<include>` etiqueta que se va a importar los comentarios de documentación de miembro desde un archivo denominado `commentFile.xml`.  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- El formato de `commentFile.xml` es el siguiente.  
+ El formato de la `commentFile.xml` es como sigue.  
   
-```  
+```xml  
 <Docs>  
 <Members name="Open">  
 <summary>Opens a file.</summary>  
@@ -68,5 +67,5 @@ Hace referencia a otro archivo que describe los tipos y miembros de su código f
 </Docs>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Etiquetas XML para comentarios](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

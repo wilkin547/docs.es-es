@@ -1,0 +1,73 @@
+---
+title: "&lt;configSections&gt; , elemento de &lt;configuración&gt;"
+ms.date: 05/01/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections
+helpviewer_keywords:
+- configSections Element
+- <configSections> Element
+ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
+author: guardrex
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7bcf425f345a3153a83cc60e76d87b3c32d83dbe
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
+---
+# <a name="configsections-element-for-configuration"></a>\<configSections > (elemento) para \<configuración >
+
+Contiene las declaraciones de espacio de nombres y la sección de configuración.
+
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;**\<configSections >**
+
+## <a name="attributes"></a>Atributos
+
+Ninguna
+
+## <a name="parent-element"></a>Elemento primario
+
+|     | Descripción |
+| --- | ----------- |
+| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
+
+## <a name="child-elements"></a>Elementos secundarios
+
+|     | Descripción |
+| --- | ----------- |
+| [**\<sección >**](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una declaración de sección de configuración. |
+| [**\<sectionGroup >**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Define un espacio de nombres de secciones de configuración. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/remove-element-for-configsections.md) | Quita una sección predefinido o un grupo de sección. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/clear-element-for-configsections.md) | Borra todas las secciones definidas anteriormente y grupos de sección. |
+
+## <a name="remarks"></a>Comentarios
+
+Si este elemento está en un archivo de configuración, debe ser el primer elemento secundario de la  **\<configuración >** elemento.
+
+## <a name="example"></a>Ejemplo
+
+En el ejemplo siguiente se muestra cómo definir una sección de configuración y definir la configuración de esa sección:
+
+```xml
+<configuration>
+  <configSections>
+    <section name="sampleSection"
+             type="System.Configuration.SingleTagSectionHandler" />
+  </configSections>
+  <sampleSection setting1="Value1" 
+                 setting2="value two" 
+                 setting3="third value" />
+</configuration>
+```
+
+## <a name="configuration-file"></a>Archivo de configuración
+
+Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración de máquina (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+
+## <a name="see-also"></a>Vea también
+
+[Esquema de archivos de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

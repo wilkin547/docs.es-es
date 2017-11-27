@@ -1,37 +1,41 @@
 ---
-title: "C&#243;mo: Crear flujos de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Crear flujos de trabajo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f16df123837b2233efd156bf35975e3adbe7279
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Crear flujos de trabajo
-Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas.Los temas de esta sección recorren la creación de un flujo de trabajo que usa tanto las actividades integradas \(como la actividad <xref:System.Activities.Statements.Flowchart>\) como las actividades personalizadas del tema [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md) anterior.El flujo de trabajo modela un juego de adivinanzas de números.Solo se necesita uno de los temas de esta sección para completar el tutorial; debe elegir el estilo que le interese y seguir ese paso.Sin embargo, puede completar todos los temas si lo desea.  
+# <a name="how-to-create-a-workflow"></a>Cómo: Crear flujos de trabajo
+Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En los temas de este paso de la sección por la creación de un flujo de trabajo que utiliza las actividades integradas, como el <xref:System.Activities.Statements.Flowchart> actividad y las actividades personalizadas desde el anterior [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tema. El flujo de trabajo modela un juego de adivinanzas de números. Solo se necesita uno de los temas de esta sección para completar el tutorial; debe elegir el estilo que le interese y seguir ese paso. Sin embargo, puede completar todos los temas si lo desea.  
   
 > [!NOTE]
->  Cada uno de los temas del tutorial de introducción depende de los temas anteriores.Para completar este tema, primero debe finalizar [Cómo: Crear una actividad](../../../docs/framework/windows-workflow-foundation//how-to-create-an-activity.md).  
+>  Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, debe completar primero [Cómo: crear una actividad](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Para descargar una versión completa del tutorial, vea [Windows Workflow Foundation \(WF45\): Tutorial de introducción](http://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
-## En esta sección  
- [Crear un flujo de trabajo secuencial](../../../docs/framework/windows-workflow-foundation//how-to-create-a-sequential-workflow.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Crear un flujo de trabajo secuencial](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
  Describe cómo crear un flujo de trabajo secuencial usando la actividad <xref:System.Activities.Statements.Sequence>.  
   
- [Crear un flujo de trabajo de diagrama de flujo](../../../docs/framework/windows-workflow-foundation//how-to-create-a-flowchart-workflow.md)  
+ [Crear un flujo de trabajo de diagrama de flujo](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
  Describe cómo crear un flujo de trabajo de diagrama de flujo usando la actividad <xref:System.Activities.Statements.Flowchart> .  
   
- [Crear un flujo de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation//how-to-create-a-state-machine-workflow.md)  
+ [Crear un flujo de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  Describe cómo crear un flujo de trabajo de máquina de estados usando la actividad <xref:System.Activities.Statements.StateMachine>.  
   
-## Vea también  
- [Programación de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//programming.md)
+## <a name="see-also"></a>Vea también  
+ [Programación de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)

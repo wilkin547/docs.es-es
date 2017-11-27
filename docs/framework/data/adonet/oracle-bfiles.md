@@ -1,44 +1,47 @@
 ---
-title: "Tipos de datos BFILE de Oracle | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Objetos BFILE de Oracle
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f48bd85559d55d9a1190310bcf13cd4a68625011
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tipos de datos BFILE de Oracle
-El proveedor de datos .NET Framework para Oracle incluye la clase <xref:System.Data.OracleClient.OracleBFile>, que se utiliza para trabajar con el tipo de datos <xref:System.Data.OracleClient.OracleType> de Oracle.  
+# <a name="oracle-bfiles"></a>Objetos BFILE de Oracle
+El proveedor de datos .NET Framework para Oracle incluye la clase <xref:System.Data.OracleClient.OracleBFile>, que se utiliza para trabajar con el tipo de datos <xref:System.Data.OracleClient.OracleType.BFile> de Oracle.  
   
- El tipo de datos **BFILE** de Oracle es un tipo de datos **LOB** de Oracle que contiene una referencia a datos binarios con un tamaño máximo de 4 gigabytes.  El tipo de datos **BFILE** se diferencia de otros tipos de datos **LOB** de Oracle en que sus datos se almacenan en un archivo físico en el sistema operativo en lugar de en el servidor.  Tenga en cuenta que el tipo de datos **BFILE** proporciona acceso de solo lectura a los datos.  
+ Oracle **BFILE** es de tipo de datos de Oracle **LOB** tipo de datos que contiene una referencia a datos binarios con un tamaño máximo de 4 gigabytes. Oracle **BFILE** difiere de otro Oracle **LOB** tipos de datos en que sus datos se almacenan en un archivo físico en el sistema operativo en lugar de en el servidor. Tenga en cuenta que la **BFILE** tipo de datos proporciona acceso de solo lectura a los datos.  
   
- Otras características del tipo de datos **BFILE** que lo distinguen del tipo de datos **LOB** son que:  
+ Otras características de un **BFILE** tipo de datos que distinguirla de una **LOB** tipo de datos son que:  
   
 -   contiene datos no estructurados.  
   
 -   admite el troceo en el servidor.  
   
--   utiliza semántica de copia de referencia.  Por ejemplo, si realiza una operación de copia en un **BFILE**, solo se copia el localizador de **BFILE** \(que es una referencia al archivo\).  Los datos del archivo no se copian.  
+-   utiliza semántica de copia de referencia. Por ejemplo, si realiza una operación de copia en un **BFILE**, solo el **BFILE** se copia el localizador (que es una referencia al archivo). Los datos del archivo no se copian.  
   
- El tipo de datos **BFILE** se debe utilizar para hacer referencia a los LOB que son de gran tamaño y que, por lo tanto, no resultan prácticos para almacenarse en la base de datos.  El uso de un tipo de datos **BFILE** comparado con un tipo de datos **LOB** implica una mayor sobrecarga en el cliente, el servidor y la comunicación.  El acceso a un **BFILE** es más eficiente si solo necesita obtener una pequeña cantidad de datos.  En cambio, si necesita obtener el objeto entero, es más eficiente tener acceso a los LOB residentes en la base de datos.  
+ El **BFILE** tipo de datos se debe utilizar para hacer referencia a los LOB que son de gran tamaño y por lo tanto, no resultan prácticos para almacenarse en la base de datos. Más sobrecarga de cliente y servidor, la comunicación está implicada cuando se usa un **BFILE** tipo de datos en comparación con el **LOB** tipo de datos. Resulta más eficaz para tener acceso a un **BFILE** si solo necesita obtener una pequeña cantidad de datos. En cambio, si necesita obtener el objeto entero, es más eficiente tener acceso a los LOB residentes en la base de datos.  
   
- Cada objeto **OracleBFile** no NULL está asociado con dos entidades que definen la ubicación del archivo físico subyacente:  
+ Cada usuario que no sea NULL **OracleBFile** objeto está asociado a dos entidades que definen la ubicación del archivo físico subyacente:  
   
 1.  Un objeto DIRECTORY de Oracle, que es un alias de base de datos de un directorio del sistema de archivos, y  
   
 2.  el nombre de archivo del archivo físico subyacente, que se encuentra en el directorio asociado con el objeto DIRECTORY.  
   
-## Ejemplo  
- En el siguiente ejemplo con C\# se muestra cómo puede crear un **BFILE** en una tabla de Oracle y, a continuación, recuperarlo en forma de un objeto **OracleBFile**.  Además, se demuestra el uso del objeto <xref:System.Data.OracleClient.OracleDataReader> y de los métodos **Seek** y**Read** de **OracleBFile**.  Tenga en cuenta que para utilizar este ejemplo, primero debe crear un directorio llamado "c:\\\\bfiles" y un archivo llamado "MyFile.jpg" en el servidor Oracle.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de C# siguiente se muestra cómo puede crear un **BFILE** de Oracle de la tabla y, a continuación, recuperarlo en forma de un **OracleBFile** objeto. En el ejemplo se muestra cómo utilizar el <xref:System.Data.OracleClient.OracleDataReader> objeto y el **OracleBFile** **Seek** y **lectura** métodos. Tenga en cuenta que para utilizar este ejemplo, primero debe crear un directorio denominado "c:\\\bfiles" y un archivo llamado "MyFile.jpg" en el servidor Oracle.  
   
 ```csharp  
 using System;  
@@ -93,6 +96,6 @@ public class Sample
 }  
 ```  
   
-## Vea también  
- [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Oracle y ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

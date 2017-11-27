@@ -5,17 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- EHMDA
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+f1_keywords: EHMDA
 helpviewer_keywords:
 - run-time error debugging
 - managed code, run-time debugging
@@ -42,16 +35,15 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8afc1ec3d5a1dab4412b16826bb32829f9b42263
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23de3ea6e9693c05aa81da056ac7763bced8e9a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnóstico de errores con asistentes de depuraciones administradas
 Los asistentes de depuración administrada (MDA) son ayudas para la depuración que funcionan en conjunción con Common Language Runtime (CLR) para proporcionar información sobre estado en tiempo de ejecución. Los asistentes generan mensajes informativos sobre eventos en tiempo de ejecución que de otra forma no pueden interceptar. Puede utilizar MDA para aislar errores de la aplicación difíciles de encontrar que aparecen al realizar la transición entre código administrado y no administrado. Puede habilitar o deshabilitar todos los MDA si agrega una clave al Registro de Windows o establece una variable de entorno. Puede habilitar MDA específicos mediante los valores de configuración de la aplicación. Puede establecer opciones de configuración adicionales para algunos MDA concretos en el archivo de configuración de la aplicación. Dado que estos archivos de configuración se analizan cuando se carga el motor en tiempo de ejecución, debe habilitar el MDA antes de que se inicie la aplicación administrada. No puede habilitarlo para aplicaciones que ya se han iniciado.  
@@ -198,4 +190,3 @@ Windows Registry Editor Version 5.00
   
 ## <a name="see-also"></a>Vea también  
  [Depurar, trazar y generar perfiles](../../../docs/framework/debug-trace-profile/index.md)
-

@@ -1,36 +1,38 @@
 ---
-title: "GROUPPARTITION (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: GROUPPARTITION (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ceadd193784a2c1936b0dcc2d634ae87b513e57e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# GROUPPARTITION (Entity SQL)
+# <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
 Devuelve una colección de valores de argumento que se proyecta a partir de la partición de grupo actual con la que está relacionado el agregado. El agregado `GroupPartition` es un agregado basado en un grupo y no tiene ningún formulario basado en una colección.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 GROUPPARTITION( [ALL|DISTINCT] expression )  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `expression`  
- Cualquier expresión [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ Cualquier expresión [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La consulta siguiente genera una lista de productos y una colección de cantidades de la línea de pedidos por cada producto:  
   
 ```  
@@ -64,7 +66,7 @@ select p, (select ol.Quantity as q from LOB.OrderLines as ol2 where ol2.Product 
   
  Tal y como se ve en el ejemplo, el operador agregado GROUPPARTITION facilita la obtención de una referencia al conjunto de entrada después de la agrupación.  
   
- El operador GROUPPARTITION puede especificar cualquier expresión [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en la entrada del operador cuando se utiliza el parámetro `expression`.  
+ El operador GROUPPARTITION puede especificar cualquier expresión [!INCLUDE[esql](../../../../../../includes/esql-md.md)] en la entrada del operador cuando se utiliza el parámetro `expression` .  
   
  Por ejemplo todas las expresiones de entrada siguientes a la partición de grupo son válidas:  
   
@@ -77,7 +79,7 @@ select groupkey, GroupPartition({42}) from {1,2,3} as a inner join {4,5,6} as b 
 select groupkey, GroupPartition(b > a) from {1,2,3} as a inner join {4,5,6} as b on true group by a as groupkey  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo utilizar la cláusula GROUPPARTITION con la cláusula GROUP BY. La cláusula GROUP BY agrupa las entidades `SalesOrderHeader` por `Contact`. A continuación, la cláusula GROUPPARTITION proyecta la propiedad `TotalDue` para cada grupo, produciendo una colección de decimales.  
   
  [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]

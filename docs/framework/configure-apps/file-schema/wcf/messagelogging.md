@@ -1,32 +1,34 @@
 ---
-title: "&lt;messageLogging&gt;&lt;/messageLogging&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;registro de mensajes&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e5b232e3faf1e0e8976b0c08264c8ba03988902a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;messageLogging&gt;&lt;/messageLogging&gt;
+# <a name="ltmessagelogginggt"></a>&lt;registro de mensajes&gt;
 Este elemento define los valores para las funciones del registro de mensajes de Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-<>\>  
-<>\>  
+ \<sistema. ServiceModel >  
+\<diagnóstico >  
+\<registro de mensajes >  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```xml  
 <system.serviceModel>  
    <diagnostics>  
        <messageLogging logEntireMessage="Boolean"  
@@ -74,9 +76,9 @@ Este elemento define los valores para las funciones del registro de mensajes de 
   
  Los filtros XPath se pueden agregar  para registrar mensajes concretos en los niveles de servicio y transporte. Si no se define ningún filtro, todos los mensajes se registran. Los filtros sólo se aplican a los encabezados del mensaje. Se omite el cuerpo. WCF omite el cuerpo del mensaje para mejorar el rendimiento. Si desea filtrar en base al contenido del cuerpo, puede crear un agente de escucha personalizado con un filtro que lo haga.  
   
- Necesita crear un agente de seguimiento de escucha para activar la traza del mensaje. El agente de escucha puede ser cualquier agente de escucha que funciona con el <xref:System.Diagnostics> arquitectura de traza. En el siguiente ejemplo se muestra cómo crear el agente de escucha.  
+ Necesita crear un agente de seguimiento de escucha para activar la traza del mensaje. El propio agente de escucha puede ser cualquier agente de escucha que funciona con la arquitectura de traza de <xref:System.Diagnostics>. En el siguiente ejemplo se muestra cómo crear el agente de escucha.  
   
-```  
+```xml  
 <system.diagnostics>  
     <sources>  
           <source name="System.ServiceModel" switchValue="Verbose">  
@@ -111,7 +113,7 @@ Este elemento define los valores para las funciones del registro de mensajes de 
   
 ## <a name="example"></a>Ejemplo  
   
-```  
+```xml  
 <messageLogging logEntireMessage="true"  
     logMalformedMessages="true"  
     logMessagesAtServiceLevel="true"  
@@ -125,8 +127,8 @@ Este elemento define los valores para las funciones del registro de mensajes de 
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>   
- <xref:System.ServiceModel.Diagnostics>   
- <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>   
- <xref:System.ServiceModel.Configuration.MessageLoggingElement>   
- [Configuración de registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+ <xref:System.ServiceModel.Configuration.DiagnosticSection>  
+ <xref:System.ServiceModel.Diagnostics>  
+ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  
+ <xref:System.ServiceModel.Configuration.MessageLoggingElement>  
+ [Configurar el registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)

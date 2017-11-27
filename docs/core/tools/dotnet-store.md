@@ -7,18 +7,17 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: fcf1eeba0709e05cff124bc3ae7bb93f4ca57128
-ms.contentlocale: es-es
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>Nombre
+## <a name="name"></a>Name
 
 `dotnet store`: almacena los ensamblados especificados en el [almacenamiento de paquetes en tiempo de ejecución](../deploying/runtime-store.md).
 
@@ -87,4 +86,3 @@ Almacenamiento de los paquetes especificados en *packages.csproj* sin optimizaci
 ## <a name="see-also"></a>Vea también
 
 [Runtime package store](../deploying/runtime-store.md) (Almacenamiento de paquetes en tiempo de ejecución)   
-

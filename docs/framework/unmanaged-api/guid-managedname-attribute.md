@@ -1,36 +1,34 @@
 ---
-title: "GUID_ManagedName (Atributo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-apiname: 
-  - "GUID_ManagedName"
-apilocation: 
-  - "alink.dll"
-apitype: "COM"
-f1_keywords: 
-  - "GUID_ManagedName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GUID_ManagedName (atributo)"
+title: GUID_ManagedName (Atributo)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: GUID_ManagedName
+api_location: alink.dll
+api_type: COM
+f1_keywords: GUID_ManagedName
+helpviewer_keywords: GUID_ManagedName attribute
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+topic_type: apiref
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: cf0facaa1107fcc6dcd93cbf0252024dc6f73b0a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# GUID_ManagedName (Atributo)
-Define un atributo de interfaz personalizado que especifica el nombre de espacio de nombres administrado para una biblioteca de \(componentes COM\) del modelo de objetos de componente.  
+# <a name="guidmanagedname-attribute"></a>GUID_ManagedName (Atributo)
+Define un atributo de interfaz personalizado que especifica el nombre de espacio de nombres administrado para una biblioteca de (componentes COM) del modelo de objetos de componente.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 [  
@@ -38,26 +36,26 @@ Define un atributo de interfaz personalizado que especifica el nombre de espacio
 ]  
 ```  
   
-#### Parámetros  
+#### <a name="parameters"></a>Parámetros  
  `value`  
  El nombre de espacio de nombres administrado para la biblioteca.  
   
-## Definición  
- `GUID_ManagedName` se define en Cor.h como sigue:  
+## <a name="definition"></a>Definición  
+ `GUID_ManagedName`se define en Cor.h como sigue:  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
 EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1, 0x10, 0xe6, 0xd2, 0xf9);  
 ```  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Un atributo de interfaz personalizado define los metadatos de un objeto en la biblioteca de tipos.  
   
- Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=fullName> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=fullName> para recuperar el nombre administrado del atributo.  
+ Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado del atributo.  
   
- Para obtener más información, vea [Interface Attributes](../Topic/Interface%20Attributes.md) documentación de referencia de Visual C\+\+.  
+ Para obtener más información, consulte [atributos de la interfaz](/cpp/windows/interface-attributes) documentación de referencia de Visual C++.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra una definición de biblioteca mediante el `GUID_ManagedName` atributo.  
   
 ```  
@@ -71,5 +69,5 @@ library Microsoft_VisualStudio_CommandBars
 }  
 ```  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
  **Encabezado:** Cor.h

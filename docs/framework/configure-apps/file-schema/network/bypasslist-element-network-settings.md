@@ -1,77 +1,79 @@
 ---
-title: "&lt;bypasslist&gt; (Elemento, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist> (elemento)"
-  - "bypasslist (elemento)"
+title: '&lt;bypasslist&gt; Element (Network Settings)'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist
+helpviewer_keywords:
+- bypasslist element
+- <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3d349f14535de806e0b130ef64b58333e63f1b86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;bypasslist&gt; (Elemento, Configuraci&#243;n de red)
-Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan un servidor proxy.  
+# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; Element (Network Settings)
+Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.NET >  
+\<defaultProxy >  
+\<bypasslist >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-      <bypasslist>   
+```xml  
+<bypasslist>   
 </bypasslist>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[agregar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Agrega una dirección IP o un nombre DNS a la lista de omisión del proxy.|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Borra la lista de omisión.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Quita una dirección IP o nombre DNS de la lista de omisión de proxy.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto \(HTTP\).|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
   
-## Comentarios  
- La lista de omisiones contiene expresiones regulares que describen los identificadores URI a los que tiene acceso directo una instancia de <xref:System.Net.WebRequest>, en lugar de utilizar el servidor proxy.  
+## <a name="remarks"></a>Comentarios  
+ La lista de omisión contiene expresiones regulares que describen las direcciones URI que <xref:System.Net.WebRequest> instancias directamente en lugar de tener acceso a través del servidor proxy.  
   
- Se debería tener cuidado al especificar una expresión regular para este elemento.  La expresión regular "\[a\-z\]\+\\.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com.  Para coincidir sólo con un host del dominio contoso.com, utilice un delimitador \("$"\): "\[a\-z\]\+\\.contoso\\.com$".  
+ Debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\.contoso\\.com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para buscar sólo un host en el dominio contoso.com, utilice un delimitador ("$"): "[a-z] +\\.contoso\\.com$".  
   
- Para obtener más información sobre expresiones regulares, vea .[Expresiones regulares de .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Para obtener más información sobre las expresiones regulares, vea. [Expresiones regulares de .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a>Archivos de configuración  
+ Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## Ejemplo  
- En el ejemplo de código siguiente se agregan dos direcciones a la lista de omisión.  La primera omite el proxy para todos los servidores del dominio contoso.com y la segunda omite el proxy para todos los servidores cuyas direcciones IP empiecen por 192.168.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuyas direcciones IP comienzan con 192.168.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
@@ -84,6 +86,6 @@ Proporciona un conjunto de expresiones regulares que describen direcciones que n
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

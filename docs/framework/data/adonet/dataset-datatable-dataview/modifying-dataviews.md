@@ -1,33 +1,39 @@
 ---
-title: "Modificar objetos DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Modificar objetos DataView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0a8478e9b21c6c2abdc02677305e468109e7b9fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Modificar objetos DataView
-Puede utilizar <xref:System.Data.DataView> para agregar, eliminar o modificar filas de datos de la tabla subyacente.  La posibilidad de utilizar **DataView** para modificar los datos de la tabla subyacente se controla estableciendo una de las tres propiedades booleanas de **DataView**.  Dichas propiedades son <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> y <xref:System.Data.DataView.AllowDelete%2A>.  Están establecidas como **true** de forma predeterminada.  
+# <a name="modifying-dataviews"></a>Modificar objetos DataView
+Puede utilizar <xref:System.Data.DataView> para agregar, eliminar o modificar filas de datos de la tabla subyacente. La capacidad para usar el **DataView** modificar datos en la tabla subyacente se controla estableciendo una de las tres propiedades booleanas de la **DataView**. Dichas propiedades son <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> y <xref:System.Data.DataView.AllowDelete%2A>. Se establecen al **true** de forma predeterminada.  
   
- Si **AllowNew** tiene el valor **true**, puede utilizar el método <xref:System.Data.DataView.AddNew%2A> de la **DataView** para crear una nueva <xref:System.Data.DataRowView>.  Tenga en cuenta que no se agrega realmente una nueva fila a la <xref:System.Data.DataTable> subyacente hasta que se llama al método <xref:System.Data.DataRowView.EndEdit%2A> de la **DataRowView**.  Si se llama al método <xref:System.Data.DataRowView.CancelEdit%2A> de la **DataRowView**, se descartará la nueva fila.  Tenga en cuenta también que sólo puede modificar una **DataRowView** cada vez.  Si se llama al método **AddNew** o **BeginEdit** de la **DataRowView** mientras hay una fila pendiente, se llamará implícitamente a **EndEdit** en la fila pendiente.  Cuando se llama a **EndEdit** se aplican los cambios a la **DataTable** subyacente; más tarde se pueden confirmar o rechazar mediante los métodos **AcceptChanges** o **RejectChanges** del objeto **DataTable**, **DataSet** o **DataRow**.  Cuando **AllowNew** tiene el valor **false**, se iniciará una excepción si llama al método **AddNew** de la **DataRowView**.  
+ Si **AllowNew** es **true**, puede usar el <xref:System.Data.DataView.AddNew%2A> método de la **DataView** para crear un nuevo <xref:System.Data.DataRowView>. Tenga en cuenta que una nueva fila no se agrega realmente a subyacente <xref:System.Data.DataTable> hasta que el <xref:System.Data.DataRowView.EndEdit%2A> método de la **DataRowView** se llama. Si el <xref:System.Data.DataRowView.CancelEdit%2A> método de la **DataRowView** es llama, se descartará la nueva fila. Tenga en cuenta también que se puede editar sólo uno **DataRowView** a la vez. Si se llama a la **AddNew** o **BeginEdit** método de la **DataRowView** mientras hay una fila pendiente, **EndEdit** se llamará implícitamente en el fila pendiente. Cuando **EndEdit** es llama, los cambios se aplican al subyacente **DataTable** y más tarde se pueden confirmar o rechazar mediante los **AcceptChanges** o  **RejectChanges** métodos de la **DataTable**, **conjunto de datos**, o **DataRow** objeto. Si **AllowNew** es **false**, se produce una excepción si se llama a la **AddNew** método de la **DataRowView**.  
   
- Si **AllowEdit** tiene el valor **true**, puede modificar el contenido de la **DataRow** mediante **DataRowView**.  Puede confirmar los cambios realizados en la fila subyacente mediante **DataRowView.EndEdit** o rechazarlos con **DataRowView.CancelEdit**.  Tenga en cuenta que sólo puede modificar una fila cada vez.  Si se llama a los métodos **AddNew** o **BeginEdit** de la **DataRowView** mientras hay una fila pendiente, se llamará implícitamente a **EndEdit** en la fila pendiente.  Cuando se llama a **EndEdit**, los cambios propuestos se ponen en la versión de fila **Current** de la **DataRow** subyacente; más tarde se pueden confirmar o rechazar mediante los métodos **AcceptChanges** o **RejectChanges** del objeto **DataTable**, **DataSet** o **DataRow**.  Cuando **AllowEdit** tiene el valor **false**, se iniciará una excepción si intenta modificar un valor de la **DataRowView**.  
+ Si **AllowEdit** es **true**, puede modificar el contenido de un **DataRow** a través de la **DataRowView**. Puede confirmar los cambios en la fila subyacente mediante **DataRowView.EndEdit** o rechazar los cambios mediante **DataRowView.CancelEdit**. Tenga en cuenta que sólo puede modificar una fila cada vez. Si se llama a la **AddNew** o **BeginEdit** métodos de la **DataRowView** mientras hay una fila pendiente, **EndEdit** se llamará implícitamente en la fila pendiente. Cuando **EndEdit** se llama, los cambios propuestos se colocan en la **actual** versión de fila de subyacente **DataRow** y más tarde se pueden confirmar o rechazar mediante los  **AcceptChanges** o **RejectChanges** métodos de la **DataTable**, **conjunto de datos**, o **DataRow** objeto. Si **AllowEdit** es **false**, se produce una excepción si intenta modificar un valor en el **DataView**.  
   
- Cuando se está modificando una **DataRowView** existente, seguirán provocándose eventos con los cambios propuestos de la **DataTable** subyacente.  Tenga en cuenta que si llama a **EndEdit** o a **CancelEdit** en la **DataRow** subyacente, los cambios pendientes se aplicarán o se cancelarán independientemente de que se llame o no a **EndEdit** o a **CancelEdit** en la **DataRowView**.  
+ Cuando una existente **DataRowView** se está editando, eventos de subyacente **DataTable** seguirán provocándose con los cambios propuestos. Tenga en cuenta que si se llama a **EndEdit** o **CancelEdit** en subyacente **DataRow**, pendiente cambios se aplicarán o se cancelarán independientemente de si  **EndEdit** o **CancelEdit** se llama en el **DataRowView**.  
   
- Si **AllowDelete** tiene el valor **true**, puede eliminar filas en la **DataView** mediante el método **Delete** del objeto **DataView** o **DataRowView** y las filas se eliminarán de la **DataTable** subyacente.  Más tarde puede confirmar o rechazar las eliminaciones mediante **AcceptChanges** o **RejectChanges**, respectivamente.  Cuando **AllowDelete** tiene el valor **false**, se iniciará una excepción si llama al método **Delete** del objeto **DataView** o **DataRowView**.  
+ Si **AllowDelete** es **true**, puede eliminar filas de la **DataView** mediante el uso de la **eliminar** método de la **DataView**  o **DataRowView** objeto y las filas se eliminan de subyacente **DataTable**. Más tarde puede confirmar o rechazar las eliminaciones mediante **AcceptChanges** o **RejectChanges** respectivamente. Si **AllowDelete** es **false**, se produce una excepción si se llama a la **eliminar** método de la **DataView** o  **DataRowView**.  
   
- En el siguiente ejemplo de código se deshabilita el uso de **DataView** para eliminar filas y se agrega una nueva fila a la tabla subyacente mediante la **DataView**.  
+ En el ejemplo de código siguiente se deshabilita el uso de la **DataView** para eliminar filas y se agrega una nueva fila a la tabla subyacente mediante la **DataView**.  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -40,7 +46,6 @@ Dim newDRV As DataRowView = custView.AddNew()
 newDRV("CustomerID") = "ABCDE"  
 newDRV("CompanyName") = "ABC Products"  
 newDRV.EndEdit()  
-  
 ```  
   
 ```csharp  
@@ -56,9 +61,9 @@ newDRV["CompanyName"] = "ABC Products";
 newDRV.EndEdit();  
 ```  
   
-## Vea también  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

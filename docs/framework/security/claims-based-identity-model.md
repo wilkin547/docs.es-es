@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7219e982f755542a35a33dddf74ee24f4b67e8e6
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
 Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario y otra, una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
@@ -91,4 +89,3 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
 3.  El IP vuelve a emitir un token que se devuelve al explorador.  
   
 4.  A continuación, el explorador se redirige a la página solicitada originalmente, donde WIF determina si el token cumple los requisitos para tener acceso a la misma. En ese caso, se emite una cookie para establecer una sesión de modo que la autenticación solo tenga que realizarse una vez y el control se pase a la aplicación.
-

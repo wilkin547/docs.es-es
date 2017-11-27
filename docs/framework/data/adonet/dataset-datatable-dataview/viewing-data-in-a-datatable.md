@@ -1,43 +1,49 @@
 ---
-title: "Ver datos en DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ver datos en un objeto DataTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Ver datos en DataTable
-Puede tener acceso al contenido de una <xref:System.Data.DataTable> mediante las colecciones **Rows** y **Columns** de la **DataTable**.  Se puede utilizar también el método <xref:System.Data.DataTable.Select%2A> para devolver subconjuntos de los datos de una **DataTable** según ciertos criterios como, por ejemplo, criterios de búsqueda, \>criterio de ordenación y estado de la fila.  Además, se puede utilizar el método <xref:System.Data.DataRowCollection.Find%2A> de una **DataRowCollection** cuando se busque una fila determinada mediante el valor de una clave principal.  
+# <a name="viewing-data-in-a-datatable"></a>Ver datos en un objeto DataTable
+Puede acceder al contenido de un <xref:System.Data.DataTable> mediante el uso de la **filas** y **columnas** colecciones de la **DataTable**. También puede usar el <xref:System.Data.DataTable.Select%2A> método para devolver subconjuntos de los datos en un **DataTable** según ciertos criterios como criterios de búsqueda, el criterio de ordenación y estado de la fila. Además, puede usar el <xref:System.Data.DataRowCollection.Find%2A> método de la **DataRowCollection** cuando se busque una fila determinada mediante el valor de clave principal.  
   
- El método **Select** del objeto **DataTable** devuelve un conjunto de objetos <xref:System.Data.DataRow> que cumplen con los criterios especificados.  **Select** toma argumentos opcionales de una expresión de filtro, expresión de ordenación y **DataViewRowState**.  La expresión de filtro identifica qué filas se van a devolver basándose en valores de **DataColumn** como, por ejemplo, `LastName = 'Smith'`.  La expresión de ordenación sigue convenciones SQL estándar para ordenar columnas, por ejemplo `LastName ASC, FirstName ASC`.  Para obtener las reglas de escritura de expresiones, vea la propiedad <xref:System.Data.DataColumn.Expression%2A> de la clase **DataColumn**.  
+ El **seleccione** método de la **DataTable** objeto devuelve un conjunto de <xref:System.Data.DataRow> objetos que coinciden con los criterios especificados. **Seleccione** toma argumentos opcionales de una expresión de filtro, expresión de ordenación y **DataViewRowState**. La expresión de filtro identifica qué filas a devolver basándose en **DataColumn** valores, como `LastName = 'Smith'`. La expresión de ordenación sigue convenciones SQL estándar para ordenar columnas, por ejemplo `LastName ASC, FirstName ASC`. Para las reglas de escritura de expresiones, vea el <xref:System.Data.DataColumn.Expression%2A> propiedad de la **DataColumn** clase.  
   
 > [!TIP]
->  Cuando se realizan varias llamadas al método **Select** de una **DataTable**, se puede aumentar el rendimiento mediante la creación de una <xref:System.Data.DataView> para la **DataTable**.  Al crear la **DataView**, las filas de la tabla se colocan en un índice.  A continuación, el método **Select** utiliza ese índice, lo que reduce considerablemente el tiempo necesario para generar el resultado de la consulta.  Para obtener información sobre la creación de una **DataView** para una **DataTable**, vea [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+>  Si va a realizar un número de llamadas a la **seleccione** método de un **DataTable**, se puede mejorar el rendimiento creando primero una <xref:System.Data.DataView> para el **DataTable**. Crear el **DataView** índices de las filas de la tabla. El **seleccione** (método), a continuación, utiliza ese índice, lo que reduce considerablemente el tiempo necesario para generar el resultado de la consulta. Para obtener información acerca de cómo crear un **DataView** para un **DataTable**, consulte [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- El método **Select** determina qué versión de las filas se debe ver o manipular, según un <xref:System.Data.DataViewRowState>.  En la siguiente tabla se recogen los posibles valores de la enumeración **DataViewRowState**.  
+ El **seleccione** método determina qué versión de las filas para ver o manipular según un <xref:System.Data.DataViewRowState>. La tabla siguiente describen los posibles **DataViewRowState** valores de enumeración.  
   
 |Valor DataViewRowState|Descripción|  
 |----------------------------|-----------------|  
 |**CurrentRows**|Filas actuales, incluidas las filas sin modificar, agregadas y modificadas.|  
-|**Deleted**|Una fila eliminada.|  
-|**ModifiedCurrent**|Una versión actual, que es una versión modificada de los datos originales.  \(Vea **ModifiedOriginal**.\)|  
-|**ModifiedOriginal**|Versión original de todas las filas modificadas.  La versión actual está disponible utilizando **ModifiedCurrent**.|  
+|**Eliminar**|Una fila eliminada.|  
+|**ModifiedCurrent**|Una versión actual, que es una versión modificada de los datos originales. (Consulte **ModifiedOriginal**.)|  
+|**ModifiedOriginal**|Versión original de todas las filas modificadas. La versión actual está disponible con **ModifiedCurrent**.|  
 |**Agregado**|Una fila nueva.|  
-|**Ninguna**|Ninguno.|  
+|**Ninguno**|Ninguno.|  
 |**OriginalRows**|Filas originales, incluidas las filas sin modificar y las eliminadas.|  
 |**Sin cambios**|Una fila sin modificar.|  
   
- En el ejemplo siguiente, el objeto **DataSet** se filtra de manera que se trabaje solo con las filas cuyo **DataViewRowState** está establecido en **CurrentRows**.  
+ En el ejemplo siguiente, la **conjunto de datos** objeto se filtra para que sólo está trabajando con las filas cuyo **DataViewRowState** está establecido en **CurrentRows**.  
   
 ```vb  
 Dim column As DataColumn  
@@ -65,7 +71,6 @@ Else
     Console.WriteLine(vbTab & rowState)  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -91,7 +96,7 @@ else
 }  
 ```  
   
- El método **Select** se puede utilizar para devolver filas con valores de **RowState** o valores de campo distintos.  En el ejemplo siguiente se devuelve una matriz **DataRow** que hace referencia a todas las filas que se han eliminado y devuelve otra matriz **DataRow** que hace referencia a todas las filas, ordenadas por **CustLName**, donde la columna **CustID** es mayor que 5.  Para obtener información sobre cómo ver la información en la fila **Deleted**, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ El **seleccione** método se puede utilizar para devolver filas con distintos **RowState** valores o valores de campo. En el ejemplo siguiente se devuelve una **DataRow** matriz que hace referencia a todas las filas que se han eliminado y devuelve otra **DataRow** matriz que hace referencia a todas las filas, ordenadas por **CustLName**, donde el **CustID** columna es mayor que 5. Para obtener información sobre cómo ver la información de la **Deleted** de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -100,7 +105,6 @@ Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowSta
 ' Retrieve rows where CustID > 5, and order by CustLName.  
 Dim custRows() As DataRow = workTable.Select( _  
     "CustID > 5", "CustLName ASC")  
-  
 ```  
   
 ```csharp  
@@ -112,11 +116,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## Vea también  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataViewRowState>   
- [Manipular datos en DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataViewRowState>  
+ [Manipular datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

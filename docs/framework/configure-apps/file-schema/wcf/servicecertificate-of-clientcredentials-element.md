@@ -1,64 +1,73 @@
 ---
-title: "Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3bd2cf4cf96fd2b80fc08523b42bd8aa2379c2d4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt;
+# <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a>Elemento &lt;serviceCertificate&gt; de &lt;clientCredentials&gt;
 Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.  
   
-## Sintaxis  
+ \<sistema. ServiceModel >  
+\<comportamientos >  
+\<endpointBehaviors >  
+\<comportamiento >  
+\<clientCredentials >  
+\<serviceCertificate >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <serviceCertificate />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<defaultCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|Especifica un certificado X.509 que se usará cuando un servicio o STS no proporcione uno a través de un protocolo de negociación.|  
-|[\<scopedCertificates\>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Representa una colección de certificados X.509 proporcionada por servicios concretos \(con ámbito\) para la autenticación.  Esta colección se utiliza normalmente para especificar los certificados de servicio para los servicios de token de seguridad en un escenario asociado externo.|  
-|[\<autenticación\>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|Especifica los comportamientos de autenticación para los certificados de servicio utilizados por un cliente.|  
+|-------------|-----------------|  
+|[\<defaultCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)|Especifica un certificado X.509 que se usará cuando un servicio o STS no proporcione uno a través de un protocolo de negociación.|  
+|[\<scopedCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)|Representa una colección de certificados X.509 proporcionada por servicios concretos (con ámbito) para la autenticación. Esta colección se utiliza normalmente para especificar los certificados de servicio para los servicios de token de seguridad en un escenario asociado externo.|  
+|[\<autenticación >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)|Especifica los comportamientos de autenticación para los certificados de servicio utilizados por un cliente.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<clientCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica las credenciales utilizadas por el cliente para autenticarse a un servicio.|  
+|-------------|-----------------|  
+|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica las credenciales utilizadas por el cliente para autenticarse a un servicio.|  
   
-## Comentarios  
- Este elemento de configuración especifica la configuración utilizada por el cliente para validar el certificado presentado por el servicio utilizando la autenticación SSL.  También contiene cualquier certificado para el servicio que se configura explícitamente en el cliente y que se utiliza para cifrar los mensajes para el servicio, utilizando la seguridad de mensaje.  
+## <a name="remarks"></a>Comentarios  
+ Este elemento de configuración especifica la configuración utilizada por el cliente para validar el certificado presentado por el servicio utilizando la autenticación SSL. También contiene cualquier certificado para el servicio que se configura explícitamente en el cliente y que se utiliza para cifrar los mensajes para el servicio, utilizando la seguridad de mensaje.  
   
- Los atributos del elemento `serviceCertificate` son idénticos a los atributos del [\<clientCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+ Los atributos de la `serviceCertificate` elemento son idénticos a los atributos de la [ \<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement>   
- <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>   
- <xref:System.ServiceModel.Description.ClientCredentials>   
- <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>   
- <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>   
- <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>   
- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)   
- [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)   
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
+ <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ServiceCertificate%2A>  
+ <xref:System.ServiceModel.Description.ClientCredentials>  
+ <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>  
+ <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>  
+ <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
+ [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)  
+ [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

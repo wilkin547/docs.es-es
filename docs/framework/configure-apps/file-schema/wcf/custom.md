@@ -1,65 +1,74 @@
 ---
-title: "&lt;personalizadas&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;personalizado&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5bccfc95313ae3ae4a692be2165dc694783a460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;personalizadas&gt;
+# <a name="ltcustomgt"></a>&lt;personalizado&gt;
 Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.  
   
-## Sintaxis  
+\<system.serviceModel >  
+\<enlaces >  
+\<netPeerBinding >  
+\<enlace >  
+\<resolución >  
+\<personalizado >  
   
+## <a name="syntax"></a>Sintaxis  
+  
+```xml
+<custom address="Uri" 
+        resolverType="String">  
+  <headers/>  
+  <identity/>  
+</custom>  
 ```  
   
-<custom address="Uri"  
-   resolverType="String">  
-      <headers/>  
-   <identity/>  
-</peerResolver>  
-```  
-  
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
+|---------------|-----------------|  
 |`address`|Un URI que especifica la dirección de extremo del nodo de iguales que hospeda el servicio de resolución del mismo nivel personalizado.|  
 |`resolverType`|Una cadena que especifica el tipo de servicio de resolución del mismo nivel personalizado.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<identidad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad para las resoluciones del mismo nivel personalizadas configuradas con este elemento.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.IdentityElement>.|  
-|[\<encabezados\>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Una colección de encabezado de dirección usada para mensajes SOAP administrados por la resolución del mismo nivel personalizada.|  
+|-------------|-----------------|  
+|[\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad para las resoluciones del mismo nivel personalizadas configuradas con este elemento. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IdentityElement>.|  
+|[\<encabezados >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Una colección de encabezado de dirección usada para mensajes SOAP administrados por la resolución del mismo nivel personalizada.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<resolver\>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Una resolución del mismo nivel que se usa para resolver un Id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.|  
+|-------------|-----------------|  
+|[\<resolución >](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Una resolución del mismo nivel que se usa para resolver un Id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.|  
   
-## Comentarios  
- Este elemento define la configuración básica para un servicio de la resolución del mismo nivel personalizado, incluso la dirección de extremo del igual que hospeda el servicio y cualquier configuración obligatoria concreta.  Para obtener más información acerca de cómo crear una resolución personalizada, vea [Adding a Custom Resolver to a PeerChannel Application](http://msdn.microsoft.com/es-es/12aa3787-2962-439c-ad27-46523c8b0419).  
+## <a name="remarks"></a>Comentarios  
+ Este elemento define la configuración básica para un servicio de la resolución del mismo nivel personalizado, incluso la dirección de punto de conexión del igual que hospeda el servicio y cualquier configuración de enlace concreta. Para obtener más información acerca de cómo crear una resolución personalizada, vea [agregando un solucionador personalizado a una aplicación de PeerChannel](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419).  
   
-## Vea también  
- <xref:System.Servicemodel.PeerResolvers.CustomPeerResolverService>   
- <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>   
- <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>   
- <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>   
- [Resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)   
- [Adding a Custom Resolver to a PeerChannel Application](http://msdn.microsoft.com/es-es/12aa3787-2962-439c-ad27-46523c8b0419)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
+ <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
+ <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
+ <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
+ [Resoluciones del mismo nivel](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [Agregar a un solucionador personalizado a una aplicación de PeerChannel](http://msdn.microsoft.com/en-us/12aa3787-2962-439c-ad27-46523c8b0419)

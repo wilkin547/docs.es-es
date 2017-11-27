@@ -1,79 +1,80 @@
 ---
-title: "&lt;schemeSettings&gt; (Elemento, Configuraci&#243;n de URI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;schemeSettings&gt; elemento (configuración de Uri)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 4cf1d2013a51985f9d7772ac0ef86e5dbb120be9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;schemeSettings&gt; (Elemento, Configuraci&#243;n de URI)
-Especifica cómo se analizará <xref:System.Uri> para esquemas concretos.  
+# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; elemento (configuración de Uri)
+Especifica cómo se analizará un <xref:System.Uri> para esquemas concretos.  
   
-## Sintaxis  
+ \<configuration>  
+\<URI >  
+\<schemeSettings >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-      <schemeSettings>   
+```xml  
+<schemeSettings>   
 </schemeSettings>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
- None  
+### <a name="attributes"></a>Atributos  
+ Ninguna  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[agregar](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Agrega un valor de esquema para un nombre de esquema.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Desactiva todos los valores de esquema existentes.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Quita un valor de esquema de un nombre de esquema.|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Agrega un valor de esquema para un nombre de esquema.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Borra todos los valores de esquema existente.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Quita un valor de esquema para un nombre de esquema.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene los valores que especifican el modo en que .NET Framework administra las direcciones web expresadas mediante identificadores uniformes de recursos \(URI\).|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contiene valores que especifican cómo .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
   
-## Comentarios  
- De forma predeterminada, la clase <xref:System.Uri?displayProperty=fullName> quita los caracteres de escape de los delimitadores de ruta de acceso codificados con porcentaje antes de ejecutar la compresión de la ruta de acceso.  Esto se implementó como un mecanismo de seguridad frente a ataques como el siguiente:  
+## <a name="remarks"></a>Comentarios  
+ De forma predeterminada, la <xref:System.Uri?displayProperty=nameWithType> delimitadores de ruta de acceso de la codificación de porcentaje de quitar los caracteres de escape de clase antes de ejecutar la compresión de la ruta de acceso. Esto se implementa como un mecanismo de seguridad frente a ataques similar al siguiente:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Si este URI se pasa a los módulos sin controlar correctamente los caracteres codificados con porcentaje, podría ocurrir que el servidor ejecute el comando siguiente:  
+ Si este URI se pasa a los módulos no se controla por ciento correctamente los caracteres codificados, podría producir en el siguiente comando que se está ejecutando el servidor:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esta razón, la clase <xref:System.Uri?displayProperty=fullName> primero quita los caracteres de escape de los delimitadores de ruta de acceso y, a continuación, aplica la compresión de la ruta de acceso.  El resultado de pasar la dirección URL malintencionada anterior al constructor de clase <xref:System.Uri?displayProperty=fullName> produce el URI siguiente:  
+ Por esta razón, <xref:System.Uri?displayProperty=nameWithType> clase primera delimitadores de ruta de acceso de los caracteres de escape anular y, a continuación, aplica la compresión de la ruta de acceso. El resultado de pasar la dirección URL malintencionada anterior a <xref:System.Uri?displayProperty=nameWithType> clase resultados de constructor en el URI siguiente:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Este comportamiento predeterminado se puede modificar para no quitar los caracteres de escape de los delimitadores de ruta de acceso codificados con porcentaje utilizando la opción de configuración schemeSettings para un esquema concreto.  
+ Este comportamiento predeterminado puede modificarse para no anula escape porcentaje de ruta de acceso codificada de los delimitadores con la opción de configuración schemeSettings para un esquema específico.  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a>Archivos de configuración  
+ Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## Ejemplo  
- El ejemplo de código siguiente muestra una configuración utilizada por la clase <xref:System.Uri> para permitir delimitadores de ruta de acceso con codificación de porcentaje para el esquema http.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra una configuración utilizada por la <xref:System.Uri> clase para admitir delimitadores de ruta de acceso con codificación de porcentaje para el esquema http.  
   
-```  
+```xml  
 <configuration>  
   <uri>  
     <schemeSettings>  
@@ -83,20 +84,20 @@ Especifica cómo se analizará <xref:System.Uri> para esquemas concretos.
 </configuration>  
 ```  
   
-## Información de elemento  
+## <a name="element-information"></a>Información de elemento  
   
-|||  
+|||
 |-|-|  
 |Espacio de nombres|Sistema|  
 |Nombre de esquema||  
 |Archivo de validación||  
 |Puede estar vacío||  
   
-## Vea también  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=fullName>   
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection?displayProperty=fullName>   
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=fullName>   
- <xref:System.GenericUriParserOptions?displayProperty=fullName>   
- <xref:System.Uri?displayProperty=fullName>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+ <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+ <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+ <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+ <xref:System.Uri?displayProperty=nameWithType>  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

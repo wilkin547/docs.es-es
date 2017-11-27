@@ -1,38 +1,35 @@
 ---
-title: "El n&#250;mero de &#237;ndices sobrepasa el n&#250;mero de dimensiones de la matriz indizada | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30106"
-  - "vbc30106"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30106"
+title: "El número de índices sobrepasa el número de dimensiones de la matriz indizada"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30106
+- vbc30106
+helpviewer_keywords: BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8fdf031734d441daca2073925f6d45d6ba9f1f52
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# El n&#250;mero de &#237;ndices sobrepasa el n&#250;mero de dimensiones de la matriz indizada
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>El número de índices sobrepasa el número de dimensiones de la matriz indizada
 El número de índices usado para obtener acceso a un elemento de matriz debe ser exactamente igual al rango de la matriz, es decir, el número de dimensiones que tiene declaradas.  
   
- **Identificador de error:** BC30106  
+ **Id. de error:** BC30106  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Quite subíndices de la referencia de la matriz hasta que el número total de subíndices sea igual a su rango.  Por ejemplo:  
+-   Quite subíndices de la referencia de la matriz hasta que el número total de subíndices sea igual al rango de la matriz. Por ejemplo:  
   
-    ```  
-    [Visual Basic]  
+    ```vb  
     Dim gameBoard(3, 3) As String  
   
     ' Incorrect code. The array has two dimensions.  
@@ -44,5 +41,5 @@ El número de índices usado para obtener acceso a un elemento de matriz debe se
     gameBoard(1, 0) = "O"  
     ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Matrices](../../../visual-basic/programming-guide/language-features/arrays/index.md)

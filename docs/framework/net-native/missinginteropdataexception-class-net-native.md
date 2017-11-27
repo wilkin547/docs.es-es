@@ -5,21 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 540ffc4aba7150c8ccac31b23162f35fec416f44
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0a7e1c02b6404f9511032d18f260726d1493d202
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Clase MissingInteropDataException (.NET Native)
 **.NET para aplicaciones de Windows para Windows 10, solo [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -32,7 +33,8 @@ ms.lasthandoff: 08/21/2017
 >  La clase `MissingInteropDataException` está diseñada únicamente para uso interno en la cadena de herramientas [!INCLUDE[net_native](../../../includes/net-native-md.md)]. No está pensada para usarse en código de terceros y tampoco debe usarse para controlar la excepción en el código de la aplicación. En su lugar, elimine la excepción. Para ello, agregue entradas al [archivo de directivas en tiempo de ejecución](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Para obtener más información, vea la sección Comentarios.  
   
 ## <a name="syntax"></a>Sintaxis  
- [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)] [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
+ [!code-csharp[ProjectN#21](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missinginteropdataexception_syntax1.cs#21)]
+ [!code-vb[ProjectN#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/projectn/vb/missinginteropdataexception_syntax1.vb#21)]  
   
  La clase `MissingInteropDataException` tiene los siguientes miembros:  
   
@@ -46,15 +48,15 @@ ms.lasthandoff: 08/21/2017
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|Obtiene una colección de pares clave-valor que proporcionan más información definida por el usuario sobre la excepción. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public string HelpLink { get; set; }`|Obtiene o establece un vínculo al archivo de ayuda asociado a esta excepción. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public int HResult { get; protected set; }`|Obtiene o establece el `HRESULT`, que es un valor numérico codificado que se asigna a una excepción específica. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public Exception InnerException { get; }`|Obtiene la excepción que ha generado la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public string Message { get; }`|Obtiene un mensaje que describe la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
+|`public IDictionary Data { get; }`|Obtiene una colección de pares clave-valor que proporcionan más información definida por el usuario sobre la excepción. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public string HelpLink { get; set; }`|Obtiene o establece un vínculo al archivo de ayuda asociado a esta excepción. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public int HResult { get; protected set; }`|Obtiene o establece el `HRESULT`, que es un valor numérico codificado que se asigna a una excepción específica. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public Exception InnerException { get; }`|Obtiene la excepción que ha generado la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public string Message { get; }`|Obtiene un mensaje que describe la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
 |`public Type MissingType { get; private set; }`|Obtiene o establece el tipo cuyos datos faltan.|  
-|`public string Source { get; set; }`|Obtiene o establece el nombre de la aplicación u objeto que produjo el error. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public string StackTrace { get; }`|Obtiene una representación de cadena de los marcos inmediatos en la pila de llamadas. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public MethodBase TargetSite { get; }`|Obtiene el método que generó la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
+|`public string Source { get; set; }`|Obtiene o establece el nombre de la aplicación u objeto que produjo el error. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public string StackTrace { get; }`|Obtiene una representación de cadena de los marcos inmediatos en la pila de llamadas. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public MethodBase TargetSite { get; }`|Obtiene el método que generó la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
   
 ## <a name="methods"></a>Métodos  
   
@@ -62,18 +64,18 @@ ms.lasthandoff: 08/21/2017
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|Determina si el objeto especificado es igual al objeto actual.  (Se hereda de <xref:System.Object>).|  
 |`protected void Finalize()`|Permite que un objeto intente liberar recursos y realizar otras operaciones de limpieza antes de que sea reclamado por la recolección de elementos no utilizados. (Se hereda de <xref:System.Object>).|  
-|`public Exception GetBaseException()`|Devuelve la excepción que es la causa raíz de una o más excepciones posteriores. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
+|`public Exception GetBaseException()`|Devuelve la excepción que es la causa raíz de una o más excepciones posteriores. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
 |`public int GetHashCode()`|Devuelve un código hash de una instancia de `MissingInteropDataException`.   (Se hereda de <xref:System.Object>).|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Establece un objeto <xref:System.Runtime.Serialization.SerializationInfo> con información sobre la excepción.  (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
-|`public Type GetType()`|Obtiene el tipo en tiempo de ejecución de la instancia actual. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Establece un objeto <xref:System.Runtime.Serialization.SerializationInfo> con información sobre la excepción.  (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
+|`public Type GetType()`|Obtiene el tipo en tiempo de ejecución de la instancia actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
 |`protected Object MemberwiseClone()`|Crea una copia superficial del objeto actual. (Se hereda de <xref:System.Object>).|  
-|`public string ToString()`|Devuelve la representación de cadena de la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
+|`public string ToString()`|Devuelve la representación de cadena de la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
   
 ## <a name="events"></a>Eventos  
   
 |Evento|Descripción|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Ocurre cuando una excepción se serializa para crear un objeto de estado de excepción que contenga datos serializados sobre la excepción. (Se hereda de <xref:System.Exception?displayProperty=fullName>).|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|Ocurre cuando una excepción se serializa para crear un objeto de estado de excepción que contenga datos serializados sobre la excepción. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|  
   
 ## <a name="usage-details"></a>Detalles de uso  
  La excepción `MissingInteropDataException` se genera cuando una llamada de método a un componente COM o de Windows en tiempo de ejecución no se puede realizar correctamente porque no hay disponible información sobre el tipo.  
@@ -83,10 +85,9 @@ ms.lasthandoff: 08/21/2017
 > [!IMPORTANT]
 >  Puesto que esta excepción indica que los metadatos que la aplicación necesita no están disponibles en tiempo de ejecución, no debe controlar esta excepción en un bloque `try`/`catch`. En su lugar, debe diagnosticar la causa de la excepción y eliminarla. Para ello, agregue la entrada apropiada a un archivo de directivas en tiempo de ejecución.  
   
- La clase `MissingInteropDataException` contiene un único miembro (la propiedad `MissingType`), que señala el tipo cuyos metadatos son necesarios para poder realizar una llamada de método correctamente. El resto de miembros se hereda de la clase base, <xref:System.Exception?displayProperty=fullName>.  
+ La clase `MissingInteropDataException` contiene un único miembro (la propiedad `MissingType`), que señala el tipo cuyos metadatos son necesarios para poder realizar una llamada de método correctamente. El resto de miembros se hereda de la clase base, <xref:System.Exception?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Exception?displayProperty=fullName>   
- [Clase MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)   
+ <xref:System.Exception?displayProperty=nameWithType>  
+ [Clase MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
  [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-

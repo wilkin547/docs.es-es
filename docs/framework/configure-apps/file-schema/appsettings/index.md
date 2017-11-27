@@ -2,14 +2,8 @@
 title: "Esquema de configuración de aplicaciones"
 ms.date: 05/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - schema app settings
 - app settings, schema [Windows Forms]
@@ -19,14 +13,12 @@ ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 16d43acc3a26c8ce7212d100e0792d40de6fa2fd
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 1d51d06895e61be60bbe9153eacb2028cb32a1fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="app-settings-schema"></a>Esquema de configuración de aplicaciones
 
 Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación.
@@ -85,4 +77,3 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 
 [Introducción a la configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [Arquitectura de configuración de la aplicación](~/docs/framework/winforms/advanced/application-settings-architecture.md)
-

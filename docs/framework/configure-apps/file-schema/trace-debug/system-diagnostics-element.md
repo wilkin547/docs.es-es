@@ -1,72 +1,73 @@
 ---
-title: "Elemento &lt;system.diagnostics&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.diagnostics> (elemento)"
-  - "system.diagnostics (elemento)"
+title: '&lt;System.Diagnostics&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics
+helpviewer_keywords:
+- <system.diagnostics> element
+- system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-caps.latest.revision: 17
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d336a0f733451cb28d8fe57af20585515b71ca4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;system.diagnostics&gt;
-Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.  
+# <a name="ltsystemdiagnosticsgt-element"></a>&lt;System.Diagnostics&gt; elemento
+Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.Diagnostics >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <system.diagnostics>   
 </system.diagnostics>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<assert\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Especifica si aparecerá o no un cuadro de mensaje al llamar al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>; también especifica el nombre del archivo donde se escriben los mensajes.|  
-|[\<performanceCounters\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Especifica el tamaño de la memoria global compartida por los contadores de rendimiento.|  
-|[\<sharedListeners\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contiene agentes de escucha a los que puede hacer referencia cualquier origen o elemento de traza.  Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar por nombre a los orígenes o trazas.|  
-|[\<orígenes\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Especifica orígenes de traza que inician mensajes de traza.|  
-|[\<Modificadores\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contiene modificadores de traza y los niveles donde éstos se establecen.|  
-|[\<trace\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes de traza.|  
+|-------------|-----------------|  
+|[\<assert>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; también indica el nombre del archivo para el que se van a escribir los mensajes.|  
+|[\<performanceCounters>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|Especifica el tamaño de la memoria global que comparten los contadores de rendimiento.|  
+|[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Contiene los agentes de escucha a los que puede hacer referencia cualquier origen o elemento de seguimiento. Los agentes de escucha identificados como agentes de escucha compartidos se pueden agregar a los orígenes o seguimientos por su nombre.|  
+|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Especifica los orígenes de seguimiento que inician mensajes de seguimiento.|  
+|[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Contiene los modificadores de seguimiento y los niveles de donde se establecen los modificadores de seguimiento.|  
+|[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo insertar un modificador de traza y un agente de escucha dentro del elemento de **\<system.diagnostics\>** .  El modificador de traza `General` se establece en el nivel [TraceLevel.Error](frlrfSystemDiagnosticsTraceLevelClassTopic).  El agente de escucha de traza `myListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo incrustar un modificador de seguimiento y un agente de escucha de seguimiento dentro de la  **\<system.diagnostics >** elemento. El `General` se ha establecido el modificador de seguimiento el <xref:System.Diagnostics.TraceLevel> nivel. El agente de escucha de seguimiento `myListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo.  
   
 > [!NOTE]
->  En la versión 2.0 de .NET Framework, se puede utilizar texto para especificar el valor de un modificador.  Por ejemplo, puede especificar `true` para <xref:System.Diagnostics.BooleanSwitch> o el texto que representa un valor de enumeración como `Error` para <xref:System.Diagnostics.TraceSwitch>.  La línea `<add name="myTraceSwitch" value="Error" />` es equivalente a `<add name="myTraceSwitch" value="1" />`.  
+>  En la versión 2.0 de .NET Framework, puede utilizar texto para especificar el valor de un modificador. Por ejemplo, puede especificar `true` para un <xref:System.Diagnostics.BooleanSwitch> o utilice el texto que representa un valor de enumeración como `Error` para un <xref:System.Diagnostics.TraceSwitch>. La línea `<add name="myTraceSwitch" value="Error" />` es equivalente a `<add name="myTraceSwitch" value="1" />`.  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <switches>  
@@ -81,7 +82,7 @@ Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enru
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.Debug>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.Debug>  
  [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

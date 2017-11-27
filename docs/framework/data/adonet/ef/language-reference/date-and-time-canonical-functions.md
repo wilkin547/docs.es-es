@@ -1,33 +1,32 @@
 ---
-title: "Funciones can&#243;nicas de fecha y hora | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Funciones canónicas de fecha y hora"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3ded6b669a5232246e2878ea26d3116774aea532
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Funciones can&#243;nicas de fecha y hora
+# <a name="date-and-time-canonical-functions"></a>Funciones canónicas de fecha y hora
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] incluye funciones canónicas de fecha y hora.  
   
-## Comentarios  
- En la tabla siguiente se muestran las funciones canónicas de fecha y hora de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. `datetime` es un valor <xref:System.DateTime>.  
+## <a name="remarks"></a>Comentarios  
+ En la tabla siguiente se muestra la fecha y hora [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funciones canónicas. `datetime`es un <xref:System.DateTime> valor.  
   
 |Función|Descripción|  
-|-------------|-----------------|  
+|--------------|-----------------|  
 |`AddNanoseconds(` `expression`, `number``)`|Agrega el `number` de nanosegundos especificado a `expression`.<br /><br /> **Argumentos**<br /><br /> `expression`: `DateTime`, `DateTimeOffset` o `Time`.<br /><br /> `number`: `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
 |`AddMicroseconds(` `expression`, `number``)`|Agrega el objeto especificado `number` de microsegundos a `expression`.<br /><br /> **Argumentos**<br /><br /> `expression`: `DateTime`, `DateTimeOffset` o `Time`.<br /><br /> `number`: `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
 |`AddMilliseconds(` `expression`, `number``)`|Agrega el objeto especificado `number` de milisegundos a `expression`.<br /><br /> **Argumentos**<br /><br /> `expression`: `DateTime`, `DateTimeOffset` o `Time`.<br /><br /> `number`: `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
@@ -37,35 +36,35 @@ caps.handback.revision: 3
 |`AddDays(` `expression`, `number``)`|Agrega el objeto especificado `number` de días a `expression`.<br /><br /> **Argumentos**<br /><br /> `expression`: `DateTime` o `DateTimeOffset`.<br /><br /> `number`: `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
 |`AddMonths(` `expression`, `number``)`|Agrega el objeto especificado `number` de meses a `expression`.<br /><br /> **Argumentos**<br /><br /> `expression`: `DateTime` o `DateTimeOffset`.<br /><br /> `number`: `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
 |`AddYears(` `expression`, `number``)`|Agrega el objeto especificado `number` de años a `expression`.<br /><br /> **Argumentos**<br /><br /> `expression`: `DateTime` o `DateTimeOffset`.<br /><br /> `number`: `Int32`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
-|`CreateDateTime(` `year`, `month`, `day`, `hour`, `minute`, `second``)`|Devuelve un valor `DateTime` nuevo como fecha y hora actuales del servidor en la zona horaria del servidor.<br /><br /> **Argumentos**<br /><br /> `year`, `month`, `day`, `hour`, `minute`: `Int16` y `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `DateTime`.|  
-|`CreateDateTimeOffset(` `year`, `month`, `day`, `hour`, `minute`, `second`, `tzoffset``)`|Devuelve un valor `DateTimeOffset` nuevo como una fecha y hora del servidor relativo a la hora universal coordinada \(UTC\).<br /><br /> **Argumentos**<br /><br /> `year`, `month`, `day`, `hour`, `minute`, `tzoffset`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `DateTimeOffset`.|  
-|`CreateTime(` `hour`, `minute`, `second``)`|Devuelve un valor `Time` nuevo como la hora actual.<br /><br /> **Argumentos**<br /><br /> `hour` y `minute`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `Time`.|  
-|`CurrentDateTime()`|Devuelve un valor `DateTime` como fecha y hora actuales del servidor en la zona horaria del servidor.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `DateTime`.|  
-|`CurrentDateTimeOffset()`|Devuelve la fecha, la hora y el desplazamiento actuales como un objeto `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `DateTimeOffset`.|  
-|`CurrentUtcDateTime()`|Devuelve un valor <xref:System.DateTime> como fecha y hora actuales del servidor en la zona horaria UTS.<br /><br /> **Valor devuelto**<br /><br /> Un objeto `DateTime`.|  
+|`CreateDateTime(` `year`, `month`, `day`, `hour`, `minute`, `second``)`|Devuelve un valor `DateTime` nuevo como fecha y hora actuales del servidor en la zona horaria del servidor.<br /><br /> **Argumentos**<br /><br /> `year`, `month`, `day`, `hour`, `minute`: `Int16` y `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Valor devuelto**<br /><br /> Objeto `DateTime`.|  
+|`CreateDateTimeOffset(` `year`, `month`, `day`, `hour`, `minute`, `second`, `tzoffset``)`|Devuelve un valor `DateTimeOffset` nuevo como una fecha y hora del servidor relativo a la hora universal coordinada (UTC).<br /><br /> **Argumentos**<br /><br /> `year`, `month`, `day`, `hour`, `minute`, `tzoffset`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Valor devuelto**<br /><br /> Objeto `DateTimeOffset`.|  
+|`CreateTime(` `hour`, `minute`, `second``)`|Devuelve un valor `Time` nuevo como la hora actual.<br /><br /> **Argumentos**<br /><br /> `hour` y `minute`: `Int32`.<br /><br /> `second`: `Double`.<br /><br /> **Valor devuelto**<br /><br /> Objeto `Time`.|  
+|`CurrentDateTime()`|Devuelve un valor `DateTime` como fecha y hora actuales del servidor en la zona horaria del servidor.<br /><br /> **Valor devuelto**<br /><br /> Objeto `DateTime`.|  
+|`CurrentDateTimeOffset()`|Devuelve la fecha, la hora y el desplazamiento actuales como un objeto `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Objeto `DateTimeOffset`.|  
+|`CurrentUtcDateTime()`|Devuelve un valor <xref:System.DateTime> como fecha y hora actuales del servidor en la zona horaria UTS.<br /><br /> **Valor devuelto**<br /><br /> Objeto `DateTime`.|  
 |`Day(` `expression` `)`|Devuelve la parte de día de `expression` como un valor `Int32` entre 1 y 31.<br /><br /> **Argumentos**<br /><br /> `DateTime` y `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 12.`<br /><br /> `Day(cast('03/12/1998' as DateTime))`|  
 |`DayOfYear(` `expression` `)`|Devuelve la parte de día de `expression` como un objeto `Int32` entre 1 y 366, donde 366 corresponde al último día de un año bisiesto.<br /><br /> **Argumentos**<br /><br /> `DateTime` o `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffNanoseconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en nanosegundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffMilliseconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en milisegundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffMicroseconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en microsegundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffSeconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en segundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffMinutes(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en minutos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffHours(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en horas, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffDays(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en días, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime` o `DateTimeOffset`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffMonths(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en meses, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime` o `DateTimeOffset`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`DiffYears(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en años, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime` o `DateTimeOffset`. **Note:**  `startExpression` y `endExpression` deben ser del mismo tipo. <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
-|`GetTotalOffsetMinutes(` `datetimeoffset` `)`|Devuelve el número de minutos que constituyen el desplazamiento de `datetimeoffset` con respecto a GMT.  Este valor está comprendido generalmente entre \+780 y \-780 \(\+ o \- 13 horas\). **Note:**  Esta función solo se admite en SQL Server 2008. <br /><br /> **Argumentos**<br /><br /> Un objeto `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffNanoseconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en nanosegundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffMilliseconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en milisegundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffMicroseconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en microsegundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffSeconds(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en segundos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffMinutes(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en minutos, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffHours(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en horas, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime`, `DateTimeOffset` o `Time`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffDays(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en días, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime` o `DateTimeOffset`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffMonths(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en meses, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime` o `DateTimeOffset`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`DiffYears(` `startExpression`, `endExpression``)`|Devuelve la diferencia, en años, entre `startExpression` y `endExpression`.<br /><br /> **Argumentos**<br /><br /> `startExpression`, `endExpression`: `DateTime` o `DateTimeOffset`. **Nota:** `startExpression` y `endExpression` debe ser del mismo tipo.   <br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
+|`GetTotalOffsetMinutes(` `datetimeoffset` `)`|Devuelve el número de minutos que constituyen el desplazamiento de `datetimeoffset` con respecto a GMT. Este valor está comprendido generalmente entre +780 y -780 (+ o - 13 horas). **Nota:** solo se admite esta función en SQL Server 2008. <br /><br /> **Argumentos**<br /><br /> Objeto `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
 |`Hour (` `expression` `)`|Devuelve la parte de hora de `expression` como un valor `Int32` entre 0 y 23.<br /><br /> **Argumentos**<br /><br /> `DateTime, Time` y `DateTimeOffset`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 22.`<br /><br /> `Hour(cast('22:35:5' as DateTime))`|  
 |`Millisecond(` `expression` `)`|Devuelve la parte de milisegundos de `expression` como un valor `Int32` entre 0 y 999.<br /><br /> **Argumentos**<br /><br /> `DateTime, Time` y `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.|  
 |`Minute(` `expression` `)`|Devuelve la parte de minutos de `expression` como un valor `Int32` entre 0 y 59.<br /><br /> **Argumentos**<br /><br /> `DateTime, Time` o `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 35`<br /><br /> `Minute(cast('22:35:5' as DateTime))`|  
-|`Month` `(``expression``)`|Devuelve la parte de mes de `expression` como un valor `Int32` entre 1 y 12.<br /><br /> **Argumentos**<br /><br /> `DateTime` o `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 3.`<br /><br /> `Month(cast('03/12/1998' as DateTime))`|  
+|`Month` `(` `expression` `)`|Devuelve la parte de mes de `expression` como un valor `Int32` entre 1 y 12.<br /><br /> **Argumentos**<br /><br /> `DateTime` o `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 3.`<br /><br /> `Month(cast('03/12/1998' as DateTime))`|  
 |`Second(` `expression` `)`|Devuelve la parte de segundos de `expression` como un valor `Int32` entre 0 y 59.<br /><br /> **Argumentos**<br /><br /> `DateTime, Time` y `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 5`<br /><br /> `Second(cast('22:35:5' as DateTime))`|  
 |`TruncateTime(` `expression` `)`|Devuelve `expression`, con los valores de tiempo truncados.<br /><br /> **Argumentos**<br /><br /> `DateTime` o `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Tipo de `expression`.|  
-|`Year(` `expression` `)`|Devuelve la parte de año de `expression` como un valor `Int32` `YYYY`.<br /><br /> **Argumentos**<br /><br /> `DateTime` y `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 1998.`<br /><br /> `Year(cast('03/12/1998' as DateTime))`|  
+|`Year(` `expression` `)`|Devuelve la parte del año `expression` como un `Int32``YYYY`.<br /><br /> **Argumentos**<br /><br /> `DateTime` y `DateTimeOffset`.<br /><br /> **Valor devuelto**<br /><br /> Interfaz `Int32`.<br /><br /> **Ejemplo**<br /><br /> `-- The following example returns 1998.`<br /><br /> `Year(cast('03/12/1998' as DateTime))`|  
   
  Estas funciones devolverán `null` si se proporciona la entrada `null`.  
   
- La funcionalidad equivalente está disponible en el proveedor administrado de Microsoft SQL Client.  Para obtener más información, consulta [SqlClient para las funciones de Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ La funcionalidad equivalente está disponible en el proveedor administrado de Microsoft SQL Client. Para obtener más información, consulte [SqlClient para Entity Framework funciones](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

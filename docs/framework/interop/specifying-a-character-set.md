@@ -5,33 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3e97c640472156c1a47ad125bffeaf39b8eb0762
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-a-character-set"></a>Especificar un juego de caracteres
-El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL. En este tema se describen ambos comportamientos.  
+El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL. En este tema se describen ambos comportamientos.  
   
  Algunas API exportan dos versiones de las funciones que toman argumentos de cadena: la versión estrecha (ANSI) y la versión ancha (Unicode). La API Win32, por ejemplo, incluye los siguientes nombres de punto de entrada para la función **MessageBox**:  
   
@@ -54,7 +51,7 @@ El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?display
   
 -   Coincidencia de nombres  
   
-     Cuando el campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> es **true**, como sucede de forma predeterminada en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], la invocación de plataforma solo busca el nombre que especifique. Por ejemplo, si especifica **MessageBox**, la invocación de plataforma busca **MessageBox** y se produce un error si no encuentra el término exacto.  
+     Cuando el campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> es **true**, como sucede de forma predeterminada en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], la invocación de plataforma solo busca el nombre que especifique. Por ejemplo, si especifica **MessageBox**, la invocación de plataforma busca **MessageBox** y se produce un error si no encuentra el término exacto.  
   
      Si el campo **ExactSpelling** es **false**, como sucede de forma predeterminada en C++ y C#, la invocación de plataforma busca primero el alias no alterado (**MessageBox**) y, luego, el nombre alterado (**MessageBoxA**) en el caso de que no se encuentre el alias no alterado. Tenga en cuenta que el comportamiento de la coincidencia de nombres en formato ANSI difiere del comportamiento de la coincidencia de nombres en formato Unicode.  
   
@@ -77,7 +74,7 @@ El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?display
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Especificar un juego de caracteres en Visual Basic  
  En el ejemplo siguiente se declara la función **MessageBox** tres veces, cada una de ellas con un comportamiento de juego de caracteres diferente. Para especificar un comportamiento de juego de caracteres en Visual Basic, agregue la palabra clave **Ansi**, **Unicode** o **Auto** a la instrucción de declaración.  
   
- Si omite la palabra clave del juego de caracteres, tal y como se hace en la primera instrucción de la declaración, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> establece como valor predeterminado el juego de caracteres ANSI. En la segunda y tercera instrucciones del ejemplo se especifica explícitamente un juego de caracteres con una palabra clave.  
+ Si omite la palabra clave del juego de caracteres, tal y como se hace en la primera instrucción de la declaración, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> establece como valor predeterminado el juego de caracteres ANSI. En la segunda y tercera instrucciones del ejemplo se especifica explícitamente un juego de caracteres con una palabra clave.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -98,7 +95,7 @@ End Class
 ```  
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>Especificar un juego de caracteres en C# y C++  
- El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> identifica el juego de caracteres subyacente como ANSI o Unicode. El juego de caracteres controla cómo se deben serializar los argumentos de cadena en un método. Use uno de los formatos siguientes para indicar el juego de caracteres:  
+ El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica el juego de caracteres subyacente como ANSI o Unicode. El juego de caracteres controla cómo se deben serializar los argumentos de cadena en un método. Use uno de los formatos siguientes para indicar el juego de caracteres:  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -152,8 +149,7 @@ extern "C" int MessageBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

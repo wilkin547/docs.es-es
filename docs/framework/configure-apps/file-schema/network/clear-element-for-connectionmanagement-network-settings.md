@@ -1,70 +1,71 @@
 ---
-title: "&lt;clear&gt; (Elemento para connectionManagement, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#clear"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<clear> (elemento), connectionManagement"
-  - "<connectionManagement>, clear (elemento)"
-  - "clear (elemento), connectionManagement"
-  - "connectionManagement, clear (elemento)"
+title: "&lt;Borrar&gt; elemento para connectionManagement (configuración de red)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#clear
+helpviewer_keywords:
+- <clear> element, connectionManagement
+- connectionManagement, clear element
+- clear element, connectionManagement
+- <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 0fe32b20b9b0a0217ecef36f65ae1ee4084e92ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;clear&gt; (Elemento para connectionManagement, Configuraci&#243;n de red)
+# <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Borrar&gt; elemento para connectionManagement (configuración de red)
 Borra la lista de administración de conexiones.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.NET >  
+\<connectionManagement >  
+\<Borrar >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <clear/>  
-  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
-## Comentarios  
- El elemento `clear` borra todas las entradas de la lista de administración de conexiones.  
+## <a name="remarks"></a>Comentarios  
+ El `clear` elemento borra todas las entradas de la lista de administración de conexiones.  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a>Archivos de configuración  
+ Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## Ejemplo  
- En el siguiente ejemplo de código se borra la lista de administración de conexiones y se agregan nuevas entradas para el servidor www.contoso.com y todos los demás hosts de red.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se borra la lista de administración de conexión y, a continuación, agrega nuevas entradas de la administración de conexión para el servidor www.contoso.com y todos los demás hosts de red.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <connectionManagement>  
@@ -76,7 +77,7 @@ Borra la lista de administración de conexiones.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Net.ServicePoint>   
- <xref:System.Net.ServicePointManager>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Net.ServicePoint>  
+ <xref:System.Net.ServicePointManager>  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

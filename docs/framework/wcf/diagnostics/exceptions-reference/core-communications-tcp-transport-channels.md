@@ -1,26 +1,29 @@
 ---
-title: "Comunicaciones b&#225;sicas: canales de transporte TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Comunicaciones básicas: canales de transporte TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d5cd057f-faec-4e21-ae0e-18bbc22bcfb1
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 92147e3887f9f82e37a4870ec6de767868c97c1b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Comunicaciones b&#225;sicas: canales de transporte TCP
+# <a name="core-communications-tcp-transport-channels"></a>Comunicaciones básicas: canales de transporte TCP
 En este tema se enumeran las excepciones generadas por los canales de transporte TCP.  
   
-## Lista de excepciones  
+## <a name="exception-list"></a>Lista de excepciones  
   
 |Código de recurso|Cadena de recurso|  
-|-----------------------|-----------------------|  
-|SocketCloseReadTimeout|El extremo remoto del socket especificado no respondió a una solicitud de cierre en el tiempo de espera asignado especificado.  Es posible que el extremo remoto no esté llamando a Cerrar después de recibir la señal EOF \(cero\) de la operación de recepción.  El tiempo asignado a esta operación puede ser una porción de un tiempo de espera mayor.|
+|-------------------|---------------------|  
+|SocketCloseReadTimeout|El extremo remoto del socket especificado no respondió a una solicitud de cierre en el tiempo de espera asignado especificado. Es posible que el extremo remoto no esté llamando a Cerrar después de recibir la señal EOF (cero) de la operación de recepción. El tiempo asignado a esta operación puede ser una porción de un tiempo de espera mayor.|

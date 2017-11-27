@@ -1,29 +1,33 @@
 ---
-title: "Restricciones declarativas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Restricciones declarativas
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a51f77864478dcefbe5b2742288f9cc91648f7bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Restricciones declarativas
-Las restricciones declarativas proporcionan un método eficaz de validación para una actividad y sus relaciones con otras actividades.Las restricciones se configuran para una actividad durante el proceso de creación, aunque el host del flujo de trabajo puede especificar también las restricciones adicionales.En este tema se ofrece información general sobre cómo usar restricciones declarativas para proporcionar la validación de actividad.  
+# <a name="declarative-constraints"></a>Restricciones declarativas
+Las restricciones declarativas proporcionan un método eficaz de validación para una actividad y sus relaciones con otras actividades. Las restricciones se configuran para una actividad durante el proceso de creación, aunque el host del flujo de trabajo puede especificar también las restricciones adicionales. En este tema se ofrece información general sobre cómo usar restricciones declarativas para proporcionar la validación de actividad.  
   
-## Usar restricciones declarativas  
- Una restricción es una actividad que contiene la lógica de validación.Esta actividad de restricción se puede crear en código o en XAML.Una vez creada una actividad de restricción, los autores de actividad agregan esta restricción a la propiedad <xref:System.Activities.Activity.Constraints%2A> de la actividad que se vaya a validar, o bien usan la restricción para proporcionar validación adicional mediante la propiedad <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> de una instancia de <xref:System.Activities.Validation.ValidationSettings>.La lógica de validación puede estar compuesta de validaciones simples como, por ejemplo, validar los metadatos de una actividad, aunque también puede realizar la validación que tiene en cuenta la relación de la actividad actual para sus actividades primarias, secundarias y del mismo nivel.Las restricciones se crean mediante la actividad <xref:System.Activities.Validation.Constraint%601>. Además, se proporcionan varias actividades de validación adicionales para ayudar en la creación de errores de validación y advertencias, y para proporcionar información sobre actividades relacionadas en el flujo de trabajo.  
+## <a name="using-declarative-constraints"></a>Usar restricciones declarativas  
+ Una restricción es una actividad que contiene la lógica de validación. Esta actividad de restricción se puede crear en código o en XAML. Una vez creada la actividad de restricción, los autores de actividad agregan esta restricción a la propiedad <xref:System.Activities.Activity.Constraints%2A> de la actividad que se vaya a validar, o bien usan la restricción para proporcionar validación adicional mediante la propiedad <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> de una instancia de <xref:System.Activities.Validation.ValidationSettings>. La lógica de validación puede estar compuesta de validaciones simples como, por ejemplo, validar los metadatos de una actividad, aunque también puede realizar la validación que tiene en cuenta la relación de la actividad actual para sus actividades primarias, secundarias y del mismo nivel. Las restricciones se crean mediante la actividad <xref:System.Activities.Validation.Constraint%601>. Además, se proporcionan varias actividades de validación para ayudar en la creación de errores de validación y advertencias, y para proporcionar información sobre actividades relacionadas en el flujo de trabajo.  
   
-### AssertValidation y AddValidationError  
- La actividad <xref:System.Activities.Validation.AssertValidation> evalúa la expresión a la que se hace referencia con la propiedad <xref:System.Activities.Validation.AssertValidation.Assertion%2A>. Si la expresión se evalúa como `false`, se agrega un error de validación o una advertencia a la clase <xref:System.Activities.Validation.ValidationResults>.La propiedad <xref:System.Activities.Validation.AssertValidation.Message%2A> describe el error de validación mientras que la propiedad <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> indica si el error de la validación es un error o una advertencia.El valor predeterminado de <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> es `false`.  
+### <a name="assertvalidation-and-addvalidationerror"></a>AssertValidation y AddValidationError  
+ La actividad <xref:System.Activities.Validation.AssertValidation> evalúa la expresión a la que se hace referencia con la propiedad <xref:System.Activities.Validation.AssertValidation.Assertion%2A>. Si la expresión se evalúa como `false`, se agrega un error de validación o advertencia a la clase <xref:System.Activities.Validation.ValidationResults>. La propiedad <xref:System.Activities.Validation.AssertValidation.Message%2A> describe el error de validación mientras que la propiedad <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> indica si el error de la validación es un error o una advertencia. El valor predeterminado de <xref:System.Activities.Validation.AssertValidation.IsWarning%2A> es `false`.  
   
- En el siguiente ejemplo, se declara una restricción que devuelve una advertencia de validación si la propiedad <xref:System.Activities.Activity.DisplayName%2A> de la actividad que se está validando tiene dos caracteres o menos de longitud.El parámetro de tipo genérico usado para <xref:System.Activities.Validation.Constraint%601> especifica el tipo de actividad que valida la restricción.Esta restricción usa <xref:System.Activities.Activity> como el tipo genérico y se puede usar para validar todos los tipos de actividades.  
+ En el siguiente ejemplo, se declara una restricción que devuelve una advertencia de validación si la propiedad <xref:System.Activities.Activity.DisplayName%2A> de la actividad que se está validando tiene dos caracteres o menos de longitud. El parámetro de tipo genérico usado para <xref:System.Activities.Validation.Constraint%601> especifica el tipo de actividad que valida la restricción. Esta restricción usa <xref:System.Activities.Activity> como el tipo genérico y se puede usar para validar todos los tipos de actividades.  
   
 ```csharp  
 public static Constraint ActivityDisplayNameIsNotSetWarning()  
@@ -60,14 +64,14 @@ public sealed class SampleActivity : CodeActivity
 }  
 ```  
   
- El host también puede especificar esta restricción para actividades en un flujo de trabajo mediante <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>, que se explica en la próxima sección.  
+ El host también puede especificar esta limitación para actividades de un flujo de trabajo mediante <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>, descrita en la sección siguiente  
   
- La actividad <xref:System.Activities.Validation.AddValidationError> se usa para generar un error de validación o advertencia sin tener que usar la evaluación de una expresión.Sus propiedades son similares a <xref:System.Activities.Validation.AssertValidation> y se puede usar junto con las actividades de control de flujo de una restricción como la actividad <xref:System.Activities.Statements.If>.  
+ La actividad <xref:System.Activities.Validation.AddValidationError> se usa para generar un error de validación o advertencia sin tener que usar la evaluación de una expresión. Sus propiedades son similares a <xref:System.Activities.Validation.AssertValidation> y se puede usar junto con las actividades de control de flujo de una restricción como la actividad <xref:System.Activities.Statements.If>.  
   
-### Actividades de relación de flujo de trabajo  
- Hay disponibles varias actividades de validación que proporcionan información sobre las demás actividades del flujo de trabajo en relación con la actividad que se va a validar.<xref:System.Activities.Validation.GetParentChain> devuelve una colección de actividades que contiene todas las actividades entre la actividad actual y la actividad raíz.<xref:System.Activities.Validation.GetChildSubtree> proporciona una colección de actividades que contiene las actividades secundarias en un modelo recursivo y <xref:System.Activities.Validation.GetWorkflowTree> obtiene todas las actividades del flujo de trabajo.  
+### <a name="workflow-relationship-activities"></a>Actividades de relación de flujo de trabajo  
+ Hay disponibles varias actividades de validación que proporcionan información sobre las demás actividades del flujo de trabajo en relación con la actividad que se va a validar. <xref:System.Activities.Validation.GetParentChain> devuelve una colección de actividades que contiene todas las actividades entre la actividad actual y la actividad raíz. <xref:System.Activities.Validation.GetChildSubtree> proporciona una colección de actividades que contiene las actividades secundarias en un patrón recursivo y <xref:System.Activities.Validation.GetWorkflowTree> obtiene todas las actividades del flujo de trabajo.  
   
- En el siguiente ejemplo de [Validar relaciones de actividad](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md), se define una actividad `CreateState`.La actividad `CreateState` debe estar dentro de una actividad `CreateCountry` y el método `GetParent` devuelve una restricción que aplica este requisito.`GetParent` usa la actividad <xref:System.Activities.Validation.GetParentChain> junto con una actividad <xref:System.Activities.Statements.ForEach%601> para inspeccionar las actividades primarias de la actividad `CreateState` para determinar si se cumple el requisito.  
+ En el ejemplo siguiente de la [validar relaciones de actividad](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) ejemplo, un `CreateState` la actividad se define. La actividad `CreateState` debe estar dentro de una actividad `CreateCountry` y el método `GetParent` devuelve una restricción que aplica este requisito. `GetParent` usa la actividad <xref:System.Activities.Validation.GetParentChain> junto con una actividad <xref:System.Activities.Statements.ForEach%601> para inspeccionar las actividades primarias de la actividad `CreateState` para determinar si se cumple el requisito.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -141,10 +145,10 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] los ejemplos de [Validación](../../../docs/framework/windows-workflow-foundation/samples/validation.md) de Windows Workflow Foundation.  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation [validación](../../../docs/framework/windows-workflow-foundation/samples/validation.md) ejemplos.  
   
-## Restricciones adicionales  
- Los autores de host de flujo de trabajo pueden especificar las restricciones de validación adicionales para las actividades en un flujo de trabajo creando las restricciones y agregándolas al diccionario de la propiedad <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> de una instancia de <xref:System.Activities.Validation.ValidationSettings>.Cada elemento de <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contiene el tipo de actividad en el que se aplican las restricciones y una lista de las restricciones adicionales para ese tipo de actividad.Cuando se invoca la validación para el flujo de trabajo, cada actividad del tipo especificado, incluidas las clases derivadas, evalúa las restricciones.En este ejemplo, la restricción `ActivityDisplayNameIsNotSetWarning` de la sección anterior se aplica a todas las actividades en un flujo de trabajo.  
+## <a name="additional-constraints"></a>Restricciones adicionales  
+ Los autores de host de flujo de trabajo pueden especificar las restricciones de validación adicionales para las actividades en un flujo de trabajo creando las restricciones y agregándolas al diccionario de la propiedad <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> de una instancia de <xref:System.Activities.Validation.ValidationSettings>. Cada elemento de <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contiene el tipo de actividad en el que se aplican las restricciones y una lista de las restricciones adicionales para ese tipo de actividad. Cuando se invoca la validación para el flujo de trabajo, cada actividad del tipo especificado, incluidas las clases derivadas, evalúa las restricciones. En este ejemplo, la restricción `ActivityDisplayNameIsNotSetWarning` de la sección anterior se aplica a todas las actividades en un flujo de trabajo.  
   
 ```csharp  
 Activity wf = new Sequence  
@@ -182,4 +186,4 @@ else
 }  
 ```  
   
- Si la propiedad <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> es `true`, sólo se evaluarán las restricciones adicionales especificadas cuando la validación se invoca llamando al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>.Esto puede ser útil a la hora de inspeccionar flujos de trabajo para configuraciones de validación concretas.Sin embargo, tenga en cuenta que cuando se invoca el flujo de trabajo, la lógica de validación configurada en el flujo de trabajo se evalúa y se debe pasar para que el flujo de trabajo comience correctamente.[!INCLUDE[crabout](../../../includes/crabout-md.md)] cómo invocar la validación, vea [Invocar validación de actividad](../../../docs/framework/windows-workflow-foundation//invoking-activity-validation.md).
+ Si la propiedad <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> es `true`, sólo se evaluarán las restricciones adicionales especificadas cuando la validación se invoca llamando al método <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Esto puede ser útil a la hora de inspeccionar flujos de trabajo para configuraciones de validación concretas. Sin embargo, tenga en cuenta que cuando se invoca el flujo de trabajo, la lógica de validación configurada en el flujo de trabajo se evalúa y se debe pasar para que el flujo de trabajo comience correctamente. [!INCLUDE[crabout](../../../includes/crabout-md.md)]invocar la validación, consulte [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

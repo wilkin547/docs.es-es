@@ -1,35 +1,39 @@
 ---
-title: "GetSchema y colecciones de esquemas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: GetSchema y colecciones de esquema
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4790195d5f02ac1f68f8ab4c5ef39499052cd725
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# GetSchema y colecciones de esquemas
-Las clases **Connection** de cada uno de los proveedores administrados de .NET Framework implementan un método **GetSchema** que se utiliza para recuperar información de esquema de la base de datos que está actualmente conectada. La información de esquema que devuelve el método **GetSchema** viene en forma de una <xref:System.Data.DataTable>.  El método **GetSchema** es un método sobrecargado que proporciona parámetros opcionales para especificar la colección de esquemas que se devolverá y para restringir la cantidad de información devuelta.  
+# <a name="getschema-and-schema-collections"></a>GetSchema y colecciones de esquema
+El **conexión** clases en cada uno de lo proveedores administrados de .NET Framework implementan un **GetSchema** método que se usa para recuperar información de esquema de la base de datos que está conectado actualmente, y la información de esquema devuelta desde el **GetSchema** método viene en forma de un <xref:System.Data.DataTable>. El **GetSchema** método es un método sobrecargado que proporciona parámetros opcionales para especificar la colección de esquemas para devolver y para restringir la cantidad de información devuelta.  
   
-## Especificación de las colecciones de esquemas  
- El primer parámetro opcional del método **GetSchema** es el nombre de la colección que se especifica como una cadena.  Existen dos tipos de colecciones de esquemas: comunes, que son comunes a todos los proveedores, y específicas, que son específicas de cada proveedor.  
+## <a name="specifying-the-schema-collections"></a>Especificación de las colecciones de esquemas  
+ El primer parámetro opcional de la **GetSchema** método es el nombre de la colección que se especifica como una cadena. Existen dos tipos de colecciones de esquemas: comunes, que son comunes a todos los proveedores, y específicas, que son específicas de cada proveedor.  
   
- Puede consultar un proveedor administrado de .NET Framework para determinar la lista de colecciones de esquemas admitidas mediante la llamada al método **GetSchema** sin argumentos, o con el nombre de colección de esquemas "MetaDataCollections".  Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
+ Puede consultar un proveedor administrado de .NET Framework para determinar la lista de colecciones de esquemas admitidas mediante la llamada la **GetSchema** método sin argumentos o con el nombre de la colección de esquemas "MetaDataCollections". Esto devolverá una <xref:System.Data.DataTable> con una lista de colecciones de esquemas admitidas, el número de restricciones que admite cada una y el número de partes de identificador que emplean.  
   
-### Ejemplo de recuperación de colecciones de esquemas  
- En los siguientes ejemplos se muestra cómo utilizar el método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> del proveedor de datos .NET Framework para la clase <xref:System.Data.SqlClient.SqlConnection> de SQL Server para recuperar información de esquema de todas las tablas contenidas en la base de datos de ejemplo **AdventureWorks**:  
+### <a name="retrieving-schema-collections-example"></a>Ejemplo de recuperación de colecciones de esquemas  
+ Los ejemplos siguientes muestran cómo utilizar el <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> método del proveedor de datos de .NET Framework para SQL Server <xref:System.Data.SqlClient.SqlConnection> clase para recuperar información de esquema de todas las tablas contenidas en el **AdventureWorks**base de datos de ejemplo:  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System.Data.SqlClient  
   
 Module Module1  
@@ -65,9 +69,7 @@ Module Module1
 End Module  
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -112,6 +114,6 @@ class Program
 }  
 ```  
   
-## Vea también  
- [Recuperar información de esquema de la base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Recuperar información del esquema de base de datos](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,71 +1,69 @@
 ---
-title: "Security and User Input | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], user input"
-  - "user input, security"
-  - "secure coding, user input"
-  - "code security, user input"
+title: "Seguridad e introducción de datos por el usuario"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], user input
+- user input, security
+- secure coding, user input
+- code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 804b91cdda1316bc0a3081c8353493faf8869b4f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Security and User Input
-Los datos proporcionados por el usuario, que pueden ser entradas de cualquier tipo \(datos de una solicitud Web o dirección URL, entrada de controles de una aplicación de formularios Microsoft Windows Forms, etc.\), pueden afectar negativamente al código, debido a que estos datos se suelen utilizar directamente como parámetros para llamar a otro código.  Ésta es una situación análoga a la que se produce cuando un código malintencionado llama a su código con parámetros desconocidos, por consiguiente, es necesario tomar las mismas precauciones.  En realidad, es más difícil conseguir que los datos que proporciona el usuario sean seguros ya que ningún marco de pila realiza el seguimiento de la posible existencia de datos que no sean de confianza.  
+# <a name="security-and-user-input"></a>Seguridad e introducción de datos por el usuario
+Los datos de usuario, que consisten en cualquier tipo de entrada (datos de una solicitud web o dirección URL, entrada a los controles de una aplicación de Microsoft Windows Forms etc.), pueden afectar negativamente al código, porque a menudo se utilizan esos datos directamente como parámetros para llamar a otro código. Esta situación es análoga al código malintencionado que llama a su código con parámetros extraños, y se deben tomar las mismas precauciones. La entrada del usuario es en realidad más difícil de proteger, porque no hay ningún marco de pila para realizar el seguimiento de la presencia de datos que no sean de confianza.  
   
- Estos son los errores de seguridad más sutiles y que más cuesta localizar porque, aunque pueden existir en un código que aparentemente no guarde ninguna relación con la seguridad, son una puerta de enlace para pasar datos malintencionados a otro código.  Para buscar estos errores, siga cualquier tipo de dato introducido por el usuario, suponga un posible intervalo de valores y considere si su código puede controlar todos estos casos.  Puede solucionar estos errores mediante la comprobación y rechazo de cualquier entrada del intervalo que su código no pueda controlar.  
+ Estos son los errores de seguridad más sutiles y más difíciles de localizar porque, aunque pueden existir en el código aparentemente no relacionado con la seguridad, son una puerta de enlace para que pasen datos maliciosos a otro código. Para buscar estos errores, siga cualquier tipo de datos de entrada, imagine cuál puede ser el intervalo de valores posibles y considere si el código que ve estos datos puede controlar todos esos casos. Puede corregir estos errores mediante la comprobación del intervalo y el rechazo de cualquier entrada que no puede controlar el código.  
   
- Entre los aspectos que es importante considerar con relación a los datos de usuario están los siguientes:  
+ A continuación se indican algunas consideraciones importantes que afectan a los datos de usuario:  
   
--   Todo dato de usuario en una respuesta de servidor se ejecuta en el contexto del sitio del servidor en el cliente.  Si el servidor web tiene datos de usuario y los inserta en la página Web devuelta, podría, por ejemplo, incluya una etiqueta de **\<script\>** y ejecute como si el servidor.  
+-   Los datos de usuario de una respuesta del servidor se ejecutan en el contexto del sitio del servidor en el cliente. Si el servidor web toma los datos de usuario y los inserta en la página web, podría incluir, por ejemplo, una etiqueta **\<script>** y ejecutarlos como si se encontrase en el servidor.  
   
 -   Recuerde que el cliente puede solicitar cualquier dirección URL.  
   
--   Tenga en cuenta que las rutas de acceso siguientes son complicadas o no válidas:  
+-   Tenga en cuenta las rutas de acceso complicadas o no válidas:  
   
-    -   .. \\, rutas de acceso extremadamente largas.  
+    -   ..\, rutas de acceso extremadamente largas.  
   
-    -   Rutas de acceso con caracteres comodín \(\*\).  
+    -   Uso de caracteres comodín (*).  
   
-    -   Expansión con símbolo \(%token%\).  
+    -   Expansión de token (%token%).  
   
-    -   Formatos extraños de rutas de acceso con significados especiales.  
+    -   Formatos extraños de rutas de acceso con un significado especial.  
   
-    -   Nombres alternativos en la secuencia del sistema de archivos, como `filename::$DATA`.  
+    -   Nombres de flujos de sistema de archivo alternativos, como `filename::$DATA`.  
   
-    -   Versiones abreviadas de nombres de archivo, como `longfi~1` para `longfilename`.  
+    -   Versiones cortas de los nombres de archivo como `longfi~1` para `longfilename`.  
   
--   Recuerde que la expresión Eval\(userdata\) puede hacer cualquier cosa.  
+-   Recuerde que Eval(userdata) puede hacer cualquier cosa.  
   
--   Recele de los enlaces en tiempo de ejecución a nombres que incluyan algunos datos de usuario.  
+-   Tenga cuidado de los enlaces tardíos en un nombre que incluye algunos datos de usuario.  
   
--   En el tratamiento de datos de un sitio Web, tenga en cuenta las distintas secuencias de escape permitidas, entre las que se incluyen:  
+-   Si está trabajando con datos de web, tenga en cuenta las distintas secuencias de escape permitidas, como:  
   
-    -   Secuencias de escape con codificación hexadecimal \(%nn\).  
+    -   Secuencias de escape hexadecimales (%nn).  
   
-    -   Secuencias de escape Unicode \(%nnn\).  
+    -   Secuencias de escape Unicode (%nnn).  
   
-    -   Secuencias de escape UTF\-8 excesivamente largas \(%nn%nn\).  
+    -   Secuencias de escape UTF-8 excesivamente largas (%nn%nn).  
   
-    -   Secuencias de escape dobles \(%nn se convierte en %mmnn, donde %mm es la secuencia de escape para '%'\).  
+    -   Secuencias de escape dobles (%nn se convierte en %mmnn, donde %mm es el escape para '%').  
   
--   Tenga en cuenta que los nombres de usuario pueden tener más de un formato canónico.  Por ejemplo, en Microsoft Windows 2000, con frecuencia se utiliza el formato MYDOMAIN\\*nombre de usuario* o el formato *nombredeusuario*@mydomain.example.com.  
+-   Tenga cuidado con los nombres de usuario que pueden tener más de un formato canónico. Por ejemplo, a menudo puede utilizar cualquier forma de MIDOMINIO\\*nombreUsuario* o de *nombreUsuario*@mydomain.example.com.  
   
-## Vea también  
- [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)

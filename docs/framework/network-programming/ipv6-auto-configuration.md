@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0332bca146041aa955ea000cfeee78d3f5287036
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-auto-configuration"></a>Configuración automática de IPv6
 Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es decir, debería ser posible conectar un nodo en una red IPv6 y hacer que se configurase automáticamente sin intervención humana.  
@@ -40,6 +34,5 @@ Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es
  La proliferación de dispositivos móviles ha introducido un nuevo requisito: un dispositivo debe poder cambiar de forma arbitraria las ubicaciones en Internet IPv6 y seguir manteniendo las conexiones existentes. Para proporcionar esta funcionalidad, se asigna a un nodo móvil una dirección principal en la que siempre se puede establecer contacto con él. Cuando el nodo móvil se encuentra en su ubicación principal, se conecta con el vínculo principal y usa su dirección principal. Cuando el nodo móvil cambia de ubicación, un agente principal, que normalmente es un enrutador, transmite los mensajes entre el nodo móvil y los nodos con los que se comunica.  
   
 ## <a name="see-also"></a>Vea también  
- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)
-

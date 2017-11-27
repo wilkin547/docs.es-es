@@ -1,38 +1,41 @@
 ---
-title: "Agregar referencia de servicio en un proyecto de subconjuntos port&#225;tiles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Agregar referencia de servicio en un proyecto de subconjuntos portátiles"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d7bd456b8c89c315321ad23683708d9dacc1dda2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Agregar referencia de servicio en un proyecto de subconjuntos port&#225;tiles
-Los proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y un sistema de compilación a la vez que se admiten varias plataformas .NET \(escritorio, Silverlight, Windows Phone y XBOX\).Los proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portátiles de .NET que son un ensamblado de .NET Framework que puede usarse en cualquier plataforma básica de .NET.  
+# <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
+Proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y el sistema de compilación al que se admiten varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y XBOX). Proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portátiles de .NET que son un ensamblado de .NET framework que se puede usar en cualquier implementación. NET.  
   
-## Detalles de Agregar referencia de servicio  
+## <a name="add-service-reference-details"></a>Detalles de Agregar referencia de servicio  
  Al agregar una referencia de servicio a un proyecto de subconjunto portátil se aplican las restricciones siguientes:  
   
-1.  Para <xref:System.Xml.Serialization.XmlSerializer>, solo se permiten codificaciones literales.Las codificaciones SOAP generan un error durante la importación.  
+1.  Para <xref:System.Xml.Serialization.XmlSerializer>, solo se permiten codificaciones literales. Las codificaciones SOAP generan un error durante la importación.  
   
 2.  Para los servicios que usan escenarios <xref:System.Runtime.Serialization.DataContractSerializer>, se proporciona un suplente de contrato de datos para asegurarse de que los tipos reutilizados proceden únicamente del subconjunto portátil.  
   
-3.  Se omiten los extremos que confían en enlaces no admitidos en las bibliotecas portátiles \(todos los enlaces excepto <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WsHttpBinding> sin flujo de transacción, sesiones confiables o codificación de MTOM y enlaces personalizados equivalentes\).  
+3.  Se omiten los extremos que confían en enlaces no admitidos en las bibliotecas portátiles (todos los enlaces excepto <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> sin flujo de transacción, sesiones confiables o codificación de MTOM y enlaces personalizados equivalentes).  
   
 4.  Los encabezados de mensaje se eliminan de todas las descripciones de mensaje en todas las operaciones antes de la importación.  
   
-5.  Los atributos no portátiles <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.Serializable> y <xref:System.ServiceModel.TransactionFlow> se quitan del código de proxy de cliente generado.  
+5.  Los atributos no portátiles <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> y <xref:System.ServiceModel.TransactionFlowAttribute> se quitan del código de proxy de cliente generado.  
   
-6.  Las propiedades no portátiles ProtectionLevel, SessionMode, IsInitiating e IsTerminating se quitan de <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContract> y <xref:System.ServiceModel.FaultContract>.  
+6.  Las propiedades no portátiles ProtectionLevel, SessionMode, IsInitiating e IsTerminating se quitan de <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> y <xref:System.ServiceModel.FaultContractAttribute>.  
   
 7.  Todas las operaciones de servicio se generan como operaciones asincrónicas en el proxy de cliente.  
   
@@ -50,6 +53,6 @@ Los proyectos de subconjuntos portátiles permiten a los programadores de ensamb
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> no se admite en proyectos de subconjuntos portátiles.  
   
-## Vea también  
- [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)   
- [Biblioteca de clases portable](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))
+## <a name="see-also"></a>Vea también  
+ [Acceso a los servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
+ [Biblioteca de clases Portable](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))

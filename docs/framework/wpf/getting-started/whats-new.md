@@ -1,136 +1,139 @@
 ---
-title: "Novedades de WPF versi&#243;n 4.5 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows Presentation Foundation, lo nuevo"
-  - "WPF, lo nuevo"
+title: "Novedades de WPF versión 4.5"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Presentation Foundation [WPF], what's new
+- WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-caps.latest.revision: 55
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 55
+caps.latest.revision: "55"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4dc6a35a0ff8586b91ab7d74abc182fa6002f88
+ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/11/2017
 ---
-# Novedades de WPF versi&#243;n 4.5
-<a name="introduction"></a> Este tema contiene información sobre las características nuevas y mejoradas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versión 4.5.  
+# <a name="what39s-new-in-wpf-version-45"></a>Novedades de WPF versión 4.5
+<a name="introduction"></a>Este tema contiene información sobre las características nuevas y mejoradas de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] versión 4.5.  
   
  Este tema contiene las siguientes secciones:  
   
--   [Control de la cinta de opciones](#ribbon_control)  
+-   [Control Ribbon](#ribbon_control)  
   
--   [Rendimiento mejorado para mostrar conjuntos grandes de datos agrupados](#grouped_virtualization)  
+-   [Rendimiento mejorado al mostrar grandes conjuntos de datos agrupados](#grouped_virtualization)  
   
--   [Nuevas características para el VirtualizingPanel](#VirtualizingPanel)  
+-   [Nuevas características para VirtualizingPanel](#VirtualizingPanel)  
   
--   [El enlace a las propiedades estáticas](#static_properties)  
+-   [Enlace a propiedades estáticas](#static_properties)  
   
--   [Colecciones de acceso en los subprocesos de la interfaz no de interfaz de usuario](#xthread_access)  
+-   [Acceso a colecciones en subprocesos que no son de la interfaz de usuario](#xthread_access)  
   
--   [Sincrónicamente y Permite que validan datos](#INotifyDataErrorInfo)  
+-   [Validación sincrónica y asincrónica de datos](#INotifyDataErrorInfo)  
   
--   [Actualizar automáticamente el origen de un enlace de datos](#delay)  
+-   [Actualización automática del origen de un enlace de datos](#delay)  
   
--   [El enlace a los tipos que implementan ICustomTypeProvider](#ICustomTypeProvider)  
+-   [Enlace a tipos que implementan ICustomTypeProvider](#ICustomTypeProvider)  
   
--   [Recuperar información de enlace de datos de una expresión de enlace](#binding_state)  
+-   [Recuperación de información sobre el enlace de datos de una expresión de enlace](#binding_state)  
   
--   [Comprobar el un objeto válido de DataContext](#DisconnectedSource)  
+-   [Búsqueda de un objeto DataContext válido](#DisconnectedSource)  
   
--   [Colocando datos como valores de datos cambie \(el cálculo de referencias Live\)](#live_shaping)  
+-   [Reposición de los datos a medida que cambian sus valores (modelado dinámico)](#live_shaping)  
   
--   [Compatibilidad mejorada con Establishing una referencia de Débil a un evento](#weak_event_pattern)  
+-   [Compatibilidad mejorada para establecer una referencia débil a un evento](#weak_event_pattern)  
   
--   [Nuevos métodos para la clase del distribuidor](#async)  
+-   [Nuevos métodos para la clase Dispatcher](#async)  
   
--   [Extensiones de marcado para los eventos](#events_markup_extenions)  
+-   [Extensiones de marcado para eventos](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
-## Control de la cinta de opciones  
- Las naves de WPF 4,5 con <xref:System.Windows.Controls.Ribbon.Ribbon> controlan que hospeda una barra de herramientas de acceso rápido, un menú de aplicación, y pestañas.  Para obtener más información, vea [Información general sobre la cinta de opciones](../Topic/Ribbon%20Overview.md).  
+## <a name="ribbon-control"></a>Control Ribbon  
+ WPF 4.5 se suministra con un <xref:System.Windows.Controls.Ribbon.Ribbon> control que hospeda una barra de herramientas de acceso rápido, un menú de la aplicación y pestañas.  Para más información, consulte [Información general sobre la cinta](/visualstudio/vsto/ribbon-overview).  
   
 <a name="grouped_virtualization"></a>   
-## Rendimiento mejorado para mostrar conjuntos grandes de datos agrupados  
- La virtualización de la interfaz de usuario aparece cuando un subconjunto de elementos de \(UI\) de se representa la interfaz de usuario de un número mayor de elementos de datos basándose en los elementos que están visibles en la pantalla.  <xref:System.Windows.Controls.VirtualizingPanel> define la propiedad asociada <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> que habilita la virtualización de la interfaz de usuario para los datos agrupados.  Para obtener más información sobre los datos de agrupación, vea Cómo: Ordenar y agrupar los datos Mediante una vista en XAML.  Para obtener más información sobre la virtualización de datos agrupados, vea la propiedad asociada <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> .  
+## <a name="improved-performance-when-displaying-large-sets-of-grouped-data"></a>Rendimiento mejorado al mostrar grandes conjuntos de datos agrupados  
+ La virtualización de la interfaz de usuario (UI) se produce cuando un subconjunto de sus elementos se generan a partir de un mayor número de elementos de datos en función de qué elementos estén visibles en la pantalla. El <xref:System.Windows.Controls.VirtualizingPanel> define la <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> adjunta la propiedad que habilita la virtualización de la interfaz de usuario para los datos agrupados.  Para más información acerca del agrupamiento de datos, consulte Cómo: Ordenar y agrupar datos mediante una vista en XAML.  Para obtener más información acerca de la virtualización de los datos agrupados, vea el <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizingWhenGrouping%2A> propiedad adjunta.  
   
 <a name="VirtualizingPanel"></a>   
-## Nuevas características para el VirtualizingPanel  
+## <a name="new-features-for-the-virtualizingpanel"></a>Nuevas características para VirtualizingPanel  
   
-1.  Puede especificar si <xref:System.Windows.Controls.VirtualizingPanel>, como <xref:System.Windows.Controls.VirtualizingStackPanel>, muestra elementos parciales mediante la propiedad asociada <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> .  Si <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> se establece en <xref:System.Windows.Controls.ScrollUnit>, <xref:System.Windows.Controls.VirtualizingPanel> mostrará sólo los elementos que están completamente visible.  Si <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> se establece en <xref:System.Windows.Controls.ScrollUnit>, <xref:System.Windows.Controls.VirtualizingPanel> puede mostrar elementos parcialmente visible.  
+1.  Puede especificar si una <xref:System.Windows.Controls.VirtualizingPanel>, como el <xref:System.Windows.Controls.VirtualizingStackPanel>, muestra parte de los elementos mediante el <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> propiedad adjunta. Si <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> está establecido en <xref:System.Windows.Controls.ScrollUnit.Item>, el <xref:System.Windows.Controls.VirtualizingPanel> solo se mostrarán los elementos que están completamente visibles. Si <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> está establecido en <xref:System.Windows.Controls.ScrollUnit.Pixel>, el <xref:System.Windows.Controls.VirtualizingPanel> puede mostrar los elementos parcialmente visibles.  
   
-2.  Puede especificar el tamaño de caché antes y después de la ventanilla cuando <xref:System.Windows.Controls.VirtualizingPanel> está virtualizar mediante la propiedad asociada <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> .  Caché es la cantidad de espacio encima o debajo de la ventanilla donde los elementos no se virtualizan.  Si utiliza la memoria caché evitar generar elementos de interfaz de usuario como se desplazan en la vista puede mejorar el rendimiento.  La memoria caché se rellena con una prioridad más baja de para no esté responde durante la operación.  La propiedad de <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=fullName> determina la unidad de medida utilizada por <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=fullName>.  
+2.  Puede especificar el tamaño de la memoria caché antes y después de la ventanilla cuando el <xref:System.Windows.Controls.VirtualizingPanel> virtualiza mediante el uso de la <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> propiedad adjunta.  La memoria caché es la cantidad de espacio encima o debajo de la ventanilla en el que no se virtualizarán elementos.  Usar una memoria caché para evitar que se generen elementos de UI a medida que van apareciendo por desplazamiento puede mejorar el rendimiento. La memoria caché se rellena con menor prioridad para que la aplicación no deje de responder durante la operación. El <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> propiedad determina la unidad de medida que se usa por <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
   
 <a name="static_properties"></a>   
-## El enlace a las propiedades estáticas  
- Puede utilizar las propiedades estáticas como origen de un enlace de datos.  El motor de enlace de datos reconoce cuando cambie el valor de propiedad si se produce un evento estático.  Por ejemplo, si la clase `SomeClass` define `MyProperty`propiedad denominada estático, `SomeClass` puede definir un evento estático que se provoca cuando el valor de `MyProperty` cambia.  El evento estático puede utilizar cualquiera de las signaturas siguientes.  
+## <a name="binding-to-static-properties"></a>Enlace a propiedades estáticas  
+ Puede usar propiedades estáticas como origen de un enlace de datos. El motor de enlace de datos reconoce cuándo cambia el valor de la propiedad si se genera un evento estático.  Por ejemplo, si la clase `SomeClass` define una propiedad estática denominada `MyProperty`, `SomeClass` puede definir un evento estático que se genera cuando el valor de `MyProperty` cambia.  El evento estático puede utilizar cualquiera de las siguientes firmas.  
   
 -   `public static event EventHandler MyPropertyChanged;`  
   
 -   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
- Observe que en el primer caso, expuestos por la clase un evento estático denominado *PropertyName*`Changed` que pasa <xref:System.EventArgs> el controlador de eventos.  En el segundo, la clase expone un evento estático denominado `StaticPropertyChanged` que pasa <xref:System.ComponentModel.PropertyChangedEventArgs> el controlador de eventos.  Una clase que implementa la propiedad estática puede elegir para generar notificaciones de propiedad\- cambios mediante cualquier método.  
+ Tenga en cuenta que en el primer caso, la clase expone un evento estático denominado *PropertyName* `Changed` que pasa <xref:System.EventArgs> al controlador de eventos.  En el segundo caso, la clase expone un evento estático denominado `StaticPropertyChanged` que pasa <xref:System.ComponentModel.PropertyChangedEventArgs> al controlador de eventos. Una clase que implementa la propiedad estática puede elegir generar notificaciones de cambio de propiedad mediante cualquiera de estos métodos.  
   
 <a name="xthread_access"></a>   
-## Colecciones de acceso en los subprocesos de la interfaz no de interfaz de usuario  
- WPF permite tener acceso y modificar a las recolecciones de datos en subprocesos distinto del que creó la colección.  Esto permite utilizar un subproceso de fondo para recibir datos de un origen externo, como una base de datos, y muestra los datos en el subproceso de la interfaz de usuario.  Mediante otro subproceso para modificar la colección, la interfaz de usuario permanece receptiva a la interacción del usuario.  
+## <a name="accessing-collections-on-non-ui-threads"></a>Acceso a colecciones en subprocesos que no son de la interfaz de usuario  
+ WPF permite acceder a colecciones de datos en subprocesos distintos del que creó la colección y modificarlas.  Esto le permite usar un subproceso en segundo plano para recibir datos de un origen externo, como una base de datos, y mostrar los datos en el subproceso de interfaz de usuario.  Si usa otro subproceso para modificar la colección, la interfaz de usuario sigue respondiendo a la interacción del usuario.  
   
 <a name="INotifyDataErrorInfo"></a>   
-## Sincrónicamente y Permite que validan datos  
- La interfaz de <xref:System.ComponentModel.INotifyDataErrorInfo> permite que las clases de entidad de datos para aplicar reglas de validación personalizadas y exponer los resultados de la validación de forma asincrónica.  Esta interfaz también admite objetos error personalizado, varios errores por propiedad, errores de la cruce\- propiedad, y errores de entidad\- nivel.  Para obtener más información, vea <xref:System.ComponentModel.INotifyDataErrorInfo>.  
+## <a name="synchronously-and-asynchronously-validating-data"></a>Validación sincrónica y asincrónica de datos  
+ El <xref:System.ComponentModel.INotifyDataErrorInfo> interfaz permite que las clases de entidad de datos implementar reglas de validación personalizadas y exponer los resultados de validación de forma asincrónica. Además, esta interfaz admite objetos de error personalizados, varios errores por propiedad, errores entre propiedades y errores de nivel de entidad.  Para obtener más información, consulta <xref:System.ComponentModel.INotifyDataErrorInfo>.  
   
 <a name="delay"></a>   
-## Actualizar automáticamente el origen de un enlace de datos  
- Si utiliza un enlace de datos para actualizar un origen de datos, puede utilizar la propiedad de <xref:System.Windows.Data.BindingBase.Delay%2A> para especificar una cantidad de tiempo de pasar cuando cambie la propiedad del destino antes de las actualizaciones del origen.  Por ejemplo, suponga que tiene <xref:System.Windows.Controls.Slider> que tiene el enlace de datos bidireccional de la propiedad de <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> a una propiedad de un objeto de datos y la propiedad de <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> se establece en <xref:System.Windows.Data.UpdateSourceTrigger>.  En este ejemplo, cuando el usuario mueve <xref:System.Windows.Controls.Slider>, el origen para cada píxel que <xref:System.Windows.Controls.Slider> mueve.  El objeto de origen normalmente necesita el valor del control deslizante sólo cuando <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> slider detiene el cambiar.  Para impedir actualizar el origen demasiado a menudo, utilice <xref:System.Windows.Data.BindingBase.Delay%2A> para especificar que el origen no debe actualizarse hasta que transcurra un período de tiempo después de que el control detenga el desplazamiento.  
+## <a name="automatically-updating-the-source-of-a-data-binding"></a>Actualización automática del origen de un enlace de datos  
+ Si usa un enlace de datos para actualizar un origen de datos, puede usar el <xref:System.Windows.Data.BindingBase.Delay%2A> propiedad para especificar un período de tiempo para pasar después de cambiar la propiedad de destino antes de las actualizaciones del origen.  Por ejemplo, suponga que tiene un <xref:System.Windows.Controls.Slider> que tiene su <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> enlazado a datos de propiedad bidireccionales a una propiedad de un objeto de datos y la <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> propiedad está establecida en <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  En este ejemplo, cuando el usuario mueve el <xref:System.Windows.Controls.Slider>, las actualizaciones del origen de cada píxel que las <xref:System.Windows.Controls.Slider> se mueve.  El objeto de origen normalmente necesita el valor del control deslizante solo cuando el control deslizante hacia <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> detiene el cambio.  Para evitar la actualización del origen con demasiada frecuencia, utilice <xref:System.Windows.Data.BindingBase.Delay%2A> para especificar que el origen no se debe actualizar hasta que transcurre una cierta cantidad de tiempo de control deja de moverse.  
   
 <a name="ICustomTypeProvider"></a>   
-## El enlace a los tipos que implementan ICustomTypeProvider  
- WPF admite el enlace de datos a los objetos que implementan <xref:System.Reflection.ICustomTypeProvider>, también conocidos como tipos personalizados.  Puede utilizar tipos personalizados en los casos siguientes.  
+## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>Enlace a tipos que implementan ICustomTypeProvider  
+ WPF admite enlace de datos a los objetos que implementan <xref:System.Reflection.ICustomTypeProvider>, también conocido como tipos personalizados.  Puede utilizar tipos personalizados en los casos siguientes.  
   
-1.  Como <xref:System.Windows.PropertyPath> en un enlace de datos.  Por ejemplo, la propiedad de <xref:System.Windows.Data.Binding.Path%2A> de <xref:System.Windows.Data.Binding> puede hacer referencia a una propiedad de un tipo personalizado.  
+1.  Como un <xref:System.Windows.PropertyPath> en un enlace de datos. Por ejemplo, el <xref:System.Windows.Data.Binding.Path%2A> propiedad de un <xref:System.Windows.Data.Binding> puede hacer referencia a una propiedad de un tipo personalizado.  
   
-2.  Como valor de la propiedad de <xref:System.Windows.DataTemplate.DataType%2A> .  
+2.  Como el valor de la <xref:System.Windows.DataTemplate.DataType%2A> propiedad.  
   
-3.  Como tipo que determina las columnas generadas automáticamente en <xref:System.Windows.Controls.DataGrid>.  
+3.  Como un tipo que determina las columnas generadas automáticamente en un <xref:System.Windows.Controls.DataGrid>.  
   
 <a name="binding_state"></a>   
-## Recuperar información de enlace de datos de una expresión de enlace  
- En algunos casos, podría obtener <xref:System.Windows.Data.BindingExpression> de <xref:System.Windows.Data.Binding> y necesita información sobre los objetos de origen y de destino del enlace.  Los nuevos API se han agregado para permitirle obtener el objeto de origen o de destino o la propiedad asociada.  Cuando tiene <xref:System.Windows.Data.BindingExpression>, utilice las API siguientes para obtener información sobre el destino y el origen.  
+## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Recuperación de información sobre el enlace de datos de una expresión de enlace  
+ En algunos casos, podría obtener el <xref:System.Windows.Data.BindingExpression> de un <xref:System.Windows.Data.Binding> y necesita información acerca de los objetos de origen y de destino del enlace.  Se agregaron nuevas API para permitirle obtener el objeto de origen o destino, o la propiedad asociada.  Cuando haya un <xref:System.Windows.Data.BindingExpression>, utilice las siguientes API para obtener información sobre el origen y de destino.  
   
-|Para encontrar esta opción de enlace|Utilice esta API|  
-|------------------------------------------|----------------------|  
-|El objeto de destino|<xref:System.Windows.Data.BindingExpressionBase.Target%2A?displayProperty=fullName>|  
-|La propiedad de destino|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=fullName>|  
-|El objeto de origen|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=fullName>|  
-|La propiedad de origen|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=fullName>|  
-|Si <xref:System.Windows.Data.BindingExpression> pertenece a <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=fullName>|  
-|El propietario de <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
+|Para encontrar este valor del enlace|Utilice esta API|  
+|---------------------------------------|------------------|  
+|Objeto de destino|<xref:System.Windows.Data.BindingExpressionBase.Target%2A?displayProperty=nameWithType>|  
+|Propiedad de destino|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
+|Objeto de origen|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
+|Propiedad de origen|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
+|Si el <xref:System.Windows.Data.BindingExpression> pertenece a un<xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|El propietario de un<xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
-## Comprobar el un objeto válido de DataContext  
- Hay casos donde <xref:System.Windows.FrameworkElement.DataContext%2A> de un contenedor de elementos en <xref:System.Windows.Controls.ItemsControl> esté desconectado.  Un contenedor de elemento es el elemento de la interfaz de usuario que muestra un elemento en <xref:System.Windows.Controls.ItemsControl>.  Cuando <xref:System.Windows.Controls.ItemsControl> está enlazado a datos con una colección, un contenedor de elemento se genera para cada elemento.  En algunos casos, los contenedores de elementos se quitan del árbol visual.  Dos casos típicos donde se quita un contenedor de elemento son cuando un elemento se quita de la colección subyacente y cuando la virtualización está habilitada en <xref:System.Windows.Controls.ItemsControl>.  En estos casos, la propiedad de <xref:System.Windows.FrameworkElement.DataContext%2A> de contenedor de elemento se establecerá el objeto centinela devuelto por la propiedad estática de <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=fullName> .  Debe comprobar si <xref:System.Windows.FrameworkElement.DataContext%2A> sea igual al objeto de <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> antes de tener acceso <xref:System.Windows.FrameworkElement.DataContext%2A> de un contenedor de elementos.  
+## <a name="checking-for-a-valid-datacontext-object"></a>Búsqueda de un objeto DataContext válido  
+ Hay casos donde la <xref:System.Windows.FrameworkElement.DataContext%2A> de un contenedor de elementos en una <xref:System.Windows.Controls.ItemsControl> se desconecta.  Un contenedor de elementos es el elemento de interfaz de usuario que muestra un elemento en un <xref:System.Windows.Controls.ItemsControl>.  Cuando un <xref:System.Windows.Controls.ItemsControl> datos enlazados a una colección, se genera un contenedor de elementos para cada elemento. En algunos casos, los contenedores de elementos se quitan del árbol visual. Dos casos típicos donde se quita un contenedor de elementos son cuando se quita un elemento de la colección subyacente y cuando está habilitada la virtualización en el <xref:System.Windows.Controls.ItemsControl>. En estos casos, el <xref:System.Windows.FrameworkElement.DataContext%2A> propiedad del contenedor de elemento se establecerá en el objeto de centinela devuelto por la <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A?displayProperty=nameWithType> propiedad estática.  Debe comprobar si el <xref:System.Windows.FrameworkElement.DataContext%2A> es igual a la <xref:System.Windows.Data.BindingOperations.DisconnectedSource%2A> objeto antes de acceder a la <xref:System.Windows.FrameworkElement.DataContext%2A> de un contenedor de elementos.  
   
 <a name="live_shaping"></a>   
-## Colocando datos como valores de datos cambie \(el cálculo de referencias Live\)  
- Una recolección de datos puede agrupar, ordenar, filtrar o.  WPF 4,5 habilita los datos que se reorganizarán cuando se modifican los datos.  Por ejemplo, supongamos que una aplicación utiliza <xref:System.Windows.Controls.DataGrid> para mostrar acciones en un mercado de acciones y las acciones se ordenan por el valor común.  Si la ordenación activa está habilitada en <xref:System.Windows.Data.CollectionView>de las acciones, la posición de una acción en <xref:System.Windows.Controls.DataGrid> se mueve cuando el valor de acción se convierte en mayor o menor que el valor de otra acción.  Para obtener más información, vea la interfaz <xref:System.ComponentModel.ICollectionViewLiveShaping>.  
+## <a name="repositioning-data-as-the-datas-values-change-live-shaping"></a>Reposición de los datos a medida que cambian sus valores (modelado dinámico)  
+ Una colección de datos se puede agrupar, ordenar o filtrar. WPF 4.5 permite que los datos se reorganicen cuando se modifican los datos. Por ejemplo, suponga que una aplicación utiliza un <xref:System.Windows.Controls.DataGrid> para enumerar existencias en una bolsa de valores tanto se ordenan por el valor de existencias. Si se habilita la ordenación en vivo en las existencias <xref:System.Windows.Data.CollectionView>, posición de la acción en el <xref:System.Windows.Controls.DataGrid> movimientos cuando el valor de las existencias pasa a ser mayor o valor de existencias menor que otro.   Para obtener más información, consulte el <xref:System.ComponentModel.ICollectionViewLiveShaping> interfaz.  
   
 <a name="weak_event_pattern"></a>   
-## Compatibilidad mejorada con Establishing una referencia de Débil a un evento  
- Implementar el modelo de evento débil resulta más fácil ahora porque los suscriptores a eventos pueden participar en él sin implementar una interfaz adicional.  La clase genérica de <xref:System.Windows.WeakEventManager> también permite suscriptores para participar en el modelo de evento débil si <xref:System.Windows.WeakEventManager> dedicado no existe para algún evento.  Para obtener más información, vea [Modelos de evento débil](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Compatibilidad mejorada para establecer una referencia débil a un evento  
+ Ahora es más fácil implementar el patrón de evento débil, ya que los suscriptores a eventos pueden participar en él sin necesidad de implementar una interfaz adicional.  La interfaz genérica <xref:System.Windows.WeakEventManager> clase también permite a los suscriptores participar en el modelo de evento débil si dedicada <xref:System.Windows.WeakEventManager> no existe para un determinado evento.  Para más información, consulte [Patrones de evento débil](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
-## Nuevos métodos para la clase del distribuidor  
- La clase del distribuidor define los nuevos métodos para sincrónico y las operaciones asincrónicas.  El método sincrónico de <xref:System.Windows.Threading.Dispatcher.Invoke%2A> define las sobrecargas que toman un parámetro de <xref:System.Action> o de <xref:System.Func%601> .  El nuevo método asincrónico, <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, también se <xref:System.Action> o <xref:System.Func%601> como parámetro de devolución de llamada y devuelve <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Windows.Threading.DispatcherOperation%601>.  Las clases de <xref:System.Windows.Threading.DispatcherOperation> y de <xref:System.Windows.Threading.DispatcherOperation%601> definen una propiedad de <xref:System.Threading.Tasks.Task> .  Cuando se llama a <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, puede utilizar la palabra clave de `await` con <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Threading.Tasks.Task>asociado.  Si necesita esperar sincrónicamente <xref:System.Threading.Tasks.Task> devuelto por <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Windows.Threading.DispatcherOperation%601>, llame al método de extensión de <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> .  La llamada <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=fullName> dará como resultado un interbloqueo si la operación se pone en cola en un subproceso de llamada.  Para obtener más información sobre cómo utilizar <xref:System.Threading.Tasks.Task> para realizar operaciones asincrónicas, vea [Paralelismo de tareas \(Task Parallel Library\)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+## <a name="new-methods-for-the-dispatcher-class"></a>Nuevos métodos para la clase Dispatcher  
+ La clase Dispatcher define nuevos métodos para operaciones sincrónicas y asincrónicas.  Sincrónico <xref:System.Windows.Threading.Dispatcher.Invoke%2A> método define sobrecargas que toman un <xref:System.Action> o <xref:System.Func%601> parámetro. El nuevo método asincrónico, <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, también se toma una <xref:System.Action> o <xref:System.Func%601> como el parámetro de devolución de llamada y devuelve un <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Windows.Threading.DispatcherOperation%601>.   El <xref:System.Windows.Threading.DispatcherOperation> y <xref:System.Windows.Threading.DispatcherOperation%601> clases definen un <xref:System.Threading.Tasks.Task> propiedad.  Cuando se llama a <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, puede usar el `await` palabra clave con cualquiera el <xref:System.Windows.Threading.DispatcherOperation> o asociado <xref:System.Threading.Tasks.Task>. Si tiene que esperar sincrónicamente el <xref:System.Threading.Tasks.Task> devuelto por una <xref:System.Windows.Threading.DispatcherOperation> o <xref:System.Windows.Threading.DispatcherOperation%601>, llame a la <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> método de extensión. Una llamada a <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> se producirá un interbloqueo si se pone en cola la operación en un subproceso que realiza la llamada. Para obtener más información sobre el uso de un <xref:System.Threading.Tasks.Task> para llevar a cabo operaciones asincrónicas, vea [paralelismo de tareas (Task Parallel Library)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
-## Extensiones de marcado para los eventos  
- Extensiones de marcado de la de WPF 4,5 para los eventos.  Mientras WPF no define una extensión de marcado que se utilizará para los eventos, los terceros pueden crear una extensión de marcado que se puede utilizar con eventos.  
+## <a name="markup-extensions-for-events"></a>Extensiones de marcado para eventos  
+ WPF 4.5 admite extensiones de marcado para eventos.  Aunque WPF no define ninguna extensión de marcado que se use para eventos, los terceros pueden crear una extensión de marcado que se puede utilizar con eventos.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Novedades de .NET Framework](../../../../docs/framework/whats-new/index.md)
