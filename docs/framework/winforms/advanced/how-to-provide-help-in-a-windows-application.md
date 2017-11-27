@@ -1,71 +1,72 @@
 ---
-title: "C&#243;mo: Proporcionar ayuda en una aplicaci&#243;n para Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "formularios, proporcionar ayuda"
-  - "Ayuda, aplicaciones Windows"
-  - "HelpProvider (componente) [Windows Forms]"
-  - "Ayuda HTML, Windows Forms"
-  - "aplicaciones Windows, proporcionar ayuda"
+title: "Cómo: Proporcionar ayuda en una aplicación para Windows"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help [Windows Forms], Windows applications
+- HTML Help [Windows Forms], Windows Forms
+- Windows applications [Windows Forms], providing Help
+- HelpProvider component [Windows Forms]
+- forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0f407f1c17c67ec99f4499b89c49932a4ba6d32c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Proporcionar ayuda en una aplicaci&#243;n para Windows
-Puede utilizar el componente <xref:System.Windows.Forms.HelpProvider> para asociar los temas de Ayuda dentro de un archivo de Ayuda a controles específicos en los formularios Windows Forms.  El archivo de Ayuda puede ser HTML o HTMLHelp 1.x o un formato superior.  
+# <a name="how-to-provide-help-in-a-windows-application"></a>Cómo: Proporcionar ayuda en una aplicación para Windows
+Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en formularios Windows Forms. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Para proporcionar Ayuda  
+### <a name="to-provide-help"></a>Para proporcionar ayuda  
   
-1.  En el **Cuadro de herramientas**, arrastre un componente <xref:System.Windows.Forms.HelpProvider> al formulario.  
+1.  Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Forms.HelpProvider> al formulario.  
   
-     El componente se colocará en la bandeja que se encuentra en la parte inferior del Diseñador de Windows Forms.  
+     El componente estará en la bandeja, en la parte inferior del Diseñador de Windows Forms.  
   
-2.  En la ventana **Propiedades**, establezca la propiedad <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> en el archivo de Ayuda .chm, .col o .htm.  
+2.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> propiedad al archivo de ayuda .chm, .col o. htm.  
   
-3.  Seleccione otro control del formulario y establezca la propiedad [HelpKeyword](frlrfSystemWindowsFormsHelpProviderClassSetHelpKeywordTopic) en la ventana **Propiedades**.  
+3.  Seleccione otro control tiene en el formulario y, en la **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> propiedad.  
   
-     Ésta es la cadena que se pasa al archivo de Ayuda a través del componente <xref:System.Windows.Forms.HelpProvider> para abrir el tema de Ayuda apropiado.  
+     Se trata de la cadena que se pasa a través de la <xref:System.Windows.Forms.HelpProvider> componente al archivo de ayuda para abrir el tema de Ayuda apropiado.  
   
-4.  En la ventana **Propiedades**, establezca la propiedad [HelpNavigator](frlrfSystemWindowsFormsHelpProviderClassSetHelpNavigatorTopic) en un valor de la enumeración <xref:System.Windows.Forms.HelpNavigator>.  
+4.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> en un valor de la <xref:System.Windows.Forms.HelpNavigator> enumeración.  
   
-     Esto determina de qué forma se pasa la propiedad **HelpKeyword** al sistema de Ayuda.  En la tabla siguiente se muestra la posible configuración y sus descripciones.  
+     Esto determina la forma en la que la propiedad **HelpKeyword** pasa al sistema de ayuda. La siguiente tabla muestra los valores posibles y sus descripciones.  
   
     |Nombre de miembro|Descripción|  
-    |-----------------------|-----------------|  
-    |AssociateIndex|Especifica que el índice de un tema concreto se ejecuta en la dirección URL determinada.|  
-    |Find|Especifica que se muestra la página de búsqueda de una dirección URL determinada.|  
-    |Índice|Especifica que se muestra el índice de una dirección URL determinada.|  
-    |KeywordIndex|Especifica una palabra clave para buscar y la acción que debe ejecutarse en la dirección URL determinada.|  
-    |TableOfContents|Especifica que se muestra la tabla de contenido del archivo de Ayuda HTML 1.0.|  
-    |Tema|Especifica que se muestra el tema al que hace referencia la dirección URL determinada.|  
+    |-----------------|-----------------|  
+    |AssociateIndex|Especifica que el índice de un tema determinado se realiza en la dirección URL especificada.|  
+    |Find|Especifica que se muestre la página de búsqueda de una dirección URL especificada.|  
+    |Índice|Especifica que se muestre el índice de una dirección URL especificada.|  
+    |KeywordIndex|Especifica una palabra clave que buscar y la acción que se realizará en la dirección URL especificada.|  
+    |TableOfContents|Especifica que se muestra la tabla de contenidos del archivo de ayuda HTML 1.0.|  
+    |Tema|Especifica que se muestra el tema al que hace referencia la dirección URL especificada.|  
   
- En tiempo de ejecución, si se presiona F1 cuando el control \(para el cual se han establecido las propiedades **HelpKeyword**  y **HelpNavigator** \) tiene el foco, se abrirá el archivo de Ayuda con el que está asociado ese componente <xref:System.Windows.Forms.HelpProvider>.  
+ En tiempo de ejecución, al presionar F1 cuando el control, para que ha establecido la **HelpKeyword** y **HelpNavigator** propiedades: tiene foco abrirá el archivo de ayuda asociados a ese <xref:System.Windows.Forms.HelpProvider> componente.  
   
- Actualmente, la propiedad **HelpNamespace** admite archivos de Ayuda en los formatos HTMLHelp 1.x, HTMLHelp 2.0 y HTML.  Por tanto, se puede establecer la propiedad **HelpNamespace** en una dirección http:\/\/, por ejemplo, una página Web.  Si esto se realiza, abrirá el explorador predeterminado en la página Web con la cadena especificada en la propiedad **HelpKeyword** utilizada como delimitador.  El delimitador se utiliza para saltar a una parte determinada de una página HTML.  
+ Actualmente, la propiedad **HelpNamespace** admite archivos de ayuda en los tres formatos siguientes: HTMLHelp 1.x, HTMLHelp 2.0 y HTML. Por lo tanto, puede establecer la propiedad **HelpNamespace** en una dirección http://, como una página web. Si esto sucede, se abrirá el explorador predeterminado en la página web con la cadena especificada en la propiedad **HelpKeyword** utilizada como delimitador. El delimitador se utiliza para saltar a una parte específica de una página HTML.  
   
 > [!IMPORTANT]
->  Tenga cuidado de comprobar cualquier información que se envíe desde un cliente antes de utilizarla en la aplicación.  Usuarios malintencionados podrían enviar o inyectar script ejecutable, instrucciones de SQL u otro código.  Antes de mostrar los datos facilitados por un usuario, almacenarlos en una base de datos o trabajar con ellos, compruebe que no contienen información potencialmente insegura.  Una manera típica de comprobarlo es utilizar una expresión regular para buscar palabras clave como "SCRIPT" cuando reciba información facilitada por un usuario.  
+>  Tenga cuidado de comprobar cualquier información que se envíe desde un cliente antes de utilizarla en su aplicación. Los usuarios malintencionados podrían intentar enviar o inyectar scripts ejecutables, instrucciones SQL u otro código. Antes de mostrar la entrada del usuario, almacénela en una base de datos o trabaje con ella, y compruebe que no contiene información potencialmente insegura. Una forma habitual de comprobación es utilizar una expresión regular para buscar palabras clave como "SCRIPT" cuando se recibe la entrada de un usuario.  
   
- Tenga en cuanta que se puede también utilizar el componente <xref:System.Windows.Forms.HelpProvider> para mostrar la Ayuda emergente, aunque esté configurado para mostrar archivos de Ayuda para los controles de los formularios Windows Forms.  Para obtener más información, vea [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ También puede usar el <xref:System.Windows.Forms.HelpProvider> componente para mostrar Ayuda emergente, aunque se haya configurado para mostrar archivos de ayuda para los controles en los formularios Windows Forms. Para más información, consulte [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
-## Vea también  
- [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)   
- [Controlar la ayuda mediante información sobre herramientas](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)   
- [Integrar la Ayuda de usuario en formularios Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ [Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
+ [Controlar la ayuda mediante componentes Tooltip](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [Integrar la Ayuda de usuario en Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

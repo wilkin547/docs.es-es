@@ -1,65 +1,63 @@
 ---
-title: "Nombres de clases, Structs e Interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "nombres de tipo, instrucciones"
-  - "clases [.NET Framework], nombres"
-  - "enumeraciones [.NET Framework], nombres"
-  - "nombres [.NET Framework], interfaces"
-  - "nombres de tipo comunes"
-  - "nombres [.NET Framework], nombres de tipo"
-  - "nombres [.NET Framework], clases"
-  - "interfaces [.NET Framework], nombres"
-  - "parámetros de tipo genérico"
+title: Nombres de clases, estructuras e interfaces
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- type names, guidelines
+- classes [.NET Framework], names
+- enumerations [.NET Framework], names
+- names [.NET Framework], interfaces
+- common type names
+- names [.NET Framework], type names
+- names [.NET Framework], classes
+- interfaces [.NET Framework], names
+- generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
-caps.latest.revision: 16
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a4f4b9e48587138f3e65c0c6825af0b3e4e8c592
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Nombres de clases, Structs e Interfaces
+# <a name="names-of-classes-structs-and-interfaces"></a>Nombres de clases, estructuras e interfaces
 Sigan las instrucciones de nomenclatura que se aplican a la nomenclatura de tipo general.  
   
- **✓ hacer** nombre clases y structs con sustantivos o sintagmas nominales, con Pascal.  
+ **✓ HACER** nombre clases y structs con sustantivos o frases con Pascal.  
   
- Esto distingue a nombres de tipo de métodos, que se denominan con frases verbales.  
+ Esto permite distinguir los nombres de tipo de métodos, que se denominan con frases verbales.  
   
- **✓ hacer** nombres de las interfaces con frases adjetivo u ocasional con sustantivos o sintagmas nominales.  
+ **✓ HACER** nombres de las interfaces con frases adjetivo o, en ocasiones con sustantivos o sintagmas nominales.  
   
- Nombres y frases deben usarse a menudo y podrían indicar que el tipo debe ser una clase abstracta y no una interfaz.  
+ Nombres y frases deben se usan con poca frecuencia y podrían indicar que el tipo debe ser una clase abstracta y no una interfaz.  
   
- **X no** dar a los nombres de clase un prefijo \(por ejemplo, "C"\).  
+ **X DO NOT** dar a los nombres de clase un prefijo (p. ej., "C").  
   
- **✓ considere** finalizar los nombres de las clases derivadas con el nombre de la clase base.  
+ **✓ Considere la posibilidad de** finalizar los nombres de las clases derivadas con el nombre de la clase base.  
   
- Esto es muy legible y explica claramente de la relación. Algunos ejemplos de esto en el código son: `ArgumentOutOfRangeException`, que es un tipo de `Exception`, y `SerializableAttribute`, que es un tipo de `Attribute`. Sin embargo, es importante utilizar la lógica en la aplicación de esta instrucción; Por ejemplo, el `Button` clase es un tipo de `Control` evento, aunque `Control` no aparece en su nombre.  
+ Esto es muy legible y explica la relación claramente. Algunos ejemplos de esto en el código son: `ArgumentOutOfRangeException`, que es un tipo de `Exception`, y `SerializableAttribute`, que es un tipo de `Attribute`. Sin embargo, es importante que use un criterio razonable para aplicar esta directriz; Por ejemplo, el `Button` clase es un tipo de `Control` eventos, aunque `Control` no aparece en su nombre.  
   
- **✓ hacer** prefijo los nombres de interfaz con la letra I, para indicar que el tipo es una interfaz.  
+ **✓ HACER** prefijo los nombres de interfaz con la letra I, para indicar que el tipo es una interfaz.  
   
- Por ejemplo, `IComponent` \(sustantivo descriptivo\), `ICustomAttributeProvider` \(frase\), y `IPersistable` \(adjetivo\) son nombres de interfaz adecuada. Al igual que con otros nombres de tipo, evite las abreviaturas.  
+ Por ejemplo, `IComponent` (sustantivo descriptivo), `ICustomAttributeProvider` (frase), y `IPersistable` (adjetivo) son nombres de interfaz adecuada. Al igual que con otros nombres de tipo, evite las abreviaturas.  
   
- **✓ hacer** Asegúrese de que los nombres difieren solo en la "I" prefijo en el nombre de interfaz al definir un par de interfaz de clase, donde la clase es una implementación estándar de la interfaz.  
+ **✓ HACER** Asegúrese de que los nombres difieren solo en la "I" prefijo en el nombre de la interfaz cuando se define un par de interfaz de clase: donde la clase es una implementación estándar de la interfaz.  
   
-## Nombres de parámetros de tipo genérico  
- Se agregaron los genéricos en .NET Framework 2.0. La característica introdujo un nuevo tipo de identificador denominada *parámetro de tipo*.  
+## <a name="names-of-generic-type-parameters"></a>Nombres de parámetros de tipo genérico  
+ Los tipos genéricos se agregaron a .NET Framework 2.0. La característica integra un nuevo tipo de identificador denominado *parámetro de tipo*.  
   
- **✓ hacer** nombre de parámetros de tipo genérico con nombres descriptivos, a menos que sea totalmente explicativa un nombre de letra única y un nombre descriptivo no agregue ningún valor.  
+ **✓ HACER** el nombre de parámetros de tipo genérico con nombres descriptivos a menos que sea totalmente explicativa un nombre de letra única y un nombre descriptivo no agregue ningún valor.  
   
- **✓ considere** utilizando `T` como nombre del parámetro de tipo para los tipos con un parámetro de tipo de letra única.  
+ **✓ Considere la posibilidad de** utilizando `T` como el nombre del parámetro de tipo para los tipos con un parámetro de tipo de letra única.  
   
 ```  
 public int IComparer<T> { ... }  
@@ -67,7 +65,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }  
 ```  
   
- **✓ hacer** prefijo de nombres de parámetros de tipo descriptivos con `T`.  
+ **✓ HACER** prefijo de nombres de parámetros de tipo descriptivos con `T`.  
   
 ```  
 public interface ISessionChannel<TSession> where TSession : ISession{  
@@ -75,42 +73,42 @@ public interface ISessionChannel<TSession> where TSession : ISession{
 }  
 ```  
   
- **✓, considere la posibilidad de** que indica las restricciones se coloca en un parámetro de tipo en el nombre del parámetro.  
+ **✓ Considere la posibilidad de** que indica las restricciones de coloca en un parámetro de tipo en el nombre del parámetro.  
   
  Por ejemplo, un parámetro restringido a `ISession` podría denominarse `TSession`.  
   
-## Nombres de tipos comunes  
- **✓ hacer** siga las instrucciones descritas en la tabla siguiente al asignar nombres a tipos derivados de o implementar determinados tipos de .NET Framework.  
+## <a name="names-of-common-types"></a>Nombres de tipos comunes  
+ **✓ HACER** siga las directrices descritas en la tabla siguiente al asignar nombres a los tipos derivados de o implementar determinados tipos de .NET Framework.  
   
-|Tipo base|Directriz de tipo derivado y la implementación|  
-|---------------|----------------------------------------------------|  
-|`System.Attribute`|**✓ hacer** agregar el sufijo "Attribute" a los nombres de clases de atributos personalizados. Agregue el sufijo "Attribute" a los nombres de clases de atributos personalizados.|  
-|`System.Delegate`|**✓ hacer** agregar el sufijo "EventHandler" a los nombres de los delegados que se usan en los eventos.<br /><br /> **✓ hacer** agregar el sufijo "Callback" a los nombres de los delegados distintos de los utilizados como controladores de eventos.<br /><br /> **X no** agregar el sufijo "Delegate" a un delegado.|  
-|`System.EventArgs`|**✓ hacer** agregar el sufijo "EventArgs".|  
-|`System.Enum`|**X no** derivan de esta clase; utilice la palabra clave admitida por el lenguaje en su lugar; por ejemplo, en C\#, utilice la palabra clave enum.<br /><br /> **X no** agregar el sufijo "Enum" o "Flag".|  
-|`System.Exception`|**✓ hacer** agregar el sufijo "Excepción".|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ hacer** agregar el sufijo "Diccionario". Tenga en cuenta que `IDictionary` es un tipo específico de la colección, pero esta instrucción tiene prioridad sobre la instrucción de colecciones más general que sigue.|  
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ hacer** agregar el sufijo "Colección".|  
-|`System.IO.Stream`|**✓ hacer** agregar el sufijo "Stream".|  
-|`CodeAccessPermission IPermission`|**✓ hacer** agregar el sufijo "Permiso".|  
+|Tipo base|Instrucciones de tipo derivado de implementación|  
+|---------------|------------------------------------------|  
+|`System.Attribute`|**✓ HACER** agregar el sufijo "Attribute" a los nombres de clases de atributos personalizados.|  
+|`System.Delegate`|**✓ HACER** agregar el sufijo "EventHandler" a los nombres de los delegados que se usan en los eventos.<br /><br /> **✓ HACER** agregar el sufijo "Callback" a los nombres de los delegados distintos de los utilizados como controladores de eventos.<br /><br /> **X DO NOT** agregar el sufijo "Delegate" a un delegado.|  
+|`System.EventArgs`|**✓ HACER** agregar el sufijo "EventArgs".|  
+|`System.Enum`|**X DO NOT** derivan de esta clase; use la palabra clave admitida por el lenguaje en su lugar; por ejemplo, en C#, utilice el `enum` palabra clave.<br /><br /> **X DO NOT** agregar el sufijo "Enum" o "Flag".|  
+|`System.Exception`|**✓ HACER** agregar el sufijo "Exception".|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ HACER** agregar el sufijo "Diccionario". Tenga en cuenta que `IDictionary` es un tipo específico de la colección, pero esta instrucción tiene prioridad sobre la instrucción de colecciones más general que sigue.|  
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ HACER** agregar el sufijo "Colección".|  
+|`System.IO.Stream`|**✓ HACER** agregar el sufijo "Stream".|  
+|`CodeAccessPermission IPermission`|**✓ HACER** agregar el sufijo "Permisos".|  
   
-## Nombres de enumeraciones  
- Nombres de tipos de enumeración \(también denominados enumeraciones\) en general deben seguir las reglas de nomenclatura de tipo estándar \(Pascal, etc.\). Sin embargo, hay directrices adicionales que se aplican específicamente a las enumeraciones.  
+## <a name="naming-enumerations"></a>Enumeraciones de nomenclaturas  
+ Nombres de tipos de enumeración (también denominados enumeraciones) por lo general deben seguir las reglas de nomenclatura de tipo estándares (Pascal, etcetera). Sin embargo, hay directrices adicionales que se aplican específicamente a las enumeraciones.  
   
- **✓ hacer** utilizar un nombre de tipo singular para una enumeración a menos que sus valores son campos de bits.  
+ **✓ HACER** utilizar un nombre de tipo singular para una enumeración a menos que sus valores son campos de bits.  
   
- **✓ hacer** utilizar un nombre de tipo plural para una enumeración con campos de bits como valores, también denominados enumeración de marcas.  
+ **✓ HACER** utilizar un nombre de tipo plural para una enumeración con los campos de bits como valores, también denominados enumeración de marcas.  
   
- **X no** utilice el sufijo "Enum" en los nombres de tipo enum.  
+ **X DO NOT** utilice el sufijo "Enum" en los nombres de tipo de enumeración.  
   
- **X no** use "Marcar" o sufijos "Indicadores" en la enumeración de nombres de tipo.  
+ **X DO NOT** usar "Marca" o sufijos "Indicadores" en la enumeración de nombres de tipo.  
   
- **X no** utilice un prefijo en los nombres de valores de enumeración \(por ejemplo, "ad" para las enumeraciones ADO.\), "rtf" para las enumeraciones de texto enriquecido, etc..  
+ **X DO NOT** utiliza un prefijo en los nombres de valor de enumeración (p. ej., "ad" para las enumeraciones de ADO.), "rtf" para las enumeraciones de texto enriquecido, etcetera.  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
-## Vea también  
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)   
- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+ [Las directrices de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

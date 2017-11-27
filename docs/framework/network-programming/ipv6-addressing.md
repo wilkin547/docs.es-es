@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -37,16 +32,15 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-addressing"></a>Direccionamiento IPv6
 En el protocolo de Internet versión 6 (IPv6), las direcciones tienen una longitud de 128 bits. Entre otras razones, el espacio de direcciones es tan grande para subdividir las direcciones disponibles en una jerarquía de dominios de enrutamiento que reflejen la topología de Internet y para asignar las direcciones de los adaptadores de red (o interfaces) que conectan los dispositivos a la red. IPv6 se caracteriza por una capacidad inherente para resolver direcciones en su nivel más bajo, que es el nivel de la interfaz de red, y cuenta con funciones de configuración automática.  
@@ -88,6 +82,5 @@ En el protocolo de Internet versión 6 (IPv6), las direcciones tienen una longit
  En general, un nodo siempre tiene una dirección local de vínculo. Podría tener una dirección local de sitio y una o varias direcciones globales.  
   
 ## <a name="see-also"></a>Vea también  
- [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [Protocolo de Internet versión 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)
-

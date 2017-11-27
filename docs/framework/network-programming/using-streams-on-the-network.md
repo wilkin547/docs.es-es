@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-streams-on-the-network"></a>Usar flujos en la red
 Los recursos de red se representan como secuencias en .NET Framework. Al tratar las secuencias de forma genérica, .NET Framework ofrece lo siguiente:  
   
--   Un método común para enviar y recibir datos web. Independientemente del contenido real del archivo (HTML, XML, etc.), la aplicación usará <xref:System.IO.Stream.Write%2A?displayProperty=fullName> y <xref:System.IO.Stream.Read%2A?displayProperty=fullName> para enviar y recibir datos.  
+-   Un método común para enviar y recibir datos web. Independientemente del contenido real del archivo (HTML, XML, etc.), la aplicación usará <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> y <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> para enviar y recibir datos.  
   
 -   Compatibilidad con las secuencias en .NET Framework. Las secuencias se usan por todo .NET Framework, que posee una amplia infraestructura para gestionarlas. Por ejemplo, puede modificar una aplicación que lee datos XML de una <xref:System.IO.FileStream> para que lea los datos de una <xref:System.Net.Sockets.NetworkStream> cambiando únicamente las pocas líneas de código que inicializan la secuencia. Las principales diferencias entre la clase **NetworkStream** y otras secuencias radican en que no se pueden hacer búsquedas en **NetworkStream**, la propiedad <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> siempre devuelve **false** y los métodos <xref:System.Net.Sockets.NetworkStream.Seek%2A> y <xref:System.Net.Sockets.NetworkStream.Position%2A> generan <xref:System.NotSupportedException>.  
   
@@ -115,6 +112,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo solicitar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [Cómo solicitar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)
-

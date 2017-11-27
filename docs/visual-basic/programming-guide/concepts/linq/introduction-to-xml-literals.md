@@ -1,40 +1,32 @@
 ---
-title: "Introducción a los literales XML en Visual Basic2 | Documentos de Microsoft"
+title: "Introducción a los literales XML de Visual Basic2"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Introducción a los literales XML de Visual Basic
-En esta sección encontrará información acerca de cómo crear árboles XML en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+En esta sección encontrará información acerca de cómo crear árboles XML en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- Para obtener información acerca del uso de los resultados de las consultas LINQ como contenido para un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Para obtener información sobre el uso de los resultados de las consultas LINQ como el contenido de un árbol XML, vea [construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Para obtener más información sobre los literales XML en [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], consulte [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
+ Para obtener más información sobre literales XML de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], consulte [información general de LINQ to XML en Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md).  
   
 ## <a name="creating-xml-trees"></a>Crear árboles XML  
- En el ejemplo siguiente se muestra cómo crear un <xref:System.Xml.Linq.XElement>, en este caso `contacts`:</xref:System.Xml.Linq.XElement>  
+ El siguiente ejemplo muestra cómo crear un <xref:System.Xml.Linq.XElement>; en este caso, `contacts`:  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -53,7 +45,7 @@ Dim contacts As XElement = _
 ```  
   
 ### <a name="creating-an-xelement-with-simple-content"></a>Crear un XElement con contenido simple  
- Puede crear un <xref:System.Xml.Linq.XElement>que contiene contenido simple, como sigue:</xref:System.Xml.Linq.XElement>  
+ Puede crear un <xref:System.Xml.Linq.XElement> que incluya un contenido simple, tal y como se detalla a continuación:  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -67,7 +59,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>Crear un elemento vacío  
- Puede crear vacío <xref:System.Xml.Linq.XElement>de la siguiente manera:</xref:System.Xml.Linq.XElement>  
+ Puede crear un <xref:System.Xml.Linq.XElement> vacío, tal y como se indica a continuación:  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -81,7 +73,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>Utilizar expresiones incrustadas  
- Una característica importante de los literales XML es que admiten el uso de expresiones incrustadas. Las expresiones incrustadas le permiten evaluar una expresión e incorporar los resultados de la expresión a un árbol XML. Si la expresión se evalúa como un tipo de <xref:System.Xml.Linq.XElement>, se inserta un elemento en el árbol.</xref:System.Xml.Linq.XElement> Si la expresión se evalúa como un tipo de <xref:System.Xml.Linq.XAttribute>, se inserta un atributo en el árbol.</xref:System.Xml.Linq.XAttribute> Puede agregar elementos y atributos al árbol solo en aquellos lugares donde sea válido.  
+ Una característica importante de los literales XML es que admiten el uso de expresiones incrustadas. Las expresiones incrustadas le permiten evaluar una expresión e incorporar los resultados de la expresión a un árbol XML. Si el resultado de evaluar la expresión es de tipo <xref:System.Xml.Linq.XElement>, se agregará un elemento al árbol. Si el resultado de evaluar la expresión es de tipo <xref:System.Xml.Linq.XAttribute>, se agregará un atributo al árbol. Puede agregar elementos y atributos al árbol solo en aquellos lugares donde sea válido.  
   
  Es importante reseñar que en una expresión incrustada solo puede aparecer una expresión única. No es posible incrustar varias instrucciones. Si una expresión se extiende más allá de una única línea, deberá utilizar el carácter de continuación de línea.  
   

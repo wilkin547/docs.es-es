@@ -1,25 +1,28 @@
 ---
-title: "C&#243;mo crear un servicio WCF que se comunique a trav&#233;s de WebSockets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo crear un servicio WCF que se comunique a través de WebSockets"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 49a0eeaedd9b41a7c4149aacc0193454f4691b1d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo crear un servicio WCF que se comunique a trav&#233;s de WebSockets
-Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada.  En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Cómo crear un servicio WCF que se comunique a través de WebSockets
+Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
-### Definir el servicio  
+### <a name="define-the-service"></a>Definir el servicio  
   
 1.  Definir un contrato de devolución de llamada  
   
@@ -66,7 +69,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
         }  
     ```  
   
-     La operación de servicio `StartSendingQuotes` se implementa como una llamada asincrónica.  Recuperamos el canal de devolución de llamada mediante `OperationContext` y si el canal está abierto, hacemos una llamada asincrónica en el canal de devolución de llamada.  
+     La operación de servicio `StartSendingQuotes` se implementa como una llamada asincrónica. Recuperamos el canal de devolución de llamada mediante `OperationContext` y si el canal está abierto, hacemos una llamada asincrónica en el canal de devolución de llamada.  
   
 4.  Configure el servicio  
   
@@ -97,9 +100,9 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
     </configuration>  
     ```  
   
-     El archivo de configuración del servicio se basa en los extremos predeterminados de WCF.  La sección `<protocolMapping>` se usa para especificar que `NetHttpBinding` se debe usar para los extremos predeterminados creados.  
+     El archivo de configuración del servicio se basa en los extremos predeterminados de WCF. La sección `<protocolMapping>` se usa para especificar que `NetHttpBinding` se debe usar para los extremos predeterminados creados.  
   
-### Definir el cliente  
+### <a name="define-the-client"></a>Definir el cliente  
   
 1.  Implemente el contrato de devolución de llamada.  
   
@@ -138,7 +141,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
         }  
         ```  
   
-         El CallbackHandler se repite aquí para mayor claridad.  La aplicación cliente crea un nuevo InstanceContext y especifica la implementación de la interfaz de devolución de llamada.  Después crea una instancia de la clase de proxy que envía una referencia al InstanceContext recién creado.  Cuando el cliente llama al servicio, el servicio llamará al cliente usando el contrato de devolución de llamada especificado.  
+         El CallbackHandler se repite aquí para mayor claridad. La aplicación cliente crea un nuevo InstanceContext y especifica la implementación de la interfaz de devolución de llamada. Después crea una instancia de la clase de proxy que envía una referencia al InstanceContext recién creado. Cuando el cliente llama al servicio, el servicio llamará al cliente usando el contrato de devolución de llamada especificado.  
   
     2.  Configurar el cliente  
   
@@ -167,7 +170,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
   
          No es necesario hacer nada especial en la configuración de cliente, simplemente especificar el extremo del lado cliente mediante `NetHttpBinding`.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  A continuación, se muestra el código completo que se emplea en este tema.  
   
 ```csharp  
@@ -196,7 +199,6 @@ namespace Server
         Task SendQuote(string code, double value);  
     }  
 }  
-  
 ```  
   
 ```  
@@ -326,6 +328,6 @@ namespace Client
 </configuration>  
 ```  
   
-## Vea también  
- [Operaciones sincrónicas y asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)   
+## <a name="see-also"></a>Vea también  
+ [Operaciones sincrónicas y asincrónicas](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
  [Usar NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

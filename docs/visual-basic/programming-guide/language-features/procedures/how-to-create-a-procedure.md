@@ -1,75 +1,74 @@
 ---
-title: "C&#243;mo: Crear un procedimiento (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declaraciones de procedimientos"
-  - "procedimientos, acerca de los procedimientos"
-  - "procedimientos, definir"
-  - "código de Visual Basic, procedimientos"
-  - "código de Visual Basic, reutilizar"
+title: "Cómo: Crear un procedimiento (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- procedures [Visual Basic], defining
+- Visual Basic code, procedures
+- Visual Basic code, reusing
+- procedure declarations
+- procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-caps.latest.revision: 27
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 56a44918b7a1426d215cee0ff2981f5763432a48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un procedimiento (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Se incluye un procedimiento entre una instrucción de declaración de inicio \(`Sub` o `Function`\) y una instrucción de declaración de fin \(`End Sub` o `End Function`\).  Todo el código del procedimiento está incluido entre estas instrucciones.  
+# <a name="how-to-create-a-procedure-visual-basic"></a>Cómo: Crear un procedimiento (Visual Basic)
+Incluir un procedimiento entre una instrucción de declaración inicial (`Sub` o `Function`) y una instrucción de declaración final (`End Sub` o `End Function`). Todo el código de procedimiento está comprendida entre estas instrucciones.  
   
- Un procedimiento no puede contener otro procedimiento, por lo que sus instrucciones de inicio y de fin deben estar fuera de cualquier otro procedimiento.  
+ Un procedimiento no puede contener otro procedimiento, por lo que sus instrucciones inicial y finales deben estar fuera de cualquier otro procedimiento.  
   
- Si tiene un código que realiza la misma tarea en distintos lugares, puede escribir la tarea una vez como procedimiento y llamarlo después desde distintos lugares del código.  
+ Si tiene código que realiza la misma tarea en distintos lugares, puede escribir la tarea una vez que un procedimiento y, a continuación, llamarlo desde distintos lugares del código.  
   
-### Para crear un procedimiento que no devuelve un valor  
+### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Para crear un procedimiento que no devuelve un valor  
   
-1.  Fuera de cualquier otro procedimiento, utilice una instrucción `Sub`, seguida de una instrucción `End Sub`.  
+1.  Fuera de cualquier otro procedimiento, utilice un `Sub` instrucción, seguida de un `End Sub` instrucción.  
   
-2.  En la instrucción `Sub`, agregue detrás de la palabra clave `Sub` el nombre del procedimiento y, a continuación, la lista de parámetros entre paréntesis.  
+2.  En el `Sub` (instrucción), siga el `Sub` palabra clave con el nombre del procedimiento y, a continuación, la lista de parámetros entre paréntesis.  
   
-3.  Coloque las instrucciones del código del procedimiento entre las instrucciones `Sub` y `End Sub`  
+3.  Coloque las instrucciones de código del procedimiento entre el `Sub` y `End Sub` las instrucciones.  
   
-### Para crear un procedimiento que devuelva un valor  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>Para crear un procedimiento que devuelve un valor  
   
-1.  Fuera de cualquier otro procedimiento, utilice una instrucción `Function`, seguida de una instrucción `End Function`.  
+1.  Fuera de cualquier otro procedimiento, utilice un `Function` instrucción, seguida de un `End Function` instrucción.  
   
-2.  En la instrucción `Function`, agregue detrás de la palabra clave `Function` el nombre del procedimiento y una cláusula `As` en la que se especifique el tipo de datos del valor devuelto.  
+2.  En el `Function` (instrucción), siga el `Function` palabra clave con el nombre del procedimiento y, a continuación, la lista de parámetros entre paréntesis y, a continuación, un `As` cláusula que especifica el tipo de datos del valor devuelto.  
   
-3.  Coloque las instrucciones de código del procedimiento entre las instrucciones `Function` y `End Function`.  
+3.  Coloque las instrucciones de código del procedimiento entre el `Function` y `End Function` las instrucciones.  
   
-4.  Utilice una instrucción `Return` para devolver el valor al código de llamada.  
+4.  Use un `Return` instrucción para devolver el valor para el código de llamada.  
   
-### Para conectar el nuevo procedimiento con los anteriores bloques de código repetitivos  
+### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Para conectar el nuevo procedimiento con los bloques anteriores y repetitivos de código  
   
 1.  Asegúrese de que define el nuevo procedimiento en un lugar donde el código anterior tiene acceso a él.  
   
-2.  En el anterior bloque de código repetitivo, reemplace las instrucciones que realizan la tarea repetitiva por una única instrucción que llama al procedimiento `Sub` o `Function`.  
+2.  En el bloque de código anterior, repetitivos, reemplace las instrucciones que realizan la tarea repetitiva con una sola instrucción que llama el `Sub` o `Function` procedimiento.  
   
-3.  Si el procedimiento es una `Function` que devuelve un valor, asegúrese de que la instrucción de llamada realiza una acción con el valor devuelto, como almacenarlo en una variable o, de lo contrario, se perderá el valor.  
+3.  Si el procedimiento es un `Function` que devuelve un valor, asegúrese de que la instrucción de llamada realiza una acción con el valor devuelto, como el almacenamiento en una variable, o bien el valor se perderá.  
   
-## Ejemplo  
- El siguiente procedimiento `Function` calcula la hipotenusa de un triángulo rectángulo a partir de los valores de los catetos.  
+## <a name="example"></a>Ejemplo  
+ El siguiente `Function` procedimiento calcula el lado más largo, o la hipotenusa de un triángulo rectángulo, dado los valores para los otros dos lados.  
   
  [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
-## Vea también  
- [Procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Procedimientos Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Procedimientos Function](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   
- [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Procedimientos de operador](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Argumentos y parámetros de procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Procedimientos recursivos](../../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)   
- [Sobrecarga de procedimientos](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Programación orientada a objetos](../Topic/Object-Oriented%20Programming%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vea también  
+ [Procedimientos](./index.md)  
+ [Subprocedimientos](./sub-procedures.md)  
+ [Procedimientos de función](./function-procedures.md)  
+ [Procedimientos de propiedades](./property-procedures.md)  
+ [Procedimientos de operadores](./operator-procedures.md)  
+ [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
+ [Procedimientos recursivos](./recursive-procedures.md)  
+ [Sobrecarga de procedimientos](./procedure-overloading.md)  
+ [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Programación orientada a objetos](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)

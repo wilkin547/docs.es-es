@@ -1,71 +1,72 @@
 ---
-title: "C&#243;mo: Establecer sangr&#237;as, sangr&#237;as francesas y p&#225;rrafos con vi&#241;etas con el control RichTextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - ".rtf (archivos), aplicar formato en el control RichTextBox"
-  - "ejemplos [Windows Forms], cuadros de texto"
-  - "RichTextBox (control) [Windows Forms], establecer sangría y viñetas"
-  - "RTF (archivos), aplicar formato en el control RichTextBox"
-  - "cuadros de texto, viñetas"
-  - "cuadros de texto, establecer sangría"
+title: "Cómo: Establecer sangrías, sangrías francesas y párrafos con viñetas con el control RichTextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- text boxes [Windows Forms], setting indents
+- .rtf files [Windows Forms], formatting in RichTextBox control
+- examples [Windows Forms], text boxes
+- RTF files [Windows Forms], formatting in RichTextBox control
+- RichTextBox control [Windows Forms], setting indents and bullets
+- text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9b1398c0438f9ebe528e9394014f5f6529ea8f2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer sangr&#237;as, sangr&#237;as francesas y p&#225;rrafos con vi&#241;etas con el control RichTextBox de formularios Windows Forms
-El control <xref:System.Windows.Forms.RichTextBox> de Windows Forms tiene numerosas opciones para dar formato al texto que muestra.  Para dar a los párrafos seleccionados el formato de lista con viñeta, puede establecer la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>.  También puede utilizar las propiedades <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> y <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> para establecer la sangría de los párrafos con respecto a los bordes izquierdo y derecho del control, así como al borde izquierdo de las demás líneas de texto.  
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Cómo: Establecer sangrías, sangrías francesas y párrafos con viñetas con el control RichTextBox de formularios Windows Forms
+Los formularios Windows Forms <xref:System.Windows.Forms.RichTextBox> control tiene numerosas opciones para dar formato al texto que muestra. Puede dar formato a párrafos seleccionados como listas con viñetas estableciendo la <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propiedad. También puede usar el <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, y <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedades para establecer la sangría de los párrafos con respecto a la izquierda y derecha bordes del control y el borde izquierdo de las demás líneas de texto.  
   
-### Para dar a un párrafo el formato de lista con viñetas  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Para aplicar formato a un párrafo como una lista con viñetas  
   
 1.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> en `true`.  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
-  
     ```  
   
     ```csharp  
     richTextBox1.SelectionBullet = true;  
-  
     ```  
   
     ```cpp  
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### Para aplicar sangría a un párrafo  
+### <a name="to-indent-a-paragraph"></a>Para aplicar sangría a un párrafo  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> en un entero que represente la distancia en píxeles entre el borde izquierdo del control y el borde izquierdo del texto.  
+1.  Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde izquierdo del control y el borde izquierdo del texto.  
   
-2.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> en un entero que represente la distancia en píxeles entre el borde izquierdo de la primera línea de texto del párrafo y el borde izquierdo de las subsiguientes líneas del mismo párrafo.  El valor de la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> se aplica sólo a las líneas de un párrafo ajustadas bajo la primera línea.  
+2.  Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde izquierdo de la primera línea de texto del párrafo y el borde izquierdo de las líneas siguientes en el mismo párrafo. El valor de la <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> propiedad solo se aplica a las líneas de un párrafo ajustan bajo la primera línea.  
   
-3.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> en un entero que represente la distancia en píxeles entre el borde derecho del control y el borde derecho del texto.  
+3.  Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> propiedad en un entero que representa la distancia en píxeles entre el borde derecho del control y el borde derecho del texto.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
     RichTextBox1.SelectionHangingIndent = 3  
     RichTextBox1.SelectionRightIndent = 12  
-  
     ```  
   
     ```csharp  
     richTextBox1.SelectionIndent = 8;  
     richTextBox1.SelectionHangingIndent = 3;  
     richTextBox1.SelectionRightIndent = 12;  
-  
     ```  
   
     ```cpp  
@@ -75,9 +76,9 @@ El control <xref:System.Windows.Forms.RichTextBox> de Windows Forms tiene numero
     ```  
   
     > [!NOTE]
-    >  Todas estas propiedades afectan a cualquier párrafo que tenga texto seleccionado y también al texto que se escriba después del punto de inserción actual.  Por ejemplo, cuando un usuario selecciona una palabra dentro de un párrafo y a continuación ajusta la sangría, la nueva configuración se aplicará a todo el párrafo que contiene la palabra, así como a los párrafos que se escriban a continuación del párrafo seleccionado.  Para obtener información sobre cómo seleccionar texto mediante programación, vea [TextBoxBase.Select \(Método\)](frlrfSystemWindowsFormsTextBoxBaseClassSelectTopic).  
+    >  Todas estas propiedades afectan a todos los párrafos que contienen texto seleccionado y también al texto que se escribe después del punto de inserción actual. Por ejemplo, cuando un usuario selecciona una palabra dentro de un párrafo y, a continuación, ajusta la sangría, la nueva configuración se aplica a todo el párrafo que contiene la palabra y a los párrafos que se escriben después del párrafo seleccionado. Para obtener información acerca de cómo seleccionar texto mediante programación, vea <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
-## Vea también  
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox \(Control\)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox (control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

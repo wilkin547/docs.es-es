@@ -1,33 +1,37 @@
 ---
-title: "C&#243;mo: Desarrollar un control de formularios Windows Forms sencillo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Control (clase), Windows Forms"
-  - "controles [Windows Forms]"
-  - "controles personalizados [Windows Forms], crear controles simples mediante código"
+title: "Cómo: Desarrollar un control de formularios Windows Forms sencillo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms]
+- custom controls [Windows Forms], creating simple controls using code
+- Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 941bcb3d69a80ff415cb76d69414ad25e3a8c76d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Desarrollar un control de formularios Windows Forms sencillo
-En esta sección se ofrece un tutorial que describe los pasos básicos para crear un control de formularios Windows Forms personalizado.  El control sencillo desarrollado en este tutorial permite modificar la alineación de su propiedad <xref:System.Windows.Forms.Control.Text%2A>.  No provoca ni controla eventos.  
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>Cómo: Desarrollar un control de formularios Windows Forms sencillo
+Esta sección le guiará a través de los pasos clave para crear un control de Windows Forms personalizado. El control sencillo desarrollado en este tutorial permite la alineación de sus <xref:System.Windows.Forms.Control.Text%2A> propiedad que debe cambiarse. No genera ni controla eventos.  
   
-### Para crear un control personalizado sencillo  
+### <a name="to-create-a-simple-custom-control"></a>Para crear un control personalizado simple  
   
-1.  Defina una clase que se derive de <xref:System.Windows.Forms.Control?displayProperty=fullName>.  
+1.  Defina una clase que se derive de <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
     ```vb  
     Public Class FirstControl  
@@ -40,30 +44,30 @@ En esta sección se ofrece un tutorial que describe los pasos básicos para crea
     public class FirstControl:Control{}  
     ```  
   
-2.  Defina propiedades.  \(No es necesario definir propiedades, ya que los controles heredan muchas propiedades de la clase <xref:System.Windows.Forms.Control>, aunque para la mayoría de los controles personalizados se suelen definir propiedades adicionales.\) En el fragmento de código siguiente se define una propiedad denominada `TextAlignment` que`FirstControl` utiliza para dar formato a la apariencia de la propiedad <xref:System.Windows.Forms.Control.Text%2A> heredada de <xref:System.Windows.Forms.Control>.  Para obtener más información sobre la definición de propiedades, vea [Properties Overview](../Topic/Properties%20Overview.md).  
+2.  Defina las propiedades. (No se requiere para definir las propiedades, puesto que un control hereda muchas propiedades de la <xref:System.Windows.Forms.Control> clase, pero la mayoría de los controles personalizada se suelen definir propiedades adicionales.) El fragmento de código siguiente define una propiedad denominada `TextAlignment` que `FirstControl` utiliza para dar formato a la presentación de la <xref:System.Windows.Forms.Control.Text%2A> propiedad se hereda de <xref:System.Windows.Forms.Control>. Para información sobre la definición de propiedades, vea [Introducción a las propiedades](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Cuando se establece una propiedad que cambia la apariencia visual del control, se debe invocar el método <xref:System.Windows.Forms.Control.Invalidate%2A> para volver a dibujar el control.  <xref:System.Windows.Forms.Control.Invalidate%2A> se define en la clase base <xref:System.Windows.Forms.Control>.  
+     Cuando se establece una propiedad que cambia la apariencia visual del control, se debe invocar el <xref:System.Windows.Forms.Control.Invalidate%2A> método para volver a dibujar el control. <xref:System.Windows.Forms.Control.Invalidate%2A>se define en la clase base <xref:System.Windows.Forms.Control>.  
   
-3.  Reemplace el método protegido <xref:System.Windows.Forms.Control.OnPaint%2A> heredado de <xref:System.Windows.Forms.Control> para proporcionar lógica de representación al control.  Si no reemplaza <xref:System.Windows.Forms.Control.OnPaint%2A>, el control no podrá dibujarse a sí mismo.  En el fragmento de código siguiente, el método <xref:System.Windows.Forms.Control.OnPaint%2A> muestra la propiedad <xref:System.Windows.Forms.Control.Text%2A> heredada de <xref:System.Windows.Forms.Control> con la alineación especificada por el campo `alignmentValue`.  
+3.  Invalidar el protegido <xref:System.Windows.Forms.Control.OnPaint%2A> método se hereda de <xref:System.Windows.Forms.Control> para proporcionar lógica de representación al control. Si no se reemplaza <xref:System.Windows.Forms.Control.OnPaint%2A>, el control no podrá dibujarse a sí mismo. En el siguiente fragmento de código, el <xref:System.Windows.Forms.Control.OnPaint%2A> método muestra el <xref:System.Windows.Forms.Control.Text%2A> propiedad se hereda de <xref:System.Windows.Forms.Control> con la alineación especificada por el `alignmentValue` campo.  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Proporcione atributos para el control.  Los atributos permite a los diseñadores visuales mostrar el control y sus propiedades y evento correctamente en tiempo de diseño.  El fragmento de código siguiente aplica atributos a la propiedad `TextAlignment`.  En un diseñador como Visual Studio, el atributo <xref:System.ComponentModel.CategoryAttribute.Category%2A> \(que aparece en el fragmento de código\) hace que se muestre la propiedad en una categoría lógica.  El atributo <xref:System.ComponentModel.DescriptionAttribute.Description%2A> hace que se muestre una cadena descriptiva en la parte inferior de la ventana **Propiedades** cuando se selecciona la propiedad `TextAlignment`.  Para obtener más información sobre controles, vea [Design\-Time Attributes for Components](../Topic/Design-Time%20Attributes%20for%20Components.md).  
+4.  Proporcione atributos para el control. Los atributos permiten que un diseñador visual muestre el control y sus propiedades y eventos de forma adecuada en el momento del diseño. El siguiente fragmento aplica los atributos a la propiedad `TextAlignment`. En un diseñador como Visual Studio, el <xref:System.ComponentModel.CategoryAttribute.Category%2A> atributo (que se muestra en el fragmento de código) hace que la propiedad que se mostrará en una categoría lógica. El <xref:System.ComponentModel.DescriptionAttribute.Description%2A> atributo da lugar a una cadena descriptiva que se mostrará en la parte inferior de la **propiedades** ventana cuando el `TextAlignment` propiedad está seleccionada. Para información sobre los atributos, vea [Atributos en tiempo de diseño para componentes](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  \(opcional\) Proporcione recursos para el control.  Para proporcionar un recurso, como un mapa de bits, al control, utilice una opción del compilador \(`/res` para C\#\) para empaquetar recursos con el control.  En tiempo de ejecución, el recurso se puede recuperar utilizando los métodos de la clase <xref:System.Resources.ResourceManager>.  Para obtener más información sobre cómo crear y utilizar los recursos, vea [Recursos de aplicaciones de escritorio](../../../../docs/framework/resources/index.md).  
+5.  (opcional) Proporcione recursos para el control. Puede proporcionar un recurso, como un mapa de bits, para el control mediante una opción de compilador (`/res` para C#) para empaquetar recursos con el control. En tiempo de ejecución, el recurso puede recuperarse utilizando los métodos de la <xref:System.Resources.ResourceManager> clase. Para más información sobre la creación y uso de recursos, vea [Recursos de aplicaciones de escritorio](../../../../docs/framework/resources/index.md).  
   
-6.  Compile e implemente el control.  Para compilar e implementar `FirstControl,`, realice los pasos siguientes.  
+6.  Compile e implemente el control. Para compilar e implementar `FirstControl,`, realice los siguientes pasos:  
   
-    1.  Guarde el código del siguiente ejemplo en un archivo de código fuente \(como FirstControl.cs o FirstControl.vb\).  
+    1.  Guarde el código del siguiente ejemplo en un archivo de origen (como FirstControl.cs o FirstControl.vb).  
   
-    2.  Compile el código fuente en un ensamblado y guárdelo en el directorio de la aplicación.  Para ello, ejecute el siguiente comando desde el directorio que contiene el archivo de código fuente.  
+    2.  Compile el código fuente en un ensamblado y guárdelo en el directorio de la aplicación. Para hacer esto, ejecute el siguiente comando desde el directorio que contiene el archivo de origen.  
   
         ```vb  
         vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
@@ -73,21 +77,21 @@ En esta sección se ofrece un tutorial que describe los pasos básicos para crea
         csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
         ```  
   
-         La opción del compilador `/t:library` indica al compilador que el ensamblado que se está creando es una biblioteca \(y no un ejecutable\).  La opción `/out` especifica la ruta de acceso y el nombre del ensamblado.  La opción `/r` indica el nombre de los ensamblados a los que hace referencia el código.  En este ejemplo, se crea un ensamblado privado que sólo pueden utilizar sus aplicaciones.  Por tanto, debe guardarlo en el directorio de su aplicación.  Para obtener más información sobre cómo empaquetar e implementar un control para la distribución, vea [Implementación](../../../../docs/framework/deployment/net-framework-and-applications.md).  
+         La opción del compilador `/t:library` indica al compilador que el ensamblado que se va a crear es una biblioteca (y no un archivo ejecutable). La opción `/out` especifica la ruta de acceso y el nombre del ensamblado. La opción `/r` proporciona el nombre de los ensamblados a los que se hace referencia mediante el código. En este ejemplo, creará un ensamblado privado que solo las aplicaciones podrán usar. Por lo tanto, tiene que guardarlo en el directorio de la aplicación. Para información sobre cómo empaquetar e implementar un control para la distribución, vea [Implementación](../../../../docs/framework/deployment/index.md).  
   
- En el siguiente ejemplo se muestra el código de `FirstControl`.  El control está incluido en el espacio de nombres `CustomWinControls`.  Un espacio de nombres proporciona una agrupación lógica de tipos relacionados.  El control se puede crear en un espacio de nombres nuevo o en uno existente.  En C\#, la declaración `using` \(en Visual Basic, `Imports`\) permite el acceso a los tipos desde un espacio de nombres sin utilizar el nombre completo del tipo.  En el ejemplo siguiente, la declaración `using` permite al código tener acceso a la clase <xref:System.Windows.Forms.Control> desde <xref:System.Windows.Forms?displayProperty=fullName> simplemente como <xref:System.Windows.Forms.Control> en lugar de tener que usar el nombre completo de <xref:System.Windows.Forms.Control?displayProperty=fullName>.  
+ El siguiente ejemplo muestra el código para `FirstControl`. El control está incluido en el espacio de nombres `CustomWinControls`. Un espacio de nombres proporciona una agrupación lógica de tipos relacionados. Puede crear el control en un espacio de nombres nuevo o existente. En C#, la declaración `using` (en Visual Basic, `Imports`) permite tener acceso desde un espacio de nombres sin utilizar el nombre completo del tipo. En el ejemplo siguiente, la `using` declaración permite al código tener acceso a la clase <xref:System.Windows.Forms.Control> de <xref:System.Windows.Forms?displayProperty=nameWithType> simplificarle <xref:System.Windows.Forms.Control> en lugar de tener que utilizar el nombre completo <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  
   
-## Utilizar el control personalizado en un formulario  
- En el siguiente ejemplo se muestra un formulario sencillo que utiliza `FirstControl`.  Crea tres instancias de `FirstControl`, cada una con un valor distinto de la propiedad `TextAlignment`.  
+## <a name="using-the-custom-control-on-a-form"></a>Utilizar el control personalizado en un formulario  
+ En el ejemplo siguiente se muestra un formulario simple que usa `FirstControl`. Crea tres instancias de `FirstControl`, cada una con un valor diferente para la propiedad `TextAlignment`.  
   
-#### Para compilar y ejecutar este ejemplo  
+#### <a name="to-compile-and-run-this-sample"></a>Para compilar y ejecutar este ejemplo  
   
-1.  Guarde el código del siguiente ejemplo en un archivo de código fuente \(SimpleForm.cs o SimpleForms.vb\).  
+1.  Guarde el código en el ejemplo siguiente en un archivo de código fuente (SimpleForm.cs o SimpleForms.vb).  
   
-2.  Compile el código fuente en un ensamblado ejecutable; para ello, ejecute el siguiente comando desde el directorio que contiene el archivo de código fuente.  
+2.  Compile el código fuente en un ensamblado ejecutable ejecutando el siguiente comando desde el directorio que contiene el archivo de origen.  
   
     ```vb  
     vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
@@ -97,7 +101,7 @@ En esta sección se ofrece un tutorial que describe los pasos básicos para crea
     csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
     ```  
   
-     CustomWinControls.dll es el ensamblado que contiene la clase`FirstControl`.  Este ensamblado debe encontrarse en el mismo directorio que el archivo de código fuente del formulario que tiene acceso a él. \(SimpleForm.cs o SimpleForms.vb\).  
+     CustomWinControls.dll es el ensamblado que contiene la clase `FirstControl`. Este ensamblado debe estar en el mismo directorio que el archivo de origen para el formulario que tiene acceso a él (SimpleForm.cs o SimpleForms.vb).  
   
 3.  Ejecute SimpleForm.exe con el siguiente comando.  
   
@@ -108,6 +112,6 @@ En esta sección se ofrece un tutorial que describe los pasos básicos para crea
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## Vea también  
- [Propiedades de los controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [Eventos de los controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+## <a name="see-also"></a>Vea también  
+ [Propiedades de los controles de Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Eventos de los controles de Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

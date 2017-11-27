@@ -1,71 +1,75 @@
 ---
-title: "How to: Add Data to the Clipboard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Clipboard, copying data to"
-  - "data [Windows Forms], copying to Clipboard"
+title: "Cómo: Agregar datos al Portapapeles"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Clipboard [Windows Forms], copying data to
+- data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47858af6d4e3dc5f29632c5a74f2431a2cc200b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Add Data to the Clipboard
-La clase <xref:System.Windows.Forms.Clipboard> proporciona métodos que puede utilizar para interactuar con la característica Portapapeles del sistema operativo Windows.  Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos.  Por ejemplo, los procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar.  El Portapapeles también resulta de utilidad para transferir datos de una aplicación a otra.  
+# <a name="how-to-add-data-to-the-clipboard"></a>Cómo: Agregar datos al Portapapeles
+La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la característica de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir datos desde una aplicación a otra.  
   
- Cuando agrega datos al Portapapeles, puede indicar su formato para que otras aplicaciones los reconozcan si pueden utilizar el formato.  También puede agregar datos al Portapapeles en varios formatos distintos para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos.  
+ Al agregar datos en el Portapapeles, puede indicar el formato de datos para que otras aplicaciones pueden reconocer los datos si puede usar ese formato. También puede agregar datos en el Portapapeles en varios formatos diferentes para aumentar el número de otras aplicaciones que pueden utilizar potencialmente los datos.  
   
- Un formato del Portapapeles es una cadena que identifica el formato para que una aplicación que lo utilice pueda recuperar los datos asociados.  La clase <xref:System.Windows.Forms.DataFormats> proporciona los nombres de formato predefinidos para su uso.  También puede utilizar sus propios nombres de formato o un tipo de objeto como su formato.  
+ Un formato de Portapapeles es una cadena que identifica el formato para que una aplicación que usa ese formato puedan recuperar los datos asociados. La <xref:System.Windows.Forms.DataFormats> clase proporciona nombres de formato predefinidos para su uso. También puede utilizar sus propios nombres de formato o use el tipo de un objeto como su formato.  
   
- Para agregar datos al Portapapeles en uno o varios formatos, utilice el método <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  Puede pasar cualquier objeto a este método, pero para agregar datos en varios formatos, antes debe agregar los datos a un objeto independiente diseñado para trabajar con varios formatos.  Normalmente, agregará los datos a <xref:System.Windows.Forms.DataObject>, pero puede utilizar cualquier tipo que implementa la interfaz <xref:System.Windows.Forms.IDataObject>.  
+ Para agregar datos al Portapapeles en uno o varios formatos, utilice el <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método. Puede pasar cualquier objeto a este método, pero para agregar datos en varios formatos, debe agregar primero los datos a un objeto independiente diseñado para trabajar con varios formatos. Normalmente, agregará los datos a un <xref:System.Windows.Forms.DataObject>, pero puede utilizar cualquier tipo que implemente la <xref:System.Windows.Forms.IDataObject> interfaz.  
   
- En [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], puede agregar directamente los datos al Portapapeles utilizando los nuevos métodos diseñados para hacer más sencillas las tareas básicas del Portapapeles.  Utilice estos métodos al trabajar con datos en un solo formato común, por ejemplo texto.  
+ En [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], puede agregar datos directamente en el Portapapeles mediante nuevos métodos diseñados para facilitar las tareas básicas del Portapapeles. Utilice estos métodos cuando se trabaja con datos en un solo formato común como texto.  
   
 > [!NOTE]
->  Todas las aplicaciones basadas en Windows comparten el Portapapeles.  Por consiguiente, el contenido está sujeto a cambios cuando pase a otra aplicación.  
+>  Todas las aplicaciones basadas en Windows comparten el Portapapeles. Por lo tanto, el contenido está sujeto a cambios cuando se cambia a otra aplicación.  
 >   
->  La clase <xref:System.Windows.Forms.Clipboard> sólo se puede utilizar en subprocesos establecidos en modo STA \(Subprocesamiento controlado simple\).  Para utilizar esta clase, cerciórese de que el método `Main` está marcado con el atributo <xref:System.STAThreadAttribute>.  
+>  La <xref:System.Windows.Forms.Clipboard> clase solo puede usarse en subprocesos establecidos en modo de apartamento de un único subproceso. Para utilizar esta clase, asegúrese de que su `Main` método está marcado con el <xref:System.STAThreadAttribute> atributo.  
 >   
->  Un objeto debe ser serializable para que pueda situarse en el Portapapeles.  Para hacer que un tipo sea serializable, márquelo con el atributo <xref:System.SerializableAttribute>.  Si pasa un objeto no serializable a un método Clipboard, se producirá un error en el método y no se iniciará una excepción.  Para obtener más información sobre serialización, vea <xref:System.Runtime.Serialization>.  
+>  Un objeto debe ser serializable para que se pueda colocar en el Portapapeles. Para hacer que un tipo sea serializable, márquelo con el <xref:System.SerializableAttribute> atributo. Si se pasa un objeto no serializable a un método de Portapapeles, se producirá un error en el método sin producir una excepción. Para obtener más información acerca de la serialización, vea <xref:System.Runtime.Serialization>.  
   
-### Para agregar datos en el Portapapeles en un solo formato común  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Para agregar datos al Portapapeles en un solo formato común  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A> o <xref:System.Windows.Forms.Clipboard.SetText%2A>.  Estos métodos sólo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Use la <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> método. Estos métodos solo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### Para agregar datos al Portapapeles en un formato personalizado  
+### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Para agregar datos en el Portapapeles en un formato personalizado  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.SetData%2A> con un nombre de formato personalizado.  Este método sólo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Use la <xref:System.Windows.Forms.Clipboard.SetData%2A> método con un nombre de formato personalizado. Este método solo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     También puede utilizar los nombres de formato predefinidos con el método <xref:System.Windows.Forms.Clipboard.SetData%2A>.  Para obtener más información, vea <xref:System.Windows.Forms.DataFormats>.  
+     También puede utilizar nombres de formato predefinidos con el <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obtener más información, consulta <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### Para agregar datos al Portapapeles en varios formatos  
+### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Para agregar datos en el Portapapeles en varios formatos  
   
-1.  Utilice el método <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> y pase una clase <xref:System.Windows.Forms.DataObject> que contiene los datos.  Debe utilizar este método para agregar datos al Portapapeles en versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  Use la <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método y pase un <xref:System.Windows.Forms.DataObject> que contiene los datos. Debe usar este método para agregar datos al Portapapeles en versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## Vea también  
- [Drag\-and\-Drop Operations and Clipboard Support](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)   
- [How to: Retrieve Data from the Clipboard](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+## <a name="see-also"></a>Vea también  
+ [Compatibilidad con las operaciones de arrastrar y colocar y con el Portapapeles](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
+ [Recuperar datos del Portapapeles](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

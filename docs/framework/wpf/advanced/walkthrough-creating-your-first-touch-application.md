@@ -1,93 +1,99 @@
 ---
-title: "Tutorial: Crear su primera aplicaci&#243;n t&#225;ctil | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crear una aplicación de pantalla táctil [WPF]"
-  - "crear una aplicación sensible al tacto [WPF]"
-  - "aplicaciones de pantalla táctil [WPF], crear"
-  - "aplicaciones sensibles al tacto [WPF], crear"
+title: "Tutorial: Crear su primera aplicación táctil"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- creating a touch-sensitive application [WPF]
+- touchscreen applications [WPF], creating
+- touch-sensitive applications [WPF], creating
+- creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee85a5d8764fc27205cf09e1af43069b25096ef1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Crear su primera aplicaci&#243;n t&#225;ctil
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que las aplicaciones respondan a la entrada táctil.  Por ejemplo, puede interactuar con una aplicación usando uno o más dedos en un dispositivo sensible al tacto, como una pantalla táctil. Este tutorial crea una aplicación que permite al usuario mover, cambiar el tamaño o girar un único objeto utilizando una entrada táctil.  
+# <a name="walkthrough-creating-your-first-touch-application"></a>Tutorial: Crear su primera aplicación táctil
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]permite que las aplicaciones responder a la entrada táctil. Por ejemplo, puede interactuar con una aplicación mediante el uso de uno o más dedos en un dispositivo táctil, como una pantalla táctil que este tutorial crea una aplicación que permite al usuario mover, cambiar el tamaño o girar un solo objeto usando el toque.  
   
-## Requisitos previos  
+## <a name="prerequisites"></a>Requisitos previos  
  Necesita los componentes siguientes para completar este tutorial:  
   
 -   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
   
 -   Windows 7.  
   
--   Un dispositivo que acepte la entrada táctil, como una pantalla táctil, compatible con Windows Touch.  
+-   Un dispositivo que acepta la entrada táctil, como una pantalla táctil, que es compatible con Windows Touch.  
   
- Además, debe tener conocimientos básicos de cómo crear una aplicación en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], especialmente cómo suscribirse a un evento y controlarlo.  Para obtener más información, vea [Tutorial: Introducción a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Además, debe tener un conocimiento básico de cómo crear una aplicación en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], especialmente cómo suscribirse a y controlar un evento. Para obtener más información, consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## Crear la aplicación  
+## <a name="creating-the-application"></a>Crear la aplicación  
   
-#### Para crear la aplicación  
+#### <a name="to-create-the-application"></a>Para crear la aplicación  
   
-1.  Cree un nuevo proyecto de aplicación de WPF en Visual Basic o en Visual C\# denominado `BasicManipulation`.  Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](http://msdn.microsoft.com/es-es/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Cree un proyecto de aplicación de WPF en Visual Basic o Visual C# denominado `BasicManipulation`. Para obtener más información, vea [Cómo: Crear un nuevo proyecto de aplicación de WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
-2.  Reemplace el contenido de MainWindow.xaml con el código XAML siguiente.  
+2.  Reemplace el contenido de MainWindow.xaml por el código XAML siguiente.  
   
-     Este marcado crea una aplicación sencilla que contiene un <xref:System.Windows.Shapes.Rectangle> rojo en un <xref:System.Windows.Controls.Canvas>.  La propiedad <xref:System.Windows.UIElement.IsManipulationEnabled%2A> de <xref:System.Windows.Shapes.Rectangle> está establecida en true, por lo que recibirá los eventos de manipulación.  La aplicación se suscribe a los eventos <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationInertiaStarting> y <xref:System.Windows.UIElement.ManipulationDelta>.  Estos eventos contienen la lógica para mover <xref:System.Windows.Shapes.Rectangle> cuando el usuario lo manipule.  
+     Este marcado crea una aplicación simple que contiene un rojo <xref:System.Windows.Shapes.Rectangle> en un <xref:System.Windows.Controls.Canvas>. El <xref:System.Windows.UIElement.IsManipulationEnabled%2A> propiedad de la <xref:System.Windows.Shapes.Rectangle> se establece en true para que recibirá los eventos de manipulación. La aplicación se suscribe a la <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, y <xref:System.Windows.UIElement.ManipulationInertiaStarting> eventos. Estos eventos contienen la lógica para mover el <xref:System.Windows.Shapes.Rectangle> cuando el usuario lo manipule.  
   
-     [!code-xml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
+     [!code-xaml[BasicManipulation#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Si usa Visual Basic, en la primera línea de MainWindow.xaml, reemplace `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
+3.  Si utiliza Visual Basic, en la primera línea de MainWindow.xaml, reemplace `x:Class="BasicManipulation.MainWindow"` con `x:Class="MainWindow"`.  
   
-4.  En la clase `MainWindow`, agregue el controlador de eventos <xref:System.Windows.UIElement.ManipulationStarting> siguiente.  
+4.  En el `MainWindow` de clases, agregue las siguientes <xref:System.Windows.UIElement.ManipulationStarting> controlador de eventos.  
   
-     El evento <xref:System.Windows.UIElement.ManipulationStarting> se produce cuando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] detecta que la entrada táctil empieza a manipular un objeto.  El código especifica que la posición de la manipulación debe ser relativa a <xref:System.Windows.Window> estableciendo la propiedad <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>.  
+     El <xref:System.Windows.UIElement.ManipulationStarting> evento tiene lugar cuando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] detecta ese táctil entrada empieza a manipular un objeto. El código especifica que la posición de la manipulación debe ser relativa a la <xref:System.Windows.Window> estableciendo el <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> propiedad.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]  
   
-5.  En la clase `MainWindow`, agregue el controlador de eventos <xref:System.Windows.Input.ManipulationDelta> siguiente.  
+5.  En el `MainWindow` de clases, agregue las siguientes <xref:System.Windows.Input.ManipulationDelta> controlador de eventos.  
   
-     El evento <xref:System.Windows.Input.ManipulationDelta> se produce cuando la entrada táctil cambia de posición y puede producirse varias veces durante una manipulación.  El evento también se puede producir después de que se haya levantado un dedo.  Por ejemplo, si el usuario arrastra un dedo por una pantalla, el evento <xref:System.Windows.Input.ManipulationDelta> se produce varias veces a medida que el dedo se mueve.  Cuando el usuario levanta un dedo de la pantalla, el evento <xref:System.Windows.Input.ManipulationDelta> sigue produciéndose para simular la inercia.  
+     El <xref:System.Windows.Input.ManipulationDelta> evento tiene lugar cuando cambia la posición de entrada de la entrada táctil y puede aparecer varias veces durante una manipulación. El evento también puede producirse después de que se produzca un dedo. Por ejemplo, si el usuario arrastra un dedo en una pantalla, la <xref:System.Windows.Input.ManipulationDelta> evento aparece varias veces como se mueve el dedo. Cuando el usuario levanta un dedo en la pantalla, la <xref:System.Windows.Input.ManipulationDelta> evento sigue produciéndose para simular la inercia.  
   
-     El código aplica la propiedad <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> a la propiedad <xref:System.Windows.UIElement.RenderTransform%2A> de <xref:System.Windows.Shapes.Rectangle> para moverlo a medida que el usuario mueve la entrada táctil.  También comprueba si <xref:System.Windows.Shapes.Rectangle> está fuera de los límites de <xref:System.Windows.Window> cuando el evento se produce durante la inercia.  Si lo está, la aplicación llama al método <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=fullName> para finalizar la manipulación.  
+     El código se aplica el <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> a la <xref:System.Windows.UIElement.RenderTransform%2A> de la <xref:System.Windows.Shapes.Rectangle> moverlo a medida que el usuario mueve la entrada táctil de entrada. También comprueba si el <xref:System.Windows.Shapes.Rectangle> está fuera de los límites de la <xref:System.Windows.Window> cuando el evento tiene lugar durante la inercia. Si es así, la aplicación llama a la <xref:System.Windows.Input.ManipulationDeltaEventArgs.Complete%2A?displayProperty=nameWithType> método para finalizar la manipulación.  
   
      [!code-csharp[BasicManipulation#ManipulationDelta](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]  
   
-6.  En la clase `MainWindow`, agregue el controlador de eventos <xref:System.Windows.UIElement.ManipulationInertiaStarting> siguiente.  
+6.  En el `MainWindow` de clases, agregue las siguientes <xref:System.Windows.UIElement.ManipulationInertiaStarting> controlador de eventos.  
   
-     El evento <xref:System.Windows.UIElement.ManipulationInertiaStarting> se produce cuando el usuario levanta todos los dedos de la pantalla.  El código establece la velocidad inicial y la desaceleración para el movimiento, expansión y giro del rectángulo.  
+     El <xref:System.Windows.UIElement.ManipulationInertiaStarting> evento tiene lugar cuando el usuario levanta todos los dedos de la pantalla. El código establece la velocidad inicial y desaceleración para el movimiento, expansión y giro del rectángulo.  
   
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]  
   
 7.  Compile y ejecute el proyecto.  
   
-     Debe ver que aparece un cuadrado rojo en la ventana.  
+     Debería ver un cuadrado rojo aparecen en la ventana.  
   
-## Probar la aplicación  
- Para probar la aplicación, intente realizar las manipulaciones siguientes:  Tenga en cuenta que puede realizar más de una de las acciones siguientes al mismo tiempo.  
+## <a name="testing-the-application"></a>Probar la aplicación  
+ Para probar la aplicación, pruebe a las manipulaciones siguientes. Tenga en cuenta que puede hacer más de uno de los siguientes al mismo tiempo.  
   
--   Para mover <xref:System.Windows.Shapes.Rectangle>, ponga un dedo en <xref:System.Windows.Shapes.Rectangle> y mueva el dedo por la pantalla.  
+-   Para mover el <xref:System.Windows.Shapes.Rectangle>, coloque un dedo en el <xref:System.Windows.Shapes.Rectangle> y mueva el dedo por la pantalla.  
   
--   Para cambiar el tamaño de <xref:System.Windows.Shapes.Rectangle>, ponga dos dedos en <xref:System.Windows.Shapes.Rectangle> y acerque o aparte los dedos.  
+-   Para cambiar el tamaño de la <xref:System.Windows.Shapes.Rectangle>, coloque dos dedos en la <xref:System.Windows.Shapes.Rectangle> y mover los dedos acerque o alejados entre sí.  
   
--   Para girar <xref:System.Windows.Shapes.Rectangle>, ponga dos dedos en <xref:System.Windows.Shapes.Rectangle> y gire los dedos uno alrededor del otro.  
+-   Para girar el <xref:System.Windows.Shapes.Rectangle>, coloque dos dedos en la <xref:System.Windows.Shapes.Rectangle> y rote los dedos entre sí.  
   
- Para producir inercia, levante rápidamente los dedos de la pantalla mientras realiza las manipulaciones anteriores.  <xref:System.Windows.Shapes.Rectangle> se seguirá moviendo, cambiando de tamaño o girando durante unos segundos antes de detenerse.  
+ Para producir inercia, levante rápidamente los dedos en la pantalla de medida que realiza las manipulaciones anteriores. El <xref:System.Windows.Shapes.Rectangle> continuarán mover, cambiar el tamaño o girar durante unos segundos antes de que se detenga.  
   
-## Vea también  
- <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=fullName>   
- <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=fullName>
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
+ <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

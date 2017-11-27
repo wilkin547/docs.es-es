@@ -1,34 +1,38 @@
 ---
-title: "Uso de la actividad Pick | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Uso de la actividad Pick
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5a95567afd955848b81bc343109acfe3fd138c7f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Uso de la actividad Pick
+# <a name="using-the-pick-activity"></a>Uso de la actividad Pick
 En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.Statements.Pick>.  
   
- La actividad <xref:System.Activities.Statements.Pick> proporciona un modelado de control basado en eventos.Se comporta de forma similar a la instrucción `switch` de C\#, que ejecuta solo una de las bifurcaciones en la instrucción `switch`.A diferencia de la instrucción `switch`, en la que se ejecuta una bifurcación basada en un valor, la actividad <xref:System.Activities.Statements.Pick> ejecuta una bifurcación en base a la manera en que se completa una actividad.  
+ La actividad <xref:System.Activities.Statements.Pick> proporciona un modelado de control basado en eventos. Se comporta de forma similar a la instrucción `switch` de C#, que ejecuta solo una de las bifurcaciones en la instrucción `switch`. A diferencia de la instrucción `switch`, en la que se ejecuta una bifurcación basada en un valor, la actividad <xref:System.Activities.Statements.Pick> ejecuta una bifurcación en base a la manera en que se completa una actividad.  
   
- En este ejemplo se pide a un usuario que escriba su nombre en la consola dentro de un determinado período de tiempo.La actividad <xref:System.Activities.Statements.Pick> del ejemplo tiene dos bifurcaciones cuya ejecución depende de si el usuario escribe su nombre en un intervalo de 5 segundos o no.Si el usuario escribe su nombre en 5 segundos, se ejecuta la primera bifurcación, que contiene una actividad `ReadLine` personalizada; de lo contrario, se ejecuta la otra bifurcación, que contiene una actividad <xref:System.Activities.Statements.Delay>.Una vez escrito el nombre de un usuario en la consola, se imprime en la consola.Si no se escribe ninguna entrada en 5 segundos, la operación agota el tiempo de espera.  
+ En este ejemplo se pide a un usuario que escriba su nombre en la consola dentro de un determinado período de tiempo. La actividad <xref:System.Activities.Statements.Pick> del ejemplo tiene dos bifurcaciones cuya ejecución depende de si el usuario escribe su nombre en un intervalo de 5 segundos o no. Si el usuario escribe su nombre en 5 segundos, se ejecuta la primera bifurcación, que contiene una actividad `ReadLine` personalizada; de lo contrario, se ejecuta la otra bifurcación, que contiene una actividad <xref:System.Activities.Statements.Delay>. Una vez escrito el nombre de un usuario en la consola, se imprime en la consola. Si no se escribe ninguna entrada en 5 segundos, la operación agota el tiempo de espera.  
   
-## Demostraciones  
+## <a name="demonstrates"></a>Demostraciones  
  Actividad <xref:System.Activities.Statements.Pick>.  
   
-## Análisis  
+## <a name="discussion"></a>Explicación  
  En este ejemplo se incluyen un flujo de trabajo de diseñador y un flujo de trabajo codificado.  
   
  Flujo de trabajo de diseñador  
- La versión del diseñador del ejemplo muestra cómo crear un flujo de trabajo en el diseñador.Están incluidos los siguientes archivos:  
+ La versión del diseñador del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:  
   
 -   Program.cs: incluye la función `Main` que ejecuta el flujo de trabajo del ejemplo.  
   
@@ -37,27 +41,27 @@ En este ejemplo se muestra cómo utilizar la actividad <xref:System.Activities.S
 -   Sequence1.xaml: un flujo de trabajo creado mediante el diseñador que utiliza Pick.  
   
  Flujo de trabajo codificado  
- La versión codificada del ejemplo muestra cómo crear un flujo de trabajo en el diseñador.Están incluidos los siguientes archivos:  
+ La versión codificada del ejemplo muestra cómo crear un flujo de trabajo en el diseñador. Están incluidos los siguientes archivos:  
   
 -   Program.cs: incluye la función `Main` que ejecuta el flujo de trabajo del ejemplo.  
   
 -   ReadString.cs: una actividad personalizada que lee alguna entrada de la consola.  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  Abra el archivo de solución Pick.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
 3.  Presione F5 para ejecutar la solución.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

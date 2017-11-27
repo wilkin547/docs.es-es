@@ -1,44 +1,49 @@
 ---
-title: "C&#243;mo: Mostrar una lista de fuentes con el componente FontDialog | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Fuente (cuadro de diálogo), mostrar"
-  - "Font (propiedad), establecer mediante el componente FontDialog"
-  - "FontDialog (componente) [Windows Forms]"
-  - "fuentes, atributos"
-  - "fuentes, seleccionar"
-  - "fuentes, mostrar lista"
+title: "Cómo: Mostrar una lista de fuentes con el componente FontDialog"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- fonts [Windows Forms], showing list
+- FontDialog component [Windows Forms]
+- fonts [Windows Forms], attributes
+- Font property [Windows Forms], setting with FontDialog component
+- Font dialog box [Windows Forms], displaying
+- fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Mostrar una lista de fuentes con el componente FontDialog
-El componente [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) permite a los usuarios seleccionar una fuente y cambiar sus características de presentación, como el grosor y el tamaño.  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>Cómo: Mostrar una lista de fuentes con el componente FontDialog
+El [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) componente permite a los usuarios seleccionar una fuente, así como para cambiar sus características de presentación, como el grosor y el tamaño.  
   
- La fuente seleccionada en el cuadro de diálogo se devuelve en la propiedad <xref:System.Windows.Forms.FontDialog.Font%2A>.  Por tanto, aprovechar la fuente seleccionada por el usuario es tan fácil como leer una propiedad.  
+ La fuente seleccionada en el cuadro de diálogo se devuelve en el <xref:System.Windows.Forms.FontDialog.Font%2A> propiedad. Por lo tanto, es tan fácil como leer una propiedad sacar partido de la fuente seleccionada por el usuario.  
   
-### Para seleccionar propiedades de fuente utilizando el componente FontDialog  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a>Para seleccionar las propiedades de fuente mediante el componente FontDialog  
   
-1.  Muestre el cuadro de diálogo mediante el método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
+1.  Mostrar el cuadro de diálogo mediante la <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método.  
   
-2.  Utilice la propiedad <xref:System.Windows.Forms.DialogResult> para determinar cómo se cerró el cuadro de diálogo.  
+2.  Use la <xref:System.Windows.Forms.DialogResult> propiedad para determinar cómo se cerró el cuadro de diálogo.  
   
-3.  Utilice la propiedad <xref:System.Windows.Forms.FontDialog.Font%2A> para definir la fuente deseada.  
+3.  Use la <xref:System.Windows.Forms.FontDialog.Font%2A> propiedad para establecer la fuente deseada.  
   
-     En el ejemplo siguiente, el controlador de eventos <xref:System.Windows.Forms.Control.Click> del control <xref:System.Windows.Forms.Button> abre un componente <xref:System.Windows.Forms.FontDialog>.  Cuando se elige una fuente y el usuario hace clic en **Aceptar**, la propiedad <xref:System.Windows.Forms.FontDialog.Font%2A> de un control <xref:System.Windows.Forms.TextBox> que está en el formulario se establece en la fuente seleccionada.  En el ejemplo se supone que el formulario tiene un control <xref:System.Windows.Forms.Button>, un control <xref:System.Windows.Forms.TextBox> y un componente <xref:System.Windows.Forms.FontDialog>.  
+     En el ejemplo siguiente, la <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Click> controlador de eventos abre un <xref:System.Windows.Forms.FontDialog> componente. Cuando una fuente es elegido y el usuario hace clic en **Aceptar**, <xref:System.Windows.Forms.FontDialog.Font%2A> propiedad de un <xref:System.Windows.Forms.TextBox> control que está en el formulario se establece en la fuente seleccionada. En el ejemplo se da por supuesto que el formulario tiene un <xref:System.Windows.Forms.Button> (control), un <xref:System.Windows.Forms.TextBox> (control) y un <xref:System.Windows.Forms.FontDialog> componente.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -47,7 +52,6 @@ El componente [FontDialog](../../../../docs/framework/winforms/controls/fontdial
           TextBox1.Font = FontDialog1.Font  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -58,7 +62,6 @@ El componente [FontDialog](../../../../docs/framework/winforms/controls/fontdial
           textBox1.Font = fontDialog1.Font;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,17 +76,16 @@ El componente [FontDialog](../../../../docs/framework/winforms/controls/fontdial
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.FontDialog>   
- [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.FontDialog>  
+ [FontDialog (componente)](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

@@ -1,38 +1,20 @@
 ---
-title: "Se produjo un error inesperado porque no se puede adquirir un recurso de sistema operativo necesario para el inicio de instancia única | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrAppModel_CantGetMemoryMappedFile
-dev_langs:
-- VB
+f1_keywords: vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 44432a2c393abb01141d09cf5f28c6fd29c5bc43
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8969303d66e946d5579c6cca592b5701c4ebd632
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>Error inesperado porque no se puede conseguir un recurso del sistema operativo necesario para el inicio de una instancia única
 La aplicación no pudo obtener un recurso de sistema operativo necesario. Algunas de las posibles causas de este problema son:  
@@ -54,6 +36,6 @@ La aplicación no pudo obtener un recurso de sistema operativo necesario. Alguna
 4.  Anote las circunstancias en las que se ha produjo el error y llame a los Servicios de soporte técnico de Microsoft.  
   
 ## <a name="see-also"></a>Vea también  
- [Página de aplicación, Diseñador de proyectos (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
- [Aspectos básicos del depurador](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)   
- [Hable con nosotros](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Página de aplicación, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)  
+ [Conceptos básicos del depurador](/visualstudio/debugger/debugger-basics)  
+ [Hable con nosotros](/visualstudio/ide/talk-to-us)

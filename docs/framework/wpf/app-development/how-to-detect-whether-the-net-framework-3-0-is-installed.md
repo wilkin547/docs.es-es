@@ -1,34 +1,37 @@
 ---
-title: "C&#243;mo: Detectar si .NET Framework 3.0 est&#225; instalado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "detectar la presencia de WPF"
-  - "presencia de WPT, detectar"
-  - "WinFX (cadena de agente de usuario del motor en tiempo de ejecución)"
+title: "Cómo: Detectar si .NET Framework 3.0 está instalado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WinFX Runtime user-agent string
+- presence of WPT [WPF], detecting
+- detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e013c9426507e20da05df26932a1f9cf1e5df761
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Detectar si .NET Framework 3.0 est&#225; instalado
-Antes de que los administradores puedan implementar aplicaciones [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] en un sistema, deben confirmar primero que está presente el tiempo de ejecución de [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)].  En este tema se proporciona un script escrito en HTML\/JavaScript que los administradores pueden utilizar para determinar si [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está presente en un sistema.  
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Cómo: Detectar si .NET Framework 3.0 está instalado
+Antes de que los administradores pueden implementar [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] aplicaciones en un sistema, debe confirmar primero que el [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está presente en tiempo de ejecución. En este tema se proporciona un script escrito en HTML/JavaScript que los administradores pueden usar para determinar si [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está presente en un sistema.  
   
 > [!NOTE]
->  Para obtener información más detallada sobre la instalación, implementación y detección de [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], vea la explicación del artículo [Deploying Microsoft .NET Framework Version 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
+>  Para obtener más información sobre cómo instalar, implementar y detectar el [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], vea la explicación en [implementación Microsoft .NET Framework versión 3.0](http://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
-## Detectar la cadena de agente de usuario ".NET CLR"  
- Cuando se instala [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)], el archivo MSI agrega ".NET CLR" y el número de versión a la cadena UserAgent.  En el ejemplo siguiente se muestra un script incrustado en una página HTML simple.  El script busca la cadena UserAgent para determinar si [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está instalado, y muestra un mensaje de estado sobre los resultados de la búsqueda.  
+## <a name="detect-the-net-clr-user-agent-string"></a>Detectar la cadena de agente de usuario ".NET CLR"  
+ Cuando [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está instalado, el archivo MSI agrega ".NET CLR" y el número de versión a la cadena UserAgent. En el ejemplo siguiente se muestra un script incrustado en una página HTML sencilla. El script busca la cadena UserAgent para determinar si [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] está instalado y muestra un mensaje de estado sobre los resultados de la búsqueda.  
   
 ```  
 <HTML>  
@@ -118,16 +121,15 @@ Antes de que los administradores puedan implementar aplicaciones [!INCLUDE[TLA#t
     <div id="result" />  
   </BODY>  
 </HTML>  
-  
 ```  
   
- Si la búsqueda de la versión de ".NET CLR " se realiza correctamente, aparecerá el siguiente tipo de mensaje de estado:  
+ Si la búsqueda de la versión de ".NET CLR" es correcta, aparece el siguiente tipo de mensaje de estado:  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- De lo contrario, aparecerá el siguiente tipo de mensaje de estado:  
+ En caso contrario, aparece el siguiente tipo de mensaje de estado:  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

@@ -1,43 +1,38 @@
 ---
-title: "Bi-Directional Support for Windows Forms Applications | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "globalization [Windows Forms], bi-directional support in Windows"
-  - "Windows Forms, international"
-  - "localization [Windows Forms], bi-directional support in Windows"
-  - "bi-directional language support, Windows applications"
-  - "Windows Forms, bi-directional support"
-ms.assetid: 7b622fa4-f390-4e4d-b624-83a1917cccf2
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+title: Compatibilidad bidireccional en las aplicaciones de Windows Forms
+ms.date: 09/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-winforms
+ms.topic: article
+helpviewer_keywords:
+- globalization [Windows Forms], bi-directional support in Windows
+- Windows Forms, international
+- localization [Windows Forms], bi-directional support in Windows
+- bi-directional language support [Windows Forms], Windows applications
+- Windows Forms, bi-directional support
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 09ed8b59e9682b45f3f3720335686002761f7bce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Bi-Directional Support for Windows Forms Applications
-Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear aplicaciones basadas en Windows que admitan idiomas bidireccionales \(de derecha a izquierda\), como el árabe y hebreo.  Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.  
+# <a name="bi-directional-support-for-windows-forms-applications"></a>Compatibilidad bidireccional en las aplicaciones de Windows Forms
+Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear aplicaciones basadas en Windows que admitan idiomas bidireccionales (de derecha a izquierda), como el árabe y hebreo. Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.  
   
-## Compatibilidad con referencias culturales  
- La configuración de referencia cultural e idioma de la interfaz de usuario determina cómo utiliza una aplicación las fechas, las horas, las monedas y otros datos.  La compatibilidad con las referencias culturales y los idiomas de la interfaz de usuario es la misma con los idiomas bidireccionales que con los demás idiomas.  Consulte también [Clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) o [Clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
+## <a name="culture-support"></a>Compatibilidad con referencias culturales  
+ La configuración de referencia cultural e idioma de la interfaz de usuario determina cómo utiliza una aplicación las fechas, las horas, las monedas y otros datos. La compatibilidad con las referencias culturales y los idiomas de la interfaz de usuario es la misma con los idiomas bidireccionales que con los demás idiomas.   Vea también [Clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) o [Clases específicas de las referencias culturales para Windows Forms y formularios Web Forms globales](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
   
-## Propiedades RightToLeft y RightToLeftLayout  
- La clase base <xref:System.Windows.Forms.Control>, de la que derivan los formularios, incluye una propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> que puede establecer para cambiar el orden de lectura de un formulario y sus controles.  Si establece la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> del formulario, los controles predeterminados del formulario heredarán este ajuste.  Sin embargo, también puede establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> individualmente en la mayoría de los controles.  Consulte también [Cómo: Mostrar texto de derecha a izquierda en formularios Windows Forms para la globalización](http://msdn.microsoft.com/library/7d3337xw\(v=vs.110\)).  
+## <a name="righttoleft-and-righttoleftlayout-properties"></a>Propiedades RightToLeft y RightToLeftLayout  
+ La clase base <xref:System.Windows.Forms.Control>, de la que derivan los formularios, incluye una propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> que puede establecer para cambiar el orden de lectura de un formulario y sus controles. Si establece la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> del formulario, los controles predeterminados del formulario heredarán este ajuste. Sin embargo, también puede establecer la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> individualmente en la mayoría de los controles. Vea también [Cómo: Mostrar texto de derecha a izquierda en Windows Forms para la globalización](http://msdn.microsoft.com/library/7d3337xw\(v=vs.110\))  
   
- El efecto de la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> puede diferir de un control a otro.  En algunos controles, la propiedad solo establece el orden de lectura, como en los controles <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ToolTip>.  En otros controles, la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> cambia el orden de lectura y el diseño.  Esto incluye los controles <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.CheckBox>.  Otros controles requieren que se aplique la propiedad <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> para reflejar su diseño de derecha a izquierda.  En la tabla siguiente, se proporcionan detalles sobre cómo las propiedades <xref:System.Windows.Forms.Control.RightToLeft%2A> y <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> afectan a los controles individuales de los formularios Windows Forms.  
+ El efecto de la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> puede diferir de un control a otro. En algunos controles, la propiedad solo establece el orden de lectura, como en los controles <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.TreeView> y <xref:System.Windows.Forms.ToolTip>. En otros controles, la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> cambia el orden de lectura y el diseño. Esto incluye los controles <xref:System.Windows.Forms.RadioButton>, <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.CheckBox>. Otros controles requieren que se aplique la propiedad <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> para reflejar su diseño de derecha a izquierda. En la tabla siguiente, se proporcionan detalles sobre cómo las propiedades <xref:System.Windows.Forms.Control.RightToLeft%2A> y <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> afectan a los controles individuales de los formularios Windows Forms.  
   
-|Control\/componente|Efecto de la propiedad RightToLeft|Efecto de la propiedad RightToLeftLayout|¿Requiere la creación de reflejos?|  
-|-------------------------|----------------------------------------|----------------------------------------------|----------------------------------------|  
-|<xref:System.Windows.Forms.Button>|Establece el orden de lectura de derecha a izquierda.  Invierte <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> y <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Ningún efecto|No|  
+|Control/componente|Efecto de la propiedad RightToLeft|Efecto de la propiedad RightToLeftLayout|¿Requiere la creación de reflejos?|  
+|------------------------|------------------------------------|------------------------------------------|-------------------------|  
+|<xref:System.Windows.Forms.Button>|Establece el orden de lectura de derecha a izquierda. Invierte <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A> y <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Ningún efecto|No|  
 |<xref:System.Windows.Forms.CheckBox>|La casilla se muestra en el lado derecho del texto|Ningún efecto|No|  
 |<xref:System.Windows.Forms.CheckedListBox>|Todas las casillas se muestran en el lado derecho del texto|Ningún efecto|No|  
 |<xref:System.Windows.Forms.ColorDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|  
@@ -50,19 +45,19 @@ Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear apli
 |<xref:System.Windows.Forms.ErrorProvider>|No compatibles|Ningún efecto|No|  
 |<xref:System.Windows.Forms.FontDialog>|Depende del idioma del sistema operativo|Ningún efecto|No|  
 |<xref:System.Windows.Forms.Form>|Establece el orden de lectura de derecha a izquierda e invierte las barras de desplazamiento|Refleja el formulario|Sí|  
-|<xref:System.Windows.Forms.GroupBox>|El título se muestra alineado a la derecha.  Los controles secundarios pueden heredar esta propiedad.|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro del control para admitir la creación de reflejos de derecha a izquierda|No|  
-|<xref:System.Windows.Forms.HScrollBar>|Comienza con el cuadro de desplazamiento \(el control\) alineado a la derecha|Ningún efecto|No|  
+|<xref:System.Windows.Forms.GroupBox>|El título se muestra alineado a la derecha. Los controles secundarios pueden heredar esta propiedad.|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro del control para admitir la creación de reflejos de derecha a izquierda|No|  
+|<xref:System.Windows.Forms.HScrollBar>|Comienza con el cuadro de desplazamiento (el control) alineado a la derecha|Ningún efecto|No|  
 |<xref:System.Windows.Forms.ImageList>|No obligatorio|Ningún efecto|No|  
-|<xref:System.Windows.Forms.Label>|Se muestra alineado a la derecha.  Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Ningún efecto|No|  
-|<xref:System.Windows.Forms.LinkLabel>|Se muestra alineado a la derecha.  Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Ningún efecto|No|  
+|<xref:System.Windows.Forms.Label>|Se muestra alineado a la derecha. Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Ningún efecto|No|  
+|<xref:System.Windows.Forms.LinkLabel>|Se muestra alineado a la derecha. Invierte <xref:System.Windows.Forms.Label.TextAlign%2A> y <xref:System.Windows.Forms.Label.ImageAlign%2A>|Ningún efecto|No|  
 |<xref:System.Windows.Forms.ListBox>|Los elementos se alinean a la derecha|Ningún efecto|No|  
 |<xref:System.Windows.Forms.ListView>|Establece el orden de lectura de derecha a izquierda y los elementos permanecen alineados a la izquierda|Refleja el control|Sí|  
-|<xref:System.Windows.Forms.MainMenu>|Se muestra alineado a la derecha con el orden de lectura de derecha a izquierda en tiempo de ejecución \(no en tiempo de diseño\)|Ningún efecto|No|  
+|<xref:System.Windows.Forms.MainMenu>|Se muestra alineado a la derecha con el orden de lectura de derecha a izquierda en tiempo de ejecución (no en tiempo de diseño)|Ningún efecto|No|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Muestra el texto de derecha a izquierda.|Ningún efecto|No|  
 |<xref:System.Windows.Forms.MonthCalendar>|No se ve afectada, depende del idioma del sistema operativo|Refleja el control|Sí|  
 |<xref:System.Windows.Forms.NotifyIcon>|No compatibles|No compatibles|No|  
 |<xref:System.Windows.Forms.NumericUpDown>|Los botones de arriba y abajo se alinean a la izquierda|Ningún efecto|No|  
-|<xref:System.Windows.Forms.OpenFileDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|  
+|<xref:System.Windows.Forms.OpenFileDialog>|En sistemas operativos de derecha a izquierda, establecer el formulario contenedor <xref:System.Windows.Forms.Control.RightToLeft> propiedad <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> localiza el cuadro de diálogo |Ningún efecto|No|  
 |<xref:System.Windows.Forms.PageSetupDialog>|No se ve afectada, depende del idioma del sistema operativo|Ningún efecto|No|  
 |<xref:System.Windows.Forms.Panel>|Los controles secundarios pueden heredar esta propiedad|Use <xref:System.Windows.Forms.TableLayoutPanel> dentro del control para admitir la disposición de derecha a izquierda|Sí|  
 |<xref:System.Windows.Forms.PictureBox>|No compatibles|Ningún efecto|No|  
@@ -86,26 +81,26 @@ Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear apli
 |<xref:System.Windows.Forms.UserControl>|La barra de desplazamiento vertical aparece a la izquierda y la barra de desplazamiento horizontal tiene el control a la derecha|Sin compatibilidad directa: use <xref:System.Windows.Forms.TableLayoutPanel>|No|  
 |<xref:System.Windows.Forms.VScrollBar>|Se muestra en el lado izquierdo, en lugar del derecho, de los controles desplazables|Ningún efecto|No|  
   
-## Codificación  
- Los formularios Windows Forms admiten Unicode, por lo que puede incluir cualquier juego de caracteres al crear aplicaciones bidireccionales.  Sin embargo, no todos los controles de formularios Windows Forms admiten Unicode en todas las plataformas.  Para más información, consulte [Codificación y globalización de Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+## <a name="encoding"></a>Codificación  
+ Los formularios Windows Forms admiten Unicode, por lo que puede incluir cualquier juego de caracteres al crear aplicaciones bidireccionales. Sin embargo, no todos los controles de formularios Windows Forms admiten Unicode en todas las plataformas. Para más información, consulte [Codificación y globalización de Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
   
-## GDI\+  
- Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar texto con orden de lectura de derecha a izquierda.  El método <xref:System.Drawing.Graphics.DrawString%2A>, que se utiliza para dibujar texto, admite un parámetro `StringFormat` que puede establecer como el miembro <xref:System.Drawing.StringFormatFlags> de la enumeración <xref:System.Drawing.StringFormatFlags> con el fin de invertir el punto de origen del texto.  
+## <a name="gdi"></a>GDI+  
+ Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar texto con orden de lectura de derecha a izquierda. El método <xref:System.Drawing.Graphics.DrawString%2A>, que se utiliza para dibujar texto, admite un parámetro `StringFormat` que puede establecer como el miembro <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> de la enumeración <xref:System.Drawing.StringFormatFlags> con el fin de invertir el punto de origen del texto.  
   
-## Cuadros de diálogo comunes  
- Las herramientas del sistema, como el cuadro de diálogo Abrir archivo, están bajo el control de Windows.  Heredan los elementos de idioma del sistema operativo.  Si está utilizando una versión de Windows con la configuración de idioma correcta, estos cuadros de diálogo funcionarán correctamente con los idiomas bidireccionales.  
+## <a name="common-dialog-boxes"></a>Cuadros de diálogo comunes  
+ Las herramientas del sistema, como el cuadro de diálogo Abrir archivo, están bajo el control de Windows. Heredan los elementos de idioma del sistema operativo. Si está utilizando una versión de Windows con la configuración de idioma correcta, estos cuadros de diálogo funcionarán correctamente con los idiomas bidireccionales.  
   
- De forma similar, los cuadros de mensaje pasan por el sistema operativo y admiten texto bidireccional.  Los títulos de los botones de los cuadros de mensaje se basan en la configuración de idioma vigente.  De forma predeterminada, los cuadros de mensaje no utilizan el orden de lectura de derecha a izquierda, pero puede especificar un parámetro para cambiar el orden de lectura cuando se muestran los cuadros de mensaje.  
+ De forma similar, los cuadros de mensaje pasan por el sistema operativo y admiten texto bidireccional. Los títulos de los botones de los cuadros de mensaje se basan en la configuración de idioma vigente. De forma predeterminada, los cuadros de mensaje no utilizan el orden de lectura de derecha a izquierda, pero puede especificar un parámetro para cambiar el orden de lectura cuando se muestran los cuadros de mensaje.  
   
-## RightToLeft, Scrollbars y ScrollableControl  
- Actualmente hay una limitación en Windows Forms que impide que todas las clases derivadas de <xref:System.Windows.Forms.ScrollableControl> actúen correctamente cuando <xref:System.Windows.Forms.Control.RightToLeft%2A> está habilitado y <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> se establece como <xref:System.Windows.Forms.RightToLeft>.  Por ejemplo, supongamos que coloca un control como <xref:System.Windows.Forms.Panel>, o una clase de contenedor derivada de <xref:System.Windows.Forms.Panel> \(como <xref:System.Windows.Forms.FlowLayoutPanel> o <xref:System.Windows.Forms.TableLayoutPanel>\), en el formulario.  Si establece <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> en el contenedor como <xref:System.Windows.Forms.RightToLeft> y, luego, establece la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> en uno o varios de los controles del contenedor como <xref:System.Windows.Forms.AnchorStyles>, no aparecerá ninguna barra de desplazamiento en ningún momento.  La clase derivada de <xref:System.Windows.Forms.ScrollableControl> actúa como si <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> estuviera establecida como <xref:System.Windows.Forms.RightToLeft>.  
+## <a name="righttoleft-scrollbars-and-scrollablecontrol"></a>RightToLeft, Scrollbars y ScrollableControl  
+ Actualmente hay una limitación en Windows Forms que impide que todas las clases derivadas de <xref:System.Windows.Forms.ScrollableControl> actúen correctamente cuando <xref:System.Windows.Forms.Control.RightToLeft%2A> está habilitado y <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> se establece como <xref:System.Windows.Forms.RightToLeft.Yes>. Por ejemplo, supongamos que coloca un control como <xref:System.Windows.Forms.Panel>, o una clase de contenedor derivada de <xref:System.Windows.Forms.Panel> (como <xref:System.Windows.Forms.FlowLayoutPanel> o <xref:System.Windows.Forms.TableLayoutPanel>), en el formulario. Si establece <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> en el contenedor como <xref:System.Windows.Forms.RightToLeft.Yes> y, luego, establece la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> en uno o varios de los controles del contenedor como <xref:System.Windows.Forms.AnchorStyles.Right>, no aparecerá ninguna barra de desplazamiento en ningún momento. La clase derivada de <xref:System.Windows.Forms.ScrollableControl> actúa como si <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> estuviera establecida como <xref:System.Windows.Forms.RightToLeft.No>.  
   
- Actualmente, la única solución es anidar <xref:System.Windows.Forms.ScrollableControl> dentro de otro <xref:System.Windows.Forms.ScrollableControl>.  Por ejemplo, si necesita que <xref:System.Windows.Forms.TableLayoutPanel> funcione en esta situación, puede colocarlo dentro de un control <xref:System.Windows.Forms.Panel> y establecer <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> en el <xref:System.Windows.Forms.Panel> como <xref:System.Windows.Forms.RightToLeft>.  
+ Actualmente, la única solución es anidar <xref:System.Windows.Forms.ScrollableControl> dentro de otro <xref:System.Windows.Forms.ScrollableControl>. Por ejemplo, si necesita que <xref:System.Windows.Forms.TableLayoutPanel> funcione en esta situación, puede colocarlo dentro de un control <xref:System.Windows.Forms.Panel> y establecer <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> en el <xref:System.Windows.Forms.Panel> como <xref:System.Windows.Forms.RightToLeft.Yes>.  
   
-## Creación de reflejos  
- La *creación de reflejos* consiste en invertir el diseño de los elementos de la interfaz de usuario para que fluyan de derecha a izquierda.  En un formulario Windows Forms reflejado, por ejemplo, los botones Minimizar, Maximizar y Cerrar aparecen en el extremo izquierdo de la barra de título, en lugar del extremo derecho.  
+## <a name="mirroring"></a>Creación de reflejos  
+ La *creación de reflejos* consiste en invertir el diseño de los elementos de la interfaz de usuario para que fluyan de derecha a izquierda. En un formulario Windows Forms reflejado, por ejemplo, los botones Minimizar, Maximizar y Cerrar aparecen en el extremo izquierdo de la barra de título, en lugar del extremo derecho.  
   
- Al configurar la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> de un formulario o un control como `true`, se invierte el orden de lectura de los elementos de un formulario, pero esta configuración no invierte el diseño de manera que quede de derecha a izquierda, es decir, no provoca la creación de un reflejo.  Por ejemplo, al establecer esta propiedad, los botones **Minimizar**, **Maximizar** y **Cerrar** de la barra de título del formulario no se mueven a la izquierda del formulario.  Del mismo modo, algunos controles, como el control <xref:System.Windows.Forms.TreeView>, deben reflejarse para cambiar su apariencia y ser adecuados para el árabe o el hebreo.  Puede reflejar estos controles configurando la propiedad <xref:System.Windows.Forms.Form.RightToLeftLayout%2A>.  
+ Al configurar la propiedad <xref:System.Windows.Forms.Control.RightToLeft%2A> de un formulario o un control como `true`, se invierte el orden de lectura de los elementos de un formulario, pero esta configuración no invierte el diseño de manera que quede de derecha a izquierda, es decir, no provoca la creación de un reflejo. Por ejemplo, al establecer esta propiedad, los botones **Minimizar**, **Maximizar** y **Cerrar** de la barra de título del formulario no se mueven a la izquierda del formulario. Del mismo modo, algunos controles, como el control <xref:System.Windows.Forms.TreeView>, deben reflejarse para cambiar su apariencia y ser adecuados para el árabe o el hebreo. Puede reflejar estos controles configurando la propiedad <xref:System.Windows.Forms.Form.RightToLeftLayout%2A>.  
   
  Puede crear versiones reflejadas de los siguientes controles:  
   
@@ -123,8 +118,8 @@ Puede usar [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] para crear apli
   
 -   <xref:System.Windows.Forms.TreeView>  
   
- Algunos controles están sellados,  de modo que no puede derivar un nuevo control de ellos:  por ejemplo, los controles <xref:System.Windows.Forms.ImageList> y <xref:System.Windows.Forms.ProgressBar>.  
+ Algunos controles están sellados, de modo que no puede derivar un nuevo control de ellos: por ejemplo, los controles <xref:System.Windows.Forms.ImageList> y <xref:System.Windows.Forms.ProgressBar>.  
   
-## Vea también  
- [Bidirectional Support for ASP.NET Web Applications](../Topic/Bidirectional%20Support%20for%20ASP.NET%20Web%20Applications.md)   
- [Globalizing Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ [Compatibilidad bidireccional para aplicaciones Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+ [Globalizar Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

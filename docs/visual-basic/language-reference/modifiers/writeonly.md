@@ -1,61 +1,60 @@
 ---
-title: "WriteOnly (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "WriteOnly"
-  - "vb.WriteOnly"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "propiedades [Visual Basic], de solo escritura"
-  - "datos confidenciales"
-  - "datos confidenciales, proteger"
-  - "WriteOnly (palabra clave)"
-  - "propiedades de solo escritura"
+title: WriteOnly (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- WriteOnly
+- vb.WriteOnly
+helpviewer_keywords:
+- write-only properties
+- WriteOnly keyword [Visual Basic]
+- sensitive data, protecting
+- properties [Visual Basic], write-only
+- sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9dab9115c31e538bd28583b9f0591ae0c9611e2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# WriteOnly (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Especifica que se puede escribir pero no leer una propiedad.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
-## Reglas  
- **Contexto de la declaración.** Sólo puede utilizar `WriteOnly` en el nivel de módulo.  Esto significa que el contexto de la declaración para una propiedad `WriteOnly` debe ser una clase, estructura o módulo y no puede ser un archivo de código fuente, espacio de nombres o procedimiento.  
+## <a name="rules"></a>Reglas  
+ **Contexto de la declaración.** Solo se puede usar `WriteOnly` en un nivel de módulo. Esto significa que el contexto de la declaración de un `WriteOnly` propiedad debe ser una clase, estructura o módulo y no puede ser un archivo de código fuente, un espacio de nombres o un procedimiento.  
   
  Puede declarar una propiedad como `WriteOnly`, pero no una variable.  
   
-## Cuándo se utiliza WriteOnly  
- A veces desea que el código utilizado pueda establecer un valor pero sin detectar lo que es.  Por ejemplo, se deben proteger los datos sensibles, como números de registro social o contraseñas, para que no obtenga acceso a ellos ningún componente que no lo haya establecido.  En estos casos, puede utilizar una propiedad `WriteOnly` para establecer el valor.  
+## <a name="when-to-use-writeonly"></a>Cuándo se utiliza WriteOnly  
+ A veces desea que el código usado para poder establecer un valor pero no descubrir lo que es. Por ejemplo, los datos confidenciales, como un número de registro social o una contraseña, deben protegerse contra el acceso por cualquier componente que no haya establecido. En estos casos, puede usar un `WriteOnly` propiedad para establecer el valor.  
   
 > [!IMPORTANT]
->  Cuando define y utiliza una propiedad `WriteOnly`, tenga en cuenta las medidas de protección adicionales siguientes:  
+>  Al definir y utilizar un `WriteOnly` propiedad, considere la posibilidad de las medidas de protección adicionales siguientes:  
   
--   **Reemplazo.** Si la propiedad es un miembro de una clase, permita que tenga un valor predeterminado [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) y no la declare `Overridable` ni `MustOverride`.  Esto evita que una clase derivada tenga un acceso no deseado mediante un reemplazo.  
+-   **Reemplazar.** Si la propiedad es un miembro de una clase, permite que de forma predeterminada [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)y no se ha declarado `Overridable` o `MustOverride`. Esto impide que una clase derivada que realiza el acceso no deseado a través de una invalidación.  
   
--   **Nivel de acceso.** Si tiene información confidencial de una propiedad en una o más variables, declárelas [Private](../../../visual-basic/language-reference/modifiers/private.md) para que ningún otro código pueda tener acceso a ellas.  
+-   **Nivel de acceso.** Si mantiene los datos confidenciales de la propiedad en una o más variables, declárelos [privada](../../../visual-basic/language-reference/modifiers/private.md) para que ningún otro código pueda acceder a ellos.  
   
--   **Cifrado.** Almacene todos los datos sensibles en un formulario cifrado en lugar de en texto sin formato.  Si un código malintencionado obtiene acceso de algún modo a esa área de memoria, resulta más difícil utilizar los datos.  El cifrado también es útil si es necesario serializar los datos sensibles.  
+-   **Cifrado.** Almacene todos los datos confidenciales en un formato cifrado en lugar de en texto sin formato. Si algún modo, el código malintencionado obtiene acceso a dicha área de memoria, es más difícil de tomar el uso de los datos. Cifrado también es útil si es necesario serializar los datos confidenciales.  
   
--   **Restablecimiento.** Cuando se termina la clase, estructura o módulo que define la propiedad, restablezca los datos sensibles a los valores predeterminados o a otros valores sin significado.  Esto proporciona una protección adicional cuando esa área de memoria se libera para el acceso general.  
+-   **Restablecer.** Cuando se termina la clase, estructura o módulo que define la propiedad, restablezca los datos sensibles a los valores predeterminados o a otros valores sin sentido. Esto proporciona una protección adicional cuando esa área de memoria se libera para el acceso general.  
   
--   **Persistencia.** No conserve ningún dato sensible, por ejemplo en disco, si puede evitarlo.  Tampoco escriba ningún dato sensible en el Portapapeles.  
+-   **Persistencia.** No se conservan los datos confidenciales, por ejemplo en el disco, si se pueden evitar. Además, no escriba los datos confidenciales en el Portapapeles.  
   
- El modificador `WriteOnly` se puede utilizar en este contexto:  
+ El `WriteOnly` modificador se puede usar en este contexto:  
   
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## Vea también  
- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
+## <a name="see-also"></a>Vea también  
+ [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
  [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

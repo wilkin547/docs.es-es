@@ -1,70 +1,75 @@
 ---
-title: "Informaci&#243;n general sobre el control Expander | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles, Expander"
-  - "Expander (control), acerca de Expander (control)"
+title: "Información general sobre el control Expander"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], Expander
+- Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff0a4432f6de8458e89132bbf46bab7568a04b60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control Expander
-Un control <xref:System.Windows.Controls.Expander> proporciona una manera de proporcionar contenido en un área ampliable que se parece una ventana e incluye un encabezado.  
+# <a name="expander-overview"></a>Información general sobre el control Expander
+Un <xref:System.Windows.Controls.Expander> control proporciona una manera de proporcionar contenido en un área ampliable que se parece a una ventana e incluye un encabezado.  
   
-   
   
 <a name="CreatinganExpanderinXAML"></a>   
-## Crear un ampliador sencillo  
- En el ejemplo siguiente se muestra cómo crear un control <xref:System.Windows.Controls.Expander> sencillo.  En este ejemplo se crea un control <xref:System.Windows.Controls.Expander> que se parece al de la ilustración anterior.  
+## <a name="creating-a-simple-expander"></a>Crear un control Expander simple  
+ En el ejemplo siguiente se muestra cómo crear un sencillo <xref:System.Windows.Controls.Expander> control. Este ejemplo se crea un <xref:System.Windows.Controls.Expander> que parece que la ilustración anterior.  
   
- [!code-xml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
- Las propiedades <xref:System.Windows.Controls.ContentControl.Content%2A> y <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> de un control <xref:System.Windows.Controls.Expander> también pueden incluir contenido complejo, como objetos <xref:System.Windows.Controls.RadioButton> e <xref:System.Windows.Controls.Image>.  
+ El <xref:System.Windows.Controls.ContentControl.Content%2A> y <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> de un <xref:System.Windows.Controls.Expander> también puede incluir contenido complejo, como <xref:System.Windows.Controls.RadioButton> y <xref:System.Windows.Controls.Image> objetos.  
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
-## Establecer la dirección del área de contenido ampliable  
- Puede establecer el área de contenido de un control <xref:System.Windows.Controls.Expander> de modo que se expanda en cuatro direcciones \(<xref:System.Windows.Controls.ExpandDirection>, <xref:System.Windows.Controls.ExpandDirection>, <xref:System.Windows.Controls.ExpandDirection> o <xref:System.Windows.Controls.ExpandDirection>\) mediante la propiedad <xref:System.Windows.Controls.ExpandDirection>.  Cuando se contrae el área de contenido, sólo aparecen el encabezado \(<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>\) del control <xref:System.Windows.Controls.Expander> y su botón de alternancia.  Para expandir o contraer el área de contenido, se usa como botón de alternancia un control <xref:System.Windows.Controls.Button> que muestra una flecha de dirección.  Cuando se expande el control <xref:System.Windows.Controls.Expander>, intenta mostrar todos su contenido en un área similar a una ventana.  
+## <a name="setting-the-direction-of-the-expanding-content-area"></a>Establecer la dirección del área de contenido de expansión  
+ Puede establecer el área de contenido de un <xref:System.Windows.Controls.Expander> control para expandir en una de las cuatro direcciones (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, o <xref:System.Windows.Controls.ExpandDirection.Right>) mediante el uso de la <xref:System.Windows.Controls.ExpandDirection> propiedad. Cuando se contrae el área de contenido, solo el <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> y su botón de alternancia aparece. Un <xref:System.Windows.Controls.Button> control que muestra una flecha se utiliza como un botón de alternancia para expandir o contraer el área de contenido. Expandido, el <xref:System.Windows.Controls.Expander> intenta mostrar todo su contenido en un área de la ventana.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
-## Controlar el tamaño de un ampliador en un panel  
- Si un control <xref:System.Windows.Controls.Expander> está dentro de un control de diseño que hereda de un control <xref:System.Windows.Controls.Panel>, como <xref:System.Windows.Controls.StackPanel>, no especifique la propiedad <xref:System.Windows.FrameworkElement.Height%2A> en <xref:System.Windows.Controls.Expander> cuando la propiedad <xref:System.Windows.Controls.Expander.ExpandDirection%2A> esté establecida en <xref:System.Windows.Controls.ExpandDirection> o en <xref:System.Windows.Controls.ExpandDirection>.  De igual forma, no especifique la propiedad <xref:System.Windows.FrameworkElement.Width%2A> en un control <xref:System.Windows.Controls.Expander> cuando la propiedad <xref:System.Windows.Controls.Expander.ExpandDirection%2A> esté establecida en <xref:System.Windows.Controls.ExpandDirection> o <xref:System.Windows.Controls.ExpandDirection>.  
+## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Controlar el tamaño de un control Expander en un panel  
+ Si un <xref:System.Windows.Controls.Expander> control está dentro de un control de diseño que hereda de <xref:System.Windows.Controls.Panel>, como <xref:System.Windows.Controls.StackPanel>, no se especifica un <xref:System.Windows.FrameworkElement.Height%2A> en el <xref:System.Windows.Controls.Expander> cuando el <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propiedad está establecida en <xref:System.Windows.Controls.ExpandDirection.Down> o <xref:System.Windows.Controls.ExpandDirection.Up>. De igual forma, no especifique un <xref:System.Windows.FrameworkElement.Width%2A> en el <xref:System.Windows.Controls.Expander> cuando el <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propiedad está establecida en <xref:System.Windows.Controls.ExpandDirection.Left> o <xref:System.Windows.Controls.ExpandDirection.Right>.  
   
- Si establece dimensiones en un control <xref:System.Windows.Controls.Expander> en la dirección en que se muestra el contenido ampliado, <xref:System.Windows.Controls.Expander> asume el control del área usada por el contenido y muestra un borde alrededor de ella.  Este borde aparece aunque el contenido esté contraído.  Para establecer el tamaño del área de contenido ampliada, establezca las dimensiones en el contenido del control <xref:System.Windows.Controls.Expander>. Opcionalmente, si desea disponer de la función de desplazamiento, establézcalas en el control <xref:System.Windows.Controls.ScrollViewer> que encierra el contenido.  
+ Cuando se define una dimensión de tamaño en un <xref:System.Windows.Controls.Expander> control en la dirección que se muestra el contenido expandido, el <xref:System.Windows.Controls.Expander> toma el control del área que se utiliza en el contenido y muestra un borde alrededor de ella. El borde se muestra aunque el contenido se contraiga. Para establecer el tamaño del área de contenido expandido, establezca las dimensiones de tamaño del contenido de la <xref:System.Windows.Controls.Expander>, o si desea desplazar la capacidad, en el <xref:System.Windows.Controls.ScrollViewer> que incluye el contenido.  
   
- Cuando un control <xref:System.Windows.Controls.Expander> es el último elemento de un control <xref:System.Windows.Controls.DockPanel>, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] establece automáticamente las dimensiones de <xref:System.Windows.Controls.Expander> en un tamaño igual al área restante de <xref:System.Windows.Controls.DockPanel>.  Para evitar este comportamiento predeterminado, establezca la propiedad <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> del objeto <xref:System.Windows.Controls.DockPanel> en `false` o asegúrese de que <xref:System.Windows.Controls.Expander> no sea el último elemento del control <xref:System.Windows.Controls.DockPanel>.  
+ Cuando un <xref:System.Windows.Controls.Expander> control es el último elemento en una <xref:System.Windows.Controls.DockPanel>, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] establece automáticamente el <xref:System.Windows.Controls.Expander> dimensiones en el área restante de la <xref:System.Windows.Controls.DockPanel>. Para evitar que este comportamiento predeterminado, establezca el <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> propiedad en el <xref:System.Windows.Controls.DockPanel> el objeto a `false`, o asegúrese de que el <xref:System.Windows.Controls.Expander> no es el último elemento en un <xref:System.Windows.Controls.DockPanel>.  
   
 <a name="CreatingScrollableContent"></a>   
-## Crear contenido desplazable  
- Si el contenido es demasiado grande para el tamaño del área de contenido, puede ajustar el contenido del control <xref:System.Windows.Controls.Expander> en un control <xref:System.Windows.Controls.ScrollViewer> para proporcionar contenido desplazable.  El control <xref:System.Windows.Controls.Expander> no proporciona automáticamente la función de desplazamiento.  En la ilustración siguiente se muestra un control <xref:System.Windows.Controls.Expander> que contiene un control <xref:System.Windows.Controls.ScrollViewer>.  
+## <a name="creating-scrollable-content"></a>Crear contenido desplazable  
+ Si el contenido es demasiado grande para el tamaño del área de contenido, puede ajustar el contenido de un <xref:System.Windows.Controls.Expander> en un <xref:System.Windows.Controls.ScrollViewer> con el fin de proporcionar contenido desplazable. El <xref:System.Windows.Controls.Expander> control no proporciona automáticamente la capacidad de desplazamiento. La siguiente ilustración muestra un <xref:System.Windows.Controls.Expander> control que contiene un <xref:System.Windows.Controls.ScrollViewer> control.  
   
  **Control Expander en un control ScrollViewer**  
   
- ![Expander con ScrollBar](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Control Expander con ScrollBar](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
- Cuando coloque un control <xref:System.Windows.Controls.Expander> en un control <xref:System.Windows.Controls.ScrollViewer>, establezca la propiedad de dimensión de <xref:System.Windows.Controls.ScrollViewer> que corresponda a la dirección en la que se abre el contenido de <xref:System.Windows.Controls.Expander> en el tamaño del área de contenido de <xref:System.Windows.Controls.Expander>.  Por ejemplo, si establece la propiedad <xref:System.Windows.Controls.Expander.ExpandDirection%2A> de <xref:System.Windows.Controls.Expander> en <xref:System.Windows.Controls.ExpandDirection> \(el área de contenido se abre hacia abajo\), establezca la propiedad <xref:System.Windows.FrameworkElement.Height%2A> del control <xref:System.Windows.Controls.ScrollViewer> en el alto necesario para el área de contenido.  Si en lugar de ello establece la dimensión de alto en el propio contenido, <xref:System.Windows.Controls.ScrollViewer> no reconoce este valor y, por consiguiente, no proporciona contenido desplazable.  
+ Cuando coloca un <xref:System.Windows.Controls.Expander> controlar en un <xref:System.Windows.Controls.ScrollViewer>, establezca el <xref:System.Windows.Controls.ScrollViewer> dimensión propiedad que corresponde a la dirección en la que el <xref:System.Windows.Controls.Expander> contenido se abre en el tamaño de la <xref:System.Windows.Controls.Expander> área de contenido. Por ejemplo, si establece la <xref:System.Windows.Controls.Expander.ExpandDirection%2A> propiedad en el <xref:System.Windows.Controls.Expander> a <xref:System.Windows.Controls.ExpandDirection.Down> (se abre el área de contenido hacia abajo), establezca el <xref:System.Windows.FrameworkElement.Height%2A> propiedad en el <xref:System.Windows.Controls.ScrollViewer> control a la altura requerida para el área de contenido. Si se establece en su lugar, la dimensión de altura en el contenido en Sí, <xref:System.Windows.Controls.ScrollViewer> no reconoce este valor y por lo tanto, no proporciona contenido desplazable.  
   
- En el ejemplo siguiente se muestra cómo crear un control <xref:System.Windows.Controls.Expander> que incluye contenido complejo y un control <xref:System.Windows.Controls.ScrollViewer>.  En este ejemplo se crea un control <xref:System.Windows.Controls.Expander> parecido al de la ilustración del principio de esta sección.  
+ En el ejemplo siguiente se muestra cómo crear un <xref:System.Windows.Controls.Expander> control de contenido complejo que contiene un <xref:System.Windows.Controls.ScrollViewer> control. Este ejemplo se crea un <xref:System.Windows.Controls.Expander> que es similar de la ilustración al principio de esta sección.  
   
  [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
  [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
-## Usar las propiedades de alineación  
- Puede alinear el contenido estableciendo las propiedades <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> y <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> del control <xref:System.Windows.Controls.Expander>.  Cuando se establecen estas propiedades, la alineación se aplica al encabezado y también al contenido ampliado.  
+## <a name="using-the-alignment-properties"></a>Usar propiedades de alineación  
+ Puede alinear el contenido estableciendo la <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> y <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propiedades en el <xref:System.Windows.Controls.Expander> control. Al establecer estas propiedades, la alineación se aplica al encabezado y también al contenido ampliado.  
   
-## Vea también  
- <xref:System.Windows.Controls.Expander>   
- <xref:System.Windows.Controls.ExpandDirection>   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Controls.Expander>  
+ <xref:System.Windows.Controls.ExpandDirection>  
+ [Temas de procedimientos](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

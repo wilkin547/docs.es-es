@@ -1,24 +1,28 @@
 ---
-title: "Argumentos necesarios y grupos de sobrecarga | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Argumentos necesarios y grupos de sobrecarga
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fae9759faa6ae5e2fa65417c6ef5767330f6d9c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Argumentos necesarios y grupos de sobrecarga
-Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse.El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios.Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
+# <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
+Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
   
-## Usar argumentos necesarios  
- Para usar el atributo `RequiredArgument` en una actividad, indique los argumentos que desee mediante <xref:System.Activities.RequiredArgumentAttribute>.En este ejemplo, una actividad `Add` se define con dos argumentos necesarios.  
+## <a name="using-required-arguments"></a>Usar argumentos necesarios  
+ Para usar el atributo `RequiredArgument` en una actividad, indique los argumentos que desee mediante <xref:System.Activities.RequiredArgumentAttribute>. En este ejemplo, una actividad `Add` se define con dos argumentos necesarios.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -36,7 +40,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- En XAML, los argumentos necesarios también se indican mediante <xref:System.Activities.RequiredArgumentAttribute>.En este ejemplo, la actividad `Add` se define mediante tres argumentos y usa una actividad <xref:System.Activities.Statements.Assign%601> para realizar la operación de suma.  
+ En XAML, los argumentos necesarios también se indican mediante <xref:System.Activities.RequiredArgumentAttribute>. En este ejemplo, la actividad `Add` se define con tres argumentos y usa una actividad <xref:System.Activities.Statements.Assign%601> para realizar la operación de suma.  
   
 ```xaml  
 <Activity x:Class="ValidationDemo.Add" ...>  
@@ -66,12 +70,12 @@ public sealed class Add : CodeActivity<int>
   
  Si se usa la actividad y no se enlaza ninguno de los argumentos necesarios, se devuelve el siguiente error de validación.  
   
- **No se proporcionó el valor para un argumento de actividad necesario 'Operand1'.**   
+ **No se proporcionó el valor para un argumento de actividad necesario 'Operand1'.**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] la comprobación y administración de advertencias y errores de validación, vea [Invocar validación de actividad](../../../docs/framework/windows-workflow-foundation//invoking-activity-validation.md).  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)]información sobre cómo buscar y controlar errores de validación y advertencias, consulte [invocar validación de actividad](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
   
-## Usar grupos de sobrecargas  
- Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad.Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>.A cada grupo se le proporciona un nombre especificado por <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando se enlaza sólo un conjunto de argumentos en un grupo de sobrecargas.En el siguiente ejemplo tomado de [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md), se define una clase `CreateLocation`.  
+## <a name="using-overload-groups"></a>Usar grupos de sobrecargas  
+ Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. A cada grupo se le proporciona un nombre especificado por <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando se enlaza sólo un conjunto de argumentos en un grupo de sobrecargas. En el siguiente ejemplo, tomado de la [OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md) ejemplo, un `CreateLocation` se define la clase.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -108,9 +112,9 @@ class CreateLocation: Activity
 }  
 ```  
   
- El objetivo de esta actividad es especificar una ubicación en los EE. UU.Para ello, el usuario de la actividad puede especificar la ubicación con uno de los tres grupos de argumentos.Para especificar las combinaciones válidas de argumentos, se definen tres grupos de sobrecargas.`G1` contiene los argumentos `Latitude` y `Longitude`.`G2` contiene `Street`, `City` y `State`.`G3` contiene `Street` y `Zip`.`Name` también es un argumento necesario, pero no forma parte de un grupo de sobrecargas.Para que esta actividad sea válida, `Name` tendría que estar enlazado con todos los argumentos de uno y solo un grupo de sobrecargas.  
+ El objetivo de esta actividad es especificar una ubicación en los EE. UU. Para ello, el usuario de la actividad puede especificar la ubicación con uno de los tres grupos de argumentos. Para especificar las combinaciones válidas de argumentos, se definen tres grupos de sobrecargas. `G1` contiene los argumentos `Latitude` y `Longitude`. `G2` contiene `Street`, `City` y `State`. `G3` contiene `Street` y `Zip`. `Name` también es un argumento necesario, pero no forma parte de un grupo de sobrecargas. Para que esta actividad sea válida, `Name` tendría que estar enlazado con todos los argumentos de uno y solo un grupo de sobrecargas.  
   
- En el ejemplo siguiente, tomado del ejemplo de [Actividades de acceso a bases de datos](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) , hay dos grupos de sobrecargas: `ConnectionString` y `ConfigFileSectionName`.Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
+ En el siguiente ejemplo, tomado de la [las actividades de acceso de base de datos](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) ejemplo, hay dos grupos de sobrecargas: `ConnectionString` y `ConfigFileSectionName`. Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
@@ -151,13 +155,13 @@ Public class DbUpdate: AsyncCodeActivity
 -   Un grupo de sobrecargas no puede ser un subconjunto o un conjunto equivalente de otro grupo de sobrecargas.  
   
     > [!NOTE]
-    >  Hay una excepción para esta regla.Si un grupo de sobrecargas es un subconjunto de otro grupo de sobrecargas y el subconjunto solo contiene argumentos donde `RequiredArgument` es `false`, el grupo de sobrecargas es válido.  
+    >  Hay una excepción para esta regla. Si un grupo de sobrecargas es un subconjunto de otro grupo de sobrecargas y el subconjunto solo contiene argumentos donde `RequiredArgument` es `false`, el grupo de sobrecargas es válido.  
   
--   Los grupos de sobrecargas se pueden superponer pero es un error si la intersección de los grupos contiene todos los argumentos necesarios de uno o ambos grupos de sobrecargas.En el ejemplo anterior los grupos de sobrecargas `G2` y `G3` se superponían, pero como la intersección no contenía todos los argumentos de uno o ambos grupos, era válido.  
+-   Los grupos de sobrecargas se pueden superponer pero es un error si la intersección de los grupos contiene todos los argumentos necesarios de uno o ambos grupos de sobrecargas. En el ejemplo anterior los grupos de sobrecargas `G2` y `G3` se superponían, pero como la intersección no contenía todos los argumentos de uno o ambos grupos, era válido.  
   
  Al enlazar argumentos en un grupo de sobrecargas:  
   
--   Se considera que un grupo de sobrecargas está enlazado si se enlazan todos los argumentos `RequiredArgument` del grupo.  
+-   Se considera que un grupo de sobrecargas está enlazado si se enlazan todos los argumentos `RequiredArgument` en el grupo.  
   
 -   Si un grupo no tiene ningún argumento `RequiredArgument` pero tiene enlazado al menos uno, se considera que el grupo está enlazado.  
   

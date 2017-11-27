@@ -1,56 +1,62 @@
 ---
-title: "Seguridad de los mensajes con un cliente de nombres de usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguridad de los mensajes con un cliente de nombres de usuario
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Seguridad de los mensajes con un cliente de nombres de usuario
-La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos mediante seguridad del nivel de mensaje.La autenticación del servicio se realiza mediante un certificado X.509.El cliente se autentica utilizando un nombre de usuario y contraseña.  
+# <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
+La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos mediante seguridad del nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
   
- Para obtener una aplicación de ejemplo, vea [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ Para una aplicación de ejemplo, vea [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
- ![Seguridad de mensajes mediante la autenticación de nombre de usuario](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61\-7e1d\-42f5\-b1af\-195bfee5b3c6")  
+ ![Seguridad de mensaje mediante la autenticación de nombre de usuario](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Mensaje|  
 |Interoperabilidad|Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
-|Autenticación \(servidor\)|La negociación inicial requiere autenticación de servidor|  
-|Autenticación \(cliente\)|Nombre de usuario\/contraseña|  
+|Autenticación (servidor)|La negociación inicial requiere autenticación de servidor|  
+|Autenticación (cliente)|Nombre de usuario/contraseña|  
 |Integridad|Sí, mediante el contexto de seguridad compartido|  
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|  
 |Transporte|HTTP|  
-|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.Siga uno de los procedimientos siguientes:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio con la configuración proporcionada, pero sin definir ningún extremo.  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
   
-### Código  
+### <a name="code"></a>Código  
  El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### Configuración  
+### <a name="configuration"></a>Configuración  
  La siguiente configuración se puede usar en lugar del código.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -90,18 +96,18 @@ La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](..
 </configuration>  
 ```  
   
-## Client  
+## <a name="client"></a>Cliente  
   
-### Código  
- El siguiente código crea el cliente.El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`.El nombre de usuario y la contraseña solo se pueden especificar mediante código \(no es configurable\).El código para devolver el nombre de usuario y la contraseña no se muestra aquí porque se debe hacer en el nivel de la aplicación.Por ejemplo, use un cuadro de diálogo de Window Forms para solicitar los datos al usuario.  
+### <a name="code"></a>Código  
+ El siguiente código crea el cliente. El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`. El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable). El código para devolver el nombre de usuario y la contraseña no se muestra aquí porque se debe hacer en el nivel de la aplicación. Por ejemplo, use un cuadro de diálogo de Windows Forms para solicitar los datos al usuario.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### Configuración  
- El siguiente código configura el cliente.El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`.El nombre de usuario y la contraseña solo se pueden especificar mediante código \(no es configurable\).  
+### <a name="configuration"></a>Configuración  
+ El siguiente código configura el cliente. El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`. El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable).  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -129,9 +135,9 @@ La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](..
 </configuration>  
 ```  
   
-## Vea también  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)   
- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<identidad\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)   
- [Modelo de seguridad para Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [Autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [\<identidad >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,33 +1,31 @@
 ---
-title: "Reanudar sin error | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID20"
-dev_langs: 
-  - "VB"
+title: Reanudar sin error
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f86361b1e5310359288a97c5f41f017a344c30b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Reanudar sin error
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Ha aparecido una instrucción `Resume` fuera del código de control de errores o el código pasó directamente al controlador de eventos aunque no se había producido ningún error.  
+# <a name="resume-without-error"></a>Reanudar sin error
+Un `Resume` instrucción ha aparecido fuera del código de control de errores o el código salta en un controlador de errores, incluso si se ha producido ningún error.  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Mueva la instrucción `Resume`a un controlador de errores o elimínela.  
+1.  Mover el `Resume` instrucción en un controlador de errores, o eliminarla.  
   
-2.  Los saltos a etiquetas no se pueden producir en los procedimientos, de modo que busque la etiqueta que identifique el controlador de errores en el procedimiento.  Si encuentra una etiqueta duplicada especificada como destino de una instrucción `GoTo` que no sea una instrucción `On Error GoTo`, cambie la etiqueta de la línea para que coincida con el destino deseado.  
+2.  Los saltos a etiquetas no se pueden realizar a través de procedimientos, de modo que busque el procedimiento para la etiqueta que identifica el controlador de errores. Si encuentra una etiqueta duplicada especificada como destino de un `GoTo` instrucción que no sea un `On Error GoTo` (instrucción), cambie la etiqueta de línea para que coincida con su destino pretendido.  
   
-## Vea también  
- [Resume \(Instrucción\)](../../../visual-basic/language-reference/statements/resume-statement.md)   
- [On Error \(Instrucción\)](../../../visual-basic/language-reference/statements/on-error-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Resume (instrucción)](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [On Error (instrucción)](../../../visual-basic/language-reference/statements/on-error-statement.md)

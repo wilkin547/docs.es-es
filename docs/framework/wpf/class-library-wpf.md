@@ -1,47 +1,49 @@
 ---
-title: "Biblioteca de clases (WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "biblioteca de clases"
-  - "biblioteca de clases de Windows Presentation Foundation"
-  - "biblioteca de clases WPF"
+title: Biblioteca de clases (WPF)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF class library [WPF]
+- Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85e5eb11f1eee12a15d19b0e0ecd93dd8042c15f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Biblioteca de clases (WPF)
-Los vínculos siguientes hacen referencia a los espacios de nombres que contienen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)][!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
+# <a name="class-library-wpf"></a>Biblioteca de clases (WPF)
+Los vínculos siguientes hacen referencia a espacios de nombres que contienen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
   
 -   <xref:Microsoft.Build.Tasks.Windows>  
   
--   <xref:Microsoft.Win32> \(compartido\)  
+-   <xref:Microsoft.Win32>(compartidos)  
   
 -   <xref:Microsoft.Windows.Themes>  
   
--   <xref:System.Collections.ObjectModel> \(compartido\)  
+-   <xref:System.Collections.ObjectModel>(compartidos)  
   
--   <xref:System.Collections.Specialized> \(compartido\)  
+-   <xref:System.Collections.Specialized>(compartidos)  
   
--   <xref:System.ComponentModel> \(compartido\)  
+-   <xref:System.ComponentModel>(compartidos)  
   
--   <xref:System.Diagnostics> \(compartido\)  
+-   <xref:System.Diagnostics>(compartidos)  
   
--   <xref:System.IO> \(compartido\)  
+-   <xref:System.IO>(compartidos)  
   
 -   <xref:System.IO.Packaging>  
   
@@ -51,7 +53,7 @@ Los vínculos siguientes hacen referencia a los espacios de nombres que contiene
   
 -   <xref:System.Printing.Interop>  
   
--   <xref:System.Security.Permissions> \(compartido\)  
+-   <xref:System.Security.Permissions>(compartidos)  
   
 -   <xref:System.Security.RightsManagement>  
   
@@ -93,7 +95,7 @@ Los vínculos siguientes hacen referencia a los espacios de nombres que contiene
   
 -   <xref:System.Windows.Interop>  
   
--   <xref:System.Windows.Markup> \(compartido\)  
+-   <xref:System.Windows.Markup>(compartidos)  
   
 -   <xref:System.Windows.Markup.Localizer>  
   
@@ -131,10 +133,10 @@ Los vínculos siguientes hacen referencia a los espacios de nombres que contiene
   
 -   <xref:UIAutomationClientsideProviders>  
   
-## Compatibilidad con XAML en .NET 4  
- Los siguientes espacios de nombres contienen los tipos del ensamblado System.Xaml.  System.Xaml proporciona la compatibilidad con el lenguaje XAML común para los marcos como WPF que se compilan en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  
+## <a name="xaml-support-in-net-4"></a>Compatibilidad con XAML en .NET 4  
+ Los siguientes espacios de nombres contienen tipos del ensamblado System.Xaml. System.Xaml proporciona la compatibilidad del lenguaje XAML común para marcos de trabajo, como WPF que se basan en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  
   
--   <xref:System.Windows.Markup> \(compartido\)  
+-   <xref:System.Windows.Markup>(compartidos)  
   
 -   <xref:System.Xaml>  
   

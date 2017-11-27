@@ -1,28 +1,34 @@
 ---
-title: "C&#243;mo: Crear un servicio b&#225;sico web HTTP de WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Crear un servicio básico web HTTP de WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: 26
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8352c7761447322d1ddf8381be145e38d6b7df8d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un servicio b&#225;sico web HTTP de WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que expone un extremo web.Los extremos web envían los datos por XML o JSON, no hay ninguna envoltura SOAP.En este tema se muestra cómo exponer este tipo de extremos.  
+# <a name="how-to-create-a-basic-wcf-web-http-service"></a>Cómo: Crear un servicio básico web HTTP de WCF
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que expone un extremo web. Los extremos web envían los datos por XML o JSON, no hay ninguna envoltura SOAP. En este tema se muestra cómo exponer este tipo de extremos.  
   
 > [!NOTE]
->  La única manera de proteger un extremo web es exponerlo a través de HTTPS, utilizando la seguridad de transporte.Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los extremos que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.  
+>  La única manera de proteger un extremo web es exponerlo a través de HTTPS, utilizando la seguridad de transporte. Al usar la seguridad basada en mensaje, la información de seguridad se coloca normalmente en encabezados SOAP, y dado que los mensajes enviados a los extremos que no son SOAP no contienen envoltura SOAP, no hay ningún lugar donde colocar la información de seguridad y debe confiar en la seguridad de transporte.  
   
-### Para crear un extremo web  
+### <a name="to-create-a-web-endpoint"></a>Para crear un extremo web  
   
 1.  Defina un contrato de servicios mediante una interfaz marcada con los atributos <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> y <xref:System.ServiceModel.Web.WebGetAttribute>.  
   
@@ -30,14 +36,14 @@ caps.handback.revision: 26
      [!code-vb[htBasicService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]  
   
     > [!NOTE]
-    >  De forma predeterminada, <xref:System.ServiceModel.Web.WebInvokeAttribute> asigna las llamadas POST a la operación.Puede, sin embargo, especificar el método HTTP \(por ejemplo, HEAD, PUT o DELETE\) para asignar a la operación especificando un parámetro “method\=”.<xref:System.ServiceModel.Web.WebGetAttribute> no tiene un parámetro “method\=” y solo asigna llamadas GET a la operación de servicio.  
+    >  De forma predeterminada, <xref:System.ServiceModel.Web.WebInvokeAttribute> asigna las llamadas POST a la operación. Puede, sin embargo, especificar el método HTTP (por ejemplo, HEAD, PUT o DELETE) para asignar a la operación especificando un parámetro “method=”. <xref:System.ServiceModel.Web.WebGetAttribute> no tiene un parámetro “method=” y solo asigna llamadas GET a la operación de servicio.  
   
 2.  Implemente el contrato de servicios.  
   
      [!code-csharp[htBasicService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#1)]
      [!code-vb[htBasicService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#1)]  
   
-### Para hospedar el servicio.  
+### <a name="to-host-the-service"></a>Para hospedar el servicio  
   
 1.  Crear un objeto <xref:System.ServiceModel.Web.WebServiceHost>.  
   
@@ -50,15 +56,15 @@ caps.handback.revision: 26
      [!code-vb[htBasicService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]  
   
     > [!NOTE]
-    >  Si no agrega un extremo, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un extremo predeterminado.<xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web \(WSDL\) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.  
+    >  Si no agrega un extremo, <xref:System.ServiceModel.Web.WebServiceHost> crea automáticamente un extremo predeterminado. <xref:System.ServiceModel.Web.WebServiceHost> también agrega <xref:System.ServiceModel.Description.WebHttpBehavior> y deshabilita la página de ayuda de HTTP y la funcionalidad GET del lenguaje de descripción de servicios Web (WSDL) para que el extremo de metadatos no interfiera con el extremo HTTP predeterminado.  
     >   
-    >  Agregar un extremo que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el extremo.La razón para esto es que el URI de escucha del extremo es igual al URI de la página de ayuda \(la página que se muestra al ir a la dirección base de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]\).  
+    >  Agregar un extremo que no es SOAP a una dirección URL de"" causa un comportamiento inesperado cuando se intenta llamar a una operación en el extremo. La razón para esto es que el URI de escucha del extremo es igual al URI de la página de ayuda (la página que se muestra al ir a la dirección base de un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]).  
   
      Para evitar que esto suceda, puede realizar una de las siguientes acciones:  
   
     -   Siempre especifique un URI que no esté en blanco para un extremo que no sea SOAP.  
   
-    -   Desactive la página de ayuda.Esto se puede hacer mediante el siguiente código.  
+    -   Desactive la página de ayuda. Esto se puede hacer mediante el siguiente código.  
   
      [!code-csharp[htBasicService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#4)]
      [!code-vb[htBasicService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#4)]  
@@ -68,23 +74,23 @@ caps.handback.revision: 26
      [!code-csharp[htBasicService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]  
   
-     Este ejemplo muestra cómo hospedar un servicio de tipo web con una aplicación de consola.También puede hospedar este tipo de servicios dentro de IIS.Para ello, especifique la clase <xref:System.ServiceModel.Activation.WebServiceHostFactory> en un archivo .svc como muestra el siguiente código.  
+     Este ejemplo muestra cómo hospedar un servicio de tipo web con una aplicación de consola. También puede hospedar este tipo de servicios dentro de IIS. Para ello, especifique la clase <xref:System.ServiceModel.Activation.WebServiceHostFactory> en un archivo .svc como muestra el siguiente código.  
   
     ```  
-    <%ServiceHost   
-        language=c#  
-        Debug="true"  
-        Service="Microsoft.Samples.Service"  
-        Factory=System.ServiceModel.Activation.WebServiceHostFactory%>  
+          <%ServiceHost   
+    language=c#  
+    Debug="true"  
+    Service="Microsoft.Samples.Service"  
+    Factory=System.ServiceModel.Activation.WebServiceHostFactory%>  
     ```  
   
-### Para llamar a las operaciones de servicio asignadas a GET en Internet Explorer  
+### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Para llamar a las operaciones de servicio asignadas a GET en Internet Explorer  
   
-1.  Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet? s=Hello, world!`" y pulse ENTER.La dirección URL contiene la dirección base del servicio \("http:\/\/localhost:8000\/"\), la dirección relativa del extremo \(""\), la operación del servicio que se ha de llamar \("EchoWithGet"\) y un signo de interrogación seguido por una lista de parámetros con nombre separados por una Y comercial \(&\).  
+1.  Abra Internet Explorer y escriba "`http://localhost:8000/EchoWithGet?s=Hello, world!`" y presione ENTRAR. La dirección URL contiene la dirección base del servicio ("http://localhost:8000/"), la dirección relativa del punto de conexión (""), la operación del servicio que se ha de llamar ("EchoWithGet") y un signo de interrogación seguido de una lista de parámetros con nombre separados por una Y comercial (&).  
   
-### Realización de llamadas a operaciones de servicio mediante código  
+### <a name="to-call-service-operations-in-code"></a>Realización de llamadas a operaciones de servicio mediante código  
   
-1.  Cree una instancia de <xref:System.ServiceModel.Web.WebChannelFactory> dentro de un bloque `using`.  
+1.  Cree una instancia de <!--zz <xref:System.ServiceModel.Web.WebChannelFactory>--> `System.ServiceModel.Web.WebChannelFactory` dentro de un `using` bloque.  
   
      [!code-csharp[htBasicService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]  
@@ -104,20 +110,19 @@ caps.handback.revision: 26
      [!code-csharp[htBasicService#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]  
   
-## Ejemplo  
- A continuación, se muestra un listado de código completo para este ejemplo.  
+## <a name="example"></a>Ejemplo  
+ A continuación, se muestra una lista de código completa para este ejemplo.  
   
  [!code-csharp[htBasicService#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]
  [!code-vb[htBasicService#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#10)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Al compilar Service.cs, haga una referencia a System.ServiceModel.dll y a System.ServiceModel.Web.dll.  
   
-## Vea también  
- <xref:System.ServiceModel.WebHttpBinding>   
- <xref:System.ServiceModel.Web.WebGetAttribute>   
- <xref:System.ServiceModel.Web.WebInvokeAttribute>   
- <xref:System.ServiceModel.Web.WebServiceHost>   
- <xref:System.ServiceModel.Web.WebChannelFactory>   
- <xref:System.ServiceModel.Description.WebHttpBehavior>   
- [Modelo de programación de web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.WebHttpBinding>  
+ <xref:System.ServiceModel.Web.WebGetAttribute>  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+ <xref:System.ServiceModel.Web.WebServiceHost>  
+ <xref:System.ServiceModel.Description.WebHttpBehavior>  
+ [Modelo de programación Web HTTP de WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

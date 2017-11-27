@@ -1,41 +1,44 @@
 ---
-title: "Enlace de WS | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Enlace de WS
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d83ff828515a2399f3dae3c263b22ec91bb1fc6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlace de WS
+# <a name="ws-binding"></a>Enlace de WS
 Esta sección contiene ejemplos que muestran el enlace del Servicio de Windows en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## En esta sección  
- [Flujo de la transacción WS](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Flujo de transacciones de WS](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
  Muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica de WS o el protocolo OleTransactions.  
   
- [Enlace HTTP de federación de WS 2007](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
+ [Enlace de HTTP de federación de WS 2007](../../../../docs/framework/wcf/samples/ws-2007-federation-http-binding.md)  
  Muestra el uso de <xref:System.ServiceModel.WS2007FederationHttpBinding>.  
   
- [WS Http dual](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
+ [WS Http Dual](../../../../docs/framework/wcf/samples/ws-dual-http.md)  
  Muestra cómo configurar el enlace `WSDualHttpBinding`.  
   
- [Codificación MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md)  
- Muestra el uso de la codificación de mensajes del Mecanismo de optimización de transmisión del mensaje \(MTOM\) con WSHttpBinding.  
+ [Codificación de MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md)  
+ Muestra el uso de la codificación de mensajes del Mecanismo de optimización de transmisión del mensaje (MTOM) con WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
  Muestra cómo implementar un servicio y un cliente típicos con [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Sesión de confianza de WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
+ [Sesión confiable WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Muestra el uso de las sesiones de confianza.  
   
  [Seguridad de transporte WS](../../../../docs/framework/wcf/samples/ws-transport-security.md)  

@@ -1,60 +1,59 @@
 ---
-title: "C&#243;mo: Ocultar una variable con el mismo nombre que su variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "instrucciones de declaración, elementos declarados"
-  - "declaraciones, elementos"
-  - "elementos declarados, acerca de los elementos declarados"
-  - "elementos declarados, hacer referencia"
-  - "declarar elementos"
-  - "nombres de elementos, calificación"
-  - "calificación, de nombres de elementos"
-  - "referencias, elementos declarados"
-  - "hacer referencia a elementos declarados"
+title: "Cómo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- qualification [Visual Basic], of element names
+- declarations [Visual Basic], elements
+- element names [Visual Basic], qualification
+- references [Visual Basic], declared elements
+- declaration statements [Visual Basic], declared elements
+- declaring elements [Visual Basic]
+- referencing declared elements [Visual Basic]
+- declared elements [Visual Basic], referencing
+- declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Puede ocultar una variable *sombreándola*, es decir, volviéndola a definir con una variable del mismo nombre.  Puede sombrear la variable que desea ocultar de dos maneras:  
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Cómo: Ocultar una variable con el mismo nombre que su variable (Visual Basic)
+Puede ocultar una variable por *sombrear* él, es decir, mediante la redefinición con una variable del mismo nombre. Puede reemplazar la variable que desea ocultar de dos maneras:  
   
--   **Sombreado por ámbito.** Puede sombrearla por ámbito volviéndola a declarar dentro de una subregión de la región que contiene la variable que desea ocultar.  
+-   **Sombreado por ámbito.** Puede reemplazar por ámbito volviéndola a declarar dentro de una subregión de la región que contiene la variable que desea ocultar.  
   
--   **Sombreado por herencia.** Si la variable que desea ocultar está definida en el nivel de clase, puede sombrearla por herencia volviéndola a declarar con la palabra clave [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) en una clase derivada.  
+-   **Sombreado por herencia.** Si la variable que desea ocultar se define en el nivel de clase, puede reemplazar a través de herencia por volver a declarar con la [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palabra clave en una clase derivada.  
   
-## Dos maneras a ocultar una variable  
+## <a name="two-ways-to-hide-a-variable"></a>Dos formas de ocultar una Variable  
   
-#### Para ocultar una variable sombreándola por ámbito  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Para ocultar una variable de sombreado por ámbito  
   
-1.  Determine la región que define la variable que desea ocultar y determine una subregión en la que va a definirla de nuevo en su variable.  
+1.  Determinar la región que define la variable que desea ocultar y determine una subregión en la que se va a volver a definirla con la variable.  
   
     |Región de la variable|Subregión permitida para volverla a definir|  
-    |---------------------------|-------------------------------------------------|  
+    |-----------------------|-------------------------------------------|  
     |Módulo|Una clase dentro del módulo|  
     |Clase|Una subclase dentro de la clase<br /><br /> Un procedimiento dentro de la clase|  
   
-     No puede volver a definir una variable de procedimiento en un bloque dentro de ese procedimiento, por ejemplo en una construcción `If`...`End If` o en un bucle `For`.  
+     No se puede definir una variable de procedimiento en un bloque dentro de ese procedimiento, por ejemplo en un `If`... `End If` construcción o `For` bucle.  
   
-2.  Cree la subregión si es que no existe ya.  
+2.  Cree la subregión si aún no existe.  
   
-3.  Dentro de la subregión, escriba una instrucción [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md) que declara la variable de sombreado.  
+3.  Dentro de la subregión, escribir una [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md) declarar la variable de sombreado.  
   
-     Cuando un código de la subregión hace referencia al nombre de variable, el compilador resuelve la referencia con la variable sombreada.  
+     Cuando el código de la subregión hace referencia al nombre de variable, el compilador resuelve la referencia a la variable de sombreado.  
   
-     El ejemplo siguiente ilustra el sombreado por ámbito, así como una referencia que omite el sombreado.  
+     En el ejemplo siguiente se ilustra el sombreado por ámbito, así como una referencia que omite el sombreado.  
   
     ```  
     Module shadowByScope  
@@ -76,21 +75,21 @@ Puede ocultar una variable *sombreándola*, es decir, volviéndola a definir con
     End Module  
     ```  
   
-     El ejemplo anterior declara la variable `num` tanto en el nivel de módulo como en el nivel de procedimiento \(en el procedimiento `show`\).  La variable local `num` prevalece sobre la variable de nivel de módulo `num` en `show`, por lo que la variable local se establece en 2.  Sin embargo, no hay ninguna variable local que prevalezca sobre `num` en el procedimiento `useModuleLevelNum`.  Por consiguiente, `useModuleLevelNum` establece el valor de la variable de nivel de módulo en 1.  
+     En el ejemplo anterior se declara la variable `num` tanto en el nivel de módulo en el nivel de procedimiento (en el procedimiento `show`). La variable local `num` prevalece sobre la variable de nivel de módulo `num` en `show`, por lo que la variable local se establece en 2. Sin embargo, no hay ninguna variable local para instantáneas `num` en el `useModuleLevelNum` procedimiento. Por lo tanto, `useModuleLevelNum` establece el valor de la variable de nivel de módulo en 1.  
   
-     La llamada a `MsgBox` dentro de `show` omite el mecanismo de sombreado calificando `num` con el nombre del módulo.  Por consiguiente, muestra la variable de nivel de módulo en lugar de la variable local.  
+     El `MsgBox` llamar dentro de `show` omite el mecanismo de sombreado calificando `num` con el nombre del módulo. Por lo tanto, muestra la variable de nivel de módulo en lugar de la variable local.  
   
-#### Para ocultar una variable sombreándola por herencia  
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Para ocultar una variable de sombreado por herencia  
   
-1.  Asegúrese de que la variable que desea ocultar está declarada en una clase y en el nivel de clase \(fuera de cualquier procedimiento\).  De lo contrario no puede sombrearla por herencia.  
+1.  Asegúrese de que la variable que desea ocultar está declarada en una clase y en el nivel de clase (fuera de cualquier procedimiento). En caso contrario, no puede prevalecer mediante herencia.  
   
-2.  Defina una clase derivada de la clase de la variable si es que no existe ya una.  
+2.  Definir una clase derivada de la clase de la variable si no existe.  
   
-3.  Dentro de la clase derivada, escriba una instrucción `Dim` que declare su variable.  Incluya la palabra clave [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) en la declaración.  
+3.  Dentro de la clase derivada, escribe un `Dim` instrucción declara la variable. Incluir el [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md) palabra clave en la declaración.  
   
-     Cuando un código de la clase derivada hace referencia al nombre de variable, el compilador resuelve la referencia en su variable.  
+     Cuando el código de la clase derivada hace referencia al nombre de variable, el compilador resuelve la referencia a la variable.  
   
-     El ejemplo siguiente ilustra el sombreado por herencia.  Realiza dos referencias, una que tiene acceso a la variable de sombreado y otra que omite el sombreado.  
+     En el ejemplo siguiente se ilustra el sombreado por herencia. Realiza dos referencias, una que tiene acceso a la variable de sombreado y otra que omite el sombreado.  
   
     ```  
     Public Class shadowBaseClass  
@@ -107,17 +106,17 @@ Puede ocultar una variable *sombreándola*, es decir, volviéndola a definir con
     End Class  
     ```  
   
-     En el ejemplo anterior, se declara la variable `shadowString` en la clase base y se sombrea dicha variable en la clase derivada.  El procedimiento `showStrings` de la clase derivada muestra la versión de sombreado de la cadena cuando el nombre `shadowString` no está calificado.  Luego, muestra la versión oculta cuando `shadowString` está calificado con la palabra clave `MyBase`.  
+     En el ejemplo anterior se declara la variable `shadowString` en la clase base y la sombra en la clase derivada. El procedimiento `showStrings` en la clase derivada muestra la versión de sombreado de la cadena cuando el nombre `shadowString` no está calificado. A continuación, muestra la versión sombreada cuando `shadowString` se califica con el `MyBase` palabra clave.  
   
-## Programación eficaz  
- El ocultamiento presenta más de una versión de una variable con el mismo nombre.  Cuando una instrucción de código hace referencia al nombre de variable, la versión en la que el compilador resuelve la referencia depende de factores como la ubicación de la instrucción de código y la presencia de una cadena de calificación.  Esto puede aumentar el riesgo de hacer referencia a una versión no deseada de una variable sombreada.  Puede reducir ese riesgo calificando por completo todas las referencias en una variable sombreada.  
+## <a name="robust-programming"></a>Programación sólida  
+ El sombreado presenta más de una versión de una variable con el mismo nombre. Cuando una instrucción de código hace referencia al nombre de variable, la versión a la que el compilador resuelve la referencia depende de factores como la ubicación de la instrucción de código y la presencia de una cadena de calificación. Esto puede aumentar el riesgo de que hace referencia a una versión no deseada de una variable sombreada. Puede reducir este riesgo certificar por completo todas las referencias a una variable sombreada.  
   
-## Vea también  
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Diferencias entre sombrear y reemplazar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)   
- [Cómo: Ocultar una variable heredada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)   
- [Cómo: Obtener acceso a una variable que oculta una clase derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)   
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
+## <a name="see-also"></a>Vea también  
+ [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Sombrear en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [Diferencias entre sombrear y reemplazar](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)  
+ [Ocultar una variable heredada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)  
+ [Obtener acceso a una variable que oculta una clase derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)  
+ [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [Fundamentos de la herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -1,38 +1,44 @@
 ---
-title: "C&#243;mo: Codificar un objeto Visual en un archivo de imagen | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "codificar formatos de imagen"
-  - "archivos de imagen, codificar a partir de elementos visuales"
-  - "elementos visuales, codificar en un archivo de imagen"
+title: "Cómo: Codificar un objeto Visual en un archivo de imagen"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image files [WPF], encoding from visuals
+- encoding image formats [WPF]
+- visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0a1ff9de1f5ddfdabbf7af7fef5f78046c14f8ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Codificar un objeto Visual en un archivo de imagen
-En este ejemplo se muestra cómo codificar un objeto <xref:System.Windows.Media.Visual> en un archivo de imagen utilizando un objeto <xref:System.Windows.Media.Imaging.RenderTargetBitmap> y un objeto <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>Cómo: Codificar un objeto Visual en un archivo de imagen
+Este ejemplo muestra cómo codificar un <xref:System.Windows.Media.Visual> objeto en un archivo de imagen mediante una <xref:System.Windows.Media.Imaging.RenderTargetBitmap> y <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
-## Ejemplo  
- <xref:System.Windows.Media.DrawingVisual> se crea utilizando los objetos <xref:System.Windows.Media.Imaging.BitmapImage> y <xref:System.Windows.Media.FormattedText>, que se representa en un objeto <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.  A continuación, el mapa de bits representado se utiliza para crear un objeto <xref:System.Windows.Media.Imaging.BitmapFrame> que se agrega a <xref:System.Windows.Media.Imaging.PngBitmapEncoder> para crear un nuevo archivo [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)].  
+## <a name="example"></a>Ejemplo  
+ El <xref:System.Windows.Media.DrawingVisual> se crea con un <xref:System.Windows.Media.Imaging.BitmapImage> y <xref:System.Windows.Media.FormattedText> que se representa en un <xref:System.Windows.Media.Imaging.RenderTargetBitmap>. El mapa de bits representado, a continuación, se utiliza para crear un <xref:System.Windows.Media.Imaging.BitmapFrame> que se agrega a la <xref:System.Windows.Media.Imaging.PngBitmapEncoder> para crear un nuevo [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] archivo.  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
   
- En este ejemplo se ha utilizado un objeto <xref:System.Windows.Media.Imaging.PngBitmapEncoder>, pero podría utilizarse cualquiera de los objetos derivados de <xref:System.Windows.Media.Imaging.BitmapEncoder> para crear el archivo de imagen.  
+ A <xref:System.Windows.Media.Imaging.PngBitmapEncoder> se usó en este ejemplo, pero los de la clase derivada <xref:System.Windows.Media.Imaging.BitmapEncoder> objetos podrían haberse utilizados para crear el archivo de imagen.  
   
-## Vea también  
- <xref:System.Windows.Media.DrawingContext>   
- [Información general sobre imágenes](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)   
- [Información general sobre objetos Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Media.DrawingContext>  
+ [Información general sobre imágenes](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Información general sobre objetos Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
  [Usar objetos DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)

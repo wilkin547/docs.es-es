@@ -1,71 +1,63 @@
 ---
-title: Multithreading con el componente BackgroundWorker (Visual Basic) | Documentos de Microsoft
+title: Multithreading con el componente BackgroundWorker (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>Tutorial: Multithreading con el componente BackgroundWorker (Visual Basic)
-Este tutorial muestra cómo crear una aplicación de formularios Windows Forms multiproceso que busque las apariciones de una palabra en una archivo de texto. Muestra:  
+Este tutorial muestra cómo crear una aplicación multiproceso de Windows Forms que busque las repeticiones de una palabra en un archivo de texto. Muestra cómo:  
   
--   Definir una clase con un método que se puede llamar mediante el <xref:System.ComponentModel.BackgroundWorker>componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Definir una clase con un método que puede llamarse mediante el componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   Controlar eventos provocados por la <xref:System.ComponentModel.BackgroundWorker>componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Controlar eventos que se han generado mediante el componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   A partir de un <xref:System.ComponentModel.BackgroundWorker>un método de ejecución del componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Iniciar un componente <xref:System.ComponentModel.BackgroundWorker> para ejecutar un método.  
   
--   Implementar un `Cancel` botón que detiene el <xref:System.ComponentModel.BackgroundWorker>componente.</xref:System.ComponentModel.BackgroundWorker>  
+-   Implementar un botón `Cancel` que detenga el componente <xref:System.ComponentModel.BackgroundWorker>.  
   
 ### <a name="to-create-the-user-interface"></a>Para crear la interfaz de usuario  
   
 1.  Abra un nuevo proyecto de aplicación de Windows Forms de Visual Basic y cree un formulario denominado `Form1`.  
   
-2.  Agregue dos botones y cuatro cuadros de texto para `Form1`.  
+2.  Agregue dos botones y cuatro cuadros de texto a `Form1`.  
   
-3.  Nombre de los objetos como se muestra en la tabla siguiente.  
+3.  Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
   
     |Objeto|Propiedad|Parámetro|  
     |------------|--------------|-------------|  
-    |Primer botón|`Name`, `Text`|Inicio, inicio|  
+    |Primer botón|`Name`, `Text`|Iniciar, Iniciar|  
     |Segundo botón|`Name`, `Text`|Cancelar, Cancelar|  
     |Primer cuadro de texto|`Name`, `Text`|SourceFile, ""|  
     |Segundo cuadro de texto|`Name`, `Text`|CompareString, ""|  
     |Tercer cuadro de texto|`Name`, `Text`|WordsCounted, "0"|  
     |Cuarto cuadro de texto|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  Agregue una etiqueta al lado de cada cuadro de texto. Establecer el `Text` propiedad para cada etiqueta, como se muestra en la tabla siguiente.  
+4.  Agregue una etiqueta junto a cada cuadro de texto. Establezca la propiedad `Text` para cada etiqueta tal y como se muestra en la tabla siguiente.  
   
     |Objeto|Propiedad|Parámetro|  
     |------------|--------------|-------------|  
     |Primera etiqueta|`Text`|Archivo de código fuente|  
-    |Segunda etiqueta|`Text`|Comparar cadenas|  
-    |Tercera etiqueta|`Text`|Coincidencia de palabras|  
+    |Segunda etiqueta|`Text`|Cadena de comparación|  
+    |Tercer etiqueta|`Text`|Palabras coincidentes|  
     |Cuarta etiqueta|`Text`|Recuento de líneas|  
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Para crear un componente BackgroundWorker y suscribirse a sus eventos  
   
-1.  Agregar un <xref:System.ComponentModel.BackgroundWorker>componente desde la **componentes** sección de la **herramientas** al formulario.</xref:System.ComponentModel.BackgroundWorker> Aparecerá en la Bandeja de componentes del formulario.  
+1.  Agregue un componente <xref:System.ComponentModel.BackgroundWorker> desde la sección **Componentes** del **cuadro de herramientas** al formulario. Aparecerá en la bandeja de componentes del formulario.  
   
 2.  Establezca las siguientes propiedades del objeto BackgroundWorker1.  
   
@@ -76,13 +68,13 @@ Este tutorial muestra cómo crear una aplicación de formularios Windows Forms m
   
 ### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>Para definir el método que se ejecutará en un subproceso independiente  
   
-1.  Desde el **proyecto** menú, elija **Agregar clase** para agregar una clase al proyecto. El **Agregar nuevo elemento** se muestra el cuadro de diálogo.  
+1.  En el menú **Proyecto**, elija **Agregar clase** para agregar una clase al proyecto. Se abrirá el cuadro de diálogo **Agregar nuevo elemento**.  
   
-2.  Seleccione **clase** desde la ventana de plantillas y escriba `Words.vb` en el campo nombre.  
+2.  Seleccione **Clase** en la ventana de plantillas y escriba `Words.vb` en el campo de nombre.  
   
-3.  Haga clic en **Agregar**. El `Words` se muestra la clase.  
+3.  Haga clic en **Agregar**. Se mostrará la clase `Words`.  
   
-4.  Agregue el código siguiente a la clase `Words` :  
+4.  Agregue el código siguiente a la clase `Words`:  
   
     ```vb  
     Public Class Words  
@@ -171,9 +163,9 @@ Este tutorial muestra cómo crear una aplicación de formularios Windows Forms m
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>Controlar eventos desde el subproceso  
+### <a name="to-handle-events-from-the-thread"></a>Para controlar eventos del subproceso  
   
--   Agregue los siguientes controladores de eventos a su formulario principal:  
+-   Agregue los controladores de eventos siguientes al formulario principal:  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,9 +197,9 @@ Este tutorial muestra cómo crear una aplicación de formularios Windows Forms m
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Para iniciar y llamar a un nuevo subproceso que ejecuta el método WordCount  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>Para iniciar un nuevo subproceso que ejecute el método WordCount y llamarlo  
   
-1.  Agregue los siguientes procedimientos en el programa:  
+1.  Agregue los procedimientos siguientes al programa:  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ Este tutorial muestra cómo crear una aplicación de formularios Windows Forms m
     End Sub  
     ```  
   
-2.  Llame a la `StartThread` método desde el `Start` botón en el formulario:  
+2.  Llame al método `StartThread` desde el botón `Start` del formulario:  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ Este tutorial muestra cómo crear una aplicación de formularios Windows Forms m
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Para implementar un botón Cancel que detiene el subproceso  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>Para implementar un botón Cancelar que detenga el subproceso  
   
--   Llame a la `StopThread` procedimiento desde el `Click` controlador de eventos para el `Cancel` botón.  
+-   Llame al procedimiento `StopThread` desde el controlador de eventos `Click` para el botón `Cancel`.  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -267,24 +259,24 @@ Este tutorial muestra cómo crear una aplicación de formularios Windows Forms m
   
 1.  Presione F5 para ejecutar la aplicación.  
   
-2.  Cuando se muestre el formulario, escriba la ruta de acceso de archivo para el archivo que desea probar en la `sourceFile` cuadro. Por ejemplo, suponiendo que el archivo de prueba denominado Test.txt, escriba C:\Test.txt.  
+2.  Cuando aparezca el formulario, escriba la ruta de acceso del archivo que quiera probar en el cuadro `sourceFile`. Por ejemplo, supongamos que el archivo de prueba se denomina Test.txt, escriba C:\Test.txt.  
   
-3.  En el segundo cuadro de texto, escriba una palabra o frase para la aplicación buscar en el archivo de texto.  
+3.  En el segundo cuadro de texto, escriba una palabra o frase para que la aplicación la busque en el archivo de texto.  
   
-4.  Haga clic en el botón `Start`. El `LinesCounted` botón empezará a incrementar inmediatamente. La aplicación muestra el mensaje "Finished Counting" cuando termine.  
+4.  Haga clic en el botón `Start`. El botón `LinesCounted` debe empezar a aumentar inmediatamente. La aplicación mostrará el mensaje "Finished Counting" (Recuento finalizado) cuando haya terminado.  
   
 #### <a name="to-test-the-cancel-button"></a>Para probar el botón Cancelar  
   
-1.  Presione F5 para iniciar la aplicación y escriba la palabra de búsqueda y de nombre de archivo como se describe en el procedimiento anterior. Asegúrese de que el archivo que elige es lo suficientemente grande como para asegurarse de que tendrá tiempo para cancelar el procedimiento antes de que finalice.  
+1.  Pulse F5 para iniciar la aplicación y escriba el nombre de archivo y la palabra de búsqueda tal y como se ha descrito en el procedimiento anterior. Asegúrese de que el archivo que elija es lo bastante grande como para que le dé tiempo a cancelar el procedimiento antes de que finalice.  
   
-2.  Haga clic en el `Start` botón para iniciar la aplicación.  
+2.  Haga clic en el botón `Start` para iniciar la aplicación.  
   
-3.  Haga clic en el botón `Cancel`. La aplicación parará de contar inmediatamente.  
+3.  Haga clic en el botón `Cancel`. La aplicación debe detener el recuento inmediatamente.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Esta aplicación contiene un control de errores básico. Detecta las cadenas de búsqueda en blanco. Puede hacer que este programa más sólido por otros errores, por ejemplo, si se supera el número máximo de palabras o líneas que se pueden contar.  
+ Esta aplicación contiene un control de errores básico. Detecta cadenas de búsqueda en blanco. Puede hacer que el programa sea más sólido mediante el control de otros errores, como, por ejemplo, que se supere el número máximo de palabras o líneas que se pueden contar.  
   
 ## <a name="see-also"></a>Vea también  
- [Subprocesamiento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [Tutorial: Crear un componente sencillo multiproceso con Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [Subprocesamiento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [Tutorial: Crear un componente sencillo multiproceso con Visual Basic](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [Cómo: Suscribir y cancelar la suscripción a eventos](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

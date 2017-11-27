@@ -1,41 +1,44 @@
 ---
-title: "C&#243;mo: Animar una cadena mediante fotogramas clave | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, cadenas con fotogramas clave"
-  - "fotogramas clave, animar cadenas con"
-  - "cadenas, animar con fotogramas clave"
+title: "Cómo: Animar una cadena mediante fotogramas clave"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], strings with key frames
+- strings [WPF], animating with key frames
+- key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f8947669178de1252c10b6a8b2c01a6b55baa424
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Animar una cadena mediante fotogramas clave
-En este ejemplo se muestra cómo animar una cadena, que en este ejemplo es la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> de un control <xref:System.Windows.Controls.Button>, mediante fotogramas clave.  
+# <a name="how-to-animate-a-string-by-using-key-frames"></a>Cómo: Animar una cadena mediante fotogramas clave
+Este ejemplo muestra cómo animar una cadena, que en este ejemplo es el <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad de un <xref:System.Windows.Controls.Button> control, mediante el uso de fotogramas clave.  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza la clase <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> para animar la propiedad <xref:System.Windows.Controls.ContentControl.Content%2A> de <xref:System.Windows.Controls.Button>.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> clase para animar la <xref:System.Windows.Controls.ContentControl.Content%2A> propiedad de un <xref:System.Windows.Controls.Button>.  
   
- Todos los cuadros clave de este ejemplo usan una instancia de la clase <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>, porque una animación de cadena creada con cuadros clave solamente puede utilizar cuadros clave discretos.  Los cuadros clave discretos como <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> crean saltos súbitos entre valores, es decir, los cambios de la animación se producen rápidamente y no de forma sutil.  
+ Todos los fotogramas clave en este ejemplo utilizan una instancia de la <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> clase porque una animación de cadena que se crea con fotogramas clave solo puede utilizar los fotogramas clave discretos. Los fotogramas clave discretos como <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> crean saltos súbitos entre valores, es decir, los cambios en la animación se producen rápidamente y no son sutiles.  
   
- [!code-xml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- Para obtener el ejemplo completo, vea [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para consultar el ejemplo completo, vea [Ejemplo de animación mediante fotogramas clave](http://go.microsoft.com/fwlink/?LinkID=160012).  
   
-## Vea también  
- <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>   
- <xref:System.Windows.Controls.ContentControl.Content%2A>   
- <xref:System.Windows.Controls.Button>   
- <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>   
- [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Temas "Cómo..." de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
+ <xref:System.Windows.Controls.ContentControl.Content%2A>  
+ <xref:System.Windows.Controls.Button>  
+ <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>  
+ [Información general sobre animaciones de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Temas de procedimientos de fotogramas clave](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

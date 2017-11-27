@@ -1,33 +1,25 @@
 ---
-title: "Cómo: buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9773f1fc5a17957cb77a0f14e12a2f61e67d73c3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 30ff1afe31b2dd23e7e9618093a8b1d383b5d713
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Cómo: buscar archivos duplicados en un árbol de directorios (LINQ) (Visual Basic)
-A veces, los archivos que tienen el mismo nombre pueden encontrarse en más de una carpeta. Por ejemplo, en la carpeta de instalación de Visual Studio, varias carpetas tienen un archivo readme.htm. En este ejemplo se muestra cómo consultar estos nombres de archivo duplicados en una carpeta raíz especificada. El segundo ejemplo muestra cómo buscar archivos cuyo tamaño y también coincide con la hora de creación.  
+A veces, los archivos que tienen el mismo nombre pueden estar en más de una carpeta. Por ejemplo, en la carpeta de instalación de Visual Studio, hay varias carpetas que tienen un archivo readme.htm. En este ejemplo se muestra cómo buscar estos nombres de archivos duplicados en una carpeta raíz especificada. En el segundo ejemplo se muestra cómo buscar archivos cuyo tamaño y fecha de creación también coinciden.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -115,11 +107,11 @@ Module QueryDuplicateFileNames
 End Module  
 ```  
   
- La primera consulta utiliza una clave simple para determinar a una coincidencia; se buscan archivos que tienen el mismo nombre pero cuyo contenido podría ser diferente. La segunda consulta utiliza una clave compuesta debe para coincidir con las tres propiedades de la <xref:System.IO.FileInfo>objeto.</xref:System.IO.FileInfo> Esta consulta es mucho más probable que encuentre archivos que tienen el mismo nombre y contenido similar o idéntico.  
+ En la primera consulta se usa una clave simple para determinar una coincidencia; se buscan archivos que tengan el mismo nombre, pero cuyo contenido podría ser diferente. En la segunda consulta se usa una clave compuesta para coincidir con tres propiedades del objeto <xref:System.IO.FileInfo>. En esta consulta es mucho más probable que se encuentren archivos que tienen el mismo nombre y un contenido similar o idéntico.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -1,37 +1,36 @@
 ---
-title: "Asignaci&#243;n de variables de objeto (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "instrucciones de asignación, asignación de variables de objeto"
-  - "instancia actual, definición"
-  - "Me (palabra clave), como variable de objeto"
-  - "Nothing (palabra clave), asignación de variables de objeto"
-  - "variables de objeto, asignar"
-  - "variables de objeto, inicializar"
-  - "objetos [Visual Basic], instancia actual"
-  - "variables [Visual Basic], asignar"
-  - "variables [Visual Basic], inicializar"
-  - "variables [Visual Basic], variables de objeto"
+title: "Asignación de variables de objeto (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Nothing keyword [Visual Basic], object variable assignment
+- object variables [Visual Basic], initializing
+- variables [Visual Basic], initializing
+- objects [Visual Basic], current instance
+- object variables [Visual Basic], assigning
+- variables [Visual Basic], object variables
+- current instance [Visual Basic], defined
+- variables [Visual Basic], assigning
+- assignment statements [Visual Basic], object variable assignment
+- Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignaci&#243;n de variables de objeto (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Utilice una instrucción de asignación normal para asignar un objeto a una variable de objeto.  Puede asignar una expresión de objeto o la palabra clave [Nothing](../../../../visual-basic/language-reference/nothing.md), tal como se muestra en el ejemplo siguiente.  
+# <a name="object-variable-assignment-visual-basic"></a>Asignación de variables de objeto (Visual Basic)
+Usar una instrucción de asignación normal para asignar un objeto a una variable de objeto. Puede asignar una expresión de objeto o la [nada](../../../../visual-basic/language-reference/nothing.md) palabra clave, como en el ejemplo siguiente se muestra.  
   
 ```  
 Dim thisObject As Object  
@@ -41,20 +40,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` significa que no hay ningún objeto asignado actualmente a la variable.  
+ `Nothing`significa que no hay ningún objeto asignado actualmente a la variable.  
   
-## Inicialización  
- Cuando el código empieza a ejecutarse, las variables de objeto se inicializan con `Nothing`.  Aquéllos cuyas declaraciones incluyen la inicialización se reinicializan con los valores que especifica cuando se ejecutan las instrucciones de declaración.  
+## <a name="initialization"></a>Inicialización  
+ Cuando el código inicia la ejecución, el objeto se inicializan las variables a `Nothing`. Aquéllos cuyas declaraciones incluyen la inicialización se reinicializan con los valores especificados cuando se ejecutan las instrucciones de declaración.  
   
- Puede incluir la inicialización en su declaración utilizando la palabra clave [New](../../../../visual-basic/language-reference/operators/new-operator.md).  En las siguientes instrucciones de declaración se declaran variables de objeto `testUri` y `ver`, y se les asignan objetos específicos.  Cada una utiliza uno de los constructores sobrecargados de la clase adecuada para inicializar el objeto.  
+ Puede incluir la inicialización en su declaración utilizando el [New](../../../../visual-basic/language-reference/operators/new-operator.md) (palabra clave). Las siguientes instrucciones de declaración declaran variables de objeto `testUri` y `ver` y asignan objetos específicos. Cada uno utiliza uno de los constructores sobrecargados de la clase adecuada para inicializar el objeto.  
   
 ```  
 Dim testUri As New System.Uri("http://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## Desasociación  
- Si se establece una variable de objeto en `Nothing` se interrumpe la asociación de la variable con cualquier objeto específico,  lo que impide que el objeto se modifique de forma accidental al cambiar la variable.  También permite comprobar si la variable de objeto señala a un objeto válido, tal como se muestra en el ejemplo siguiente:  
+## <a name="disassociation"></a>Desasociación  
+ Si se establece una variable de objeto en `Nothing` se interrumpe la asociación de la variable con cualquier objeto concreto. Esto impide que se modifique accidentalmente el objeto cambiando la variable. También permite comprobar si la variable de objeto hace referencia a un objeto válido, como se muestra en el ejemplo siguiente.  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -62,16 +61,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Si el objeto al que hace referencia la variable está en otra aplicación, esta comprobación no permite averiguar si la aplicación se ha terminado o ha invalidado el objeto.  
+ Si el objeto al que hace referencia la variable está en otra aplicación, esta prueba no puede determinar si esa aplicación ha terminado o ha invalidado el objeto.  
   
- Una variable de objeto con un valor de `Nothing` también se llama *referencia nula*.  
+ Una variable de objeto con un valor de `Nothing` también se denomina un *referencia nula*.  
   
-## Instancia actual  
- La *instancia actual* de un objeto es aquella en la que se está ejecutando el código.  Dado que todo el código se ejecuta siempre dentro de un procedimiento, la instancia actual es aquella en la cual se invocó al procedimiento.  
+## <a name="current-instance"></a>Instancia actual  
+ El *instancia actual* de un objeto es el que se está ejecutando el código actualmente. Puesto que todo el código se ejecuta dentro de un procedimiento, la instancia actual es uno en el que se invocó el procedimiento.  
   
- La palabra clave `Me` cumple la función de una variable de objeto que hace referencia a la instancia actual.  Si un procedimiento no es [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), puede utilizar la palabra clave `Me` para obtener un puntero a la instancia actual.  Los procedimientos compartidos no pueden asociarse a una instancia específica de una clase.  
+ El `Me` palabra clave actúa como una variable de objeto que hace referencia a la instancia actual. Si un procedimiento no es [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), puede usar el `Me` palabra clave que se va a obtener un puntero a la instancia actual. Los procedimientos compartidos no se pueden asociados a una instancia específica de una clase.  
   
- El uso de la palabra clave `Me` es especialmente útil para pasar la instancia actual a un procedimiento de otro módulo.  Por ejemplo, suponga que tiene varios documentos XML y desea agregar un texto estándar a todos ellos.  El ejemplo siguiente define un procedimiento para ello.  
+ Usar `Me` es especialmente útil para pasar la instancia actual a un procedimiento en otro módulo. Por ejemplo, suponga que tiene un número de documentos XML y desea agregar algún texto estándar a todos ellos. En el ejemplo siguiente se define un procedimiento para hacer esto.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -79,16 +78,16 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Después, todos los objetos de documento XML pueden llamar al procedimiento y pasar como argumento su instancia actual.  En el siguiente ejemplo se muestra cómo.  
+ Cada objeto de documento XML, a continuación, podría llamar al procedimiento y pasar la instancia actual como un argumento. En el siguiente ejemplo se muestra cómo hacerlo.  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## Vea también  
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [Cómo: Declarar una variable de objeto y asignarle un objeto en Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)   
- [Cómo: Crear una variable de objeto que no haga referencia a ninguna instancia](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)   
+## <a name="see-also"></a>Vea también  
+ [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [Cómo: declarar una Variable de objeto y asignarle un objeto en Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [Crear una variable de objeto que no haga referencia a ninguna instancia](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
  [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

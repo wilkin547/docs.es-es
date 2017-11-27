@@ -1,39 +1,31 @@
 ---
-title: "Cómo: leer y escribir un documento codificado (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: leer y escribir un documento codificado (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3247af177066e9b50d5028766f99e7bf6589050f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7dd871b4ab58103897bd5884581bf2e1353a3c60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Cómo: leer y escribir un documento codificado (Visual Basic)
-Para crear un documento XML codificado, se agrega un <xref:System.Xml.Linq.XDeclaration>al árbol XML, estableciendo la codificación en el nombre de la página de códigos deseado.</xref:System.Xml.Linq.XDeclaration>  
+Para crear un documento XML codificado, se agrega un <xref:System.Xml.Linq.XDeclaration> al árbol XML, estableciendo la codificación en el nombre de página de códigos deseado.  
   
- Cualquier valor devuelto por <xref:System.Text.Encoding.WebName%2A>es un valor válido.</xref:System.Text.Encoding.WebName%2A>  
+ Los valores devueltos por <xref:System.Text.Encoding.WebName%2A> son valores válidos.  
   
- Si lee un documento codificado, la <xref:System.Xml.Linq.XDeclaration.Encoding%2A>propiedad se establecerá en el nombre de la página de códigos.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Si lee un documento codificado, la propiedad <xref:System.Xml.Linq.XDeclaration.Encoding%2A> estará establecida en el nombre de la página de códigos.  
   
- Si establece <xref:System.Xml.Linq.XDeclaration.Encoding%2A>en un nombre de página de códigos válido, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] se serializará con la codificación especificada.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ Si establece <xref:System.Xml.Linq.XDeclaration.Encoding%2A> en un nombre de página de códigos válido, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] se serializará con la codificación especificada.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crean dos documentos, uno con codificación utf-8 y otro con codificación utf-16. A continuación se cargan los documentos y se imprime la codificación en la consola.  
@@ -94,5 +86,5 @@ Encoding of loaded document is:utf-16
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+ [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

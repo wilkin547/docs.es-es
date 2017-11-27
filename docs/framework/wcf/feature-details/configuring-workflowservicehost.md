@@ -1,37 +1,40 @@
 ---
-title: "Configurar WorkflowServiceHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Configurar WorkflowServiceHost
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2c2400347dabc5136b83cc087aa5ed735a8d4ce9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Configurar WorkflowServiceHost
-Esta sección contiene un conjunto de temas informativos que describen brevemente cómo configurar diversas características de la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost> en la configuración.  Estos temas incluyen la configuración específica del servicio de flujo de trabajo; el resto de la configuración se realiza de la misma manera que un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal.  
+# <a name="configuring-workflowservicehost"></a>Configurar WorkflowServiceHost
+Esta sección contiene un conjunto de corta "how to" temas que describen brevemente cómo configurar diversas características de la <xref:System.ServiceModel.Activities.WorkflowServiceHost> clase en la configuración. Estos temas incluyen la configuración específica del servicio de flujo de trabajo; el resto de la configuración se realiza de la misma manera que un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal.  
   
-## En esta sección  
- [Cómo: Configurar la persistencia con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  
+## <a name="in-this-section"></a>En esta sección  
+ [Cómo: configurar la persistencia con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md)  
  Describe cómo configurar la persistencia de un servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
- [Cómo: Configurar el seguimiento con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-tracking-with-workflowservicehost.md)  
+ [Cómo: configurar el seguimiento con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-tracking-with-workflowservicehost.md)  
  Describe cómo configurar el seguimiento del flujo de trabajo de un servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
- [Cómo: Configurar el comportamiento inactivo con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)  
+ [Cómo: configurar el comportamiento inactivo con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md)  
  Describe cómo configurar el comportamiento inactivo de un servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
- [Cómo: Configurar el comportamiento de excepción no controlada del flujo de trabajo con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [Cómo: configurar el flujo de trabajo no controlada por el comportamiento de excepción con WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
  Describe cómo configurar el comportamiento de excepciones no controladas de un servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
-## Vea también  
- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
+## <a name="see-also"></a>Vea también  
+ [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Hospedar información general de servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)

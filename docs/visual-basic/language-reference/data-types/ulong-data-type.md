@@ -1,63 +1,85 @@
 ---
-title: "ULong (Tipo de datos, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ulong"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "tipos de datos [Visual Basic], integrales"
-  - "números enteros"
-  - "enteros, tipos de datos"
-  - "enteros, tipos"
-  - "tipos de datos integrales"
-  - "caracteres de tipo literal, UL"
-  - "números, enteros"
-  - "números, enteros"
-  - "UL (caracteres de tipo literal)"
-  - "ULong (tipo de datos)"
-  - "números enteros"
+title: ULong (Tipo de datos, Visual Basic)
+ms.date: 04/20/2017
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.ulong
+helpviewer_keywords:
+- numbers [Visual Basic], whole
+- whole numbers
+- integral data types [Visual Basic]
+- integer numbers
+- numbers [Visual Basic], integer
+- integers [Visual Basic], data types
+- integers [Visual Basic], types
+- data types [Visual Basic], integral
+- literal type characters [Visual Basic], UL
+- ULong data type
+- UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: afc52bfd16541feed599d5445adad7aba04f8e9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# ULong (Tipo de datos, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+# <a name="ulong-data-type-visual-basic"></a>Tipo de datos ULong (Visual Basic)
 
-Contiene enteros de 64 bits sin signo \(8 bytes\) que van de un valor de 0 a 18.446.744.073.709.551.615 \(más de 1,84 veces 10 ^ 19\).  
+Contiene enteros de (8 bytes) de 64 bits sin signo que van de un valor de 0 a 18.446.744.073.709.551.615 (más de 1,84 veces 10 ^ 19).  
   
-## Comentarios  
- Utilice el tipo de datos `ULong` para contener datos binarios demasiado grandes para `UInteger` o valores de enteros sin signo lo más grandes posibles.  
+## <a name="remarks"></a>Comentarios
+
+Use la `ULong` tipo de datos para contener datos binarios demasiado grandes para `UInteger`, o valores enteros sin signo de mayor tamaño posible.  
   
- El valor predeterminado de `ULong` es 0.  
+El valor predeterminado de `ULong` es 0.
+
+## <a name="literal-assignments"></a>Asignaciones de literales
+
+Puede declarar e inicializar un `ULong` variable asignarle un decimal literal, un literal hexadecimal, un literal octal, o (a partir de Visual Basic de 2017) un literal binario. Si el literal entero está fuera del intervalo de `ULong` (es decir, si es inferior a <xref:System.UInt64.MinValue?displayProperty=nameWithType> o mayor que <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación.
+
+En el ejemplo siguiente, los enteros que equivalen a 7 934 076 125 que se representan como literales binarios, hexadecimales y decimales se asignan a valores `ULong`.
   
-## Sugerencias de programación  
+[!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ULong)]
+
+> [!NOTE] 
+> Use el prefijo `&h` o `&H` para denotar un literal hexadecimal, el prefijo `&b` o `&B` para denotar un literal binario y el prefijo `&o` o `&O` para denotar un literal octal. Los literales decimales no tienen prefijo.
+
+A partir de Visual Basic de 2017, también puede utilizar el carácter de subrayado, `_`, como un separador de dígitos para mejorar la legibilidad, como en el ejemplo siguiente se muestra.
+
+[!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
+
+También pueden incluir literales numéricos el `UL` o `ul` [escriba carácter](../../programming-guide\language-features\data-types/type-characters.md) para denotar el `ULong` tipo de datos, como se muestra en el ejemplo siguiente.
+
+```vb
+Dim number = &H00_00_0A_96_2F_AC_14_D7ul
+```
+
+## <a name="programming-tips"></a>Sugerencias de programación
   
--   **Números negativos.** Dado que `ULong` es un tipo sin signo, no puede representar un número negativo.  Si utiliza el operador menos \(`-`\) unario en una expresión que produce un resultado del tipo `ULong`, Visual Basic convierte primero la expresión a `Decimal`.  
+-   **Números negativos.** Dado que `ULong` es un tipo sin signo, no puede representar un número negativo. Si se utiliza el operador unario menos (`-`) operador en una expresión que se evalúa como tipo `ULong`, Visual Basic convierte la expresión `Decimal` primero.  
   
--   **Compatibilidad con CLS.** El tipo de datos `ULong` no forma parte de [Independencia del lenguaje y componentes independientes del lenguaje](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md) \(CLS\), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.  
+-   **Conformidad con CLS.** El `ULong` tipo de datos no es parte de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), por lo que el código conforme a CLS no puede utilizar un componente que lo utiliza.  
   
--   **Consideraciones de interoperabilidad.** Si trabaja con componentes no escritos para .NET Framework, por ejemplo objetos de automatización o COM, recuerde que los tipos como `ulong` pueden tener un ancho de datos distinto \(32 bits\) en otros entornos.  Al pasar un argumento de 32 bits a esos componentes, declárelo como `UInteger` en lugar de `ULong` en el código administrado de Visual Basic.  
+-   **Consideraciones de interoperabilidad.** Si interactúa con componentes no se han escrito para .NET Framework, por ejemplo objetos de automatización o COM, tenga en cuenta que los tipos como `ulong` puede tener un ancho de datos diferente (32 bits) en otros entornos. Al pasar un argumento de 32 bits a esos componentes, declárelo como `UInteger` en lugar de `ULong` en el código administrado de Visual Basic.  
   
-     Además, la automatización no admite enteros de 64 bits en Windows 95, Windows 98, Windows ME o Windows 2000.  No puede pasar un argumento de Visual Basic `ULong` a un componente de Automatización en estas plataformas.  
+     Además, la automatización no admite enteros de 64 bits en Windows 95, Windows 98, Windows Millennium Edition o Windows 2000. No se puede pasar un de Visual Basic `ULong` argumento pasado a un componente de automatización en estas plataformas.  
   
--   **Ampliación.** El tipo de datos `ULong` se amplía a `Decimal`, `Single` y `Double`.  Esto significa que se puede convertir `ULong` en cualquiera de estos tipos sin encontrar un error <xref:System.OverflowException?displayProperty=fullName>.  
+-   **De ampliación.** El `ULong` tipo de datos se amplía a `Decimal`, `Single`, y `Double`. Esto significa que se puede convertir `ULong` a cualquiera de estos tipos sin que se produzca una <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
--   **Caracteres de tipo.** Al agregar los caracteres de tipo literal `UL` a un literal, el tipo de datos se convierte al tipo de datos `ULong`.  `ULong` no tiene caracteres de tipo identificador.  
+-   **Caracteres de tipo.** Anexar los caracteres de tipo literal `UL` a un literal, se convierte a la `ULong` tipo de datos. `ULong`no tiene ningún carácter de tipo identificador.
   
--   **Tipo en Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt64?displayProperty=fullName>.  
+-   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.UInt64?displayProperty=nameWithType>.  
   
-## Vea también  
- <xref:System.UInt64>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Cómo: Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)   
+## <a name="see-also"></a>Vea también
+
+ <xref:System.UInt64>  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Llamar a una función de Windows que adopta tipos sin signo](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

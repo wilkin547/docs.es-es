@@ -1,42 +1,46 @@
 ---
-title: "C&#243;mo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView (control) [Windows Forms], ejemplos"
-  - "Panel (control) [Windows Forms], ejemplos"
-  - "RichTextBox (control) [Windows Forms], ejemplos"
-  - "SplitContainer (control) [Windows Forms], ejemplos"
-  - "Splitter (control) [Windows Forms], ejemplos"
-  - "TreeView (control) [Windows Forms], ejemplos"
+title: "Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], examples
+- ListView control [Windows Forms], examples
+- RichTextBox control [Windows Forms], examples
+- Panel control [Windows Forms], examples
+- TreeView control [Windows Forms], examples
+- Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms
-El procedimiento siguiente permite crear una interfaz de usuario de varios paneles parecida a la utilizada en Microsoft Outlook, con una lista de **Carpetas**, un panel de **Mensajes** y un panel de **Vista previa**.  Esta organización se logra principalmente mediante el acoplamiento de los controles con el formulario.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms
+En el siguiente procedimiento, creará una interfaz de usuario de varios paneles que es similar al utilizado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel. Esta disposición se consigue principalmente mediante el acoplamiento de controles con el formulario.  
   
- Al acoplar un control se determina a cuál de los bordes del contenedor principal deberá fijarse.  Por consiguiente, si establece la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A> en <xref:System.Windows.Forms.DockStyle>, el borde derecho del control se acoplará al borde derecho de su control primario.  Además, el tamaño del borde acoplado del control se ajusta al tamaño del control contenedor.  Para obtener más información sobre cómo funciona la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A>, vea [Cómo: Acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ Al acoplar un control, se determina cuál de los bordes del contenedor primario de un control está enchufado al. Por lo tanto, si establece la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Right>, el borde derecho del control se acoplará al borde derecho de su control primario. Además, el borde del control acoplado cambia para coincidir con el de su control contenedor. Para obtener más información acerca de cómo los <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad, consulte [Cómo: acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
   
- Este procedimiento se centra en organizar el contenedor <xref:System.Windows.Forms.SplitContainer> y los demás controles del formulario, no se trata de agregar funcionalidades para obtener una aplicación que imite a Microsoft Outlook.  
+ Este procedimiento se centra en organizar el <xref:System.Windows.Forms.SplitContainer> y los demás controles en el formulario, no en Agregar funcionalidad para hacer que la aplicación se comporten como Microsoft Outlook.  
   
- Para crear esta interfaz de usuario, se colocan todos los controles dentro de un control <xref:System.Windows.Forms.SplitContainer> que, a su vez, contiene un control <xref:System.Windows.Forms.TreeView> en el panel izquierdo.  El panel derecho del control <xref:System.Windows.Forms.SplitContainer> contiene un segundo control <xref:System.Windows.Forms.SplitContainer>, que a su vez tiene un control <xref:System.Windows.Forms.ListView> por encima de un control <xref:System.Windows.Forms.RichTextBox>.  Estos controles <xref:System.Windows.Forms.SplitContainer> permiten realizar el ajuste del tamaño de los demás controles del formulario de manera independiente.  Puede adaptar las técnicas de este procedimiento para crear interfaces de usuario personalizadas propias.  
+ Para crear esta interfaz de usuario, coloque todos los controles dentro de un <xref:System.Windows.Forms.SplitContainer> control, que contiene un <xref:System.Windows.Forms.TreeView> control en el panel izquierdo. El panel derecho de la <xref:System.Windows.Forms.SplitContainer> control contiene un segundo <xref:System.Windows.Forms.SplitContainer> controlar con un <xref:System.Windows.Forms.ListView> control anterior un <xref:System.Windows.Forms.RichTextBox> control. Estos <xref:System.Windows.Forms.SplitContainer> controles permiten el cambio de tamaño independientemente de los demás controles en el formulario. Puede adaptar las técnicas de este procedimiento para interfaces de usuario personalizadas de elaborar de su elección.  
   
-### Para crear una interfaz de usuario de estilo Outlook mediante programación  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Para crear una interfaz de usuario de estilo Outlook mediante programación  
   
-1.  En un formulario, declare cada uno de los controles que constituyen la interfaz de usuario.  Para este ejemplo, utilice los controles <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer> y <xref:System.Windows.Forms.RichTextBox> para imitar la interfaz de usuario de Microsoft Outlook.  
+1.  Dentro de un formulario, declare cada control que compone la interfaz de usuario. En este ejemplo, use la <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, y <xref:System.Windows.Forms.RichTextBox> controles para imitar la interfaz de usuario de Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -46,7 +50,6 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
         System.Windows.Forms.SplitContainer  
     Private WithEvents splitContainer2 As _  
         System.Windows.Forms.SplitContainer  
-  
     ```  
   
     ```csharp  
@@ -55,10 +58,9 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
     private System.Windows.Forms.RichTextBox richTextBox1;  
     private System.Windows.Forms. SplitContainer splitContainer2;  
     private System.Windows.Forms. SplitContainer splitContainer1;  
-  
     ```  
   
-2.  Cree un procedimiento que defina la interfaz de usuario.  El código siguiente establece las propiedades de modo que el formulario se asemeje a la interfaz de usuario de Microsoft Outlook.  Sin embargo, si utiliza otros controles o los acopla de forma diferente, es igual de fácil crear otras interfaces de usuario que tengan la misma flexibilidad.  
+2.  Cree un procedimiento que define la interfaz de usuario. El código siguiente establece las propiedades para que el formulario se asemeje a la interfaz de usuario en Microsoft Outlook. Sin embargo, con otros controles o acopla de forma diferente, es fácil crear otras interfaces de usuario que tengan la misma flexibilidad.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -120,7 +122,6 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
         Me.Controls.Add(Me.splitContainer2)  
         Me.Text = "Intricate UI Example"  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -171,24 +172,21 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
         this.Controls.Add(this.splitContainer2);  
         this.Text = "Intricate UI Example";  
     }  
-  
     ```  
   
-3.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], agregue una llamada al procedimiento que acaba de crear en el procedimiento `New()`.  En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], agregue esta línea de código al constructor de la clase de formulario.  
+3.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], agregue una llamada al procedimiento que acaba de crear en el `New()` procedimiento. En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], agregue esta línea de código al constructor de la clase de formulario.  
   
     ```vb  
     ' Add this to the New procedure.  
     CreateOutlookUI()  
-  
     ```  
   
     ```csharp  
     // Add this to the form class's constructor.  
     createOutlookUI();  
-  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer \(Control\)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [SplitContainer (control)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [Crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

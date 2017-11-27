@@ -1,54 +1,57 @@
 ---
-title: "Instrucciones de instalaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Ejemplos de WCF [WCF], instalación"
-  - "Ejemplos de Windows Communication Foundation [WCF], instalación"
+title: "Instrucciones de instalación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Samples [WCF], setup
+- Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a12a250438c7b977cc3ce310001c1551101037f6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Instrucciones de instalaci&#243;n
+# <a name="set-up-instructions"></a>Instrucciones de instalación
 Este conjunto de temas describe cómo configurar los servicios que son necesarios para ejecutar un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
  Describe los pasos para configurar los ejemplos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Instrucciones de firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
+ [Instrucciones de Firewall](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
  Describe los pasos necesarios para instalar el firewall de Windows a fin de permitir que los servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funcionen.  
   
- [Instrucciones de hospedaje Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Instrucciones de hospedaje de Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  Describe los pasos necesarios para configurar IIS.  
   
- [Instrucciones de instalación del certificado de servidor de Internet Information Services \(IIS\)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+ [Servicios de Internet Information Server (IIS) instrucciones de instalación de certificado de servidor](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
  Describe el proceso para instalar los certificados de servidor para IIS.  
   
  [Instrucciones de configuración del directorio virtual](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
  Describe los pasos necesarios para crear un directorio virtual.  
   
- [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+ [Compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  Describe los pasos para generar los ejemplos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [Ejecutar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Describe los pasos para ejecutar los ejemplos de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el mismo equipo y en varios de ellos.  
   
- [Habilitar servicios de igual a igual](../Topic/Enabling%20Peer%20to%20Peer%20Services.md)  
- Describe los pasos para instalar el componente Windows Peer\-to\-Peer, la resolución integrada para los servicios de la mensajería de punto a punto.  
+ [Habilitar los servicios de punto a punto](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
+ Describe los pasos para instalar el componente Windows Peer-to-Peer, la resolución integrada para los servicios de la mensajería de punto a punto.  
   
- [Instalar Message Queuing \(MSMQ\)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
+ [Instalar Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Describe los pasos para instalar Message Queuing.  
   
-## Secciones relacionadas  
- [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b)
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Sugerencias para solucionar problemas](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)

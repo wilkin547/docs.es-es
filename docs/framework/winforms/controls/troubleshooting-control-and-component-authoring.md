@@ -1,93 +1,97 @@
 ---
-title: "Soluci&#243;n de problemas relacionados con la creaci&#243;n de controles y componentes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "componentes [Windows Forms], solucionar problemas"
-  - "controles [Windows Forms], solucionar problemas"
-  - "solucionar problemas de componentes"
-  - "solucionar problemas de controles"
-  - "controles de Windows Forms, depurar"
+title: "Solución de problemas relacionados con la creación de controles y componentes"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- troubleshooting components
+- troubleshooting controls [Windows Forms]
+- controls [Windows Forms], troubleshooting
+- components [Windows Forms], troubleshooting
+- Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Soluci&#243;n de problemas relacionados con la creaci&#243;n de controles y componentes
-Este tema enumera los siguientes problemas comunes que surgen cuando se desarrollan componentes y controles.  Para obtener más información, vea [Programming with Components](../Topic/Programming%20with%20Components.md).  
+# <a name="troubleshooting-control-and-component-authoring"></a>Solución de problemas relacionados con la creación de controles y componentes
+En este tema se enumeran los siguientes problemas comunes que surgen cuando se desarrollan componentes y controles. Para obtener más información, vea [Programar con componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
   
--   No se puede agregar un control al Cuadro de herramientas  
+-   No se puede agregar el control al cuadro de herramientas  
   
--   No se puede depurar un componente o control de usuario de formularios Windows Forms  
+-   No se puede depurar el control de usuario de Windows Forms o un componente  
   
--   Un evento se produce dos veces en un control o componente heredado  
+-   El evento se genera dos veces en el control o el componente heredado  
   
--   Error en tiempo de diseño: "Error al crear el componente '*Nombre de componente*'"  
+-   Error en tiempo de diseño: "Error al crear el componente '*nombre de componente*'"  
   
 -   STAThreadAttribute  
   
 -   El icono del componente no aparece en el cuadro de herramientas  
   
-## No se puede agregar un control al Cuadro de herramientas  
- Si desea agregar un control personalizado que haya creado en otro proyecto o un control de otro fabricante al **Cuadro de herramientas**, debe hacerlo manualmente.  Si el proyecto actual contiene el control o componente, debería aparecer automáticamente en el **Cuadro de herramientas**.  Para obtener más información, vea [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+## <a name="cannot-add-control-to-toolbox"></a>No se puede agregar el control al cuadro de herramientas  
+ Si desea agregar un control personalizado que creó en otro proyecto o un control de terceros al **cuadro de herramientas**, debe hacerlo manualmente. Si el proyecto actual contiene el control o componente, debería aparecer en el **cuadro de herramientas** automáticamente. Para obtener más información, vea [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
-#### Para agregar un control al Cuadro de herramientas  
+#### <a name="to-add-a-control-to-the-toolbox"></a>Para agregar un control al cuadro de herramientas  
   
-1.  Haga clic con el botón secundario del mouse en el **Cuadro de herramientas** y, en el menú contextual, seleccione **Elegir elementos**.  
+1.  Haga clic con el botón derecho en el **cuadro de herramientas** y, en el menú contextual, seleccione **Elegir elementos**.  
   
-2.  En el cuadro de diálogo **Elegir elementos del cuadro de herramientas**, agregue el componente:  
+2.  En el cuadro de diálogo **Elegir elementos de cuadro de herramientas**, agregue el componente:  
   
-    -   Si desea agregar un componente o control .NET Framework, haga clic en la ficha **Componentes de .NET Framework**.  
+    -   Si desea agregar un control o un componente de .NET Framework, haga clic en la pestaña **Componentes de .NET Framework**.  
   
-         O bien  
+         -O bien-  
   
-    -   Si desea agregar un componente COM o un control ActiveX, haga clic en la ficha **Componentes COM**.  
+    -   Si desea agregar un componente COM o un control ActiveX, haga clic en la pestaña **Componentes COM**.  
   
-3.  Si el control aparece en el cuadro de diálogo, asegúrese de que está seleccionado y haga clic en **Aceptar**.  
+3.  Si el control aparece en el cuadro de diálogo, confirme que está seleccionado y, a continuación, haga clic en **Aceptar**.  
   
-     Ya ha agregado el control al **Cuadro de herramientas**.  
+     El control se agrega al **cuadro de herramientas**.  
   
-4.  Si el control no aparece en el cuadro de diálogo, proceda como se indica a continuación:  
+4.  Si el control no aparece en el cuadro de diálogo, haga lo siguiente:  
   
     1.  Haga clic en el botón **Examinar**.  
   
-    2.  Busque la carpeta que contiene el archivo .dll que contiene el control.  
+    2.  Vaya a la carpeta que contiene el archivo .dll que contiene el control.  
   
     3.  Seleccione el archivo .dll y haga clic en **Abrir**.  
   
-         El control aparece ahora en el cuadro de diálogo.  
+         El control aparece en el cuadro de diálogo.  
   
-    4.  Confirme que el control está seleccionado, y, a continuación, haga clic en **Aceptar**.  
+    4.  Confirme que el control está seleccionado y, a continuación, haga clic en **Aceptar**.  
   
-         Ya ha agregado el control al **Cuadro de herramientas**.  
+         El control se agrega al **cuadro de herramientas**.  
   
-## No se puede depurar un componente o control de usuario de formularios Windows Forms  
- Si el control deriva de la clase <xref:System.Windows.Forms.UserControl>, puede depurar su comportamiento en tiempo de ejecución con el contenedor de prueba.  Para obtener más información, vea [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>No se puede depurar el control de usuario de Windows Forms o un componente  
+ Si el control se deriva de la <xref:System.Windows.Forms.UserControl> (clase), puede depurar su comportamiento en tiempo de ejecución con el contenedor de prueba. Para más información, consulte [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
- Los demás componentes y controles personalizados no son proyectos independientes.  Deben estar hospedados en una aplicación como un proyecto de formularios Windows Forms.  Para depurar un control o componente, debe agregarlo a un proyecto de formularios Windows Forms.  
+ Otros controles y componentes personalizados no son proyectos independientes. Deben hospedarse en una aplicación, como un proyecto de Windows Forms. Para depurar un control o componente, debe agregarlo a un proyecto de Windows Forms.  
   
-#### Para depurar un control o componente  
+#### <a name="to-debug-a-control-or-component"></a>Para depurar un control o componente  
   
-1.  En el menú **Compilar**, haga clic en **Compilar solución** para compilar la solución.  
+1.  Para compilar la solución, en el menú **Compilar**, haga clic en **Compilar solución**.  
   
-2.  En el menú **Archivo**, elija **Agregar** y, a continuación, seleccione **Nuevo proyecto** para agregar un proyecto de prueba a la aplicación.  
+2.  En el menú **Archivo**, elija **Agregar** y, luego, elija **Nuevo proyecto** para agregar un proyecto de prueba a la aplicación.  
   
-3.  En el cuadro de diálogo **Agregar nuevo proyecto**, elija **Aplicación para Windows** como tipo de proyecto.  
+3.  En el cuadro de diálogo **Agregar nuevo proyecto**, elija **Aplicación de Windows** como tipo de proyecto.  
   
-4.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en el nodo **Referencias** para el nuevo proyecto.  En el menú contextual, haga clic en **Agregar referencia** para agregar una referencia al proyecto que contiene el control o componente.  
+4.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo **Referencias** del nuevo proyecto. En el menú contextual, haga clic en **Agregar referencia** para agregar una referencia al proyecto que contiene el control o componente.  
   
-5.  Cree una instancia del control o componente en el proyecto de prueba.  Si el componente está en el **Cuadro de herramientas**, puede arrastrarlo hasta la superficie de diseño; o bien, puede crear la instancia mediante programación como se muestra en el ejemplo siguiente:  
+5.  Crear una instancia de un control o componente en el proyecto de prueba. Si el componente está en el **cuadro de herramientas**, puede arrastrarlo a la superficie del diseñador o puede crear la instancia mediante programación, tal y como se muestra en el ejemplo de código siguiente.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
@@ -97,27 +101,27 @@ Este tema enumera los siguientes problemas comunes que surgen cuando se desarrol
     MyNeatComponent Component1 = new MyNeatComponent();  
     ```  
   
-     Ahora puede depurar el control o componente con siempre.  
+     Ahora puede depurar el control o componente como de costumbre.  
   
- Para obtener más información sobre depuración, vea [Depurar en Visual Studio](../Topic/Debugging%20in%20Visual%20Studio.md) y [Tutorial: Depurar controles personalizados de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Para obtener más información acerca de la depuración, consulte [Depuración en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) y [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
-## Un evento se produce dos veces en un control o componente heredado  
- Probablemente, esto se debe a una cláusula `Handles` duplicada.  Para obtener más información, vea [Solucionar problemas de controladores de eventos heredados en Visual Basic](../Topic/Troubleshooting%20Inherited%20Event%20Handlers%20in%20Visual%20Basic.md).  
+## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>El evento se genera dos veces en el control o el componente heredado  
+ Probablemente se debe a una cláusula `Handles` duplicada. Para obtener más información, consulte [Solución de problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
-## Error en tiempo de diseño: "Error al crear el componente 'Nombre de componente'"  
- El componente o control debe proporcionar un constructor predeterminado sin parámetros.  Cuando el entorno de diseño crea una instancia del componente o control, no intenta proporcionar ningún parámetro a la sobrecarga del constructor que toma parámetros.  
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Error en tiempo de diseño: "Error al crear el componente 'nombre de componente'"  
+ El componente o el control deben proporcionar un constructor predeterminado sin parámetros. Cuando el entorno de diseño crea una instancia de un componente o control, no intenta proporcionar ningún parámetro a las sobrecargas del constructor que toman parámetros.  
   
-## STAThreadAttribute  
- <xref:System.STAThreadAttribute> informa a Common Language Runtime \(CLR\) que Windows Forms utiliza el modelo de contenedor uniproceso.  Puede observar un comportamiento imprevisto si no aplica este atributo al método `Main` de la aplicación de Windows Forms.  Por ejemplo, es posible que no aparezcan las imágenes de fondo en controles como <xref:System.Windows.Forms.ListView>.  Algunos controles también pueden requerir este atributo para corregir el comportamiento de Autocompletar y de arrastrar y colocar.  
+## <a name="stathreadattribute"></a>STAThreadAttribute  
+ El <xref:System.STAThreadAttribute> informa a common language runtime (CLR) que Windows Forms utiliza el modelo de subprocesamiento controlado simple. Podría observar un comportamiento imprevisto si no aplica este atributo al método `Main` de su aplicación de formularios Windows Forms. Por ejemplo, imágenes de fondo no pueden aparecer como controles <xref:System.Windows.Forms.ListView>. Algunos controles también pueden requerir este atributo para que los comportamientos de Autocompletar y arrastrar y colocar sean correctos.  
   
-## El icono del componente no aparece en el cuadro de herramientas  
- Cuando se usa <xref:System.Drawing.ToolboxBitmapAttribute> para asociar un icono a un componente personalizado, el mapa de bits no aparece en el cuadro de herramientas para los componentes generados automáticamente.  Para ver el mapa de bits, recargue el control mediante el cuadro de diálogo **Elegir elementos del cuadro de herramientas**.  Para obtener más información, vea [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+## <a name="component-icon-does-not-appear-in-toolbox"></a>El icono del componente no aparece en el cuadro de herramientas  
+ Cuando se usa <xref:System.Drawing.ToolboxBitmapAttribute> para asociar un icono a su componente personalizado, el mapa de bits no aparece en el cuadro de herramientas para componentes generados automáticamente. Para ver el mapa de bits, vuelva a cargar el control con el cuadro de diálogo **Elegir elementos del cuadro de herramientas**. Para obtener más información, vea [Cómo: Proporcionar un mapa de bits del cuadro de herramientas para un control](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
-## Vea también  
- [Desarrollar controles de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)   
- [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)   
- [Cómo: Comprobar el comportamiento de un control de usuario en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)   
- [Tutorial: Depurar controles personalizados de formularios Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)   
- [Component Authoring](../Topic/Component%20Authoring.md)   
- [Troubleshooting Design\-Time Development](../Topic/Troubleshooting%20Design-Time%20Development.md)   
- [Programming with Components](../Topic/Programming%20with%20Components.md)
+## <a name="see-also"></a>Vea también  
+ [Desarrollar controles de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [Cómo: Comprobar el comportamiento de una clase UserControl en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [Tutorial: Depurar controles personalizados de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [Creación de componentes](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
+ [Solución de problemas de desarrollo en tiempo de diseño](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [Programar con componentes](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

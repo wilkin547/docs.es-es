@@ -1,56 +1,60 @@
 ---
-title: "Suavizado de contorno con l&#237;neas y curvas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "suavizado de contorno"
-  - "suavizado de contorno, modos de suavizado"
-  - "GDI+, suavizado de contorno"
+title: "Suavizado de contorno con líneas y curvas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- antialiasing
+- antialiasing [Windows Forms], smoothing modes
+- GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d69d635fbdd8720937cd189826c1496b8126ddef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Suavizado de contorno con l&#237;neas y curvas
-Cuando utiliza [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, proporciona el punto inicial y el punto final de la línea, pero no tiene que suministrar ninguna información sobre los píxeles individuales de la línea.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona junto con el software del controlador de vídeo para determinar qué píxeles se encenderán para mostrar la línea en un dispositivo de presentación determinado.  
+# <a name="antialiasing-with-lines-and-curves"></a>Suavizado de contorno con líneas y curvas
+Cuando se usa [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, se proporcionan los puntos inicial y final de la línea, pero no tendrá que proporcionar toda la información sobre los píxeles individuales en la línea. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]funciona junto con el software de controlador de vídeo para determinar qué píxeles se activará para mostrar la línea en un dispositivo de presentación determinado.  
   
-## Aliasing \(efecto escalonado\)  
- Piense en la línea recta de color rojo que va del punto \(4, 2\) al punto \(16, 10\).  Suponga que el sistema de coordenadas tiene su origen en la esquina superior izquierda y que la unidad de medida es el píxel.  Suponga también que el eje x apunta hacia la derecha y que el eje y apunta hacia abajo.  En la siguiente ilustración se muestra una vista ampliada de la línea roja dibujada sobre un fondo de varios colores.  
+## <a name="aliasing"></a>Uso de alias  
+ Tenga en cuenta la línea recta de color rojo que va desde el punto (4, 2) al punto (16, 10). Suponga que el sistema de coordenadas tiene su origen en la esquina superior izquierda y que la unidad de medida es el píxel. También se supone que el eje x apunta a la derecha y el eje y hacia abajo. En la siguiente ilustración muestra una vista ampliada de la línea roja dibujada sobre un fondo multicolor.  
   
- ![Línea, sin suavizado de contorno &#40;anti&#45;aliasing&#41;](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.png "AboutGdip02\_Art33")  
+ ![Línea, sin suavizado de contorno](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art33.gif "AboutGdip02_Art33")  
   
- Los píxeles rojos utilizados para representar la línea son opacos.  No existen píxeles parcialmente transparentes en la línea.  Este tipo de representación de línea le da a ésta una apariencia escalonada y la línea se asemeja un poco a una escalera.  A esta técnica de representación de una línea con una escalera se le denomina "aliasing"; la escalera es un "alias" para la línea teórica.  
+ Los píxeles rojos utilizados para representar la línea son opacos. No hay ningún píxeles parcialmente transparentes en la línea. Este tipo de representación de línea le da a ésta una apariencia escalonada y la línea se asemeja un poco a una escalera. Esta técnica de representación de una línea con una escalera se denomina "aliasing"; la escalera es un alias para la línea teórica.  
   
-## Suavizado de contorno  
- Una técnica más sofisticada para la representación de una línea implica el uso de píxeles parcialmente transparentes junto con píxeles opacos.  Los píxeles se establecen en rojo puro, o en cierta mezcla de rojo y el color de fondo, dependiendo de lo próximos que estén de la línea.  Este tipo de representación se denomina suavizado de contorno y el resultado es una línea que el ojo humano percibe como más regular.  En la siguiente ilustración se muestra la forma en que ciertos píxeles se mezclan con el fondo para generar una línea con suavizado de contorno.  
+## <a name="antialiasing"></a>Suavizado de contorno  
+ Una técnica más sofisticada para representar una línea implica el uso de píxeles parcialmente transparentes junto con píxeles opacos. Los píxeles se establecen en rojo puro o en cierta mezcla de rojo y el color de fondo, dependiendo de cómo cerrar están a la línea. Este tipo de representación se denomina suavizado de contorno y el resultado en una línea que el ojo humano percibe como más suave. La ilustración siguiente muestra cómo ciertos píxeles se mezclan con el fondo para generar una línea con suavizado de contorno.  
   
- ![Suavizar el contorno de una línea](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.png "AboutGdip02\_Art34")  
+ ![Suavizar el contorno de una línea](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art34.gif "AboutGdip02_Art34")  
   
- El suavizado de contorno puede aplicarse también a curvas.  En la siguiente ilustración se muestra una vista ampliada de una elipse suavizada.  
+ Suavizado de contorno, también llamado suavizado, también puede aplicarse a curvas. En la siguiente ilustración muestra una vista ampliada de una elipse suavizada.  
   
- ![Suavizar el contorno de curvas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.png "AboutGdip02\_Art35")  
+ ![Suavizado de contorno curvas](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art35.gif "AboutGdip02_Art35")  
   
- En la siguiente ilustración se muestra la misma elipse con su tamaño real, una vez sin suavizado de contorno y otra con él.  
+ En la siguiente ilustración muestra la misma elipse con su tamaño real, una vez sin suavizado de contorno y otra con suavizado de contorno.  
   
- ![Ejemplo de suavizado de contorno &#40;anti&#45;aliasing&#41;](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02\_Art36")  
+ ![Ejemplo de suavizado de contorno](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art36.gif "AboutGdip02_Art36")  
   
- Para dibujar líneas y curvas que utilicen suavizado de contorno, cree una instancia de la clase <xref:System.Drawing.Graphics> y establezca su propiedad <xref:System.Drawing.Graphics.SmoothingMode%2A> en <xref:System.Drawing.Drawing2D.SmoothingMode> o <xref:System.Drawing.Drawing2D.SmoothingMode>.  A continuación, hay que llamar a uno de los métodos de dibujo de la misma clase <xref:System.Drawing.Graphics>.  
+ Para dibujar líneas y curvas que utilizan el suavizado de contorno, cree una instancia de la <xref:System.Drawing.Graphics> clase y establezca su <xref:System.Drawing.Graphics.SmoothingMode%2A> propiedad <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> o <xref:System.Drawing.Drawing2D.SmoothingMode.HighQuality>. A continuación, llame a uno de los métodos de dibujo de ese mismo <xref:System.Drawing.Graphics> clase.  
   
  [!code-csharp[LinesCurvesAndShapes#81](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#81)]
  [!code-vb[LinesCurvesAndShapes#81](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
-## Vea también  
- <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=fullName>   
- [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [Cómo: Utilizar la función de suavizado de contorno con texto](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
+ [Líneas, curvas y formas](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Utilizar la función de suavizado de contorno con texto](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

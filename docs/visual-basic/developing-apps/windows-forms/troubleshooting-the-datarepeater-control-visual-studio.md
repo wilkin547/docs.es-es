@@ -1,74 +1,75 @@
 ---
-title: "Soluci&#243;n de problemas del control DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, solucionar problemas"
+title: "Solución de problemas del control DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: DataRepeater, troubleshooting
 ms.assetid: c0ab9469-eced-4f52-aa18-4bd8dd4f1a9a
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2d630dbf8601eeddd5ce3ea02696891a1087f71f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Soluci&#243;n de problemas del control DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En este tema se enumeran los problemas comunes que pueden producirse al trabajar con el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+# <a name="troubleshooting-the-datarepeater-control-visual-studio"></a>Solución de problemas del control DataRepeater (Visual Studio)
+En este tema se enumera los problemas comunes que pueden producirse cuando se trabaja con el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.  
   
-## No se provocan eventos de teclado y mouse de DataRepeater  
- No se provocan algunos eventos del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, como eventos de teclado y mouse.  Esto es intencionado.  El propio control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> es un contenedor para objetos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> y no se puede obtener acceso a él en tiempo de ejecución.  El objeto <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> no expone eventos en tiempo de diseño.  Por consiguiente, al hacer clic en un elemento o al presionar una tecla cuando el elemento tiene el foco no se inicia ningún evento.  
+## <a name="datarepeater-keyboard-and-mouse-events-are-not-raised"></a>No se generan eventos de Mouse y teclado DataRepeater  
+ Algunos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> no se generan eventos de control, tales como eventos de teclado y mouse (ratón). Esto es intencionado. El <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> propio control es un contenedor para <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> objetos y no se puede tener acceso en tiempo de ejecución. El <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> no expone eventos en tiempo de diseño. Por lo tanto, al hacer clic en un elemento o presionar una tecla cuando el elemento tiene el foco no provoca un evento.  
   
- La excepción a esto es cuando la propiedad <xref:System.Windows.Forms.Control.Padding%2A> está establecida en un valor lo suficientemente grande para exponer los bordes del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  En este caso, al hacer clic en el margen expuesto, se provocarán eventos de mouse.  
+ La excepción a esto es cuando la <xref:System.Windows.Forms.Control.Padding%2A> propiedad está establecida en un gran valor suficiente para exponer los bordes de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. En este caso, haga clic en el margen expuesto generará los eventos del mouse.  
   
- Para resolver este problema, agregue un control <xref:System.Windows.Forms.Panel> a la sección <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> y, a continuación, agregue el resto de los controles a <xref:System.Windows.Forms.Panel>.  A continuación, puede agregar código a los controladores de eventos del control <xref:System.Windows.Forms.Panel> para eventos de teclado y mouse.  
+ Para resolver este problema, agregue un <xref:System.Windows.Forms.Panel> el control a la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> sección de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> controlar y, a continuación, agregue el resto de los controles en el <xref:System.Windows.Forms.Panel>. A continuación, puede agregar código para el <xref:System.Windows.Forms.Panel> controladores de eventos del control de eventos de teclado y mouse (ratón).  
   
-## DataRepeater se oculta parcialmente detrás del examinador de enlaces  
- Al agregar por primera vez un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> a un formulario y, a continuación, agregar controles enlazados a datos desde la ventana **Orígenes de datos**, el control <xref:System.Windows.Forms.BindingNavigator> puede aparecer encima del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Es una limitación conocida de la ventana **Orígenes de datos**, en la que otros controles, como el control <xref:System.Windows.Forms.DataGridView>, se comportan de igual manera.  
+## <a name="the-datarepeater-is-partially-hidden-behind-the-binding-navigator"></a>DataRepeater se oculta parcialmente detrás del Examinador de enlaces  
+ Cuando agrega un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> el control a un formulario y, a continuación, agregar controles enlazados a datos desde el **orígenes de datos** ventana, el <xref:System.Windows.Forms.BindingNavigator> control puede aparecer en la parte superior de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. Se trata de una limitación conocida de la **orígenes de datos** ventana y es coherente con el comportamiento de otros controles, como el <xref:System.Windows.Forms.DataGridView> control.  
   
- Puede colocar el control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> debajo del control <xref:System.Windows.Forms.BindingNavigator> en tiempo de diseño o agregar un código similar al siguiente en el controlador de eventos `Load`.  
+ Puede cualquier movimiento la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> inferior a la <xref:System.Windows.Forms.BindingNavigator> de control en tiempo de diseño o agregue código similar al siguiente en el `Load` controlador de eventos.  
   
-```vb#  
+```vb  
 DataRepeater1.Top = ProductsBindingNavigator.Height  
 ```  
   
-```c#  
+```csharp  
 dataRepeater1.Top = productsBindingNavigator.Height;  
 ```  
   
-## Los controles no se muestran correctamente en tiempo de ejecución  
- Algunos controles en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> no se pueden mostrar en tiempo de ejecución tal como se espera.  El proceso utilizado para clonar controles de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> no siempre puede determinar todas las propiedades de todos los controles.  Por ejemplo, si agrega un control <xref:System.Windows.Forms.ListBox> independiente a un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> en tiempo de diseño y rellena su colección <xref:System.Windows.Forms.ListBox.Items%2A> con una lista de cadenas, el control <xref:System.Windows.Forms.ListBox> estará vacío en tiempo de ejecución.  Esto es así porque el proceso de clonación no puede tener en cuenta la propiedad <xref:System.Windows.Forms.ListBox.Items%2A>.  
+## <a name="controls-are-not-displayed-correctly-at-run-time"></a>Controles no se muestran correctamente en tiempo de ejecución  
+ Algunos de los controles en un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control podría no mostrarse según lo previsto en tiempo de ejecución. El proceso utilizado para clonar controles desde el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> a la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> no siempre puede determinar todas las propiedades de todos los controles. Por ejemplo, si agrega un independiente <xref:System.Windows.Forms.ListBox> el control a un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> de control en tiempo de diseño y rellena su <xref:System.Windows.Forms.ListBox.Items%2A> colección con una lista de cadenas, la <xref:System.Windows.Forms.ListBox> estará vacío en tiempo de ejecución. Esto es porque el proceso de clonación no se puede tener en cuenta el <xref:System.Windows.Forms.ListBox.Items%2A> propiedad.  
   
- Puede corregir este tipo de problemas restableciendo las propiedades perdidas en el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>, lo que sucede una vez completada la clonación predeterminada.  En el ejemplo siguiente se muestra cómo reparar la colección <xref:System.Windows.Forms.ListBox.Items%2A> de un control <xref:System.Windows.Forms.ListBox> en el controlador de eventos <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned>.  
+ Puede solucionar problemas como este mediante la restauración de las propiedades que faltan en la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> evento, que se produce una vez completada la clonación predeterminada. En el ejemplo siguiente se muestra cómo reparar la <xref:System.Windows.Forms.ListBox.Items%2A> colección de un <xref:System.Windows.Forms.ListBox> controlar en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> controlador de eventos.  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-csharp[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
  [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
-## Falta el símbolo de selección en el encabezado del elemento  
- Al cambiar la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> del encabezado de elemento en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, algunas opciones de color pueden hacer que el símbolo de selección desaparezca.  Al modificar la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>, el símbolo de selección también puede desaparecer.  
+## <a name="the-selection-symbol-on-the-item-header-is-missing"></a>El símbolo de selección en el encabezado de elemento es que faltan  
+ Al cambiar la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> propiedad del encabezado de elemento en un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> (control), algunas opciones de color pueden provocar que el símbolo de selección desaparezca. Cambiar el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> propiedad también puede provocar que el símbolo de selección desaparezca.  
   
- No se pueden cambiar ni color ni el tamaño del símbolo de selección.  
+ No se puede cambiar el color y el tamaño del símbolo de selección.  
   
--   Si establece la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> en <xref:System.Drawing.Color.White%2A>, el símbolo de selección no estará visible al seleccionar por primera vez un elemento.  
+-   Si establece la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> a <xref:System.Drawing.Color.White%2A>, el símbolo de selección no estará visible cuando se selecciona un elemento por primera vez.  
   
--   Si establece la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> en <xref:System.Drawing.Color.Black%2A>, el símbolo de selección no estará visible cuando esté seleccionado un control y el símbolo de lápiz no estará visible cuando un control esté en modo de edición.  
+-   Si establece la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> a <xref:System.Drawing.Color.Black%2A>, el símbolo de selección no estará visible cuando se selecciona un control y el símbolo de lápiz no estará visible cuando un control está en modo de edición.  
   
--   Si la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> está establecida en un valor menor que 11, no se mostrarán los símbolos de indicador en el encabezado del elemento.  
+-   Si el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> propiedad está establecida en un valor que es menor que 11, no se mostrarán los símbolos de indicador en el encabezado de elemento.  
   
- Puede proporcionar su propio encabezado de elemento y símbolo de selección utilizando un control <xref:System.Windows.Forms.PictureBox> y supervisando la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> en el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Para obtener más información, vea <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+ Puede proporcionar su propio símbolo de encabezado y la selección de elementos mediante un <xref:System.Windows.Forms.PictureBox> control y supervisión de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> propiedad de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> eventos de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control. Para obtener más información, consulta <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
   
-## Vea también  
- [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Cómo: Mostrar los datos enlazados en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: Mostrar controles no enlazados en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: Cambiar el diseño de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
- [Cómo: Cambiar la apariencia de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Cómo: Mostrar los encabezados de los elementos en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: Deshabilitar las operaciones de agregar y eliminar elementos DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)   
- [Cómo: Buscar datos en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)   
- [Cómo: Crear un formulario principal\-detalle mediante dos controles DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Mostrar los datos enlazados en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Mostrar controles no enlazados en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [Cambiar el diseño de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [Cambiar la apariencia de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Mostrar los encabezados de los elementos en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ [Deshabilitar las operaciones de agregar y eliminar elementos DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
+ [Buscar datos en un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ [Cómo: crear un formulario principal-detalle mediante dos controles DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)

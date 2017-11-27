@@ -1,43 +1,46 @@
 ---
-title: "Activaci&#243;n MSMQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Activación MSMQ"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 29
+caps.latest.revision: "29"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 99fa5a5b76b90a6c16fa2bbd8ee11e91d77d47a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Activaci&#243;n MSMQ
-Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows \(WAS\) que se lee en una cola de mensajes.  Este ejemplo utiliza `netMsmqBinding` y está basado en el ejemplo [Comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md).  El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.  
+# <a name="msmq-activation"></a>Activación MSMQ
+Este ejemplo muestra cómo hospedar aplicaciones en el servicio de activación del proceso de Windows (WAS) que se lee en una cola de mensajes. Este ejemplo se utiliza la `netMsmqBinding` y se basa en el [comunicación bidireccional](../../../../docs/framework/wcf/samples/two-way-communication.md) ejemplo. El servicio en este caso es una aplicación hospedada en web y el cliente es autohospedado y proporciona resultados a la consola para observar el estado de pedidos de compra enviados.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 > [!NOTE]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  \<InstallDrive\>:\\WF\_WCF\_Samples  
+>  \<InstallDrive >: \WF_WCF_Samples  
 >   
->  Si este directorio no existe, vaya a los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf](../../../../includes/wf-md.md)] para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] con el objeto de descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" y [!INCLUDE[wf](../../../../includes/wf-md.md)] ejemplos para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] para descargar todos los [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  \<InstallDrive\>:\\Samples\\WCFWFCardSpace\\WCF\\Basic\\Services\\Hosting\\WASHost\\MsmqActivation.  
+>  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Servicio de activación de procesos de Windows \(WAS\), el nuevo mecanismo de activación de procesos para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], proporciona características de tipo IIS que solo estaban disponible para aplicaciones basadas en HTTP a aplicaciones que usan protocolos no HTTP.  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa la interfaz de Adaptador de agentes de escucha para comunicar solicitudes de activación que se reciben a través de protocolos no HTTP admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, Canalizaciones con nombre y MSMQ.  La funcionalidad para recibir solicitudes a través de protocolos no http está hospedada por servicios de Windows administrados que se ejecutan en SMSvcHost.exe.  
+ Servicio de activación de procesos de Windows (WAS), el nuevo mecanismo de activación de procesos para [!INCLUDE[lserver](../../../../includes/lserver-md.md)], proporciona características de tipo IIS que solo estaban disponible para aplicaciones basadas en HTTP a aplicaciones que usan protocolos no HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usa la interfaz de Adaptador de agentes de escucha para comunicar solicitudes de activación que se reciben a través de protocolos no HTTP admitidos por [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], como TCP, Canalizaciones con nombre y MSMQ. La funcionalidad para recibir solicitudes a través de protocolos no http está hospedada por servicios de Windows administrados que se ejecutan en SMSvcHost.exe.  
   
- El servicio Net.Msmq Listener Adapter \(NetMsmqActivator\) activa aplicaciones en cola basadas en mensajes en la cola.  
+ El servicio Net.Msmq Listener Adapter (NetMsmqActivator) activa aplicaciones en cola basadas en mensajes en la cola.  
   
- El cliente envía los pedidos de compra al servicio desde dentro del ámbito de una transacción.  El servicio recibe las órdenes en una transacción y las procesa.  El servicio llama a continuación de nuevo al cliente con el estado del orden.  Para facilitar la comunicación bidireccional, tanto el cliente como el servicio utilizan las colas para poner en cola los pedidos de compra y el estado de la orden.  
+ El cliente envía los pedidos de compra al servicio desde dentro del ámbito de una transacción. El servicio recibe las órdenes en una transacción y las procesa. El servicio llama a continuación de nuevo al cliente con el estado del orden. Para facilitar la comunicación bidireccional, tanto el cliente como el servicio utilizan las colas para poner en cola los pedidos de compra y el estado de la orden.  
   
- El contrato de servicio `IOrderProcessor` define operaciones de servicio unidireccionales que funcionan en cola.  La operación del servicio utiliza el extremo de respuesta para enviar estados de orden al cliente.  La dirección de extremo de la respuesta es el URI de la cola utilizado para devolver el estado del orden al cliente.  La aplicación de procesamiento de orden implementa este contrato.  
+ El contrato de servicio `IOrderProcessor` define operaciones de servicio unidireccionales que funcionan en cola. La operación del servicio utiliza el extremo de respuesta para enviar estados de orden al cliente. La dirección de extremo de la respuesta es el URI de la cola utilizado para devolver el estado del orden al cliente. La aplicación de procesamiento de orden implementa este contrato.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -47,10 +50,9 @@ public interface IOrderProcessor
     void SubmitPurchaseOrder(PurchaseOrder po,   
                                            string reportOrderStatusTo);  
 }  
-  
 ```  
   
- El cliente especifica el contrato de la respuesta para enviar el estado de la orden.  El cliente implementa el contrato del estado de la orden.  El servicio utiliza el cliente generado de este contrato para devolver el estado de la orden al cliente.  
+ El cliente especifica el contrato de la respuesta para enviar el estado de la orden. El cliente implementa el contrato del estado de la orden. El servicio utiliza el cliente generado de este contrato para devolver el estado de la orden al cliente.  
   
 ```csharp  
 [ServiceContract]  
@@ -59,10 +61,9 @@ public interface IOrderStatus
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-  
 ```  
   
- La operación del servicio procesa el pedido de compra enviado.  <xref:System.ServiceModel.OperationBehaviorAttribute> se aplica a la operación del servicio para especificar la inscripción automática en la transacción que se utiliza para recibir el mensaje de la cola y la realización automática de la transacción en la realización de la operación del servicio.  La clase `Orders` encapsula la funcionalidad del procesamiento de la orden.  En este caso, agrega el pedido de compra a un diccionario.  La transacción en la que la operación del servicio se dio de alta está disponible para las operaciones en la clase `Orders`.  
+ La operación del servicio procesa el pedido de compra enviado. <xref:System.ServiceModel.OperationBehaviorAttribute> se aplica a la operación del servicio para especificar la inscripción automática en la transacción que se utiliza para recibir el mensaje de la cola y la realización automática de la transacción en la realización de la operación del servicio. La clase `Orders` encapsula la funcionalidad del procesamiento de la orden. En este caso, agrega el pedido de compra a un diccionario. La transacción en la que la operación del servicio se dio de alta está disponible para las operaciones en la clase `Orders`.  
   
  La operación del servicio, además de procesar el pedido de compra enviado, responde de nuevo al cliente acerca del estado de la orden.  
   
@@ -86,15 +87,14 @@ public class OrderProcessorService : IOrderProcessor
             scope.Complete();  
         }  
     }  
-  
 ```  
   
  El enlace de cliente que se ha de utilizar se especifica utilizando un archivo de configuración.  
   
- El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración.  El extremo para el servicio se define en la sección de System.ServiceModel del archivo de configuración.  
+ El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración. El extremo para el servicio se define en la sección de System.ServiceModel del archivo de configuración.  
   
 > [!NOTE]
->  El nombre de cola de MSMQ y la dirección de extremo utilizan convenciones de direccionamiento ligeramente diferentes.  El nombre de la cola de MSMQ utiliza un punto \(.\) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso.  La dirección de extremo de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especifica un esquema net.msmq:, usa el "localhost" para el equipo local y barras diagonales en su ruta de acceso.  Para leer de una cola que se hospeda en el equipo remoto, reemplace "." y “localhost” con el nombre del equipo remoto.  
+>  El nombre de cola de MSMQ y la dirección de extremo utilizan convenciones de direccionamiento ligeramente diferentes. El nombre de la cola de MSMQ utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] especifica un esquema net.msmq:, usa el "localhost" para el equipo local y barras diagonales en su ruta de acceso. Para leer de una cola que se hospeda en el equipo remoto, reemplace "." y “localhost” con el nombre del equipo remoto.  
   
  Se utiliza un archivo .svc con el nombre de la clase para hospedar el código del servicio en WAS.  
   
@@ -102,7 +102,6 @@ public class OrderProcessorService : IOrderProcessor
   
 ```xml  
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>  
-  
 ```  
   
  El archivo Service.svc también contiene una directiva de ensamblado para asegurar que se carga System.Transactions.dll.  
@@ -111,7 +110,7 @@ public class OrderProcessorService : IOrderProcessor
 <%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>  
 ```  
   
- El cliente crea un ámbito de transacción.  La comunicación con el servicio tiene lugar dentro del ámbito de la transacción, produciendo que se trate como una unidad atómica donde todos los mensajes tienen éxito o dan error.  La transacción se confirma llamando a `Complete` en el ámbito de la transacción.  
+ El cliente crea un ámbito de transacción. La comunicación con el servicio tiene lugar dentro del ámbito de la transacción, produciendo que se trate como una unidad atómica donde todos los mensajes tienen éxito o dan error. La transacción se confirma llamando a `Complete` en el ámbito de la transacción.  
   
 ```csharp  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
@@ -164,10 +163,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHostBase to shutdown the service.  
     serviceHost.Close();  
     }  
-  
 ```  
   
- El código de cliente implementa el contrato`IOrderStatus` para recibir el estado de la orden del servicio.  En este caso, imprime el estado de la orden.  
+ El código de cliente implementa el contrato`IOrderStatus` para recibir el estado de la orden del servicio. En este caso, imprime el estado de la orden.  
   
 ```csharp  
 [ServiceBehavior]  
@@ -183,7 +181,7 @@ public class OrderStatusService : IOrderStatus
 }  
 ```  
   
- La cola de estado de la orden se crea en el método `Main`.  La configuración del cliente incluye la configuración del servicio del estado de la orden para hospedar el servicio del estado de la orden, tal y como se muestra en la configuración del ejemplo siguiente.  
+ La cola de estado de la orden se crea en el método `Main`. La configuración del cliente incluye la configuración del servicio del estado de la orden para hospedar el servicio del estado de la orden, tal y como se muestra en la configuración del ejemplo siguiente.  
   
 ```csharp  
 <appSettings>  
@@ -213,60 +211,58 @@ public class OrderStatusService : IOrderStatus
     </client>  
   
   </system.serviceModel>  
-  
 ```  
   
- Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servidor.  Puede ver que el servidor recibe mensajes desde el cliente.  Presione Entrar en cada ventana de la consola para cerrar el servidor y el cliente.  
+ Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servidor. Puede ver que el servidor recibe mensajes desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servidor y el cliente.  
   
  El cliente muestra la información del estado de la orden enviada por el servidor.  
   
 ```Output  
-  
-Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-81c2-23aa4478ebed: Pendiente    
+Press <ENTER> to terminate client.  
+Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending  
 ```  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
 1.  Asegúrese de que está instalado [!INCLUDE[iisver](../../../../includes/iisver-md.md)], según se requiere para la activación WAS.  
   
-2.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  Además, debe instalar los componentes de activación que no son HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Además, debe instalar los componentes de activación que no son HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
-    1.  En el menú **Inicio**, elija **Panel de control**.  
+    1.  Desde el **iniciar** menú, elija **el Panel de Control**.  
   
-    2.  Seleccione **Programas y características**.  
+    2.  Seleccione **programas y características**.  
   
-    3.  Haga clic en **Activar o desactivar las características de Windows.**  
+    3.  Haga clic en **activar o desactivar las características de Windows**.  
   
-    4.  En **Resumen de Características**, haga clic en **Añadir características**.  
+    4.  En **resumen de características**, haga clic en **agregar características**.  
   
-    5.  Expanda el nodo  **Microsoft .NET Framework 3.0** y compruebe la característica  **Activación No HTTP de Windows Communication Foundation** .  
+    5.  Expanda el **Microsoft .NET Framework 3.0** nodo y compruebe el **activación no HTTP de Windows Communication Foundation** característica.  
   
-3.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Ejecute el cliente ejecutando client.exe de una ventana de comandos.  Esto crea la cola y envía un mensaje a la misma.  Deje que el cliente se ejecute para ver el resultado del servicio que lee el mensaje  
+4.  Ejecute el cliente ejecutando client.exe de una ventana de comandos. Esto crea la cola y envía un mensaje a la misma. Deje que el cliente se ejecute para ver el resultado del servicio que lee el mensaje  
   
-5.  El servicio de activación MSMQ se ejecuta como servicio de red de manera predeterminada.  Por consiguiente, la cola que se utiliza para activar la aplicación debe tener permisos de recepción y lectura para el Servicio de la Red.  Esto se puede agregar utilizando el MMC de Message Queuing:  
+5.  El servicio de activación MSMQ se ejecuta como servicio de red de manera predeterminada. Por consiguiente, la cola que se utiliza para activar la aplicación debe tener permisos de recepción y lectura para el Servicio de la Red. Esto se puede agregar utilizando el MMC de Message Queuing:  
   
-    1.  En el menú **Inicio**, haga clic en **Ejecutar**, a continuación, escriba `Compmgmt.msc` y presione Entrar.  
+    1.  Desde el **iniciar** menú, haga clic en **ejecutar**, a continuación, escriba `Compmgmt.msc` y presione ENTRAR.  
   
-    2.  En **Servicios y Aplicaciones**, expanda **Message Queuing**.  
+    2.  En **servicios y aplicaciones**, expanda **Message Queue Server**.  
   
-    3.  Haga clic en **Colas privadas**.  
+    3.  Haga clic en **colas privadas**.  
   
-    4.  Haga clic con el botón derecho en la cola \(servicemodelsamples\/Service.svc\) y elija **Propiedades**.  
+    4.  Haga clic en la cola (servicemodelsamples/Service.svc) y elija **propiedades**.  
   
-    5.  En la pestaña de **Seguridad**, haga clic en **Agregar** y proporcione permisos de recepción y lectura al Servicio de red.  
+    5.  En el **seguridad** , haga clic en **agregar** y asigne peek y reciben permisos al servicio de red.  
   
-6.  Configure el Windows Process Activation Service \(WAS\) para admitir la activación de MSMQ.  
+6.  Configure el Windows Process Activation Service (WAS) para admitir la activación de MSMQ.  
   
      Para su comodidad, los dos pasos siguientes se implementan en un archivo por lotes denominado AddMsmqSiteBinding.cmd que se encuentra en el directorio de ejemplo.  
   
-    1.  Para admitir la activación de net.msmq, el sitio web predeterminado debe enlazarse primero al protocolo net.msmq.  Esto se puede hacer utilizando appcmd.exe, que se instala con el conjunto de herramientas de administración de [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  Desde un símbolo del sistema con permisos elevados \(administrador\), ejecute el comando siguiente.  
+    1.  Para admitir la activación de net.msmq, el sitio web predeterminado debe enlazarse primero al protocolo net.msmq. Esto se puede hacer utilizando appcmd.exe, que se instala con el conjunto de herramientas de administración de [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Desde un símbolo del sistema con permisos elevados (administrador), ejecute el comando siguiente.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
         -+bindings.[protocol='net.msmq',bindingInformation='localhost']  
-  
         ```  
   
         > [!NOTE]
@@ -274,21 +270,20 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
   
          Este comando agrega un enlace del sitio de net.msmq al sitio web predeterminado.  
   
-    2.  Aunque todas las aplicaciones dentro de un sitio comparten un enlace net.msmq común, cada aplicación puede habilitar la compatibilidad con net.msmq individualmente.  Para habilitar net.msmq para la aplicación \/servicemodelsamples, ejecute el comando siguiente desde un símbolo del sistema con permisos elevados.  
+    2.  Aunque todas las aplicaciones dentro de un sitio comparten un enlace net.msmq común, cada aplicación puede habilitar la compatibilidad con net.msmq individualmente. Para habilitar net.msmq para la aplicación /servicemodelsamples, ejecute el comando siguiente desde un símbolo del sistema con permisos elevados.  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.msmq  
-  
         ```  
   
         > [!NOTE]
         >  Este comando es una sola línea de texto.  
   
-         Este comando habilita la aplicación \/servicemodelsamples para tener acceso utilizando http:\/\/localhost\/servicemodelsamples y net.msmq:\/\/localhost\/servicemodelsamples.  
+         Este comando habilita la aplicación /servicemodelsamples para tener acceso utilizando http://localhost/servicemodelsamples y net.msmq://localhost/servicemodelsamples.  
   
-7.  Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado.  En el menú **Inicio**, haga clic en **Ejecutar**, y escriba `Services.msc`.  Busque **Net.Msmq Listener Adapter**en la lista de servicios.  Haga clic con el botón derecho del ratón y seleccione **Propiedades**.  Establezca el **Tipo de inicio** en **Automático**, haga clic en **Aplicar** y haga clic en el botón de**Inicio**.  Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.  
+7.  Si no lo ha hecho previamente, asegúrese de que el servicio de activación MSMQ está habilitado. Desde el **iniciar** menú, haga clic en **ejecutar**y el tipo de `Services.msc`. Buscar en la lista de servicios para la **Net.Msmq Listener Adapter**. Haga clic en y seleccione **propiedades**. Establecer el **tipo de inicio** a **automática**, haga clic en **aplicar** y haga clic en el **iniciar** botón. Este paso solo debe realizarse una vez antes del primer uso del servicio de Adaptador de escucha Net.Msmq.  
   
-8.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra.  Utilice el código siguiente:  
+8.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Además, cambie el código en el cliente que envía el pedido de compra para reflejar el nombre de equipo en el URI de la cola al enviar el pedido de compra. Utilice el código siguiente:  
   
     ```  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -302,7 +297,6 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
-  
         ```  
   
         > [!NOTE]
@@ -312,7 +306,6 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.msmq',bindingInformation='localhost']  
-  
         ```  
   
         > [!NOTE]
@@ -321,9 +314,9 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
     > [!WARNING]
     >  Al ejecutar el archivo por lotes, se restablecerá DefaultAppPool para que se ejecute utilizando la versión 2.0 de .NET Framework.  
   
- De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada.  Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte.  De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`.  Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio.  Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".  
+ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".  
   
-### Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo  
   
 1.  Si su equipo no forma parte de un dominio, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en cero, tal y como se muestra en la configuración de ejemplo siguiente.  
   
@@ -335,7 +328,6 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
             </binding>  
         </netMsmqBinding>  
     </bindings>  
-  
     ```  
   
 2.  Cambie la configuración en el servidor y el cliente antes de ejecutar el ejemplo.  
@@ -343,13 +335,13 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
     > [!NOTE]
     >  Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.  
   
-3.  Para habilitar la activación en un equipo combinado a un grupo de trabajo, el servicio de activación y el proceso de trabajador se deben ejecutar con una cuenta de usuario concreta \(debe ser la misma para ambos\) y la cola debe tener ACL para la cuenta de usuario concreta.  
+3.  Para habilitar la activación en un equipo combinado a un grupo de trabajo, el servicio de activación y el proceso de trabajador se deben ejecutar con una cuenta de usuario concreta (debe ser la misma para ambos) y la cola debe tener ACL para la cuenta de usuario concreta.  
   
      Para cambiar la identidad bajo la que el proceso de trabajador se ejecuta:  
   
     1.  Ejecute Inetmgr.exe.  
   
-    2.  En **Grupos de aplicaciones**, haga clic con el botón derecho en**AppPool** \(normalmente **DefaultAppPool**\) y elija **Establecer valores predeterminados del grupo de aplicaciones**.  
+    2.  En **grupos de aplicaciones**, haga clic en el **AppPool** (normalmente **DefaultAppPool**) y elija **establecer valores predeterminados de grupo de aplicaciones...** .  
   
     3.  Cambie las propiedades Identity para utilizar la cuenta de usuario concreta.  
   
@@ -357,15 +349,15 @@ Presione <ENTRAR> para terminar el cliente.  Estado de orden 70cf9d63-3dfa-4e69-
   
     1.  Ejecute Services.msc.  
   
-    2.  Haga clic con el botón derecho en **Net.MsmqListener Adapter**y elija **Propiedades**.  
+    2.  Haga clic en el **Net.MsmqListener Adapter**y elija **propiedades**.  
   
-4.  Cambie la cuenta en la pestaña **Inicio de sesión**.  
+4.  Cambiar la cuenta en la **inicio de sesión** ficha.  
   
-5.  En un grupo de trabajo, el servicio se debe ejecutar también utilizando un token sin restricciones.  Para ello, ejecute lo siguiente en una ventana de comandos:  
+5.  En un grupo de trabajo, el servicio se debe ejecutar también utilizando un token sin restricciones. Para ello, ejecute lo siguiente en una ventana de comandos:  
   
     ```  
     sc sidtype netmsmqactivator unrestricted  
     ```  
   
-## Vea también  
- [Ejemplos de Hospedaje y persistencia de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Vea también  
+ [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)

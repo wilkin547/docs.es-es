@@ -1,43 +1,48 @@
 ---
-title: "C&#243;mo: Enlazar datos al control MaskedTextBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "enlace de datos, MaskedTextBox (control) [Windows Forms]"
-  - "MaskedTextBox (control) [Windows Forms]"
-  - "MaskedTextBox (control) [Windows Forms], enlazar datos"
+title: "Cómo: Enlazar datos al control MaskedTextBox"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- MaskedTextBox control [Windows Forms]
+- data binding [Windows Forms], MaskedTextBox control [Windows Forms]
+- MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 995a466801337b5bbbf69c5c07f693b6d57c1d98
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Enlazar datos al control MaskedTextBox
-Puede enlazar datos a un control <xref:System.Windows.Forms.MaskedTextBox> del mismo modo que cualquier otro control de formularios Windows Forms.  No obstante, si el formato de los datos de la base de datos no coincide con el formato que se espera de la definición de máscara, será necesario volver a dar formato a los datos.  En el procedimiento siguiente se muestra cómo hacerlo utilizando los eventos <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> de la clase <xref:System.Windows.Forms.Binding> para mostrar los campos de número de teléfono y extensión telefónica independientes como un solo campo modificable.  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Cómo: Enlazar datos al control MaskedTextBox
+Puede enlazar datos a un <xref:System.Windows.Forms.MaskedTextBox> controlar igual que lo haría para cualquier otro control de formularios Windows Forms. Sin embargo, si el formato de los datos en la base de datos no coincide con el formato esperado por la definición de máscara, debe volver a formatear los datos. El siguiente procedimiento muestra cómo hacer esto mediante la <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> eventos de la <xref:System.Windows.Forms.Binding> clase para mostrar el número de teléfono distinto y campos de la base de datos de extensión de teléfono como un único campo editable.  
   
- El procedimiento siguiente requiere que tenga acceso a una base de datos de SQL Server con la base de datos de ejemplo Northwind instalada.  
+ El procedimiento siguiente requiere que tiene acceso a una base de datos de SQL Server con la base de datos de ejemplo Northwind instalada.  
   
-### Para enlazar datos a un control MaskedTextBox  
+### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Para enlazar datos a un control MaskedTextBox  
   
-1.  Cree un nuevo proyecto de formularios Windows Forms.  
+1.  Cree un nuevo proyecto de Windows Forms.  
   
-2.  Arrastre dos controles <xref:System.Windows.Forms.TextBox> al formulario; asígnelos el nombre `FirstName` y `LastName`.  
+2.  Arrastre dos <xref:System.Windows.Forms.TextBox> controles al formulario; Denomínelos `FirstName` y `LastName`.  
   
-3.  Arrastre un control <xref:System.Windows.Forms.MaskedTextBox> al formulario; asígnelo el nombre `PhoneMask`.  
+3.  Arrastre un <xref:System.Windows.Forms.MaskedTextBox> el control al formulario; asígnele el nombre `PhoneMask`.  
   
-4.  Establezca la propiedad <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> de `PhoneMask` en `(000) 000-0000 x9999`.  
+4.  Establecer el <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad de `PhoneMask` a `(000) 000-0000 x9999`.  
   
-5.  Agregue las importaciones de espacio de nombres siguientes al formulario:  
+5.  Agregue que el siguiente espacio de nombres se importa al formulario.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -47,7 +52,7 @@ Puede enlazar datos a un control <xref:System.Windows.Forms.MaskedTextBox> del m
     Imports System.Data.SqlClient  
     ```  
   
-6.  Haga clic con el botón secundario del mouse en el formulario y elija **Ver código**.  Coloque este código en cualquier parte de la clase de formulario.  
+6.  Haga clic en el formulario y elija **ver código**. Coloque este código en cualquier parte en la clase de formulario.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -141,7 +146,7 @@ Puede enlazar datos a un control <xref:System.Windows.Forms.MaskedTextBox> del m
     End Sub  
     ```  
   
-7.  Agregue controladores de eventos para que los eventos <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> combinen y separen los campos `PhoneNumber` y `Extension` del <xref:System.Data.DataSet> enlazado.  
+7.  Agregar controladores de eventos para el <xref:System.Windows.Forms.Binding.Format> y <xref:System.Windows.Forms.Binding.Parse> eventos se van a combinar y separar la `PhoneNumber` y `Extension` campos desde el límite <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -209,7 +214,7 @@ Puede enlazar datos a un control <xref:System.Windows.Forms.MaskedTextBox> del m
     End Sub  
     ```  
   
-8.  Agregue dos controles <xref:System.Windows.Forms.Button> al formulario.  Denomínelos `previousButton` y `nextButton`.  Haga doble clic en cada botón para agregar un controlador de eventos <xref:System.Windows.Forms.Control.Click> y rellene los controladores de eventos como se muestra en el ejemplo de código siguiente.  
+8.  Agregar dos <xref:System.Windows.Forms.Button> controles al formulario. Denomínelos `previousButton` y `nextButton`. Haga doble clic en cada botón para agregar una <xref:System.Windows.Forms.Control.Click> controlador de eventos y rellene los controladores de eventos, como se muestra en el ejemplo de código siguiente.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -233,26 +238,26 @@ Puede enlazar datos a un control <xref:System.Windows.Forms.MaskedTextBox> del m
     End Sub  
     ```  
   
-9. Ejecute el ejemplo.  Edite los datos y utilice los botones **Anterior** y **Siguiente** para comprobar que los datos se conservan correctamente en el <xref:System.Data.DataSet>.  
+9. Ejecute el ejemplo. Edite los datos y use la **anterior** y **siguiente** botones para ver que los datos se guardan correctamente en el <xref:System.Data.DataSet>.  
   
-## Ejemplo  
- El ejemplo de código siguiente es la lista de código completa que se produce de completar el procedimiento anterior.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se muestra la lista que resulta de completar el procedimiento anterior de código completo.  
   
  [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
  [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
  [!code-vb[MaskedTextBoxData#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
   
--   Cree un proyecto de [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] o [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)].  
+-   Crear un [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] o [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] proyecto.  
   
--   Agregue los controles <xref:System.Windows.Forms.TextBox> y <xref:System.Windows.Forms.MaskedTextBox> al formulario, como se describe en el procedimiento anterior.  
+-   Agregar el <xref:System.Windows.Forms.TextBox> y <xref:System.Windows.Forms.MaskedTextBox> controles al formulario, tal como se describe en el procedimiento anterior.  
   
--   Abra el archivo de código fuente del formulario predeterminado del proyecto.  
+-   Abra el archivo de código fuente para el formulario del proyecto predeterminado.  
   
--   Reemplace el código fuente de este archivo con el código mostrado en la sección "Código" anterior.  
+-   Reemplace el código fuente de este archivo por el código que aparece en la sección "Código" anterior.  
   
 -   Compile la aplicación.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Tutorial: Trabajar con el control MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

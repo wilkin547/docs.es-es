@@ -1,46 +1,44 @@
 ---
-title: "Configurar clases de criptograf&#237;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "configuración de las aplicaciones de .NET Framework, criptografía"
-  - "archivos de configuración [.NET Framework], criptografía"
-  - "algoritmos criptográficos"
-  - "criptografía, clases"
-  - "criptografía predeterminada"
-  - "seguridad [.NET Framework], cifrado"
+title: "Configurar clases de criptografía"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration files [.NET Framework], cryptography
+- cryptographic algorithms
+- security [.NET Framework], encryption
+- cryptography, classes
+- .NET Framework application configuration, cryptography
+- default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 79eb9f9ef95dae24dd38fa93b137c9303815143b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Configurar clases de criptograf&#237;a
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite a los administradores de equipos configurar los algoritmos de cifrado predeterminados y las implementaciones de algoritmos usados por .NET Framework y las aplicaciones correctamente escritas.  Por ejemplo, una empresa que use su propia implementación de un algoritmo de cifrado puede hacer que esa implementación sea la predeterminada en lugar de la que se incluye en [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)].  Aunque las aplicaciones administradas que utilizan criptografía siempre pueden elegir enlazarse de forma explícita a una implementación concreta, es recomendable que creen objetos criptográficos mediante el sistema de configuración de criptografía.  
+# <a name="configuring-cryptography-classes"></a>Configurar clases de criptografía
+El [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] permite a los administradores de equipo configurar los algoritmos criptográficos predeterminados y las implementaciones de algoritmos que utilizan .NET Framework y las aplicaciones escritas correctamente.  Por ejemplo, una empresa que tenga su propia implementación de un algoritmo criptográfico puede hacer que la implementación el valor predeterminado en lugar de la implementación que se incluye en el [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]. Aunque las aplicaciones administradas que utilizan criptografía siempre pueden elegir enlazarse de forma explícita a una implementación concreta, se recomienda que creen objetos criptográficos mediante el sistema de configuración de criptografía.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Asignar nombres de algoritmo a clases de criptografía](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
- Describe cómo se asigna un nombre de algoritmo a una clase criptográfica.  
+ Describe cómo asignar un nombre de algoritmo a una clase de criptografía.  
   
  [Asignar identificadores de objeto a algoritmos de criptografía](../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)  
- Describe cómo se asigna un identificador de objeto a un algoritmo criptográfico.  
+ Describe cómo asignar un identificador de objeto a un algoritmo criptográfico.  
   
-## Secciones relacionadas  
- [Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)  
- Facilita información general sobre los servicios de cifrado proporcionados por [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)].  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
+ Proporciona información general de servicios criptográficos proporcionados por el [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)].  
   
  [Esquema de la configuración de criptografía](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
  Describe los elementos que asignan nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.

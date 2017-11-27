@@ -1,26 +1,22 @@
 ---
-title: "Cómo: crear la jerarquía con la agrupación (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: crear la jerarquía con la agrupación (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 09f75d439eeba1a4b991587053e77021d1928d4c
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 67019e2ab3d9057567969b34e276abba15174321
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Cómo: crear la jerarquía con la agrupación (Visual Basic)
 Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agrupación.  
@@ -28,7 +24,7 @@ Este ejemplo muestra cómo agrupar datos y después generar XML basado en la agr
 ## <a name="example"></a>Ejemplo  
  Este ejemplo agrupa primero los datos por categorías y, a continuación, genera un nuevo archivo XML en el que la jerarquía XML refleja la agrupación.  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de muestra: datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  

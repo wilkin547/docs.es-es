@@ -1,23 +1,26 @@
 ---
-title: "Autenticador de tokens | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autenticador de tokens
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: 22
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 559ce043c50582f40e2d7828ad74f6d16e2b81f8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Autenticador de tokens
-Este ejemplo muestra cómo implementar un autenticador de tokens personalizado.Un autenticador de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para validar el token utilizado con el mensaje, comprobar que concuerda con sí mismo, y autenticar la identidad asociada al token.  
+# <a name="token-authenticator"></a>Autenticador de tokens
+Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] se utiliza para validar el token utilizado con el mensaje, comprobar que concuerda con sí mismo, y autenticar la identidad asociada al token.  
   
  Los autenticadores de tokens personalizados son útiles en diversos casos, como:  
   
@@ -37,9 +40,9 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado.U
   
  Este ejemplo también muestra cómo la identidad del llamador es accesible desde [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] después del proceso de autenticación del token personalizado.  
   
- El servicio expone un extremo único para comunicarse con el servicio, definido mediante el archivo de configuración App.config.El extremo está compuesto por una dirección, un enlace y un contrato.El enlace se configura con un `wsHttpBinding`estándar, con el conjunto de modo de seguridad en mensaje \- el modo predeterminado de `wsHttpBinding`.Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente.El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`.El comportamiento `securityCredentials` le permite especificar un certificado del servicio.Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje.La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
+ El servicio expone un extremo único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El extremo está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding`estándar, con el conjunto de modo de seguridad en mensaje - el modo predeterminado de `wsHttpBinding`. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario del cliente. El servicio también configura el certificado del servicio utilizando comportamiento`serviceCredentials`. El comportamiento `securityCredentials` le permite especificar un certificado del servicio. Un cliente utiliza un certificado de servicio para autenticar el servicio y proporcionar protección al mensaje. La configuración siguiente hace referencia al certificado del host local instalado durante la configuración del ejemplo tal y como se describe en las siguientes instrucciones de configuración.  
   
-```  
+```xml  
 <system.serviceModel>  
     <services>  
       <service   
@@ -86,12 +89,11 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado.U
     </behaviors>  
   
   </system.serviceModel>  
-  
 ```  
   
- La configuración de extremo de cliente está compuesta por un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato.El enlace del cliente se configura con el `Mode` adecuado y `clientCredentialType`.  
+ La configuración de extremo de cliente está compuesta por un nombre de configuración, una dirección absoluta para el extremo de servicio, el enlace y el contrato. El enlace del cliente se configura con el `Mode` adecuado y `clientCredentialType`.  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <endpoint name=""  
@@ -114,7 +116,7 @@ Este ejemplo muestra cómo implementar un autenticador de tokens personalizado.U
   </system.serviceModel>  
 ```  
   
- La implementación del cliente establece el nombre de usuario y la contraseña que se van a utilizar.  
+ La implementación del cliente establece el nombre de usuario y la contraseña que utilizar.  
   
 ```  
 static void Main()  
@@ -126,12 +128,12 @@ static void Main()
 }  
 ```  
   
-## autenticador de tokens personalizado  
+## <a name="custom-token-authenticator"></a>autenticador de tokens personalizado  
  Siga los siguientes pasos para crear un autenticador de tokens personalizado:  
   
 1.  Escriba un autenticador de tokens personalizado.  
   
-     El ejemplo implementa un autenticador de tokens personalizado que valida que el nombre de usuario tiene un formato de correo electrónico válido.Deriva <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>.El método más importante en esta clase es <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>.En este método, el autenticador valida el formato del nombre de usuario y también que el nombre de host no es de un dominio no autorizado.Si se cumplen ambas condiciones, a continuación, devuelve una colección de solo lectura de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que se utiliza a continuación para proporcionar indicaciones que representan la información almacenada dentro del token del nombre de usuario.  
+     El ejemplo implementa un autenticador de tokens personalizado que valida que el nombre de usuario tiene un formato de correo electrónico válido. Deriva <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. El método más importante en esta clase es <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. En este método, el autenticador valida el formato del nombre de usuario y también que el nombre de host no es de un dominio no autorizado. Si se cumplen ambas condiciones, a continuación, devuelve una colección de solo lectura de instancias <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que se utiliza a continuación para proporcionar indicaciones que representan la información almacenada dentro del token del nombre de usuario.  
   
     ```  
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)  
@@ -220,10 +222,9 @@ static void Main()
   
 3.  Escribir un administrador de tokens de seguridad personalizado.  
   
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> para objetos <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concretos que se pasan en el método `CreateSecurityTokenAuthenticator`.El administrador de tokens de seguridad también se utiliza para crear proveedores de tokens y serializadores de tokens, aunque en este ejemplo no se explica.En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenAuthenticator` para devolver el autenticador de tokens de nombre de usuario personalizado cuando los requisitos de token pasados indican que se solicita el autenticador de nombre de usuario.  
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> se utiliza para crear <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> para objetos <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> concretos que se pasan en el método `CreateSecurityTokenAuthenticator`. El administrador de tokens de seguridad también se utiliza para crear proveedores de tokens y serializadores de tokens, aunque en este ejemplo no se explica. En este ejemplo, el administrador de tokens de seguridad personalizado hereda de la clase <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> e invalida el método `CreateSecurityTokenAuthenticator` para devolver el autenticador de tokens de nombre de usuario personalizado cuando los requisitos de token pasados indican que se solicita el autenticador de nombre de usuario.  
   
     ```  
-  
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager  
     {  
         MyUserNameCredential myUserNameCredential;  
@@ -288,7 +289,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);  
     ```  
   
- Para mostrar la información del autor de la llamada, puede usar <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> tal y como se muestra en el código siguiente.<xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene información de las indicaciones sobre el llamador actual.  
+ Para mostrar la información del autor de la llamada, puede usar <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> tal y como se muestra en el código siguiente. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contiene información de las notificaciones sobre el llamador actual.  
   
 ```  
 static void DisplayIdentityInformation()  
@@ -297,19 +298,18 @@ static void DisplayIdentityInformation()
             ServiceSecurityContext.Current.PrimaryIdentity.Name);  
      return;  
 }  
-  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
-## Instalar el archivo por lotes  
- El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor.Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.  
+## <a name="setup-batch-file"></a>Instalar el archivo por lotes  
+ El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.  
   
  A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.  
   
 -   Crear el certificado de servidor.  
   
-     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar.La variable `%SERVER_NAME%` especifica el nombre del servidor.Cambie esta variable para especificar su propio nombre del servidor.El valor predeterminado en este archivo por lotes es el host local.  
+     Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable `%SERVER_NAME%`especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado en este archivo por lotes es el host local.  
   
     ```  
     echo ************  
@@ -319,63 +319,62 @@ static void DisplayIdentityInformation()
     echo making server cert  
     echo ************  
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-  
     ```  
   
 -   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.  
   
-     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de usuarios de confianza del cliente.Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
+     Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
     > [!NOTE]
-    >  El archivo por lotes de instalación está diseñado para ejecutarse desde el símbolo del sistema de Windows SDK.Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK.Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Windows SDK.  
+    >  El archivo por lotes de instalación está diseñado para ejecutarse desde el símbolo del sistema de Windows SDK. Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Windows SDK.  
   
-#### Para configurar y compilar el ejemplo  
+#### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1.  Asegúrese de que ha realizado el [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar la solución, siga las instrucciones que aparecen en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-#### Para ejecutar el ejemplo en el mismo equipo  
+#### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] abierto con privilegios de administrador.De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
+1.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].La variable de entorno PATH que se establece en el símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] señala al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
+    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. La variable de entorno PATH que se establece en el símbolo del sistema de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] señala al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
   
-2.  Inicie service.exe desde \\service\\bin.  
+2.  Inicie service.exe desde \service\bin.  
   
-3.  Inicie client.exe desde \\client\\bin.La actividad del cliente se muestra en la aplicación de consola del cliente.  
+3.  Inicie client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### Para ejecutar el ejemplo en varios equipos  
+#### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
 1.  Cree un directorio en el equipo del servicio para los binarios del servicio.  
   
-2.  Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio.Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
+2.  Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo.El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado.Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio.Observe que el archivo setup.bat se debe ejecutar desde un símbolo del sistema de Visual Studio abierto con privilegios de administrador.  
+3.  Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Observe que el archivo setup.bat se debe ejecutar desde un símbolo del sistema de Visual Studio abierto con privilegios de administrador.  
   
-4.  Copie el certificado de servidor en el almacén CurrentUser\-TrustedPeople del cliente.No necesita hacerlo excepto cuando un emisor de confianza del cliente emite el certificado de servidor.  
+4.  Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. No necesita hacerlo excepto cuando un emisor de confianza del cliente emite el certificado de servidor.  
   
 5.  En el archivo App.config situado en el equipo del servicio, cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar del host local.  
   
 6.  En el equipo del servicio, ejecute service.exe desde un símbolo del sistema.  
   
-7.  Copie los archivos de programa del cliente de la carpeta \\client\\bin\\, bajo la carpeta específica del lenguaje, al equipo cliente.  
+7.  Copie los archivos de programa del cliente de la carpeta \client\bin\, bajo la carpeta específica del lenguaje, al equipo cliente.  
   
 8.  En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.  
   
 9. En el equipo cliente, inicie Client.exe desde un símbolo del sistema.  
   
-10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-#### Para limpiar después del ejemplo  
+#### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 1.  Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
-## Vea también
+## <a name="see-also"></a>Vea también

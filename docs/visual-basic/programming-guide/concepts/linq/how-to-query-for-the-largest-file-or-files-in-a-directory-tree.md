@@ -1,46 +1,38 @@
 ---
-title: "Cómo: buscar el mayor tamaño o archivos en un árbol de directorios (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 055cbdd5a5903417ab382d390e1215f0319c0b5a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bcdb73006958188ef14949e37b04c2913c3fa0a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Cómo buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (Visual Basic)
-Este ejemplo muestra cinco consultas relacionadas con el tamaño de archivo en bytes:  
+En este ejemplo se muestran cinco consultas relacionadas con el tamaño de archivo en bytes:  
   
 -   Cómo recuperar el tamaño en bytes del archivo más grande.  
   
 -   Cómo recuperar el tamaño en bytes del archivo más pequeño.  
   
--   Cómo recuperar el <xref:System.IO.FileInfo>archivo mayor o menor de objeto de una o más carpetas bajo una carpeta raíz especificada.</xref:System.IO.FileInfo>  
+-   Cómo recuperar el archivo de mayor o menor tamaño del objeto <xref:System.IO.FileInfo> de una o más carpetas en una carpeta raíz especificada.  
   
--   Cómo recuperar una secuencia como los 10 archivos mayores.  
+-   Cómo recuperar una secuencia, como los 10 archivos de mayor tamaño.  
   
--   Cómo ordenar los archivos en grupos según su tamaño en bytes, omitiendo los archivos que son inferiores a un tamaño especificado.  
+-   Cómo ordenar los archivos en grupos según su tamaño en bytes, sin incluir los archivos inferiores a un tamaño especificado.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente contiene cinco consultas independientes que muestran cómo consultar y agrupar archivos, dependiendo de su tamaño en bytes. Puede modificar fácilmente estos ejemplos para basar la consulta en alguna otra propiedad de la <xref:System.IO.FileInfo>objeto.</xref:System.IO.FileInfo>  
+ El ejemplo siguiente contiene cinco consultas independientes que muestran cómo consultar y agrupar archivos, en función de su tamaño en bytes. Puede modificar fácilmente estos ejemplos para basar la consulta en otra propiedad del objeto <xref:System.IO.FileInfo>.  
   
 ```vb  
 Module QueryBySize  
@@ -130,13 +122,13 @@ Module QueryBySize
 End Module  
 ```  
   
- Para devolver uno o más completar <xref:System.IO.FileInfo>objetos, la consulta debe examinar cada uno de los datos de origen y, a continuación, ordenarlos por el valor de su propiedad Length.</xref:System.IO.FileInfo> A continuación, puede devolver una única o la secuencia con la longitud máxima. Utilice <xref:System.Linq.Enumerable.First%2A>para devolver el primer elemento de una lista.</xref:System.Linq.Enumerable.First%2A> Utilice <xref:System.Linq.Enumerable.Take%2A>para devolver el primer número n de elementos.</xref:System.Linq.Enumerable.Take%2A> Especifique un criterio de ordenación descendente para colocar los elementos menores al principio de la lista.  
+ Para devolver uno o más objetos <xref:System.IO.FileInfo> completos, la consulta debe examinar cada uno de ellos en los datos de origen y, después, ordenarlos por el valor de su propiedad Length. Después, puede devolver el objeto único o la secuencia con la mayor longitud. Use <xref:System.Linq.Enumerable.First%2A> para devolver el primer elemento de una lista. Use <xref:System.Linq.Enumerable.Take%2A> para devolver el primer número n de elementos. Especifique un criterio de ordenación descendente para colocar los elementos más pequeños al principio de la lista.  
   
- La consulta llama a un método independiente para obtener el tamaño del archivo en bytes con el fin de utilizar la posible excepción que se generarán en el caso de que se eliminó un archivo en otro subproceso en el período de tiempo desde el <xref:System.IO.FileInfo>se creó el objeto en la llamada a `GetFiles`.</xref:System.IO.FileInfo> Incluso aunque el <xref:System.IO.FileInfo>objeto ya se ha creado, la excepción puede producirse porque un <xref:System.IO.FileInfo>objeto intentará actualizar su <xref:System.IO.FileInfo.Length%2A>propiedad utilizando el tamaño más actual en bytes de la primera vez que se tiene acceso a la propiedad.</xref:System.IO.FileInfo.Length%2A> </xref:System.IO.FileInfo> </xref:System.IO.FileInfo> Al incluir esta operación en un bloque try-catch fuera de la consulta, seguimos la regla de evitar las operaciones en las consultas que se pueden producir efectos secundarios. En general, gran debe tener cuidado al utilizar las excepciones, para asegurarse de que una aplicación no queda en un estado desconocido.  
+ La consulta llama a un método independiente para obtener el tamaño del archivo en bytes para consumir la posible excepción que se generará en el caso de que se haya eliminado un archivo en otro subproceso en el período de tiempo desde que se ha creado el objeto <xref:System.IO.FileInfo> en la llamada a `GetFiles`. Aunque ya se haya creado el objeto <xref:System.IO.FileInfo>, puede producirse una excepción porque un objeto <xref:System.IO.FileInfo> intentará actualizar su propiedad <xref:System.IO.FileInfo.Length%2A> con el tamaño más actual la primera vez que se tenga acceso a la propiedad. Al incluir esta operación en un bloque try-catch fuera de la consulta, seguimos la regla de evitar las operaciones en las consultas que pueden producir efectos secundarios. En general, debe tener mucho cuidado al consumir excepciones para asegurarse de que no deja una aplicación en un estado desconocido.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

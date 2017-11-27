@@ -1,44 +1,26 @@
 ---
-title: 'No se puede escribir en el archivo de salida &quot;&lt;nombre de archivo&gt;&quot;: &lt;error&gt; | Documentos de Microsoft'
-ms.date: 2015-07-20
+title: 'No se puede escribir en el archivo de salida &#39; &lt;filename&gt;&#39;: &lt;error&gt;'
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31019
 - bc31019
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC31019
+helpviewer_keywords: BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe093ec3b36ba733cb9b0c162e242c8dce6b7c78
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>No se puede escribir en el archivo de salida '&lt;nombre de archivo&gt;': &lt;error&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>No se puede escribir en el archivo de salida &#39; &lt;filename&gt;&#39;: &lt;error&gt;
 Se ha producido un problema al crear el archivo.  
   
  No se puede abrir un archivo de salida para escritura. Puede que otro proceso haya abierto el archivo (o la carpeta que lo contiene) o puede que este tenga establecido el atributo de solo lectura.  
@@ -57,11 +39,11 @@ Se ha producido un problema al crear el archivo.
   
 1.  Vuelva a compilar el programa para ver si el error se repite.  
   
-2.  Si el error continúa, guarde el trabajo y reinicie [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+2.  Si el error continúa, guarde el trabajo y reinicie [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
 3.  Si el error continúa, reinicie el equipo.  
   
-4.  Si el error se repite, reinstale [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+4.  Si el error se repite, reinstale [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 5.  Si el error persiste después de la reinstalación, informe al respecto a los Servicios de soporte técnico de Microsoft.  
   
@@ -77,9 +59,9 @@ Se ha producido un problema al crear el archivo.
   
 1.  En **Explorador de archivos**, haga clic en el archivo o carpeta y elija **propiedades**.  
   
-2.  En el **atributos** sección de la **General** ficha, desactive el **de sólo lectura** cuadro.  
+2.  En el **atributos** sección de la **General** ficha, desactive la **de sólo lectura** cuadro.  
   
 3.  Press **OK**.  
   
 ## <a name="see-also"></a>Vea también  
- [Hable con nosotros](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [Hable con nosotros](/visualstudio/ide/talk-to-us)
