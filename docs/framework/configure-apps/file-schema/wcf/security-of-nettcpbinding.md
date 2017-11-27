@@ -1,28 +1,36 @@
 ---
-title: "Elemento &lt;security&gt; de &lt;netTcpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;security&gt; de &lt;netTcpBinding&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3873c3fd04e2f52e6d2a3bdc64e82f87c84aaf5c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;security&gt; de &lt;netTcpBinding&gt;
-Define la configuración de seguridad de un enlace.  
+# <a name="ltsecuritygt-of-ltnettcpbindinggt"></a><span data-ttu-id="a4466-102">Elemento &lt;security&gt; de &lt;netTcpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="a4466-102">&lt;security&gt; of &lt;netTcpBinding&gt;</span></span>
+<span data-ttu-id="a4466-103">Define la configuración de seguridad de un enlace.</span><span class="sxs-lookup"><span data-stu-id="a4466-103">Defines the security settings for a binding.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="a4466-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="a4466-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="a4466-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="a4466-105">\<bindings></span></span>  
+<span data-ttu-id="a4466-106">\<netTcpBinding ></span><span class="sxs-lookup"><span data-stu-id="a4466-106">\<netTcpBinding></span></span>  
+<span data-ttu-id="a4466-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="a4466-107">\<binding></span></span>  
+<span data-ttu-id="a4466-108">\<seguridad ></span><span class="sxs-lookup"><span data-stu-id="a4466-108">\<security></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="a4466-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a4466-109">Syntax</span></span>  
   
+```xml  
 <security mode="Message/None/Transport/TransportWithCredential">  
    <transport  
       clientCredentialType="Basic/Certificate/Digest/None/Ntlm/Windows"  
@@ -33,51 +41,51 @@ Define la configuración de seguridad de un enlace.
 </security>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a4466-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="a4466-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="a4466-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios</span><span class="sxs-lookup"><span data-stu-id="a4466-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="a4466-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="a4466-112">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|modo|Opcional.  Especifica el tipo de seguridad que se aplica.  Se muestran los valores válidos a continuación.  El valor predeterminado es `Transport`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.|  
+|<span data-ttu-id="a4466-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="a4466-113">Attribute</span></span>|<span data-ttu-id="a4466-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="a4466-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="a4466-115">modo</span><span class="sxs-lookup"><span data-stu-id="a4466-115">mode</span></span>|<span data-ttu-id="a4466-116">Opcional.</span><span class="sxs-lookup"><span data-stu-id="a4466-116">Optional.</span></span> <span data-ttu-id="a4466-117">Especifica el tipo de seguridad que se aplica.</span><span class="sxs-lookup"><span data-stu-id="a4466-117">Specifies the type of security that is applied.</span></span> <span data-ttu-id="a4466-118">Se muestran los valores válidos a continuación.</span><span class="sxs-lookup"><span data-stu-id="a4466-118">Valid values are shown below.</span></span> <span data-ttu-id="a4466-119">El valor predeterminado es `Transport`.</span><span class="sxs-lookup"><span data-stu-id="a4466-119">The default value is `Transport`.</span></span><br /><br /> <span data-ttu-id="a4466-120">Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="a4466-120">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## Atributo de modo  
+## <a name="mode-attribute"></a><span data-ttu-id="a4466-121">Atributo de modo</span><span class="sxs-lookup"><span data-stu-id="a4466-121">mode Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="a4466-122">Valor</span><span class="sxs-lookup"><span data-stu-id="a4466-122">Value</span></span>|<span data-ttu-id="a4466-123">Descripción</span><span class="sxs-lookup"><span data-stu-id="a4466-123">Description</span></span>|  
 |-----------|-----------------|  
-|Ninguna|La seguridad está deshabilitada.|  
-|Transporte|La seguridad de transporte se proporciona utilizando TLS sobre TCP o SPNego.  El servicio puede necesitar ser configurado con certificados SSL.  Es posible controlar el nivel de protección con este modo.|  
-|Mensaje|La seguridad se proporciona mediante la seguridad del mensaje SOAP.  De forma predeterminada, el cuerpo SOAP se cifra y firma.  Este modo proporciona una variedad de características, como si las credenciales del servicio están disponibles para el cliente fuera de la banda, el conjunto de algoritmos que se utiliza y qué nivel de protección se aplica al cuerpo del mensaje.  Se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en memoria caché durante la duración de la sesión.|  
-|TransportWithMessageCredential|La seguridad de transporte va unida a la seguridad del mensaje.  TLS proporciona la seguridad de transporte sobre TCP o SPNego y asegura la integridad, confidencialidad y autenticación de servidor.  La seguridad del mensaje SOAP proporciona la autenticación del cliente.  De manera predeterminada, se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en la memoria caché durante la duración de la sesión.|  
+|<span data-ttu-id="a4466-124">Ninguna</span><span class="sxs-lookup"><span data-stu-id="a4466-124">None</span></span>|<span data-ttu-id="a4466-125">La seguridad está deshabilitada.</span><span class="sxs-lookup"><span data-stu-id="a4466-125">Security is disabled.</span></span>|  
+|<span data-ttu-id="a4466-126">Transporte</span><span class="sxs-lookup"><span data-stu-id="a4466-126">Transport</span></span>|<span data-ttu-id="a4466-127">La seguridad de transporte se proporciona utilizando TLS sobre TCP o SPNego.</span><span class="sxs-lookup"><span data-stu-id="a4466-127">Transport security is provided using TLS over TCP or SPNego.</span></span> <span data-ttu-id="a4466-128">El servicio puede necesitar ser configurado con certificados SSL.</span><span class="sxs-lookup"><span data-stu-id="a4466-128">The service may need to be configured with SSL certificates.</span></span> <span data-ttu-id="a4466-129">Es posible controlar el nivel de protección con este modo.</span><span class="sxs-lookup"><span data-stu-id="a4466-129">It is possible to control the protection level with this mode.</span></span>|  
+|<span data-ttu-id="a4466-130">Mensaje</span><span class="sxs-lookup"><span data-stu-id="a4466-130">Message</span></span>|<span data-ttu-id="a4466-131">La seguridad se proporciona mediante la seguridad del mensaje SOAP.</span><span class="sxs-lookup"><span data-stu-id="a4466-131">Security is provided using SOAP message security.</span></span> <span data-ttu-id="a4466-132">De forma predeterminada, el cuerpo SOAP se cifra y firma.</span><span class="sxs-lookup"><span data-stu-id="a4466-132">By default, the SOAP body is encrypted and signed.</span></span> <span data-ttu-id="a4466-133">Este modo proporciona una variedad de características, como si las credenciales del servicio están disponibles para el cliente fuera de la banda, el conjunto de algoritmos que se utiliza y qué nivel de protección se aplica al cuerpo del mensaje.</span><span class="sxs-lookup"><span data-stu-id="a4466-133">This mode offers a variety of features, such as whether the service credentials are available at the client out of band, the algorithm suite to use, and what level of protection to apply to the message body.</span></span> <span data-ttu-id="a4466-134">Se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en memoria caché durante la duración de la sesión.</span><span class="sxs-lookup"><span data-stu-id="a4466-134">Client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
+|<span data-ttu-id="a4466-135">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="a4466-135">TransportWithMessageCredential</span></span>|<span data-ttu-id="a4466-136">La seguridad de transporte va unida a la seguridad del mensaje.</span><span class="sxs-lookup"><span data-stu-id="a4466-136">Transport security is coupled with message security.</span></span> <span data-ttu-id="a4466-137">TLS proporciona la seguridad de transporte sobre TCP o SPNego y asegura la integridad, confidencialidad y autenticación de servidor.</span><span class="sxs-lookup"><span data-stu-id="a4466-137">Transport security is provided by TLS over TCP, or SPNego, and ensures integrity, confidentiality, and server authentication.</span></span> <span data-ttu-id="a4466-138">La seguridad del mensaje SOAP proporciona la autenticación del cliente.</span><span class="sxs-lookup"><span data-stu-id="a4466-138">SOAP message security provides client authentication.</span></span> <span data-ttu-id="a4466-139">De manera predeterminada, se realiza la autenticación del cliente una vez por sesión y los resultados de autenticación están almacenados en la memoria caché durante la duración de la sesión.</span><span class="sxs-lookup"><span data-stu-id="a4466-139">By default, client authentication is performed once per session and the results of authentication are cached for the duration of the session.</span></span>|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="a4466-140">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="a4466-140">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<transport\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Define la configuración de seguridad para el transporte.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Define la configuración de seguridad del mensaje.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
+|<span data-ttu-id="a4466-141">Elemento</span><span class="sxs-lookup"><span data-stu-id="a4466-141">Element</span></span>|<span data-ttu-id="a4466-142">Descripción</span><span class="sxs-lookup"><span data-stu-id="a4466-142">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="a4466-143">\<transporte ></span><span class="sxs-lookup"><span data-stu-id="a4466-143">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|<span data-ttu-id="a4466-144">Define la configuración de seguridad para el transporte.</span><span class="sxs-lookup"><span data-stu-id="a4466-144">Defines the security settings for the transport.</span></span> <span data-ttu-id="a4466-145">Este elemento es del tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="a4466-145">This element is of type <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="a4466-146">\<mensaje ></span><span class="sxs-lookup"><span data-stu-id="a4466-146">\<message></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|<span data-ttu-id="a4466-147">Define la configuración de seguridad del mensaje.</span><span class="sxs-lookup"><span data-stu-id="a4466-147">Defines the security settings for the message.</span></span> <span data-ttu-id="a4466-148">Este elemento es del tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.</span><span class="sxs-lookup"><span data-stu-id="a4466-148">This element is of type <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="a4466-149">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="a4466-149">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|enlace|El elemento de enlace del [\<netTcpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|<span data-ttu-id="a4466-150">Elemento</span><span class="sxs-lookup"><span data-stu-id="a4466-150">Element</span></span>|<span data-ttu-id="a4466-151">Descripción</span><span class="sxs-lookup"><span data-stu-id="a4466-151">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="a4466-152">enlace</span><span class="sxs-lookup"><span data-stu-id="a4466-152">binding</span></span>|<span data-ttu-id="a4466-153">El elemento de enlace de la [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="a4466-153">The binding element of the [\<netTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).</span></span>|  
   
-## Comentarios  
- Cada uno de los enlaces estándar proporciona los parámetros para controlar los requisitos de seguridad de la transferencia.  Estos parámetros incluyen normalmente el modo de seguridad que especificó si se usó la seguridad del nivel de mensaje o del nivel de transporte y la elección del tipo de credencial del cliente.  Basada en la elección de opciones que estos parámetros presentan, se construirá una pila de canal con la seguridad adecuada.  
+## <a name="remarks"></a><span data-ttu-id="a4466-154">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a4466-154">Remarks</span></span>  
+ <span data-ttu-id="a4466-155">Cada uno de los enlaces estándar proporciona los parámetros para controlar los requisitos de seguridad de la transferencia.</span><span class="sxs-lookup"><span data-stu-id="a4466-155">Each of the standard bindings provides parameters for controlling the transfer security requirements.</span></span> <span data-ttu-id="a4466-156">Estos parámetros incluyen normalmente el modo de seguridad que especificó si se usó la seguridad del nivel de mensaje o del nivel de transporte y la elección del tipo de credencial del cliente.</span><span class="sxs-lookup"><span data-stu-id="a4466-156">These parameters typically include the security mode that specified whether message-level or transport-level security is used and the choice of client credential type.</span></span> <span data-ttu-id="a4466-157">Basada en la elección de opciones que estos parámetros presentan, se construirá una pila de canal con la seguridad adecuada.</span><span class="sxs-lookup"><span data-stu-id="a4466-157">Based on the choice of options these parameters present, a channel stack is constructed with appropriate security.</span></span>  
   
- Los enlaces proporcionados por el sistema suministrados por Windows Communication Foundation \(WCF\) son un conjunto diseñado para cumplir algunos de los requisitos de escenario más comunes.  Cada uno de estos enlaces permite la especificación de requisitos de seguridad para algunos escenarios concretos.  
+ <span data-ttu-id="a4466-158">Los enlaces proporcionados por el sistema suministrados por Windows Communication Foundation (WCF) son un conjunto diseñado para cumplir algunos de los requisitos de escenario más comunes.</span><span class="sxs-lookup"><span data-stu-id="a4466-158">The system-provided bindings supplied by Windows Communication Foundation (WCF) are a set designed to meet some of the most common scenario requirements.</span></span> <span data-ttu-id="a4466-159">Cada uno de estos enlaces permite la especificación de requisitos de seguridad para algunos escenarios concretos.</span><span class="sxs-lookup"><span data-stu-id="a4466-159">Each of these bindings allows the specification of security requirements for some specific targeted scenarios.</span></span>  
   
- Este elemento de configuración proporciona especificaciones de seguridad para `netTcpBinding`.  Se trata de un enlace seguro, confiable y optimizado adecuado para la comunicación entre equipos.  De forma predeterminada, genera una pila de comunicación en tiempo de ejecución que admite TCP para la entrega del mensaje y Seguridad de Windows para la seguridad y autenticación del mensaje, WS\-ReliableMessaging para la confiabilidad, y la codificación binaria del mensaje.  
+ <span data-ttu-id="a4466-160">Este elemento de configuración proporciona especificaciones de seguridad para `netTcpBinding`.</span><span class="sxs-lookup"><span data-stu-id="a4466-160">This configuration element provides the security specifications for `netTcpBinding`.</span></span> <span data-ttu-id="a4466-161">Se trata de un enlace seguro, confiable y optimizado adecuado para la comunicación entre equipos.</span><span class="sxs-lookup"><span data-stu-id="a4466-161">This is a secure, reliable, optimized binding suitable for cross-machine communication.</span></span> <span data-ttu-id="a4466-162">De forma predeterminada, genera una pila de comunicación en tiempo de ejecución que admite TCP para la entrega del mensaje y Seguridad de Windows para la seguridad y autenticación del mensaje, WS-ReliableMessaging para la confiabilidad, y la codificación binaria del mensaje.</span><span class="sxs-lookup"><span data-stu-id="a4466-162">By default it generates a runtime communication stack supporting TCP for message delivery and Windows Security for message security and authentication, WS-ReliableMessaging for reliability, and binary message encoding.</span></span>  
   
-## Vea también  
- <xref:System.ServiceModel.NetTcpSecurity>   
- <xref:System.ServiceModel.NetTcpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>   
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="a4466-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4466-163">See Also</span></span>  
+ <xref:System.ServiceModel.NetTcpSecurity>  
+ <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
+ [<span data-ttu-id="a4466-164">Protección de servicios y clientes</span><span class="sxs-lookup"><span data-stu-id="a4466-164">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="a4466-165">Enlaces</span><span class="sxs-lookup"><span data-stu-id="a4466-165">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="a4466-166">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="a4466-166">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="a4466-167">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="a4466-167">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="a4466-168">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="a4466-168">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

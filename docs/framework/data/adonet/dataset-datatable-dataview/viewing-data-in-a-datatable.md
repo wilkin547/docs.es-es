@@ -1,43 +1,49 @@
 ---
-title: "Ver datos en DataTable | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ver datos en un objeto DataTable
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Ver datos en DataTable
-Puede tener acceso al contenido de una <xref:System.Data.DataTable> mediante las colecciones **Rows** y **Columns** de la **DataTable**.  Se puede utilizar también el método <xref:System.Data.DataTable.Select%2A> para devolver subconjuntos de los datos de una **DataTable** según ciertos criterios como, por ejemplo, criterios de búsqueda, \>criterio de ordenación y estado de la fila.  Además, se puede utilizar el método <xref:System.Data.DataRowCollection.Find%2A> de una **DataRowCollection** cuando se busque una fila determinada mediante el valor de una clave principal.  
+# <a name="viewing-data-in-a-datatable"></a><span data-ttu-id="d8910-102">Ver datos en un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="d8910-102">Viewing Data in a DataTable</span></span>
+<span data-ttu-id="d8910-103">Puede acceder al contenido de un <xref:System.Data.DataTable> mediante el uso de la **filas** y **columnas** colecciones de la **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="d8910-103">You can access the contents of a <xref:System.Data.DataTable> by using the **Rows** and **Columns** collections of the **DataTable**.</span></span> <span data-ttu-id="d8910-104">También puede usar el <xref:System.Data.DataTable.Select%2A> método para devolver subconjuntos de los datos en un **DataTable** según ciertos criterios como criterios de búsqueda, el criterio de ordenación y estado de la fila.</span><span class="sxs-lookup"><span data-stu-id="d8910-104">You can also use the <xref:System.Data.DataTable.Select%2A> method to return subsets of the data in a **DataTable** according to criteria including search criteria, sort order, and row state.</span></span> <span data-ttu-id="d8910-105">Además, puede usar el <xref:System.Data.DataRowCollection.Find%2A> método de la **DataRowCollection** cuando se busque una fila determinada mediante el valor de clave principal.</span><span class="sxs-lookup"><span data-stu-id="d8910-105">Additionally, you can use the <xref:System.Data.DataRowCollection.Find%2A> method of the **DataRowCollection** when searching for a particular row using a primary key value.</span></span>  
   
- El método **Select** del objeto **DataTable** devuelve un conjunto de objetos <xref:System.Data.DataRow> que cumplen con los criterios especificados.  **Select** toma argumentos opcionales de una expresión de filtro, expresión de ordenación y **DataViewRowState**.  La expresión de filtro identifica qué filas se van a devolver basándose en valores de **DataColumn** como, por ejemplo, `LastName = 'Smith'`.  La expresión de ordenación sigue convenciones SQL estándar para ordenar columnas, por ejemplo `LastName ASC, FirstName ASC`.  Para obtener las reglas de escritura de expresiones, vea la propiedad <xref:System.Data.DataColumn.Expression%2A> de la clase **DataColumn**.  
+ <span data-ttu-id="d8910-106">El **seleccione** método de la **DataTable** objeto devuelve un conjunto de <xref:System.Data.DataRow> objetos que coinciden con los criterios especificados.</span><span class="sxs-lookup"><span data-stu-id="d8910-106">The **Select** method of the **DataTable** object returns a set of <xref:System.Data.DataRow> objects that match the specified criteria.</span></span> <span data-ttu-id="d8910-107">**Seleccione** toma argumentos opcionales de una expresión de filtro, expresión de ordenación y **DataViewRowState**.</span><span class="sxs-lookup"><span data-stu-id="d8910-107">**Select** takes optional arguments of a filter expression, sort expression, and **DataViewRowState**.</span></span> <span data-ttu-id="d8910-108">La expresión de filtro identifica qué filas a devolver basándose en **DataColumn** valores, como `LastName = 'Smith'`.</span><span class="sxs-lookup"><span data-stu-id="d8910-108">The filter expression identifies which rows to return based on **DataColumn** values, such as `LastName = 'Smith'`.</span></span> <span data-ttu-id="d8910-109">La expresión de ordenación sigue convenciones SQL estándar para ordenar columnas, por ejemplo `LastName ASC, FirstName ASC`.</span><span class="sxs-lookup"><span data-stu-id="d8910-109">The sort expression follows standard SQL conventions for ordering columns, for example `LastName ASC, FirstName ASC`.</span></span> <span data-ttu-id="d8910-110">Para las reglas de escritura de expresiones, vea el <xref:System.Data.DataColumn.Expression%2A> propiedad de la **DataColumn** clase.</span><span class="sxs-lookup"><span data-stu-id="d8910-110">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>  
   
 > [!TIP]
->  Cuando se realizan varias llamadas al método **Select** de una **DataTable**, se puede aumentar el rendimiento mediante la creación de una <xref:System.Data.DataView> para la **DataTable**.  Al crear la **DataView**, las filas de la tabla se colocan en un índice.  A continuación, el método **Select** utiliza ese índice, lo que reduce considerablemente el tiempo necesario para generar el resultado de la consulta.  Para obtener información sobre la creación de una **DataView** para una **DataTable**, vea [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
+>  <span data-ttu-id="d8910-111">Si va a realizar un número de llamadas a la **seleccione** método de un **DataTable**, se puede mejorar el rendimiento creando primero una <xref:System.Data.DataView> para el **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="d8910-111">If you are performing a number of calls to the **Select** method of a **DataTable**, you can increase performance by first creating a <xref:System.Data.DataView> for the **DataTable**.</span></span> <span data-ttu-id="d8910-112">Crear el **DataView** índices de las filas de la tabla.</span><span class="sxs-lookup"><span data-stu-id="d8910-112">Creating the **DataView** indexes the rows of the table.</span></span> <span data-ttu-id="d8910-113">El **seleccione** (método), a continuación, utiliza ese índice, lo que reduce considerablemente el tiempo necesario para generar el resultado de la consulta.</span><span class="sxs-lookup"><span data-stu-id="d8910-113">The **Select** method then usees that index, significantly reducing the time to generate the query result.</span></span> <span data-ttu-id="d8910-114">Para obtener información acerca de cómo crear un **DataView** para un **DataTable**, consulte [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span><span class="sxs-lookup"><span data-stu-id="d8910-114">For information about creating a **DataView** for a **DataTable**, see [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span></span>  
   
- El método **Select** determina qué versión de las filas se debe ver o manipular, según un <xref:System.Data.DataViewRowState>.  En la siguiente tabla se recogen los posibles valores de la enumeración **DataViewRowState**.  
+ <span data-ttu-id="d8910-115">El **seleccione** método determina qué versión de las filas para ver o manipular según un <xref:System.Data.DataViewRowState>.</span><span class="sxs-lookup"><span data-stu-id="d8910-115">The **Select** method determines which version of the rows to view or manipulate based on a <xref:System.Data.DataViewRowState>.</span></span> <span data-ttu-id="d8910-116">La tabla siguiente describen los posibles **DataViewRowState** valores de enumeración.</span><span class="sxs-lookup"><span data-stu-id="d8910-116">The following table describes the possible **DataViewRowState** enumeration values.</span></span>  
   
-|Valor DataViewRowState|Descripción|  
+|<span data-ttu-id="d8910-117">Valor DataViewRowState</span><span class="sxs-lookup"><span data-stu-id="d8910-117">DataViewRowState value</span></span>|<span data-ttu-id="d8910-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="d8910-118">Description</span></span>|  
 |----------------------------|-----------------|  
-|**CurrentRows**|Filas actuales, incluidas las filas sin modificar, agregadas y modificadas.|  
-|**Deleted**|Una fila eliminada.|  
-|**ModifiedCurrent**|Una versión actual, que es una versión modificada de los datos originales.  \(Vea **ModifiedOriginal**.\)|  
-|**ModifiedOriginal**|Versión original de todas las filas modificadas.  La versión actual está disponible utilizando **ModifiedCurrent**.|  
-|**Agregado**|Una fila nueva.|  
-|**Ninguna**|Ninguno.|  
-|**OriginalRows**|Filas originales, incluidas las filas sin modificar y las eliminadas.|  
-|**Sin cambios**|Una fila sin modificar.|  
+|<span data-ttu-id="d8910-119">**CurrentRows**</span><span class="sxs-lookup"><span data-stu-id="d8910-119">**CurrentRows**</span></span>|<span data-ttu-id="d8910-120">Filas actuales, incluidas las filas sin modificar, agregadas y modificadas.</span><span class="sxs-lookup"><span data-stu-id="d8910-120">Current rows including unchanged, added, and modified rows.</span></span>|  
+|<span data-ttu-id="d8910-121">**Eliminar**</span><span class="sxs-lookup"><span data-stu-id="d8910-121">**Deleted**</span></span>|<span data-ttu-id="d8910-122">Una fila eliminada.</span><span class="sxs-lookup"><span data-stu-id="d8910-122">A deleted row.</span></span>|  
+|<span data-ttu-id="d8910-123">**ModifiedCurrent**</span><span class="sxs-lookup"><span data-stu-id="d8910-123">**ModifiedCurrent**</span></span>|<span data-ttu-id="d8910-124">Una versión actual, que es una versión modificada de los datos originales.</span><span class="sxs-lookup"><span data-stu-id="d8910-124">A current version, which is a modified version of original data.</span></span> <span data-ttu-id="d8910-125">(Consulte **ModifiedOriginal**.)</span><span class="sxs-lookup"><span data-stu-id="d8910-125">(See **ModifiedOriginal**.)</span></span>|  
+|<span data-ttu-id="d8910-126">**ModifiedOriginal**</span><span class="sxs-lookup"><span data-stu-id="d8910-126">**ModifiedOriginal**</span></span>|<span data-ttu-id="d8910-127">Versión original de todas las filas modificadas.</span><span class="sxs-lookup"><span data-stu-id="d8910-127">The original version of all modified rows.</span></span> <span data-ttu-id="d8910-128">La versión actual está disponible con **ModifiedCurrent**.</span><span class="sxs-lookup"><span data-stu-id="d8910-128">The current version is available using **ModifiedCurrent**.</span></span>|  
+|<span data-ttu-id="d8910-129">**Agregado**</span><span class="sxs-lookup"><span data-stu-id="d8910-129">**Added**</span></span>|<span data-ttu-id="d8910-130">Una fila nueva.</span><span class="sxs-lookup"><span data-stu-id="d8910-130">A new row.</span></span>|  
+|<span data-ttu-id="d8910-131">**Ninguno**</span><span class="sxs-lookup"><span data-stu-id="d8910-131">**None**</span></span>|<span data-ttu-id="d8910-132">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="d8910-132">None.</span></span>|  
+|<span data-ttu-id="d8910-133">**OriginalRows**</span><span class="sxs-lookup"><span data-stu-id="d8910-133">**OriginalRows**</span></span>|<span data-ttu-id="d8910-134">Filas originales, incluidas las filas sin modificar y las eliminadas.</span><span class="sxs-lookup"><span data-stu-id="d8910-134">Original rows, including unchanged and deleted rows.</span></span>|  
+|<span data-ttu-id="d8910-135">**Sin cambios**</span><span class="sxs-lookup"><span data-stu-id="d8910-135">**Unchanged**</span></span>|<span data-ttu-id="d8910-136">Una fila sin modificar.</span><span class="sxs-lookup"><span data-stu-id="d8910-136">An unchanged row.</span></span>|  
   
- En el ejemplo siguiente, el objeto **DataSet** se filtra de manera que se trabaje solo con las filas cuyo **DataViewRowState** está establecido en **CurrentRows**.  
+ <span data-ttu-id="d8910-137">En el ejemplo siguiente, la **conjunto de datos** objeto se filtra para que sólo está trabajando con las filas cuyo **DataViewRowState** está establecido en **CurrentRows**.</span><span class="sxs-lookup"><span data-stu-id="d8910-137">In the following example, the **DataSet** object is filtered so that you are only working with rows whose **DataViewRowState** is set to **CurrentRows**.</span></span>  
   
 ```vb  
 Dim column As DataColumn  
@@ -65,7 +71,6 @@ Else
     Console.WriteLine(vbTab & rowState)  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -91,7 +96,7 @@ else
 }  
 ```  
   
- El método **Select** se puede utilizar para devolver filas con valores de **RowState** o valores de campo distintos.  En el ejemplo siguiente se devuelve una matriz **DataRow** que hace referencia a todas las filas que se han eliminado y devuelve otra matriz **DataRow** que hace referencia a todas las filas, ordenadas por **CustLName**, donde la columna **CustID** es mayor que 5.  Para obtener información sobre cómo ver la información en la fila **Deleted**, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ <span data-ttu-id="d8910-138">El **seleccione** método se puede utilizar para devolver filas con distintos **RowState** valores o valores de campo.</span><span class="sxs-lookup"><span data-stu-id="d8910-138">The **Select** method can be used to return rows with differing **RowState** values or field values.</span></span> <span data-ttu-id="d8910-139">En el ejemplo siguiente se devuelve una **DataRow** matriz que hace referencia a todas las filas que se han eliminado y devuelve otra **DataRow** matriz que hace referencia a todas las filas, ordenadas por **CustLName**, donde el **CustID** columna es mayor que 5.</span><span class="sxs-lookup"><span data-stu-id="d8910-139">The following example returns a **DataRow** array that references all rows that have been deleted, and returns another **DataRow** array that references all rows, ordered by **CustLName**, where the **CustID** column is greater than 5.</span></span> <span data-ttu-id="d8910-140">Para obtener información sobre cómo ver la información de la **Deleted** de fila, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="d8910-140">For information about how to view the information in the **Deleted** row, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -100,7 +105,6 @@ Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowSta
 ' Retrieve rows where CustID > 5, and order by CustLName.  
 Dim custRows() As DataRow = workTable.Select( _  
     "CustID > 5", "CustLName ASC")  
-  
 ```  
   
 ```csharp  
@@ -112,11 +116,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## Vea también  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataViewRowState>   
- [Manipular datos en DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d8910-141">Vea también</span><span class="sxs-lookup"><span data-stu-id="d8910-141">See Also</span></span>  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataViewRowState>  
+ [<span data-ttu-id="d8910-142">Manipular datos en un objeto DataTable</span><span class="sxs-lookup"><span data-stu-id="d8910-142">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [<span data-ttu-id="d8910-143">Estados de fila y versiones de fila</span><span class="sxs-lookup"><span data-stu-id="d8910-143">Row States and Row Versions</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
+ [<span data-ttu-id="d8910-144">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="d8910-144">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

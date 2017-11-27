@@ -1,73 +1,70 @@
 ---
-title: "ROW (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: ROW (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 396b81e01d057f1d5c357f18d833a973777c07ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# ROW (Entity SQL)
-Crea registros anónimos con tipos asignados estructuralmente a partir de uno o varios valores.  
+# <a name="row-entity-sql"></a><span data-ttu-id="8a74d-102">ROW (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="8a74d-102">ROW (Entity SQL)</span></span>
+<span data-ttu-id="8a74d-103">Crea registros anónimos con tipos asignados estructuralmente a partir de uno o varios valores.</span><span class="sxs-lookup"><span data-stu-id="8a74d-103">Constructs anonymous, structurally typed records from one or more values.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="8a74d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8a74d-104">Syntax</span></span>  
   
 ```  
-  
-ROW (expression [ AS alias ] [,...] )  
+ROW ( expression [ AS alias ] [,...] )  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a><span data-ttu-id="8a74d-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="8a74d-105">Arguments</span></span>  
  `expression`  
- Cualquier expresión de consulta válida que devuelve un valor que se va a crear en un tipo de fila.  
+ <span data-ttu-id="8a74d-106">Cualquier expresión de consulta válida que devuelve un valor que se va a crear en un tipo de fila.</span><span class="sxs-lookup"><span data-stu-id="8a74d-106">Any valid query expression that returns a value to construct in a row type.</span></span>  
   
  `alias`  
- Especifica un alias para el valor especificado en un tipo de fila. Si no se proporciona un alias, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno basándose en las reglas de generación de alias de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ <span data-ttu-id="8a74d-107">Especifica un alias para el valor especificado en un tipo de fila.</span><span class="sxs-lookup"><span data-stu-id="8a74d-107">Specifies an alias for the value specified in a row type.</span></span> <span data-ttu-id="8a74d-108">Si no se proporciona un alias, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno basándose en las reglas de generación de alias de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="8a74d-108">If an alias is not provided, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tries to generate an alias based on the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alias generation rules.</span></span>  
   
-## Valor devuelto  
- Un tipo de fila.  
+## <a name="return-value"></a><span data-ttu-id="8a74d-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="8a74d-109">Return Value</span></span>  
+ <span data-ttu-id="8a74d-110">Un tipo de fila.</span><span class="sxs-lookup"><span data-stu-id="8a74d-110">A row type.</span></span>  
   
-## Comentarios  
- Debe utilizar constructores ROW en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para crear registros anónimos escritos estructuralmente de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`.  
+## <a name="remarks"></a><span data-ttu-id="8a74d-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8a74d-111">Remarks</span></span>  
+ <span data-ttu-id="8a74d-112">Debe utilizar constructores ROW en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para crear registros anónimos escritos estructuralmente de uno o más valores.</span><span class="sxs-lookup"><span data-stu-id="8a74d-112">You use row constructors in the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to construct anonymous, structurally typed records from one or more values.</span></span> <span data-ttu-id="8a74d-113">El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila.</span><span class="sxs-lookup"><span data-stu-id="8a74d-113">The result type of a row constructor is a row type whose field types correspond to the types of the values that were used to construct the row.</span></span> <span data-ttu-id="8a74d-114">Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`.</span><span class="sxs-lookup"><span data-stu-id="8a74d-114">For example, the following expression constructs a value of type `Record(a int, b string, c int)`.</span></span>  
   
 ```  
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
- Si no proporciona un alias para una expresión en un constructor ROW, Entity Framework intentará generar uno. Para obtener más información, vea la sección "Reglas de alias" del tema [Identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
+ <span data-ttu-id="8a74d-115">Si no proporciona un alias para una expresión en un constructor ROW, Entity Framework intentará generar uno.</span><span class="sxs-lookup"><span data-stu-id="8a74d-115">If you do not provide an alias for an expression in a row constructor, the Entity Framework will try to generate one.</span></span> <span data-ttu-id="8a74d-116">Para obtener más información, vea la sección "Reglas de alias" del tema [Identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) .</span><span class="sxs-lookup"><span data-stu-id="8a74d-116">For more information, see the "Aliasing Rules" section of the [Identifiers](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) topic.</span></span>  
   
- Las reglas siguientes se aplican a expresiones que usan alias en un constructor ROW:  
+ <span data-ttu-id="8a74d-117">Las reglas siguientes se aplican a expresiones que usan alias en un constructor ROW:</span><span class="sxs-lookup"><span data-stu-id="8a74d-117">The following rules apply to expression aliasing in a row constructor:</span></span>  
   
--   Las expresiones en un constructor ROW no pueden hacer referencia a otros alias del mismo constructor.  
+-   <span data-ttu-id="8a74d-118">Las expresiones en un constructor ROW no pueden hacer referencia a otros alias del mismo constructor.</span><span class="sxs-lookup"><span data-stu-id="8a74d-118">Expressions in a row constructor cannot refer to other aliases in the same constructor.</span></span>  
   
--   Dos expresiones en el mismo constructor ROW no pueden tener el mismo alias.  
+-   <span data-ttu-id="8a74d-119">Dos expresiones en el mismo constructor ROW no pueden tener el mismo alias.</span><span class="sxs-lookup"><span data-stu-id="8a74d-119">Two expressions in the same row constructor cannot have the same alias.</span></span>  
   
- Para obtener más información sobre los constructores de consultas, vea [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ <span data-ttu-id="8a74d-120">Para obtener más información sobre los constructores de consulta, vea [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="8a74d-120">For more information about query constructors, see [Constructing Types](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).</span></span>  
   
-## Ejemplo  
- La consulta de Entity SQL siguiente utiliza el operador ROW para construir registros anónimos escritos estructuralmente. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+## <a name="example"></a><span data-ttu-id="8a74d-121">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8a74d-121">Example</span></span>  
+ <span data-ttu-id="8a74d-122">La consulta de Entity SQL siguiente utiliza el operador ROW para construir registros anónimos escritos estructuralmente.</span><span class="sxs-lookup"><span data-stu-id="8a74d-122">The following Entity SQL query uses the ROW operator to construct anonymous, structurally typed records.</span></span> <span data-ttu-id="8a74d-123">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="8a74d-123">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="8a74d-124">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="8a74d-124">To compile and run this query, follow these steps:</span></span>  
   
-1.  Siga el procedimiento de [Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="8a74d-125">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="8a74d-125">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="8a74d-126">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="8a74d-126">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ROW](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#row)]  
   
-## Vea también  
- [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)   
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [Definiciones de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="8a74d-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a74d-127">See Also</span></span>  
+ [<span data-ttu-id="8a74d-128">Tipos de constructores</span><span class="sxs-lookup"><span data-stu-id="8a74d-128">Constructing Types</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
+ [<span data-ttu-id="8a74d-129">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="8a74d-129">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="8a74d-130">Definiciones de tipo</span><span class="sxs-lookup"><span data-stu-id="8a74d-130">Type Definitions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)

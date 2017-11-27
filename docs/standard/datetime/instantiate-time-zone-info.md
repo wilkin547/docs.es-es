@@ -1,48 +1,59 @@
 ---
-title: "C&#243;mo: Crear instancias de un objeto TimeZoneInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "crear instancias de objetos de zonas horarias"
-  - "objetos de zonas horarias [.NET Framework], creación de instancias"
+title: "Cómo: crear una instancia de un objeto TimeZoneInfo"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- instantiating time zone objects
+- time zone objects [.NET Framework], instantiation
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: defc8c9981b8476660c9c99d20bc50142ee9dfad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Crear instancias de un objeto TimeZoneInfo
-La manera más común para crear una instancia de un objeto <xref:System.TimeZoneInfo> es recuperar información sobre él del registro. En este tema se describe cómo crear una instancia de un objeto <xref:System.TimeZoneInfo> desde el registro del sistema local.  
-  
-### Cómo crear una instancia de un objeto TimeZoneInfo  
-  
-1.  Declare un objeto <xref:System.TimeZoneInfo>.  
-  
-2.  Llame al método `static` \(`Shared` en Visual Basic\) <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=fullName>.  
-  
-3.  Controle las excepciones que genere el método, especialmente la <xref:System.TimeZoneNotFoundException> que se produce si la zona horaria no está definida en el registro.  
-  
-## Ejemplo  
- El siguiente código recupera un objeto <xref:System.TimeZoneInfo> que representa la zona horaria estándar del Este y muestra la hora estándar del Este que corresponde a la hora local.  
-  
- [!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
- [!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]  
-  
- El único parámetro del método <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=fullName> es el identificador de la zona horaria que quiere recuperar, que se corresponde con la propiedad <xref:System.TimeZoneInfo.Id%2A?displayProperty=fullName> del objeto. El identificador de zona horaria es un campo clave que identifica de forma única la zona horaria. Aunque la mayoría de las claves son relativamente cortas, el identificador de zona horaria es comparativamente largo. En la mayoría de los casos, su valor corresponde a la propiedad <xref:System.TimeZoneInfo.StandardName%2A> de un objeto <xref:System.TimeZoneInfo>, que se utiliza para proporcionar el nombre de la hora estándar de la zona horaria. Sin embargo, hay excepciones. La mejor manera de asegurarse de que se proporciona un identificador válido es enumerar las zonas horarias disponibles en el sistema y anotar los identificadores de las zonas horarias que figuran en ellas. Para obtener un ejemplo, vea [Cómo: Enumerar zonas horarias presentes en un equipo](../../../docs/standard/datetime/enumerate-time-zones.md). El tema [Buscar las zonas horarias definidas en un sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) también contiene una lista de identificadores de la zona horaria seleccionada.  
-  
- Si se encuentra la zona horaria, el método devuelve su objeto <xref:System.TimeZoneInfo>.  Si no se encuentra la zona horaria, el método produce una <xref:System.TimeZoneNotFoundException>. Si se encuentra la zona horaria, pero sus datos están dañados o incompletos, el método produce una <xref:System.InvalidTimeZoneException>.  
-  
- Si la aplicación se basa en una zona horaria que debe estar presente, debe llamar primero al método <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> para recuperar la información de zona horaria del registro. Si se produce un error en la llamada al método, el controlador de excepciones debe crear una nueva instancia de la zona horaria o volver a crearla mediante la deserialización de un objeto <xref:System.TimeZoneInfo> serializado. Vea [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) para obtener un ejemplo.  
-  
-## Vea también  
- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)   
- [Buscar las zonas horarias definidas en un sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)   
- [Cómo: Obtener acceso a los objetos de zona horaria local y UTC predefinidos](../../../docs/standard/datetime/access-utc-and-local.md)
+# <a name="how-to-instantiate-a-timezoneinfo-object"></a><span data-ttu-id="aea17-102">Cómo: crear una instancia de un objeto TimeZoneInfo</span><span class="sxs-lookup"><span data-stu-id="aea17-102">How to: Instantiate a TimeZoneInfo object</span></span>
+
+<span data-ttu-id="aea17-103">La manera más común para crear una instancia de un objeto <xref:System.TimeZoneInfo> es recuperar información sobre él del registro.</span><span class="sxs-lookup"><span data-stu-id="aea17-103">The most common way to instantiate a <xref:System.TimeZoneInfo> object is to retrieve information about it from the registry.</span></span> <span data-ttu-id="aea17-104">En este tema se describe cómo crear una instancia de un objeto <xref:System.TimeZoneInfo> desde el registro del sistema local.</span><span class="sxs-lookup"><span data-stu-id="aea17-104">This topic discusses how to instantiate a <xref:System.TimeZoneInfo> object from the local system registry.</span></span>
+
+### <a name="to-instantiate-a-timezoneinfo-object"></a><span data-ttu-id="aea17-105">Cómo crear una instancia de un objeto TimeZoneInfo</span><span class="sxs-lookup"><span data-stu-id="aea17-105">To instantiate a TimeZoneInfo object</span></span>
+
+1. <span data-ttu-id="aea17-106">Declare un objeto <xref:System.TimeZoneInfo> .</span><span class="sxs-lookup"><span data-stu-id="aea17-106">Declare a <xref:System.TimeZoneInfo> object.</span></span>
+
+2. <span data-ttu-id="aea17-107">Llame a la `static` (`Shared` en Visual Basic) <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> método.</span><span class="sxs-lookup"><span data-stu-id="aea17-107">Call the `static` (`Shared` in Visual Basic) <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> method.</span></span>
+
+3. <span data-ttu-id="aea17-108">Controle las excepciones que genere el método, especialmente la <xref:System.TimeZoneNotFoundException> que se produce si la zona horaria no está definida en el registro.</span><span class="sxs-lookup"><span data-stu-id="aea17-108">Handle any exceptions thrown by the method, particularly the <xref:System.TimeZoneNotFoundException> that is thrown if the time zone is not defined in the registry.</span></span>
+
+## <a name="example"></a><span data-ttu-id="aea17-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="aea17-109">Example</span></span>
+
+<span data-ttu-id="aea17-110">El siguiente código recupera un objeto <xref:System.TimeZoneInfo> que representa la zona horaria estándar del Este y muestra la hora estándar del Este que corresponde a la hora local.</span><span class="sxs-lookup"><span data-stu-id="aea17-110">The following code retrieves a <xref:System.TimeZoneInfo> object that represents the Eastern Standard Time zone and displays the Eastern Standard time that corresponds to the local time.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
+[!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
+
+<span data-ttu-id="aea17-111">El <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> único parámetro del método es el identificador de la zona horaria que se va a recuperar, que se corresponde con el objeto <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> propiedad.</span><span class="sxs-lookup"><span data-stu-id="aea17-111">The <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> method's single parameter is the identifier of the time zone that you want to retrieve, which corresponds to the object's <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> property.</span></span> <span data-ttu-id="aea17-112">El identificador de zona horaria es un campo clave que identifica de forma única la zona horaria.</span><span class="sxs-lookup"><span data-stu-id="aea17-112">The time zone identifier is a key field that uniquely identifies the time zone.</span></span> <span data-ttu-id="aea17-113">Aunque la mayoría de las claves son relativamente cortas, el identificador de zona horaria es comparativamente largo.</span><span class="sxs-lookup"><span data-stu-id="aea17-113">While most keys are relatively short, the time zone identifier is comparatively long.</span></span> <span data-ttu-id="aea17-114">En la mayoría de los casos, su valor corresponde a la propiedad <xref:System.TimeZoneInfo.StandardName%2A> de un objeto <xref:System.TimeZoneInfo> , que se utiliza para proporcionar el nombre de la hora estándar de la zona horaria.</span><span class="sxs-lookup"><span data-stu-id="aea17-114">In most cases, its value corresponds to the <xref:System.TimeZoneInfo.StandardName%2A> property of a <xref:System.TimeZoneInfo> object, which is used to provide the name of the time zone's standard time.</span></span> <span data-ttu-id="aea17-115">Sin embargo, hay excepciones.</span><span class="sxs-lookup"><span data-stu-id="aea17-115">However, there are exceptions.</span></span> <span data-ttu-id="aea17-116">La mejor manera de asegurarse de que se proporciona un identificador válido es enumerar las zonas horarias disponibles en el sistema y anotar los identificadores de las zonas horarias que figuran en ellas.</span><span class="sxs-lookup"><span data-stu-id="aea17-116">The best way to make sure that you supply a valid identifier is to enumerate the time zones available on your system and note the identifiers of the time zones present on them.</span></span> <span data-ttu-id="aea17-117">Para obtener un ejemplo, vea [How to: Enumerate time zones present on a computer](../../../docs/standard/datetime/enumerate-time-zones.md).</span><span class="sxs-lookup"><span data-stu-id="aea17-117">For an illustration, see [How to: Enumerate time zones present on a computer](../../../docs/standard/datetime/enumerate-time-zones.md).</span></span> <span data-ttu-id="aea17-118">El tema [Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) también contiene una lista de identificadores de la zona horaria seleccionada.</span><span class="sxs-lookup"><span data-stu-id="aea17-118">The [Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) topic also contains a list of selected time zone identifiers.</span></span>
+
+<span data-ttu-id="aea17-119">Si se encuentra la zona horaria, el método devuelve su objeto <xref:System.TimeZoneInfo> .</span><span class="sxs-lookup"><span data-stu-id="aea17-119">If the time zone is found, the method returns its <xref:System.TimeZoneInfo> object.</span></span> <span data-ttu-id="aea17-120">Si no se encuentra la zona horaria, el método produce una <xref:System.TimeZoneNotFoundException>.</span><span class="sxs-lookup"><span data-stu-id="aea17-120">If the time zone is not found, the method throws a <xref:System.TimeZoneNotFoundException>.</span></span> <span data-ttu-id="aea17-121">Si se encuentra la zona horaria, pero sus datos están dañados o incompletos, el método produce una <xref:System.InvalidTimeZoneException>.</span><span class="sxs-lookup"><span data-stu-id="aea17-121">If the time zone is found but its data is corrupted or incomplete, the method throws an <xref:System.InvalidTimeZoneException>.</span></span>
+
+<span data-ttu-id="aea17-122">Si la aplicación se basa en una zona horaria que debe estar presente, debe llamar primero al método <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> para recuperar la información de zona horaria del registro.</span><span class="sxs-lookup"><span data-stu-id="aea17-122">If your application relies on a time zone that must be present, you should first call the <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> method to retrieve the time zone information from the registry.</span></span> <span data-ttu-id="aea17-123">Si se produce un error en la llamada al método, el controlador de excepciones debe crear una nueva instancia de la zona horaria o volver a crearla mediante la deserialización de un objeto <xref:System.TimeZoneInfo> serializado.</span><span class="sxs-lookup"><span data-stu-id="aea17-123">If the method call fails, your exception handler should then either create a new instance of the time zone or re-create it by deserializing a serialized <xref:System.TimeZoneInfo> object.</span></span> <span data-ttu-id="aea17-124">Vea [Cómo: restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) para obtener un ejemplo.</span><span class="sxs-lookup"><span data-stu-id="aea17-124">See [How to: Restore time zones from an embedded resource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) for an example.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="aea17-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="aea17-125">See also</span></span>
+
+<span data-ttu-id="aea17-126">[Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+[buscar las zonas horarias definidas en un sistema local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+[Cómo: obtener acceso a los objetos de zona hora local y UTC predefinidos](../../../docs/standard/datetime/access-utc-and-local.md)</span><span class="sxs-lookup"><span data-stu-id="aea17-126">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+[How to: Access the predefined UTC and local time zone objects](../../../docs/standard/datetime/access-utc-and-local.md)</span></span>

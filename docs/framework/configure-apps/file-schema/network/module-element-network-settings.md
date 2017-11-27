@@ -1,85 +1,87 @@
 ---
-title: "&lt;module&gt; (Elemento, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#module"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<module> (elemento)"
-  - "module (elemento)"
+title: "&lt;módulo&gt; Element (Network Settings)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#module
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/module
+helpviewer_keywords:
+- module element
+- <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a039f6ed985997c5557659abd299fe0fc7699a1b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;module&gt; (Elemento, Configuraci&#243;n de red)
-Agrega un nuevo módulo proxy a la aplicación.  
+# <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="ca542-102">&lt;módulo&gt; Element (Network Settings)</span><span class="sxs-lookup"><span data-stu-id="ca542-102">&lt;module&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="ca542-103">Agrega un nuevo módulo proxy a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ca542-103">Adds a new proxy module to the application.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="ca542-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="ca542-104">\<configuration></span></span>  
+<span data-ttu-id="ca542-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="ca542-105">\<system.net></span></span>  
+<span data-ttu-id="ca542-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="ca542-106">\<defaultProxy></span></span>  
+<span data-ttu-id="ca542-107">\<módulo ></span><span class="sxs-lookup"><span data-stu-id="ca542-107">\<module></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="ca542-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ca542-108">Syntax</span></span>  
   
-      <module   
-   type = "name", System, Version="version number", Culture="culture", PublicKeyToken="token" "   
+```xml  
+<module   
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ca542-109">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ca542-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="ca542-110">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="ca542-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="ca542-111">Atributos</span><span class="sxs-lookup"><span data-stu-id="ca542-111">Attributes</span></span>  
   
-|**Atributo**|**Descripción**|  
-|------------------|---------------------|  
-|`type`|Nombre e información específica del módulo que implementa el proxy.|  
+|<span data-ttu-id="ca542-112">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="ca542-112">**Attribute**</span></span>|<span data-ttu-id="ca542-113">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="ca542-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`type`|<span data-ttu-id="ca542-114">El nombre de tipo completo (indicado por la <xref:System.Type.FullName%2A> propiedad) y el nombre del ensamblado (indicado por el <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por comas, que implementa el proxy.</span><span class="sxs-lookup"><span data-stu-id="ca542-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma, that implements the proxy.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="ca542-115">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ca542-115">Child Elements</span></span>  
+ <span data-ttu-id="ca542-116">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="ca542-116">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="ca542-117">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ca542-117">Parent Elements</span></span>  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto \(HTTP\).|  
+|<span data-ttu-id="ca542-118">**Element**</span><span class="sxs-lookup"><span data-stu-id="ca542-118">**Element**</span></span>|<span data-ttu-id="ca542-119">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="ca542-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="ca542-120">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="ca542-120">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="ca542-121">Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).</span><span class="sxs-lookup"><span data-stu-id="ca542-121">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
   
-## Comentarios  
- El elemento `module` registra clases de proxy que implementan la interfaz <xref:System.Net.IWebProxy>.  Después de registrar la clase de proxy, `module` se puede utilizar para solicitar información con el proxy compatible.  
+## <a name="remarks"></a><span data-ttu-id="ca542-122">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ca542-122">Remarks</span></span>  
+ <span data-ttu-id="ca542-123">El `module` elemento registra clases de proxy que implementan la <xref:System.Net.IWebProxy> interfaz.</span><span class="sxs-lookup"><span data-stu-id="ca542-123">The `module` element registers proxy classes that implement the <xref:System.Net.IWebProxy> interface.</span></span> <span data-ttu-id="ca542-124">Después de registrar la clase de proxy, `module` puede utilizarse para solicitar información a través del proxy compatible.</span><span class="sxs-lookup"><span data-stu-id="ca542-124">After registering the proxy class, `module` can be used to request information through the supported proxy.</span></span>  
   
- El valor para el atributo `type` debería corresponder al nombre de una biblioteca de vínculos dinámicos \(DLL\) válida y al nombre de clase del módulo.  
+ <span data-ttu-id="ca542-125">El valor de la `type` atributo debe ser el nombre de clase del módulo y el nombre de su biblioteca de vínculos dinámicos (DLL) correspondiente.</span><span class="sxs-lookup"><span data-stu-id="ca542-125">The value for the `type` attribute should be the class name of the module and the name of its corresponding Dynamic Link Library (DLL).</span></span>  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="configuration-files"></a><span data-ttu-id="ca542-126">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="ca542-126">Configuration Files</span></span>  
+ <span data-ttu-id="ca542-127">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="ca542-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo de código se registra una clase de proxy personalizada.  
+## <a name="example"></a><span data-ttu-id="ca542-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ca542-128">Example</span></span>  
+ <span data-ttu-id="ca542-129">El ejemplo siguiente registra una clase de proxy personalizada.</span><span class="sxs-lookup"><span data-stu-id="ca542-129">The following example registers a custom proxy class.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <module  
-        type = "Test.CustomWebProxy, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
+        type="Test.CustomWebProxy, TestProxy, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b23a5c561934e385"  
       />  
     </defaultProxy>  
   </system.net>  
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Net.IWebProxy?displayProperty=fullName>   
- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="ca542-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="ca542-130">See Also</span></span>  
+ <xref:System.Net.IWebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="ca542-131">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="ca542-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

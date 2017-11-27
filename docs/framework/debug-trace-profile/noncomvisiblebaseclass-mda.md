@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - visible classes
 - managed debugging assistants (MDAs), COM visible classes
@@ -22,34 +16,33 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f6da0e4a2046ac80a35894383f732eb266b8459
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b43ad5c039be3ad1c4e57bad12304927a76fb6c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="noncomvisiblebaseclass-mda"></a>MDA de nonComVisibleBaseClass
-El Asistente para la depuración administrada (MDA) `nonComVisibleBaseClass` se activa cuando se realiza una llamada a `QueryInterface` desde código no administrado o nativo en el contenedor CCW de una clase administrada visible para COM que deriva de una clase base que no es visible para COM.  La llamada a `QueryInterface` hace que el MDA se active solo cuando la llamada solicita la interfaz de clase o la interfaz predeterminado `IDispatch` de la clase administrada visible para COM.  El MDA no se activa cuando `QueryInterface` es para una interfaz explícita que tiene aplicado el atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> y se implementa explícitamente la clase visible para COM.  
+# <a name="noncomvisiblebaseclass-mda"></a><span data-ttu-id="8cfed-102">MDA de nonComVisibleBaseClass</span><span class="sxs-lookup"><span data-stu-id="8cfed-102">nonComVisibleBaseClass MDA</span></span>
+<span data-ttu-id="8cfed-103">El Asistente para la depuración administrada (MDA) `nonComVisibleBaseClass` se activa cuando se realiza una llamada a `QueryInterface` desde código no administrado o nativo en el contenedor CCW de una clase administrada visible para COM que deriva de una clase base que no es visible para COM.</span><span class="sxs-lookup"><span data-stu-id="8cfed-103">The `nonComVisibleBaseClass` managed debugging assistant (MDA) is activated when a `QueryInterface` call is made by native or unmanaged code on the COM callable wrapper (CCW) of a COM-visible managed class that derives from a base class that is not COM visible.</span></span>  <span data-ttu-id="8cfed-104">La llamada a `QueryInterface` hace que el MDA se active solo cuando la llamada solicita la interfaz de clase o la interfaz predeterminado `IDispatch` de la clase administrada visible para COM.</span><span class="sxs-lookup"><span data-stu-id="8cfed-104">The `QueryInterface` call causes the MDA to activate only in cases where call requests the class interface or default `IDispatch` of the COM-visible managed class.</span></span>  <span data-ttu-id="8cfed-105">El MDA no se activa cuando `QueryInterface` es para una interfaz explícita que tiene aplicado el atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> y se implementa explícitamente la clase visible para COM.</span><span class="sxs-lookup"><span data-stu-id="8cfed-105">The MDA is not activated when the `QueryInterface` is for an explicit interface that has the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute applied and is explicitly implemented by the COM-visible class.</span></span>  
   
-## <a name="symptoms"></a>Síntomas  
- Una llamada a `QueryInterface` que se realiza desde código nativo produce el error COR_E_INVALIDOPERATION HRESULT.  El HRESULT podría deberse a que CLR no permite llamadas a  `QueryInterface` que producirían la activación de este MDA.  
+## <a name="symptoms"></a><span data-ttu-id="8cfed-106">Síntomas</span><span class="sxs-lookup"><span data-stu-id="8cfed-106">Symptoms</span></span>  
+ <span data-ttu-id="8cfed-107">Una llamada a `QueryInterface` que se realiza desde código nativo produce el error COR_E_INVALIDOPERATION HRESULT.</span><span class="sxs-lookup"><span data-stu-id="8cfed-107">A `QueryInterface` call made from native code that is failing with a COR_E_INVALIDOPERATION HRESULT.</span></span>  <span data-ttu-id="8cfed-108">El HRESULT podría deberse a que CLR no permite llamadas a  `QueryInterface` que producirían la activación de este MDA.</span><span class="sxs-lookup"><span data-stu-id="8cfed-108">The HRESULT might be due to the runtime disallowing `QueryInterface` calls that would cause the activation of this MDA.</span></span>  
   
-## <a name="cause"></a>Motivo  
- CLR no puede permitir llamadas a `QueryInterface` para la interfaz de clase o la interfaz `IDispatch` predeterminada de una clase visible para COM que deriva de una clase que no es visible para COM debido a posibles problemas de versiones.  Por ejemplo, si se agregan miembros públicos a la clase base que no es visible para COM, los clientes COM existentes que usan la clase derivada podrían interrumpirse porque la vtable de la clase derivada, que contiene los miembros de clase base, se vería alterada por ese cambio.  Las interfaces explícitas expuestas a COM no tienen este problema porque no incluyen los miembros base de las interfaces en la vtable.  
+## <a name="cause"></a><span data-ttu-id="8cfed-109">Motivo</span><span class="sxs-lookup"><span data-stu-id="8cfed-109">Cause</span></span>  
+ <span data-ttu-id="8cfed-110">CLR no puede permitir llamadas a `QueryInterface` para la interfaz de clase o la interfaz `IDispatch` predeterminada de una clase visible para COM que deriva de una clase que no es visible para COM debido a posibles problemas de versiones.</span><span class="sxs-lookup"><span data-stu-id="8cfed-110">The runtime cannot allow `QueryInterface` calls for the class interface or default `IDispatch` interface of a COM-visible class that derives from a class that is not COM-visible because of potential versioning problems.</span></span>  <span data-ttu-id="8cfed-111">Por ejemplo, si se agregan miembros públicos a la clase base que no es visible para COM, los clientes COM existentes que usan la clase derivada podrían interrumpirse porque la vtable de la clase derivada, que contiene los miembros de clase base, se vería alterada por ese cambio.</span><span class="sxs-lookup"><span data-stu-id="8cfed-111">For example, if any public members were added to the base class that is not COM-visible, existing COM clients using the derived class could potentially break because the vtable of the derived class, which contains the base class members, would be altered by such a change.</span></span>  <span data-ttu-id="8cfed-112">Las interfaces explícitas expuestas a COM no tienen este problema porque no incluyen los miembros base de las interfaces en la vtable.</span><span class="sxs-lookup"><span data-stu-id="8cfed-112">Explicit interfaces exposed to COM do not have this problem because they do not include the base members of interfaces in the vtable.</span></span>  
   
-## <a name="resolution"></a>Resolución  
- No exponga la interfaz de clase. Defina una interfaz explícita y aplíquele el atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
+## <a name="resolution"></a><span data-ttu-id="8cfed-113">Resolución</span><span class="sxs-lookup"><span data-stu-id="8cfed-113">Resolution</span></span>  
+ <span data-ttu-id="8cfed-114">No exponga la interfaz de clase.</span><span class="sxs-lookup"><span data-stu-id="8cfed-114">Do not expose the class interface.</span></span> <span data-ttu-id="8cfed-115">Defina una interfaz explícita y aplíquele el atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.</span><span class="sxs-lookup"><span data-stu-id="8cfed-115">Define an explicit interface and apply the <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> attribute to it.</span></span>  
   
-## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
- Este MDA no tiene ningún efecto en el CLR.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="8cfed-116">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="8cfed-116">Effect on the Runtime</span></span>  
+ <span data-ttu-id="8cfed-117">Este MDA no tiene ningún efecto en el CLR.</span><span class="sxs-lookup"><span data-stu-id="8cfed-117">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a>Salida  
- El siguiente es un mensaje de ejemplo de una llamada a `QueryInterface` en una clase visible para COM `Derived` que deriva de una clase no visible para COM `Base`.  
+## <a name="output"></a><span data-ttu-id="8cfed-118">Salida</span><span class="sxs-lookup"><span data-stu-id="8cfed-118">Output</span></span>  
+ <span data-ttu-id="8cfed-119">El siguiente es un mensaje de ejemplo de una llamada a `QueryInterface` en una clase visible para COM `Derived` que deriva de una clase no visible para COM `Base`.</span><span class="sxs-lookup"><span data-stu-id="8cfed-119">The following is an example message for a `QueryInterface` call on a COM-visible class `Derived` that derives from a non-COM-visible class `Base`.</span></span>  
   
 ```  
 A QueryInterface call was made requesting the class interface of COM   
@@ -59,7 +52,7 @@ is done to prevent the non COM visible base class from being
 constrained by the COM versioning rules.   
 ```  
   
-## <a name="configuration"></a>Configuración  
+## <a name="configuration"></a><span data-ttu-id="8cfed-120">Configuración</span><span class="sxs-lookup"><span data-stu-id="8cfed-120">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -69,8 +62,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
-
+## <a name="see-also"></a><span data-ttu-id="8cfed-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="8cfed-121">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [<span data-ttu-id="8cfed-122">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="8cfed-122">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [<span data-ttu-id="8cfed-123">Serialización para interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="8cfed-123">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

@@ -1,35 +1,38 @@
 ---
-title: "3392 - TransactionScopeCreate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3392 - TransactionScopeCreate
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b6257a6-683b-4adc-aca5-6d095e4c03a0
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 81f46db19d91c9fbc7327055445ee6f3f83c78e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3392 - TransactionScopeCreate
-## Propiedades  
+# <a name="3392---transactionscopecreate"></a><span data-ttu-id="12aed-102">3392 - TransactionScopeCreate</span><span class="sxs-lookup"><span data-stu-id="12aed-102">3392 - TransactionScopeCreate</span></span>
+## <a name="properties"></a><span data-ttu-id="12aed-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="12aed-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|3392|  
-|Palabras clave|ServiceModel|  
-|Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="12aed-104">Id.</span><span class="sxs-lookup"><span data-stu-id="12aed-104">ID</span></span>|<span data-ttu-id="12aed-105">3392</span><span class="sxs-lookup"><span data-stu-id="12aed-105">3392</span></span>|  
+|<span data-ttu-id="12aed-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="12aed-106">Keywords</span></span>|<span data-ttu-id="12aed-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="12aed-107">ServiceModel</span></span>|  
+|<span data-ttu-id="12aed-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="12aed-108">Level</span></span>|<span data-ttu-id="12aed-109">Información</span><span class="sxs-lookup"><span data-stu-id="12aed-109">Information</span></span>|  
+|<span data-ttu-id="12aed-110">Canal</span><span class="sxs-lookup"><span data-stu-id="12aed-110">Channel</span></span>|<span data-ttu-id="12aed-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="12aed-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Este evento se genera cuando se crea TransactionScope.  
+## <a name="description"></a><span data-ttu-id="12aed-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="12aed-112">Description</span></span>  
+ <span data-ttu-id="12aed-113">Este evento se genera cuando se crea TransactionScope.</span><span class="sxs-lookup"><span data-stu-id="12aed-113">This event is emitted when the TransactionScope is being created.</span></span>  
   
-## Mensaje  
- TransactionScope se va a crear con LocalIdentifier:'%1 y DistributedIdentifier:'%2'.  
+## <a name="message"></a><span data-ttu-id="12aed-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="12aed-114">Message</span></span>  
+ <span data-ttu-id="12aed-115">TransactionScope se va a crear con LocalIdentifier:'%1 y DistributedIdentifier:'%2'.</span><span class="sxs-lookup"><span data-stu-id="12aed-115">TransactionScope is being created with LocalIdentifier:'%1' and DistributedIdentifier:'%2'.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="12aed-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="12aed-116">Details</span></span>

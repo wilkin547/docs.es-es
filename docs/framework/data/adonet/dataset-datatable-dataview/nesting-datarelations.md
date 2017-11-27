@@ -1,27 +1,33 @@
 ---
-title: "Anidar DataRelations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Anidar objetos DataRelation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: db7df753bf6066d3a89c46a82b66e47281076f95
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Anidar DataRelations
-En una representación relacional de datos, las tablas individuales contienen filas que están relacionadas entre sí por una columna o un conjunto de columnas.  En el <xref:System.Data.DataSet> de ADO.NET, la relación entre tablas se implementa mediante una <xref:System.Data.DataRelation>.  Cuando crea una **DataRelation**, las relaciones primaria\-secundaria de las columnas se administran sólo mediante la relación.  Las tablas y las columnas son entidades independientes.  En la representación jerárquica de los datos proporcionada por XML, las relaciones primaria\-secundaria se representan mediante elementos primarios que contienen elementos secundarios anidados.  
+# <a name="nesting-datarelations"></a><span data-ttu-id="c135c-102">Anidar objetos DataRelation</span><span class="sxs-lookup"><span data-stu-id="c135c-102">Nesting DataRelations</span></span>
+<span data-ttu-id="c135c-103">En una representación relacional de datos, las tablas individuales contienen filas que están relacionadas entre sí por una columna o un conjunto de columnas.</span><span class="sxs-lookup"><span data-stu-id="c135c-103">In a relational representation of data, individual tables contain rows that are related to one another using a column or set of columns.</span></span> <span data-ttu-id="c135c-104">En el <xref:System.Data.DataSet> de ADO.NET, la relación entre tablas se implementa mediante una <xref:System.Data.DataRelation>.</span><span class="sxs-lookup"><span data-stu-id="c135c-104">In the ADO.NET <xref:System.Data.DataSet>, the relationship between tables is implemented using a <xref:System.Data.DataRelation>.</span></span> <span data-ttu-id="c135c-105">Cuando se crea un **DataRelation**, las relaciones de elementos primarios y secundarios de las columnas se administran sólo mediante la relación.</span><span class="sxs-lookup"><span data-stu-id="c135c-105">When you create a **DataRelation**, the parent-child relationships of the columns are managed only through the relation.</span></span> <span data-ttu-id="c135c-106">Las tablas y las columnas son entidades independientes.</span><span class="sxs-lookup"><span data-stu-id="c135c-106">The tables and columns are separate entities.</span></span> <span data-ttu-id="c135c-107">En la representación jerárquica de los datos proporcionada por XML, las relaciones primaria-secundaria se representan mediante elementos primarios que contienen elementos secundarios anidados.</span><span class="sxs-lookup"><span data-stu-id="c135c-107">In the hierarchical representation of data that XML provides, the parent-child relationships are represented by parent elements that contain nested child elements.</span></span>  
   
- Para facilitar el anidamiento de objetos secundarios cuando un **DataSet** se sincroniza con un <xref:System.Xml.XmlDataDocument> o se escribe como XML mediante **WriteXml**, la **DataRelation** expone una propiedad **Nested**.  Al establecer la propiedad **Nested** de una **DataRelation** como **true**, las filas secundarias de la relación se anidan dentro de la columna primaria cuando se escriben como datos XML o cuando se sincronizan con un **XmlDataDocument**.  La propiedad **Nested** de la **DataRelation** es **false** de manera predeterminada.  
+ <span data-ttu-id="c135c-108">Para facilitar el anidamiento de objetos secundarios cuando un **conjunto de datos** está sincronizado con un <xref:System.Xml.XmlDataDocument> o se escribe como datos XML mediante **WriteXml**, **DataRelation** expone un **Nested** propiedad.</span><span class="sxs-lookup"><span data-stu-id="c135c-108">To facilitate the nesting of child objects when a **DataSet** is synchronized with an <xref:System.Xml.XmlDataDocument> or written as XML data using **WriteXml**, the **DataRelation** exposes a **Nested** property.</span></span> <span data-ttu-id="c135c-109">Establecer el **Nested** propiedad de un **DataRelation** a **true** , las filas de la relación se anidan dentro de la columna primaria cuando se escriben como datos XML secundarias o sincronizar con un **XmlDataDocument**.</span><span class="sxs-lookup"><span data-stu-id="c135c-109">Setting the **Nested** property of a **DataRelation** to **true** causes the child rows of the relation to be nested within the parent column when written as XML data or synchronized with an **XmlDataDocument**.</span></span> <span data-ttu-id="c135c-110">El **Nested** propiedad de la **DataRelation** es **false**, de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="c135c-110">The **Nested** property of the **DataRelation** is **false**, by default.</span></span>  
   
- Por ejemplo, considere el siguiente **DataSet**.  
+ <span data-ttu-id="c135c-111">Por ejemplo, considere el siguiente **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="c135c-111">For example, consider the following **DataSet**.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -63,11 +69,11 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Como la propiedad **Nested** del objeto **DataRelation** no tiene el valor **true** para este **DataSet**, los objetos secundarios no se anidarán dentro de los elementos primarios cuando este **DataSet** se represente como datos XML.  La transformación de la representación XML de un objeto **DataSet** que contiene objetos **DataSet** relacionados con relaciones de datos no anidadas puede provocar un rendimiento lento.  Se recomienda anidar las relaciones de datos.  Para ello, debe establecer la propiedad **Nested** en **True**.  A continuación, debe escribir código en la hoja de estilos XSLT que utilice expresiones de consulta XPath con jerarquía de arriba a abajo para localizar y transformar los datos.  
+ <span data-ttu-id="c135c-112">Dado que la **Nested** propiedad de la **DataRelation** objeto no está establecido en **true** para este **conjunto de datos**, los objetos secundarios no están anidados dentro de los elementos primarios cuando este **conjunto de datos** se representa como datos XML.</span><span class="sxs-lookup"><span data-stu-id="c135c-112">Because the **Nested** property of the **DataRelation** object is not set to **true** for this **DataSet**, the child objects are not nested within the parent elements when this **DataSet** is represented as XML data.</span></span> <span data-ttu-id="c135c-113">Transformar la representación XML de un **conjunto de datos** que contiene relacionados **conjunto de datos**con relaciones de datos no anidadas puede provocar un rendimiento lento.</span><span class="sxs-lookup"><span data-stu-id="c135c-113">Transforming the XML representation of a **DataSet** that contains related **DataSet**s with non-nested data relations can cause slow performance.</span></span> <span data-ttu-id="c135c-114">Se recomienda anidar las relaciones de datos.</span><span class="sxs-lookup"><span data-stu-id="c135c-114">We recommend that you nest the data relations.</span></span> <span data-ttu-id="c135c-115">Para ello, establezca la **Nested** propiedad **true**.</span><span class="sxs-lookup"><span data-stu-id="c135c-115">To do this, set the **Nested** property to **true**.</span></span> <span data-ttu-id="c135c-116">A continuación, debe escribir código en la hoja de estilos XSLT que utilice expresiones de consulta XPath con jerarquía de arriba a abajo para localizar y transformar los datos.</span><span class="sxs-lookup"><span data-stu-id="c135c-116">Then write code in the XSLT style sheet that uses top-down hierarchical XPath query expressions to locate and transform the data.</span></span>  
   
- En el siguiente ejemplo de código se muestra el resultado de llamar a **WriteXml** en el **DataSet**.  
+ <span data-ttu-id="c135c-117">En el ejemplo de código siguiente se muestra el resultado de llamar al método **WriteXml** en el **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="c135c-117">The following code example shows the result from calling **WriteXml** on the **DataSet**.</span></span>  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -95,7 +101,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Hay que tener en cuenta que el elemento **Customers** y los elementos **Orders** se muestran como elementos relacionados.  Si desea que los elementos **Orders** aparezcan como secundarios de sus respectivos elementos primarios, la propiedad **Nested** de la **DataRelation** debe ser **true** y se debe agregar lo siguiente:  
+ <span data-ttu-id="c135c-118">Tenga en cuenta que la **clientes** elemento y el **pedidos** elementos se muestran como elementos del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="c135c-118">Note that the **Customers** element and the **Orders** elements are shown as sibling elements.</span></span> <span data-ttu-id="c135c-119">Si deseara la **pedidos** elementos se muestren como elementos secundarios de sus respectivos elementos primarios, la **Nested** propiedad de la **DataRelation** tendría que estar establecido en **true** y debe agregar lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="c135c-119">If you wanted the **Orders** elements to show up as children of their respective parent elements, the **Nested** property of the **DataRelation** would need to be set to **true** and you would add the following:</span></span>  
   
 ```vb  
 customerOrders.Nested = True  
@@ -105,9 +111,9 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- En el siguiente código se muestra cuál sería el resultado, con los elementos **Orders** anidados dentro de sus respectivos elementos primarios.  
+ <span data-ttu-id="c135c-120">El código siguiente muestra lo que el resultado sería, con el **pedidos** elementos anidados dentro de sus respectivos elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="c135c-120">The following code shows what the resulting output would look like, with the **Orders** elements nested within their respective parent elements.</span></span>  
   
-```  
+```xml  
 <CustomerOrders>  
   <Customers>  
     <CustomerID>ALFKI</CustomerID>  
@@ -135,8 +141,8 @@ customerOrders.Nested = true;
 </CustomerOrders>  
 ```  
   
-## Vea también  
- [Utilizar XML en un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [Agregar DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="c135c-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="c135c-121">See Also</span></span>  
+ [<span data-ttu-id="c135c-122">Usar XML en un conjunto de datos</span><span class="sxs-lookup"><span data-stu-id="c135c-122">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="c135c-123">Agregar objetos DataRelation</span><span class="sxs-lookup"><span data-stu-id="c135c-123">Adding DataRelations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [<span data-ttu-id="c135c-124">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="c135c-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="c135c-125">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="c135c-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

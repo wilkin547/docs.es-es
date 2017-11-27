@@ -1,43 +1,47 @@
 ---
-title: "Ejemplo de extremo de administraci&#243;n de flujo de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo de punto de conexión de administración de flujo de trabajo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d13d1d2af449631f93dd4df29ff41113ffbbfec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de extremo de administraci&#243;n de flujo de trabajo
-En este ejemplo se muestra cómo un extremo de control de flujo de trabajo se puede utilizar para crear y ejecutar flujos de trabajo de forma local y remota.En el ejemplo se muestra cómo hospedar un extremo de control y cómo escribir clientes que llamen al extremo de control para crear y ejecutar la instancia de un flujo de trabajo.El flujo de trabajo no es un servicio.  
+# <a name="workflow-management-endpoint-sample"></a><span data-ttu-id="25768-102">Ejemplo de punto de conexión de administración de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="25768-102">Workflow Management Endpoint Sample</span></span>
+<span data-ttu-id="25768-103">En este ejemplo se muestra cómo un punto de conexión de control de flujo de trabajo se puede utilizar para crear y ejecutar flujos de trabajo de forma local y remota.</span><span class="sxs-lookup"><span data-stu-id="25768-103">This sample shows how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span> <span data-ttu-id="25768-104">En el ejemplo se muestra cómo hospedar un extremo de control y cómo escribir clientes que llamen al extremo de control para crear y ejecutar la instancia de un flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="25768-104">The sample demonstrates how to host a control endpoint and write clients that call the control endpoint to create and run the instance of a workflow.</span></span> <span data-ttu-id="25768-105">El flujo de trabajo no es un servicio.</span><span class="sxs-lookup"><span data-stu-id="25768-105">The workflow is not a service.</span></span>  
   
- En el lado del servicio del ejemplo un flujo de trabajo se hospeda con WorkflowServiceHost y se agrega un WorkflowControlEndpoint de modo que los clientes puedan realizar operaciones de control \(Suspend, Start, etc.\).También se agrega un CreationEndpoint definido por el usuario para permitir la creación del flujo de trabajo.El servicio usará posteriormente estos extremos para iniciar el flujo de trabajo en un estado suspendido y después reanudar el flujo de trabajo.El cliente realiza las mismas operaciones pero desde el código de cliente.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] estas interfaces, vea [Extremo de control de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) y [Cómo: Hospedar un flujo de trabajo no perteneciente al servicio en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md).  
+ <span data-ttu-id="25768-106">En el lado del servicio del ejemplo un flujo de trabajo se hospeda con WorkflowServiceHost y se agrega un WorkflowControlEndpoint de modo que los clientes puedan realizar operaciones de control (Suspend, Start, etc.).</span><span class="sxs-lookup"><span data-stu-id="25768-106">On the service side of the sample a workflow is hosted with WorkflowServiceHost and a WorkflowControlEndpoint is added so that clients can perform control operations (Suspend, Start, etc).</span></span> <span data-ttu-id="25768-107">También se agrega un CreationEndpoint definido por el usuario para permitir la creación del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="25768-107">A user-defined CreationEndpoint is also added to allow the workflow to be created.</span></span> <span data-ttu-id="25768-108">El servicio usará posteriormente estos extremos para iniciar el flujo de trabajo en un estado suspendido y después reanudar el flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="25768-108">The service then uses these endpoints to start the workflow in a suspended state and then resume the workflow.</span></span> <span data-ttu-id="25768-109">El cliente realiza las mismas operaciones pero desde el código de cliente.</span><span class="sxs-lookup"><span data-stu-id="25768-109">The client performs the same operations but from the client code.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="25768-110">Vea estas interfaces, [extremo de Control de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) y [Cómo: hospedar un flujo de trabajo no pertenecientes al servicio en IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)</span><span class="sxs-lookup"><span data-stu-id="25768-110"> these interfaces see, [Workflow Control Endpoint](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) and [How to: Host a non-service workflow in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)</span></span>  
   
-#### Para ejecutar el ejemplo  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="25768-111">Para ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="25768-111">To run the sample</span></span>  
   
-1.  Ejecute [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con privilegios de administrador.  
+1.  <span data-ttu-id="25768-112">Ejecute [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] con privilegios de administrador.</span><span class="sxs-lookup"><span data-stu-id="25768-112">Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with administrator privileges.</span></span>  
   
-2.  Abra la solución ManagementEndpoint.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+2.  <span data-ttu-id="25768-113">Abra la solución ManagementEndpoint.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="25768-113">Open the ManagementEndpoint.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-3.  Para compilar la solución, presione CTRL\+MAYÚS\+B o seleccione **Compilar solución** en el menú **Compilar**.  
+3.  <span data-ttu-id="25768-114">Para compilar la solución, presione CTRL + MAYÚS + B o seleccione **generar solución** desde el **generar** menú.</span><span class="sxs-lookup"><span data-stu-id="25768-114">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-4.  Inicie la aplicación ManagementEndpoint.exe.  
+4.  <span data-ttu-id="25768-115">Inicie la aplicación ManagementEndpoint.exe.</span><span class="sxs-lookup"><span data-stu-id="25768-115">Start the ManagementEndpoint.exe application.</span></span>  
   
-5.  Inicie la aplicación Client.exe.  
+5.  <span data-ttu-id="25768-116">Inicie la aplicación Client.exe.</span><span class="sxs-lookup"><span data-stu-id="25768-116">Start the Client.exe application.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="25768-117">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="25768-117">The samples may already be installed on your computer.</span></span> <span data-ttu-id="25768-118">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="25768-118">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="25768-119">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="25768-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="25768-120">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="25768-120">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Execution\ManagementEndpoint`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ManagementEndpoint`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="25768-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="25768-121">See Also</span></span>

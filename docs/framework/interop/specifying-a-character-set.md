@@ -5,79 +5,76 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3e97c640472156c1a47ad125bffeaf39b8eb0762
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="specifying-a-character-set"></a>Especificar un juego de caracteres
-El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL. En este tema se describen ambos comportamientos.  
+# <a name="specifying-a-character-set"></a><span data-ttu-id="a5a16-102">Especificar un juego de caracteres</span><span class="sxs-lookup"><span data-stu-id="a5a16-102">Specifying a Character Set</span></span>
+<span data-ttu-id="a5a16-103">El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> controla la serialización de cadenas y determina cómo la invocación de plataforma busca nombres de función en un archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="a5a16-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="a5a16-104">En este tema se describen ambos comportamientos.</span><span class="sxs-lookup"><span data-stu-id="a5a16-104">This topic describes both behaviors.</span></span>  
   
- Algunas API exportan dos versiones de las funciones que toman argumentos de cadena: la versión estrecha (ANSI) y la versión ancha (Unicode). La API Win32, por ejemplo, incluye los siguientes nombres de punto de entrada para la función **MessageBox**:  
+ <span data-ttu-id="a5a16-105">Algunas API exportan dos versiones de las funciones que toman argumentos de cadena: la versión estrecha (ANSI) y la versión ancha (Unicode).</span><span class="sxs-lookup"><span data-stu-id="a5a16-105">Some APIs export two versions of functions that take string arguments: narrow (ANSI) and wide (Unicode).</span></span> <span data-ttu-id="a5a16-106">La API Win32, por ejemplo, incluye los siguientes nombres de punto de entrada para la función **MessageBox**:</span><span class="sxs-lookup"><span data-stu-id="a5a16-106">The Win32 API, for instance, includes the following entry-point names for the **MessageBox** function:</span></span>  
   
--   **MessageBoxA**  
+-   <span data-ttu-id="a5a16-107">**MessageBoxA**</span><span class="sxs-lookup"><span data-stu-id="a5a16-107">**MessageBoxA**</span></span>  
   
-     Proporciona el formato ANSI de caracteres de 1 byte, que se distingue por una "A" anexada al nombre del punto de entrada. Las llamadas a **MessageBoxA** siempre serializan las cadenas en formato ANSI, como es habitual en las plataformas Windows 95 y Windows 98.  
+     <span data-ttu-id="a5a16-108">Proporciona el formato ANSI de caracteres de 1 byte, que se distingue por una "A" anexada al nombre del punto de entrada.</span><span class="sxs-lookup"><span data-stu-id="a5a16-108">Provides 1-byte character ANSI formatting, distinguished by an "A" appended to the entry-point name.</span></span> <span data-ttu-id="a5a16-109">Las llamadas a **MessageBoxA** siempre serializan las cadenas en formato ANSI, como es habitual en las plataformas Windows 95 y Windows 98.</span><span class="sxs-lookup"><span data-stu-id="a5a16-109">Calls to **MessageBoxA** always marshal strings in ANSI format, as is common on Windows 95 and Windows 98 platforms.</span></span>  
   
--   **MessageBoxW**  
+-   <span data-ttu-id="a5a16-110">**MessageBoxW**</span><span class="sxs-lookup"><span data-stu-id="a5a16-110">**MessageBoxW**</span></span>  
   
-     Proporciona el formato Unicode de caracteres de 2 bytes, que se distingue por una "W" anexada al nombre del punto de entrada. Las llamadas a **MessageBoxW** siempre serializan las cadenas en formato Unicode, como es habitual en las plataformas Windows NT, Windows 2000 y Windows XP.  
+     <span data-ttu-id="a5a16-111">Proporciona el formato Unicode de caracteres de 2 bytes, que se distingue por una "W" anexada al nombre del punto de entrada.</span><span class="sxs-lookup"><span data-stu-id="a5a16-111">Provides 2-byte character Unicode formatting, distinguished by a "W" appended to the entry-point name.</span></span> <span data-ttu-id="a5a16-112">Las llamadas a **MessageBoxW** siempre serializan las cadenas en formato Unicode, como es habitual en las plataformas Windows NT, Windows 2000 y Windows XP.</span><span class="sxs-lookup"><span data-stu-id="a5a16-112">Calls to **MessageBoxW** always marshal strings in Unicode format, as is common on Windows NT, Windows 2000, and Windows XP platforms.</span></span>  
   
-## <a name="string-marshaling-and-name-matching"></a>Serialización de cadenas y coincidencia de nombres  
- El campo **CharSet** acepta los valores siguientes:  
+## <a name="string-marshaling-and-name-matching"></a><span data-ttu-id="a5a16-113">Serialización de cadenas y coincidencia de nombres</span><span class="sxs-lookup"><span data-stu-id="a5a16-113">String Marshaling and Name Matching</span></span>  
+ <span data-ttu-id="a5a16-114">El campo **CharSet** acepta los valores siguientes:</span><span class="sxs-lookup"><span data-stu-id="a5a16-114">The **CharSet** field accepts the following values:</span></span>  
   
- **CharSet.Ansi** (valor predeterminado)  
+ <span data-ttu-id="a5a16-115">**CharSet.Ansi** (valor predeterminado)</span><span class="sxs-lookup"><span data-stu-id="a5a16-115">**CharSet.Ansi** (default value)</span></span>  
   
--   Serialización de cadenas  
+-   <span data-ttu-id="a5a16-116">Serialización de cadenas</span><span class="sxs-lookup"><span data-stu-id="a5a16-116">String marshaling</span></span>  
   
-     La invocación de plataforma serializa las cadenas del formato administrado (Unicode) al formato ANSI.  
+     <span data-ttu-id="a5a16-117">La invocación de plataforma serializa las cadenas del formato administrado (Unicode) al formato ANSI.</span><span class="sxs-lookup"><span data-stu-id="a5a16-117">Platform invoke marshals strings from their managed format (Unicode) to ANSI format.</span></span>  
   
--   Coincidencia de nombres  
+-   <span data-ttu-id="a5a16-118">Coincidencia de nombres</span><span class="sxs-lookup"><span data-stu-id="a5a16-118">Name matching</span></span>  
   
-     Cuando el campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> es **true**, como sucede de forma predeterminada en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], la invocación de plataforma solo busca el nombre que especifique. Por ejemplo, si especifica **MessageBox**, la invocación de plataforma busca **MessageBox** y se produce un error si no encuentra el término exacto.  
+     <span data-ttu-id="a5a16-119">Cuando el campo <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> es **true**, como sucede de forma predeterminada en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], la invocación de plataforma solo busca el nombre que especifique.</span><span class="sxs-lookup"><span data-stu-id="a5a16-119">When the <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> field is **true**, as it is by default in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke searches only for the name you specify.</span></span> <span data-ttu-id="a5a16-120">Por ejemplo, si especifica **MessageBox**, la invocación de plataforma busca **MessageBox** y se produce un error si no encuentra el término exacto.</span><span class="sxs-lookup"><span data-stu-id="a5a16-120">For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails when it cannot locate the exact spelling.</span></span>  
   
-     Si el campo **ExactSpelling** es **false**, como sucede de forma predeterminada en C++ y C#, la invocación de plataforma busca primero el alias no alterado (**MessageBox**) y, luego, el nombre alterado (**MessageBoxA**) en el caso de que no se encuentre el alias no alterado. Tenga en cuenta que el comportamiento de la coincidencia de nombres en formato ANSI difiere del comportamiento de la coincidencia de nombres en formato Unicode.  
+     <span data-ttu-id="a5a16-121">Si el campo **ExactSpelling** es **false**, como sucede de forma predeterminada en C++ y C#, la invocación de plataforma busca primero el alias no alterado (**MessageBox**) y, luego, el nombre alterado (**MessageBoxA**) en el caso de que no se encuentre el alias no alterado.</span><span class="sxs-lookup"><span data-stu-id="a5a16-121">When the **ExactSpelling** field is **false**, as it is by default in C++ and C#, platform invoke searches for the unmangled alias first (**MessageBox**), then the mangled name (**MessageBoxA**) if the unmangled alias is not found.</span></span> <span data-ttu-id="a5a16-122">Tenga en cuenta que el comportamiento de la coincidencia de nombres en formato ANSI difiere del comportamiento de la coincidencia de nombres en formato Unicode.</span><span class="sxs-lookup"><span data-stu-id="a5a16-122">Notice that ANSI name-matching behavior differs from Unicode name-matching behavior.</span></span>  
   
- **CharSet.Unicode**  
+ <span data-ttu-id="a5a16-123">**CharSet.Unicode**</span><span class="sxs-lookup"><span data-stu-id="a5a16-123">**CharSet.Unicode**</span></span>  
   
--   Serialización de cadenas  
+-   <span data-ttu-id="a5a16-124">Serialización de cadenas</span><span class="sxs-lookup"><span data-stu-id="a5a16-124">String marshaling</span></span>  
   
-     La invocación de plataforma copia las cadenas del formato administrado (Unicode) al formato Unicode.  
+     <span data-ttu-id="a5a16-125">La invocación de plataforma copia las cadenas del formato administrado (Unicode) al formato Unicode.</span><span class="sxs-lookup"><span data-stu-id="a5a16-125">Platform invoke copies strings from their managed format (Unicode) to Unicode format.</span></span>  
   
--   Coincidencia de nombres  
+-   <span data-ttu-id="a5a16-126">Coincidencia de nombres</span><span class="sxs-lookup"><span data-stu-id="a5a16-126">Name matching</span></span>  
   
-     Cuando el campo **ExactSpelling** es **true**, como sucede de forma predeterminada en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], la invocación de plataforma solo busca el nombre que especifique. Por ejemplo, si especifica **MessageBox**, la invocación de plataforma busca **MessageBox** y se produce un error si no encuentra el término exacto.  
+     <span data-ttu-id="a5a16-127">Cuando el campo **ExactSpelling** es **true**, como sucede de forma predeterminada en [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], la invocación de plataforma solo busca el nombre que especifique.</span><span class="sxs-lookup"><span data-stu-id="a5a16-127">When the **ExactSpelling** field is **true**, as it is by default in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], platform invoke searches only for the name you specify.</span></span> <span data-ttu-id="a5a16-128">Por ejemplo, si especifica **MessageBox**, la invocación de plataforma busca **MessageBox** y se produce un error si no encuentra el término exacto.</span><span class="sxs-lookup"><span data-stu-id="a5a16-128">For example, if you specify **MessageBox**, platform invoke searches for **MessageBox** and fails if it cannot locate the exact spelling.</span></span>  
   
-     Si el campo **ExactSpelling** es **false**, como sucede de forma predeterminada en C++ y C#, la invocación de plataforma busca primero el alias alterado (**MessageBoxW**) y, luego, el nombre no alterado (**MessageBox**) en el caso de que no se encuentre el alias alterado. Tenga en cuenta que el comportamiento de la coincidencia de nombres en formato Unicode difiere del comportamiento de la coincidencia de nombres en formato ANSI.  
+     <span data-ttu-id="a5a16-129">Si el campo **ExactSpelling** es **false**, como sucede de forma predeterminada en C++ y C#, la invocación de plataforma busca primero el alias alterado (**MessageBoxW**) y, luego, el nombre no alterado (**MessageBox**) en el caso de que no se encuentre el alias alterado.</span><span class="sxs-lookup"><span data-stu-id="a5a16-129">When the **ExactSpelling** field is **false**, as it is by default in C++ and C#, platform invoke searches for the mangled name first (**MessageBoxW**), then the unmangled alias (**MessageBox**) if the mangled name is not found.</span></span> <span data-ttu-id="a5a16-130">Tenga en cuenta que el comportamiento de la coincidencia de nombres en formato Unicode difiere del comportamiento de la coincidencia de nombres en formato ANSI.</span><span class="sxs-lookup"><span data-stu-id="a5a16-130">Notice that Unicode name-matching behavior differs from ANSI name-matching behavior.</span></span>  
   
- **CharSet.Auto**  
+ <span data-ttu-id="a5a16-131">**CharSet.Auto**</span><span class="sxs-lookup"><span data-stu-id="a5a16-131">**CharSet.Auto**</span></span>  
   
--   La invocación de plataforma elige entre los formatos ANSI y Unicode en tiempo de ejecución en función de la plataforma de destino.  
+-   <span data-ttu-id="a5a16-132">La invocación de plataforma elige entre los formatos ANSI y Unicode en tiempo de ejecución en función de la plataforma de destino.</span><span class="sxs-lookup"><span data-stu-id="a5a16-132">Platform invoke chooses between ANSI and Unicode formats at run time, based on the target platform.</span></span>  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Especificar un juego de caracteres en Visual Basic  
- En el ejemplo siguiente se declara la función **MessageBox** tres veces, cada una de ellas con un comportamiento de juego de caracteres diferente. Para especificar un comportamiento de juego de caracteres en Visual Basic, agregue la palabra clave **Ansi**, **Unicode** o **Auto** a la instrucción de declaración.  
+## <a name="specifying-a-character-set-in-visual-basic"></a><span data-ttu-id="a5a16-133">Especificar un juego de caracteres en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a5a16-133">Specifying a Character Set in Visual Basic</span></span>  
+ <span data-ttu-id="a5a16-134">En el ejemplo siguiente se declara la función **MessageBox** tres veces, cada una de ellas con un comportamiento de juego de caracteres diferente.</span><span class="sxs-lookup"><span data-stu-id="a5a16-134">The following example declares the **MessageBox** function three times, each time with different character-set behavior.</span></span> <span data-ttu-id="a5a16-135">Para especificar un comportamiento de juego de caracteres en Visual Basic, agregue la palabra clave **Ansi**, **Unicode** o **Auto** a la instrucción de declaración.</span><span class="sxs-lookup"><span data-stu-id="a5a16-135">You can specify character-set behavior in Visual Basic by adding the **Ansi**, **Unicode**, or **Auto** keyword to the declaration statement.</span></span>  
   
- Si omite la palabra clave del juego de caracteres, tal y como se hace en la primera instrucción de la declaración, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> establece como valor predeterminado el juego de caracteres ANSI. En la segunda y tercera instrucciones del ejemplo se especifica explícitamente un juego de caracteres con una palabra clave.  
+ <span data-ttu-id="a5a16-136">Si omite la palabra clave del juego de caracteres, tal y como se hace en la primera instrucción de la declaración, el campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> establece como valor predeterminado el juego de caracteres ANSI.</span><span class="sxs-lookup"><span data-stu-id="a5a16-136">If you omit the character-set keyword, as is done in the first declaration statement, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field defaults to the ANSI character set.</span></span> <span data-ttu-id="a5a16-137">En la segunda y tercera instrucciones del ejemplo se especifica explícitamente un juego de caracteres con una palabra clave.</span><span class="sxs-lookup"><span data-stu-id="a5a16-137">The second and third statements in the example explicitly specify a character set with a keyword.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -97,8 +94,8 @@ Public Class Win32
 End Class  
 ```  
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>Especificar un juego de caracteres en C# y C++  
- El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> identifica el juego de caracteres subyacente como ANSI o Unicode. El juego de caracteres controla cómo se deben serializar los argumentos de cadena en un método. Use uno de los formatos siguientes para indicar el juego de caracteres:  
+## <a name="specifying-a-character-set-in-c-and-c"></a><span data-ttu-id="a5a16-138">Especificar un juego de caracteres en C# y C++</span><span class="sxs-lookup"><span data-stu-id="a5a16-138">Specifying a Character Set in C# and C++</span></span>  
+ <span data-ttu-id="a5a16-139">El campo <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> identifica el juego de caracteres subyacente como ANSI o Unicode.</span><span class="sxs-lookup"><span data-stu-id="a5a16-139">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field identifies the underlying character set as ANSI or Unicode.</span></span> <span data-ttu-id="a5a16-140">El juego de caracteres controla cómo se deben serializar los argumentos de cadena en un método.</span><span class="sxs-lookup"><span data-stu-id="a5a16-140">The character set controls how string arguments to a method should be marshaled.</span></span> <span data-ttu-id="a5a16-141">Use uno de los formatos siguientes para indicar el juego de caracteres:</span><span class="sxs-lookup"><span data-stu-id="a5a16-141">Use one of the following forms to indicate the character set:</span></span>  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -112,7 +109,7 @@ End Class
 [DllImport("dllname", CharSet=CharSet::Auto)]  
 ```  
   
- En el ejemplo siguiente se muestran tres definiciones administradas de la función **MessageBox** con atributos para especificar un juego de caracteres. En la primera definición, debido a su omisión, el campo **CharSet** establece como valor predeterminado el juego de caracteres ANSI.  
+ <span data-ttu-id="a5a16-142">En el ejemplo siguiente se muestran tres definiciones administradas de la función **MessageBox** con atributos para especificar un juego de caracteres.</span><span class="sxs-lookup"><span data-stu-id="a5a16-142">The following example shows three managed definitions of the **MessageBox** function attributed to specify a character set.</span></span> <span data-ttu-id="a5a16-143">En la primera definición, debido a su omisión, el campo **CharSet** establece como valor predeterminado el juego de caracteres ANSI.</span><span class="sxs-lookup"><span data-stu-id="a5a16-143">In the first definition, by its omission, the **CharSet** field defaults to the ANSI character set.</span></span>  
   
 ```csharp  
 [DllImport("user32.dll")]  
@@ -151,9 +148,8 @@ extern "C" int MessageBox(HWND hWnd,
                           unsigned int uType);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Crear prototipos en código administrado](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [Ejemplos de invocación de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)   
- [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-
+## <a name="see-also"></a><span data-ttu-id="a5a16-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="a5a16-144">See Also</span></span>  
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [<span data-ttu-id="a5a16-145">Crear prototipos en código administrado</span><span class="sxs-lookup"><span data-stu-id="a5a16-145">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [<span data-ttu-id="a5a16-146">Ejemplos de invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="a5a16-146">Platform Invoke Examples</span></span>](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [<span data-ttu-id="a5a16-147">Serialización de datos con invocación de plataforma</span><span class="sxs-lookup"><span data-stu-id="a5a16-147">Marshaling Data with Platform Invoke</span></span>](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

@@ -1,70 +1,63 @@
 ---
-title: "Using Libraries from Partially Trusted Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "security [.NET Framework], partially trusted code"
-  - "partially trusted code"
-  - "partial trust"
-  - "AllowPartiallyTrustedCallersAttribute attribute"
-  - "code access security, partially trusted code"
-  - "APTCA"
+title: "Utilizar bibliotecas de código que no es de plena confianza"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [.NET Framework], partially trusted code
+- partially trusted code
+- partial trust
+- AllowPartiallyTrustedCallersAttribute attribute
+- code access security, partially trusted code
+- APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "25"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 7a452370df7c18f3e3f0190a14979099152485f9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Using Libraries from Partially Trusted Code
-> [!NOTE]
->  En este tema se trata el comportamiento de los ensamblados con nombre seguro, que solo se aplica a los ensamblados de [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md). Los ensamblados [Security\-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md) en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o una versión posterior no se ven afectados por los nombres seguros. Para más información sobre los cambios realizados en el sistema de seguridad, consulte [Cambios de seguridad](../../../docs/framework/security/security-changes.md).  
-  
-> [!CAUTION]
->  Seguridad de acceso del código y código de confianza parcial  
->   
->  .NET Framework proporciona seguridad de acceso del código \(CAS\), que es un mecanismo para el cumplimiento de los distintos niveles de confianza en diferentes códigos que se ejecutan en la misma aplicación.  La seguridad de acceso del código en .NET Framework no debe usarse como límite de seguridad para código de confianza parcial, especialmente si se trata de código de origen desconocido. Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas.  
->   
->  Esta directiva se aplica a todas las versiones de .NET Framework, pero no se aplica a la versión de .NET Framework incluida en Silverlight.  
-  
- Las aplicaciones que reciben menos de la plena confianza de su host o espacio aislado no pueden llamar a las bibliotecas administradas compartidas a menos que el escritor de la biblioteca se lo permita específicamente mediante el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Por lo tanto, los escritores de aplicaciones deben tener en cuenta que habrá algunas bibliotecas que no estarán a su disposición desde un contexto de confianza parcial. De forma predeterminada, el código ejecutado en un [espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) de confianza parcial y que no está en la lista de ensamblados de plena confianza tendrá una confianza parcial. Si no espera que el código se ejecute desde un contexto de confianza parcial o que lo llame un código de confianza parcial, no tiene que preocuparse de la información de esta sección. Sin embargo, si escribe un código que debe interactuar con un código de confianza parcial o que debe funcionar desde un contexto de confianza parcial, debe considerar los siguientes factores:  
-  
--   Las bibliotecas deben firmarse con un nombre seguro para que las puedan compartir varias aplicaciones. Los nombres seguros permiten que el código se coloque en la caché global de ensamblados o se agregue a la lista de plena confianza de un espacio aislado <xref:System.AppDomain>, de manera que los consumidores puedan comprobar que un determinado fragmento del código móvil proviene de usted.  
-  
--   De forma predeterminada, las bibliotecas compartidas de [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) con nombre seguro efectúan un [LinkDemand](../../../docs/framework/misc/link-demands.md) implícito para obtener automáticamente una confianza completa, sin que el escritor de la biblioteca tenga que hacer nada.  
-  
--   Si un llamador no tiene plena confianza y, aun así, intenta llamar a dicha biblioteca, el tiempo de ejecución produce una <xref:System.Security.SecurityException>, de manera que el llamador no podrá vincularse a la biblioteca.  
-  
--   Para deshabilitar el **LinkDemand** automático y evitar que se produzca la excepción, puede colocar el atributo **AllowPartiallyTrustedCallersAttribute** en el ámbito de ensamblado de una biblioteca compartida. Este atributo permite llamar a las bibliotecas desde un código administrado de confianza parcial.  
-  
--   El código de confianza parcial al que se concede acceso a una biblioteca con este atributo sigue estando sujeto a otras restricciones definidas por el <xref:System.AppDomain>.  
-  
--   No hay ningún mecanismo de programación que permita que el código de confianza parcial llame a una biblioteca que no tenga el atributo **AllowPartiallyTrustedCallersAttribute** .  
-  
- Las bibliotecas que son privadas para una aplicación específica no necesitan un nombre seguro ni el atributo **AllowPartiallyTrustedCallersAttribute**; además, no se les puede hacer referencia mediante código potencialmente malintencionado fuera de la aplicación. Este código está protegido contra el uso indebido intencional o involuntario por parte del código móvil de confianza parcial sin que el desarrollador tenga que hacer nada más.  
-  
- Considere la posibilidad de habilitar de forma explícita el uso por parte de un código de confianza parcial en los siguientes tipos de código:  
-  
--   Código en el que se han probado minuciosamente las vulnerabilidades de seguridad y que cumple las directrices descritas en [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md).  
-  
--   Bibliotecas de código con nombre seguro escritas específicamente para escenarios de confianza parcial.  
-  
--   Cualquier componente \(ya sea de confianza parcial o de plena confianza\) firmado con un nombre seguro, llamado mediante el código descargado de Internet.  
+# <a name="using-libraries-from-partially-trusted-code"></a><span data-ttu-id="498bf-102">Utilizar bibliotecas de código que no es de plena confianza</span><span class="sxs-lookup"><span data-stu-id="498bf-102">Using Libraries from Partially Trusted Code</span></span>
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  Algunas clases de la biblioteca de clases de .NET Framework no tienen el atributo **AllowPartiallyTrustedCallersAttribute** y no se pueden llamar mediante código de confianza parcial.  
+>  <span data-ttu-id="498bf-103">Este tema trata el comportamiento de ensamblados con nombre seguro y solo se aplica a [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) ensamblados.</span><span class="sxs-lookup"><span data-stu-id="498bf-103">This topic addresses the behavior of strong-named assemblies and applies only to [Level 1](../../../docs/framework/misc/security-transparent-code-level-1.md) assemblies.</span></span> <span data-ttu-id="498bf-104">[Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md) ensamblados en la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o posterior no se ven afectados por los nombres seguros.</span><span class="sxs-lookup"><span data-stu-id="498bf-104">[Security-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md) assemblies in the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] or later are not affected by strong names.</span></span> <span data-ttu-id="498bf-105">Para obtener más información sobre los cambios en el sistema de seguridad, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).</span><span class="sxs-lookup"><span data-stu-id="498bf-105">For more information about changes to the security system, see [Security Changes](../../../docs/framework/security/security-changes.md).</span></span>  
   
-## Vea también  
- [Code Access Security](../../../docs/framework/misc/code-access-security.md)
+ <span data-ttu-id="498bf-106">Las aplicaciones que reciben menos de plena confianza de su host o espacio aislado no se pueden llamar a compartidas a menos que el escritor de la biblioteca se lo permita específicamente puedan mediante el uso de las bibliotecas administran el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo.</span><span class="sxs-lookup"><span data-stu-id="498bf-106">Applications that receive less than full trust from their host or sandbox are not allowed to call shared managed libraries unless the library writer specifically allows them to through the use of the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribute.</span></span> <span data-ttu-id="498bf-107">Por lo tanto, los escritores de aplicaciones deben tener en cuenta que habrá algunas bibliotecas que no estarán a su disposición desde un contexto de confianza parcial.</span><span class="sxs-lookup"><span data-stu-id="498bf-107">Therefore, application writers must be aware that some libraries will not be available to them from a partially trusted context.</span></span> <span data-ttu-id="498bf-108">De forma predeterminada, todo el código que se ejecuta en una confianza parcial [espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) y que no está en la lista de ensamblados de plena confianza es de confianza parcial.</span><span class="sxs-lookup"><span data-stu-id="498bf-108">By default, all code that executes in a partial-trust [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) and is not in the list of full-trust assemblies is partially trusted.</span></span> <span data-ttu-id="498bf-109">Si no espera que el código se ejecute desde un contexto de confianza parcial o que lo llame un código de confianza parcial, no tiene que preocuparse de la información de esta sección.</span><span class="sxs-lookup"><span data-stu-id="498bf-109">If you do not expect your code to be executed from a partially trusted context or to be called by partially trusted code, you do not have to be concerned about the information in this section.</span></span> <span data-ttu-id="498bf-110">Sin embargo, si escribe un código que debe interactuar con un código de confianza parcial o que debe funcionar desde un contexto de confianza parcial, debe considerar los siguientes factores:</span><span class="sxs-lookup"><span data-stu-id="498bf-110">However, if you write code that must interact with partially trusted code or operate from a partially trusted context, you should consider the following factors:</span></span>  
+  
+-   <span data-ttu-id="498bf-111">Las bibliotecas deben firmarse con un nombre seguro para que las puedan compartir varias aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="498bf-111">Libraries must be signed with a strong name in order to be shared by multiple applications.</span></span> <span data-ttu-id="498bf-112">Los nombres seguros permiten que el código se coloque en la caché global de ensamblados o se agregue a la lista de plena confianza de un espacio aislado <xref:System.AppDomain>, de manera que los consumidores puedan comprobar que un determinado fragmento del código móvil proviene de usted.</span><span class="sxs-lookup"><span data-stu-id="498bf-112">Strong names allow your code to be placed in the global assembly cache or added to the full-trust list of a sandboxing <xref:System.AppDomain>, and allow consumers to verify that a particular piece of mobile code actually originates from you.</span></span>  
+  
+-   <span data-ttu-id="498bf-113">De forma predeterminada, con nombre seguro [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) realizan implícita las bibliotecas compartidas [LinkDemand](../../../docs/framework/misc/link-demands.md) para completo confiar automáticamente, sin que el escritor de la biblioteca tenga que hacer nada.</span><span class="sxs-lookup"><span data-stu-id="498bf-113">By default, strong-named [Level 1](../../../docs/framework/misc/security-transparent-code-level-1.md) shared libraries perform an implicit [LinkDemand](../../../docs/framework/misc/link-demands.md) for full trust automatically, without the library writer having to do anything.</span></span>  
+  
+-   <span data-ttu-id="498bf-114">Si un llamador no tiene plena confianza y, aun así, intenta llamar a dicha biblioteca, el tiempo de ejecución produce una <xref:System.Security.SecurityException>, de manera que el llamador no podrá vincularse a la biblioteca.</span><span class="sxs-lookup"><span data-stu-id="498bf-114">If a caller does not have full trust but still tries to call such a library, the runtime throws a <xref:System.Security.SecurityException> and the caller is not allowed to link to the library.</span></span>  
+  
+-   <span data-ttu-id="498bf-115">Para deshabilitar el automático **LinkDemand** y evitar que se produzca la excepción, puede colocar el **AllowPartiallyTrustedCallersAttribute** atributo en el ámbito de un ensamblado biblioteca.</span><span class="sxs-lookup"><span data-stu-id="498bf-115">In order to disable the automatic **LinkDemand** and prevent the exception from being thrown, you can place the **AllowPartiallyTrustedCallersAttribute** attribute on the assembly scope of a shared library.</span></span> <span data-ttu-id="498bf-116">Este atributo permite llamar a las bibliotecas desde un código administrado de confianza parcial.</span><span class="sxs-lookup"><span data-stu-id="498bf-116">This attribute allows your libraries to be called from partially trusted managed code.</span></span>  
+  
+-   <span data-ttu-id="498bf-117">El código de confianza parcial al que se concede acceso a una biblioteca con este atributo sigue estando sujeto a otras restricciones definidas por el <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="498bf-117">Partially trusted code that is granted access to a library with this attribute is still subject to further restrictions defined by the <xref:System.AppDomain>.</span></span>  
+  
+-   <span data-ttu-id="498bf-118">No hay ningún mecanismo de programación para el código de confianza parcial llame a una biblioteca que no tiene la **AllowPartiallyTrustedCallersAttribute** atributo.</span><span class="sxs-lookup"><span data-stu-id="498bf-118">There is no programmatic way for partially trusted code to call a library that does not have the **AllowPartiallyTrustedCallersAttribute** attribute.</span></span>  
+  
+ <span data-ttu-id="498bf-119">Las bibliotecas que son privadas para una aplicación específica no necesitan un nombre seguro o la **AllowPartiallyTrustedCallersAttribute** atributo y no se puede hacer referencia mediante código potencialmente malintencionado fuera de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="498bf-119">Libraries that are private to a specific application do not require a strong name or the **AllowPartiallyTrustedCallersAttribute** attribute and cannot be referenced by potentially malicious code outside the application.</span></span> <span data-ttu-id="498bf-120">Este código está protegido contra el uso indebido intencional o involuntario por parte del código móvil de confianza parcial sin que el desarrollador tenga que hacer nada más.</span><span class="sxs-lookup"><span data-stu-id="498bf-120">Such code is protected against intentional or unintentional misuse by partially trusted mobile code without the developer having to do anything extra.</span></span>  
+  
+ <span data-ttu-id="498bf-121">Considere la posibilidad de habilitar de forma explícita el uso por parte de un código de confianza parcial en los siguientes tipos de código:</span><span class="sxs-lookup"><span data-stu-id="498bf-121">You should consider explicitly enabling use by partially trusted code for the following types of code:</span></span>  
+  
+-   <span data-ttu-id="498bf-122">Código que se han probado minuciosamente las vulnerabilidades de seguridad y que cumple las directrices descritas en [instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md).</span><span class="sxs-lookup"><span data-stu-id="498bf-122">Code that has been diligently tested for security vulnerabilities and is in compliance with the guidelines described in [Secure Coding Guidelines](../../../docs/standard/security/secure-coding-guidelines.md).</span></span>  
+  
+-   <span data-ttu-id="498bf-123">Bibliotecas de código con nombre seguro escritas específicamente para escenarios de confianza parcial.</span><span class="sxs-lookup"><span data-stu-id="498bf-123">Strong-named code libraries that are specifically written for partially trusted scenarios.</span></span>  
+  
+-   <span data-ttu-id="498bf-124">Cualquier componente (ya sea de confianza parcial o de plena confianza) firmado con un nombre seguro, llamado mediante el código descargado de Internet.</span><span class="sxs-lookup"><span data-stu-id="498bf-124">Any components (whether partially or fully trusted) signed with a strong name that will be called by code that is downloaded from the Internet.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="498bf-125">Algunas clases de la biblioteca de clases de .NET Framework no tienen la **AllowPartiallyTrustedCallersAttribute** de atributo y no se puede llamar mediante código de confianza parcial.</span><span class="sxs-lookup"><span data-stu-id="498bf-125">Some classes in the .NET Framework class library do not have the **AllowPartiallyTrustedCallersAttribute** attribute and cannot be called by partially trusted code.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="498bf-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="498bf-126">See Also</span></span>  
+ [<span data-ttu-id="498bf-127">Seguridad de acceso del código</span><span class="sxs-lookup"><span data-stu-id="498bf-127">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)

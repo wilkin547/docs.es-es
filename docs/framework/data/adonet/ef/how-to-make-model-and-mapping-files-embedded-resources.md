@@ -1,58 +1,55 @@
 ---
-title: "C&#243;mo hacer que los archivos de asignaci&#243;n y de modelo sean recursos incrustados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
-  - "jsharp"
+title: "Cómo: Hacer que los archivos de asignación y de modelo sean recursos incrustados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 98fb3ada369279a34ed08110644aabcbbe72a501
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo hacer que los archivos de asignaci&#243;n y de modelo sean recursos incrustados
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite implementar archivos de asignación y de modelo como recursos incrustados de una aplicación.  El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad.  Para obtener más información, consulta [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  De forma predeterminada, las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incrustan los archivos de asignación y de modelo. Cuando defina los archivos de asignación y de modelo manualmente, use este procedimiento para asegurarse de que dichos archivos se implementan como recursos incrustados junto con una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a><span data-ttu-id="2aa2b-102">Cómo: Hacer que los archivos de asignación y de modelo sean recursos incrustados</span><span class="sxs-lookup"><span data-stu-id="2aa2b-102">How to: Make Model and Mapping Files Embedded Resources</span></span>
+<span data-ttu-id="2aa2b-103">El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] le permite implementar los archivos de asignación y modelo como recursos incrustados de una aplicación.</span><span class="sxs-lookup"><span data-stu-id="2aa2b-103">The [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enables you to deploy model and mapping files as embedded resources of an application.</span></span> <span data-ttu-id="2aa2b-104">El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad.</span><span class="sxs-lookup"><span data-stu-id="2aa2b-104">The assembly with the embedded model and mapping files must be loaded in the same application domain as the entity connection.</span></span> <span data-ttu-id="2aa2b-105">Para obtener más información, consulte [las cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="2aa2b-105">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span> <span data-ttu-id="2aa2b-106">De forma predeterminada, las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] incrustan los archivos de asignación y de modelo.</span><span class="sxs-lookup"><span data-stu-id="2aa2b-106">By default, the [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] tools embed the model and mapping files.</span></span> <span data-ttu-id="2aa2b-107">Cuando defina los archivos de asignación y de modelo manualmente, use este procedimiento para asegurarse de que dichos archivos se implementan como recursos incrustados junto con una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2aa2b-107">When you manually define the model and mapping files, use this procedure to ensure that the files are deployed as embedded resources together with an [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] application.</span></span>  
   
 > [!NOTE]
->  Para mantener los recursos incrustados, deberá repetir este procedimiento cada vez que se modifiquen los archivos de asignación y de modelo.  
+>  <span data-ttu-id="2aa2b-108">Para mantener los recursos incrustados, deberá repetir este procedimiento cada vez que se modifiquen los archivos de asignación y de modelo.</span><span class="sxs-lookup"><span data-stu-id="2aa2b-108">To maintain embedded resources, you must repeat this procedure whenever the model and mapping files are modified.</span></span>  
   
-### Para incrustar los archivos de asignación y de modelo  
+### <a name="to-embed-model-and-mapping-files"></a><span data-ttu-id="2aa2b-109">Para incrustar los archivos de asignación y de modelo</span><span class="sxs-lookup"><span data-stu-id="2aa2b-109">To embed model and mapping files</span></span>  
   
-1.  En el **Explorador de soluciones**, seleccione el archivo conceptual \(.csdl\).  
+1.  <span data-ttu-id="2aa2b-110">En **el Explorador de soluciones**, seleccione el archivo conceptual (.csdl).</span><span class="sxs-lookup"><span data-stu-id="2aa2b-110">In **Solution Explorer**, select the conceptual (.csdl) file.</span></span>  
   
-2.  En el panel **Propiedades**, establezca **Acción de compilación** en **Recurso incrustado**.  
+2.  <span data-ttu-id="2aa2b-111">En el **propiedades** panel, establezca **acción de compilación** a **recurso incrustado**.</span><span class="sxs-lookup"><span data-stu-id="2aa2b-111">In the **Properties** pane, set **Build Action** to **Embedded Resource**.</span></span>  
   
-3.  Repita los pasos 1 y 2 para el archivo de almacenamiento \(.ssdl\) y el archivo de asignación \(.msl\).  
+3.  <span data-ttu-id="2aa2b-112">Repita los pasos 1 y 2 para el archivo de almacenamiento (.ssdl) y el archivo de asignación (.msl).</span><span class="sxs-lookup"><span data-stu-id="2aa2b-112">Repeat steps 1 and 2 for the storage (.ssdl) file and the mapping (.msl) file.</span></span>  
   
-4.  En el **Explorador de soluciones**, haga doble clic en el archivo App.config y, a continuación, modifique el parámetro `Metadata` del atributo `connectionString` usando uno de los formatos siguientes:  
+4.  <span data-ttu-id="2aa2b-113">En **el Explorador de soluciones**, haga doble clic en el archivo App.config y, a continuación, modifique la `Metadata` parámetro en el `connectionString` atributo basado en uno de los siguientes formatos:</span><span class="sxs-lookup"><span data-stu-id="2aa2b-113">In **Solution Explorer**, double-click the App.config file and then modify the `Metadata` parameter in the `connectionString` attribute based on one of the following formats:</span></span>  
   
-    -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
+    -   <span data-ttu-id="2aa2b-114">`Metadata=` `res://<assemblyFullName>/<resourceName>;`</span><span class="sxs-lookup"><span data-stu-id="2aa2b-114">`Metadata=` `res://<assemblyFullName>/<resourceName>;`</span></span>  
   
-    -   `Metadata=` `res://*/<resourceName>;`  
+    -   <span data-ttu-id="2aa2b-115">`Metadata=` `res://*/<resourceName>;`</span><span class="sxs-lookup"><span data-stu-id="2aa2b-115">`Metadata=` `res://*/<resourceName>;`</span></span>  
   
     -   `Metadata=res://*;`  
   
-     Para obtener más información, consulta [Cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+     <span data-ttu-id="2aa2b-116">Para obtener más información, consulte [las cadenas de conexión](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span><span class="sxs-lookup"><span data-stu-id="2aa2b-116">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
-## Ejemplo  
- La cadena de conexión siguiente hace referencia a los archivos de asignación y de modelo incrustados para el [modelo AdventureWorks Sales](http://msdn.microsoft.com/es-es/f16cd988-673f-4376-b034-129ca93c7832).  Esta cadena de conexión está almacenada en el archivo App.config del proyecto.  
+## <a name="example"></a><span data-ttu-id="2aa2b-117">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2aa2b-117">Example</span></span>  
+ <span data-ttu-id="2aa2b-118">Hace referencia a la siguiente cadena de conexión para los archivos de asignación y de modelo incrustados el [modelo AdventureWorks Sales](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).</span><span class="sxs-lookup"><span data-stu-id="2aa2b-118">The following connection string references embedded model and mapping files for the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832).</span></span> <span data-ttu-id="2aa2b-119">Esta cadena de conexión está almacenada en el archivo App.config del proyecto.</span><span class="sxs-lookup"><span data-stu-id="2aa2b-119">This connection string is stored in the project's App.config file.</span></span>  
   
   
   
-## Vea también  
- [Modelado y asignación](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)   
- [Definir la cadena de conexión](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)   
- [Cómo generar una cadena de conexión EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)   
- [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/es-es/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="2aa2b-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="2aa2b-120">See Also</span></span>  
+ [<span data-ttu-id="2aa2b-121">Modelado y asignación</span><span class="sxs-lookup"><span data-stu-id="2aa2b-121">Modeling and Mapping</span></span>](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
+ [<span data-ttu-id="2aa2b-122">Cómo: definir la cadena de conexión</span><span class="sxs-lookup"><span data-stu-id="2aa2b-122">How to: Define the Connection String</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)  
+ [<span data-ttu-id="2aa2b-123">Cómo: crear una cadena de conexión EntityConnection</span><span class="sxs-lookup"><span data-stu-id="2aa2b-123">How to: Build an EntityConnection Connection String</span></span>](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [<span data-ttu-id="2aa2b-124">Herramientas de Entity Data Model de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="2aa2b-124">ADO.NET Entity Data Model  Tools</span></span>](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

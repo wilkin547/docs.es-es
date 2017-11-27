@@ -1,70 +1,73 @@
 ---
-title: "DataViews | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Objetos DataView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# DataViews
-Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos almacenados en una <xref:System.Data.DataTable>, una capacidad que suele utilizarse en aplicaciones de enlace a datos.  Mediante una **DataView** puede exponer los datos de una tabla con distintos criterios de ordenación y filtrar los datos por el estado de fila o basándose en una expresión de filtro.  
+# <a name="dataviews"></a><span data-ttu-id="2cb26-102">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="2cb26-102">DataViews</span></span>
+<span data-ttu-id="2cb26-103">Una <xref:System.Data.DataView> le permite crear diferentes vistas de los datos almacenados en una <xref:System.Data.DataTable>, una capacidad que suele utilizarse en aplicaciones de enlace a datos.</span><span class="sxs-lookup"><span data-stu-id="2cb26-103">A <xref:System.Data.DataView> enables you to create different views of the data stored in a <xref:System.Data.DataTable>, a capability that is often used in data-binding applications.</span></span> <span data-ttu-id="2cb26-104">Con un **DataView**, puede exponer los datos en una tabla con distintos criterios de ordenación y puede filtrar los datos por estado de fila o basándose en una expresión de filtro.</span><span class="sxs-lookup"><span data-stu-id="2cb26-104">Using a **DataView**, you can expose the data in a table with different sort orders, and you can filter the data by row state or based on a filter expression.</span></span>  
   
- Una **DataView** proporciona una vista de datos dinámica en la **DataTable**subyacente: el contenido, el orden y la pertenencia reflejan los cambios en cuanto se producen.  Este comportamiento difiere del método **Select** de la **DataTable**, que devuelve una matriz de <xref:System.Data.DataRow> de una tabla basada en un filtro o un criterio de ordenación determinados: este contenido refleja cambios en la tabla subyacente, pero la pertenencia y la ordenación siguen siendo estáticas.  Las capacidades dinámicas de la **DataView** hacen que resulte ideal para las aplicaciones de enlace a datos.  
+ <span data-ttu-id="2cb26-105">A **DataView** proporciona una vista dinámica de datos subyacente **DataTable**: el contenido, el orden y la pertenencia reflejan cambios cuando se producen.</span><span class="sxs-lookup"><span data-stu-id="2cb26-105">A **DataView** provides a dynamic view of data in the underlying **DataTable**: the content, ordering, and membership reflect changes as they occur.</span></span> <span data-ttu-id="2cb26-106">Este comportamiento difiere de la **seleccione** método de la **DataTable**, que devuelve un <xref:System.Data.DataRow> matriz a partir de una tabla basada en un criterio de filtro o un orden determinado: thiscontent refleja los cambios en el subyacente de la tabla, pero la pertenencia y ordenación siguen siendo estáticas.</span><span class="sxs-lookup"><span data-stu-id="2cb26-106">This behavior differs from the **Select** method of the **DataTable**, which returns a <xref:System.Data.DataRow> array from a table based on a particular filter and/or sort order: thiscontent reflects changes to the underlying table, but its membership and ordering remain static.</span></span> <span data-ttu-id="2cb26-107">Las capacidades dinámicas de la **DataView** hacen que resulte ideal para las aplicaciones de enlace de datos.</span><span class="sxs-lookup"><span data-stu-id="2cb26-107">The dynamic capabilities of the **DataView** make it ideal for data-binding applications.</span></span>  
   
- Una **DataView** proporciona una vista dinámica de un único conjunto de datos, similar a la vista de una base de datos, a la que puede aplicar distintos criterios de ordenación y filtrado.  Sin embargo, al contrario que una vista de base de datos, una **DataView** no puede tratarse como una tabla y no puede proporcionar una vista de tablas combinadas.  Tampoco puede excluir columnas que existen en la tabla de origen ni puede anexar columnas, como columnas de cálculo, que no existen en la tabla de origen.  
+ <span data-ttu-id="2cb26-108">A **DataView** proporciona una vista dinámica de un único conjunto de datos, similar a una vista de base de datos, al que puede aplicar distintos de ordenación y criterios de filtrado.</span><span class="sxs-lookup"><span data-stu-id="2cb26-108">A **DataView** provides you with a dynamic view of a single set of data, much like a database view, to which you can apply different sorting and filtering criteria.</span></span> <span data-ttu-id="2cb26-109">A diferencia de una vista de base de datos, sin embargo, un **DataView** no se puede tratar como una tabla y no puede proporcionar una vista de tablas combinadas.</span><span class="sxs-lookup"><span data-stu-id="2cb26-109">Unlike a database view, however, a **DataView** cannot be treated as a table and cannot provide a view of joined tables.</span></span> <span data-ttu-id="2cb26-110">Tampoco puede excluir columnas que existen en la tabla de origen ni puede anexar columnas, como columnas de cálculo, que no existen en la tabla de origen.</span><span class="sxs-lookup"><span data-stu-id="2cb26-110">You also cannot exclude columns that exist in the source table, nor can you append columns, such as computational columns, that do not exist in the source table.</span></span>  
   
- Puede utilizar un <xref:System.Data.DataView.DataViewManager%2A> para administrar la configuración de vista para todas las tablas de un **DataSet**.  El **DataViewManager** proporciona una forma cómoda de administrar la configuración de vista predeterminada para cada tabla.  Al enlazar un control a más de una tabla de un **DataSet**, el enlace a un **DataViewManager** es la elección ideal.  
+ <span data-ttu-id="2cb26-111">Puede usar un <xref:System.Data.DataView.DataViewManager%2A> para administrar la configuración de vista para todas las tablas en un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-111">You can use a <xref:System.Data.DataView.DataViewManager%2A> to manage view settings for all the tables in a **DataSet**.</span></span> <span data-ttu-id="2cb26-112">El **DataViewManager** proporciona una manera cómoda de administrar la configuración de vista predeterminada para cada tabla.</span><span class="sxs-lookup"><span data-stu-id="2cb26-112">The **DataViewManager** provides you with a convenient way to manage default view settings for each table.</span></span> <span data-ttu-id="2cb26-113">Al enlazar un control a más de una tabla de un **conjunto de datos**, el enlace a un **DataViewManager** es la elección ideal.</span><span class="sxs-lookup"><span data-stu-id="2cb26-113">When binding a control to more than one table of a **DataSet**, binding to a **DataViewManager** is the ideal choice.</span></span>  
   
-## En esta sección  
- [Crear DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
- Describe cómo se crea una **DataView** para una **DataTable**.  
+## <a name="in-this-section"></a><span data-ttu-id="2cb26-114">En esta sección</span><span class="sxs-lookup"><span data-stu-id="2cb26-114">In This Section</span></span>  
+ [<span data-ttu-id="2cb26-115">Crear un objeto DataView</span><span class="sxs-lookup"><span data-stu-id="2cb26-115">Creating a DataView</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+ <span data-ttu-id="2cb26-116">Describe cómo crear un **DataView** para un **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-116">Describes how to create a **DataView** for a **DataTable**.</span></span>  
   
- [Ordenar y filtrar datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
- Describe cómo establecer las propiedades de una **DataView** para devolver subconjuntos de filas de datos que reúnan determinados criterios de filtro o para devolver datos con un criterio de ordenación concreto.  
+ [<span data-ttu-id="2cb26-117">Ordenar y filtrar datos</span><span class="sxs-lookup"><span data-stu-id="2cb26-117">Sorting and Filtering Data</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ <span data-ttu-id="2cb26-118">Describe cómo establecer las propiedades de un **DataView** para devolver subconjuntos de filas de datos que reúnan determinados criterios, o para devolver datos en un orden determinado.</span><span class="sxs-lookup"><span data-stu-id="2cb26-118">Describes how to set the properties of a **DataView** to return subsets of data rows meeting specific filter criteria, or to return data in a particular sort order.</span></span>  
   
- [DataRows y DataRowViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
- Describe cómo tener acceso a los datos expuestos por la **DataView**.  
+ [<span data-ttu-id="2cb26-119">Objetos DataRow y DataRowView</span><span class="sxs-lookup"><span data-stu-id="2cb26-119">DataRows and DataRowViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ <span data-ttu-id="2cb26-120">Describe cómo obtener acceso a los datos expuestos por el **DataView**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-120">Describes how to access the data exposed by the **DataView**.</span></span>  
   
- [Buscar filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
- Describe cómo buscar una fila determinada en una **DataView**.  
+ [<span data-ttu-id="2cb26-121">Buscar las filas</span><span class="sxs-lookup"><span data-stu-id="2cb26-121">Finding Rows</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
+ <span data-ttu-id="2cb26-122">Describe cómo buscar una fila determinada en una **DataView**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-122">Describes how to find a particular row in a **DataView**.</span></span>  
   
- [ChildViews y relaciones](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
- Describe cómo crear vistas de datos a partir de una relación primaria\-secundaria con una **DataView**.  
+ [<span data-ttu-id="2cb26-123">Objetos ChildView y Relation</span><span class="sxs-lookup"><span data-stu-id="2cb26-123">ChildViews and Relations</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
+ <span data-ttu-id="2cb26-124">Describe cómo crear vistas de datos de una relación de elementos primarios y secundarios con un **DataView**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-124">Describes how to create views of data from a parent-child relationship using a **DataView**.</span></span>  
   
- [Modificar objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
- Describe cómo modificar los datos de la **DataTable** subyacente mediante la **DataView**, así como la forma de habilitar y deshabilitar las actualizaciones.  
+ [<span data-ttu-id="2cb26-125">Modificar objetos DataView</span><span class="sxs-lookup"><span data-stu-id="2cb26-125">Modifying DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ <span data-ttu-id="2cb26-126">Describe cómo modificar los datos de subyacente **DataTable** a través de la **DataView**, como habilitar o deshabilitar las actualizaciones.</span><span class="sxs-lookup"><span data-stu-id="2cb26-126">Describes how to modify the data in the underlying **DataTable** via the **DataView**, including enabling or disabling updates.</span></span>  
   
- [Tratamiento de eventos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
- Describe cómo utilizar el evento **ListChanged** para recibir una notificación cuando se actualice el contenido o el orden de una **DataView**.  
+ [<span data-ttu-id="2cb26-127">Control de eventos de DataView</span><span class="sxs-lookup"><span data-stu-id="2cb26-127">Handling DataView Events</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ <span data-ttu-id="2cb26-128">Describe cómo utilizar el **ListChanged** eventos para recibir una notificación cuando el contenido o el orden de un **DataView** se está actualizando.</span><span class="sxs-lookup"><span data-stu-id="2cb26-128">Describes how to use the **ListChanged** event to receive notification when the contents or order of a **DataView** is being updated.</span></span>  
   
- [Administrar DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
- Describe cómo utilizar un **DataViewManager** para administrar la configuración de **DataView** para todas las tablas de un **DataSet**.  
+ [<span data-ttu-id="2cb26-129">Administrar objetos DataView</span><span class="sxs-lookup"><span data-stu-id="2cb26-129">Managing DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ <span data-ttu-id="2cb26-130">Describe cómo usar un **DataViewManager** para administrar **DataView** configuración para cada tabla en un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-130">Describes how to use a **DataViewManager** to manage **DataView** settings for each table in a **DataSet**.</span></span>  
   
-## Secciones relacionadas  
- [ASP.NET Web Applications](http://msdn.microsoft.com/es-es/a812d7b7-049e-4234-a4c2-6acf690301f6)  
- Proporciona información general y procedimientos detallados paso a paso sobre la creación de aplicaciones ASP.NET, Web Forms y servicios Web.  
+## <a name="related-sections"></a><span data-ttu-id="2cb26-131">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="2cb26-131">Related Sections</span></span>  
+ [<span data-ttu-id="2cb26-132">Aplicaciones Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2cb26-132">ASP.NET Web Applications</span></span>](http://msdn.microsoft.com/en-us/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ <span data-ttu-id="2cb26-133">Proporciona información general y procedimientos detallados paso a paso sobre la creación de aplicaciones ASP.NET, Web Forms y servicios Web.</span><span class="sxs-lookup"><span data-stu-id="2cb26-133">Provides overviews and detailed, step-by-step procedures for creating ASP.NET applications, Web Forms, and Web Services.</span></span>  
   
- [Windows Applications](http://msdn.microsoft.com/es-es/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
- Proporciona información detallada sobre el uso de Windows Forms y aplicaciones de consola.  
+ [<span data-ttu-id="2cb26-134">Aplicaciones de Windows</span><span class="sxs-lookup"><span data-stu-id="2cb26-134">Windows Applications</span></span>](http://msdn.microsoft.com/en-us/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ <span data-ttu-id="2cb26-135">Proporciona información detallada sobre el uso de Windows Forms y aplicaciones de consola.</span><span class="sxs-lookup"><span data-stu-id="2cb26-135">Provides detailed information about working with Windows Forms and console applications.</span></span>  
   
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Describe el objeto **DataSet** y cómo puede utilizarlo para administrar datos de aplicación.  
+ [<span data-ttu-id="2cb26-136">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="2cb26-136">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ <span data-ttu-id="2cb26-137">Describe la **conjunto de datos** objeto y cómo puede utilizarlo para administrar datos de aplicación.</span><span class="sxs-lookup"><span data-stu-id="2cb26-137">Describes the **DataSet** object and how you can use it to manage application data.</span></span>  
   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- Describe el objeto **DataTable** y cómo puede utilizarlo para administrar datos de aplicación por sí solos o como parte de un **DataSet**.  
+ [<span data-ttu-id="2cb26-138">Objetos DataTable</span><span class="sxs-lookup"><span data-stu-id="2cb26-138">DataTables</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ <span data-ttu-id="2cb26-139">Describe la **DataTable** objeto y cómo puede utilizarlo para administrar datos de aplicación por sí solo o como parte de un **conjunto de datos**.</span><span class="sxs-lookup"><span data-stu-id="2cb26-139">Describes the **DataTable** object and how you can use it to manage application data by itself or as part of a **DataSet**.</span></span>  
   
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- Describe la arquitectura y los componentes de ADO.NET así como su uso para obtener acceso a orígenes de datos existentes y administrar los datos de las aplicaciones.  
+ [<span data-ttu-id="2cb26-140">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="2cb26-140">ADO.NET</span></span>](../../../../../docs/framework/data/adonet/index.md)  
+ <span data-ttu-id="2cb26-141">Describe la arquitectura y los componentes de ADO.NET así como su uso para obtener acceso a orígenes de datos existentes y administrar los datos de las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="2cb26-141">Describes the ADO.NET architecture and components, and how to use ADO.NET to access existing data sources and manage application data.</span></span>  
   
-## Vea también  
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="2cb26-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="2cb26-142">See Also</span></span>  
+ [<span data-ttu-id="2cb26-143">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="2cb26-143">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

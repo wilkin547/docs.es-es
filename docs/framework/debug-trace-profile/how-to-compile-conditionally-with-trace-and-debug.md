@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - trace compiler options
 - trace statements
@@ -23,99 +17,97 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee67d687b52bd911597fb99e6f1316e8a9cf5fe0
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f3907888ebcda9c5c6c498cbff39956391f7e213
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Cómo: Realizar compilación condicional con Trace y Debug
-Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de depuración aparecen en la ventana Salida de Visual Studio. Pero para incluir características de seguimiento en una aplicación implementada, tendrá que compilar las aplicaciones instrumentadas con la directiva de compilador **TRACE** habilitada. Esto permite que el código de seguimiento se compile en la versión de lanzamiento de la aplicación. Si no habilita la directiva **TRACE**, se ignorará todo el código de seguimiento durante la compilación y no se incluirá en el código ejecutable que se va a implementar.  
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a><span data-ttu-id="48236-102">Cómo: Realizar compilación condicional con Trace y Debug</span><span class="sxs-lookup"><span data-stu-id="48236-102">How to: Compile Conditionally with Trace and Debug</span></span>
+<span data-ttu-id="48236-103">Al depurar una aplicación durante el desarrollo, el seguimiento y la salida de depuración aparecen en la ventana Salida de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="48236-103">While you are debugging an application during development, both your tracing and debugging output go to the Output window in Visual Studio.</span></span> <span data-ttu-id="48236-104">Pero para incluir características de seguimiento en una aplicación implementada, tendrá que compilar las aplicaciones instrumentadas con la directiva de compilador **TRACE** habilitada.</span><span class="sxs-lookup"><span data-stu-id="48236-104">However, to include tracing features in a deployed application, you must compile your instrumented applications with the **TRACE** compiler directive enabled.</span></span> <span data-ttu-id="48236-105">Esto permite que el código de seguimiento se compile en la versión de lanzamiento de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="48236-105">This allows tracing code to be compiled into the release version of your application.</span></span> <span data-ttu-id="48236-106">Si no habilita la directiva **TRACE**, se ignorará todo el código de seguimiento durante la compilación y no se incluirá en el código ejecutable que se va a implementar.</span><span class="sxs-lookup"><span data-stu-id="48236-106">If you do not enable the **TRACE** directive, all tracing code is ignored during compilation and is not included in the executable code that you will deploy.</span></span>  
   
- Los métodos de depuración y seguimiento tienen atributos condicionales asociados. Por ejemplo, si el atributo condicional para el seguimiento es **true**, todas las instrucciones de seguimiento se incluyen dentro de un ensamblado (un archivo .exe o .dll compilado); si el atributo condicional de **Trace** es **false**, no se incluyen las instrucciones de seguimiento.  
+ <span data-ttu-id="48236-107">Los métodos de depuración y seguimiento tienen atributos condicionales asociados.</span><span class="sxs-lookup"><span data-stu-id="48236-107">Both the tracing and debugging methods have associated conditional attributes.</span></span> <span data-ttu-id="48236-108">Por ejemplo, si el atributo condicional para el seguimiento es **true**, todas las instrucciones de seguimiento se incluyen dentro de un ensamblado (un archivo .exe o .dll compilado); si el atributo condicional de **Trace** es **false**, no se incluyen las instrucciones de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="48236-108">For example, if the conditional attribute for tracing is **true**, all trace statements are included within an assembly (a compiled .exe file or .dll); if the **Trace** conditional attribute is **false**, the trace statements are not included.</span></span>  
   
- Para una compilación puede tener activados ambos, uno o ninguno de los atributos condicionales **Trace** o **Debug**. Por tanto, hay cuatro tipos de compilación: **Debug**, **Trace**, ambos o ninguno. Algunas compilaciones de versión para la implementación de producción pueden no contener ninguno; la mayoría de las compilaciones de depuración contienen ambos.  
+ <span data-ttu-id="48236-109">Para una compilación puede tener activados ambos, uno o ninguno de los atributos condicionales **Trace** o **Debug**.</span><span class="sxs-lookup"><span data-stu-id="48236-109">You can have either the **Trace** or **Debug** conditional attribute turned on for a build, or both, or neither.</span></span> <span data-ttu-id="48236-110">Por tanto, hay cuatro tipos de compilación: **Debug**, **Trace**, ambos o ninguno.</span><span class="sxs-lookup"><span data-stu-id="48236-110">Thus, there are four types of build: **Debug**, **Trace**, both, or neither.</span></span> <span data-ttu-id="48236-111">Algunas compilaciones de versión para la implementación de producción pueden no contener ninguno; la mayoría de las compilaciones de depuración contienen ambos.</span><span class="sxs-lookup"><span data-stu-id="48236-111">Some release builds for production deployment might contain neither; most debugging builds contain both.</span></span>  
   
- La configuración del compilador para la aplicación se puede configurar de varias maneras:  
+ <span data-ttu-id="48236-112">La configuración del compilador para la aplicación se puede configurar de varias maneras:</span><span class="sxs-lookup"><span data-stu-id="48236-112">You can specify the compiler settings for your application in several ways:</span></span>  
   
--   Las páginas de propiedades  
+-   <span data-ttu-id="48236-113">Las páginas de propiedades</span><span class="sxs-lookup"><span data-stu-id="48236-113">The property pages</span></span>  
   
--   La línea de comandos  
+-   <span data-ttu-id="48236-114">La línea de comandos</span><span class="sxs-lookup"><span data-stu-id="48236-114">The command line</span></span>  
   
--   **#CONST** (para Visual Basic) y **#define** (para C#)  
+-   <span data-ttu-id="48236-115">**#CONST** (para Visual Basic) y **#define** (para C#)</span><span class="sxs-lookup"><span data-stu-id="48236-115">**#CONST** (for Visual Basic) and **#define** (for C#)</span></span>  
   
-### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Para cambiar la configuración de compilación desde el cuadro de diálogo de páginas de propiedades  
+### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a><span data-ttu-id="48236-116">Para cambiar la configuración de compilación desde el cuadro de diálogo de páginas de propiedades</span><span class="sxs-lookup"><span data-stu-id="48236-116">To change compile settings from the property pages dialog box</span></span>  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo del proyecto.  
+1.  <span data-ttu-id="48236-117">En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="48236-117">Right-click the project node in **Solution Explorer**.</span></span>  
   
-2.  Seleccione **Propiedades** en el menú contextual.  
+2.  <span data-ttu-id="48236-118">Seleccione **Propiedades** en el menú contextual.</span><span class="sxs-lookup"><span data-stu-id="48236-118">Choose **Properties** from the shortcut menu.</span></span>  
   
-    -   En Visual Basic, haga clic en la pestaña **Compilar** en el panel izquierdo de la página de propiedades. Después, haga clic en el botón **Opciones de compilación avanzadas** para mostrar el cuadro de diálogo **Configuración de compilador avanzada**. Seleccione las casillas correspondientes a los valores de configuración del compilador que desee habilitar. Desactive las casillas de los valores de configuración que desee deshabilitar.  
+    -   <span data-ttu-id="48236-119">En Visual Basic, haga clic en la pestaña **Compilar** en el panel izquierdo de la página de propiedades. Después, haga clic en el botón **Opciones de compilación avanzadas** para mostrar el cuadro de diálogo **Configuración de compilador avanzada**.</span><span class="sxs-lookup"><span data-stu-id="48236-119">In Visual Basic, click the **Compile** tab in the left pane of the property page, then click the **Advanced Compile Options** button to display the **Advanced Compiler Settings** dialog box.</span></span> <span data-ttu-id="48236-120">Seleccione las casillas correspondientes a los valores de configuración del compilador que desee habilitar.</span><span class="sxs-lookup"><span data-stu-id="48236-120">Select the check boxes for the compiler settings you want to enable.</span></span> <span data-ttu-id="48236-121">Desactive las casillas de los valores de configuración que desee deshabilitar.</span><span class="sxs-lookup"><span data-stu-id="48236-121">Clear the check boxes for settings you want to disable.</span></span>  
   
-    -   En C#, haga clic en la pestaña **Compilar** en el panel izquierdo de la página de propiedades y, después, active las casillas correspondientes a los valores de configuración del compilador que quiere habilitar. Desactive las casillas de los valores de configuración que desee deshabilitar.  
+    -   <span data-ttu-id="48236-122">En C#, haga clic en la pestaña **Compilar** en el panel izquierdo de la página de propiedades y, después, active las casillas correspondientes a los valores de configuración del compilador que quiere habilitar.</span><span class="sxs-lookup"><span data-stu-id="48236-122">In C#, click the **Build** tab in the left pane of the property page, then select the check boxes for the compiler settings you want to enable.</span></span> <span data-ttu-id="48236-123">Desactive las casillas de los valores de configuración que desee deshabilitar.</span><span class="sxs-lookup"><span data-stu-id="48236-123">Clear the check boxes for settings you want to disable.</span></span>  
   
-### <a name="to-compile-instrumented-code-using-the-command-line"></a>Para compilar código instrumentado desde la línea de comandos  
+### <a name="to-compile-instrumented-code-using-the-command-line"></a><span data-ttu-id="48236-124">Para compilar código instrumentado desde la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="48236-124">To compile instrumented code using the command line</span></span>  
   
-1.  Establezca un modificador de compilación condicional en la línea de comandos. El compilador incluirá código de seguimiento o depuración en el archivo ejecutable.  
+1.  <span data-ttu-id="48236-125">Establezca un modificador de compilación condicional en la línea de comandos.</span><span class="sxs-lookup"><span data-stu-id="48236-125">Set a conditional compiler switch on the command line.</span></span> <span data-ttu-id="48236-126">El compilador incluirá código de seguimiento o depuración en el archivo ejecutable.</span><span class="sxs-lookup"><span data-stu-id="48236-126">The compiler will include trace or debug code in the executable.</span></span>  
   
-     Por ejemplo, la siguiente instrucción del compilador especificada en la línea de comandos incluiría el código de seguimiento en un ejecutable compilado:  
+     <span data-ttu-id="48236-127">Por ejemplo, la siguiente instrucción del compilador especificada en la línea de comandos incluiría el código de seguimiento en un ejecutable compilado:</span><span class="sxs-lookup"><span data-stu-id="48236-127">For example, the following compiler instruction entered on the command line would include your tracing code in a compiled executable:</span></span>  
   
-     Para Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     <span data-ttu-id="48236-128">Para Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**</span><span class="sxs-lookup"><span data-stu-id="48236-128">For Visual Basic: **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**</span></span>  
   
-     Para C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     <span data-ttu-id="48236-129">Para C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**</span><span class="sxs-lookup"><span data-stu-id="48236-129">For C#: **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**</span></span>  
   
     > [!TIP]
-    >  Para compilar varios archivos de aplicación, deje un espacio en blanco entre los nombres de archivo, por ejemplo, **MyApplication1.vb MyApplication2.vb MyApplication3.vb** o **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
+    >  <span data-ttu-id="48236-130">Para compilar varios archivos de aplicación, deje un espacio en blanco entre los nombres de archivo, por ejemplo, **MyApplication1.vb MyApplication2.vb MyApplication3.vb** o **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.</span><span class="sxs-lookup"><span data-stu-id="48236-130">To compile more than one application file, leave a blank space between the file names, for example, **MyApplication1.vb MyApplication2.vb MyApplication3.vb** or **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.</span></span>  
   
-     El significado de las directivas de compilación condicional usadas en los ejemplos anteriores es el siguiente:  
+     <span data-ttu-id="48236-131">El significado de las directivas de compilación condicional usadas en los ejemplos anteriores es el siguiente:</span><span class="sxs-lookup"><span data-stu-id="48236-131">The meaning of the conditional-compilation directives used in the above examples is as follows:</span></span>  
   
-    |Directiva|Significado|  
+    |<span data-ttu-id="48236-132">Directiva</span><span class="sxs-lookup"><span data-stu-id="48236-132">Directive</span></span>|<span data-ttu-id="48236-133">Significado</span><span class="sxs-lookup"><span data-stu-id="48236-133">Meaning</span></span>|  
     |---------------|-------------|  
-    |`vbc`|compilador de Visual Basic|  
-    |`csc`|Compilador de C#|  
-    |`/r:`|Hace referencia a un ensamblado externo (EXE o DLL)|  
-    |`/d:`|Define un símbolo de compilación condicional|  
+    |`vbc`|<span data-ttu-id="48236-134">compilador de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48236-134">Visual Basic compiler</span></span>|  
+    |`csc`|<span data-ttu-id="48236-135">Compilador de C#</span><span class="sxs-lookup"><span data-stu-id="48236-135">C# compiler</span></span>|  
+    |`/r:`|<span data-ttu-id="48236-136">Hace referencia a un ensamblado externo (EXE o DLL)</span><span class="sxs-lookup"><span data-stu-id="48236-136">References an external assembly (EXE or DLL)</span></span>|  
+    |`/d:`|<span data-ttu-id="48236-137">Define un símbolo de compilación condicional</span><span class="sxs-lookup"><span data-stu-id="48236-137">Defines a conditional compilation symbol</span></span>|  
   
     > [!NOTE]
-    >  TRACE o DEBUG deben escribirse en letras mayúsculas. Para obtener más información sobre los comandos de compilación condicional, escriba `vbc /?` (para Visual Basic) o `csc /?` (para C#) en el símbolo del sistema. Para más información, vea [Building from the Command Line](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (Compilar desde la línea de comandos) (C#) o [Invoking the Command-Line Compiler](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Invocar el compilador de línea de comandos) (Visual Basic).  
+    >  <span data-ttu-id="48236-138">TRACE o DEBUG deben escribirse en letras mayúsculas.</span><span class="sxs-lookup"><span data-stu-id="48236-138">You must spell TRACE or DEBUG with uppercase letters.</span></span> <span data-ttu-id="48236-139">Para obtener más información sobre los comandos de compilación condicional, escriba `vbc /?` (para Visual Basic) o `csc /?` (para C#) en el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="48236-139">For more information about the conditional compilation commands, enter `vbc /?` (for Visual Basic) or `csc /?` (for C#) at the command prompt.</span></span> <span data-ttu-id="48236-140">Para más información, vea [Building from the Command Line](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (Compilar desde la línea de comandos) (C#) o [Invoking the Command-Line Compiler](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Invocar el compilador de línea de comandos) (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="48236-140">For more information, see [Building from the Command Line](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) or [Invoking the Command-Line Compiler](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).</span></span>  
   
-### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Para realizar compilación condicional mediante #CONST o #define  
+### <a name="to-perform-conditional-compilation-using-const-or-define"></a><span data-ttu-id="48236-141">Para realizar compilación condicional mediante #CONST o #define</span><span class="sxs-lookup"><span data-stu-id="48236-141">To perform conditional compilation using #CONST or #define</span></span>  
   
-1.  Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.  
+1.  <span data-ttu-id="48236-142">Escriba la instrucción apropiada para su lenguaje de programación en la parte superior del archivo de código fuente.</span><span class="sxs-lookup"><span data-stu-id="48236-142">Type the appropriate statement for your programming language at the top of the source code file.</span></span>  
   
-    |Lenguaje|Instrucción|Resultado|  
+    |<span data-ttu-id="48236-143">Lenguaje</span><span class="sxs-lookup"><span data-stu-id="48236-143">Language</span></span>|<span data-ttu-id="48236-144">Instrucción</span><span class="sxs-lookup"><span data-stu-id="48236-144">Statement</span></span>|<span data-ttu-id="48236-145">Resultado</span><span class="sxs-lookup"><span data-stu-id="48236-145">Result</span></span>|  
     |--------------|---------------|------------|  
-    |**Visual Basic**|**#CONST TRACE = true**|Habilita el seguimiento|  
-    ||**#CONST TRACE = false**|Deshabilita el seguimiento|  
-    ||**#CONST DEBUG = true**|Habilita la depuración|  
-    ||**#CONST DEBUG = false**|Deshabilita la depuración|  
-    |**C#**|**#define TRACE**|Habilita el seguimiento|  
-    ||**#undef TRACE**|Deshabilita el seguimiento|  
-    ||**#define DEBUG**|Habilita la depuración|  
-    ||**#undef DEBUG**|Deshabilita la depuración|  
+    |<span data-ttu-id="48236-146">**Visual Basic**</span><span class="sxs-lookup"><span data-stu-id="48236-146">**Visual Basic**</span></span>|<span data-ttu-id="48236-147">**#CONST TRACE = true**</span><span class="sxs-lookup"><span data-stu-id="48236-147">**#CONST TRACE = true**</span></span>|<span data-ttu-id="48236-148">Habilita el seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-148">Enables tracing</span></span>|  
+    ||<span data-ttu-id="48236-149">**#CONST TRACE = false**</span><span class="sxs-lookup"><span data-stu-id="48236-149">**#CONST TRACE = false**</span></span>|<span data-ttu-id="48236-150">Deshabilita el seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-150">Disables tracing</span></span>|  
+    ||<span data-ttu-id="48236-151">**#CONST DEBUG = true**</span><span class="sxs-lookup"><span data-stu-id="48236-151">**#CONST DEBUG = true**</span></span>|<span data-ttu-id="48236-152">Habilita la depuración</span><span class="sxs-lookup"><span data-stu-id="48236-152">Enables debugging</span></span>|  
+    ||<span data-ttu-id="48236-153">**#CONST DEBUG = false**</span><span class="sxs-lookup"><span data-stu-id="48236-153">**#CONST DEBUG = false**</span></span>|<span data-ttu-id="48236-154">Deshabilita la depuración</span><span class="sxs-lookup"><span data-stu-id="48236-154">Disables debugging</span></span>|  
+    |<span data-ttu-id="48236-155">**C#**</span><span class="sxs-lookup"><span data-stu-id="48236-155">**C#**</span></span>|<span data-ttu-id="48236-156">**#define TRACE**</span><span class="sxs-lookup"><span data-stu-id="48236-156">**#define TRACE**</span></span>|<span data-ttu-id="48236-157">Habilita el seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-157">Enables tracing</span></span>|  
+    ||<span data-ttu-id="48236-158">**#undef TRACE**</span><span class="sxs-lookup"><span data-stu-id="48236-158">**#undef TRACE**</span></span>|<span data-ttu-id="48236-159">Deshabilita el seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-159">Disables tracing</span></span>|  
+    ||<span data-ttu-id="48236-160">**#define DEBUG**</span><span class="sxs-lookup"><span data-stu-id="48236-160">**#define DEBUG**</span></span>|<span data-ttu-id="48236-161">Habilita la depuración</span><span class="sxs-lookup"><span data-stu-id="48236-161">Enables debugging</span></span>|  
+    ||<span data-ttu-id="48236-162">**#undef DEBUG**</span><span class="sxs-lookup"><span data-stu-id="48236-162">**#undef DEBUG**</span></span>|<span data-ttu-id="48236-163">Deshabilita la depuración</span><span class="sxs-lookup"><span data-stu-id="48236-163">Disables debugging</span></span>|  
   
-### <a name="to-disable-tracing-or-debugging"></a>Para deshabilitar el seguimiento o la depuración  
+### <a name="to-disable-tracing-or-debugging"></a><span data-ttu-id="48236-164">Para deshabilitar el seguimiento o la depuración</span><span class="sxs-lookup"><span data-stu-id="48236-164">To disable tracing or debugging</span></span>  
   
-1.  Elimine la directiva de compilador del código fuente.  
+1.  <span data-ttu-id="48236-165">Elimine la directiva de compilador del código fuente.</span><span class="sxs-lookup"><span data-stu-id="48236-165">Delete the compiler directive from your source code.</span></span>  
   
-     \- o -  
+     <span data-ttu-id="48236-166">\- o -</span><span class="sxs-lookup"><span data-stu-id="48236-166">\- or -</span></span>  
   
-2.  Convierta en comentario la directiva de compilador.  
+2.  <span data-ttu-id="48236-167">Convierta en comentario la directiva de compilador.</span><span class="sxs-lookup"><span data-stu-id="48236-167">Comment out the compiler directive.</span></span>  
   
     > [!NOTE]
-    >  Cuando esté preparado para compilar, puede elegir **Compilar** en el menú **Compilar**, o bien usar el método de línea de comandos, pero sin escribir **d:** para definir símbolos de compilación condicional.  
+    >  <span data-ttu-id="48236-168">Cuando esté preparado para compilar, puede elegir **Compilar** en el menú **Compilar**, o bien usar el método de línea de comandos, pero sin escribir **d:** para definir símbolos de compilación condicional.</span><span class="sxs-lookup"><span data-stu-id="48236-168">When you are ready to compile, you can either choose **Build** from the **Build** menu, or use the command line method but without typing the **d:** to define conditional compilation symbols.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)   
- [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
- [Invocar al compilador de la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
-
+## <a name="see-also"></a><span data-ttu-id="48236-169">Vea también</span><span class="sxs-lookup"><span data-stu-id="48236-169">See Also</span></span>  
+ [<span data-ttu-id="48236-170">Seguimiento e instrumentación de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="48236-170">Tracing and Instrumenting Applications</span></span>](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [<span data-ttu-id="48236-171">Cómo: crear, inicializar y configurar modificadores de seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-171">How to: Create, Initialize and Configure Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [<span data-ttu-id="48236-172">Modificadores de seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-172">Trace Switches</span></span>](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [<span data-ttu-id="48236-173">Agentes de escucha de seguimiento</span><span class="sxs-lookup"><span data-stu-id="48236-173">Trace Listeners</span></span>](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [<span data-ttu-id="48236-174">Cómo: agregar instrucciones de seguimiento al código de aplicación</span><span class="sxs-lookup"><span data-stu-id="48236-174">How to: Add Trace Statements to Application Code</span></span>](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [<span data-ttu-id="48236-175">Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="48236-175">How to: Set Environment Variables for the Visual Studio Command Line</span></span>](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [<span data-ttu-id="48236-176">Invocar al compilador de la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="48236-176">How to: Invoke the Command-Line Compiler</span></span>](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

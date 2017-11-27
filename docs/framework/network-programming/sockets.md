@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -26,26 +21,24 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9ddf506ee82d90c8a4d363c1ecc3abd1a8f9dbca
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de5778e398a9a7205e99cc810d0b672ac247da08
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sockets"></a>sockets
-El espacio de nombres <xref:System.Net.Sockets> contiene una implementación administrada de la interfaz de Windows Sockets. Las demás clases de acceso a la red del espacio de nombres <xref:System.Net> se basan en esta implementación de sockets.  
+# <a name="sockets"></a><span data-ttu-id="cc0d1-102">sockets</span><span class="sxs-lookup"><span data-stu-id="cc0d1-102">Sockets</span></span>
+<span data-ttu-id="cc0d1-103">El espacio de nombres <xref:System.Net.Sockets> contiene una implementación administrada de la interfaz de Windows Sockets.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-103">The <xref:System.Net.Sockets> namespace contains a managed implementation of the Windows Sockets interface.</span></span> <span data-ttu-id="cc0d1-104">Las demás clases de acceso a la red del espacio de nombres <xref:System.Net> se basan en esta implementación de sockets.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-104">All other network-access classes in the <xref:System.Net> namespace are built on top of this implementation of sockets.</span></span>  
   
- La clase <xref:System.Net.Sockets.Socket> de .NET Framework es una versión de código administrado de los servicios de socket proporcionados por la API de Winsock32. En la mayoría de los casos, los métodos de la clase **Socket** solo serializan los datos en sus equivalentes nativos de Win32 y controlan las comprobaciones de seguridad necesarias.  
+ <span data-ttu-id="cc0d1-105">La clase <xref:System.Net.Sockets.Socket> de .NET Framework es una versión de código administrado de los servicios de socket proporcionados por la API de Winsock32.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-105">The .NET Framework <xref:System.Net.Sockets.Socket> class is a managed-code version of the socket services provided by the Winsock32 API.</span></span> <span data-ttu-id="cc0d1-106">En la mayoría de los casos, los métodos de la clase **Socket** solo serializan los datos en sus equivalentes nativos de Win32 y controlan las comprobaciones de seguridad necesarias.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-106">In most cases, the **Socket** class methods simply marshal data into their native Win32 counterparts and handle any necessary security checks.</span></span>  
   
- La clase **Socket** admite dos modos básicos, el modo sincrónico y el modo asincrónico. En el modo sincrónico, las llamadas a funciones que efectúan operaciones de red (como <xref:System.Net.Sockets.Socket.Send%2A> y <xref:System.Net.Sockets.Socket.Receive%2A>) esperan a que finalice la operación antes de devolver el control al programa que realiza la llamada. En el modo asincrónico, estas llamadas vuelven inmediatamente.  
+ <span data-ttu-id="cc0d1-107">La clase **Socket** admite dos modos básicos, el modo sincrónico y el modo asincrónico.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-107">The **Socket** class supports two basic modes, synchronous and asynchronous.</span></span> <span data-ttu-id="cc0d1-108">En el modo sincrónico, las llamadas a funciones que efectúan operaciones de red (como <xref:System.Net.Sockets.Socket.Send%2A> y <xref:System.Net.Sockets.Socket.Receive%2A>) esperan a que finalice la operación antes de devolver el control al programa que realiza la llamada.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-108">In synchronous mode, calls to functions that perform network operations (such as <xref:System.Net.Sockets.Socket.Send%2A> and <xref:System.Net.Sockets.Socket.Receive%2A>) wait until the operation completes before returning control to the calling program.</span></span> <span data-ttu-id="cc0d1-109">En el modo asincrónico, estas llamadas vuelven inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="cc0d1-109">In asynchronous mode, these calls return immediately.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
+## <a name="see-also"></a><span data-ttu-id="cc0d1-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="cc0d1-110">See Also</span></span>  
+ [<span data-ttu-id="cc0d1-111">Cómo: crear un socket</span><span class="sxs-lookup"><span data-stu-id="cc0d1-111">How to: Create a Socket</span></span>](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
     
- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)
-
+ [<span data-ttu-id="cc0d1-112">Usar protocolos de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="cc0d1-112">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)

@@ -1,50 +1,53 @@
 ---
-title: "Enlaces de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlaces [WCF]"
-  - "WCF [WCF], enlaces"
-  - "Windows Communication Foundation [WCF], enlaces"
+title: Enlaces de Windows Communication Foundation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF [WCF], bindings
+- Windows Communication Foundation [WCF], bindings
+- bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlaces de Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] separa cómo se escribe el software para una aplicación de cómo se comunica con otro software.Los enlaces se usan para especificar el transporte, la codificación y los detalles de protocolo necesarios para que los clientes y los servicios se comuniquen entre sí.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa enlaces para generar la representación subyacente de conexión del extremo, por lo que la mayoría de los detalles de enlace se deben acordar entre las partes que están en comunicación.La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el extremo para el servicio.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo hacerlo, consulte [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+# <a name="windows-communcation-foundation-bindings"></a><span data-ttu-id="c882f-102">Enlaces de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c882f-102">Windows Communcation Foundation Bindings</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="c882f-103"> separa cómo se escribe el software para una aplicación de cómo se comunica con otro software.</span><span class="sxs-lookup"><span data-stu-id="c882f-103"> separates how the software for an application is written from how it communicates with other software.</span></span> <span data-ttu-id="c882f-104">Los enlaces se usan para especificar el transporte, codificación y detalles protocolares requeridos para que los clientes y servicios se comuniquen entre sí.</span><span class="sxs-lookup"><span data-stu-id="c882f-104">Bindings are used to specify the transport, encoding, and protocol details required for clients and services to communicate with each other.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c882f-105"> usa enlaces para generar la representación subyacente de conexión del extremo, por lo que la mayoría de los detalles de enlace se deben acordar entre las partes que están en comunicación.</span><span class="sxs-lookup"><span data-stu-id="c882f-105"> uses bindings to generate the underlying wire representation of the endpoint, so most of the binding details must be agreed upon by the parties that are communicating.</span></span> <span data-ttu-id="c882f-106">La manera más sencilla de lograrlo es que los clientes de un servicio usen el mismo enlace que emplea el punto de conexión para el servicio.</span><span class="sxs-lookup"><span data-stu-id="c882f-106">The easiest way to achieve this is for clients of a service to use the same binding that the endpoint for the service uses.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c882f-107">Cómo hacer esto, consulte [utilizando enlaces para configurar los servicios de Windows Communication Foundation y los clientes](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).</span><span class="sxs-lookup"><span data-stu-id="c882f-107"> how to do this, see [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).</span></span>  
   
- Un enlace se compone de una colección de elementos de enlace.Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes.Un enlace debe incluir por lo menos un elemento de enlace del transporte, por lo menos un elemento de enlace de la codificación de mensajes \(que el elemento de enlace del transporte puede proporcionar de forma predeterminada\), y cualquier número de otros elementos de enlace de protocolo.El proceso que compila un tiempo de ejecución a partir de esta descripción permite a cada elemento de enlace contribuir en el código a ese tiempo de ejecución.  
+ <span data-ttu-id="c882f-108">Un enlace se compone de una colección de elementos de enlace.</span><span class="sxs-lookup"><span data-stu-id="c882f-108">A binding is made up of a collection of binding elements.</span></span> <span data-ttu-id="c882f-109">Cada elemento describe algún aspecto de cómo el extremo se comunica con los clientes.</span><span class="sxs-lookup"><span data-stu-id="c882f-109">Each element describes some aspect of how the endpoint communicates with clients.</span></span> <span data-ttu-id="c882f-110">Un enlace debe incluir por lo menos un elemento de enlace del transporte, por lo menos un elemento de enlace de la codificación de mensajes (que el elemento de enlace del transporte puede proporcionar de forma predeterminada), y cualquier número de otros elementos de enlace de protocolo.</span><span class="sxs-lookup"><span data-stu-id="c882f-110">A binding must include at least one transport binding element, at least one message-encoding binding element (which the transport binding element can provide by default), and any number of other protocol binding elements.</span></span> <span data-ttu-id="c882f-111">El proceso que compila un tiempo de ejecución a partir de esta descripción permite a cada elemento de enlace contribuir en el código a ese tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="c882f-111">The process that builds a runtime out of this description allows each binding element to contribute code to that runtime.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona enlaces que contienen selecciones comunes de elementos de enlace.Éstos se pueden utilizar con su configuración predeterminada o puede modificar esos valores predeterminados según los requisitos del usuario.Estos enlaces proporcionados por el sistema tienen propiedades que permiten el control directo sobre los elementos de enlace y sus valores.También puede trabajar fácilmente y en paralelo con varias versiones de un enlace dando a cada versión del enlace un nombre propio.Para obtener información detallada, consulte [Configuración de enlaces proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="c882f-112"> proporciona enlaces que contienen selecciones comunes de elementos de enlace.</span><span class="sxs-lookup"><span data-stu-id="c882f-112"> provides bindings that contain common selections of binding elements.</span></span> <span data-ttu-id="c882f-113">Éstos se pueden utilizar con su configuración predeterminada o puede modificar esos valores predeterminados según los requisitos del usuario.</span><span class="sxs-lookup"><span data-stu-id="c882f-113">These can be used with their default settings or you can modify those default values according to user requirements.</span></span> <span data-ttu-id="c882f-114">Estos enlaces proporcionados por el sistema tienen propiedades que permiten el control directo sobre los elementos de enlace y sus valores.</span><span class="sxs-lookup"><span data-stu-id="c882f-114">These system-provided bindings have properties that allow direct control over the binding elements and their settings.</span></span> <span data-ttu-id="c882f-115">También puede trabajar fácilmente y en paralelo con varias versiones de un enlace dando a cada versión del enlace un nombre propio.</span><span class="sxs-lookup"><span data-stu-id="c882f-115">You can also easily work side-by-side with multiple versions of a binding by giving each version of the binding its own name.</span></span> <span data-ttu-id="c882f-116">Para obtener más información, consulte [Configuring System-Provided enlaces](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="c882f-116">For details, see [Configuring System-Provided Bindings](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).</span></span>  
   
- Si necesita una colección de elementos de enlace no proporcionada por uno de estos enlaces proporcionados por el sistema, puede crear un enlace personalizado que esté compuesto de la colección de elementos de enlace requeridos.Estos enlaces personalizados son fáciles de crear y no requieren una nueva clase, pero no proporcionan las propiedades para controlar los elementos de enlace o sus valores.Puede obtener acceso a los elementos de enlace y modificar sus valores a través de la colección que los contiene.Para obtener información detallada, consulte [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ <span data-ttu-id="c882f-117">Si necesita una colección de elementos de enlace no proporcionada por uno de estos enlaces proporcionados por el sistema, puede crear un enlace personalizado que esté compuesto de la colección de elementos de enlace requeridos.</span><span class="sxs-lookup"><span data-stu-id="c882f-117">If you need a collection of binding elements not provided by one of these system-provided bindings, you can create a custom binding that consists of the collection of binding elements required.</span></span> <span data-ttu-id="c882f-118">Estos enlaces personalizados son fáciles de crear y no requieren una nueva clase, pero no proporcionan las propiedades para controlar los elementos de enlace o sus valores.</span><span class="sxs-lookup"><span data-stu-id="c882f-118">These custom bindings are easy to create and do not require a new class, but they do not provide properties for controlling the binding elements or their settings.</span></span> <span data-ttu-id="c882f-119">Puede obtener acceso a los elementos de enlace y modificar sus valores a través de la colección que los contiene.</span><span class="sxs-lookup"><span data-stu-id="c882f-119">You can access the binding elements and modify their settings through the collection that contains them.</span></span> <span data-ttu-id="c882f-120">Para obtener más información, consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md).</span><span class="sxs-lookup"><span data-stu-id="c882f-120">For details, see [Custom Bindings](../../../../docs/framework/wcf/extending/custom-bindings.md).</span></span>  
   
-## En esta sección  
- [Configuración de enlaces proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- Describe cómo utilizar y modificar los enlaces que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona para admitir los escenarios comunes.  
+## <a name="in-this-section"></a><span data-ttu-id="c882f-121">En esta sección</span><span class="sxs-lookup"><span data-stu-id="c882f-121">In This Section</span></span>  
+ [<span data-ttu-id="c882f-122">Configuración de enlaces proporcionados por el sistema</span><span class="sxs-lookup"><span data-stu-id="c882f-122">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ <span data-ttu-id="c882f-123">Describe cómo utilizar y modificar los enlaces que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona para admitir los escenarios comunes.</span><span class="sxs-lookup"><span data-stu-id="c882f-123">Describes how to use and modify the bindings that [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides to support common scenarios.</span></span>  
   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- Describe cómo definir los enlaces [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para los servicios y clientes de forma imperativa en código y de forma declarativa utilizando la configuración.  
+ [<span data-ttu-id="c882f-124">Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="c882f-124">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ <span data-ttu-id="c882f-125">Describe cómo definir los enlaces [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para los servicios y clientes de forma imperativa en código y de forma declarativa utilizando la configuración.</span><span class="sxs-lookup"><span data-stu-id="c882f-125">Describes how to define [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] bindings for services and clients imperatively in code and declaratively using configuration.</span></span>  
   
- [Enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)  
- Describe qué es <xref:System.ServiceModel.Channels.CustomBinding> y cuándo se utiliza.  
+ [<span data-ttu-id="c882f-126">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="c882f-126">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ <span data-ttu-id="c882f-127">Describe qué es <xref:System.ServiceModel.Channels.CustomBinding> y cuándo se utiliza.</span><span class="sxs-lookup"><span data-stu-id="c882f-127">Describes what a <xref:System.ServiceModel.Channels.CustomBinding> is and when it is used.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="c882f-128">Referencia</span><span class="sxs-lookup"><span data-stu-id="c882f-128">Reference</span></span>  
  <xref:System.ServiceModel.Channels.Binding>  
   
  <xref:System.ServiceModel.Channels.BindingElement>  
   
  <xref:System.ServiceModel.Channels.CustomBinding>  
   
-## Secciones relacionadas  
- [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="related-sections"></a><span data-ttu-id="c882f-129">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="c882f-129">Related Sections</span></span>  
+ [<span data-ttu-id="c882f-130">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="c882f-130">Extending Bindings</span></span>](../../../../docs/framework/wcf/extending/extending-bindings.md)

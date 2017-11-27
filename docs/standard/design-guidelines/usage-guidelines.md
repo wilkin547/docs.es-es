@@ -1,46 +1,43 @@
 ---
-title: "Instrucciones de uso | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "instrucciones de diseño clases biblioteca [.NET Framework], instrucciones de uso"
+title: Instrucciones de uso
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Instrucciones de uso
-Esta sección contiene directrices para el uso de tipos comunes en las API de acceso público. Trata de uso directo de los tipos de Framework \(por ejemplo, los atributos de serialización\) y la sobrecarga de operadores comunes integrados.  
+# <a name="usage-guidelines"></a><span data-ttu-id="0fd3e-102">Instrucciones de uso</span><span class="sxs-lookup"><span data-stu-id="0fd3e-102">Usage Guidelines</span></span>
+<span data-ttu-id="0fd3e-103">Esta sección contiene directrices para utilizar tipos comunes en las API es accesibles públicamente.</span><span class="sxs-lookup"><span data-stu-id="0fd3e-103">This section contains guidelines for using common types in publicly accessible APIs.</span></span> <span data-ttu-id="0fd3e-104">Ocupa de uso directo de integrados tipos de marco de trabajo (por ejemplo, los atributos de serialización) y la sobrecarga de operadores comunes.</span><span class="sxs-lookup"><span data-stu-id="0fd3e-104">It deals with direct usage of built-in Framework types (e.g., serialization attributes) and overloading common operators.</span></span>  
   
- El <xref:System.IDisposable?displayProperty=fullName> interfaz no se tratan en esta sección, pero se trata en la [Patrón de Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sección.  
+ <span data-ttu-id="0fd3e-105">El <xref:System.IDisposable?displayProperty=nameWithType> interfaz no se trata en esta sección, pero se describe en el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) sección.</span><span class="sxs-lookup"><span data-stu-id="0fd3e-105">The <xref:System.IDisposable?displayProperty=nameWithType> interface is not covered in this section, but is discussed in the [Dispose Pattern](../../../docs/standard/design-guidelines/dispose-pattern.md) section.</span></span>  
   
 > [!NOTE]
->  Para instrucciones e información adicional acerca de otro común, los tipos integrados de .NET Framework, vea los temas de referencia para los siguientes: <xref:System.DateTime?displayProperty=fullName>, <xref:System.DateTimeOffset?displayProperty=fullName>, <xref:System.ICloneable?displayProperty=fullName>, <xref:System.IComparable%601?displayProperty=fullName>, <xref:System.IEquatable%601?displayProperty=fullName>, <xref:System.Nullable%601?displayProperty=fullName>, <xref:System.Object?displayProperty=fullName>, <xref:System.Uri?displayProperty=fullName>.  
+>  <span data-ttu-id="0fd3e-106">Para instrucciones e información adicional sobre otros comunes, los tipos integrados de .NET Framework, vea los temas de referencia para lo siguiente: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType> , <xref:System.Uri?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0fd3e-106">For guidelines and additional information about about other common, built-in .NET Framework types, see the reference topics for the following: <xref:System.DateTime?displayProperty=nameWithType>, <xref:System.DateTimeOffset?displayProperty=nameWithType>, <xref:System.ICloneable?displayProperty=nameWithType>, <xref:System.IComparable%601?displayProperty=nameWithType>, <xref:System.IEquatable%601?displayProperty=nameWithType>, <xref:System.Nullable%601?displayProperty=nameWithType>, <xref:System.Object?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>.</span></span>  
   
-## En esta sección  
- [Matrices](../../../docs/standard/design-guidelines/arrays.md)  
- [Atributos](../../../docs/standard/design-guidelines/atributos.md)  
- [Colecciones](../../../amples/snippets/cpp/VS_Snippets_Misc/cx_collections/cpp/collections.vcxproj)  
- [Serialización](../../../docs/standard/design-guidelines/serialización.md)  
- [Uso de System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [Operadores de igualdad](../../../docs/standard/design-guidelines/equality-operators.md)  
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+## <a name="in-this-section"></a><span data-ttu-id="0fd3e-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="0fd3e-107">In This Section</span></span>  
+ [<span data-ttu-id="0fd3e-108">Matrices</span><span class="sxs-lookup"><span data-stu-id="0fd3e-108">Arrays</span></span>](../../../docs/standard/design-guidelines/arrays.md)  
+ [<span data-ttu-id="0fd3e-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="0fd3e-109">Attributes</span></span>](../../../docs/standard/design-guidelines/attributes.md)  
+ [<span data-ttu-id="0fd3e-110">Colecciones</span><span class="sxs-lookup"><span data-stu-id="0fd3e-110">Collections</span></span>](/cpp/mfc/collections)  
+ [<span data-ttu-id="0fd3e-111">Serialización</span><span class="sxs-lookup"><span data-stu-id="0fd3e-111">Serialization</span></span>](../../../docs/standard/design-guidelines/serialization.md)  
+ [<span data-ttu-id="0fd3e-112">Uso de System.Xml</span><span class="sxs-lookup"><span data-stu-id="0fd3e-112">System.Xml Usage</span></span>](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [<span data-ttu-id="0fd3e-113">Operadores de igualdad</span><span class="sxs-lookup"><span data-stu-id="0fd3e-113">Equality Operators</span></span>](../../../docs/standard/design-guidelines/equality-operators.md)  
+ <span data-ttu-id="0fd3e-114">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="0fd3e-114">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="0fd3e-115">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="0fd3e-115">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a><span data-ttu-id="0fd3e-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="0fd3e-116">See Also</span></span>  
+ [<span data-ttu-id="0fd3e-117">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="0fd3e-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)

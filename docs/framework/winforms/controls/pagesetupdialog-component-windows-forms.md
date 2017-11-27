@@ -1,60 +1,61 @@
 ---
-title: "PageSetupDialog (Componente, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "pies de página, opciones de configuración de página"
-  - "encabezados, imprimir"
-  - "orientación horizontal"
-  - "márgenes, opciones de configuración de página"
-  - "pie de página"
-  - "encabezado de página"
-  - "propiedades de página"
-  - "configuración de página"
-  - "Configurar página (cuadro de diálogo)"
-  - "PageSetupDialog (componente)"
-  - "orientación del papel"
-  - "orientación vertical"
-  - "opciones de impresión, PageSetupDialog (componente)"
-  - "imprimir [Windows Forms], mostrar cuadros de diálogo de configuración"
-  - "imprimir [Windows Forms], encabezados y pies de página"
-  - "imprimir [Windows Forms], configuración de página"
+title: PageSetupDialog (Componente, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- printing [Windows Forms], page setup
+- margins [Windows Forms], page setup options
+- paper orientation
+- print options [Windows Forms], PageSetupDialog component
+- page properties
+- printing [Windows Forms], displaying setup dialog boxes
+- portrait orientation
+- headers [Windows Forms], printing
+- footers [Windows Forms], page setup options
+- landscape orientation
+- page footer
+- page setup
+- Page Setup dialog box
+- PageSetupDialog component
+- page header
+- printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1eb071b4bf3248deaa171ad473d1867d2edb46ab
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# PageSetupDialog (Componente, formularios Windows Forms)
-El componente <xref:System.Windows.Forms.PageSetupDialog> de formularios Windows Forms es un cuadro de diálogo preconfigurado que permite establecer los detalles de la página para imprimir en aplicaciones Windows.  Utilícelo dentro de la aplicación para Windows como una solución sencilla para establecer las preferencias de página, en lugar de configurar un cuadro de diálogo propio.  Puede permitir que los usuarios establezcan ajustes de borde y margen, encabezados y pies de página, y orientación vertical y  horizontal.  Al basarse en cuadros de diálogo estándar de Windows, creará aplicaciones cuya funcionalidad básica les resultará inmediatamente familiar a los usuarios.  
+# <a name="pagesetupdialog-component-windows-forms"></a><span data-ttu-id="daff4-102">PageSetupDialog (Componente, formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="daff4-102">PageSetupDialog Component (Windows Forms)</span></span>
+<span data-ttu-id="daff4-103">Los formularios de Windows <xref:System.Windows.Forms.PageSetupDialog> componente es un cuadro de diálogo preconfigurado que se utiliza para establecer los detalles de la página para la impresión en aplicaciones basadas en Windows.</span><span class="sxs-lookup"><span data-stu-id="daff4-103">The Windows Forms <xref:System.Windows.Forms.PageSetupDialog> component is a pre-configured dialog box used to set page details for printing in Windows-based applications.</span></span> <span data-ttu-id="daff4-104">Utilícelo en la aplicación basada en Windows como una solución sencilla para los usuarios para establecer preferencias de la página en lugar de configurar su propio cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="daff4-104">Use it within your Windows-based application as a simple solution for users to set page preferences in lieu of configuring your own dialog box.</span></span> <span data-ttu-id="daff4-105">Puede permitir a los usuarios establecer borde y ajustes de margen, encabezados y pies de página y orientación vertical y horizontal.</span><span class="sxs-lookup"><span data-stu-id="daff4-105">You can enable users to set border and margin adjustments, headers and footers, and portrait vs. landscape orientation.</span></span> <span data-ttu-id="daff4-106">Al basarse en cuadros de diálogo estándar de Windows, crea aplicaciones cuya funcionalidad básica resultará de inmediato familiar a los usuarios.</span><span class="sxs-lookup"><span data-stu-id="daff4-106">By relying on standard Windows dialog boxes, you create applications whose basic functionality is immediately familiar to users.</span></span>  
   
-## En esta sección  
- [Información general sobre el componente PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
- Presenta conceptos generales acerca del componente <xref:System.Windows.Forms.PageSetupDialog>, que se puede utilizar para mostrar un cuadro de diálogo preconfigurado donde los usuarios puedan manipular la configuración de página.  
+## <a name="in-this-section"></a><span data-ttu-id="daff4-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="daff4-107">In This Section</span></span>  
+ [<span data-ttu-id="daff4-108">Información general del componente PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="daff4-108">PageSetupDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="daff4-109">Presenta los conceptos generales de la <xref:System.Windows.Forms.PageSetupDialog> componente, que puede usar para mostrar un cuadro de diálogo preconfigurado que los usuarios pueden utilizar para manipular la configuración de la página.</span><span class="sxs-lookup"><span data-stu-id="daff4-109">Introduces the general concepts of the <xref:System.Windows.Forms.PageSetupDialog> component, which you can use to display a pre-configured dialog box that users can use to manipulate page settings.</span></span>  
   
- [Cómo: Determinar las propiedades de página mediante el componente PageSetupDialog](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Explica cómo establecer propiedades de página en tiempo de ejecución con una instancia del componente <xref:System.Windows.Forms.PageSetupDialog> en tiempo de ejecución.  
+ [<span data-ttu-id="daff4-110">Determinar las propiedades de página mediante el componente PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="daff4-110">How to: Determine Page Properties Using the PageSetupDialog Component</span></span>](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ <span data-ttu-id="daff4-111">Explica cómo establecer propiedades de la página mediante el uso de una instancia de la <xref:System.Windows.Forms.PageSetupDialog> componente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="daff4-111">Explains how to set page properties by using an instance of the <xref:System.Windows.Forms.PageSetupDialog> component at run time.</span></span>  
   
-## Referencia  
+## <a name="reference"></a><span data-ttu-id="daff4-112">Referencia</span><span class="sxs-lookup"><span data-stu-id="daff4-112">Reference</span></span>  
  <xref:System.Windows.Forms.PageSetupDialog>  
- Proporciona información de referencia acerca de la clase y sus miembros.  
+ <span data-ttu-id="daff4-113">Contiene información de referencia sobre la clase y sus miembros.</span><span class="sxs-lookup"><span data-stu-id="daff4-113">Provides reference information on the class and its members.</span></span>  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.  
+## <a name="related-sections"></a><span data-ttu-id="daff4-114">Secciones relacionadas</span><span class="sxs-lookup"><span data-stu-id="daff4-114">Related Sections</span></span>  
+ [<span data-ttu-id="daff4-115">Controles que se usan en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="daff4-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="daff4-116">Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.</span><span class="sxs-lookup"><span data-stu-id="daff4-116">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [Controles y componentes de cuadros de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Describe un conjunto de controles y componentes que permite a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.  
+ [<span data-ttu-id="daff4-117">Controles y componentes de cuadros de diálogo</span><span class="sxs-lookup"><span data-stu-id="daff4-117">Dialog-Box Controls and Components</span></span>](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ <span data-ttu-id="daff4-118">Describe un conjunto de controles y componentes que permiten a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.</span><span class="sxs-lookup"><span data-stu-id="daff4-118">Describes a set of controls and components that allow users to perform standard interactions with the application or system.</span></span>  
   
- [Essential Code for Windows Forms Dialog Boxes](http://go.microsoft.com/fwlink/?LinkID=102575)  
- Explica los controles y componentes de los cuadros de diálogo de los formularios Windows Forms, y el código necesario para ejecutar sus funciones básicas.  \(Artículo técnico de MSDN Online Library\)
+ [<span data-ttu-id="daff4-119">Código esencial para los cuadros de diálogo de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="daff4-119">Essential Code for Windows Forms Dialog Boxes</span></span>](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ <span data-ttu-id="daff4-120">Describe los componentes y controles de cuadros de diálogo de Windows Forms y el código necesario para ejecutar sus funciones básicas.</span><span class="sxs-lookup"><span data-stu-id="daff4-120">Discusses the Windows Forms dialog box controls and components and the code necessary for executing their basic functions.</span></span> <span data-ttu-id="daff4-121">(artículo técnico de MSDN Online Library)</span><span class="sxs-lookup"><span data-stu-id="daff4-121">(MSDN Online Library technical article)</span></span>

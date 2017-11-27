@@ -1,90 +1,88 @@
 ---
-title: "LIKE (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: LIKE (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 773547b097bad80e82350b473b6e59d0d84aa6dd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# LIKE (Entity SQL)
-Determina si un elemento `String` de caracteres específico coincide con un patrón especificado.  
+# <a name="like-entity-sql"></a><span data-ttu-id="254c1-102">LIKE (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="254c1-102">LIKE (Entity SQL)</span></span>
+<span data-ttu-id="254c1-103">Determina si un elemento `String` de caracteres específico coincide con un patrón especificado.</span><span class="sxs-lookup"><span data-stu-id="254c1-103">Determines whether a specific character `String` matches a specified pattern.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="254c1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="254c1-104">Syntax</span></span>  
   
 ```  
-  
 match [NOT] LIKE pattern [ESCAPE escape]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a><span data-ttu-id="254c1-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="254c1-105">Arguments</span></span>  
  `match`  
- Expresión de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que se evalúa como un elemento `String`.  
+ <span data-ttu-id="254c1-106">Un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión que se evalúa como un `String`.</span><span class="sxs-lookup"><span data-stu-id="254c1-106">An [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expression that evaluates to a `String`.</span></span>  
   
  `pattern`  
- Patrón que va a coincidir con el elemento `String` especificado.  
+ <span data-ttu-id="254c1-107">Patrón que va a coincidir con el elemento `String` especificado.</span><span class="sxs-lookup"><span data-stu-id="254c1-107">A pattern to match to the specified `String`.</span></span>  
   
  `escape`  
- Carácter de escape.  
+ <span data-ttu-id="254c1-108">Carácter de escape.</span><span class="sxs-lookup"><span data-stu-id="254c1-108">An escape character.</span></span>  
   
- NOT  
- Especifica que el resultado de LIKE se niega.  
+ <span data-ttu-id="254c1-109">NOT</span><span class="sxs-lookup"><span data-stu-id="254c1-109">NOT</span></span>  
+ <span data-ttu-id="254c1-110">Especifica que el resultado de LIKE se niega.</span><span class="sxs-lookup"><span data-stu-id="254c1-110">Specifies that the result of LIKE be negated.</span></span>  
   
-## Valor devuelto  
- `true` si el elemento `string` coincide con el patrón; de lo contrario, `false`.  
+## <a name="return-value"></a><span data-ttu-id="254c1-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="254c1-111">Return Value</span></span>  
+ <span data-ttu-id="254c1-112">`true` si el elemento `string` coincide con el patrón; de lo contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="254c1-112">`true` if the `string` matches the pattern; otherwise, `false`.</span></span>  
   
-## Comentarios  
- Las expresiones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que utilizan al operador LIKE se evalúan de forma muy parecida a las expresiones que utilizan la igualdad como criterios de filtrado. Sin embargo, las expresiones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que utilizan el operador LIKE pueden incluir tanto literales como caracteres comodín.  
+## <a name="remarks"></a><span data-ttu-id="254c1-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="254c1-113">Remarks</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="254c1-114">expresiones que utilizan el operador LIKE se evalúan en gran parte del mismo modo que las expresiones que utilizan la igualdad como criterios de filtrado.</span><span class="sxs-lookup"><span data-stu-id="254c1-114"> expressions that use the LIKE operator are evaluated in much the same way as expressions that use equality as the filter criteria.</span></span> <span data-ttu-id="254c1-115">Sin embargo, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las expresiones que utilizan el operador LIKE pueden incluir tanto literales como caracteres comodín.</span><span class="sxs-lookup"><span data-stu-id="254c1-115">However, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expressions that use the LIKE operator can include both literals and wildcard characters.</span></span>  
   
- En la tabla siguiente se describe la sintaxis del patrón `string`.  
+ <span data-ttu-id="254c1-116">En la tabla siguiente se describe la sintaxis del patrón `string`.</span><span class="sxs-lookup"><span data-stu-id="254c1-116">The following table describes the syntax of the pattern `string`.</span></span>  
   
-|Carácter comodín|Descripción|Ejemplo|  
-|----------------------|-----------------|-------------|  
-|%|Cualquier elemento `string` de cero o más caracteres.|`title like '%computer%'` busca todos los títulos con la palabra `"computer"` en cualquier parte del título.|  
-|\_ \(carácter de subrayado\)|Cualquier carácter individual.|`firstname like '_ean'` busca todos los nombres de cuatro letras que finalizan con `"ean`", como Dean o Sean.|  
-|\[ \]|Cualquier carácter individual del intervalo \(\[a\-f\]\) o del conjunto \(\[abcdef\]\) que se han especificado.|`lastname like '[C-P]arsen'` busca los apellidos que terminan con "arsen" y empiezan con cualquier carácter individual entre C y P, como Carsen o Larsen.|  
-|\[^\]|Cualquier carácter individual no incluido en el intervalo \(\[^a\-f\]\) o del conjunto \(\[^abcdef\]\) que se han especificado.|`lastname like 'de[^l]%'` busca todos los apellidos que empiezan con "de" y no incluyen "l" como letra siguiente.|  
-  
-> [!NOTE]
->  El operador LIKE y la cláusula ESCAPE de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se pueden aplicar a los valores `System.DateTime` o `System.Guid`.  
-  
- LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode. Cuando todos los parámetros son caracteres ASCII, se realiza la operación de búsqueda de coincidencias de patrón ASCII. Si uno o más argumentos son Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode. Cuando se utiliza Unicode con LIKE, los espacios en blanco al final son significativos; sin embargo, no lo son para los datos que no son Unicode. La sintaxis de cadena de patrón de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] coincide con la de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
-  
- Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en el elemento `string` de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena de caracteres. Cuando se utiliza con caracteres comodín, el operador LIKE es más flexible que los operadores de comparación de cadenas \= y \!\=.  
+|<span data-ttu-id="254c1-117">Carácter comodín</span><span class="sxs-lookup"><span data-stu-id="254c1-117">Wildcard Character</span></span>|<span data-ttu-id="254c1-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="254c1-118">Description</span></span>|<span data-ttu-id="254c1-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="254c1-119">Example</span></span>|  
+|------------------------|-----------------|-------------|  
+|%|<span data-ttu-id="254c1-120">Cualquier elemento `string` de cero o más caracteres.</span><span class="sxs-lookup"><span data-stu-id="254c1-120">Any `string` of zero or more characters.</span></span>|<span data-ttu-id="254c1-121">`title like '%computer%'`Busca todos los títulos con la palabra `"computer"` en cualquier lugar en el título.</span><span class="sxs-lookup"><span data-stu-id="254c1-121">`title like '%computer%'` finds all titles with the word `"computer"` anywhere in the title.</span></span>|  
+|<span data-ttu-id="254c1-122">_ (carácter de subrayado)</span><span class="sxs-lookup"><span data-stu-id="254c1-122">_ (underscore)</span></span>|<span data-ttu-id="254c1-123">Cualquier carácter individual.</span><span class="sxs-lookup"><span data-stu-id="254c1-123">Any single character.</span></span>|<span data-ttu-id="254c1-124">`firstname like '_ean'`Busca todos los nombres de la primera de cuatro letras que finalizan con `"ean`, ", como Dean o Sean.</span><span class="sxs-lookup"><span data-stu-id="254c1-124">`firstname like '_ean'` finds all four-letter first names that end with `"ean`," such as Dean or Sean.</span></span>|  
+|<span data-ttu-id="254c1-125">[ ]</span><span class="sxs-lookup"><span data-stu-id="254c1-125">[ ]</span></span>|<span data-ttu-id="254c1-126">Cualquier carácter individual del intervalo ([a-f]) o del conjunto ([abcdef]) que se han especificado.</span><span class="sxs-lookup"><span data-stu-id="254c1-126">Any single character in the specified range ([a-f]) or set ([abcdef]).</span></span>|<span data-ttu-id="254c1-127">`lastname like '[C-P]arsen'`busca apellidos que terminan con "arsen" y empiezan con cualquier carácter individual entre C y P, como Carsen o Larsen.</span><span class="sxs-lookup"><span data-stu-id="254c1-127">`lastname like '[C-P]arsen'` finds last names ending with "arsen" and beginning with any single character between C and P, such as Carsen or Larsen.</span></span>|  
+|<span data-ttu-id="254c1-128">[^]</span><span class="sxs-lookup"><span data-stu-id="254c1-128">[^]</span></span>|<span data-ttu-id="254c1-129">Cualquier carácter individual no incluido en el intervalo ([^a-f]) o del conjunto ([^abcdef]) que se han especificado.</span><span class="sxs-lookup"><span data-stu-id="254c1-129">Any single character not in the specified range ([^a-f]) or set ([^abcdef]).</span></span>|<span data-ttu-id="254c1-130">`lastname like 'de[^l]%'`Busca todos los apellidos que empiezan con "de" y no incluyen "l" como letra siguiente.</span><span class="sxs-lookup"><span data-stu-id="254c1-130">`lastname like 'de[^l]%'` finds all last names that begin with "de" and do not include "l" as the following letter.</span></span>|  
   
 > [!NOTE]
->  Puede utilizar extensiones específicas del proveedor si el destino es un proveedor concreto. Sin embargo, otros proveedores pueden tratar de manera diferente este tipo de estructuras. SqlServer admite patrones \[primero\-último\] y \[^primero\-último\] donde el primero coincide exactamente con un carácter entre el primero y el último, y el segundo coincide exactamente con un carácter que no está entre el primero y el último.  
+>  <span data-ttu-id="254c1-131">El operador LIKE y la cláusula ESCAPE de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se pueden aplicar a los valores `System.DateTime` o `System.Guid`.</span><span class="sxs-lookup"><span data-stu-id="254c1-131">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE operator and ESCAPE clause cannot be applied to `System.DateTime` or `System.Guid` values.</span></span>  
   
-### Escape  
- El uso de la cláusula ESCAPE permite buscar cadenas de caracteres que incluyen uno o más de los caracteres comodín especiales que se describen en la tabla de la sección anterior. Por ejemplo, suponga que varios documentos incluyen el literal "100%" en el título y desea buscar todos esos documentos. Dado que el carácter de porcentaje \(%\) es un carácter comodín, debe evitarlo utilizando la cláusula ESCAPE de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para ejecutar correctamente la búsqueda. A continuación se muestra un ejemplo de este filtro.  
+ <span data-ttu-id="254c1-132">LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode.</span><span class="sxs-lookup"><span data-stu-id="254c1-132">LIKE supports ASCII pattern matching and Unicode pattern matching.</span></span> <span data-ttu-id="254c1-133">Cuando todos los parámetros son caracteres ASCII, se realiza la operación de búsqueda de coincidencias de patrón ASCII.</span><span class="sxs-lookup"><span data-stu-id="254c1-133">When all parameters are ASCII characters, ASCII pattern matching is performed.</span></span> <span data-ttu-id="254c1-134">Si uno o más argumentos son Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode.</span><span class="sxs-lookup"><span data-stu-id="254c1-134">If one or more of the arguments are Unicode, all arguments are converted to Unicode and Unicode pattern matching is performed.</span></span> <span data-ttu-id="254c1-135">Cuando se utiliza Unicode con LIKE, los espacios en blanco al final son significativos; sin embargo, no lo son para los datos que no son Unicode.</span><span class="sxs-lookup"><span data-stu-id="254c1-135">When you use Unicode with LIKE, trailing blanks are significant; however, for non-Unicode, trailing blanks are not significant.</span></span> <span data-ttu-id="254c1-136">La sintaxis de cadena de patrón de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es el mismo que el de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="254c1-136">The pattern string syntax of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is the same as that of [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].</span></span>  
+  
+ <span data-ttu-id="254c1-137">Un patrón puede contener caracteres normales y caracteres comodín.</span><span class="sxs-lookup"><span data-stu-id="254c1-137">A pattern can include regular characters and wildcard characters.</span></span> <span data-ttu-id="254c1-138">Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en el elemento `string` de caracteres.</span><span class="sxs-lookup"><span data-stu-id="254c1-138">During pattern matching, regular characters must exactly match the characters specified in the character `string`.</span></span> <span data-ttu-id="254c1-139">Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena de caracteres.</span><span class="sxs-lookup"><span data-stu-id="254c1-139">However, wildcard characters can be matched with arbitrary fragments of the character string.</span></span> <span data-ttu-id="254c1-140">Cuando se utiliza con caracteres comodín, el operador LIKE es más flexible que los operadores de comparación de cadenas = y !=.</span><span class="sxs-lookup"><span data-stu-id="254c1-140">When it is used with wildcard characters, the LIKE operator is more flexible than the = and != string comparison operators.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="254c1-141">Puede utilizar extensiones específicas del proveedor si el destino es un proveedor concreto.</span><span class="sxs-lookup"><span data-stu-id="254c1-141">You may use provider-specific extensions if you target a specific provider.</span></span> <span data-ttu-id="254c1-142">Sin embargo, otros proveedores pueden tratar de manera diferente este tipo de estructuras.</span><span class="sxs-lookup"><span data-stu-id="254c1-142">However, such constructs may be treated differently by other providers, for example.</span></span> <span data-ttu-id="254c1-143">SqlServer admite patrones [primero-último] y [^primero-último] donde el primero coincide exactamente con un carácter entre el primero y el último, y el segundo coincide exactamente con un carácter que no está entre el primero y el último.</span><span class="sxs-lookup"><span data-stu-id="254c1-143">SqlServer supports [first-last] and [^first-last] patterns where the former matches exactly one character between first and last, and the latter matches exactly one character that is not between first and last.</span></span>  
+  
+### <a name="escape"></a><span data-ttu-id="254c1-144">Escape</span><span class="sxs-lookup"><span data-stu-id="254c1-144">Escape</span></span>  
+ <span data-ttu-id="254c1-145">El uso de la cláusula ESCAPE permite buscar cadenas de caracteres que incluyen uno o más de los caracteres comodín especiales que se describen en la tabla de la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="254c1-145">By using the ESCAPE clause, you can search for character strings that include one or more of the special wildcard characters described in the table in the previous section.</span></span> <span data-ttu-id="254c1-146">Por ejemplo, suponga que varios documentos incluyen el literal "100%" en el título y desea buscar todos esos documentos.</span><span class="sxs-lookup"><span data-stu-id="254c1-146">For example, assume several documents include the literal "100%" in the title and you want to search for all of those documents.</span></span> <span data-ttu-id="254c1-147">Dado que el carácter de porcentaje (%) es un carácter comodín, debe evitarlo utilizando la [!INCLUDE[esql](../../../../../../includes/esql-md.md)] cláusula de ESCAPE para ejecutar correctamente la búsqueda.</span><span class="sxs-lookup"><span data-stu-id="254c1-147">Because the percent (%) character is a wildcard character, you must escape it using the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ESCAPE clause to successfully execute the search.</span></span> <span data-ttu-id="254c1-148">A continuación se muestra un ejemplo de este filtro.</span><span class="sxs-lookup"><span data-stu-id="254c1-148">The following is an example of this filter.</span></span>  
   
 ```  
 "title like '%100!%%' escape '!'"  
 ```  
   
- En esta expresión de búsqueda, el carácter comodín de porcentaje \(%\) situado inmediatamente después del carácter de exclamación \(\!\) se trata como literal, en lugar de como carácter comodín. Puede utilizar cualquier carácter como carácter de escape salvo los caracteres comodín de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] y los caracteres incluidos entre corchetes \(`[ ]`\). En el ejemplo anterior, el carácter de exclamación \(\!\) es el carácter de escape.  
+ <span data-ttu-id="254c1-149">En esta expresión de búsqueda, el carácter comodín de porcentaje (%) situado inmediatamente después del carácter de exclamación (!) se trata como literal, en lugar de como carácter comodín.</span><span class="sxs-lookup"><span data-stu-id="254c1-149">In this search expression, the percent wildcard character (%) immediately following the exclamation point character (!) is treated as a literal, instead of as a wildcard character.</span></span> <span data-ttu-id="254c1-150">Puede utilizar cualquier carácter como carácter de escape salvo los [!INCLUDE[esql](../../../../../../includes/esql-md.md)] caracteres comodín y el cuadrado corchete de cierre (`[ ]`) caracteres.</span><span class="sxs-lookup"><span data-stu-id="254c1-150">You can use any character as an escape character except for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wildcard characters and the square bracket (`[ ]`) characters.</span></span> <span data-ttu-id="254c1-151">En el ejemplo anterior, el carácter de exclamación (!) es el carácter de escape.</span><span class="sxs-lookup"><span data-stu-id="254c1-151">In the previous example, the exclamation point (!) character is the escape character.</span></span>  
   
-## Ejemplo  
- Las dos consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguientes utilizan los operadores ESCAPE y LIKE para determinar si una cadena de caracteres concreta coincide con un patrón especificado. La primera consulta busca el elemento `Name` que empieza con los caracteres `Down_`. Esta consulta utiliza la opción ESCAPE porque el carácter de subrayado \(`_`\) es un carácter comodín. Sin especificar la opción ESCAPE, la consulta buscaría valores de `Name` que empezasen por la palabra `Down` seguida de cualquier carácter individual diferente del carácter de subrayado. Las consultas se basan en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+## <a name="example"></a><span data-ttu-id="254c1-152">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="254c1-152">Example</span></span>  
+ <span data-ttu-id="254c1-153">Las dos siguientes [!INCLUDE[esql](../../../../../../includes/esql-md.md)] las consultas utilizan el tipo y operadores ESCAPE para determinar si una cadena de caracteres específica coincide con un patrón especificado.</span><span class="sxs-lookup"><span data-stu-id="254c1-153">The following two [!INCLUDE[esql](../../../../../../includes/esql-md.md)] queries use the LIKE and ESCAPE operators to determine whether a specific character string matches a specified pattern.</span></span> <span data-ttu-id="254c1-154">La primera consulta busca el `Name` que empieza con los caracteres `Down_`.</span><span class="sxs-lookup"><span data-stu-id="254c1-154">The first query searches for the `Name` that starts with the characters `Down_`.</span></span> <span data-ttu-id="254c1-155">Esta consulta utiliza la opción ESCAPE porque el carácter de subrayado (`_`) es un carácter comodín.</span><span class="sxs-lookup"><span data-stu-id="254c1-155">This query uses the ESCAPE option because the underscore (`_`) is a wildcard character.</span></span> <span data-ttu-id="254c1-156">Sin especificar la opción ESCAPE, la consulta buscaría valores de `Name` que empezasen con la palabra `Down` seguida de cualquier carácter individual diferente del carácter de subrayado.</span><span class="sxs-lookup"><span data-stu-id="254c1-156">Without specifying the ESCAPE option, the query would search for any `Name` values that start with the word `Down` followed by any single character other than the underscore character.</span></span> <span data-ttu-id="254c1-157">Las consultas se basan en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="254c1-157">The queries are based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="254c1-158">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="254c1-158">To compile and run this query, follow these steps:</span></span>  
   
-1.  Siga el procedimiento de [Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  <span data-ttu-id="254c1-159">Siga el procedimiento de [Cómo: ejecutar una consulta que muestra los resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span><span class="sxs-lookup"><span data-stu-id="254c1-159">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2.  Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery`:  
+2.  <span data-ttu-id="254c1-160">Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="254c1-160">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
-## Vea también  
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="254c1-161">Vea también</span><span class="sxs-lookup"><span data-stu-id="254c1-161">See Also</span></span>  
+ [<span data-ttu-id="254c1-162">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="254c1-162">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

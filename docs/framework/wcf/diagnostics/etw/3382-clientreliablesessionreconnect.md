@@ -1,36 +1,39 @@
 ---
-title: "3382 - ClientReliableSessionReconnect | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3382 - ClientReliableSessionReconnect
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 029c0e75-8cf0-4860-8539-c2baa18eb7a7
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8d0074e167d80f4ba8d3e9e9bf9101c06b06b214
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3382 - ClientReliableSessionReconnect
-## Propiedades  
+# <a name="3382---clientreliablesessionreconnect"></a><span data-ttu-id="55974-102">3382 - ClientReliableSessionReconnect</span><span class="sxs-lookup"><span data-stu-id="55974-102">3382 - ClientReliableSessionReconnect</span></span>
+## <a name="properties"></a><span data-ttu-id="55974-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="55974-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|3382|  
-|Palabras clave|Canal|  
-|Nivel|Informativa|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="55974-104">Id.</span><span class="sxs-lookup"><span data-stu-id="55974-104">ID</span></span>|<span data-ttu-id="55974-105">3382</span><span class="sxs-lookup"><span data-stu-id="55974-105">3382</span></span>|  
+|<span data-ttu-id="55974-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="55974-106">Keywords</span></span>|<span data-ttu-id="55974-107">Canal</span><span class="sxs-lookup"><span data-stu-id="55974-107">Channel</span></span>|  
+|<span data-ttu-id="55974-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="55974-108">Level</span></span>|<span data-ttu-id="55974-109">Informativa</span><span class="sxs-lookup"><span data-stu-id="55974-109">Informational</span></span>|  
+|<span data-ttu-id="55974-110">Canal</span><span class="sxs-lookup"><span data-stu-id="55974-110">Channel</span></span>|<span data-ttu-id="55974-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="55974-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Se genera este evento cuando ClientReliableSession se vuelve a conectar.  
+## <a name="description"></a><span data-ttu-id="55974-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="55974-112">Description</span></span>  
+ <span data-ttu-id="55974-113">Se genera este evento cuando ClientReliableSession se vuelve a conectar.</span><span class="sxs-lookup"><span data-stu-id="55974-113">This event is emitted when the ClientReliableSession is reconnecting.</span></span>  
   
-## Mensaje  
- Volviendo a conectar SessionId:%1.  
+## <a name="message"></a><span data-ttu-id="55974-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="55974-114">Message</span></span>  
+ <span data-ttu-id="55974-115">Volviendo a conectar SessionId:%1.</span><span class="sxs-lookup"><span data-stu-id="55974-115">SessionId:%1 reconnecting.</span></span>  
   
-## Detalles  
- Se genera este evento cuando ClientReliableSession se vuelve a conectar.
+## <a name="details"></a><span data-ttu-id="55974-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="55974-116">Details</span></span>  
+ <span data-ttu-id="55974-117">Se genera este evento cuando ClientReliableSession se vuelve a conectar.</span><span class="sxs-lookup"><span data-stu-id="55974-117">This event is emitted when the ClientReliableSession is reconnecting.</span></span>

@@ -8,34 +8,32 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5248dd3a4da450e411dd5d9a7843df6c9263026e
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="transaction-processing"></a>Procesar transacciones
-Al comprar un libro desde una librería en línea, se intercambia dinero (en forma de crédito) por un libro. Si su crédito es bueno, una serie de operaciones relacionadas le aseguran que obtendrá el libro y que la librería obtendrá su dinero. Sin embargo, si se producir un error en una operación única en la serie durante el intercambio, todo el intercambio falla. No obtiene el libro y la librería no obtiene su dinero.  
+# <a name="transaction-processing"></a><span data-ttu-id="f62af-102">Procesar transacciones</span><span class="sxs-lookup"><span data-stu-id="f62af-102">Transaction Processing</span></span>
+<span data-ttu-id="f62af-103">Al comprar un libro desde una librería en línea, se intercambia dinero (en forma de crédito) por un libro.</span><span class="sxs-lookup"><span data-stu-id="f62af-103">When you purchase a book from an online bookstore, you exchange money (in the form of credit) for a book.</span></span> <span data-ttu-id="f62af-104">Si su crédito es bueno, una serie de operaciones relacionadas le aseguran que obtendrá el libro y que la librería obtendrá su dinero.</span><span class="sxs-lookup"><span data-stu-id="f62af-104">If your credit is good, a series of related operations ensures that you get the book and the bookstore gets your money.</span></span> <span data-ttu-id="f62af-105">Sin embargo, si se producir un error en una operación única en la serie durante el intercambio, todo el intercambio falla.</span><span class="sxs-lookup"><span data-stu-id="f62af-105">However, if a single operation in the series fails during the exchange, the entire exchange fails.</span></span> <span data-ttu-id="f62af-106">No obtiene el libro y la librería no obtiene su dinero.</span><span class="sxs-lookup"><span data-stu-id="f62af-106">You do not get the book and the bookstore does not get your money.</span></span>  
   
- La tecnología responsable para realizar el intercambio equilibrado y predecible se denomina procesamiento de transacciones. Las transacciones le aseguran que los recursos orientados a datos no están actualizados permanentemente a menos que todas las operaciones dentro de la unidad transaccional se completen correctamente. Combinando un conjunto de operaciones relacionadas en una unidad que o tiene un éxito rotundo  o bien fracasa completamente, puede simplificar la recuperación de errores y realizar su aplicación con más confianza.  
+ <span data-ttu-id="f62af-107">La tecnología responsable para realizar el intercambio equilibrado y predecible se denomina procesamiento de transacciones.</span><span class="sxs-lookup"><span data-stu-id="f62af-107">The technology responsible for making the exchange balanced and predictable is called transaction processing.</span></span> <span data-ttu-id="f62af-108">Las transacciones le aseguran que los recursos orientados a datos no están actualizados permanentemente a menos que todas las operaciones dentro de la unidad transaccional se completen correctamente.</span><span class="sxs-lookup"><span data-stu-id="f62af-108">Transactions ensure that data-oriented resources are not permanently updated unless all operations within the transactional unit complete successfully.</span></span> <span data-ttu-id="f62af-109">Combinando un conjunto de operaciones relacionadas en una unidad que o tiene un éxito rotundo  o bien fracasa completamente, puede simplificar la recuperación de errores y realizar su aplicación con más confianza.</span><span class="sxs-lookup"><span data-stu-id="f62af-109">By combining a set of related operations into a unit that either completely succeeds or completely fails, you can simplify error recovery and make your application more reliable.</span></span>  
   
- Los sistemas del procesamiento de transacciones están compuestos de hardware del equipo y software que hospedan una aplicación orientada a transacciones que realiza las transacciones rutinarias necesarias para realizar el negocio. Los ejemplos incluyen sistemas que administran entradas del pedido de ventas, reservas de la línea aérea, nómina, registros del empleado, fabricación y envío.  
+ <span data-ttu-id="f62af-110">Los sistemas del procesamiento de transacciones están compuestos de hardware del equipo y software que hospedan una aplicación orientada a transacciones que realiza las transacciones rutinarias necesarias para realizar el negocio.</span><span class="sxs-lookup"><span data-stu-id="f62af-110">Transaction processing systems consist of computer hardware and software hosting a transaction-oriented application that performs the routine transactions necessary to conduct business.</span></span> <span data-ttu-id="f62af-111">Los ejemplos incluyen sistemas que administran entradas del pedido de ventas, reservas de la línea aérea, nómina, registros del empleado, fabricación y envío.</span><span class="sxs-lookup"><span data-stu-id="f62af-111">Examples include systems that manage sales order entry, airline reservations, payroll, employee records, manufacturing, and shipping.</span></span>  
   
- En esta sección se proporciona tanto información general sobre procesamiento de transacciones como información concreta sobre cómo escribir las aplicaciones transaccionales y los administradores de recursos mediante Microsoft .NET Framework.  
+ <span data-ttu-id="f62af-112">En esta sección se proporciona tanto información general sobre procesamiento de transacciones como información concreta sobre cómo escribir las aplicaciones transaccionales y los administradores de recursos mediante Microsoft .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f62af-112">This section provides both general information on transaction processing, and specific information on how to write transactional applications and resource managers using the Microsoft .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
- [Principios de la transacción](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
- Introduce condiciones del procesamiento de transacciones básicas y conceptos.  
+## <a name="in-this-section"></a><span data-ttu-id="f62af-113">En esta sección</span><span class="sxs-lookup"><span data-stu-id="f62af-113">In This Section</span></span>  
+ [<span data-ttu-id="f62af-114">Principios de la transacción</span><span class="sxs-lookup"><span data-stu-id="f62af-114">Transaction Fundamentals</span></span>](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ <span data-ttu-id="f62af-115">Introduce condiciones del procesamiento de transacciones básicas y conceptos.</span><span class="sxs-lookup"><span data-stu-id="f62af-115">Introduces basic transaction processing terms and concepts.</span></span>  
   
- [Características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
- Discute cómo puede utilizar las características en System.Transactions para escribir su propia aplicación transaccional.  
+ [<span data-ttu-id="f62af-116">Características proporcionadas por System.Transactions</span><span class="sxs-lookup"><span data-stu-id="f62af-116">Features Provided by System.Transactions</span></span>](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
+ <span data-ttu-id="f62af-117">Discute cómo puede utilizar las características en System.Transactions para escribir su propia aplicación transaccional.</span><span class="sxs-lookup"><span data-stu-id="f62af-117">Discusses how you can use features in System.Transactions to write your own transactional application.</span></span>  
   
-## <a name="reference"></a>Referencia  
+## <a name="reference"></a><span data-ttu-id="f62af-118">Referencia</span><span class="sxs-lookup"><span data-stu-id="f62af-118">Reference</span></span>  
  <xref:System.Transactions>  
- Proporciona las clases que permiten al código participar en transacciones. Las clases admiten transacciones con varios participantes distribuidos, varias notificaciones de fase e inscripciones duraderas.
-
+ <span data-ttu-id="f62af-119">Proporciona las clases que permiten al código participar en transacciones.</span><span class="sxs-lookup"><span data-stu-id="f62af-119">Provides classes that allow your code to participate in transactions.</span></span> <span data-ttu-id="f62af-120">Las clases admiten transacciones con varios participantes distribuidos, varias notificaciones de fase e inscripciones duraderas.</span><span class="sxs-lookup"><span data-stu-id="f62af-120">The classes support transactions with multiple distributed participants, multiple phase notifications, and durable enlistments.</span></span>

@@ -10,32 +10,30 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ed89b286eee9b4c2e11bb27d18e50f777f94f33e
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="framework-types-supporting-expression-trees"></a><span data-ttu-id="d2734-104">Tipos de marco que admiten árboles de expresión</span><span class="sxs-lookup"><span data-stu-id="d2734-104">Framework Types Supporting Expression Trees</span></span>
 
-# <a name="framework-types-supporting-expression-trees"></a>Tipos de marco que admiten árboles de expresión
+[<span data-ttu-id="d2734-105">Anterior: Árboles de expresiones en detalle</span><span class="sxs-lookup"><span data-stu-id="d2734-105">Previous -- Expression Trees Explained</span></span>](expression-trees-explained.md)
 
-[Anterior: Árboles de expresiones en detalle](expression-trees-explained.md)
+<span data-ttu-id="d2734-106">Hay una amplia lista de clases en .NET Core Framework que funcionan con árboles de expresiones.</span><span class="sxs-lookup"><span data-stu-id="d2734-106">There is a large list of classes in the .NET Core framework that work with Expression Trees.</span></span>
+<span data-ttu-id="d2734-107">Puede ver la lista completa [aquí](/dotnet/core/api/System.Linq.Expressions).</span><span class="sxs-lookup"><span data-stu-id="d2734-107">You can see the full list [here](/dotnet/core/api/System.Linq.Expressions).</span></span>
+<span data-ttu-id="d2734-108">En lugar de analizarla al completo, vamos a explicar cómo se han diseñado las clases del marco.</span><span class="sxs-lookup"><span data-stu-id="d2734-108">Rather than run through the full list, let's understand how the framework classes have been designed.</span></span>
 
-Hay una amplia lista de clases en .NET Core Framework que funcionan con árboles de expresiones.
-Puede ver la lista completa [aquí](/dotnet/core/api/System.Linq.Expressions).
-En lugar de analizarla al completo, vamos a explicar cómo se han diseñado las clases del marco.
+<span data-ttu-id="d2734-109">En el diseño del lenguaje, una expresión es un cuerpo de código que se evalúa y devuelve un valor.</span><span class="sxs-lookup"><span data-stu-id="d2734-109">In language design, an expression is a body of code that evaluates and returns a value.</span></span> <span data-ttu-id="d2734-110">Las expresiones pueden ser muy sencillas: la expresión constante `1` devuelve el valor constante de 1.</span><span class="sxs-lookup"><span data-stu-id="d2734-110">Expressions may be very simple: the constant expression `1` returns the constant value of 1.</span></span> <span data-ttu-id="d2734-111">También pueden ser más complicadas: la expresión `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` devuelve una raíz de una ecuación cuadrática (en el caso en el que la ecuación tenga una solución).</span><span class="sxs-lookup"><span data-stu-id="d2734-111">They may be more complicated: The expression `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` returns one root for a quadratic equation (in the case where the equation has a solution).</span></span>  
 
-En el diseño del lenguaje, una expresión es un cuerpo de código que se evalúa y devuelve un valor. Las expresiones pueden ser muy sencillas: la expresión constante `1` devuelve el valor constante de 1. También pueden ser más complicadas: la expresión `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` devuelve una raíz de una ecuación cuadrática (en el caso en el que la ecuación tenga una solución).  
+## <a name="it-all-starts-with-systemlinqexpression"></a><span data-ttu-id="d2734-112">Todo empieza con System.Linq.Expression</span><span class="sxs-lookup"><span data-stu-id="d2734-112">It all starts with System.Linq.Expression</span></span>
 
-## <a name="it-all-starts-with-systemlinqexpression"></a>Todo empieza con System.Linq.Expression
+<span data-ttu-id="d2734-113">Una de las complejidades de trabajar con árboles de expresiones es que muchos tipos de expresiones distintos son válidos en muchos lugares de los programas.</span><span class="sxs-lookup"><span data-stu-id="d2734-113">One of the complexities of working with expression trees is that many different kinds of expressions are valid in many places in programs.</span></span> <span data-ttu-id="d2734-114">Piense en una expresión de asignación.</span><span class="sxs-lookup"><span data-stu-id="d2734-114">Consider an assignment expression.</span></span> <span data-ttu-id="d2734-115">El lado derecho de una asignación podría ser un valor constante, una variable, una expresión de llamada de método u otros elementos.</span><span class="sxs-lookup"><span data-stu-id="d2734-115">The right hand side of an assignment could be a constant value, a variable, a method call expression, or others.</span></span> <span data-ttu-id="d2734-116">Esa flexibilidad del lenguaje significa que puede encontrarse con muchos tipos de expresiones diferentes en cualquier parte de los nodos de un árbol al atravesar un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="d2734-116">That language flexibility means that you may encounter many different expression types anywhere in the nodes of a tree when you traverse an expression tree.</span></span> <span data-ttu-id="d2734-117">Por lo tanto, lo más sencillo consiste en trabajar con el tipo de expresión base, siempre que sea posible.</span><span class="sxs-lookup"><span data-stu-id="d2734-117">Therefore, when you can work with the base expression type, that's the simplest way to work.</span></span> <span data-ttu-id="d2734-118">En cambio, en ocasiones necesitará saber más.</span><span class="sxs-lookup"><span data-stu-id="d2734-118">However, sometimes you need to know more.</span></span>
+<span data-ttu-id="d2734-119">La clase de expresión base contiene una propiedad `NodeType` para ello.</span><span class="sxs-lookup"><span data-stu-id="d2734-119">The base Expression class contains a `NodeType` property for this purpose.</span></span>
+<span data-ttu-id="d2734-120">Esta devuelve un elemento `ExpressionType`, que es una enumeración de tipos de expresiones posibles.</span><span class="sxs-lookup"><span data-stu-id="d2734-120">It returns an `ExpressionType` which is an enumeration of possible expression types.</span></span>
+<span data-ttu-id="d2734-121">Una vez que sepa el tipo del nodo, puede convertirlo en ese tipo y realizar acciones específicas sabiendo el tipo del nodo de expresión.</span><span class="sxs-lookup"><span data-stu-id="d2734-121">Once you know the type of the node, you can cast it to that type, and perform specific actions knowing the type of the expression node.</span></span> <span data-ttu-id="d2734-122">Puede buscar determinados tipos de nodo y, luego, trabajar con las propiedades específicas de ese tipo de expresión.</span><span class="sxs-lookup"><span data-stu-id="d2734-122">You can search for certain node types, and then work with the specific properties of that kind of expression.</span></span>
 
-Una de las complejidades de trabajar con árboles de expresiones es que muchos tipos de expresiones distintos son válidos en muchos lugares de los programas. Piense en una expresión de asignación. El lado derecho de una asignación podría ser un valor constante, una variable, una expresión de llamada de método u otros elementos. Esa flexibilidad del lenguaje significa que puede encontrarse con muchos tipos de expresiones diferentes en cualquier parte de los nodos de un árbol al atravesar un árbol de expresión. Por lo tanto, lo más sencillo consiste en trabajar con el tipo de expresión base, siempre que sea posible. En cambio, en ocasiones necesitará saber más.
-La clase de expresión base contiene una propiedad `NodeType` para ello.
-Esta devuelve un elemento `ExpressionType`, que es una enumeración de tipos de expresiones posibles.
-Una vez que sepa el tipo del nodo, puede convertirlo en ese tipo y realizar acciones específicas sabiendo el tipo del nodo de expresión. Puede buscar determinados tipos de nodo y, luego, trabajar con las propiedades específicas de ese tipo de expresión.
-
-Por ejemplo, este código imprimirá el nombre de una variable para una expresión de acceso a la variable. He seguido el procedimiento que consiste en comprobar el tipo de nodo, convertirlo en una expresión de acceso a la variable y después comprobar las propiedades del tipo de expresión específico:
+<span data-ttu-id="d2734-123">Por ejemplo, este código imprimirá el nombre de una variable para una expresión de acceso a la variable.</span><span class="sxs-lookup"><span data-stu-id="d2734-123">For example, this code will print the name of a variable for a variable access expression.</span></span> <span data-ttu-id="d2734-124">He seguido el procedimiento que consiste en comprobar el tipo de nodo, convertirlo en una expresión de acceso a la variable y después comprobar las propiedades del tipo de expresión específico:</span><span class="sxs-lookup"><span data-stu-id="d2734-124">I've followed the practice of checking the node type, then casting to a variable access expression and then checking the properties of the specific expression type:</span></span>
 
 ```csharp
 Expression<Func<int, int>> addFive = (num) => num + 5;
@@ -51,9 +49,9 @@ if (addFive.NodeType == ExpressionType.Lambda)
 }
 ```
 
-## <a name="creating-expression-trees"></a>Crear árboles de expresiones
+## <a name="creating-expression-trees"></a><span data-ttu-id="d2734-125">Crear árboles de expresiones</span><span class="sxs-lookup"><span data-stu-id="d2734-125">Creating Expression Trees</span></span>
 
-La clase `System.Linq.Expression` también contiene muchos métodos estáticos para crear expresiones. Estos métodos crean un nodo de expresión al usar los argumentos proporcionados para sus elementos secundarios. De esta manera, se crea una expresión a partir de sus nodos hoja. Por ejemplo, este código genera una expresión de agregar:
+<span data-ttu-id="d2734-126">La clase `System.Linq.Expression` también contiene muchos métodos estáticos para crear expresiones.</span><span class="sxs-lookup"><span data-stu-id="d2734-126">The `System.Linq.Expression` class also contains many static methods to create expressions.</span></span> <span data-ttu-id="d2734-127">Estos métodos crean un nodo de expresión al usar los argumentos proporcionados para sus elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="d2734-127">These methods create an expression node using the arguments supplied for its children.</span></span> <span data-ttu-id="d2734-128">De esta manera, se crea una expresión a partir de sus nodos hoja.</span><span class="sxs-lookup"><span data-stu-id="d2734-128">In this way, you build an expression up from its leaf nodes.</span></span> <span data-ttu-id="d2734-129">Por ejemplo, este código genera una expresión de agregar:</span><span class="sxs-lookup"><span data-stu-id="d2734-129">For example, this code builds an Add expression:</span></span>
 
 ```csharp
 // Addition is an add expression for "1 + 2"
@@ -62,16 +60,15 @@ var two = Expression.Constant(2, typeof(int));
 var addition = Expression.Add(one, two);
 ```
 
-En este sencillo ejemplo puede ver que hay muchos tipos implicados a la hora de crear árboles de expresiones y trabajar con ellos. Esta complejidad resulta necesaria para proporcionar las capacidades del vocabulario variado que ofrece el lenguaje C#.
+<span data-ttu-id="d2734-130">En este sencillo ejemplo puede ver que hay muchos tipos implicados a la hora de crear árboles de expresiones y trabajar con ellos.</span><span class="sxs-lookup"><span data-stu-id="d2734-130">You can see from this simple example that many types are involved in creating and working with expression trees.</span></span> <span data-ttu-id="d2734-131">Esta complejidad resulta necesaria para proporcionar las capacidades del vocabulario variado que ofrece el lenguaje C#.</span><span class="sxs-lookup"><span data-stu-id="d2734-131">That complexity is necessary to provide the capabilities of the rich vocabulary provided by the C# language.</span></span>
 
-## <a name="navigating-the-apis"></a>Navegar por las API
-Hay tipos de nodos de expresión que se asignan a casi todos los elementos de sintaxis del lenguaje C#. Cada tipo tiene métodos específicos para ese tipo de elemento del lenguaje. Es mucha información como para recordarla toda. En lugar de intentar memorizar todo, estas son las técnicas que uso para trabajar con árboles de expresiones:
-1. Fíjese en los miembros de la enumeración `ExpressionType` para determinar los posibles nodos que debe examinar. Esto resulta muy útil cuando quiere atravesar y comprender un árbol de expresión.
-2. Fíjese en los miembros estáticos de la clase `Expression` para crear una expresión. Esos métodos pueden crear cualquier tipo de expresión a partir de un conjunto de sus nodos secundarios.
-3. Fíjese en la clase `ExpressionVisitor` para crear un árbol de expresión modificado.
+## <a name="navigating-the-apis"></a><span data-ttu-id="d2734-132">Navegar por las API</span><span class="sxs-lookup"><span data-stu-id="d2734-132">Navigating the APIs</span></span>
+<span data-ttu-id="d2734-133">Hay tipos de nodos de expresión que se asignan a casi todos los elementos de sintaxis del lenguaje C#.</span><span class="sxs-lookup"><span data-stu-id="d2734-133">There are Expression node types that map to almost all of the syntax elements of the C# language.</span></span> <span data-ttu-id="d2734-134">Cada tipo tiene métodos específicos para ese tipo de elemento del lenguaje.</span><span class="sxs-lookup"><span data-stu-id="d2734-134">Each type has specific methods for that type of language element.</span></span> <span data-ttu-id="d2734-135">Es mucha información como para recordarla toda.</span><span class="sxs-lookup"><span data-stu-id="d2734-135">It's a lot to keep in your head at one time.</span></span> <span data-ttu-id="d2734-136">En lugar de intentar memorizar todo, estas son las técnicas que uso para trabajar con árboles de expresiones:</span><span class="sxs-lookup"><span data-stu-id="d2734-136">Rather than try to memorize everything, here are the techniques I use to work with Expression trees:</span></span>
+1. <span data-ttu-id="d2734-137">Fíjese en los miembros de la enumeración `ExpressionType` para determinar los posibles nodos que debe examinar.</span><span class="sxs-lookup"><span data-stu-id="d2734-137">Look at the members of the `ExpressionType` enum to determine possible nodes you should be examining.</span></span> <span data-ttu-id="d2734-138">Esto resulta muy útil cuando quiere atravesar y comprender un árbol de expresión.</span><span class="sxs-lookup"><span data-stu-id="d2734-138">This really helps when you want to traverse and understand an expression tree.</span></span>
+2. <span data-ttu-id="d2734-139">Fíjese en los miembros estáticos de la clase `Expression` para crear una expresión.</span><span class="sxs-lookup"><span data-stu-id="d2734-139">Look at the static members of the `Expression` class to build an expression.</span></span> <span data-ttu-id="d2734-140">Esos métodos pueden crear cualquier tipo de expresión a partir de un conjunto de sus nodos secundarios.</span><span class="sxs-lookup"><span data-stu-id="d2734-140">Those methods can build any expression type from a set of its child nodes.</span></span>
+3. <span data-ttu-id="d2734-141">Fíjese en la clase `ExpressionVisitor` para crear un árbol de expresión modificado.</span><span class="sxs-lookup"><span data-stu-id="d2734-141">Look at the `ExpressionVisitor` class to build a modified expression tree.</span></span>
 
-Encontrará más información a medida que observe cada una de esas tres áreas. Siempre encontrará lo que necesita empezando con uno de esos tres pasos.
+<span data-ttu-id="d2734-142">Encontrará más información a medida que observe cada una de esas tres áreas.</span><span class="sxs-lookup"><span data-stu-id="d2734-142">You'll find more as you look at each of those three areas.</span></span> <span data-ttu-id="d2734-143">Siempre encontrará lo que necesita empezando con uno de esos tres pasos.</span><span class="sxs-lookup"><span data-stu-id="d2734-143">Invariably, you will find what you need when you start with one of those three steps.</span></span>
  
- [Siguiente: Ejecutar árboles de expresión](expression-trees-execution.md)
+ [<span data-ttu-id="d2734-144">Siguiente: Ejecutar árboles de expresión</span><span class="sxs-lookup"><span data-stu-id="d2734-144">Next -- Executing Expression Trees</span></span>](expression-trees-execution.md)
  
-

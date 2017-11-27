@@ -1,45 +1,43 @@
 ---
-title: "C&#243;mo: Crear una directiva de publicador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "GAC (caché global de ensamblados), ensamblado de directivas del editor"
-  - "caché global de ensamblados, ensamblado de directivas del editor"
-  - "ensamblado de directivas del editor"
-  - "archivos de directivas del editor"
+title: "Cómo: Crear una directiva de publicador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publisher policy assembly
+- publisher policy files
+- GAC (global assembly cache), publisher policy assembly
+- global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 430426e3662582bd904bc088a362e9d7ed331c11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear una directiva de publicador
-Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado incluyendo un archivo de directivas del editor con el ensamblado actualizado.  El archivo de directivas del editor especifica la redirección del ensamblado y la configuración del código base, además de utilizar el mismo formato que un archivo de configuración de la aplicación.  El archivo de directivas del editor se compila en un ensamblado y se ubica en la caché global de ensamblados.  
+# <a name="how-to-create-a-publisher-policy"></a><span data-ttu-id="e4f76-102">Cómo: Crear una directiva de publicador</span><span class="sxs-lookup"><span data-stu-id="e4f76-102">How to: Create a Publisher Policy</span></span>
+<span data-ttu-id="e4f76-103">Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar una versión más reciente de un ensamblado mediante la inclusión de un archivo de directiva de publicador con el ensamblado actualizado.</span><span class="sxs-lookup"><span data-stu-id="e4f76-103">Vendors of assemblies can state that applications should use a newer version of an assembly by including a publisher policy file with the upgraded assembly.</span></span> <span data-ttu-id="e4f76-104">El archivo de directiva de publicador especifica la redirección de ensamblado y la configuración del código base y usa el mismo formato que un archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="e4f76-104">The publisher policy file specifies assembly redirection and code base settings, and uses the same format as an application configuration file.</span></span> <span data-ttu-id="e4f76-105">El archivo de directiva de edición se compila en un ensamblado y se coloca en la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="e4f76-105">The publisher policy file is compiled into an assembly and placed in the global assembly cache.</span></span>  
   
- El procedimiento para crear una directiva del editor se compone de tres pasos:  
+ <span data-ttu-id="e4f76-106">Hay tres pasos necesarios para crear una directiva de edición:</span><span class="sxs-lookup"><span data-stu-id="e4f76-106">There are three steps involved in creating a publisher policy:</span></span>  
   
-1.  Cree un archivo de directivas del editor.  
+1.  <span data-ttu-id="e4f76-107">Crear un archivo de directiva de edición.</span><span class="sxs-lookup"><span data-stu-id="e4f76-107">Create a publisher policy file.</span></span>  
   
-2.  Cree un ensamblado de directivas del editor.  
+2.  <span data-ttu-id="e4f76-108">Crear un ensamblado de directivas del Editor.</span><span class="sxs-lookup"><span data-stu-id="e4f76-108">Create a publisher policy assembly.</span></span>  
   
-3.  Agregue dicho ensamblado a la caché global de ensamblados.  
+3.  <span data-ttu-id="e4f76-109">Agregue el ensamblado de directivas de publicador a la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="e4f76-109">Add the publisher policy assembly to the global assembly cache.</span></span>  
   
- El esquema de la directiva del editor se describe en [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  En el siguiente ejemplo, se muestra un archivo de directivas del editor que redirige una versión de `myAssembly` a otra.  
+ <span data-ttu-id="e4f76-110">Se describe el esquema de directiva de publicador en [redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span><span class="sxs-lookup"><span data-stu-id="e4f76-110">The schema for publisher policy is described in [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md).</span></span> <span data-ttu-id="e4f76-111">En el ejemplo siguiente se muestra un editor de archivo de directiva que redirige una versión de `myAssembly` a otro.</span><span class="sxs-lookup"><span data-stu-id="e4f76-111">The following example shows a publisher policy file that redirects one version of `myAssembly` to another.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -56,67 +54,67 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
 </configuration>  
 ```  
   
- Para saber cómo especificar un código base, vea [Especificar una ubicación de ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md).  
+ <span data-ttu-id="e4f76-112">Para obtener información sobre cómo especificar un código base, vea [especificar la ubicación de un ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md).</span><span class="sxs-lookup"><span data-stu-id="e4f76-112">To learn how to specify a code base, see [Specifying an Assembly's Location](../../../docs/framework/configure-apps/specify-assembly-location.md).</span></span>  
   
-## Crear el ensamblado de directivas del publicador  
- Utilice la herramienta [Assembly Linker \(Al.exe\)](../../../docs/framework/tools/al-exe-assembly-linker.md) para crear el ensamblado de directivas del editor.  
+## <a name="creating-the-publisher-policy-assembly"></a><span data-ttu-id="e4f76-113">Crear el ensamblado de directiva de publicador</span><span class="sxs-lookup"><span data-stu-id="e4f76-113">Creating the Publisher Policy Assembly</span></span>  
+ <span data-ttu-id="e4f76-114">Use la [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) para crear el ensamblado de directivas de publicador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-114">Use the [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) to create the publisher policy assembly.</span></span>  
   
-#### Para crear un ensamblado de directivas del editor  
+#### <a name="to-create-a-publisher-policy-assembly"></a><span data-ttu-id="e4f76-115">Para crear un ensamblado de directivas de publicador</span><span class="sxs-lookup"><span data-stu-id="e4f76-115">To create a publisher policy assembly</span></span>  
   
-1.  Escriba el comando siguiente en el símbolo del sistema:  
+1.  <span data-ttu-id="e4f76-116">Escriba el siguiente comando en el símbolo del sistema:</span><span class="sxs-lookup"><span data-stu-id="e4f76-116">Type the following command at the command prompt:</span></span>  
   
-     **al \/link:** *archivoDeDirectivasDelPublicador* **\/out:** *archivoDeEnsambladoDeDirectivasDelPublicador* **\/keyfile:** *archivoDeParDeClaves* **\/platform:** *arquitecturaDelProcesador*  
+     <span data-ttu-id="e4f76-117">**al/Link:** *directivas* **/out:** *publisherPolicyAssemblyFile* **/keyfile:**  *keyPairFile* **/Platform:** *processorArchitecture*</span><span class="sxs-lookup"><span data-stu-id="e4f76-117">**al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*</span></span>  
   
-     En este comando:  
+     <span data-ttu-id="e4f76-118">En este comando:</span><span class="sxs-lookup"><span data-stu-id="e4f76-118">In this command:</span></span>  
   
-    -   El argumento *Archivo de directivas del editor* es el nombre del archivo de directivas del editor.  
+    -   <span data-ttu-id="e4f76-119">El *directivas* argumento es el nombre del archivo de directiva de publicador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-119">The *publisherPolicyFile* argument is the name of the publisher policy file.</span></span>  
   
-    -   El argumento *Archivo del ensamblado de directivas del editor* es el nombre del ensamblado de directivas del editor que es el resultado de este comando.  El nombre de archivo del ensamblado debe tener el siguiente formato:  
+    -   <span data-ttu-id="e4f76-120">El *publisherPolicyAssemblyFile* argumento es el nombre del ensamblado de directiva de publicador que da como resultado de este comando.</span><span class="sxs-lookup"><span data-stu-id="e4f76-120">The *publisherPolicyAssemblyFile* argument is the name of the publisher policy assembly that results from this command.</span></span> <span data-ttu-id="e4f76-121">El nombre de archivo de ensamblado debe seguir el formato:</span><span class="sxs-lookup"><span data-stu-id="e4f76-121">The assembly file name must follow the format:</span></span>  
   
-         **policy.** *númeroPrincipal* **.** *númeroSecundario* **.** *nombreDelEnsambladoPrincipal* **.dll**  
+         <span data-ttu-id="e4f76-122">**Directiva.**</span><span class="sxs-lookup"><span data-stu-id="e4f76-122">**policy.**</span></span> <span data-ttu-id="e4f76-123">*número principal* **.**</span><span class="sxs-lookup"><span data-stu-id="e4f76-123">*majorNumber* **.**</span></span> <span data-ttu-id="e4f76-124">*número secundario* **.**</span><span class="sxs-lookup"><span data-stu-id="e4f76-124">*minorNumber* **.**</span></span> <span data-ttu-id="e4f76-125">*nombre de ensamblado principal* **.dll**</span><span class="sxs-lookup"><span data-stu-id="e4f76-125">*mainAssemblyName* **.dll**</span></span>  
   
-    -   El argumento *Archivo de par de claves* es el nombre del archivo que contiene el par de claves.  Es necesario firmar el ensamblado y el ensamblado de directivas del editor con el mismo par de claves.  
+    -   <span data-ttu-id="e4f76-126">El *keyPairFile* argumento es el nombre del archivo que contiene el par de claves.</span><span class="sxs-lookup"><span data-stu-id="e4f76-126">The *keyPairFile* argument is the name of the file containing the key pair.</span></span> <span data-ttu-id="e4f76-127">Debe firmar el ensamblado y el ensamblado de directivas del publicador con el mismo par de claves.</span><span class="sxs-lookup"><span data-stu-id="e4f76-127">You must sign the assembly and publisher policy assembly with the same key pair.</span></span>  
   
-    -   El argumento *Arquitectura de procesador* identifica la plataforma a la que va dirigido un ensamblado específico del procesador.  
+    -   <span data-ttu-id="e4f76-128">El *processorArchitecture* argumento identifica la plataforma de destino de un ensamblado específico del procesador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-128">The *processorArchitecture* argument identifies the platform targeted by a processor-specific assembly.</span></span>  
   
         > [!NOTE]
-        >  La capacidad de dirigirse a una arquitectura de procesador concreta es nueva en la versión 2.0 de .NET Framework.  
+        >  <span data-ttu-id="e4f76-129">La capacidad de tener como destino una arquitectura de procesador específico es nueva en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e4f76-129">The ability to target a specific processor architecture is new in the .NET Framework version 2.0.</span></span>  
   
-     El siguiente comando crea un ensamblado de directivas del editor denominado `policy.1.0.myAssembly` a partir de un archivo de directivas del editor denominado `pub.config`, asigna un nombre seguro al ensamblado mediante el par de claves del archivo `sgKey.snk` y especifica que el ensamblado va dirigido a la arquitectura de procesador x86.  
+     <span data-ttu-id="e4f76-130">El siguiente comando crea un ensamblado de directivas del editor denominado `policy.1.0.myAssembly` desde un archivo de directiva de publicador llama `pub.config`, asigna un nombre seguro al ensamblado mediante el par de claves en el `sgKey.snk` de archivos y especifica que el ensamblado tiene como destino el x86 arquitectura de procesador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-130">The following command creates a publisher policy assembly called `policy.1.0.myAssembly` from a publisher policy file called `pub.config`, assigns a strong name to the assembly using the key pair in the `sgKey.snk` file, and specifies that the assembly targets the x86 processor architecture.</span></span>  
   
     ```  
     al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86  
     ```  
   
-     El ensamblado de directivas del editor debe coincidir con la arquitectura del procesador del ensamblado al que se aplica.  Por tanto, si su ensamblado tiene un valor <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> de <xref:System.Reflection.ProcessorArchitecture>, el ensamblado de directivas del editor para ese ensamblado se debe crear con `/platform:anycpu`.  Debe proporcionar un ensamblado de directivas del editor independiente para cada ensamblado específico del procesador.  
+     <span data-ttu-id="e4f76-131">El ensamblado de directivas del editor debe coincidir con la arquitectura del procesador del ensamblado que se aplica.</span><span class="sxs-lookup"><span data-stu-id="e4f76-131">The publisher policy assembly must match the processor architecture of the assembly that it applies to.</span></span> <span data-ttu-id="e4f76-132">Por lo tanto, si el ensamblado tiene un <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> valo <xref:System.Reflection.ProcessorArchitecture.MSIL>, el ensamblado de directivas de publicador para ese ensamblado debe crearse con `/platform:anycpu`.</span><span class="sxs-lookup"><span data-stu-id="e4f76-132">Thus, if your assembly has a <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> value of <xref:System.Reflection.ProcessorArchitecture.MSIL>, the publisher policy assembly for that assembly must be created with `/platform:anycpu`.</span></span> <span data-ttu-id="e4f76-133">Debe proporcionar otro ensamblado de directivas de publicador para cada ensamblado específico del procesador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-133">You must provide a separate publisher policy assembly for each processor-specific assembly.</span></span>  
   
-     Una consecuencia de esta regla es que, para cambiar la arquitectura del procesador para un ensamblado, debe cambiar el componente principal o secundario del número de versión, con el fin de proporcionar un nuevo ensamblado de directivas del editor con la arquitectura del procesador correcta.  El ensamblado de directivas del editor anterior no puede reparar el ensamblado cuando éste tiene una arquitectura del procesador diferente.  
+     <span data-ttu-id="e4f76-134">Una consecuencia de esta regla es que, con el fin de cambiar la arquitectura de procesador para un ensamblado, debe cambiar el componente principal o secundario del número de versión, por lo que puede proporcionar un nuevo ensamblado de directiva de publicador con la arquitectura correcta del procesador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-134">A consequence of this rule is that in order to change the processor architecture for an assembly, you must change the major or minor component of the version number, so that you can supply a new publisher policy assembly with the correct processor architecture.</span></span> <span data-ttu-id="e4f76-135">El ensamblado de directivas de publicador anterior no puede reparar el ensamblado una vez que el ensamblado tiene una arquitectura de procesador distinta.</span><span class="sxs-lookup"><span data-stu-id="e4f76-135">The old publisher policy assembly cannot service your assembly once your assembly has a different processor architecture.</span></span>  
   
-     Otra consecuencia es que la versión 2.0 del vinculador no se puede utilizar para crear un ensamblado de directivas del editor para un ensamblado compilado mediante versiones anteriores de .NET Framework, porque siempre especifica la arquitectura del procesador.  
+     <span data-ttu-id="e4f76-136">Otra consecuencia es que no se puede usar la versión 2.0 del vinculador para crear un ensamblado de directivas de publicador para un ensamblado compilado con versiones anteriores de .NET Framework, porque siempre especifica la arquitectura del procesador.</span><span class="sxs-lookup"><span data-stu-id="e4f76-136">Another consequence is that the version 2.0 linker cannot be used to create a publisher policy assembly for an assembly compiled using earlier versions of the .NET Framework, because it always specifies processor architecture.</span></span>  
   
-## Agregar el ensamblado de directivas del publicador a la caché global de ensamblados  
- Use la [herramienta Caché global de ensamblados \(Gacutil.exe\)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para agregar el ensamblado de directivas del editor a la caché global de ensamblados.  
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="e4f76-137">Agregar el ensamblado de directivas de publicador a la caché Global de ensamblados</span><span class="sxs-lookup"><span data-stu-id="e4f76-137">Adding the Publisher Policy Assembly to the Global Assembly Cache</span></span>  
+ <span data-ttu-id="e4f76-138">Use la [herramienta caché Global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para agregar el ensamblado de directivas de publicador a la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="e4f76-138">Use the [Global Assembly Cache tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) to add the publisher policy assembly to the global assembly cache.</span></span>  
   
-#### Para agregar el ensamblado de directivas del editor a la caché global de ensamblados  
+#### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a><span data-ttu-id="e4f76-139">Para agregar el ensamblado de directivas de publicador a la caché global de ensamblados</span><span class="sxs-lookup"><span data-stu-id="e4f76-139">To add the publisher policy assembly to the global assembly cache</span></span>  
   
-1.  Escriba el comando siguiente en el símbolo del sistema:  
+1.  <span data-ttu-id="e4f76-140">Escriba el siguiente comando en el símbolo del sistema:</span><span class="sxs-lookup"><span data-stu-id="e4f76-140">Type the following command at the command prompt:</span></span>  
   
-     **gacutil \/i**  *nombreDelEnsambladoDeDirectivasDelPublicador*  
+     <span data-ttu-id="e4f76-141">**gacutil /i***publisherPolicyAssemblyFile* </span><span class="sxs-lookup"><span data-stu-id="e4f76-141">**gacutil /i**  *publisherPolicyAssemblyFile*</span></span>  
   
-     El siguiente comando agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.  
+     <span data-ttu-id="e4f76-142">El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="e4f76-142">The following command adds `policy.1.0.myAssembly.dll` to the global assembly cache.</span></span>  
   
     ```  
     gacutil /i policy.1.0.myAssembly.dll  
     ```  
   
     > [!IMPORTANT]
-    >  El ensamblado de directivas del editor no se puede agregar a la caché global de ensamblados a menos que el archivo de directiva del editor original se encuentre en el mismo directorio que el ensamblado.  
+    >  <span data-ttu-id="e4f76-143">No se puede agregar el ensamblado de directivas de publicador a la caché de ensamblados global, a menos que el archivo de directiva de publicador original se encuentra en el mismo directorio que el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="e4f76-143">The publisher policy assembly cannot be added to the global assembly cache unless the original publisher policy file is located in the same directory as the assembly.</span></span>  
   
-## Vea también  
- [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md)   
- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
- [Configurar aplicaciones](../../../docs/framework/configure-apps/index.md)   
- [Configuring .NET Framework Apps](http://msdn.microsoft.com/es-es/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)   
- [Esquema de la configuración de Common Language Runtime](../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)   
- [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+## <a name="see-also"></a><span data-ttu-id="e4f76-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="e4f76-144">See Also</span></span>  
+ [<span data-ttu-id="e4f76-145">Programar con ensamblados</span><span class="sxs-lookup"><span data-stu-id="e4f76-145">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ [<span data-ttu-id="e4f76-146">Cómo el motor en tiempo de ejecución ubica ensamblados</span><span class="sxs-lookup"><span data-stu-id="e4f76-146">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="e4f76-147">Configurar aplicaciones</span><span class="sxs-lookup"><span data-stu-id="e4f76-147">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
+ [<span data-ttu-id="e4f76-148">Configurar aplicaciones de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="e4f76-148">Configuring .NET Framework Apps</span></span>](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [<span data-ttu-id="e4f76-149">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="e4f76-149">Runtime Settings Schema</span></span>](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="e4f76-150">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="e4f76-150">Configuration File Schema</span></span>](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="e4f76-151">Redirigir versiones de ensamblado</span><span class="sxs-lookup"><span data-stu-id="e4f76-151">Redirecting Assembly Versions</span></span>](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

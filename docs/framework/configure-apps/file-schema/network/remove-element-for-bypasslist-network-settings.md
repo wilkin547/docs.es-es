@@ -1,83 +1,86 @@
 ---
-title: "&lt;remove&gt; (Elemento para bypasslist, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#remove"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypasslist>, remove (elemento)"
-  - "bypasslist, remove (elemento)"
-  - "remove (elemento), bypasslist"
-  - "remove (elemento), bypasslist"
+title: "&lt;quitar&gt; elemento para bypasslist (configuración de red)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
+helpviewer_keywords:
+- <bypasslist>, remove element
+- remove elemment, bypasslist
+- bypasslist, remove element
+- remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-caps.latest.revision: 16
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a87632ec9725aa24d085ca6c1bf1e54545b324fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;remove&gt; (Elemento para bypasslist, Configuraci&#243;n de red)
-Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a><span data-ttu-id="7aa9d-102">&lt;quitar&gt; elemento para bypasslist (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="7aa9d-102">&lt;remove&gt; Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="7aa9d-103">Quita una dirección IP o nombre DNS de la lista de omisión de proxy.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-103">Removes an IP address or DNS name from the proxy bypass list.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="7aa9d-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="7aa9d-104">\<configuration></span></span>  
+<span data-ttu-id="7aa9d-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="7aa9d-105">\<system.net></span></span>  
+<span data-ttu-id="7aa9d-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="7aa9d-106">\<defaultProxy></span></span>  
+<span data-ttu-id="7aa9d-107">\<bypasslist ></span><span class="sxs-lookup"><span data-stu-id="7aa9d-107">\<bypasslist></span></span>  
+<span data-ttu-id="7aa9d-108">\<Quitar ></span><span class="sxs-lookup"><span data-stu-id="7aa9d-108">\<remove></span></span>  
   
+## <a name="syntax"></a><span data-ttu-id="7aa9d-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7aa9d-109">Syntax</span></span>  
+  
+```xml  
+<remove   
+  address="regular expression"   
+/>
 ```  
   
-      <remove   
-   name = "regular expression"   
-/>  
-```  
+## <a name="attributes-and-elements"></a><span data-ttu-id="7aa9d-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="7aa9d-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="7aa9d-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+### <a name="attributes"></a><span data-ttu-id="7aa9d-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="7aa9d-112">Attributes</span></span>  
   
-### Atributos  
+|<span data-ttu-id="7aa9d-113">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="7aa9d-113">**Attribute**</span></span>|<span data-ttu-id="7aa9d-114">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="7aa9d-114">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`address`|<span data-ttu-id="7aa9d-115">Una expresión regular que describe una dirección IP o nombre DNS.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-115">A regular expression describing an IP address or DNS name.</span></span>|  
   
-|**Atributo**|**Descripción**|  
-|------------------|---------------------|  
-|`name`|Expresión regular que describe una dirección IP o un nombre DNS.|  
+### <a name="child-elements"></a><span data-ttu-id="7aa9d-116">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="7aa9d-116">Child Elements</span></span>  
+ <span data-ttu-id="7aa9d-117">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-117">None.</span></span>  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="parent-elements"></a><span data-ttu-id="7aa9d-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="7aa9d-118">Parent Elements</span></span>  
   
-### Elementos primarios  
+|<span data-ttu-id="7aa9d-119">**Element**</span><span class="sxs-lookup"><span data-stu-id="7aa9d-119">**Element**</span></span>|<span data-ttu-id="7aa9d-120">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="7aa9d-120">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="7aa9d-121">bypasslist</span><span class="sxs-lookup"><span data-stu-id="7aa9d-121">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="7aa9d-122">Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan a un servidor proxy.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-122">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no utilizan un servidor proxy.|  
+## <a name="remarks"></a><span data-ttu-id="7aa9d-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7aa9d-123">Remarks</span></span>  
+ <span data-ttu-id="7aa9d-124">El `remove` elemento quita expresiones regulares que describen direcciones IP o nombres de los servidores DNS de la lista de direcciones que omiten un servidor proxy.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-124">The `remove` element removes regular expressions describing IP addresses or DNS server names from the list of addresses that bypass a proxy server.</span></span> <span data-ttu-id="7aa9d-125">Las direcciones se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-125">The addresses were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
-## Comentarios  
- El elemento `remove` quita expresiones regulares que describen direcciones IP o nombres de servidores DNS de la lista de direcciones que omiten un servidor proxy.  Las direcciones quedaron definidas anteriormente en el archivo de configuración o en un nivel más alto en la jerarquía de configuración.  
+ <span data-ttu-id="7aa9d-126">El valor de la `address` atributo debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-126">The value for the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>  
   
- El valor del atributo `name` debería ser una expresión regular que describiera un conjunto de direcciones IP o nombres de host.  
+ <span data-ttu-id="7aa9d-127">Para obtener más información sobre las expresiones regulares, vea. [Expresiones regulares de .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="7aa9d-127">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../../docs/standard/base-types/regular-expressions.md).</span></span>  
   
- Para obtener más información sobre expresiones regulares, vea .[Expresiones regulares de .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+## <a name="configuration-files"></a><span data-ttu-id="7aa9d-128">Archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="7aa9d-128">Configuration Files</span></span>  
+ <span data-ttu-id="7aa9d-129">Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="7aa9d-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## Archivos de configuración  
- Este elemento puede utilizarse en el archivo de configuración de la aplicación o en el archivo de configuración del equipo \(Machine.config\).  
+## <a name="example"></a><span data-ttu-id="7aa9d-130">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7aa9d-130">Example</span></span>  
+ <span data-ttu-id="7aa9d-131">En el ejemplo siguiente se quita cualquier definición anterior para el dominio adventure-works.com y, a continuación, agrega el dominio contoso.com a la lista de omisión.</span><span class="sxs-lookup"><span data-stu-id="7aa9d-131">The following example removes any previous definition for the adventure-works.com domain, and then adds the contoso.com domain to the bypass list.</span></span>  
   
-## Ejemplo  
- El ejemplo de código siguiente quita cualquier definición anterior para el dominio adventure\-works.com y, a continuación, agrega el dominio contoso.com a la lista de omisiones.  
-  
-```  
+```xml  
 <configuration>  
   <system.net>  
     <defaultProxy>  
       <bypasslist>  
-        <remove name = "[a-z]+\.adventure-works\.com$" />  
+        <remove address="[a-z]+\.adventure-works\.com$" />  
         <add address="[a-z]+\.contoso\.com$" />  
       </bypasslist>  
     </defaultProxy>  
@@ -85,6 +88,6 @@ Quita una dirección IP o un nombre DNS de la lista de omisión de proxy.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Net.WebProxy?displayProperty=fullName>   
- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="7aa9d-132">Vea también</span><span class="sxs-lookup"><span data-stu-id="7aa9d-132">See Also</span></span>  
+ <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+ [<span data-ttu-id="7aa9d-133">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="7aa9d-133">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

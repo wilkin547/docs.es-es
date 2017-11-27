@@ -1,56 +1,64 @@
 ---
-title: "&lt;transactedBatching&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;transactedBatching&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: edeb10a1a7fa540b3f3e6ef4bf1a4a820fbc1b4a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transactedBatching&gt;
-Especifica si el procesamiento por lotes de la transacción se admite para las operaciones de recepción.  
+# <a name="lttransactedbatchinggt"></a><span data-ttu-id="067ee-102">&lt;transactedBatching&gt;</span><span class="sxs-lookup"><span data-stu-id="067ee-102">&lt;transactedBatching&gt;</span></span>
+<span data-ttu-id="067ee-103">Especifica si el procesamiento por lotes de la transacción se admite para las operaciones de recepción.</span><span class="sxs-lookup"><span data-stu-id="067ee-103">Specifies whether transaction batching is supported for receive operations.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="067ee-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="067ee-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="067ee-105">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="067ee-105">\<behaviors></span></span>  
+<span data-ttu-id="067ee-106">\<endpointBehaviors ></span><span class="sxs-lookup"><span data-stu-id="067ee-106">\<endpointBehaviors></span></span>  
+<span data-ttu-id="067ee-107">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="067ee-107">\<behavior></span></span>  
+<span data-ttu-id="067ee-108">\<transactedBatching ></span><span class="sxs-lookup"><span data-stu-id="067ee-108">\<transactedBatching></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="067ee-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="067ee-109">Syntax</span></span>  
   
+```xml  
 <transactedBatching maxBatchSize="Integer" />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="067ee-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="067ee-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="067ee-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="067ee-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="067ee-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="067ee-112">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`maxBatchSize`|Un entero que especifica el número máximo de operaciones de recepción que pueden encontrarse por lotes en una transacción.  El valor predeterminado es 0.|  
+|<span data-ttu-id="067ee-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="067ee-113">Attribute</span></span>|<span data-ttu-id="067ee-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="067ee-114">Description</span></span>|  
+|---------------|-----------------|  
+|`maxBatchSize`|<span data-ttu-id="067ee-115">Un entero que especifica el número máximo de operaciones de recepción que pueden encontrarse por lotes en una transacción.</span><span class="sxs-lookup"><span data-stu-id="067ee-115">An integer that specifies the maximum number of receive operations that can be batched together in one transaction.</span></span> <span data-ttu-id="067ee-116">El valor predeterminado es 0.</span><span class="sxs-lookup"><span data-stu-id="067ee-116">The default is 0.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="067ee-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="067ee-117">Child Elements</span></span>  
+ <span data-ttu-id="067ee-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="067ee-118">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="067ee-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="067ee-119">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<comportamiento\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un extremo.|  
+|<span data-ttu-id="067ee-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="067ee-120">Element</span></span>|<span data-ttu-id="067ee-121">Descripción</span><span class="sxs-lookup"><span data-stu-id="067ee-121">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="067ee-122">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="067ee-122">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="067ee-123">Especifica el comportamiento de un punto de conexión.</span><span class="sxs-lookup"><span data-stu-id="067ee-123">Specifies an endpoint behavior.</span></span>|  
   
-## Comentarios  
- Un transporte que se configura con procesamiento por lotes de la transacción intenta realizar varias operaciones de recepción en una transacción.  Haciendo esto, el costo relativamente alto de crear una transacción y confirmarla se evita en cada operación de recepción.  
+## <a name="remarks"></a><span data-ttu-id="067ee-124">Comentarios</span><span class="sxs-lookup"><span data-stu-id="067ee-124">Remarks</span></span>  
+ <span data-ttu-id="067ee-125">Un transporte que se configura con procesamiento por lotes de la transacción intenta realizar varias operaciones de recepción en una transacción.</span><span class="sxs-lookup"><span data-stu-id="067ee-125">A transport that is configured with transaction batching attempts to batch several receive operations into one transaction.</span></span> <span data-ttu-id="067ee-126">Haciendo esto, el costo relativamente alto de crear una transacción y confirmarla se evita en cada operación de recepción.</span><span class="sxs-lookup"><span data-stu-id="067ee-126">By doing so, the relatively high cost of creating a transaction and committing it in every receive operation is avoided.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo agregar el comportamiento por lotes llevado a cabo en un servicio en un archivo de configuración.  
+## <a name="example"></a><span data-ttu-id="067ee-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="067ee-127">Example</span></span>  
+ <span data-ttu-id="067ee-128">El ejemplo siguiente muestra cómo agregar el comportamiento por lotes llevado a cabo en un servicio en un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="067ee-128">The following example shows how to add the transacted batching behavior to a service in a configuration file.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -88,6 +96,6 @@ Especifica si el procesamiento por lotes de la transacción se admite para las o
 </system.serviceModel>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>   
+## <a name="see-also"></a><span data-ttu-id="067ee-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="067ee-129">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.TransactedBatchingElement>  
  <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

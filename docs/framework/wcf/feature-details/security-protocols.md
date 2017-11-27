@@ -1,977 +1,964 @@
 ---
-title: "Protocolos de seguridad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "seguridad [WCF], protocolos"
+title: Protocolos de seguridad
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-caps.latest.revision: 11
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 25a6e333b81b337ad0c34de0c0ae097a5cff5601
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Protocolos de seguridad
-Los protocolos de Seguridad de Servicios web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes.En esta sección se describen los detalles de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] \(implementados en <xref:System.ServiceModel.Channels.SecurityBindingElement>\) para los siguientes protocolos de Seguridad de Servicios web.  
+# <a name="security-protocols"></a><span data-ttu-id="24752-102">Protocolos de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-102">Security Protocols</span></span>
+<span data-ttu-id="24752-103">Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes.</span><span class="sxs-lookup"><span data-stu-id="24752-103">The Web Services Security Protocols provide Web services security mechanisms that cover all existing enterprise messaging security requirements.</span></span> <span data-ttu-id="24752-104">En esta sección se describen los detalles de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] (implementados en <xref:System.ServiceModel.Channels.SecurityBindingElement>) para los siguientes protocolos de Seguridad de Servicios web.</span><span class="sxs-lookup"><span data-stu-id="24752-104">This section describes the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] details (implemented in the <xref:System.ServiceModel.Channels.SecurityBindingElement>) for the following Web services security protocols.</span></span>  
+  
+|<span data-ttu-id="24752-105">Especificación/documento</span><span class="sxs-lookup"><span data-stu-id="24752-105">Specification/Document</span></span>|<span data-ttu-id="24752-106">Link</span><span class="sxs-lookup"><span data-stu-id="24752-106">Link</span></span>|  
+|-|-|  
+|<span data-ttu-id="24752-107">WSS: Message Security 1,0 de SOAP</span><span class="sxs-lookup"><span data-stu-id="24752-107">WSS: SOAP Message Security 1.0</span></span>|<span data-ttu-id="24752-108">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-108">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf</span></span>|  
+|<span data-ttu-id="24752-109">WSS: Token Profile 1.0 de Username</span><span class="sxs-lookup"><span data-stu-id="24752-109">WSS: Username Token Profile 1.0</span></span>|<span data-ttu-id="24752-110">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-110">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="24752-111">WSS: Token Profile 1,0 de X509</span><span class="sxs-lookup"><span data-stu-id="24752-111">WSS: X509 Token Profile 1.0</span></span>|<span data-ttu-id="24752-112">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-112">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="24752-113">WSS: Token Profile 1.1 de SAML 1,0</span><span class="sxs-lookup"><span data-stu-id="24752-113">WSS: SAML 1.1 Token Profile 1.0</span></span>|<span data-ttu-id="24752-114">http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-114">http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="24752-115">WSS: Message Security 1.1 de SOAP</span><span class="sxs-lookup"><span data-stu-id="24752-115">WSS: SOAP Message Security 1.1</span></span>|<span data-ttu-id="24752-116">http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-116">http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf</span></span>|  
+|<span data-ttu-id="24752-117">WSS: Token Profile 1.1 de Username</span><span class="sxs-lookup"><span data-stu-id="24752-117">WSS Username Token Profile 1.1</span></span>|<span data-ttu-id="24752-118">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-118">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</span></span>|  
+|<span data-ttu-id="24752-119">WSS: Token Profile 1,1 de X.509</span><span class="sxs-lookup"><span data-stu-id="24752-119">WSS: X.509 Token Profile 1.1</span></span>|<span data-ttu-id="24752-120">http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-120">http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf</span></span>|  
+|<span data-ttu-id="24752-121">WSS: Token Profile 1.1 de Kerberos</span><span class="sxs-lookup"><span data-stu-id="24752-121">WSS: Kerberos Token Profile 1.1</span></span>|<span data-ttu-id="24752-122">http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-122">http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf</span></span>|  
+|<span data-ttu-id="24752-123">WSS: Token Profile 1.1 de SAML 1.1</span><span class="sxs-lookup"><span data-stu-id="24752-123">WSS: SAML 1.1 Token Profile 1.1</span></span>|<span data-ttu-id="24752-124">http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-124">http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf</span></span>|  
+|<span data-ttu-id="24752-125">WS-Secure Conversation 1.3</span><span class="sxs-lookup"><span data-stu-id="24752-125">WS-Secure Conversation 1.3</span></span>|<span data-ttu-id="24752-126">http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-126">http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf</span></span>|  
+|<span data-ttu-id="24752-127">WS-Trust 1.3</span><span class="sxs-lookup"><span data-stu-id="24752-127">WS-Trust 1.3</span></span>|<span data-ttu-id="24752-128">http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-128">http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf</span></span>|  
+|<span data-ttu-id="24752-129">Nota de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="24752-129">Application Note:</span></span><br /><br /> <span data-ttu-id="24752-130">Uso de WS-Trust para protocolo de enlace TLS</span><span class="sxs-lookup"><span data-stu-id="24752-130">Using WS-Trust for TLS Handshake</span></span>|<span data-ttu-id="24752-131">Para su publicación</span><span class="sxs-lookup"><span data-stu-id="24752-131">To be published</span></span>|  
+|<span data-ttu-id="24752-132">Nota de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="24752-132">Application Note:</span></span><br /><br /> <span data-ttu-id="24752-133">Uso de WS-Trust para SPNEGO</span><span class="sxs-lookup"><span data-stu-id="24752-133">Using WS-Trust for SPNEGO</span></span>|<span data-ttu-id="24752-134">Para su publicación</span><span class="sxs-lookup"><span data-stu-id="24752-134">To be published</span></span>|  
+|<span data-ttu-id="24752-135">Nota de la aplicación:</span><span class="sxs-lookup"><span data-stu-id="24752-135">Application Note:</span></span><br /><br /> <span data-ttu-id="24752-136">Referencias e identidad de extremos de direccionamiento de servicios Web</span><span class="sxs-lookup"><span data-stu-id="24752-136">Web Services Addressing Endpoint References And Identity</span></span>|<span data-ttu-id="24752-137">Para su publicación</span><span class="sxs-lookup"><span data-stu-id="24752-137">To be published</span></span>|  
+|<span data-ttu-id="24752-138">WS-SecurityPolicy 1.2 (2007/04)</span><span class="sxs-lookup"><span data-stu-id="24752-138">WS-SecurityPolicy 1.2 (2007/04)</span></span>|<span data-ttu-id="24752-139">http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf</span><span class="sxs-lookup"><span data-stu-id="24752-139">http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf</span></span>|  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-140">, versión 1, proporciona 17 modos de autenticación que se pueden utilizar como base para la configuración de seguridad de servicios Web.</span><span class="sxs-lookup"><span data-stu-id="24752-140">, version 1, provides 17 authentication modes that can be used as the basis for Web services security configuration.</span></span> <span data-ttu-id="24752-141">Cada modo se optimiza para un conjunto común de requisitos de implementación, como:</span><span class="sxs-lookup"><span data-stu-id="24752-141">Each mode is optimized for a common set of deployment requirements, such as:</span></span>  
+  
+-   <span data-ttu-id="24752-142">Credenciales utilizadas para autenticar cliente y servicio.</span><span class="sxs-lookup"><span data-stu-id="24752-142">Credentials used to authenticate client and service.</span></span>  
+  
+-   <span data-ttu-id="24752-143">Mecanismos de protección de seguridad de transporte o mensaje.</span><span class="sxs-lookup"><span data-stu-id="24752-143">Message or transport security protection mechanisms.</span></span>  
+  
+-   <span data-ttu-id="24752-144">Patrones de intercambio de mensajes.</span><span class="sxs-lookup"><span data-stu-id="24752-144">Message exchange patterns.</span></span>  
+  
+|<span data-ttu-id="24752-145">Modo de autenticación</span><span class="sxs-lookup"><span data-stu-id="24752-145">Authentication Mode</span></span>|<span data-ttu-id="24752-146">Autenticación del cliente</span><span class="sxs-lookup"><span data-stu-id="24752-146">Client Authentication</span></span>|<span data-ttu-id="24752-147">Autenticación de servidor</span><span class="sxs-lookup"><span data-stu-id="24752-147">Server Authentication</span></span>|<span data-ttu-id="24752-148">Modo</span><span class="sxs-lookup"><span data-stu-id="24752-148">Mode</span></span>|  
+|-------------------------|---------------------------|---------------------------|----------|  
+|<span data-ttu-id="24752-149">UserNameOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-149">UserNameOverTransport</span></span>|<span data-ttu-id="24752-150">Nombre de usuario/contraseña</span><span class="sxs-lookup"><span data-stu-id="24752-150">User name/password</span></span>|<span data-ttu-id="24752-151">X509</span><span class="sxs-lookup"><span data-stu-id="24752-151">X509</span></span>|<span data-ttu-id="24752-152">Transporte</span><span class="sxs-lookup"><span data-stu-id="24752-152">Transport</span></span>|  
+|<span data-ttu-id="24752-153">CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-153">CertificateOverTransport</span></span>|<span data-ttu-id="24752-154">X509</span><span class="sxs-lookup"><span data-stu-id="24752-154">X509</span></span>|<span data-ttu-id="24752-155">X509</span><span class="sxs-lookup"><span data-stu-id="24752-155">X509</span></span>|<span data-ttu-id="24752-156">Transporte</span><span class="sxs-lookup"><span data-stu-id="24752-156">Transport</span></span>|  
+|<span data-ttu-id="24752-157">KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-157">KerberosOverTransport</span></span>|<span data-ttu-id="24752-158">Windows</span><span class="sxs-lookup"><span data-stu-id="24752-158">Windows</span></span>|<span data-ttu-id="24752-159">X509</span><span class="sxs-lookup"><span data-stu-id="24752-159">X509</span></span>|<span data-ttu-id="24752-160">Transporte</span><span class="sxs-lookup"><span data-stu-id="24752-160">Transport</span></span>|  
+|<span data-ttu-id="24752-161">IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-161">IssuedTokenOverTransport</span></span>|<span data-ttu-id="24752-162">Federado</span><span class="sxs-lookup"><span data-stu-id="24752-162">Federated</span></span>|<span data-ttu-id="24752-163">X509</span><span class="sxs-lookup"><span data-stu-id="24752-163">X509</span></span>|<span data-ttu-id="24752-164">Transporte</span><span class="sxs-lookup"><span data-stu-id="24752-164">Transport</span></span>|  
+|<span data-ttu-id="24752-165">SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-165">SspiNegotiatedOverTransport</span></span>|<span data-ttu-id="24752-166">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="24752-166">Windows Sspi Negotiated</span></span>|<span data-ttu-id="24752-167">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="24752-167">Windows Sspi Negotiated</span></span>|<span data-ttu-id="24752-168">Transporte</span><span class="sxs-lookup"><span data-stu-id="24752-168">Transport</span></span>|  
+|<span data-ttu-id="24752-169">AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-169">AnonymousForCertificate</span></span>|<span data-ttu-id="24752-170">Ninguna</span><span class="sxs-lookup"><span data-stu-id="24752-170">None</span></span>|<span data-ttu-id="24752-171">X509</span><span class="sxs-lookup"><span data-stu-id="24752-171">X509</span></span>|<span data-ttu-id="24752-172">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-172">Message</span></span>|  
+|<span data-ttu-id="24752-173">UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-173">UserNameForCertificate</span></span>|<span data-ttu-id="24752-174">Nombre de usuario/contraseña</span><span class="sxs-lookup"><span data-stu-id="24752-174">User name/password</span></span>|<span data-ttu-id="24752-175">X509</span><span class="sxs-lookup"><span data-stu-id="24752-175">X509</span></span>|<span data-ttu-id="24752-176">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-176">Message</span></span>|  
+|<span data-ttu-id="24752-177">MutualCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-177">MutualCertificate</span></span>|<span data-ttu-id="24752-178">X509</span><span class="sxs-lookup"><span data-stu-id="24752-178">X509</span></span>|<span data-ttu-id="24752-179">X509</span><span class="sxs-lookup"><span data-stu-id="24752-179">X509</span></span>|<span data-ttu-id="24752-180">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-180">Message</span></span>|  
+|<span data-ttu-id="24752-181">MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="24752-181">MutualCertificateDuplex</span></span>|<span data-ttu-id="24752-182">X509</span><span class="sxs-lookup"><span data-stu-id="24752-182">X509</span></span>|<span data-ttu-id="24752-183">X509</span><span class="sxs-lookup"><span data-stu-id="24752-183">X509</span></span>|<span data-ttu-id="24752-184">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-184">Message</span></span>|  
+|<span data-ttu-id="24752-185">IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-185">IssuedTokenForCertificate</span></span>|<span data-ttu-id="24752-186">Federado</span><span class="sxs-lookup"><span data-stu-id="24752-186">Federated</span></span>|<span data-ttu-id="24752-187">X509</span><span class="sxs-lookup"><span data-stu-id="24752-187">X509</span></span>|<span data-ttu-id="24752-188">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-188">Message</span></span>|  
+|<span data-ttu-id="24752-189">Kerberos</span><span class="sxs-lookup"><span data-stu-id="24752-189">Kerberos</span></span>|<span data-ttu-id="24752-190">Windows</span><span class="sxs-lookup"><span data-stu-id="24752-190">Windows</span></span>|<span data-ttu-id="24752-191">Windows</span><span class="sxs-lookup"><span data-stu-id="24752-191">Windows</span></span>|<span data-ttu-id="24752-192">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-192">Message</span></span>|  
+|<span data-ttu-id="24752-193">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="24752-193">IssuedToken</span></span>|<span data-ttu-id="24752-194">Federado</span><span class="sxs-lookup"><span data-stu-id="24752-194">Federated</span></span>|<span data-ttu-id="24752-195">Federado</span><span class="sxs-lookup"><span data-stu-id="24752-195">Federated</span></span>|<span data-ttu-id="24752-196">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-196">Message</span></span>|  
+|<span data-ttu-id="24752-197">SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-197">SspiNegotiated</span></span>|<span data-ttu-id="24752-198">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="24752-198">Windows Sspi Negotiated</span></span>|<span data-ttu-id="24752-199">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="24752-199">Windows Sspi Negotiated</span></span>|<span data-ttu-id="24752-200">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-200">Message</span></span>|  
+|<span data-ttu-id="24752-201">AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-201">AnonymousForSslNegotiated</span></span>|<span data-ttu-id="24752-202">Ninguna</span><span class="sxs-lookup"><span data-stu-id="24752-202">None</span></span>|<span data-ttu-id="24752-203">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="24752-203">X509, TLS-Nego</span></span>|<span data-ttu-id="24752-204">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-204">Message</span></span>|  
+|<span data-ttu-id="24752-205">UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-205">UserNameForSslNegotiated</span></span>|<span data-ttu-id="24752-206">Nombre de usuario/contraseña</span><span class="sxs-lookup"><span data-stu-id="24752-206">User name/password</span></span>|<span data-ttu-id="24752-207">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="24752-207">X509, TLS-Nego</span></span>|<span data-ttu-id="24752-208">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-208">Message</span></span>|  
+|<span data-ttu-id="24752-209">MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-209">MutualSslNegotiated</span></span>|<span data-ttu-id="24752-210">X509</span><span class="sxs-lookup"><span data-stu-id="24752-210">X509</span></span>|<span data-ttu-id="24752-211">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="24752-211">X509, TLS-Nego</span></span>|<span data-ttu-id="24752-212">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-212">Message</span></span>|  
+|<span data-ttu-id="24752-213">IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-213">IssuedTokenForSslNegotiated</span></span>|<span data-ttu-id="24752-214">Federado</span><span class="sxs-lookup"><span data-stu-id="24752-214">Federated</span></span>|<span data-ttu-id="24752-215">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="24752-215">X509, TLS-Nego</span></span>|<span data-ttu-id="24752-216">Mensaje</span><span class="sxs-lookup"><span data-stu-id="24752-216">Message</span></span>|  
+  
+ <span data-ttu-id="24752-217">Los extremos que usan tales modos de autenticación pueden expresar sus requisitos de seguridad mediante WS-SecurityPolicy (WS-SP).</span><span class="sxs-lookup"><span data-stu-id="24752-217">Endpoints using such authentication modes can express their security requirements using WS-SecurityPolicy (WS-SP).</span></span> <span data-ttu-id="24752-218">Este documento describe la estructura de mensajes de infraestructura y encabezado de seguridad para cada modo de autenticación y proporciona ejemplos de directivas y mensajes.</span><span class="sxs-lookup"><span data-stu-id="24752-218">This document describes the structure of security header and infrastructure messages for each authentication mode and provides examples of policies and messages.</span></span>  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-219"> reutiliza WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de múltiples mensaje entre aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="24752-219"> leverages WS-SecureConversation to provide secure sessions support to protect multi-message exchanges between applications.</span></span>  <span data-ttu-id="24752-220">Vea "Sesiones seguras" más abajo para obtener detalles de implementación.</span><span class="sxs-lookup"><span data-stu-id="24752-220">See "Secure Sessions" below for implementation details.</span></span>  
+  
+ <span data-ttu-id="24752-221">Además de los modos de autenticación, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona ajustes para controlar mecanismos de protección comunes que se aplican a la mayoría de modos de autenticación basados en seguridad, como, por ejemplo: orden de firma frente a operaciones de cifrado, conjuntos de algoritmos, derivación de claves y confirmación de firmas.</span><span class="sxs-lookup"><span data-stu-id="24752-221">In addition to authentication modes, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provides settings to control common protection mechanisms that apply to most message security-based authentication modes, for example: order of signature versus encryption operations, algorithm suites, key derivation, and signature confirmation.</span></span>  
+  
+ <span data-ttu-id="24752-222">Los siguientes prefijos y espacios de nombres se utilizan en este documento.</span><span class="sxs-lookup"><span data-stu-id="24752-222">The following prefixes and namespaces are used in this document.</span></span>  
+  
+|<span data-ttu-id="24752-223">Prefijo</span><span class="sxs-lookup"><span data-stu-id="24752-223">Prefix</span></span>|<span data-ttu-id="24752-224">Espacio de nombres</span><span class="sxs-lookup"><span data-stu-id="24752-224">Namespace</span></span>|  
+|------------|---------------|  
+|<span data-ttu-id="24752-225">s</span><span class="sxs-lookup"><span data-stu-id="24752-225">s</span></span>|<span data-ttu-id="24752-226">http://www.w3.org/2003/05/soap-envelope</span><span class="sxs-lookup"><span data-stu-id="24752-226">http://www.w3.org/2003/05/soap-envelope</span></span>|  
+|<span data-ttu-id="24752-227">sp</span><span class="sxs-lookup"><span data-stu-id="24752-227">sp</span></span>|<span data-ttu-id="24752-228">http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702</span><span class="sxs-lookup"><span data-stu-id="24752-228">http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702</span></span>|  
+|<span data-ttu-id="24752-229">a</span><span class="sxs-lookup"><span data-stu-id="24752-229">a</span></span>|<span data-ttu-id="24752-230">http://www.w3.org/2005/08/addressing</span><span class="sxs-lookup"><span data-stu-id="24752-230">http://www.w3.org/2005/08/addressing</span></span>|  
+|<span data-ttu-id="24752-231">wsse</span><span class="sxs-lookup"><span data-stu-id="24752-231">wsse</span></span>|<span data-ttu-id="24752-232">TBD – OASIS WSS 1,0 URI</span><span class="sxs-lookup"><span data-stu-id="24752-232">TBD – OASIS WSS 1.0 URI</span></span>|  
+|<span data-ttu-id="24752-233">wsse11</span><span class="sxs-lookup"><span data-stu-id="24752-233">wsse11</span></span>|<span data-ttu-id="24752-234">TBD – OASIS WSS 1.1 URI</span><span class="sxs-lookup"><span data-stu-id="24752-234">TBD – OASIS WSS 1.1 URI</span></span>|  
+|<span data-ttu-id="24752-235">wsu</span><span class="sxs-lookup"><span data-stu-id="24752-235">wsu</span></span>|<span data-ttu-id="24752-236">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd</span><span class="sxs-lookup"><span data-stu-id="24752-236">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd</span></span>|  
+|<span data-ttu-id="24752-237">ds</span><span class="sxs-lookup"><span data-stu-id="24752-237">ds</span></span>|<span data-ttu-id="24752-238">TBD – W3C XMLDSig URI</span><span class="sxs-lookup"><span data-stu-id="24752-238">TBD – W3C XMLDSig URI</span></span>|  
+|<span data-ttu-id="24752-239">wst</span><span class="sxs-lookup"><span data-stu-id="24752-239">wst</span></span>|<span data-ttu-id="24752-240">TBD – WS-Trust 2005/02 URI</span><span class="sxs-lookup"><span data-stu-id="24752-240">TBD – WS-Trust 2005/02 URI</span></span>|  
+|<span data-ttu-id="24752-241">wssc</span><span class="sxs-lookup"><span data-stu-id="24752-241">wssc</span></span>|<span data-ttu-id="24752-242">TBD – WS-SecureConversation 2005/02 URI</span><span class="sxs-lookup"><span data-stu-id="24752-242">TBD – WS-SecureConversation 2005/02 URI</span></span>|  
+|<span data-ttu-id="24752-243">wsaw</span><span class="sxs-lookup"><span data-stu-id="24752-243">wsaw</span></span>|<span data-ttu-id="24752-244">http://www.w3.org/2006/05/addressing/wsdl</span><span class="sxs-lookup"><span data-stu-id="24752-244">http://www.w3.org/2006/05/addressing/wsdl</span></span>|  
+|<span data-ttu-id="24752-245">wsp</span><span class="sxs-lookup"><span data-stu-id="24752-245">wsp</span></span>|<span data-ttu-id="24752-246">http://schemas.xmlsoap.org/ws/2004/09/policy</span><span class="sxs-lookup"><span data-stu-id="24752-246">http://schemas.xmlsoap.org/ws/2004/09/policy</span></span>|  
+|<span data-ttu-id="24752-247">mssp</span><span class="sxs-lookup"><span data-stu-id="24752-247">mssp</span></span>|<span data-ttu-id="24752-248">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span><span class="sxs-lookup"><span data-stu-id="24752-248">http://schemas.microsoft.com/ws/2005/07/securitypolicy</span></span>|  
+  
+## <a name="1-token-profiles"></a><span data-ttu-id="24752-249">1. Perfiles de tokens</span><span class="sxs-lookup"><span data-stu-id="24752-249">1. Token Profiles</span></span>  
+ <span data-ttu-id="24752-250">Las especificaciones Seguridad de Servicios web representan la credencial como tokens de seguridad.</span><span class="sxs-lookup"><span data-stu-id="24752-250">Web Services Security specifications represent credential as security tokens.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-251"> admite los siguientes tipos de token:</span><span class="sxs-lookup"><span data-stu-id="24752-251"> supports the following token types:</span></span>  
+  
+### <a name="11-usernametoken"></a><span data-ttu-id="24752-252">1.1 UsernameToken</span><span class="sxs-lookup"><span data-stu-id="24752-252">1.1 UsernameToken</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-253"> sigue perfiles UsernameToken10 y UsernameToken11 con las restricciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="24752-253"> follows UsernameToken10 and UsernameToken11 profiles with the following constraints:</span></span>  
+  
+ <span data-ttu-id="24752-254">El atributo R1101 PasswordType en el elemento UsernameToken\Password no se debe omitir ni debe tener el valor #PasswordText (valor predeterminado).</span><span class="sxs-lookup"><span data-stu-id="24752-254">R1101 PasswordType attribute on UsernameToken\Password element MUST be either omitted or have value #PasswordText (default).</span></span>  
+  
+ <span data-ttu-id="24752-255">Uno puede implementar el #PasswordDigest mediante extensibilidad.</span><span class="sxs-lookup"><span data-stu-id="24752-255">One can implement the #PasswordDigest using extensibility.</span></span> <span data-ttu-id="24752-256">Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro.</span><span class="sxs-lookup"><span data-stu-id="24752-256">It has been observed that #PasswordDigest was often mistaken to be a secure enough password protection mechanism.</span></span> <span data-ttu-id="24752-257">Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken.</span><span class="sxs-lookup"><span data-stu-id="24752-257">But #PasswordDigest cannot serve as a substitute for encryption of the UsernameToken.</span></span> <span data-ttu-id="24752-258">El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición.</span><span class="sxs-lookup"><span data-stu-id="24752-258">The primary goal of #PasswordDigest is protection against replay attacks.</span></span> <span data-ttu-id="24752-259">En los modos de autenticación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las amenazas de ataques mediante repetición se mitigan mediante las firmas de mensaje.</span><span class="sxs-lookup"><span data-stu-id="24752-259">In [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] authentication modes, replay attack threats are mitigated by using message signatures.</span></span>  
+  
+ <span data-ttu-id="24752-260">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de B1102 nunca emite subelementos Nonce y Created del UsernameToken.</span><span class="sxs-lookup"><span data-stu-id="24752-260">B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] never emits Nonce and Created sub-elements of the UsernameToken.</span></span>  
+  
+ <span data-ttu-id="24752-261">Estos subelementos están diseñados para ayudar a detectar las repeticiones.</span><span class="sxs-lookup"><span data-stu-id="24752-261">These sub-elements are intended to help replay detection.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-262"> usa signaturas de mensaje en su lugar.</span><span class="sxs-lookup"><span data-stu-id="24752-262"> uses message signatures instead.</span></span>  
+  
+ <span data-ttu-id="24752-263">Perfil 1.1 de UsernameToken de seguridad de mensajes SOAP WSS OASIS (UsernameToken11) introdujo la característica de derivación de claves a partir de la contraseña.</span><span class="sxs-lookup"><span data-stu-id="24752-263">OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) introduced key derivation from password feature.</span></span>  
+  
+ <span data-ttu-id="24752-264">La contraseña de UsernameToken B1103 no se debe utilizar para la derivación de claves ni, por consiguiente, para las operaciones criptográficas.</span><span class="sxs-lookup"><span data-stu-id="24752-264">B1103 UsernameToken password MUST not be used for key derivation and therefore for cryptographic operations.</span></span>  
+  
+ <span data-ttu-id="24752-265">Razón: las contraseñas generalmente están consideradas demasiado débiles como para ser utilizadas para operaciones criptográficas.</span><span class="sxs-lookup"><span data-stu-id="24752-265">Rationale: passwords are generally considered too weak to be used for cryptographic operations.</span></span>  
+  
+### <a name="12-x509-token"></a><span data-ttu-id="24752-266">1.2 Token X509</span><span class="sxs-lookup"><span data-stu-id="24752-266">1.2 X509 Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-267"> admite certificados X509v3 como un tipo de credencial y sigue X509TokenProfile1.0 y X509TokenProfile1.1 con las siguientes restricciones:</span><span class="sxs-lookup"><span data-stu-id="24752-267"> supports X509v3 certificates as a credential type and follows X509TokenProfile1.0 and X509TokenProfile1.1 with the following constraints:</span></span>  
+  
+ <span data-ttu-id="24752-268">R1201 El atributo ValueType en el elemento BinarySecurityToken debe tener el valor #X509v3 cuando contiene un certificado X509v3.</span><span class="sxs-lookup"><span data-stu-id="24752-268">R1201 The ValueType attribute on the BinarySecurityToken element must have value #X509v3 when it contains an X509v3 certificate.</span></span>  
+  
+ <span data-ttu-id="24752-269">Los perfiles 1.0 y 1.1 de token de WSS X509 también definen #X509PKIPathv1 y #PKCS7 como tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="24752-269">WSS X509 Token Profile 1.0 and 1.1 define also #X509PKIPathv1 and #PKCS7 as value types.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-270"> no admite estos tipos.</span><span class="sxs-lookup"><span data-stu-id="24752-270"> does not support these types.</span></span>  
+  
+ <span data-ttu-id="24752-271">R1202 Si una extensión SubjectKeyIdentifier (SKI) se encuentra en un certificado X509, se debería utilizar wsse:KeyIdentifier para las referencias externas al token, con el atributo ValueType como #X509SubjectKeyIdentifier, y su contenido el valor codificado en base64 de la extensión SKI del certificado.</span><span class="sxs-lookup"><span data-stu-id="24752-271">R1202 If a SubjectKeyIdentifier (SKI) extension is present in an X509 certificate, wsse:KeyIdentifier should be used for external references to the token, with the ValueType attribute as #X509SubjectKeyIdentifier and its content the base64-encoded value of certificate's SKI extension.</span></span>  
+  
+ <span data-ttu-id="24752-272">Las referencias SKI se implementan ampliamente y demuestran ser un tipo de referencia externa muy interoperable.</span><span class="sxs-lookup"><span data-stu-id="24752-272">SKI references are widely implemented and proven to be a highly interoperable external reference type.</span></span>  
+  
+ <span data-ttu-id="24752-273">R1203 Una referencia externa al token de seguridad X509 NO DEBERÍA utilizar ds:X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="24752-273">R1203 An external Reference to X509 Security Token SHOULD NOT use ds:X509IssuerSerial.</span></span>  
+  
+ <span data-ttu-id="24752-274">R1204 Si se está utilizando X509TokenProfile1.1, una referencia externa al token de seguridad X509 DEBERÍA utilizar la huella digital introducida por WS-Security 1.1.</span><span class="sxs-lookup"><span data-stu-id="24752-274">R1204 If X509TokenProfile1.1 is in use, an external reference to X509 Security Token SHOULD use the thumbprint introduced by WS-Security 1.1.</span></span>  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-275"> admite X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="24752-275"> supports X509IssuerSerial.</span></span> <span data-ttu-id="24752-276">Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza una cadena para comparar dos valores de X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="24752-276">However there are interoperability issues with X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses a string to compare two values of X509IssuerSerial.</span></span> <span data-ttu-id="24752-277">Por consiguiente, si uno reordena componentes del Nombre del asunto y envía una referencia a un certificado a un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede que no se encuentre.</span><span class="sxs-lookup"><span data-stu-id="24752-277">Therefore if one reorders components of the Subject Name and sends to an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service a reference to a certificate, it may not be found.</span></span>  
+  
+### <a name="13-kerberos-token"></a><span data-ttu-id="24752-278">1.3 Token de Kerberos.</span><span class="sxs-lookup"><span data-stu-id="24752-278">1.3 Kerberos Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-279"> admite KerberosTokenProfile1.1 para la autenticación de Windows con las restricciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="24752-279"> supports KerberosTokenProfile1.1 for the purpose of Windows authentication with the following constraints:</span></span>  
+  
+ <span data-ttu-id="24752-280">R1301 Un Token de Kerberos debe llevar el valor de un AP_REQ de Kerberos v4 ajustado a GSS, tal y como se define en GSS_API y en la especificación de Kerberos, y debe tener el atributo ValueType con el valor #GSS_Kerberosv5_AP_REQ.</span><span class="sxs-lookup"><span data-stu-id="24752-280">R1301 A Kerberos Token must carry the value of a GSS wrapped Kerberos v4 AP_REQ as defined in GSS_API and the Kerberos specification, and must have the ValueType attribute with the value #GSS_Kerberosv5_AP_REQ.</span></span>  
+  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-281"> utiliza AP-REQ de Kerberos ajustado a GSS, no un AP-REQ desnudo.</span><span class="sxs-lookup"><span data-stu-id="24752-281"> uses GSS wrapped Kerberos AP-REQ, not a bare AP-REQ.</span></span> <span data-ttu-id="24752-282">Éste es un procedimiento de seguridad recomendado.</span><span class="sxs-lookup"><span data-stu-id="24752-282">This is a security best practice.</span></span>  
+  
+### <a name="14-saml-v11-token"></a><span data-ttu-id="24752-283">1.4 Token SAML v1.1</span><span class="sxs-lookup"><span data-stu-id="24752-283">1.4 SAML v1.1 Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-284"> admite perfiles de token de WSS SAML 1.0 y 1.1 para tokens SAML v1.1.</span><span class="sxs-lookup"><span data-stu-id="24752-284"> supports WSS SAML Token profiles 1.0 and 1.1 for SAML v1.1 tokens.</span></span> <span data-ttu-id="24752-285">Es posible implementar otras versiones de formatos de token SAML.</span><span class="sxs-lookup"><span data-stu-id="24752-285">It is possible to implement other versions of SAML token formats.</span></span>  
+  
+### <a name="15-security-context-token"></a><span data-ttu-id="24752-286">1.5 Token de contexto de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-286">1.5 Security Context Token</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-287"> admite el token de contexto de seguridad (SCT) introducido en WS-SecureCoversation.</span><span class="sxs-lookup"><span data-stu-id="24752-287"> supports the Security Context Token (SCT) introduced in WS-SecureCoversation.</span></span> <span data-ttu-id="24752-288">SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.</span><span class="sxs-lookup"><span data-stu-id="24752-288">SCT is used to represent a security context established in SecureConversation as well as the binary negotiation protocols TLS and SSPI, described below.</span></span>  
+  
+## <a name="2-common-message-security-parameters"></a><span data-ttu-id="24752-289">2. Parámetros de seguridad de mensajes comunes</span><span class="sxs-lookup"><span data-stu-id="24752-289">2. Common Message Security Parameters</span></span>  
+  
+### <a name="21-timestamp"></a><span data-ttu-id="24752-290">2.1 Marca de tiempo</span><span class="sxs-lookup"><span data-stu-id="24752-290">2.1 TimeStamp</span></span>  
+ <span data-ttu-id="24752-291">La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="24752-291">Timestamp presence is controlled using the <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> property of the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-292"> serializa siempre wsse:TimeStamp con los campos wsse:Created y wsse:Expires.</span><span class="sxs-lookup"><span data-stu-id="24752-292"> always serializes wsse:TimeStamp with wsse:Created and wsse:Expires fields.</span></span> <span data-ttu-id="24752-293">El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.</span><span class="sxs-lookup"><span data-stu-id="24752-293">The wsse:TimeStamp is always signed when signing is used.</span></span>  
+  
+### <a name="22-protection-order"></a><span data-ttu-id="24752-294">2.2 Orden de protección</span><span class="sxs-lookup"><span data-stu-id="24752-294">2.2 Protection Order</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-295">admite el orden de protección de mensaje "Inicio de sesión antes de cifrar" y "Cifrar antes de inicio de sesión" (1.2 de directiva de seguridad).</span><span class="sxs-lookup"><span data-stu-id="24752-295"> supports the message protection order "Sign Before Encrypt" and "Encrypt Before Sign" (Security Policy 1.2).</span></span> <span data-ttu-id="24752-296">"Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.</span><span class="sxs-lookup"><span data-stu-id="24752-296">"Sign Before Encrypt" is recommended for reasons including: messages protected with Encrypt Before Sign are open to signature substitution attacks unless the WS-Security 1.1 SignatureConfirmation mechanism is used, and a signature over encrypted content makes auditing harder.</span></span>  
+  
+### <a name="23-signature-protection"></a><span data-ttu-id="24752-297">2.3 Protección de firmas</span><span class="sxs-lookup"><span data-stu-id="24752-297">2.3 Signature Protection</span></span>  
+ <span data-ttu-id="24752-298">Cuando se usa Cifrar antes de firmar, se recomienda proteger la firma para evitar los ataques por fuerza bruta para adivinar el contenido cifrado o la clave de la firma (sobre todo cuando un token personalizado se utiliza con material de clave débil).</span><span class="sxs-lookup"><span data-stu-id="24752-298">When Encrypt Before Sign is used, it is recommended to protect the signature to prevent brute force attacks for guessing the encrypted content or the signing key (especially when a custom token is used with weak key material).</span></span>  
+  
+### <a name="24-algorithm-suite"></a><span data-ttu-id="24752-299">2.4 Conjunto de algoritmos</span><span class="sxs-lookup"><span data-stu-id="24752-299">2.4 Algorithm Suite</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-300">admite todos los conjuntos de algoritmos enumerados en 1.2 de directiva de seguridad.</span><span class="sxs-lookup"><span data-stu-id="24752-300"> supports all algorithm suites listed in Security Policy 1.2.</span></span>  
+  
+### <a name="25-key-derivation"></a><span data-ttu-id="24752-301">2.5 Derivación de clave</span><span class="sxs-lookup"><span data-stu-id="24752-301">2.5 Key Derivation</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-302"> utiliza la "Derivación de clave para claves simétricas" tal y como se describe en WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="24752-302"> uses "Key Derivation for symmetric keys" as described in WS-SecureConversation.</span></span>  
+  
+### <a name="26-signature-confirmation"></a><span data-ttu-id="24752-303">2.6 Confirmación de firma</span><span class="sxs-lookup"><span data-stu-id="24752-303">2.6 Signature Confirmation</span></span>  
+ <span data-ttu-id="24752-304">La confirmación de firma puede utilizarse como protección frente a ataques de intermediarios para proteger el conjunto de firmas.</span><span class="sxs-lookup"><span data-stu-id="24752-304">Signature confirmation can be used as protection from middle man attacks to protect the set of signatures.</span></span>  
+  
+### <a name="27-security-header-layout"></a><span data-ttu-id="24752-305">2.7 Diseño del encabezado de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-305">2.7 Security Header Layout</span></span>  
+ <span data-ttu-id="24752-306">Cada modo de autenticación describe un cierto diseño para el encabezado de seguridad.</span><span class="sxs-lookup"><span data-stu-id="24752-306">Each authentication mode describes a certain layout for the security header.</span></span> <span data-ttu-id="24752-307">Los elementos dentro del encabezado de seguridad se semiordenan.</span><span class="sxs-lookup"><span data-stu-id="24752-307">Elements within the security header are semi-ordered.</span></span> <span data-ttu-id="24752-308">Para definir el orden de elementos secundarios del encabezado de seguridad, la directiva WS-Security define los siguientes modos de diseño del encabezado de seguridad:</span><span class="sxs-lookup"><span data-stu-id="24752-308">To define the order of security header child elements, WS-Security Policy defines the following security header layout modes:</span></span>  
   
 |||  
 |-|-|  
-|Especificación\/documento|Vínculo|  
-|WSS: Message Security 1.0 de SOAP|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-soap\-message\-security\-1.0.pdf|  
-|WSS: Token Profile 1.0 de Username|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-username\-token\-profile\-1.0.pdf|  
-|WSS: Token Profile 1.0 de X509|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-x509\-token\-profile\-1.0.pdf|  
-|WSS: Token Profile 1.1 de SAML 1.0|http:\/\/docs.oasis\-open.org\/wss\/oasis\-wss\-saml\-token\-profile\-1.0.pdf|  
-|WSS: Message Security 1.1 de SOAP|http:\/\/www.oasis\-open.org\/committees\/download.php\/16790\/wss\-v1.1\-spec\-os\-SOAPMessageSecurity.pdf|  
-|WSS Username Token Profile 1.1|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-username\-token\-profile\-1.0.pdf|  
-|WSS: Token Profile 1.1 de X.509|http:\/\/www.oasis\-open.org\/committees\/download.php\/16785\/wss\-v1.1\-spec\-os\-x509TokenProfile.pdf|  
-|WSS: Token Profile 1.1 de Kerberos|http:\/\/www.oasis\-open.org\/committees\/download.php\/16788\/wss\-v1.1\-spec\-os\-KerberosTokenProfile.pdf|  
-|WSS: Token Profile 1.1 de SAML 1.1|http:\/\/www.oasis\-open.org\/committees\/download.php\/16768\/wss\-v1.1\-spec\-os\-SAMLTokenProfile.pdf|  
-|WS\-Secure Conversation 1.3|http:\/\/docs.oasis\-open.org\/ws\-sx\/ws\-secureconversation\/200512\/ws\-secureconversation\-1.3\-os.pdf|  
-|WS\-Trust 1.3|http:\/\/docs.oasis\-open.org\/ws\-sx\/ws\-trust\/200512\/ws\-trust\-1.3\-os.pdf|  
-|Nota de la aplicación:<br /><br /> Uso de WS\-Trust para protocolo de enlace de TLS|Para su publicación|  
-|Nota de la aplicación:<br /><br /> Uso de WS\-Trust para SPNEGO|Para su publicación|  
-|Nota de la aplicación:<br /><br /> Referencias e identidad de extremos de direccionamiento de servicios Web|Para su publicación|  
-|WS\-SecurityPolicy 1.2 \(2007\/04\)|http:\/\/www.oasis\-open.org\/committees\/download.php\/23821\/ws\-securitypolicy\-1.2\-spec\-cs.pdf|  
+|<span data-ttu-id="24752-309">Strict</span><span class="sxs-lookup"><span data-stu-id="24752-309">Strict</span></span>|<span data-ttu-id="24752-310">Los elementos se agregan al encabezado de seguridad siguiendo las reglas de diseño descritas en la sección 7.7.1 de la Directiva de seguridad, según un principio general de "declarar antes de usar".</span><span class="sxs-lookup"><span data-stu-id="24752-310">Items are added to the security header following the numbered layout rules described in Security Policy section 7.7.1 according to a general principle of "declare before use".</span></span>|  
+|<span data-ttu-id="24752-311">Lax</span><span class="sxs-lookup"><span data-stu-id="24752-311">Lax</span></span>|<span data-ttu-id="24752-312">Los elementos se agregan al encabezado de seguridad en cualquier orden que cumpla con la seguridad de mensajes WSS: SOAP.</span><span class="sxs-lookup"><span data-stu-id="24752-312">Items are added to the security header in any order that conforms to WSS: SOAP Message Security.</span></span>|  
+|<span data-ttu-id="24752-313">LaxTimestampFirst</span><span class="sxs-lookup"><span data-stu-id="24752-313">LaxTimestampFirst</span></span>|<span data-ttu-id="24752-314">Igual que Lax, solo que el primer elemento en el encabezado de seguridad debe ser wsse:Timestamp</span><span class="sxs-lookup"><span data-stu-id="24752-314">Same as Lax except that the first item in the security header must be a wsse:Timestamp</span></span>|  
+|<span data-ttu-id="24752-315">LaxTimestampLast</span><span class="sxs-lookup"><span data-stu-id="24752-315">LaxTimestampLast</span></span>|<span data-ttu-id="24752-316">Igual que lax, solo que el último elemento en el encabezado de seguridad debe ser wsse:Timestamp</span><span class="sxs-lookup"><span data-stu-id="24752-316">Same as lax except that the last item in the security header must be a wsse:Timestamp</span></span>|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], versión 1, proporciona 17 modos de autenticación que se pueden utilizar como base para la configuración de seguridad de servicios Web.Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-317"> admite los cuatro modos de diseño del encabezado de seguridad.</span><span class="sxs-lookup"><span data-stu-id="24752-317"> supports all four modes for security header layout.</span></span> <span data-ttu-id="24752-318">La estructura de encabezado de Seguridad y los ejemplos de mensajes para los modos de autenticación siguen el modo "Strict" (estricto).</span><span class="sxs-lookup"><span data-stu-id="24752-318">Security header structure and message examples for authentication modes below follow the "Strict" mode.</span></span>  
   
--   Credenciales utilizadas para autenticar cliente y servicio.  
+## <a name="3-common-message-security-parameters"></a><span data-ttu-id="24752-319">3. Parámetros de seguridad de mensajes comunes</span><span class="sxs-lookup"><span data-stu-id="24752-319">3. Common Message Security Parameters</span></span>  
+ <span data-ttu-id="24752-320">En esta sección se proporcionan ejemplos de directivas para cada modo de autenticación junto con ejemplos que muestran la estructura de encabezado de seguridad en mensajes intercambiados por cliente y servicio.</span><span class="sxs-lookup"><span data-stu-id="24752-320">This section provides example policies for each authentication mode along with examples showing security header structure in messages exchanged by client and service.</span></span>  
   
--   Mecanismos de protección de seguridad de transporte o mensaje.  
+### <a name="31-transport-protection"></a><span data-ttu-id="24752-321">3.1 protección de transporte</span><span class="sxs-lookup"><span data-stu-id="24752-321">3.1 Transport Protection</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="24752-322"> proporciona cinco modos de autenticación que utilizan el transporte seguro para proteger los mensajes; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport y SspiNegotiatedOverTransport.</span><span class="sxs-lookup"><span data-stu-id="24752-322"> provides five authentication modes that use secure transport to protect messages; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport and SspiNegotiatedOverTransport.</span></span>  
   
--   Patrones de intercambio de mensajes.  
+ <span data-ttu-id="24752-323">Estos modos de autenticación se construyen utilizando el enlace de transportes descrito en SecurityPolicy.</span><span class="sxs-lookup"><span data-stu-id="24752-323">These authentication modes are constructed using the transport binding described in SecurityPolicy.</span></span> <span data-ttu-id="24752-324">Para el modo de autenticación de UserNameOverTransport, UsernameToken es un token auxiliar firmado.</span><span class="sxs-lookup"><span data-stu-id="24752-324">For the UserNameOverTransport authentication mode the UsernameToken is a signed supporting token.</span></span> <span data-ttu-id="24752-325">Para los otros modos de autenticación el token aparece como un token de endoso firmado.</span><span class="sxs-lookup"><span data-stu-id="24752-325">For the other authentication modes the token appears as a signed endorsing token.</span></span> <span data-ttu-id="24752-326">Los apéndices C.1.2 y C.1.3 de SecurityPolicy describen en detalle el diseño del encabezado de seguridad.</span><span class="sxs-lookup"><span data-stu-id="24752-326">Appendix C.1.2 and C.1.3 of SecurityPolicy describe the security header layout in detail.</span></span> <span data-ttu-id="24752-327">Los siguientes encabezados de seguridad del ejemplo muestran el diseño estricto para un modo de autenticación determinado.</span><span class="sxs-lookup"><span data-stu-id="24752-327">The following example security headers show the Strict layout for a given authentication mode.</span></span>  
   
-|Modo de autenticación|Autenticación de cliente|Autenticación de servidor|Modo|  
-|---------------------------|------------------------------|-------------------------------|----------|  
-|UserNameOverTransport|Nombre de usuario\/contraseña|X509|Transporte|  
-|CertificateOverTransport|X509|X509|Transporte|  
-|KerberosOverTransport|Windows|X509|Transporte|  
-|IssuedTokenOverTransport|Federado|X509|Transport|  
-|SspiNegotiatedOverTransport|Windows SSPI negociado|Windows SSPI negociado|Transport|  
-|AnonymousForCertificate|Ninguno|X509|Mensaje|  
-|UserNameForCertificate|Nombre de usuario\/contraseña|X509|Message|  
-|MutualCertificate|X509|X509|Mensaje|  
-|MutualCertificateDuplex|X509|X509|Mensaje|  
-|IssuedTokenForCertificate|Federado|X509|Mensaje|  
-|Kerberos|Windows|Windows|Mensaje|  
-|IssuedToken|Federado|Federado|Mensaje|  
-|SspiNegotiated|Windows SSPI negociado|Windows SSPI negociado|Message|  
-|AnonymousForSslNegotiated|None|X509, TLS\-Nego|Message|  
-|UserNameForSslNegotiated|Nombre de usuario\/contraseña|X509, TLS\-Nego|Message|  
-|MutualSslNegotiated|X509|X509, TLS\-Nego|Message|  
-|IssuedTokenForSslNegotiated|Federado|X509, TLS\-Nego|Message|  
+ <span data-ttu-id="24752-328">El valor de propiedad “Derived Keys” para los tokens en todos los casos es "falsa."</span><span class="sxs-lookup"><span data-stu-id="24752-328">The value of the "Derived Keys" property for the tokens in all cases is "false".</span></span>  
   
- Los extremos que usan tales modos de autenticación pueden expresar sus requisitos de seguridad mediante WS\-SecurityPolicy \(WS\-SP\).Este documento describe la estructura de mensajes de infraestructura y encabezado de seguridad para cada modo de autenticación y proporciona ejemplos de directivas y mensajes.  
+ <span data-ttu-id="24752-329">Los valores de las diversas propiedades del enlace de transporte son las siguientes:</span><span class="sxs-lookup"><span data-stu-id="24752-329">The values of the various properties of the transport binding are as follows:</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] reutiliza WS\-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de múltiples mensaje entre aplicaciones.Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
+ <span data-ttu-id="24752-330">Marca de tiempo: true</span><span class="sxs-lookup"><span data-stu-id="24752-330">Timestamp: true</span></span>  
   
- Además de los modos de autenticación, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona ajustes para controlar mecanismos de protección comunes que se aplican a la mayoría de modos de autenticación basados en seguridad, como, por ejemplo: orden de firma frente a operaciones de cifrado, conjuntos de algoritmos, derivación de claves y confirmación de firmas.  
+ <span data-ttu-id="24752-331">Diseño de encabezado de seguridad: Strict</span><span class="sxs-lookup"><span data-stu-id="24752-331">Security Header Layout: Strict</span></span>  
   
- Los siguientes prefijos y espacios de nombres se utilizan en este documento.  
+ <span data-ttu-id="24752-332">Conjunto de algoritmos: Basic256</span><span class="sxs-lookup"><span data-stu-id="24752-332">Algorithm Suite: Basic256</span></span>  
   
-|Prefijo|Espacio de nombres|  
-|-------------|------------------------|  
-|s|http:\/\/www.w3.org\/2003\/05\/soap\-envelope|  
-|sp|http:\/\/docs.oasis\-open.org\/ws\-sx\/ws\-securitypolicy\/200702|  
-|a|http:\/\/www.w3.org\/2005\/08\/addressing|  
-|wsse|TBD – OASIS WSS 1.0 URI|  
-|wsse11|TBD – OASIS WSS 1.1 URI|  
-|wsu|http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-utility\-1.0.xsd|  
-|ds|TBD – W3C XMLDSig URI|  
-|wst|TBD – WS\-Trust 2005\/02 URI|  
-|wssc|TBD – WS\-SecureConversation 2005\/02 URI|  
-|wsaw|http:\/\/www.w3.org\/2006\/05\/addressing\/wsdl|  
-|wsp|http:\/\/schemas.xmlsoap.org\/ws\/2004\/09\/policy|  
-|mssp|http:\/\/schemas.microsoft.com\/ws\/2005\/07\/securitypolicy|  
+#### <a name="311-usernameovertransport"></a><span data-ttu-id="24752-333">3.1.1 UsernameOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-333">3.1.1 UsernameOverTransport</span></span>  
+ <span data-ttu-id="24752-334">Con este modo de autenticación, el cliente se autentica con un token de nombre de usuario que aparece en la capa de SOAP como un token auxiliar firmado que siempre se envía desde el iniciador al destinatario.</span><span class="sxs-lookup"><span data-stu-id="24752-334">With this authentication mode, the client authenticates with a Username Token which appears at the SOAP layer as a signed supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="24752-335">La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-335">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="24752-336">El enlace utilizado es un enlace de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-336">The binding used is a transport binding.</span></span>  
   
-## 1.Perfiles de tokens  
- Las especificaciones Seguridad de Servicios web representan la credencial como tokens de seguridad.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite los siguientes tipos de token:  
+ <span data-ttu-id="24752-337">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-337">Policy</span></span>  
   
-### 1.1 UsernameToken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sigue perfiles UsernameToken10 y UsernameToken11 con las restricciones siguientes:  
-  
- El atributo R1101 PasswordType en el elemento UsernameToken\\Password no se debe omitir ni debe tener el valor \#PasswordText \(valor predeterminado\).  
-  
- Uno puede implementar el \#PasswordDigest mediante extensibilidad.Se ha observado que \#PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro.Pero \#PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken.El objetivo principal de \#PasswordDigest es la protección frente a ataques mediante repetición.En los modos de autenticación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las amenazas de ataques mediante repetición se mitigan mediante las firmas de mensaje.  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de B1102 nunca emite subelementos Nonce y Created del UsernameToken.  
-  
- Estos subelementos están diseñados para ayudar a detectar las repeticiones.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa signaturas de mensaje en su lugar.  
-  
- Perfil 1.1 de UsernameToken de seguridad de mensajes SOAP WSS OASIS \(UsernameToken11\) introdujo la característica de derivación de claves a partir de la contraseña.  
-  
- La contraseña de UsernameToken B1103 no se debe utilizar para la derivación de claves ni, por consiguiente, para las operaciones criptográficas.  
-  
- Razón: las contraseñas generalmente están consideradas demasiado débiles como para ser utilizadas para operaciones criptográficas.  
-  
-### 1.2 Token X509  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite certificados X509v3 como un tipo de credencial y sigue X509TokenProfile1.0 y X509TokenProfile1.1 con las siguientes restricciones:  
-  
- R1201 El atributo ValueType en el elemento BinarySecurityToken debe tener el valor \#X509v3 cuando contiene un certificado X509v3.  
-  
- Los perfiles 1.0 y 1.1 de token de WSS X509 también definen \#X509PKIPathv1 y \#PKCS7 como tipos de valor.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] no admite estos tipos.  
-  
- R1202 Si una extensión SubjectKeyIdentifier \(SKI\) se encuentra en un certificado X509, se debería utilizar wsse:KeyIdentifier para las referencias externas al token, con el atributo ValueType como \#X509SubjectKeyIdentifier, y su contenido el valor codificado en base64 de la extensión SKI del certificado.  
-  
- Las referencias SKI se implementan ampliamente y demuestran ser un tipo de referencia externa muy interoperable.  
-  
- R1203 Una referencia externa al token de seguridad X509 NO DEBERÍA utilizar ds:X509IssuerSerial.  
-  
- R1204 Si X509TokenProfile1.1 se está utilizando, una referencia externa al token de seguridad X509 DEBERÍA utilizar la huella digital introducida por WS\-Security 1.1.  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite X509IssuerSerial.Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza una cadena para comparar dos valores de X509IssuerSerial.Por consiguiente, si uno reordena componentes del Nombre del asunto y envía una referencia a un certificado a un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], puede que no se encuentre.  
-  
-### 1.3 Token de Kerberos.  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite KerberosTokenProfile1.1 para la autenticación de Windows con las restricciones siguientes:  
-  
- R1301 Un Token de Kerberos debe llevar el valor de un AP\_REQ de Kerberos v4 ajustado a GSS, tal y como se define en GSS\_API y en la especificación de Kerberos, y debe tener el atributo ValueType con el valor \#GSS\_Kerberosv5\_AP\_REQ.  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza AP\-REQ de Kerberos ajustado a GSS, no un AP\-REQ desnudo.Éste es un procedimiento de seguridad recomendado.  
-  
-### 1.4 Token SAML v1.1  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite perfiles de token de WSS SAML 1.0 y 1.1 para tokens SAML v1.1.Es posible implementar otras versiones de formatos de token SAML.  
-  
-### 1.5 Token de contexto de seguridad  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el token de contexto de seguridad \(SCT\) introducido en WS\-SecureCoversation.SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
-  
-## 2.Parámetros de seguridad de mensajes comunes  
-  
-### 2.1 Marca de tiempo  
- La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] serializa siempre wsse:TimeStamp con los campos wsse:Created y wsse:Expires.El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
-  
-### 2.2 Orden de protección  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite el orden de protección de mensajes "Sign Before Encrypt" \(firmar antes de cifrar\) y "Encrypt Before Sign" \(cifrar antes de firmar\) \(Security Policy 1.2\). ""Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de signaturas a menos que se use el mecanismo SignatureConfirmation de WS\-Security 1.1, y una signatura sobre el contenido cifrado dificulta la auditoría.  
-  
-### 2.3 Protección de firmas  
- Cuando se usa Cifrar antes de firmar, se recomienda proteger la firma para evitar los ataques por fuerza bruta para adivinar el contenido cifrado o la clave de la firma \(sobre todo cuando un token personalizado se utiliza con material de clave débil\).  
-  
-### 2.4 Conjunto de algoritmos  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite todos los conjuntos de algoritmos enumerados en la Directiva de seguridad 1.2.  
-  
-### 2.5 Derivación de clave  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza la "Derivación de clave para claves simétricas" tal y como se describe en WS\-SecureConversation.  
-  
-### 2.6 Confirmación de firma  
- La confirmación de firma puede utilizarse como protección frente a ataques de intermediarios para proteger el conjunto de firmas.  
-  
-### 2.7 Diseño del encabezado de seguridad  
- Cada modo de autenticación describe un cierto diseño para el encabezado de seguridad.Los elementos dentro del encabezado de seguridad se semiordenan.Para definir el orden de elementos secundarios del encabezado de seguridad, la directiva WS\-Security define los siguientes modos de diseño del encabezado de seguridad:  
-  
-|||  
-|-|-|  
-|Strict|Los elementos se agregan al encabezado de seguridad siguiendo las reglas de diseño descritas en la sección 7.7.1 de la Directiva de seguridad, según un principio general de "declarar antes de usar".|  
-|Lax|Los elementos se agregan al encabezado de seguridad en cualquier orden que cumpla con la seguridad de mensajes WSS: SOAP.|  
-|LaxTimestampFirst|Igual que Lax, solo que el primer elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
-|LaxTimestampLast|Igual que lax, solo que el último elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
-  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] admite los cuatro modos de diseño del encabezado de seguridad.La estructura de encabezado de Seguridad y los ejemplos de mensajes para los modos de autenticación siguen el modo "Strict" \(estricto\).  
-  
-## 3.Parámetros de seguridad de mensajes comunes  
- En esta sección se proporcionan ejemplos de directivas para cada modo de autenticación junto con ejemplos que muestran la estructura de encabezado de seguridad en mensajes intercambiados por cliente y servicio.  
-  
-### 3.1 Protección de transporte  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporciona cinco modos de autenticación que utilizan el transporte seguro para proteger los mensajes; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport y SspiNegotiatedOverTransport.  
-  
- Estos modos de autenticación se construyen utilizando el enlace de transportes descrito en SecurityPolicy.Para el modo de autenticación de UserNameOverTransport, UsernameToken es un token auxiliar firmado.Para los otros modos de autenticación el token aparece como un token de endoso firmado.Los apéndices C.1.2 y C.1.3 de SecurityPolicy describen en detalle el diseño del encabezado de seguridad.Los siguientes encabezados de seguridad del ejemplo muestran el diseño estricto para un modo de autenticación determinado.  
-  
- El valor de propiedad “Derived Keys” para los tokens en todos los casos es "falsa."  
-  
- Los valores de las diversas propiedades del enlace de transporte son las siguientes:  
-  
- Marca de tiempo: true  
-  
- Diseño de encabezado de seguridad: Strict  
-  
- Conjunto de algoritmos: Basic256  
-  
-#### 3.1.1 UsernameOverTransport  
- Con este modo de autenticación, el cliente se autentica con un token de nombre de usuario que aparece en la capa de SOAP como un token auxiliar firmado que siempre se envía desde el iniciador al destinatario.La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.El enlace utilizado es un enlace de transporte.  
-  
- Directiva  
-  
-```  
+```xml  
 <wsp:Policy wsu:Id="UserNameOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
- Diseño del encabezado de seguridad  
+ <span data-ttu-id="24752-338">Diseño del encabezado de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-338">Security Header Layout</span></span>  
   
- Solicitud  
+ <span data-ttu-id="24752-339">Request</span><span class="sxs-lookup"><span data-stu-id="24752-339">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><o:UsernameToken u:Id="uuid-b96fbb3a-e646-4403-9473-2e5ffc733ff8-1"> ... </o:UsernameToken></o:Security>  
 ```  
   
- Respuesta  
+ <span data-ttu-id="24752-340">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-340">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### 3.1.2 CertificateOverTransport  
- Con este modo de autenticación el cliente se autentica utilizando un certificado X.509 que aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario.La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.El enlace utilizado es un enlace de transporte.CertificateOverTransport solo firma los encabezados SOAP, no el cuerpo de SOAP.Es el modo de autenticación utilizado por el modo de seguridad de TransportWithMessageCredentials.Solo se firman los encabezados SOAP porque la autenticación se realiza utilizando credenciales de mensaje.  
+#### <a name="312-certificateovertransport"></a><span data-ttu-id="24752-341">3.1.2 CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-341">3.1.2 CertificateOverTransport</span></span>  
+ <span data-ttu-id="24752-342">Con este modo de autenticación el cliente se autentica utilizando un certificado X.509 que aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario.</span><span class="sxs-lookup"><span data-stu-id="24752-342">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="24752-343">La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-343">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="24752-344">El enlace utilizado es un enlace de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-344">The binding used is a transport binding.</span></span> <span data-ttu-id="24752-345">CertificateOverTransport solo firma los encabezados SOAP, no el cuerpo de SOAP.</span><span class="sxs-lookup"><span data-stu-id="24752-345">CertificateOverTransport only signs the SOAP headers, not the SOAP body.</span></span> <span data-ttu-id="24752-346">Es el modo de autenticación utilizado por el modo de seguridad de TransportWithMessageCredentials.</span><span class="sxs-lookup"><span data-stu-id="24752-346">This is the authentication mode used by the TransportWithMessageCredentials security mode.</span></span> <span data-ttu-id="24752-347">Solo se firman los encabezados SOAP porque la autenticación se realiza utilizando credenciales de mensaje.</span><span class="sxs-lookup"><span data-stu-id="24752-347">Only the SOAP headers are signed because authentication is done by using message credentials.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-348">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-348">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="CertificateOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
- Diseño del encabezado de seguridad  
+ <span data-ttu-id="24752-349">Diseño del encabezado de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-349">Security Header Layout</span></span>  
   
- Solicitud  
+ <span data-ttu-id="24752-350">Request</span><span class="sxs-lookup"><span data-stu-id="24752-350">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-351">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-351">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### 3.1.3 IssuedTokenOverTransport  
- Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un servicio de token de seguridad \(STS\) y demuestra que conoce una clave compartida.El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario.La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.El enlace es un enlace de transporte.  
+#### <a name="313-issuedtokenovertransport"></a><span data-ttu-id="24752-352">3.1.3 IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-352">3.1.3 IssuedTokenOverTransport</span></span>  
+ <span data-ttu-id="24752-353">Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un servicio de token de seguridad (STS) y demuestra que conoce una clave compartida.</span><span class="sxs-lookup"><span data-stu-id="24752-353">With this authentication mode the client does not authenticate to the service, as such, but rather presents a token issued by a Security Token Service (STS) and proves knowledge of a shared key.</span></span> <span data-ttu-id="24752-354">El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario.</span><span class="sxs-lookup"><span data-stu-id="24752-354">The issued token appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="24752-355">La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-355">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="24752-356">El enlace es un enlace de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-356">The binding is a transport binding.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-357">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-357">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy  
 ```  
   
- Diseño del encabezado de seguridad  
+ <span data-ttu-id="24752-358">Diseño del encabezado de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-358">Security Header Layout</span></span>  
   
- Solicitud  
+ <span data-ttu-id="24752-359">Request</span><span class="sxs-lookup"><span data-stu-id="24752-359">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-67692bb6-85b7-4299-8587-3ce60086b0d2-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-fab7e1b2-8dc4-412b-bda9-b95a4f836815-16" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-360">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-360">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-fab7e1b2-8dc4-412b-bda9-b95a4f836815-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-#### 3.1.4 KerberosOverTransport  
- Con este modo de autenticación, el cliente se autentica en el servicio utilizando un tique de Kerberos.El token de Kerberos aparece en la capa de SOAP como un token auxiliar de aprobación.La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.El enlace es un enlace de transporte.  
+#### <a name="314-kerberosovertransport"></a><span data-ttu-id="24752-361">3.1.4 KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-361">3.1.4 KerberosOverTransport</span></span>  
+ <span data-ttu-id="24752-362">Con este modo de autenticación, el cliente se autentica en el servicio utilizando un tique de Kerberos.</span><span class="sxs-lookup"><span data-stu-id="24752-362">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="24752-363">El token de Kerberos aparece en la capa de SOAP como un token auxiliar de aprobación.</span><span class="sxs-lookup"><span data-stu-id="24752-363">The Kerberos token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="24752-364">La autenticación del servicio se realiza mediante un certificado X.509 en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-364">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="24752-365">El enlace es un enlace de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-365">The binding is a transport binding.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-366">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-366">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="KerberosOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
- Diseño del encabezado de seguridad  
+ <span data-ttu-id="24752-367">Diseño del encabezado de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-367">Security Header Layout</span></span>  
   
- Solicitud  
+ <span data-ttu-id="24752-368">Request</span><span class="sxs-lookup"><span data-stu-id="24752-368">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-369">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-369">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-#### 3.1.5 SspiNegotiatedOverTransport  
- Con este modo de negociación, se usa un protocolo de negociación para realizar la autenticación del cliente y del servidor.Se utiliza Kerberos si es posible; de lo contrario, se utiliza NTLM.El SCT resultante aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario.El servicio se autentica además en el nivel de transporte por un certificado X.509.El enlace utilizado es un enlace de transporte. "SPNEGO" \(negociación\) describe cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usa el protocolo de negociación binario SSPI con WS\-Trust.Los ejemplos de encabezados de seguridad de esta sección tienen lugar una vez se ha establecido SCT mediante el protocolo de enlace SPNEGO.  
+#### <a name="315-sspinegotiatedovertransport"></a><span data-ttu-id="24752-370">3.1.5 SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="24752-370">3.1.5 SspiNegotiatedOverTransport</span></span>  
+ <span data-ttu-id="24752-371">Con este modo de negociación, se usa un protocolo de negociación para realizar la autenticación del cliente y del servidor.</span><span class="sxs-lookup"><span data-stu-id="24752-371">With this mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="24752-372">Se utiliza Kerberos si es posible; de lo contrario, se utiliza NTLM.</span><span class="sxs-lookup"><span data-stu-id="24752-372">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="24752-373">El SCT resultante aparece en la capa de SOAP como un token auxiliar de aprobación que siempre se envía desde el iniciador al destinatario.</span><span class="sxs-lookup"><span data-stu-id="24752-373">The resulting SCT appears at the SOAP layer as an endorsing supporting token that is always sent from initiator to recipient.</span></span> <span data-ttu-id="24752-374">El servicio se autentica además en el nivel de transporte por un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-374">The service is additionally authenticated at the transport layer by an X.509 certificate.</span></span> <span data-ttu-id="24752-375">El enlace utilizado es un enlace de transporte.</span><span class="sxs-lookup"><span data-stu-id="24752-375">The binding used is a transport binding.</span></span> <span data-ttu-id="24752-376">"SPNEGO" (negociación) describe cómo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza el protocolo de negociación binario SSPI con WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="24752-376">"SPNEGO" (negotiation) describes how [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses SSPI binary negotiation protocol with WS-Trust.</span></span> <span data-ttu-id="24752-377">Los ejemplos de encabezados de seguridad de esta sección tienen lugar una vez se ha establecido SCT mediante el protocolo de enlace SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="24752-377">Security header examples in this section are after the SCT has been established through the SPNEGO handshake.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-378">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-378">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SspiNegotiatedOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezados de seguridad  
- Una vez se establece el token de contexto de seguridad \(SCT\) a través del protocolo de enlace de SPNEGO mediante negociación binaria WS\-Trust, los mensajes de aplicación tienen encabezados de seguridad con la estructura siguiente.  
+### <a name="security-header-examples"></a><span data-ttu-id="24752-379">Ejemplos de encabezados de seguridad</span><span class="sxs-lookup"><span data-stu-id="24752-379">Security Header Examples</span></span>  
+ <span data-ttu-id="24752-380">Una vez se establece el token de contexto de seguridad (SCT) a través del protocolo de enlace de SPNEGO mediante negociación binaria WS-Trust, los mensajes de aplicación tienen encabezados de seguridad con la estructura siguiente.</span><span class="sxs-lookup"><span data-stu-id="24752-380">Once the Security Context Token is established through SPNEGO handshake using WS-Trust Binary Negotiation, the application messages have security headers with the following structure.</span></span>  
   
- Solicitud  
+ <span data-ttu-id="24752-381">Request</span><span class="sxs-lookup"><span data-stu-id="24752-381">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-9a29d087-5dae-4d40-bf86-5746d9d30eca-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-382">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-382">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### 3.2 Uso de certificados X.509 para la autenticación de servicios  
- En esta sección se describen los modos de autenticación siguientes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate y IssuedTokenForCertificate.  
+### <a name="32-using-x509-certificates-for-service-authentication"></a><span data-ttu-id="24752-383">3.2 utilizando certificados X.509 para la autenticación de servicio</span><span class="sxs-lookup"><span data-stu-id="24752-383">3.2 Using X.509 Certificates for Service Authentication</span></span>  
+ <span data-ttu-id="24752-384">En esta sección se describen los modos de autenticación siguientes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate y IssuedTokenForCertificate.</span><span class="sxs-lookup"><span data-stu-id="24752-384">This section describes the following authentication modes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate and IssuedTokenForCertificate.</span></span>  
   
-#### 3.2.1 MutualCertificate WSS1.0  
- Con este modo de autenticación el cliente autentica mediante un certificado X.509 que aparece en la capa de SOAP como el token del iniciador.La autenticación del servicio también se realiza mediante un certificado X.509.Se firman los encabezados SOAP y el cuerpo de SOAP.Se crea una clave simétrica, que se cifra con el certificado de transporte para el destinatario.  
+#### <a name="321-mutualcertificate-wss10"></a><span data-ttu-id="24752-385">3.2.1 MutualCertificate WSS1.0</span><span class="sxs-lookup"><span data-stu-id="24752-385">3.2.1 MutualCertificate WSS1.0</span></span>  
+ <span data-ttu-id="24752-386">Con este modo de autenticación el cliente autentica mediante un certificado X.509 que aparece en la capa de SOAP como el token del iniciador.</span><span class="sxs-lookup"><span data-stu-id="24752-386">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="24752-387">La autenticación del servicio también se realiza mediante un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-387">The service is also authenticated using an X.509 certificate.</span></span> <span data-ttu-id="24752-388">Se firman los encabezados SOAP y el cuerpo de SOAP.</span><span class="sxs-lookup"><span data-stu-id="24752-388">Both the SOAP headers and the SOAP body are signed.</span></span> <span data-ttu-id="24752-389">Se crea una clave simétrica, que se cifra con el certificado de transporte para el destinatario.</span><span class="sxs-lookup"><span data-stu-id="24752-389">A symmetric key is created and is encrypted with the transport certificate for the recipient.</span></span>  
   
- El enlace utilizado es un enlace asimétrico con los valores de propiedad siguientes:  
+ <span data-ttu-id="24752-390">El enlace usado es un enlace asimétrico con los valores de propiedad siguientes:</span><span class="sxs-lookup"><span data-stu-id="24752-390">The binding used is an asymmetric binding with the following property values:</span></span>  
   
- Token del iniciador: el certificado X.509 del cliente, con modo de inclusión establecido en ...\/IncludeToken\/AlwaysToRecipient  
+ <span data-ttu-id="24752-391">Token del iniciador: el certificado X.509 del cliente, con modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="24752-391">Initiator Token: the client’s X.509 certificate, with inclusion mode set to .../IncludeToken/AlwaysToRecipient</span></span>  
   
- Token del destinatario: el certificado X.509 del servidor, con modo de inclusión establecido en ...\/IncludeToken\/Never  
+ <span data-ttu-id="24752-392">Token del destinatario: el certificado X.509 del servidor, con modo de inclusión establecido en .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="24752-392">Recipient Token: Server’s X.509 Certificate, with inclusion mode is set .../IncludeToken/Never</span></span>  
   
- Protección de tokens: False  
+ <span data-ttu-id="24752-393">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-393">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-394">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-394">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-395">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-395">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-396">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-396">Encrypt Signature: True</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-397">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-397">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/></wsp:Policy></sp:Wss10><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-398">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-398">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-399">Request</span><span class="sxs-lookup"><span data-stu-id="24752-399">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-39cb393e-9da8-4d5d-b273-540ef614569b-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-400">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-400">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"> <u:Timestamp u:Id="uuid-3d742930-70d3-4d7e-aa0a-8721128dc115-8"> ... </u:Timestamp><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_5" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-401">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-401">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/></wsp:Policy></sp:Wss10><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-402">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-402">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-403">Request</span><span class="sxs-lookup"><span data-stu-id="24752-403">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-73da3e21-abff-4294-a910-e75303d280cc-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-404">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-404">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-02f276b6-804f-480d-99e9-2e90fc76ab27-3"> ... </u:Timestamp><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.2 MutualCertificateDuplex  
- Con este modo de autenticación el cliente autentica mediante un certificado X.509 que aparece en la capa de SOAP como el token del iniciador.La autenticación del servicio también se realiza mediante un certificado X.509.  
+#### <a name="322-mutualcertificateduplex"></a><span data-ttu-id="24752-405">3.2.2 MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="24752-405">3.2.2 MutualCertificateDuplex</span></span>  
+ <span data-ttu-id="24752-406">Con este modo de autenticación el cliente autentica mediante un certificado X.509 que aparece en la capa de SOAP como el token del iniciador.</span><span class="sxs-lookup"><span data-stu-id="24752-406">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="24752-407">La autenticación del servicio también se realiza mediante un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-407">The service is also authenticated using an X.509 certificate.</span></span>  
   
- El enlace utilizado es un enlace asimétrico con los valores de propiedad siguientes:  
+ <span data-ttu-id="24752-408">El enlace usado es un enlace asimétrico con los valores de propiedad siguientes:</span><span class="sxs-lookup"><span data-stu-id="24752-408">The binding used is an asymmetric binding with the following property values:</span></span>  
   
- Token del iniciador: certificado X509 de cliente, modo de inclusión establecido en ...\/IncludeToken\/AlwaysToRecipient  
+ <span data-ttu-id="24752-409">Token del iniciador: certificado X509 de cliente, modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="24752-409">Initiator Token: Client’s X509 Certificate, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
   
- Token del destinatario: certificado X509 del servidor, modo de inclusión establecido en ...\/IncludeToken\/AlwaysToInitiator  
+ <span data-ttu-id="24752-410">Token del destinatario: certificado X509 del servidor, modo de inclusión establecido en .../IncludeToken/AlwaysToInitiator</span><span class="sxs-lookup"><span data-stu-id="24752-410">Recipient Token: Server’s X509 Certificate, inclusion mode is set to .../IncludeToken/AlwaysToInitiator</span></span>  
   
- Protección de tokens: False  
+ <span data-ttu-id="24752-411">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-411">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-412">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-412">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-413">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-413">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-414">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-414">Encrypt Signature: True</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-415">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-415">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificateDuplex_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex"/><ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud y respuesta  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-416">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-416">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-417">Solicitud y respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-417">Request and Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-4dec3da4-b572-4654-ba4d-4a2f84a87510-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-418">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-418">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificateDuplex_policy"><wsp:ExactlyOne><wsp:All><sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:InitiatorToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:InitiatorToken><sp:RecipientToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:RecipientToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:AsymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex"/><ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud y respuesta  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-419">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-419">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-420">Solicitud y respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-420">Request and Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b0e23feb-cd2d-4dc1-bad9-284bc45f3be3-1"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><e:EncryptedKey Id="_0" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.3 Usar SymmetricBinding con autenticación de servicio X.509  
- "WSS10" proporcionó compatibilidad limitada para escenarios con tokens de X509.Por ejemplo, no hubo manera de proporcionar protección de cifrado y firma para los mensajes que solo usan tokens de X509 de servicio. "WSS11" introdujo el uso de EncryptedKey como un token simétrico.Ahora una clave temporal cifrada para el certificado X.509 de servicio se podría utilizar para la protección de mensajes de solicitud y respuesta.Los modos de autenticación descritos en la sección 3.4 que se encuentra abajo usan este patrón.  
+#### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a><span data-ttu-id="24752-421">3.2.3 Uso de SymmetricBinding con autenticación de servicio X.509</span><span class="sxs-lookup"><span data-stu-id="24752-421">3.2.3 Using SymmetricBinding with X.509 Service Authentication</span></span>  
+ <span data-ttu-id="24752-422">"WSS10" proporcionó compatibilidad limitada para escenarios con tokens de X509.</span><span class="sxs-lookup"><span data-stu-id="24752-422">"WSS10" provided limited support for scenarios with X509 tokens.</span></span> <span data-ttu-id="24752-423">Por ejemplo, no hubo manera de proporcionar protección de cifrado y firma para los mensajes que solo usan tokens de X509 de servicio.</span><span class="sxs-lookup"><span data-stu-id="24752-423">For example, there was no way to provide signature and encryption protection for messages using only service X509 token.</span></span> <span data-ttu-id="24752-424">"WSS11" introdujo el uso de EncryptedKey como un token simétrico.</span><span class="sxs-lookup"><span data-stu-id="24752-424">"WSS11" introduced the usage of EncryptedKey as a symmetric token.</span></span> <span data-ttu-id="24752-425">Ahora una clave temporal cifrada para el certificado X.509 de servicio se podría utilizar para la protección de mensajes de solicitud y respuesta.</span><span class="sxs-lookup"><span data-stu-id="24752-425">Now a temporary key encrypted for the service's X.509 certificate could be used for both request and response messages protection.</span></span> <span data-ttu-id="24752-426">Los modos de autenticación que se describe en la sección 3.4 siguiente usan este patrón.</span><span class="sxs-lookup"><span data-stu-id="24752-426">The authentication modes described in the section 3.4 below use this pattern.</span></span>  
   
- WS\-SecurityPolicy describe este patrón utilizando SymmetricBinding con token X509 de servicio como el token de protección.  
+ <span data-ttu-id="24752-427">WS-SecurityPolicy describe este patrón utilizando SymmetricBinding con token X509 de servicio como el token de protección.</span><span class="sxs-lookup"><span data-stu-id="24752-427">WS-SecurityPolicy describes this pattern using SymmetricBinding with Service X509 token as the protection token.</span></span>  
   
- Los modos de autenticación AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 e IssuedTokenForCertificate usan una instancia similar de sp:SymmetricBinding con los siguientes valores de propiedad:  
+ <span data-ttu-id="24752-428">Los modos de autenticación AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 e IssuedTokenForCertificate usan una instancia similar de sp:SymmetricBinding con los siguientes valores de propiedad:</span><span class="sxs-lookup"><span data-stu-id="24752-428">Authentication modes AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 and IssuedTokenForCertificate all use a similar instance of sp:SymmetricBinding with the following property values:</span></span>  
   
- Token de protección: certificado X.509 de servidor, modo de inclusión establecido en ...\/IncludeToken\/Never  
-Protección de tokens: False  
+ <span data-ttu-id="24752-429">Token de protección: certificado X.509 de servidor, modo de inclusión establecido en .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="24752-429">Protection Token: Server’s X509 Certificate, inclusion mode is set to .../IncludeToken/Never</span></span>  
+<span data-ttu-id="24752-430">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-430">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-431">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-431">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-432">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-432">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-433">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-433">Encrypt Signature: True</span></span>  
   
- Los modos de autenticación anteriores solo difieren en los tokens auxiliares que utilizan.AnonymousForCertificate no tiene ningún token auxiliar, MutualCertificate WSS 1.1 tiene el certificado X509 de cliente como un token auxiliar de aprobación, UserNameForCertificate tiene un token de nombre de usuario como un token auxiliar firmado e IssuedTokenForCertificate tiene el token emitido como un token auxiliar de aprobación.  
+ <span data-ttu-id="24752-434">Los modos de autenticación anteriores solo difieren en los tokens auxiliares que utilizan.</span><span class="sxs-lookup"><span data-stu-id="24752-434">The above authentication modes only differ by the supporting tokens they use.</span></span> <span data-ttu-id="24752-435">AnonymousForCertificate no tiene ningún token auxiliar, MutualCertificate WSS 1.1 tiene el certificado X509 de cliente como un token auxiliar de aprobación, UserNameForCertificate tiene un token de nombre de usuario como un token auxiliar firmado e IssuedTokenForCertificate tiene el token emitido como un token auxiliar de aprobación.</span><span class="sxs-lookup"><span data-stu-id="24752-435">AnonymousForCertificate does not have any supporting tokens, MutualCertificate WSS 1.1 has the client’s X509 certificate as an endorsing supporting tokens, UserNameForCertificate has a UserName Token as a signed supporting token and IssuedTokenForCertificate has the issued token as an endorsing supporting token.</span></span>  
   
-#### 3.2.4 AnonymousForCertificate  
- Con este modo de autenticación, el cliente es anónimo y el servicio se autentica utilizando un certificado X.509.El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.4.2.  
+#### <a name="324-anonymousforcertificate"></a><span data-ttu-id="24752-436">3.2.4 AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-436">3.2.4 AnonymousForCertificate</span></span>  
+ <span data-ttu-id="24752-437">Con este modo de autenticación, el cliente es anónimo y el servicio se autentica utilizando un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-437">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="24752-438">El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.4.2.</span><span class="sxs-lookup"><span data-stu-id="24752-438">The binding used is an instance of symmetric binding as described in 3.4.2.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-439">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-439">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousforCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-440">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-440">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-441">Request</span><span class="sxs-lookup"><span data-stu-id="24752-441">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-4de2d2a1-6266-4a02-93e6-242a1ac2aeb3-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-4de2d2a1-6266-4a02-93e6-242a1ac2aeb3-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-442">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-442">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b06cb481-3176-4c56-af35-c38252bb6c78-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_2" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_7" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-443">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-443">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousforCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-444">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-444">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-445">Request</span><span class="sxs-lookup"><span data-stu-id="24752-445">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-562aac68-8cdd-45d5-bc03-df662e6ed048-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-562aac68-8cdd-45d5-bc03-df662e6ed048-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-446">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-446">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-15b48260-23da-424d-8dc4-8f4e150fb8cf-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><k:SignatureConfirmation u:Id="_2" Value="ALF+QNGmWn2k3LpWEDIzSBgTkvo=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.5 UserNameForCertificate  
- Con este modo de autenticación el cliente se autentica en el servicio utilizando un token de nombre de usuario que aparece en la capa SOAP como un token auxiliar firmado.El servicio autentica al cliente utilizando un certificado X.509.El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.  
+#### <a name="325-usernameforcertificate"></a><span data-ttu-id="24752-447">3.2.5 UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-447">3.2.5 UserNameForCertificate</span></span>  
+ <span data-ttu-id="24752-448">Con este modo de autenticación el cliente se autentica en el servicio utilizando un token de nombre de usuario que aparece en la capa SOAP como un token auxiliar firmado.</span><span class="sxs-lookup"><span data-stu-id="24752-448">With this authentication mode the client authenticates to the service using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="24752-449">El servicio autentica al cliente utilizando un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-449">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="24752-450">El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.</span><span class="sxs-lookup"><span data-stu-id="24752-450">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-451">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-451">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-452">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-452">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-453">Request</span><span class="sxs-lookup"><span data-stu-id="24752-453">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-27196139-acb9-410f-a2c6-51d20d24278b-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-27196139-acb9-410f-a2c6-51d20d24278b-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-454">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-454">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-681226f7-126a-4806-b732-fcca097cd7a8-5"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-455">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-455">Policy</span></span>  
   
+```xml  
+<wsp:Policy wsu:Id="UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
-<wsp:Policy wsu:Id=”UserNameForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
   
-```  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-456">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-456">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-457">Request</span><span class="sxs-lookup"><span data-stu-id="24752-457">Request</span></span>  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
-  
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8276d8b7-74a0-4257-b8a5-e25350e7c2d4-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-8276d8b7-74a0-4257-b8a5-e25350e7c2d4-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
- Response  
+ <span data-ttu-id="24752-458">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-458">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8a7ad353-f071-49dc-90dd-5ad2e9abd40a-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
-#### 3.2.6 MutualCertificate \(WSS 1.1\)  
- Con este modo de autenticación el cliente se autentica mediante un certificado X.509 que aparece en la capa SOAP como el token auxiliar de aprobación.La autenticación del servicio también se realiza mediante un certificado X.509.El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.  
+#### <a name="326-mutualcertificate-wss-11"></a><span data-ttu-id="24752-459">3.2.6 MutualCertificate (WSS 1.1)</span><span class="sxs-lookup"><span data-stu-id="24752-459">3.2.6 MutualCertificate (WSS 1.1)</span></span>  
+ <span data-ttu-id="24752-460">Con este modo de autenticación el cliente se autentica mediante un certificado X.509 que aparece en la capa SOAP como el token auxiliar de aprobación.</span><span class="sxs-lookup"><span data-stu-id="24752-460">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="24752-461">La autenticación del servicio también se realiza mediante un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-461">The service is also authenticated using an X.509 certificate.</span></span> <span data-ttu-id="24752-462">El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.</span><span class="sxs-lookup"><span data-stu-id="24752-462">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-463">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-463">Policy</span></span>  
   
+```xml  
+<wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
-<wsp:Policy wsu:Id=”MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-464">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-464">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-465">Request</span><span class="sxs-lookup"><span data-stu-id="24752-465">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-75305d4e-f54f-4e36-9de9-45b6d2053c80-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-75305d4e-f54f-4e36-9de9-45b6d2053c80-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_2" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><o:BinarySecurityToken> ...</o:BinarySecurityToken><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_10" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-466">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-466">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-8c73fa91-f95b-40ff-b088-48118e6fadcf-5"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_3" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_10" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-467">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-467">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-468">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-468">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-469">Request</span><span class="sxs-lookup"><span data-stu-id="24752-469">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-0b940a9e-606f-43b9-b05d-a162043529bc-2"> ... </u:Timestamp><e:EncryptedKey Id="uuid-0b940a9e-606f-43b9-b05d-a162043529bc-1" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedKey><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><o:BinarySecurityToken> ... </o:BinarySecurityToken><Signature Id="_2" xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-470">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-470">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-67dacc31-4a50-4866-b673-ccc03e156337-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><k:SignatureConfirmation u:Id="_2" Value="mYyksUQKkK27Fd6hmgOiqFwvudk=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><k:SignatureConfirmation u:Id="_3" Value="SreOZ4Rr2BcXjFQFvgN55ERypI/1/86hdWThE5lav0eYIxF1OCzQgZF+y7cQ82t+g3CRnLbE3c52DqMpY/HXlrdMct3m3rnpDH+fqdhNY4fE+M2v4zUMFR7uxDKWcEm9zZpmUvJCDfJRfKRaKjy5cTbccRKqSxw7HAqOYnqibA4=" xmlns:k="http://docs.oasis-open.org/wss/oasis-wss-wssecurity-secext-1.1.xsd"></k:SignatureConfirmation><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.2.7 IssuedTokenForCertificate  
- Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida.El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación.El servicio autentica al cliente utilizando un certificado X.509.El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.  
+#### <a name="327-issuedtokenforcertificate"></a><span data-ttu-id="24752-471">3.2.7 IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="24752-471">3.2.7 IssuedTokenForCertificate</span></span>  
+ <span data-ttu-id="24752-472">Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida.</span><span class="sxs-lookup"><span data-stu-id="24752-472">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by a STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="24752-473">El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación.</span><span class="sxs-lookup"><span data-stu-id="24752-473">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="24752-474">El servicio autentica al cliente utilizando un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-474">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="24752-475">El enlace utilizado es un enlace simétrico donde el token de protección es una clave generada por el cliente, cifrada con la clave pública del servicio.</span><span class="sxs-lookup"><span data-stu-id="24752-475">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-476">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-476">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-477">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-477">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-478">Request</span><span class="sxs-lookup"><span data-stu-id="24752-478">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-1d2c03e6-0b69-4483-903a-6ef9b9d286ed-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-3f0f57fa-046d-40c0-919f-d0d7aa640b9f-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
-  
 ```  
   
- Response  
+ <span data-ttu-id="24752-479">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-479">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-3f0f57fa-046d-40c0-919f-d0d7aa640b9f-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Directiva  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-480">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-480">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-481">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-481">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForCertificate_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never"><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireThumbprintReference/><sp:WssX509V3Token10/></wsp:Policy></sp:X509Token></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
- Solicitud  
+ <span data-ttu-id="24752-482">Solicitud</span><span class="sxs-lookup"><span data-stu-id="24752-482">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-de1c51aa-2ecc-4e70-b6bd-9dca58331fa7-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-96c5e80a-9b87-4c6f-af77-752ca65cf607-16" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-483">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-483">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-96c5e80a-9b87-4c6f-af77-752ca65cf607-21"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-## 3.3 Kerberos  
- Con este modo de autenticación, el cliente se autentica en el servicio utilizando un tique de Kerberos.Ese mismo vale también proporciona autenticación del servidor.El enlace utilizado es un enlace simétrico con las siguientes propiedades:  
+## <a name="33-kerberos"></a><span data-ttu-id="24752-484">3.3 Kerberos</span><span class="sxs-lookup"><span data-stu-id="24752-484">3.3 Kerberos</span></span>  
+ <span data-ttu-id="24752-485">Con este modo de autenticación, el cliente se autentica en el servicio utilizando un tique de Kerberos.</span><span class="sxs-lookup"><span data-stu-id="24752-485">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="24752-486">Ese mismo vale también proporciona autenticación del servidor.</span><span class="sxs-lookup"><span data-stu-id="24752-486">That same ticket also provides server authentication.</span></span> <span data-ttu-id="24752-487">El enlace utilizado es un enlace simétrico con las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="24752-487">The binding used is a symmetric binding with the following properties;</span></span>  
   
- Token de protección: vale de Kerberos, modo de inclusión establecido en ...\/IncludeToken\/Once  
-Protección de tokens: False  
+ <span data-ttu-id="24752-488">Token de protección: vale de Kerberos, modo de inclusión establecido en .../IncludeToken/Once</span><span class="sxs-lookup"><span data-stu-id="24752-488">Protection Token: Kerberos Ticket, inclusion mode is set to .../IncludeToken/Once</span></span>  
+<span data-ttu-id="24752-489">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-489">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-490">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-490">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-491">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-491">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-492">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-492">Encrypt Signature: True</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-493">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-493">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="Kerberos_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:RequireDerivedKeys/><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-494">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-494">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-495">Request</span><span class="sxs-lookup"><span data-stu-id="24752-495">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e8f6dc3b-407d-4387-bd33-97aedfd8bf13-2"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
-  
 ```  
   
- Response  
+ <span data-ttu-id="24752-496">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-496">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7b03568e-66ae-49da-82ee-5d12d372876e-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-497">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-497">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="Kerberos_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:KerberosToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Once"><wsp:Policy><sp:RequireDerivedKeys/><sp:WssGssKerberosV5ApReqToken11/></wsp:Policy></sp:KerberosToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic128/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-498">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-498">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-499">Request</span><span class="sxs-lookup"><span data-stu-id="24752-499">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d29247f0-f220-4e81-9a8d-a15f5ac31072-2"> ... </u:Timestamp><o:BinarySecurityToken> ... </o:BinarySecurityToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-500">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-500">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9025b930-4f15-42fe-8e78-35d3a3480177-2"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.4 IssuedToken  
- Con este modo de autenticación, el cliente no se autentica en el servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida.El servicio no se autentica al cliente como tal, sino que, en su lugar, el STS cifra la clave compartida como parte del token emitido, de manera que solo el servicio puede descifrar la clave.El enlace utilizado es un enlace simétrico con las siguientes propiedades:  
+#### <a name="34-issuedtoken"></a><span data-ttu-id="24752-501">3.4 IssuedToken</span><span class="sxs-lookup"><span data-stu-id="24752-501">3.4 IssuedToken</span></span>  
+ <span data-ttu-id="24752-502">Con este modo de autenticación, el cliente no se autentica en el servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida.</span><span class="sxs-lookup"><span data-stu-id="24752-502">With this authentication mode the client does not authenticate to the service, as such, rather the client presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="24752-503">El servicio no se autentica al cliente como tal, sino que, en su lugar, el STS cifra la clave compartida como parte del token emitido, de manera que solo el servicio puede descifrar la clave.</span><span class="sxs-lookup"><span data-stu-id="24752-503">The service is not authenticated to the client, as such, instead the STS encrypts the shared key as part of the issued token such that only the service can decrypt the key.</span></span> <span data-ttu-id="24752-504">El enlace utilizado es un enlace simétrico con las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="24752-504">The binding used is as symmetric binding with the following properties;</span></span>  
   
- Token de protección: token emitido, modo de inclusión establecido en ...\/IncludeToken\/AlwaysToRecipient  
-Protección de tokens: False  
+ <span data-ttu-id="24752-505">Token de protección: token emitido, modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="24752-505">Protection Token: Issued Token, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
+<span data-ttu-id="24752-506">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-506">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-507">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-507">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-508">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-508">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-509">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-509">Encrypt Signature: True</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-510">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-510">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedToken_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-511">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-511">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-512">Request</span><span class="sxs-lookup"><span data-stu-id="24752-512">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-61ce3989-bc38-4d67-8262-6232c9d49a26-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-7e2d2617-1c28-465a-be30-de4a78cfc0e2-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-513">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-513">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e2d2617-1c28-465a-be30-de4a78cfc0e2-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>    
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-514">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-514">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedToken_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-515">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-515">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-516">Request</span><span class="sxs-lookup"><span data-stu-id="24752-516">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-1dc8bdef-4202-4e08-8a5e-ab94da579dec-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-517">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-517">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### 3.5 Uso de SslNegotiated para la autenticación de servicio  
- En esta sección se describe un grupo de modos de autenticación que utilizan un enlace simétrico donde el token de protección es un token de contexto de seguridad por WS\-SecureConversation \(WS SC\), cuyo valor de clave se negocia ejecutando el protocolo TLS sobre mensajes de RST\/RSTR de WS\-Trust \(WS\-T\).En TLSNEGO se describen los detalles de la implementación del protocolo de enlace de TLS mediante WS\-Trust.Aquí en los ejemplos de mensajes supondremos que SCT con un contexto de seguridad asociado ya se establece a través de un protocolo de enlace.  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a><span data-ttu-id="24752-518">3.5 uso de SslNegotiated para la autenticación de servicio</span><span class="sxs-lookup"><span data-stu-id="24752-518">3.5 Using SslNegotiated for Service Authentication</span></span>  
+ <span data-ttu-id="24752-519">En esta sección se describe un grupo de modos de autenticación que utilizan un enlace simétrico donde el token de protección es un token de contexto de seguridad por WS-SecureConversation (WS SC), cuyo valor de clave se negocia ejecutando el protocolo TLS sobre mensajes de RST/RSTR de WS-Trust (WS-T).</span><span class="sxs-lookup"><span data-stu-id="24752-519">This section describes a group of authentication modes that use a symmetric binding with the protection token being a Security Context Token per WS-SecureConversation (WS-SC) whose key value is negotiated by executing the TLS protocol over WS-Trust (WS-T) RST/RSTR messages.</span></span> <span data-ttu-id="24752-520">En TLSNEGO se describen los detalles de la implementación del protocolo de enlace de TLS mediante WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="24752-520">Details of the TLS handshake implementation using WS-Trust are described in TLSNEGO.</span></span> <span data-ttu-id="24752-521">Aquí en los ejemplos de mensajes supondremos que SCT con un contexto de seguridad asociado ya se establece a través de un protocolo de enlace.</span><span class="sxs-lookup"><span data-stu-id="24752-521">Here in the message examples we will assume that SCT with an associated security context is already established through a handshake.</span></span>  
   
- El enlace utilizado es un enlace simétrico con las siguientes propiedades:  
+ <span data-ttu-id="24752-522">El enlace utilizado es un enlace simétrico con las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="24752-522">The binding used is a symmetric binding with the following properties;</span></span>  
   
- Token de protección: SslContextToken, modo de inclusión establecido en ...\/IncludeToken\/Never  
-Protección de tokens: False  
+ <span data-ttu-id="24752-523">Token de protección: SslContextToken, modo de inclusión establecido en .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="24752-523">Protection Token: SslContextToken, inclusion mode is set to .../IncludeToken/Never</span></span>  
+<span data-ttu-id="24752-524">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-524">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-525">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-525">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-526">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-526">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-527">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-527">Encrypt Signature: True</span></span>  
   
-#### 3.5.1 Directiva para la autenticación de servicio SslNegotiated  
- La directiva para todos los modos de autenticación de esta sección es similar y solo difieren en los tokens auxiliares firmados o aprobados empleados.  
+#### <a name="351-policy-for-sslnegotiated-service-authentication"></a><span data-ttu-id="24752-528">3.5.1 Directiva para la autenticación de servicio SslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-528">3.5.1 Policy for SslNegotiated service authentication</span></span>  
+ <span data-ttu-id="24752-529">La directiva para todos los modos de autenticación de esta sección es similar y solo difieren en los tokens auxiliares firmados o aprobados empleados.</span><span class="sxs-lookup"><span data-stu-id="24752-529">Policy for all authentication modes in this section are similar and differ only by specific signed supporting or endorsing tokens used.</span></span>  
   
-#### 3.5.2 AnonymousForSslNegotiated  
- Con este modo de autenticación, el cliente es anónimo y el servicio se autentica utilizando un certificado X.509.El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1 más arriba.  
+#### <a name="352-anonymousforsslnegotiated"></a><span data-ttu-id="24752-530">3.5.2 AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-530">3.5.2 AnonymousForSslNegotiated</span></span>  
+ <span data-ttu-id="24752-531">Con este modo de autenticación, el cliente es anónimo y el servicio se autentica utilizando un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-531">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="24752-532">El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1 más arriba.</span><span class="sxs-lookup"><span data-stu-id="24752-532">The binding used is an instance of symmetric binding as described in 3.5.1 above.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-533">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-533">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-534">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-534">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-535">Request</span><span class="sxs-lookup"><span data-stu-id="24752-535">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-f4b86ce2-4ba6-4c55-bac1-2e920fc6d5db-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-d21ec2b8-99f5-443c-a4c6-a4d40619187e-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-536">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-536">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d21ec2b8-99f5-443c-a4c6-a4d40619187e-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-537">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-537">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="AnonymousForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-538">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-538">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-539">Request</span><span class="sxs-lookup"><span data-stu-id="24752-539">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-c84b24b9-39e0-4cc3-99e2-cec088f1b9eb-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-df206ad9-1ee2-46d7-9fb4-6e4631c9762f-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-540">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-540">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-df206ad9-1ee2-46d7-9fb4-6e4631c9762f-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.5.3 UserNameForSslNegotiated  
- Con este modo de autenticación el cliente se autentica el servicio utilizando un token de nombre de usuario que aparece en la capa SOAP como un token auxiliar firmado.La autenticación del servicio se realiza mediante un certificado X.509.El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1.  
+#### <a name="353-usernameforsslnegotiated"></a><span data-ttu-id="24752-541">3.5.3 UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-541">3.5.3 UserNameForSslNegotiated</span></span>  
+ <span data-ttu-id="24752-542">Con este modo de autenticación el cliente se autentica el servicio utilizando un token de nombre de usuario que aparece en la capa SOAP como un token auxiliar firmado.</span><span class="sxs-lookup"><span data-stu-id="24752-542">With this authentication mode the client is authenticates using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="24752-543">La autenticación del servicio se realiza mediante un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-543">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="24752-544">El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1.</span><span class="sxs-lookup"><span data-stu-id="24752-544">The binding used is an instance of symmetric binding as described in 3.5.1.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-545">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-545">Policy</span></span>  
   
+```xml  
+<wsp:Policy wsu:Id="UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
-<wsp:Policy wsu:Id=”UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-546">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-546">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-547">Request</span><span class="sxs-lookup"><span data-stu-id="24752-547">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-3d1a12c3-e690-474a-a223-a346fc0329a9-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-137ea768-7d49-404b-87eb-f11d9c7154aa-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_9" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-548">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-548">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-137ea768-7d49-404b-87eb-f11d9c7154aa-5"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-549">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-549">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="UserNameForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:SignedEncryptedSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:UsernameToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:WssUsernameToken10/></wsp:Policy></sp:UsernameToken></wsp:Policy></sp:SignedEncryptedSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-550">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-550">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-551">Request</span><span class="sxs-lookup"><span data-stu-id="24752-551">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-56e931e8-20c2-457f-a83e-8fcd6b92c258-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-83d053cb-03a0-4461-9616-86475cf083c4-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
- Response  
+ <span data-ttu-id="24752-552">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-552">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-83d053cb-03a0-4461-9616-86475cf083c4-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-#### 3.5.4 IssuedTokenForSslNegotiated  
- Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida.El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación.La autenticación del servicio se realiza mediante un certificado X.509.El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1 más arriba.  
+#### <a name="354-issuedtokenforsslnegotiated"></a><span data-ttu-id="24752-553">3.5.4 IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-553">3.5.4 IssuedTokenForSslNegotiated</span></span>  
+ <span data-ttu-id="24752-554">Con este modo de autenticación, el cliente no se autentica al servicio como tal; sino que, en su lugar, presenta un token emitido por un STS y demuestra que conoce una clave compartida.</span><span class="sxs-lookup"><span data-stu-id="24752-554">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="24752-555">El token emitido aparece en la capa de SOAP como un token auxiliar de aprobación.</span><span class="sxs-lookup"><span data-stu-id="24752-555">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="24752-556">La autenticación del servicio se realiza mediante un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-556">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="24752-557">El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1 más arriba.</span><span class="sxs-lookup"><span data-stu-id="24752-557">The binding used is an instance of symmetric binding as described in 3.5.1 above.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-558">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-558">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-559">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-559">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-560">Request</span><span class="sxs-lookup"><span data-stu-id="24752-560">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-b19fb2e7-8f0c-45c1-b62c-45d6ff6d57e7-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-199509f9-7963-42b7-b340-7598ee261d5a-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-561">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-561">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-199509f9-7963-42b7-b340-7598ee261d5a-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-562">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-562">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="IssuedTokenForSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ... </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireDerivedKeys/><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/><sp:RequireSignatureConfirmation/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>    
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-563">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-563">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-564">Request</span><span class="sxs-lookup"><span data-stu-id="24752-564">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d75104d5-313e-440f-b112-db8aff57a5fe-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-e668caab-b7e4-4056-ac42-4015ae2a67a6-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-565">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-565">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e668caab-b7e4-4056-ac42-4015ae2a67a6-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-#### 3.5.5 MutualSslNegotiated  
- Con este modo de autenticación, el cliente y el servicio autentican utilizando los certificados X.509.El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1 más arriba.  
+#### <a name="355-mutualsslnegotiated"></a><span data-ttu-id="24752-566">3.5.5 MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-566">3.5.5 MutualSslNegotiated</span></span>  
+ <span data-ttu-id="24752-567">Con este modo de autenticación, el cliente y el servicio autentican utilizando los certificados X.509.</span><span class="sxs-lookup"><span data-stu-id="24752-567">With this authentication mode the client and the service authenticate using X.509 certificates.</span></span> <span data-ttu-id="24752-568">El enlace utilizado es una instancia de enlace simétrico tal y como se describe en 3.5.1 más arriba.</span><span class="sxs-lookup"><span data-stu-id="24752-568">The binding used is an instance of symmetric binding as described in 3.5.1 above.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-569">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-569">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-570">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-570">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-571">Request</span><span class="sxs-lookup"><span data-stu-id="24752-571">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d1e6037e-8a64-494f-9447-07d3125b81b5-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-e4b73625-3011-4f6d-a6f9-4d682e860801-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-572">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-572">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e4b73625-3011-4f6d-a6f9-4d682e860801-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-573">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-573">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="MutualSslNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><mssp:SslContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient" xmlns:mssp="http://schemas.microsoft.com/ws/2005/07/securitypolicy"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><mssp:RequireClientCertificate/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></mssp:SslContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>   
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-574">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-574">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-575">Request</span><span class="sxs-lookup"><span data-stu-id="24752-575">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-c2a6ab10-889a-4ee1-871d-05410c90fc10-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
-  
 ```  
   
- Response  
+ <span data-ttu-id="24752-576">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-576">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-ede0bd89-1f7e-4453-96ed-13e58c7ba8fe-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### 3.6 SspiNegotiated  
- Con este modo de autenticación, se usa un protocolo de negociación para realizar la autenticación del cliente y del servidor.Se utiliza Kerberos si es posible; de lo contrario, se utiliza NTLM.El enlace utilizado es un enlace simétrico con las siguientes propiedades:  
+### <a name="36-sspinegotiated"></a><span data-ttu-id="24752-577">3.6 SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="24752-577">3.6 SspiNegotiated</span></span>  
+ <span data-ttu-id="24752-578">Con este modo de autenticación, se usa un protocolo de negociación para realizar la autenticación del cliente y del servidor.</span><span class="sxs-lookup"><span data-stu-id="24752-578">With this authentication mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="24752-579">Se utiliza Kerberos si es posible; de lo contrario, se utiliza NTLM.</span><span class="sxs-lookup"><span data-stu-id="24752-579">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="24752-580">El enlace utilizado es un enlace simétrico con las siguientes propiedades:</span><span class="sxs-lookup"><span data-stu-id="24752-580">The binding used is a symmetric binding with the following properties;</span></span>  
   
- Token de protección: SpnegoContextToken, modo de inclusión establecido en ...\/IncludeToken\/AlwaysToRecipient  
-Protección de tokens: False  
+ <span data-ttu-id="24752-581">Token de protección: SpnegoContextToken, modo de inclusión establecido en .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="24752-581">Protection Token: SpnegoContextToken, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
+<span data-ttu-id="24752-582">Protección de tokens: False</span><span class="sxs-lookup"><span data-stu-id="24752-582">Token Protection: False</span></span>  
   
- Encabezado completo y firmas de cuerpo: True  
+ <span data-ttu-id="24752-583">Encabezado completo y firmas de cuerpo: True</span><span class="sxs-lookup"><span data-stu-id="24752-583">Entire Header And Body Signatures: True</span></span>  
   
- Orden de protección: SignBeforeEncrypt  
+ <span data-ttu-id="24752-584">Orden de protección: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="24752-584">Protection Order: SignBeforeEncrypt</span></span>  
   
- Cifrar firma: True  
+ <span data-ttu-id="24752-585">Cifrar firma: True</span><span class="sxs-lookup"><span data-stu-id="24752-585">Encrypt Signature: True</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-586">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-586">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SspiNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-587">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-587">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-588">Request</span><span class="sxs-lookup"><span data-stu-id="24752-588">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9a954fcb-4df2-4610-9800-f542f2b5130a-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-554d8cfc-e956-43db-9abb-afcafd024347-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-589">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-589">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-554d8cfc-e956-43db-9abb-afcafd024347-4"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>   
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-590">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-590">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SspiNegotiated_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:MustNotSendCancel/><sp:MustNotSendAmend/><sp:MustNotSendRenew/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-591">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-591">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-592">Request</span><span class="sxs-lookup"><span data-stu-id="24752-592">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-f1673773-f9a7-4b43-b13b-405e7dd4a6e3-4"> ... </u:Timestamp><sc:SecurityContextToken u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:SecurityContextToken><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-593">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-593">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-e0aabc81-6942-4fe6-81bc-9def184565ea-3"> ... </u:Timestamp><sc:DerivedKeyToken u:Id="_1" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><sc:DerivedKeyToken u:Id="_0" xmlns:sc="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"> ... </sc:DerivedKeyToken><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"> ... </Signature><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList></o:Security>  
 ```  
   
-### 3.7 SecureConversation  
- El enlace utilizado es un enlace simétrico donde el token de protección es un SCT por WS\-SecureConversation \(WS SC\).El SCT se negocia mediante WS\-Trust \(WS\-Trust\) o WS\-SecureConversation \(WS\-SC\) según un enlace anidado, que es en sí mismo un enlace simétrico que usa un protocolo de negociación.El protocolo de negociación utilizará Kerberos para realizar la autenticación de cliente y servidor si es posible.Si no se puede utilizar Kerberos, se volverá a NTLM.  
+### <a name="37-secureconversation"></a><span data-ttu-id="24752-594">3.7 SecureConversation</span><span class="sxs-lookup"><span data-stu-id="24752-594">3.7 SecureConversation</span></span>  
+ <span data-ttu-id="24752-595">El enlace utilizado es un enlace simétrico donde el token de protección es un SCT por WS-SecureConversation (WS SC).</span><span class="sxs-lookup"><span data-stu-id="24752-595">The binding used is a symmetric binding with the protection token being a SCT per WS-SecureConversation (WS-SC).</span></span> <span data-ttu-id="24752-596">El SCT se negocia mediante WS-Trust (WS-Trust) o WS-SecureConversation (WS-SC) según un enlace anidado, que es en sí mismo un enlace simétrico que usa un protocolo de negociación.</span><span class="sxs-lookup"><span data-stu-id="24752-596">The SCT is negotiated using WS-Trust (WS-Trust) or WS-SecureConversation (WS-SC) according to a nested binding, which is itself a symmetric binding that uses a negotiation protocol.</span></span> <span data-ttu-id="24752-597">El protocolo de negociación utilizará Kerberos para realizar la autenticación de cliente y servidor si es posible.</span><span class="sxs-lookup"><span data-stu-id="24752-597">The negotiation protocol will use Kerberos to perform client and server authentication if possible.</span></span> <span data-ttu-id="24752-598">Si no se puede utilizar Kerberos, se volverá a NTLM.</span><span class="sxs-lookup"><span data-stu-id="24752-598">If Kerberos cannot be used, it will fall back to NTLM.</span></span>  
   
- Directiva  
+ <span data-ttu-id="24752-599">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-599">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SecureConversation_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SecureConversationToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:BootstrapPolicy><wsp:Policy><sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts><sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/></sp:EncryptedParts><sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust10></wsp:Policy></sp:BootstrapPolicy><sp:MustNotSendAmend/></wsp:Policy></sp:SecureConversationToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
 ```  
   
-### Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature  
- Solicitud  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="24752-600">Ejemplos de encabezado de seguridad: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="24752-600">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="24752-601">Request</span><span class="sxs-lookup"><span data-stu-id="24752-601">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-f01c6159-f159-454d-bd97-bbcc9b8e25d3-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-582920d7-14a7-4adc-8091-e1f92d7d8055-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-602">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-602">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-582920d7-14a7-4adc-8091-e1f92d7d8055-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Directiva  
+ <span data-ttu-id="24752-603">Directiva</span><span class="sxs-lookup"><span data-stu-id="24752-603">Policy</span></span>  
   
-```  
+```xml  
 <wsp:Policy wsu:Id="SecureConversation_policy"><wsp:ExactlyOne><wsp:All><sp:SymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SecureConversationToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/><sp:BootstrapPolicy><wsp:Policy><sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing"/><sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts><sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><sp:Body/></sp:EncryptedParts><sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:ProtectionToken><wsp:Policy><sp:SpnegoContextToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient"><wsp:Policy><sp:RequireDerivedKeys/></wsp:Policy></sp:SpnegoContextToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptSignature/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust10></wsp:Policy></sp:BootstrapPolicy><sp:MustNotSendAmend/></wsp:Policy></sp:SecureConversationToken></wsp:Policy></sp:ProtectionToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/><sp:EncryptBeforeSigning/><sp:OnlySignEntireHeadersAndBody/></wsp:Policy></sp:SymmetricBinding><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy>  
-  
 ```  
   
-### Ejemplos de encabezado de seguridad: EncryptBeforeSign  
- Solicitud  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="24752-604">Ejemplos de encabezado de seguridad: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="24752-604">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="24752-605">Request</span><span class="sxs-lookup"><span data-stu-id="24752-605">Request</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-d57e6342-1c68-4095-a0c1-41979088a944-5"> ... </u:Timestamp><c:SecurityContextToken u:Id="uuid-9b22407d-b914-4c41-9105-1cf8cf7c3fe5-1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:SecurityContextToken><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_8" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
- Response  
+ <span data-ttu-id="24752-606">Respuesta</span><span class="sxs-lookup"><span data-stu-id="24752-606">Response</span></span>  
   
-```  
+```xml  
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-9b22407d-b914-4c41-9105-1cf8cf7c3fe5-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```

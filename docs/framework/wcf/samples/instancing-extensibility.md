@@ -1,33 +1,36 @@
 ---
-title: "Extensibilidad de creaci&#243;n de instancias | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Extensibilidad de creación de instancias"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7a2f8b51-472b-4b71-8602-d3dbc6e1cb07
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b89da7f0f8877a6eeeb6e44beb8e5d1249f9f6d2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Extensibilidad de creaci&#243;n de instancias
-Esta sección contiene ejemplos que muestran la creación personalizada de instancias.  
+# <a name="instancing-extensibility"></a><span data-ttu-id="7f2b7-102">Extensibilidad de creación de instancias</span><span class="sxs-lookup"><span data-stu-id="7f2b7-102">Instancing Extensibility</span></span>
+<span data-ttu-id="7f2b7-103">Esta sección contiene ejemplos que muestran la creación personalizada de instancias.</span><span class="sxs-lookup"><span data-stu-id="7f2b7-103">This section contains samples that demonstrate custom instancing.</span></span>  
   
-## En esta sección  
- [Contexto de instancia duradera](../../../../docs/framework/wcf/samples/durable-instance-context.md)  
- Muestra cómo personalizar el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para habilitar los contextos de la instancia duraderos.  
+## <a name="in-this-section"></a><span data-ttu-id="7f2b7-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="7f2b7-104">In This Section</span></span>  
+ [<span data-ttu-id="7f2b7-105">Contexto de instancia duradera</span><span class="sxs-lookup"><span data-stu-id="7f2b7-105">Durable Instance Context</span></span>](../../../../docs/framework/wcf/samples/durable-instance-context.md)  
+ <span data-ttu-id="7f2b7-106">Muestra cómo personalizar el tiempo de ejecución de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para habilitar los contextos de la instancia duraderos.</span><span class="sxs-lookup"><span data-stu-id="7f2b7-106">Demonstrates how to customize the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] runtime to enable durable instance contexts.</span></span>  
   
- [Vigencia personalizada](../../../../docs/framework/wcf/samples/custom-lifetime.md)  
- Muestra cómo escribir una extensión de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para proporcionar servicios de duración personalizados para las instancias de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] compartidas.  
+ [<span data-ttu-id="7f2b7-107">Duración personalizados</span><span class="sxs-lookup"><span data-stu-id="7f2b7-107">Custom Lifetime</span></span>](../../../../docs/framework/wcf/samples/custom-lifetime.md)  
+ <span data-ttu-id="7f2b7-108">Muestra cómo escribir una extensión de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] para proporcionar servicios de duración personalizados para las instancias de servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] compartidas.</span><span class="sxs-lookup"><span data-stu-id="7f2b7-108">Demonstrates how to write a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension to provide custom lifetime services for shared [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service instances.</span></span>  
   
- [Creación de instancias de inicialización](../../../../docs/framework/wcf/samples/instancing-initialization.md)  
- Muestra cómo personalizar la inicialización de un objeto.  
+ [<span data-ttu-id="7f2b7-109">Creación de instancias de inicialización</span><span class="sxs-lookup"><span data-stu-id="7f2b7-109">Instancing Initialization</span></span>](../../../../docs/framework/wcf/samples/instancing-initialization.md)  
+ <span data-ttu-id="7f2b7-110">Muestra cómo personalizar la inicialización de un objeto.</span><span class="sxs-lookup"><span data-stu-id="7f2b7-110">Demonstrates how to customize the initialization of an object.</span></span>  
   
- [Agrupación](../../../../docs/framework/wcf/samples/pooling.md)  
- Muestra cómo extender [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para admitir la agrupación de objetos.
+ [<span data-ttu-id="7f2b7-111">Agrupación</span><span class="sxs-lookup"><span data-stu-id="7f2b7-111">Pooling</span></span>](../../../../docs/framework/wcf/samples/pooling.md)  
+ <span data-ttu-id="7f2b7-112">Muestra cómo extender [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] para admitir la agrupación de objetos.</span><span class="sxs-lookup"><span data-stu-id="7f2b7-112">Demonstrates how to extend [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to support object pooling.</span></span>
