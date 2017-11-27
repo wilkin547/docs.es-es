@@ -1,96 +1,91 @@
 ---
-title: "Tareas comunes realizadas con los operadores de Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operadores [Visual Basic], aritméticos"
-  - "operadores [Visual Basic], desplazamiento de bits"
-  - "operadores [Visual Basic], bit a bit"
-  - "operadores [Visual Basic], comparación"
-  - "operadores [Visual Basic], concatenación"
-  - "operadores [Visual Basic], lógico"
-  - "operadores [Visual Basic], lógicos de evaluación "cortocircuitada""
-  - "operadores [Visual Basic], comparación de cadenas"
-  - "operadores [Visual Basic], concatenación de cadenas"
-  - "código de Visual Basic, operadores"
+title: Tareas comunes realizadas con los operadores de Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], logical
+- operators [Visual Basic], string concatenation
+- operators [Visual Basic], bitwise
+- operators [Visual Basic], bit-shift
+- operators [Visual Basic], arithmetic
+- operators [Visual Basic], string comparison
+- operators [Visual Basic], concatenation
+- Visual Basic code, operators
+- operators [Visual Basic], comparison
+- operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tareas comunes realizadas con los operadores de Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los operadores realizan muchas tareas comunes en las que intervienen una o más expresiones denominadas *operandos*.  
+# <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="57479-102">Tareas comunes realizadas con los operadores de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="57479-102">Common Tasks Performed with Visual Basic Operators</span></span>
+<span data-ttu-id="57479-103">Los operadores realizan muchas tareas comunes relacionadas con una o más expresiones denominadas *operandos*.</span><span class="sxs-lookup"><span data-stu-id="57479-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  
   
-## Tareas aritméticas y de cambio de bits  
- En la tabla siguiente se resumen las operaciones aritméticas y de cambio de bits disponibles.  
+## <a name="arithmetic-and-bit-shift-tasks"></a><span data-ttu-id="57479-104">Tareas aritméticas y de desplazamiento de bits</span><span class="sxs-lookup"><span data-stu-id="57479-104">Arithmetic and Bit-shift Tasks</span></span>  
+ <span data-ttu-id="57479-105">En la tabla siguiente se resume las operaciones aritméticas y de desplazamiento de bits disponibles.</span><span class="sxs-lookup"><span data-stu-id="57479-105">The following table summarizes the available arithmetic and bit-shift operations.</span></span>  
   
-|||  
-|-|-|  
-|Para|Vea|  
-|Sumar un valor numérico a otro|[\+ \(Operador\)](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|Restar un valor numérico de otro|[\- \(Operador\)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Invertir el signo de un valor numérico|[\- \(Operador\)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|Multiplicar un valor numérico por otro|[\* \(Operador\)](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|Dividir un valor numérico por otro|[\/ \(Operador\)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|Encontrar el cociente de un valor numérico dividido por otro \(sin el resto\)|[\\ \(Operador\)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|Encontrar el resto de un valor numérico dividido por otro \(sin el cociente\)|[Mod \(Operador\)](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|Elevar un valor numérico a una potencia|[^ \(Operador\)](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|Desplazar el modelo de bits de un valor numérico a la izquierda|[\<\< \(Operador\)](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|Desplazar el modelo de bits de un valor numérico a la derecha|[\>\> \(Operador\)](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|<span data-ttu-id="57479-106">Para</span><span class="sxs-lookup"><span data-stu-id="57479-106">To</span></span>|<span data-ttu-id="57479-107">Vea</span><span class="sxs-lookup"><span data-stu-id="57479-107">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="57479-108">Agregar un valor numérico a otro</span><span class="sxs-lookup"><span data-stu-id="57479-108">Add one numeric value to another</span></span>|[<span data-ttu-id="57479-109">Operador +</span><span class="sxs-lookup"><span data-stu-id="57479-109">+ Operator</span></span>](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
+|<span data-ttu-id="57479-110">Resta un valor numérico de otro</span><span class="sxs-lookup"><span data-stu-id="57479-110">Subtract one numeric value from another</span></span>|[<span data-ttu-id="57479-111">-(Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57479-111">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="57479-112">Invierte el signo de un valor numérico</span><span class="sxs-lookup"><span data-stu-id="57479-112">Reverse the sign of a numeric value</span></span>|[<span data-ttu-id="57479-113">-(Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57479-113">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="57479-114">Multiplica un valor numérico por otro</span><span class="sxs-lookup"><span data-stu-id="57479-114">Multiply one numeric value by another</span></span>|[<span data-ttu-id="57479-115">Operador *</span><span class="sxs-lookup"><span data-stu-id="57479-115">* Operator</span></span>](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
+|<span data-ttu-id="57479-116">Dividir un valor numérico a otro</span><span class="sxs-lookup"><span data-stu-id="57479-116">Divide one numeric value into another</span></span>|[<span data-ttu-id="57479-117">/ (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57479-117">/ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|<span data-ttu-id="57479-118">Encontrar el cociente de un valor numérico dividido por otro (sin el resto)</span><span class="sxs-lookup"><span data-stu-id="57479-118">Find the quotient of one numeric value divided by another (without the remainder)</span></span>|[<span data-ttu-id="57479-119">\ (Operador) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="57479-119">\ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
+|<span data-ttu-id="57479-120">Buscar el resto de un valor numérico dividido por otro (sin el cociente)</span><span class="sxs-lookup"><span data-stu-id="57479-120">Find the remainder of one numeric value divided by another (without the quotient)</span></span>|[<span data-ttu-id="57479-121">Mod (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-121">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
+|<span data-ttu-id="57479-122">Elevar un valor numérico a la potencia de otro</span><span class="sxs-lookup"><span data-stu-id="57479-122">Raise one numeric value to the power of another</span></span>|[<span data-ttu-id="57479-123">Operador ^</span><span class="sxs-lookup"><span data-stu-id="57479-123">^ Operator</span></span>](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
+|<span data-ttu-id="57479-124">Cambiar el patrón de bits de un valor numérico a la izquierda</span><span class="sxs-lookup"><span data-stu-id="57479-124">Shift the bit pattern of a numeric value to the left</span></span>|[<span data-ttu-id="57479-125"><\<Operador</span><span class="sxs-lookup"><span data-stu-id="57479-125"><\< Operator</span></span>](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|<span data-ttu-id="57479-126">Cambiar el patrón de bits de un valor numérico a la derecha</span><span class="sxs-lookup"><span data-stu-id="57479-126">Shift the bit pattern of a numeric value to the right</span></span>|[<span data-ttu-id="57479-127">Operador >></span><span class="sxs-lookup"><span data-stu-id="57479-127">>> Operator</span></span>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
-## Tareas de comparación  
- En la tabla siguiente se resumen las operaciones de comparación disponibles.  
+## <a name="comparison-tasks"></a><span data-ttu-id="57479-128">Tareas de comparación</span><span class="sxs-lookup"><span data-stu-id="57479-128">Comparison Tasks</span></span>  
+ <span data-ttu-id="57479-129">En la tabla siguiente se resume las operaciones de comparación disponibles.</span><span class="sxs-lookup"><span data-stu-id="57479-129">The following table summarizes the available comparison operations.</span></span>  
   
-|||  
-|-|-|  
-|Para|Vea|  
-|Determinar si dos valores son iguales|Operador `=` \([Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Determinar si dos valores no son iguales|Operador `<>` \([Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Determinar si un valor es menor que otro|Operador `<` \([Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Determinar si un valor es mayor que otro|Operador `>` \([Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Determinar si un valor es menor o igual que otro|Operador `<=` \([Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Determinar si un valor es mayor o igual que otro|Operador `>=` \([Operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|Determinar si dos variables de objeto hacen referencia a la misma instancia de objeto|[Is \(Operador\)](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|Determinar si dos variables de objeto hacen referencia a instancias de objeto diferentes|[IsNot \(Operador\)](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|Determinar si un objeto es de un tipo específico|[TypeOf \(Operador\)](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|<span data-ttu-id="57479-130">Para</span><span class="sxs-lookup"><span data-stu-id="57479-130">To</span></span>|<span data-ttu-id="57479-131">Vea</span><span class="sxs-lookup"><span data-stu-id="57479-131">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="57479-132">Determinar si dos valores son iguales</span><span class="sxs-lookup"><span data-stu-id="57479-132">Determine whether two values are equal</span></span>|<span data-ttu-id="57479-133">`=`Operador ([operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-133">`=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="57479-134">Determinar si dos valores son iguales</span><span class="sxs-lookup"><span data-stu-id="57479-134">Determine whether two values are unequal</span></span>|<span data-ttu-id="57479-135">`<>`Operador ([operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-135">`<>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="57479-136">Determinar si un valor es menor que otro.</span><span class="sxs-lookup"><span data-stu-id="57479-136">Determine whether one value is less than another</span></span>|<span data-ttu-id="57479-137">`<`Operador ([operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-137">`<` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="57479-138">Determinar si un valor es mayor que otro.</span><span class="sxs-lookup"><span data-stu-id="57479-138">Determine whether one value is greater than another</span></span>|<span data-ttu-id="57479-139">`>`Operador ([operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-139">`>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="57479-140">Determinar si un valor es menor o igual a otro</span><span class="sxs-lookup"><span data-stu-id="57479-140">Determine whether one value is less than or equal to another</span></span>|<span data-ttu-id="57479-141">`<=`Operador ([operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-141">`<=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="57479-142">Determinar si un valor es mayor o igual que otro</span><span class="sxs-lookup"><span data-stu-id="57479-142">Determine whether one value is greater than or equal to another</span></span>|<span data-ttu-id="57479-143">`>=`Operador ([operadores de comparación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-143">`>=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="57479-144">Determinar si dos variables de objeto hacen referencia a la misma instancia de objeto</span><span class="sxs-lookup"><span data-stu-id="57479-144">Determine whether two object variables refer to the same object instance</span></span>|[<span data-ttu-id="57479-145">Is (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-145">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|<span data-ttu-id="57479-146">Determinar si dos variables de objeto hacen referencia a distintas instancias de objeto</span><span class="sxs-lookup"><span data-stu-id="57479-146">Determine whether two object variables refer to different object instances</span></span>|[<span data-ttu-id="57479-147">IsNot (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-147">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|<span data-ttu-id="57479-148">Determinar si un objeto es de un tipo específico</span><span class="sxs-lookup"><span data-stu-id="57479-148">Determine whether an object is of a specific type</span></span>|[<span data-ttu-id="57479-149">TypeOf (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-149">TypeOf Operator</span></span>](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
-## Tareas de concatenación  
- En la tabla siguiente se resumen las operaciones de concatenación disponibles.  
+## <a name="concatenation-tasks"></a><span data-ttu-id="57479-150">Tareas de concatenación</span><span class="sxs-lookup"><span data-stu-id="57479-150">Concatenation Tasks</span></span>  
+ <span data-ttu-id="57479-151">En la tabla siguiente se resume las operaciones de concatenación disponibles.</span><span class="sxs-lookup"><span data-stu-id="57479-151">The following table summarizes the available concatenation operations.</span></span>  
   
-|||  
-|-|-|  
-|Para|Vea|  
-|Unir varias cadenas en una única cadena|Operador `&` \([Operadores de concatenación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
-|Unir valores numéricos con valores de cadena|Operador `+` \([Operadores de concatenación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
+|<span data-ttu-id="57479-152">Para</span><span class="sxs-lookup"><span data-stu-id="57479-152">To</span></span>|<span data-ttu-id="57479-153">Vea</span><span class="sxs-lookup"><span data-stu-id="57479-153">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="57479-154">Unir varias cadenas en una sola cadena</span><span class="sxs-lookup"><span data-stu-id="57479-154">Join multiple strings into a single string</span></span>|<span data-ttu-id="57479-155">`&`Operador ([operadores de concatenación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-155">`&` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
+|<span data-ttu-id="57479-156">Unir valores numéricos con valores de cadena</span><span class="sxs-lookup"><span data-stu-id="57479-156">Join numeric values with string values</span></span>|<span data-ttu-id="57479-157">`+`Operador ([operadores de concatenación en Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="57479-157">`+` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
   
-## Tareas lógicas y bit a bit  
- En la tabla siguiente se resumen las operaciones lógicas y bit a bit disponibles.  
+## <a name="logical-and-bitwise-tasks"></a><span data-ttu-id="57479-158">Tareas lógicas y bit a bit</span><span class="sxs-lookup"><span data-stu-id="57479-158">Logical and Bitwise Tasks</span></span>  
+ <span data-ttu-id="57479-159">En la tabla siguiente se resume las operaciones lógicas y bit a bit disponibles.</span><span class="sxs-lookup"><span data-stu-id="57479-159">The following table summarizes the available logical and bitwise operations.</span></span>  
   
-|||  
-|-|-|  
-|Para|Vea|  
-|Realizar la negación lógica en un valor booleano|[Not \(Operador\)](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|Realizar la conjunción lógica en dos valores booleanos|[And \(Operador\)](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Realizar la disyunción lógica inclusiva en dos valores booleanos|[Or \(Operador\)](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Realizar la disyunción lógica exclusiva en dos valores booleanos|[Xor \(Operador\)](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Realizar la conjunción lógica de evaluación cortocircuitada en dos valores booleanos|[AndAlso \(Operador\)](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|Realizar la disyunción lógica inclusiva de evaluación cortocircuitada en dos valores booleanos|[OrElse \(Operador\)](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|Realizar la conjunción lógica bit a bit en dos valores enteros|[And \(Operador\)](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|Realizar la disyunción lógica inclusiva bit a bit en dos valores enteros|[Or \(Operador\)](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|Realizar la disyunción lógica exclusiva bit a bit en dos valores enteros|[Xor \(Operador\)](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|Realizar la negación lógica bit a bit en un valor entero|[Not \(Operador\)](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="57479-160">Para</span><span class="sxs-lookup"><span data-stu-id="57479-160">To</span></span>|<span data-ttu-id="57479-161">Vea</span><span class="sxs-lookup"><span data-stu-id="57479-161">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="57479-162">Realizar la negación lógica en un valor booleano</span><span class="sxs-lookup"><span data-stu-id="57479-162">Perform logical negation on a Boolean value</span></span>|[<span data-ttu-id="57479-163">NOT (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-163">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="57479-164">Realizar la conjunción lógica en dos valores booleanos.</span><span class="sxs-lookup"><span data-stu-id="57479-164">Perform logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="57479-165">And (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-165">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="57479-166">Realizar la disyunción lógica inclusiva en dos valores booleanos.</span><span class="sxs-lookup"><span data-stu-id="57479-166">Perform inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="57479-167">OR (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-167">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="57479-168">Realizar la disyunción lógica exclusiva en dos valores booleanos.</span><span class="sxs-lookup"><span data-stu-id="57479-168">Perform exclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="57479-169">XOR (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-169">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="57479-170">Realizar una evaluación cortocircuitada conjunción lógica en dos valores booleanos.</span><span class="sxs-lookup"><span data-stu-id="57479-170">Perform short-circuited logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="57479-171">AndAlso (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-171">AndAlso Operator</span></span>](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
+|<span data-ttu-id="57479-172">Realizar la evaluación cortocircuitada disyunción lógica inclusiva en dos valores booleanos.</span><span class="sxs-lookup"><span data-stu-id="57479-172">Perform short-circuited inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="57479-173">OrElse (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-173">OrElse Operator</span></span>](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|<span data-ttu-id="57479-174">Realizar una conjunción lógica bit a bit en dos valores enteros</span><span class="sxs-lookup"><span data-stu-id="57479-174">Perform bit-by-bit logical conjunction on two integral values</span></span>|[<span data-ttu-id="57479-175">And (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-175">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="57479-176">Realizar la disyunción lógica inclusiva de bit a bit en dos valores enteros</span><span class="sxs-lookup"><span data-stu-id="57479-176">Perform bit-by-bit inclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="57479-177">OR (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-177">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="57479-178">Realiza una disyunción lógica exclusiva bit a bit en dos valores enteros</span><span class="sxs-lookup"><span data-stu-id="57479-178">Perform bit-by-bit exclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="57479-179">XOR (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-179">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="57479-180">Realizar la negación lógica bit a bit en un valor entero</span><span class="sxs-lookup"><span data-stu-id="57479-180">Perform bit-by-bit logical negation on an integral value</span></span>|[<span data-ttu-id="57479-181">NOT (operador)</span><span class="sxs-lookup"><span data-stu-id="57479-181">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## Vea también  
- [Operadores y expresiones](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Operadores enumerados por funcionalidad](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="57479-182">Vea también</span><span class="sxs-lookup"><span data-stu-id="57479-182">See Also</span></span>  
+ [<span data-ttu-id="57479-183">Operadores y expresiones</span><span class="sxs-lookup"><span data-stu-id="57479-183">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="57479-184">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="57479-184">Operators Listed by Functionality</span></span>](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

@@ -1,109 +1,92 @@
 ---
-title: "Duración en Visual Basic | Documentos de Microsoft"
+title: "Período de duración en Visual Basic"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- static variables, lifetime
-- static variables, Visual Basic
-- declared elements, lifetime
-- Shared variable lifetime
-- lifetime, declared elements
-- lifetime, Visual Basic
-- lifetime
+- static variables [Visual Basic], lifetime
+- static variables [Visual Basic], Visual Basic
+- declared elements [Visual Basic], lifetime
+- Shared variable lifetime [Visual Basic]
+- lifetime [Visual Basic], declared elements
+- lifetime [Visual Basic], Visual Basic
+- lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fa0cbdf4a8fe5e8fc41e4e4f373c79451fb7b75f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="lifetime-in-visual-basic"></a>Período de duración en Visual Basic
-El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso. Las variables son los únicos elementos que tienen una duración. Para este propósito, el compilador trata los parámetros de procedimiento y función devuelve como casos especiales de variables. La duración de una variable representa el período de tiempo durante el cual puede contener un valor. Su valor puede cambiar durante toda su duración, pero siempre contiene un valor.  
+# <a name="lifetime-in-visual-basic"></a><span data-ttu-id="2c48c-102">Período de duración en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c48c-102">Lifetime in Visual Basic</span></span>
+<span data-ttu-id="2c48c-103">El *duración* de un elemento declarado es el período de tiempo durante el cual está disponible para su uso.</span><span class="sxs-lookup"><span data-stu-id="2c48c-103">The *lifetime* of a declared element is the period of time during which it is available for use.</span></span> <span data-ttu-id="2c48c-104">Las variables son los únicos elementos que tienen duración.</span><span class="sxs-lookup"><span data-stu-id="2c48c-104">Variables are the only elements that have lifetime.</span></span> <span data-ttu-id="2c48c-105">Para ello, el compilador trata los parámetros de procedimiento y función devuelve como casos especiales de variables.</span><span class="sxs-lookup"><span data-stu-id="2c48c-105">For this purpose, the compiler treats procedure parameters and function returns as special cases of variables.</span></span> <span data-ttu-id="2c48c-106">La duración de una variable representa el período de tiempo durante el cual puede contener un valor.</span><span class="sxs-lookup"><span data-stu-id="2c48c-106">The lifetime of a variable represents the period of time during which it can hold a value.</span></span> <span data-ttu-id="2c48c-107">Su valor puede cambiar durante su vida útil, pero siempre contiene un valor.</span><span class="sxs-lookup"><span data-stu-id="2c48c-107">Its value can change over its lifetime, but it always holds some value.</span></span>  
   
-## <a name="different-lifetimes"></a>Períodos de duración diferentes  
- Un *variable miembro* (declarado en el nivel de módulo, fuera de cualquier procedimiento) normalmente tiene la misma duración que el elemento en el que se declara. Una variable no compartida declarada en una clase o estructura existe como una copia independiente para cada instancia de la clase o estructura en la que se declara. Cada variable tiene la misma duración que su instancia. Sin embargo, un `Shared` variable tiene sólo una duración, que dura todo el tiempo que se ejecuta la aplicación.  
+## <a name="different-lifetimes"></a><span data-ttu-id="2c48c-108">Diferentes períodos de duración</span><span class="sxs-lookup"><span data-stu-id="2c48c-108">Different Lifetimes</span></span>  
+ <span data-ttu-id="2c48c-109">A *variable miembro* (declarado en el nivel de módulo, fuera de cualquier procedimiento) normalmente tiene la misma duración que el elemento en el que se declara.</span><span class="sxs-lookup"><span data-stu-id="2c48c-109">A *member variable* (declared at module level, outside any procedure) typically has the same lifetime as the element in which it is declared.</span></span> <span data-ttu-id="2c48c-110">Una variable no compartida declarada en una clase o estructura existe como una copia independiente para cada instancia de la clase o estructura en la que se ha declarado.</span><span class="sxs-lookup"><span data-stu-id="2c48c-110">A nonshared variable declared in a class or structure exists as a separate copy for each instance of the class or structure in which it is declared.</span></span> <span data-ttu-id="2c48c-111">Cada variable tiene la misma duración que su instancia.</span><span class="sxs-lookup"><span data-stu-id="2c48c-111">Each such variable has the same lifetime as its instance.</span></span> <span data-ttu-id="2c48c-112">Sin embargo, un `Shared` variable tiene solo una duración, que tiene una validez de todo el tiempo que se ejecuta la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2c48c-112">However, a `Shared` variable has only a single lifetime, which lasts for the entire time your application is running.</span></span>  
   
- Un *variable local* (declarado dentro de un procedimiento) sólo existe mientras se ejecuta el procedimiento en el que se declara. Esto también se aplica a los parámetros del procedimiento y a cualquier valor devuelto de función. Sin embargo, si ese procedimiento llama a otros procedimientos, las variables locales conservan sus valores mientras se ejecutan los procedimientos llamados.  
+ <span data-ttu-id="2c48c-113">A *variable local* (declarada dentro de un procedimiento) sólo existe mientras se ejecuta el procedimiento en el que se declara.</span><span class="sxs-lookup"><span data-stu-id="2c48c-113">A *local variable* (declared inside a procedure) exists only while the procedure in which it is declared is running.</span></span> <span data-ttu-id="2c48c-114">Esto también se aplica a los parámetros del procedimiento y a cualquier valor devuelto de función.</span><span class="sxs-lookup"><span data-stu-id="2c48c-114">This applies also to that procedure's parameters and to any function return.</span></span> <span data-ttu-id="2c48c-115">Sin embargo, si ese procedimiento llama a otros procedimientos, las variables locales conservan sus valores mientras se ejecutan los procedimientos llamados.</span><span class="sxs-lookup"><span data-stu-id="2c48c-115">However, if that procedure calls other procedures, the local variables retain their values while the called procedures are running.</span></span>  
   
-## <a name="beginning-of-lifetime"></a>Comienzo del período de duración  
- Duración de la variable local se inicia cuando el control entra en el procedimiento en el que se declara. Cada variable local se inicializa en el valor predeterminado de su tipo de datos tan pronto como el procedimiento inicia la ejecución. Cuando el procedimiento encuentra una `Dim` instrucción que especifica valores iniciales, Establece esas variables a esos valores, incluso si su código ya haya asignado otros valores para ellos.  
+## <a name="beginning-of-lifetime"></a><span data-ttu-id="2c48c-116">Principio de la duración</span><span class="sxs-lookup"><span data-stu-id="2c48c-116">Beginning of Lifetime</span></span>  
+ <span data-ttu-id="2c48c-117">Duración de una variable local se inicia cuando el control entra en el procedimiento en el que se declara.</span><span class="sxs-lookup"><span data-stu-id="2c48c-117">A local variable's lifetime begins when control enters the procedure in which it is declared.</span></span> <span data-ttu-id="2c48c-118">Cada variable local se inicializa en el valor predeterminado para su tipo de datos tan pronto como comienza el procedimiento ejecuta.</span><span class="sxs-lookup"><span data-stu-id="2c48c-118">Every local variable is initialized to the default value for its data type as soon as the procedure begins running.</span></span> <span data-ttu-id="2c48c-119">Cuando se encuentra el procedimiento una `Dim` instrucción que especifica valores iniciales, Establece esas variables en esos valores, incluso si el código ya tenía asignado otros valores para ellas.</span><span class="sxs-lookup"><span data-stu-id="2c48c-119">When the procedure encounters a `Dim` statement that specifies initial values, it sets those variables to those values, even if your code had already assigned other values to them.</span></span>  
   
- Cada miembro de una variable de estructura se inicializa como si fuera una variable independiente. De forma similar, cada elemento de una variable de matriz se inicializa de manera individual.  
+ <span data-ttu-id="2c48c-120">Cada miembro de una variable de estructura se inicializa como si fuera una variable independiente.</span><span class="sxs-lookup"><span data-stu-id="2c48c-120">Each member of a structure variable is initialized as if it were a separate variable.</span></span> <span data-ttu-id="2c48c-121">Del mismo modo, cada elemento de una variable de matriz se inicializa de manera individual.</span><span class="sxs-lookup"><span data-stu-id="2c48c-121">Similarly, each element of an array variable is initialized individually.</span></span>  
   
- Las variables declaradas dentro de un bloque dentro de un procedimiento (como un `For` bucle) se inicializan en la entrada al procedimiento. Estas inicializaciones tienen efecto independientemente de que el código ejecuta el bloque o no.  
+ <span data-ttu-id="2c48c-122">Las variables declaradas dentro de un bloque dentro de un procedimiento (como un `For` bucle) se inicializan en la entrada al procedimiento.</span><span class="sxs-lookup"><span data-stu-id="2c48c-122">Variables declared within a block inside a procedure (such as a `For` loop) are initialized on entry to the procedure.</span></span> <span data-ttu-id="2c48c-123">Estas inicializaciones tienen efecto si o no alguna vez ejecuta el código del bloque.</span><span class="sxs-lookup"><span data-stu-id="2c48c-123">These initializations take effect whether or not your code ever executes the block.</span></span>  
   
-## <a name="end-of-lifetime"></a>Final del período de duración  
- Cuando un procedimiento finaliza, no se conservan los valores de sus variables locales, y [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] recupera su memoria. La próxima vez que se llama al procedimiento, todas sus variables locales se crearla de nuevo y se reinicializan.  
+## <a name="end-of-lifetime"></a><span data-ttu-id="2c48c-124">Final del período de duración</span><span class="sxs-lookup"><span data-stu-id="2c48c-124">End of Lifetime</span></span>  
+ <span data-ttu-id="2c48c-125">Cuando un procedimiento finaliza, no se conservan los valores de las variables locales, y [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] recupera su memoria.</span><span class="sxs-lookup"><span data-stu-id="2c48c-125">When a procedure terminates, the values of its local variables are not preserved, and [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] reclaims their memory.</span></span> <span data-ttu-id="2c48c-126">La próxima vez que se llama al procedimiento, todas sus variables locales se crean de nuevo y reinicializar.</span><span class="sxs-lookup"><span data-stu-id="2c48c-126">The next time you call the procedure, all its local variables are created afresh and reinitialized.</span></span>  
   
- Cuando finaliza una instancia de una clase o estructura, sus variables no compartidas pierden su memoria y sus valores. Cada nueva instancia de la clase o estructura crea y reinicializa sus variables no compartidas. Sin embargo, `Shared` variables se conservan hasta que la aplicación deja de ejecutarse.  
+ <span data-ttu-id="2c48c-127">Cuando finaliza una instancia de una clase o estructura, sus variables no compartidas pierden su memoria y sus valores.</span><span class="sxs-lookup"><span data-stu-id="2c48c-127">When an instance of a class or structure terminates, its nonshared variables lose their memory and their values.</span></span> <span data-ttu-id="2c48c-128">Cada nueva instancia de la clase o estructura crea y reinicializa sus variables no compartidas.</span><span class="sxs-lookup"><span data-stu-id="2c48c-128">Each new instance of the class or structure creates and reinitializes its nonshared variables.</span></span> <span data-ttu-id="2c48c-129">Sin embargo, `Shared` variables se conservan hasta que la aplicación deje de ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="2c48c-129">However, `Shared` variables are preserved until your application stops running.</span></span>  
   
-## <a name="extension-of-lifetime"></a>Extensión de duración  
- Si declara una variable local con el `Static` (palabra clave), su duración sea mayor que el tiempo de ejecución de su procedimiento. La tabla siguiente muestra cómo la declaración de procedimiento determina cuánto tiempo un `Static` variable existe.  
+## <a name="extension-of-lifetime"></a><span data-ttu-id="2c48c-130">Extensión de duración</span><span class="sxs-lookup"><span data-stu-id="2c48c-130">Extension of Lifetime</span></span>  
+ <span data-ttu-id="2c48c-131">Si declara una variable local con el `Static` de palabra clave, su duración sea mayor que el tiempo de ejecución de su procedimiento.</span><span class="sxs-lookup"><span data-stu-id="2c48c-131">If you declare a local variable with the `Static` keyword, its lifetime is longer than the execution time of its procedure.</span></span> <span data-ttu-id="2c48c-132">En la tabla siguiente se muestra cómo la declaración de procedimiento determina cuánto tiempo un `Static` existe una variable.</span><span class="sxs-lookup"><span data-stu-id="2c48c-132">The following table shows how the procedure declaration determines how long a `Static` variable exists.</span></span>  
   
-|Ubicación de procedimiento y uso compartido|Comienza la duración de la variable estática|Extremos de la duración de la variable estática|  
+|<span data-ttu-id="2c48c-133">Ubicación de procedimiento y uso compartido</span><span class="sxs-lookup"><span data-stu-id="2c48c-133">Procedure location and sharing</span></span>|<span data-ttu-id="2c48c-134">Comienza la duración de la variable estática</span><span class="sxs-lookup"><span data-stu-id="2c48c-134">Static variable lifetime begins</span></span>|<span data-ttu-id="2c48c-135">Extremos de duración de la variable estática</span><span class="sxs-lookup"><span data-stu-id="2c48c-135">Static variable lifetime ends</span></span>|  
 |------------------------------------|-------------------------------------|-----------------------------------|  
-|En un módulo (compartido de forma predeterminada)|La primera vez que se llama al procedimiento|Cuando la aplicación deja de ejecutarse|  
-|En una clase, `Shared` (el procedimiento no es un miembro de instancia)|La primera vez que se llama al procedimiento en una instancia específica o en el nombre de clase o estructura|Cuando la aplicación deja de ejecutarse|  
-|En una instancia de una clase, no `Shared` (el procedimiento es un miembro de instancia)|La primera vez que se llama al procedimiento en la instancia específica|Cuando la instancia se libera para la recopilación de elementos no utilizados (GC)|  
+|<span data-ttu-id="2c48c-136">En un módulo (compartido de forma predeterminada)</span><span class="sxs-lookup"><span data-stu-id="2c48c-136">In a module (shared by default)</span></span>|<span data-ttu-id="2c48c-137">La primera vez que se llama al procedimiento</span><span class="sxs-lookup"><span data-stu-id="2c48c-137">The first time the procedure is called</span></span>|<span data-ttu-id="2c48c-138">Cuando la aplicación deja de ejecutarse</span><span class="sxs-lookup"><span data-stu-id="2c48c-138">When your application stops running</span></span>|  
+|<span data-ttu-id="2c48c-139">En una clase, `Shared` (el procedimiento no es un miembro de instancia)</span><span class="sxs-lookup"><span data-stu-id="2c48c-139">In a class, `Shared` (procedure is not an instance member)</span></span>|<span data-ttu-id="2c48c-140">La primera vez que se llama al procedimiento en una instancia específica o en el propio nombre de clase o estructura</span><span class="sxs-lookup"><span data-stu-id="2c48c-140">The first time the procedure is called either on a specific instance or on the class or structure name itself</span></span>|<span data-ttu-id="2c48c-141">Cuando la aplicación deja de ejecutarse</span><span class="sxs-lookup"><span data-stu-id="2c48c-141">When your application stops running</span></span>|  
+|<span data-ttu-id="2c48c-142">En una instancia de una clase, no `Shared` (el procedimiento es un miembro de instancia)</span><span class="sxs-lookup"><span data-stu-id="2c48c-142">In an instance of a class, not `Shared` (procedure is an instance member)</span></span>|<span data-ttu-id="2c48c-143">La primera vez que se llama al procedimiento en la instancia específica</span><span class="sxs-lookup"><span data-stu-id="2c48c-143">The first time the procedure is called on the specific instance</span></span>|<span data-ttu-id="2c48c-144">Cuando se libera la instancia para la recopilación de elementos no utilizados (GC)</span><span class="sxs-lookup"><span data-stu-id="2c48c-144">When the instance is released for garbage collection (GC)</span></span>|  
   
-## <a name="static-variables-of-the-same-name"></a>Variables estáticas del mismo nombre  
- Puede declarar variables estáticas con el mismo nombre en más de un procedimiento. Si lo hace, el [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador considera que cada variable es un elemento separado. La inicialización de una de estas variables no afecta a los valores de las demás. Lo mismo se aplica si se define un procedimiento con un conjunto de sobrecargas y declare una variable estática con el mismo nombre en cada sobrecarga.  
+## <a name="static-variables-of-the-same-name"></a><span data-ttu-id="2c48c-145">Variables estáticas del mismo nombre</span><span class="sxs-lookup"><span data-stu-id="2c48c-145">Static Variables of the Same Name</span></span>  
+ <span data-ttu-id="2c48c-146">Puede declarar variables estáticas con el mismo nombre en más de un procedimiento.</span><span class="sxs-lookup"><span data-stu-id="2c48c-146">You can declare static variables with the same name in more than one procedure.</span></span> <span data-ttu-id="2c48c-147">Si lo hace, el [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilador considera que cada variable es un elemento independiente.</span><span class="sxs-lookup"><span data-stu-id="2c48c-147">If you do this, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler considers each such variable to be a separate element.</span></span> <span data-ttu-id="2c48c-148">La inicialización de una de estas variables no afecta a los valores de las demás.</span><span class="sxs-lookup"><span data-stu-id="2c48c-148">The initialization of one of these variables does not affect the values of the others.</span></span> <span data-ttu-id="2c48c-149">Lo mismo se aplica si se define un procedimiento con un conjunto de sobrecargas y se declara una variable estática con el mismo nombre en cada sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="2c48c-149">The same applies if you define a procedure with a set of overloads and declare a static variable with the same name in each overload.</span></span>  
   
-## <a name="containing-elements-for-static-variables"></a>Elementos contenedores para Variables estáticas  
- Puede declarar una variable local estática dentro de una clase, es decir, dentro de un procedimiento de esa clase. Sin embargo, no puede declarar una variable local estática dentro de una estructura como miembros de una estructura o como una variable local de un procedimiento dentro de esa estructura.  
+## <a name="containing-elements-for-static-variables"></a><span data-ttu-id="2c48c-150">Que contiene los elementos para las Variables estáticas</span><span class="sxs-lookup"><span data-stu-id="2c48c-150">Containing Elements for Static Variables</span></span>  
+ <span data-ttu-id="2c48c-151">Puede declarar una variable local estática dentro de una clase, es decir, dentro de un procedimiento de esa clase.</span><span class="sxs-lookup"><span data-stu-id="2c48c-151">You can declare a static local variable within a class, that is, inside a procedure in that class.</span></span> <span data-ttu-id="2c48c-152">Sin embargo, no puede declarar una variable local estática dentro de una estructura, como un miembro de estructura o como una variable local de un procedimiento dentro de esa estructura.</span><span class="sxs-lookup"><span data-stu-id="2c48c-152">However, you cannot declare a static local variable within a structure, either as a structure member or as a local variable of a procedure within that structure.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="2c48c-153">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2c48c-153">Example</span></span>  
   
-### <a name="description"></a>Descripción  
- En el ejemplo siguiente se declara una variable con el [estático](../../../../visual-basic/language-reference/modifiers/static.md) (palabra clave). (Tenga en cuenta que no es necesario el `Dim` palabra clave cuando la [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md) utiliza un modificador como `Static`.)  
+### <a name="description"></a><span data-ttu-id="2c48c-154">Descripción</span><span class="sxs-lookup"><span data-stu-id="2c48c-154">Description</span></span>  
+ <span data-ttu-id="2c48c-155">En el ejemplo siguiente se declara una variable con el [estático](../../../../visual-basic/language-reference/modifiers/static.md) palabra clave.</span><span class="sxs-lookup"><span data-stu-id="2c48c-155">The following example declares a variable with the [Static](../../../../visual-basic/language-reference/modifiers/static.md) keyword.</span></span> <span data-ttu-id="2c48c-156">(Tenga en cuenta que no es necesario el `Dim` palabra clave cuando el [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md) usa un modificador como `Static`.)</span><span class="sxs-lookup"><span data-stu-id="2c48c-156">(Note that you do not need the `Dim` keyword when the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) uses a modifier such as `Static`.)</span></span>  
   
-### <a name="code"></a>Código  
- [!code-vb[VbVbalrKeywords&#13;](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+### <a name="code"></a><span data-ttu-id="2c48c-157">Código</span><span class="sxs-lookup"><span data-stu-id="2c48c-157">Code</span></span>  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
-### <a name="comments"></a>Comentarios  
- En el ejemplo anterior, la variable `applesSold` sigue existiendo después del procedimiento `runningTotal` devuelve al código de llamada. La próxima vez `runningTotal` se llama, `applesSold` mantiene su valor calculado anteriormente.  
+### <a name="comments"></a><span data-ttu-id="2c48c-158">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2c48c-158">Comments</span></span>  
+ <span data-ttu-id="2c48c-159">En el ejemplo anterior, la variable `applesSold` sigue existiendo después del procedimiento `runningTotal` devuelve al código de llamada.</span><span class="sxs-lookup"><span data-stu-id="2c48c-159">In the preceding example, the variable `applesSold` continues to exist after the procedure `runningTotal` returns to the calling code.</span></span> <span data-ttu-id="2c48c-160">La próxima vez que `runningTotal` se llama, `applesSold` mantiene su valor calculado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2c48c-160">The next time `runningTotal` is called, `applesSold` retains its previously calculated value.</span></span>  
   
- Si `applesSold` hubiera declarado sin usar `Static`, los valores acumulados anteriores no se conservarían a través de llamadas a `runningTotal`. La próxima vez `runningTotal` se llamó, `applesSold` habría sido vuelve a inicializa en 0, y `runningTotal` simplemente se habría devuelto el mismo valor con el que se llamó.  
+ <span data-ttu-id="2c48c-161">Si `applesSold` hubieran declarado sin usar `Static`, los valores acumulados anteriores no se conservarían a través de llamadas a `runningTotal`.</span><span class="sxs-lookup"><span data-stu-id="2c48c-161">If `applesSold` had been declared without using `Static`, the previous accumulated values would not be preserved across calls to `runningTotal`.</span></span> <span data-ttu-id="2c48c-162">La próxima vez que `runningTotal` se llamó, `applesSold` habría ha vuelto a crear e inicializa en 0, y `runningTotal` simplemente se habría devuelto el mismo valor con el que se llamó.</span><span class="sxs-lookup"><span data-stu-id="2c48c-162">The next time `runningTotal` was called, `applesSold` would have been recreated and initialized to 0, and `runningTotal` would have simply returned the same value with which it was called.</span></span>  
   
-### <a name="compiling-the-code"></a>Compilar el código  
- Puede inicializar el valor de una variable local estática como parte de su declaración. Si declara una matriz como `Static`, puede inicializar su rango (número de dimensiones), la longitud de cada dimensión y los valores de los elementos individuales.  
+### <a name="compiling-the-code"></a><span data-ttu-id="2c48c-163">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="2c48c-163">Compiling the Code</span></span>  
+ <span data-ttu-id="2c48c-164">Puede inicializar el valor de una variable local estática como parte de su declaración.</span><span class="sxs-lookup"><span data-stu-id="2c48c-164">You can initialize the value of a static local variable as part of its declaration.</span></span> <span data-ttu-id="2c48c-165">Si declara una matriz como `Static`, puede inicializar su rango (número de dimensiones), la longitud de cada dimensión y los valores de los elementos individuales.</span><span class="sxs-lookup"><span data-stu-id="2c48c-165">If you declare an array to be `Static`, you can initialize its rank (number of dimensions), the length of each dimension, and the values of the individual elements.</span></span>  
   
-### <a name="security"></a>Seguridad  
- En el ejemplo anterior, puede generar la misma duración si declara `applesSold` a nivel de módulo. Si cambia el ámbito de una variable de este modo, sin embargo, el procedimiento ya no tendría acceso exclusivo a él. Dado que podrían tener acceso otros procedimientos `applesSold` y cambiar su valor, el total acumulado no sería fiable y el código podría ser más difícil de mantener.  
+### <a name="security"></a><span data-ttu-id="2c48c-166">Seguridad</span><span class="sxs-lookup"><span data-stu-id="2c48c-166">Security</span></span>  
+ <span data-ttu-id="2c48c-167">En el ejemplo anterior, puede generar la misma duración declarando `applesSold` en nivel de módulo.</span><span class="sxs-lookup"><span data-stu-id="2c48c-167">In the preceding example, you can produce the same lifetime by declaring `applesSold` at module level.</span></span> <span data-ttu-id="2c48c-168">Si cambia el ámbito de una variable de esta manera, sin embargo, el procedimiento ya no tendría acceso exclusivo a él.</span><span class="sxs-lookup"><span data-stu-id="2c48c-168">If you changed the scope of a variable this way, however, the procedure would no longer have exclusive access to it.</span></span> <span data-ttu-id="2c48c-169">Dado que pudieron tener acceso otros procedimientos `applesSold` y cambiar su valor, el total acumulativo podría ser poco confiable y el código podría ser más difícil de mantener.</span><span class="sxs-lookup"><span data-stu-id="2c48c-169">Because other procedures could access `applesSold` and change its value, the running total could be unreliable and the code could be more difficult to maintain.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Compartido](../../../../visual-basic/language-reference/modifiers/shared.md)   
- [Nada](../../../../visual-basic/language-reference/nothing.md)   
- [Nombres de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Ámbito en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [Declaración de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Solucionar problemas de tipos de datos](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+## <a name="see-also"></a><span data-ttu-id="2c48c-170">Vea también</span><span class="sxs-lookup"><span data-stu-id="2c48c-170">See Also</span></span>  
+ [<span data-ttu-id="2c48c-171">Shared</span><span class="sxs-lookup"><span data-stu-id="2c48c-171">Shared</span></span>](../../../../visual-basic/language-reference/modifiers/shared.md)  
+ [<span data-ttu-id="2c48c-172">Nothing</span><span class="sxs-lookup"><span data-stu-id="2c48c-172">Nothing</span></span>](../../../../visual-basic/language-reference/nothing.md)  
+ [<span data-ttu-id="2c48c-173">Nombres de elementos declarados</span><span class="sxs-lookup"><span data-stu-id="2c48c-173">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="2c48c-174">Referencias a elementos declarados</span><span class="sxs-lookup"><span data-stu-id="2c48c-174">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="2c48c-175">Ámbito en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c48c-175">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="2c48c-176">Niveles de acceso en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2c48c-176">Access levels in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [<span data-ttu-id="2c48c-177">Variables</span><span class="sxs-lookup"><span data-stu-id="2c48c-177">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="2c48c-178">Declaración de variables</span><span class="sxs-lookup"><span data-stu-id="2c48c-178">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [<span data-ttu-id="2c48c-179">Solución de problemas de tipos de datos</span><span class="sxs-lookup"><span data-stu-id="2c48c-179">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [<span data-ttu-id="2c48c-180">Static</span><span class="sxs-lookup"><span data-stu-id="2c48c-180">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)

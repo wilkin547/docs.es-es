@@ -1,210 +1,213 @@
 ---
-title: "Informaci&#243;n de privacidad de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "información de privacidad [WCF]"
-  - "WCF, información de privacidad"
-  - "Windows Communication Foundation, información de privacidad"
+title: "Información de privacidad de Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation, privacy information
+- WCF, privacy information
+- privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 53fc4be67fd3f6a7b2b8c914c11fb6540b28c199
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n de privacidad de Windows Communication Foundation
-Microsoft se compromete a proteger la privacidad de usuarios finales.  Al compilar una aplicación usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versión 3.0, su aplicación puede afectar a la privacidad de sus usuarios finales.  Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web.  Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no envía ninguna información a Microsoft de su aplicación a menos que usted o el usuario final elija enviarla.  
+# <a name="windows-communication-foundation-privacy-information"></a><span data-ttu-id="7f185-102">Información de privacidad de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="7f185-102">Windows Communication Foundation Privacy Information</span></span>
+<span data-ttu-id="7f185-103">Microsoft se compromete a proteger la privacidad de usuarios finales.</span><span class="sxs-lookup"><span data-stu-id="7f185-103">Microsoft is committed to protecting end-users' privacy.</span></span> <span data-ttu-id="7f185-104">Al compilar una aplicación usando [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], versión 3.0, su aplicación puede afectar a la privacidad de sus usuarios finales.</span><span class="sxs-lookup"><span data-stu-id="7f185-104">When you build an application using [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], version 3.0, your application may impact your end-users' privacy.</span></span> <span data-ttu-id="7f185-105">Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web.</span><span class="sxs-lookup"><span data-stu-id="7f185-105">For example, your application may explicitly collect user contact information, or it may request or send information over the Internet to your Web site.</span></span> <span data-ttu-id="7f185-106">Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad.</span><span class="sxs-lookup"><span data-stu-id="7f185-106">If you embed Microsoft technology in your application, that technology may have its own behavior that might affect privacy.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-107"> no envía ninguna información a Microsoft de su aplicación a menos que usted o el usuario final elija enviarla.</span><span class="sxs-lookup"><span data-stu-id="7f185-107"> does not send any information to Microsoft from your application unless you or the end-user choose to send it to us.</span></span>  
   
-## WCF en breve  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] es un marco de mensajería distribuido mediante el marco de Microsoft .NET que permite a los programadores compilar las aplicaciones distribuidas.  Los mensajes comunicados entre dos aplicaciones contienen encabezado e información del cuerpo.  
+## <a name="wcf-in-brief"></a><span data-ttu-id="7f185-108">WCF en breve</span><span class="sxs-lookup"><span data-stu-id="7f185-108">WCF in Brief</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-109"> es un marco de mensajería distribuido mediante el marco de Microsoft .NET que permite a los programadores compilar las aplicaciones distribuidas.</span><span class="sxs-lookup"><span data-stu-id="7f185-109"> is a distributed messaging framework using the Microsoft .NET Framework that allows developers to build distributed applications.</span></span> <span data-ttu-id="7f185-110">Los mensajes comunicados entre dos aplicaciones contienen encabezado e información del cuerpo.</span><span class="sxs-lookup"><span data-stu-id="7f185-110">Messages communicated between two applications contain header and body information.</span></span>  
   
- Los encabezados pueden contener enrutamiento de mensajes, información de seguridad, transacciones, y más, en función de los servicios utilizados por la aplicación.  Generalmente, se cifran los mensajes de forma predeterminada.  Una excepción es cuando se utiliza `BasicHttpBinding`, diseñado para el uso con Servicio Web no seguros, heredados.  Como diseñador de aplicaciones, es el responsable del último diseño.  Los mensajes del cuerpo SOAP contienen datos específicos de la aplicación; sin embargo, estos datos, como información personal definida por la aplicación, se pueden proteger utilizando cifrado [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] o características de confidencialidad.  Las secciones siguientes describen las características que pueden afectan a la privacidad.  
+ <span data-ttu-id="7f185-111">Los encabezados pueden contener enrutamiento de mensajes, información de seguridad, transacciones, y más, en función de los servicios utilizados por la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-111">Headers may contain message routing, security information, transactions, and more depending on the services used by the application.</span></span> <span data-ttu-id="7f185-112">Generalmente, se cifran los mensajes de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="7f185-112">Messages are typically encrypted by default.</span></span> <span data-ttu-id="7f185-113">Una excepción es cuando se utiliza `BasicHttpBinding`, diseñado para el uso con Servicio Web no seguros, heredados.</span><span class="sxs-lookup"><span data-stu-id="7f185-113">The one exception is when using the `BasicHttpBinding`, which was designed for use with non-secured, legacy Web services.</span></span> <span data-ttu-id="7f185-114">Como diseñador de aplicaciones, es el responsable del último diseño.</span><span class="sxs-lookup"><span data-stu-id="7f185-114">As the application designer, you are responsible for the final design.</span></span> <span data-ttu-id="7f185-115">Los mensajes del cuerpo SOAP contienen datos específicos de la aplicación; sin embargo, estos datos, como información personal definida por la aplicación, se pueden proteger utilizando cifrado [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] o características de confidencialidad.</span><span class="sxs-lookup"><span data-stu-id="7f185-115">Messages in the SOAP body contain application-specific data; however, this data, such as application-defined personal information, can be secured by using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] encryption or confidentiality features.</span></span> <span data-ttu-id="7f185-116">Las secciones siguientes describen las características que pueden afectan a la privacidad.</span><span class="sxs-lookup"><span data-stu-id="7f185-116">The following sections describe the features that potentially impact privacy.</span></span>  
   
-## Mensajería  
- Cada mensaje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene un encabezado de dirección que especifica el destino del mensaje y donde debería ir la respuesta.  
+## <a name="messaging"></a><span data-ttu-id="7f185-117">Mensajería</span><span class="sxs-lookup"><span data-stu-id="7f185-117">Messaging</span></span>  
+ <span data-ttu-id="7f185-118">Cada mensaje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene un encabezado de dirección que especifica el destino del mensaje y donde debería ir la respuesta.</span><span class="sxs-lookup"><span data-stu-id="7f185-118">Each [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] message has an address header that specifies the message destination and where the reply should go.</span></span>  
   
- El componente de dirección de una dirección de extremo es un Identificador uniforme de recursos \(URI\) que identifica el extremo.  La dirección puede ser una dirección de red o una dirección lógica.  La dirección puede incluir nombre del equipo \(nombre del host, nombre de dominio completo\) y una dirección IP.  La dirección del extremo también puede contener un identificador único global \(GUID\) o una colección de GUID para el direccionamiento temporal utilizado para discernir cada dirección.  Cada mensaje contiene un id. de mensaje que es un GUID.  Esta característica sigue la regla de referencia WS\-Addressing.  
+ <span data-ttu-id="7f185-119">El componente de dirección de una dirección de extremo es un Identificador uniforme de recursos (URI) que identifica el extremo.</span><span class="sxs-lookup"><span data-stu-id="7f185-119">The address component of an endpoint address is a Uniform Resource Identifier (URI) that identifies the endpoint.</span></span> <span data-ttu-id="7f185-120">La dirección puede ser una dirección de red o una dirección lógica.</span><span class="sxs-lookup"><span data-stu-id="7f185-120">The address can be a network address or a logical address.</span></span> <span data-ttu-id="7f185-121">La dirección puede incluir nombre del equipo (nombre del host, nombre de dominio completo) y una dirección IP.</span><span class="sxs-lookup"><span data-stu-id="7f185-121">The address may include machine name (hostname, fully qualified domain name) and an IP address.</span></span> <span data-ttu-id="7f185-122">La dirección del extremo también puede contener un identificador único global (GUID) o una colección de GUID para el direccionamiento temporal utilizado para discernir cada dirección.</span><span class="sxs-lookup"><span data-stu-id="7f185-122">The endpoint address may also contain a globally unique identifier (GUID), or a collection of GUIDs for temporary addressing used to discern each address.</span></span> <span data-ttu-id="7f185-123">Cada mensaje contiene un id. de mensaje que es un GUID.</span><span class="sxs-lookup"><span data-stu-id="7f185-123">Each message contains a message ID that is a GUID.</span></span> <span data-ttu-id="7f185-124">Esta característica sigue la regla de referencia WS-Addressing.</span><span class="sxs-lookup"><span data-stu-id="7f185-124">This feature follows the WS-Addressing reference standard.</span></span>  
   
- El nivel de mensajería [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no escribe datos personales en el equipo local.  Sin embargo, podría propagar información personal en el nivel de la red si un programador del servicio ha creado un servicio que expone dicha información \(por ejemplo, utilizando el nombre de una persona en un nombre de extremo o incluso información personal en el Lenguaje de descripción de servicios Web \(WSDL\) del extremo pero no requiero que los clientes utilicen http para tener acceso al WSDL\).  Además, si un programador ejecuta la herramienta [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) contra un extremo que expone información personal, el resultado de la herramienta podría contener esa información y el archivo de salida se escribe en el disco duro local.  
+ <span data-ttu-id="7f185-125">El nivel de mensajería [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no escribe datos personales en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="7f185-125">The [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] messaging layer does not write any personal information to the local machine.</span></span> <span data-ttu-id="7f185-126">Sin embargo, podría propagar información personal en el nivel de la red si un programador del servicio ha creado un servicio que expone dicha información (por ejemplo, utilizando el nombre de una persona en un nombre de punto de conexión o incluso información personal en el Lenguaje de descripción de servicios Web (WSDL) del punto de conexión pero no requiero que los clientes utilicen http para tener acceso al WSDL).</span><span class="sxs-lookup"><span data-stu-id="7f185-126">However, it might propagate personal information at the network level if a service developer has created a service that exposes such information (for example, by using a person's name in an endpoint name, or including personal information in the endpoint's Web Services Description Language but not requiring clients to use https to access the WSDL).</span></span> <span data-ttu-id="7f185-127">Además, si un programador se ejecuta el [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta con un extremo que expone la información personal, el resultado de la herramienta podría contener esa información y el archivo de salida se escribe en el disco duro local.</span><span class="sxs-lookup"><span data-stu-id="7f185-127">Also, if a developer runs the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool against an endpoint that exposes personal information, the tool's output could contain that information, and the output file is written to the local hard disk.</span></span>  
   
-## Hospedaje  
- La característica de alojamiento en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] permite a las aplicaciones iniciarse a petición o habilitar el uso compartido del puerto entre varias aplicaciones.  Una aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se puede hospedar en Internet Information Services \(IIS\), similar a [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+## <a name="hosting"></a><span data-ttu-id="7f185-128">Hospedaje</span><span class="sxs-lookup"><span data-stu-id="7f185-128">Hosting</span></span>  
+ <span data-ttu-id="7f185-129">La característica de alojamiento en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] permite a las aplicaciones iniciarse a petición o habilitar el uso compartido del puerto entre varias aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="7f185-129">The hosting feature in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] allows applications to start on demand or to enable port sharing between multiple applications.</span></span> <span data-ttu-id="7f185-130">Una aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se puede hospedar en Internet Information Services (IIS), similar a [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-130">An [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application can be hosted in Internet Information Services (IIS), similar to [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].</span></span>  
   
- Al hospedarse, no se expone ninguna información específica sobre la red y no mantiene los datos en el equipo.  
+ <span data-ttu-id="7f185-131">Al hospedarse, no se expone ninguna información específica sobre la red y no mantiene los datos en el equipo.</span><span class="sxs-lookup"><span data-stu-id="7f185-131">Hosting does not expose any specific information on the network and it does not keep data on the machine.</span></span>  
   
-## Seguridad de los mensajes  
- La seguridad [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona las funciones de seguridad para las aplicaciones de mensajería.  Las funciones de seguridad proporcionadas incluyen autenticación y autorización.  
+## <a name="message-security"></a><span data-ttu-id="7f185-132">Seguridad de los mensajes</span><span class="sxs-lookup"><span data-stu-id="7f185-132">Message Security</span></span>  
+ <span data-ttu-id="7f185-133">La seguridad [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona las funciones de seguridad para las aplicaciones de mensajería.</span><span class="sxs-lookup"><span data-stu-id="7f185-133">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] security provides the security capabilities for messaging applications.</span></span> <span data-ttu-id="7f185-134">Las funciones de seguridad proporcionadas incluyen autenticación y autorización.</span><span class="sxs-lookup"><span data-stu-id="7f185-134">The security functions provided include authentication and authorization.</span></span>  
   
- La autenticación se lleva a cabo pasando las credenciales entre clientes y servicios.  La autenticación se puede llevar a cabo a través de la seguridad de nivel de transporte o a través de seguridad del nivel del mensaje SOAP, tal y como se muestra a continuación:  
+ <span data-ttu-id="7f185-135">La autenticación se lleva a cabo pasando las credenciales entre clientes y servicios.</span><span class="sxs-lookup"><span data-stu-id="7f185-135">Authentication is performed by passing credentials between the clients and services.</span></span> <span data-ttu-id="7f185-136">La autenticación se puede llevar a cabo a través de la seguridad de nivel de transporte o a través de seguridad del nivel del mensaje SOAP, tal y como se muestra a continuación:</span><span class="sxs-lookup"><span data-stu-id="7f185-136">Authentication can be either through transport-level security or through SOAP message-level security, as follows:</span></span>  
   
--   En seguridad del mensaje SOAP, la autenticación se realiza a través de las credenciales como el nombre de usuario\/contraseñas, certificados X.509, vales de Kerberos y tokens de SAML, los cuales podrían contener datos personales, en función del emisor.  
+-   <span data-ttu-id="7f185-137">En seguridad del mensaje SOAP, la autenticación se realiza a través de las credenciales como el nombre de usuario/contraseñas, certificados X.509, vales de Kerberos y tokens de SAML, los cuales podrían contener datos personales, en función del emisor.</span><span class="sxs-lookup"><span data-stu-id="7f185-137">In SOAP message security, authentication is performed through credentials like username/passwords, X.509 certificates, Kerberos tickets, and SAML tokens, all of which might contain personal information, depending on the issuer.</span></span>  
   
--   En el uso de seguridad de transporte, la autenticación se realiza a través de los mecanismos de autenticación de transporte tradicionales como los esquemas de autenticación de HTTP \(Básica, implícita, Negociada, Autorización de Windows Integrada, NTLM, Ninguna, y Anónima\) y autenticación de formularios.  
+-   <span data-ttu-id="7f185-138">En el uso de seguridad de transporte, la autenticación se realiza a través de los mecanismos de autenticación de transporte tradicionales como los esquemas de autenticación de HTTP (Básica, implícita, Negociada, Autorización de Windows Integrada, NTLM, Ninguna, y Anónima) y autenticación de formularios.</span><span class="sxs-lookup"><span data-stu-id="7f185-138">Using transport security, authentication is done through traditional transport authentication mechanisms like HTTP authentication schemes (Basic, Digest, Negotiate, Integrated Windows Authorization, NTLM, None, and Anonymous), and form authentication.</span></span>  
   
- La autenticación puede producir una sesión segura establecida entre los extremos en comunicación.  Un GUID, cuya duración es igual a la sesión de seguridad, identifica la sesión.  La tabla siguiente muestra lo que se guarda y dónde.  
+ <span data-ttu-id="7f185-139">La autenticación puede producir una sesión segura establecida entre los extremos en comunicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-139">Authentication can result in a secure session established between the communicating endpoints.</span></span> <span data-ttu-id="7f185-140">Un GUID, cuya duración es igual a la sesión de seguridad, identifica la sesión.</span><span class="sxs-lookup"><span data-stu-id="7f185-140">The session is identified by a GUID that lasts the lifetime of the security session.</span></span> <span data-ttu-id="7f185-141">La tabla siguiente muestra lo que se guarda y dónde.</span><span class="sxs-lookup"><span data-stu-id="7f185-141">The following table shows what is kept and where.</span></span>  
   
-|Datos|Almacenamiento|  
-|-----------|--------------------|  
-|Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
-|Información de pertenencia del usuario, como nombres de usuario y contraseñas.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] proveedores de pertenencia.|  
-|Información de identidad sobre el servicio utilizado para autenticar el servicio a los clientes.|La dirección del extremo del servicio.|  
-|Información del agente de llamada.|Registros de auditoría.|  
+|<span data-ttu-id="7f185-142">Datos</span><span class="sxs-lookup"><span data-stu-id="7f185-142">Data</span></span>|<span data-ttu-id="7f185-143">Almacenamiento</span><span class="sxs-lookup"><span data-stu-id="7f185-143">Storage</span></span>|  
+|----------|-------------|  
+|<span data-ttu-id="7f185-144">Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.</span><span class="sxs-lookup"><span data-stu-id="7f185-144">Presentation credentials, such as username, X.509 certificates, Kerberos tokens, and references to credentials.</span></span>|<span data-ttu-id="7f185-145">Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.</span><span class="sxs-lookup"><span data-stu-id="7f185-145">Standard Windows credential management mechanisms such as the Windows certificate store.</span></span>|  
+|<span data-ttu-id="7f185-146">Información de pertenencia del usuario, como nombres de usuario y contraseñas.</span><span class="sxs-lookup"><span data-stu-id="7f185-146">User membership information, such as usernames and passwords.</span></span>|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]<span data-ttu-id="7f185-147"> proveedores de pertenencia.</span><span class="sxs-lookup"><span data-stu-id="7f185-147"> membership providers.</span></span>|  
+|<span data-ttu-id="7f185-148">Información de identidad sobre el servicio utilizado para autenticar el servicio a los clientes.</span><span class="sxs-lookup"><span data-stu-id="7f185-148">Identity information about the service used to authenticate the service to clients.</span></span>|<span data-ttu-id="7f185-149">La dirección del extremo del servicio.</span><span class="sxs-lookup"><span data-stu-id="7f185-149">Endpoint address of the service.</span></span>|  
+|<span data-ttu-id="7f185-150">Información del agente de llamada.</span><span class="sxs-lookup"><span data-stu-id="7f185-150">Caller information.</span></span>|<span data-ttu-id="7f185-151">Registros de auditoría.</span><span class="sxs-lookup"><span data-stu-id="7f185-151">Auditing logs.</span></span>|  
   
-## Auditoría  
- La auditoría registra si se ha completado o se ha producido un error en la autenticación y eventos de autorización.  Los registros de la auditoría contienen los datos siguientes: servicio URI, acción URI y la identificación del agente de llamada.  
+## <a name="auditing"></a><span data-ttu-id="7f185-152">Auditoría</span><span class="sxs-lookup"><span data-stu-id="7f185-152">Auditing</span></span>  
+ <span data-ttu-id="7f185-153">La auditoría registra si se ha completado o se ha producido un error en la autenticación y eventos de autorización.</span><span class="sxs-lookup"><span data-stu-id="7f185-153">Auditing records the success and failure of authentication and authorization events.</span></span> <span data-ttu-id="7f185-154">Los registros de la auditoría contienen los datos siguientes: servicio URI, acción URI y la identificación del agente de llamada.</span><span class="sxs-lookup"><span data-stu-id="7f185-154">Auditing records contain the following data: service URI, action URI, and the caller's identification.</span></span>  
   
- La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes \(activándolo o desactivándolo\), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos.  Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación.  Para [!INCLUDE[wv](../../../includes/wv-md.md)] y [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], un registro está registrado en el registro de eventos de seguridad.  
+ <span data-ttu-id="7f185-155">La auditoría también registra cuando el administrador modifica la configuración de registro de mensajes (activándolo o desactivándolo), porque el registro de mensajes puede registrar los datos específicos de la aplicación en encabezados y cuerpos.</span><span class="sxs-lookup"><span data-stu-id="7f185-155">Auditing also records when the administrator modifies the configuration of message logging (turning it on or off), because message logging may log application-specific data in headers and bodies.</span></span> <span data-ttu-id="7f185-156">Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], un registro está registrado en el registro de eventos de aplicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-156">For [!INCLUDE[wxp](../../../includes/wxp-md.md)], a record is logged in the application event log.</span></span> <span data-ttu-id="7f185-157">Para [!INCLUDE[wv](../../../includes/wv-md.md)] y [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], un registro está registrado en el registro de eventos de seguridad.</span><span class="sxs-lookup"><span data-stu-id="7f185-157">For [!INCLUDE[wv](../../../includes/wv-md.md)] and [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], a record is logged in the security event log.</span></span>  
   
-## Transacciones  
- La característica de transacciones proporciona servicios transaccionales a una aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+## <a name="transactions"></a><span data-ttu-id="7f185-158">Transacciones</span><span class="sxs-lookup"><span data-stu-id="7f185-158">Transactions</span></span>  
+ <span data-ttu-id="7f185-159">La característica de transacciones proporciona servicios transaccionales a una aplicación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-159">The transactions feature provides transactional services to a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] application.</span></span>  
   
- Los encabezados de las transacciones utilizados en la propagación de la transacción pueden contener los id. de transacción o id. de inscripción, que son GUID.  
+ <span data-ttu-id="7f185-160">Los encabezados de las transacciones utilizados en la propagación de la transacción pueden contener los id. de transacción o id. de inscripción, que son GUID.</span><span class="sxs-lookup"><span data-stu-id="7f185-160">Transaction headers used in transaction propagation may contain Transaction IDs or Enlistment IDs, which are GUIDs.</span></span>  
   
- La característica de las transacciones utiliza el Administrador de transacciones \(un componente de Windows\) de Microsoft DTC \(Coordinador de transacciones distribuidas\) para administrar el estado de la transacción.  De forma predeterminada, se cifran las comunicaciones entre Administradores de las Transacciones.  Los administradores de transacciones pueden registrar referencias de extremo, id. de transacción e id. de inscripción como parte de su estado duradero.  La duración del archivo de registro del Administrador de la Transacción determina la duración de este estado.  El servicio de MSDTC posee y mantiene este registro.  
+ <span data-ttu-id="7f185-161">La característica de las transacciones utiliza el Administrador de transacciones (un componente de Windows) de Microsoft DTC (Coordinador de transacciones distribuidas) para administrar el estado de la transacción.</span><span class="sxs-lookup"><span data-stu-id="7f185-161">The Transactions feature uses the Microsoft Distributed Transaction Coordinator (MSDTC) Transaction Manager (a Windows component) to manage transaction state.</span></span> <span data-ttu-id="7f185-162">De forma predeterminada, se cifran las comunicaciones entre Administradores de las Transacciones.</span><span class="sxs-lookup"><span data-stu-id="7f185-162">By default, communications between Transactions Managers are encrypted.</span></span> <span data-ttu-id="7f185-163">Los administradores de transacciones pueden registrar referencias de extremo, id. de transacción e id. de inscripción como parte de su estado duradero.</span><span class="sxs-lookup"><span data-stu-id="7f185-163">Transaction Managers may log endpoint references, Transaction IDs, and Enlistment IDs as part of their durable state.</span></span> <span data-ttu-id="7f185-164">La duración del archivo de registro del Administrador de la Transacción determina la duración de este estado.</span><span class="sxs-lookup"><span data-stu-id="7f185-164">The lifetime of this state is determined by the lifetime of the Transaction Manager’s log file.</span></span> <span data-ttu-id="7f185-165">El servicio de MSDTC posee y mantiene este registro.</span><span class="sxs-lookup"><span data-stu-id="7f185-165">The MSDTC service owns and maintains this log.</span></span>  
   
- La característica Transacciones implementa los estándares WS\-Coordination y WS\-Atomic Transaction.  
+ <span data-ttu-id="7f185-166">La característica Transacciones implementa los estándares WS-Coordination y WS-Atomic Transaction.</span><span class="sxs-lookup"><span data-stu-id="7f185-166">The Transactions feature implements the WS-Coordination and WS-Atomic Transaction standards.</span></span>  
   
-## Sesiones de confianza  
- Las sesiones de confianza en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporcionan la transferencia de mensajes cuando se producen errores en el transporte o errores intermediarios.  Incluso proporcionan una transferencia de mensajes,, exactamente una vez, cuando el transporte subyacente desconecta \(por ejemplo, una conexión TCP en una red inalámbrica\) o pierde un mensaje \(un proxy HTTP al colocar un mensaje de salida o entrante\).  Las sesiones de confianza también recuperan el mensaje reordenando \(como puede pasar en el caso de enrutamiento de varias rutas de acceso\), conservando el orden en el que se enviaron los mensajes.  
+## <a name="reliable-sessions"></a><span data-ttu-id="7f185-167">Sesiones de confianza</span><span class="sxs-lookup"><span data-stu-id="7f185-167">Reliable Sessions</span></span>  
+ <span data-ttu-id="7f185-168">Las sesiones de confianza en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporcionan la transferencia de mensajes cuando se producen errores en el transporte o errores intermediarios.</span><span class="sxs-lookup"><span data-stu-id="7f185-168">Reliable sessions in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] provide the transfer of messages when transport or intermediary failures occur.</span></span> <span data-ttu-id="7f185-169">Incluso proporcionan una transferencia de mensajes,, exactamente una vez, cuando el transporte subyacente desconecta (por ejemplo, una conexión TCP en una red inalámbrica) o pierde un mensaje (un proxy HTTP al colocar un mensaje de salida o entrante).</span><span class="sxs-lookup"><span data-stu-id="7f185-169">They provide an exactly-once transfer of messages even when the underlying transport disconnects (for example, a TCP connection on a wireless network) or loses a message (an HTTP proxy dropping an outgoing or incoming message).</span></span> <span data-ttu-id="7f185-170">Las sesiones de confianza también recuperan el mensaje reordenando (como puede pasar en el caso de enrutamiento de varias rutas de acceso), conservando el orden en el que se enviaron los mensajes.</span><span class="sxs-lookup"><span data-stu-id="7f185-170">Reliable sessions also recover message reordering (as may happen in the case of multipath routing), preserving the order in which the messages were sent.</span></span>  
   
- Las sesiones de confianza se implementan utilizando el protocolo WS\-ReliableMessaging \(WS\-RM\).  Agregan los encabezados WS\-RM que contienen información de la sesión, la cual se utiliza para identificar todos los mensajes asociados a una sesión de confianza determinada.  Cada sesión de WS\-RM tiene un identificador, que es un GUID.  
+ <span data-ttu-id="7f185-171">Las sesiones de confianza se implementan utilizando el protocolo WS-ReliableMessaging (WS-RM).</span><span class="sxs-lookup"><span data-stu-id="7f185-171">Reliable sessions are implemented using the WS-ReliableMessaging (WS-RM) protocol.</span></span> <span data-ttu-id="7f185-172">Agregan los encabezados WS-RM que contienen información de la sesión, la cual se utiliza para identificar todos los mensajes asociados a una sesión de confianza determinada.</span><span class="sxs-lookup"><span data-stu-id="7f185-172">They add WS-RM headers that contain session information, which is used to identify all messages associated with a particular reliable session.</span></span> <span data-ttu-id="7f185-173">Cada sesión de WS-RM tiene un identificador, que es un GUID.</span><span class="sxs-lookup"><span data-stu-id="7f185-173">Each WS-RM session has an identifier, which is a GUID.</span></span>  
   
- No se retiene información personal en el equipo de usuario final.  
+ <span data-ttu-id="7f185-174">No se retiene información personal en el equipo de usuario final.</span><span class="sxs-lookup"><span data-stu-id="7f185-174">No personal information is retained on the end-user's machine.</span></span>  
   
-## Canals en la cola  
- Las colas almacenan mensajes de una aplicación emisora en nombre de una aplicación receptora y, a continuación, reenvían estos mensajes a la aplicación receptora.  Ayudan a garantizar la transferencia de mensajes desde aplicaciones de envío a aplicaciones de recepción cuando, por ejemplo, la aplicación receptora es transitoria.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proporciona compatibilidad para la puesta en cola usando Microsoft Message Queuing \(MSMQ\) como transporte.  
+## <a name="queued-channels"></a><span data-ttu-id="7f185-175">Canals en la cola</span><span class="sxs-lookup"><span data-stu-id="7f185-175">Queued Channels</span></span>  
+ <span data-ttu-id="7f185-176">Las colas almacenan mensajes de una aplicación emisora en nombre de una aplicación receptora y, a continuación, reenvían estos mensajes a la aplicación receptora.</span><span class="sxs-lookup"><span data-stu-id="7f185-176">Queues store messages from a sending application on behalf of a receiving application and later forward these messages to the receiving application.</span></span> <span data-ttu-id="7f185-177">Ayudan a garantizar la transferencia de mensajes desde aplicaciones de envío a aplicaciones de recepción cuando, por ejemplo, la aplicación receptora es transitoria.</span><span class="sxs-lookup"><span data-stu-id="7f185-177">They help ensure the transfer of messages from sending applications to receiving applications when, for example, the receiving application is transient.</span></span> [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-178"> proporciona compatibilidad para la puesta en cola usando Microsoft Message Queuing (MSMQ) como transporte.</span><span class="sxs-lookup"><span data-stu-id="7f185-178"> provides support for queuing by using Microsoft Message Queuing (MSMQ) as a transport.</span></span>  
   
- La característica de los canales en cola no agrega encabezados a un mensaje.  En su lugar, crea un mensaje de Message Queuing con propiedades de mensaje de Message Queuing adecuadas establecidas e invoca los métodos Message Queuing para colocar el mensaje en la cola de Message Queuing.  Message Queuing es un componente opcional distribuido con Windows.  
+ <span data-ttu-id="7f185-179">La característica de los canales en cola no agrega encabezados a un mensaje.</span><span class="sxs-lookup"><span data-stu-id="7f185-179">The queued channels feature does not add headers to a message.</span></span> <span data-ttu-id="7f185-180">En su lugar, crea un mensaje de Message Queuing con propiedades de mensaje de Message Queuing adecuadas establecidas e invoca los métodos Message Queuing para colocar el mensaje en la cola de Message Queuing.</span><span class="sxs-lookup"><span data-stu-id="7f185-180">Instead it creates a Message Queuing message with appropriate Message Queuing message properties set, and invokes Message Queuing methods to put the message in the Message Queuing queue.</span></span> <span data-ttu-id="7f185-181">Message Queuing es un componente opcional distribuido con Windows.</span><span class="sxs-lookup"><span data-stu-id="7f185-181">Message Queuing is an optional component that ships with Windows.</span></span>  
   
- No se retiene información en el equipo del usuario final mediante la característica de canal en cola, porque utiliza la infraestructura Message Queuing.  
+ <span data-ttu-id="7f185-182">No se retiene información en el equipo del usuario final mediante la característica de canal en cola, porque utiliza la infraestructura Message Queuing.</span><span class="sxs-lookup"><span data-stu-id="7f185-182">No information is retained on the end-user's machine by the queued channels feature, because it uses Message Queuing as the queuing infrastructure.</span></span>  
   
-## Integración de COM\+  
- Esta característica ajusta la funcionalidad COM y COM\+ existentes para crear servicios que son compatibles con servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Esta característica no utiliza los encabezados específicos y no retiene los datos en el equipo del usuario final.  
+## <a name="com-integration"></a><span data-ttu-id="7f185-183">Integración de COM+</span><span class="sxs-lookup"><span data-stu-id="7f185-183">COM+ Integration</span></span>  
+ <span data-ttu-id="7f185-184">Esta característica ajusta la funcionalidad COM y COM+ existentes para crear servicios que son compatibles con servicios [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-184">This feature wraps existing COM and COM+ functionality to create services that are compatible with [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="7f185-185">Esta característica no utiliza los encabezados específicos y no retiene los datos en el equipo del usuario final.</span><span class="sxs-lookup"><span data-stu-id="7f185-185">This feature does not use specific headers and it does not retain data on the end-user's machine.</span></span>  
   
-## Moniker de servicio COM  
- Esto proporciona un contenedor no administrado a un cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] estándar.  Esta característica no tiene encabezados específicos en la conexión ni conserva datos en el equipo.  
+## <a name="com-service-moniker"></a><span data-ttu-id="7f185-186">Moniker de servicio COM</span><span class="sxs-lookup"><span data-stu-id="7f185-186">COM Service Moniker</span></span>  
+ <span data-ttu-id="7f185-187">Esto proporciona un contenedor no administrado a un cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] estándar.</span><span class="sxs-lookup"><span data-stu-id="7f185-187">This provides an unmanaged wrapper to a standard [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="7f185-188">Esta característica no tiene encabezados específicos en la conexión ni conserva datos en el equipo.</span><span class="sxs-lookup"><span data-stu-id="7f185-188">This feature does not have specific headers on the wire nor does it persist data on the machine.</span></span>  
   
-## Canal del mismo nivel  
- Un canal del mismo nivel habilita el desarrollo de aplicaciones multipartidarias utilizando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  La mensajería multipartidaria se produce en el contexto de una malla.  Un nombre al cual se pueden unir los nodos identifica las mallas.  Cada nodo del canal del mismo nivel crea un agente de escucha de TCP en un puerto especificado por el usuario y establece las conexiones con otros nodos en la malla para garantizar la resiliencia.  Para conectar a otros nodos en la malla, los nodos también intercambian algunos datos, incluso la dirección del agente de escucha y las direcciones IP del equipo, con otros nodos de la malla.  Los mensajes enviados en la malla pueden contener información de seguridad que pertenece al remitente para evitar que se suplante y se manipule el mensaje.  
+## <a name="peer-channel"></a><span data-ttu-id="7f185-189">Canal del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="7f185-189">Peer Channel</span></span>  
+ <span data-ttu-id="7f185-190">Un canal del mismo nivel habilita el desarrollo de aplicaciones multipartidarias utilizando [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-190">A peer channel enables development of multiparty applications using [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="7f185-191">La mensajería multipartidaria se produce en el contexto de una malla.</span><span class="sxs-lookup"><span data-stu-id="7f185-191">Multiparty messaging occurs in the context of a mesh.</span></span> <span data-ttu-id="7f185-192">Un nombre al cual se pueden unir los nodos identifica las mallas.</span><span class="sxs-lookup"><span data-stu-id="7f185-192">Meshes are identified by a name that nodes can join.</span></span> <span data-ttu-id="7f185-193">Cada nodo del canal del mismo nivel crea un agente de escucha de TCP en un puerto especificado por el usuario y establece las conexiones con otros nodos en la malla para garantizar la resiliencia.</span><span class="sxs-lookup"><span data-stu-id="7f185-193">Each node in the peer channel creates a TCP listener at a user-specified port and establishes connections with other nodes in the mesh to ensure resiliency.</span></span> <span data-ttu-id="7f185-194">Para conectar a otros nodos en la malla, los nodos también intercambian algunos datos, incluso la dirección del agente de escucha y las direcciones IP del equipo, con otros nodos de la malla.</span><span class="sxs-lookup"><span data-stu-id="7f185-194">To connect to other nodes in the mesh, nodes also exchange some data, including the listener address and the machine's IP addresses, with other nodes in the mesh.</span></span> <span data-ttu-id="7f185-195">Los mensajes enviados en la malla pueden contener información de seguridad que pertenece al remitente para evitar que se suplante y se manipule el mensaje.</span><span class="sxs-lookup"><span data-stu-id="7f185-195">Messages sent around in the mesh can contain security information that pertains to the sender to prevent message spoofing and tampering.</span></span>  
   
- No se almacena información personal en el equipo de usuario final.  
+ <span data-ttu-id="7f185-196">No se almacena información personal en el equipo de usuario final.</span><span class="sxs-lookup"><span data-stu-id="7f185-196">No personal information is stored on the end-user's machine.</span></span>  
   
-## Experiencia profesional de TI  
+## <a name="it-professional-experience"></a><span data-ttu-id="7f185-197">Experiencia profesional de TI</span><span class="sxs-lookup"><span data-stu-id="7f185-197">IT Professional Experience</span></span>  
   
-### Seguimiento  
- La característica de los diagnósticos de la infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] registra mensajes que pasan a través del transporte y los niveles de modelo de servicio, y las actividades y eventos asociados a estos mensajes.  Esta característica está desactivada de forma predeterminada.  Se habilita mediante el archivo de configuración de la aplicación y el comportamiento de la traza se puede modificar utilizando el proveedor de WMI [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en tiempo de ejecución.  Cuando se habilita, la infraestructura de la traza emite una traza de diagnóstico que contiene mensajes, actividades y eventos de procesamiento a los agentes de escucha configurados.  Las opciones de configuración del agente de escucha del administrador determinan el formato y ubicación del resultado, pero es normalmente un archivo con formato XML.  El administrador es responsable de establecer la lista de control de acceso \(ACL\) en los archivos de seguimiento.  En particular, cuando está hospedado por el Sistema de Activación de Windows \(WAS\), el administrador debería asegurarse de que los archivos no provienen del directorio raíz virtual público si no se desea.  
+### <a name="tracing"></a><span data-ttu-id="7f185-198">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="7f185-198">Tracing</span></span>  
+ <span data-ttu-id="7f185-199">La característica de los diagnósticos de la infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] registra mensajes que pasan a través del transporte y los niveles de modelo de servicio, y las actividades y eventos asociados a estos mensajes.</span><span class="sxs-lookup"><span data-stu-id="7f185-199">The diagnostics feature of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure logs messages that pass through the transport and service model layers, and the activities and events associated with these messages.</span></span> <span data-ttu-id="7f185-200">Esta característica está desactivada de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="7f185-200">This feature is turned off by default.</span></span> <span data-ttu-id="7f185-201">Se habilita mediante el archivo de configuración de la aplicación y el comportamiento de la traza se puede modificar utilizando el proveedor de WMI [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7f185-201">It is enabled using the application’s configuration file and the tracing behavior may be modified using the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] WMI provider at run time.</span></span> <span data-ttu-id="7f185-202">Cuando se habilita, la infraestructura de la traza emite una traza de diagnóstico que contiene mensajes, actividades y eventos de procesamiento a los agentes de escucha configurados.</span><span class="sxs-lookup"><span data-stu-id="7f185-202">When enabled, the tracing infrastructure emits a diagnostic trace that contains messages, activities, and processing events to configured listeners.</span></span> <span data-ttu-id="7f185-203">Las opciones de configuración del agente de escucha del administrador determinan el formato y ubicación del resultado, pero es normalmente un archivo con formato XML.</span><span class="sxs-lookup"><span data-stu-id="7f185-203">The format and location of the output are determined by the administrator’s listener configuration choices, but is typically an XML formatted file.</span></span> <span data-ttu-id="7f185-204">El administrador es responsable de establecer la lista de control de acceso (ACL) en los archivos de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="7f185-204">The administrator is responsible for setting the access control list (ACL) on the trace files.</span></span> <span data-ttu-id="7f185-205">En particular, cuando está hospedado por el Sistema de Activación de Windows (WAS), el administrador debería asegurarse de que los archivos no provienen del directorio raíz virtual público si no se desea.</span><span class="sxs-lookup"><span data-stu-id="7f185-205">In particular, when hosted by Windows Activation System (WAS), the administrator should make sure the files are not served from the public virtual root directory if that is not desired.</span></span>  
   
- Hay dos tipos de traza: registro de mensajes y traza de diagnóstico de modelo de servicio, descritos en la sección siguiente.  Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>.  Estos orígenes de traza de registro capturan locales a la aplicación.  
+ <span data-ttu-id="7f185-206">Hay dos tipos de traza: registro de mensajes y traza de diagnóstico de modelo de servicio, descritos en la sección siguiente.</span><span class="sxs-lookup"><span data-stu-id="7f185-206">There are two types of tracing: Message logging and Service Model diagnostic tracing, described in the following section.</span></span> <span data-ttu-id="7f185-207">Cada tipo se configura a través de su propio origen de traza: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> y <xref:System.ServiceModel>.</span><span class="sxs-lookup"><span data-stu-id="7f185-207">Each type is configured through its own trace source: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> and <xref:System.ServiceModel>.</span></span> <span data-ttu-id="7f185-208">Estos orígenes de traza de registro capturan locales a la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-208">Both of these logging trace sources capture data that is local to the application.</span></span>  
   
-### Registro de mensajes  
- El origen de traza del registro de mensajes \(<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>\) permite a un administrador registrar los mensajes que fluyen a través del sistema.  A través de la configuración, el usuario puede decidir si quiere registrar mensajes completos o solamente encabezados de mensaje, registrar en el transporte y\/o niveles de modelo de servicio y si quiere incluir mensajes incorrectos.  Además, el usuario puede configurar el filtro para restringir qué mensajes están registrados.  
+### <a name="message-logging"></a><span data-ttu-id="7f185-209">Registro de mensajes</span><span class="sxs-lookup"><span data-stu-id="7f185-209">Message Logging</span></span>  
+ <span data-ttu-id="7f185-210">El origen de traza del registro de mensajes (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite a un administrador registrar los mensajes que fluyen a través del sistema.</span><span class="sxs-lookup"><span data-stu-id="7f185-210">The message logging trace source (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) allows an administrator to log the messages that flow through the system.</span></span> <span data-ttu-id="7f185-211">A través de la configuración, el usuario puede decidir si quiere registrar mensajes completos o solamente encabezados de mensaje, registrar en el transporte y/o niveles de modelo de servicio y si quiere incluir mensajes incorrectos.</span><span class="sxs-lookup"><span data-stu-id="7f185-211">Through configuration, the user may decide to log entire messages or message headers only, whether to log at the transport and/or service model layers, and whether to include malformed messages.</span></span> <span data-ttu-id="7f185-212">Además, el usuario puede configurar el filtro para restringir qué mensajes están registrados.</span><span class="sxs-lookup"><span data-stu-id="7f185-212">Also, the user may configure filtering to restrict which messages are logged.</span></span>  
   
- De forma predeterminada, el registro de mensajes está deshabilitado.  El administrador del equipo local puede evitar que el administrador del nivel de la aplicación active el registro de mensajes.  
+ <span data-ttu-id="7f185-213">De forma predeterminada, el registro de mensajes está deshabilitado.</span><span class="sxs-lookup"><span data-stu-id="7f185-213">By default, message logging is disabled.</span></span> <span data-ttu-id="7f185-214">El administrador del equipo local puede evitar que el administrador del nivel de la aplicación active el registro de mensajes.</span><span class="sxs-lookup"><span data-stu-id="7f185-214">The local machine administrator can prevent the application-level administrator from turning message logging on.</span></span>  
   
-#### Registro de mensajes cifrado y descifrado  
- Los mensajes se registran, cifran o descifran, tal y como se ha descrito en los términos siguientes.  
+#### <a name="encrypted-and-decrypted-message-logging"></a><span data-ttu-id="7f185-215">Registro de mensajes cifrado y descifrado</span><span class="sxs-lookup"><span data-stu-id="7f185-215">Encrypted and Decrypted Message Logging</span></span>  
+ <span data-ttu-id="7f185-216">Los mensajes se registran, cifran o descifran, tal y como se ha descrito en los términos siguientes.</span><span class="sxs-lookup"><span data-stu-id="7f185-216">Messages are logged, encrypted, or decrypted, as described in the following terms.</span></span>  
   
- Registro de transporte  
- Registra los mensajes recibidos y enviados en el nivel de transporte.  Estos mensajes contienen todos los encabezados y se pueden cifrar antes de ser enviados en la conexión y al recibirse.  
+ <span data-ttu-id="7f185-217">Registro de transporte</span><span class="sxs-lookup"><span data-stu-id="7f185-217">Transport Logging</span></span>  
+ <span data-ttu-id="7f185-218">Registra los mensajes recibidos y enviados en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="7f185-218">Logs messages received and sent at the transport level.</span></span> <span data-ttu-id="7f185-219">Estos mensajes contienen todos los encabezados y se pueden cifrar antes de ser enviados en la conexión y al recibirse.</span><span class="sxs-lookup"><span data-stu-id="7f185-219">These messages contain all headers, and may be encrypted before being sent on the wire and when being received.</span></span>  
   
- Si se cifran los mensajes antes de ser enviados en la conexión y cuando se reciben, están registrados y cifrados también.  Una excepción es cuando se utiliza un protocolo de seguridad \(https\): están registrados y descifrado antes de ser enviados y después de ser recibidos, incluso si se cifran en la conexión.  
+ <span data-ttu-id="7f185-220">Si se cifran los mensajes antes de ser enviados en la conexión y cuando se reciben, están registrados y cifrados también.</span><span class="sxs-lookup"><span data-stu-id="7f185-220">If messages are encrypted before being sent on the wire and when they are received, they are logged encrypted as well.</span></span> <span data-ttu-id="7f185-221">Una excepción es cuando se utiliza un protocolo de seguridad (https): están registrados y descifrado antes de ser enviados y después de ser recibidos, incluso si se cifran en la conexión.</span><span class="sxs-lookup"><span data-stu-id="7f185-221">An exception is when a security protocol is used (https): they are then logged decrypted before being sent and after being received even if they are encrypted on the wire.</span></span>  
   
- Registro del servicio  
- Registra mensajes recibidos o enviados en el nivel de modelo del servicio, después de que se haya producido el procesamiento del encabezado del canal procesar, justo antes y después de escribir el código de usuario.  
+ <span data-ttu-id="7f185-222">Registro del servicio</span><span class="sxs-lookup"><span data-stu-id="7f185-222">Service Logging</span></span>  
+ <span data-ttu-id="7f185-223">Registra mensajes recibidos o enviados en el nivel de modelo del servicio, después de que se haya producido el procesamiento del encabezado del canal procesar, justo antes y después de escribir el código de usuario.</span><span class="sxs-lookup"><span data-stu-id="7f185-223">Logs messages received or sent at the service model level, after channel header processing has occurred, just before and after entering user code.</span></span>  
   
- Se descifran los mensajes registrados en este nivel incluso si se protegieron y cifraron en la conexión.  
+ <span data-ttu-id="7f185-224">Se descifran los mensajes registrados en este nivel incluso si se protegieron y cifraron en la conexión.</span><span class="sxs-lookup"><span data-stu-id="7f185-224">Messages logged at this level are decrypted even if they were secured and encrypted on the wire.</span></span>  
   
- Registro de mensajes incorrectos  
- Registra mensajes que la infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no puede entender o procesar.  
+ <span data-ttu-id="7f185-225">Registro de mensajes incorrectos</span><span class="sxs-lookup"><span data-stu-id="7f185-225">Malformed Message Logging</span></span>  
+ <span data-ttu-id="7f185-226">Registra mensajes que la infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no puede entender o procesar.</span><span class="sxs-lookup"><span data-stu-id="7f185-226">Logs messages that the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure cannot understand or process.</span></span>  
   
- Los mensajes están registrados tal cual, es decir, cifrados o no  
+ <span data-ttu-id="7f185-227">Los mensajes están registrados tal cual, es decir, cifrados o no</span><span class="sxs-lookup"><span data-stu-id="7f185-227">Messages are logged as-is, that is, encrypted or not</span></span>  
   
- Cuando los mensajes están registrados en forma descifrado o no cifrado, de forma predeterminada [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] quita las claves de seguridad y potencialmente datos personales de los mensajes antes de registrarlos.  Las secciones siguientes describen qué información se quita, y cuándo.  El administrador del equipo e implementador de la aplicación deben tomar ciertas medidas de configuración para cambiar el comportamiento predeterminado con el fin de registrar las claves y potencialmente datos personales.  
+ <span data-ttu-id="7f185-228">Cuando los mensajes están registrados en forma descifrado o no cifrado, de forma predeterminada [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] quita las claves de seguridad y potencialmente datos personales de los mensajes antes de registrarlos.</span><span class="sxs-lookup"><span data-stu-id="7f185-228">When messages are logged in decrypted or unencrypted form, by default [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] removes security keys and potentially personal information from the messages before logging them.</span></span> <span data-ttu-id="7f185-229">Las secciones siguientes describen qué información se quita, y cuándo.</span><span class="sxs-lookup"><span data-stu-id="7f185-229">The next sections describe what information is removed, and when.</span></span> <span data-ttu-id="7f185-230">El administrador del equipo e implementador de la aplicación deben tomar ciertas medidas de configuración para cambiar el comportamiento predeterminado con el fin de registrar las claves y potencialmente datos personales.</span><span class="sxs-lookup"><span data-stu-id="7f185-230">The machine administrator and application deployer must both take certain configuration actions to change the default behavior to log keys and potentially personal information.</span></span>  
   
-#### Información quitada de los encabezados del mensaje al registrar mensajes descifrados\/no cifrados  
- Cuando los mensajes están registrados en forma de descifrados\/no cifrados, las claves de seguridad y potencialmente los datos personales se quitan de forma predeterminada de los encabezados del mensaje y los cuerpos del mensaje antes de registrarse.  La lista siguiente muestra lo que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] considera como claves y potencialmente datos personales.  
+#### <a name="information-removed-from-message-headers-when-logging-decryptedunencrypted-messages"></a><span data-ttu-id="7f185-231">Información quitada de los encabezados del mensaje al registrar mensajes descifrados/no cifrados</span><span class="sxs-lookup"><span data-stu-id="7f185-231">Information Removed from Message Headers When Logging Decrypted/Unencrypted Messages</span></span>  
+ <span data-ttu-id="7f185-232">Cuando los mensajes están registrados en forma de descifrados/no cifrados, las claves de seguridad y potencialmente los datos personales se quitan de forma predeterminada de los encabezados del mensaje y los cuerpos del mensaje antes de registrarse.</span><span class="sxs-lookup"><span data-stu-id="7f185-232">When messages are logged in decrypted/unencrypted form, security keys and potentially personal information are removed by default from message headers and message bodies before they are logged.</span></span> <span data-ttu-id="7f185-233">La lista siguiente muestra lo que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] considera como claves y potencialmente datos personales.</span><span class="sxs-lookup"><span data-stu-id="7f185-233">The following list shows what [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] considers keys and potentially personal information.</span></span>  
   
- Claves que se quitan:  
+ <span data-ttu-id="7f185-234">Claves que se quitan:</span><span class="sxs-lookup"><span data-stu-id="7f185-234">Keys that are removed:</span></span>  
   
- \- Para xmlns:wst \= "http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/trust" y xmlns:wst \= "http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust"  
+ <span data-ttu-id="7f185-235">\-Para xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"</span><span class="sxs-lookup"><span data-stu-id="7f185-235">\- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"</span></span>  
   
- wst:BinarySecret  
+ <span data-ttu-id="7f185-236">wst:BinarySecret</span><span class="sxs-lookup"><span data-stu-id="7f185-236">wst:BinarySecret</span></span>  
   
- wst:Entropy  
+ <span data-ttu-id="7f185-237">wst:Entropy</span><span class="sxs-lookup"><span data-stu-id="7f185-237">wst:Entropy</span></span>  
   
- \- Para xmlns:wsse \= "http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.1.xsd" y xmlns:wsse \= "http:\/\/docs.oasis\-open.org\/wss\/2005\/xx\/oasis\-2005xx\-wss\-wssecurity\-secext\-1.1.xsd"  
+ <span data-ttu-id="7f185-238">\-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"</span><span class="sxs-lookup"><span data-stu-id="7f185-238">\- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"</span></span>  
   
- wsse:Password  
+ <span data-ttu-id="7f185-239">wsse:Password</span><span class="sxs-lookup"><span data-stu-id="7f185-239">wsse:Password</span></span>  
   
- wsse:Nonce  
+ <span data-ttu-id="7f185-240">wsse:Nonce</span><span class="sxs-lookup"><span data-stu-id="7f185-240">wsse:Nonce</span></span>  
   
- Datos personales posibles que se quitan:  
+ <span data-ttu-id="7f185-241">Datos personales posibles que se quitan:</span><span class="sxs-lookup"><span data-stu-id="7f185-241">Potentially personal information that is removed:</span></span>  
   
- \- Para xmlns:wsse \= "http:\/\/docs.oasis\-open.org\/wss\/2004\/01\/oasis\-200401\-wss\-wssecurity\-secext\-1.1.xsd" y xmlns:wsse \= "http:\/\/docs.oasis\-open.org\/wss\/2005\/xx\/oasis\-2005xx\-wss\-wssecurity\-secext\-1.1.xsd"  
+ <span data-ttu-id="7f185-242">\-Para xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" y xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"</span><span class="sxs-lookup"><span data-stu-id="7f185-242">\- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"</span></span>  
   
- wsse:Username  
+ <span data-ttu-id="7f185-243">wsse:Username</span><span class="sxs-lookup"><span data-stu-id="7f185-243">wsse:Username</span></span>  
   
- wsse:BinarySecurityToken  
+ <span data-ttu-id="7f185-244">wsse:BinarySecurityToken</span><span class="sxs-lookup"><span data-stu-id="7f185-244">wsse:BinarySecurityToken</span></span>  
   
- \- Para xmlns:saml \= "urn:oasis:names:tc:SAML:1.0: aserción" se quitan los elementos en negrita \(abajo\):  
+ <span data-ttu-id="7f185-245">\-Para xmlns = "urn: oasis: nombres: tc: SAML:1.0:assertion" se quitan los elementos en negrita (abajo):</span><span class="sxs-lookup"><span data-stu-id="7f185-245">\- For xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" the items in bold (below) are removed:</span></span>  
   
- \<Assertion  
+ <span data-ttu-id="7f185-246">\<Aserción</span><span class="sxs-lookup"><span data-stu-id="7f185-246">\<Assertion</span></span>  
   
- MajorVersion\="1"  
+ <span data-ttu-id="7f185-247">MajorVersion="1"</span><span class="sxs-lookup"><span data-stu-id="7f185-247">MajorVersion="1"</span></span>  
   
- MinorVersion\="1"  
+ <span data-ttu-id="7f185-248">MinorVersion="1"</span><span class="sxs-lookup"><span data-stu-id="7f185-248">MinorVersion="1"</span></span>  
   
- AssertionId \=" \[ID\]"  
+ <span data-ttu-id="7f185-249">AssertionId =" [ID]"</span><span class="sxs-lookup"><span data-stu-id="7f185-249">AssertionId="[ID]"</span></span>  
   
- Issuer\="\[string\]"  
+ <span data-ttu-id="7f185-250">Issuer="[string]"</span><span class="sxs-lookup"><span data-stu-id="7f185-250">Issuer="[string]"</span></span>  
   
- IssueInstant\="\[dateTime\]"  
+ <span data-ttu-id="7f185-251">IssueInstant="[dateTime]"</span><span class="sxs-lookup"><span data-stu-id="7f185-251">IssueInstant="[dateTime]"</span></span>  
   
- \>  
+ >  
   
- \<Conditions NotBefore\="\[dateTime\]" NotOnOrAfter\="\[dateTime\]"\>  
+ <span data-ttu-id="7f185-252">\<Las condiciones NotBefore = "[fecha y hora]" NotOnOrAfter = "[fecha y hora]" ></span><span class="sxs-lookup"><span data-stu-id="7f185-252">\<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]"></span></span>  
   
- \<AudienceRestrictionCondition\>  
+ <span data-ttu-id="7f185-253">\<AudienceRestrictionCondition ></span><span class="sxs-lookup"><span data-stu-id="7f185-253">\<AudienceRestrictionCondition></span></span>  
   
- \<Audience\>\[uri\]\<\/Audience\>\+  
+ <span data-ttu-id="7f185-254">\<Audiencia > [uri]\</Audience > +</span><span class="sxs-lookup"><span data-stu-id="7f185-254">\<Audience>[uri]\</Audience>+</span></span>  
   
- \<\/AudienceRestrictionCondition\>\*  
+ <span data-ttu-id="7f185-255">\</ AudienceRestrictionCondition > *</span><span class="sxs-lookup"><span data-stu-id="7f185-255">\</AudienceRestrictionCondition>*</span></span>  
   
- \<DoNotCacheCondition \/\>\*  
+ <span data-ttu-id="7f185-256">\<DoNotCacheCondition / > *</span><span class="sxs-lookup"><span data-stu-id="7f185-256">\<DoNotCacheCondition />*</span></span>  
   
- \<\!\-\- abstract base type  
+ <span data-ttu-id="7f185-257"><\!--tipo base abstracto</span><span class="sxs-lookup"><span data-stu-id="7f185-257"><\!-- abstract base type</span></span>  
   
- \<Condition \/\>\*  
+ <span data-ttu-id="7f185-258">\<Condición / > *</span><span class="sxs-lookup"><span data-stu-id="7f185-258">\<Condition />*</span></span>  
   
- \-\-\>  
+ -->  
   
- ¿\<\/Conditions\>?  
+ <span data-ttu-id="7f185-259">\<¿/ Condiciones >?</span><span class="sxs-lookup"><span data-stu-id="7f185-259">\</Conditions>?</span></span>  
   
- \<Advice\>  
+ <span data-ttu-id="7f185-260">\<Consejos ></span><span class="sxs-lookup"><span data-stu-id="7f185-260">\<Advice></span></span>  
   
- \<AssertionIDReference\>\[ID\]\<\/AssertionIDReference\>\*  
+ <span data-ttu-id="7f185-261">\<AssertionIDReference > [ID]\</AssertionIDReference > *</span><span class="sxs-lookup"><span data-stu-id="7f185-261">\<AssertionIDReference>[ID]\</AssertionIDReference>*</span></span>  
   
- \<Assertion\>\[assertion\]\<\/Assertion\>\*  
+ <span data-ttu-id="7f185-262">\<Aserción > [aserción]\</Assertion > *</span><span class="sxs-lookup"><span data-stu-id="7f185-262">\<Assertion>[assertion]\</Assertion>*</span></span>  
   
- \[any\]\*  
+ <span data-ttu-id="7f185-263">[any]*</span><span class="sxs-lookup"><span data-stu-id="7f185-263">[any]*</span></span>  
   
- \<\/Advice\>?  
+ <span data-ttu-id="7f185-264">\<¿/ Notificación de >?</span><span class="sxs-lookup"><span data-stu-id="7f185-264">\</Advice>?</span></span>  
   
- \<\!\-\- Abstract base types  
+ <span data-ttu-id="7f185-265"><\!--Tipos base abstractos</span><span class="sxs-lookup"><span data-stu-id="7f185-265"><\!-- Abstract base types</span></span>  
   
- \<Statement \/\>\*  
+ <span data-ttu-id="7f185-266">\<Instrucción / > *</span><span class="sxs-lookup"><span data-stu-id="7f185-266">\<Statement />*</span></span>  
   
- \<SubjectStatement\>  
+ <span data-ttu-id="7f185-267">\<SubjectStatement ></span><span class="sxs-lookup"><span data-stu-id="7f185-267">\<SubjectStatement></span></span>  
   
- \<Subject\>  
+ <span data-ttu-id="7f185-268">\<Asunto ></span><span class="sxs-lookup"><span data-stu-id="7f185-268">\<Subject></span></span>  
   
  `<NameIdentifier`  
   
@@ -218,31 +221,31 @@ Microsoft se compromete a proteger la privacidad de usuarios finales.  Al compil
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation\>  
+ <span data-ttu-id="7f185-269">\<SubjectConfirmation ></span><span class="sxs-lookup"><span data-stu-id="7f185-269">\<SubjectConfirmation></span></span>  
   
- \<ConfirmationMethod\>\[anyUri\]\<\/ConfirmationMethod\>\+  
+ <span data-ttu-id="7f185-270">\<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +</span><span class="sxs-lookup"><span data-stu-id="7f185-270">\<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+</span></span>  
   
- \<SubjectConfirmationData\>\[any\]\<\/SubjectConfirmationData\>?  
+ <span data-ttu-id="7f185-271">\<¿SubjectConfirmationData > [any]\</SubjectConfirmationData >?</span><span class="sxs-lookup"><span data-stu-id="7f185-271">\<SubjectConfirmationData>[any]\</SubjectConfirmationData>?</span></span>  
   
- \<ds:KeyInfo\>...\<\/ds:KeyInfo\>?  
+ <span data-ttu-id="7f185-272">\<DS:KeyInfo >... ¿\</ds:KeyInfo >?</span><span class="sxs-lookup"><span data-stu-id="7f185-272">\<ds:KeyInfo>...\</ds:KeyInfo>?</span></span>  
   
- \<\/SubjectConfirmation\>?  
+ <span data-ttu-id="7f185-273">\<¿/ SubjectConfirmation >?</span><span class="sxs-lookup"><span data-stu-id="7f185-273">\</SubjectConfirmation>?</span></span>  
   
- \<\/Subject\>  
+ <span data-ttu-id="7f185-274">\</ Asunto ></span><span class="sxs-lookup"><span data-stu-id="7f185-274">\</Subject></span></span>  
   
- \<\/SubjectStatement\>\*  
+ <span data-ttu-id="7f185-275">\</ SubjectStatement > *</span><span class="sxs-lookup"><span data-stu-id="7f185-275">\</SubjectStatement>*</span></span>  
   
- \-\-\>  
+ -->  
   
- \<AuthenticationStatement  
+ <span data-ttu-id="7f185-276">\<AuthenticationStatement</span><span class="sxs-lookup"><span data-stu-id="7f185-276">\<AuthenticationStatement</span></span>  
   
- AuthenticationMethod \=" \[uri\]"  
+ <span data-ttu-id="7f185-277">AuthenticationMethod =" [uri]"</span><span class="sxs-lookup"><span data-stu-id="7f185-277">AuthenticationMethod="[uri]"</span></span>  
   
- AuthenticationInstant\="\[dateTime\]"  
+ <span data-ttu-id="7f185-278">AuthenticationInstant="[dateTime]"</span><span class="sxs-lookup"><span data-stu-id="7f185-278">AuthenticationInstant="[dateTime]"</span></span>  
   
- \>  
+ >  
   
- \[Subject\]  
+ <span data-ttu-id="7f185-279">[Subject]</span><span class="sxs-lookup"><span data-stu-id="7f185-279">[Subject]</span></span>  
   
  `<SubjectLocality`  
   
@@ -252,162 +255,162 @@ Microsoft se compromete a proteger la privacidad de usuarios finales.  Al compil
   
  `/>?`  
   
- \<AuthorityBinding  
+ <span data-ttu-id="7f185-280"><AuthorityBinding</span><span class="sxs-lookup"><span data-stu-id="7f185-280"><AuthorityBinding</span></span>  
   
- AuthorityKind \=" \[QName\]"  
+ <span data-ttu-id="7f185-281">AuthorityKind =" [QName]"</span><span class="sxs-lookup"><span data-stu-id="7f185-281">AuthorityKind="[QName]"</span></span>  
   
- Location\="\[uri\]"  
+ <span data-ttu-id="7f185-282">Location="[uri]"</span><span class="sxs-lookup"><span data-stu-id="7f185-282">Location="[uri]"</span></span>  
   
- Enlace \=" \[uri\]"  
+ <span data-ttu-id="7f185-283">Enlace =" [uri]"</span><span class="sxs-lookup"><span data-stu-id="7f185-283">Binding="[uri]"</span></span>  
   
- \/\>\*  
+ />*  
   
- \<\/AuthenticationStatement\>\*  
+ <span data-ttu-id="7f185-284">\</ AuthenticationStatement > *</span><span class="sxs-lookup"><span data-stu-id="7f185-284">\</AuthenticationStatement>*</span></span>  
   
- \<AttributeStatement\>  
+ <span data-ttu-id="7f185-285">\<AttributeStatement ></span><span class="sxs-lookup"><span data-stu-id="7f185-285">\<AttributeStatement></span></span>  
   
- \[Subject\]  
+ <span data-ttu-id="7f185-286">[Subject]</span><span class="sxs-lookup"><span data-stu-id="7f185-286">[Subject]</span></span>  
   
- \<Atributo  
+ <span data-ttu-id="7f185-287">\<Atributo</span><span class="sxs-lookup"><span data-stu-id="7f185-287">\<Attribute</span></span>  
   
- AttributeName\="\[string\]"  
+ <span data-ttu-id="7f185-288">AttributeName="[string]"</span><span class="sxs-lookup"><span data-stu-id="7f185-288">AttributeName="[string]"</span></span>  
   
- AttributeNamespace \=" \[uri\]"  
+ <span data-ttu-id="7f185-289">AttributeNamespace =" [uri]"</span><span class="sxs-lookup"><span data-stu-id="7f185-289">AttributeNamespace="[uri]"</span></span>  
   
- \>  
+ >  
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \<\/Attribute\>\+  
+ <span data-ttu-id="7f185-290">\</ Atributo > +</span><span class="sxs-lookup"><span data-stu-id="7f185-290">\</Attribute>+</span></span>  
   
- \<\/AttributeStatement\>\*  
+ <span data-ttu-id="7f185-291">\</ AttributeStatement > *</span><span class="sxs-lookup"><span data-stu-id="7f185-291">\</AttributeStatement>*</span></span>  
   
- \<AuthorizationDecisionStatement  
+ <span data-ttu-id="7f185-292">\<AuthorizationDecisionStatement</span><span class="sxs-lookup"><span data-stu-id="7f185-292">\<AuthorizationDecisionStatement</span></span>  
   
- Resource \=" \[uri\]"  
+ <span data-ttu-id="7f185-293">Resource =" [uri]"</span><span class="sxs-lookup"><span data-stu-id="7f185-293">Resource="[uri]"</span></span>  
   
- Decision\="\[Permit&#124;Deny&#124;Indeterminate\]"  
+ <span data-ttu-id="7f185-294">Decisión = "[Permitir &#124; Deny &#124; indeterminado]"</span><span class="sxs-lookup"><span data-stu-id="7f185-294">Decision="[Permit&#124;Deny&#124;Indeterminate]"</span></span>  
   
- \>  
+ >  
   
- \[Subject\]  
+ <span data-ttu-id="7f185-295">[Subject]</span><span class="sxs-lookup"><span data-stu-id="7f185-295">[Subject]</span></span>  
   
- \<Action Namespace\="\[uri\]"\>\[string\]\<\/Action\>\+  
+ <span data-ttu-id="7f185-296">\<Acción Namespace = "[uri]" > [cadena] \< /Action > +</span><span class="sxs-lookup"><span data-stu-id="7f185-296">\<Action Namespace="[uri]">[string]\</Action>+</span></span>  
   
- \<Evidence\>  
+ <span data-ttu-id="7f185-297">\<Evidencia ></span><span class="sxs-lookup"><span data-stu-id="7f185-297">\<Evidence></span></span>  
   
- \<AssertionIDReference\>\[ID\]\<\/AssertionIDReference\>\+  
+ <span data-ttu-id="7f185-298">\<AssertionIDReference > [ID]\</AssertionIDReference > +</span><span class="sxs-lookup"><span data-stu-id="7f185-298">\<AssertionIDReference>[ID]\</AssertionIDReference>+</span></span>  
   
- \<Assertion\>\[assertion\]\<\/Assertion\>\+  
+ <span data-ttu-id="7f185-299">\<Aserción > [aserción]\</Assertion > +</span><span class="sxs-lookup"><span data-stu-id="7f185-299">\<Assertion>[assertion]\</Assertion>+</span></span>  
   
- \<\/Evidence\>?  
+ <span data-ttu-id="7f185-300">\<¿/ Evidencia >?</span><span class="sxs-lookup"><span data-stu-id="7f185-300">\</Evidence>?</span></span>  
   
- \<\/AuthorizationDecisionStatement\>\*  
+ <span data-ttu-id="7f185-301">\</ AuthorizationDecisionStatement > *</span><span class="sxs-lookup"><span data-stu-id="7f185-301">\</AuthorizationDecisionStatement>*</span></span>  
   
- \<\/Assertion\>  
+ <span data-ttu-id="7f185-302">\</ Aserción ></span><span class="sxs-lookup"><span data-stu-id="7f185-302">\</Assertion></span></span>  
   
-#### Información quitada de los cuerpos del mensaje al registrar mensajes descifrados\/no cifrados  
- Como se ha descrito previamente, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] quita las claves y los datos personales potencialmente conocidos de los encabezados del mensaje de los mensajes registrados descifrados\/no cifrados.  Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] quita las claves y los datos personales potencialmente conocidos de los cuerpos del mensaje de los elementos del cuerpo y acciones de la lista siguiente, que describe los mensajes de seguridad implicados en el intercambio de claves.  
+#### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a><span data-ttu-id="7f185-303">Información quitada de los cuerpos del mensaje al registrar mensajes descifrados/no cifrados</span><span class="sxs-lookup"><span data-stu-id="7f185-303">Information Removed from Message Bodies When Logging Decrypted/Unencrypted Messages</span></span>  
+ <span data-ttu-id="7f185-304">Como se ha descrito previamente, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] quita las claves y los datos personales potencialmente conocidos de los encabezados del mensaje de los mensajes registrados descifrados/no cifrados.</span><span class="sxs-lookup"><span data-stu-id="7f185-304">As previously described, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] removes keys and known potentially personal information from message headers for logged decrypted/unencrypted messages.</span></span> <span data-ttu-id="7f185-305">Además, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] quita las claves y los datos personales potencialmente conocidos de los cuerpos del mensaje de los elementos del cuerpo y acciones de la lista siguiente, que describe los mensajes de seguridad implicados en el intercambio de claves.</span><span class="sxs-lookup"><span data-stu-id="7f185-305">In addition, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] removes keys and known potentially personal information from message bodies for the body elements and actions in the following list, which describe security messages involved in key exchange.</span></span>  
   
- Para los siguientes espacios de nombres:  
+ <span data-ttu-id="7f185-306">Para los siguientes espacios de nombres:</span><span class="sxs-lookup"><span data-stu-id="7f185-306">For the following namespaces:</span></span>  
   
- xmlns:wst \= "http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/trust" y xmlns:wst \= "http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust \(por ejemplo, si no hay ninguna acción disponible\)"  
+ <span data-ttu-id="7f185-307">xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" y xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust (por ejemplo, si no hay ninguna acción disponible)"</span><span class="sxs-lookup"><span data-stu-id="7f185-307">xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (for example, if no action available)</span></span>  
   
- La información se quita de estos elementos del cuerpo, lo cual implica intercambio de claves:  
+ <span data-ttu-id="7f185-308">La información se quita de estos elementos del cuerpo, lo cual implica intercambio de claves:</span><span class="sxs-lookup"><span data-stu-id="7f185-308">Information is removed for these body elements, which involve key exchange:</span></span>  
   
- wst:RequestSecurityToken  
+ <span data-ttu-id="7f185-309">wst:RequestSecurityToken</span><span class="sxs-lookup"><span data-stu-id="7f185-309">wst:RequestSecurityToken</span></span>  
   
- wst:RequestSecurityTokenResponse  
+ <span data-ttu-id="7f185-310">wst:RequestSecurityTokenResponse</span><span class="sxs-lookup"><span data-stu-id="7f185-310">wst:RequestSecurityTokenResponse</span></span>  
   
- wst:RequestSecurityTokenResponseCollection  
+ <span data-ttu-id="7f185-311">wst:RequestSecurityTokenResponseCollection</span><span class="sxs-lookup"><span data-stu-id="7f185-311">wst:RequestSecurityTokenResponseCollection</span></span>  
   
- La información también se quita en cada una de las acciones siguientes:  
+ <span data-ttu-id="7f185-312">La información también se quita en cada una de las acciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="7f185-312">Information is also removed for each of the following Actions:</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Issue  
+ <span data-ttu-id="7f185-313">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue</span><span class="sxs-lookup"><span data-stu-id="7f185-313">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Issue  
+ <span data-ttu-id="7f185-314">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue</span><span class="sxs-lookup"><span data-stu-id="7f185-314">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Renew  
+ <span data-ttu-id="7f185-315">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew</span><span class="sxs-lookup"><span data-stu-id="7f185-315">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Renew  
+ <span data-ttu-id="7f185-316">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew</span><span class="sxs-lookup"><span data-stu-id="7f185-316">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Cancel  
+ <span data-ttu-id="7f185-317">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel</span><span class="sxs-lookup"><span data-stu-id="7f185-317">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Cancel  
+ <span data-ttu-id="7f185-318">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel</span><span class="sxs-lookup"><span data-stu-id="7f185-318">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/Validate  
+ <span data-ttu-id="7f185-319">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate</span><span class="sxs-lookup"><span data-stu-id="7f185-319">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/Validate  
+ <span data-ttu-id="7f185-320">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate</span><span class="sxs-lookup"><span data-stu-id="7f185-320">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT  
+ <span data-ttu-id="7f185-321">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT</span><span class="sxs-lookup"><span data-stu-id="7f185-321">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT  
+ <span data-ttu-id="7f185-322">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT</span><span class="sxs-lookup"><span data-stu-id="7f185-322">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT\/Amend  
+ <span data-ttu-id="7f185-323">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend</span><span class="sxs-lookup"><span data-stu-id="7f185-323">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Amend</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT\/Amend  
+ <span data-ttu-id="7f185-324">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend</span><span class="sxs-lookup"><span data-stu-id="7f185-324">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT\/Renew  
+ <span data-ttu-id="7f185-325">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew</span><span class="sxs-lookup"><span data-stu-id="7f185-325">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT\/Renew  
+ <span data-ttu-id="7f185-326">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew</span><span class="sxs-lookup"><span data-stu-id="7f185-326">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RST\/SCT\/Cancel  
+ <span data-ttu-id="7f185-327">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel</span><span class="sxs-lookup"><span data-stu-id="7f185-327">http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2005\/02\/trust\/RSTR\/SCT\/Cancel  
+ <span data-ttu-id="7f185-328">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel</span><span class="sxs-lookup"><span data-stu-id="7f185-328">http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RST\/SCT  
+ <span data-ttu-id="7f185-329">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT</span><span class="sxs-lookup"><span data-stu-id="7f185-329">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RSTR\/SCT  
+ <span data-ttu-id="7f185-330">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT</span><span class="sxs-lookup"><span data-stu-id="7f185-330">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RST\/SCT\-Amend  
+ <span data-ttu-id="7f185-331">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend</span><span class="sxs-lookup"><span data-stu-id="7f185-331">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend</span></span>  
   
- http:\/\/schemas.xmlsoap.org\/ws\/2004\/04\/security\/trust\/RSTR\/SCT\-Amend  
+ <span data-ttu-id="7f185-332">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend</span><span class="sxs-lookup"><span data-stu-id="7f185-332">http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend</span></span>  
   
-#### No se quita información de los encabezados y datos del cuerpo específicos de la aplicación  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] no realiza el seguimiento de datos personales en encabezados específicos de la aplicación \(por ejemplo, cadenas de consulta\) o datos del cuerpo \(por ejemplo, número de la tarjeta de crédito\).  
+#### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a><span data-ttu-id="7f185-333">No se quita información de los encabezados y datos del cuerpo específicos de la aplicación</span><span class="sxs-lookup"><span data-stu-id="7f185-333">No Information Is Removed from Application-specific Headers and Body Data</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-334"> no realiza el seguimiento de datos personales en encabezados específicos de la aplicación (por ejemplo, cadenas de consulta) o datos del cuerpo (por ejemplo, número de la tarjeta de crédito).</span><span class="sxs-lookup"><span data-stu-id="7f185-334"> does not track personal information in application-specific headers (for example, query strings) or body data (for example, credit card number).</span></span>  
   
- Cuando el registro de mensajes está activado, los datos personales en encabezados específicos de la aplicación e información del cuerpo pueden estar visibles en los registros.  De nuevo, el implementador de la aplicación es el responsable de establecer las ACL en los archivos de registro y configuración.  También puede desactivar el registro si no desea que esta información esté visible, o puede filtrar fuera esta información de los archivos de registro una vez registrado.  
+ <span data-ttu-id="7f185-335">Cuando el registro de mensajes está activado, los datos personales en encabezados específicos de la aplicación e información del cuerpo pueden estar visibles en los registros.</span><span class="sxs-lookup"><span data-stu-id="7f185-335">When message logging is on, personal information in application-specific headers and body information may be visible in the logs.</span></span> <span data-ttu-id="7f185-336">De nuevo, el implementador de la aplicación es el responsable de establecer las ACL en los archivos de registro y configuración.</span><span class="sxs-lookup"><span data-stu-id="7f185-336">Again, the application deployer is responsible for setting the ACLs on the configuration and log files.</span></span> <span data-ttu-id="7f185-337">También puede desactivar el registro si no desea que esta información esté visible, o puede filtrar fuera esta información de los archivos de registro una vez registrado.</span><span class="sxs-lookup"><span data-stu-id="7f185-337">He also can turn off logging if he does not want this information to be visible, or he may filter out this information from the log files after it is logged.</span></span>  
   
-### Traza de modelo de servicio  
- El origen de la traza de modelo de servicio \(<xref:System.ServiceModel>\) habilita la traza de las actividades y el segumiento de eventos relacionados con el procesamiento de mensajes.  Esta característica utiliza la funcionalidad de diagnóstico del marco .NET de <xref:System.Diagnostics>.  Como con la propiedad <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, el usuario puede configurar la ubicación y su ACL mediante los archivos de configuración de la aplicación del marco .NET.  Como con el registro de mensajes, la ubicación del archivo se configura siempre cuando el administrador habilita la traza; de este modo, el administrador controla el ACL.  
+### <a name="service-model-tracing"></a><span data-ttu-id="7f185-338">Traza de modelo de servicio</span><span class="sxs-lookup"><span data-stu-id="7f185-338">Service Model Tracing</span></span>  
+ <span data-ttu-id="7f185-339">El origen de la traza de modelo de servicio (<xref:System.ServiceModel>) habilita la traza de las actividades y el segumiento de eventos relacionados con el procesamiento de mensajes.</span><span class="sxs-lookup"><span data-stu-id="7f185-339">The Service Model trace source (<xref:System.ServiceModel>) enables tracing of activities and events related to message processing.</span></span> <span data-ttu-id="7f185-340">Esta característica utiliza la funcionalidad de diagnóstico del marco .NET de <xref:System.Diagnostics>.</span><span class="sxs-lookup"><span data-stu-id="7f185-340">This feature uses the .NET Framework diagnostic functionality from <xref:System.Diagnostics>.</span></span> <span data-ttu-id="7f185-341">Como con la propiedad <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, el usuario puede configurar la ubicación y su ACL mediante los archivos de configuración de la aplicación del marco .NET.</span><span class="sxs-lookup"><span data-stu-id="7f185-341">As with the <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> property, the location and its ACL are user-configurable using .NET Framework application configuration files.</span></span> <span data-ttu-id="7f185-342">Como con el registro de mensajes, la ubicación del archivo se configura siempre cuando el administrador habilita la traza; de este modo, el administrador controla el ACL.</span><span class="sxs-lookup"><span data-stu-id="7f185-342">As with message logging, the file location is always configured when the administrator enables tracing; thus, the administrator controls the ACL.</span></span>  
   
- Las trazas contienen los encabezados del mensaje cuando un mensaje está en ámbito.  Se aplican las mismas reglas para ocultar los posibles datos personales en encabezados del mensaje de la sección anterior: los datos personales previamente identificados se quitan de forma predeterminada de los encabezados en trazas.  El administrador del equipo y el implementador de la aplicación deben modificar la configuración para registrar potencialmente datos personales.  Sin embargo, los datos personales contenidos en encabezados específicos de la aplicación están registrados en trazas.  El implementador de la aplicación es el responsable de establecer las ACL en los archivos de seguimiento y configuración.  También puede desactivar la traza si no desea que esta información esté visible, o puede filtrar fuera esta información de los archivos de seguimiento una vez registrado.  
+ <span data-ttu-id="7f185-343">Las trazas contienen los encabezados del mensaje cuando un mensaje está en ámbito.</span><span class="sxs-lookup"><span data-stu-id="7f185-343">Traces contain message headers when a message is in scope.</span></span> <span data-ttu-id="7f185-344">Se aplican las mismas reglas para ocultar los posibles datos personales en encabezados del mensaje de la sección anterior: los datos personales previamente identificados se quitan de forma predeterminada de los encabezados en trazas.</span><span class="sxs-lookup"><span data-stu-id="7f185-344">The same rules for hiding potentially personal information in message headers in the previous section apply: the personal information previously identified is removed by default from the headers in traces.</span></span> <span data-ttu-id="7f185-345">El administrador del equipo y el implementador de la aplicación deben modificar la configuración para registrar potencialmente datos personales.</span><span class="sxs-lookup"><span data-stu-id="7f185-345">Both the machine administrator and the application deployer must modify the configuration in order to log potentially personal information.</span></span> <span data-ttu-id="7f185-346">Sin embargo, los datos personales contenidos en encabezados específicos de la aplicación están registrados en trazas.</span><span class="sxs-lookup"><span data-stu-id="7f185-346">However, personal information contained in application-specific headers is logged in traces.</span></span> <span data-ttu-id="7f185-347">El implementador de la aplicación es el responsable de establecer las ACL en los archivos de seguimiento y configuración.</span><span class="sxs-lookup"><span data-stu-id="7f185-347">The application deployer is responsible for setting the ACLs on the configuration and trace files.</span></span> <span data-ttu-id="7f185-348">También puede desactivar la traza si no desea que esta información esté visible, o puede filtrar fuera esta información de los archivos de seguimiento una vez registrado.</span><span class="sxs-lookup"><span data-stu-id="7f185-348">He also can turn off tracing if he does not want this information to be visible, or he can filter out this information from the trace files after it is logged.</span></span>  
   
- Como parte de la traza de ServiceModel, los id. únicos \(llamados id. de actividad y normalmente un GUID\) vinculan actividades diferentes juntas como un mensaje fluye a través de diferentes partes de la infraestructura.  
+ <span data-ttu-id="7f185-349">Como parte de la traza de ServiceModel, los id. únicos (llamados id. de actividad y normalmente un GUID) vinculan actividades diferentes juntas como un mensaje fluye a través de diferentes partes de la infraestructura.</span><span class="sxs-lookup"><span data-stu-id="7f185-349">As part of ServiceModel Tracing, Unique IDs (called Activity IDs, and typically a GUID) link different activities together as a message flows through different parts of the infrastructure.</span></span>  
   
-#### Agentes de escucha de traza personalizados  
- Para el registro y la traza de mensajes, se puede configurar un agente de escucha de traza personalizado que puede enviar rastros y mensajes en la conexión \(por ejemplo, a una base de datos remota\).  El implementador de la aplicación es el responsable de configurar agentes de escucha personalizados o habilitar los usuarios para ello.  También es responsable de obtener los datos personales expuestos en la ubicación remota y de aplicar correctamente ACL a esta ubicación.  
+#### <a name="custom-trace-listeners"></a><span data-ttu-id="7f185-350">Agentes de escucha de traza personalizados</span><span class="sxs-lookup"><span data-stu-id="7f185-350">Custom Trace Listeners</span></span>  
+ <span data-ttu-id="7f185-351">Para el registro y la traza de mensajes, se puede configurar un agente de escucha de traza personalizado que puede enviar rastros y mensajes en la conexión (por ejemplo, a una base de datos remota).</span><span class="sxs-lookup"><span data-stu-id="7f185-351">For both message logging and tracing, a custom trace listener can be configured, which can send traces and messages on the wire (for example, to a remote database).</span></span> <span data-ttu-id="7f185-352">El implementador de la aplicación es el responsable de configurar agentes de escucha personalizados o habilitar los usuarios para ello.</span><span class="sxs-lookup"><span data-stu-id="7f185-352">The application deployer is responsible for configuring custom listeners or enabling users to do so.</span></span> <span data-ttu-id="7f185-353">También es responsable de obtener los datos personales expuestos en la ubicación remota y de aplicar correctamente ACL a esta ubicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-353">He is also responsible for any personal information exposed at the remote location, and for properly applying ACLs to this location.</span></span>  
   
-### Otras características para profesionales de TI  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tiene un proveedor de WMI que expone la información de configuración de infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a través de WMI \(incluido con Windows\).  De forma predeterminada, la interfaz WMI está disponible para los administradores.  
+### <a name="other-features-for-it-professionals"></a><span data-ttu-id="7f185-354">Otras características para profesionales de TI</span><span class="sxs-lookup"><span data-stu-id="7f185-354">Other features for IT Professionals</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-355"> tiene un proveedor de WMI que expone la información de configuración de infraestructura [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] a través de WMI (incluido con Windows).</span><span class="sxs-lookup"><span data-stu-id="7f185-355"> has a WMI provider that exposes the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] infrastructure configuration information through WMI (shipped with Windows).</span></span> <span data-ttu-id="7f185-356">De forma predeterminada, la interfaz WMI está disponible para los administradores.</span><span class="sxs-lookup"><span data-stu-id="7f185-356">By default, the WMI interface is available to administrators.</span></span>  
   
- La configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] utiliza el mecanismo de configuración de .NET Framework.  Los archivos de configuración están almacenados en el equipo.  El desarrollador de aplicaciones y el administrador crean los archivos de configuración y ACL para cada uno de los requisitos de la aplicación.  Un archivo de configuración puede contener las direcciones del extremo y vínculos a los certificados en el almacén de certificados.  Los certificados se pueden usar para proporcionar los datos de la aplicación con el fin de configurar varias propiedades de las características utilizadas por la aplicación.  
+ <span data-ttu-id="7f185-357">La configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] utiliza el mecanismo de configuración de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7f185-357">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration uses the .NET Framework configuration mechanism.</span></span> <span data-ttu-id="7f185-358">Los archivos de configuración están almacenados en el equipo.</span><span class="sxs-lookup"><span data-stu-id="7f185-358">The configuration files are stored on the machine.</span></span> <span data-ttu-id="7f185-359">El desarrollador de aplicaciones y el administrador crean los archivos de configuración y ACL para cada uno de los requisitos de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-359">The application developer and the administrator create the configuration files and ACL for each of the application's requirements.</span></span> <span data-ttu-id="7f185-360">Un archivo de configuración puede contener las direcciones del extremo y vínculos a los certificados en el almacén de certificados.</span><span class="sxs-lookup"><span data-stu-id="7f185-360">A configuration file can contain endpoint addresses and links to certificates in the certificate store.</span></span> <span data-ttu-id="7f185-361">Los certificados se pueden usar para proporcionar los datos de la aplicación con el fin de configurar varias propiedades de las características utilizadas por la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-361">The certificates can be used to provide application data to configure various properties of the features used by the application.</span></span>  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también usa la funcionalidad de volcado de memoria del proceso de .NET Framework llamando al método <xref:System.Environment.FailFast%2A>.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-362"> también usa la funcionalidad de volcado de memoria del proceso de .NET Framework llamando al método <xref:System.Environment.FailFast%2A>.</span><span class="sxs-lookup"><span data-stu-id="7f185-362"> also uses the .NET Framework process dump functionality by calling the <xref:System.Environment.FailFast%2A> method.</span></span>  
   
-### IT Pro Tools  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] también proporciona las siguiente herramientas profesionales de TI distribuidas en Windows SDK.  
+### <a name="it-pro-tools"></a><span data-ttu-id="7f185-363">IT Pro Tools</span><span class="sxs-lookup"><span data-stu-id="7f185-363">IT Pro Tools</span></span>  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]<span data-ttu-id="7f185-364"> también proporciona las siguiente herramientas profesionales de TI distribuidas en Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="7f185-364"> also provides the following IT professional tools, which ship in the Windows SDK.</span></span>  
   
-#### SvcTraceViewer.exe  
- El visor muestra los archivos de seguimiento [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  El visor muestra la información cualquier contenida en los seguimientos.  
+#### <a name="svctraceviewerexe"></a><span data-ttu-id="7f185-365">SvcTraceViewer.exe</span><span class="sxs-lookup"><span data-stu-id="7f185-365">SvcTraceViewer.exe</span></span>  
+ <span data-ttu-id="7f185-366">El visor muestra los archivos de seguimiento [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-366">The viewer displays [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] trace files.</span></span> <span data-ttu-id="7f185-367">El visor muestra la información cualquier contenida en los seguimientos.</span><span class="sxs-lookup"><span data-stu-id="7f185-367">The viewer shows whatever information is contained in the traces.</span></span>  
   
-#### SvcConfigEditor.exe  
- El editor permite al usuario crear y modificar los archivos de configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  El editor muestra la información cualquier contenida en los archivos de configuración.  La misma tarea se puede lograr con un editor de texto.  
+#### <a name="svcconfigeditorexe"></a><span data-ttu-id="7f185-368">SvcConfigEditor.exe</span><span class="sxs-lookup"><span data-stu-id="7f185-368">SvcConfigEditor.exe</span></span>  
+ <span data-ttu-id="7f185-369">El editor permite al usuario crear y modificar los archivos de configuración [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-369">The editor allows the user to create and edit [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] configuration files.</span></span> <span data-ttu-id="7f185-370">El editor muestra la información cualquier contenida en los archivos de configuración.</span><span class="sxs-lookup"><span data-stu-id="7f185-370">The editor shows whatever information is contained in the configuration files.</span></span> <span data-ttu-id="7f185-371">La misma tarea se puede lograr con un editor de texto.</span><span class="sxs-lookup"><span data-stu-id="7f185-371">The same task can be accomplished with a text editor.</span></span>  
   
-#### ServiceModel\_Reg  
- Esta herramienta permite al usuario administrar las instalaciones de ServiceModel en un equipo.  La herramienta muestra los mensajes del estado en una ventana de consola cuando ejecuta y, en el proceso, puede mostrar información sobre la configuración de la instalación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+#### <a name="servicemodelreg"></a><span data-ttu-id="7f185-372">ServiceModel_Reg</span><span class="sxs-lookup"><span data-stu-id="7f185-372">ServiceModel_Reg</span></span>  
+ <span data-ttu-id="7f185-373">Esta herramienta permite al usuario administrar las instalaciones de ServiceModel en un equipo.</span><span class="sxs-lookup"><span data-stu-id="7f185-373">This tool allows the user to manage ServiceModel installs on a machine.</span></span> <span data-ttu-id="7f185-374">La herramienta muestra los mensajes del estado en una ventana de consola cuando ejecuta y, en el proceso, puede mostrar información sobre la configuración de la instalación [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-374">The tool displays status messages in a console window when it runs and, in the process, may display information about the configuration of the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] installation.</span></span>  
   
-#### WSATConfig.exe y WSATUI.dll  
- Estas herramientas permiten a los profesionales de TI configurar la compatibilidad de red de WS\-AtomicTransaction interoperable en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Las herramientas muestran y permiten al usuario cambiar los valores de la configuración más utilizada de WS\-AtomicTransaction almacenada en el registro.  
+#### <a name="wsatconfigexe-and-wsatuidll"></a><span data-ttu-id="7f185-375">WSATConfig.exe y WSATUI.dll</span><span class="sxs-lookup"><span data-stu-id="7f185-375">WSATConfig.exe and WSATUI.dll</span></span>  
+ <span data-ttu-id="7f185-376">Estas herramientas permiten a los profesionales de TI configurar la compatibilidad de red de WS-AtomicTransaction interoperable en [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7f185-376">These tools allow IT Professionals to configure interoperable WS-AtomicTransaction network support in [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="7f185-377">Las herramientas muestran y permiten al usuario cambiar los valores de la configuración más utilizada de WS-AtomicTransaction almacenada en el registro.</span><span class="sxs-lookup"><span data-stu-id="7f185-377">The tools display and allow the user to change the values of the most commonly used WS-AtomicTransaction settings stored in the registry.</span></span>  
   
-## Características del corte del cruce  
- Las características siguientes son transversales.  Es decir, se pueden crear con cualquiera de las características anteriores.  
+## <a name="cross-cutting-features"></a><span data-ttu-id="7f185-378">Características del corte del cruce</span><span class="sxs-lookup"><span data-stu-id="7f185-378">Cross-cutting Features</span></span>  
+ <span data-ttu-id="7f185-379">Las características siguientes son transversales.</span><span class="sxs-lookup"><span data-stu-id="7f185-379">The following features are cross-cutting.</span></span> <span data-ttu-id="7f185-380">Es decir, se pueden crear con cualquiera de las características anteriores.</span><span class="sxs-lookup"><span data-stu-id="7f185-380">That is, they can be composed with any of the preceding features.</span></span>  
   
-### Marco de servicios  
- Los encabezados pueden contener un id. de instancia, que es un GUID que asocia un mensaje a una instancia de una clase CLR.  
+### <a name="service-framework"></a><span data-ttu-id="7f185-381">Marco de servicios</span><span class="sxs-lookup"><span data-stu-id="7f185-381">Service Framework</span></span>  
+ <span data-ttu-id="7f185-382">Los encabezados pueden contener un id. de instancia, que es un GUID que asocia un mensaje a una instancia de una clase CLR.</span><span class="sxs-lookup"><span data-stu-id="7f185-382">Headers can contain an instance ID, which is a GUID that associates a message with an instance of a CLR class.</span></span>  
   
- El Lenguaje de descripción de servicios Web \(WSDL\) contiene una definición del puerto.  Cada puerto tiene una dirección del extremo y un enlace que representa los servicios utilizados por la aplicación.  Exponer WSDL se puede desactivar utilizando la configuración.  No se retiene información en el equipo.  
+ <span data-ttu-id="7f185-383">El Lenguaje de descripción de servicios Web (WSDL) contiene una definición del puerto.</span><span class="sxs-lookup"><span data-stu-id="7f185-383">The Web Services Description Language (WSDL) contains a definition of the port.</span></span> <span data-ttu-id="7f185-384">Cada puerto tiene una dirección del extremo y un enlace que representa los servicios utilizados por la aplicación.</span><span class="sxs-lookup"><span data-stu-id="7f185-384">Each port has an endpoint address and a binding that represents the services used by the application.</span></span> <span data-ttu-id="7f185-385">Exponer WSDL se puede desactivar utilizando la configuración.</span><span class="sxs-lookup"><span data-stu-id="7f185-385">Exposing WSDL can be turned off using configuration.</span></span> <span data-ttu-id="7f185-386">No se retiene información en el equipo.</span><span class="sxs-lookup"><span data-stu-id="7f185-386">No information is retained on the machine.</span></span>  
   
-## Vea también  
- [Windows Communication Foundation](http://msdn.microsoft.com/es-es/fd327ade-0260-4c40-adbe-b74645ba3277)   
- [Seguridad](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a><span data-ttu-id="7f185-387">Vea también</span><span class="sxs-lookup"><span data-stu-id="7f185-387">See Also</span></span>  
+ [<span data-ttu-id="7f185-388">Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="7f185-388">Windows Communication Foundation</span></span>](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [<span data-ttu-id="7f185-389">Seguridad</span><span class="sxs-lookup"><span data-stu-id="7f185-389">Security</span></span>](../../../docs/framework/wcf/feature-details/security.md)

@@ -1,35 +1,35 @@
 ---
-title: "Informaci&#243;n general sobre el componente Timer (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Timer"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Timer (componente) [Windows Forms], acerca de los componentes Timer"
-  - "temporizadores, acerca de temporizadores"
+title: "Información general sobre el componente Timer (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Timer
+helpviewer_keywords:
+- Timer component [Windows Forms], about Timer components
+- timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea78cadae6e033bc54274e5428ba5e8c6410259d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el componente Timer (formularios Windows Forms)
-El componente <xref:System.Windows.Forms.Timer> de formularios Windows Forms produce un evento a intervalos regulares.  Este componente está diseñado para un entorno de formularios Windows Forms.  Si necesita un temporizador que sea adecuado para un entorno de servidor, vea [Introduction to Server\-Based Timers](http://msdn.microsoft.com/es-es/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+# <a name="timer-component-overview-windows-forms"></a><span data-ttu-id="91f66-102">Información general sobre el componente Timer (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="91f66-102">Timer Component Overview (Windows Forms)</span></span>
+<span data-ttu-id="91f66-103">El componente <xref:System.Windows.Forms.Timer> de Windows Forms produce un evento a intervalos regulares.</span><span class="sxs-lookup"><span data-stu-id="91f66-103">The Windows Forms <xref:System.Windows.Forms.Timer> is a component that raises an event at regular intervals.</span></span> <span data-ttu-id="91f66-104">Este componente está diseñado para un entorno de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="91f66-104">This component is designed for a Windows Forms environment.</span></span> <span data-ttu-id="91f66-105">Si necesita un temporizador que sea adecuado para un entorno de servidor, consulte [Introducción a los temporizadores basados en servidor](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span><span class="sxs-lookup"><span data-stu-id="91f66-105">If you need a timer that is suitable for a server environment, see [Introduction to Server-Based Timers](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).</span></span>  
   
-## Propiedades, métodos y eventos principales  
- La longitud de los intervalos está definida por la propiedad <xref:System.Windows.Forms.Timer.Interval%2A>, cuyo valor se expresa en milisegundos.  Cuando el componente está habilitado, el evento <xref:System.Windows.Forms.Timer.Tick> se produce a cada intervalo.  Aquí es donde se agrega el código que se va a ejecutar.  Para obtener más información, vea [Cómo: Ejecutar procedimientos a intervalos establecidos con el componente Timer de formularios Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md).  Los métodos principales del componente <xref:System.Windows.Forms.Timer> son <xref:System.Windows.Forms.Timer.Start%2A> y <xref:System.Windows.Forms.Timer.Stop%2A>, que activan y desactivan el temporizador.  Cuando el temporizador está desactivado, se reinicia; no hay modo de hacer una pausa en un componente <xref:System.Windows.Forms.Timer>.  
+## <a name="key-properties-methods-and-events"></a><span data-ttu-id="91f66-106">Eventos, métodos y propiedades clave</span><span class="sxs-lookup"><span data-stu-id="91f66-106">Key Properties, Methods, and Events</span></span>  
+ <span data-ttu-id="91f66-107">La longitud de los intervalos está definida por el <xref:System.Windows.Forms.Timer.Interval%2A> propiedad, cuyo valor se expresa en milisegundos.</span><span class="sxs-lookup"><span data-stu-id="91f66-107">The length of the intervals is defined by the <xref:System.Windows.Forms.Timer.Interval%2A> property, whose value is in milliseconds.</span></span> <span data-ttu-id="91f66-108">Cuando el componente está habilitado, el <xref:System.Windows.Forms.Timer.Tick> evento se desencadena cada intervalo.</span><span class="sxs-lookup"><span data-stu-id="91f66-108">When the component is enabled, the <xref:System.Windows.Forms.Timer.Tick> event is raised every interval.</span></span> <span data-ttu-id="91f66-109">Esto es donde puede agregar código que se ejecute.</span><span class="sxs-lookup"><span data-stu-id="91f66-109">This is where you would add code to be executed.</span></span> <span data-ttu-id="91f66-110">Para obtener más información, consulte [Cómo: ejecutar procedimientos a intervalos establecido con el componente Timer de formularios Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md).</span><span class="sxs-lookup"><span data-stu-id="91f66-110">For more information, see [How to: Run Procedures at Set Intervals with the Windows Forms Timer Component](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md).</span></span> <span data-ttu-id="91f66-111">Los métodos principales de la <xref:System.Windows.Forms.Timer> componente <xref:System.Windows.Forms.Timer.Start%2A> y <xref:System.Windows.Forms.Timer.Stop%2A>, que activar el temporizador y desactivar.</span><span class="sxs-lookup"><span data-stu-id="91f66-111">The key methods of the <xref:System.Windows.Forms.Timer> component are <xref:System.Windows.Forms.Timer.Start%2A> and <xref:System.Windows.Forms.Timer.Stop%2A>, which turn the timer on and off.</span></span> <span data-ttu-id="91f66-112">Cuando el temporizador está desactivado, se reinicia; No hay ninguna manera de poner en pausa un <xref:System.Windows.Forms.Timer> componente.</span><span class="sxs-lookup"><span data-stu-id="91f66-112">When the timer is switched off, it resets; there is no way to pause a <xref:System.Windows.Forms.Timer> component.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.Timer>   
- [Timer](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)   
- [Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)
+## <a name="see-also"></a><span data-ttu-id="91f66-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="91f66-113">See Also</span></span>  
+ <xref:System.Windows.Forms.Timer>  
+ [<span data-ttu-id="91f66-114">Timer (componente)</span><span class="sxs-lookup"><span data-stu-id="91f66-114">Timer Component</span></span>](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [<span data-ttu-id="91f66-115">Limitaciones de la propiedad Interval del componente Timer de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="91f66-115">Limitations of the Windows Forms Timer Component's Interval Property</span></span>](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)

@@ -1,30 +1,33 @@
 ---
-title: "System.ServiceModel.UnhandledAction | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.UnhandledAction
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a704fb1d-6cf8-4fd1-9aee-e70d7055c812
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 64c180d992c9a07afa22338002f957a406e64145
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.UnhandledAction
-System.ServiceModel.UnhandledAction  
+# <a name="systemservicemodelunhandledaction"></a><span data-ttu-id="05854-102">System.ServiceModel.UnhandledAction</span><span class="sxs-lookup"><span data-stu-id="05854-102">System.ServiceModel.UnhandledAction</span></span>
+<span data-ttu-id="05854-103">System.ServiceModel.UnhandledAction</span><span class="sxs-lookup"><span data-stu-id="05854-103">System.ServiceModel.UnhandledAction</span></span>  
   
-## Descripción  
- Ningún servicio disponible para administrar esta acción.  
+## <a name="description"></a><span data-ttu-id="05854-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="05854-104">Description</span></span>  
+ <span data-ttu-id="05854-105">Ningún servicio disponible para administrar esta acción.</span><span class="sxs-lookup"><span data-stu-id="05854-105">No service available to handle this action.</span></span>  
   
- Todos los seguimientos para el contador de rendimiento se pueden utilizar para depurar los problemas relacionados con el contador de rendimiento.  
+ <span data-ttu-id="05854-106">Todos los seguimientos para el contador de rendimiento se pueden utilizar para depurar los problemas relacionados con el contador de rendimiento.</span><span class="sxs-lookup"><span data-stu-id="05854-106">All the traces for performance counter can be used to debug performance counter related issues.</span></span>  
   
-## Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="05854-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="05854-107">See Also</span></span>  
+ [<span data-ttu-id="05854-108">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="05854-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="05854-109">Uso del seguimiento para solucionar problemas de la aplicación</span><span class="sxs-lookup"><span data-stu-id="05854-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="05854-110">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="05854-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

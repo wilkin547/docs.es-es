@@ -1,56 +1,59 @@
 ---
-title: "C&#243;mo: Implementar un control ToolStripRenderer personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barras de herramientas [Windows Forms]"
-  - "ToolStrip (control) [Windows Forms]"
-  - "ToolStripRenderer (clase)"
+title: "Cómo: Implementar un control ToolStripRenderer personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ecd8953d6fe2e4a22e6c3b5fcc294855ef3a1c8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar un control ToolStripRenderer personalizado
-Puede personalizar la apariencia de un control <xref:System.Windows.Forms.ToolStrip> implementando una clase que deriva de <xref:System.Windows.Forms.ToolStripRenderer>.  Esta opción le da flexibilidad para crear un aspecto diferente al que proporcionan las clases <xref:System.Windows.Forms.ToolStripProfessionalRenderer> y <xref:System.Windows.Forms.ToolStripSystemRenderer>.  
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a><span data-ttu-id="4670a-102">Cómo: Implementar un control ToolStripRenderer personalizado</span><span class="sxs-lookup"><span data-stu-id="4670a-102">How to: Implement a Custom ToolStripRenderer</span></span>
+<span data-ttu-id="4670a-103">Puede personalizar la apariencia de un control <xref:System.Windows.Forms.ToolStrip> implementando una clase que deriva de <xref:System.Windows.Forms.ToolStripRenderer>.</span><span class="sxs-lookup"><span data-stu-id="4670a-103">You can customize the appearance of a <xref:System.Windows.Forms.ToolStrip> control by implementing a class that derives from <xref:System.Windows.Forms.ToolStripRenderer>.</span></span> <span data-ttu-id="4670a-104">Esta opción le da flexibilidad para crear un aspecto diferente al que proporcionan las clases <xref:System.Windows.Forms.ToolStripProfessionalRenderer> y <xref:System.Windows.Forms.ToolStripSystemRenderer>.</span><span class="sxs-lookup"><span data-stu-id="4670a-104">This gives you the flexibility to create an appearance that differs from the appearance provided the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> and <xref:System.Windows.Forms.ToolStripSystemRenderer> classes.</span></span>  
   
-## Ejemplo  
- En el ejemplo de código siguiente, se muestra cómo implementar una clase <xref:System.Windows.Forms.ToolStripRenderer> personalizada.  En este ejemplo, el control `GridStrip` implementa un rompecabezas de mosaicos deslizantes que permite al usuario trasladar mosaicos en un diseño de tabla para formar una imagen.  Un control <xref:System.Windows.Forms.ToolStrip> personalizado organiza sus controles <xref:System.Windows.Forms.ToolStripButton> en un diseño de cuadrícula.   El diseño contiene una celda vacía en la que el usuario puede deslizar un mosaico adyacente mediante una operación de arrastrar y colocar.  Se resaltan los mosaicos que el usuario puede mover.  
+## <a name="example"></a><span data-ttu-id="4670a-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="4670a-105">Example</span></span>  
+ <span data-ttu-id="4670a-106">En el ejemplo de código siguiente, se muestra cómo implementar una clase <xref:System.Windows.Forms.ToolStripRenderer> personalizada.</span><span class="sxs-lookup"><span data-stu-id="4670a-106">The following code example demonstrates how to implement a custom <xref:System.Windows.Forms.ToolStripRenderer> class.</span></span> <span data-ttu-id="4670a-107">En este ejemplo, el control `GridStrip` implementa un rompecabezas de mosaicos deslizantes que permite al usuario trasladar mosaicos en un diseño de tabla para formar una imagen.</span><span class="sxs-lookup"><span data-stu-id="4670a-107">In this example, the `GridStrip` control implements a sliding-tile puzzle, which allows the user to move tiles in a table layout to form an image.</span></span> <span data-ttu-id="4670a-108">Un control <xref:System.Windows.Forms.ToolStrip> personalizado organiza sus controles <xref:System.Windows.Forms.ToolStripButton> en un diseño de cuadrícula.</span><span class="sxs-lookup"><span data-stu-id="4670a-108">A custom <xref:System.Windows.Forms.ToolStrip> control arranges its <xref:System.Windows.Forms.ToolStripButton> controls in a grid layout.</span></span> <span data-ttu-id="4670a-109">El diseño contiene una celda vacía en la que el usuario puede deslizar un mosaico adyacente mediante una operación de arrastrar y colocar.</span><span class="sxs-lookup"><span data-stu-id="4670a-109">The layout contains one empty cell, into which the user can slide an adjacent tile by using a drag-and-drop operation.</span></span> <span data-ttu-id="4670a-110">Se resaltan los mosaicos que el usuario puede mover.</span><span class="sxs-lookup"><span data-stu-id="4670a-110">Tiles that the user can move are highlighted.</span></span>  
   
- La clase `GridStripRenderer` personaliza tres aspectos del aspecto del control `GridStrip`:  
+ <span data-ttu-id="4670a-111">La clase `GridStripRenderer` personaliza tres aspectos del aspecto del control `GridStrip`:</span><span class="sxs-lookup"><span data-stu-id="4670a-111">The `GridStripRenderer` class customizes three aspects of the `GridStrip` control's appearance:</span></span>  
   
--   Borde `GridStrip`  
+-   <span data-ttu-id="4670a-112">Borde `GridStrip`</span><span class="sxs-lookup"><span data-stu-id="4670a-112">`GridStrip` border</span></span>  
   
--   Borde <xref:System.Windows.Forms.ToolStripButton>  
+-   <span data-ttu-id="4670a-113">Borde <xref:System.Windows.Forms.ToolStripButton></span><span class="sxs-lookup"><span data-stu-id="4670a-113"><xref:System.Windows.Forms.ToolStripButton> border</span></span>  
   
--   Imagen <xref:System.Windows.Forms.ToolStripButton>  
+-   <span data-ttu-id="4670a-114">Imagen <xref:System.Windows.Forms.ToolStripButton></span><span class="sxs-lookup"><span data-stu-id="4670a-114"><xref:System.Windows.Forms.ToolStripButton> image</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="4670a-115">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="4670a-115">Compiling the Code</span></span>  
+ <span data-ttu-id="4670a-116">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="4670a-116">This example requires:</span></span>  
   
--   Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
+-   <span data-ttu-id="4670a-117">Referencias a los ensamblados System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="4670a-117">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Para obtener información acerca de cómo generar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilar desde la línea de comandos](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilar la línea de comandos con csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="4670a-118">Para información sobre cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilación desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilar desde la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="4670a-118">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="4670a-119">También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="4670a-119">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="4670a-120">Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="4670a-120">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStripRenderer>   
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>   
- <xref:System.Windows.Forms.ToolStripSystemRenderer>   
- <xref:System.Windows.Forms.StatusStrip>   
- [ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="4670a-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="4670a-121">See Also</span></span>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStripRenderer>  
+ <xref:System.Windows.Forms.ToolStripProfessionalRenderer>  
+ <xref:System.Windows.Forms.ToolStripSystemRenderer>  
+ <xref:System.Windows.Forms.StatusStrip>  
+ [<span data-ttu-id="4670a-122">Control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="4670a-122">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)

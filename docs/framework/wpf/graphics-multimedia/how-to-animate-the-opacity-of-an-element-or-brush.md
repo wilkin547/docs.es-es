@@ -1,33 +1,36 @@
 ---
-title: "C&#243;mo: Animar la opacidad de un elemento o pincel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, Opacity (propiedad)"
-  - "opacidad, animar"
+title: "Cómo: Animar la opacidad de un elemento o pincel"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- opacity [WPF], animating
+- animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 808d29292e176af8d3af1fc0f4a02c48ee05ea35
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Animar la opacidad de un elemento o pincel
-Para que un elemento de marco aparezca y se desvanezca mediante un fundido, puede animar su propiedad <xref:System.Windows.UIElement.Opacity%2A>, o bien puede animar la propiedad <xref:System.Windows.Media.Brush.Opacity%2A> del objeto o los objetos <xref:System.Windows.Media.Brush> utilizados para pintarlo.  Al animar la opacidad del elemento, éste aparece y se desvanece mediante un fundido; sin embargo, animar el pincel utilizado para pintar el elemento permite seleccionar mejor qué parte del elemento se desvanece.  Por ejemplo, podría animar la opacidad de un pincel utilizada para pintar el fondo de un botón.  Esto haría que el fondo del botón apareciese y se desvaneciese mediante un fundido, pero el texto permanecería totalmente opaco.  
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a><span data-ttu-id="9b322-102">Cómo: Animar la opacidad de un elemento o pincel</span><span class="sxs-lookup"><span data-stu-id="9b322-102">How to: Animate the Opacity of an Element or Brush</span></span>
+<span data-ttu-id="9b322-103">Para hacer que un elemento de marco fundido, puede animar su <xref:System.Windows.UIElement.Opacity%2A> propiedad o se puede animar la <xref:System.Windows.Media.Brush.Opacity%2A> propiedad de la <xref:System.Windows.Media.Brush> (o pinceles) utilizado para pintar.</span><span class="sxs-lookup"><span data-stu-id="9b322-103">To make a framework element fade in and out of view, you can animate its <xref:System.Windows.UIElement.Opacity%2A> property or you can animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Brush> (or brushes) used to paint it.</span></span> <span data-ttu-id="9b322-104">Animar la opacidad del elemento facilita y fundido sus elementos secundarios, pero animar el pincel que se usa para pintar el elemento permite que sea más selectivo con respecto a qué parte del elemento fundido.</span><span class="sxs-lookup"><span data-stu-id="9b322-104">Animating the element's opacity makes it and its children fade in and out of view, but animating the brush used to paint the element enables you to be more selective about which portion of the element fades.</span></span> <span data-ttu-id="9b322-105">Por ejemplo, podría animar la opacidad de un pincel utilizado para pintar el fondo del botón.</span><span class="sxs-lookup"><span data-stu-id="9b322-105">For example, you could animate the opacity of a brush used to paint a button's background.</span></span> <span data-ttu-id="9b322-106">Esto provocaría que el fondo del botón fundido de entrada y salida de la vista, dejando su texto completamente opaco.</span><span class="sxs-lookup"><span data-stu-id="9b322-106">This would cause the button's background to fade in and out of view, while leaving its text fully opaque.</span></span>  
   
 > [!NOTE]
->  Animar la propiedad <xref:System.Windows.Media.Brush.Opacity%2A> de un objeto <xref:System.Windows.Media.Brush>, aporta ventajas de rendimiento con respecto a animar la propiedad <xref:System.Windows.UIElement.Opacity%2A> de un elemento.  
+>  <span data-ttu-id="9b322-107">Animar el <xref:System.Windows.Media.Brush.Opacity%2A> de un <xref:System.Windows.Media.Brush> ofrece ventajas de rendimiento respecto a animar la <xref:System.Windows.UIElement.Opacity%2A> propiedad de un elemento.</span><span class="sxs-lookup"><span data-stu-id="9b322-107">Animating the <xref:System.Windows.Media.Brush.Opacity%2A> of a <xref:System.Windows.Media.Brush> provides performance benefits over animating the <xref:System.Windows.UIElement.Opacity%2A> property of an element.</span></span>  
   
- En el ejemplo siguiente, se animan dos botones para que aparezcan y se desvanezcan mediante un fundido.  La opacidad del primer control <xref:System.Windows.Controls.Button> se anima desde `1.0` hasta `0.0` durante un valor de <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de cinco segundos.  El segundo botón también se anima, pero lo que se anima es la opacidad del objeto SolidColorBrush utilizado para pintar su propiedad <xref:System.Windows.Controls.Control.Background%2A>, en lugar de la opacidad del botón completo.  Al ejecutar el ejemplo, el primer botón aparece y desaparece completamente, mientras que en el segundo botón lo único que aparece y desaparece es su fondo.  Su texto y borde permanecen totalmente opacos.  
+ <span data-ttu-id="9b322-108">En el ejemplo siguiente, se animan dos botones para que atenuación u ocultar.</span><span class="sxs-lookup"><span data-stu-id="9b322-108">In the following example, two buttons are animated so that they fade in and out of view.</span></span> <span data-ttu-id="9b322-109">La opacidad del primer <xref:System.Windows.Controls.Button> se anima desde `1.0` a `0.0` sobre un <xref:System.Windows.Media.Animation.Timeline.Duration%2A> de cinco segundos.</span><span class="sxs-lookup"><span data-stu-id="9b322-109">The Opacity of the first <xref:System.Windows.Controls.Button> is animated from `1.0` to `0.0` over a <xref:System.Windows.Media.Animation.Timeline.Duration%2A> of five seconds.</span></span> <span data-ttu-id="9b322-110">El segundo botón también se anima, pero la opacidad del objeto SolidColorBrush utilizado para pintar su <xref:System.Windows.Controls.Control.Background%2A> se anima en lugar de la opacidad de todo el botón.</span><span class="sxs-lookup"><span data-stu-id="9b322-110">The second button is also animated, but the Opacity of the SolidColorBrush used to paint its <xref:System.Windows.Controls.Control.Background%2A> is animated rather than the opacity of the entire button.</span></span> <span data-ttu-id="9b322-111">Cuando se ejecuta el ejemplo, el primer botón completamente desaparece, mientras que sólo el fondo del segundo botón desaparece de la vista.</span><span class="sxs-lookup"><span data-stu-id="9b322-111">When the example is run, the first button completely fades in and out of view, while only the background of the second button fades in and out of view.</span></span> <span data-ttu-id="9b322-112">Su texto y borde permanecen totalmente opacos.</span><span class="sxs-lookup"><span data-stu-id="9b322-112">Its text and border remain fully opaque.</span></span>  
   
-## Ejemplo  
- [!code-xml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
+## <a name="example"></a><span data-ttu-id="9b322-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9b322-113">Example</span></span>  
+ [!code-xaml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- Se ha omitido código en este ejemplo.  El ejemplo completo también muestra cómo animar la opacidad de un objeto <xref:System.Windows.Media.Color> dentro de <xref:System.Windows.Media.LinearGradientBrush>.  Para obtener el ejemplo completo, vea [Animating the Opacity of an Element Sample](http://go.microsoft.com/fwlink/?LinkID=159968).
+ <span data-ttu-id="9b322-114">Se ha omitido el código de este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="9b322-114">Code has been omitted from this example.</span></span> <span data-ttu-id="9b322-115">El ejemplo completo también muestra cómo animar la opacidad de un <xref:System.Windows.Media.Color> dentro de un <xref:System.Windows.Media.LinearGradientBrush>.</span><span class="sxs-lookup"><span data-stu-id="9b322-115">The full sample also shows how to animate the opacity of a <xref:System.Windows.Media.Color> within a <xref:System.Windows.Media.LinearGradientBrush>.</span></span>  <span data-ttu-id="9b322-116">Para obtener el ejemplo completo, vea el [animar la opacidad de un ejemplo de elemento](http://go.microsoft.com/fwlink/?LinkID=159968).</span><span class="sxs-lookup"><span data-stu-id="9b322-116">For the full sample, see the [Animating the Opacity of an Element Sample](http://go.microsoft.com/fwlink/?LinkID=159968).</span></span>

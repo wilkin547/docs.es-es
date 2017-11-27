@@ -1,98 +1,103 @@
 ---
-title: "Informaci&#243;n general sobre ListView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles, ListView"
-  - "ListView (controles) [WPF], acerca del control ListView"
+title: "Información general sobre ListView"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], ListView
+- ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e0886e387b6de34673cd4990ef8b61e08674b531
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre ListView
-El control <xref:System.Windows.Controls.ListView> proporciona la infraestructura necesaria para mostrar un conjunto de elementos de datos en distintos diseños o vistas.  Por ejemplo, un usuario puede desear mostrar los elementos de datos en una tabla y también ordenar sus columnas.  
+# <a name="listview-overview"></a><span data-ttu-id="278d7-102">Información general sobre ListView</span><span class="sxs-lookup"><span data-stu-id="278d7-102">ListView Overview</span></span>
+<span data-ttu-id="278d7-103">El <xref:System.Windows.Controls.ListView> control proporciona la infraestructura necesaria para mostrar un conjunto de elementos de datos en distintos diseños o vistas.</span><span class="sxs-lookup"><span data-stu-id="278d7-103">The <xref:System.Windows.Controls.ListView> control provides the infrastructure to display a set of data items in different layouts or views.</span></span> <span data-ttu-id="278d7-104">Por ejemplo, es posible que un usuario quiera mostrar elementos de datos en una tabla y, además, ordenar las columnas.</span><span class="sxs-lookup"><span data-stu-id="278d7-104">For example, a user may want to display data items in a table and also to sort its columns.</span></span>  
   
-   
   
 <a name="WhatisaListView"></a>   
-## ¿Qué es un control ListView?  
- El control <xref:System.Windows.Controls.ListView> es un <xref:System.Windows.Controls.ItemsControl> que se deriva de <xref:System.Windows.Controls.ListBox>.  Normalmente, sus elementos son miembros de una recolección de datos y se representan como objetos <xref:System.Windows.Controls.ListViewItem>.  <xref:System.Windows.Controls.ListViewItem> es un control <xref:System.Windows.Controls.ContentControl> que puede contener un solo elemento secundario.  Sin embargo, ese elemento secundario puede ser cualquier elemento visual.  
+## <a name="what-is-a-listview"></a><span data-ttu-id="278d7-105">¿Qué es ListView?</span><span class="sxs-lookup"><span data-stu-id="278d7-105">What Is a ListView?</span></span>  
+ <span data-ttu-id="278d7-106">El <xref:System.Windows.Controls.ListView> control es un <xref:System.Windows.Controls.ItemsControl> que se deriva de <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="278d7-106">The <xref:System.Windows.Controls.ListView> control is an <xref:System.Windows.Controls.ItemsControl> that is derived from <xref:System.Windows.Controls.ListBox>.</span></span> <span data-ttu-id="278d7-107">Normalmente, sus elementos son miembros de una recolección de datos y se representan como <xref:System.Windows.Controls.ListViewItem> objetos.</span><span class="sxs-lookup"><span data-stu-id="278d7-107">Typically, its items are members of a data collection and are represented as <xref:System.Windows.Controls.ListViewItem> objects.</span></span> <span data-ttu-id="278d7-108">A <xref:System.Windows.Controls.ListViewItem> es un <xref:System.Windows.Controls.ContentControl> y puede contener sólo un único elemento secundario.</span><span class="sxs-lookup"><span data-stu-id="278d7-108">A <xref:System.Windows.Controls.ListViewItem> is a <xref:System.Windows.Controls.ContentControl> and can contain only a single child element.</span></span> <span data-ttu-id="278d7-109">Sin embargo, el elemento secundario puede ser cualquier elemento visual.</span><span class="sxs-lookup"><span data-stu-id="278d7-109">However, that child element can be any visual element.</span></span>  
   
 <a name="DefiningaListViewView"></a>   
-## Definir un modo de vista para ListView  
- Para especificar un modo de vista para el contenido de un control <xref:System.Windows.Controls.ListView>, se establece la propiedad <xref:System.Windows.Controls.ListView.View%2A>.  Un modo de vista que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona es <xref:System.Windows.Controls.GridView>, que muestra una colección de elementos de datos en una tabla que tiene columnas personalizables.  
+## <a name="defining-a-view-mode-for-a-listview"></a><span data-ttu-id="278d7-110">Definición de un modo de vista para ListView</span><span class="sxs-lookup"><span data-stu-id="278d7-110">Defining a View Mode for a ListView</span></span>  
+ <span data-ttu-id="278d7-111">Para especificar un modo de vista para el contenido de un <xref:System.Windows.Controls.ListView> (control), establecer el <xref:System.Windows.Controls.ListView.View%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="278d7-111">To specify a view mode for the content of a <xref:System.Windows.Controls.ListView> control, you set the <xref:System.Windows.Controls.ListView.View%2A> property.</span></span> <span data-ttu-id="278d7-112">Modo de una vista que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona es <xref:System.Windows.Controls.GridView>, que muestra una colección de elementos de datos en una tabla que tiene columnas personalizables.</span><span class="sxs-lookup"><span data-stu-id="278d7-112">One view mode that [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides is <xref:System.Windows.Controls.GridView>, which displays a collection of data items in a table that has customizable columns.</span></span>  
   
- En el ejemplo siguiente se muestra cómo definir <xref:System.Windows.Controls.GridView> para un control <xref:System.Windows.Controls.ListView> que muestra información de empleados.  
+ <span data-ttu-id="278d7-113">En el ejemplo siguiente se muestra cómo definir un <xref:System.Windows.Controls.GridView> para un <xref:System.Windows.Controls.ListView> control que muestra información de los empleados.</span><span class="sxs-lookup"><span data-stu-id="278d7-113">The following example shows how to define a <xref:System.Windows.Controls.GridView> for a <xref:System.Windows.Controls.ListView> control that displays employee information.</span></span>  
   
- [!code-xml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- En la ilustración siguiente se muestra la presentación de los datos del ejemplo anterior.  
+ <span data-ttu-id="278d7-114">En la ilustración siguiente se muestra cómo aparecen los datos en el ejemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="278d7-114">The following illustration shows how the data appears for the previous example.</span></span>  
   
- ![ListView con resultado GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.png "ListViewGridView")  
+ <span data-ttu-id="278d7-115">![ListView con salida de GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span><span class="sxs-lookup"><span data-stu-id="278d7-115">![ListView with GridView output](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")</span></span>  
   
- Puede crear un modo de vista personalizado mediante la definición de una clase que herede de la clase <xref:System.Windows.Controls.ViewBase>.  La clase <xref:System.Windows.Controls.ViewBase> proporciona la infraestructura necesaria para crear una vista personalizada.  Para obtener más información acerca de cómo crear una vista personalizada, vea [Crear un modo de vista personalizado para un control ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ <span data-ttu-id="278d7-116">Puede crear un modo de vista personalizada definiendo una clase que hereda de la <xref:System.Windows.Controls.ViewBase> clase.</span><span class="sxs-lookup"><span data-stu-id="278d7-116">You can create a custom view mode by defining a class that inherits from the <xref:System.Windows.Controls.ViewBase> class.</span></span> <span data-ttu-id="278d7-117">La <xref:System.Windows.Controls.ViewBase> clase proporciona la infraestructura que necesita para crear una vista personalizada.</span><span class="sxs-lookup"><span data-stu-id="278d7-117">The <xref:System.Windows.Controls.ViewBase> class provides the infrastructure that you need to create a custom view.</span></span> <span data-ttu-id="278d7-118">Para más información sobre cómo crear una vista personalizada, consulte [Creación de un modo de vista personalizada para un control ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).</span><span class="sxs-lookup"><span data-stu-id="278d7-118">For more information about how to create a custom view, see [Create a Custom View Mode for a ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).</span></span>  
   
 <a name="BindingDatatoaListView"></a>   
-## Enlazar datos a ListView  
- Use las propiedades <xref:System.Windows.Controls.ItemsControl.Items%2A> y <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para especificar los elementos para un control <xref:System.Windows.Controls.ListView>.  En el ejemplo siguiente se establece la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> en una recolección de datos que se denomina `EmployeeInfoDataSource`.  
+## <a name="binding-data-to-a-listview"></a><span data-ttu-id="278d7-119">Enlace de datos a un control ListView</span><span class="sxs-lookup"><span data-stu-id="278d7-119">Binding Data to a ListView</span></span>  
+ <span data-ttu-id="278d7-120">Use la <xref:System.Windows.Controls.ItemsControl.Items%2A> y <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propiedades para especificar elementos para una <xref:System.Windows.Controls.ListView> control.</span><span class="sxs-lookup"><span data-stu-id="278d7-120">Use the <xref:System.Windows.Controls.ItemsControl.Items%2A> and <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> properties to specify items for a <xref:System.Windows.Controls.ListView> control.</span></span> <span data-ttu-id="278d7-121">El ejemplo siguiente se establece la <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> propiedad a una recopilación de datos que se denomina `EmployeeInfoDataSource`.</span><span class="sxs-lookup"><span data-stu-id="278d7-121">The following example sets the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property to a data collection that is called `EmployeeInfoDataSource`.</span></span>  
   
- [!code-xml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
+ [!code-xaml[ListViewCode#ItemsSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#itemssource)]  
   
- En <xref:System.Windows.Controls.GridView>, los objetos <xref:System.Windows.Controls.GridViewColumn> se enlazan a campos de datos específicos.  En el ejemplo siguiente se enlaza un objeto <xref:System.Windows.Controls.GridViewColumn> a un campo de datos al especificar <xref:System.Windows.Data.Binding> para la propiedad <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>.  
+ <span data-ttu-id="278d7-122">En un <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> enlazan objetos a los campos de datos especificado.</span><span class="sxs-lookup"><span data-stu-id="278d7-122">In a <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn> objects bind to specified data fields.</span></span> <span data-ttu-id="278d7-123">En el ejemplo siguiente se enlaza un <xref:System.Windows.Controls.GridViewColumn> objeto a un campo de datos mediante la especificación de un <xref:System.Windows.Data.Binding> para el <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="278d7-123">The following example binds a <xref:System.Windows.Controls.GridViewColumn> object to a data field by specifying a <xref:System.Windows.Data.Binding> for the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property.</span></span>  
   
  [!code-csharp[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml.cs#gridviewcolumnproperties)]
  [!code-vb[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCode/visualbasic/window1.xaml.vb#gridviewcolumnproperties)]
- [!code-xml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
+ [!code-xaml[ListViewCode#GridViewColumnProperties](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#gridviewcolumnproperties)]  
   
- También puede especificar <xref:System.Windows.Data.Binding> como parte de una definición <xref:System.Windows.DataTemplate> que se usa para definir el estilo de las celdas de una columna.  En el ejemplo siguiente, <xref:System.Windows.DataTemplate> que se identifica con <xref:System.Windows.ResourceKey> establece <xref:System.Windows.Data.Binding> para <xref:System.Windows.Controls.GridViewColumn>.  Observe que en este ejemplo no se define <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> porque, en ese caso, se invalidaría el enlace especificado por <xref:System.Windows.DataTemplate>.  
+ <span data-ttu-id="278d7-124">También puede especificar un <xref:System.Windows.Data.Binding> como parte de una <xref:System.Windows.DataTemplate> definición que utiliza para definir el estilo de las celdas de una columna.</span><span class="sxs-lookup"><span data-stu-id="278d7-124">You can also specify a <xref:System.Windows.Data.Binding> as part of a <xref:System.Windows.DataTemplate> definition that you use to style the cells in a column.</span></span> <span data-ttu-id="278d7-125">En el ejemplo siguiente, la <xref:System.Windows.DataTemplate> que se identifica con un <xref:System.Windows.ResourceKey> establece la <xref:System.Windows.Data.Binding> para un <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="278d7-125">In the following example, the <xref:System.Windows.DataTemplate> that is identified with a <xref:System.Windows.ResourceKey> sets the <xref:System.Windows.Data.Binding> for a <xref:System.Windows.Controls.GridViewColumn>.</span></span> <span data-ttu-id="278d7-126">Tenga en cuenta que este ejemplo no define la <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> porque al hacerlo por lo que invalida el enlace especificado por <xref:System.Windows.DataTemplate>.</span><span class="sxs-lookup"><span data-stu-id="278d7-126">Note that this example does not define the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> because doing so overrides the binding that is specified by <xref:System.Windows.DataTemplate>.</span></span>  
   
- [!code-xml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
+ [!code-xaml[ListViewTemplate#GridViewCellTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#gridviewcelltemplate)]  
   
- [!code-xml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
+ [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 <a name="StylingaListView"></a>   
-## Aplicar estilos a un control ListView que implementa GridView  
- El control <xref:System.Windows.Controls.ListView> contiene objetos <xref:System.Windows.Controls.ListViewItem>, que representan los elementos de datos que se muestran.  Puede usar las propiedades siguientes para definir el contenido y estilo de los elementos de datos:  
+## <a name="styling-a-listview-that-implements-a-gridview"></a><span data-ttu-id="278d7-127">Aplicación de un estilo a un control ListView que implementa GridView</span><span class="sxs-lookup"><span data-stu-id="278d7-127">Styling a ListView That Implements a GridView</span></span>  
+ <span data-ttu-id="278d7-128">El <xref:System.Windows.Controls.ListView> control contiene <xref:System.Windows.Controls.ListViewItem> objetos que representan los elementos de datos que se muestran.</span><span class="sxs-lookup"><span data-stu-id="278d7-128">The <xref:System.Windows.Controls.ListView> control contains <xref:System.Windows.Controls.ListViewItem> objects, which represent the data items that are displayed.</span></span> <span data-ttu-id="278d7-129">Puede usar las propiedades siguientes para definir el contenido y el estilo de los elementos de datos:</span><span class="sxs-lookup"><span data-stu-id="278d7-129">You can use the following properties to define the content and style of data items:</span></span>  
   
--   En el control <xref:System.Windows.Controls.ListView>, use las propiedades <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A> y <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.  
+-   <span data-ttu-id="278d7-130">En el <xref:System.Windows.Controls.ListView> de control, use la <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, y <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> propiedades.</span><span class="sxs-lookup"><span data-stu-id="278d7-130">On the <xref:System.Windows.Controls.ListView> control, use the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>, and <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> properties.</span></span>  
   
--   En el control <xref:System.Windows.Controls.ListViewItem>, use las propiedades <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> y <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>.  
+-   <span data-ttu-id="278d7-131">En el <xref:System.Windows.Controls.ListViewItem> de control, use la <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> y <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> propiedades.</span><span class="sxs-lookup"><span data-stu-id="278d7-131">On the <xref:System.Windows.Controls.ListViewItem> control, use the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> and <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> properties.</span></span>  
   
- Para evitar problemas de alineación entre las celdas en <xref:System.Windows.Controls.GridView>, no utilice <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para establecer propiedades o agregar contenido que afecte al ancho de un elemento de <xref:System.Windows.Controls.ListView>.  Por ejemplo, puede producirse un problema de alineación al establecer la propiedad <xref:System.Windows.FrameworkElement.Margin%2A> en <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.  Para especificar propiedades o definir contenido que afecta al ancho de los elementos en <xref:System.Windows.Controls.GridView>, utilice las propiedades de la clase <xref:System.Windows.Controls.GridView> y sus clases relacionadas, como <xref:System.Windows.Controls.GridViewColumn>.  
+ <span data-ttu-id="278d7-132">Para evitar problemas de alineación entre las celdas de un <xref:System.Windows.Controls.GridView>, no utilice la <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para establecer propiedades o agregar contenido que afecta al ancho de un elemento en un <xref:System.Windows.Controls.ListView>.</span><span class="sxs-lookup"><span data-stu-id="278d7-132">To avoid alignment issues between cells in a <xref:System.Windows.Controls.GridView>, do not use the <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> to set properties or add content that affects the width of an item in a <xref:System.Windows.Controls.ListView>.</span></span> <span data-ttu-id="278d7-133">Por ejemplo, puede producirse un problema de alineación al establecer el <xref:System.Windows.FrameworkElement.Margin%2A> propiedad en el <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.</span><span class="sxs-lookup"><span data-stu-id="278d7-133">For example, an alignment issue can occur when you set the <xref:System.Windows.FrameworkElement.Margin%2A> property in the <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>.</span></span> <span data-ttu-id="278d7-134">Para especificar propiedades o definir contenido que afecta al ancho de los elementos de un <xref:System.Windows.Controls.GridView>, utilice las propiedades de la <xref:System.Windows.Controls.GridView> clase y sus clases relacionadas, como <xref:System.Windows.Controls.GridViewColumn>.</span><span class="sxs-lookup"><span data-stu-id="278d7-134">To specify properties or define content that affects the width of items in a <xref:System.Windows.Controls.GridView>, use the properties of the <xref:System.Windows.Controls.GridView> class and its related classes, such as <xref:System.Windows.Controls.GridViewColumn>.</span></span>  
   
- Para obtener más información sobre cómo utilizar <xref:System.Windows.Controls.GridView> y sus clases auxiliares, vea [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md).  
+ <span data-ttu-id="278d7-135">Para obtener más información sobre cómo usar <xref:System.Windows.Controls.GridView> y sus clases auxiliares, vea el artículo [GridView Overview](../../../../docs/framework/wpf/controls/gridview-overview.md).</span><span class="sxs-lookup"><span data-stu-id="278d7-135">For more information about how to use <xref:System.Windows.Controls.GridView> and its supporting classes, see [GridView Overview](../../../../docs/framework/wpf/controls/gridview-overview.md).</span></span>  
   
- Si define <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para un control <xref:System.Windows.Controls.ListView> y también define <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, debe incluir un elemento <xref:System.Windows.Controls.ContentPresenter> en el estilo de manera que <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> funcione correctamente.  
+ <span data-ttu-id="278d7-136">Si define un <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> para un <xref:System.Windows.Controls.ListView> controlar y que también definen un <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, debe incluir un <xref:System.Windows.Controls.ContentPresenter> en el estilo en orden para el <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> funcione correctamente.</span><span class="sxs-lookup"><span data-stu-id="278d7-136">If you define an <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> for a <xref:System.Windows.Controls.ListView> control and also define an <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>, you must include a <xref:System.Windows.Controls.ContentPresenter> in the style in order for the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> to work correctly.</span></span>  
   
- No use las propiedades <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> y <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> para contenido de <xref:System.Windows.Controls.ListView> que se muestre mediante <xref:System.Windows.Controls.GridView>.  Para especificar la alineación del contenido de una columna de <xref:System.Windows.Controls.GridView>, defina <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.  
+ <span data-ttu-id="278d7-137">No utilice la <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> y <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> propiedades de <xref:System.Windows.Controls.ListView> contenido que se muestra mediante el uso de un <xref:System.Windows.Controls.GridView>.</span><span class="sxs-lookup"><span data-stu-id="278d7-137">Do not use the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> and <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> properties for <xref:System.Windows.Controls.ListView> content that is displayed by using a <xref:System.Windows.Controls.GridView>.</span></span> <span data-ttu-id="278d7-138">Para especificar la alineación del contenido de una columna de un <xref:System.Windows.Controls.GridView>, defina un <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.</span><span class="sxs-lookup"><span data-stu-id="278d7-138">To specify the alignment of content in a column of a <xref:System.Windows.Controls.GridView>, define a <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>.</span></span>  
   
 <a name="UsingtheSameViewMoreThanOnce"></a>   
-## Compartir el mismo modo de vista  
- Dos controles <xref:System.Windows.Controls.ListView> no pueden compartir al mismo tiempo el mismo modo de vista.  Si intenta utilizar el mismo modo de vista con más de un control <xref:System.Windows.Controls.ListView>, se producirá una excepción.  
+## <a name="sharing-the-same-view-mode"></a><span data-ttu-id="278d7-139">Uso compartido del mismo modo de vista</span><span class="sxs-lookup"><span data-stu-id="278d7-139">Sharing the Same View Mode</span></span>  
+ <span data-ttu-id="278d7-140">Dos <xref:System.Windows.Controls.ListView> controles no pueden compartir el mismo modo de vista al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="278d7-140">Two <xref:System.Windows.Controls.ListView> controls cannot share the same view mode at the same time.</span></span> <span data-ttu-id="278d7-141">Si intenta usar el mismo modo de vista con más de una <xref:System.Windows.Controls.ListView> de control, se produce una excepción.</span><span class="sxs-lookup"><span data-stu-id="278d7-141">If you try to use the same view mode with more than one <xref:System.Windows.Controls.ListView> control, an exception occurs.</span></span>  
   
- Para especificar un modo de vista que puedan usar varios controles <xref:System.Windows.Controls.ListView> simultáneamente, utilice plantillas o estilos.  Para obtener un ejemplo de cómo definir vistas como recursos \(<xref:System.Windows.FrameworkElement.Resources%2A>\), vea [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).  
+ <span data-ttu-id="278d7-142">Para especificar un modo de vista que puede usarse simultáneamente más de un <xref:System.Windows.Controls.ListView>, utilice plantillas o estilos.</span><span class="sxs-lookup"><span data-stu-id="278d7-142">To specify a view mode that can be simultaneously used by more than one <xref:System.Windows.Controls.ListView>, use templates or styles.</span></span> <span data-ttu-id="278d7-143">Para obtener un ejemplo de cómo definir vistas como <xref:System.Windows.FrameworkElement.Resources%2A>, consulte [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).</span><span class="sxs-lookup"><span data-stu-id="278d7-143">For an example of how to define views as <xref:System.Windows.FrameworkElement.Resources%2A>, see [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).</span></span>  
   
 <a name="CreatingaCustomView"></a>   
-## Crear un modo de vista personalizado  
- Las vistas personalizadas como <xref:System.Windows.Controls.GridView> se derivan de la clase abstracta <xref:System.Windows.Controls.ViewBase>, que proporciona las herramientas necesarias para mostrar elementos de datos que se representan como objetos <xref:System.Windows.Controls.ListViewItem>.  
+## <a name="creating-a-custom-view-mode"></a><span data-ttu-id="278d7-144">Creación de un modo de vista personalizado</span><span class="sxs-lookup"><span data-stu-id="278d7-144">Creating a Custom View Mode</span></span>  
+ <span data-ttu-id="278d7-145">Personalizar vistas como <xref:System.Windows.Controls.GridView> se derivan de la <xref:System.Windows.Controls.ViewBase> clase, que proporciona las herramientas para mostrar los elementos de datos que se representan como abstracta <xref:System.Windows.Controls.ListViewItem> objetos.</span><span class="sxs-lookup"><span data-stu-id="278d7-145">Customized views like <xref:System.Windows.Controls.GridView> are derived from the <xref:System.Windows.Controls.ViewBase> abstract class, which provides the tools to display data items that are represented as <xref:System.Windows.Controls.ListViewItem> objects.</span></span>  
   
- Para obtener un ejemplo de un modo de vista personalizado, vea [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).  
+ <span data-ttu-id="278d7-146">Para ver un ejemplo de un modo de vista personalizada, consulte [Ejemplo de ListView con varias vistas](http://go.microsoft.com/fwlink/?LinkID=160013).</span><span class="sxs-lookup"><span data-stu-id="278d7-146">For an example of a custom view mode, see [ListView with Multiple Views Sample](http://go.microsoft.com/fwlink/?LinkID=160013).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Controls.GridView>   
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.ListViewItem>   
- <xref:System.Windows.Data.Binding>   
- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [Controles](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a><span data-ttu-id="278d7-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="278d7-147">See Also</span></span>  
+ <xref:System.Windows.Controls.GridView>  
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.ListViewItem>  
+ <xref:System.Windows.Data.Binding>  
+ [<span data-ttu-id="278d7-148">Información general sobre GridView</span><span class="sxs-lookup"><span data-stu-id="278d7-148">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [<span data-ttu-id="278d7-149">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="278d7-149">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="278d7-150">Controles</span><span class="sxs-lookup"><span data-stu-id="278d7-150">Controls</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

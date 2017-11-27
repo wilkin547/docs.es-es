@@ -1,76 +1,79 @@
 ---
-title: "Transferir | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Transferir
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 40cd80b2b4e2f949b92f4c89cde6b271a502d047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Transferir
-En este tema se describe la transferencia en el modelo de seguimiento de actividad de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+# <a name="transfer"></a><span data-ttu-id="bd5df-102">Transferir</span><span class="sxs-lookup"><span data-stu-id="bd5df-102">Transfer</span></span>
+<span data-ttu-id="bd5df-103">En este tema se describe la transferencia en el modelo de seguimiento de actividad de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bd5df-103">This topic describes transfer in the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] activity tracing model.</span></span>  
   
-## Definición de transferencia  
- Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los extremos.  Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad.  En [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], cuando los bytes son de entrada en el servicio, la actividad Realizar escucha de se transfiere a la actividad Recibir bytes, donde se crea el objeto de mensaje.  Consulte [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md) para obtener una lista de escenarios de seguimiento de un extremo a otro, así como su actividad y diseño de seguimiento correspondientes.  
+## <a name="transfer-definition"></a><span data-ttu-id="bd5df-104">Definición de transferencia</span><span class="sxs-lookup"><span data-stu-id="bd5df-104">Transfer Definition</span></span>  
+ <span data-ttu-id="bd5df-105">Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los extremos.</span><span class="sxs-lookup"><span data-stu-id="bd5df-105">Transfers between activities represent causal relationships between events in the related activities within endpoints.</span></span> <span data-ttu-id="bd5df-106">Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad.</span><span class="sxs-lookup"><span data-stu-id="bd5df-106">Two activities are related with transfers when control flows between these activities, for example, a method call crossing activity boundaries.</span></span> <span data-ttu-id="bd5df-107">En [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], cuando los bytes son de entrada en el servicio, la actividad Realizar escucha de se transfiere a la actividad Recibir bytes, donde se crea el objeto de mensaje.</span><span class="sxs-lookup"><span data-stu-id="bd5df-107">In [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], when bytes are incoming on the service, the Listen At activity is transferred to the Receive Bytes activity where the message object is created.</span></span> <span data-ttu-id="bd5df-108">Para obtener una lista de escenarios de seguimiento de extremo a extremo y su respectivo actividad y seguimiento de diseño, vea [escenarios de seguimiento de End-To-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).</span><span class="sxs-lookup"><span data-stu-id="bd5df-108">For a list of end-to-end tracing scenarios, and their respective activity and tracing design, see [End-To-End Tracing Scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).</span></span>  
   
- Para emitir seguimientos de transferencia, use el valor `ActivityTracing` en el origen de seguimiento, tal y como se muestra en el código de configuración siguiente.  
+ <span data-ttu-id="bd5df-109">Para emitir seguimientos de transferencia, use el valor `ActivityTracing` en el origen de seguimiento, tal y como se muestra en el código de configuración siguiente.</span><span class="sxs-lookup"><span data-stu-id="bd5df-109">To emit transfer traces, use the `ActivityTracing` setting on the trace source as demonstrated by the following configuration code.</span></span>  
   
-```  
+```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
-## Uso de la transferencia para poner en correlación actividades dentro de los extremos  
- Las actividades y transferencias permiten al usuario ubicar probabilísticamente la causa principal de un error.  Por ejemplo, si transferimos de uno a otro respectivamente entre las actividades M y N en componentes M y N, y se bloquea N justamente antes de realizarse la transferencia a M, podemos sacar la conclusión de que es probable que se deba a que N emita datos a M.  
+## <a name="using-transfer-to-correlate-activities-within-endpoints"></a><span data-ttu-id="bd5df-110">Uso de la transferencia para poner en correlación actividades dentro de los extremos</span><span class="sxs-lookup"><span data-stu-id="bd5df-110">Using Transfer to Correlate Activities Within Endpoints</span></span>  
+ <span data-ttu-id="bd5df-111">Las actividades y transferencias permiten al usuario ubicar probabilísticamente la causa principal de un error.</span><span class="sxs-lookup"><span data-stu-id="bd5df-111">Activities and transfers permit the user to probabilistically locate the root cause of an error.</span></span> <span data-ttu-id="bd5df-112">Por ejemplo, si transferimos de uno a otro respectivamente entre las actividades M y N en componentes M y N, y se bloquea N justamente antes de realizarse la transferencia a M, podemos sacar la conclusión de que es probable que se deba a que N emita datos a M.</span><span class="sxs-lookup"><span data-stu-id="bd5df-112">For example, if we transfer back and forth between activities M and N respectively in components M and N, and a crash happens in N right after the transfer back to M, we can draw the conclusion that it is likely due to N’s passing data back to M.</span></span>  
   
- Un seguimiento de transferencia se emite desde la actividad M a la actividad N cuando hay un flujo de control entre M y N.  Por ejemplo, N realiza algún trabajo para M debido a una llamada al método que cruza los límites de las actividades.  N puede que ya exista o que se haya creado.  M genera N cuando esta última es una nueva actividad que realiza algún trabajo para M.  
+ <span data-ttu-id="bd5df-113">Se emite un seguimiento de transferencia de la actividad M a la actividad N cuando hay flujo de control entre M y N. Por ejemplo, N realiza algún trabajo para M debido a una llamada al método que cruza los límites de las actividades.</span><span class="sxs-lookup"><span data-stu-id="bd5df-113">A transfer trace is emitted from activity M to activity N when there is a flow of control between M and N. For example, N performs some work for M because of a method call crossing the activities’ boundaries.</span></span> <span data-ttu-id="bd5df-114">N puede que ya exista o que se haya creado.</span><span class="sxs-lookup"><span data-stu-id="bd5df-114">N may already exist or has been created.</span></span> <span data-ttu-id="bd5df-115">M genera N cuando esta última es una nueva actividad que realiza algún trabajo para M.</span><span class="sxs-lookup"><span data-stu-id="bd5df-115">N is spawned by M when N is a new activity that performs some work for M.</span></span>  
   
- Una transferencia de M a N puede no ir seguida de una nueva transferencia de N a M.  Esto es porque N puede generar algún trabajo en N y no hacer un seguimiento cuando N completa ese trabajo.  De hecho, M puede finalizar antes de que N complete su tarea.  Esto pasa en la actividad "Abrir ServiceHost \(M\)" que genera actividades de escucha \(N\) y, a continuación, finaliza.  Una transferencia de vuelta de N a M significa que N completó el trabajo relacionado con M.  
+ <span data-ttu-id="bd5df-116">Una transferencia de M a N puede que no sea seguida por una transferencia de vuelta de N a M, ya que M puede generar algún trabajo en N y no sabe cuándo N termina ese trabajo.</span><span class="sxs-lookup"><span data-stu-id="bd5df-116">A transfer from M to N may not be followed by a transfer back from N to M. This is because M can spawn some work in N and do not track when N completes that work.</span></span> <span data-ttu-id="bd5df-117">De hecho, M puede finalizar antes de que N complete su tarea.</span><span class="sxs-lookup"><span data-stu-id="bd5df-117">In fact, M can terminate before N completes its task.</span></span> <span data-ttu-id="bd5df-118">Esto sucede en la actividad "Abrir ServiceHost" (M) que genera actividades de escucha (N) y, a continuación, finaliza.</span><span class="sxs-lookup"><span data-stu-id="bd5df-118">This happens in the "Open ServiceHost" activity (M) that spawns Listener activities (N) and then terminates.</span></span> <span data-ttu-id="bd5df-119">Una transferencia de vuelta de N a M significa que N completó el trabajo relacionado con M.</span><span class="sxs-lookup"><span data-stu-id="bd5df-119">A transfer back from N to M means that N completed the work related to M.</span></span>  
   
- N puede seguir realizando otro procesamiento no relacionado con M, como por ejemplo una actividad de autenticador existente \(N\) que sigue recibiendo solicitudes de inicio de sesión \(M\) de diferentes actividades de inicio de sesión.  
+ <span data-ttu-id="bd5df-120">N puede seguir realizando otro procesamiento no relacionado con M, como por ejemplo una actividad de autenticador existente (N) que sigue recibiendo solicitudes de inicio de sesión (M) de diferentes actividades de inicio de sesión.</span><span class="sxs-lookup"><span data-stu-id="bd5df-120">N can continue performing other processing unrelated to M, for example, an existing authenticator activity (N) that keeps receiving login requests (M) from different login activities.</span></span>  
   
- Una relación de anidamiento no existe necesariamente entre las actividades M y N.  Esto puede suceder debido a dos razones.  Primero, cuando la actividad M no supervisa el procesamiento real realizado en N aunque M inició N.  En segundo lugar, cuando N ya existe.  
+ <span data-ttu-id="bd5df-121">No existe necesariamente una relación de anidamiento entre las actividades M y N. Esto puede pasar debido a dos razones.</span><span class="sxs-lookup"><span data-stu-id="bd5df-121">A nesting relationship does not necessarily exist between activities M and N. This can happen due to two reasons.</span></span> <span data-ttu-id="bd5df-122">Primero, cuando la actividad M no supervisa el procesamiento real realizado en N aunque M inició N. Second, cuando N ya existe.</span><span class="sxs-lookup"><span data-stu-id="bd5df-122">First, when activity M does not monitor the actual processing performed in N although M initiated N. Second, when N already exists.</span></span>  
   
-## Ejemplo de transferencias  
- A continuación se muestran dos ejemplos de transferencia.  
+## <a name="example-of-transfers"></a><span data-ttu-id="bd5df-123">Ejemplo de transferencias</span><span class="sxs-lookup"><span data-stu-id="bd5df-123">Example of Transfers</span></span>  
+ <span data-ttu-id="bd5df-124">A continuación se muestran dos ejemplos de transferencia.</span><span class="sxs-lookup"><span data-stu-id="bd5df-124">The following lists two transfer examples.</span></span>  
   
--   Al crear un host de servicio, el constructor toma el control del código de llamada o el código de llamada transfiere al constructor.  Cuando el constructor ha terminado de ejecutar, devuelve el control al código de llamada o el constructor transfiere de nuevo al código de llamada.  Éste es el caso de una relación anidada.  
+-   <span data-ttu-id="bd5df-125">Al crear un host de servicio, el constructor toma el control del código de llamada o el código de llamada transfiere al constructor.</span><span class="sxs-lookup"><span data-stu-id="bd5df-125">When you create a service host, the constructor gains control from the calling code, or the calling code transfers to the constructor.</span></span> <span data-ttu-id="bd5df-126">Cuando el constructor ha terminado de ejecutar, devuelve el control al código de llamada o el constructor transfiere de nuevo al código de llamada.</span><span class="sxs-lookup"><span data-stu-id="bd5df-126">When the constructor has finished executing, it returns control to the calling code, or the constructor transfers back to the calling code.</span></span> <span data-ttu-id="bd5df-127">Éste es el caso de una relación anidada.</span><span class="sxs-lookup"><span data-stu-id="bd5df-127">This is the case of a nested relationship.</span></span>  
   
--   Cuando un agente de escucha empieza a procesar datos de transporte, crea un nuevo subproceso y da a la actividad Recibir Bytes el contexto adecuado para procesar, es decir, pasar control y datos.  Cuando ese subproceso ha finalizado el procesamiento de la solicitud, la actividad Recibir Bytes no devuelve nada al agente de escucha.  En este caso, tenemos una transferencia de entrada pero ninguna de salida en la nueva actividad de subproceso.  Las dos actividades se relacionan pero no están anidadas.  
+-   <span data-ttu-id="bd5df-128">Cuando un agente de escucha empieza a procesar datos de transporte, crea un nuevo subproceso y da a la actividad Recibir Bytes el contexto adecuado para procesar, es decir, pasar control y datos.</span><span class="sxs-lookup"><span data-stu-id="bd5df-128">When a listener starts processing transport data, it creates a new thread and hands to the Receive Bytes activity the appropriate context for processing, passing control and data.</span></span> <span data-ttu-id="bd5df-129">Cuando ese subproceso ha finalizado el procesamiento de la solicitud, la actividad Recibir Bytes no devuelve nada al agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="bd5df-129">When that thread has finished processing the request, the Receive Bytes activity passes nothing back to the listener.</span></span> <span data-ttu-id="bd5df-130">En este caso, tenemos una transferencia de entrada pero ninguna de salida en la nueva actividad de subproceso.</span><span class="sxs-lookup"><span data-stu-id="bd5df-130">In this case, we have a transfer in but no transfer out of the new thread activity.</span></span> <span data-ttu-id="bd5df-131">Las dos actividades se relacionan pero no están anidadas.</span><span class="sxs-lookup"><span data-stu-id="bd5df-131">The two activities are related but not nested.</span></span>  
   
-## Secuencia de transferencia de actividad  
- Una secuencia de transferencia de actividad bien formada incluye los pasos siguientes.  
+## <a name="activity-transfer-sequence"></a><span data-ttu-id="bd5df-132">Secuencia de transferencia de actividad</span><span class="sxs-lookup"><span data-stu-id="bd5df-132">Activity Transfer Sequence</span></span>  
+ <span data-ttu-id="bd5df-133">Una secuencia de transferencia de actividad bien formada incluye los pasos siguientes.</span><span class="sxs-lookup"><span data-stu-id="bd5df-133">A well-formed activity transfer sequence includes the following steps.</span></span>  
   
-1.  Comenzar una nueva actividad, que consiste en seleccionar un nuevo gAId.  
+1.  <span data-ttu-id="bd5df-134">Comenzar una nueva actividad, que consiste en seleccionar un nuevo gAId.</span><span class="sxs-lookup"><span data-stu-id="bd5df-134">Begin a new activity, which consists of selecting a new gAId.</span></span>  
   
-2.  Emitir un seguimiento de transferencia a ese nuevo gAId desde el id. de actividad actual  
+2.  <span data-ttu-id="bd5df-135">Emitir un seguimiento de transferencia a ese nuevo gAId desde el id. de actividad actual</span><span class="sxs-lookup"><span data-stu-id="bd5df-135">Emit a transfer trace to that new gAId from the current activity ID</span></span>  
   
-3.  Establecer el nuevo id. en TLS  
+3.  <span data-ttu-id="bd5df-136">Establecer el nuevo id. en TLS</span><span class="sxs-lookup"><span data-stu-id="bd5df-136">Set the new ID in TLS</span></span>  
   
-4.  Emitir un seguimiento de inicio para indicar el principio de la nueva actividad.  
+4.  <span data-ttu-id="bd5df-137">Emitir un seguimiento de inicio para indicar el principio de la nueva actividad.</span><span class="sxs-lookup"><span data-stu-id="bd5df-137">Emit a start trace to indicate the beginning of the new activity by.</span></span>  
   
-5.  Volver a la actividad original consiste en lo siguiente:  
+5.  <span data-ttu-id="bd5df-138">Volver a la actividad original consiste en lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="bd5df-138">Return to the original activity consists of the following:</span></span>  
   
-6.  Emitir un seguimiento de transferencia al gAId original  
+6.  <span data-ttu-id="bd5df-139">Emitir un seguimiento de transferencia al gAId original</span><span class="sxs-lookup"><span data-stu-id="bd5df-139">Emit a transfer trace to the original gAId</span></span>  
   
-7.  Emitir un seguimiento de detención para indicar el fin de la nueva actividad  
+7.  <span data-ttu-id="bd5df-140">Emitir un seguimiento de detención para indicar el fin de la nueva actividad</span><span class="sxs-lookup"><span data-stu-id="bd5df-140">Emit a Stop trace to indicate the end of the new activity</span></span>  
   
-8.  Establecer TLS en el gAId anterior.  
+8.  <span data-ttu-id="bd5df-141">Establecer TLS en el gAId anterior.</span><span class="sxs-lookup"><span data-stu-id="bd5df-141">Set TLS to the old gAId.</span></span>  
   
- En el ejemplo de código siguiente se muestra cómo utilizar este recurso.  Este ejemplo supone que se realiza una llamada de bloqueo al transferir a la nueva actividad, e incluye seguimientos de suspensión\/reanudación.  
+ <span data-ttu-id="bd5df-142">En el ejemplo de código siguiente se muestra cómo utilizar este recurso.</span><span class="sxs-lookup"><span data-stu-id="bd5df-142">The following code example demonstrates how to do this.</span></span> <span data-ttu-id="bd5df-143">Este ejemplo supone que se realiza una llamada de bloqueo al transferir a la nueva actividad, e incluye seguimientos de suspensión/reanudación.</span><span class="sxs-lookup"><span data-stu-id="bd5df-143">This sample assumes a blocking call is made when transferring to the new activity, and includes suspend/resume traces.</span></span>  
   
 ```  
 // 0. Create a trace source  
-TraceSource ts = new TraceSource(“myTS”);  
-// 1. remember existing (“ambient”) activity for clean up  
+TraceSource ts = new TraceSource("myTS");  
+// 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
 Guid newGuid = Guid.NewGuid();   
@@ -98,8 +101,8 @@ Trace.CorrelationManager.ActivityId = oldGuid;
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## Vea también  
- [Configurar seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)   
- [Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)   
- [Escenarios de seguimiento de traza de un extremo a otro](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)   
- [Herramienta del visor de seguimiento de servicio \(SvcTraceViewer.exe\)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="bd5df-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="bd5df-144">See Also</span></span>  
+ [<span data-ttu-id="bd5df-145">Configuración del seguimiento</span><span class="sxs-lookup"><span data-stu-id="bd5df-145">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [<span data-ttu-id="bd5df-146">Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas</span><span class="sxs-lookup"><span data-stu-id="bd5df-146">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [<span data-ttu-id="bd5df-147">Escenarios de seguimiento de extremo a extremo</span><span class="sxs-lookup"><span data-stu-id="bd5df-147">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [<span data-ttu-id="bd5df-148">Herramienta del visor de seguimiento de servicio (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="bd5df-148">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

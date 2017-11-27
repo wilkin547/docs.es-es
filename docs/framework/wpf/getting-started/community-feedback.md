@@ -1,191 +1,194 @@
 ---
-title: "Comentarios de la comunidad de WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "blogs para enviar comentarios"
-  - "descripciones de errores"
-  - "recursos de la comunidad"
-  - "centro de comentarios"
-  - "foros"
-  - "centro de comentarios del producto Microsoft"
-  - "centro de comentarios del producto"
-  - "blogs para enviar comentarios"
+title: Comentarios de la comunidad de WPF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Feedback Center [WPF]
+- Microsoft Product Feedback Center [WPF]
+- community resources [WPF]
+- forums [WPF]
+- blogs for feedback [WPF]
+- weblogs for feedback [WPF]
+- Product Feedback Center [WPF]
+- bug descriptions [WPF]
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cec4326c8ae93507ee94c0b9573e679c8584a77
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Comentarios de la comunidad de WPF
-[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] expone diversos recursos de la comunidad para que obtenga información sobre ellos, los discuta y proporcione comentarios en [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], incluyendo blogs generados por miembros del equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y coordinadores de la comunidad, foros y el Centro de comentarios del producto [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)].  Cada recurso de comunidad proporciona un conjunto diferente de ventajas.  Estas ventajas se describen aquí, así como un conjunto de procedimientos recomendados para asegurarse la mejor respuesta de la comunidad en general y de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] en particular.  
+# <a name="wpf-community-feedback"></a><span data-ttu-id="d3a56-102">Comentarios de la comunidad de WPF</span><span class="sxs-lookup"><span data-stu-id="d3a56-102">WPF Community Feedback</span></span>
+[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]<span data-ttu-id="d3a56-103"> ofrece una amplia gama de recursos de comunidad que le ayudarán a conocer, analizar y proporcionar comentarios sobre [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], incluidos los blogs de los miembros del equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y líderes de la comunidad, los foros y el centro de comentarios del producto de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-103"> exposes a variety of community resources for you to learn about, discuss, and provide feedback on [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], including blogs produced by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team members and community leaders, forums, and the [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] Product Feedback Center.</span></span> <span data-ttu-id="d3a56-104">Cada recurso de comunidad proporciona un conjunto diferente de ventajas.</span><span class="sxs-lookup"><span data-stu-id="d3a56-104">Each community resource offers a different set of benefits.</span></span> <span data-ttu-id="d3a56-105">Estas ventajas se describen aquí, así como un conjunto de procedimientos recomendados para asegurarse la mejor respuesta de la comunidad en general y de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] en particular.</span><span class="sxs-lookup"><span data-stu-id="d3a56-105">These benefits are described here, as are a set of best practices for using each to ensure the best response from the community at large and [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] in particular.</span></span>  
   
 > [!NOTE]
->  No utilice el vínculo **comentarios** que se encuentra en la parte inferior de cada página para enviar comentarios sobre el producto.  Estos vínculos son solamente para comentarios de documentación.  
+>  <span data-ttu-id="d3a56-106">No utilice el vínculo **comentarios** ubicado en la parte inferior de cada página para enviar comentarios sobre el producto.</span><span class="sxs-lookup"><span data-stu-id="d3a56-106">Do not use the **comments** link located at the bottom of each page to send product feedback.</span></span> <span data-ttu-id="d3a56-107">Estos vínculos son solo para comentarios sobre la documentación.</span><span class="sxs-lookup"><span data-stu-id="d3a56-107">These links are for documentation feedback only.</span></span>  
   
-   
+ 
   
 <a name="Blogs"></a>   
-## Blogs  
- Los miembros del equipo de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y los coordinadores de la comunidad crean una variedad de [blogs](http://go.microsoft.com/fwlink/?LinkId=98852) que tratan sobre [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en general o sobre subconjuntos específicos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  El contenido generalmente va de los desarrollos de productos, motivaciones y filosofías, a la discusión detallada de escenarios concretos, problemas y [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].  Además, puede discutir o profundizar más sobre los envíos que le interesen con las personas que mejor conocen la plataforma.  
+## <a name="blogs"></a><span data-ttu-id="d3a56-108">Blogs</span><span class="sxs-lookup"><span data-stu-id="d3a56-108">Blogs</span></span>  
+ <span data-ttu-id="d3a56-109">Los miembros del equipo y líderes de la comunidad de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)][!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] crean una variedad de [blogs](http://go.microsoft.com/fwlink/?LinkId=98852) que abordan [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en general o subconjuntos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] específicamente.</span><span class="sxs-lookup"><span data-stu-id="d3a56-109">[!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team members and community leaders author a variety of [blogs](http://go.microsoft.com/fwlink/?LinkId=98852) that target [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in general or subsets of [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] specifically.</span></span> <span data-ttu-id="d3a56-110">El contenido por lo general va de los desarrollos de productos, motivaciones y filosofías a obtener información detallada de escenarios concretos, problemas y [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-110">Content generally ranges from product developments, motivations, and philosophies, to detailed discussion of specific scenarios, issues, and [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)].</span></span> <span data-ttu-id="d3a56-111">Además, puede debatir o profundizar más sobre las publicaciones que le interesen con personas que comprenden más profundamente la plataforma.</span><span class="sxs-lookup"><span data-stu-id="d3a56-111">Additionally, you can discuss or inquire further about posts that interest you with people who have the deepest understanding of the platform.</span></span>  
   
 <a name="Forums"></a>   
-## Foros  
- El [foro de WPF](http://go.microsoft.com/fwlink/?LinkID=187440) \(y el [foro](http://go.microsoft.com/fwlink/?LinkId=98855) de [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64\) son el principal recurso para discutir y resolver problemas.  Los foros facilitan la discusión y resolución de problemas proporcionando un conjunto completo de características de soporte, que incluyen:  
+## <a name="forums"></a><span data-ttu-id="d3a56-112">Foros</span><span class="sxs-lookup"><span data-stu-id="d3a56-112">Forums</span></span>  
+ <span data-ttu-id="d3a56-113">El [foro de WPF](http://go.microsoft.com/fwlink/?LinkID=187440) (y el [foro](http://go.microsoft.com/fwlink/?LinkId=98855) para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64) es el principal recurso de la comunidad para debatir y resolver problemas.</span><span class="sxs-lookup"><span data-stu-id="d3a56-113">The [WPF forum](http://go.microsoft.com/fwlink/?LinkID=187440) (and the [forum](http://go.microsoft.com/fwlink/?LinkId=98855) for [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 64) is the primary community resource for discussing and resolving issues.</span></span> <span data-ttu-id="d3a56-114">Los foros facilitan el debate y la resolución de problemas al ofrecer un conjunto completo de características de compatibilidad que incluyen:</span><span class="sxs-lookup"><span data-stu-id="d3a56-114">Forums facilitate discussion and problem resolution by offering a comprehensive set of supporting features that include:</span></span>  
   
--   Búsqueda.  
+-   <span data-ttu-id="d3a56-115">Búsqueda.</span><span class="sxs-lookup"><span data-stu-id="d3a56-115">Searching.</span></span>  
   
--   Seguimiento de discusiones.  
+-   <span data-ttu-id="d3a56-116">Seguimiento de debates.</span><span class="sxs-lookup"><span data-stu-id="d3a56-116">Discussion tracking.</span></span>  
   
--   Formato enriquecido para texto y código.  
+-   <span data-ttu-id="d3a56-117">Formato enriquecido para texto y código.</span><span class="sxs-lookup"><span data-stu-id="d3a56-117">Rich formatting for text and code.</span></span>  
   
--   Integración con [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+-   <span data-ttu-id="d3a56-118">Integración de [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-118">[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] integration.</span></span>  
   
--   Profesional más valorado \(Most Valued Professional, MVP\) e implicación de la comunidad.  
+-   <span data-ttu-id="d3a56-119">Implicación de los profesionales más valiosos (MVP) y de la comunidad.</span><span class="sxs-lookup"><span data-stu-id="d3a56-119">Most Valued Professional (MVP) and community involvement.</span></span>  
   
--   Supervisión para garantizar que se responde a los envíos de la manera más rápida posible.  
+-   <span data-ttu-id="d3a56-120">Supervisión para asegurarse de que las publicaciones se responden en el menor tiempo posible.</span><span class="sxs-lookup"><span data-stu-id="d3a56-120">Monitoring to ensure posts are responded to in the quickest possible time.</span></span>  
   
- Tenga en cuenta que aunque un problema puede estar relacionado con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], puede que el foro [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] no sea el lugar más adecuado para tratarlo.  Por ejemplo, es posible que el problema sea específico de una herramienta [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] como [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858), [Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859) y [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860).  En estos casos, debe utilizar los [foros comunitarios de expresión](http://go.microsoft.com/fwlink/?LinkId=98861).  
+ <span data-ttu-id="d3a56-121">Tenga en cuenta que, aunque el problema puede estar relacionado con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el foro de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] podría no ser el lugar más adecuado para tratarlo.</span><span class="sxs-lookup"><span data-stu-id="d3a56-121">Note that while an issue may be [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-related, the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum might not be the most appropriate place to raise it.</span></span> <span data-ttu-id="d3a56-122">Por ejemplo, el problema podría ser específico para una herramienta de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], como [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858), [Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859) y [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860).</span><span class="sxs-lookup"><span data-stu-id="d3a56-122">For example, your issue might be specific to a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] tool such as [Expression Blend](http://go.microsoft.com/fwlink/?LinkId=98858), [Expression Web](http://go.microsoft.com/fwlink/?LinkId=98859), and [Expression Design](http://go.microsoft.com/fwlink/?LinkId=98860).</span></span> <span data-ttu-id="d3a56-123">En estos casos, debe utilizar los [foros de comunidad de Expression](http://go.microsoft.com/fwlink/?LinkId=98861) correspondientes.</span><span class="sxs-lookup"><span data-stu-id="d3a56-123">In these cases, you should use the appropriate [Expression Community forums](http://go.microsoft.com/fwlink/?LinkId=98861).</span></span>  
   
-### Procedimientos recomendados del foro  
- El uso de los procedimientos recomendados siguientes ayuda a resolver problemas publicados en el foro [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en el menor tiempo posible.  Estos procedimientos son aplicables a todos los foros.  
+### <a name="forum-best-practices"></a><span data-ttu-id="d3a56-124">Procedimientos recomendados en los foros</span><span class="sxs-lookup"><span data-stu-id="d3a56-124">Forum Best Practices</span></span>  
+ <span data-ttu-id="d3a56-125">El uso de los siguientes procedimientos recomendados ayudan a resolver problemas publicados en el foro de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en el menor tiempo posible.</span><span class="sxs-lookup"><span data-stu-id="d3a56-125">Using the following best practices help to address issues posted to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum in the quickest possible time.</span></span> <span data-ttu-id="d3a56-126">Estos procedimientos se aplican a todos los foros.</span><span class="sxs-lookup"><span data-stu-id="d3a56-126">These practices are applicable to all forums.</span></span>  
   
-#### Buscar envíos existentes  
- Algunos problemas se producen con la suficiente frecuencia como para que otros los hayan afrontado antes que usted.  Por consiguiente, podrá resolver rápidamente el problema o agregar información a una discusión existente.  
+#### <a name="search-existing-posts"></a><span data-ttu-id="d3a56-127">Buscar publicaciones existentes</span><span class="sxs-lookup"><span data-stu-id="d3a56-127">Search Existing Posts</span></span>  
+ <span data-ttu-id="d3a56-128">Algunos problemas se producen con tanta frecuencia que otras personas ya se han enfrentado antes a ellos.</span><span class="sxs-lookup"><span data-stu-id="d3a56-128">Some issues occur widely enough that others have faced them before you.</span></span> <span data-ttu-id="d3a56-129">Por consiguiente, puede resolver el problema rápidamente, o puede agregar su entrada a una discusión existente.</span><span class="sxs-lookup"><span data-stu-id="d3a56-129">Consequently, you can solve your problem quickly, or you can add your input to an existing discussion.</span></span>  
   
-#### Utilizar títulos significativos  
- Los títulos concisos, significativos mejoran la detectabilidad de los envíos y facilitan a los demás miembros de la comunidad de foros de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] la tarea de determinar si pueden resolver el problema.  
+#### <a name="use-meaningful-titles"></a><span data-ttu-id="d3a56-130">Utilizar títulos significativos</span><span class="sxs-lookup"><span data-stu-id="d3a56-130">Use Meaningful Titles</span></span>  
+ <span data-ttu-id="d3a56-131">Los títulos concisos y significativos mejoran la detectabilidad de sus publicaciones y facilitan a los otros miembros de la comunidad del foro [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] determinar si puede resolver el problema.</span><span class="sxs-lookup"><span data-stu-id="d3a56-131">Concise, meaningful titles improve the discoverability of your posts, and make it easier for other [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum community members to determine if they can solve your problem.</span></span>  
   
-#### Incluir el contenido adecuado  
- Debe describir el problema y cómo ha intentado resolverlo.  Si es posible, incluya como ayuda fragmentos de código o el ejemplo más simple posible que muestre el problema.  Todos estos detalles contribuyen a aumentar la probabilidad de que se responda rápidamente a la pregunta.  
+#### <a name="include-appropriate-content"></a><span data-ttu-id="d3a56-132">Incluir contenido adecuado</span><span class="sxs-lookup"><span data-stu-id="d3a56-132">Include Appropriate Content</span></span>  
+ <span data-ttu-id="d3a56-133">Debe describir el problema y cómo ha intentado resolverlo.</span><span class="sxs-lookup"><span data-stu-id="d3a56-133">You should describe the issue and how you’ve tried to work through it.</span></span> <span data-ttu-id="d3a56-134">Si es posible, incluya fragmentos de código adicionales o el ejemplo más sencillo posible que muestre el problema.</span><span class="sxs-lookup"><span data-stu-id="d3a56-134">If possible, include supporting code snippets, or the simplest possible sample that demonstrates your issue.</span></span> <span data-ttu-id="d3a56-135">Todos estos detalles contribuyen a aumentar las posibilidades de que su pregunta se responda rápidamente.</span><span class="sxs-lookup"><span data-stu-id="d3a56-135">All these details help to increase the chance your question will be answered quickly.</span></span>  
   
- Encontrará un conjunto completo de procedimientos recomendados [en línea](http://www.microsoft.com/wn3/locales/help/help_en-us.htm).  
+ <span data-ttu-id="d3a56-136">Encontrará un conjunto completo de procedimientos recomendados de los foros [en línea](http://www.microsoft.com/wn3/locales/help/help_en-us.htm).</span><span class="sxs-lookup"><span data-stu-id="d3a56-136">A complete set of forum best practices can be found [online](http://www.microsoft.com/wn3/locales/help/help_en-us.htm).</span></span>  
   
 <a name="Product_Feedback_Center"></a>   
-## Centro de comentarios del producto  
- Los problemas, a veces, pueden ser difíciles de resolver o irresolubles.  Tales situaciones se presentan debido a errores en la tecnología, dificultades en la aplicación de la tecnología a escenarios determinados o falta de compatibilidad para escenarios determinados.  Esta información es importante para [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] y puede proporcionarse a través del [Centro de comentarios del producto](http://go.microsoft.com/fwlink/?LinkId=99381).  
+## <a name="product-feedback-center"></a><span data-ttu-id="d3a56-137">centro de comentarios del producto</span><span class="sxs-lookup"><span data-stu-id="d3a56-137">Product Feedback Center</span></span>  
+ <span data-ttu-id="d3a56-138">A veces los problemas pueden ser difíciles de resolver o irresolubles.</span><span class="sxs-lookup"><span data-stu-id="d3a56-138">Issues can sometimes be difficult to resolve, or irresolvable.</span></span> <span data-ttu-id="d3a56-139">Tales situaciones se presentan debido a errores de tecnología, dificultades para aplicar la tecnología a escenarios determinados o a la falta de compatibilidad con escenarios concretos.</span><span class="sxs-lookup"><span data-stu-id="d3a56-139">Such situations arise because of bugs in the technology, difficulties applying the technology to particular scenarios, or lack of support for particular scenarios.</span></span> <span data-ttu-id="d3a56-140">Esta información es importante para [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] y puede proporcionarse a través del [centro de comentarios del producto](http://go.microsoft.com/fwlink/?LinkId=99381).</span><span class="sxs-lookup"><span data-stu-id="d3a56-140">This information is important to [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)], and can be provided via the [Product Feedback Center](http://go.microsoft.com/fwlink/?LinkId=99381).</span></span>  
   
- Los elementos enviados al Centro de comentarios del producto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se enrutan a la base de datos de errores interna del equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Por consiguiente, es la manera más confiable de hacer llegar comentarios al responsable de la característica de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Además, puede validar y hacer un seguimiento de las sugerencias y los errores, así como votar, lo que ayuda al equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] a clasificar por orden de prioridad los problemas.  
+ <span data-ttu-id="d3a56-141">Los artículos publicados en el centro de comentarios del producto de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se enrutan a la base de datos de errores internos del equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-141">Items posted on the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Product Feedback Center are routed to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team's internal bug database.</span></span> <span data-ttu-id="d3a56-142">En consecuencia, es la forma más fiable de obtener sus comentarios al propietario de la característica de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-142">Consequently, it is the most reliable way to get your feedback to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] feature owner.</span></span> <span data-ttu-id="d3a56-143">Además, puede validar y realizar un seguimiento de los errores y sugerencias, así como votarlo, lo que ayuda al equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] a priorizar los problemas.</span><span class="sxs-lookup"><span data-stu-id="d3a56-143">In addition, you can validate and track suggestions and bugs as well as vote on them, which helps the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team to prioritize issues.</span></span>  
   
-### Procedimientos recomendados del Centro de comentarios del producto de WPF  
- Al hacer un envío al Centro de comentarios del producto de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], se recomienda buscar envíos existentes, y proporcionar un título significativo y contenido adecuado, al igual que para hacer envíos al foro de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  A continuación se muestran procedimientos recomendados adicionales que también debería emplear.  
+### <a name="wpf-product-feedback-center-best-practices"></a><span data-ttu-id="d3a56-144">Prácticas recomendadas del centro de comentarios del producto de WPF</span><span class="sxs-lookup"><span data-stu-id="d3a56-144">WPF Product Feedback Center Best Practices</span></span>  
+ <span data-ttu-id="d3a56-145">Publicar en el centro de comentarios de productos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], buscar publicaciones existentes, proporcionar un título significativo y contenido adecuado son importantes procedimientos recomendados, tal como aparecen en su publicación en el foro de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-145">When posting to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Product Feedback Center, searching existing posts, providing a meaningful title and appropriate content are important best practices, just as they are for posting to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] forum.</span></span> <span data-ttu-id="d3a56-146">A continuación se muestran los procedimientos recomendados adicionales que también debería emplear.</span><span class="sxs-lookup"><span data-stu-id="d3a56-146">The following are additional best practices you should also employ.</span></span>  
   
-#### Buscar envíos existentes  
- Algunos problemas se producen con la suficiente frecuencia como para que otros los hayan afrontado antes que usted.  Por consiguiente, podrá resolver rápidamente el problema o agregar información a una discusión existente.  
+#### <a name="search-existing-posts"></a><span data-ttu-id="d3a56-147">Buscar publicaciones existentes</span><span class="sxs-lookup"><span data-stu-id="d3a56-147">Search Existing Posts</span></span>  
+ <span data-ttu-id="d3a56-148">Algunos problemas se producen con tanta frecuencia que otras personas ya se han enfrentado antes a ellos.</span><span class="sxs-lookup"><span data-stu-id="d3a56-148">Some issues occur widely enough that others have faced them before you.</span></span> <span data-ttu-id="d3a56-149">Por consiguiente, puede resolver el problema rápidamente, o puede agregar su entrada a una discusión existente.</span><span class="sxs-lookup"><span data-stu-id="d3a56-149">Consequently, you can solve your problem quickly, or you can add your input to an existing discussion.</span></span>  
   
-#### Utilizar títulos significativos  
- Los títulos concisos, significativos aumentan la oportunidad que el problema se dirija al equipo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] más adecuado en el menor periodo de tiempo.  Esto es particularmente importante para una tecnología como [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], que contiene muchas características relacionadas.  
+#### <a name="use-meaningful-titles"></a><span data-ttu-id="d3a56-150">Utilizar títulos significativos</span><span class="sxs-lookup"><span data-stu-id="d3a56-150">Use Meaningful Titles</span></span>  
+ <span data-ttu-id="d3a56-151">Los títulos concisos y significativos aumentan la posibilidad de que el problema se dirija al equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] más adecuado en el menor plazo de tiempo.</span><span class="sxs-lookup"><span data-stu-id="d3a56-151">Concise, meaningful titles increase the chance that your issue is directed to the most appropriate [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team in the shortest amount of time.</span></span> <span data-ttu-id="d3a56-152">Esto es especialmente importante para una tecnología como [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], que contiene muchas características interrelacionadas.</span><span class="sxs-lookup"><span data-stu-id="d3a56-152">This is particularly important for a technology like [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], which contains many interrelated features.</span></span>  
   
-#### Describir cómo reproducir el error  
- Al exponer un error, es importante incluir lo siguiente cuando sea pertinente:  
+#### <a name="describe-how-to-reproduce-your-bug"></a><span data-ttu-id="d3a56-153">Describir cómo se reproduce el error</span><span class="sxs-lookup"><span data-stu-id="d3a56-153">Describe How to Reproduce Your Bug</span></span>  
+ <span data-ttu-id="d3a56-154">Al publicar sobre un error, es importante incluir lo siguiente cuando corresponda:</span><span class="sxs-lookup"><span data-stu-id="d3a56-154">When you post about a bug, it is important to include the following where relevant:</span></span>  
   
--   Proporcione una descripción clara del error.  
+-   <span data-ttu-id="d3a56-155">Proporcione una descripción clara del error.</span><span class="sxs-lookup"><span data-stu-id="d3a56-155">Provide a clear description of the bug.</span></span>  
   
--   Utilice fragmentos de código para complementar la descripción del error.  
+-   <span data-ttu-id="d3a56-156">Utilice fragmentos de código para respaldar la descripción del error.</span><span class="sxs-lookup"><span data-stu-id="d3a56-156">Use code snippets to support the bug description.</span></span>  
   
--   Proporcione una lista de pasos que muestren cómo reproducir el error.  
+-   <span data-ttu-id="d3a56-157">Proporcione una lista de pasos que muestren cómo reproducir el error.</span><span class="sxs-lookup"><span data-stu-id="d3a56-157">Provide a list of steps that demonstrate how to reproduce the bug.</span></span>  
   
--   Incluya el menor ejemplo de código posible que reproduzca el error.  
+-   <span data-ttu-id="d3a56-158">Incluya el código de ejemplo más pequeño posible que reproduzca el error.</span><span class="sxs-lookup"><span data-stu-id="d3a56-158">Include the smallest possible code sample that reproduces the bug.</span></span>  
   
--   Menciones si el error es reproducible coherentemente o no.  
+-   <span data-ttu-id="d3a56-159">Mencione si el error se puede reproducir consistentemente o no.</span><span class="sxs-lookup"><span data-stu-id="d3a56-159">Mention whether the bug is consistently reproducible or not.</span></span>  
   
--   Incluya la información de excepción pertinente.  
+-   <span data-ttu-id="d3a56-160">Incluya la información de excepciones pertinente.</span><span class="sxs-lookup"><span data-stu-id="d3a56-160">Include relevant exception information.</span></span>  
   
- Si el error está relacionado con la instalación o la configuración, adjunte los registros es instantáneas de instalación pertinentes \(archivos prefijados con "dd\_" que se encuentran en la carpeta %temp%\).  
+ <span data-ttu-id="d3a56-161">Si el error está relacionado con la instalación o configuración, adjunte los registros de instalación pertinentes y las instantáneas (archivos prefijados con "dd_" que se encuentran en la carpeta %temp%).</span><span class="sxs-lookup"><span data-stu-id="d3a56-161">If the bug is install or setup related, attach the relevant install logs and snapshots (files prefixed with "dd_" that are located in your %temp% folder).</span></span>  
   
- Para problemas de compilación o generación, adjunte los registros de compilación.  El sistema MSBuild se puede configurar para que admita el registro con diferentes niveles de detalle utilizando el modificador \/v: desde la línea de comandos o configurando el nivel adecuado desde un [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] como [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+ <span data-ttu-id="d3a56-162">En el caso de problemas de compilación, adjunte los registros de compilación.</span><span class="sxs-lookup"><span data-stu-id="d3a56-162">For compile or build issues, attach the build logs.</span></span> <span data-ttu-id="d3a56-163">El sistema de MSBuild puede configurarse para admitir el registro con diferentes niveles de detalle mediante el uso del modificador/v: desde la línea de comandos o configurando el nivel adecuado desde un [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] como [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-163">The MSBuild system can be configured to supports logging with various verbosities by using the /v: switch from the command line or by configuring the appropriate level from an [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] like [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].</span></span>  
   
-#### Proporcionar información de entorno  
- La información adicional puede ser útil a menudo para agregar el contexto al envío.  En particular, mencione la plataforma del sistema operativo, la familia del procesador y la arquitectura, por ejemplo "Windows XP SP2, Pentium III, x86".  
+#### <a name="provide-environment-information"></a><span data-ttu-id="d3a56-164">Proporcionar información de entorno</span><span class="sxs-lookup"><span data-stu-id="d3a56-164">Provide Environment Information</span></span>  
+ <span data-ttu-id="d3a56-165">La información general puede resultar útil para agregar contexto a su publicación.</span><span class="sxs-lookup"><span data-stu-id="d3a56-165">Background information can often be useful for adding context to your post.</span></span> <span data-ttu-id="d3a56-166">En particular, mencione la plataforma del sistema operativo, la familia de procesadores y la arquitectura, por ejemplo, "Windows XP SP2, Pentium III, x86".</span><span class="sxs-lookup"><span data-stu-id="d3a56-166">In particular, mention the operating system platform, processor family, and architecture, such as "Windows XP SP2, Pentium III, x86".</span></span>  
   
- Si el problema que está exponiendo está relacionado con la representación, también debe incluir información sobre la tarjeta gráfica y el controlador, si es posible.  Esta información es importante porque [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] es un marco de presentación.  
+ <span data-ttu-id="d3a56-167">Si el problema que está publicando está relacionado con la representación, también debe incluir detalles de tarjeta y del controlador de gráficos, si es posible.</span><span class="sxs-lookup"><span data-stu-id="d3a56-167">If the issue you are posting about is related to rendering, you should also include graphics card and driver details, if possible.</span></span> <span data-ttu-id="d3a56-168">Esta información es importante porque [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] es un marco de presentación.</span><span class="sxs-lookup"><span data-stu-id="d3a56-168">This information is important because [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] is a presentation framework.</span></span>  
   
-#### Proporcione información sobre la solución o el proyecto  
- Los errores pueden ser de las herramientas utilizadas para desarrollar y compilar las aplicaciones y los tipos de aplicación que esté compilando.  Por consiguiente, puede ser útil especificar:  
+#### <a name="provide-solution-or-project-information"></a><span data-ttu-id="d3a56-169">Proporcionar información del proyecto o soluciones</span><span class="sxs-lookup"><span data-stu-id="d3a56-169">Provide Solution or Project Information</span></span>  
+ <span data-ttu-id="d3a56-170">Los errores pueden pertenecer a las herramientas utilizadas para desarrollar y compilar las aplicaciones y los tipos de aplicaciones que se va a compilar.</span><span class="sxs-lookup"><span data-stu-id="d3a56-170">Bugs may pertain to the tools used to develop and build your applications and the types of applications you are building.</span></span> <span data-ttu-id="d3a56-171">Por lo tanto, puede ser útil especificar:</span><span class="sxs-lookup"><span data-stu-id="d3a56-171">Consequently, it can be useful to specify:</span></span>  
   
--   El tipo de aplicación que se está compilando, como:  
+-   <span data-ttu-id="d3a56-172">El tipo de aplicación que está creando, como:</span><span class="sxs-lookup"><span data-stu-id="d3a56-172">The type of application you are building, such as:</span></span>  
   
-    -   Aplicación \(.exe\) o biblioteca \(.dll\).  
+    -   <span data-ttu-id="d3a56-173">Aplicación (.exe) o biblioteca (.dll).</span><span class="sxs-lookup"><span data-stu-id="d3a56-173">Application (.exe) or library (.dll).</span></span>  
   
-    -   La aplicación de explorador de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] \(XBAP\).  
+    -   <span data-ttu-id="d3a56-174">Aplicación del explorador [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (XBAP).</span><span class="sxs-lookup"><span data-stu-id="d3a56-174">[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] browser application (XBAP).</span></span>  
   
-    -   Aplicación [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] separada.  
+    -   <span data-ttu-id="d3a56-175">Aplicación [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] flexible.</span><span class="sxs-lookup"><span data-stu-id="d3a56-175">Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] application.</span></span>  
   
-    -   Aplicaciones independientes instaladas.  
+    -   <span data-ttu-id="d3a56-176">Aplicaciones instaladas independientes.</span><span class="sxs-lookup"><span data-stu-id="d3a56-176">Standalone installed applications.</span></span>  
   
-    -   Aplicaciones independientes implementadas por ClickOnce.  
+    -   <span data-ttu-id="d3a56-177">Aplicaciones independientes implementadas por ClickOnce.</span><span class="sxs-lookup"><span data-stu-id="d3a56-177">Standalone ClickOnce-deployed applications.</span></span>  
   
--   La herramienta de desarrollo, tal como:  
+-   <span data-ttu-id="d3a56-178">La herramienta de desarrollo, como:</span><span class="sxs-lookup"><span data-stu-id="d3a56-178">The development tool, such as:</span></span>  
   
-    -   MSBuild.  
+    -   <span data-ttu-id="d3a56-179">MSBuild.</span><span class="sxs-lookup"><span data-stu-id="d3a56-179">MSBuild.</span></span>  
   
-    -   Expression Graphic Designer.  
+    -   <span data-ttu-id="d3a56-180">Expression Graphic Designer.</span><span class="sxs-lookup"><span data-stu-id="d3a56-180">Expression Graphic Designer.</span></span>  
   
-    -   Expression Interactive Designer.  
+    -   <span data-ttu-id="d3a56-181">Expression Interactive Designer.</span><span class="sxs-lookup"><span data-stu-id="d3a56-181">Expression Interactive Designer.</span></span>  
   
-    -   [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+    -   [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]<span data-ttu-id="d3a56-182">.</span><span class="sxs-lookup"><span data-stu-id="d3a56-182">.</span></span>  
   
--   La configuración de solución, tal como:  
+-   <span data-ttu-id="d3a56-183">La configuración de soluciones, como:</span><span class="sxs-lookup"><span data-stu-id="d3a56-183">The solution configuration, such as:</span></span>  
   
-    -   Una solución.  
+    -   <span data-ttu-id="d3a56-184">Una solución.</span><span class="sxs-lookup"><span data-stu-id="d3a56-184">A solution.</span></span>  
   
-    -   Un proyecto único.  
+    -   <span data-ttu-id="d3a56-185">Un solo proyecto.</span><span class="sxs-lookup"><span data-stu-id="d3a56-185">A single project.</span></span>  
   
-    -   Una solución con varios proyectos dependientes.  
+    -   <span data-ttu-id="d3a56-186">Una solución con varios proyectos dependientes.</span><span class="sxs-lookup"><span data-stu-id="d3a56-186">A solution with multiple dependent projects.</span></span>  
   
--   Si la aplicación tiene recursos específicos de idioma lenguaje o neutrales respecto al idioma.  ¿Por ejemplo, especificó la propiedad de proyecto `UICulture` o metadatos adaptables para los tipos `Application`, `Page` y `Resource` ?  
+-   <span data-ttu-id="d3a56-187">Si la aplicación tiene recursos neutrales o específicos del idioma.</span><span class="sxs-lookup"><span data-stu-id="d3a56-187">Whether your application has language-specific or language-neutral resources.</span></span> <span data-ttu-id="d3a56-188">Por ejemplo, ¿especificó la propiedad del proyecto `UICulture` o metadatos localizables para los tipos `Application`, `Page` y `Resource`?</span><span class="sxs-lookup"><span data-stu-id="d3a56-188">For example, did you specify the `UICulture` project property or localizable metadata for `Application`, `Page`, and `Resource` types?</span></span>  
   
--   Si utilizó la configuración de idioma neutro en el archivo AssemblyInfo.cs o AssemblyInfo.vb.  
+-   <span data-ttu-id="d3a56-189">Si utilizó la configuración neutral de idioma en el archivo AssemblyInfo.cs o AssemblyInfo.vb.</span><span class="sxs-lookup"><span data-stu-id="d3a56-189">Whether you used the neutral language setting in the AssemblyInfo.cs or AssemblyInfo.vb file.</span></span>  
   
-#### Proporcionar información de escenario y de impacto  
- La información sobre el escenario que manifiesta el error y su impacto es muy importante para el equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] cuando decide si, cuándo y cómo se debe corregir un problema o si se puede utilizar una solución alternativa aceptable en su lugar.  
+#### <a name="provide-scenario-and-impact-information"></a><span data-ttu-id="d3a56-190">Proporcionar información de impacto y de escenario</span><span class="sxs-lookup"><span data-stu-id="d3a56-190">Provide Scenario and Impact Information</span></span>  
+ <span data-ttu-id="d3a56-191">La información sobre el escenario que manifiesta el error y su impacto es muy importante para el equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] cuando decide si, cuándo y cómo debe solucionarse un problema, o si se puede utilizar una solución alternativa aceptable en su lugar.</span><span class="sxs-lookup"><span data-stu-id="d3a56-191">Information about the scenario that manifests the bug and its impact is highly important to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team when it decides if, when, and how a problem should be fixed, or whether an acceptable workaround can be used instead.</span></span>  
   
- Normalmente, los escenarios de bloqueo y pérdida de datos son de impacto alto y, por consiguiente, más fáciles de clasificar por orden de prioridad.  Algunos errores, sin embargo, sólo se presentan en escenarios poco comunes, que también pueden ser escenarios habituales en algunos casos.  Proporcionar un contexto del escenario y del impacto ayuda al equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] a tomar decisiones correctas.  
+ <span data-ttu-id="d3a56-192">Normalmente, los escenarios de pérdida de datos y bloqueo son de alto impacto y, por lo tanto, los más fáciles para establecer prioridades.</span><span class="sxs-lookup"><span data-stu-id="d3a56-192">Ordinarily, crash and data loss scenarios are high impact and, therefore, the easiest to prioritize.</span></span> <span data-ttu-id="d3a56-193">Sin embargo, algunos errores solo aparecen en escenarios poco comunes, que también pueden ser los escenarios principales en algunos casos.</span><span class="sxs-lookup"><span data-stu-id="d3a56-193">Some bugs, however, only show up in uncommon scenarios, which may also be mainline scenarios in some cases.</span></span> <span data-ttu-id="d3a56-194">Proporcionar contexto relacionado con el escenario y el impacto ayuda al equipo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] a tomar la decisión correcta.</span><span class="sxs-lookup"><span data-stu-id="d3a56-194">Providing context around scenario and impact helps the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] team make the right decision.</span></span>  
   
 <a name="Windows_Presentation_Foundation_Community_Site"></a>   
-## Sitio de la comunidad de Windows Presentation Foundation  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] cuenta con el soporte de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] mediante un [portal para la comunidad](http://go.microsoft.com/fwlink/?LinkId=99382) que ofrece un punto de entrada único para blogs, foros y otros recursos relacionados con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+## <a name="windows-presentation-foundation-community-site"></a><span data-ttu-id="d3a56-195">Sitio de la comunidad de Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d3a56-195">Windows Presentation Foundation Community Site</span></span>  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="d3a56-196"> es compatible con [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] con un [sitio de portal de la comunidad](http://go.microsoft.com/fwlink/?LinkId=99382) que proporciona un único punto de entrada a blogs, foros y otros recursos relacionados con [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-196"> is supported by [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] with a [community portal site](http://go.microsoft.com/fwlink/?LinkId=99382) that provides a single point of entry to [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-related blogs, forums, and other resources.</span></span>  
   
 <a name="MSDN_Community_Content"></a>   
-## MSDN Community Content  
- La documentación de [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) proporciona un conjunto completo de contenidos técnicos relacionados con los escenarios básicos que habilita [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  Por supuesto, los desarrolladores del mundo real encuentran una amplia variedad de escenarios interesantes y no tan comunes y, por tanto, aprenden cosas que pueden ser útiles para la comunidad de desarrollo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en general.  
+## <a name="msdn-community-content"></a><span data-ttu-id="d3a56-197">Contenido de la comunidad MSDN</span><span class="sxs-lookup"><span data-stu-id="d3a56-197">MSDN Community Content</span></span>  
+ <span data-ttu-id="d3a56-198">La documentación de [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) proporciona un conjunto completo de contenido técnico destinado a los escenarios principales habilitados por [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d3a56-198">The [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) documentation provides a complete set of technical content that targets the core scenarios that are enabled by [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].</span></span> <span data-ttu-id="d3a56-199">Por supuesto, los desarrolladores del mundo real encuentran una amplia variedad de escenarios interesantes y no tan comunes y, por consiguiente, obtienen información sobre todo lo que puede ser beneficioso para la comunidad de desarrollo de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en general.</span><span class="sxs-lookup"><span data-stu-id="d3a56-199">Of course, developers in the real world encounter a wide variety of interesting and not-so-common scenarios and consequently learn things that could be of benefit to the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] development community at large.</span></span>  
   
- Para permitir que los desarrolladores compartan sus conocimientos y experiencia con la comunidad de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], la documentación se ha ampliado con MSDN Community Content, que permite a los desarrolladores agregar y actualizar comentarios sobre los temas conceptuales, de referencia, de procedimientos, de tutorial y de ejemplo.  
+ <span data-ttu-id="d3a56-200">Para que los desarrolladores puedan compartir sus conocimientos y experiencia con la comunidad [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], se ha ampliado la documentación con contenido de la comunidad MSDN, que permite a los desarrolladores agregar y actualizar comentarios en los temas conceptuales, de referencia, de procedimientos, tutoriales y de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="d3a56-200">To enable developers to share their knowledge and experience with the [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] community, the documentation has been augmented with MSDN Community Content, which allows developers to add and update comments on each conceptual, reference, how-to, tutorial, and sample topics.</span></span>  
   
- La ventaja de agregar información a MSDN Community Content es proporcionar un repositorio central, actual y compartido de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)], así como conocimientos y experiencia comunitarios que amplían las ventajas de la documentación en línea.  Además, el contenido se modera para garantizar que se proporciona información clara, correcta, adecuada y útil.  
+ <span data-ttu-id="d3a56-201">La ventaja de agregar información al contenido de la comunidad MSDN es ofrecer un repositorio central, actual y compartido de [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] y de los conocimientos y experiencia de la comunidad que extiende los beneficios de la documentación en línea.</span><span class="sxs-lookup"><span data-stu-id="d3a56-201">The benefit of adding information to MSDN Community Content is to provide a central, current, and shared repository of [!INCLUDE[TLA2#tla_ms](../../../../includes/tla2sharptla-ms-md.md)] and community knowledge and experience that extends the benefits of the online documentation.</span></span> <span data-ttu-id="d3a56-202">Es más, el contenido se modera para garantizar que se proporciona una información clara, correcta, apropiada y útil.</span><span class="sxs-lookup"><span data-stu-id="d3a56-202">Furthermore, the content is moderated to ensure clear, correct, appropriate, and useful information is provided.</span></span>  
   
-### ¿Qué tipo de contenido se debe agregar a MSDN Community Content?  
- MSDN Community Content está diseñado para capturar información pertinente, útil y adecuada que extiende el contenido de MSDN existente.  Los errores, comentarios, discusiones encadenadas y preguntas se deben exponer utilizando las herramientas adecuadas y más eficaces descritas anteriormente.  
+### <a name="what-type-of-content-should-be-added-to-msdn-community-content"></a><span data-ttu-id="d3a56-203">¿Qué tipo de contenido se deben agregar al contenido de la comunidad MSDN?</span><span class="sxs-lookup"><span data-stu-id="d3a56-203">What Type of Content should be added to MSDN Community Content?</span></span>  
+ <span data-ttu-id="d3a56-204">El contenido de la comunidad MSDN está pensado para capturar información pertinente, útil y adecuada que amplía el contenido MSDN existente.</span><span class="sxs-lookup"><span data-stu-id="d3a56-204">MSDN Community Content is designed to capture relevant, useful, and appropriate information that extends the existing MSDN content.</span></span> <span data-ttu-id="d3a56-205">Los errores, comentarios, discusiones encadenadas y preguntas se deben publicar mediante las herramientas apropiadas y más eficaces descritas antes.</span><span class="sxs-lookup"><span data-stu-id="d3a56-205">Bugs, feedback, threaded discussions, and questions should be posted using the appropriate, and more effective, tools, described earlier.</span></span>  
   
-### Moderación de MSDN Community Content  
- MSDN Community Content se modera para garantizar que sea adecuado.  Según lo descrito por las [Directrices de moderación de contenido](http://go.microsoft.com/fwlink/?LinkId=98864) de MSDN, los siguientes tipos de contenido se consideran inadecuados:  
+### <a name="msdn-community-content-moderation"></a><span data-ttu-id="d3a56-206">Moderación de contenido de la comunidad MSDN</span><span class="sxs-lookup"><span data-stu-id="d3a56-206">MSDN Community Content Moderation</span></span>  
+ <span data-ttu-id="d3a56-207">El contenido de la comunidad MSDN se modera para garantizar que es adecuado.</span><span class="sxs-lookup"><span data-stu-id="d3a56-207">The MSDN Community Content is moderated to ensure that the content is appropriate.</span></span> <span data-ttu-id="d3a56-208">Tal como se describe en [Content Moderation Guidelines](http://go.microsoft.com/fwlink/?LinkId=98864) (Directrices de moderación de contenido), los tipos de contenido siguientes se consideran inadecuados:</span><span class="sxs-lookup"><span data-stu-id="d3a56-208">As described by the MSDN [Content Moderation Guidelines](http://go.microsoft.com/fwlink/?LinkId=98864), the following types of content are considered inappropriate:</span></span>  
   
--   Contenido que incumpla el [Código de conducta](http://go.microsoft.com/fwlink/?LinkId=98865) de la comunidad MSDN  
+-   <span data-ttu-id="d3a56-209">El contenido que infringe el [código de conducta](http://go.microsoft.com/fwlink/?LinkId=98865) de la comunidad MSDN</span><span class="sxs-lookup"><span data-stu-id="d3a56-209">Content that violates the MSDN Community [Code of Conduct](http://go.microsoft.com/fwlink/?LinkId=98865)</span></span>  
   
--   Contenido irrelevante, incomprensible y de prueba  
+-   <span data-ttu-id="d3a56-210">Contenido irrelevante, incomprensible y de prueba</span><span class="sxs-lookup"><span data-stu-id="d3a56-210">Irrelevant, incomprehensible, and test content</span></span>  
   
--   Contenido duplicado  
+-   <span data-ttu-id="d3a56-211">Contenido duplicado</span><span class="sxs-lookup"><span data-stu-id="d3a56-211">Duplicate content</span></span>  
   
--   Correo no deseado  
+-   <span data-ttu-id="d3a56-212">Correo no deseado</span><span class="sxs-lookup"><span data-stu-id="d3a56-212">Spam</span></span>  
   
--   Comentarios sobre la documentación  
+-   <span data-ttu-id="d3a56-213">Comentarios sobre la documentación</span><span class="sxs-lookup"><span data-stu-id="d3a56-213">Documentation feedback</span></span>  
   
--   Informes de errores  
+-   <span data-ttu-id="d3a56-214">Informes de errores</span><span class="sxs-lookup"><span data-stu-id="d3a56-214">Bug reports</span></span>  
   
--   Preguntas  
+-   <span data-ttu-id="d3a56-215">Preguntas</span><span class="sxs-lookup"><span data-stu-id="d3a56-215">Questions</span></span>  
   
- Los moderadores procesarán estos tipos de contenido según las directrices de moderación de MSDN Community Content.  
+ <span data-ttu-id="d3a56-216">Los moderadores procesarán estos tipos de contenido de acuerdo con las directrices de moderación de contenido de la comunidad MSDN.</span><span class="sxs-lookup"><span data-stu-id="d3a56-216">Moderators will process these types of content according to the MSDN Community Content Moderation Guidelines.</span></span>  
   
-### Compatibilidad con idiomas de MSDN Community Content  
- MSDN Community Content está disponible en las versiones en inglés americano y portugués brasileño de MSDN Online.  Se está considerando el lanzamiento futuro de versiones en japonés, francés, alemán, italiano, español, coreano y chino, tanto simplificado como tradicional.  
+### <a name="msdn-community-content-language-support"></a><span data-ttu-id="d3a56-217">Soporte técnico de idioma del contenido de la comunidad MSDN</span><span class="sxs-lookup"><span data-stu-id="d3a56-217">MSDN Community Content Language Support</span></span>  
+ <span data-ttu-id="d3a56-218">El contenido de la comunidad MSDN solo está disponible en las versiones en inglés de Estados Unidos y en portugués de Brasil de MSDN Online.</span><span class="sxs-lookup"><span data-stu-id="d3a56-218">MSDN Community Content is available on both the US English and Brazilian Portuguese versions of MSDN Online.</span></span> <span data-ttu-id="d3a56-219">Se están pensando otras versiones para japonés, francés, alemán, italiano, español, coreano y chino tradicional y simplificado.</span><span class="sxs-lookup"><span data-stu-id="d3a56-219">Future releases are being considered for Japanese, French, German, Italian, Spanish, Korean, and both Simplified and Traditional Chinese.</span></span>  
   
-### Preguntas frecuentes sobre MSDN Community Content  
- Puede encontrar más información en MSDN Community Content [FAQ](http://go.microsoft.com/fwlink/?LinkId=98866).
+### <a name="msdn-community-content-frequently-asked-questions"></a><span data-ttu-id="d3a56-220">Preguntas más frecuentes sobre el contenido de la comunidad MSDN</span><span class="sxs-lookup"><span data-stu-id="d3a56-220">MSDN Community Content Frequently Asked Questions</span></span>  
+ <span data-ttu-id="d3a56-221">Puede encontrar más información en las [preguntas más frecuentes](http://go.microsoft.com/fwlink/?LinkId=98866) del contenido de la comunidad MSDN.</span><span class="sxs-lookup"><span data-stu-id="d3a56-221">Further information can be found in the MSDN Community Content [FAQ](http://go.microsoft.com/fwlink/?LinkId=98866).</span></span>

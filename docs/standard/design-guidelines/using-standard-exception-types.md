@@ -1,78 +1,76 @@
 ---
-title: "Uso de tipos de excepci&#243;n est&#225;ndar | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "producir excepciones, tipos estándar"
-  - "detectar excepciones"
-  - "excepciones, detectar"
-  - "excepciones, iniciar"
+title: "Usar tipos de excepciones estándar"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- throwing exceptions, standard types
+- catching exceptions
+- exceptions, catching
+- exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-caps.latest.revision: 17
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 91cd9a03ad1acf61681ecfad0edb061802c4362c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Uso de tipos de excepci&#243;n est&#225;ndar
-Esta sección describe las excepciones estándar que proporciona el marco de trabajo y los detalles de su uso. La lista no es exhaustiva. Consulte la documentación de referencia de .NET Framework para el uso de otros tipos de excepción de Framework.  
+# <a name="using-standard-exception-types"></a><span data-ttu-id="fb4d9-102">Usar tipos de excepciones estándar</span><span class="sxs-lookup"><span data-stu-id="fb4d9-102">Using Standard Exception Types</span></span>
+<span data-ttu-id="fb4d9-103">Esta sección describe las excepciones estándar que proporciona el marco de trabajo y los detalles de su uso.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-103">This section describes the standard exceptions provided by the Framework and the details of their usage.</span></span> <span data-ttu-id="fb4d9-104">La lista no es exhaustiva.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-104">The list is by no means exhaustive.</span></span> <span data-ttu-id="fb4d9-105">Consulte la documentación de referencia de .NET Framework para el uso de otros tipos de excepción de Framework.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-105">Please refer to the .NET Framework reference documentation for usage of other Framework exception types.</span></span>  
   
-## Exception y SystemException  
- **X no** throw <xref:System.Exception?displayProperty=fullName> o <xref:System.SystemException?displayProperty=fullName>.  
+## <a name="exception-and-systemexception"></a><span data-ttu-id="fb4d9-106">Exception y SystemException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-106">Exception and SystemException</span></span>  
+ <span data-ttu-id="fb4d9-107">**X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> o <xref:System.SystemException?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-107">**X DO NOT** throw <xref:System.Exception?displayProperty=nameWithType> or <xref:System.SystemException?displayProperty=nameWithType>.</span></span>  
   
- **X no** catch `System.Exception` o `System.SystemException` en el código de framework, a menos que vaya a producir.  
+ <span data-ttu-id="fb4d9-108">**X DO NOT** catch `System.Exception` o `System.SystemException` en el código de framework, a menos que vaya a producir.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-108">**X DO NOT** catch `System.Exception` or `System.SystemException` in framework code, unless you intend to rethrow.</span></span>  
   
- **Evitar X** detectar `System.Exception` o `System.SystemException`, salvo en los controladores de excepciones de nivel superior.  
+ <span data-ttu-id="fb4d9-109">**X evitar** detectar `System.Exception` o `System.SystemException`, excepto en los controladores de excepciones de nivel superior.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-109">**X AVOID** catching `System.Exception` or `System.SystemException`, except in top-level exception handlers.</span></span>  
   
-## ApplicationException  
- **X no** inicie o derive de <xref:System.ApplicationException>.  
+## <a name="applicationexception"></a><span data-ttu-id="fb4d9-110">ApplicationException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-110">ApplicationException</span></span>  
+ <span data-ttu-id="fb4d9-111">**X DO NOT** throw o derivar de <xref:System.ApplicationException>.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-111">**X DO NOT** throw or derive from <xref:System.ApplicationException>.</span></span>  
   
-## InvalidOperationException  
- **✓ hacer** producir una <xref:System.InvalidOperationException> Si el objeto está en un estado inadecuado.  
+## <a name="invalidoperationexception"></a><span data-ttu-id="fb4d9-112">InvalidOperationException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-112">InvalidOperationException</span></span>  
+ <span data-ttu-id="fb4d9-113">**✓ HACER** producir una <xref:System.InvalidOperationException> si el objeto está en un estado inadecuado.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-113">**✓ DO** throw an <xref:System.InvalidOperationException> if the object is in an inappropriate state.</span></span>  
   
-## ArgumentException, ArgumentNullException y ArgumentOutOfRangeException  
- **✓ hacer** throw <xref:System.ArgumentException> o uno de sus subtipos si se pasan argumentos incorrectos a un miembro. Preferir el tipo de excepción más derivado, si procede.  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a><span data-ttu-id="fb4d9-114">ArgumentException, ArgumentNullException y ArgumentOutOfRangeException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-114">ArgumentException, ArgumentNullException, and ArgumentOutOfRangeException</span></span>  
+ <span data-ttu-id="fb4d9-115">**✓ HACER** throw <xref:System.ArgumentException> o uno de sus subtipos si se pasan argumentos incorrectos a un miembro.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-115">**✓ DO** throw <xref:System.ArgumentException> or one of its subtypes if bad arguments are passed to a member.</span></span> <span data-ttu-id="fb4d9-116">Preferir el tipo de excepción más derivado, si procede.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-116">Prefer the most derived exception type, if applicable.</span></span>  
   
- **✓ hacer** establecer el `ParamName` propiedad cuando se produce una de las subclases de `ArgumentException`.  
+ <span data-ttu-id="fb4d9-117">**✓ HACER** establecer el `ParamName` propiedad al producir una de las subclases de `ArgumentException`.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-117">**✓ DO** set the `ParamName` property when throwing one of the subclasses of `ArgumentException`.</span></span>  
   
- Esta propiedad representa el nombre del parámetro que provocó la excepción. Tenga en cuenta que la propiedad puede establecerse utilizando una de las sobrecargas del constructor.  
+ <span data-ttu-id="fb4d9-118">Esta propiedad representa el nombre del parámetro que provocó la excepción.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-118">This property represents the name of the parameter that caused the exception to be thrown.</span></span> <span data-ttu-id="fb4d9-119">Tenga en cuenta que la propiedad puede establecerse utilizando una de las sobrecargas del constructor.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-119">Note that the property can be set using one of the constructor overloads.</span></span>  
   
- **✓ hacer** usar `value` para el nombre del parámetro de valor implícito de establecedores de propiedad.  
+ <span data-ttu-id="fb4d9-120">**✓ HACER** usar `value` para el nombre del parámetro de valor implícito de establecedores de propiedades.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-120">**✓ DO** use `value` for the name of the implicit value parameter of property setters.</span></span>  
   
-## NullReferenceException IndexOutOfRangeException y AccessViolationException  
- **X no** permiten que las API invocables públicamente explícita o implícita <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>. Estas excepciones están reservadas y producida por el motor de ejecución y suele indica un error en.  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a><span data-ttu-id="fb4d9-121">Excepción NullReferenceException, IndexOutOfRangeException y AccessViolationException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-121">NullReferenceException, IndexOutOfRangeException, and AccessViolationException</span></span>  
+ <span data-ttu-id="fb4d9-122">**X DO NOT** permitir que las API invocables públicamente explícita o implícitamente produzca <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, o <xref:System.IndexOutOfRangeException>.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-122">**X DO NOT** allow publicly callable APIs to explicitly or implicitly throw <xref:System.NullReferenceException>, <xref:System.AccessViolationException>, or <xref:System.IndexOutOfRangeException>.</span></span> <span data-ttu-id="fb4d9-123">Estas excepciones son reservadas y producida por el motor de ejecución y en que la mayoría de casos indican un error.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-123">These exceptions are reserved and thrown by the execution engine and in most cases indicate a bug.</span></span>  
   
- Realizar comprobaciones para evitar estas excepciones. Estas excepciones exponen los detalles de implementación de un método que puede cambiar con el tiempo.  
+ <span data-ttu-id="fb4d9-124">Realice la comprobación para evitar estas excepciones de argumento.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-124">Do argument checking to avoid throwing these exceptions.</span></span> <span data-ttu-id="fb4d9-125">Al iniciar estas excepciones expone los detalles de implementación del método que puede cambiar con el tiempo.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-125">Throwing these exceptions exposes implementation details of your method that might change over time.</span></span>  
   
-## StackOverflowException  
- **X no** iniciar explícitamente <xref:System.StackOverflowException>. La excepción debe producirse explícitamente sólo por CLR.  
+## <a name="stackoverflowexception"></a><span data-ttu-id="fb4d9-126">StackOverflowException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-126">StackOverflowException</span></span>  
+ <span data-ttu-id="fb4d9-127">**X DO NOT** iniciar explícitamente <xref:System.StackOverflowException>.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-127">**X DO NOT** explicitly throw <xref:System.StackOverflowException>.</span></span> <span data-ttu-id="fb4d9-128">Debe producirse explícitamente la excepción solo por CLR.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-128">The exception should be explicitly thrown only by the CLR.</span></span>  
   
- **X no** catch `StackOverflowException`.  
+ <span data-ttu-id="fb4d9-129">**X DO NOT** catch `StackOverflowException`.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-129">**X DO NOT** catch `StackOverflowException`.</span></span>  
   
- Es casi imposible escribir código administrado que siga siendo coherente en presencia de desbordamientos de pila arbitrario. Las partes no administradas de CLR siguen siendo coherentes mediante sondeos para mover los desbordamientos de pila en lugares bien definidos en lugar de reversión de desbordamientos de pila arbitrario.  
+ <span data-ttu-id="fb4d9-130">Es prácticamente imposible escribir código administrado que siga siendo coherente en presencia de desbordamientos de pila arbitrario.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-130">It is almost impossible to write managed code that remains consistent in the presence of arbitrary stack overflows.</span></span> <span data-ttu-id="fb4d9-131">Las partes no administradas de CLR permanezcan coherentes mediante sondeos para mover la pila se desborda en lugares bien definidos en lugar de realizar la copia de los desbordamientos de pila arbitrario.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-131">The unmanaged parts of the CLR remain consistent by using probes to move stack overflows to well-defined places rather than by backing out from arbitrary stack overflows.</span></span>  
   
-## OutOfMemoryException  
- **X no** iniciar explícitamente <xref:System.OutOfMemoryException>. Esta excepción es que se produzca únicamente por la infraestructura de CLR.  
+## <a name="outofmemoryexception"></a><span data-ttu-id="fb4d9-132">OutOfMemoryException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-132">OutOfMemoryException</span></span>  
+ <span data-ttu-id="fb4d9-133">**X DO NOT** iniciar explícitamente <xref:System.OutOfMemoryException>.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-133">**X DO NOT** explicitly throw <xref:System.OutOfMemoryException>.</span></span> <span data-ttu-id="fb4d9-134">Esta excepción es que se produzca únicamente por la infraestructura CLR.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-134">This exception is to be thrown only by the CLR infrastructure.</span></span>  
   
-## ExecutionEngineException, ComException y SEHException  
- **X no** iniciar explícitamente <xref:System.Runtime.InteropServices.COMException>,  <xref:System.ExecutionEngineException>, y <xref:System.Runtime.InteropServices.SEHException>. Estas excepciones son se produce únicamente por la infraestructura de CLR.  
+## <a name="comexception-sehexception-and-executionengineexception"></a><span data-ttu-id="fb4d9-135">ComException y SEHException, ExecutionEngineException</span><span class="sxs-lookup"><span data-stu-id="fb4d9-135">ComException, SEHException, and ExecutionEngineException</span></span>  
+ <span data-ttu-id="fb4d9-136">**X DO NOT** iniciar explícitamente <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, y <xref:System.Runtime.InteropServices.SEHException>.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-136">**X DO NOT** explicitly throw <xref:System.Runtime.InteropServices.COMException>,  <xref:System.ExecutionEngineException>, and <xref:System.Runtime.InteropServices.SEHException>.</span></span> <span data-ttu-id="fb4d9-137">Estas excepciones son que se produzca únicamente por la infraestructura CLR.</span><span class="sxs-lookup"><span data-stu-id="fb4d9-137">These exceptions are to be thrown only by the CLR infrastructure.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="fb4d9-138">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="fb4d9-138">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="fb4d9-139">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="fb4d9-139">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)   
- [Instrucciones de diseño para excepciones](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a><span data-ttu-id="fb4d9-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="fb4d9-140">See Also</span></span>  
+ [<span data-ttu-id="fb4d9-141">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="fb4d9-141">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="fb4d9-142">Instrucciones de diseño para excepciones</span><span class="sxs-lookup"><span data-stu-id="fb4d9-142">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)

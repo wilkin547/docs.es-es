@@ -1,48 +1,51 @@
 ---
-title: "C&#243;mo: Usar el patr&#243;n principal-detalle con datos jer&#225;rquicos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlace de datos, paradigma de datos principal-detalle"
-  - "paradigma de datos principal-detalle"
+title: "Cómo: Usar el patrón principal-detalle con datos jerárquicos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [WPF], Master-Detail data paradigm
+- Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bb546a3429012a49ee7652a3470460935fc76d70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Usar el patr&#243;n principal-detalle con datos jer&#225;rquicos
-En este ejemplo se muestra cómo implementar el patrón principal\-detalle con datos jerárquicos.  
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a><span data-ttu-id="64ff6-102">Cómo: Usar el patrón principal-detalle con datos jerárquicos</span><span class="sxs-lookup"><span data-stu-id="64ff6-102">How to: Use the Master-Detail Pattern with Hierarchical Data</span></span>
+<span data-ttu-id="64ff6-103">En este ejemplo se muestra cómo implementar el escenario principal-detalle.</span><span class="sxs-lookup"><span data-stu-id="64ff6-103">This example shows how to implement the master-detail scenario.</span></span>  
   
-## Ejemplo  
- En este ejemplo, `LeagueList` es una colección de `Leagues`.  Cada `League` tiene un valor `Name` y una colección de `Divisions` y cada `Division` tiene un nombre y una colección de `Teams`.  Cada `Team` tiene un nombre de equipo.  
+## <a name="example"></a><span data-ttu-id="64ff6-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="64ff6-104">Example</span></span>  
+ <span data-ttu-id="64ff6-105">En este ejemplo, `LeagueList` es una colección de `Leagues`.</span><span class="sxs-lookup"><span data-stu-id="64ff6-105">In this example, `LeagueList` is a collection of `Leagues`.</span></span> <span data-ttu-id="64ff6-106">Cada `League` tiene un `Name` y una colección de `Divisions`y cada `Division` tiene un nombre y una colección de `Teams`.</span><span class="sxs-lookup"><span data-stu-id="64ff6-106">Each `League` has a `Name` and a collection of `Divisions`, and each `Division` has a name and a collection of `Teams`.</span></span> <span data-ttu-id="64ff6-107">Cada `Team` tiene un nombre de equipo.</span><span class="sxs-lookup"><span data-stu-id="64ff6-107">Each `Team` has a team name.</span></span>  
   
- [!code-xml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
-[!code-xml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
+ [!code-xaml[MasterDetail#HowTo1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto1)]  
+[!code-xaml[MasterDetail#HowTo2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MasterDetail/VisualBasic/Page1.xaml#howto2)]  
   
- A continuación, se muestra una captura de pantalla del ejemplo.  El control <xref:System.Windows.Controls.ListBox> `Divisions` realiza automáticamente el seguimiento de las selecciones en el control <xref:System.Windows.Controls.ListBox> `Leagues` y muestra los datos correspondientes.  El control <xref:System.Windows.Controls.ListBox> `Teams` realiza el seguimiento de las selecciones en los otros dos controles <xref:System.Windows.Controls.ListBox>.  
+ <span data-ttu-id="64ff6-108">La siguiente captura de pantalla muestra el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="64ff6-108">The following is a screenshot of the example.</span></span> <span data-ttu-id="64ff6-109">El `Divisions` <xref:System.Windows.Controls.ListBox> automáticamente realiza un seguimiento de las selecciones en la `Leagues` <xref:System.Windows.Controls.ListBox> y mostrar los datos correspondientes.</span><span class="sxs-lookup"><span data-stu-id="64ff6-109">The `Divisions` <xref:System.Windows.Controls.ListBox> automatically tracks selections in the `Leagues` <xref:System.Windows.Controls.ListBox> and display the corresponding data.</span></span> <span data-ttu-id="64ff6-110">El `Teams` <xref:System.Windows.Controls.ListBox> realiza un seguimiento de las selecciones en los otros dos <xref:System.Windows.Controls.ListBox> controles.</span><span class="sxs-lookup"><span data-stu-id="64ff6-110">The `Teams` <xref:System.Windows.Controls.ListBox> tracks selections in the other two <xref:System.Windows.Controls.ListBox> controls.</span></span>  
   
- ![Ejemplo Master&#45;detail](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ <span data-ttu-id="64ff6-111">![Patrón &#45; ejemplo detalle](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")</span><span class="sxs-lookup"><span data-stu-id="64ff6-111">![Master&#45;detail example](../../../../docs/framework/wpf/data/media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")</span></span>  
   
- Los dos puntos importantes de este ejemplo son:  
+ <span data-ttu-id="64ff6-112">Las dos cosas que se observan en este ejemplo son:</span><span class="sxs-lookup"><span data-stu-id="64ff6-112">The two things to notice in this example are:</span></span>  
   
-1.  Los tres controles <xref:System.Windows.Controls.ListBox> están enlazados al mismo origen.  Debe establecer la propiedad <xref:System.Windows.Data.Binding.Path%2A> del enlace para especificar qué nivel de datos desea que muestre el control <xref:System.Windows.Controls.ListBox>.  
+1.  <span data-ttu-id="64ff6-113">Los tres <xref:System.Windows.Controls.ListBox> controles se enlazan al mismo origen.</span><span class="sxs-lookup"><span data-stu-id="64ff6-113">The three <xref:System.Windows.Controls.ListBox> controls bind to the same source.</span></span> <span data-ttu-id="64ff6-114">Establece el <xref:System.Windows.Data.Binding.Path%2A> propiedad del enlace para especificar el nivel de datos desea que el <xref:System.Windows.Controls.ListBox> para mostrar.</span><span class="sxs-lookup"><span data-stu-id="64ff6-114">You set the <xref:System.Windows.Data.Binding.Path%2A> property of the binding to specify which level of data you want the <xref:System.Windows.Controls.ListBox> to display.</span></span>  
   
-2.  Debe establecer la propiedad <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> en `true` en los controles <xref:System.Windows.Controls.ListBox> de la selección de la que está realizando el seguimiento.  Al establecer esta propiedad se garantiza que el elemento seleccionado se establezca siempre como <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>.  Como alternativa, si el control <xref:System.Windows.Controls.ListBox> obtiene sus datos de un objeto <xref:System.Windows.Data.CollectionViewSource>, sincronizará automáticamente la selección y la actualización.  
+2.  <span data-ttu-id="64ff6-115">Debe establecer el <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> propiedad `true` en el <xref:System.Windows.Controls.ListBox> controles de los cuales la selección está realizando el seguimiento.</span><span class="sxs-lookup"><span data-stu-id="64ff6-115">You must set the <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> property to `true` on the <xref:System.Windows.Controls.ListBox> controls of which the selection you are tracking.</span></span> <span data-ttu-id="64ff6-116">Al establecer esta propiedad se asegura de que el elemento seleccionado siempre se establece como el <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="64ff6-116">Setting this property ensures that the selected item is always set as the <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>.</span></span> <span data-ttu-id="64ff6-117">Como alternativa, si la <xref:System.Windows.Controls.ListBox> obtiene datos de un <xref:System.Windows.Data.CollectionViewSource>, sincroniza automáticamente selección y moneda.</span><span class="sxs-lookup"><span data-stu-id="64ff6-117">Alternatively, if the <xref:System.Windows.Controls.ListBox> gets it data from a <xref:System.Windows.Data.CollectionViewSource>, it synchronizes selection and currency automatically.</span></span>  
   
- La técnica es ligeramente diferente cuando se utilizan datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  Para obtener un ejemplo, vea [Usar el patrón principal\-detalle con datos XML jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ <span data-ttu-id="64ff6-118">La técnica es ligeramente diferente cuando se utiliza [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos.</span><span class="sxs-lookup"><span data-stu-id="64ff6-118">The technique is slightly different when you are using [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] data.</span></span> <span data-ttu-id="64ff6-119">Para obtener un ejemplo, vea [usar el patrón principal-detalle con datos XML jerárquicos](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).</span><span class="sxs-lookup"><span data-stu-id="64ff6-119">For an example, see [Use the Master-Detail Pattern with Hierarchical XML Data](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).</span></span>  
   
-## Vea también  
- <xref:System.Windows.HierarchicalDataTemplate>   
- [Enlazar a una colección y mostrar información basada en la selección](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)   
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Información general sobre plantillas de datos](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="64ff6-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="64ff6-120">See Also</span></span>  
+ <xref:System.Windows.HierarchicalDataTemplate>  
+ [<span data-ttu-id="64ff6-121">Enlazar a una colección y mostrar información basada en la selección</span><span class="sxs-lookup"><span data-stu-id="64ff6-121">Bind to a Collection and Display Information Based on Selection</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [<span data-ttu-id="64ff6-122">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="64ff6-122">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="64ff6-123">Información general sobre plantillas de datos</span><span class="sxs-lookup"><span data-stu-id="64ff6-123">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="64ff6-124">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="64ff6-124">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

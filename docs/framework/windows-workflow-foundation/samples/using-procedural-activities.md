@@ -1,45 +1,49 @@
 ---
-title: "Usar actividades de procedimiento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Usar actividades de procedimiento
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c67f739-3878-48ad-806c-b2ce0d6733a0
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2c391316959829c77d16dd87af51d9fe1915dc88
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Usar actividades de procedimiento
-En el ejemplo se utilizan las actividades <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch> y <xref:System.Activities.Statements.WriteLine> para implementar un juego de adivinanzas.La adivinanza selecciona un número aleatorio y el jugador tiene que adivinar el número.Cuando el jugador envía una suposición incorrecta, el flujo de trabajo proporciona una sugerencia para indicar si es mayor o menor.Si el jugador adivina el número en menos de 7 intentos, se muestra una felicitación especial.  
+# <a name="using-procedural-activities"></a><span data-ttu-id="65593-102">Usar actividades de procedimiento</span><span class="sxs-lookup"><span data-stu-id="65593-102">Using Procedural Activities</span></span>
+<span data-ttu-id="65593-103">En el ejemplo se utilizan las actividades <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch> y <xref:System.Activities.Statements.WriteLine> para implementar un juego de adivinanzas.</span><span class="sxs-lookup"><span data-stu-id="65593-103">The sample uses the <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch>, and <xref:System.Activities.Statements.WriteLine> activities to implement a guessing game.</span></span> <span data-ttu-id="65593-104">La adivinanza selecciona un número aleatorio y el jugador tiene que adivinar el número.</span><span class="sxs-lookup"><span data-stu-id="65593-104">The guessing game selects a random number and the player has to guess that number.</span></span> <span data-ttu-id="65593-105">Cuando el jugador envía una suposición incorrecta, el flujo de trabajo proporciona una sugerencia para indicar si es mayor o menor.</span><span class="sxs-lookup"><span data-stu-id="65593-105">When the player submits an incorrect guess, the workflow provides a hint whether to guess higher or lower.</span></span> <span data-ttu-id="65593-106">Si el jugador adivina el número en menos de 7 intentos, se muestra una felicitación especial.</span><span class="sxs-lookup"><span data-stu-id="65593-106">If the player guesses the number in less than 7 attempts, a special congratulations is displayed to the user.</span></span>  
   
-## Actividades personalizadas de este ejemplo  
+## <a name="custom-activities-in-this-sample"></a><span data-ttu-id="65593-107">Actividades personalizadas de este ejemplo</span><span class="sxs-lookup"><span data-stu-id="65593-107">Custom Activities in this Sample</span></span>  
   
-### ReadLine  
- Lee una línea de texto de la consola.Esta actividad deriva de la clase <xref:System.Activities.NativeActivity> y crea un marcador que la aplicación de consola reanuda cuando se lee una línea.  
+### <a name="readline"></a><span data-ttu-id="65593-108">ReadLine</span><span class="sxs-lookup"><span data-stu-id="65593-108">ReadLine</span></span>  
+ <span data-ttu-id="65593-109">Lee una línea de texto de la consola.</span><span class="sxs-lookup"><span data-stu-id="65593-109">Reads a line of text from the console.</span></span> <span data-ttu-id="65593-110">Esta actividad deriva de la clase <xref:System.Activities.NativeActivity> y crea un marcador que la aplicación de consola reanuda cuando se lee una línea.</span><span class="sxs-lookup"><span data-stu-id="65593-110">This activity derives from the <xref:System.Activities.NativeActivity> class and creates a bookmark that is resumed by the console application when a line is read.</span></span>  
   
-### PromptInt  
- Solicita al usuario que escriba un número y, a continuación, lo lee de una ventana de la consola.La actividad deriva de <xref:System.Activities.Activity%601> y utiliza las actividades <xref:System.Activities.Statements.WriteLine> y `ReadLine`.  
+### <a name="promptint"></a><span data-ttu-id="65593-111">PromptInt</span><span class="sxs-lookup"><span data-stu-id="65593-111">PromptInt</span></span>  
+ <span data-ttu-id="65593-112">Solicita al usuario que escriba un número y, a continuación, lo lee de una ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="65593-112">Prompts the user to type in a number and then reads it from a console window.</span></span> <span data-ttu-id="65593-113">La actividad deriva de <xref:System.Activities.Activity%601> y utiliza las actividades <xref:System.Activities.Statements.WriteLine> y `ReadLine`.</span><span class="sxs-lookup"><span data-stu-id="65593-113">The activity derives from <xref:System.Activities.Activity%601> and uses the <xref:System.Activities.Statements.WriteLine> and `ReadLine` activities.</span></span>  
   
-##### Para utilizar este ejemplo  
+##### <a name="to-use-this-sample"></a><span data-ttu-id="65593-114">Para utilizar este ejemplo</span><span class="sxs-lookup"><span data-stu-id="65593-114">To use this sample</span></span>  
   
-1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución GuessingGame.sln.  
+1.  <span data-ttu-id="65593-115">Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución GuessingGame.sln.</span><span class="sxs-lookup"><span data-stu-id="65593-115">Using [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], open the GuessingGame.sln solution file.</span></span>  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  <span data-ttu-id="65593-116">Para compilar la solución, presione Ctrl+MAYÚS+B.</span><span class="sxs-lookup"><span data-stu-id="65593-116">To build the solution, press CTRL+SHIFT+B.</span></span>  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  <span data-ttu-id="65593-117">Para ejecutar la solución, presione CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="65593-117">To run the solution, press CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="65593-118">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="65593-118">The samples may already be installed on your machine.</span></span> <span data-ttu-id="65593-119">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="65593-119">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="65593-120">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="65593-120">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="65593-121">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="65593-121">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Procedurals`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Procedurals`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="65593-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="65593-122">See Also</span></span>

@@ -1,42 +1,46 @@
 ---
-title: "C&#243;mo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView (control) [Windows Forms], ejemplos"
-  - "Panel (control) [Windows Forms], ejemplos"
-  - "RichTextBox (control) [Windows Forms], ejemplos"
-  - "SplitContainer (control) [Windows Forms], ejemplos"
-  - "Splitter (control) [Windows Forms], ejemplos"
-  - "TreeView (control) [Windows Forms], ejemplos"
+title: "Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], examples
+- ListView control [Windows Forms], examples
+- RichTextBox control [Windows Forms], examples
+- Panel control [Windows Forms], examples
+- TreeView control [Windows Forms], examples
+- Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms
-El procedimiento siguiente permite crear una interfaz de usuario de varios paneles parecida a la utilizada en Microsoft Outlook, con una lista de **Carpetas**, un panel de **Mensajes** y un panel de **Vista previa**.  Esta organización se logra principalmente mediante el acoplamiento de los controles con el formulario.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="2d458-102">Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2d458-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
+<span data-ttu-id="2d458-103">En el siguiente procedimiento, creará una interfaz de usuario de varios paneles que es similar al utilizado en Microsoft Outlook, con un **carpeta** lista, un **mensajes** panel y un **devistaprevia** panel.</span><span class="sxs-lookup"><span data-stu-id="2d458-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="2d458-104">Esta disposición se consigue principalmente mediante el acoplamiento de controles con el formulario.</span><span class="sxs-lookup"><span data-stu-id="2d458-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  
   
- Al acoplar un control se determina a cuál de los bordes del contenedor principal deberá fijarse.  Por consiguiente, si establece la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A> en <xref:System.Windows.Forms.DockStyle>, el borde derecho del control se acoplará al borde derecho de su control primario.  Además, el tamaño del borde acoplado del control se ajusta al tamaño del control contenedor.  Para obtener más información sobre cómo funciona la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A>, vea [Cómo: Acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ <span data-ttu-id="2d458-105">Al acoplar un control, se determina cuál de los bordes del contenedor primario de un control está enchufado al.</span><span class="sxs-lookup"><span data-stu-id="2d458-105">When you dock a control, you determine which edge of the parent container a control is fastened to.</span></span> <span data-ttu-id="2d458-106">Por lo tanto, si establece la <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad <xref:System.Windows.Forms.DockStyle.Right>, el borde derecho del control se acoplará al borde derecho de su control primario.</span><span class="sxs-lookup"><span data-stu-id="2d458-106">Thus, if you set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Right>, the right edge of the control will be docked to the right edge of its parent control.</span></span> <span data-ttu-id="2d458-107">Además, el borde del control acoplado cambia para coincidir con el de su control contenedor.</span><span class="sxs-lookup"><span data-stu-id="2d458-107">Additionally, the docked edge of the control is resized to match that of its container control.</span></span> <span data-ttu-id="2d458-108">Para obtener más información acerca de cómo los <xref:System.Windows.Forms.SplitContainer.Dock%2A> propiedad, consulte [Cómo: acoplar controles en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="2d458-108">For more information about how the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property works, see [How to: Dock Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span></span>  
   
- Este procedimiento se centra en organizar el contenedor <xref:System.Windows.Forms.SplitContainer> y los demás controles del formulario, no se trata de agregar funcionalidades para obtener una aplicación que imite a Microsoft Outlook.  
+ <span data-ttu-id="2d458-109">Este procedimiento se centra en organizar el <xref:System.Windows.Forms.SplitContainer> y los demás controles en el formulario, no en Agregar funcionalidad para hacer que la aplicación se comporten como Microsoft Outlook.</span><span class="sxs-lookup"><span data-stu-id="2d458-109">This procedure focuses on arranging the <xref:System.Windows.Forms.SplitContainer> and the other controls on the form, not on adding functionality to make the application mimic Microsoft Outlook.</span></span>  
   
- Para crear esta interfaz de usuario, se colocan todos los controles dentro de un control <xref:System.Windows.Forms.SplitContainer> que, a su vez, contiene un control <xref:System.Windows.Forms.TreeView> en el panel izquierdo.  El panel derecho del control <xref:System.Windows.Forms.SplitContainer> contiene un segundo control <xref:System.Windows.Forms.SplitContainer>, que a su vez tiene un control <xref:System.Windows.Forms.ListView> por encima de un control <xref:System.Windows.Forms.RichTextBox>.  Estos controles <xref:System.Windows.Forms.SplitContainer> permiten realizar el ajuste del tamaño de los demás controles del formulario de manera independiente.  Puede adaptar las técnicas de este procedimiento para crear interfaces de usuario personalizadas propias.  
+ <span data-ttu-id="2d458-110">Para crear esta interfaz de usuario, coloque todos los controles dentro de un <xref:System.Windows.Forms.SplitContainer> control, que contiene un <xref:System.Windows.Forms.TreeView> control en el panel izquierdo.</span><span class="sxs-lookup"><span data-stu-id="2d458-110">To create this user interface, you place all the controls within a <xref:System.Windows.Forms.SplitContainer> control, which contains a <xref:System.Windows.Forms.TreeView> control in the left-hand panel.</span></span> <span data-ttu-id="2d458-111">El panel derecho de la <xref:System.Windows.Forms.SplitContainer> control contiene un segundo <xref:System.Windows.Forms.SplitContainer> controlar con un <xref:System.Windows.Forms.ListView> control anterior un <xref:System.Windows.Forms.RichTextBox> control.</span><span class="sxs-lookup"><span data-stu-id="2d458-111">The right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control contains a second <xref:System.Windows.Forms.SplitContainer> control with a <xref:System.Windows.Forms.ListView> control above a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="2d458-112">Estos <xref:System.Windows.Forms.SplitContainer> controles permiten el cambio de tamaño independientemente de los demás controles en el formulario.</span><span class="sxs-lookup"><span data-stu-id="2d458-112">These <xref:System.Windows.Forms.SplitContainer> controls enable independent resizing of the other controls on the form.</span></span> <span data-ttu-id="2d458-113">Puede adaptar las técnicas de este procedimiento para interfaces de usuario personalizadas de elaborar de su elección.</span><span class="sxs-lookup"><span data-stu-id="2d458-113">You can adapt the techniques in this procedure to craft custom user interfaces of your own.</span></span>  
   
-### Para crear una interfaz de usuario de estilo Outlook mediante programación  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a><span data-ttu-id="2d458-114">Para crear una interfaz de usuario de estilo Outlook mediante programación</span><span class="sxs-lookup"><span data-stu-id="2d458-114">To create an Outlook-style user interface programmatically</span></span>  
   
-1.  En un formulario, declare cada uno de los controles que constituyen la interfaz de usuario.  Para este ejemplo, utilice los controles <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer> y <xref:System.Windows.Forms.RichTextBox> para imitar la interfaz de usuario de Microsoft Outlook.  
+1.  <span data-ttu-id="2d458-115">Dentro de un formulario, declare cada control que compone la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="2d458-115">Within a form, declare each control that comprises your user interface.</span></span> <span data-ttu-id="2d458-116">En este ejemplo, use la <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, y <xref:System.Windows.Forms.RichTextBox> controles para imitar la interfaz de usuario de Microsoft Outlook.</span><span class="sxs-lookup"><span data-stu-id="2d458-116">For this example, use the <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, and <xref:System.Windows.Forms.RichTextBox> controls to mimic the Microsoft Outlook user interface.</span></span>  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -46,7 +50,6 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
         System.Windows.Forms.SplitContainer  
     Private WithEvents splitContainer2 As _  
         System.Windows.Forms.SplitContainer  
-  
     ```  
   
     ```csharp  
@@ -55,10 +58,9 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
     private System.Windows.Forms.RichTextBox richTextBox1;  
     private System.Windows.Forms. SplitContainer splitContainer2;  
     private System.Windows.Forms. SplitContainer splitContainer1;  
-  
     ```  
   
-2.  Cree un procedimiento que defina la interfaz de usuario.  El código siguiente establece las propiedades de modo que el formulario se asemeje a la interfaz de usuario de Microsoft Outlook.  Sin embargo, si utiliza otros controles o los acopla de forma diferente, es igual de fácil crear otras interfaces de usuario que tengan la misma flexibilidad.  
+2.  <span data-ttu-id="2d458-117">Cree un procedimiento que define la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="2d458-117">Create a procedure that defines your user interface.</span></span> <span data-ttu-id="2d458-118">El código siguiente establece las propiedades para que el formulario se asemeje a la interfaz de usuario en Microsoft Outlook.</span><span class="sxs-lookup"><span data-stu-id="2d458-118">The following code sets the properties so that the form will resemble the user interface in Microsoft Outlook.</span></span> <span data-ttu-id="2d458-119">Sin embargo, con otros controles o acopla de forma diferente, es fácil crear otras interfaces de usuario que tengan la misma flexibilidad.</span><span class="sxs-lookup"><span data-stu-id="2d458-119">However, by using other controls or docking them differently, it is just as easy to create other user interfaces that are equally flexible.</span></span>  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -120,7 +122,6 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
         Me.Controls.Add(Me.splitContainer2)  
         Me.Text = "Intricate UI Example"  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -171,24 +172,21 @@ El procedimiento siguiente permite crear una interfaz de usuario de varios panel
         this.Controls.Add(this.splitContainer2);  
         this.Text = "Intricate UI Example";  
     }  
-  
     ```  
   
-3.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], agregue una llamada al procedimiento que acaba de crear en el procedimiento `New()`.  En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], agregue esta línea de código al constructor de la clase de formulario.  
+3.  <span data-ttu-id="2d458-120">En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], agregue una llamada al procedimiento que acaba de crear en el `New()` procedimiento.</span><span class="sxs-lookup"><span data-stu-id="2d458-120">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], add a call to the procedure you just created in the `New()` procedure.</span></span> <span data-ttu-id="2d458-121">En [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], agregue esta línea de código al constructor de la clase de formulario.</span><span class="sxs-lookup"><span data-stu-id="2d458-121">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], add this line of code to the constructor for the form class.</span></span>  
   
     ```vb  
     ' Add this to the New procedure.  
     CreateOutlookUI()  
-  
     ```  
   
     ```csharp  
     // Add this to the form class's constructor.  
     createOutlookUI();  
-  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer \(Control\)](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [Cómo: Crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el Diseñador](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a><span data-ttu-id="2d458-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="2d458-122">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="2d458-123">SplitContainer (control)</span><span class="sxs-lookup"><span data-stu-id="2d458-123">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [<span data-ttu-id="2d458-124">Crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="2d458-124">How to: Create a Multipane User Interface with Windows Forms Using the Designer</span></span>](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

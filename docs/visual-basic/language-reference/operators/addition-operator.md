@@ -1,131 +1,124 @@
 ---
-title: "+ (Operador, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.+"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "+ (operador)"
-  - "operadores aritméticos, suma"
-  - "operadores de concatenación, sintaxis"
-  - "cadenas [Visual Basic], concatenar"
-  - "operador de suma"
+title: + (Operador) (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.+
+helpviewer_keywords:
+- arithmetic operators [Visual Basic], addition
+- + operator
+- concatenation operators [Visual Basic], syntax
+- strings [Visual Basic], concatenating
+- sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# + (Operador, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Suma dos números o devuelve el valor positivo de una expresión numérica.  También se puede utilizar para concatenar dos expresiones de cadena.  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="8d252-102">+ (Operador, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8d252-102">+ Operator (Visual Basic)</span></span>
+<span data-ttu-id="8d252-103">Suma dos números o devuelve el valor positivo de una expresión numérica.</span><span class="sxs-lookup"><span data-stu-id="8d252-103">Adds two numbers or returns the positive value of a numeric expression.</span></span> <span data-ttu-id="8d252-104">También puede utilizarse para concatenar dos expresiones de cadena.</span><span class="sxs-lookup"><span data-stu-id="8d252-104">Can also be used to concatenate two string expressions.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="8d252-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8d252-105">Syntax</span></span>  
   
 ```  
-  
       expression1 + expression2  
 - or -  
 + expression1  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="8d252-106">Elementos</span><span class="sxs-lookup"><span data-stu-id="8d252-106">Parts</span></span>  
   
-|||  
-|-|-|  
-|Término|Definición|  
-|`expression1`|Obligatorio.  Cualquier expresión numérica o de cadena.|  
-|`expression2`|Obligatorio a menos que el operador `+` esté calculando un valor negativo.  Cualquier expresión numérica o de cadena.|  
+|<span data-ttu-id="8d252-107">Término</span><span class="sxs-lookup"><span data-stu-id="8d252-107">Term</span></span>|<span data-ttu-id="8d252-108">Definición</span><span class="sxs-lookup"><span data-stu-id="8d252-108">Definition</span></span>|  
+|---|---|  
+|`expression1`|<span data-ttu-id="8d252-109">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="8d252-109">Required.</span></span> <span data-ttu-id="8d252-110">Cualquier expresión numérica o de cadena.</span><span class="sxs-lookup"><span data-stu-id="8d252-110">Any numeric or string expression.</span></span>|  
+|`expression2`|<span data-ttu-id="8d252-111">Obligatorio a menos que el `+` operador está calculando un valor negativo.</span><span class="sxs-lookup"><span data-stu-id="8d252-111">Required unless the `+` operator is calculating a negative value.</span></span> <span data-ttu-id="8d252-112">Cualquier expresión numérica o de cadena.</span><span class="sxs-lookup"><span data-stu-id="8d252-112">Any numeric or string expression.</span></span>|  
   
-## Resultado  
- Si `expression1` y `expression2` son ambos numéricos, el resultado es su suma aritmética.  
+## <a name="result"></a><span data-ttu-id="8d252-113">Resultado</span><span class="sxs-lookup"><span data-stu-id="8d252-113">Result</span></span>  
+ <span data-ttu-id="8d252-114">Si `expression1` y `expression2` son numéricos, el resultado es su suma aritmética.</span><span class="sxs-lookup"><span data-stu-id="8d252-114">If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.</span></span>  
   
- Si `expression2` está ausente, el operador `+` es el operador de identidad *unario* para el valor sin modificar de una expresión.  En este sentido, la operación trata de conservar el signo de `expression1`, por lo que el resultado es negativo si `expression1` es negativo.  
+ <span data-ttu-id="8d252-115">Si `expression2` no está presente, el `+` operador es la *unario* operador de identidad para el valor sin modificar de una expresión.</span><span class="sxs-lookup"><span data-stu-id="8d252-115">If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression.</span></span> <span data-ttu-id="8d252-116">En este sentido, la operación consiste en conservar el signo de `expression1`, por lo que el resultado es negativo si `expression1` es negativo.</span><span class="sxs-lookup"><span data-stu-id="8d252-116">In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.</span></span>  
   
- Si `expression1` y `expression2` son ambas cadenas, el resultado es la concatenación de sus valores.  
+ <span data-ttu-id="8d252-117">Si `expression1` y `expression2` son cadenas, el resultado es la concatenación de sus valores.</span><span class="sxs-lookup"><span data-stu-id="8d252-117">If `expression1` and `expression2` are both strings, the result is the concatenation of their values.</span></span>  
   
- Si `expression1` y `expression2` son de tipos mixtos, la acción realizada depende de sus tipos, su contenido y la configuración de [Option Strict \(Instrucción\)](../../../visual-basic/language-reference/statements/option-strict-statement.md).  Para obtener más información, vea las tablas en "Comentarios".  
+ <span data-ttu-id="8d252-118">Si `expression1` y `expression2` son de tipos mixtos, la acción realizada depende de sus tipos, su contenido y la configuración de la [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8d252-118">If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="8d252-119">Para obtener más información, vea las tablas en la sección "comentarios".</span><span class="sxs-lookup"><span data-stu-id="8d252-119">For more information, see the tables in "Remarks."</span></span>  
   
-## Tipos admitidos  
- Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo, `Decimal` y `String`.  
+## <a name="supported-types"></a><span data-ttu-id="8d252-120">Tipos admitidos</span><span class="sxs-lookup"><span data-stu-id="8d252-120">Supported Types</span></span>  
+ <span data-ttu-id="8d252-121">Todos los tipos numéricos, incluidos los tipos sin signo y de punto flotante y `Decimal`, y `String`.</span><span class="sxs-lookup"><span data-stu-id="8d252-121">All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.</span></span>  
   
-## Comentarios  
- En general, `+` realiza la suma aritmética cuando es posible y sólo concatena cuando ambas expresiones son cadenas.  
+## <a name="remarks"></a><span data-ttu-id="8d252-122">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8d252-122">Remarks</span></span>  
+ <span data-ttu-id="8d252-123">En general, `+` realiza la suma aritmética cuando sea posible y los concatena solo cuando ambas expresiones son cadenas.</span><span class="sxs-lookup"><span data-stu-id="8d252-123">In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.</span></span>  
   
- Si ninguna de las expresiones es `Object`, Visual Basic realiza las acciones siguientes.  
+ <span data-ttu-id="8d252-124">Si ninguna de las expresiones es un `Object`, Visual Basic realiza las siguientes acciones.</span><span class="sxs-lookup"><span data-stu-id="8d252-124">If neither expression is an `Object`, Visual Basic takes the following actions.</span></span>  
   
-|||  
-|-|-|  
-|Tipos de datos de expresiones|Acción del compilador|  
-|Ambas expresiones son tipos de datos numéricos \(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` o `Double`\)|Deberá agregar.  El tipo de datos resultante es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2`.  Vea las tablas "Aritmética de enteros" en [Tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Ambas expresiones son de tipo `String`|Deberá concatenar.|  
-|Una expresión es numérica y la otra es una cadena|Si `Option Strict` es `On`, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, convertir implícitamente `String` en `Double` y sumar.<br /><br /> Si `String` no puede convertirse en `Double`, producir una excepción <xref:System.InvalidCastException>.|  
-|Una expresión es numérica y la otra es [Nothing](../../../visual-basic/language-reference/nothing.md)|Sumar, con `Nothing` evaluado como cero.|  
-|Una expresión es una cadena y la otra es `Nothing`|Concatenar, con `Nothing` evaluado como " ".|  
+|<span data-ttu-id="8d252-125">Tipos de datos de expresiones</span><span class="sxs-lookup"><span data-stu-id="8d252-125">Data types of expressions</span></span>|<span data-ttu-id="8d252-126">Acción del compilador</span><span class="sxs-lookup"><span data-stu-id="8d252-126">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="8d252-127">Ambas expresiones son tipos de datos numéricos (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, o `Double`)</span><span class="sxs-lookup"><span data-stu-id="8d252-127">Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)</span></span>|<span data-ttu-id="8d252-128">Agregar.</span><span class="sxs-lookup"><span data-stu-id="8d252-128">Add.</span></span> <span data-ttu-id="8d252-129">El tipo de datos del resultado es un tipo numérico adecuado para los tipos de datos de `expression1` y `expression2`.</span><span class="sxs-lookup"><span data-stu-id="8d252-129">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="8d252-130">Vea las tablas "Aritmética de enteros" en [tipos de datos de resultados de operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="8d252-130">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>|  
+|<span data-ttu-id="8d252-131">Ambas expresiones son de tipo`String`</span><span class="sxs-lookup"><span data-stu-id="8d252-131">Both expressions are of type `String`</span></span>|<span data-ttu-id="8d252-132">Concatenar.</span><span class="sxs-lookup"><span data-stu-id="8d252-132">Concatenate.</span></span>|  
+|<span data-ttu-id="8d252-133">Una expresión es un tipo de datos numérico y la otra es una cadena</span><span class="sxs-lookup"><span data-stu-id="8d252-133">One expression is a numeric data type and the other is a string</span></span>|<span data-ttu-id="8d252-134">Si `Option Strict` es `On`, a continuación, generar un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="8d252-134">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="8d252-135">Si `Option Strict` es `Off`, a continuación, convertir implícitamente el `String` a `Double` y agregar.</span><span class="sxs-lookup"><span data-stu-id="8d252-135">If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="8d252-136">Si el `String` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.</span><span class="sxs-lookup"><span data-stu-id="8d252-136">If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="8d252-137">Una expresión es un tipo de datos numéricos y el otro es [nada](../../../visual-basic/language-reference/nothing.md)</span><span class="sxs-lookup"><span data-stu-id="8d252-137">One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)</span></span>|<span data-ttu-id="8d252-138">Agregar, con `Nothing` el valor es cero.</span><span class="sxs-lookup"><span data-stu-id="8d252-138">Add, with `Nothing` valued as zero.</span></span>|  
+|<span data-ttu-id="8d252-139">Una expresión es una cadena y la otra es`Nothing`</span><span class="sxs-lookup"><span data-stu-id="8d252-139">One expression is a string, and the other is `Nothing`</span></span>|<span data-ttu-id="8d252-140">Concatenación, con `Nothing` con valores como "".</span><span class="sxs-lookup"><span data-stu-id="8d252-140">Concatenate, with `Nothing` valued as "".</span></span>|  
   
- Si una de las expresiones es `Object`, Visual Basic realiza las acciones siguientes.  
+ <span data-ttu-id="8d252-141">Si una expresión es un `Object` expresión, Visual Basic realiza las siguientes acciones.</span><span class="sxs-lookup"><span data-stu-id="8d252-141">If one expression is an `Object` expression, Visual Basic takes the following actions.</span></span>  
   
-|||  
-|-|-|  
-|Tipos de datos de expresiones|Acción del compilador|  
-|`Object` expresión que contiene un valor numérico y la otra es un tipo de datos numérico|Si `Option Strict` es `On`, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, sumar.|  
-|La expresión de `Object` contiene un valor numérico y la otra es de tipo `String`|Si `Option Strict` es `On`, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, convertir implícitamente `String` en `Double` y sumar.<br /><br /> Si `String` no puede convertirse en `Double`, producir una excepción <xref:System.InvalidCastException>.|  
-|`Object` expresión que contiene una cadena y la otra es un tipo de datos numérico|Si `Option Strict` es `On`, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, convertir implícitamente la cadena `Object` en `Double` y sumar.<br /><br /> Si la cadena `Object` no puede convertirse en `Double`, producir una excepción <xref:System.InvalidCastException>.|  
-|La expresión de `Object` contiene una cadena y la otra es de tipo `String`|Si `Option Strict` es `On`, generar un error del compilador.<br /><br /> Si `Option Strict` es `Off`, convertir implícitamente `Object` en `String` y concatenar.|  
+|<span data-ttu-id="8d252-142">Tipos de datos de expresiones</span><span class="sxs-lookup"><span data-stu-id="8d252-142">Data types of expressions</span></span>|<span data-ttu-id="8d252-143">Acción del compilador</span><span class="sxs-lookup"><span data-stu-id="8d252-143">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="8d252-144">`Object`Expresión que contiene un valor numérico y el otro es un tipo de datos numéricos</span><span class="sxs-lookup"><span data-stu-id="8d252-144">`Object` expression holds a numeric value and the other is a numeric data type</span></span>|<span data-ttu-id="8d252-145">Si `Option Strict` es `On`, a continuación, generar un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="8d252-145">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="8d252-146">Si `Option Strict` es `Off`, a continuación, agregue.</span><span class="sxs-lookup"><span data-stu-id="8d252-146">If `Option Strict` is `Off`, then add.</span></span>|  
+|<span data-ttu-id="8d252-147">`Object`Expresión que contiene un valor numérico y el otro es de tipo`String`</span><span class="sxs-lookup"><span data-stu-id="8d252-147">`Object` expression holds a numeric value and the other is of type `String`</span></span>|<span data-ttu-id="8d252-148">Si `Option Strict` es `On`, a continuación, generar un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="8d252-148">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="8d252-149">Si `Option Strict` es `Off`, a continuación, convertir implícitamente el `String` a `Double` y agregar.</span><span class="sxs-lookup"><span data-stu-id="8d252-149">If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="8d252-150">Si el `String` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.</span><span class="sxs-lookup"><span data-stu-id="8d252-150">If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="8d252-151">`Object`Expresión que contiene una cadena y la otra es un tipo de datos numéricos</span><span class="sxs-lookup"><span data-stu-id="8d252-151">`Object` expression holds a string and the other is a numeric data type</span></span>|<span data-ttu-id="8d252-152">Si `Option Strict` es `On`, a continuación, generar un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="8d252-152">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="8d252-153">Si `Option Strict` es `Off`, a continuación, convertir implícitamente la cadena `Object` a `Double` y agregar.</span><span class="sxs-lookup"><span data-stu-id="8d252-153">If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="8d252-154">Si la cadena `Object` no se puede convertir a `Double`, a continuación, iniciar una <xref:System.InvalidCastException> excepción.</span><span class="sxs-lookup"><span data-stu-id="8d252-154">If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="8d252-155">`Object`Expresión que contiene una cadena y la otra es de tipo`String`</span><span class="sxs-lookup"><span data-stu-id="8d252-155">`Object` expression holds a string and the other is of type `String`</span></span>|<span data-ttu-id="8d252-156">Si `Option Strict` es `On`, a continuación, generar un error del compilador.</span><span class="sxs-lookup"><span data-stu-id="8d252-156">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="8d252-157">Si `Option Strict` es `Off`, a continuación, convertir implícitamente `Object` a `String` y concatenar.</span><span class="sxs-lookup"><span data-stu-id="8d252-157">If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.</span></span>|  
   
- Si ambas son expresiones `Object`, Visual Basic realiza las acciones siguientes \(sólo `Option Strict Off`\).  
+ <span data-ttu-id="8d252-158">Si ambas expresiones son `Object` expresiones, Visual Basic realiza las siguientes acciones (`Option Strict Off` solo).</span><span class="sxs-lookup"><span data-stu-id="8d252-158">If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).</span></span>  
   
-|||  
-|-|-|  
-|Tipos de datos de expresiones|Acción del compilador|  
-|Ambas expresiones `Object` contienen valores numéricos|Deberá agregar.|  
-|Ambas expresiones `Object` son de tipo `String`|Deberá concatenar.|  
-|Una expresión `Object` contiene un valor numérico y la otra, una cadena|Convertir implícitamente la cadena `Object` en `Double` y sumar.<br /><br /> Si la cadena `Object` no puede convertirse en un valor numérico, producir una excepción <xref:System.InvalidCastException>.|  
+|<span data-ttu-id="8d252-159">Tipos de datos de expresiones</span><span class="sxs-lookup"><span data-stu-id="8d252-159">Data types of expressions</span></span>|<span data-ttu-id="8d252-160">Acción del compilador</span><span class="sxs-lookup"><span data-stu-id="8d252-160">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="8d252-161">Ambos `Object` expresiones contienen valores numéricos</span><span class="sxs-lookup"><span data-stu-id="8d252-161">Both `Object` expressions hold numeric values</span></span>|<span data-ttu-id="8d252-162">Agregar.</span><span class="sxs-lookup"><span data-stu-id="8d252-162">Add.</span></span>|  
+|<span data-ttu-id="8d252-163">Ambos `Object` expresiones son de tipo`String`</span><span class="sxs-lookup"><span data-stu-id="8d252-163">Both `Object` expressions are of type `String`</span></span>|<span data-ttu-id="8d252-164">Concatenar.</span><span class="sxs-lookup"><span data-stu-id="8d252-164">Concatenate.</span></span>|  
+|<span data-ttu-id="8d252-165">Una `Object` expresión que contiene un valor numérico y el otro contiene una cadena</span><span class="sxs-lookup"><span data-stu-id="8d252-165">One `Object` expression holds a numeric value and the other holds a string</span></span>|<span data-ttu-id="8d252-166">Convertir implícitamente la cadena `Object` a `Double` y agregar.</span><span class="sxs-lookup"><span data-stu-id="8d252-166">Implicitly convert the string `Object` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="8d252-167">Si la cadena `Object` no se puede convertir en un valor numérico, a continuación, iniciar una <xref:System.InvalidCastException> excepción.</span><span class="sxs-lookup"><span data-stu-id="8d252-167">If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
   
- Si una de las expresiones `Object` se evalúa como [Nothing](../../../visual-basic/language-reference/nothing.md) o <xref:System.DBNull>, el operador `+` la trata como `String` con un valor de " ".  
+ <span data-ttu-id="8d252-168">Si el valor `Object` expresión se evalúa como [nada](../../../visual-basic/language-reference/nothing.md) o <xref:System.DBNull>, `+` operador lo trata como un `String` con un valor de "".</span><span class="sxs-lookup"><span data-stu-id="8d252-168">If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".</span></span>  
   
 > [!NOTE]
->  Cuando utilice el operador `+`, puede que no logre determinar si se producirá una suma o bien una concatenación de cadenas.  Use el operador `&` de concatenación para eliminar ambigüedades y ofrecer código autoexplicativo.  
+>  <span data-ttu-id="8d252-169">Cuando se usa el `+` (operador), es posible que no pueda determinar si se producirá la suma o la cadena de la concatenación.</span><span class="sxs-lookup"><span data-stu-id="8d252-169">When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur.</span></span> <span data-ttu-id="8d252-170">Use la `&` operador de concatenación para eliminar la ambigüedad y proporcionar código autoexplicativo.</span><span class="sxs-lookup"><span data-stu-id="8d252-170">Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.</span></span>  
   
-## Sobrecarga  
- El operador `+` se puede *sobrecargar*, lo que significa que una clase o una estructura pueden definir de nuevo su comportamiento cuando un operando tiene el tipo de dicha clase o estructura.  Si el código utiliza este operador en una clase o estructura de este tipo, asegúrese de conocer su comportamiento redefinido.  Para obtener más información, vea [Procedimientos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="8d252-171">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="8d252-171">Overloading</span></span>  
+ <span data-ttu-id="8d252-172">El `+` puede ser *sobrecargados*, lo que significa que una clase o estructura puede definir de nuevo su comportamiento cuando un operando tiene el tipo de esa clase o estructura.</span><span class="sxs-lookup"><span data-stu-id="8d252-172">The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="8d252-173">Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido.</span><span class="sxs-lookup"><span data-stu-id="8d252-173">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="8d252-174">Para obtener más información, consulte [procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="8d252-174">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se usa el operador `+` para sumar números.  Si los operandos son ambos numéricos, Visual Basic calcula el resultado aritmético.  El resultado aritmético representa la suma de ambos operandos.  
+## <a name="example"></a><span data-ttu-id="8d252-175">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8d252-175">Example</span></span>  
+ <span data-ttu-id="8d252-176">En el ejemplo siguiente se usa el `+` operador para sumar números.</span><span class="sxs-lookup"><span data-stu-id="8d252-176">The following example uses the `+` operator to add numbers.</span></span> <span data-ttu-id="8d252-177">Si los operandos son ambos numéricos, Visual Basic calcula el resultado aritmético.</span><span class="sxs-lookup"><span data-stu-id="8d252-177">If the operands are both numeric, Visual Basic computes the arithmetic result.</span></span> <span data-ttu-id="8d252-178">El resultado aritmético representa la suma de los dos operandos.</span><span class="sxs-lookup"><span data-stu-id="8d252-178">The arithmetic result represents the sum of the two operands.</span></span>  
   
  [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
- El operador `+` también puede utilizarse para concatenar cadenas.  Si los operandos son ambos cadenas, Visual Basic los concatena.  El resultado de la concatenación representa una cadena única que consta del contenido de los dos operandos uno tras otro.  
+ <span data-ttu-id="8d252-179">También puede usar el `+` para concatenar cadenas.</span><span class="sxs-lookup"><span data-stu-id="8d252-179">You can also use the `+` operator to concatenate strings.</span></span> <span data-ttu-id="8d252-180">Si los operandos son cadenas, Visual Basic los concatena.</span><span class="sxs-lookup"><span data-stu-id="8d252-180">If the operands are both strings, Visual Basic concatenates them.</span></span> <span data-ttu-id="8d252-181">El resultado de la concatenación representa una sola cadena que consta del contenido de los dos operandos uno tras otro.</span><span class="sxs-lookup"><span data-stu-id="8d252-181">The concatenation result represents a single string consisting of the contents of the two operands one after the other.</span></span>  
   
- Si los operandos son de tipos mixtos, el resultado depende de la configuración de [Option Strict \(Instrucción\)](../../../visual-basic/language-reference/statements/option-strict-statement.md).  El ejemplo siguiente ilustra el resultado cuando `Option Strict` es `On`.  
+ <span data-ttu-id="8d252-182">Si los operandos son de tipos mixtos, el resultado depende de la configuración de la [Option Strict (instrucción)](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span><span class="sxs-lookup"><span data-stu-id="8d252-182">If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="8d252-183">En el ejemplo siguiente se muestra el resultado cuando `Option Strict` es `On`.</span><span class="sxs-lookup"><span data-stu-id="8d252-183">The following example illustrates the result when `Option Strict` is `On`.</span></span>  
   
  [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
   
- El ejemplo siguiente ilustra el resultado cuando `Option Strict` es `Off`.  
+ <span data-ttu-id="8d252-184">En el ejemplo siguiente se muestra el resultado cuando `Option Strict` es `Off`.</span><span class="sxs-lookup"><span data-stu-id="8d252-184">The following example illustrates the result when `Option Strict` is `Off`.</span></span>  
   
  [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
- Para eliminar la ambigüedad, debería utilizar al operador `&` en lugar de `+` para la concatenación.  
+ <span data-ttu-id="8d252-185">Para eliminar la ambigüedad, debe usar el `&` en lugar del operador `+` para la concatenación.</span><span class="sxs-lookup"><span data-stu-id="8d252-185">To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.</span></span>  
   
-## Vea también  
- [& \(Operador\)](../../../visual-basic/language-reference/operators/concatenation-operator.md)   
- [Operadores de concatenación](../../../visual-basic/language-reference/operators/concatenation-operators.md)   
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Option Strict \(Instrucción\)](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8d252-186">Vea también</span><span class="sxs-lookup"><span data-stu-id="8d252-186">See Also</span></span>  
+ [<span data-ttu-id="8d252-187">Operador &</span><span class="sxs-lookup"><span data-stu-id="8d252-187">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="8d252-188">Operadores de concatenación</span><span class="sxs-lookup"><span data-stu-id="8d252-188">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [<span data-ttu-id="8d252-189">Operadores aritméticos</span><span class="sxs-lookup"><span data-stu-id="8d252-189">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="8d252-190">Operadores enumerados por funcionalidad</span><span class="sxs-lookup"><span data-stu-id="8d252-190">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="8d252-191">Prioridad de operador en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d252-191">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="8d252-192">Operadores aritméticos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d252-192">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="8d252-193">Option Strict (instrucción)</span><span class="sxs-lookup"><span data-stu-id="8d252-193">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)

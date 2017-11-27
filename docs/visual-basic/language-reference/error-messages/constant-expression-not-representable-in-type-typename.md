@@ -1,36 +1,34 @@
 ---
-title: "La expresi&#243;n constante no se puede representar en el tipo &#39;&lt;nombreTipo&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc30439"
-  - "vbc30439"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30439"
+title: "Expresión constante no se puede representar en el tipo &#39; &lt;typename&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc30439
+- vbc30439
+helpviewer_keywords: BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7dd19d28eff4bd33f27478380f410cce6e1b2f39
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La expresi&#243;n constante no se puede representar en el tipo &#39;&lt;nombreTipo&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Está intentando evaluar una constante que no encaja en el tipo de destino, normalmente porque desborda el intervalo.  
+# <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a><span data-ttu-id="40d40-102">Expresión constante no se puede representar en el tipo &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="40d40-102">Constant expression not representable in type &#39;&lt;typename&gt;&#39;</span></span>
+<span data-ttu-id="40d40-103">Está intentando evaluar una constante que no encaja en el tipo de destino, normalmente porque desborda el intervalo.</span><span class="sxs-lookup"><span data-stu-id="40d40-103">You are trying to evaluate a constant that will not fit into the target type, usually because it is overflowing the range.</span></span>  
   
- **Identificador de error:** BC30439  
+ <span data-ttu-id="40d40-104">**Id. de error:** BC30439</span><span class="sxs-lookup"><span data-stu-id="40d40-104">**Error ID:** BC30439</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="40d40-105">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="40d40-105">To correct this error</span></span>  
   
-1.  Cambie el tipo de destino a un tipo que pueda controlar la constante.  
+1.  <span data-ttu-id="40d40-106">Cambiar el tipo de destino a uno que pueda controlar la constante.</span><span class="sxs-lookup"><span data-stu-id="40d40-106">Change the target type to one that can handle the constant.</span></span>  
   
-## Vea también  
- [Información general sobre las constantes](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Constantes y enumeraciones](../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="40d40-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="40d40-107">See Also</span></span>  
+ [<span data-ttu-id="40d40-108">Información general sobre las constantes</span><span class="sxs-lookup"><span data-stu-id="40d40-108">Constants Overview</span></span>](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [<span data-ttu-id="40d40-109">Constantes y enumeraciones</span><span class="sxs-lookup"><span data-stu-id="40d40-109">Constants and Enumerations</span></span>](../../../visual-basic/language-reference/constants-and-enumerations.md)

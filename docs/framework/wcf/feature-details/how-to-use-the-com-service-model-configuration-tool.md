@@ -1,121 +1,122 @@
 ---
-title: "C&#243;mo: Utilizar la herramienta configuraci&#243;n de modelos de servicio COM+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM+ [WCF], utilizar la herramienta de configuración del modelo de servicio"
+title: "Cómo: Utilizar la herramienta configuración de modelos de servicio COM+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 71d4a08f46578e185e7e6cde9e6c77a6313638a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Utilizar la herramienta configuraci&#243;n de modelos de servicio COM+
-Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de línea de comandos de configuración de modelos de servicio COM\+ \(ComSvcConfig.exe\) para configurar las interfaces de aplicaciones que se expondrán como servicios web.  
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a><span data-ttu-id="3f961-102">Cómo: Utilizar la herramienta configuración de modelos de servicio COM+</span><span class="sxs-lookup"><span data-stu-id="3f961-102">How to: Use the COM+ Service Model Configuration Tool</span></span>
+<span data-ttu-id="3f961-103">Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de línea de comandos de configuración de modelos de servicio COM+ (ComSvcConfig.exe) para configurar las interfaces de aplicaciones que se expondrán como servicios web.</span><span class="sxs-lookup"><span data-stu-id="3f961-103">Once you have selected an appropriate hosting mode, use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that will be exposed as Web services.</span></span>  
   
 > [!NOTE]
->  Debe ser un administrador en el equipo para realizar cualquiera de las tareas siguientes.  
+>  <span data-ttu-id="3f961-104">Debe ser un administrador en el equipo para realizar cualquiera de las tareas siguientes.</span><span class="sxs-lookup"><span data-stu-id="3f961-104">You must be an administrator on the machine to perform any of the following tasks.</span></span>  
   
- Al usar ComSvcConfig.exe en un equipo con Windows 7 para configurar un servicio web con la finalidad de usar la última versión de modelo de servicio \(actualmente, la versión 4.5\), lleve a cabo los siguientes pasos:  
+ <span data-ttu-id="3f961-105">Al usar ComSvcConfig.exe en un equipo con Windows 7 para configurar un servicio web con la finalidad de usar la última versión de modelo de servicio (actualmente, la versión 4.5), lleve a cabo los siguientes pasos:</span><span class="sxs-lookup"><span data-stu-id="3f961-105">When using ComSvcConfig.exe on a Windows 7 machine to configure a web service to use the latest service model version (currently v4.5), perform the following steps:</span></span>  
   
-1.  Establezca la clave del Registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` a un valor DWORD de 0x00000001  
+1.  <span data-ttu-id="3f961-106">Establezca la clave del registro `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` a un valor DWORD de 0 x 00000001</span><span class="sxs-lookup"><span data-stu-id="3f961-106">Set the registry key  `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` to a DWORD value of 0x00000001</span></span>  
   
-2.  Ejecute comsvcconfig.exe  
+2.  <span data-ttu-id="3f961-107">Ejecute comsvcconfig.exe</span><span class="sxs-lookup"><span data-stu-id="3f961-107">Run comsvcconfig.exe</span></span>  
   
-3.  Revierta la clave del Registro agregada en el paso 1 a su valor original, o elimínela si no existía.  
+3.  <span data-ttu-id="3f961-108">Revierta la clave del Registro agregada en el paso 1 a su valor original, o elimínela si no existía.</span><span class="sxs-lookup"><span data-stu-id="3f961-108">Revert the registry key added in step 1 back to its original value, or delete it if did not exist.</span></span>  
   
 > [!IMPORTANT]
->  Es importante revertir esta clave del Registro.Se trata de una clave de compatibilidad.Si no se revierte este cambio, se pueden producir problemas con otras aplicaciones .NET activas en el equipo.  
+>  <span data-ttu-id="3f961-109">Es importante revertir esta clave del Registro.</span><span class="sxs-lookup"><span data-stu-id="3f961-109">Reverting this registry key is important.</span></span> <span data-ttu-id="3f961-110">Se trata de una clave de compatibilidad.</span><span class="sxs-lookup"><span data-stu-id="3f961-110">This is a compatibility key.</span></span> <span data-ttu-id="3f961-111">Si no se revierte este cambio, se pueden producir problemas con otras aplicaciones .NET activas en el equipo.</span><span class="sxs-lookup"><span data-stu-id="3f961-111">Not reverting this change may cause issues with other .NET applications running on the machine).</span></span>  
   
 > [!WARNING]
->  Al usar ComSvcConfig.exe \/install en un equipo con Windows 8, se muestra un cuadro de diálogo que indica "Una aplicación de su equipo requiere la siguiente característica de Windows: .NET Framework 3.5 \(incluye .NET 2.0 y .NET 3.0\)" si no se ha instalado .NET Framework 3.5.Se puede omitir este cuadro de diálogo.También puede establecer la clave del Registro OnlyUseLatestCLR a un valor DWORD de 0x00000001  
+>  <span data-ttu-id="3f961-112">Al usar ComSvcConfig.exe /install en un equipo con Windows 8 un cuadro de diálogo se muestra que indica "una aplicación en su equipo necesita la siguiente característica de Windows: .NET Framework 3.5 (incluye .NET 2.0 y .NET 3.0" Si no está instalado .NET Framework 3.5.</span><span class="sxs-lookup"><span data-stu-id="3f961-112">When using ComSvcConfig.exe  /install on a Windows 8 machine a dialog is displayed stating "An app on your PC needs the following Windows feature: .NET Framework 3.5 (includes .NET 2.0 and .NET 3.0" if .NET Framework 3.5 is not installed.</span></span> <span data-ttu-id="3f961-113">Se puede omitir este cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="3f961-113">This dialog may be ignored.</span></span> <span data-ttu-id="3f961-114">También puede establecer la clave del Registro OnlyUseLatestCLR a un valor DWORD de 0x00000001</span><span class="sxs-lookup"><span data-stu-id="3f961-114">Alternatively you can sed the OnlyUseLatestCLR registry key to a DWORD value of 0x00000001</span></span>  
   
-### Para agregar una interfaz al conjunto de interfaces que se expondrán como servicios web, utilizando el modo de hospedaje de COM\+  
+### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a><span data-ttu-id="3f961-115">Para agregar una interfaz al conjunto de interfaces que se expondrán como servicios web, utilizando el modo de hospedaje de COM+</span><span class="sxs-lookup"><span data-stu-id="3f961-115">To add an interface to the set of interfaces that are to be exposed as Web services, using the COM+ hosting mode</span></span>  
   
--   Ejecute ComSvcConfig utilizando `/install` y las opciones `/hosting:complus`, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-116">Ejecute ComSvcConfig utilizando `/install` y las opciones `/hosting:complus`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-116">Run ComSvcConfig using the `/install` and `/hosting:complus` options, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
     ```  
   
-     El comando agrega la interfaz `IFinances` del componente \(de la aplicación OnlineStore COM\+\) `ItemOrders.IFinancial` al conjunto de interfaces que se expondrán como servicios web.El servicio utiliza el modo de hospedaje de COM\+ y por consiguiente requiere la activación explícita de la aplicación.  
+     <span data-ttu-id="3f961-117">El comando agrega la interfaz `IFinances` del componente (de la aplicación OnlineStore COM+) `ItemOrders.IFinancial` al conjunto de interfaces que se expondrán como servicios web.</span><span class="sxs-lookup"><span data-stu-id="3f961-117">The command adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="3f961-118">El servicio utiliza el modo de hospedaje de COM+ y por consiguiente requiere la activación explícita de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="3f961-118">The service uses the COM+ hosting mode and therefore requires explicit application activation.</span></span>  
   
-     Aunque el carácter comodín de asterisco \(\*\) se puede utilizar para el componente y la interfaz, evite utilizarlo porque podría desear exponer solo la funcionalidad seleccionada como un servicio web.Si se ejecuta con una versión futura de este componente, al utilizar el carácter comodín se pueden exponer involuntariamente interfaces que pueden no haber estado presentes cuando se determinó la sintaxis de configuración.  
+     <span data-ttu-id="3f961-119">Aunque el carácter comodín de asterisco (*) se puede utilizar para el componente y la interfaz, evite utilizarlo porque podría desear exponer solo la funcionalidad seleccionada como un servicio web.</span><span class="sxs-lookup"><span data-stu-id="3f961-119">While the wildcard asterisk (*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="3f961-120">Si se ejecuta con una versión futura de este componente, al utilizar el carácter comodín se pueden exponer involuntariamente interfaces que pueden no haber estado presentes cuando se determinó la sintaxis de configuración.</span><span class="sxs-lookup"><span data-stu-id="3f961-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
   
-     La opción \/verbose indica a la herramienta que muestre las advertencias además de cualquier error.  
+     <span data-ttu-id="3f961-121">La opción /verbose indica a la herramienta que muestre las advertencias además de cualquier error.</span><span class="sxs-lookup"><span data-stu-id="3f961-121">The /verbose option instructs the tool to display warnings in addition to any errors.</span></span>  
   
-     El contrato para el servicio expuesto contendrá todos los métodos de la interfaz `IFinances`.  
+     <span data-ttu-id="3f961-122">El contrato para el servicio expuesto contendrá todos los métodos de la interfaz `IFinances`.</span><span class="sxs-lookup"><span data-stu-id="3f961-122">The contract for the exposed service will contain all of the methods from the `IFinances` interface.</span></span>  
   
-### Para agregar solo métodos específicos de una interfaz al conjunto de interfaces que se expondrán como servicios web, utilizando el modo del alojamiento de COM\+  
+### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a><span data-ttu-id="3f961-123">Para agregar solo métodos específicos de una interfaz al conjunto de interfaces que se expondrán como servicios web, utilizando el modo del alojamiento de COM+</span><span class="sxs-lookup"><span data-stu-id="3f961-123">To add only specific methods from an interface to the set of interfaces that are to be exposed as Web services, using the COM+ hosting mode</span></span>  
   
--   Ejecute ComSvcConfig utilizando `/install` y las opciones `/hosting:complus` con denominación explícita de los métodos necesarios, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-124">Ejecute ComSvcConfig utilizando `/install` y las opciones `/hosting:complus` con denominación explícita de los métodos necesarios, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-124">Run ComSvcConfig using the `/install` and `/hosting:complus` options with explicit naming of the required methods, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
     ```  
   
-     El comando agrega solo los métodos `Credit` y `Debit` de la interfaz `IFinances` como operaciones al contrato de servicios expuesto.Todos los otros métodos en la interfaz se omitirán del contrato y no podrán ser llamados por los clientes de servicios web.  
+     <span data-ttu-id="3f961-125">El comando agrega solo los métodos `Credit` y `Debit` de la interfaz `IFinances` como operaciones al contrato de servicios expuesto.</span><span class="sxs-lookup"><span data-stu-id="3f961-125">The command adds only the `Credit` and `Debit` methods from the `IFinances` interface as operations to the exposed service contract.</span></span> <span data-ttu-id="3f961-126">Todos los otros métodos en la interfaz se omitirán del contrato y no podrán ser llamados por los clientes de servicios web.</span><span class="sxs-lookup"><span data-stu-id="3f961-126">All other methods on the interface will be omitted from the contract and will not be callable from Web service clients.</span></span>  
   
-### Para agregar una interfaz al conjunto de interfaces que serán expuestas como servicios web, utilizando el modo de hospedaje web  
+### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a><span data-ttu-id="3f961-127">Para agregar una interfaz al conjunto de interfaces que serán expuestas como servicios web, utilizando el modo de hospedaje web</span><span class="sxs-lookup"><span data-stu-id="3f961-127">To add an interface to the set of interfaces that are to be exposed as Web services, using the Web hosting mode</span></span>  
   
--   Ejecute ComSvcConfig utilizando la opción `/install` y la opción `/hosting:was`, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-128">Ejecute ComSvcConfig utilizando la opción `/install` y la opción `/hosting:was`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-128">Run ComSvcConfig using the `/install` option and the `/hosting:was` option, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
     ```  
   
-     El comando agrega la interfaz `IStockLevels` en el componente `ItemInventory.Warehouse` \(de la aplicación OnlineWarehouse COM\+\) al conjunto de interfaces que se expondrán como servicios web.El servicio está hospedado en Web en el directorio virtual de OnlineWarehouse de IIS en lugar de en COM\+ y así la aplicación se activa automáticamente como se requiere.  
+     <span data-ttu-id="3f961-129">El comando agrega la interfaz `IStockLevels` en el componente `ItemInventory.Warehouse` (de la aplicación OnlineWarehouse COM+) al conjunto de interfaces que se expondrán como servicios web.</span><span class="sxs-lookup"><span data-stu-id="3f961-129">The command adds the `IStockLevels` interface on the `ItemInventory.Warehouse` component (from the OnlineWarehouse COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="3f961-130">El servicio está hospedado en Web en el directorio virtual de OnlineWarehouse de IIS en lugar de en COM+ y así la aplicación se activa automáticamente como se requiere.</span><span class="sxs-lookup"><span data-stu-id="3f961-130">The service is Web hosted in the OnlineWarehouse virtual directory of IIS rather than in COM+, and thus the application is automatically activated as required.</span></span>  
   
-     Para utilizar la configuración en proceso hospedada en Web, la aplicación COM\+ se debe configurar para ejecutarse como una aplicación de biblioteca en lugar de una aplicación de servidor utilizando la consola de administración de Servicios de componentes.Las aplicaciones configuradas como aplicaciones de servidor utilizan el modo hospedado por Web estándar e incurren un salto de proceso para procesar cada solicitud.  
+     <span data-ttu-id="3f961-131">Para utilizar la configuración en proceso hospedada en Web, la aplicación COM+ se debe configurar para ejecutarse como una aplicación de biblioteca en lugar de una aplicación de servidor utilizando la consola de administración de Servicios de componentes.</span><span class="sxs-lookup"><span data-stu-id="3f961-131">To use the Web-hosted in-process configuration, the COM+ application must be configured to run as a Library application rather than a Server application using the Component Services administration console.</span></span> <span data-ttu-id="3f961-132">Las aplicaciones configuradas como aplicaciones de servidor utilizan el modo hospedado por Web estándar e incurren un salto de proceso para procesar cada solicitud.</span><span class="sxs-lookup"><span data-stu-id="3f961-132">Applications configured as Server applications use the standard Web-hosted mode and incur a process hop to process each request.</span></span>  
   
-     La opción `/mex` agrega un extremo de servicio adicional de Intercambio de metadatos \(MEX\) que utiliza el mismo transporte que el extremo de servicio de la aplicación para admitir clientes que desean recuperar una definición del contrato del servicio.  
+     <span data-ttu-id="3f961-133">La opción `/mex` agrega un extremo de servicio adicional de Intercambio de metadatos (MEX) que utiliza el mismo transporte que el extremo de servicio de la aplicación para admitir clientes que desean recuperar una definición del contrato del servicio.</span><span class="sxs-lookup"><span data-stu-id="3f961-133">The `/mex` option adds an additional Metadata Exchange (MEX) service endpoint that uses the same transport as the application's service endpoint to support clients that want to retrieve a contract definition from the service.</span></span>  
   
-### Para quitar un servicio Web para una interfaz especificada  
+### <a name="to-remove-a-web-service-for-a-specified-interface"></a><span data-ttu-id="3f961-134">Para quitar un servicio Web para una interfaz especificada</span><span class="sxs-lookup"><span data-stu-id="3f961-134">To remove a Web service for a specified interface</span></span>  
   
--   Ejecute ComSvcConfig utilizando la opción `/uninstall`, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-135">Ejecute ComSvcConfig utilizando la opción `/uninstall`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-135">Run ComSvcConfig using the `/uninstall` option, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
     ```  
   
-     El comando quita la interfaz `IFinances` del componente \(de la aplicación OnlineStore COM\+\) `ItemOrders.Financial`.  
+     <span data-ttu-id="3f961-136">El comando quita la interfaz `IFinances` del componente (de la aplicación OnlineStore COM+) `ItemOrders.Financial`.</span><span class="sxs-lookup"><span data-stu-id="3f961-136">The command removes the `IFinances` interface on the `ItemOrders.Financial` component (from the OnlineStore COM+ application).</span></span>  
   
-### Para hacer una lista de las interfaces actualmente expuestas  
+### <a name="to-list-currently-exposed-interfaces"></a><span data-ttu-id="3f961-137">Para hacer una lista de las interfaces actualmente expuestas</span><span class="sxs-lookup"><span data-stu-id="3f961-137">To list currently exposed interfaces</span></span>  
   
--   Ejecute ComSvcConfig utilizando la opción `/list`, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-138">Ejecute ComSvcConfig utilizando la opción `/list`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-138">Run ComSvcConfig using the `/list` option, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /list  
     ```  
   
-     El comando hace una lista de las interfaces actualmente expuestas, junto con la dirección correspondiente y los detalles del enlace, y se pone a disposición del equipo local.  
+     <span data-ttu-id="3f961-139">El comando hace una lista de las interfaces actualmente expuestas, junto con la dirección correspondiente y los detalles del enlace, y se pone a disposición del equipo local.</span><span class="sxs-lookup"><span data-stu-id="3f961-139">The command lists the currently exposed interfaces, along with the corresponding address and binding details, scoped to the local machine.</span></span>  
   
-### Para hacer una lista de interfaces específicas actualmente expuestas  
+### <a name="to-list-specific-currently-exposed-interfaces"></a><span data-ttu-id="3f961-140">Para hacer una lista de interfaces específicas actualmente expuestas</span><span class="sxs-lookup"><span data-stu-id="3f961-140">To list specific currently exposed interfaces</span></span>  
   
--   Ejecute ComSvcConfig utilizando la opción `/list`, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-141">Ejecute ComSvcConfig utilizando la opción `/list`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-141">Run ComSvcConfig using the `/list` option, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
     ```  
   
-     El comando hace una lista de las interfaces hospedadas por COM\+ actualmente expuestas, junto con la dirección correspondiente y los detalles del enlace, para la aplicación OnlineStore COM\+ en el equipo local.  
+     <span data-ttu-id="3f961-142">El comando hace una lista de las interfaces hospedadas por COM+ actualmente expuestas, junto con la dirección correspondiente y los detalles del enlace, para la aplicación OnlineStore COM+ en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="3f961-142">The command lists currently exposed COM+-hosted interfaces, along with the corresponding address and binding details, for the OnlineStore COM+ application on the local machine.</span></span>  
   
-### Para mostrar la ayuda en las opciones que se pueden utilizar con la utilidad  
+### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a><span data-ttu-id="3f961-143">Para mostrar la ayuda en las opciones que se pueden utilizar con la utilidad</span><span class="sxs-lookup"><span data-stu-id="3f961-143">To display help on the options that can be used with the utility</span></span>  
   
--   Ejecutar ComSvcConfig utilizando la opción \/?, como se muestra en el ejemplo siguiente.  
+-   <span data-ttu-id="3f961-144">Ejecutar ComSvcConfig utilizando la opción /?</span><span class="sxs-lookup"><span data-stu-id="3f961-144">Run ComSvcConfig using the /?</span></span> <span data-ttu-id="3f961-145">, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="3f961-145">option, as shown in the following example.</span></span>  
   
     ```  
     ComSvcConfig.exe /?  
-  
     ```  
   
-## Vea también  
- [Integración en la información general de las aplicaciones COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3f961-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="3f961-146">See Also</span></span>  
+ [<span data-ttu-id="3f961-147">Integración con la introducción a las aplicaciones COM +</span><span class="sxs-lookup"><span data-stu-id="3f961-147">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

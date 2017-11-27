@@ -1,74 +1,57 @@
 ---
-title: /delaysign | Documentos de Microsoft
-ms.date: 2015-07-20
+title: /delaysign
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - delaysign compiler option [Visual Basic]
 - /delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59d4ec227286c20b2b4ecf749a91f0c4ee8d25ca
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6c42e351808281d90eafdb6e61a3f1736ef15c9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="delaysign"></a>/delaysign
-Especifica si el ensamblado estará firmado total o parcialmente.  
+# <a name="delaysign"></a><span data-ttu-id="21cf8-102">/delaysign</span><span class="sxs-lookup"><span data-stu-id="21cf8-102">/delaysign</span></span>
+<span data-ttu-id="21cf8-103">Especifica si el ensamblado estará firmado total o parcialmente.</span><span class="sxs-lookup"><span data-stu-id="21cf8-103">Specifies whether the assembly will be fully or partially signed.</span></span>  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="21cf8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="21cf8-104">Syntax</span></span>  
   
 ```  
 /delaysign[+ | -]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
- `+` &#124; `-`  
- Opcional. Use `/delaysign-` para firmar completamente un ensamblado. Use `/delaysign+` si desea colocar la clave pública en el ensamblado y reservar espacio para el hash firmado. De manera predeterminada, es `/delaysign-`.  
+## <a name="arguments"></a><span data-ttu-id="21cf8-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="21cf8-105">Arguments</span></span>  
+ <span data-ttu-id="21cf8-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="21cf8-106">`+` &#124; `-`</span></span>  
+ <span data-ttu-id="21cf8-107">Opcional.</span><span class="sxs-lookup"><span data-stu-id="21cf8-107">Optional.</span></span> <span data-ttu-id="21cf8-108">Use `/delaysign-` para firmar completamente un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="21cf8-108">Use `/delaysign-` if you want a fully signed assembly.</span></span> <span data-ttu-id="21cf8-109">Use `/delaysign+` si desea colocar la clave pública en el ensamblado y reservar espacio para el hash firmado.</span><span class="sxs-lookup"><span data-stu-id="21cf8-109">Use `/delaysign+` if you want to place the public key in the assembly and reserve space for the signed hash.</span></span> <span data-ttu-id="21cf8-110">De manera predeterminada, es `/delaysign-`.</span><span class="sxs-lookup"><span data-stu-id="21cf8-110">The default is `/delaysign-`.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- El `/delaysign` opción no tiene ningún efecto a menos que se utiliza con [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).  
+## <a name="remarks"></a><span data-ttu-id="21cf8-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="21cf8-111">Remarks</span></span>  
+ <span data-ttu-id="21cf8-112">El `/delaysign` opción no tiene ningún efecto a menos que use con [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) o [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).</span><span class="sxs-lookup"><span data-stu-id="21cf8-112">The `/delaysign` option has no effect unless used with [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) or [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md).</span></span>  
   
- Cuando se solicita un ensamblado totalmente firmado, el compilador genera un valor hash del archivo que contiene el manifiesto (metadatos de ensamblado) y firma el hash con la clave privada. La firma digital resultante se almacena en el archivo que contiene el manifiesto. Cuando se retrasa la firma de un ensamblado, el compilador no calcula y almacena la firma, pero reserva espacio en el archivo para que la firma se pueda agregar más tarde.  
+ <span data-ttu-id="21cf8-113">Cuando se solicita un ensamblado totalmente firmado, el compilador genera un valor hash para el archivo que contiene el manifiesto (metadatos del ensamblado) y firma dicho valor mediante la clave privada.</span><span class="sxs-lookup"><span data-stu-id="21cf8-113">When you request a fully signed assembly, the compiler hashes the file that contains the manifest (assembly metadata) and signs that hash with the private key.</span></span> <span data-ttu-id="21cf8-114">La firma digital resultante se almacena en el archivo que contiene el manifiesto.</span><span class="sxs-lookup"><span data-stu-id="21cf8-114">The resulting digital signature is stored in the file that contains the manifest.</span></span> <span data-ttu-id="21cf8-115">Una vez un ensamblado con firma retrasada, el compilador no de proceso y se almacena la firma, pero reserva espacio en el archivo para que la firma se pueda agregar más tarde.</span><span class="sxs-lookup"><span data-stu-id="21cf8-115">When an assembly is delay signed, the compiler does not compute and store the signature but reserves space in the file so the signature can be added later.</span></span>  
   
- Por ejemplo, si utiliza `/delaysign+`, un desarrollador de una organización distribuye versiones de prueba sin firma de un ensamblado que los evaluadores pueden utilizar y registrar con la caché global de ensamblados. Cuando finalice el trabajo en el ensamblado, la persona responsable de la clave privada de la organización puede firmar completamente el ensamblado. Esta división de funciones protege la clave privada de la organización de la divulgación, permitiendo que todos los desarrolladores trabajar en los ensamblados.  
+ <span data-ttu-id="21cf8-116">Por ejemplo, al usar `/delaysign+`, un desarrollador de una organización distribuye versiones de prueba sin firma de un ensamblado que los evaluadores pueden utilizar y registrar con la caché global de ensamblados.</span><span class="sxs-lookup"><span data-stu-id="21cf8-116">For example, by using `/delaysign+`, a developer in an organization can distribute unsigned test versions of an assembly that testers can register with the global assembly cache and use.</span></span> <span data-ttu-id="21cf8-117">Cuando se completa el trabajo en el ensamblado, la persona responsable de la clave privada de la organización puede firmar completamente el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="21cf8-117">When work on the assembly is completed, the person responsible for the organization's private key can fully sign the assembly.</span></span> <span data-ttu-id="21cf8-118">Esta división de funciones protege la clave privada de la organización contra la divulgación, permitiendo a los desarrolladores trabajar en los ensamblados.</span><span class="sxs-lookup"><span data-stu-id="21cf8-118">This compartmentalization protects the organization's private key from disclosure, while allowing all developers to work on the assemblies.</span></span>  
   
- Consulte [crear y utilizar ensamblados](https://msdn.microsoft.com/library/xwb8f617) para obtener más información sobre cómo firmar un ensamblado.  
+ <span data-ttu-id="21cf8-119">Vea [crear y utilizar ensamblados](https://msdn.microsoft.com/library/xwb8f617) para obtener más información sobre cómo firmar un ensamblado.</span><span class="sxs-lookup"><span data-stu-id="21cf8-119">See [Creating and Using Strong-Named Assemblies](https://msdn.microsoft.com/library/xwb8f617) for more information on signing an assembly.</span></span>  
   
-### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Para establecer /delaysign en Visual Studio de entorno de desarrollo integrado  
+### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a><span data-ttu-id="21cf8-120">Para establecer /delaysign en Visual Studio integra el entorno de desarrollo</span><span class="sxs-lookup"><span data-stu-id="21cf8-120">To set /delaysign in the Visual Studio integrated development environment</span></span>  
   
-1.  Seleccione un proyecto en el **Explorador de soluciones**. En el **proyecto** menú, haga clic en **propiedades**. Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  <span data-ttu-id="21cf8-121">Seleccione un proyecto en el **Explorador de soluciones**.</span><span class="sxs-lookup"><span data-stu-id="21cf8-121">Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="21cf8-122">En el menú **Proyecto**, haga clic en **Propiedades**.</span><span class="sxs-lookup"><span data-stu-id="21cf8-122">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="21cf8-123">Para obtener más información, consulte [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span><span class="sxs-lookup"><span data-stu-id="21cf8-123">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  Haga clic en el **firma** ficha.  
+2.  <span data-ttu-id="21cf8-124">Haga clic en la pestaña **Firma**.</span><span class="sxs-lookup"><span data-stu-id="21cf8-124">Click the **Signing** tab.</span></span>  
   
-3.  Establezca el valor de la **Retrasar firma sólo** cuadro.  
+3.  <span data-ttu-id="21cf8-125">Establezca el valor el **Retrasar firma sólo** cuadro.</span><span class="sxs-lookup"><span data-stu-id="21cf8-125">Set the value in the **Delay sign only** box.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/ keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [/ keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)   
- [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="21cf8-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="21cf8-126">See Also</span></span>  
+ [<span data-ttu-id="21cf8-127">Compilador de línea de comandos de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="21cf8-127">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="21cf8-128">/keyfile</span><span class="sxs-lookup"><span data-stu-id="21cf8-128">/keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [<span data-ttu-id="21cf8-129">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="21cf8-129">/keycontainer</span></span>](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
+ [<span data-ttu-id="21cf8-130">Líneas de comandos de compilación de ejemplo</span><span class="sxs-lookup"><span data-stu-id="21cf8-130">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

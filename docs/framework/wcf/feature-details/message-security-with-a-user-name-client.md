@@ -1,56 +1,62 @@
 ---
-title: "Seguridad de los mensajes con un cliente de nombres de usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguridad de los mensajes con un cliente de nombres de usuario
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 429136ab3e01f3f53f662db02bbac6096be48d11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Seguridad de los mensajes con un cliente de nombres de usuario
-La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos mediante seguridad del nivel de mensaje.La autenticación del servicio se realiza mediante un certificado X.509.El cliente se autentica utilizando un nombre de usuario y contraseña.  
+# <a name="message-security-with-a-user-name-client"></a><span data-ttu-id="cab7f-102">Seguridad de los mensajes con un cliente de nombres de usuario</span><span class="sxs-lookup"><span data-stu-id="cab7f-102">Message Security with a User Name Client</span></span>
+<span data-ttu-id="cab7f-103">La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protegidos mediante seguridad del nivel de mensaje.</span><span class="sxs-lookup"><span data-stu-id="cab7f-103">The following illustration shows an [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service and client secured using message-level security.</span></span> <span data-ttu-id="cab7f-104">La autenticación del servicio se realiza mediante un certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="cab7f-104">The service is authenticated with an X.509 certificate.</span></span> <span data-ttu-id="cab7f-105">El cliente se autentica utilizando un nombre de usuario y contraseña.</span><span class="sxs-lookup"><span data-stu-id="cab7f-105">The client authenticates using a user name and password.</span></span>  
   
- Para obtener una aplicación de ejemplo, vea [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+ <span data-ttu-id="cab7f-106">Para una aplicación de ejemplo, vea [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md).</span><span class="sxs-lookup"><span data-stu-id="cab7f-106">For a sample application, see [Message Security User Name](../../../../docs/framework/wcf/samples/message-security-user-name.md).</span></span>  
   
- ![Seguridad de mensajes mediante la autenticación de nombre de usuario](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61\-7e1d\-42f5\-b1af\-195bfee5b3c6")  
+ <span data-ttu-id="cab7f-107">![Seguridad de mensaje mediante la autenticación de nombre de usuario](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")</span><span class="sxs-lookup"><span data-stu-id="cab7f-107">![Message security using username authentication](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")</span></span>  
   
-|Característica|Descripción|  
+|<span data-ttu-id="cab7f-108">Característica</span><span class="sxs-lookup"><span data-stu-id="cab7f-108">Characteristic</span></span>|<span data-ttu-id="cab7f-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="cab7f-109">Description</span></span>|  
 |--------------------|-----------------|  
-|Modo de seguridad|Mensaje|  
-|Interoperabilidad|Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
-|Autenticación \(servidor\)|La negociación inicial requiere autenticación de servidor|  
-|Autenticación \(cliente\)|Nombre de usuario\/contraseña|  
-|Integridad|Sí, mediante el contexto de seguridad compartido|  
-|Confidencialidad|Sí, mediante el contexto de seguridad compartido|  
-|Transporte|HTTP|  
-|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
+|<span data-ttu-id="cab7f-110">Modo de seguridad</span><span class="sxs-lookup"><span data-stu-id="cab7f-110">Security Mode</span></span>|<span data-ttu-id="cab7f-111">Mensaje</span><span class="sxs-lookup"><span data-stu-id="cab7f-111">Message</span></span>|  
+|<span data-ttu-id="cab7f-112">Interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="cab7f-112">Interoperability</span></span>|<span data-ttu-id="cab7f-113">Solo [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cab7f-113">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] only</span></span>|  
+|<span data-ttu-id="cab7f-114">Autenticación (servidor)</span><span class="sxs-lookup"><span data-stu-id="cab7f-114">Authentication (Server)</span></span>|<span data-ttu-id="cab7f-115">La negociación inicial requiere autenticación de servidor</span><span class="sxs-lookup"><span data-stu-id="cab7f-115">Initial negotiation requires server authentication</span></span>|  
+|<span data-ttu-id="cab7f-116">Autenticación (cliente)</span><span class="sxs-lookup"><span data-stu-id="cab7f-116">Authentication (Client)</span></span>|<span data-ttu-id="cab7f-117">Nombre de usuario/contraseña</span><span class="sxs-lookup"><span data-stu-id="cab7f-117">User name/password</span></span>|  
+|<span data-ttu-id="cab7f-118">Integridad</span><span class="sxs-lookup"><span data-stu-id="cab7f-118">Integrity</span></span>|<span data-ttu-id="cab7f-119">Sí, mediante el contexto de seguridad compartido</span><span class="sxs-lookup"><span data-stu-id="cab7f-119">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="cab7f-120">Confidencialidad</span><span class="sxs-lookup"><span data-stu-id="cab7f-120">Confidentiality</span></span>|<span data-ttu-id="cab7f-121">Sí, mediante el contexto de seguridad compartido</span><span class="sxs-lookup"><span data-stu-id="cab7f-121">Yes, using shared security context</span></span>|  
+|<span data-ttu-id="cab7f-122">Transporte</span><span class="sxs-lookup"><span data-stu-id="cab7f-122">Transport</span></span>|<span data-ttu-id="cab7f-123">HTTP</span><span class="sxs-lookup"><span data-stu-id="cab7f-123">HTTP</span></span>|  
+|<span data-ttu-id="cab7f-124">Enlaces</span><span class="sxs-lookup"><span data-stu-id="cab7f-124">Binding</span></span>|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.Siga uno de los procedimientos siguientes:  
+## <a name="service"></a><span data-ttu-id="cab7f-125">Servicio</span><span class="sxs-lookup"><span data-stu-id="cab7f-125">Service</span></span>  
+ <span data-ttu-id="cab7f-126">El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.</span><span class="sxs-lookup"><span data-stu-id="cab7f-126">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="cab7f-127">Realice una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="cab7f-127">Do one of the following:</span></span>  
   
--   Cree un servicio independiente mediante el código sin configuración.  
+-   <span data-ttu-id="cab7f-128">Cree un servicio independiente mediante el código sin configuración.</span><span class="sxs-lookup"><span data-stu-id="cab7f-128">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   Cree un servicio con la configuración proporcionada, pero sin definir ningún extremo.  
+-   <span data-ttu-id="cab7f-129">Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.</span><span class="sxs-lookup"><span data-stu-id="cab7f-129">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### Código  
- El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje.  
+### <a name="code"></a><span data-ttu-id="cab7f-130">Código</span><span class="sxs-lookup"><span data-stu-id="cab7f-130">Code</span></span>  
+ <span data-ttu-id="cab7f-131">El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje.</span><span class="sxs-lookup"><span data-stu-id="cab7f-131">The following code shows how to create a service endpoint that uses message security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### Configuración  
- La siguiente configuración se puede usar en lugar del código.  
+### <a name="configuration"></a><span data-ttu-id="cab7f-132">Configuración</span><span class="sxs-lookup"><span data-stu-id="cab7f-132">Configuration</span></span>  
+ <span data-ttu-id="cab7f-133">La siguiente configuración se puede usar en lugar del código.</span><span class="sxs-lookup"><span data-stu-id="cab7f-133">The following configuration can be used instead of the code:</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -90,18 +96,18 @@ La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](..
 </configuration>  
 ```  
   
-## Client  
+## <a name="client"></a><span data-ttu-id="cab7f-134">Cliente</span><span class="sxs-lookup"><span data-stu-id="cab7f-134">Client</span></span>  
   
-### Código  
- El siguiente código crea el cliente.El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`.El nombre de usuario y la contraseña solo se pueden especificar mediante código \(no es configurable\).El código para devolver el nombre de usuario y la contraseña no se muestra aquí porque se debe hacer en el nivel de la aplicación.Por ejemplo, use un cuadro de diálogo de Window Forms para solicitar los datos al usuario.  
+### <a name="code"></a><span data-ttu-id="cab7f-135">Código</span><span class="sxs-lookup"><span data-stu-id="cab7f-135">Code</span></span>  
+ <span data-ttu-id="cab7f-136">El siguiente código crea el cliente.</span><span class="sxs-lookup"><span data-stu-id="cab7f-136">The following code creates the client.</span></span> <span data-ttu-id="cab7f-137">El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`.</span><span class="sxs-lookup"><span data-stu-id="cab7f-137">The binding is to message mode security, and the client credential type is set to `UserName`.</span></span> <span data-ttu-id="cab7f-138">El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable).</span><span class="sxs-lookup"><span data-stu-id="cab7f-138">The user name and password can only be specified using code (it is not configurable).</span></span> <span data-ttu-id="cab7f-139">El código para devolver el nombre de usuario y la contraseña no se muestra aquí porque se debe hacer en el nivel de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="cab7f-139">The code to return the user name and password is not shown here because it must be done at the application level.</span></span> <span data-ttu-id="cab7f-140">Por ejemplo, use un cuadro de diálogo de Windows Forms para solicitar los datos al usuario.</span><span class="sxs-lookup"><span data-stu-id="cab7f-140">For example, use a Windows Forms dialog box to query the user for the data.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### Configuración  
- El siguiente código configura el cliente.El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`.El nombre de usuario y la contraseña solo se pueden especificar mediante código \(no es configurable\).  
+### <a name="configuration"></a><span data-ttu-id="cab7f-141">Configuración</span><span class="sxs-lookup"><span data-stu-id="cab7f-141">Configuration</span></span>  
+ <span data-ttu-id="cab7f-142">El siguiente código configura el cliente.</span><span class="sxs-lookup"><span data-stu-id="cab7f-142">The following code configures the client.</span></span> <span data-ttu-id="cab7f-143">El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`.</span><span class="sxs-lookup"><span data-stu-id="cab7f-143">The binding is to message mode security, and the client credential type is set to `UserName`.</span></span> <span data-ttu-id="cab7f-144">El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable).</span><span class="sxs-lookup"><span data-stu-id="cab7f-144">The user name and password can only be specified using code (it is not configurable).</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -129,9 +135,9 @@ La ilustración siguiente muestra un servicio y cliente de [!INCLUDE[indigo1](..
 </configuration>  
 ```  
   
-## Vea también  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)   
- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<identidad\>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)   
- [Modelo de seguridad para Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="cab7f-145">Vea también</span><span class="sxs-lookup"><span data-stu-id="cab7f-145">See Also</span></span>  
+ [<span data-ttu-id="cab7f-146">Información general sobre seguridad</span><span class="sxs-lookup"><span data-stu-id="cab7f-146">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="cab7f-147">Nombre de usuario de seguridad de mensaje</span><span class="sxs-lookup"><span data-stu-id="cab7f-147">Message Security User Name</span></span>](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+ [<span data-ttu-id="cab7f-148">Autenticación e identidad de servicio</span><span class="sxs-lookup"><span data-stu-id="cab7f-148">Service Identity and Authentication</span></span>](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [<span data-ttu-id="cab7f-149">\<identidad ></span><span class="sxs-lookup"><span data-stu-id="cab7f-149">\<identity></span></span>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
+ [<span data-ttu-id="cab7f-150">Modelo de seguridad de Windows Server AppFabric</span><span class="sxs-lookup"><span data-stu-id="cab7f-150">Security Model for Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

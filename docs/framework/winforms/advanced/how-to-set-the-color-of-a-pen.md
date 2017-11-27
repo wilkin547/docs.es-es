@@ -1,45 +1,50 @@
 ---
-title: "C&#243;mo: Establecer el color de un l&#225;piz | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "lápices con color"
-  - "lápices, establecer color"
+title: "Cómo: Establecer el color de un lápiz"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- pens [Windows Forms], setting color
+- colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 452e88b4b41a22cc78f73e120e49468e4f4dad56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer el color de un l&#225;piz
-En este ejemplo se cambia el color de un objeto <xref:System.Drawing.Pen> ya existente.  
+# <a name="how-to-set-the-color-of-a-pen"></a><span data-ttu-id="6ba73-102">Cómo: Establecer el color de un lápiz</span><span class="sxs-lookup"><span data-stu-id="6ba73-102">How to: Set the Color of a Pen</span></span>
+<span data-ttu-id="6ba73-103">Este ejemplo cambia el color de preexistente <xref:System.Drawing.Pen> objeto</span><span class="sxs-lookup"><span data-stu-id="6ba73-103">This example changes the color of a pre-existing <xref:System.Drawing.Pen> object</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="6ba73-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="6ba73-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#9](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#9)]
  [!code-csharp[System.Drawing.ConceptualHowTos#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#9)]
  [!code-vb[System.Drawing.ConceptualHowTos#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#9)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="6ba73-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="6ba73-105">Compiling the Code</span></span>  
+ <span data-ttu-id="6ba73-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="6ba73-106">This example requires:</span></span>  
   
--   Un objeto <xref:System.Drawing.Pen> llamado  `myPen`.  
+-   <span data-ttu-id="6ba73-107">A <xref:System.Drawing.Pen> objeto denominado `myPen`.</span><span class="sxs-lookup"><span data-stu-id="6ba73-107">A <xref:System.Drawing.Pen> object named `myPen`.</span></span>  
   
-## Programación eficaz  
- Debe llamar a <xref:System.Drawing.Pen.Dispose%2A> en objetos que consuman recursos del sistema \(como objetos <xref:System.Drawing.Pen>\) cuando haya terminado de utilizarlos.  
+## <a name="robust-programming"></a><span data-ttu-id="6ba73-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="6ba73-108">Robust Programming</span></span>  
+ <span data-ttu-id="6ba73-109">Debe llamar a <xref:System.Drawing.Pen.Dispose%2A> en los objetos que consumen recursos del sistema (como <xref:System.Drawing.Pen> objetos) cuando haya terminado de usarlos.</span><span class="sxs-lookup"><span data-stu-id="6ba73-109">You should call <xref:System.Drawing.Pen.Dispose%2A> on objects that consume system resources (such as <xref:System.Drawing.Pen> objects) after you are finished using them.</span></span>  
   
-## Vea también  
- <xref:System.Drawing.Pen>   
- [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)   
- [Cómo: Crear un lápiz](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)   
- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
- [Lápices, líneas y rectángulos en GDI\+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="6ba73-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="6ba73-110">See Also</span></span>  
+ <xref:System.Drawing.Pen>  
+ [<span data-ttu-id="6ba73-111">Introducción a la programación de gráficos</span><span class="sxs-lookup"><span data-stu-id="6ba73-111">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
+ [<span data-ttu-id="6ba73-112">Crear un lápiz</span><span class="sxs-lookup"><span data-stu-id="6ba73-112">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [<span data-ttu-id="6ba73-113">Utilizar lápiz para dibujar líneas y formas</span><span class="sxs-lookup"><span data-stu-id="6ba73-113">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="6ba73-114">Lápices, líneas y rectángulos en GDI+</span><span class="sxs-lookup"><span data-stu-id="6ba73-114">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

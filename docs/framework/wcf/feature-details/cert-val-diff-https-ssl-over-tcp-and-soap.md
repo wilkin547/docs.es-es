@@ -1,56 +1,61 @@
 ---
-title: "Diferencias en la validaci&#243;n de certificados entre HTTPS, SSL a trav&#233;s de TCP, y seguridad SOAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "certificados [WCF], diferencias de la validación"
+title: "Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b0a29b59b6b2f7b8dd3a430b2395b18c1e4f83fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Diferencias en la validaci&#243;n de certificados entre HTTPS, SSL a trav&#233;s de TCP, y seguridad SOAP
-Puede utilizar los certificados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con seguridad de la capa del mensaje \(SOAP\) además de la seguridad de la capa de transporte \(TLS\) a través de HTTP \(HTTPS\) o TCP.En este tema se describen las diferencias en la manera como se validan tales certificados.  
+# <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a><span data-ttu-id="cd7d6-102">Diferencias en la validación de certificados entre HTTPS, SSL a través de TCP, y seguridad SOAP</span><span class="sxs-lookup"><span data-stu-id="cd7d6-102">Certificate Validation Differences Between HTTPS, SSL over TCP, and SOAP Security</span></span>
+<span data-ttu-id="cd7d6-103">Puede utilizar los certificados en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] con seguridad de la capa del mensaje (SOAP) además de la seguridad de la capa de transporte (TLS) a través de HTTP (HTTPS) o TCP.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-103">You can use certificates in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] with message-layer (SOAP) security in addition to transport-layer security (TLS) over HTTP (HTTPS) or TCP.</span></span> <span data-ttu-id="cd7d6-104">En este tema se describen las diferencias en la manera como se validan tales certificados.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-104">This topic describes differences in the way such certificates are validated.</span></span>  
   
-## Validación de certificados de cliente HTTPS  
- Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado que el cliente utiliza para autenticar al servicio debe soportar la confianza de la cadena.Es decir, debe encadenar a una entidad de certificación raíz de confianza.Si no, el nivel HTTP inicia una excepción <xref:System.Net.WebException> con el mensaje "Error en el servidor remoto: \(403\) Prohibido". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] manifiesta esta excepción como <xref:System.ServiceModel.Security.MessageSecurityException>.  
+## <a name="validation-of-https-client-certificates"></a><span data-ttu-id="cd7d6-105">Validación de certificados de cliente HTTPS</span><span class="sxs-lookup"><span data-stu-id="cd7d6-105">Validation of HTTPS Client Certificates</span></span>  
+ <span data-ttu-id="cd7d6-106">Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado que el cliente utiliza para autenticar al servicio debe soportar la confianza de la cadena.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-106">When using HTTPS to communicate between a client and a service, the certificate that the client uses to authenticate to the service must support chain trust.</span></span> <span data-ttu-id="cd7d6-107">Es decir, debe encadenar a una entidad de certificación raíz de confianza.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-107">That is, it must chain to a trusted root certificate authority.</span></span> <span data-ttu-id="cd7d6-108">Si no, el nivel HTTP inicia una excepción <xref:System.Net.WebException> con el mensaje "Error en el servidor remoto: (403) Prohibido".</span><span class="sxs-lookup"><span data-stu-id="cd7d6-108">If not, the HTTP layer raises a <xref:System.Net.WebException> with the message "The remote server returned an error: (403) Forbidden."</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="cd7d6-109"> manifiesta esta excepción como <xref:System.ServiceModel.Security.MessageSecurityException>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-109"> surfaces this exception as a <xref:System.ServiceModel.Security.MessageSecurityException>.</span></span>  
   
-## Validación de certificados de servicio HTTPS  
- Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado con el que se autentica el servidor debe soportar la confianza de la cadena.Es decir, debe encadenar a una entidad de certificación raíz de confianza.No se realiza ninguna comprobación para ver si se ha revocado el certificado.Puede invalidar este comportamiento registrando una devolución de llamada <xref:System.Net.Security.RemoteCertificateValidationCallback>, como se muestra en el código siguiente.  
+## <a name="validation-of-https-service-certificates"></a><span data-ttu-id="cd7d6-110">Validación de certificados de servicio HTTPS</span><span class="sxs-lookup"><span data-stu-id="cd7d6-110">Validation of HTTPS Service Certificates</span></span>  
+ <span data-ttu-id="cd7d6-111">Al utilizar HTTPS para comunicarse entre un cliente y un servicio, el certificado con el que se autentica el servidor debe soportar la confianza de la cadena.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-111">When using HTTPS to communicate between a client and a service, the certificate that the server authenticates with must support chain trust by default.</span></span> <span data-ttu-id="cd7d6-112">Es decir, debe encadenar a una entidad de certificación raíz de confianza.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-112">That is, it must chain to a trusted root certificate authority.</span></span> <span data-ttu-id="cd7d6-113">No se realiza ninguna comprobación para ver si se ha revocado el certificado.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-113">No online check is performed to see whether the certificate has been revoked.</span></span> <span data-ttu-id="cd7d6-114">Puede invalidar este comportamiento registrando una devolución de llamada <xref:System.Net.Security.RemoteCertificateValidationCallback>, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-114">You can override this behavior by registering a <xref:System.Net.Security.RemoteCertificateValidationCallback> callback, as shown in the following code.</span></span>  
   
- [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
- <!-- TODO: review snippet reference [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  -->  
+ [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)] 
+ [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
   
- donde la firma para `ValidateServerCertificate` es como sigue:  
+ <span data-ttu-id="cd7d6-115">donde la firma para `ValidateServerCertificate` es como sigue:</span><span class="sxs-lookup"><span data-stu-id="cd7d6-115">where the signature for `ValidateServerCertificate` is as follows:</span></span>  
   
  [!code-csharp[c_CertificateValidationDifferences#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#2)]
  [!code-vb[c_CertificateValidationDifferences#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#2)]  
   
- Al implementar `ValidateServerCertificate`, se puede realizar cualquier comprobación que el programador de la aplicación cliente juzgue necesaria para validar el certificado del servicio.  
+ <span data-ttu-id="cd7d6-116">Al implementar `ValidateServerCertificate`, se puede realizar cualquier comprobación que el programador de la aplicación cliente juzgue necesaria para validar el certificado del servicio.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-116">Implementing `ValidateServerCertificate` can perform any checks that the client application developer deems necessary to validate the service certificate.</span></span>  
   
-## La validación de certificados de cliente en SSL a través TCP o seguridad SOAP  
- Al utilizar Capa de sockets seguros \(SSL\) a través TCP o seguridad de mensajes \(SOAP\), los certificados de cliente se validan según el valor de propiedad <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.La propiedad está establecida en uno de los valores <xref:System.ServiceModel.Security.X509CertificateValidationMode>.La comprobación de la revocación se realiza según los valores del valor de propiedad <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.La propiedad está establecida en uno de los valores <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.  
+## <a name="validation-of-client-certificates-in-ssl-over-tcp-or-soap-security"></a><span data-ttu-id="cd7d6-117">La validación de certificados de cliente en SSL a través TCP o seguridad SOAP</span><span class="sxs-lookup"><span data-stu-id="cd7d6-117">Validation of Client Certificates in SSL over TCP or SOAP Security</span></span>  
+ <span data-ttu-id="cd7d6-118">Al utilizar Capa de sockets seguros (SSL) a través TCP o seguridad de mensajes (SOAP), los certificados de cliente se validan según el valor de propiedad <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-118">When using Secure Sockets Layer (SSL) over TCP or message (SOAP) security, client certificates are validated according to the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> property value of the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> class.</span></span> <span data-ttu-id="cd7d6-119">La propiedad está establecida en uno de los valores <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-119">The property is set to one of the <xref:System.ServiceModel.Security.X509CertificateValidationMode> values.</span></span> <span data-ttu-id="cd7d6-120">La comprobación de la revocación se realiza según los valores del valor de propiedad <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-120">Revocation checking is performed according to the values of the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> property value of the <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> class.</span></span> <span data-ttu-id="cd7d6-121">La propiedad está establecida en uno de los valores <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-121">The property is set to one of the <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> values.</span></span>  
   
  [!code-csharp[c_CertificateValidationDifferences#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#3)]
  [!code-vb[c_CertificateValidationDifferences#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#3)]  
   
-## La validación del certificado de servicio en SSL a través TCP y seguridad SOAP  
- Al utilizar SSL a través de TCP o seguridad de mensajes \(SOAP\), los certificados de servicio se validan de acuerdo con el valor de propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>.La propiedad está establecida en uno de los valores <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  
+## <a name="validation-of-service-certificate-in-ssl-over-tcp-and-soap-security"></a><span data-ttu-id="cd7d6-122">La validación del certificado de servicio en SSL a través TCP y seguridad SOAP</span><span class="sxs-lookup"><span data-stu-id="cd7d6-122">Validation of Service Certificate in SSL over TCP and SOAP Security</span></span>  
+ <span data-ttu-id="cd7d6-123">Al utilizar SSL a través de TCP o seguridad de mensajes (SOAP), los certificados de servicio se validan de acuerdo con el valor de propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-123">When using SSL over TCP or (SOAP) message security, service certificates are validated according to the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> property value of the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> class.</span></span> <span data-ttu-id="cd7d6-124">La propiedad está establecida en uno de los valores <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-124">The property is set to one of the <xref:System.ServiceModel.Security.X509CertificateValidationMode> values.</span></span>  
   
- La comprobación de la revocación se realiza según los valores del valor de propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>.La propiedad está establecida en uno de los valores <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.  
+ <span data-ttu-id="cd7d6-125">La comprobación de la revocación se realiza según los valores del valor de propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> de la clase <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-125">Revocation checking is performed according to the values of the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> property value of the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> class.</span></span> <span data-ttu-id="cd7d6-126">La propiedad está establecida en uno de los valores <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span><span class="sxs-lookup"><span data-stu-id="cd7d6-126">The property is set to one of the <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> values.</span></span>  
   
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
   
-## Vea también  
- <xref:System.Net.Security.RemoteCertificateValidationCallback>   
- [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a><span data-ttu-id="cd7d6-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="cd7d6-127">See Also</span></span>  
+ <xref:System.Net.Security.RemoteCertificateValidationCallback>  
+ [<span data-ttu-id="cd7d6-128">Trabajar con certificados</span><span class="sxs-lookup"><span data-stu-id="cd7d6-128">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

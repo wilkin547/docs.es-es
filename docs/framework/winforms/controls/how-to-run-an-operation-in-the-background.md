@@ -1,53 +1,57 @@
 ---
-title: "C&#243;mo: Ejecutar una operaci&#243;n en segundo plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "operaciones en segundo plano"
-  - "tareas en segundo plano"
-  - "subprocesos en segundo plano"
-  - "BackgroundWorker (clase), ejemplos"
-  - "formularios, operaciones en segundo plano"
-  - "formularios, multithreading"
-  - "subprocesamiento [Windows Forms], operaciones en segundo plano"
+title: "Cómo: Ejecutar una operación en segundo plano"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- background tasks
+- forms [Windows Forms], multithreading
+- forms [Windows Forms], background operations
+- background threads
+- BackgroundWorker class [Windows Forms], examples
+- threading [Windows Forms], background operations
+- background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c07d2e5dfb89827f00a03d3c361ccc1417cdeeeb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ejecutar una operaci&#243;n en segundo plano
-Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
+# <a name="how-to-run-an-operation-in-the-background"></a><span data-ttu-id="e97f5-102">Cómo: Ejecutar una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="e97f5-102">How to: Run an Operation in the Background</span></span>
+<span data-ttu-id="e97f5-103">Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.</span><span class="sxs-lookup"><span data-stu-id="e97f5-103">If you have an operation that will take a long time to complete, and you do not want to cause delays in your user interface, you can use the <xref:System.ComponentModel.BackgroundWorker> class to run the operation on another thread.</span></span>  
   
- El ejemplo de código siguiente muestra cómo ejecutar en segundo plano una operación que consume mucho tiempo.  El formulario cuenta con los botones **Iniciar** y **Cancelar**.  Haga clic en el botón **Iniciar** para ejecutar una operación asincrónica.  Haga clic en el botón **Cancelar** para detener una operación asincrónica.  El resultado de cada operación se muestra en un elemento <xref:System.Windows.Forms.MessageBox>.  
+ <span data-ttu-id="e97f5-104">El ejemplo de código siguiente muestra cómo ejecutar en segundo plano una operación que consume mucho tiempo.</span><span class="sxs-lookup"><span data-stu-id="e97f5-104">The following code example shows how to run a time-consuming operation in the background.</span></span> <span data-ttu-id="e97f5-105">El formulario cuenta con los botones **Iniciar** y **Cancelar**.</span><span class="sxs-lookup"><span data-stu-id="e97f5-105">The form has **Start** and **Cancel** buttons.</span></span> <span data-ttu-id="e97f5-106">Haga clic en el botón **Iniciar** para ejecutar una operación asincrónica.</span><span class="sxs-lookup"><span data-stu-id="e97f5-106">Click the **Start** button to run an asynchronous operation.</span></span> <span data-ttu-id="e97f5-107">Haga clic en el botón **Cancelar** para detener una operación asincrónica.</span><span class="sxs-lookup"><span data-stu-id="e97f5-107">Click the **Cancel** button to stop a running asynchronous operation.</span></span> <span data-ttu-id="e97f5-108">El resultado de cada operación se muestra en un elemento <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="e97f5-108">The outcome of each operation is displayed in a <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- Hay una amplia compatibilidad para esta tarea en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+ <span data-ttu-id="e97f5-109">Hay una amplia compatibilidad para esta tarea en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e97f5-109">There is extensive support for this task in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
- Consulte también [Tutorial: Ejecutar una operación en segundo plano](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).  
+ <span data-ttu-id="e97f5-110">Vea también [Tutorial: Ejecutar una operación en segundo plano](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="e97f5-110">Also see [Walkthrough: Running an Operation in the Background](http://msdn.microsoft.com/library/ms233672\(v=vs.110\)).</span></span>  
   
-## Ejemplo  
+## <a name="example"></a><span data-ttu-id="e97f5-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e97f5-111">Example</span></span>  
  [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#1)]  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="e97f5-112">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="e97f5-112">Compiling the Code</span></span>  
+ <span data-ttu-id="e97f5-113">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="e97f5-113">This example requires:</span></span>  
   
--   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
+-   <span data-ttu-id="e97f5-114">Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="e97f5-114">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- Para obtener información acerca de cómo generar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilar desde la línea de comandos](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilar la línea de comandos con csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ <span data-ttu-id="e97f5-115">Para información sobre cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilación desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilar desde la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="e97f5-115">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="e97f5-116">También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="e97f5-116">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="e97f5-117">Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="e97f5-117">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## Vea también  
- <xref:System.ComponentModel.BackgroundWorker>   
- <xref:System.ComponentModel.DoWorkEventArgs>   
- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [BackgroundWorker \(Componente\)](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a><span data-ttu-id="e97f5-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="e97f5-118">See Also</span></span>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ <xref:System.ComponentModel.DoWorkEventArgs>  
+ [<span data-ttu-id="e97f5-119">Cómo: Implementar un formulario que utiliza una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="e97f5-119">How to: Implement a Form That Uses a Background Operation</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [<span data-ttu-id="e97f5-120">Componente BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="e97f5-120">BackgroundWorker Component</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

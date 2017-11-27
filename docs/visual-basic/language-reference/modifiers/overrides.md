@@ -1,78 +1,77 @@
 ---
-title: "Overrides (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overrides"
-  - "vb.Overrides"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Overrides (palabra clave)"
-  - "reemplazar"
-  - "reemplazar, Overrides (palabra clave)"
-  - "procedimientos, reemplazar"
-  - "procedimientos, redefinir"
-  - "propiedades [Visual Basic], reemplazar"
-  - "propiedades [Visual Basic], redefinir"
+title: Overrides (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overrides
+- vb.Overrides
+helpviewer_keywords:
+- properties [Visual Basic], redefining
+- procedures [Visual Basic], overriding
+- procedures [Visual Basic], redefining
+- overriding
+- Overrides keyword [Visual Basic]
+- overriding, Overrides keyword
+- properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1bee6a6235b87a7e20f087a73bef76e0fc7bf124
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Overrides (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica que una propiedad o procedimiento invalida una propiedad o procedimiento del mismo nombre heredado de una clase base.  
+# <a name="overrides-visual-basic"></a><span data-ttu-id="64084-102">Overrides (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64084-102">Overrides (Visual Basic)</span></span>
+<span data-ttu-id="64084-103">Especifica que una propiedad o procedimiento invalida una propiedad o procedimiento del mismo nombre heredado de una clase base.</span><span class="sxs-lookup"><span data-stu-id="64084-103">Specifies that a property or procedure overrides an identically named property or procedure inherited from a base class.</span></span>  
   
-## Comentarios  
+## <a name="remarks"></a><span data-ttu-id="64084-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="64084-104">Remarks</span></span>  
   
-## Reglas  
+## <a name="rules"></a><span data-ttu-id="64084-105">Reglas</span><span class="sxs-lookup"><span data-stu-id="64084-105">Rules</span></span>  
   
--   **Contexto de declaración**. Puede usar `Overrides` únicamente en una instrucción de declaración de procedimiento o propiedad.  
+-   <span data-ttu-id="64084-106">**Contexto de la declaración.**</span><span class="sxs-lookup"><span data-stu-id="64084-106">**Declaration Context.**</span></span> <span data-ttu-id="64084-107">Puede usar `Overrides` únicamente en una instrucción de declaración de procedimiento o propiedad.</span><span class="sxs-lookup"><span data-stu-id="64084-107">You can use `Overrides` only in a property or procedure declaration statement.</span></span>  
   
--   **Modificadores combinados**. No es posible especificar `Overrides` junto con `Shadows` o `Shared` en la misma declaración.  Dado que un elemento de reemplazo es reemplazable de forma implícita, no se puede combinar `Overridable` con `Overrides`.  
+-   <span data-ttu-id="64084-108">**Modificadores combinados.**</span><span class="sxs-lookup"><span data-stu-id="64084-108">**Combined Modifiers.**</span></span> <span data-ttu-id="64084-109">No es posible especificar `Overrides` junto con `Shadows` o `Shared` en la misma declaración.</span><span class="sxs-lookup"><span data-stu-id="64084-109">You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration.</span></span> <span data-ttu-id="64084-110">Dado que un elemento de reemplazo es reemplazable de forma implícita, no se puede combinar `Overridable` con `Overrides`.</span><span class="sxs-lookup"><span data-stu-id="64084-110">Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.</span></span>  
   
--   **Firmas coincidentes**. La firma de esta declaración debe coincidir de forma exacta con la *firma* de la propiedad o el procedimiento al que reemplaza.  Esto significa que las listas de parámetros deben tener el mismo número de parámetros, en el mismo orden y con los mismos tipos de datos.  
+-   <span data-ttu-id="64084-111">**Hacer coincidir las firmas.**</span><span class="sxs-lookup"><span data-stu-id="64084-111">**Matching Signatures.**</span></span> <span data-ttu-id="64084-112">La firma de esta declaración debe coincidir la *firma* de la propiedad o procedimiento que reemplaza.</span><span class="sxs-lookup"><span data-stu-id="64084-112">The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides.</span></span> <span data-ttu-id="64084-113">Esto significa que las listas de parámetros deben tener el mismo número de parámetros, en el mismo orden y con los mismos tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="64084-113">This means the parameter lists must have the same number of parameters, in the same order, with the same data types.</span></span>  
   
-     Además de coincidir con la firma, la declaración de reemplazo también debe coincidir de forma exacta con los elementos siguientes:  
+     <span data-ttu-id="64084-114">Además de coincidir con la firma, la declaración de reemplazo también debe coincidir de forma exacta con los elementos siguientes:</span><span class="sxs-lookup"><span data-stu-id="64084-114">In addition to the signature, the overriding declaration must also exactly match the following:</span></span>  
   
-    -   El nivel de acceso.  
+    -   <span data-ttu-id="64084-115">El nivel de acceso.</span><span class="sxs-lookup"><span data-stu-id="64084-115">The access level</span></span>  
   
-    -   El tipo de valor devuelto, si lo hay.  
+    -   <span data-ttu-id="64084-116">El tipo de valor devuelto, si lo hay.</span><span class="sxs-lookup"><span data-stu-id="64084-116">The return type, if any</span></span>  
   
--   **Firmas genéricas**. En los procedimientos genéricos, la firma incluye el número de parámetros de tipo.  Por lo tanto, la declaración de reemplazo también debe coincidir con la versión de la clase base en este sentido.  
+-   <span data-ttu-id="64084-117">**Firmas genéricas.**</span><span class="sxs-lookup"><span data-stu-id="64084-117">**Generic Signatures.**</span></span> <span data-ttu-id="64084-118">En los procedimientos genéricos, la firma incluye el número de parámetros de tipo.</span><span class="sxs-lookup"><span data-stu-id="64084-118">For a generic procedure, the signature includes the number of type parameters.</span></span> <span data-ttu-id="64084-119">Por lo tanto, la declaración de reemplazo también debe coincidir con la versión de la clase base en este sentido.</span><span class="sxs-lookup"><span data-stu-id="64084-119">Therefore, the overriding declaration must match the base class version in that respect as well.</span></span>  
   
--   **Coincidencia adicional**. Además de coincidir con la firma de la versión de la clase base, esta declaración también debe coincidir con los elementos siguientes:  
+-   <span data-ttu-id="64084-120">**Coincidencia adicional.**</span><span class="sxs-lookup"><span data-stu-id="64084-120">**Additional Matching.**</span></span> <span data-ttu-id="64084-121">Además de coincidir con la firma de la versión de la clase base, esta declaración también debe coincidir con los elementos siguientes:</span><span class="sxs-lookup"><span data-stu-id="64084-121">In addition to matching the signature of the base class version, this declaration must also match it in the following respects:</span></span>  
   
-    -   Modificador de nivel de acceso \(como [Public](../../../visual-basic/language-reference/modifiers/public.md)\).  
+    -   <span data-ttu-id="64084-122">Modificador de nivel de acceso (como [público](../../../visual-basic/language-reference/modifiers/public.md))</span><span class="sxs-lookup"><span data-stu-id="64084-122">Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))</span></span>  
   
-    -   Mecanismo de paso de cada parámetro \([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)\).  
+    -   <span data-ttu-id="64084-123">Mecanismo de paso de cada parámetro ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) o [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))</span><span class="sxs-lookup"><span data-stu-id="64084-123">Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))</span></span>  
   
-    -   Listas de restricciones de los distintos parámetros de tipo de los procedimientos genéricos.  
+    -   <span data-ttu-id="64084-124">Listas de restricciones de los distintos parámetros de tipo de los procedimientos genéricos.</span><span class="sxs-lookup"><span data-stu-id="64084-124">Constraint lists on each type parameter of a generic procedure</span></span>  
   
--   **Sombreado y reemplazos**. Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos.  Para obtener más información, consulte [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+-   <span data-ttu-id="64084-125">**Sombrear y reemplazar.**</span><span class="sxs-lookup"><span data-stu-id="64084-125">**Shadowing and Overriding.**</span></span> <span data-ttu-id="64084-126">Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos.</span><span class="sxs-lookup"><span data-stu-id="64084-126">Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches.</span></span> <span data-ttu-id="64084-127">Para obtener más información, consulte [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span><span class="sxs-lookup"><span data-stu-id="64084-127">For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).</span></span>  
   
- Si usa `Overrides`, el compilador agregará `Overloads` de forma implícita para que las API de biblioteca trabajen con C\# más fácilmente.  
+ <span data-ttu-id="64084-128">Si usa `Overrides`, el compilador agregará `Overloads` de forma implícita para que las API de biblioteca trabajen con C# más fácilmente.</span><span class="sxs-lookup"><span data-stu-id="64084-128">If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.</span></span>  
   
- El modificador `Overrides` se puede utilizar en los contextos siguientes:  
+ <span data-ttu-id="64084-129">El modificador `Overrides` se puede utilizar en los contextos siguientes:</span><span class="sxs-lookup"><span data-stu-id="64084-129">The `Overrides` modifier can be used in these contexts:</span></span>  
   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="64084-130">Function (instrucción)</span><span class="sxs-lookup"><span data-stu-id="64084-130">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="64084-131">Property (instrucción)</span><span class="sxs-lookup"><span data-stu-id="64084-131">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="64084-132">Sub (instrucción)</span><span class="sxs-lookup"><span data-stu-id="64084-132">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vea también  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)   
- [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)   
- [Tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Lista de tipos](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a><span data-ttu-id="64084-133">Vea también</span><span class="sxs-lookup"><span data-stu-id="64084-133">See Also</span></span>  
+ [<span data-ttu-id="64084-134">MustOverride</span><span class="sxs-lookup"><span data-stu-id="64084-134">MustOverride</span></span>](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [<span data-ttu-id="64084-135">NotOverridable</span><span class="sxs-lookup"><span data-stu-id="64084-135">NotOverridable</span></span>](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [<span data-ttu-id="64084-136">Overridable</span><span class="sxs-lookup"><span data-stu-id="64084-136">Overridable</span></span>](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [<span data-ttu-id="64084-137">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="64084-137">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="64084-138">Sombrear en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="64084-138">Shadowing in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
+ [<span data-ttu-id="64084-139">Tipos genéricos en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="64084-139">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="64084-140">Lista de tipos</span><span class="sxs-lookup"><span data-stu-id="64084-140">Type List</span></span>](../../../visual-basic/language-reference/statements/type-list.md)

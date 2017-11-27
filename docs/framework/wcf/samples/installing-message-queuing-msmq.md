@@ -1,73 +1,76 @@
 ---
-title: "Instalar Message Queuing (MSMQ) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Instalar Message Queuing (MSMQ)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 89d81a25da6494fc9cbf041ae68f2985b5c90a81
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Instalar Message Queuing (MSMQ)
-Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
+# <a name="installing-message-queuing-msmq"></a><span data-ttu-id="59acc-102">Instalar Message Queuing (MSMQ)</span><span class="sxs-lookup"><span data-stu-id="59acc-102">Installing Message Queuing (MSMQ)</span></span>
+<span data-ttu-id="59acc-103">Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.</span><span class="sxs-lookup"><span data-stu-id="59acc-103">The following procedures show how to install Message Queuing 4.0 and Message Queuing 3.0.</span></span>  
   
 > [!NOTE]
->  Message Queuing 4.0 no está disponible en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ni [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+>  <span data-ttu-id="59acc-104">Message Queuing 4.0 no está disponible en [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ni [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].</span><span class="sxs-lookup"><span data-stu-id="59acc-104">Message Queuing 4.0 is not available in [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].</span></span>  
   
-#### Para instalar Message Queuing 4.0 en Windows Server 2008 o Windows Server 2008 R2  
+#### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a><span data-ttu-id="59acc-105">Para instalar Message Queuing 4.0 en Windows Server 2008 o Windows Server 2008 R2</span><span class="sxs-lookup"><span data-stu-id="59acc-105">To install Message Queuing 4.0 on Windows Server 2008 or Windows Server 2008 R2</span></span>  
   
-1.  En Administrador del servidor, haga clic en **Características**.  
+1.  <span data-ttu-id="59acc-106">En el administrador del servidor, haga clic en **características**.</span><span class="sxs-lookup"><span data-stu-id="59acc-106">In Server Manager, click **Features**.</span></span>  
   
-2.  En el panel derecho, en **Resumen de características**, haga clic en **Agregar características**.  
+2.  <span data-ttu-id="59acc-107">En el panel derecho, en **resumen de características**, haga clic en **agregar características**.</span><span class="sxs-lookup"><span data-stu-id="59acc-107">In the right-hand pane under **Features Summary**, click **Add Features**.</span></span>  
   
-3.  En la ventana resultante, expanda el nodo **Message Queuing**.  
+3.  <span data-ttu-id="59acc-108">En la ventana resultante, expanda **Message Queue Server**.</span><span class="sxs-lookup"><span data-stu-id="59acc-108">In the resulting window, expand **Message Queuing**.</span></span>  
   
-4.  Expanda el nodo **Servicios de Message Queuing**.  
+4.  <span data-ttu-id="59acc-109">Expanda **servicios puesta en cola de mensajes**.</span><span class="sxs-lookup"><span data-stu-id="59acc-109">Expand **Message Queuing Services**.</span></span>  
   
-5.  Haga clic en **Integración de servicios de directorio** \(para los equipos asociados a un dominio\), a continuación haga clic en **Compatibilidad con HTTP**.  
+5.  <span data-ttu-id="59acc-110">Haga clic en **integración de servicios de directorio** (para los equipos unidos a un dominio), a continuación, haga clic en **compatibilidad con HTTP**.</span><span class="sxs-lookup"><span data-stu-id="59acc-110">Click **Directory Services Integration** (for computers joined to a Domain), then click **HTTP Support**.</span></span>  
   
-6.  Haga clic en **Siguiente**,y, a continuación, en **Instalar**.  
+6.  <span data-ttu-id="59acc-111">Haga clic en **siguiente**, a continuación, haga clic en **instalar**.</span><span class="sxs-lookup"><span data-stu-id="59acc-111">Click **Next**,then click **Install**.</span></span>  
   
-#### Para instalar Message Queuing 4.0 en Windows 7 o Windows Vista  
+#### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a><span data-ttu-id="59acc-112">Para instalar Message Queuing 4.0 en Windows 7 o Windows Vista</span><span class="sxs-lookup"><span data-stu-id="59acc-112">To install Message Queuing 4.0 on Windows 7 or Windows Vista</span></span>  
   
-1.  Abra el **Panel de control**.  
+1.  <span data-ttu-id="59acc-113">Abra **Panel de Control**.</span><span class="sxs-lookup"><span data-stu-id="59acc-113">Open **Control Panel**.</span></span>  
   
-2.  Haga clic en **Programas** y, a continuación, en **Programas y características**, haga clic en **Activar o desactivar las características de Windows**.  
+2.  <span data-ttu-id="59acc-114">Haga clic en **programas** y, a continuación, en **programas y características**, haga clic en **activar o desactivar las características de Windows**.</span><span class="sxs-lookup"><span data-stu-id="59acc-114">Click **Programs** and then, under **Programs and Features**, click **Turn Windows Features on and off**.</span></span>  
   
-3.  Expanda Microsoft Message Queuing \(MSMQ\), expanda Núcleo de Microsoft Message Queuing \(MSMQ\) y, a continuación, active las casillas para que se instalen las siguientes características de Message Queuing:  
+3.  <span data-ttu-id="59acc-115">Expanda Microsoft Message Queuing (MSMQ), expanda Núcleo de Microsoft Message Queuing (MSMQ) y, a continuación, active las casillas para que se instalen las siguientes características de Message Queuing:</span><span class="sxs-lookup"><span data-stu-id="59acc-115">Expand Microsoft Message Queue (MSMQ) Server, expand Microsoft Message Queue (MSMQ) Server Core, and then select the check boxes for the following Message Queuing features to install:</span></span>  
   
-    -   Integración de Servicios de dominio de Active Directory MSMQ \(para los equipos unidos a un dominio\).  
+    -   <span data-ttu-id="59acc-116">Integración de Servicios de dominio de Active Directory MSMQ (para los equipos unidos a un dominio).</span><span class="sxs-lookup"><span data-stu-id="59acc-116">MSMQ Active Directory Domain Services Integration (for computers joined to a Domain).</span></span>  
   
-    -   Compatibilidad con MSMQ HTTP.  
+    -   <span data-ttu-id="59acc-117">Compatibilidad con MSMQ HTTP.</span><span class="sxs-lookup"><span data-stu-id="59acc-117">MSMQ HTTP Support.</span></span>  
   
-4.  Haga clic en **Aceptar**.  
+4.  <span data-ttu-id="59acc-118">Haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="59acc-118">Click **OK**.</span></span>  
   
-5.  Si se le solicita que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.  
+5.  <span data-ttu-id="59acc-119">Si se le pide que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.</span><span class="sxs-lookup"><span data-stu-id="59acc-119">If you are prompted to restart the computer, click **OK** to complete the installation.</span></span>  
   
-#### Para instalar Message Queuing 3.0 en Windows XP y Windows Server 2003  
+#### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a><span data-ttu-id="59acc-120">Para instalar Message Queuing 3.0 en Windows XP y Windows Server 2003</span><span class="sxs-lookup"><span data-stu-id="59acc-120">To install Message Queuing 3.0 on Windows XP and Windows Server 2003</span></span>  
   
-1.  Abra el **Panel de control**.  
+1.  <span data-ttu-id="59acc-121">Abra **Panel de Control**.</span><span class="sxs-lookup"><span data-stu-id="59acc-121">Open **Control Panel**.</span></span>  
   
-2.  Haga clic en **Agregar o quitar programas** y, a continuación, haga clic en **Agregar componentes de Windows**.  
+2.  <span data-ttu-id="59acc-122">Haga clic en **agregar o quitar programas** y, a continuación, haga clic en **agregar componentes de Windows**.</span><span class="sxs-lookup"><span data-stu-id="59acc-122">Click **Add Remove Programs** and then click **Add Windows Components**.</span></span>  
   
-3.  Seleccione Message Queuing y haga clic en **Detalles**.  
+3.  <span data-ttu-id="59acc-123">Seleccione Message Queue Server y haga clic en **detalles**.</span><span class="sxs-lookup"><span data-stu-id="59acc-123">Select Message Queuing and click **Details**.</span></span>  
   
     > [!NOTE]
-    >  Si ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], seleccione Servidor de aplicaciones para obtener acceso a Message Queuing.  
+    >  <span data-ttu-id="59acc-124">Si ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], seleccione Servidor de aplicaciones para obtener acceso a Message Queuing.</span><span class="sxs-lookup"><span data-stu-id="59acc-124">If you are running [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], select Application Server to access Message Queuing.</span></span>  
   
-4.  Asegúrese de que la opción de compatibilidad HTTP con MSMQ está seleccionada en la página de detalles.  
+4.  <span data-ttu-id="59acc-125">Asegúrese de que la opción de compatibilidad HTTP con MSMQ está seleccionada en la página de detalles.</span><span class="sxs-lookup"><span data-stu-id="59acc-125">Ensure that the option MSMQ HTTP Support is selected on the details page.</span></span>  
   
-5.  Haga clic en **Aceptar** para salir de la página de detalles y, a continuación, haga clic en **Siguiente**.Complete la instalación.  
+5.  <span data-ttu-id="59acc-126">Haga clic en **Aceptar** para salir de la página de detalles y, a continuación, haga clic en **siguiente**.</span><span class="sxs-lookup"><span data-stu-id="59acc-126">Click **OK** to exit the details page, and then click **Next**.</span></span> <span data-ttu-id="59acc-127">Complete la instalación.</span><span class="sxs-lookup"><span data-stu-id="59acc-127">Complete the installation.</span></span>  
   
-6.  Si se le solicita que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.  
+6.  <span data-ttu-id="59acc-128">Si se le pide que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.</span><span class="sxs-lookup"><span data-stu-id="59acc-128">If you are prompted to restart the computer, click **OK** to complete the installation.</span></span>  
   
-## Vea también  
- [Instrucciones de instalación](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+## <a name="see-also"></a><span data-ttu-id="59acc-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="59acc-129">See Also</span></span>  
+ [<span data-ttu-id="59acc-130">Instrucciones de instalación</span><span class="sxs-lookup"><span data-stu-id="59acc-130">Set-Up Instructions</span></span>](../../../../docs/framework/wcf/samples/set-up-instructions.md)

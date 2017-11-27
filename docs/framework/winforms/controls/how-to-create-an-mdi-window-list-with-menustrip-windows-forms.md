@@ -1,48 +1,52 @@
 ---
-title: "C&#243;mo: Crear una lista de ventanas MDI con MenuStrip (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI, crear listas de ventanas"
-  - "MenuStrip (control) [Windows Forms], crear listas de ventanas"
+title: "Cómo: Crear una lista de ventanas MDI con MenuStrip (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- MDI [Windows Forms], creating window lists
+- MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ea2b3f41e6e40b589589db99bb2a5a0ba474c8cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear una lista de ventanas MDI con MenuStrip (formularios Windows Forms)
-Utilice la interfaz de múltiples documentos \(MDI\) para crear aplicaciones que abran varios documentos al mismo tiempo, y copie y pegue el contenido de un documento a otro.  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a><span data-ttu-id="9d465-102">Cómo: Crear una lista de ventanas MDI con MenuStrip (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="9d465-102">How to: Create an MDI Window List with MenuStrip (Windows Forms)</span></span>
+<span data-ttu-id="9d465-103">Usar la interfaz de múltiples documentos (MDI) para crear aplicaciones que pueden abrir varios documentos al mismo tiempo y copie y pegue el contenido de un documento a otro.</span><span class="sxs-lookup"><span data-stu-id="9d465-103">Use the multiple-document interface (MDI) to create applications that can open several documents at the same time and copy and paste content from one document to the other.</span></span>  
   
- Este procedimiento muestra cómo crear una lista de todos los formularios secundarios activos en el menú Ventana del elemento primario.  
+ <span data-ttu-id="9d465-104">Este procedimiento muestra cómo crear una lista de todos los formularios secundarios activos en el menú de la ventana del elemento primario.</span><span class="sxs-lookup"><span data-stu-id="9d465-104">This procedure shows you how to create a list of all the active child forms on the parent's Window menu.</span></span>  
   
-### Para crear una lista Ventana de MDI en un MenuStrip  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a><span data-ttu-id="9d465-105">Para crear una lista de ventanas MDI en un control MenuStrip</span><span class="sxs-lookup"><span data-stu-id="9d465-105">To create an MDI Window list on a MenuStrip</span></span>  
   
-1.  Cree un formulario y establezca su propiedad <xref:System.Windows.Forms.Form.IsMdiContainer%2A> en `true`.  
+1.  <span data-ttu-id="9d465-106">Cree un formulario y establezca su propiedad <xref:System.Windows.Forms.Form.IsMdiContainer%2A> en `true`.</span><span class="sxs-lookup"><span data-stu-id="9d465-106">Create a form and set its <xref:System.Windows.Forms.Form.IsMdiContainer%2A> property to `true`.</span></span>  
   
-2.  Agregue un <xref:System.Windows.Forms.MenuStrip> al formulario.  
+2.  <span data-ttu-id="9d465-107">Agregue un control <xref:System.Windows.Forms.MenuStrip> al formulario.</span><span class="sxs-lookup"><span data-stu-id="9d465-107">Add a <xref:System.Windows.Forms.MenuStrip> to the form.</span></span>  
   
-3.  Agregue dos elementos de menú de nivel superior a <xref:System.Windows.Forms.MenuStrip> y establezca sus propiedades <xref:System.Windows.Forms.Control.Text%2A> en `&File` y `&Window`.  
+3.  <span data-ttu-id="9d465-108">Agregar dos elementos de menú de nivel superior a la <xref:System.Windows.Forms.MenuStrip> y establezca sus <xref:System.Windows.Forms.Control.Text%2A> propiedades `&File` y `&Window`.</span><span class="sxs-lookup"><span data-stu-id="9d465-108">Add two top-level menu items to the <xref:System.Windows.Forms.MenuStrip> and set their <xref:System.Windows.Forms.Control.Text%2A> properties to `&File` and `&Window`.</span></span>  
   
-4.  Agregue un elemento de submenú al elemento de menú `&File` y establezca su propiedad <xref:System.Windows.Forms.ToolStripItem.Text%2A> en `&Open`.  
+4.  <span data-ttu-id="9d465-109">Agregue un elemento de submenú al elemento de menú `&File` y establezca su propiedad <xref:System.Windows.Forms.ToolStripItem.Text%2A> en `&Open`.</span><span class="sxs-lookup"><span data-stu-id="9d465-109">Add a submenu item to the `&File` menu item and set its <xref:System.Windows.Forms.ToolStripItem.Text%2A> property to `&Open`.</span></span>  
   
-5.  establezca la propiedad de <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> de <xref:System.Windows.Forms.MenuStrip> a `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+5.  <span data-ttu-id="9d465-110">Establecer el <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> propiedad de la <xref:System.Windows.Forms.MenuStrip> a la `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.</span><span class="sxs-lookup"><span data-stu-id="9d465-110">Set the <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property of the <xref:System.Windows.Forms.MenuStrip> to the `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-6.  Agregue un formulario al proyecto y agréguele el control que desee, como otro <xref:System.Windows.Forms.MenuStrip>.  
+6.  <span data-ttu-id="9d465-111">Agregue un formulario al proyecto y agregue el control que desee, por ejemplo, otro <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="9d465-111">Add a form to the project and add the control you want to it, such as another <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-7.  Cree un controlador de eventos para el evento <xref:System.Windows.Forms.Control.Click> de `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+7.  <span data-ttu-id="9d465-112">Cree un controlador para el evento <xref:System.Windows.Forms.Control.Click> del <xref:System.Windows.Forms.ToolStripMenuItem>`&New`.</span><span class="sxs-lookup"><span data-stu-id="9d465-112">Create an event handler for the <xref:System.Windows.Forms.Control.Click> event of the `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.</span></span>  
   
-8.  Dentro del controlador de eventos, inserte el código de ejemplo siguiente para crear y mostrar nuevas instancias de `Form2` como formulario MDI secundario de `Form1`.  
+8.  <span data-ttu-id="9d465-113">En el controlador de eventos, inserte código similar al siguiente para crear y mostrar nuevas instancias de `Form2` como elementos secundarios MDI de `Form1`.</span><span class="sxs-lookup"><span data-stu-id="9d465-113">Within the event handler, insert code similar to the following to create and display new instances of `Form2` as MDI children of `Form1`.</span></span>  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -54,12 +58,9 @@ Utilice la interfaz de múltiples documentos \(MDI\) para crear aplicaciones que
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void newToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -68,32 +69,29 @@ Utilice la interfaz de múltiples documentos \(MDI\) para crear aplicaciones que
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-9. Coloque el código siguiente en `&New`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar el controlador de eventos.  
+9. <span data-ttu-id="9d465-114">Incluya código similar al siguiente en el `&New` <xref:System.Windows.Forms.ToolStripMenuItem> para registrar el controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="9d465-114">Place code like the following in the `&New`<xref:System.Windows.Forms.ToolStripMenuItem> to register the event handler.</span></span>  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles newToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
-  
     ```  
   
-## Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="9d465-115">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="9d465-115">Compiling the Code</span></span>  
+ <span data-ttu-id="9d465-116">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="9d465-116">This example requires:</span></span>  
   
--   Dos controles <xref:System.Windows.Forms.Form> denominados `Form1` y `Form2`.  
+-   <span data-ttu-id="9d465-117">Dos controles <xref:System.Windows.Forms.Form> llamados `Form1` y `Form2`.</span><span class="sxs-lookup"><span data-stu-id="9d465-117">Two <xref:System.Windows.Forms.Form> controls named `Form1` and `Form2`.</span></span>  
   
--   Un control <xref:System.Windows.Forms.MenuStrip> en `Form1` denominado `menuStrip1` y un control <xref:System.Windows.Forms.MenuStrip> en `Form2` denominado `menuStrip2`.  
+-   <span data-ttu-id="9d465-118">Un control <xref:System.Windows.Forms.MenuStrip> en `Form1` llamado `menuStrip1` y un control <xref:System.Windows.Forms.MenuStrip> en `Form2` llamado `menuStrip2`.</span><span class="sxs-lookup"><span data-stu-id="9d465-118">A <xref:System.Windows.Forms.MenuStrip> control on `Form1` named `menuStrip1`, and a <xref:System.Windows.Forms.MenuStrip> control on `Form2` named `menuStrip2`.</span></span>  
   
--   Referencias a los ensamblados <xref:System?displayProperty=fullName> y <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   <span data-ttu-id="9d465-119">Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9d465-119">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## Vea también  
- [Cómo: Crear formularios principales MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Cómo: Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
- [MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="9d465-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="9d465-120">See Also</span></span>  
+ [<span data-ttu-id="9d465-121">Crear formularios principales MDI</span><span class="sxs-lookup"><span data-stu-id="9d465-121">How to: Create MDI Parent Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [<span data-ttu-id="9d465-122">Crear formularios MDI secundarios</span><span class="sxs-lookup"><span data-stu-id="9d465-122">How to: Create MDI Child Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
+ [<span data-ttu-id="9d465-123">Control MenuStrip</span><span class="sxs-lookup"><span data-stu-id="9d465-123">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

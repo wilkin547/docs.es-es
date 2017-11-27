@@ -1,30 +1,33 @@
 ---
-title: "Ejemplo de seguridad de mensaje | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ejemplo de seguridad de mensaje
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-caps.latest.revision: 33
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 33
+caps.latest.revision: "33"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: eda5acd6865e463f01b59566c7c75f8efad0c329
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de seguridad de mensaje
-Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBinding` y seguridad de mensaje.Este ejemplo se basa en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
+# <a name="message-security-sample"></a><span data-ttu-id="df1e4-102">Ejemplo de seguridad de mensaje</span><span class="sxs-lookup"><span data-stu-id="df1e4-102">Message Security Sample</span></span>
+<span data-ttu-id="df1e4-103">Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBinding` y seguridad de mensaje.</span><span class="sxs-lookup"><span data-stu-id="df1e4-103">This sample demonstrates how to implement an application that uses the `basicHttpBinding` and message security.</span></span> <span data-ttu-id="df1e4-104">En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.</span><span class="sxs-lookup"><span data-stu-id="df1e4-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="df1e4-105">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="df1e4-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- El modo de seguridad de `basicHttpBinding` puede establecerse en los valores siguientes: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` y `None`.En el siguiente archivo App.config del servicio del ejemplo, la definición de extremo especifica `basicHttpBinding` y hace referencia una configuración de enlace denominada `Binding1`, como se muestra en la configuración del ejemplo siguiente:  
+ <span data-ttu-id="df1e4-106">El modo de seguridad de `basicHttpBinding` puede establecerse en los valores siguientes: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` y `None`.</span><span class="sxs-lookup"><span data-stu-id="df1e4-106">The security mode of `basicHttpBinding` can be set to the following values: `Message`, `Transport`, `TransportWithMessageCredential`, `TransportCredentialOnly` and `None`.</span></span> <span data-ttu-id="df1e4-107">En el siguiente archivo App.config del servicio del ejemplo, la definición de extremo especifica `basicHttpBinding` y hace referencia una configuración de enlace denominada `Binding1`, como se muestra en la configuración del ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="df1e4-107">In the following sample service App.config file, the endpoint definition specifies the `basicHttpBinding` and references a binding configuration named `Binding1`, as shown in the following sample configuration:</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -40,9 +43,9 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBin
 </system.serviceModel>  
 ```  
   
- La configuración de enlace establece el atributo `mode` de [\<seguridad\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) como `Message`y establece el atributo `clientCredentialType` de [\<message\>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) como `Certificate` tal y como se muestra en la siguiente configuración de ejemplo:  
+ <span data-ttu-id="df1e4-108">Los conjuntos de configuración de enlace el `mode` atributo de la [ \<seguridad >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) a `Message` y establece la `clientCredentialType` atributo de la [ \<mensaje >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)a `Certificate` tal como se muestra en el siguiente ejemplo de configuración:</span><span class="sxs-lookup"><span data-stu-id="df1e4-108">The binding configuration sets the `mode` attribute of the [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) to `Message` and sets the `clientCredentialType` attribute of the [\<message>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md) to `Certificate` as shown in the following sample configuration:</span></span>  
   
-```  
+```xml  
 <bindings>  
   <basicHttpBinding>  
     <!--   
@@ -58,9 +61,9 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBin
 </bindings>  
 ```  
   
- El certificado que el servicio utiliza para autenticarse al cliente se establece en la sección de comportamientos del archivo de configuración bajo el elemento `serviceCredentials`.El modo de la validación que se aplica al certificado que el cliente utiliza para autenticarse al servicio también se establece en la sección de comportamientos bajo el elemento `clientCertificate`.  
+ <span data-ttu-id="df1e4-109">El certificado que el servicio utiliza para autenticarse al cliente se establece en la sección de comportamientos del archivo de configuración bajo el elemento `serviceCredentials`.</span><span class="sxs-lookup"><span data-stu-id="df1e4-109">The certificate that the service uses to authenticate itself to the client is set in the behaviors section of the configuration file under the `serviceCredentials` element.</span></span> <span data-ttu-id="df1e4-110">El modo de la validación que se aplica al certificado que el cliente utiliza para autenticarse al servicio también se establece en la sección de comportamientos bajo el elemento `clientCertificate`.</span><span class="sxs-lookup"><span data-stu-id="df1e4-110">The validation mode that applies to the certificate that the client uses to authenticate itself to the service is also set in the behaviors section under the `clientCertificate` element.</span></span>  
   
-```  
+```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
 <behaviors>  
   <serviceBehaviors>  
@@ -98,15 +101,15 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza `basicHttpBin
 </behaviors>  
 ```  
   
- El mismo enlace y detalles de seguridad se especifican en el archivo de configuración del cliente.  
+ <span data-ttu-id="df1e4-111">El mismo enlace y detalles de seguridad se especifican en el archivo de configuración del cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-111">The same binding and security details are specified in the client configuration file.</span></span>  
   
- La identidad del llamador se muestra en la ventana de la consola del servicio utilizando el código siguiente:  
+ <span data-ttu-id="df1e4-112">La identidad del llamador se muestra en la ventana de la consola del servicio utilizando el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="df1e4-112">The identity of the caller is displayed in the service console window by using the following code:</span></span>  
   
 ```  
 Console.WriteLine("Called by {0}", ServiceSecurityContext.Current.PrimaryIdentity.Name);  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="df1e4-113">Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-113">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="df1e4-114">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-114">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -116,73 +119,73 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Para configurar y compilar el ejemplo  
+### <a name="to-set-up-and-build-the-sample"></a><span data-ttu-id="df1e4-115">Para configurar y compilar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="df1e4-115">To set up and build the sample</span></span>  
   
-1.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="df1e4-116">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="df1e4-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="df1e4-117">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="df1e4-117">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-### Para ejecutar el ejemplo en el mismo equipo  
+### <a name="to-run-the-sample-on-the-same-machine"></a><span data-ttu-id="df1e4-118">Para ejecutar el ejemplo en el mismo equipo</span><span class="sxs-lookup"><span data-stu-id="df1e4-118">To run the sample on the same machine</span></span>  
   
-1.  Ejecute Setup.bat desde la carpeta de instalación del ejemplo.Esto instala todos los certificados requeridos para ejecutar el ejemplo.  
-  
-    > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Windows SDK.Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK.Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Windows SDK.  
-  
-2.  Ejecute la aplicación de servicio desde \\service\\bin.  
-  
-3.  Ejecute la aplicación cliente desde \\client\\bin.La actividad del cliente se muestra en la aplicación de consola del cliente.  
-  
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
-  
-5.  Quite los certificados ejecutando Cleanup.bat cuando haya finalizado con el ejemplo.Otros ejemplos de seguridad usan los mismos certificados.  
-  
-### Para ejecutar el ejemplo en varios equipos  
-  
-1.  Cree un directorio en el equipo del servicio para los binarios del servicio.  
-  
-2.  Copie los archivos del programa de servicio en el directorio de servicio situado en el servidor.Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el servidor.  
-  
-3.  Cree un directorio en el equipo cliente para los archivos binarios del cliente.  
-  
-4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente.Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
-  
-5.  En el servidor, ejecute `setup.bat service`.Al ejecutar `setup.bat`  con el argumento `service` se crea un certificado del servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
-  
-6.  Edite el archivo service.exe.config para reflejar el nuevo nombre del certificado \(en el atributo `findValue` en el elemento [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), que es igual que el nombre de dominio completo del equipo.También cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar de `.` del host local  
-  
-7.  Copie el archivo Service.cer del directorio de servicio del directorio del cliente al equipo cliente.  
-  
-8.  En el cliente, ejecute `setup.bat client`.Ejecutar `setup.bat` con el argumento `client` crea un certificado de cliente denominado client.com y exporta el certificado de cliente a un archivo denominado Client.cer.  
-  
-9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.También cambie el atributo `findValue` de [\<defaultCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) al nuevo nombre de certificado de servicio que es el nombre de dominio completo del servidor.  
-  
-10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
-  
-11. En el cliente, ejecute ImportServiceCert.bat.Esto importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser \- TrustedPeople.  
-  
-12. En el servidor, ejecute ImportClientCert.bat. Esto importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine \- TrustedPeople.  
-  
-13. En el equipo del servicio, ejecute Service.exe desde el símbolo del sistema.  
-  
-14. En el equipo cliente, inicie Client.exe desde la ventana de símbolo del sistema.  
-  
-    1.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
-  
-### Para limpiar después del ejemplo  
-  
--   Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+1.  <span data-ttu-id="df1e4-119">Ejecute Setup.bat desde la carpeta de instalación del ejemplo.</span><span class="sxs-lookup"><span data-stu-id="df1e4-119">Run Setup.bat from the sample install folder.</span></span> <span data-ttu-id="df1e4-120">De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="df1e4-120">This installs all the certificates required for running the sample.</span></span>  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos.Si ha ejecutado los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el almacén CurrentUser \- TrustedPeople.Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  <span data-ttu-id="df1e4-121">El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="df1e4-121">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="df1e4-122">Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK.</span><span class="sxs-lookup"><span data-stu-id="df1e4-122">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="df1e4-123">Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Windows SDK.</span><span class="sxs-lookup"><span data-stu-id="df1e4-123">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span>  
+  
+2.  <span data-ttu-id="df1e4-124">Ejecute la aplicación de servicio desde \service\bin.</span><span class="sxs-lookup"><span data-stu-id="df1e4-124">Run the service application from \service\bin.</span></span>  
+  
+3.  <span data-ttu-id="df1e4-125">Ejecute la aplicación cliente desde \client\bin.</span><span class="sxs-lookup"><span data-stu-id="df1e4-125">Run the client application from \client\bin.</span></span> <span data-ttu-id="df1e4-126">La actividad del cliente se muestra en la aplicación de consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-126">Client activity is displayed on the client console application.</span></span>  
+  
+4.  <span data-ttu-id="df1e4-127">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="df1e4-127">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
+  
+5.  <span data-ttu-id="df1e4-128">Quite los certificados ejecutando Cleanup.bat cuando haya finalizado con el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="df1e4-128">Remove the certificates by running Cleanup.bat when you have finished with the sample.</span></span> <span data-ttu-id="df1e4-129">Otros ejemplos de seguridad usan los mismos certificados.</span><span class="sxs-lookup"><span data-stu-id="df1e4-129">Other security samples use the same certificates.</span></span>  
+  
+### <a name="to-run-the-sample-across-machines"></a><span data-ttu-id="df1e4-130">Para ejecutar el ejemplo en los equipos</span><span class="sxs-lookup"><span data-stu-id="df1e4-130">To run the sample across machines</span></span>  
+  
+1.  <span data-ttu-id="df1e4-131">Cree un directorio en el equipo del servicio para los binarios del servicio.</span><span class="sxs-lookup"><span data-stu-id="df1e4-131">Create a directory on the service machine for the service binaries.</span></span>  
+  
+2.  <span data-ttu-id="df1e4-132">Copie los archivos del programa de servicio en el directorio de servicio situado en el servidor.</span><span class="sxs-lookup"><span data-stu-id="df1e4-132">Copy the service program files to the service directory on the server.</span></span> <span data-ttu-id="df1e4-133">Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el servidor.</span><span class="sxs-lookup"><span data-stu-id="df1e4-133">Also copy the Setup.bat, Cleanup.bat, and ImportClientCert.bat files to the server.</span></span>  
+  
+3.  <span data-ttu-id="df1e4-134">Cree un directorio en el equipo cliente para los archivos binarios del cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-134">Create a directory on the client machine for the client binaries.</span></span>  
+  
+4.  <span data-ttu-id="df1e4-135">Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-135">Copy the client program files to the client directory on the client machine.</span></span> <span data-ttu-id="df1e4-136">Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-136">Also copy the Setup.bat, Cleanup.bat, and ImportServiceCert.bat files to the client.</span></span>  
+  
+5.  <span data-ttu-id="df1e4-137">En el servidor, ejecute `setup.bat service`.</span><span class="sxs-lookup"><span data-stu-id="df1e4-137">On the server, run `setup.bat service`.</span></span> <span data-ttu-id="df1e4-138">Ejecuta `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo de la máquina y exporta el certificado de servicio a un archivo denominado Service.cer.</span><span class="sxs-lookup"><span data-stu-id="df1e4-138">Running `setup.bat` with the `service` argument creates a service certificate with the fully-qualified domain name of the machine and exports the service certificate to a file named Service.cer.</span></span>  
+  
+6.  <span data-ttu-id="df1e4-139">Editar Service.exe.config para reflejar el nuevo nombre de certificado (en el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento) que es el mismo que el nombre de dominio completo de la máquina.</span><span class="sxs-lookup"><span data-stu-id="df1e4-139">Edit Service.exe.config to reflect the new certificate name (in the `findValue` attribute in the [\<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) element) which is the same as the fully-qualified domain name of the machine.</span></span> <span data-ttu-id="df1e4-140">También cambie el valor de la dirección base para especificar un nombre de equipo completo en lugar de `.` del host local</span><span class="sxs-lookup"><span data-stu-id="df1e4-140">Also change the value of the base address to specify a fully-qualified machine name instead of localhost`.`</span></span>  
+  
+7.  <span data-ttu-id="df1e4-141">Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.</span><span class="sxs-lookup"><span data-stu-id="df1e4-141">Copy the Service.cer file from the service directory to the client directory on the client machine.</span></span>  
+  
+8.  <span data-ttu-id="df1e4-142">En el cliente, ejecute `setup.bat client`.</span><span class="sxs-lookup"><span data-stu-id="df1e4-142">On the client, run `setup.bat client`.</span></span> <span data-ttu-id="df1e4-143">Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.</span><span class="sxs-lookup"><span data-stu-id="df1e4-143">Running `setup.bat` with the `client` argument creates a client certificate named client.com and exports the client certificate to a file named Client.cer.</span></span>  
+  
+9. <span data-ttu-id="df1e4-144">En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio.</span><span class="sxs-lookup"><span data-stu-id="df1e4-144">In the Client.exe.config file on the client machine, change the address value of the endpoint to match the new address of your service.</span></span> <span data-ttu-id="df1e4-145">Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.</span><span class="sxs-lookup"><span data-stu-id="df1e4-145">You do this by replacing localhost with the fully-qualified domain name of the server.</span></span> <span data-ttu-id="df1e4-146">Cambiar el `findValue` atributo de la [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) para el nuevo nombre de certificado de servicio que es el nombre de dominio completo del servidor.</span><span class="sxs-lookup"><span data-stu-id="df1e4-146">Also change the `findValue` attribute of the [\<defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) to the new service certificate name which is the fully-qualified domain name of the server.</span></span>  
+  
+10. <span data-ttu-id="df1e4-147">Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.</span><span class="sxs-lookup"><span data-stu-id="df1e4-147">Copy the Client.cer file from the client directory to the service directory on the server.</span></span>  
+  
+11. <span data-ttu-id="df1e4-148">En el cliente, ejecute ImportServiceCert.bat.</span><span class="sxs-lookup"><span data-stu-id="df1e4-148">On the client, run ImportServiceCert.bat.</span></span> <span data-ttu-id="df1e4-149">Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="df1e4-149">This imports the service certificate from the Service.cer file into the CurrentUser - TrustedPeople store.</span></span>  
+  
+12. <span data-ttu-id="df1e4-150">En el servidor, ejecute ImportClientCert.bat. Esto importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="df1e4-150">On the server, run ImportClientCert.bat, This imports the client certificate from the Client.cer file into the LocalMachine - TrustedPeople store.</span></span>  
+  
+13. <span data-ttu-id="df1e4-151">En el equipo del servicio, ejecute Service.exe desde el símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="df1e4-151">On the service machine, run Service.exe from a command prompt.</span></span>  
+  
+14. <span data-ttu-id="df1e4-152">En el equipo cliente, inicie Client.exe desde la ventana de símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="df1e4-152">On the client machine, launch Client.exe from a command prompt window.</span></span>  
+  
+    1.  <span data-ttu-id="df1e4-153">Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span><span class="sxs-lookup"><span data-stu-id="df1e4-153">If the client and service are not able to communicate, see [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).</span></span>  
+  
+### <a name="to-clean-up-after-the-sample"></a><span data-ttu-id="df1e4-154">Para realizar una limpieza después de ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="df1e4-154">To clean up after the sample</span></span>  
+  
+-   <span data-ttu-id="df1e4-155">Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="df1e4-155">Run Cleanup.bat in the samples folder once you have finished running the sample.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="df1e4-156">Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos.</span><span class="sxs-lookup"><span data-stu-id="df1e4-156">This script does not remove service certificates on a client when running this sample across machines.</span></span> <span data-ttu-id="df1e4-157">Si ha ejecutado los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople.</span><span class="sxs-lookup"><span data-stu-id="df1e4-157">If you have run [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples that use certificates across machines, be sure to clear the service certificates that have been installed in the CurrentUser - TrustedPeople store.</span></span> <span data-ttu-id="df1e4-158">Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.</span><span class="sxs-lookup"><span data-stu-id="df1e4-158">To do this, use the following command: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` For example: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="df1e4-159">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="df1e4-159">The samples may already be installed on your machine.</span></span> <span data-ttu-id="df1e4-160">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="df1e4-160">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="df1e4-161">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="df1e4-161">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="df1e4-162">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="df1e4-162">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="df1e4-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="df1e4-163">See Also</span></span>

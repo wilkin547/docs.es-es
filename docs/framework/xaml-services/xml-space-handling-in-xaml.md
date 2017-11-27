@@ -1,52 +1,55 @@
 ---
-title: "xml:space Handling in XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], xml:space attribute"
-  - "XAML [XAML Services], whitespace processing"
-  - "xml:space attribute [XAML Services]"
-  - "whitespace processing [XAML Services]"
+title: Control de xml:space en XAML
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [XAML Services], xml:space attribute
+- XAML [XAML Services], whitespace processing
+- xml:space attribute [XAML Services]
+- whitespace processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-caps.latest.revision: 15
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: a5048cbad1d2ea914d041ac3c87a43223b208c3a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# xml:space Handling in XAML
-El atributo `xml:space` es un atributo XML definido que declara el comportamiento de procesamiento significativo de espacio en blanco dentro de un elemento de objeto.  Este comportamiento es pertinente para todo el contenido \(texto interno\) incluido dentro del elemento donde se declara `xml:space` y también ámbitos a los elementos secundarios.  
+# <a name="xmlspace-handling-in-xaml"></a><span data-ttu-id="4228a-102">Control de xml:space en XAML</span><span class="sxs-lookup"><span data-stu-id="4228a-102">xml:space Handling in XAML</span></span>
+<span data-ttu-id="4228a-103">El `xml:space` es un atributo definido por el XML que declara el comportamiento del procesamiento de espacios en blanco significativos dentro de un elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="4228a-103">The `xml:space` attribute is an XML-defined attribute that declares the significant whitespace processing behavior within an object element.</span></span> <span data-ttu-id="4228a-104">Este comportamiento es pertinente para todo el contenido (texto interno) incluido dentro del elemento donde `xml:space` se declara y también limita su ámbito a los elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="4228a-104">This behavior is relevant for all content (inner text) contained within the element where `xml:space` is declared, and also scopes to child elements.</span></span>  
   
-## Uso de atributos XAML  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="4228a-105">Uso de atributos XAML</span><span class="sxs-lookup"><span data-stu-id="4228a-105">XAML Attribute Usage</span></span>  
   
-```  
-<object xml:space="preserve" />  
-```  
-  
- \-O bien\-  
-  
-```  
-<object xml:space="default" />  
+```xaml  
+<object xml:space="preserve" />  
 ```  
   
-## Comentarios  
- La definición para el atributo `xml:space` en XAML que incluye sus dos valores posibles se deriva de `xml:space` definido como un "atributo especial" por especificaciones W3C para XML.  
+ <span data-ttu-id="4228a-106">\- o -</span><span class="sxs-lookup"><span data-stu-id="4228a-106">\- or -</span></span>  
   
- El valor predeterminado del atributo `xml:space` es el valor literal `"default"`.  Cuando su valor es `"default"`, o si no se indica `xml:space` en absoluto, el comportamiento de análisis del espacio en blanco significativo es la administración predeterminada, como se define en el tema [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+```xaml  
+<object xml:space="default" />  
+```  
   
- Para conservar el espacio en blanco dentro del contenido de un elemento de objeto, especifique `xml:space="preserve"` para ese elemento de objeto.  
+## <a name="remarks"></a><span data-ttu-id="4228a-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4228a-107">Remarks</span></span>  
+ <span data-ttu-id="4228a-108">La definición de la `xml:space` atributo en XAML que incluye sus dos valores posibles se deriva de `xml:space` tal como se define como un "atributo especial" por especificaciones W3C para XML.</span><span class="sxs-lookup"><span data-stu-id="4228a-108">The definition for the `xml:space` attribute in XAML including its two possible values is derived from `xml:space` as defined as a "special attribute" by W3C specifications for XML.</span></span>  
   
- Según la mayoría de interpretaciones, el ámbito de los efectos de atributo `xml:space` y su valor se aplica a los elementos secundarios.  
+ <span data-ttu-id="4228a-109">El valor predeterminado de la `xml:space` atributo es el valor literal `"default"`.</span><span class="sxs-lookup"><span data-stu-id="4228a-109">The default value of the `xml:space` attribute is the literal value `"default"`.</span></span> <span data-ttu-id="4228a-110">Para el valor `"default"`, o si `xml:space` no se indica en absoluto, el comportamiento de análisis de espacio en blanco significativo es el control de forma predeterminada, tal como se define en el tema [procesamiento de espacios en blanco en XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="4228a-110">For the value `"default"`, or if `xml:space` is not indicated at all, the behavior of significant whitespace parsing is the default handling, as defined in the topic [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
   
- Para obtener una discusión completa de procesamiento del espacio en blanco en XAML, vea [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <span data-ttu-id="4228a-111">Para conservar espacio en blanco en el contenido del elemento de objeto, especifique `xml:space="preserve"` en ese elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="4228a-111">To preserve whitespace within object element content, specify `xml:space="preserve"` on that object element.</span></span>  
   
-## Vea también  
- [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)   
- [Información general sobre XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+ <span data-ttu-id="4228a-112">En la mayoría de interpretaciones, la `xml:space` efectos del atributo y el valor del atributo se limitan a los elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="4228a-112">Under most interpretations, the `xml:space` attribute effects and the value of the attribute are scoped to child elements.</span></span>  
+  
+ <span data-ttu-id="4228a-113">Para obtener una explicación completa de procesamiento de espacios en XAML, vea [procesamiento de espacios en blanco en XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span><span class="sxs-lookup"><span data-stu-id="4228a-113">For a complete discussion of whitespace processing in XAML, see [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="4228a-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="4228a-114">See Also</span></span>  
+ [<span data-ttu-id="4228a-115">Procesamiento de espacios en blanco en XAML</span><span class="sxs-lookup"><span data-stu-id="4228a-115">Whitespace Processing in XAML</span></span>](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
+ [<span data-ttu-id="4228a-116">Información general sobre XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="4228a-116">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

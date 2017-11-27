@@ -1,97 +1,95 @@
 ---
-title: "From (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryFrom"
-  - "vb.QueryFromIn"
-  - "vb.QueryFromLet"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "From (cláusula)"
-  - "From (instrucción)"
-  - "consultas [Visual Basic], From"
+title: "From (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.QueryFrom
+- vb.QueryFromIn
+- vb.QueryFromLet
+helpviewer_keywords:
+- queries [Visual Basic], From
+- From clause [Visual Basic]
+- From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# From (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica una o más variables de rango y una colección que se va a consultar.  
+# <a name="from-clause-visual-basic"></a><span data-ttu-id="82f64-102">From (Cláusula, Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82f64-102">From Clause (Visual Basic)</span></span>
+<span data-ttu-id="82f64-103">Especifica uno o más variables de rango y una colección a la consulta.</span><span class="sxs-lookup"><span data-stu-id="82f64-103">Specifies one or more range variables and a collection to query.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="82f64-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="82f64-104">Syntax</span></span>  
   
 ```  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
   
-## Elementos  
+## <a name="parts"></a><span data-ttu-id="82f64-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="82f64-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|Término|Definición|  
-|`element`|Obligatorio.  *Variable de rango* usada para recorrer en iteración los elementos de la colección.  Una variable de rango se utiliza para hacer referencia a cada miembro de `collection` a medida que la consulta recorre en iteración `collection`.  Debe ser un tipo enumerable.|  
-|`type`|Opcional.  Tipo de `element`.  Si no se especifica ningún `type`, el tipo de `element` se infiere de `collection`.|  
-|`collection`|Obligatorio.  Hace referencia a la colección que se va a consultar.  Debe ser un tipo enumerable.|  
+|<span data-ttu-id="82f64-106">Término</span><span class="sxs-lookup"><span data-stu-id="82f64-106">Term</span></span>|<span data-ttu-id="82f64-107">Definición</span><span class="sxs-lookup"><span data-stu-id="82f64-107">Definition</span></span>|  
+|---|---|  
+|`element`|<span data-ttu-id="82f64-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="82f64-108">Required.</span></span> <span data-ttu-id="82f64-109">A *variable de rango* utilizar para recorrer en iteración los elementos de la colección.</span><span class="sxs-lookup"><span data-stu-id="82f64-109">A *range variable* used to iterate through the elements of the collection.</span></span> <span data-ttu-id="82f64-110">Una variable de rango se utiliza para hacer referencia a cada miembro de la `collection` como la consulta recorre en iteración la `collection`.</span><span class="sxs-lookup"><span data-stu-id="82f64-110">A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`.</span></span> <span data-ttu-id="82f64-111">Debe ser un tipo enumerable.</span><span class="sxs-lookup"><span data-stu-id="82f64-111">Must be an enumerable type.</span></span>|  
+|`type`|<span data-ttu-id="82f64-112">Opcional.</span><span class="sxs-lookup"><span data-stu-id="82f64-112">Optional.</span></span> <span data-ttu-id="82f64-113">Tipo de `element`.</span><span class="sxs-lookup"><span data-stu-id="82f64-113">The type of `element`.</span></span> <span data-ttu-id="82f64-114">Si no hay ningún `type` se especifica, el tipo de `element` se deduce de `collection`.</span><span class="sxs-lookup"><span data-stu-id="82f64-114">If no `type` is specified, the type of `element` is inferred from `collection`.</span></span>|  
+|`collection`|<span data-ttu-id="82f64-115">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="82f64-115">Required.</span></span> <span data-ttu-id="82f64-116">Hace referencia a la colección para consultar.</span><span class="sxs-lookup"><span data-stu-id="82f64-116">Refers to the collection to be queried.</span></span> <span data-ttu-id="82f64-117">Debe ser un tipo enumerable.</span><span class="sxs-lookup"><span data-stu-id="82f64-117">Must be an enumerable type.</span></span>|  
   
-## Comentarios  
- La cláusula `From` se utiliza para identificar los datos de origen de una consulta y las variables que se usan para hacer referencia a un elemento de la colección de origen.  Estas variables se denominan *variables de rango*.  La cláusula `From` se requiere para una consulta, excepto cuando la cláusula `Aggregate` se usa para identificar una consulta que devuelve sólo resultados agregados.  Para obtener más información, vea [Aggregate \(Cláusula\)](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+## <a name="remarks"></a><span data-ttu-id="82f64-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="82f64-118">Remarks</span></span>  
+ <span data-ttu-id="82f64-119">El `From` cláusula se utiliza para identificar los datos de origen para una consulta y las variables que se utilizan para hacer referencia a un elemento de la colección de origen.</span><span class="sxs-lookup"><span data-stu-id="82f64-119">The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection.</span></span> <span data-ttu-id="82f64-120">Estas variables se denominan *las variables de rango*.</span><span class="sxs-lookup"><span data-stu-id="82f64-120">These variables are called *range variables*.</span></span> <span data-ttu-id="82f64-121">El `From` cláusula es necesaria para una consulta, excepto cuando la `Aggregate` cláusula se utiliza para identificar una consulta que devuelve solo agrega los resultados.</span><span class="sxs-lookup"><span data-stu-id="82f64-121">The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results.</span></span> <span data-ttu-id="82f64-122">Para obtener más información, consulte [Aggregate (cláusula)](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span><span class="sxs-lookup"><span data-stu-id="82f64-122">For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).</span></span>  
   
- Puede especificar varias cláusulas `From` en una consulta para identificar varias colecciones que se van a combinar.  Cuando se especifican varias colecciones, se iteran en ellas independientemente o puede combinarlas si están relacionadas.  Puede combinar colecciones implícitamente mediante la cláusula `Select` o explícitamente mediante las cláusulas `Join` o `Group Join` Como alternativa, puede especificar varias variables de rango y colecciones en una sola cláusula `From`, con cada variable de rango y colección relacionadas separadas del resto por una coma.  El ejemplo de código siguiente muestra ambas opciones de sintaxis para la cláusula `From`.  
+ <span data-ttu-id="82f64-123">Puede especificar varios `From` cláusulas en una consulta para identificar varias colecciones de combinarse.</span><span class="sxs-lookup"><span data-stu-id="82f64-123">You can specify multiple `From` clauses in a query to identify multiple collections to be joined.</span></span> <span data-ttu-id="82f64-124">Cuando se especifican varias colecciones, se iteran en ellas independientemente o puede combinarlas si están relacionadas.</span><span class="sxs-lookup"><span data-stu-id="82f64-124">When multiple collections are specified, they are iterated over independently, or you can join them if they are related.</span></span> <span data-ttu-id="82f64-125">Puede combinar colecciones implícitamente mediante la `Select` cláusula, o explícitamente mediante la `Join` o `Group Join` cláusulas.</span><span class="sxs-lookup"><span data-stu-id="82f64-125">You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses.</span></span> <span data-ttu-id="82f64-126">Como alternativa, puede especificar varias variables de rango y colecciones en una sola `From` cláusula, con cada variable de rango relacionados y una colección separada del resto por una coma.</span><span class="sxs-lookup"><span data-stu-id="82f64-126">As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma.</span></span> <span data-ttu-id="82f64-127">El ejemplo de código siguiente muestra ambas opciones de sintaxis para la `From` cláusula.</span><span class="sxs-lookup"><span data-stu-id="82f64-127">The following code example shows both syntax options for the `From` clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
- La cláusula `From` define el ámbito de una consulta, que es similar al ámbito de un bucle `For`.  Por consiguiente, cada variable de rango `element` del ámbito de una consulta debe tener un nombre único.  Dado que puede especificar varias cláusulas `From` para una consulta, las cláusulas `From` subsiguientes pueden hacer referencia a las variables de rango de la cláusula `From` o pueden hacer referencia a las variables de rango de una cláusula `From` previa.  Por ejemplo, el ejemplo siguiente muestra una cláusula `From` anidada en la que la colección de la segunda cláusula se basa en una propiedad de variable de rango de la primera cláusula.  
+ <span data-ttu-id="82f64-128">El `From` cláusula define el ámbito de una consulta, que es similar al ámbito de un `For` bucle.</span><span class="sxs-lookup"><span data-stu-id="82f64-128">The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop.</span></span> <span data-ttu-id="82f64-129">Por lo tanto, cada uno de ellos `element` variable de rango en el ámbito de una consulta debe tener un nombre único.</span><span class="sxs-lookup"><span data-stu-id="82f64-129">Therefore, each `element` range variable in the scope of a query must have a unique name.</span></span> <span data-ttu-id="82f64-130">Dado que puede especificar varios `From` cláusulas en una consulta, posterior `From` cláusulas pueden hacer referencia a variables de rango de la `From` cláusula, o se puede hacer referencia a las variables de rango en una versión anterior `From` cláusula.</span><span class="sxs-lookup"><span data-stu-id="82f64-130">Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause.</span></span> <span data-ttu-id="82f64-131">Por ejemplo, en el ejemplo siguiente se muestra un anidada `From` cláusula donde la colección en la segunda cláusula se basa en una propiedad de la variable de rango en la primera cláusula.</span><span class="sxs-lookup"><span data-stu-id="82f64-131">For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
- Cada cláusula `From` puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta.  Puede refinarla de las siguientes maneras:  
+ <span data-ttu-id="82f64-132">Cada `From` cláusula puede ir seguida de cualquier combinación de cláusulas de consulta adicionales para refinar la consulta.</span><span class="sxs-lookup"><span data-stu-id="82f64-132">Each `From` clause can be followed by any combination of additional query clauses to refine the query.</span></span> <span data-ttu-id="82f64-133">Puede refinar la consulta de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="82f64-133">You can refine the query in the following ways:</span></span>  
   
--   Combine varias colecciones implícitamente mediante las cláusulas `From` y `Select` o explícitamente mediante las cláusulas `Join` o `Group Join`.  
+-   <span data-ttu-id="82f64-134">Combinar varias colecciones implícitamente mediante la `From` y `Select` cláusulas, o explícitamente mediante la `Join` o `Group Join` cláusulas.</span><span class="sxs-lookup"><span data-stu-id="82f64-134">Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.</span></span>  
   
--   Utilice la cláusula `Where` para filtrar el resultado de la consulta.  
+-   <span data-ttu-id="82f64-135">Use la `Where` cláusula para filtrar el resultado de la consulta.</span><span class="sxs-lookup"><span data-stu-id="82f64-135">Use the `Where` clause to filter the query result.</span></span>  
   
--   Ordene el resultado con la cláusula `Order By`.  
+-   <span data-ttu-id="82f64-136">Ordenar el resultado mediante la `Order By` cláusula.</span><span class="sxs-lookup"><span data-stu-id="82f64-136">Sort the result by using the `Order By` clause.</span></span>  
   
--   Agrupe los resultados similares usando la cláusula `Group By`.  
+-   <span data-ttu-id="82f64-137">Agrupar resultados similares mediante el uso de la `Group By` cláusula.</span><span class="sxs-lookup"><span data-stu-id="82f64-137">Group similar results together by using the `Group By` clause.</span></span>  
   
--   Utilice la cláusula `Aggregate` para identificar las funciones de agregado que se van a evaluar para todo el resultado de la consulta.  
+-   <span data-ttu-id="82f64-138">Use la `Aggregate` cláusula para identificar las funciones de agregado que se evalúa para el resultado de consulta global.</span><span class="sxs-lookup"><span data-stu-id="82f64-138">Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.</span></span>  
   
--   Utilice la cláusula `Let` para presentar una variable de iteración cuyo valor lo determina una expresión en lugar de una colección.  
+-   <span data-ttu-id="82f64-139">Use la `Let` cláusula introducir una variable de iteración cuyo valor se determina mediante una expresión en lugar de una colección.</span><span class="sxs-lookup"><span data-stu-id="82f64-139">Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.</span></span>  
   
--   Use la cláusula `Distinct` para omitir resultados duplicados.  
+-   <span data-ttu-id="82f64-140">Use la `Distinct` cláusula para omitir resultados duplicados.</span><span class="sxs-lookup"><span data-stu-id="82f64-140">Use the `Distinct` clause to ignore duplicate query results.</span></span>  
   
--   Identifique las partes del resultado que se van a devolver mediante las cláusulas `Skip`, `Take`, `Skip While` y `Take While`.  
+-   <span data-ttu-id="82f64-141">Identificar las partes del resultado para devolver mediante el uso de la `Skip`, `Take`, `Skip While`, y `Take While` cláusulas.</span><span class="sxs-lookup"><span data-stu-id="82f64-141">Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.</span></span>  
   
-## Ejemplo  
- La siguiente expresión de consulta usa una cláusula `From` para declarar una variable de rango `cust` para cada objeto `Customer` de la colección `customers`.  La cláusula `Where` usa la variable de rango para restringir el resultado a los clientes de la región especificada.  El bucle `For Each` muestra el nombre de la compañía de cada cliente en el resultado de la consulta.  
+## <a name="example"></a><span data-ttu-id="82f64-142">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="82f64-142">Example</span></span>  
+ <span data-ttu-id="82f64-143">Consulta la siguiente expresión utiliza una `From` cláusula para declarar una variable de rango `cust` para cada `Customer` objeto en el `customers` colección.</span><span class="sxs-lookup"><span data-stu-id="82f64-143">The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection.</span></span> <span data-ttu-id="82f64-144">El `Where` cláusula utiliza la variable de rango para restringir los resultados a los clientes de la región especificada.</span><span class="sxs-lookup"><span data-stu-id="82f64-144">The `Where` clause uses the range variable to restrict the output to customers from the specified region.</span></span> <span data-ttu-id="82f64-145">El `For Each` bucle muestra el nombre de la compañía de cada cliente en el resultado de la consulta.</span><span class="sxs-lookup"><span data-stu-id="82f64-145">The `For Each` loop displays the company name for each customer in the query result.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
-## Vea también  
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [For Each...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [For...Next \(Instrucción\)](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Select \(Cláusula\)](../../../visual-basic/language-reference/queries/select-clause.md)   
- [Where \(Cláusula\)](../../../visual-basic/language-reference/queries/where-clause.md)   
- [Aggregate \(Cláusula\)](../../../visual-basic/language-reference/queries/aggregate-clause.md)   
- [Distinct \(Cláusula\)](../../../visual-basic/language-reference/queries/distinct-clause.md)   
- [Join \(Cláusula\)](../../../visual-basic/language-reference/queries/join-clause.md)   
- [Group Join \(Cláusula\)](../../../visual-basic/language-reference/queries/group-join-clause.md)   
- [Order By \(Cláusula\)](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Let \(Cláusula\)](../../../visual-basic/language-reference/queries/let-clause.md)   
- [Skip \(Cláusula\)](../../../visual-basic/language-reference/queries/skip-clause.md)   
- [Take \(Cláusula\)](../../../visual-basic/language-reference/queries/take-clause.md)   
- [Skip While \(Cláusula\)](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
- [Take While \(Cláusula\)](../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a><span data-ttu-id="82f64-146">Vea también</span><span class="sxs-lookup"><span data-stu-id="82f64-146">See Also</span></span>  
+ [<span data-ttu-id="82f64-147">Consultas</span><span class="sxs-lookup"><span data-stu-id="82f64-147">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="82f64-148">Introducción a LINQ en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="82f64-148">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="82f64-149">For Each...Next (instrucción)</span><span class="sxs-lookup"><span data-stu-id="82f64-149">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [<span data-ttu-id="82f64-150">For...Next (instrucción)</span><span class="sxs-lookup"><span data-stu-id="82f64-150">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [<span data-ttu-id="82f64-151">Select (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-151">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="82f64-152">Where (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-152">Where Clause</span></span>](../../../visual-basic/language-reference/queries/where-clause.md)  
+ [<span data-ttu-id="82f64-153">Aggregate (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-153">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="82f64-154">Distinct (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-154">Distinct Clause</span></span>](../../../visual-basic/language-reference/queries/distinct-clause.md)  
+ [<span data-ttu-id="82f64-155">Join (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-155">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="82f64-156">Group Join (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-156">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="82f64-157">Order By (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-157">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="82f64-158">Let (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-158">Let Clause</span></span>](../../../visual-basic/language-reference/queries/let-clause.md)  
+ [<span data-ttu-id="82f64-159">Skip (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-159">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)  
+ [<span data-ttu-id="82f64-160">Take (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-160">Take Clause</span></span>](../../../visual-basic/language-reference/queries/take-clause.md)  
+ [<span data-ttu-id="82f64-161">Skip While (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-161">Skip While Clause</span></span>](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [<span data-ttu-id="82f64-162">Take While (cláusula)</span><span class="sxs-lookup"><span data-stu-id="82f64-162">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)

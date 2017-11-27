@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, WebRequest and WebResponse classes exceptions
 - Status property
@@ -39,48 +37,47 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: aad78fb509f98a01b5ca072ad476d901fdd1d4d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="handling-errors"></a>Control de errores
-Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan excepciones de sistema (como <xref:System.ArgumentException>) y excepciones específicas de web (que son <xref:System.Net.WebException> generadas mediante el método <xref:System.Net.WebRequest.GetResponse%2A>).  
+# <a name="handling-errors"></a><span data-ttu-id="53875-102">Control de errores</span><span class="sxs-lookup"><span data-stu-id="53875-102">Handling Errors</span></span>
+<span data-ttu-id="53875-103">Las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> generan excepciones de sistema (como <xref:System.ArgumentException>) y excepciones específicas de web (que son <xref:System.Net.WebException> generadas mediante el método <xref:System.Net.WebRequest.GetResponse%2A>).</span><span class="sxs-lookup"><span data-stu-id="53875-103">The <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes throw both system exceptions (such as <xref:System.ArgumentException>) and Web-specific exceptions (which are <xref:System.Net.WebException> thrown by the <xref:System.Net.WebRequest.GetResponse%2A> method).</span></span>  
   
- Cada **WebException** incluye una propiedad <xref:System.Net.WebException.Status%2A> que contiene un valor de la enumeración <xref:System.Net.WebExceptionStatus>. Puede examinar la propiedad **Status** para determinar el error que se ha producido y realizar los pasos adecuados para resolverlo.  
+ <span data-ttu-id="53875-104">Cada **WebException** incluye una propiedad <xref:System.Net.WebException.Status%2A> que contiene un valor de la enumeración <xref:System.Net.WebExceptionStatus>.</span><span class="sxs-lookup"><span data-stu-id="53875-104">Each **WebException** includes a <xref:System.Net.WebException.Status%2A> property that contains a value from the <xref:System.Net.WebExceptionStatus> enumeration.</span></span> <span data-ttu-id="53875-105">Puede examinar la propiedad **Status** para determinar el error que se ha producido y realizar los pasos adecuados para resolverlo.</span><span class="sxs-lookup"><span data-stu-id="53875-105">You can examine the **Status** property to determine the error that occurred and take the proper steps to resolve the error.</span></span>  
   
- En la tabla siguiente se describen los valores posibles de la propiedad **Status**.  
+ <span data-ttu-id="53875-106">En la tabla siguiente se describen los valores posibles de la propiedad **Status**.</span><span class="sxs-lookup"><span data-stu-id="53875-106">The following table describes the possible values for the **Status** property.</span></span>  
   
-|Estado|Descripción|  
+|<span data-ttu-id="53875-107">Estado</span><span class="sxs-lookup"><span data-stu-id="53875-107">Status</span></span>|<span data-ttu-id="53875-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="53875-108">Description</span></span>|  
 |------------|-----------------|  
-|ConnectFailure|No se ha podido contactar con el servicio remoto en el nivel de transporte.|  
-|ConnectionClosed|La conexión ha terminado antes de tiempo.|  
-|KeepAliveFailure|El servidor ha terminado una conexión realizada con el conjunto de encabezado de conexión persistente.|  
-|NameResolutionFailure|El servicio de nombres no pudo resolver el nombre de host.|  
-|ProtocolError|La respuesta que se ha recibido del servidor estaba completa pero indicaba un error en el nivel de protocolo.|  
-|ReceiveFailure|No se ha recibido una respuesta completa del servidor remoto.|  
-|RequestCanceled|Se ha cancelado la solicitud.|  
-|SecureChannelFailure|Se ha producido un error en un vínculo de canal seguro.|  
-|SendFailure|No se pudo enviar una solicitud completa al servidor remoto.|  
-|ServerProtocolViolation|La respuesta del servidor no era una respuesta HTTP válida.|  
-|Correcto|No se ha detectado ningún error.|  
-|Timeout|No se ha recibido ninguna respuesta en el tiempo de espera establecido para la solicitud.|  
-|TrustFailure|No se pudo validar un certificado de servidor.|  
-|MessageLengthLimitExceeded|Se ha recibido un mensaje que ha superado el límite especificado al enviar una solicitud o recibir una respuesta del servidor.|  
-|Pendiente|Una solicitud asincrónica interna está pendiente.|  
-|PipelineFailure|Este valor admite la infraestructura de .NET Framework y no está previsto su uso directo en el código.|  
-|ProxyNameResolutionFailure|El servicio de resolución de nombres no pudo resolver el nombre de host del proxy.|  
-|UnknownError|Se ha producido una excepción de un tipo desconocido.|  
+|<span data-ttu-id="53875-109">ConnectFailure</span><span class="sxs-lookup"><span data-stu-id="53875-109">ConnectFailure</span></span>|<span data-ttu-id="53875-110">No se ha podido contactar con el servicio remoto en el nivel de transporte.</span><span class="sxs-lookup"><span data-stu-id="53875-110">The remote service could not be contacted at the transport level.</span></span>|  
+|<span data-ttu-id="53875-111">ConnectionClosed</span><span class="sxs-lookup"><span data-stu-id="53875-111">ConnectionClosed</span></span>|<span data-ttu-id="53875-112">La conexión ha terminado antes de tiempo.</span><span class="sxs-lookup"><span data-stu-id="53875-112">The connection was closed prematurely.</span></span>|  
+|<span data-ttu-id="53875-113">KeepAliveFailure</span><span class="sxs-lookup"><span data-stu-id="53875-113">KeepAliveFailure</span></span>|<span data-ttu-id="53875-114">El servidor ha terminado una conexión realizada con el conjunto de encabezado de conexión persistente.</span><span class="sxs-lookup"><span data-stu-id="53875-114">The server closed a connection made with the Keep-alive header set.</span></span>|  
+|<span data-ttu-id="53875-115">NameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="53875-115">NameResolutionFailure</span></span>|<span data-ttu-id="53875-116">El servicio de nombres no pudo resolver el nombre de host.</span><span class="sxs-lookup"><span data-stu-id="53875-116">The name service could not resolve the host name.</span></span>|  
+|<span data-ttu-id="53875-117">ProtocolError</span><span class="sxs-lookup"><span data-stu-id="53875-117">ProtocolError</span></span>|<span data-ttu-id="53875-118">La respuesta que se ha recibido del servidor estaba completa pero indicaba un error en el nivel de protocolo.</span><span class="sxs-lookup"><span data-stu-id="53875-118">The response received from the server was complete but indicated an error at the protocol level.</span></span>|  
+|<span data-ttu-id="53875-119">ReceiveFailure</span><span class="sxs-lookup"><span data-stu-id="53875-119">ReceiveFailure</span></span>|<span data-ttu-id="53875-120">No se ha recibido una respuesta completa del servidor remoto.</span><span class="sxs-lookup"><span data-stu-id="53875-120">A complete response was not received from the remote server.</span></span>|  
+|<span data-ttu-id="53875-121">RequestCanceled</span><span class="sxs-lookup"><span data-stu-id="53875-121">RequestCanceled</span></span>|<span data-ttu-id="53875-122">Se ha cancelado la solicitud.</span><span class="sxs-lookup"><span data-stu-id="53875-122">The request was canceled.</span></span>|  
+|<span data-ttu-id="53875-123">SecureChannelFailure</span><span class="sxs-lookup"><span data-stu-id="53875-123">SecureChannelFailure</span></span>|<span data-ttu-id="53875-124">Se ha producido un error en un vínculo de canal seguro.</span><span class="sxs-lookup"><span data-stu-id="53875-124">An error occurred in a secure channel link.</span></span>|  
+|<span data-ttu-id="53875-125">SendFailure</span><span class="sxs-lookup"><span data-stu-id="53875-125">SendFailure</span></span>|<span data-ttu-id="53875-126">No se pudo enviar una solicitud completa al servidor remoto.</span><span class="sxs-lookup"><span data-stu-id="53875-126">A complete request could not be sent to the remote server.</span></span>|  
+|<span data-ttu-id="53875-127">ServerProtocolViolation</span><span class="sxs-lookup"><span data-stu-id="53875-127">ServerProtocolViolation</span></span>|<span data-ttu-id="53875-128">La respuesta del servidor no era una respuesta HTTP válida.</span><span class="sxs-lookup"><span data-stu-id="53875-128">The server response was not a valid HTTP response.</span></span>|  
+|<span data-ttu-id="53875-129">Correcto</span><span class="sxs-lookup"><span data-stu-id="53875-129">Success</span></span>|<span data-ttu-id="53875-130">No se ha detectado ningún error.</span><span class="sxs-lookup"><span data-stu-id="53875-130">No error was encountered.</span></span>|  
+|<span data-ttu-id="53875-131">Timeout</span><span class="sxs-lookup"><span data-stu-id="53875-131">Timeout</span></span>|<span data-ttu-id="53875-132">No se ha recibido ninguna respuesta en el tiempo de espera establecido para la solicitud.</span><span class="sxs-lookup"><span data-stu-id="53875-132">No response was received within the time-out set for the request.</span></span>|  
+|<span data-ttu-id="53875-133">TrustFailure</span><span class="sxs-lookup"><span data-stu-id="53875-133">TrustFailure</span></span>|<span data-ttu-id="53875-134">No se pudo validar un certificado de servidor.</span><span class="sxs-lookup"><span data-stu-id="53875-134">A server certificate could not be validated.</span></span>|  
+|<span data-ttu-id="53875-135">MessageLengthLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="53875-135">MessageLengthLimitExceeded</span></span>|<span data-ttu-id="53875-136">Se ha recibido un mensaje que ha superado el límite especificado al enviar una solicitud o recibir una respuesta del servidor.</span><span class="sxs-lookup"><span data-stu-id="53875-136">A message was received that exceeded the specified limit when sending a request or receiving a response from the server.</span></span>|  
+|<span data-ttu-id="53875-137">Pendiente</span><span class="sxs-lookup"><span data-stu-id="53875-137">Pending</span></span>|<span data-ttu-id="53875-138">Una solicitud asincrónica interna está pendiente.</span><span class="sxs-lookup"><span data-stu-id="53875-138">An internal asynchronous request is pending.</span></span>|  
+|<span data-ttu-id="53875-139">PipelineFailure</span><span class="sxs-lookup"><span data-stu-id="53875-139">PipelineFailure</span></span>|<span data-ttu-id="53875-140">Este valor admite la infraestructura de .NET Framework y no está previsto su uso directo en el código.</span><span class="sxs-lookup"><span data-stu-id="53875-140">This value supports the .NET Framework infrastructure and is not intended to be used directly in your code.</span></span>|  
+|<span data-ttu-id="53875-141">ProxyNameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="53875-141">ProxyNameResolutionFailure</span></span>|<span data-ttu-id="53875-142">El servicio de resolución de nombres no pudo resolver el nombre de host del proxy.</span><span class="sxs-lookup"><span data-stu-id="53875-142">The name resolver service could not resolve the proxy host name.</span></span>|  
+|<span data-ttu-id="53875-143">UnknownError</span><span class="sxs-lookup"><span data-stu-id="53875-143">UnknownError</span></span>|<span data-ttu-id="53875-144">Se ha producido una excepción de un tipo desconocido.</span><span class="sxs-lookup"><span data-stu-id="53875-144">An exception of unknown type has occurred.</span></span>|  
   
- Cuando la propiedad **Status** es **WebExceptionStatus.ProtocolError**, está disponible un elemento **WebResponse** que contiene la respuesta del servidor. Puede examinar esta respuesta para determinar el origen real del error del protocolo.  
+ <span data-ttu-id="53875-145">Cuando la propiedad **Status** es **WebExceptionStatus.ProtocolError**, está disponible un elemento **WebResponse** que contiene la respuesta del servidor.</span><span class="sxs-lookup"><span data-stu-id="53875-145">When the **Status** property is **WebExceptionStatus.ProtocolError**, a **WebResponse** that contains the response from the server is available.</span></span> <span data-ttu-id="53875-146">Puede examinar esta respuesta para determinar el origen real del error del protocolo.</span><span class="sxs-lookup"><span data-stu-id="53875-146">You can examine this response to determine the actual source of the protocol error.</span></span>  
   
- En el ejemplo siguiente se muestra cómo capturar un elemento **WebException**.  
+ <span data-ttu-id="53875-147">En el ejemplo siguiente se muestra cómo capturar un elemento **WebException**.</span><span class="sxs-lookup"><span data-stu-id="53875-147">The following example shows how to catch a **WebException**.</span></span>  
   
 ```csharp  
 try   
@@ -175,11 +172,10 @@ Catch e As Exception
 End Try  
 ```  
   
- Las aplicaciones que usan la clase <xref:System.Net.Sockets.Socket> generan <xref:System.Net.Sockets.SocketException> cuando se producen errores en Windows Socket. Las clases <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> y <xref:System.Net.Sockets.UdpClient> se generan en la parte superior de la clase **Socket** y también generan **SocketExceptions**.  
+ <span data-ttu-id="53875-148">Las aplicaciones que usan la clase <xref:System.Net.Sockets.Socket> generan <xref:System.Net.Sockets.SocketException> cuando se producen errores en Windows Socket.</span><span class="sxs-lookup"><span data-stu-id="53875-148">Applications that use the <xref:System.Net.Sockets.Socket> class throw <xref:System.Net.Sockets.SocketException> when errors occur on the Windows socket.</span></span> <span data-ttu-id="53875-149">Las clases <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> y <xref:System.Net.Sockets.UdpClient> se generan en la parte superior de la clase **Socket** y también generan **SocketExceptions**.</span><span class="sxs-lookup"><span data-stu-id="53875-149">The <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, and <xref:System.Net.Sockets.UdpClient> classes are built on top of the **Socket** class and throw **SocketExceptions** as well.</span></span>  
   
- Cuando se genera **SocketException**, la clase **SocketException** establece la propiedad <xref:System.Net.Sockets.SocketException.ErrorCode%2A> en el último error de socket que se ha producido en el sistema operativo. Para obtener más información sobre los códigos de error de socket, vea la documentación de códigos de error de la API de Winsock 2.0 en MSDN.  
+ <span data-ttu-id="53875-150">Cuando se genera **SocketException**, la clase **SocketException** establece la propiedad <xref:System.Net.Sockets.SocketException.ErrorCode%2A> en el último error de socket que se ha producido en el sistema operativo.</span><span class="sxs-lookup"><span data-stu-id="53875-150">When a **SocketException** is thrown, the **SocketException** class sets the <xref:System.Net.Sockets.SocketException.ErrorCode%2A> property to the last operating system socket error that occurred.</span></span> <span data-ttu-id="53875-151">Para obtener más información sobre los códigos de error de socket, vea la documentación de códigos de error de la API de Winsock 2.0 en MSDN.</span><span class="sxs-lookup"><span data-stu-id="53875-151">For more information about socket error codes, see the Winsock 2.0 API error code documentation in MSDN.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Fundamentos del control de excepciones](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="53875-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="53875-152">See Also</span></span>  
+ [<span data-ttu-id="53875-153">Fundamentos del control de excepciones</span><span class="sxs-lookup"><span data-stu-id="53875-153">Exception Handling Fundamentals</span></span>](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
+ [<span data-ttu-id="53875-154">Solicitud de datos</span><span class="sxs-lookup"><span data-stu-id="53875-154">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

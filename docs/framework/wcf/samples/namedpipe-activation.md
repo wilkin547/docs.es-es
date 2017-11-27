@@ -1,40 +1,43 @@
 ---
-title: "Activaci&#243;n NamedPipe | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Activación NamedPipe"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 55594e1505e60ede8d7c6abcbd8a9cf9a1f739bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Activaci&#243;n NamedPipe
-Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows \(WAS\) para activar un servicio que se comunica a través de las canalizaciones de los nombres.  Este ejemplo está basado en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md) y exige que se ejecute [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+# <a name="namedpipe-activation"></a><span data-ttu-id="3ce24-102">Activación NamedPipe</span><span class="sxs-lookup"><span data-stu-id="3ce24-102">NamedPipe Activation</span></span>
+<span data-ttu-id="3ce24-103">Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows (WAS) para activar un servicio que se comunica a través de las canalizaciones de los nombres.</span><span class="sxs-lookup"><span data-stu-id="3ce24-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="3ce24-104">En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) y requiere [!INCLUDE[wv](../../../../includes/wv-md.md)] para que se ejecute.</span><span class="sxs-lookup"><span data-stu-id="3ce24-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="3ce24-105">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="3ce24-105">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="3ce24-106">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="3ce24-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="3ce24-107">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="3ce24-107">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="3ce24-108">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="3ce24-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3ce24-109">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="3ce24-109">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
-## Detalles del ejemplo  
- El ejemplo está compuesto de un programa \(.exe\) de consola de cliente y una biblioteca de servicios \(.dll\) hospedados en un proceso de trabajo activado por el servicio de activación de procesos de Windows \(WAS\).  La actividad del cliente es visible en la ventana de la consola.  
+## <a name="sample-details"></a><span data-ttu-id="3ce24-110">Detalles del ejemplo</span><span class="sxs-lookup"><span data-stu-id="3ce24-110">Sample Details</span></span>  
+ <span data-ttu-id="3ce24-111">El ejemplo está compuesto de un programa (.exe) de consola de cliente y una biblioteca de servicios (.dll) hospedados en un proceso de trabajo activado por el servicio de activación de procesos de Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="3ce24-111">The sample consists of a client console program (.exe) and a service library (.dll) hosted in a worker process activated by the Windows Process Activation Services (WAS).</span></span> <span data-ttu-id="3ce24-112">La actividad del cliente es visible en la ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="3ce24-112">Client activity is visible in the console window.</span></span>  
   
- El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  La interfaz `ICalculator`, que expone las operaciones matemáticas \(Sumar, Restar, Multiplicar y Dividir\), define el contrato, tal ycomo se muestra en el código muestra siguiente.  
+ <span data-ttu-id="3ce24-113">El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.</span><span class="sxs-lookup"><span data-stu-id="3ce24-113">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="3ce24-114">La interfaz `ICalculator`, que expone las operaciones matemáticas (Sumar, Restar, Multiplicar y Dividir), define el contrato, tal ycomo se muestra en el código muestra siguiente.</span><span class="sxs-lookup"><span data-stu-id="3ce24-114">The contract is defined by the `ICalculator` interface, which exposes math operations (Add, Subtract, Multiply, and Divide), as shown in the following sample code.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -51,7 +54,7 @@ public interface ICalculator
 }  
 ```  
   
- El cliente realiza las solicitudes sincrónicas a una operación matemática determinada y la implementación del servicio calcula y devuelve el resultado adecuado.  
+ <span data-ttu-id="3ce24-115">El cliente realiza las solicitudes sincrónicas a una operación matemática determinada y la implementación del servicio calcula y devuelve el resultado adecuado.</span><span class="sxs-lookup"><span data-stu-id="3ce24-115">The client makes synchronous requests to a given math operation and the service implementation calculates and returns the appropriate result.</span></span>  
   
 ```  
 // Service class that implements the service contract.  
@@ -74,14 +77,13 @@ public class CalculatorService : ICalculator
         return n1 / n2;  
     }  
 }  
-  
 ```  
   
- El ejemplo utiliza un enlace `netNamedPipeBinding` modificado sin seguridad.  El enlace se especifica en los archivos de configuración para el cliente y servicio.  El tipo de enlace se especifica para el servicio en el atributo `binding` del elemento del extremo, tal y como se explica en el ejemplo siguiente de configuración.  
+ <span data-ttu-id="3ce24-116">El ejemplo utiliza un enlace `netNamedPipeBinding` modificado sin seguridad.</span><span class="sxs-lookup"><span data-stu-id="3ce24-116">The sample uses a modified `netNamedPipeBinding` binding with no security.</span></span> <span data-ttu-id="3ce24-117">El enlace se especifica en los archivos de configuración para el cliente y servicio.</span><span class="sxs-lookup"><span data-stu-id="3ce24-117">The binding is specified in the configuration files for the client and service.</span></span> <span data-ttu-id="3ce24-118">El tipo de enlace se especifica para el servicio en el atributo `binding` del elemento del extremo, tal y como se explica en el ejemplo siguiente de configuración.</span><span class="sxs-lookup"><span data-stu-id="3ce24-118">The binding type for the service is specified in the endpoint element’s `binding` attribute as shown in the following sample configuration.</span></span>  
   
- Si desea utilizar un enlace seguro de canalización con nombre, cambie el modo de seguridad del servidor a la configuración de seguridad deseada y ejecute de nuevo svcutil.exe en el cliente para obtener un archivo de configuración del cliente actualizado.  
+ <span data-ttu-id="3ce24-119">Si desea utilizar un enlace seguro de canalización con nombre, cambie el modo de seguridad del servidor a la configuración de seguridad deseada y ejecute de nuevo svcutil.exe en el cliente para obtener un archivo de configuración del cliente actualizado.</span><span class="sxs-lookup"><span data-stu-id="3ce24-119">If you want use a secured named pipe binding, change the server's security mode to the desired security setting and run svcutil.exe again on the client to obtain an updated client configuration file.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
         <services>  
             <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -120,9 +122,9 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- La información de extremo del cliente se configura como se muestra en el código muestra siguiente.  
+ <span data-ttu-id="3ce24-120">La información de extremo del cliente se configura como se muestra en el código muestra siguiente.</span><span class="sxs-lookup"><span data-stu-id="3ce24-120">The client’s endpoint information is configured as shown in the following sample code.</span></span>  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <client>  
@@ -152,7 +154,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.  Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="3ce24-121">Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="3ce24-121">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="3ce24-122">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="3ce24-122">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -163,27 +165,27 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### Configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3ce24-123">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="3ce24-123">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] está instalado.  [!INCLUDE[iisver](../../../../includes/iisver-md.md)] es necesario para la activación de WAS.  
+1.  <span data-ttu-id="3ce24-124">Asegúrese de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] está instalado.</span><span class="sxs-lookup"><span data-stu-id="3ce24-124">Ensure that [!INCLUDE[iisver](../../../../includes/iisver-md.md)] is installed.</span></span> [!INCLUDE[iisver](../../../../includes/iisver-md.md)]<span data-ttu-id="3ce24-125"> es necesario para la activación de WAS.</span><span class="sxs-lookup"><span data-stu-id="3ce24-125"> is required for WAS activation.</span></span>  
   
-2.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  <span data-ttu-id="3ce24-126">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3ce24-126">Ensure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-     Además, debe instalar los componentes de activación que no son HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+     <span data-ttu-id="3ce24-127">Además, debe instalar los componentes de activación que no son HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:</span><span class="sxs-lookup"><span data-stu-id="3ce24-127">In addition, you must install the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] non-HTTP activation components:</span></span>  
   
-    1.  En el menú **Inicio**, elija **Panel de control**.  
+    1.  <span data-ttu-id="3ce24-128">Desde el **iniciar** menú, elija **el Panel de Control**.</span><span class="sxs-lookup"><span data-stu-id="3ce24-128">From the **Start** menu, choose **Control Panel**.</span></span>  
   
-    2.  Seleccione **Programas y características**.  
+    2.  <span data-ttu-id="3ce24-129">Seleccione **programas y características**.</span><span class="sxs-lookup"><span data-stu-id="3ce24-129">Select **Programs and Features**.</span></span>  
   
-    3.  Haga clic en **Activar o desactivar los componentes Windows.**  
+    3.  <span data-ttu-id="3ce24-130">Haga clic en **activar o desactivar el componentes de Windows**.</span><span class="sxs-lookup"><span data-stu-id="3ce24-130">Click **Turn Windows Components on or Off**.</span></span>  
   
-    4.  Expanda el nodo  **Microsoft .NET Framework 3.0** y compruebe la característica  **Activación No HTTP de Windows Communication Foundation** .  
+    4.  <span data-ttu-id="3ce24-131">Expanda el **Microsoft .NET Framework 3.0** nodo y compruebe el **activación no HTTP de Windows Communication Foundation** característica.</span><span class="sxs-lookup"><span data-stu-id="3ce24-131">Expand the **Microsoft .NET Framework 3.0** node and check the **Windows Communication Foundation Non-HTTP Activation** feature.</span></span>  
   
-3.  Configure el servicio de activación de procesos de Windows \(WAS\) para admitir la activación de la canalización con nombre.  
+3.  <span data-ttu-id="3ce24-132">Configure el servicio de activación de procesos de Windows (WAS) para admitir la activación de la canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="3ce24-132">Configure the Windows Process Activation Service (WAS) to support named pipe activation.</span></span>  
   
-     Para su comodidad, los dos pasos siguientes se implementan en un archivo de información llamado AddNetPipeSiteBinding.cmd localizado en el directorio de ejemplo.  
+     <span data-ttu-id="3ce24-133">Para su comodidad, los dos pasos siguientes se implementan en un archivo de información llamado AddNetPipeSiteBinding.cmd localizado en el directorio de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="3ce24-133">As a convenience, the following two steps are implemented in a batch file called AddNetPipeSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  Para admitir la activación de net.pipe, el sitio web predeterminado se debe enlazar primero al protocolo net.pipe.  Esto se puede hacer utilizando appcmd.exe, que se instala con el conjunto de herramientas de administración de IIS 7.0.  Desde un símbolo del sistema con permisos elevados \(administrador\), ejecute el comando siguiente.  
+    1.  <span data-ttu-id="3ce24-134">Para admitir la activación de net.pipe, el sitio web predeterminado se debe enlazar primero al protocolo net.pipe.</span><span class="sxs-lookup"><span data-stu-id="3ce24-134">To support net.pipe activation, the default Web site must first be bound to the net.pipe protocol.</span></span> <span data-ttu-id="3ce24-135">Esto se puede hacer utilizando appcmd.exe, que se instala con el conjunto de herramientas de administración de IIS 7.0.</span><span class="sxs-lookup"><span data-stu-id="3ce24-135">This can be done using appcmd.exe, which is installed with the IIS 7.0 management toolset.</span></span> <span data-ttu-id="3ce24-136">Desde un símbolo del sistema con permisos elevados (administrador), ejecute el comando siguiente.</span><span class="sxs-lookup"><span data-stu-id="3ce24-136">From an elevated (administrator) command prompt, run the following command.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -191,44 +193,44 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Este comando es una sola línea de texto.  
+        >  <span data-ttu-id="3ce24-137">Este comando es una sola línea de texto.</span><span class="sxs-lookup"><span data-stu-id="3ce24-137">This command is a single line of text.</span></span>  
   
-         Este comando agrega un enlace del sitio de net.pipe al sitio web predeterminado.  
+         <span data-ttu-id="3ce24-138">Este comando agrega un enlace del sitio de net.pipe al sitio web predeterminado.</span><span class="sxs-lookup"><span data-stu-id="3ce24-138">This command adds a net.pipe site binding to the default Web site.</span></span>  
   
-    2.  Aunque todas las aplicaciones dentro de un sitio comparten un enlace net.pipe común, cada aplicación puede habilitar la compatibilidad net.pipe individualmente.  Para habilitar net.pipe para la aplicación \/servicemodelsamples, ejecute el comando siguiente desde un símbolo del sistema con permisos elevados.  
+    2.  <span data-ttu-id="3ce24-139">Aunque todas las aplicaciones dentro de un sitio comparten un enlace net.pipe común, cada aplicación puede habilitar la compatibilidad net.pipe individualmente.</span><span class="sxs-lookup"><span data-stu-id="3ce24-139">Although all applications within a site share a common net.pipe binding, each application can enable net.pipe support individually.</span></span> <span data-ttu-id="3ce24-140">Para habilitar net.pipe para la aplicación /servicemodelsamples, ejecute el comando siguiente desde un símbolo del sistema con permisos elevados.</span><span class="sxs-lookup"><span data-stu-id="3ce24-140">To enable net.pipe for the /servicemodelsamples application, run the following command from an elevated command prompt.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.pipe  
         ```  
   
         > [!NOTE]
-        >  Este comando es una sola línea de texto.  
+        >  <span data-ttu-id="3ce24-141">Este comando es una sola línea de texto.</span><span class="sxs-lookup"><span data-stu-id="3ce24-141">This command is a single line of text.</span></span>  
   
-         Este comando habilita la aplicación \/servicemodelsamples para tener acceso utilizando http:\/\/localhost\/servicemodelsamples y net.tcp:\/\/localhost\/servicemodelsamples.  
+         <span data-ttu-id="3ce24-142">Este comando habilita la aplicación /servicemodelsamples para tener acceso utilizando http://localhost/servicemodelsamples y net.tcp://localhost/servicemodelsamples.</span><span class="sxs-lookup"><span data-stu-id="3ce24-142">This command enables the /servicemodelsamples application to be accessed using both http://localhost/servicemodelsamples and net.tcp://localhost/servicemodelsamples.</span></span>  
   
-4.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  <span data-ttu-id="3ce24-143">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3ce24-143">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  Quite el enlace del sitio de net.pipe que ha agregado para obtener este ejemplo.  
+5.  <span data-ttu-id="3ce24-144">Quite el enlace del sitio de net.pipe que ha agregado para obtener este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="3ce24-144">Remove the net.pipe site binding you added for this sample.</span></span>  
   
-     Para su comodidad, los dos pasos siguientes se implementan en un archivo por lotes denominado RemoveNetPipeSiteBinding.cmd que se encuentra en el directorio de ejemplo:  
+     <span data-ttu-id="3ce24-145">Para su comodidad, los dos pasos siguientes se implementan en un archivo por lotes denominado RemoveNetPipeSiteBinding.cmd que se encuentra en el directorio de ejemplo:</span><span class="sxs-lookup"><span data-stu-id="3ce24-145">As a convenience, the following two steps are implemented in a batch file called RemoveNetPipeSiteBinding.cmd located in the sample directory:</span></span>  
   
-    1.  Quite net.tcp de la lista de protocolos habilitados ejecutando el comando siguiente desde un símbolo del sistema con permisos elevados.  
+    1.  <span data-ttu-id="3ce24-146">Quite net.tcp de la lista de protocolos habilitados ejecutando el comando siguiente desde un símbolo del sistema con permisos elevados.</span><span class="sxs-lookup"><span data-stu-id="3ce24-146">Remove net.tcp from the list of enabled protocols by running the following command from an elevated command prompt.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
   
         > [!NOTE]
-        >  Este comando se debe escribir como una línea de texto única.  
+        >  <span data-ttu-id="3ce24-147">Este comando se debe escribir como una línea de texto única.</span><span class="sxs-lookup"><span data-stu-id="3ce24-147">This command must be entered as a single line of text.</span></span>  
   
-    2.  Quite el enlace del sitio net.tcp ejecutando el comando siguiente desde un símbolo del sistema con permisos elevados.  
+    2.  <span data-ttu-id="3ce24-148">Quite el enlace del sitio net.tcp ejecutando el comando siguiente desde un símbolo del sistema con permisos elevados.</span><span class="sxs-lookup"><span data-stu-id="3ce24-148">Remove the net.tcp site binding by running the following command from an elevated command prompt.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" --bindings.[protocol='net.pipe',bindingInformation='*']  
         ```  
   
         > [!NOTE]
-        >  Este comando se debe escribir en una sola línea de texto.  
+        >  <span data-ttu-id="3ce24-149">Este comando se debe escribir en una sola línea de texto.</span><span class="sxs-lookup"><span data-stu-id="3ce24-149">This command must be typed in as a single line of text.</span></span>  
   
-## Vea también  
- [Ejemplos de Hospedaje y persistencia de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="3ce24-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="3ce24-150">See Also</span></span>  
+ [<span data-ttu-id="3ce24-151">Ejemplos de persistencia y el hospedaje de AppFabric</span><span class="sxs-lookup"><span data-stu-id="3ce24-151">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

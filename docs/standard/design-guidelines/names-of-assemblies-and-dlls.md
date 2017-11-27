@@ -1,50 +1,48 @@
 ---
-title: "Nombres de ensamblados y archivos DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "nombres [.NET Framework], archivos DLL"
-  - "nombres [.NET Framework], ensamblados"
-  - "ensamblados [.NET Framework], nombres"
-  - "DLL, nombres"
+title: Nombres de ensamblados y bibliotecas DLL
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], DLLs
+- names [.NET Framework], assemblies
+- assemblies [.NET Framework], names
+- DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Nombres de ensamblados y archivos DLL
-Un ensamblado es la unidad de implementación e identidad de los programas de código administrado. Aunque los ensamblados pueden abarcar uno o más archivos, normalmente un ensamblado se asigna uno a uno con un archivo DLL. Por lo tanto, en esta sección se describe sólo convenciones de nomenclatura de archivos DLL, que, a continuación, se pueden asignar a las convenciones de nomenclatura ensamblado.  
+# <a name="names-of-assemblies-and-dlls"></a><span data-ttu-id="d9a58-102">Nombres de ensamblados y bibliotecas DLL</span><span class="sxs-lookup"><span data-stu-id="d9a58-102">Names of Assemblies and DLLs</span></span>
+<span data-ttu-id="d9a58-103">Un ensamblado es la unidad de implementación e identidad de los programas de código administrado.</span><span class="sxs-lookup"><span data-stu-id="d9a58-103">An assembly is the unit of deployment and identity for managed code programs.</span></span> <span data-ttu-id="d9a58-104">Aunque los ensamblados pueden abarcar uno o más archivos, normalmente un ensamblado se asigna uno a uno con un archivo DLL.</span><span class="sxs-lookup"><span data-stu-id="d9a58-104">Although assemblies can span one or more files, typically an assembly maps one-to-one with a DLL.</span></span> <span data-ttu-id="d9a58-105">Por lo tanto, en esta sección se describen sola convenciones de nomenclatura de archivos DLL, que, a continuación, se pueden asignar a las convenciones de nomenclatura ensamblado.</span><span class="sxs-lookup"><span data-stu-id="d9a58-105">Therefore, this section describes only DLL naming conventions, which then can be mapped to assembly naming conventions.</span></span>  
   
- **✓ hacer** elegir nombres para el ensamblado de DLL que sugieran grandes fragmentos de funcionalidad como System.Data.  
+ <span data-ttu-id="d9a58-106">**✓ HACER** elegir nombres para el ensamblado DLL que sugieran grandes fragmentos de funcionalidad como System.Data.</span><span class="sxs-lookup"><span data-stu-id="d9a58-106">**✓ DO** choose names for your assembly DLLs that suggest large chunks of functionality, such as System.Data.</span></span>  
   
- Nombres de ensamblado y el archivo DLL no tienen que corresponder con espacios de nombres, pero es razonable seguir el espacio de nombres al asignar nombres a los ensamblados. Una buena regla general es el nombre de la DLL basada en el prefijo común de los ensamblados incluidos en el ensamblado. Por ejemplo, un ensamblado con dos espacios de nombres, `MyCompany.MyTechnology.FirstFeature` y `MyCompany.MyTechnology.SecondFeature`, se podría llamar `MyCompany.MyTechnology.dll`.  
+ <span data-ttu-id="d9a58-107">Nombres de ensamblado y el archivo DLL no tienen que corresponder con espacios de nombres, pero es razonable seguir el nombre de espacio de nombres al asignar nombres a los ensamblados.</span><span class="sxs-lookup"><span data-stu-id="d9a58-107">Assembly and DLL names don’t have to correspond to namespace names, but it is reasonable to follow the namespace name when naming assemblies.</span></span> <span data-ttu-id="d9a58-108">Una buena regla general es el nombre de la DLL basada en el prefijo común de los ensamblados incluidos en el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="d9a58-108">A good rule of thumb is to name the DLL based on the common prefix of the assemblies contained in the assembly.</span></span> <span data-ttu-id="d9a58-109">Por ejemplo, un ensamblado con dos espacios de nombres, `MyCompany.MyTechnology.FirstFeature` y `MyCompany.MyTechnology.SecondFeature`, se podría llamar `MyCompany.MyTechnology.dll`.</span><span class="sxs-lookup"><span data-stu-id="d9a58-109">For example, an assembly with two namespaces, `MyCompany.MyTechnology.FirstFeature` and `MyCompany.MyTechnology.SecondFeature`, could be called `MyCompany.MyTechnology.dll`.</span></span>  
   
- **✓ considere** nomenclatura DLL según el modelo siguiente:  
+ <span data-ttu-id="d9a58-110">**Considere la posibilidad de ✓** nomenclatura DLL según el modelo siguiente:</span><span class="sxs-lookup"><span data-stu-id="d9a58-110">**✓ CONSIDER** naming DLLs according to the following pattern:</span></span>  
   
  `<Company>.<Component>.dll`  
   
- donde `<Component>` contiene una o más cláusulas separadas por puntos. Por ejemplo:  
+ <span data-ttu-id="d9a58-111">donde `<Component>` contiene una o más cláusulas separados por puntos.</span><span class="sxs-lookup"><span data-stu-id="d9a58-111">where `<Component>` contains one or more dot-separated clauses.</span></span> <span data-ttu-id="d9a58-112">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="d9a58-112">For example:</span></span>  
   
- `Litware.Controls.dll`.  
+ <span data-ttu-id="d9a58-113">`Litware.Controls.dll`.</span><span class="sxs-lookup"><span data-stu-id="d9a58-113">`Litware.Controls.dll`.</span></span>  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ <span data-ttu-id="d9a58-114">*Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="d9a58-114">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ <span data-ttu-id="d9a58-115">*Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="d9a58-115">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## Vea también  
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)   
- [Instrucciones de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a><span data-ttu-id="d9a58-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="d9a58-116">See Also</span></span>  
+ [<span data-ttu-id="d9a58-117">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="d9a58-117">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+ [<span data-ttu-id="d9a58-118">Las directrices de nomenclatura</span><span class="sxs-lookup"><span data-stu-id="d9a58-118">Naming Guidelines</span></span>](../../../docs/standard/design-guidelines/naming-guidelines.md)

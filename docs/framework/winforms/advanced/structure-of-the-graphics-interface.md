@@ -1,37 +1,38 @@
 ---
-title: "Estructura de la interfaz gr&#225;fica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, mediante la interfaz administrada"
-  - "gráficos, estructura de clases"
+title: "Estructura de la interfaz gráfica"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, using managed interface
+- graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Estructura de la interfaz gr&#225;fica
-La interfaz de clases administradas en [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contiene en torno a 60 clases, 50 enumeraciones y 8 estructuras.  La clase <xref:System.Drawing.Graphics> es la base de la funcionalidad de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]; es la clase que realmente dibuja líneas, curvas, figuras, imágenes y texto.  
+# <a name="structure-of-the-graphics-interface"></a><span data-ttu-id="e9b0c-102">Estructura de la interfaz gráfica</span><span class="sxs-lookup"><span data-stu-id="e9b0c-102">Structure of the Graphics Interface</span></span>
+<span data-ttu-id="e9b0c-103">La interfaz de clases administradas a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contiene aproximadamente 60 clases, 50 enumeraciones y 8 estructuras.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-103">The managed class interface to [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] contains about 60 classes, 50 enumerations, and 8 structures.</span></span> <span data-ttu-id="e9b0c-104">El <xref:System.Drawing.Graphics> clase es el núcleo de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funcionalidad; es la clase que realmente dibuja líneas, curvas, figuras, imágenes y texto.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-104">The <xref:System.Drawing.Graphics> class is at the core of [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] functionality; it is the class that actually draws lines, curves, figures, images, and text.</span></span>  
   
-## Clases importantes  
- Muchas clases funcionan junto con la clase <xref:System.Drawing.Graphics>.  Por ejemplo, el método <xref:System.Drawing.Graphics.DrawLine%2A> recibe un objeto <xref:System.Drawing.Pen>, que contiene los atributos \(color, ancho, estilo de guión, etc.\) de la línea que se va a dibujar.  El método <xref:System.Drawing.Graphics.FillRectangle%2A> puede recibir un puntero a un objeto <xref:System.Drawing.Drawing2D.LinearGradientBrush>, que funciona con el objeto <xref:System.Drawing.Graphics> para llenar un rectángulo con cambio de color gradual.  Los objetos <xref:System.Drawing.StringFormat> y <xref:System.Drawing.Font> influyen en la manera en que un objeto <xref:System.Drawing.Graphics> dibuja texto.  Un objeto <xref:System.Drawing.Drawing2D.Matrix> almacena y manipula la transformación de un objeto <xref:System.Drawing.Graphics>, que se utiliza para girar, ajustar la escala y voltear imágenes.  
+## <a name="important-classes"></a><span data-ttu-id="e9b0c-105">Clases importantes</span><span class="sxs-lookup"><span data-stu-id="e9b0c-105">Important Classes</span></span>  
+ <span data-ttu-id="e9b0c-106">Muchas clases trabajan junto con la <xref:System.Drawing.Graphics> clase.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-106">Many classes work together with the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="e9b0c-107">Por ejemplo, el <xref:System.Drawing.Graphics.DrawLine%2A> método recibe un <xref:System.Drawing.Pen> objeto, que contiene los atributos (color, ancho, estilo de guión etc.) de la línea para dibujar.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-107">For example, the <xref:System.Drawing.Graphics.DrawLine%2A> method receives a <xref:System.Drawing.Pen> object, which holds attributes (color, width, dash style, and the like) of the line to be drawn.</span></span> <span data-ttu-id="e9b0c-108">El <xref:System.Drawing.Graphics.FillRectangle%2A> método puede recibir un puntero a un <xref:System.Drawing.Drawing2D.LinearGradientBrush> objeto, que funciona con la <xref:System.Drawing.Graphics> objeto para rellenar un rectángulo con un color que cambia gradualmente.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-108">The <xref:System.Drawing.Graphics.FillRectangle%2A> method can receive a pointer to a <xref:System.Drawing.Drawing2D.LinearGradientBrush> object, which works with the <xref:System.Drawing.Graphics> object to fill a rectangle with a gradually changing color.</span></span> <span data-ttu-id="e9b0c-109"><xref:System.Drawing.Font>y <xref:System.Drawing.StringFormat> objetos influir en la forma un <xref:System.Drawing.Graphics> objeto dibuja texto.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-109"><xref:System.Drawing.Font> and <xref:System.Drawing.StringFormat> objects influence the way a <xref:System.Drawing.Graphics> object draws text.</span></span> <span data-ttu-id="e9b0c-110">A <xref:System.Drawing.Drawing2D.Matrix> objeto almacena y manipula la transformación universal de un <xref:System.Drawing.Graphics> objeto, que se utiliza para girar, escalar y voltear imágenes.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-110">A <xref:System.Drawing.Drawing2D.Matrix> object stores and manipulates the world transformation of a <xref:System.Drawing.Graphics> object, which is used to rotate, scale, and flip images.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona varias estructuras \(por ejemplo, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point> y <xref:System.Drawing.Size>\) para organizar los datos de los gráficos.  Además, algunas clases sirven principalmente como tipos de datos estructurados.  Por ejemplo, la clase <xref:System.Drawing.Imaging.BitmapData> es un auxiliar para la clase <xref:System.Drawing.Bitmap>, y la clase <xref:System.Drawing.Drawing2D.PathData> es un auxiliar para la clase <xref:System.Drawing.Drawing2D.GraphicsPath>.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e9b0c-111">proporciona varias estructuras (por ejemplo, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point>, y <xref:System.Drawing.Size>) para organizar los datos de gráficos.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-111"> provides several structures (for example, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Point>, and <xref:System.Drawing.Size>) for organizing graphics data.</span></span> <span data-ttu-id="e9b0c-112">Además, algunas clases sirven estructurados principalmente como tipos de datos.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-112">Also, certain classes serve primarily as structured data types.</span></span> <span data-ttu-id="e9b0c-113">Por ejemplo, el <xref:System.Drawing.Imaging.BitmapData> clase es una aplicación auxiliar para la <xref:System.Drawing.Bitmap> (clase) y el <xref:System.Drawing.Drawing2D.PathData> clase es una aplicación auxiliar para la <xref:System.Drawing.Drawing2D.GraphicsPath> clase.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-113">For example, the <xref:System.Drawing.Imaging.BitmapData> class is a helper for the <xref:System.Drawing.Bitmap> class, and the <xref:System.Drawing.Drawing2D.PathData> class is a helper for the <xref:System.Drawing.Drawing2D.GraphicsPath> class.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] define varias enumeraciones, que son colecciones de constantes relacionadas.  Por ejemplo, la enumeración <xref:System.Drawing.Drawing2D.LineJoin> contiene los elementos <xref:System.Drawing.Drawing2D.LineJoin>, <xref:System.Drawing.Drawing2D.LineJoin> y <xref:System.Drawing.Drawing2D.LineJoin>, que especifican estilos que pueden utilizarse para combinar dos líneas.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e9b0c-114">define varias enumeraciones, que son colecciones de constantes relacionadas.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-114"> defines several enumerations, which are collections of related constants.</span></span> <span data-ttu-id="e9b0c-115">Por ejemplo, el <xref:System.Drawing.Drawing2D.LineJoin> enumeración contiene los elementos <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, y <xref:System.Drawing.Drawing2D.LineJoin.Round>, que especifican estilos que pueden utilizarse para combinar dos líneas.</span><span class="sxs-lookup"><span data-stu-id="e9b0c-115">For example, the <xref:System.Drawing.Drawing2D.LineJoin> enumeration contains the elements <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, and <xref:System.Drawing.Drawing2D.LineJoin.Round>, which specify styles that can be used to join two lines.</span></span>  
   
-## Vea también  
- [Información general de gráficos](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)   
- [Código administrado de GDI\+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)   
- [Utilizar clases gráficas administradas](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a><span data-ttu-id="e9b0c-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="e9b0c-116">See Also</span></span>  
+ <span data-ttu-id="e9b0c-117">[Graphics Overview](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md) (Información general sobre gráficos [Windows Forms])</span><span class="sxs-lookup"><span data-stu-id="e9b0c-117">[Graphics Overview](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)</span></span>  
+ <span data-ttu-id="e9b0c-118">[About GDI+ Managed Code](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md) (Acerca del código administrado de GDI+)</span><span class="sxs-lookup"><span data-stu-id="e9b0c-118">[About GDI+ Managed Code](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)</span></span>  
+ <span data-ttu-id="e9b0c-119">[Using Managed Graphics Classes](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md) (Usar clases gráficas administradas)</span><span class="sxs-lookup"><span data-stu-id="e9b0c-119">[Using Managed Graphics Classes](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)</span></span>

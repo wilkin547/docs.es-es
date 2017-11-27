@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, overriding
 - serialization, overriding
@@ -20,41 +18,40 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: bd06d53ff1d28b3b3ec9937b4c3efdb1d784c481
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 66bb538dcdc5ad0df200eb02ee315716e160160a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Cómo: Especificar un nombre de elemento alternativo para una secuencia XML
-[Ejemplo de código](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a><span data-ttu-id="53f35-102">Cómo: Especificar un nombre de elemento alternativo para una secuencia XML</span><span class="sxs-lookup"><span data-stu-id="53f35-102">How to: Specify an Alternate Element Name for an XML Stream</span></span>
+[<span data-ttu-id="53f35-103">Ejemplo de código</span><span class="sxs-lookup"><span data-stu-id="53f35-103">Code Example</span></span>](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
   
- Usando[XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), se puede generar más de una secuencia XML con el mismo conjunto de clases. Puede que desee proceder de esta forma ya que dos servicios Web XML diferentes requieren la misma información básica, con solo ligeras diferencias. Por ejemplo, imagine dos servicios Web XML que procesan órdenes para los libros y así ambos requieren los números de ISBN. Un servicio usa la etiqueta \<ISBN> mientras el segundo usa la etiqueta \<BookID>. Tiene una clase denominada `Book` que contiene un campo denominado `ISBN`. Cuando se serializa una instancia de la clase `Book`, utilizará, de forma predeterminada, el nombre de miembro (ISBN) como el nombre de elemento de etiqueta. Para el primer servicio Web XML, esto es como esperado. Pero para enviar la secuencia XML al segundo servicio Web XML, debe invalidar la serialización para que el nombre de elemento de la etiqueta sea `BookID`.  
+ <span data-ttu-id="53f35-104">Usando[XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), se puede generar más de una secuencia XML con el mismo conjunto de clases.</span><span class="sxs-lookup"><span data-stu-id="53f35-104">Using the [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), you can generate more than one XML stream with the same set of classes.</span></span> <span data-ttu-id="53f35-105">Puede que desee proceder de esta forma ya que dos servicios Web XML diferentes requieren la misma información básica, con solo ligeras diferencias.</span><span class="sxs-lookup"><span data-stu-id="53f35-105">You might want to do this because two different XML Web services require the same basic information, with only slight differences.</span></span> <span data-ttu-id="53f35-106">Por ejemplo, imagine dos servicios Web XML que procesan órdenes para los libros y así ambos requieren los números de ISBN.</span><span class="sxs-lookup"><span data-stu-id="53f35-106">For example, imagine two XML Web services that process orders for books, and thus both require ISBN numbers.</span></span> <span data-ttu-id="53f35-107">Un servicio usa la etiqueta \<ISBN> mientras el segundo usa la etiqueta \<BookID>.</span><span class="sxs-lookup"><span data-stu-id="53f35-107">One service uses the tag \<ISBN> while the second uses the tag \<BookID>.</span></span> <span data-ttu-id="53f35-108">Tiene una clase denominada `Book` que contiene un campo denominado `ISBN`.</span><span class="sxs-lookup"><span data-stu-id="53f35-108">You have a class named `Book` that contains a field named `ISBN`.</span></span> <span data-ttu-id="53f35-109">Cuando se serializa una instancia de la clase `Book`, utilizará, de forma predeterminada, el nombre de miembro (ISBN) como el nombre de elemento de etiqueta.</span><span class="sxs-lookup"><span data-stu-id="53f35-109">When an instance of the `Book` class is serialized, it will, by default, use the member name (ISBN) as the tag element name.</span></span> <span data-ttu-id="53f35-110">Para el primer servicio Web XML, esto es como esperado.</span><span class="sxs-lookup"><span data-stu-id="53f35-110">For the first XML Web service, this is as expected.</span></span> <span data-ttu-id="53f35-111">Pero para enviar la secuencia XML al segundo servicio Web XML, debe invalidar la serialización para que el nombre de elemento de la etiqueta sea `BookID`.</span><span class="sxs-lookup"><span data-stu-id="53f35-111">But to send the XML stream to the second XML Web service, you must override the serialization so that the tag's element name is `BookID`.</span></span>  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Para crear una secuencia XML con un nombre de elemento alternativo  
+### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a><span data-ttu-id="53f35-112">Para crear una secuencia XML con un nombre de elemento alternativo</span><span class="sxs-lookup"><span data-stu-id="53f35-112">To create an XML stream with an alternate element name</span></span>  
   
-1.  Cree una instancia de la clase <xref:System.Xml.Serialization.XmlElementAttribute>.  
+1.  <span data-ttu-id="53f35-113">Cree una instancia de la clase <xref:System.Xml.Serialization.XmlElementAttribute>.</span><span class="sxs-lookup"><span data-stu-id="53f35-113">Create an instance of the <xref:System.Xml.Serialization.XmlElementAttribute> class.</span></span>  
   
-2.  Establece el <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> de <xref:System.Xml.Serialization.XmlElementAttribute> a "BookID".  
+2.  <span data-ttu-id="53f35-114">Establece el <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> de <xref:System.Xml.Serialization.XmlElementAttribute> a "BookID".</span><span class="sxs-lookup"><span data-stu-id="53f35-114">Set the <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> of the <xref:System.Xml.Serialization.XmlElementAttribute> to "BookID".</span></span>  
   
-3.  Cree una instancia de la clase <xref:System.Xml.Serialization.XmlAttributes>.  
+3.  <span data-ttu-id="53f35-115">Cree una instancia de la clase <xref:System.Xml.Serialization.XmlAttributes>.</span><span class="sxs-lookup"><span data-stu-id="53f35-115">Create an instance of the <xref:System.Xml.Serialization.XmlAttributes> class.</span></span>  
   
-4.  Agregue el objeto `XmlElementAttribute` a la colección a la que ha accedido mediante la propiedad <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> de <xref:System.Xml.Serialization.XmlAttributes> .  
+4.  <span data-ttu-id="53f35-116">Agregue el objeto `XmlElementAttribute` a la colección a la que ha accedido mediante la propiedad <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> de <xref:System.Xml.Serialization.XmlAttributes> .</span><span class="sxs-lookup"><span data-stu-id="53f35-116">Add the `XmlElementAttribute` object to the collection accessed through the <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> property of <xref:System.Xml.Serialization.XmlAttributes> .</span></span>  
   
-5.  Cree una instancia de la clase <xref:System.Xml.Serialization.XmlAttributeOverrides>.  
+5.  <span data-ttu-id="53f35-117">Cree una instancia de la clase <xref:System.Xml.Serialization.XmlAttributeOverrides>.</span><span class="sxs-lookup"><span data-stu-id="53f35-117">Create an instance of the <xref:System.Xml.Serialization.XmlAttributeOverrides> class.</span></span>  
   
-6.  Agregue `XmlAttributes` a <xref:System.Xml.Serialization.XmlAttributeOverrides>, pasando el tipo del objeto para invalidarlo y el nombre de miembro invalidado.  
+6.  <span data-ttu-id="53f35-118">Agregue `XmlAttributes` a <xref:System.Xml.Serialization.XmlAttributeOverrides>, pasando el tipo del objeto para invalidarlo y el nombre de miembro invalidado.</span><span class="sxs-lookup"><span data-stu-id="53f35-118">Add the `XmlAttributes` to the <xref:System.Xml.Serialization.XmlAttributeOverrides>, passing the type of the object to override and the name of the member being overridden.</span></span>  
   
-7.  Cree una instancia de la clase `XmlSerializer` con `XmlAttributeOverrides`.  
+7.  <span data-ttu-id="53f35-119">Cree una instancia de la clase `XmlSerializer` con `XmlAttributeOverrides`.</span><span class="sxs-lookup"><span data-stu-id="53f35-119">Create an instance of the `XmlSerializer` class with `XmlAttributeOverrides`.</span></span>  
   
-8.  Cree una instancia de la clase `Book` y serialice o deserialícela.  
+8.  <span data-ttu-id="53f35-120">Cree una instancia de la clase `Book` y serialice o deserialícela.</span><span class="sxs-lookup"><span data-stu-id="53f35-120">Create an instance of the `Book` class, and serialize or deserialize it.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="53f35-121">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="53f35-121">Example</span></span>  
   
 ```vb  
 Public Class SerializeOverride()  
@@ -96,7 +93,7 @@ public class SerializeOverride()
 }  
 ```  
   
- La secuencia XML puede parecerse a lo siguiente.  
+ <span data-ttu-id="53f35-122">La secuencia XML puede parecerse a lo siguiente.</span><span class="sxs-lookup"><span data-stu-id="53f35-122">The XML stream might resemble the following.</span></span>  
   
 ```xml  
 <Book>  
@@ -104,13 +101,12 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Xml.Serialization.XmlElementAttribute>   
- <xref:System.Xml.Serialization.XmlAttributes>   
- <xref:System.Xml.Serialization.XmlAttributeOverrides>   
- [Serialización SOAP y XML](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)   
- [Cómo: Serializar un objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)   
- [Cómo: Deserializar un objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-
+## <a name="see-also"></a><span data-ttu-id="53f35-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="53f35-123">See Also</span></span>  
+ <xref:System.Xml.Serialization.XmlElementAttribute>  
+ <xref:System.Xml.Serialization.XmlAttributes>  
+ <xref:System.Xml.Serialization.XmlAttributeOverrides>  
+ [<span data-ttu-id="53f35-124">Serialización SOAP y XML</span><span class="sxs-lookup"><span data-stu-id="53f35-124">XML and SOAP Serialization</span></span>](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [<span data-ttu-id="53f35-125">XmlSerializer</span><span class="sxs-lookup"><span data-stu-id="53f35-125">XmlSerializer</span></span>](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
+ [<span data-ttu-id="53f35-126">Cómo: Serializar un objeto</span><span class="sxs-lookup"><span data-stu-id="53f35-126">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [<span data-ttu-id="53f35-127">Cómo: Deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="53f35-127">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [<span data-ttu-id="53f35-128">Cómo: Deserializar un objeto</span><span class="sxs-lookup"><span data-stu-id="53f35-128">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

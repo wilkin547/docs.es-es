@@ -1,40 +1,39 @@
 ---
-title: "C&#243;mo usar un cliente de Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "clientes de WCF [WCF], utilizar"
+title: "Cómo usar un cliente de Windows Communication Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c4b0612cc18129f9f35ed3f475bca8941a20d3ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo usar un cliente de Windows Communication Foundation
-Es la última de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  Para obtener información general de las seis tareas, consulte el tema [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md).  
+# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="3dc03-102">Cómo usar un cliente de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="3dc03-102">How to: Use a Windows Communication Foundation Client</span></span>
+<span data-ttu-id="3dc03-103">Es la última de las seis tareas necesarias para crear una aplicación básica de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3dc03-103">This is the last of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="3dc03-104">Para obtener información general de las seis de las tareas, consulte la [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md) tema.</span><span class="sxs-lookup"><span data-stu-id="3dc03-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- Una vez creado y configurado un proxy de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], se puede crear una instancia de cliente y la aplicación de cliente se puede compilar y utilizar para comunicar con el servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  En este tema se describen los procedimientos para crear instancias y usar un cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Este procedimiento hace tres cosas:  
+ <span data-ttu-id="3dc03-105">Una vez creado y configurado un proxy de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], se puede crear una instancia de cliente y la aplicación de cliente se puede compilar y utilizar para comunicar con el servicio [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3dc03-105">Once a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="3dc03-106">En este tema se describen los procedimientos para crear instancias y usar un cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3dc03-106">This topic describes procedures for instantiating and using a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="3dc03-107">Este procedimiento hace tres cosas:</span><span class="sxs-lookup"><span data-stu-id="3dc03-107">This procedure does three things:</span></span>  
   
-1.  Crea una instancia de un cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+1.  <span data-ttu-id="3dc03-108">Crea una instancia de un cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3dc03-108">Instantiates a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
   
-2.  Llama a las operaciones de servicio desde el proxy generado.  
+2.  <span data-ttu-id="3dc03-109">Llama a las operaciones de servicio desde el proxy generado.</span><span class="sxs-lookup"><span data-stu-id="3dc03-109">Calls the service operations from the generated proxy.</span></span>  
   
-3.  Cierra el cliente una vez completada la llamada de operación.  
+3.  <span data-ttu-id="3dc03-110">Cierra el cliente una vez completada la llamada de operación.</span><span class="sxs-lookup"><span data-stu-id="3dc03-110">Closes the client once the operation call is completed.</span></span>  
   
-### Uso de un cliente de Windows Communication Foundation  
+### <a name="to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="3dc03-111">Uso de un cliente de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="3dc03-111">To use a Windows Communication Foundation client</span></span>  
   
-1.  Abra el archivo Program.cs o Program.vb del proyecto GettingStartedClient y reemplace el código existente por el código siguiente:  
+1.  <span data-ttu-id="3dc03-112">Abra el archivo Program.cs o Program.vb del proyecto GettingStartedClient y reemplace el código existente por el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="3dc03-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>  
   
     ```  
     using System;  
@@ -82,7 +81,6 @@ Es la última de las seis tareas necesarias para crear una aplicación básica d
             }  
         }  
     }  
-  
     ```  
   
     ```  
@@ -133,44 +131,28 @@ Es la última de las seis tareas necesarias para crear una aplicación básica d
         End Sub  
   
     End Module  
-  
     ```  
   
-     Observe la instrucción using o imports que importa GettingStartedClient.ServiceReference1.  Esto importa el código generado por Agregar referencia de servicio en Visual Studio.  El código crea una instancia del proxy de WCF y llama a cada una de las operaciones de servicio expuestas por el servicio de calculadora, cierra el proxy y finaliza.  
+     <span data-ttu-id="3dc03-113">Observe la instrucción using o imports que importa GettingStartedClient.ServiceReference1.</span><span class="sxs-lookup"><span data-stu-id="3dc03-113">Notice the using or imports statement that imports the GettingStartedClient.ServiceReference1.</span></span> <span data-ttu-id="3dc03-114">Esto importa el código generado por Agregar referencia de servicio en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3dc03-114">This imports the code generated by Add Service Reference in Visual Studio.</span></span> <span data-ttu-id="3dc03-115">El código crea una instancia del proxy de WCF y llama a cada una de las operaciones de servicio expuestas por el servicio de calculadora, cierra el proxy y finaliza.</span><span class="sxs-lookup"><span data-stu-id="3dc03-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy and terminates.</span></span>  
   
- Se ha completado el tutorial.  Ha definido un contrato de servicio, implementado el contrato de servicio, generado un proxy WCF, configurado una aplicación cliente de WCF y a continuación usado el proxy para llamar a operaciones de servicio.  Para probar la aplicación, ejecute primero GettingStartedHost para iniciar el servicio y ejecute después GettingStartedClient.  La salida de GettingStartedHost debe ser similar a:  
-  
-```Output  
-  
-            El servicio está listo.  Presione <ENTRAR> para terminar el servicio.  Suma recibida(100,15.99)  
-Retorno: 115,99  
-Resta recibida(145,76.54)  
-Retorno: 68,46  
-Multiplicación recibida(9,81.25)  
-Retorno: 731,25  
-División recibida(22,7)  
-Retorno: 3,14285714285714    
-```  
-  
- La salida de GettingStartedClient debe ser similar a:  
+ <span data-ttu-id="3dc03-116">Se ha completado el tutorial.</span><span class="sxs-lookup"><span data-stu-id="3dc03-116">You have now completed the tutorial.</span></span> <span data-ttu-id="3dc03-117">Ha definido un contrato de servicio, implementado el contrato de servicio, generado un proxy WCF, configurado una aplicación cliente de WCF y a continuación usado el proxy para llamar a operaciones de servicio.</span><span class="sxs-lookup"><span data-stu-id="3dc03-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="3dc03-118">Para probar la aplicación, ejecute primero GettingStartedHost para iniciar el servicio y ejecute después GettingStartedClient.</span><span class="sxs-lookup"><span data-stu-id="3dc03-118">To test out the application first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span> <span data-ttu-id="3dc03-119">La salida de GettingStartedHost debe ser similar a:</span><span class="sxs-lookup"><span data-stu-id="3dc03-119">The output from GettingStartedHost should look like this:</span></span>  
   
 ```Output  
-  
-            Sumar(100;15,99) = 115,99  
-Restar(145;76,54) = 68,46  
-Multiplicar(9;81,25) = 731,25  
-Dividir(22;7) = 3.14285714285714  
-  
-Presione <ENTRAR> para terminar el cliente.  
-  
+The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714  
 ```  
   
-## Vea también  
- [Creación de clientes](../../../docs/framework/wcf/building-clients.md)   
- [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md)   
- [Programación básica de WCF](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [Creación de un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [Cómo: Obtener acceso a los servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)   
- [Introducción:](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [Autohospedaje](../../../docs/framework/wcf/samples/self-host.md)
+ <span data-ttu-id="3dc03-120">La salida de GettingStartedClient debe ser similar a:</span><span class="sxs-lookup"><span data-stu-id="3dc03-120">The output from GettingStartedClient should look like this:</span></span>  
+  
+```Output  
+Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="3dc03-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="3dc03-121">See Also</span></span>  
+ [<span data-ttu-id="3dc03-122">Creación de clientes</span><span class="sxs-lookup"><span data-stu-id="3dc03-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ [<span data-ttu-id="3dc03-123">Cómo crear un cliente</span><span class="sxs-lookup"><span data-stu-id="3dc03-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="3dc03-124">Tutorial de introducción</span><span class="sxs-lookup"><span data-stu-id="3dc03-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="3dc03-125">Programación básica de WCF</span><span class="sxs-lookup"><span data-stu-id="3dc03-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="3dc03-126">Cómo: crear un contrato dúplex</span><span class="sxs-lookup"><span data-stu-id="3dc03-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="3dc03-127">Cómo: obtener acceso a servicios con un contrato dúplex</span><span class="sxs-lookup"><span data-stu-id="3dc03-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [<span data-ttu-id="3dc03-128">Introducción</span><span class="sxs-lookup"><span data-stu-id="3dc03-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="3dc03-129">Autohospedaje</span><span class="sxs-lookup"><span data-stu-id="3dc03-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

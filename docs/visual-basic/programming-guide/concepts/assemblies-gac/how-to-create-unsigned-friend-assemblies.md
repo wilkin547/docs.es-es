@@ -1,39 +1,31 @@
 ---
-title: "Cómo: crear ensamblados de confianza sin firmar (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: crear ensamblados de confianza sin firmar (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ceddb35c306f72c8927deda326d9fcca6c75d786
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a2b2667c60a07a2897a0934d210901042e2e43c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Cómo: crear ensamblados de confianza sin firmar (Visual Basic)
-Este ejemplo muestra cómo utilizar los ensamblados de confianza con ensamblados no firmados.  
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="62299-102">Cómo: crear ensamblados de confianza sin firmar (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62299-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="62299-103">En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados sin firmar.</span><span class="sxs-lookup"><span data-stu-id="62299-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Para crear un ensamblado y un ensamblado de confianza  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="62299-104">Para crear un ensamblado y un ensamblado de confianza</span><span class="sxs-lookup"><span data-stu-id="62299-104">To create an assembly and a friend assembly</span></span>  
   
-1.  Abra un símbolo del sistema.  
+1.  <span data-ttu-id="62299-105">Abra un símbolo del sistema.</span><span class="sxs-lookup"><span data-stu-id="62299-105">Open a command prompt.</span></span>  
   
-2.  Cree un archivo de Visual Basic llamado `friend_signed_A.` que contiene el código siguiente. El código usa el <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>atributo declarar friend_signed_B como un ensamblado de confianza.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+2.  <span data-ttu-id="62299-106">Cree un archivo de Visual Basic denominado `friend_signed_A.` que contiene el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="62299-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="62299-107">El código usa el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar friend_signed_B como un ensamblado de confianza.</span><span class="sxs-lookup"><span data-stu-id="62299-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -59,13 +51,13 @@ Este ejemplo muestra cómo utilizar los ensamblados de confianza con ensamblados
     End Class  
     ```  
   
-3.  Compile y firme friend_signed_A mediante el siguiente comando.  
+3.  <span data-ttu-id="62299-108">Compile y firme friend_signed_A mediante el siguiente comando.</span><span class="sxs-lookup"><span data-stu-id="62299-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```vb  
     Vbc /target:library friend_unsigned_A.vb  
     ```  
   
-4.  Cree un archivo de Visual Basic llamado `friend_unsigned_B` que contiene el código siguiente. Dado que friend_unsigned_A especifica que friend_unsigned_B es un ensamblado de confianza, puede tener acceso el código de friend_unsigned_B `Friend` tipos y miembros de friend_unsigned_A.  
+4.  <span data-ttu-id="62299-109">Cree un archivo de Visual Basic denominado `friend_unsigned_B` que contiene el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="62299-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="62299-110">Como friend_unsigned_A especifica que friend_unsigned_B es un ensamblado de confianza, el código de friend_unsigned_B puede tener acceso a tipos `Friend` y miembros de friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="62299-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -86,24 +78,24 @@ Este ejemplo muestra cómo utilizar los ensamblados de confianza con ensamblados
     End Module  
     ```  
   
-5.  Compile friend_signed_B mediante el siguiente comando.  
+5.  <span data-ttu-id="62299-111">Compile friend_signed_B mediante el siguiente comando.</span><span class="sxs-lookup"><span data-stu-id="62299-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```vb  
     Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     El nombre del ensamblado generado por el compilador debe coincidir con el nombre de ensamblado de confianza que se pasa a la <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>atributo.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Puede establecer explícitamente el ensamblado utilizando el `/out` opción del compilador.  
+     <span data-ttu-id="62299-112">El nombre del ensamblado que genera el compilador debe coincidir con el nombre del ensamblado de confianza que se ha pasado al atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="62299-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="62299-113">Puede establecer explícitamente el ensamblado utilizando el `/out` opción del compilador.</span><span class="sxs-lookup"><span data-stu-id="62299-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
   
-6.  Ejecute el archivo friend_signed_B.exe.  
+6.  <span data-ttu-id="62299-114">Ejecute el archivo friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="62299-114">Run the friend_signed_B.exe file.</span></span>  
   
-     El programa imprime dos cadenas: "Class1.Test" y "Class2.Test".  
+     <span data-ttu-id="62299-115">El programa imprime dos cadenas: "Class1.Test" y "Class2.Test".</span><span class="sxs-lookup"><span data-stu-id="62299-115">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework  
- Hay similitudes entre el <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>atributo y la <xref:System.Security.Permissions.StrongNameIdentityPermission>clase.</xref:System.Security.Permissions.StrongNameIdentityPermission> </xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> La principal diferencia es que <xref:System.Security.Permissions.StrongNameIdentityPermission>puede solicitar permisos de seguridad para ejecutar una sección concreta del código, mientras que el <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>atributo controla la visibilidad de `Friend` tipos y miembros.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> </xref:System.Security.Permissions.StrongNameIdentityPermission>  
+## <a name="net-framework-security"></a><span data-ttu-id="62299-116">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="62299-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="62299-117">Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="62299-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="62299-118">La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `Friend`.</span><span class="sxs-lookup"><span data-stu-id="62299-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute></xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [Ensamblados y caché Global de ensamblados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Friend (ensamblados) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [Cómo: crear ensamblados de confianza firmados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
- [Conceptos de la Guía de programación](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a><span data-ttu-id="62299-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="62299-119">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [<span data-ttu-id="62299-120">Ensamblados y caché global de ensamblados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62299-120">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="62299-121">Ensamblados de confianza (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62299-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="62299-122">Cómo: crear ensamblados de confianza firmados (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="62299-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [<span data-ttu-id="62299-123">Conceptos de la Guía de programación</span><span class="sxs-lookup"><span data-stu-id="62299-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)

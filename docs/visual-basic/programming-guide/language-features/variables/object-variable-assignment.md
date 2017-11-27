@@ -1,37 +1,36 @@
 ---
-title: "Asignaci&#243;n de variables de objeto (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "instrucciones de asignación, asignación de variables de objeto"
-  - "instancia actual, definición"
-  - "Me (palabra clave), como variable de objeto"
-  - "Nothing (palabra clave), asignación de variables de objeto"
-  - "variables de objeto, asignar"
-  - "variables de objeto, inicializar"
-  - "objetos [Visual Basic], instancia actual"
-  - "variables [Visual Basic], asignar"
-  - "variables [Visual Basic], inicializar"
-  - "variables [Visual Basic], variables de objeto"
+title: "Asignación de variables de objeto (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Nothing keyword [Visual Basic], object variable assignment
+- object variables [Visual Basic], initializing
+- variables [Visual Basic], initializing
+- objects [Visual Basic], current instance
+- object variables [Visual Basic], assigning
+- variables [Visual Basic], object variables
+- current instance [Visual Basic], defined
+- variables [Visual Basic], assigning
+- assignment statements [Visual Basic], object variable assignment
+- Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignaci&#243;n de variables de objeto (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Utilice una instrucción de asignación normal para asignar un objeto a una variable de objeto.  Puede asignar una expresión de objeto o la palabra clave [Nothing](../../../../visual-basic/language-reference/nothing.md), tal como se muestra en el ejemplo siguiente.  
+# <a name="object-variable-assignment-visual-basic"></a><span data-ttu-id="884cc-102">Asignación de variables de objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="884cc-102">Object Variable Assignment (Visual Basic)</span></span>
+<span data-ttu-id="884cc-103">Usar una instrucción de asignación normal para asignar un objeto a una variable de objeto.</span><span class="sxs-lookup"><span data-stu-id="884cc-103">You use a normal assignment statement to assign an object to an object variable.</span></span> <span data-ttu-id="884cc-104">Puede asignar una expresión de objeto o la [nada](../../../../visual-basic/language-reference/nothing.md) palabra clave, como en el ejemplo siguiente se muestra.</span><span class="sxs-lookup"><span data-stu-id="884cc-104">You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.</span></span>  
   
 ```  
 Dim thisObject As Object  
@@ -41,20 +40,20 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` significa que no hay ningún objeto asignado actualmente a la variable.  
+ <span data-ttu-id="884cc-105">`Nothing`significa que no hay ningún objeto asignado actualmente a la variable.</span><span class="sxs-lookup"><span data-stu-id="884cc-105">`Nothing` means there is no object currently assigned to the variable.</span></span>  
   
-## Inicialización  
- Cuando el código empieza a ejecutarse, las variables de objeto se inicializan con `Nothing`.  Aquéllos cuyas declaraciones incluyen la inicialización se reinicializan con los valores que especifica cuando se ejecutan las instrucciones de declaración.  
+## <a name="initialization"></a><span data-ttu-id="884cc-106">Inicialización</span><span class="sxs-lookup"><span data-stu-id="884cc-106">Initialization</span></span>  
+ <span data-ttu-id="884cc-107">Cuando el código inicia la ejecución, el objeto se inicializan las variables a `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="884cc-107">When your code begins running, your object variables are initialized to `Nothing`.</span></span> <span data-ttu-id="884cc-108">Aquéllos cuyas declaraciones incluyen la inicialización se reinicializan con los valores especificados cuando se ejecutan las instrucciones de declaración.</span><span class="sxs-lookup"><span data-stu-id="884cc-108">Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.</span></span>  
   
- Puede incluir la inicialización en su declaración utilizando la palabra clave [New](../../../../visual-basic/language-reference/operators/new-operator.md).  En las siguientes instrucciones de declaración se declaran variables de objeto `testUri` y `ver`, y se les asignan objetos específicos.  Cada una utiliza uno de los constructores sobrecargados de la clase adecuada para inicializar el objeto.  
+ <span data-ttu-id="884cc-109">Puede incluir la inicialización en su declaración utilizando el [New](../../../../visual-basic/language-reference/operators/new-operator.md) (palabra clave).</span><span class="sxs-lookup"><span data-stu-id="884cc-109">You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword.</span></span> <span data-ttu-id="884cc-110">Las siguientes instrucciones de declaración declaran variables de objeto `testUri` y `ver` y asignan objetos específicos.</span><span class="sxs-lookup"><span data-stu-id="884cc-110">The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them.</span></span> <span data-ttu-id="884cc-111">Cada uno utiliza uno de los constructores sobrecargados de la clase adecuada para inicializar el objeto.</span><span class="sxs-lookup"><span data-stu-id="884cc-111">Each uses one of the overloaded constructors of the appropriate class to initialize the object.</span></span>  
   
 ```  
 Dim testUri As New System.Uri("http://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
-## Desasociación  
- Si se establece una variable de objeto en `Nothing` se interrumpe la asociación de la variable con cualquier objeto específico,  lo que impide que el objeto se modifique de forma accidental al cambiar la variable.  También permite comprobar si la variable de objeto señala a un objeto válido, tal como se muestra en el ejemplo siguiente:  
+## <a name="disassociation"></a><span data-ttu-id="884cc-112">Desasociación</span><span class="sxs-lookup"><span data-stu-id="884cc-112">Disassociation</span></span>  
+ <span data-ttu-id="884cc-113">Si se establece una variable de objeto en `Nothing` se interrumpe la asociación de la variable con cualquier objeto concreto.</span><span class="sxs-lookup"><span data-stu-id="884cc-113">Setting an object variable to `Nothing` discontinues the association of the variable with any specific object.</span></span> <span data-ttu-id="884cc-114">Esto impide que se modifique accidentalmente el objeto cambiando la variable.</span><span class="sxs-lookup"><span data-stu-id="884cc-114">This prevents you from accidentally changing the object by changing the variable.</span></span> <span data-ttu-id="884cc-115">También permite comprobar si la variable de objeto hace referencia a un objeto válido, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="884cc-115">It also allows you to test whether the object variable points to a valid object, as the following example shows.</span></span>  
   
 ```  
 If otherObject IsNot Nothing Then  
@@ -62,16 +61,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Si el objeto al que hace referencia la variable está en otra aplicación, esta comprobación no permite averiguar si la aplicación se ha terminado o ha invalidado el objeto.  
+ <span data-ttu-id="884cc-116">Si el objeto al que hace referencia la variable está en otra aplicación, esta prueba no puede determinar si esa aplicación ha terminado o ha invalidado el objeto.</span><span class="sxs-lookup"><span data-stu-id="884cc-116">If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.</span></span>  
   
- Una variable de objeto con un valor de `Nothing` también se llama *referencia nula*.  
+ <span data-ttu-id="884cc-117">Una variable de objeto con un valor de `Nothing` también se denomina un *referencia nula*.</span><span class="sxs-lookup"><span data-stu-id="884cc-117">An object variable with a value of `Nothing` is also called a *null reference*.</span></span>  
   
-## Instancia actual  
- La *instancia actual* de un objeto es aquella en la que se está ejecutando el código.  Dado que todo el código se ejecuta siempre dentro de un procedimiento, la instancia actual es aquella en la cual se invocó al procedimiento.  
+## <a name="current-instance"></a><span data-ttu-id="884cc-118">Instancia actual</span><span class="sxs-lookup"><span data-stu-id="884cc-118">Current Instance</span></span>  
+ <span data-ttu-id="884cc-119">El *instancia actual* de un objeto es el que se está ejecutando el código actualmente.</span><span class="sxs-lookup"><span data-stu-id="884cc-119">The *current instance* of an object is the one in which the code is currently executing.</span></span> <span data-ttu-id="884cc-120">Puesto que todo el código se ejecuta dentro de un procedimiento, la instancia actual es uno en el que se invocó el procedimiento.</span><span class="sxs-lookup"><span data-stu-id="884cc-120">Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.</span></span>  
   
- La palabra clave `Me` cumple la función de una variable de objeto que hace referencia a la instancia actual.  Si un procedimiento no es [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), puede utilizar la palabra clave `Me` para obtener un puntero a la instancia actual.  Los procedimientos compartidos no pueden asociarse a una instancia específica de una clase.  
+ <span data-ttu-id="884cc-121">El `Me` palabra clave actúa como una variable de objeto que hace referencia a la instancia actual.</span><span class="sxs-lookup"><span data-stu-id="884cc-121">The `Me` keyword acts as an object variable referring to the current instance.</span></span> <span data-ttu-id="884cc-122">Si un procedimiento no es [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), puede usar el `Me` palabra clave que se va a obtener un puntero a la instancia actual.</span><span class="sxs-lookup"><span data-stu-id="884cc-122">If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance.</span></span> <span data-ttu-id="884cc-123">Los procedimientos compartidos no se pueden asociados a una instancia específica de una clase.</span><span class="sxs-lookup"><span data-stu-id="884cc-123">Shared procedures cannot be associated with a specific instance of a class.</span></span>  
   
- El uso de la palabra clave `Me` es especialmente útil para pasar la instancia actual a un procedimiento de otro módulo.  Por ejemplo, suponga que tiene varios documentos XML y desea agregar un texto estándar a todos ellos.  El ejemplo siguiente define un procedimiento para ello.  
+ <span data-ttu-id="884cc-124">Usar `Me` es especialmente útil para pasar la instancia actual a un procedimiento en otro módulo.</span><span class="sxs-lookup"><span data-stu-id="884cc-124">Using `Me` is particularly useful for passing the current instance to a procedure in another module.</span></span> <span data-ttu-id="884cc-125">Por ejemplo, suponga que tiene un número de documentos XML y desea agregar algún texto estándar a todos ellos.</span><span class="sxs-lookup"><span data-stu-id="884cc-125">For example, suppose you have a number of XML documents and wish to add some standard text to all of them.</span></span> <span data-ttu-id="884cc-126">En el ejemplo siguiente se define un procedimiento para hacer esto.</span><span class="sxs-lookup"><span data-stu-id="884cc-126">The following example defines a procedure to do this.</span></span>  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -79,16 +78,16 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Después, todos los objetos de documento XML pueden llamar al procedimiento y pasar como argumento su instancia actual.  En el siguiente ejemplo se muestra cómo.  
+ <span data-ttu-id="884cc-127">Cada objeto de documento XML, a continuación, podría llamar al procedimiento y pasar la instancia actual como un argumento.</span><span class="sxs-lookup"><span data-stu-id="884cc-127">Every XML document object could then call the procedure and pass its current instance as an argument.</span></span> <span data-ttu-id="884cc-128">En el siguiente ejemplo se muestra cómo hacerlo.</span><span class="sxs-lookup"><span data-stu-id="884cc-128">The following example demonstrates this.</span></span>  
   
 ```  
 addStandardText(Me)  
 ```  
   
-## Vea también  
- [Variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Declaración de variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Valores de las variables de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)   
- [Cómo: Declarar una variable de objeto y asignarle un objeto en Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)   
- [Cómo: Crear una variable de objeto que no haga referencia a ninguna instancia](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)   
- [Me, My, MyBase y MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a><span data-ttu-id="884cc-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="884cc-129">See Also</span></span>  
+ [<span data-ttu-id="884cc-130">Variables de objeto</span><span class="sxs-lookup"><span data-stu-id="884cc-130">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [<span data-ttu-id="884cc-131">Declaración de variables de objeto</span><span class="sxs-lookup"><span data-stu-id="884cc-131">Object Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
+ [<span data-ttu-id="884cc-132">Valores de las variables de objeto</span><span class="sxs-lookup"><span data-stu-id="884cc-132">Object Variable Values</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [<span data-ttu-id="884cc-133">Cómo: declarar una Variable de objeto y asignarle un objeto en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="884cc-133">How to: Declare an Object Variable and Assign an Object to It in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
+ [<span data-ttu-id="884cc-134">Crear una variable de objeto que no haga referencia a ninguna instancia</span><span class="sxs-lookup"><span data-stu-id="884cc-134">How to: Make an Object Variable Not Refer to Any Instance</span></span>](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
+ [<span data-ttu-id="884cc-135">Me, My, MyBase y MyClass</span><span class="sxs-lookup"><span data-stu-id="884cc-135">Me, My, MyBase, and MyClass</span></span>](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

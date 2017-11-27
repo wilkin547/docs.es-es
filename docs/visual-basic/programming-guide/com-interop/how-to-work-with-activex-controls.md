@@ -1,63 +1,46 @@
 ---
-title: "Cómo: trabajar con controles ActiveX (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: Trabajar con controles ActiveX (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12780fc2e95e219befdfd7283a2f958f21e447f7
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d7856149d22f8949d8acbbd405649a12ad2f8113
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-work-with-activex-controls-visual-basic"></a>Cómo: Trabajar con controles ActiveX (Visual Basic)
-Los controles ActiveX son componentes COM o los objetos que puede insertar en una página Web u otra aplicación para reutilizar una funcionalidad empaquetada programada. Puede utilizar controles ActiveX desarrollados para que Visual Basic 6.0 y versiones anteriores para agregar características a la **herramientas** de [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+# <a name="how-to-work-with-activex-controls-visual-basic"></a><span data-ttu-id="f179c-102">Cómo: Trabajar con controles ActiveX (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f179c-102">How to: Work with ActiveX Controls (Visual Basic)</span></span>
+<span data-ttu-id="f179c-103">Los controles ActiveX son componentes COM o a objetos que puede insertar en una página Web u otra aplicación para reutilizar una funcionalidad empaquetada que alguien ha programado.</span><span class="sxs-lookup"><span data-stu-id="f179c-103">ActiveX controls are COM components or objects you can insert into a Web page or other application to reuse packaged functionality someone else has programmed.</span></span> <span data-ttu-id="f179c-104">Puede usar controles ActiveX desarrollados para que Visual Basic 6.0 y versiones anteriores para agregar características a la **cuadro de herramientas** de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f179c-104">You can use ActiveX controls developed for Visual Basic 6.0 and earlier versions to add features to the **Toolbox** of [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>Para agregar controles ActiveX al cuadro de herramientas  
+### <a name="to-add-activex-controls-to-the-toolbox"></a><span data-ttu-id="f179c-105">Para agregar controles ActiveX al cuadro de herramientas</span><span class="sxs-lookup"><span data-stu-id="f179c-105">To add ActiveX controls to the toolbox</span></span>  
   
-1.  En el **herramientas** menú, haga clic en **elegir elementos del cuadro de herramientas**.  
+1.  <span data-ttu-id="f179c-106">En el **herramientas** menú, haga clic en **elegir elementos del cuadro de herramientas**.</span><span class="sxs-lookup"><span data-stu-id="f179c-106">On the **Tools** menu, click **Choose Toolbox Items**.</span></span>  
   
-     El **elegir cuadro de herramientas** aparece el cuadro de diálogo.  
+     <span data-ttu-id="f179c-107">El **elegir cuadro de herramientas** aparece el cuadro de diálogo.</span><span class="sxs-lookup"><span data-stu-id="f179c-107">The **Choose Toolbox** dialog box appears.</span></span>  
   
-2.  Haga clic en el **componentes COM** ficha.  
+2.  <span data-ttu-id="f179c-108">Haga clic en el **componentes COM** ficha.</span><span class="sxs-lookup"><span data-stu-id="f179c-108">Click the **COM Components** tab.</span></span>  
   
-3.  Active la casilla situada junto al control ActiveX que desea utilizar y, a continuación, haga clic en **Aceptar**.  
+3.  <span data-ttu-id="f179c-109">Active la casilla situada junto al control ActiveX que desea utilizar y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="f179c-109">Select the check box next to the ActiveX control you want to use, and then click **OK**.</span></span>  
   
-     El nuevo control aparece con las otras herramientas en el **cuadro de herramientas**.  
+     <span data-ttu-id="f179c-110">El nuevo control aparece con las demás herramientas de la **cuadro de herramientas**.</span><span class="sxs-lookup"><span data-stu-id="f179c-110">The new control appears with the other tools in the **Toolbox**.</span></span>  
   
     > [!NOTE]
-    >  Puede utilizar la herramienta Aximp para crear manualmente un ensamblado de interoperabilidad para controles ActiveX. Para obtener más información, consulte [Aximp.exe (importador de controles de ActiveX de Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
+    >  <span data-ttu-id="f179c-111">Puede utilizar la herramienta Aximp para crear manualmente un ensamblado de interoperabilidad para controles ActiveX.</span><span class="sxs-lookup"><span data-stu-id="f179c-111">You can use the Aximp utility to manually create an interop assembly for ActiveX controls.</span></span> <span data-ttu-id="f179c-112">Para obtener más información, consulte [Aximp.exe (importador de controles de ActiveX de Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).</span><span class="sxs-lookup"><span data-stu-id="f179c-112">For more information, see [Aximp.exe (Windows Forms ActiveX Control Importer)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)   
- [Cómo: agregar controles ActiveX a formularios Windows Forms](http://msdn.microsoft.com/library/54a61e5b-555e-4887-b41e-6244fed271eb)   
- [Aximp.exe (importador de controles ActiveX de Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)   
- [Consideraciones al alojar un Control ActiveX en un formulario Windows Forms](http://msdn.microsoft.com/library/2509302d-a74e-484f-9890-2acdbfa67a68)   
- [Solución de problemas de interoperabilidad](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+## <a name="see-also"></a><span data-ttu-id="f179c-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="f179c-113">See Also</span></span>  
+ [<span data-ttu-id="f179c-114">Interoperabilidad COM</span><span class="sxs-lookup"><span data-stu-id="f179c-114">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [<span data-ttu-id="f179c-115">Procedimiento para agregar controles ActiveX a formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f179c-115">How to: Add ActiveX Controls to Windows Forms</span></span>](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [<span data-ttu-id="f179c-116">Aximp.exe (Importador de controles ActiveX de Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f179c-116">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
+ [<span data-ttu-id="f179c-117">Consideraciones al hospedar un control ActiveX en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f179c-117">Considerations When Hosting an ActiveX Control on a Windows Form</span></span>](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+ [<span data-ttu-id="f179c-118">Solución de problemas de interoperabilidad</span><span class="sxs-lookup"><span data-stu-id="f179c-118">Troubleshooting Interoperability</span></span>](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

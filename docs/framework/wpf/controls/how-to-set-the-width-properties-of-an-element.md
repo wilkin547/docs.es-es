@@ -1,49 +1,55 @@
 ---
-title: "C&#243;mo: Establecer las propiedades de ancho de un elemento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Panel (control), propiedades de ancho de los elementos"
-  - "propiedades de ancho"
+title: "Cómo: Establecer las propiedades de ancho de un elemento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- width properties [WPF]
+- Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 830289f13ac89601f0d3539e2f4400e56a2476f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer las propiedades de ancho de un elemento
-## Ejemplo  
- En este ejemplo se muestran los distintos comportamientos de representación de las cuatro propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] que están relacionadas con el ancho.  
+# <a name="how-to-set-the-width-properties-of-an-element"></a><span data-ttu-id="dccaf-102">Cómo: Establecer las propiedades de ancho de un elemento</span><span class="sxs-lookup"><span data-stu-id="dccaf-102">How to: Set the Width Properties of an Element</span></span>
+## <a name="example"></a><span data-ttu-id="dccaf-103">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="dccaf-103">Example</span></span>  
+ <span data-ttu-id="dccaf-104">Este ejemplo muestran las diferencias de comportamiento entre las cuatro propiedades de ancho en representación [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dccaf-104">This example visually shows the differences in rendering behavior among the four width-related properties in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
- La clase <xref:System.Windows.FrameworkElement> expone cuatro propiedades que describen las características de ancho de un elemento.  Estas cuatro propiedades pueden generar conflictos y, en ese caso, el valor que tiene prioridad se determina de la manera siguiente: el valor de <xref:System.Windows.FrameworkElement.MinWidth%2A> tiene prioridad sobre el valor de <xref:System.Windows.FrameworkElement.MaxWidth%2A>, que a su vez tiene prioridad sobre el valor de <xref:System.Windows.FrameworkElement.Width%2A>.  Una cuarta propiedad, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, es de solo lectura y notifica el ancho real tal y como se determina por las interacciones con el proceso del diseño.  
+ <span data-ttu-id="dccaf-105">La <xref:System.Windows.FrameworkElement> clase expone cuatro propiedades que describen las características de ancho de un elemento.</span><span class="sxs-lookup"><span data-stu-id="dccaf-105">The <xref:System.Windows.FrameworkElement> class exposes four properties that describe the width characteristics of an element.</span></span> <span data-ttu-id="dccaf-106">Estas cuatro propiedades pueden entrar en conflicto y, cuando lo hacen, el valor que tiene prioridad se determina como sigue: el <xref:System.Windows.FrameworkElement.MinWidth%2A> valor tiene prioridad sobre la <xref:System.Windows.FrameworkElement.MaxWidth%2A> valor, que a su vez tiene prioridad sobre la <xref:System.Windows.FrameworkElement.Width%2A> valor.</span><span class="sxs-lookup"><span data-stu-id="dccaf-106">These four properties can conflict, and when they do, the value that takes precedence is determined as follows: the <xref:System.Windows.FrameworkElement.MinWidth%2A> value takes precedence over the <xref:System.Windows.FrameworkElement.MaxWidth%2A> value, which in turn takes precedence over the <xref:System.Windows.FrameworkElement.Width%2A> value.</span></span> <span data-ttu-id="dccaf-107">Una cuarta propiedad, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, es de solo lectura y notifica el ancho real determinado por las interacciones con el proceso de diseño.</span><span class="sxs-lookup"><span data-stu-id="dccaf-107">A fourth property, <xref:System.Windows.FrameworkElement.ActualWidth%2A>, is read-only, and reports the actual width as determined by interactions with the layout process.</span></span>  
   
- En los siguientes ejemplos de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] se dibuja un elemento <xref:System.Windows.Shapes.Rectangle> \(`rect1`\) como un elemento secundario de <xref:System.Windows.Controls.Canvas>.  Puede cambiar las propiedades de ancho de una clase <xref:System.Windows.Shapes.Rectangle> por medio de una serie de elementos <xref:System.Windows.Controls.ListBox> que representan los valores de propiedad de <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A> y <xref:System.Windows.FrameworkElement.Width%2A>.  De esta manera, la prioridad de cada propiedad se muestra visualmente.  
+ <span data-ttu-id="dccaf-108">El siguiente [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ejemplos se dibuja un <xref:System.Windows.Shapes.Rectangle> elemento (`rect1`) como un elemento secundario de <xref:System.Windows.Controls.Canvas>.</span><span class="sxs-lookup"><span data-stu-id="dccaf-108">The following [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] examples draw a <xref:System.Windows.Shapes.Rectangle> element (`rect1`) as a child of <xref:System.Windows.Controls.Canvas>.</span></span> <span data-ttu-id="dccaf-109">Puede cambiar las propiedades de ancho de un <xref:System.Windows.Shapes.Rectangle> con una serie de <xref:System.Windows.Controls.ListBox> elementos que representan los valores de propiedad <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, y <xref:System.Windows.FrameworkElement.Width%2A>.</span><span class="sxs-lookup"><span data-stu-id="dccaf-109">You can change the width properties of a <xref:System.Windows.Shapes.Rectangle> by using a series of <xref:System.Windows.Controls.ListBox> elements that represent the property values of <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.MaxWidth%2A>, and <xref:System.Windows.FrameworkElement.Width%2A>.</span></span> <span data-ttu-id="dccaf-110">De esta manera, la prioridad de cada propiedad se muestra visualmente.</span><span class="sxs-lookup"><span data-stu-id="dccaf-110">In this manner, the precedence of each property is visually displayed.</span></span>  
   
- [!code-xml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
-[!code-xml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
+ [!code-xaml[WidthMinWidthMaxWidth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#1)]  
+[!code-xaml[WidthMinWidthMaxWidth#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml#2)]  
   
- Los siguientes ejemplos de código subyacente permiten controlar los eventos que provoca el evento <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged>.  Cada método personalizado acepta la entrada de <xref:System.Windows.Controls.ListBox>, analiza el valor como <xref:System.Double> y aplica el valor a la propiedad relacionada con el ancho especificada.  Los valores de ancho se convierten también en una cadena y se escriben en varios elementos <xref:System.Windows.Controls.TextBlock> \(la definición de esos elementos no se muestra en el código XAML seleccionado\).  
+ <span data-ttu-id="dccaf-111">Los siguientes ejemplos de código subyacente controlan los eventos que el <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> genera el evento.</span><span class="sxs-lookup"><span data-stu-id="dccaf-111">The following code-behind examples handle the events that the <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> event raises.</span></span> <span data-ttu-id="dccaf-112">Cada método personalizado toma la entrada de la <xref:System.Windows.Controls.ListBox>, analiza el valor como un <xref:System.Double>y se aplica el valor a la propiedad relacionada con el ancho especificada.</span><span class="sxs-lookup"><span data-stu-id="dccaf-112">Each custom method takes the input from the <xref:System.Windows.Controls.ListBox>, parses the value as a <xref:System.Double>, and applies the value to the specified width-related property.</span></span> <span data-ttu-id="dccaf-113">Los valores de ancho también se convierte en una cadena y se escriben en diferentes <xref:System.Windows.Controls.TextBlock> elementos (definición de esos elementos no se muestra en el código XAML seleccionado).</span><span class="sxs-lookup"><span data-stu-id="dccaf-113">The width values are also converted to a string and written to various <xref:System.Windows.Controls.TextBlock> elements (definition of those elements is not shown in the selected XAML).</span></span>  
   
  [!code-csharp[WidthMinWidthMaxWidth#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
  [!code-vb[WidthMinWidthMaxWidth#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
- Para obtener el ejemplo completo, vea [Width Properties Comparison Sample](http://go.microsoft.com/fwlink/?LinkID=160050).  
+ <span data-ttu-id="dccaf-114">Para obtener un ejemplo completo, vea [Width Properties Comparison Sample](http://go.microsoft.com/fwlink/?LinkID=160050).</span><span class="sxs-lookup"><span data-stu-id="dccaf-114">For the complete sample, see [Width Properties Comparison Sample](http://go.microsoft.com/fwlink/?LinkID=160050).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Controls.ListBox>   
- <xref:System.Windows.FrameworkElement>   
- <xref:System.Windows.FrameworkElement.ActualWidth%2A>   
- <xref:System.Windows.FrameworkElement.MaxWidth%2A>   
- <xref:System.Windows.FrameworkElement.MinWidth%2A>   
- <xref:System.Windows.FrameworkElement.Width%2A>   
- [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)   
- [Establecer las propiedades de alto de un elemento](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)   
- [Ejemplo Width Properties Comparison](http://go.microsoft.com/fwlink/?LinkID=160050)
+## <a name="see-also"></a><span data-ttu-id="dccaf-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="dccaf-115">See Also</span></span>  
+ <xref:System.Windows.Controls.ListBox>  
+ <xref:System.Windows.FrameworkElement>  
+ <xref:System.Windows.FrameworkElement.ActualWidth%2A>  
+ <xref:System.Windows.FrameworkElement.MaxWidth%2A>  
+ <xref:System.Windows.FrameworkElement.MinWidth%2A>  
+ <xref:System.Windows.FrameworkElement.Width%2A>  
+ [<span data-ttu-id="dccaf-116">Información general sobre elementos Panel</span><span class="sxs-lookup"><span data-stu-id="dccaf-116">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="dccaf-117">Establecer las propiedades de alto de un elemento</span><span class="sxs-lookup"><span data-stu-id="dccaf-117">Set the Height Properties of an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [<span data-ttu-id="dccaf-118">Ejemplo de comparación de propiedades de ancho</span><span class="sxs-lookup"><span data-stu-id="dccaf-118">Width Properties Comparison Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160050)

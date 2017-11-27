@@ -1,105 +1,88 @@
 ---
-title: "Personalizar los objetos que están disponibles en My (Visual Basic) | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Personalizar los objetos que están disponibles en My (Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My namespace, customizing
+- My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6791398270e4348adf356eb36a385bfbefde873c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personalizar los objetos que están disponibles en My (Visual Basic)
-Este tema describe cómo puede controlar qué `My` objetos se habilitan estableciendo su proyecto `_MYTYPE` constante de compilación condicional. El [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] el entorno de desarrollo integrado (IDE) mantiene el `_MYTYPE` constante de compilación condicional para un proyecto en sincronización con el tipo del proyecto.  
+# <a name="customizing-which-objects-are-available-in-my-visual-basic"></a><span data-ttu-id="edff0-102">Personalizar los objetos que están disponibles en My (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edff0-102">Customizing Which Objects are Available in My (Visual Basic)</span></span>
+<span data-ttu-id="edff0-103">Este tema describe cómo puede controlar qué `My` objetos se habilitan estableciendo el proyecto `_MYTYPE` constante de compilación condicional.</span><span class="sxs-lookup"><span data-stu-id="edff0-103">This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="edff0-104">El [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] el entorno de desarrollo integrado (IDE) mantiene el `_MYTYPE` constante de compilación condicional para un proyecto en sincronización con el tipo del proyecto.</span><span class="sxs-lookup"><span data-stu-id="edff0-104">The [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.</span></span>  
   
-## <a name="predefined-mytype-values"></a>Valores predefinidos de _MYTYPE  
- Debe utilizar el `/define` opción del compilador para establecer el `_MYTYPE` constante de compilación condicional. Al especificar su propio valor para la `_MYTYPE` constante, debe incluir el valor de cadena en la barra diagonal inversa/comillas (\\") las secuencias. Por ejemplo, podría utilizar:  
+## <a name="predefined-mytype-values"></a><span data-ttu-id="edff0-105">Valores predefinidos de _MYTYPE</span><span class="sxs-lookup"><span data-stu-id="edff0-105">Predefined _MYTYPE Values</span></span>  
+ <span data-ttu-id="edff0-106">Debe utilizar el `/define` opción del compilador para establecer el `_MYTYPE` constante de compilación condicional.</span><span class="sxs-lookup"><span data-stu-id="edff0-106">You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="edff0-107">Al especificar su propio valor para la `_MYTYPE` constante, debe incluir el valor de cadena en la barra diagonal inversa/comillas (\\") las secuencias.</span><span class="sxs-lookup"><span data-stu-id="edff0-107">When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences.</span></span> <span data-ttu-id="edff0-108">Por ejemplo, podría utilizar:</span><span class="sxs-lookup"><span data-stu-id="edff0-108">For example, you could use:</span></span>  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- Esta tabla muestra qué la `_MYTYPE` constante de compilación condicional se establece en para varios tipos de proyecto.  
+ <span data-ttu-id="edff0-109">Esta tabla muestra lo que hace el `_MYTYPE` constante de compilación condicional se establece en para varios tipos de proyecto.</span><span class="sxs-lookup"><span data-stu-id="edff0-109">This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.</span></span>  
   
-|Tipo de proyecto|Valor _MYTYPE|  
+|<span data-ttu-id="edff0-110">Tipo de proyecto</span><span class="sxs-lookup"><span data-stu-id="edff0-110">Project type</span></span>|<span data-ttu-id="edff0-111">Valor _MYTYPE</span><span class="sxs-lookup"><span data-stu-id="edff0-111">_MYTYPE value</span></span>|  
 |------------------|--------------------|  
-|Biblioteca de clases|"Windows"|  
-|Aplicación de consola|"Consola"|  
-|Web|"Web"|  
-|Biblioteca de controles web|"WebControl"|  
-|Aplicación Windows|"WindowsForms"|  
-|Aplicación de Windows, al iniciarse con personalizada`Sub Main`|"WindowsFormsWithCustomSubMain"|  
-|Biblioteca de controles de Windows|"Windows"|  
-|Servicio de Windows|"Consola"|  
-|Empty|"Vacío"|  
+|<span data-ttu-id="edff0-112">Biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="edff0-112">Class Library</span></span>|<span data-ttu-id="edff0-113">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-113">"Windows"</span></span>|  
+|<span data-ttu-id="edff0-114">Aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="edff0-114">Console Application</span></span>|<span data-ttu-id="edff0-115">"Consola"</span><span class="sxs-lookup"><span data-stu-id="edff0-115">"Console"</span></span>|  
+|<span data-ttu-id="edff0-116">Web</span><span class="sxs-lookup"><span data-stu-id="edff0-116">Web</span></span>|<span data-ttu-id="edff0-117">"Web"</span><span class="sxs-lookup"><span data-stu-id="edff0-117">"Web"</span></span>|  
+|<span data-ttu-id="edff0-118">Biblioteca de controles Web</span><span class="sxs-lookup"><span data-stu-id="edff0-118">Web Control Library</span></span>|<span data-ttu-id="edff0-119">"WebControl"</span><span class="sxs-lookup"><span data-stu-id="edff0-119">"WebControl"</span></span>|  
+|<span data-ttu-id="edff0-120">Aplicación Windows</span><span class="sxs-lookup"><span data-stu-id="edff0-120">Windows Application</span></span>|<span data-ttu-id="edff0-121">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="edff0-121">"WindowsForms"</span></span>|  
+|<span data-ttu-id="edff0-122">Aplicación de Windows, al iniciarse con personalizado`Sub Main`</span><span class="sxs-lookup"><span data-stu-id="edff0-122">Windows Application, when starting with custom `Sub Main`</span></span>|<span data-ttu-id="edff0-123">"WindowsFormsWithCustomSubMain"</span><span class="sxs-lookup"><span data-stu-id="edff0-123">"WindowsFormsWithCustomSubMain"</span></span>|  
+|<span data-ttu-id="edff0-124">Biblioteca de controles de Windows</span><span class="sxs-lookup"><span data-stu-id="edff0-124">Windows Control Library</span></span>|<span data-ttu-id="edff0-125">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-125">"Windows"</span></span>|  
+|<span data-ttu-id="edff0-126">Servicio de Windows</span><span class="sxs-lookup"><span data-stu-id="edff0-126">Windows Service</span></span>|<span data-ttu-id="edff0-127">"Consola"</span><span class="sxs-lookup"><span data-stu-id="edff0-127">"Console"</span></span>|  
+|<span data-ttu-id="edff0-128">Empty</span><span class="sxs-lookup"><span data-stu-id="edff0-128">Empty</span></span>|<span data-ttu-id="edff0-129">"Vacío"</span><span class="sxs-lookup"><span data-stu-id="edff0-129">"Empty"</span></span>|  
   
 > [!NOTE]
->  Todas las comparaciones de cadenas de compilación condicional distinguen mayúsculas de minúsculas, con independencia del `Option Compare` se establece la instrucción.  
+>  <span data-ttu-id="edff0-130">Todas las comparaciones de cadenas de compilación condicional distinguen mayúsculas de minúsculas, independientemente de cómo `Option Compare` instrucción se establece.</span><span class="sxs-lookup"><span data-stu-id="edff0-130">All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.</span></span>  
   
-## <a name="dependent-my-compilation-constants"></a>Constantes de compilación de _MY dependientes  
- El `_MYTYPE` constante de compilación condicional, a su vez, controla los valores de otras `_MY` constantes de compilación:  
+## <a name="dependent-my-compilation-constants"></a><span data-ttu-id="edff0-131">Constantes de compilación de _MY dependientes</span><span class="sxs-lookup"><span data-stu-id="edff0-131">Dependent _MY Compilation Constants</span></span>  
+ <span data-ttu-id="edff0-132">El `_MYTYPE` constante de compilación condicional, a su vez, controla los valores de los otros `_MY` constantes de compilación:</span><span class="sxs-lookup"><span data-stu-id="edff0-132">The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:</span></span>  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|<span data-ttu-id="edff0-133">_MYTYPE</span><span class="sxs-lookup"><span data-stu-id="edff0-133">_MYTYPE</span></span>|<span data-ttu-id="edff0-134">_MYAPPLICATIONTYPE</span><span class="sxs-lookup"><span data-stu-id="edff0-134">_MYAPPLICATIONTYPE</span></span>|<span data-ttu-id="edff0-135">_MYCOMPUTERTYPE</span><span class="sxs-lookup"><span data-stu-id="edff0-135">_MYCOMPUTERTYPE</span></span>|<span data-ttu-id="edff0-136">_MYFORMS</span><span class="sxs-lookup"><span data-stu-id="edff0-136">_MYFORMS</span></span>|<span data-ttu-id="edff0-137">_MYUSERTYPE</span><span class="sxs-lookup"><span data-stu-id="edff0-137">_MYUSERTYPE</span></span>|<span data-ttu-id="edff0-138">_MYWEBSERVICES</span><span class="sxs-lookup"><span data-stu-id="edff0-138">_MYWEBSERVICES</span></span>|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"Consola"|"Consola"|"Windows"|Sin definir|"Windows"|TRUE|  
-|"Custom"|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
-|"Vacío"|Sin definir|Sin definir|Sin definir|Sin definir|Sin definir|  
-|"Web"|Sin definir|"Web"|FALSE|"Web"|FALSE|  
-|"WebControl"|Sin definir|"Web"|FALSE|"Web"|TRUE|  
-|"Windows" o ""|"Windows"|"Windows"|Sin definir|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"Consola"|"Windows"|TRUE|"Windows"|TRUE|  
+|<span data-ttu-id="edff0-139">"Consola"</span><span class="sxs-lookup"><span data-stu-id="edff0-139">"Console"</span></span>|<span data-ttu-id="edff0-140">"Consola"</span><span class="sxs-lookup"><span data-stu-id="edff0-140">"Console"</span></span>|<span data-ttu-id="edff0-141">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-141">"Windows"</span></span>|<span data-ttu-id="edff0-142">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-142">Undefined</span></span>|<span data-ttu-id="edff0-143">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-143">"Windows"</span></span>|<span data-ttu-id="edff0-144">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-144">TRUE</span></span>|  
+|<span data-ttu-id="edff0-145">"Custom"</span><span class="sxs-lookup"><span data-stu-id="edff0-145">"Custom"</span></span>|<span data-ttu-id="edff0-146">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-146">Undefined</span></span>|<span data-ttu-id="edff0-147">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-147">Undefined</span></span>|<span data-ttu-id="edff0-148">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-148">Undefined</span></span>|<span data-ttu-id="edff0-149">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-149">Undefined</span></span>|<span data-ttu-id="edff0-150">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-150">Undefined</span></span>|  
+|<span data-ttu-id="edff0-151">"Vacío"</span><span class="sxs-lookup"><span data-stu-id="edff0-151">"Empty"</span></span>|<span data-ttu-id="edff0-152">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-152">Undefined</span></span>|<span data-ttu-id="edff0-153">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-153">Undefined</span></span>|<span data-ttu-id="edff0-154">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-154">Undefined</span></span>|<span data-ttu-id="edff0-155">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-155">Undefined</span></span>|<span data-ttu-id="edff0-156">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-156">Undefined</span></span>|  
+|<span data-ttu-id="edff0-157">"Web"</span><span class="sxs-lookup"><span data-stu-id="edff0-157">"Web"</span></span>|<span data-ttu-id="edff0-158">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-158">Undefined</span></span>|<span data-ttu-id="edff0-159">"Web"</span><span class="sxs-lookup"><span data-stu-id="edff0-159">"Web"</span></span>|<span data-ttu-id="edff0-160">FALSE</span><span class="sxs-lookup"><span data-stu-id="edff0-160">FALSE</span></span>|<span data-ttu-id="edff0-161">"Web"</span><span class="sxs-lookup"><span data-stu-id="edff0-161">"Web"</span></span>|<span data-ttu-id="edff0-162">FALSE</span><span class="sxs-lookup"><span data-stu-id="edff0-162">FALSE</span></span>|  
+|<span data-ttu-id="edff0-163">"WebControl"</span><span class="sxs-lookup"><span data-stu-id="edff0-163">"WebControl"</span></span>|<span data-ttu-id="edff0-164">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-164">Undefined</span></span>|<span data-ttu-id="edff0-165">"Web"</span><span class="sxs-lookup"><span data-stu-id="edff0-165">"Web"</span></span>|<span data-ttu-id="edff0-166">FALSE</span><span class="sxs-lookup"><span data-stu-id="edff0-166">FALSE</span></span>|<span data-ttu-id="edff0-167">"Web"</span><span class="sxs-lookup"><span data-stu-id="edff0-167">"Web"</span></span>|<span data-ttu-id="edff0-168">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-168">TRUE</span></span>|  
+|<span data-ttu-id="edff0-169">"Windows" o ""</span><span class="sxs-lookup"><span data-stu-id="edff0-169">"Windows" or ""</span></span>|<span data-ttu-id="edff0-170">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-170">"Windows"</span></span>|<span data-ttu-id="edff0-171">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-171">"Windows"</span></span>|<span data-ttu-id="edff0-172">Sin definir</span><span class="sxs-lookup"><span data-stu-id="edff0-172">Undefined</span></span>|<span data-ttu-id="edff0-173">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-173">"Windows"</span></span>|<span data-ttu-id="edff0-174">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-174">TRUE</span></span>|  
+|<span data-ttu-id="edff0-175">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="edff0-175">"WindowsForms"</span></span>|<span data-ttu-id="edff0-176">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="edff0-176">"WindowsForms"</span></span>|<span data-ttu-id="edff0-177">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-177">"Windows"</span></span>|<span data-ttu-id="edff0-178">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-178">TRUE</span></span>|<span data-ttu-id="edff0-179">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-179">"Windows"</span></span>|<span data-ttu-id="edff0-180">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-180">TRUE</span></span>|  
+|<span data-ttu-id="edff0-181">"WindowsFormsWithCustomSubMain"</span><span class="sxs-lookup"><span data-stu-id="edff0-181">"WindowsFormsWithCustomSubMain"</span></span>|<span data-ttu-id="edff0-182">"Consola"</span><span class="sxs-lookup"><span data-stu-id="edff0-182">"Console"</span></span>|<span data-ttu-id="edff0-183">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-183">"Windows"</span></span>|<span data-ttu-id="edff0-184">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-184">TRUE</span></span>|<span data-ttu-id="edff0-185">"Windows"</span><span class="sxs-lookup"><span data-stu-id="edff0-185">"Windows"</span></span>|<span data-ttu-id="edff0-186">TRUE</span><span class="sxs-lookup"><span data-stu-id="edff0-186">TRUE</span></span>|  
   
- De forma predeterminada, las constantes de compilación condicional no definidas resuelven en `FALSE`. Puede especificar valores para las constantes indefinidos al compilar el proyecto para invalidar el comportamiento predeterminado.  
+ <span data-ttu-id="edff0-187">De forma predeterminada, resuelven sin definir constantes de compilación condicional en `FALSE`.</span><span class="sxs-lookup"><span data-stu-id="edff0-187">By default, undefined conditional-compilation constants resolve to `FALSE`.</span></span> <span data-ttu-id="edff0-188">Puede especificar valores para las constantes sin definir cuando se compila el proyecto para invalidar el comportamiento predeterminado.</span><span class="sxs-lookup"><span data-stu-id="edff0-188">You can specify values for the undefined constants when compiling your project to override the default behavior.</span></span>  
   
 > [!NOTE]
->  Cuando `_MYTYPE` está establecido en "Custom", el proyecto contiene el `My` espacio de nombres, pero no contiene objetos. Sin embargo, establecer `_MYTYPE` a "Vacío" impide que el compilador agregando la `My` espacio de nombres y sus objetos.  
+>  <span data-ttu-id="edff0-189">Cuando `_MYTYPE` se establece en "Custom", el proyecto contiene el `My` espacio de nombres, pero no contiene ningún objeto.</span><span class="sxs-lookup"><span data-stu-id="edff0-189">When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects.</span></span> <span data-ttu-id="edff0-190">Sin embargo, establecer `_MYTYPE` a "Vacío" impide que el compilador agrega las `My` espacio de nombres y sus objetos.</span><span class="sxs-lookup"><span data-stu-id="edff0-190">However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.</span></span>  
   
- Esta tabla describen los efectos de los valores predefinidos de la `_MY` constantes de compilación.  
+ <span data-ttu-id="edff0-191">Esta tabla describen los efectos de los valores predefinidos de la `_MY` constantes de compilación.</span><span class="sxs-lookup"><span data-stu-id="edff0-191">This table describes the effects of the predefined values of the `_MY` compilation constants.</span></span>  
   
-|Constante|Significado|  
+|<span data-ttu-id="edff0-192">Constante</span><span class="sxs-lookup"><span data-stu-id="edff0-192">Constant</span></span>|<span data-ttu-id="edff0-193">Significado</span><span class="sxs-lookup"><span data-stu-id="edff0-193">Meaning</span></span>|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|Permite `My.Application`, si la constante es "Consola" Windows "o"WindowsForms":<br /><br /> -La versión de "Console" deriva de <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.</xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> y tiene menos miembros que la versión de "Windows".<br />-La versión de "Windows" deriva de <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>y tiene menos miembros que la versión de "WindowsForms".</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase><br />-La versión de "WindowsForms" de `My.Application` se deriva de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Si el `TARGET` constante se define como "winexe", a continuación, la clase incluye un `Sub Main` (método).|  
-|`_MYCOMPUTERTYPE`|Permite `My.Computer`, si la constante es "Web" o "Windows":<br /><br /> -La versión de "Web" deriva de <xref:Microsoft.VisualBasic.Devices.ServerComputer>, y tiene menos miembros que la versión de "Windows".</xref:Microsoft.VisualBasic.Devices.ServerComputer><br />-La versión de "Windows" `My.Computer` se deriva de <xref:Microsoft.VisualBasic.Devices.Computer>.</xref:Microsoft.VisualBasic.Devices.Computer>|  
-|`_MYFORMS`|Permite `My.Forms`, si la constante es `TRUE`.|  
-|`_MYUSERTYPE`|Permite `My.User`, si la constante es "Web" o "Windows":<br /><br /> -La versión de "Web" de `My.User` está asociado a la identidad del usuario de la solicitud HTTP actual.<br />-La versión de "Windows" `My.User` está asociado a la entidad de seguridad actual del subproceso.|  
-|`_MYWEBSERVICES`|Permite `My.WebServices`, si la constante es `TRUE`.|  
-|`_MYTYPE`|Permite `My.Log`, `My.Request`, y `My.Response`, si la constante es "Web".|  
+|`_MYAPPLICATIONTYPE`|<span data-ttu-id="edff0-194">Permite `My.Application`, si la constante es "Ventanas de la consola,", "o"WindowsForms":</span><span class="sxs-lookup"><span data-stu-id="edff0-194">Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":</span></span><br /><br /> <span data-ttu-id="edff0-195">-La versión de "Console" deriva de <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.</span><span class="sxs-lookup"><span data-stu-id="edff0-195">-   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.</span></span> <span data-ttu-id="edff0-196">y tiene menos miembros que la versión de "Windows".</span><span class="sxs-lookup"><span data-stu-id="edff0-196">and has fewer members than the "Windows" version.</span></span><br /><span data-ttu-id="edff0-197">-La versión de "Windows" deriva de <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>y tiene menos miembros que la versión de "WindowsForms".</span><span class="sxs-lookup"><span data-stu-id="edff0-197">-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.</span></span><br /><span data-ttu-id="edff0-198">-La versión de "WindowsForms" de `My.Application` deriva de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.</span><span class="sxs-lookup"><span data-stu-id="edff0-198">-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.</span></span> <span data-ttu-id="edff0-199">Si el `TARGET` constante se define como "winexe", a continuación, la clase incluye una `Sub Main` método.</span><span class="sxs-lookup"><span data-stu-id="edff0-199">If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.</span></span>|  
+|`_MYCOMPUTERTYPE`|<span data-ttu-id="edff0-200">Permite `My.Computer`, si la constante es "Web" o "Windows":</span><span class="sxs-lookup"><span data-stu-id="edff0-200">Enables `My.Computer`, if the constant is "Web" or "Windows":</span></span><br /><br /> <span data-ttu-id="edff0-201">-La versión de "Web" deriva de <xref:Microsoft.VisualBasic.Devices.ServerComputer>, y tiene menos miembros que la versión de "Windows".</span><span class="sxs-lookup"><span data-stu-id="edff0-201">-   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.</span></span><br /><span data-ttu-id="edff0-202">-La versión de "Windows" `My.Computer` deriva de <xref:Microsoft.VisualBasic.Devices.Computer>.</span><span class="sxs-lookup"><span data-stu-id="edff0-202">-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.</span></span>|  
+|`_MYFORMS`|<span data-ttu-id="edff0-203">Permite `My.Forms`, si la constante es `TRUE`.</span><span class="sxs-lookup"><span data-stu-id="edff0-203">Enables `My.Forms`, if the constant is `TRUE`.</span></span>|  
+|`_MYUSERTYPE`|<span data-ttu-id="edff0-204">Permite `My.User`, si la constante es "Web" o "Windows":</span><span class="sxs-lookup"><span data-stu-id="edff0-204">Enables `My.User`, if the constant is "Web" or "Windows":</span></span><br /><br /> <span data-ttu-id="edff0-205">-La versión de "Web" de `My.User` está asociado a la identidad del usuario de la solicitud HTTP actual.</span><span class="sxs-lookup"><span data-stu-id="edff0-205">-   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.</span></span><br /><span data-ttu-id="edff0-206">-La versión de "Windows" `My.User` está asociado a la entidad de seguridad actual del subproceso.</span><span class="sxs-lookup"><span data-stu-id="edff0-206">-   The "Windows" version of `My.User` is associated with the thread's current principal.</span></span>|  
+|`_MYWEBSERVICES`|<span data-ttu-id="edff0-207">Permite `My.WebServices`, si la constante es `TRUE`.</span><span class="sxs-lookup"><span data-stu-id="edff0-207">Enables `My.WebServices`, if the constant is `TRUE`.</span></span>|  
+|`_MYTYPE`|<span data-ttu-id="edff0-208">Permite `My.Log`, `My.Request`, y `My.Response`, si la constante es "Web".</span><span class="sxs-lookup"><span data-stu-id="edff0-208">Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [Cómo My depende de tipo de proyecto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)   
- [Compilación condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)   
- [My.Forms (objeto)](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.Request (objeto)](../../../visual-basic/language-reference/objects/my-request-object.md)   
- [My.Response (objeto)](../../../visual-basic/language-reference/objects/my-response-object.md)   
- [My.WebServices (objeto)](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="edff0-209">Vea también</span><span class="sxs-lookup"><span data-stu-id="edff0-209">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.Logging.Log>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [<span data-ttu-id="edff0-210">Cómo My depende del tipo de proyecto</span><span class="sxs-lookup"><span data-stu-id="edff0-210">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ [<span data-ttu-id="edff0-211">Compilación condicional</span><span class="sxs-lookup"><span data-stu-id="edff0-211">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [<span data-ttu-id="edff0-212">/define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="edff0-212">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [<span data-ttu-id="edff0-213">My.Forms (objeto)</span><span class="sxs-lookup"><span data-stu-id="edff0-213">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [<span data-ttu-id="edff0-214">My.Request (objeto)</span><span class="sxs-lookup"><span data-stu-id="edff0-214">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [<span data-ttu-id="edff0-215">My.Response (objeto)</span><span class="sxs-lookup"><span data-stu-id="edff0-215">My.Response Object</span></span>](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [<span data-ttu-id="edff0-216">My.WebServices (objeto)</span><span class="sxs-lookup"><span data-stu-id="edff0-216">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)

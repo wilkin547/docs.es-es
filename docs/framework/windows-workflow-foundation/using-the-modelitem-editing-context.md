@@ -1,24 +1,28 @@
 ---
-title: "Utilizar el contexto de edici&#243;n de ModelItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Utilizar el contexto de edición de ModelItem"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fde8bf45e01f8e3fede04c08d63177271a4a6faf
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizar el contexto de edici&#243;n de ModelItem
-El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem> es el objeto que la aplicación host usa para comunicarse con el diseñador.<xref:System.Activities.Presentation.EditingContext> expone dos métodos, <xref:System.Activities.Presentation.EditingContext.Items%2A> y <xref:System.Activities.Presentation.EditingContext.Services%2A>, que se pueden usar.  
+# <a name="using-the-modelitem-editing-context"></a><span data-ttu-id="eaeb8-102">Utilizar el contexto de edición de ModelItem</span><span class="sxs-lookup"><span data-stu-id="eaeb8-102">Using the ModelItem Editing Context</span></span>
+<span data-ttu-id="eaeb8-103">El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem> es el objeto que la aplicación host usa para comunicarse con el diseñador.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-103">The <xref:System.Activities.Presentation.Model.ModelItem> editing context is the object that the host application uses to communicate with the designer.</span></span> <span data-ttu-id="eaeb8-104"><xref:System.Activities.Presentation.EditingContext> expone dos métodos, <xref:System.Activities.Presentation.EditingContext.Items%2A> y <xref:System.Activities.Presentation.EditingContext.Services%2A>, que se pueden usar.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-104"><xref:System.Activities.Presentation.EditingContext> exposes two methods, <xref:System.Activities.Presentation.EditingContext.Items%2A> and <xref:System.Activities.Presentation.EditingContext.Services%2A>, which can be used</span></span>  
   
-## La colección Items  
- La colección <xref:System.Activities.Presentation.EditingContext.Items%2A> se utiliza para tener acceso a los datos que se comparten entre el host y el diseñador, o a los datos disponibles para todos los diseñadores.Esta colección tiene las siguientes capacidades, cuyo acceso se obtiene a través de la clase <xref:System.Activities.Presentation.ContextItemManager>:  
+## <a name="the-items-collection"></a><span data-ttu-id="eaeb8-105">La colección Items</span><span class="sxs-lookup"><span data-stu-id="eaeb8-105">The Items collection</span></span>  
+ <span data-ttu-id="eaeb8-106">La colección <xref:System.Activities.Presentation.EditingContext.Items%2A> se utiliza para tener acceso a los datos que se comparten entre el host y el diseñador, o a los datos disponibles para todos los diseñadores.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-106">The <xref:System.Activities.Presentation.EditingContext.Items%2A> collection is used to access data that is shared between the host and the designer, or data that is available to all designers.</span></span> <span data-ttu-id="eaeb8-107">Esta colección tiene las siguientes capacidades, cuyo acceso se obtiene a través de la clase <xref:System.Activities.Presentation.ContextItemManager>:</span><span class="sxs-lookup"><span data-stu-id="eaeb8-107">This collection has the following capabilities, accessed via the <xref:System.Activities.Presentation.ContextItemManager> class:</span></span>  
   
 1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
@@ -28,8 +32,8 @@ El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem>
   
 4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
-## La colección Services  
- La colección <xref:System.Activities.Presentation.EditingContext.Services%2A> se utiliza para tener acceso a los servicios que el diseñador utiliza para interactuar con el host, o a los servicios que todos los diseñadores utilizan.Esta colección tiene los siguientes métodos reseñables:  
+## <a name="the-services-collection"></a><span data-ttu-id="eaeb8-108">La colección Services</span><span class="sxs-lookup"><span data-stu-id="eaeb8-108">The Services collection</span></span>  
+ <span data-ttu-id="eaeb8-109">La colección <xref:System.Activities.Presentation.EditingContext.Services%2A> se utiliza para tener acceso a los servicios que el diseñador utiliza para interactuar con el host, o a los servicios que todos los diseñadores utilizan.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-109">The <xref:System.Activities.Presentation.EditingContext.Services%2A> collection is used to access services that the designer uses to interact with the host, or services that all designers use.</span></span> <span data-ttu-id="eaeb8-110">Esta colección tiene los siguientes métodos reseñables:</span><span class="sxs-lookup"><span data-stu-id="eaeb8-110">This collection has the following methods of note:</span></span>  
   
 1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
@@ -39,18 +43,17 @@ El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem>
   
 4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
-## Asignar una actividad a un diseñador  
- Para especificar qué diseñador utiliza una actividad, se usa el atributo Designer.  
+## <a name="assigning-a-designer-an-activity"></a><span data-ttu-id="eaeb8-111">Asignar una actividad a un diseñador</span><span class="sxs-lookup"><span data-stu-id="eaeb8-111">Assigning a designer an activity</span></span>  
+ <span data-ttu-id="eaeb8-112">Para especificar qué diseñador utiliza una actividad, se usa el atributo Designer.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-112">To specify which designer an activity uses, the Designer attribute is used.</span></span>  
   
 ```  
 [Designer(typeof(MyClassDesigner))]  
 public sealed class MyClass : CodeActivity  
 {  
-  
 ```  
   
-## Crear un servicio  
- Para crear un servicio que actúa como conducto de información entre el diseñador y el host, se deben crear una interfaz y una implementación.La interfaz la utiliza el método <xref:System.Activities.Presentation.ServiceManager.Publish%2A> para definir los miembros del servicio y la implementación contiene la lógica para el servicio.En el ejemplo de código siguiente, se crean una interfaz y una implementación de servicio.  
+## <a name="creating-a-service"></a><span data-ttu-id="eaeb8-113">Crear un servicio</span><span class="sxs-lookup"><span data-stu-id="eaeb8-113">Creating a service</span></span>  
+ <span data-ttu-id="eaeb8-114">Para crear un servicio que actúa como conducto de información entre el diseñador y el host, se deben crear una interfaz y una implementación.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-114">To create a service that serves as a conduit of information between the designer and the host, an interface and an implementation must be created.</span></span> <span data-ttu-id="eaeb8-115">La interfaz la utiliza el método <xref:System.Activities.Presentation.ServiceManager.Publish%2A> para definir los miembros del servicio y la implementación contiene la lógica para el servicio.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-115">The interface is used by the <xref:System.Activities.Presentation.ServiceManager.Publish%2A> method to define the members of the service, and the implementation contains the logic for the service.</span></span> <span data-ttu-id="eaeb8-116">En el ejemplo de código siguiente, se crean una interfaz y una implementación de servicio.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-116">In the following code example, a service interface and implementation are created.</span></span>  
   
 ```  
 public interface IMyService  
@@ -69,18 +72,17 @@ public interface IMyService
             } ;  
         }  
     }  
-  
 ```  
   
-## Publicar un servicio  
- Para que un diseñador utilice un servicio, primero debe ser publicado por el host mediante el método <xref:System.Activities.Presentation.ServiceManager.Publish%2A>.  
+## <a name="publishing-a-service"></a><span data-ttu-id="eaeb8-117">Publicar un servicio</span><span class="sxs-lookup"><span data-stu-id="eaeb8-117">Publishing a service</span></span>  
+ <span data-ttu-id="eaeb8-118">Para que un diseñador utilice un servicio, primero debe ser publicado por el host mediante el método <xref:System.Activities.Presentation.ServiceManager.Publish%2A>.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-118">For a designer to consume a service, it must first be published by the host using the <xref:System.Activities.Presentation.ServiceManager.Publish%2A> method.</span></span>  
   
 ```  
 this.Context.Services.Publish<IMyService>(new MyServiceImpl);  
 ```  
   
-## Suscribirse a un servicio  
- El diseñador obtiene acceso al servicio utilizando el método <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> en el método <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A>.El fragmento de código siguiente muestra cómo suscribirse a un servicio.  
+## <a name="subscribing-to-a-service"></a><span data-ttu-id="eaeb8-119">Suscribirse a un servicio</span><span class="sxs-lookup"><span data-stu-id="eaeb8-119">Subscribing to a service</span></span>  
+ <span data-ttu-id="eaeb8-120">El diseñador obtiene acceso al servicio utilizando el método <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> en el método <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A>.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-120">The designer obtains access to the service using the <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> method in the <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A> method.</span></span> <span data-ttu-id="eaeb8-121">El fragmento de código siguiente muestra cómo suscribirse a un servicio.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-121">The following code snippet demonstrates how to subscribe to a service.</span></span>  
   
 ```  
 protected override void OnModelItemChanged(object newItem)  
@@ -96,59 +98,58 @@ protected override void OnModelItemChanged(object newItem)
         subscribed = true;   
     }  
 }  
-  
 ```  
   
-## Compartir datos utilizando la colección Items  
- El uso de la colección Items es similar al de la colección Services, salvo que se usa <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A> en lugar de Publish.Esta colección es más adecuada para compartir datos simples entre los diseñadores y el host, en lugar de una funcionalidad compleja.  
+## <a name="sharing-data-using-the-items-collection"></a><span data-ttu-id="eaeb8-122">Compartir datos utilizando la colección Items</span><span class="sxs-lookup"><span data-stu-id="eaeb8-122">Sharing data using the Items collection</span></span>  
+ <span data-ttu-id="eaeb8-123">El uso de la colección Items es similar al de la colección Services, salvo que se usa <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A> en lugar de Publish.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-123">Using the Items collection is similar to using the Services collection, except that <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A> is used instead of Publish.</span></span> <span data-ttu-id="eaeb8-124">Esta colección es más adecuada para compartir datos simples entre los diseñadores y el host, en lugar de una funcionalidad compleja.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-124">This collection is more appropriate for sharing simple data between the designers and the host, rather than complex functionality.</span></span>  
   
-## Servicios y elementos host de EditingContext  
- .NET Framework proporciona una serie de elementos y servicios integrados cuyo acceso se obtiene a través del contexto de edición.  
+## <a name="editingcontext-host-items-and-services"></a><span data-ttu-id="eaeb8-125">Servicios y elementos host de EditingContext</span><span class="sxs-lookup"><span data-stu-id="eaeb8-125">EditingContext host items and services</span></span>  
+ <span data-ttu-id="eaeb8-126">.NET Framework proporciona una serie de elementos y servicios integrados cuyo acceso se obtiene a través del contexto de edición.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-126">The .Net Framework provides a number of built-in items and services accessed through the editing context.</span></span>  
   
- Elementos:  
+ <span data-ttu-id="eaeb8-127">Elementos:</span><span class="sxs-lookup"><span data-stu-id="eaeb8-127">Items:</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: administra la lista de ensamblados locales a los que se hace referencia que se utilizarán en el flujo de trabajo para los controles \(como el editor de expresiones\).  
+-   <span data-ttu-id="eaeb8-128"><xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: administra la lista de ensamblados locales a los que se hace referencia que se utilizarán en el flujo de trabajo para los controles (como el editor de expresiones).</span><span class="sxs-lookup"><span data-stu-id="eaeb8-128"><xref:System.Activities.Presentation.Hosting.AssemblyContextControlItem>: Manages the list of referenced local assemblies that will be used inside the workflow for controls (such as the expression editor).</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.ReadOnlyState>: indica si el diseñador está en estado de solo lectura.  
+-   <span data-ttu-id="eaeb8-129"><xref:System.Activities.Presentation.Hosting.ReadOnlyState>: indica si el diseñador está en estado de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-129"><xref:System.Activities.Presentation.Hosting.ReadOnlyState>: Indicates whether the designer is in a read-only state.</span></span>  
   
--   <xref:System.Activities.Presentation.View.Selection>: define la colección de objetos seleccionados actualmente.  
+-   <span data-ttu-id="eaeb8-130"><xref:System.Activities.Presentation.View.Selection>: define la colección de objetos seleccionados actualmente.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-130"><xref:System.Activities.Presentation.View.Selection>: Defines the collection of objects that are currently selected.</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:  
+-   <span data-ttu-id="eaeb8-131"><xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:</span><span class="sxs-lookup"><span data-stu-id="eaeb8-131"><xref:System.Activities.Presentation.Hosting.WorkflowCommandExtensionItem>:</span></span>  
   
--   <xref:System.Activities.Presentation.WorkflowFileItem>: proporciona información sobre el archivo en que se basa la sesión de edición actual.  
+-   <span data-ttu-id="eaeb8-132"><xref:System.Activities.Presentation.WorkflowFileItem>: proporciona información sobre el archivo en que se basa la sesión de edición actual.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-132"><xref:System.Activities.Presentation.WorkflowFileItem>: Provides information on the file that the current editing session is based on.</span></span>  
   
- Servicios:  
+ <span data-ttu-id="eaeb8-133">Servicios:</span><span class="sxs-lookup"><span data-stu-id="eaeb8-133">Services:</span></span>  
   
--   <xref:System.Activities.Presentation.Model.AttachedPropertiesService>: permite agregar propiedades a la instancia actual utilizando <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.  
+-   <span data-ttu-id="eaeb8-134"><xref:System.Activities.Presentation.Model.AttachedPropertiesService>: permite agregar propiedades a la instancia actual utilizando <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-134"><xref:System.Activities.Presentation.Model.AttachedPropertiesService>: Allows properties to be added to the current instance, using <xref:System.Activities.Presentation.Model.AttachedPropertiesService.AddProperty%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.View.DesignerView>: permite el acceso a las propiedades del lienzo del diseñador.  
+-   <span data-ttu-id="eaeb8-135"><xref:System.Activities.Presentation.View.DesignerView>: permite el acceso a las propiedades del lienzo del diseñador.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-135"><xref:System.Activities.Presentation.View.DesignerView>: Allows access to the properties of the designer canvas.</span></span>  
   
--   <xref:System.Activities.Presentation.IActivityToolboxService>: permite la actualización del contenido del cuadro de herramientas.  
+-   <span data-ttu-id="eaeb8-136"><xref:System.Activities.Presentation.IActivityToolboxService>: permite la actualización del contenido del cuadro de herramientas.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-136"><xref:System.Activities.Presentation.IActivityToolboxService>: Allows the contents of the toolbox to be updated.</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.ICommandService>: se utiliza para integrar los comandos del diseñador \(como el menú contextual\) con implementaciones de servicio personalizadas.  
+-   <span data-ttu-id="eaeb8-137"><xref:System.Activities.Presentation.Hosting.ICommandService>: se utiliza para integrar los comandos del diseñador (como el menú contextual) con implementaciones de servicio personalizadas.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-137"><xref:System.Activities.Presentation.Hosting.ICommandService>: Used to integrate designer commands (such as Context Menu) with custom-provided service implementations.</span></span>  
   
--   <xref:System.Activities.Presentation.Debug.IDesignerDebugView>: proporciona funcionalidad para el depurador del diseñador.  
+-   <span data-ttu-id="eaeb8-138"><xref:System.Activities.Presentation.Debug.IDesignerDebugView>: proporciona funcionalidad para el depurador del diseñador.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-138"><xref:System.Activities.Presentation.Debug.IDesignerDebugView>: Provides functionality for the designer debugger.</span></span>  
   
--   <xref:System.Activities.Presentation.View.IExpressionEditorService>: proporciona acceso al cuadro de diálogo Editor de expresiones.  
+-   <span data-ttu-id="eaeb8-139"><xref:System.Activities.Presentation.View.IExpressionEditorService>: proporciona acceso al cuadro de diálogo Editor de expresiones.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-139"><xref:System.Activities.Presentation.View.IExpressionEditorService>: Provides access to the Expression Editor dialog.</span></span>  
   
--   <xref:System.Activities.Presentation.IIntegratedHelpService>: proporciona funcionalidad de ayuda integrada al diseñador.  
+-   <span data-ttu-id="eaeb8-140"><xref:System.Activities.Presentation.IIntegratedHelpService>: proporciona funcionalidad de ayuda integrada al diseñador.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-140"><xref:System.Activities.Presentation.IIntegratedHelpService>: Provides the designer with integrated help functionality.</span></span>  
   
--   <xref:System.Activities.Presentation.Validation.IValidationErrorService>: proporciona acceso a los errores de validación utilizando <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
+-   <span data-ttu-id="eaeb8-141"><xref:System.Activities.Presentation.Validation.IValidationErrorService>: proporciona acceso a los errores de validación utilizando <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-141"><xref:System.Activities.Presentation.Validation.IValidationErrorService>: Provides access to validation errors using <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: proporciona un servicio interno para almacenar y recuperar datos.Este servicio lo utiliza internamente .NET Framework y no está previsto utilizarlo externamente.  
+-   <span data-ttu-id="eaeb8-142"><xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: proporciona un servicio interno para almacenar y recuperar datos.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-142"><xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: Provides an internal service to store and retrieve data.</span></span> <span data-ttu-id="eaeb8-143">Este servicio lo utiliza internamente .NET Framework y no está previsto utilizarlo externamente.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-143">This service is used internally by the .Net Framework, and is not intended for external use.</span></span>  
   
--   <xref:System.Activities.Presentation.IXamlLoadErrorService>: proporciona acceso a la colección de errores de carga de XAML utilizando <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
+-   <span data-ttu-id="eaeb8-144"><xref:System.Activities.Presentation.IXamlLoadErrorService>: proporciona acceso a la colección de errores de carga de XAML utilizando <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-144"><xref:System.Activities.Presentation.IXamlLoadErrorService>: Provides access to the XAML load error collection using <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.Services.ModelService>: lo utiliza el diseñador para interactuar con el modelo del flujo de trabajo que se está editando.  
+-   <span data-ttu-id="eaeb8-145"><xref:System.Activities.Presentation.Services.ModelService>: lo utiliza el diseñador para interactuar con el modelo del flujo de trabajo que se está editando.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-145"><xref:System.Activities.Presentation.Services.ModelService>: Used by the designer to interact with the model of the workflow being edited.</span></span>  
   
--   <xref:System.Activities.Presentation.Model.ModelTreeManager>: proporciona acceso a la raíz del árbol de elementos de modelo utilizando <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.  
+-   <span data-ttu-id="eaeb8-146"><xref:System.Activities.Presentation.Model.ModelTreeManager>: proporciona acceso a la raíz del árbol de elementos de modelo utilizando <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-146"><xref:System.Activities.Presentation.Model.ModelTreeManager>: Provides access to the root of the model item tree using <xref:System.Activities.Presentation.Model.ModelItem.Root%2A>.</span></span>  
   
--   <xref:System.Activities.Presentation.UndoEngine>: proporciona funcionalidad de deshacer y rehacer.  
+-   <span data-ttu-id="eaeb8-147"><xref:System.Activities.Presentation.UndoEngine>: proporciona funcionalidad de deshacer y rehacer.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-147"><xref:System.Activities.Presentation.UndoEngine>: Provides undo and redo functionality.</span></span>  
   
--   <xref:System.Activities.Presentation.Services.ViewService>: asigna elementos visuales a elementos de modelo subyacentes.  
+-   <span data-ttu-id="eaeb8-148"><xref:System.Activities.Presentation.Services.ViewService>: asigna elementos visuales a elementos de modelo subyacentes.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-148"><xref:System.Activities.Presentation.Services.ViewService>: Maps visual elements to underlying model items.</span></span>  
   
--   <xref:System.Activities.Presentation.View.ViewStateService>: almacena los estados de vista de los elementos de modelo.  
+-   <span data-ttu-id="eaeb8-149"><xref:System.Activities.Presentation.View.ViewStateService>: almacena los estados de vista de los elementos de modelo.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-149"><xref:System.Activities.Presentation.View.ViewStateService>: Stores view states for model items.</span></span>  
   
--   <xref:System.Activities.Presentation.View.VirtualizedContainerService>: se usa para personalizar el comportamiento de la interfaz de usuario de contenedor virtual.  
+-   <span data-ttu-id="eaeb8-150"><xref:System.Activities.Presentation.View.VirtualizedContainerService>: se usa para personalizar el comportamiento de la interfaz de usuario de contenedor virtual.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-150"><xref:System.Activities.Presentation.View.VirtualizedContainerService>: Used to customize the virtual container UI behavior.</span></span>  
   
--   <xref:System.Activities.Presentation.Hosting.WindowHelperService>: se utiliza para registrar y eliminar del Registro los delegados para las notificaciones de eventos.También permite establecer el propietario de una ventana.
+-   <span data-ttu-id="eaeb8-151"><xref:System.Activities.Presentation.Hosting.WindowHelperService>: se utiliza para registrar y eliminar del Registro los delegados para las notificaciones de eventos.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-151"><xref:System.Activities.Presentation.Hosting.WindowHelperService>: Used to register and unregister delegates for event notifications.</span></span> <span data-ttu-id="eaeb8-152">También permite establecer el propietario de una ventana.</span><span class="sxs-lookup"><span data-stu-id="eaeb8-152">Also allows a window owner to be set.</span></span>

@@ -1,31 +1,68 @@
 ---
-title: "Gu&#237;a de migraci&#243;n de Windows Workflow Foundation (WF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Guía de migración"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b2424766be26003180f40dfd4b2f4ace2c371154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Gu&#237;a de migraci&#243;n de Windows Workflow Foundation (WF)
-Esta sección contiene los temas que tratan sobre la migración de flujos de trabajo de versiones anteriores de [!INCLUDE[wf](../../../includes/wf-md.md)].  
+# <a name="migration-guidance"></a><span data-ttu-id="47549-102">Guía de migración</span><span class="sxs-lookup"><span data-stu-id="47549-102">Migration Guidance</span></span>
+<span data-ttu-id="47549-103">En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft lanza la segunda versión principal de [!INCLUDE[wf](../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="47549-103">In the [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft is releasing the second major version of [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span> [!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="47549-104"> se lanzó en [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (incluía los tipos de los espacios de nombres System.Workflow.*; ahora se conoce como WF3) y se mejoró en [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="47549-104"> was released in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (this included the types in the System.Workflow.* namespaces; now referred to as WF3) and enhanced in [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> <span data-ttu-id="47549-105">WF3 también es parte de la [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], aunque está presente junto con la nueva tecnología de flujo de trabajo (los tipos de System.Activities.\* espacios de nombres; conoce como WF4).</span><span class="sxs-lookup"><span data-stu-id="47549-105">WF3 is also part of the [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], but it exists there alongside new workflow technology (the types in the System.Activities.\* namespaces; referred to as WF4).</span></span> <span data-ttu-id="47549-106">A la hora de plantearse cuándo adoptar WF4, es importante reconocer primero que controla el tiempo.</span><span class="sxs-lookup"><span data-stu-id="47549-106">When considering when to adopt WF4, it is important to first recognize that you control the timing.</span></span>  
   
-## En esta sección  
- [Guía de migración](../../../docs/framework/windows-workflow-foundation//migration-guidance.md)  
- Contiene una lista de vínculos a las notas del producto sobre temas de migración.  
+-   <span data-ttu-id="47549-107">WF3 es totalmente compatible con [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="47549-107">WF3 is a fully supported part of the [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span></span>  
   
- [Usar actividades de WF de .NET Framework 3.0 en .NET Framework 4 con la actividad Interop](../../../docs/framework/windows-workflow-foundation//net-framework-3-0-wf-in-net-framework-4-interop.md)  
- Incluye información sobre cómo usar la actividad <xref:System.Activities.Statements.Interop> para incrustar las actividades de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] dentro de un flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
+-   <span data-ttu-id="47549-108">Aplicaciones WF3 se ejecutan en [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] sin modificación alguna y siguen siendo totalmente compatibles.</span><span class="sxs-lookup"><span data-stu-id="47549-108">WF3 applications run on the [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] without modification and continue to be fully supported.</span></span>  
   
- [Usar la actividad Interop en un flujo de trabajo de .NET Framework 4](../../../docs/framework/windows-workflow-foundation//using-the-interop-activity-in-a-net-framework-4-workflow.md)  
- Describe cómo usar las reglas de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] en [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
+-   <span data-ttu-id="47549-109">Se pueden crear nuevas aplicaciones WF3, mientras que las ya existentes se pueden editar en [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Todas ellas serán compatibles.</span><span class="sxs-lookup"><span data-stu-id="47549-109">New WF3 applications can be created and your existing applications can be edited in [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and are fully supported.</span></span>  
   
- [Escribir proyectos destinados a .NET Framework 3.0 y 3.5 en Visual Studio 2010](../../../docs/framework/windows-workflow-foundation//projects-targeting-dotnet-in-vs.md)  
- Describe cómo usar [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] para crear proyectos que tienen como destino la versión 3.0 o 3.5 de .NET Framework.
+ <span data-ttu-id="47549-110">Por lo tanto, la decisión de adoptar .NET Framework 4 se separa de la decisión de mover a WF4 (System.Activities) desde WF3 (System.Workflow.\*).</span><span class="sxs-lookup"><span data-stu-id="47549-110">Thus, the decision to adopt the .NET Framework 4 is decoupled from your decision to move to WF4 (System.Activities.*) from WF3 (System.Workflow.\*).</span></span> <span data-ttu-id="47549-111">En este tema se proporcionan vínculos a la guía de migración de WF que proporciona información sobre cómo trabajar con WF3 y WF4.</span><span class="sxs-lookup"><span data-stu-id="47549-111">This topic provides links to WF migration guidance that provides information about working with WF3 and WF4.</span></span>  
+  
+## <a name="wf-migration-whitepapers-and-cookbooks"></a><span data-ttu-id="47549-112">Notas del producto y guías básicas sobre migración de WF</span><span class="sxs-lookup"><span data-stu-id="47549-112">WF Migration Whitepapers and Cookbooks</span></span>  
+ <span data-ttu-id="47549-113">El [información general sobre la migración de WF](http://go.microsoft.com/fwlink/?LinkId=153873) tema proporciona una amplia perspectiva de la relación entre las estrategias de migración y WF4 y WF3.</span><span class="sxs-lookup"><span data-stu-id="47549-113">The [WF Migration Overview](http://go.microsoft.com/fwlink/?LinkId=153873) topic provides a broad overview of the relationship between WF3 and WF4 and migration strategies.</span></span> <span data-ttu-id="47549-114">Los temas de ayuda profundizan en asuntos específicos.</span><span class="sxs-lookup"><span data-stu-id="47549-114">Companion topics drill into specific topics.</span></span>  
+  
+ [<span data-ttu-id="47549-115">Información general sobre la migración de WF</span><span class="sxs-lookup"><span data-stu-id="47549-115">WF Migration Overview</span></span>](http://go.microsoft.com/fwlink/?LinkId=153873)  
+ <span data-ttu-id="47549-116">Describe la relación entre WF3 y WF4, además las opciones que tiene como usuario o usuario potencial de tecnología del flujo de trabajo en .NET 4.</span><span class="sxs-lookup"><span data-stu-id="47549-116">Describes the relationship between WF3 and WF4, and the choices you have as a user or a potential user of workflow technology in .NET 4.</span></span>  
+  
+ [<span data-ttu-id="47549-117">Migración de WF: Procedimientos recomendados para el desarrollo de WF3</span><span class="sxs-lookup"><span data-stu-id="47549-117">WF Migration: Best Practices for WF3 Development</span></span>](http://go.microsoft.com/fwlink/?LinkId=153852)  
+ <span data-ttu-id="47549-118">Describe cómo diseñar los artefactos de WF3 de modo que se puedan migrar más fácilmente a WF4.</span><span class="sxs-lookup"><span data-stu-id="47549-118">Discusses how to design WF3 artifacts so they can be more easily migrated to WF4.</span></span>  
+  
+ [<span data-ttu-id="47549-119">Guía de WF: reglas</span><span class="sxs-lookup"><span data-stu-id="47549-119">WF Guidance: Rules</span></span>](http://go.microsoft.com/fwlink/?LinkId=153854)  
+ <span data-ttu-id="47549-120">Trata sobre cómo presentar las inversiones relacionadas con las reglas en soluciones de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="47549-120">Discusses how to bring rules-related investments forward into [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] solutions.</span></span>  
+  
+ [<span data-ttu-id="47549-121">Guía de WF: Equipo de estado de</span><span class="sxs-lookup"><span data-stu-id="47549-121">WF Guidance: State Machine</span></span>](http://go.microsoft.com/fwlink/?LinkId=153855)  
+ <span data-ttu-id="47549-122">Trata sobre el modelado de flujo de control de WF4 en ausencia de una actividad de máquina de estados.</span><span class="sxs-lookup"><span data-stu-id="47549-122">Discusses WF4 control flow modeling in the absence of a State-Machine activity.</span></span>  
+  
+ <span data-ttu-id="47549-123">Tenga en cuenta que esta guía se aplica solamente a proyectos de flujo de trabajo que tienen como destino .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="47549-123">Note that this guidance only applies to workflow projects that target .NET Framework 4.</span></span> <span data-ttu-id="47549-124">Los flujos de trabajo de máquina de estados se agregaron en .NET 4.0.1 con el lanzamiento de la Actualización de plataforma 1, y se incluyeron como parte de .NET Framework 4.5.</span><span class="sxs-lookup"><span data-stu-id="47549-124">State Machine workflows were added in .NET 4.0.1 with the release of Platform Update 1, and were included as part of .NET Framework 4.5.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="47549-125">flujos de trabajo de máquina de Estados en .NET 4.0.1 - 4.0.3 y .NET Framework 4.5, consulte [actualización 4.0.1 para características de Microsoft .NET Framework 4](http://msdn.microsoft.com/en-us/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) y [flujos de trabajo de máquina de estados](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).</span><span class="sxs-lookup"><span data-stu-id="47549-125"> state machine workflows in .NET 4.0.1 - 4.0.3 and .NET Framework 4.5, see [Update 4.0.1 for Microsoft .NET Framework 4 Features](http://msdn.microsoft.com/en-us/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) and [State Machine Workflows](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).</span></span>  
+  
+ [<span data-ttu-id="47549-126">Libro de cocina de migración de WF: Las actividades personalizadas</span><span class="sxs-lookup"><span data-stu-id="47549-126">WF Migration Cookbook: Custom Activities</span></span>](http://go.microsoft.com/fwlink/?LinkId=153856)  
+ <span data-ttu-id="47549-127">Proporciona ejemplos e instrucciones para rediseñar actividades personalizadas de WF3 en WF4.</span><span class="sxs-lookup"><span data-stu-id="47549-127">Provides examples and instructions for redesigning WF3 custom activities on WF4.</span></span>  
+  
+ [<span data-ttu-id="47549-128">Guía de migración de WF: Actividades personalizadas avanzadas</span><span class="sxs-lookup"><span data-stu-id="47549-128">WF Migration Cookbook: Advanced Custom Activities</span></span>](http://go.microsoft.com/fwlink/?LinkId=275560)  
+ <span data-ttu-id="47549-129">Proporciona una guía para rediseñar actividades personalizadas WF3 avanzadas que usan colas WF3 y programan actividades secundarias como actividades personalizadas de WF4.</span><span class="sxs-lookup"><span data-stu-id="47549-129">Provides guidance for redesigning advanced WF3 custom activities that use WF3 queues and schedule child activities as WF4 custom activities.</span></span>  
+  
+ [<span data-ttu-id="47549-130">Guía de migración de WF: flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="47549-130">WF Migration Cookbook: Workflows</span></span>](http://go.microsoft.com/fwlink/?LinkId=153858)  
+ <span data-ttu-id="47549-131">Proporciona ejemplos e instrucciones para rediseñar flujos de trabajo de WF3 en WF4.</span><span class="sxs-lookup"><span data-stu-id="47549-131">Provides examples and instructions for redesigning WF3 workflows on WF4.</span></span>  
+  
+ [<span data-ttu-id="47549-132">Libro de cocina de migración de WF: Hospedaje de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="47549-132">WF Migration Cookbook: Workflow Hosting</span></span>](http://go.microsoft.com/fwlink/?LinkId=275561)  
+ <span data-ttu-id="47549-133">Proporciona una guía para rediseñar el código de hospedaje de WF3 como un código de hospedaje WF4.</span><span class="sxs-lookup"><span data-stu-id="47549-133">Provides guidance for redesigning WF3 hosting code as WF4 hosting code.</span></span> <span data-ttu-id="47549-134">El objetivo es tratar las diferencias clave entre WF3 Y WF4 en el hospedaje de flujos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="47549-134">The goal is to cover the key differences in workflow hosting between WF3 and WF4.</span></span>  
+  
+ [<span data-ttu-id="47549-135">Libro de cocina de migración de WF: Seguimiento de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="47549-135">WF Migration Cookbook: Workflow Tracking</span></span>](http://go.microsoft.com/fwlink/?LinkId=275562)  
+ <span data-ttu-id="47549-136">Proporciona una guía para rediseñar el código de seguimiento WF3 y la configuración mediante un código y una configuración de seguimiento de WF4 equivalentes.</span><span class="sxs-lookup"><span data-stu-id="47549-136">Provides guidance for redesigning WF3 tracking code and configuration using equivalent WF4 tracking code and configuration.</span></span>  
+  
+ [<span data-ttu-id="47549-137">Guía de WF: Servicios de flujo de trabajo de</span><span class="sxs-lookup"><span data-stu-id="47549-137">WF Guidance: Workflow Services</span></span>](http://go.microsoft.com/fwlink/?LinkId=275564)  
+ <span data-ttu-id="47549-138">Proporciona instrucciones paso a paso basadas en ejemplos para rediseñar flujos de trabajo que implementan los servicios web de Windows Communication Foundation (más conocidos como servicios de flujo de trabajo) creados en WF3 para usar WF4, para escenarios comunes en actividades estándar.</span><span class="sxs-lookup"><span data-stu-id="47549-138">Provides example-oriented step-by-step instructions for redesigning workflows that implement Windows Communication Foundation (WCF) web services (commonly referred to as workflow services) created in WF3 to use WF4, for common scenarios for out-of-box activities.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="47549-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="47549-139">See Also</span></span>  
+ <xref:System.Activities.Statements.Interop>

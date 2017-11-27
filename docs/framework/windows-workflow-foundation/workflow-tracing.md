@@ -1,55 +1,58 @@
 ---
-title: "Traza del flujo de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Traza del flujo de trabajo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4332b93175f4cb751ba88c7d2b05e4b462de7748
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Traza del flujo de trabajo
-La traza del flujo de trabajo ofrece una forma de capturar la información de diagnóstico con los agentes de escucha de seguimiento de .NET Framework.Se puede habilitar la traza si se detecta un problema con la aplicación y se deshabilita de nuevo una vez resuelto el problema.Hay dos maneras de poder habilitar la traza de depuración para los flujos de trabajo.Puede configurarlo con el visor del seguimiento de eventos o puede usar <xref:System.Diagnostics> para enviar los eventos de seguimiento a un archivo.  
+# <a name="workflow-tracing"></a><span data-ttu-id="e176a-102">Traza del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="e176a-102">Workflow Tracing</span></span>
+<span data-ttu-id="e176a-103">La traza del flujo de trabajo ofrece una forma de capturar la información de diagnóstico con los agentes de escucha de seguimiento de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e176a-103">Workflow tracing offers a way to capture diagnostic information using .NET Framework trace listeners.</span></span> <span data-ttu-id="e176a-104">Se puede habilitar la traza si se detecta un problema con la aplicación y se deshabilita de nuevo una vez resuelto el problema.</span><span class="sxs-lookup"><span data-stu-id="e176a-104">Tracing can be enabled if a problem is detected with the application and then disabled again once the problem is resolved.</span></span> <span data-ttu-id="e176a-105">Hay dos maneras de poder habilitar la traza de depuración para los flujos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="e176a-105">There are two ways you could enable debug tracing for workflows.</span></span> <span data-ttu-id="e176a-106">Puede configurarlo con el visor del seguimiento de eventos o puede usar <xref:System.Diagnostics> para enviar los eventos de seguimiento a un archivo.</span><span class="sxs-lookup"><span data-stu-id="e176a-106">You can configure it using the Event Trace viewer or you can use <xref:System.Diagnostics> to send trace events to a file.</span></span>  
   
-## Habilitar la traza de depuración en ETW  
- Para habilitar la traza mediante ETW, habilite el canal de depuración en el visor de eventos:  
+## <a name="enabling-debug-tracing-in-etw"></a><span data-ttu-id="e176a-107">Habilitar la traza de depuración en ETW</span><span class="sxs-lookup"><span data-stu-id="e176a-107">Enabling Debug Tracing in ETW</span></span>  
+ <span data-ttu-id="e176a-108">Para habilitar la traza mediante ETW, habilite el canal de depuración en el visor de eventos:</span><span class="sxs-lookup"><span data-stu-id="e176a-108">To enable tracing using ETW, enable the Debug channel in Event Viewer:</span></span>  
   
-1.  Desplácese hasta el nodo de registros analíticos y de depuración en el visor de eventos.  
+1.  <span data-ttu-id="e176a-109">Desplácese hasta el nodo de registros analíticos y de depuración en el visor de eventos.</span><span class="sxs-lookup"><span data-stu-id="e176a-109">Navigate to analytic and debug logs node in Event Viewer.</span></span>  
   
-2.  En la vista de árbol del visor de eventos, desplácese hasta **Visor de eventos \-\>Registros de aplicaciones y servicios\-\>Microsoft \-\>Windows \-\>Servidor de aplicaciones\-Aplicación**.Haga clic con el botón secundario en **Servidor de aplicaciones\-Aplicación** y seleccione **Ver\-\>Mostrar registros analíticos y de depuración**.Haga clic con el botón secundario en **Depuración** y seleccione **Habilitar registro**.  
+2.  <span data-ttu-id="e176a-110">En la vista de árbol en el Visor de eventos, navegue hasta **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones**.</span><span class="sxs-lookup"><span data-stu-id="e176a-110">In the tree view in Event Viewer, navigate to **Event Viewer->Applications and Services Logs->Microsoft->Windows->Application Server-Applications**.</span></span> <span data-ttu-id="e176a-111">Haga clic en **servidor de aplicaciones** y seleccione **Ver -> Mostrar registros analíticos y depuración**.</span><span class="sxs-lookup"><span data-stu-id="e176a-111">Right-click **Application Server-Applications** and select **View->Show Analytic and Debug Logs**.</span></span> <span data-ttu-id="e176a-112">Haga clic en **depurar** y seleccione **Habilitar registro**.</span><span class="sxs-lookup"><span data-stu-id="e176a-112">Right-click **Debug** and select **Enable Log**.</span></span>  
   
-3.  Cuando un flujo de trabajo ejecuta la depuración y los seguimientos se emiten en el canal de depuración de ETW, se pueden ver en el Visor de eventos.Desplácese hasta **Visor de eventos \-\>Registros de aplicaciones y servicios\-\>Microsoft \-\>Windows \-\>Aplicaciones de servidor\-Aplicaciones**.Haga clic con el botón secundario en **Depuración** y seleccione **Actualizar**.  
+3.  <span data-ttu-id="e176a-113">Cuando un flujo de trabajo ejecuta la depuración y los seguimientos se emiten en el canal de depuración de ETW, se pueden ver en el Visor de eventos.</span><span class="sxs-lookup"><span data-stu-id="e176a-113">When a workflow runs the debug and traces are emitted to ETW debug channel, they can be viewed in the Event Viewer.</span></span> <span data-ttu-id="e176a-114">Vaya a **aplicaciones -> el Visor de eventos y registros de servicios -> Microsoft -> Windows -> servidor de aplicaciones**.</span><span class="sxs-lookup"><span data-stu-id="e176a-114">Navigate to **Event Viewer->Applications and Services Logs->Microsoft->Windows->Application Server-Applications**.</span></span> <span data-ttu-id="e176a-115">Haga clic en **depurar** y seleccione **actualizar**.</span><span class="sxs-lookup"><span data-stu-id="e176a-115">Right-click **Debug** and select **Refresh**.</span></span>  
   
-4.  El tamaño predeterminado del búfer de traza analítica es solo de 4 kilobytes \(KB\); se recomienda aumentar el tamaño a 32 KB.Para ello, realice los pasos siguientes.  
+4.  <span data-ttu-id="e176a-116">El tamaño predeterminado del búfer de traza analítica es solo de 4 kilobytes (KB); se recomienda aumentar el tamaño a 32 KB.</span><span class="sxs-lookup"><span data-stu-id="e176a-116">The default analytic trace buffer size is only 4 kilobytes (KB); it is recommended to increase the size to 32 KB.</span></span> <span data-ttu-id="e176a-117">Para ello, realice los pasos siguientes.</span><span class="sxs-lookup"><span data-stu-id="e176a-117">To do this, perform the following steps.</span></span>  
   
-    1.  Ejecute el siguiente comando en el directorio de .NET Framework actual \(por ejemplo, C:\\Windows\\Microsoft.NET\\Framework\\v4.0.21203\): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  <span data-ttu-id="e176a-118">Ejecute el siguiente comando en el directorio de .NET Framework actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`</span><span class="sxs-lookup"><span data-stu-id="e176a-118">Execute the following command in the current framework directory (for example, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`</span></span>  
   
-    2.  Cambie el valor de \<bufferSize\> del archivo Windows.ApplicationServer.Applications.man a 32.  
+    2.  <span data-ttu-id="e176a-119">Cambiar el \<bufferSize > valor en el archivo Windows.ApplicationServer.Applications.man a 32.</span><span class="sxs-lookup"><span data-stu-id="e176a-119">Change the \<bufferSize> value in the Windows.ApplicationServer.Applications.man file to 32.</span></span>  
   
-        ```  
+        ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
                     <publishing>  
                       <bufferSize>32</bufferSize>  
                     </publishing>  
                   </channel>  
-  
         ```  
   
-    3.  Ejecute el siguiente comando en el directorio de .NET Framework actual \(por ejemplo, C:\\Windows\\Microsoft.NET\\Framework\\v4.0.21203\): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  <span data-ttu-id="e176a-120">Ejecute el siguiente comando en el directorio de .NET Framework actual (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`</span><span class="sxs-lookup"><span data-stu-id="e176a-120">Execute the following command in the current framework directory (for example, C:\Windows\Microsoft.NET\Framework\v4.0.21203): `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`</span></span>  
   
 > [!NOTE]
->  Si está utilizando .NET Framework 4 Client Profile, en primer lugar debe registrar el manifiesto ETW ejecutando el siguiente comando desde el directorio de .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
+>  <span data-ttu-id="e176a-121">Si usa .NET Framework 4 Client Profile, primero debe registrar el manifiesto ETW ejecutando el siguiente comando desde el directorio de .NET Framework 4:`ServiceModelReg.exe –i –c:etw`</span><span class="sxs-lookup"><span data-stu-id="e176a-121">If you are using the .NET Framework 4 Client Profile, you must first register the ETW manifest by running the following command from the .NET Framework 4 directory: `ServiceModelReg.exe –i –c:etw`</span></span>  
   
-## Habilitar el seguimiento de depuración con System.Diagnostics  
- Se pueden configurar estos agentes de escucha en el archivo App.config de la aplicación de flujo de trabajo o Web.config para un servicio del flujo de trabajo.En este ejemplo, se configura [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) para guardar la información de traza en el archivo MyTraceLog.txt del directorio actual.  
+## <a name="enabling-debug-tracing-using-systemdiagnostics"></a><span data-ttu-id="e176a-122">Habilitar el seguimiento de depuración con System.Diagnostics</span><span class="sxs-lookup"><span data-stu-id="e176a-122">Enabling Debug Tracing using System.Diagnostics</span></span>  
+ <span data-ttu-id="e176a-123">Se pueden configurar estos agentes de escucha en el archivo App.config de la aplicación de flujo de trabajo o Web.config para un servicio del flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="e176a-123">These listeners can be configured in the App.config file of the workflow application, or the Web.config for a workflow service.</span></span> <span data-ttu-id="e176a-124">En este ejemplo, un [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) está configurado para guardar información de seguimiento en el archivo MyTraceLog.txt del directorio actual.</span><span class="sxs-lookup"><span data-stu-id="e176a-124">In this example, a [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424) is configured to save tracing information to the MyTraceLog.txt file in the current directory.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -75,6 +78,6 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
 </configuration>  
 ```  
   
-## Vea también  
- [Supervisión de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)   
- [Supervisión de aplicaciones con App Fabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a><span data-ttu-id="e176a-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="e176a-125">See Also</span></span>  
+ [<span data-ttu-id="e176a-126">Supervisión de Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="e176a-126">Windows Server App Fabric Monitoring</span></span>](http://go.microsoft.com/fwlink/?LinkId=201273)  
+ [<span data-ttu-id="e176a-127">Supervisión de aplicaciones con App Fabric</span><span class="sxs-lookup"><span data-stu-id="e176a-127">Monitoring Applications with App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=201275)

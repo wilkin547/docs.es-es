@@ -1,96 +1,88 @@
 ---
-title: Aplicaciones multiproceso (Visual Basic) | Documentos de Microsoft
+title: Aplicaciones multiproceso (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bde7f49a2f2bc8a2e6c1eeab3722428b8a37a95
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 19a4fe40e27a9edf8515e2734914aaf02d5e48b2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="multithreaded-applications-visual-basic"></a>Aplicaciones multiproceso (Visual Basic)
-Con Visual Basic, puede escribir aplicaciones que realizan varias tareas al mismo tiempo. Las tareas con la posibilidad de mantener otras tareas pueden ejecutarse en subprocesos separados, un proceso conocido como *multithreading* o *libre subprocesamiento*.  
+# <a name="multithreaded-applications-visual-basic"></a><span data-ttu-id="5ad0e-102">Aplicaciones multiproceso (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ad0e-102">Multithreaded Applications (Visual Basic)</span></span>
+<span data-ttu-id="5ad0e-103">Con Visual Basic, puede escribir aplicaciones que realizan varias tareas al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-103">With Visual Basic, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="5ad0e-104">Las tareas con la posibilidad de contener otras tareas pueden ejecutarse en subprocesos separados, lo que se conoce como *multithreading* o *subprocesamiento libre*.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  
   
- Las aplicaciones que utilizan multithreading son más sensibles a la entrada del usuario, porque la interfaz de usuario permanece activa cuando se ejecutan las tareas de uso intensivo del procesador en subprocesos separan. El multithreading también es útil cuando se crean aplicaciones escalables, porque se pueden agregar subprocesos a medida que aumenta la carga de trabajo.  
+ <span data-ttu-id="5ad0e-105">Las aplicaciones que usan multithreading responden mejor a la entrada del usuario, ya que la interfaz de usuario permanece activa mientras las tareas que requieren un uso intensivo del procesador se ejecutan en subprocesos separados.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-105">Applications that use multithreading are more responsive to user input because the user interface stays active as processor-intensive tasks execute on separate threads.</span></span> <span data-ttu-id="5ad0e-106">El multithreading también es útil cuando se crean aplicaciones escalables, porque se pueden agregar subprocesos a medida que aumenta la carga de trabajo.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-106">Multithreading is also useful when you create scalable applications, because you can add threads as the workload increases.</span></span>  
   
-## <a name="creating-and-using-threads"></a>Crear y usar subprocesos  
- Si necesita más control sobre el comportamiento de los subprocesos de la aplicación, puede administrar los subprocesos. Sin embargo, tenga en cuenta que escribir aplicaciones multiproceso correctas puede ser difícil: la aplicación puede dejar de responder o experimentar errores transitorios debido a condiciones de carrera. Para obtener más información, consulte [componentes seguros para subprocesos](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).  
+## <a name="creating-and-using-threads"></a><span data-ttu-id="5ad0e-107">Crear y usar subprocesos</span><span class="sxs-lookup"><span data-stu-id="5ad0e-107">Creating and Using Threads</span></span>  
+ <span data-ttu-id="5ad0e-108">Si necesita tener más control sobre el comportamiento de los subprocesos de la aplicación, puede administrar los subprocesos por su cuenta.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-108">If you need more control over the behavior of your application's threads, you can manage the threads yourself.</span></span> <span data-ttu-id="5ad0e-109">Aun así, debe tener en cuenta que puede ser difícil escribir aplicaciones multiproceso correctas, ya que la aplicación puede dejar de responder o experimentar errores transitorios debidos a condiciones de carrera.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-109">However, realize that writing correct multithreaded applications can be difficult: Your application may stop responding or experience transient errors caused by race conditions.</span></span> <span data-ttu-id="5ad0e-110">Para obtener más información, vea [Componentes seguros para subprocesos](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).</span><span class="sxs-lookup"><span data-stu-id="5ad0e-110">For more information, see [Thread-Safe Components](http://msdn.microsoft.com/library/4f7c7377-a782-4bd0-aaa3-9db8c12945ee).</span></span>  
   
- Crear un nuevo subproceso mediante la declaración de una variable de tipo <xref:System.Threading.Thread>y llamando al constructor, proporcionando el nombre del procedimiento o método que desea ejecutar en el subproceso nuevo.</xref:System.Threading.Thread> El siguiente código proporciona un ejemplo.  
+ <span data-ttu-id="5ad0e-111">Para crear un subproceso, declare una variable de tipo <xref:System.Threading.Thread> y llame al constructor. Proporcione el nombre del procedimiento o método que quiera ejecutar en el subproceso nuevo.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-111">You create a new thread by declaring a variable of type <xref:System.Threading.Thread> and calling the constructor, providing the name of the procedure or method that you want to execute on the new thread.</span></span> <span data-ttu-id="5ad0e-112">El siguiente código proporciona un ejemplo.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-112">The following code provides an example.</span></span>  
   
 ```vb  
 Dim newThread As New System.Threading.Thread(AddressOf AMethod)  
 ```  
   
-### <a name="starting-and-stopping-threads"></a>Iniciar y detener subprocesos  
- Para iniciar la ejecución de un nuevo subproceso, utilice el <xref:System.Threading.Thread.Start%2A>método, tal como se muestra en el código siguiente.</xref:System.Threading.Thread.Start%2A>  
+### <a name="starting-and-stopping-threads"></a><span data-ttu-id="5ad0e-113">Iniciar y detener subprocesos</span><span class="sxs-lookup"><span data-stu-id="5ad0e-113">Starting and Stopping Threads</span></span>  
+ <span data-ttu-id="5ad0e-114">Para iniciar la ejecución de un subproceso nuevo, use el método <xref:System.Threading.Thread.Start%2A>, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-114">To start the execution of a new thread, use the <xref:System.Threading.Thread.Start%2A> method, as shown in the following code.</span></span>  
   
 ```vb  
 newThread.Start()  
 ```  
   
- Para detener la ejecución de un subproceso, utilice el <xref:System.Threading.Thread.Abort%2A>método, tal como se muestra en el código siguiente.</xref:System.Threading.Thread.Abort%2A>  
+ <span data-ttu-id="5ad0e-115">Para detener la ejecución de un subproceso, use el método <xref:System.Threading.Thread.Abort%2A>, como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-115">To stop the execution of a thread, use the <xref:System.Threading.Thread.Abort%2A> method, as shown in the following code.</span></span>  
   
 ```vb  
 newThread.Abort()  
 ```  
   
- Además de iniciar y detener subprocesos, también puede pausar subprocesos llamando a la <xref:System.Threading.Thread.Sleep%2A>o <xref:System.Threading.Thread.Suspend%2A>método, reanudar un subproceso suspendido mediante el <xref:System.Threading.Thread.Resume%2A>método y destruir un subproceso mediante el <xref:System.Threading.Thread.Abort%2A>método</xref:System.Threading.Thread.Abort%2A> </xref:System.Threading.Thread.Resume%2A> </xref:System.Threading.Thread.Suspend%2A> </xref:System.Threading.Thread.Sleep%2A>  
+ <span data-ttu-id="5ad0e-116">Además de iniciar y detener los subprocesos, también puede pausarlos llamando al método <xref:System.Threading.Thread.Sleep%2A> o <xref:System.Threading.Thread.Suspend%2A>, reanudar un subproceso suspendido con el método <xref:System.Threading.Thread.Resume%2A> y destruir un subproceso con el método <xref:System.Threading.Thread.Abort%2A>.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-116">Besides starting and stopping threads, you can also pause threads by calling the <xref:System.Threading.Thread.Sleep%2A> or <xref:System.Threading.Thread.Suspend%2A> method, resume a suspended thread by using the <xref:System.Threading.Thread.Resume%2A> method, and destroy a thread by using the <xref:System.Threading.Thread.Abort%2A> method</span></span>  
   
-### <a name="thread-methods"></a>Métodos de subproceso  
- La tabla siguiente muestran algunos de los métodos que puede usar para controlar subprocesos individuales.  
+### <a name="thread-methods"></a><span data-ttu-id="5ad0e-117">Métodos de subproceso</span><span class="sxs-lookup"><span data-stu-id="5ad0e-117">Thread Methods</span></span>  
+ <span data-ttu-id="5ad0e-118">En la tabla siguiente se muestran algunos de los métodos que puede usar para controlar subprocesos individuales.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-118">The following table shows some of the methods that you can use to control individual threads.</span></span>  
   
-|Método|Acción|  
+|<span data-ttu-id="5ad0e-119">Método</span><span class="sxs-lookup"><span data-stu-id="5ad0e-119">Method</span></span>|<span data-ttu-id="5ad0e-120">Acción</span><span class="sxs-lookup"><span data-stu-id="5ad0e-120">Action</span></span>|  
 |------------|------------|  
-|<xref:System.Threading.Thread.Start%2A></xref:System.Threading.Thread.Start%2A>|Hace que un subproceso empiecen a ejecutarse.|  
-|<xref:System.Threading.Thread.Sleep%2A></xref:System.Threading.Thread.Sleep%2A>|Detiene un subproceso durante un tiempo especificado.|  
-|<xref:System.Threading.Thread.Suspend%2A></xref:System.Threading.Thread.Suspend%2A>|Detiene un subproceso cuando alcanza un punto seguro.|  
-|<xref:System.Threading.Thread.Abort%2A></xref:System.Threading.Thread.Abort%2A>|Detiene un subproceso cuando alcanza un punto seguro.|  
-|<xref:System.Threading.Thread.Resume%2A></xref:System.Threading.Thread.Resume%2A>|Reinicia un subproceso suspendido|  
-|<xref:System.Threading.Thread.Join%2A></xref:System.Threading.Thread.Join%2A>|Hace que el subproceso actual para que espere a que termine otro subproceso. Si se utiliza con un valor de tiempo de espera, este método devuelve `True` si el subproceso termina en el tiempo asignado.|  
+|<xref:System.Threading.Thread.Start%2A>|<span data-ttu-id="5ad0e-121">Hace que un subproceso empiece a ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-121">Causes a thread to start to run.</span></span>|  
+|<xref:System.Threading.Thread.Sleep%2A>|<span data-ttu-id="5ad0e-122">Detiene un subproceso durante un tiempo especificado.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-122">Pauses a thread for a specified time.</span></span>|  
+|<xref:System.Threading.Thread.Suspend%2A>|<span data-ttu-id="5ad0e-123">Pausa un subproceso cuando alcanza un punto seguro.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-123">Pauses a thread when it reaches a safe point.</span></span>|  
+|<xref:System.Threading.Thread.Abort%2A>|<span data-ttu-id="5ad0e-124">Detiene un subproceso cuando alcanza un punto seguro.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-124">Stops a thread when it reaches a safe point.</span></span>|  
+|<xref:System.Threading.Thread.Resume%2A>|<span data-ttu-id="5ad0e-125">Reinicia un subproceso suspendido.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-125">Restarts a suspended thread</span></span>|  
+|<xref:System.Threading.Thread.Join%2A>|<span data-ttu-id="5ad0e-126">Hace que el subproceso actual espere a que termine otro subproceso.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-126">Causes the current thread to wait for another thread to finish.</span></span> <span data-ttu-id="5ad0e-127">En el caso de que se use con un valor de tiempo de espera, este método devuelve `True` si el subproceso termina en el tiempo asignado.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-127">If used with a time-out value, this method returns `True` if the thread finishes in the allocated time.</span></span>|  
   
-### <a name="safe-points"></a>Puntos de seguridad  
- La mayoría de estos métodos son autoexplicativos, pero el concepto de *puntos seguros* puede ser nuevo para usted. Puntos seguros son ubicaciones del código sea seguro para common language runtime realizar automática *recolección*, el proceso de liberar variables no utilizadas y reclamar memoria. Cuando se llama a la <xref:System.Threading.Thread.Abort%2A>o <xref:System.Threading.Thread.Suspend%2A>método de un subproceso, common language runtime analiza el código y determina la ubicación de una ubicación adecuada para el subproceso deje de ejecutarse.</xref:System.Threading.Thread.Suspend%2A> </xref:System.Threading.Thread.Abort%2A>  
+### <a name="safe-points"></a><span data-ttu-id="5ad0e-128">Puntos de seguridad</span><span class="sxs-lookup"><span data-stu-id="5ad0e-128">Safe Points</span></span>  
+ <span data-ttu-id="5ad0e-129">La mayoría de estos métodos se explican por sí solos, pero el concepto de *puntos seguros* podría resultarle nuevo.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-129">Most of these methods are self-explanatory, but the concept of *safe points* may be new to you.</span></span> <span data-ttu-id="5ad0e-130">Los puntos seguros son ubicaciones del código donde es seguro que Common Language Runtime realice una *recolección de elementos no utilizados* automática, un proceso que consiste en liberar variables no usadas y reclamar memoria.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-130">Safe points are locations in code where it is safe for the common language runtime to perform automatic *garbage collection*, the process of releasing unused variables and reclaiming memory.</span></span> <span data-ttu-id="5ad0e-131">Cuando se llama al método <xref:System.Threading.Thread.Abort%2A> o <xref:System.Threading.Thread.Suspend%2A> de un subproceso, Common Language Runtime analiza el código y determina una ubicación adecuada en la que el subproceso puede dejar de ejecutarse.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-131">When you call the <xref:System.Threading.Thread.Abort%2A> or <xref:System.Threading.Thread.Suspend%2A> method of a thread, the common language runtime analyzes the code and determines the location of an appropriate location for the thread to stop running.</span></span>  
   
-### <a name="thread-properties"></a>Propiedades del subproceso  
- Los subprocesos contienen también varias propiedades útiles, como se muestra en la tabla siguiente:  
+### <a name="thread-properties"></a><span data-ttu-id="5ad0e-132">Propiedades del subproceso</span><span class="sxs-lookup"><span data-stu-id="5ad0e-132">Thread Properties</span></span>  
+ <span data-ttu-id="5ad0e-133">Los subprocesos también contienen varias propiedades útiles, como se muestra en la tabla siguiente:</span><span class="sxs-lookup"><span data-stu-id="5ad0e-133">Threads also contain several useful properties, as shown in the following table:</span></span>  
   
-|Propiedad|Valor|  
+|<span data-ttu-id="5ad0e-134">Propiedad</span><span class="sxs-lookup"><span data-stu-id="5ad0e-134">Property</span></span>|<span data-ttu-id="5ad0e-135">Valor</span><span class="sxs-lookup"><span data-stu-id="5ad0e-135">Value</span></span>|  
 |--------------|-----------|  
-|<xref:System.Threading.Thread.IsAlive%2A></xref:System.Threading.Thread.IsAlive%2A>|Contiene el valor `True` si un subproceso está activo.|  
-|<xref:System.Threading.Thread.IsBackground%2A></xref:System.Threading.Thread.IsBackground%2A>|Obtiene o establece un valor booleano que indica si un subproceso es o debe ser un subproceso en segundo plano. Subprocesos en segundo plano son como los subprocesos de primer plano, pero un subproceso en segundo plano no evita que un proceso de detención. Una vez detengan todos los subprocesos de primer plano que pertenecen a un proceso, common language runtime finaliza el proceso llamando a la <xref:System.Threading.Thread.Abort%2A>método en subprocesos en segundo plano que continúan activos.</xref:System.Threading.Thread.Abort%2A>|  
-|<xref:System.Threading.Thread.Name%2A></xref:System.Threading.Thread.Name%2A>|Obtiene o establece el nombre de un subproceso. Suelen utilizarse para descubrir subprocesos individuales durante la depuración.|  
-|<xref:System.Threading.Thread.Priority%2A></xref:System.Threading.Thread.Priority%2A>|Obtiene o establece un valor que se utiliza el sistema operativo para dar prioridad a la programación de subprocesos.|  
-|<xref:System.Threading.Thread.ThreadState%2A></xref:System.Threading.Thread.ThreadState%2A>|Contiene un valor que describe el estado o Estados de un subproceso.|  
+|<xref:System.Threading.Thread.IsAlive%2A>|<span data-ttu-id="5ad0e-136">Contiene el valor `True` si un subproceso está activo.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-136">Contains the value `True` if a thread is active.</span></span>|  
+|<xref:System.Threading.Thread.IsBackground%2A>|<span data-ttu-id="5ad0e-137">Obtiene o establece un valor booleano que indica si un subproceso es o debe ser un subproceso en segundo plano.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-137">Gets or sets a Boolean that indicates if a thread is or should be a background thread.</span></span> <span data-ttu-id="5ad0e-138">Los subprocesos en segundo plano son como subprocesos en primer plano, con la diferencia de que un subproceso en segundo plano no impide que un proceso se detenga.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-138">Background threads are like foreground threads, but a background thread does not prevent a process from stopping.</span></span> <span data-ttu-id="5ad0e-139">Una vez que se hayan detenido todos los subprocesos en primer plano que pertenecen a un proceso, Common Language Runtime finaliza el proceso mediante una llamada al método <xref:System.Threading.Thread.Abort%2A> en los subprocesos en segundo plano que continúan activos.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-139">Once all foreground threads that belong to a process have stopped, the common language runtime ends the process by calling the <xref:System.Threading.Thread.Abort%2A> method on background threads that are still alive.</span></span>|  
+|<xref:System.Threading.Thread.Name%2A>|<span data-ttu-id="5ad0e-140">Obtiene o establece el nombre de un subproceso.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-140">Gets or sets the name of a thread.</span></span> <span data-ttu-id="5ad0e-141">Suele usarse para detectar subprocesos individuales durante la depuración.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-141">Most frequently used to discover individual threads when you debug.</span></span>|  
+|<xref:System.Threading.Thread.Priority%2A>|<span data-ttu-id="5ad0e-142">Obtiene o establece un valor que el sistema operativo usa para dar prioridad a la programación de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-142">Gets or sets a value that is used by the operating system to prioritize thread scheduling.</span></span>|  
+|<xref:System.Threading.Thread.ThreadState%2A>|<span data-ttu-id="5ad0e-143">Contiene un valor que describe los estados de un subproceso.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-143">Contains a value that describes a thread's state or states.</span></span>|  
   
-## <a name="thread-priorities"></a>Las prioridades de subprocesos  
- Cada subproceso tiene una propiedad de prioridad que determina cómo porción de tiempo de procesador tiene que ejecutarse. El sistema operativo asigna mayores porciones de tiempo a los subprocesos de alta prioridad y menores a los subprocesos de baja prioridad. Nuevos subprocesos se crean con el valor de `Normal`, pero se puede cambiar el <xref:System.Threading.Thread.Priority%2A>propiedad a cualquier valor en el <xref:System.Threading.ThreadPriority>enumeración.</xref:System.Threading.ThreadPriority> </xref:System.Threading.Thread.Priority%2A>  
+## <a name="thread-priorities"></a><span data-ttu-id="5ad0e-144">Prioridades de subprocesos</span><span class="sxs-lookup"><span data-stu-id="5ad0e-144">Thread Priorities</span></span>  
+ <span data-ttu-id="5ad0e-145">Cada subproceso tiene una propiedad de prioridad que determina la cantidad de tiempo de procesador que tiene que ejecutar.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-145">Every thread has a priority property that determines how big or small a slice of processor time it has to execute.</span></span> <span data-ttu-id="5ad0e-146">El sistema operativo asigna tiempos mayores a los subprocesos de alta prioridad y tiempos menores a los subprocesos de baja prioridad.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-146">The operating system allocates longer time slices to high-priority threads and shorter time slices to low-priority threads.</span></span> <span data-ttu-id="5ad0e-147">Se crean subprocesos con el valor de `Normal`, pero puede cambiar la propiedad <xref:System.Threading.Thread.Priority%2A> a cualquier valor en la enumeración <xref:System.Threading.ThreadPriority>.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-147">New threads are created with the value of `Normal`, but you can change the <xref:System.Threading.Thread.Priority%2A> property to any value in the <xref:System.Threading.ThreadPriority> enumeration.</span></span>  
   
- Consulte <xref:System.Threading.ThreadPriority>para obtener una descripción detallada de las diversas prioridades de subprocesos.</xref:System.Threading.ThreadPriority>  
+ <span data-ttu-id="5ad0e-148">Vea <xref:System.Threading.ThreadPriority> para obtener una descripción detallada de las diversas prioridades de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-148">See <xref:System.Threading.ThreadPriority> for a detailed description of the various thread priorities.</span></span>  
   
-## <a name="foreground-and-background-threads"></a>Subprocesos de primer y segundo plano  
- Un *subproceso en primer plano* se ejecuta de forma indefinida, mientras que un *subproceso en segundo plano* se detiene en cuanto el último subproceso de primer plano se ha detenido. Puede usar el <xref:System.Threading.Thread.IsBackground%2A>propiedad para determinar o cambiar el estado de un subproceso en segundo plano.</xref:System.Threading.Thread.IsBackground%2A>  
+## <a name="foreground-and-background-threads"></a><span data-ttu-id="5ad0e-149">Subprocesos de primer y segundo plano</span><span class="sxs-lookup"><span data-stu-id="5ad0e-149">Foreground and Background Threads</span></span>  
+ <span data-ttu-id="5ad0e-150">Un *subproceso en primer plano* se ejecuta de forma indefinida, mientras que un *subproceso en segundo plano* se detiene en el momento en que se detiene el último subproceso en primer plano.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-150">A *foreground thread* runs indefinitely, whereas a *background thread* stops as soon as the last foreground thread has stopped.</span></span> <span data-ttu-id="5ad0e-151">Puede usar la propiedad <xref:System.Threading.Thread.IsBackground%2A> para determinar o cambiar el estado en segundo plano de un subproceso.</span><span class="sxs-lookup"><span data-stu-id="5ad0e-151">You can use the <xref:System.Threading.Thread.IsBackground%2A> property to determine or change the background status of a thread.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.Threading.Thread></xref:System.Threading.Thread>   
- [Sincronización de subprocesos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)   
- [Parámetros y valores devueltos para procedimientos multiproceso (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
- [Subprocesamiento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)
+## <a name="see-also"></a><span data-ttu-id="5ad0e-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="5ad0e-152">See Also</span></span>  
+ <xref:System.Threading.Thread>  
+ [<span data-ttu-id="5ad0e-153">Sincronización de subprocesos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ad0e-153">Thread Synchronization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)  
+ [<span data-ttu-id="5ad0e-154">Parámetros y valores devueltos para procedimientos multiproceso (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ad0e-154">Parameters and Return Values for Multithreaded Procedures (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)  
+ [<span data-ttu-id="5ad0e-155">Subprocesamiento (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ad0e-155">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)

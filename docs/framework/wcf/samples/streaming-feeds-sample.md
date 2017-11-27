@@ -1,32 +1,35 @@
 ---
-title: "Ejemplo de suministros de transmisi&#243;n por secuencias | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Ejemplo de suministros de transmisión por secuencias"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: becc388a03d065b5763669929806c2f85e171ffc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Ejemplo de suministros de transmisi&#243;n por secuencias
-Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen grandes cantidades de elementos.En el servidor, el ejemplo muestra cómo retrasar la creación de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuales dentro de la fuente hasta justo antes de que el elemento se escriba en el flujo de red.  
+# <a name="streaming-feeds-sample"></a><span data-ttu-id="14b29-102">Ejemplo de suministros de transmisión por secuencias</span><span class="sxs-lookup"><span data-stu-id="14b29-102">Streaming Feeds Sample</span></span>
+<span data-ttu-id="14b29-103">Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen grandes cantidades de elementos.</span><span class="sxs-lookup"><span data-stu-id="14b29-103">This sample demonstrates how to manage syndication feeds that contain large numbers of items.</span></span> <span data-ttu-id="14b29-104">En el servidor, el ejemplo muestra cómo retrasar la creación de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuales dentro de la fuente hasta justo antes de que el elemento se escriba en el flujo de red.</span><span class="sxs-lookup"><span data-stu-id="14b29-104">On the server, the sample demonstrates how to delay the creation of individual <xref:System.ServiceModel.Syndication.SyndicationItem> objects within the feed until immediately before the item is written to the network stream.</span></span>  
   
- En el cliente, el ejemplo muestra cómo se puede utilizar el formateador de fuente de distribución personalizado para leer los elementos individuales del flujo de red para que la fuente que se está leyendo nunca se almacene completamente en el búfer en la memoria.  
+ <span data-ttu-id="14b29-105">En el cliente, el ejemplo muestra cómo se puede utilizar el formateador de fuente de distribución personalizado para leer los elementos individuales de la secuencia de red para que la fuente que se está leyendo nunca se almacene completamente en el búfer en la memoria.</span><span class="sxs-lookup"><span data-stu-id="14b29-105">On the client, the sample shows how a custom syndication feed formatter can be used to read individual items from the network stream so that the feed being read is never fully buffered into memory.</span></span>  
   
- Para mostrar mejor la capacidad de transmisión por secuencias de la API de sindicación, este ejemplo utiliza un escenario algo improbable en el que el servidor expone una fuente que contiene un número infinito de elementos.En este caso, el servidor sigue generando los nuevos elementos en la fuente hasta que determine que el cliente ha leído un número especificado de elementos de la fuente \(de forma predeterminada, 10\).Para simplificar, el cliente y el servidor se implementan en el mismo proceso y utilizan un objeto `ItemCounter` compartido para realizar un seguimiento del número de elementos que el cliente ha generado.El tipo `ItemCounter` solo existe con el propósito de permitir la finalización del escenario de ejemplo y no es un elemento básico del modelo que se está mostrando.  
+ <span data-ttu-id="14b29-106">Para mostrar mejor la capacidad de transmisión por secuencias de la API de sindicación, este ejemplo utiliza un escenario algo improbable en el que el servidor expone una fuente que contiene un número infinito de elementos.</span><span class="sxs-lookup"><span data-stu-id="14b29-106">To best demonstrate the streaming capability of the syndication API, this sample uses a somewhat unlikely scenario in which the server exposes a feed that contains an infinite number of items.</span></span> <span data-ttu-id="14b29-107">En este caso, el servidor sigue generando los nuevos elementos en la fuente hasta que determine que el cliente ha leído un número especificado de elementos de la fuente (de forma predeterminada, 10).</span><span class="sxs-lookup"><span data-stu-id="14b29-107">In this case, the server continues generating new items into the feed until it determines that the client has read a specified number of items from the feed (by default, 10).</span></span> <span data-ttu-id="14b29-108">Para simplificar, el cliente y el servidor se implementan en el mismo proceso y utilizan un objeto `ItemCounter` compartido para realizar un seguimiento del número de elementos que el cliente ha generado.</span><span class="sxs-lookup"><span data-stu-id="14b29-108">For simplicity, both the client and the server are implemented in the same process and use a shared `ItemCounter` object to keep track of how many items the client has produced.</span></span> <span data-ttu-id="14b29-109">El tipo `ItemCounter` solo existe con el propósito de permitir la finalización del escenario de ejemplo y no es un elemento básico del patrón que se está mostrando.</span><span class="sxs-lookup"><span data-stu-id="14b29-109">The `ItemCounter` type exists only for the purpose of allowing the sample scenario to terminate cleanly, and is not a core element of the pattern being demonstrated.</span></span>  
   
- La demostración usa iteradores de [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] \(mediante la construcción de la palabra clave de `yield``return`\).[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los iteradores, vea el tema "Utilizar iteradores” en MSDN.  
+ <span data-ttu-id="14b29-110">La demostración hace uso de [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] iteradores (mediante el `yield``return` construcción de la palabra clave).</span><span class="sxs-lookup"><span data-stu-id="14b29-110">The demonstration makes use of [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] iterators (using the `yield``return` keyword construct).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="14b29-111"> los iteradores, vea el tema "Utilizar iteradores” en MSDN.</span><span class="sxs-lookup"><span data-stu-id="14b29-111"> iterators, see the "Using Iterators" topic on MSDN.</span></span>  
   
-## Servicio  
- El servicio implementa un contrato <xref:System.ServiceModel.Web.WebGetAttribute> básico que está compuesto de una operación, tal y como se muestra en el código siguiente.  
+## <a name="service"></a><span data-ttu-id="14b29-112">Servicio</span><span class="sxs-lookup"><span data-stu-id="14b29-112">Service</span></span>  
+ <span data-ttu-id="14b29-113">El servicio implementa un contrato <xref:System.ServiceModel.Web.WebGetAttribute> básico que está compuesto de una operación, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="14b29-113">The service implements a basic <xref:System.ServiceModel.Web.WebGetAttribute> contract that consists of one operation, as shown in the following code.</span></span>  
   
 ```  
 [ServiceContract]  
@@ -36,10 +39,9 @@ interface IStreamingFeedService
     [OperationContract]  
     Atom10FeedFormatter StreamedFeed();  
 }  
-  
 ```  
   
- El servicio implementa este contrato utilizando una clase `ItemGenerator` para crear una secuencia potencialmente infinita de instancias <xref:System.ServiceModel.Syndication.SyndicationItem> mediante un iterador, tal y como se muestra en el código siguiente.  
+ <span data-ttu-id="14b29-114">El servicio implementa este contrato utilizando una clase `ItemGenerator` para crear una secuencia potencialmente infinita de instancias <xref:System.ServiceModel.Syndication.SyndicationItem> mediante un iterador, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="14b29-114">The service implements this contract by using an `ItemGenerator` class to create a potentially infinite stream of <xref:System.ServiceModel.Syndication.SyndicationItem> instances using an iterator, as shown in the following code.</span></span>  
   
 ```  
 class ItemGenerator  
@@ -55,10 +57,9 @@ class ItemGenerator
     }  
     ...  
 }  
-  
 ```  
   
- Cuando la implementación del servicio crea la fuente, se usa el resultado de `ItemGenerator.GenerateItems()` en lugar de una colección almacenada en búfer de elementos.  
+ <span data-ttu-id="14b29-115">Cuando la implementación del servicio crea la fuente, se usa el resultado de `ItemGenerator.GenerateItems()` en lugar de una colección almacenada en búfer de elementos.</span><span class="sxs-lookup"><span data-stu-id="14b29-115">When the service implementation creates the feed, the output of `ItemGenerator.GenerateItems()` is used instead of a buffered collection of items.</span></span>  
   
 ```  
 public Atom10FeedFormatter StreamedFeed()  
@@ -72,23 +73,21 @@ public Atom10FeedFormatter StreamedFeed()
     feed.Items = itemGenerator.GenerateItems();  
     return feed.GetAtom10Formatter();  
 }  
-  
 ```  
   
- Como resultado, la secuencia del elemento nunca se almacena totalmente en búfer en la memoria.Puede observar este comportamiento estableciendo un punto de interrupción en la instrucción `yield``return` dentro del método `ItemGenerator.GenerateItems()` y teniendo en cuenta que este punto de interrupción se encuentra por primera vez después de que el servicio haya devuelto el resultado del método `StreamedFeed()`.  
+ <span data-ttu-id="14b29-116">Como resultado, la secuencia del elemento nunca se almacena totalmente en búfer en la memoria.</span><span class="sxs-lookup"><span data-stu-id="14b29-116">As a result, the item stream is never fully buffered into memory.</span></span> <span data-ttu-id="14b29-117">Puede observar este comportamiento estableciendo un punto de interrupción en la `yield``return` instrucción dentro de la `ItemGenerator.GenerateItems()` método y teniendo en cuenta que este punto de interrupción se encuentra por primera vez después de que el servicio ha devuelto el resultado de la `StreamedFeed()` método.</span><span class="sxs-lookup"><span data-stu-id="14b29-117">You can observe this behavior by setting a breakpoint on the `yield``return` statement inside of the `ItemGenerator.GenerateItems()` method and noting that this breakpoint is encountered for the first time after the service has returned the result of the `StreamedFeed()` method.</span></span>  
   
-## Cliente  
- El cliente en este ejemplo utiliza una implementación <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizada que retrasa la materialización de elementos individuales en la fuente en lugar de almacenarlos en búfer en la memoria.La instancia `StreamedAtom10FeedFormatter` personalizada se usa de la manera siguiente.  
+## <a name="client"></a><span data-ttu-id="14b29-118">Cliente</span><span class="sxs-lookup"><span data-stu-id="14b29-118">Client</span></span>  
+ <span data-ttu-id="14b29-119">El cliente en este ejemplo utiliza una implementación <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizada que retrasa la materialización de elementos individuales en la fuente en lugar de almacenarlos en búfer en la memoria.</span><span class="sxs-lookup"><span data-stu-id="14b29-119">The client in this sample uses a custom <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> implementation that delays the materialization of individual items in the feed instead of buffering them into memory.</span></span> <span data-ttu-id="14b29-120">La instancia `StreamedAtom10FeedFormatter` personalizada se usa de la manera siguiente.</span><span class="sxs-lookup"><span data-stu-id="14b29-120">The custom `StreamedAtom10FeedFormatter` instance is used as follows.</span></span>  
   
 ```  
 XmlReader reader = XmlReader.Create("http://localhost:8000/Service/Feeds/StreamedFeed");  
 StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter);  
   
 SyndicationFeed feed = formatter.ReadFrom(reader);  
-  
 ```  
   
- Normalmente, una llamada a <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> no se devuelve hasta que el contenido completo de la fuente se haya leído desde la red y almacenado en búfer en la memoria.Sin embargo, el objeto `StreamedAtom10FeedFormatter` invalida <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> para devolver un iterador en lugar de una colección almacenada en búfer, tal y como se muestra en el código siguiente.  
+ <span data-ttu-id="14b29-121">Normalmente, una llamada a <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> no se devuelve hasta que el contenido completo de la fuente se haya leído desde la red y almacenado en búfer en la memoria.</span><span class="sxs-lookup"><span data-stu-id="14b29-121">Normally, a call to <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> does not return until the entire contents of the feed have been read from the network and buffered into memory.</span></span> <span data-ttu-id="14b29-122">Sin embargo, el objeto `StreamedAtom10FeedFormatter` invalida <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> para devolver un iterador en lugar de una colección almacenada en búfer, tal y como se muestra en el código siguiente.</span><span class="sxs-lookup"><span data-stu-id="14b29-122">However, the `StreamedAtom10FeedFormatter` object overrides <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> to return an iterator instead of a buffered collection, as shown in the following code.</span></span>  
   
 ```  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
@@ -106,29 +105,28 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
   
     reader.ReadEndElement();  
 }  
-  
 ```  
   
- Como resultado, no se lee cada elemento desde la red hasta que la aplicación cliente que atraviesa los resultados de `ReadItems()` esté lista para utilizarlo.Puede observar este comportamiento estableciendo un punto de interrupción en la instrucción `yield``return` dentro de `StreamedAtom10FeedFormatter.DelayReadItems()` y teniendo en cuenta que este punto de interrupción aparece por primera vez después de que la llamada a `ReadFrom()` se complete.  
+ <span data-ttu-id="14b29-123">Como resultado, no se lee cada elemento desde la red hasta que la aplicación cliente que atraviesa los resultados de `ReadItems()` esté lista para utilizarlo.</span><span class="sxs-lookup"><span data-stu-id="14b29-123">As a result, each item is not read from the network until the client application traversing the results of `ReadItems()` is ready to use it.</span></span> <span data-ttu-id="14b29-124">Puede observar este comportamiento estableciendo un punto de interrupción en la `yield``return` instrucción dentro de `StreamedAtom10FeedFormatter.DelayReadItems()` y teniendo en cuenta que este punto de interrupción se encuentra por primera vez después de llamar a `ReadFrom()` completa.</span><span class="sxs-lookup"><span data-stu-id="14b29-124">You can observe this behavior by setting a breakpoint on the `yield``return` statement inside of `StreamedAtom10FeedFormatter.DelayReadItems()` and noticing that this breakpoint is encountered for the first time after the call to `ReadFrom()` completes.</span></span>  
   
- Las instrucciones siguientes muestran cómo compilar y ejecutar el ejemplo.Tenga en cuenta que aunque el servidor deja de generar los elementos después de que el cliente haya leído diez elementos, la salida muestra que el cliente lee significativamente más de diez elementos.Esto es porque el enlace de conexión en red utilizado por el ejemplo transmite los datos en segmentos de cuatro kilobytes \(KB\).Como tal, el cliente recibe 4 KB de datos de elemento antes de tener la oportunidad incluso de leer un elemento.Se trata del comportamiento normal \(el envío de datos de secuencia de HTTP en segmentos de tamaño razonable aumenta el rendimiento\).  
+ <span data-ttu-id="14b29-125">Las instrucciones siguientes muestran cómo compilar y ejecutar el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="14b29-125">The following instructions show how to build and run the sample.</span></span> <span data-ttu-id="14b29-126">Tenga en cuenta que aunque el servidor deja de generar los elementos después de que el cliente haya leído diez elementos, la salida muestra que el cliente lee significativamente más de diez elementos.</span><span class="sxs-lookup"><span data-stu-id="14b29-126">Note that although the server stops generating items after the client has read 10 items, the output shows that the client reads significantly more than 10 items.</span></span> <span data-ttu-id="14b29-127">Esto es porque el enlace de conexión en red utilizado por el ejemplo transmite los datos en segmentos de cuatro kilobytes (KB).</span><span class="sxs-lookup"><span data-stu-id="14b29-127">This is because the networking binding used by the sample transmits data in four-kilobyte (KB) segments.</span></span> <span data-ttu-id="14b29-128">Como tal, el cliente recibe 4 KB de datos de elemento antes de tener la oportunidad incluso de leer un elemento.</span><span class="sxs-lookup"><span data-stu-id="14b29-128">As such, the client receives 4KB of item data before it has the opportunity to read even one item.</span></span> <span data-ttu-id="14b29-129">Se trata del comportamiento normal (el envío de datos de secuencia de HTTP en segmentos de tamaño razonable aumenta el rendimiento).</span><span class="sxs-lookup"><span data-stu-id="14b29-129">This is normal behavior (sending streamed HTTP data in reasonably-sized segments increases performance).</span></span>  
   
-#### Para configurar, compilar y ejecutar el ejemplo  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="14b29-130">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="14b29-130">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="14b29-131">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="14b29-131">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="14b29-132">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="14b29-132">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Para ejecutar el ejemplo en una configuración con un único equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="14b29-133">Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="14b29-133">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  <span data-ttu-id="14b29-134">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="14b29-134">The samples may already be installed on your computer.</span></span> <span data-ttu-id="14b29-135">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="14b29-135">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="14b29-136">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="14b29-136">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="14b29-137">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="14b29-137">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
-## Vea también  
- [Fuente de diagnósticos independientes](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+## <a name="see-also"></a><span data-ttu-id="14b29-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="14b29-138">See Also</span></span>  
+ [<span data-ttu-id="14b29-139">Fuente de diagnósticos independientes</span><span class="sxs-lookup"><span data-stu-id="14b29-139">Stand-Alone Diagnostics Feed</span></span>](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

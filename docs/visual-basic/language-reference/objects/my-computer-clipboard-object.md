@@ -1,58 +1,41 @@
 ---
-title: My.Computer.Clipboard (objeto) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: My.Computer.Clipboard (Objeto)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2fbfc37d157d5f6fbfe5b540f4ad3a17c7b81844
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7da023c342498375daf1723a22b4e4969656cf52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard (Objeto)
-Proporciona métodos para manipular el Portapapeles.  
+# <a name="mycomputerclipboard-object"></a><span data-ttu-id="6fda3-102">My.Computer.Clipboard (Objeto)</span><span class="sxs-lookup"><span data-stu-id="6fda3-102">My.Computer.Clipboard Object</span></span>
+<span data-ttu-id="6fda3-103">Proporciona métodos para manipular el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="6fda3-103">Provides methods for manipulating the Clipboard.</span></span>  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener información acerca de los métodos y propiedades de la `My.Computer.Clipboard` objeto, vea <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+## <a name="remarks"></a><span data-ttu-id="6fda3-104">Comentarios</span><span class="sxs-lookup"><span data-stu-id="6fda3-104">Remarks</span></span>  
+ <span data-ttu-id="6fda3-105">Para obtener información acerca de los métodos y propiedades de la `My.Computer.Clipboard` de objetos, consulte <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span><span class="sxs-lookup"><span data-stu-id="6fda3-105">For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.</span></span>  
   
- Para obtener más información, consulte [almacenar y leer datos desde el Portapapeles](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ <span data-ttu-id="6fda3-106">Para obtener más información, consulte [almacenar y leer datos desde el Portapapeles](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span><span class="sxs-lookup"><span data-stu-id="6fda3-106">For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).</span></span>  
   
 > [!NOTE]
->  También puede utilizar métodos de la <xref:System.Windows.Forms.Clipboard?displayProperty=fullName>clase para manipular el Portapapeles.</xref:System.Windows.Forms.Clipboard?displayProperty=fullName>  
+>  <span data-ttu-id="6fda3-107">También puede utilizar métodos de la <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> clase para manipular el Portapapeles.</span><span class="sxs-lookup"><span data-stu-id="6fda3-107">You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.</span></span>  
   
-## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.MyServices></xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a><span data-ttu-id="6fda3-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6fda3-108">Requirements</span></span>  
+ <span data-ttu-id="6fda3-109">**Namespace:**<xref:Microsoft.VisualBasic.MyServices></span><span class="sxs-lookup"><span data-stu-id="6fda3-109">**Namespace:** <xref:Microsoft.VisualBasic.MyServices></span></span>  
   
- **Clase:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>(proporciona acceso a <xref:System.Windows.Forms.Clipboard>)</xref:System.Windows.Forms.Clipboard> </xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+ <span data-ttu-id="6fda3-110">**Clase:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (proporciona acceso a <xref:System.Windows.Forms.Clipboard>)</span><span class="sxs-lookup"><span data-stu-id="6fda3-110">**Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)</span></span>  
   
- **Ensamblado:**[!INCLUDE[vbprvbruntime](../../../visual-basic/language-reference/objects/includes/vbprvbruntime_md.md)]  
+ <span data-ttu-id="6fda3-111">**Ensamblado:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6fda3-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>  
   
-## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A></xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>   
- [My.Computer (objeto)](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="6fda3-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="6fda3-112">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>  
+ [<span data-ttu-id="6fda3-113">My.Computer (objeto)</span><span class="sxs-lookup"><span data-stu-id="6fda3-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -1,94 +1,96 @@
 ---
-title: "Mensajes por lotes en una transacci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "mensajes por lotes [WCF]"
+title: "Mensajes por lotes en una transacción"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Mensajes por lotes en una transacci&#243;n
-Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud y la entrega fiable de mensajes.Las transacciones, sin embargo, son operaciones caras y pueden reducir dramáticamente el rendimiento de los mensajes.Una manera de mejorar el rendimiento de los mensajes consiste en hacer que una aplicación lea y procese varios mensajes dentro de una transacción única.La balanza está entre el rendimiento y la recuperación: a medida que el número de mensajes de un lote aumenta, lo hace la cantidad de trabajo de recuperación requerida si se deshacen las transacciones.Es importante tener en cuenta la diferencia entre los mensajes por lotes en una transacción y en sesiones.Una *sesión* es una agrupación de mensajes relacionados que son procesados por una única aplicación y se confirman como una unidad única.Las sesiones se utilizan generalmente cuando se debe procesar conjuntamente un grupo de mensajes relacionados.Un ejemplo de esto es el sitio web de una tienda en línea.Los *lotes* se usan para procesar varios mensajes no relacionados de tal manera que se aumente el rendimiento de mensajes.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] sesiones, vea [Agrupación de los mensajes en cola de una sesión](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).Los mensajes de un lote también se procesan mediante una aplicación única y se confirman como una sola unidad, pero no puede haber ninguna relación entre los mensajes del lote.Los mensajes por lotes en una transacción son una optimización que no cambia cómo se ejecuta la aplicación.  
+# <a name="batching-messages-in-a-transaction"></a><span data-ttu-id="2e811-102">Mensajes por lotes en una transacción</span><span class="sxs-lookup"><span data-stu-id="2e811-102">Batching Messages in a Transaction</span></span>
+<span data-ttu-id="2e811-103">Las aplicaciones en cola utilizan las transacciones para garantizar la exactitud y la entrega fiable de mensajes.</span><span class="sxs-lookup"><span data-stu-id="2e811-103">Queued applications use transactions to ensure correctness and reliable delivery of messages.</span></span> <span data-ttu-id="2e811-104">Las transacciones, sin embargo, son operaciones caras y pueden reducir dramáticamente el rendimiento de los mensajes.</span><span class="sxs-lookup"><span data-stu-id="2e811-104">Transactions, however, are expensive operations and can dramatically reduce message throughput.</span></span> <span data-ttu-id="2e811-105">Una manera de mejorar el rendimiento de los mensajes consiste en hacer que una aplicación lea y procese varios mensajes dentro de una transacción única.</span><span class="sxs-lookup"><span data-stu-id="2e811-105">One way to improve message throughput is to have an application read and process multiple messages within a single transaction.</span></span> <span data-ttu-id="2e811-106">La balanza está entre el rendimiento y la recuperación: a medida que el número de mensajes de un lote aumenta, lo hace la cantidad de trabajo de recuperación requerida si se deshacen las transacciones.</span><span class="sxs-lookup"><span data-stu-id="2e811-106">The trade-off is between performance and recovery: as the number of messages in a batch increases, so does the amount of recovery work that required if transactions are rolled back.</span></span> <span data-ttu-id="2e811-107">Es importante tener en cuenta la diferencia entre los mensajes por lotes en una transacción y en sesiones.</span><span class="sxs-lookup"><span data-stu-id="2e811-107">It is important to note the difference between batching messages in a transaction and sessions.</span></span> <span data-ttu-id="2e811-108">A *sesión* es una agrupación de mensajes relacionados que son procesados por una única aplicación y se confirman como una sola unidad.</span><span class="sxs-lookup"><span data-stu-id="2e811-108">A *session* is a grouping of related messages that are processed by a single application and committed as a single unit.</span></span> <span data-ttu-id="2e811-109">Las sesiones se utilizan generalmente cuando se debe procesar conjuntamente un grupo de mensajes relacionados.</span><span class="sxs-lookup"><span data-stu-id="2e811-109">Sessions are generally used when a group of related messages must be processed together.</span></span> <span data-ttu-id="2e811-110">Un ejemplo de esto es el sitio web de una tienda en línea.</span><span class="sxs-lookup"><span data-stu-id="2e811-110">An example of this is an online shopping Web site.</span></span> <span data-ttu-id="2e811-111">*Lotes* se utilizan para procesar varios, no relacionados con mensajes de la manera que aumenta el rendimiento de mensajes.</span><span class="sxs-lookup"><span data-stu-id="2e811-111">*Batches* are used to process multiple, unrelated messages in a way that increases message throughput.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="2e811-112">las sesiones, consulte [agrupar los mensajes en cola en una sesión de](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span><span class="sxs-lookup"><span data-stu-id="2e811-112"> sessions, see [Grouping Queued Messages in a Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span></span> <span data-ttu-id="2e811-113">Los mensajes de un lote también se procesan mediante una aplicación única y se confirman como una sola unidad, pero no puede haber ninguna relación entre los mensajes del lote.</span><span class="sxs-lookup"><span data-stu-id="2e811-113">Messages in a batch are also processed by a single application and committed as a single unit, but there may be no relationship between the messages in the batch.</span></span> <span data-ttu-id="2e811-114">Los mensajes por lotes en una transacción son una optimización que no cambia cómo se ejecuta la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2e811-114">Batching messages in a transaction is an optimization that does not change how the application runs.</span></span>  
   
-## Introducción al modo de procesamiento por lotes  
- El comportamiento de extremo <xref:System.ServiceModel.Description.TransactedBatchingBehavior> controla el procesamiento por lotes.Al agregar este comportamiento de extremo a un extremo de servicio se indica a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que procese los mensajes por lotes en una transacción.No todos los mensajes requieren una transacción, por lo que solo los mensajes que requieren una transacción se colocan en un lote y solo los mensajes enviados desde las operaciones marcados con `TransactionScopeRequired` \= `true` y `TransactionAutoComplete` \= `true` se consideran para un lote.Si todas las operaciones en el contrato de servicios se marcan con `TransactionScopeRequired` \= `false` y `TransactionAutoComplete` \= `false`, nunca se entra en el modo por lotes.  
+## <a name="entering-batching-mode"></a><span data-ttu-id="2e811-115">Introducción al modo de procesamiento por lotes</span><span class="sxs-lookup"><span data-stu-id="2e811-115">Entering Batching Mode</span></span>  
+ <span data-ttu-id="2e811-116">El comportamiento de extremo <xref:System.ServiceModel.Description.TransactedBatchingBehavior> controla el procesamiento por lotes.</span><span class="sxs-lookup"><span data-stu-id="2e811-116">The <xref:System.ServiceModel.Description.TransactedBatchingBehavior> endpoint behavior controls batching.</span></span> <span data-ttu-id="2e811-117">Al agregar este comportamiento de extremo a un extremo de servicio se indica a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que procese los mensajes por lotes en una transacción.</span><span class="sxs-lookup"><span data-stu-id="2e811-117">Adding this endpoint behavior to a service endpoint tells [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to batch messages in a transaction.</span></span> <span data-ttu-id="2e811-118">No todos los mensajes requieren una transacción, por lo que solo los mensajes que requieren una transacción se colocan en un lote y solo los mensajes enviados desde las operaciones marcados con `TransactionScopeRequired`  =  `true` y `TransactionAutoComplete`  =  `true` son se consideran para un lote.</span><span class="sxs-lookup"><span data-stu-id="2e811-118">Not all messages require a transaction, so only messages that require a transaction are placed in a batch, and only messages sent from operations marked with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true` are considered for a batch.</span></span> <span data-ttu-id="2e811-119">Si todas las operaciones del contrato de servicio se marcan con `TransactionScopeRequired`  =  `false` y `TransactionAutoComplete`  =  `false`, a continuación, nunca se especifica el modo por lotes.</span><span class="sxs-lookup"><span data-stu-id="2e811-119">If all operations on the service contract are marked with `TransactionScopeRequired` = `false` and `TransactionAutoComplete` = `false`, then batching mode is never entered.</span></span>  
   
-## Confirmación de una transacción.  
- Una transacción por lotes se confirma en función de lo siguiente:  
+## <a name="committing-a-transaction"></a><span data-ttu-id="2e811-120">Confirmación de una transacción.</span><span class="sxs-lookup"><span data-stu-id="2e811-120">Committing a Transaction</span></span>  
+ <span data-ttu-id="2e811-121">Una transacción por lotes se confirma en función de lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="2e811-121">A batched transaction is committed based on the following:</span></span>  
   
--   `MaxBatchSize`.Una propiedad del comportamiento <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.Esta propiedad determina el número máximo de mensajes que se colocan en un lote.Cuando se alcanza este número, se confirma el lote.Esto valor no es un límite estricto, es posible confirmar un lote antes de recibir este número de mensajes.  
+-   <span data-ttu-id="2e811-122">`MaxBatchSize`.</span><span class="sxs-lookup"><span data-stu-id="2e811-122">`MaxBatchSize`.</span></span> <span data-ttu-id="2e811-123">Una propiedad del comportamiento <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.</span><span class="sxs-lookup"><span data-stu-id="2e811-123">A property of the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> behavior.</span></span> <span data-ttu-id="2e811-124">Esta propiedad determina el número máximo de mensajes que se colocan en un lote.</span><span class="sxs-lookup"><span data-stu-id="2e811-124">This property determines the maximum number of messages that are placed into a batch.</span></span> <span data-ttu-id="2e811-125">Cuando se alcanza este número, se confirma el lote.</span><span class="sxs-lookup"><span data-stu-id="2e811-125">When this number is reached, the batch is committed.</span></span> <span data-ttu-id="2e811-126">Esto valor no es un límite estricto, es posible confirmar un lote antes de recibir este número de mensajes.</span><span class="sxs-lookup"><span data-stu-id="2e811-126">This is value is not a strict limit, it is possible to commit a batch before receiving this number of messages.</span></span>  
   
--   `Transaction Timeout`.Después de que el 80 por ciento del tiempo de espera de la transacción haya transcurrido, se confirma el lote y se crea uno nuevo.Esto significa que si queda el 20 por ciento o menos del tiempo proporcionado para que una transacción se complete, se confirma el lote.  
+-   <span data-ttu-id="2e811-127">`Transaction Timeout`.</span><span class="sxs-lookup"><span data-stu-id="2e811-127">`Transaction Timeout`.</span></span> <span data-ttu-id="2e811-128">Después de que el 80 por ciento del tiempo de espera de la transacción haya transcurrido, se confirma el lote y se crea uno nuevo.</span><span class="sxs-lookup"><span data-stu-id="2e811-128">After 80 percent of the transaction's time-out has elapsed, the batch is committed and a new batch is created.</span></span> <span data-ttu-id="2e811-129">Esto significa que si queda el 20 por ciento o menos del tiempo proporcionado para que una transacción se complete, se confirma el lote.</span><span class="sxs-lookup"><span data-stu-id="2e811-129">This means that if 20 percent or less of the time given for a transaction to complete remains, the batch is committed.</span></span>  
   
--   `TransactionScopeRequired`.Al procesar un lote de mensajes, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra uno que tenga `TransactionScopeRequired` \= `false`, confirma el lote y vuelve a abrir un nuevo lote al recibir el primer mensaje con `TransactionScopeRequired` \= `true` y `TransactionAutoComplete` \= `true`.  
+-   <span data-ttu-id="2e811-130">`TransactionScopeRequired`.</span><span class="sxs-lookup"><span data-stu-id="2e811-130">`TransactionScopeRequired`.</span></span> <span data-ttu-id="2e811-131">Al procesar un lote de mensajes, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] encuentra uno que tenga `TransactionScopeRequired`  =  `false`, confirma el lote y vuelve a abrir un nuevo lote al recibir el primer mensaje con `TransactionScopeRequired`  =  `true` y `TransactionAutoComplete` = `true`.</span><span class="sxs-lookup"><span data-stu-id="2e811-131">When processing a batch of messages, if [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] finds one that has `TransactionScopeRequired` = `false`, it commits the batch and reopens a new batch on receipt of the first message with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true`.</span></span>  
   
--   Si no existe ningún mensaje más en la cola, se confirma el lote actual, aunque no se haya alcanzado el `MaxBatchSize` o no haya transcurrido el 80 por ciento del tiempo de espera de la transacción.  
+-   <span data-ttu-id="2e811-132">Si no existe ningún mensaje más en la cola, se confirma el lote actual, aunque no se haya alcanzado el `MaxBatchSize` o no haya transcurrido el 80 por ciento del tiempo de espera de la transacción.</span><span class="sxs-lookup"><span data-stu-id="2e811-132">If no more messages exist in the queue, then the current batch is committed, even if the `MaxBatchSize` has not been reached or 80 percent of the transaction's time-out has not elapsed.</span></span>  
   
-## Salir del modo de procesamiento por lotes  
- Si un mensaje en un lote hace que la transacción se anule, se producen los pasos siguientes:  
+## <a name="leaving-batching-mode"></a><span data-ttu-id="2e811-133">Salir del modo de procesamiento por lotes</span><span class="sxs-lookup"><span data-stu-id="2e811-133">Leaving Batching Mode</span></span>  
+ <span data-ttu-id="2e811-134">Si un mensaje en un lote hace que la transacción se anule, se producen los pasos siguientes:</span><span class="sxs-lookup"><span data-stu-id="2e811-134">If a message in a batch causes the transaction to abort, the following steps occur:</span></span>  
   
-1.  Se deshace el lote completo de mensajes.  
+1.  <span data-ttu-id="2e811-135">Se deshace el lote completo de mensajes.</span><span class="sxs-lookup"><span data-stu-id="2e811-135">The entire batch of messages is rolled back.</span></span>  
   
-2.  Los mensajes se leen de uno en uno hasta que el número de mensajes leídos supera el doble del tamaño del lote máximo.  
+2.  <span data-ttu-id="2e811-136">Los mensajes se leen de uno en uno hasta que el número de mensajes leídos supera el doble del tamaño del lote máximo.</span><span class="sxs-lookup"><span data-stu-id="2e811-136">Messages are read one at a time until the number of messages read exceeds twice the maximum batch size.</span></span>  
   
-3.  Se vuelve a entrar en el modo de procesamiento por lotes.  
+3.  <span data-ttu-id="2e811-137">Se vuelve a entrar en el modo de procesamiento por lotes.</span><span class="sxs-lookup"><span data-stu-id="2e811-137">Batch mode is re-entered.</span></span>  
   
-## Elección del tamaño del lote  
- El tamaño de un lote depende de la aplicación.El método empírico es la mejor manera de llegar a un tamaño de lote óptimo para la aplicación.Es importante recordar al elegir un tamaño de lote para elegir el tamaño según el modelo de implementación real de su aplicación.Por ejemplo, al implementar la aplicación, si necesita un servidor SQL en un equipo remoto y una transacción que abarque la cola y el servidor SQL, el tamaño del lote se determina mejor ejecutando esta configuración exacta.  
+## <a name="choosing-the-batch-size"></a><span data-ttu-id="2e811-138">Elección del tamaño del lote</span><span class="sxs-lookup"><span data-stu-id="2e811-138">Choosing the Batch Size</span></span>  
+ <span data-ttu-id="2e811-139">El tamaño de un lote depende de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2e811-139">The size of a batch is application-dependent.</span></span> <span data-ttu-id="2e811-140">El método empírico es la mejor manera de llegar a un tamaño de lote óptimo para la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2e811-140">The empirical method is the best way to arrive at an optimal batch size for the application.</span></span> <span data-ttu-id="2e811-141">Es importante recordar al elegir un tamaño de lote para elegir el tamaño según el modelo de implementación real de su aplicación.</span><span class="sxs-lookup"><span data-stu-id="2e811-141">It is important to remember when choosing a batch size to choose the size according to your application's actual deployment model.</span></span> <span data-ttu-id="2e811-142">Por ejemplo, al implementar la aplicación, si necesita un servidor SQL en un equipo remoto y una transacción que abarque la cola y el servidor SQL, el tamaño del lote se determina mejor ejecutando esta configuración exacta.</span><span class="sxs-lookup"><span data-stu-id="2e811-142">For example, when deploying the application, if you need an SQL server on a remote machine and a transaction that spans the queue and the SQL server, then the batch size is best determined by running this exact configuration.</span></span>  
   
-## Simultaneidad y procesamiento por lotes  
- Para aumentar el rendimiento, puede hacer que se ejecuten muchos lotes de manera simultánea.Estableciendo `ConcurrencyMode.Multiple` en `ServiceBehaviorAttribute`, se habilita el procesamiento por lotes simultáneo.  
+## <a name="concurrency-and-batching"></a><span data-ttu-id="2e811-143">Simultaneidad y procesamiento por lotes</span><span class="sxs-lookup"><span data-stu-id="2e811-143">Concurrency and Batching</span></span>  
+ <span data-ttu-id="2e811-144">Para aumentar el rendimiento, puede hacer que se ejecuten muchos lotes de manera simultánea.</span><span class="sxs-lookup"><span data-stu-id="2e811-144">To increase throughput, you can also have many batches run concurrently.</span></span> <span data-ttu-id="2e811-145">Estableciendo `ConcurrencyMode.Multiple` en `ServiceBehaviorAttribute`, se habilita el procesamiento por lotes simultáneo.</span><span class="sxs-lookup"><span data-stu-id="2e811-145">By setting `ConcurrencyMode.Multiple` in `ServiceBehaviorAttribute`, you enable concurrent batching.</span></span>  
   
- La *limitación de peticiones de servicio* es un comportamiento del servicio que se utiliza para indicar el número máximo de llamadas concurrentes que se pueden realizar en el servicio.Cuando se utiliza con procesamiento por lotes, esto se interpreta como cuántos lotes simultáneos se pueden ejecutar.Si no se establece la limitación de peticiones del servicio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] establece el número máximo de llamadas simultáneas en 16.De este modo, si se agregara el comportamiento de procesamiento por lotes de forma predeterminada, podrían estar activos un máximo de 16 lotes al mismo tiempo.Es mejor ajustar la limitación de peticiones del servicio y el procesamiento por lotes en función de su capacidad.Por ejemplo, si la cola tiene 100 mensajes y se desea un lote de 20, tener el número máximo de llamadas simultáneas establecido en 16 no sería útil porque, dependiendo del rendimiento, 16 transacciones podrían estar activas, parecido a no tener el procesamiento por lotes activado.Por consiguiente, al afinar para mejorar el rendimiento, no tenga el procesamiento por lotes simultáneo o tenga el procesamiento por lotes simultáneo con el tamaño correcto de limitación de peticiones del servicio.  
+ <span data-ttu-id="2e811-146">*Limitación del servicio* es un comportamiento de servicio que se utiliza para indicar el número máximo de llamadas simultáneas que pueden realizarse en el servicio.</span><span class="sxs-lookup"><span data-stu-id="2e811-146">*Service throttling* is a service behavior that is used to indicate how many maximum concurrent calls can be made on the service.</span></span> <span data-ttu-id="2e811-147">Cuando se utiliza con procesamiento por lotes, esto se interpreta como cuántos lotes simultáneos se pueden ejecutar.</span><span class="sxs-lookup"><span data-stu-id="2e811-147">When used with batching, this is interpreted as how many concurrent batches can be run.</span></span> <span data-ttu-id="2e811-148">Si no se establece la limitación de peticiones del servicio, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] establece el número máximo de llamadas simultáneas en 16.</span><span class="sxs-lookup"><span data-stu-id="2e811-148">If the service throttling is not set, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] defaults the maximum concurrent calls to 16.</span></span> <span data-ttu-id="2e811-149">De este modo, si se agregara el comportamiento de procesamiento por lotes de forma predeterminada, podrían estar activos un máximo de 16 lotes al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="2e811-149">Thus, if batching behavior were added by default, a maximum of 16 batches can be active at the same time.</span></span> <span data-ttu-id="2e811-150">Es mejor ajustar la limitación de peticiones del servicio y el procesamiento por lotes en función de su capacidad.</span><span class="sxs-lookup"><span data-stu-id="2e811-150">It is best to tune the service throttling and batching based on your capacity.</span></span> <span data-ttu-id="2e811-151">Por ejemplo, si la cola tiene 100 mensajes y se desea un lote de 20, tener el número máximo de llamadas simultáneas establecido en 16 no sería útil porque, dependiendo del rendimiento, 16 transacciones podrían estar activas, parecido a no tener el procesamiento por lotes activado.</span><span class="sxs-lookup"><span data-stu-id="2e811-151">For example, if the queue has 100 messages and a batch of 20 is desired, having the maximum concurrent calls set to 16 is not useful because, depending on throughput, 16 transactions could be active, similar to not having batching turned on.</span></span> <span data-ttu-id="2e811-152">Por consiguiente, al afinar para mejorar el rendimiento, no tenga el procesamiento por lotes simultáneo o tenga el procesamiento por lotes simultáneo con el tamaño correcto de limitación de peticiones del servicio.</span><span class="sxs-lookup"><span data-stu-id="2e811-152">Therefore, when fine-tuning for performance, either do not have concurrent batching or have concurrent batching with the correct service throttle size.</span></span>  
   
-## Procesamiento por lotes y varios extremos  
- Un extremo está compuesto por una dirección y un contrato.Puede haber varios extremos que comparten el mismo enlace.Es posible que dos extremos compartan el mismo enlace y escuchen al Identificador uniforme de recursos \(URI\) o dirección de la cola.Si dos extremos están leyendo desde la misma cola, y se agrega el comportamiento del procesamiento por lotes con transacciones a ambos extremos, podría surgir un conflicto en los tamaños de lotes especificados.Esto se resuelve implementando el procesamiento por lotes utilizando el tamaño de lote mínimo especificado entre los dos comportamientos de procesamiento por lotes con transacciones.En este escenario, si uno de los extremos no especifica el procesamiento por lotes con transacciones, ambos extremos no usarán el procesamiento por lotes.  
+## <a name="batching-and-multiple-endpoints"></a><span data-ttu-id="2e811-153">Procesamiento por lotes y varios extremos</span><span class="sxs-lookup"><span data-stu-id="2e811-153">Batching and Multiple Endpoints</span></span>  
+ <span data-ttu-id="2e811-154">Un extremo está compuesto por una dirección y un contrato.</span><span class="sxs-lookup"><span data-stu-id="2e811-154">An endpoint is composed of an address and a contract.</span></span> <span data-ttu-id="2e811-155">Puede haber varios extremos que comparten el mismo enlace.</span><span class="sxs-lookup"><span data-stu-id="2e811-155">There may be multiple endpoints that share the same binding.</span></span> <span data-ttu-id="2e811-156">Es posible que dos extremos compartan el mismo enlace y escuchen al Identificador uniforme de recursos (URI) o dirección de la cola.</span><span class="sxs-lookup"><span data-stu-id="2e811-156">It is possible for two endpoints to share the same binding and listen Uniform Resource Identifier (URI), or queue address.</span></span> <span data-ttu-id="2e811-157">Si dos extremos están leyendo desde la misma cola, y se agrega el comportamiento del procesamiento por lotes con transacciones a ambos extremos, podría surgir un conflicto en los tamaños de lotes especificados.</span><span class="sxs-lookup"><span data-stu-id="2e811-157">If two endpoints are reading from the same queue, and transacted batching behavior is added to both endpoints, a conflict in the batch sizes specified could arise.</span></span> <span data-ttu-id="2e811-158">Esto se resuelve implementando el procesamiento por lotes utilizando el tamaño de lote mínimo especificado entre los dos comportamientos de procesamiento por lotes con transacciones.</span><span class="sxs-lookup"><span data-stu-id="2e811-158">This is resolved by implementing batching using the minimal batch size specified between the two transacted batching behaviors.</span></span> <span data-ttu-id="2e811-159">En este escenario, si uno de los extremos no especifica el procesamiento por lotes con transacciones, ambos extremos no usarán el procesamiento por lotes.</span><span class="sxs-lookup"><span data-stu-id="2e811-159">In this scenario, if one of the endpoints does not specify transacted batching, then both endpoints would not use batching.</span></span>  
   
-## Ejemplo  
- El siguiente ejemplo muestra cómo especificar el `TransactedBatchingBehavior` en un archivo de configuración.  
+## <a name="example"></a><span data-ttu-id="2e811-160">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2e811-160">Example</span></span>  
+ <span data-ttu-id="2e811-161">El siguiente ejemplo muestra cómo especificar el `TransactedBatchingBehavior` en un archivo de configuración.</span><span class="sxs-lookup"><span data-stu-id="2e811-161">The following example shows how to specify the `TransactedBatchingBehavior` in a configuration file.</span></span>  
   
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="TransactedBatchingBehavior"
+              maxBatchSize="100" />
+  </endpointBehaviors>
+</behaviors>
 ```  
-<behaviors>  
-      <endpointBehaviors>  
-        <behavior name="TransactedBatchingBehavior"  
-                  maxBatchSize="100"/>  
-      </endpointBehaviors>  
-    </behaviors>  
-```  
   
- En el siguiente ejemplo se muestra cómo especificar mediante código <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.  
+ <span data-ttu-id="2e811-162">En el siguiente ejemplo se muestra cómo especificar mediante código <xref:System.ServiceModel.Description.TransactedBatchingBehavior>.</span><span class="sxs-lookup"><span data-stu-id="2e811-162">The following example shows how to specify the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> in code.</span></span>  
   
-```  
-using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
-{  
-     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");  
-                sep.Behaviors.Add(new TransactedBatchingBehavior(100));  
+```csharp
+using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
+{
+     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");
+     sep.Behaviors.Add(new TransactedBatchingBehavior(100));
+     
+     // Open the ServiceHost to create listeners and start listening for messages.
+    serviceHost.Open();
   
-     // Open the ServiceHost to create listeners and start listening for messages.  
-    serviceHost.Open();  
+    // The service can now be accessed.
+    Console.WriteLine("The service is ready.");
+    Console.WriteLine("Press <ENTER> to terminate service.");
+    Console.WriteLine();
+    Console.ReadLine();
   
-    // The service can now be accessed.  
-    Console.WriteLine("The service is ready.");  
-    Console.WriteLine("Press <ENTER> to terminate service.");  
-    Console.WriteLine();  
-    Console.ReadLine();  
-  
-   // Close the ServiceHostB to shut down the service.  
-    serviceHost.Close();  
+    // Close the ServiceHostB to shut down the service.
+    serviceHost.Close();
 }  
 ```  
   
-## Vea también  
- [Información general de colas](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [Las colas en WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="2e811-163">Vea también</span><span class="sxs-lookup"><span data-stu-id="2e811-163">See Also</span></span>  
+ [<span data-ttu-id="2e811-164">Información general de colas</span><span class="sxs-lookup"><span data-stu-id="2e811-164">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [<span data-ttu-id="2e811-165">Las colas en WCF</span><span class="sxs-lookup"><span data-stu-id="2e811-165">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
