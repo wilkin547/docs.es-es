@@ -1,25 +1,31 @@
 ---
-title: "Realizar una consulta de XPath en DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Realizar una consulta XPath en un objeto DataSet
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e8a993c75f33dd3c98da5534658d02b4eeeda51a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Realizar una consulta de XPath en DataSet
-La relación entre un <xref:System.Data.DataSet> y un <xref:System.Xml.XmlDataDocument> sincronizados le permite utilizar servicios XML, como la consulta XPath \(XML Path Language\), que tiene acceso al **XmlDataDocument** y puede realizar ciertas funciones más cómodamente que si tuviera acceso directamente al **DataSet**.  Por ejemplo, en lugar de utilizar el método **Select** de una <xref:System.Data.DataTable> para navegar por relaciones con otras tablas de un **DataSet**, puede realizar una consulta de XPath en un **XmlDataDocument** sincronizado con el **DataSet** para obtener una lista de elementos XML en forma de una <xref:System.Xml.XmlNodeList>.  Los nodos de la **XmlNodeList**, convertidos en nodos <xref:System.Xml.XmlElement>, se pueden pasar entonces al método **GetRowFromElement** del **XmlDataDocument** para devolver referencias de <xref:System.Data.DataRow> coincidentes con las filas de la tabla del **DataSet** sincronizado.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Realizar una consulta XPath en un objeto DataSet
+La relación entre un sincronizada <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> le permite hacer uso de XML servicios, como las consultas XML Path Language (XPath), que tienen acceso a la **XmlDataDocument** y puede realizar ciertas funciones más cómodamente que si tuviera acceso la **conjunto de datos** directamente. Por ejemplo, en lugar de usar el **seleccione** método de un <xref:System.Data.DataTable> para navegar por relaciones con otras tablas de un **conjunto de datos**, puede realizar una consulta XPath en un **XmlDataDocument**  que está sincronizado con el **conjunto de datos**, para obtener una lista de elementos XML en forma de un <xref:System.Xml.XmlNodeList>. Los nodos de la **XmlNodeList**, convertidos en <xref:System.Xml.XmlElement> nodos, a continuación, puede pasarse a la **GetRowFromElement** método de la **XmlDataDocument**para devolver la búsqueda de coincidencias <xref:System.Data.DataRow> referencias a las filas de la tabla en sincronizada **conjunto de datos**.  
   
- Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath.  El **DataSet** se rellena con tres tablas: **Customers**, **Orders** y **OrderDetails**.  En el ejemplo se crea primero una relación primaria\-secundaria entre las tablas **Customers** y **Orders**, y entre las tablas **Orders** y **OrderDetails**.  Después se realiza una consulta XPath para devolver una **XmlNodeList** de nodos de **Customers** donde un secundario de **OrderDetails** tiene un nodo **ProductID** con el valor 43.  El ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto cuyo **ProductID** es 43.  
+ Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath. El **conjunto de datos** se rellena con tres tablas: **clientes**, **pedidos**, y **OrderDetails**. En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre el **clientes** y **pedidos** tablas y entre el **pedidos** y **OrderDetails** tablas. A continuación, se realiza una consulta XPath para devolver una **XmlNodeList** de **clientes** nodos donde un secundario **OrderDetails** nodo tiene un **ProductID**nodo con el valor 43. En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** es 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -105,6 +111,6 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## Vea también  
- [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

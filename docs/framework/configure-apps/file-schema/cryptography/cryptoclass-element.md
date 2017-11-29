@@ -1,67 +1,72 @@
 ---
-title: "Elemento &lt;cryptoClass&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClass"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<cryptoClass> (elemento)"
-  - "cryptoClass (elemento)"
+title: '&lt;cryptoClass&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#cryptoClass
+helpviewer_keywords:
+- cryptoClass element
+- <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 448e2c83f6897fd876bb79dfb781bcf4ddd2252b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;cryptoClass&gt;
-Contiene una clase criptográfica que tiene una asignación a un nombre descriptivo en el elemento de [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) .  
+# <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; elemento
+Contiene una clase de criptografía que tiene una asignación a un nombre descriptivo en el elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
   
-## Sintaxis  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<cryptoNameMapping >  
+\<cryptoClasses >  
+\<cryptoClass >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <cryptoClass customClassName="fully qualified type name" />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`customClassName`|Atributo necesario.<br /><br /> Contiene la información de la clase de criptografía.  Utilice este atributo para proporcionar un nombre corto para la clase.  Debe especificar una cadena que cumpla los requisitos especificados en [Especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|---------------|-----------------|  
+|`customClassName`|Atributo necesario.<br /><br /> Contiene la información de la clase criptográfica. Utilice este atributo para proporcionar un nombre corto para la clase. Debe especificar una cadena que cumpla los requisitos especificados en [especificar nombres de tipo completos](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`cryptoClasses`|Contiene una lista de clases de criptografía que tienen una asignación a un nombre descriptivo en el elemento de [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) .|  
-|`cryptographySettings`|Este elemento contiene la configuración de criptografía.|  
-|`cryptoNameMapping`|Este elemento contiene las asignaciones de clases a nombres descriptivos.|  
-|`mscorlib`|Contiene el elemento de [\<cryptographySettings\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md) .|  
+|`cryptoClasses`|Contiene una lista de las clases de criptografía que tienen una asignación a un nombre descriptivo en el elemento [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).|  
+|`cryptographySettings`|Contiene la configuración de criptografía.|  
+|`cryptoNameMapping`|Contiene asignaciones de clases a nombres descriptivos.|  
+|`mscorlib`|Contiene el elemento [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).|  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo utilizar el elemento de **\<cryptoClass\>** de hacer referencia a una clase criptográfica y configurar el tiempo de ejecución.  A continuación, puede pasar la cadena "RSA" al método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> y utilizar el método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para devolver un objeto `MyCryptoRSAClass`.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente se muestra cómo utilizar el  **\<cryptoClass >** elemento para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución. A continuación, puede pasar la cadena "RSA" a la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método y el uso el <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para devolver un `MyCryptoRSAClass` objeto.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -80,8 +85,8 @@ Contiene una clase criptográfica que tiene una asignación a un nombre descript
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>Vea también  
+ [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
  [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

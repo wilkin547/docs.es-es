@@ -1,88 +1,90 @@
 ---
-title: "&lt;applicationPool&gt; (Elemento) (Configuraci&#243;n web) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<applicationPool> (elemento)"
-  - "applicationPool (elemento)"
+title: "&lt;applicationPool&gt; elemento (configuración Web)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applicationPool element
+- <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: df4e7325a42db733fd6a7f5fbc9fe29c2cda4bd1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;applicationPool&gt; (Elemento) (Configuraci&#243;n web)
-Especifica la configuración usada por ASP.NET para administrar el comportamiento de todo el proceso cuando una aplicación ASP.NET se está ejecutando en modo integrado en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o en una versión posterior.  
+# <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;applicationPool&gt; elemento (configuración Web)
+Especifica la configuración que usa ASP.NET para administrar el comportamiento de todo el proceso cuando una aplicación ASP.NET se ejecuta en modo integrado en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior.  
   
 > [!IMPORTANT]
->  Este elemento y la característica que admite solo funcionan si su aplicación ASP.NET está hospedada en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o en versiones posteriores.  
+>  Este elemento y la característica que admite solo funcionan si la aplicación ASP.NET se hospeda en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versiones posteriores.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.Web > elemento (configuración Web)  
+\<applicationPool > elemento (configuración Web)  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <applicationPool   
-    maxConcurrentRequestsPerCPU="5000"   
-    maxConcurrentThreadsPerCPU="0"   
-    requestQueueLimit="5000" />  
+    maxConcurrentRequestsPerCPU="5000"   
+    maxConcurrentThreadsPerCPU="0"   
+    requestQueueLimit="5000" />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
+|---------------|-----------------|  
 |`maxConcurrentRequestsPerCPU`|Especifica cuántas solicitudes simultáneas permite ASP.NET por CPU.|  
-|`maxConcurrentThreadsPerCPU`|Especifica cuántos subprocesos simultáneos se pueden estar ejecutando para un grupo de aplicaciones para cada CPU.  Esto proporciona una manera alternativa de controlar la simultaneidad de ASP.NET, ya que puede limitar el número de subprocesos administrados que se pueden usar por CPU para atender las solicitudes.  De forma predeterminada este valor es 0, lo que significa que ASP.NET no limita el número de subprocesos que se pueden crear por CPU, aunque el grupo de subprocesos de CLR también limita el número de subprocesos que se pueden crear.|  
-|`requestQueueLimit`|Especifica el número máximo de solicitudes que se pueden poner en cola para ASP.NET en un único proceso.  Cuando dos o más aplicaciones ASP.NET se ejecutan en un único grupo de aplicaciones, el conjunto acumulativo de solicitudes que se realizan a cualquier aplicación del grupo de aplicaciones está sujeto a este valor.|  
+|`maxConcurrentThreadsPerCPU`|Especifica cuántos subprocesos simultáneos pueden estar en ejecución para un grupo de aplicaciones para cada CPU. Esto proporciona una manera alternativa para controlar la simultaneidad ASP.NET, ya que permite limitar el número de subprocesos administrados que se puede usar por CPU para atender las solicitudes. De forma predeterminada este valor es 0, lo que significa que ASP.NET no limita el número de subprocesos que se pueden crear por CPU, aunque el grupo de subprocesos CLR también limita el número de subprocesos que se pueden crear.|  
+|`requestQueueLimit`|Especifica el número máximo de solicitudes que pueden poner en cola para ASP.NET en un único proceso. Cuando dos o más aplicaciones de ASP.NET se ejecutan en un único grupo de aplicaciones, el conjunto acumulativo de solicitudes que se realizan a cualquier aplicación en el grupo de aplicaciones está sujeto a esta configuración.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<system.web\>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene información sobre cómo ASP.NET interactúa con una aplicación host.|  
+|-------------|-----------------|  
+|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene información sobre cómo ASP.NET interactúa con una aplicación host.|  
   
-## Comentarios  
- Cuando ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior en modo integrado, esta combinación de elementos permite configurar cómo administra ASP.NET los subprocesos y cómo pone en cola las solicitudes cuando la aplicación está hospedada en un grupo de aplicaciones de IIS.  Si ejecuta IIS 6 o [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en modo Clásico o en modo ISAPI, se pasa por alto esta configuración.  
+## <a name="remarks"></a>Comentarios  
+ Al ejecutar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior en el modo integrado, esta combinación de elementos permite configurar cómo administra ASP.NET los subprocesos y las colas de solicitudes cuando la aplicación se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 6 o ejecutar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en modo clásico o en modo ISAPI, estos valores se omiten.  
   
- Los valores `applicationPool` se aplican a todos los grupos de aplicaciones que se ejecutan en una versión determinada de .NET Framework.  La configuración está contenida en un archivo aspnet.config.  Hay una versión de este archivo para las versiones 2.0 y 4 de .NET Framework. \(Las versiones 3.0 y 3.5 de .NET Framework comparten el archivo aspnet.config con la versión 2.0.\)  
+ El `applicationPool` configuración se aplica a todos los grupos de aplicaciones que se ejecutan en una versión concreta de .NET Framework. La configuración se encuentra en un archivo aspnet.config. Hay una versión de este archivo para las versiones 2.0 y 4.0 de .NET Framework. (Las versiones 3.0 y 3.5 de .NET Framework comparten el archivo aspnet.config con la versión 2.0.)  
   
 > [!IMPORTANT]
->  Si ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en [!INCLUDE[win7](../../../../../includes/win7-md.md)], puede configurar un archivo aspnet.config diferente para cada grupo de aplicaciones.  Esto le permite adaptar el rendimiento de los subprocesos para cada grupo de aplicaciones.  
+>  Si ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en [!INCLUDE[win7](../../../../../includes/win7-md.md)], puede configurar un archivo aspnet.config diferente para cada grupo de aplicaciones. Esto le permite adaptar el rendimiento de los subprocesos para cada grupo de aplicaciones.  
   
- Para el valor `maxConcurrentRequestsPerCPU`, el valor predeterminado de "5000" en [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] desactiva la limitación de solicitudes controlada por ASP.NET, a menos que realmente tenga 5000 o más solicitudes por CPU.  La configuración predeterminada depende en su lugar del grupo de subprocesos de CLR para administrar automáticamente la simultaneidad por CPU.  Las aplicaciones que utilizan mucho procesamiento de solicitudes asincrónico, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en la E\/S de red, se beneficiarán del mayor límite predeterminado de [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  Al establecer `maxConcurrentRequestsPerCPU` en cero se desactiva el uso de subprocesos administrados para procesar las solicitudes de ASP.NET.  Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de E\/S de IIS y, por tanto, la simultaneidad está limitada por la configuración de subprocesos de IIS.  
+ Para el `maxConcurrentRequestsPerCPU` configuración, el valor predeterminado de "5000" la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] eficazmente desactiva la limitación de solicitudes controlada por ASP.NET, a menos que realmente tenga 5000 o más solicitudes por CPU. La configuración predeterminada depende en su lugar, el grupo de subprocesos CLR para administrar automáticamente la simultaneidad por CPU. Las aplicaciones que hacen un amplio uso de procesamiento de solicitudes asincrónicas, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en E/S de red, puede beneficiarse de la mayor límite predeterminado de la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Establecer `maxConcurrentRequestsPerCPU` en cero el uso de los subprocesos administrados se desactiva para procesar solicitudes ASP.NET. Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de E/S de IIS y, por tanto, la simultaneidad está limitada por la configuración de subprocesos IIS.  
   
- El valor `requestQueueLimit` funciona de la misma manera que el atributo `requestQueueLimit` del elemento [processModel](http://msdn.microsoft.com/es-es/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d), que se establece en los archivos Web.config para las aplicaciones ASP.NET.  Sin embargo, el valor `requestQueueLimit` de un archivo aspnet.config invalida el valor `requestQueueLimit` de un archivo Web.config.  Es decir, si se establecen ambos atributos \(de forma predeterminada, esto es verdad\), el valor `requestQueueLimit` del archivo aspnet.config tiene prioridad.  
+ El `requestQueueLimit` configuración funciona del mismo modo que la `requestQueueLimit` atributo de la [processModel](http://msdn.microsoft.com/en-us/4b8fe20e-74c8-4566-b72c-ce5f83c8e32d) elemento, que se establece en los archivos Web.config para las aplicaciones ASP.NET. Sin embargo, el `requestQueueLimit` configuración en un archivo aspnet.config invalida el `requestQueueLimit` en un archivo Web.config. En otras palabras, si se establecen ambos atributos (de forma predeterminada, esto es true), el `requestQueueLimit` configuración en el archivo aspnet.config tiene prioridad.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso de ASP.NET en el archivo aspnet.config en las circunstancias siguientes:  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso ASP.NET en el archivo aspnet.config en las siguientes circunstancias:  
   
--   La aplicación está hospedada en un grupo de aplicaciones de [!INCLUDE[iisver](../../../../../includes/iisver-md.md)].  
+-   La aplicación se hospeda en un [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] grupo de aplicaciones.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] se está ejecutando en modo integrado.  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]se está ejecutando en el modo integrado.  
   
--   La aplicación está usando [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o una versión posterior.  
+-   La aplicación está utilizando el [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] o una versión posterior.  
   
- Los valores de este ejemplo son los valores predeterminados.  
+ Los valores en el ejemplo son los valores predeterminados.  
   
-```  
+```xml  
 <configuration>  
   <system.web>  
     <applicationPool   
@@ -93,7 +95,7 @@ Especifica la configuración usada por ASP.NET para administrar el comportamient
 </configuration>  
 ```  
   
-## Información de elemento  
+## <a name="element-information"></a>Información de elemento  
   
 |||  
 |-|-|  
@@ -102,5 +104,5 @@ Especifica la configuración usada por ASP.NET para administrar el comportamient
 |Archivo de validación||  
 |Puede estar vacío||  
   
-## Vea también  
- [\<system.web\> \(Elemento\) \(Configuración web\)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+## <a name="see-also"></a>Vea también  
+ [Elemento \<system.web> (configuración web)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

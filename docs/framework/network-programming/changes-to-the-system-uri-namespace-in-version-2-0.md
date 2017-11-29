@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Cambios realizados en el espacio de nombres System.Uri de la versión 2.0
-Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=fullName>. Estos cambios han corregido un comportamiento incorrecto, han mejorado el uso y también la seguridad.  
+Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=nameWithType>. Estos cambios han corregido un comportamiento incorrecto, han mejorado el uso y también la seguridad.  
   
 ## <a name="obsolete-and-deprecated-members"></a>Miembros obsoletos y en desuso  
  Constructores:  
@@ -85,5 +79,4 @@ Se han realizado varios cambios en la clase <xref:System.Uri?displayProperty=ful
 -   Se ha corregido la compresión de la ruta de acceso URI para que un URI roto no pueda recorrer el sistema de archivos por encima de la raíz.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>
