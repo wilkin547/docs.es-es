@@ -1,33 +1,37 @@
 ---
-title: "C&#243;mo: Cargar y mostrar metarchivos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [Windows Forms], metarchivos"
-  - "metarchivos, mostrar"
+title: "Cómo: Cargar y mostrar metarchivos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- examples [Windows Forms], metafiles
+- metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 722b6d36801c69e500535a32e952ef8f45634d03
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Cargar y mostrar metarchivos
-La clase <xref:System.Drawing.Imaging.Metafile>, que se hereda de la clase <xref:System.Drawing.Image>, proporciona métodos para registrar, mostrar y examinar imágenes vectoriales.  
+# <a name="how-to-load-and-display-metafiles"></a>Cómo: Cargar y mostrar metarchivos
+El <xref:System.Drawing.Imaging.Metafile> (clase), que se hereda de la <xref:System.Drawing.Image> clase, proporciona métodos para registrar, mostrar y examinar imágenes vectoriales.  
   
-## Ejemplo  
- Para mostrar una imagen vectorial \(metarchivo\) en la pantalla, son necesarios un objeto <xref:System.Drawing.Imaging.Metafile> y un objeto <xref:System.Drawing.Graphics>.  Pase el nombre de un archivo \(o una secuencia\) a un constructor <xref:System.Drawing.Imaging.Metafile>.  Después de haber creado un objeto <xref:System.Drawing.Imaging.Metafile>, pase el objeto <xref:System.Drawing.Imaging.Metafile> al método <xref:System.Drawing.Graphics.DrawImage%2A> de un objeto <xref:System.Drawing.Graphics>.  
+## <a name="example"></a>Ejemplo  
+ Para mostrar una imagen vectorial (metarchivo) en la pantalla, necesita un <xref:System.Drawing.Imaging.Metafile> objeto y un <xref:System.Drawing.Graphics> objeto. Pasar el nombre de un archivo (o una secuencia) a un <xref:System.Drawing.Imaging.Metafile> constructor. Después de haber creado un <xref:System.Drawing.Imaging.Metafile> de objetos, pasar ese <xref:System.Drawing.Imaging.Metafile> el objeto a la <xref:System.Drawing.Graphics.DrawImage%2A> método de una <xref:System.Drawing.Graphics> objeto.  
   
- En el ejemplo siguiente se crea un objeto <xref:System.Drawing.Imaging.Metafile> a partir de un archivo EMF \(metarchivo mejorado\) y, a continuación, se dibuja la imagen con la esquina superior izquierda en \(60, 10\):  
+ El ejemplo se crea un <xref:System.Drawing.Imaging.Metafile> objeto desde un archivo EMF (metarchivo mejorado) y, a continuación, se dibuja la imagen con la esquina superior izquierda en (60, 10).  
   
  En la siguiente ilustración se muestra el metarchivo dibujado en la ubicación especificada.  
   
@@ -36,8 +40,8 @@ La clase <xref:System.Drawing.Imaging.Metafile>, que se hereda de la clase <xref
  [!code-csharp[System.Drawing.WorkingWithImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.WorkingWithImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
   
-## Compilar el código  
- El ejemplo anterior está diseñado para formularios Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a>Compilar el código  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,50 +1,31 @@
 ---
-title: "Necesaria una referencia al ensamblado &quot;&lt;assemblyidentity&gt;&quot;que contiene el tipo&quot;&lt;typename&gt;&quot;, pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre los proyectos&lt;projectname1&gt;&quot;y&quot;&lt;projectname2&gt;&quot; | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Necesaria una referencia al ensamblado &#39; &lt;identidadensamblado&gt;&#39; contenedor tipo &#39;&lt; TypeName&gt;&#39; pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre proyectos &#39;&lt; projectname1&gt;&#39; y &#39;&lt; projectname2&gt;&#39;"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30969
 - vbc30969
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC30969
+helpviewer_keywords: BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 38f016b9d0de053c9a95a6d4a4d810d55af903e9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 04a1b16a10d2a3945d1efbe3a2bd0850f1da39fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necesaria una referencia al ensamblado '&lt;assemblyidentity&gt;'que contiene el tipo'&lt;typename&gt;', pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre los proyectos&lt;projectname1&gt;'y'&lt;projectname2&gt;'
+# <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Necesaria una referencia al ensamblado &#39; &lt;identidadensamblado&gt;&#39; contenedor tipo &#39;&lt; TypeName&gt;&#39; pero no se pudo encontrar una referencia adecuada debido a la ambigüedad entre proyectos &#39;&lt; projectname1&gt;&#39; y &#39;&lt; projectname2&gt;&#39;
 Una expresión usa un tipo como, por ejemplo, una clase, estructura, interfaz, enumeración o delegado, que se define fuera del proyecto. Sin embargo, hay referencias de proyectos a más de un ensamblado que definen ese tipo.  
   
  Los proyectos citados generan ensamblados con el mismo nombre. Por lo tanto, el compilador no puede determinar qué ensamblado debe usar para el tipo al que se está accediendo.  
   
- Para obtener acceso a un tipo definido en otro ensamblado, el [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compilador debe tener una referencia a dicho ensamblado. Debe ser una referencia única y no ambigua, que no produzca referencias circulares entre proyectos.  
+ Para acceder a un tipo definido en otro ensamblado, el compilador de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] debe tener una referencia a dicho ensamblado. Debe ser una referencia única y no ambigua, que no produzca referencias circulares entre proyectos.  
   
  **Identificador de error:** BC30969  
   
@@ -55,8 +36,8 @@ Una expresión usa un tipo como, por ejemplo, una clase, estructura, interfaz, e
 2.  En las propiedades del proyecto, agregue una referencia al archivo que contiene el ensamblado que define el tipo que está usando.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar referencias en un proyecto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Cómo: Agregar o quitar referencias utilizando el cuadro de diálogo Agregar referencia](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)   
- [NIB Cómo: modificar las propiedades de proyecto y opciones de configuración](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Solucionar problemas de referencias rotas](https://docs.microsoft.com/visualstudio/ide/troubleshooting-broken-references)
+ [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)  
+ [Referencias a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [NO ESTÁ EN LA COMPILACIÓN: Cómo: agregar o quitar referencias mediante el cuadro de diálogo Agregar referencia](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)  
+ [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Solucionar problemas de referencias rotas](/visualstudio/ide/troubleshooting-broken-references)

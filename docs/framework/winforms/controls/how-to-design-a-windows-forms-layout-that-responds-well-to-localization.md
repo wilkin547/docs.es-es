@@ -1,35 +1,39 @@
 ---
-title: "C&#243;mo: Crear un dise&#241;o de formularios Windows Forms que sea apropiado para la localizaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "diseño de aplicaciones, adaptación"
-  - "adaptación, diseño de Windows Forms"
-  - "TableLayoutPanel (control) [Windows Forms]"
-  - "Windows Forms, adaptación"
+title: "Cómo: Crear un diseño de formularios Windows Forms que sea apropiado para la localización"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- TableLayoutPanel control [Windows Forms]
+- application design [Windows Forms], localization
+- Windows Forms, localization
+- localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3584b1a5751257c558d5e000135478966605f9c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un dise&#241;o de formularios Windows Forms que sea apropiado para la localizaci&#243;n
-La creación de formularios ya listos para ser localizados acelera en gran medida el desarrollo para los mercados internacionales.  Puede utilizar el control <xref:System.Windows.Forms.TableLayoutPanel> para implementar diseños que respondan correctamente cuando los controles cambien de tamaño debido a los cambios en los valores de la propiedad <xref:System.Windows.Forms.Control.Text%2A>.  
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Cómo: Crear un diseño de formularios Windows Forms que sea apropiado para la localización
+La creación de formularios ya listos para ser localizados acelera en gran medida el desarrollo para los mercados internacionales. Puede utilizar el control <xref:System.Windows.Forms.TableLayoutPanel> para implementar diseños que respondan correctamente cuando los controles cambien de tamaño debido a los cambios en los valores de la propiedad <xref:System.Windows.Forms.Control.Text%2A>.  
   
-## Ejemplo  
- Este formulario muestra cómo crear un diseño que se ajusta proporcionalmente cuando traduce los valores de cadena mostrados a otros idiomas.  Este proceso de traducción se denomina *localización*.  Para obtener más información, consulte [Localización](../../../../docs/standard/globalization-localization/localization.md).  
+## <a name="example"></a>Ejemplo  
+ Este formulario muestra cómo crear un diseño que se ajusta proporcionalmente cuando traduce los valores de cadena mostrados a otros idiomas. Este proceso de traducción se denomina *localización*. Para más información, consulte [Localización](../../../../docs/standard/globalization-localization/localization.md).  
   
- Visual Studio es altamente compatible con esta tarea.  Consulte también [Tutorial: Crear un diseño que ajuste las proporciones para la localización](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\)).  
+ Visual Studio es altamente compatible con esta tarea.  Vea también Tutorial: [Crear un diseño que ajuste las proporciones para la localización](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\)).  
   
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/CS/localizableform.cs#1)]
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
@@ -52,14 +56,14 @@ La creación de formularios ya listos para ser localizados acelera en gran medid
   
 9. [Tutorial: Crear Windows Forms de entrada de datos de tamaño variable](http://msdn.microsoft.com/library/991eahec\(v=vs.110\))  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 -   Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
   
- Para obtener información acerca de cómo generar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilar desde la línea de comandos](../Topic/Building%20from%20the%20Command%20Line%20\(Visual%20Basic\).md) o [Compilar la línea de comandos con csc.exe](../../../../ocs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Consulte también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Para información sobre cómo compilar este ejemplo desde la línea de comandos para [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] o [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], consulte [Compilación desde la línea de comandos](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [Compilar desde la línea de comandos con csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pegando el código en un nuevo proyecto.  Vea también [Cómo: Compilar y ejecutar un ejemplo de código completo de Windows Forms en Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## Vea también  
- <xref:System.Windows.Forms.TableLayoutPanel>   
- <xref:System.Windows.Forms.FlowLayoutPanel>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
  [Localización](../../../../docs/standard/globalization-localization/localization.md)

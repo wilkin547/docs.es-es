@@ -1,55 +1,61 @@
 ---
-title: "Seguridad de mensajes con clientes an&#243;nimos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Seguridad de mensajes con clientes anónimos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: edf1dd36fe8c0f3e6c1ae8087d1bacbc00cf307a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Seguridad de mensajes con clientes an&#243;nimos
-El escenario siguiente muestra un cliente y el servicio protegido por la seguridad del mensaje [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  Un objetivo del diseño es usar la seguridad del mensaje en lugar de la seguridad de transporte, para que en el futuro pueda admitir un modelo basado en notificaciones más completo.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo usar notificaciones enriquecidas para la autorización, vea [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+# <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
+El escenario siguiente muestra un cliente y el servicio protegido por la seguridad del mensaje [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Un objetivo del diseño es usar la seguridad del mensaje en lugar de la seguridad de transporte, para que en el futuro pueda admitir un modelo basado en notificaciones más completo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]uso de notificaciones completo para la autorización, consulte [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
- Para obtener una aplicación de ejemplo, consulte [Seguridad de mensaje anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
+ Para una aplicación de ejemplo, vea [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
- ![Seguridad de mensajes con clientes anónimos](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565\-831c\-4c10\-90d7\-66d8eeece0a1")  
+ ![Modo de seguridad con clientes anónimos](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Mensaje|  
 |Interoperabilidad|Solo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
-|Autenticación \(servidor\)|La negociación inicial requiere la autenticación del servidor, pero no la autenticación del cliente|  
-|Autenticación \(cliente\)|Ninguna|  
+|Autenticación (servidor)|La negociación inicial requiere la autenticación del servidor, pero no la autenticación del cliente|  
+|Autenticación (cliente)|Ninguna|  
 |Integridad|Sí, mediante el contexto de seguridad compartido|  
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|  
 |Transporte|HTTP|  
   
-## Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.  Realice una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
 -   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
   
-### Código  
+### <a name="code"></a>Código  
  El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje.  
   
  [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
  [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
   
-### Configuración  
- En lugar del código, se puede utilizar la siguiente configuración.  El elemento de comportamiento del servicio se utiliza para especificar un certificado utilizado para autenticar el servicio al cliente.  El elemento de servicio debe especificar el comportamiento mediante el atributo `behaviorConfiguration`.  El elemento de enlace especifica que el tipo de credencial de cliente es `None`, de modo que permite a los clientes anónimos utilizar el servicio.  
+### <a name="configuration"></a>Configuración  
+ En lugar del código, se puede utilizar la siguiente configuración. El elemento de comportamiento del servicio se utiliza para especificar un certificado utilizado para autenticar el servicio al cliente. El elemento de servicio debe especificar el comportamiento mediante el atributo `behaviorConfiguration`. El elemento de enlace especifica que el tipo de credencial de cliente es `None`, de modo que permite a los clientes anónimos utilizar el servicio.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -88,26 +94,26 @@ El escenario siguiente muestra un cliente y el servicio protegido por la segurid
 </configuration>  
 ```  
   
-## Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.  Realice una de las siguientes acciones:  
+## <a name="client"></a>Cliente  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
--   Cree un cliente independiente mediante el código \(y el código de cliente\).  
+-   Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de extremo.  En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.  Por ejemplo:  
+-   Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Código  
- En el ejemplo de código siguiente se crea una instancia de cliente.  El enlace utiliza seguridad en modo de mensaje y el tipo de credencial de cliente está establecido como ninguno.  
+### <a name="code"></a>Código  
+ En el ejemplo de código siguiente se crea una instancia de cliente. El enlace utiliza seguridad en modo de mensaje y el tipo de credencial de cliente está establecido como ninguno.  
   
  [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
  [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
   
-### Configuración  
+### <a name="configuration"></a>Configuración  
  El siguiente código configura el cliente.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -135,9 +141,9 @@ El escenario siguiente muestra un cliente y el servicio protegido por la segurid
 </configuration>  
 ```  
   
-## Vea también  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)   
- [Seguridad de mensaje anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)   
- [Identidad del servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [Seguridad y protección](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Seguridad de la aplicación distribuida](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [Seguridad de mensaje anónima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [Autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

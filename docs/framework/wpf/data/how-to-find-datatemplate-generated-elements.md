@@ -1,50 +1,56 @@
 ---
-title: "C&#243;mo: Buscar elementos generados por un objeto DataTemplate | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PlantillaDeDatos"
-  - "buscar elementos de plantilla de datos"
+title: "Cómo: Buscar elementos generados por un objeto DataTemplate"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- finding DataTemplate elements [WPF]
+- DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22d5f393d376935f04459e2713e9658c80af6efa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Buscar elementos generados por un objeto DataTemplate
-En este ejemplo, se muestra cómo buscar elementos generados por un objeto <xref:System.Windows.DataTemplate>.  
+# <a name="how-to-find-datatemplate-generated-elements"></a>Cómo: Buscar elementos generados por un objeto DataTemplate
+Este ejemplo muestra cómo buscar elementos generados por un <xref:System.Windows.DataTemplate>.  
   
-## Ejemplo  
- En este ejemplo, hay un control <xref:System.Windows.Controls.ListBox> enlazado a algunos datos [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]:  
+## <a name="example"></a>Ejemplo  
+ En este ejemplo, hay un <xref:System.Windows.Controls.ListBox> que está enlazado a algunas [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos:  
   
- [!code-xml[FindGeneratedItems#LB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#lb)]  
+ [!code-xaml[FindGeneratedItems#LB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#lb)]  
   
- El control <xref:System.Windows.Controls.ListBox> utiliza el siguiente objeto <xref:System.Windows.DataTemplate>:  
+ El <xref:System.Windows.Controls.ListBox> usa las siguientes <xref:System.Windows.DataTemplate>:  
   
- [!code-xml[FindGeneratedItems#DT](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#dt)]  
+ [!code-xaml[FindGeneratedItems#DT](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml#dt)]  
   
- Si desea recuperar el elemento <xref:System.Windows.Controls.TextBlock> generado por el objeto <xref:System.Windows.DataTemplate> de un elemento <xref:System.Windows.Controls.ListBoxItem> determinado, debe obtener el elemento <xref:System.Windows.Controls.ListBoxItem>, hallar el objeto <xref:System.Windows.Controls.ContentPresenter> contenido en ese <xref:System.Windows.Controls.ListBoxItem> y, a continuación, llamar al método <xref:System.Windows.FrameworkTemplate.FindName%2A> del objeto <xref:System.Windows.DataTemplate> establecido para ese objeto <xref:System.Windows.Controls.ContentPresenter>.  En el ejemplo siguiente se muestra cómo realizar estos pasos.  Con fines de demostración, en este ejemplo se crea un cuadro de mensaje que muestra el contenido de texto de <xref:System.Windows.DataTemplate>, el bloque de texto generado.  
+ Si desea recuperar la <xref:System.Windows.Controls.TextBlock> elemento generado por la <xref:System.Windows.DataTemplate> de una determinada <xref:System.Windows.Controls.ListBoxItem>, tendrá que obtener el <xref:System.Windows.Controls.ListBoxItem>, buscar el <xref:System.Windows.Controls.ContentPresenter> dentro de ese <xref:System.Windows.Controls.ListBoxItem>y, a continuación, llame a <xref:System.Windows.FrameworkTemplate.FindName%2A> en el <xref:System.Windows.DataTemplate> que se establece en ese <xref:System.Windows.Controls.ContentPresenter>. En el ejemplo siguiente se muestra cómo realizar estos pasos. Con fines de demostración, este ejemplo crea un cuadro de mensaje que muestra el texto del contenido de la <xref:System.Windows.DataTemplate>-bloque de texto generado.  
   
  [!code-csharp[FindGeneratedItems#DTFindElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#dtfindelement)]
  [!code-vb[FindGeneratedItems#DTFindElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#dtfindelement)]  
   
- A continuación se muestra la implementación de `FindVisualChild`, que utiliza los métodos de <xref:System.Windows.Media.VisualTreeHelper>:  
+ La siguiente es la implementación de `FindVisualChild`, que usa el <xref:System.Windows.Media.VisualTreeHelper> métodos:  
   
  [!code-csharp[FindGeneratedItems#FVC](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#fvc)]
  [!code-vb[FindGeneratedItems#FVC](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
-## Vea también  
- [Cómo: Buscar elementos generados por un objeto ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)   
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)   
- [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [Ámbitos de nombres XAML de WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)   
+## <a name="see-also"></a>Vea también  
+ [Buscar elementos generados por un objeto ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Ámbitos de nombres XAML de WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
  [Árboles en WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

@@ -1,24 +1,28 @@
 ---
-title: "Pausar y reanudar un flujo de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Pausar y reanudar un flujo de trabajo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 31e3bdf501a88e78c5ae251499baf2512f73579d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Pausar y reanudar un flujo de trabajo
+# <a name="pausing-and-resuming-a-workflow"></a>Pausar y reanudar un flujo de trabajo
 Los flujos de trabajo pausarán y se reanudarán en respuesta a los marcadores y actividades de bloqueo, como <xref:System.Activities.Statements.Delay>, pero un flujo de trabajo puede ser explicitamente pausado, descargado y reanudado utilizando la persistencia.  
   
-## Pausar un flujo de trabajo  
- Para pausar un flujo de trabajo, utilice <xref:System.Activities.WorkflowApplication.Unload%2A>.Este método solicita que el flujo de trabajo se guarde y descargue, y producirá una excepción <xref:System.TimeoutException> si el flujo de trabajo no se descarga en 30 segundos.  
+## <a name="pausing-a-workflow"></a>Pausar un flujo de trabajo  
+ Para pausar un flujo de trabajo, utilice <xref:System.Activities.WorkflowApplication.Unload%2A>.  Este método solicita que el flujo de trabajo se guarde y descargue, y producirá una excepción <xref:System.TimeoutException> si el flujo de trabajo no se descarga en 30 segundos.  
   
 ```csharp  
 try  
@@ -30,20 +34,18 @@ catch (TimeoutException e)
 {  
     Console.WriteLine(e.Message);  
 }  
-  
 ```  
   
-## Reanudar un flujo de trabajo  
- Para reanudar un flujo de trabajo previamente pausado y descargado, utilice <xref:System.Activities.WorkflowApplication.Load%2A>.Este método carga un flujo de trabajo en la memoria desde un almacén de persistencia.  
+## <a name="resuming-a-workflow"></a>Reanudar un flujo de trabajo  
+ Para reanudar un flujo de trabajo previamente pausado y descargado, utilice <xref:System.Activities.WorkflowApplication.Load%2A>. Este método carga un flujo de trabajo en la memoria desde un almacén de persistencia.  
   
 ```csharp  
 WorkflowApplication application = new WorkflowApplication(activity);  
 application.InstanceStore = instanceStore;  
 application.Load(id);  
-  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de código muestra cómo pausar y reanudar un flujo de trabajo utilizando la persistencia.  
   
 ```csharp  
@@ -60,7 +62,7 @@ static void StartAndUnloadInstance()
     SqlWorkflowInstanceStore instanceStore = SetupSqlpersistenceStore();  
     wfApp.InstanceStore = instanceStore;  
     wfApp.Extensions.Add(SetupMyFileTrackingParticipant);  
-    wfApp.PersistableIdle = (e) => {          ///persists application state and remove it from memory   
+    wfApp.PersistableIdle = (e) => {          ///persists application state and remove it from memory   
     return PersistableIdleAction.Unload;  
     };  
     wfApp.Unloaded = (e) => {  
@@ -73,7 +75,7 @@ static void StartAndUnloadInstance()
 }  
   
 static void LoadAndCompleteInstance(Guid id)   
-{            
+{            
     Console.WriteLine("Press <enter> to load the persisted workflow");  
     Console.ReadLine();  
     AutoResetEvent waitHandler = new AutoResetEvent(false);  
@@ -106,7 +108,7 @@ public static Activity GetDelayedWF()
   
 private static SqlWorkflowInstanceStore SetupSqlpersistenceStore()   
 {   
-     string connectionString = ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString();  
+     string connectionString = ConfigurationManager.AppSettings["SqlWF4PersistenceConnectionString"].ToString();  
     SqlWorkflowInstanceStore sqlWFInstanceStore = new SqlWorkflowInstanceStore(connectionString);  
     sqlWFInstanceStore.InstanceCompletionAction = InstanceCompletionAction.DeleteAll;  
     InstanceHandle handle = sqlWFInstanceStore.CreateInstanceHandle();  
@@ -115,5 +117,4 @@ private static SqlWorkflowInstanceStore SetupSqlpersistenceStore()
     sqlWFInstanceStore.DefaultInstanceOwner = view.InstanceOwner;  
     return sqlWFInstanceStore;  
 }  
-  
 ```

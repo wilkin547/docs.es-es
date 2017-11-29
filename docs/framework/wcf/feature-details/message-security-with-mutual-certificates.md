@@ -1,58 +1,64 @@
 ---
-title: "Seguridad de mensajes con certificados mutuos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguridad de mensajes con certificados mutuos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: 18
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3d5e598fea118eb340b965d605f5fdeb9c479a4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Seguridad de mensajes con certificados mutuos
-El escenario siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y el cliente protegido utilizando el modo de seguridad de mensajes.El cliente y el servicio se autentican con certificados.  
+# <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
+El escenario siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y el cliente protegido utilizando el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
   
- Este escenario es interoperable porque utiliza WS\-Security con el perfil de token de certificado X.509.  
+ Este escenario es interoperable porque utiliza WS-Security con el perfil de token de certificado X.509.  
   
 > [!NOTE]
->  Este escenario no realiza negociación del certificado del servicio.El certificado del servicio debe ser proporcionado de antemano al cliente de cualquier comunicación.El certificado de servidor se puede distribuir con la aplicación o puede ser proporcionado en una comunicación fuera de banda.  
+>  Este escenario no realiza negociación del certificado del servicio. El certificado del servicio debe ser proporcionado de antemano al cliente de cualquier comunicación. El certificado de servidor se puede distribuir con la aplicación o puede ser proporcionado en una comunicación fuera de banda.  
   
- ![Seguridad de mensajes con certificados mutuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312\-b17c\-416c\-a5ee\-fa7b54db211b")  
+ ![Modo de seguridad con certificados mutuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
 |Modo de seguridad|Mensaje|  
-|Interoperabilidad|Sí, clientes y servicios compatibles con WS\-Security y el perfil de token de certificado X.509.|  
+|Interoperabilidad|Sí, clientes y servicios compatibles con WS-Security y el perfil de token de certificado X.509.|  
 |Autenticación|Autenticación mutua del servidor y el cliente.|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
 |Transporte|HTTP|  
 |Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente.Siga uno de los procedimientos siguientes:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 -   Cree un servicio independiente mediante el código sin configuración.  
   
--   Cree un servicio con la configuración proporcionada, pero sin definir ningún extremo.  
+-   Cree un servicio mediante la configuración proporcionada, pero sin definir ningún extremo.  
   
-### Código  
- El código siguiente muestra cómo crear un extremo de servicio que utilice la seguridad del mensaje.El servicio exige a un certificado que se autentique.  
+### <a name="code"></a>Código  
+ El código siguiente muestra cómo crear un extremo de servicio que utilice la seguridad del mensaje. El servicio exige a un certificado que se autentique.  
   
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### Configuración  
+### <a name="configuration"></a>Configuración  
  La configuración siguiente se puede utilizar en lugar del código para crear el mismo servicio.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -94,26 +100,26 @@ El escenario siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includ
 </configuration>  
 ```  
   
-## Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de manera independiente.Realice uno de los procedimientos siguientes:  
+## <a name="client"></a>Cliente  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
--   Cree un cliente independiente mediante el código \(y el código de cliente\).  
+-   Cree un cliente independiente mediante el código (y el código de cliente).  
   
--   Cree un cliente que no defina direcciones de extremo.En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento.Por ejemplo:  
+-   Cree un cliente que no defina direcciones de extremo. En su lugar, utilice el constructor de cliente que adopta el nombre de configuración como un argumento. Por ejemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### Código  
- El siguiente código crea el cliente.El modo de seguridad se establece en mensaje, y el tipo de credencial de cliente se establece en certificado.  
+### <a name="code"></a>Código  
+ El siguiente código crea el cliente. El modo de seguridad se establece en mensaje, y el tipo de credencial de cliente se establece en certificado.  
   
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### Configuración  
- Lo siguiente configura el cliente.Un certificado de cliente se debe especificar utilizando [\<clientCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).Asimismo, el certificado del servicio se especifica utilizando [\<defaultCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+### <a name="configuration"></a>Configuración  
+ Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante la [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica utilizando el [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <system.serviceModel>  
@@ -162,7 +168,7 @@ El escenario siguiente muestra un servicio [!INCLUDE[indigo1](../../../../includ
 </configuration>  
 ```  
   
-## Vea también  
- [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)   
- [Seguridad y protección](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)   
- [Cómo: Crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](http://go.microsoft.com/fwlink/?LinkId=244264)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [Modelo de seguridad de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ [Cómo: crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](http://go.microsoft.com/fwlink/?LinkId=244264)

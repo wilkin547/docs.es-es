@@ -1,123 +1,124 @@
 ---
-title: "Variedades de controles personalizados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles compuestos"
-  - "controles [Windows Forms], compuestos"
-  - "controles [Windows Forms], extendidos"
-  - "controles [Windows Forms], tipos de"
-  - "controles [Windows Forms], controles de usuario"
-  - "controles personalizados [Windows Forms]"
-  - "controles extendidos"
-  - "controles de usuario [Windows Forms]"
+title: Variedades de controles personalizados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], user controls
+- controls [Windows Forms], types of
+- composite controls [Windows Forms]
+- extended controls [Windows Forms]
+- controls [Windows Forms], extended
+- user controls [Windows Forms]
+- custom controls [Windows Forms]
+- controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8a8d858228630147e1fbcdfab6a52fba5a63a566
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Variedades de controles personalizados
-Con .NET Framework, se pueden desarrollar e implementar nuevos controles.  Se puede ampliar la funcionalidad de los conocidos controles de usuario así como de los controles existentes por medio de la herencia.  También se pueden escribir controles personalizados que realizan su propia representación.  
+# <a name="varieties-of-custom-controls"></a>Variedades de controles personalizados
+.NET Framework permite desarrollar e implementar nuevos controles. Puede extender la funcionalidad del control de usuario ya conocida, así como de los controles existentes, mediante la herencia. También puede escribir controles personalizados que realicen su propia representación.  
   
- La decisión sobre qué tipo de control se va a crear puede ser difícil.  En este tema se destacan las diferencias entre las distintas clases de controles desde los que se puede heredar, y se proporciona información sobre cómo elegir una determinada clase de control para el proyecto.  
+ Decidir qué tipo de control va a crear puede resultar confuso. En este tema se destacan las diferencias entre los distintos tipos de controles de los que puede heredar, y proporciona información sobre cómo elegir un tipo de control determinado para el proyecto.  
   
 > [!NOTE]
->  Para obtener información sobre cómo crear un control para utilizarlo en formularios Web Forms, vea [Developing Custom ASP.NET Server Controls](../Topic/Developing%20Custom%20ASP.NET%20Server%20Controls.md).  
+>  Para obtener información sobre cómo crear un control para usarlo en formularios Web Forms, consulte [Desarrollar controles de servidor de ASP.NET](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
   
-## Clase de control base  
- La clase <xref:System.Windows.Forms.Control> es la clase base para los controles de formularios Windows Forms.  Proporciona la infraestructura necesaria para la presentación visual de las aplicaciones de Windows Forms.  
+## <a name="base-control-class"></a>Clase base de Control  
+ El <xref:System.Windows.Forms.Control> es la clase base para controles de formularios Windows Forms. Proporciona la infraestructura necesaria para la presentación visual en aplicaciones de Windows Forms.  
   
- La clase <xref:System.Windows.Forms.Control> realiza las tareas siguientes para proporcionar la presentación visual de las aplicaciones de Windows Forms:  
+ La <xref:System.Windows.Forms.Control> clase realiza las tareas siguientes para proporcionar la presentación visual en aplicaciones de Windows Forms:  
   
--   Expone un controlador de ventanas.  
+-   Expone un identificador de ventana.  
   
--   Administra el enrutamiento de mensajes.  
+-   Administra el enrutamiento de los mensajes.  
   
--   Proporciona eventos del mouse y del teclado y muchos otros eventos de la interfaz de usuario.  
+-   Proporciona eventos de teclado y mouse, y muchos otros eventos de interfaz de usuario.  
   
 -   Proporciona características de diseño avanzadas.  
   
--   Contiene muchas propiedades específicas a la presentación visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A> y <xref:System.Windows.Forms.Control.Width%2A>.  
+-   Contiene muchas propiedades específicas de presentación visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, y <xref:System.Windows.Forms.Control.Width%2A>.  
   
--   Proporciona la seguridad y compatibilidad para subprocesos necesarias para que un control de formularios Windows Forms actúe como un control de Microsoft® ActiveX®.  
+-   Proporciona la seguridad y la compatibilidad para subprocesos necesarias para un control de Windows Forms que actúa como un control de Microsoft® ActiveX®.  
   
- Dado que gran parte de la infraestructura la proporciona la clase base, resulta relativamente fácil desarrollar controles de formularios Windows Forms propios.  
+ Dado que la clase base proporciona gran parte de la infraestructura, es relativamente fácil desarrollar sus propios controles de Windows Forms.  
   
-## Tipos de controles  
- Los formularios Windows Forms admiten tres tipos de controles definidos por el usuario: *compuesto*, *ampliado* y *personalizado*.  En las secciones siguientes se describe cada tipo de control y se dan recomendaciones para elegir el tipo que puede utilizar en sus proyectos.  
+## <a name="kinds-of-controls"></a>Tipos de controles  
+ Windows Forms admite tres tipos de controles definidos por el usuario: *compuestos*, *extendidos* y *personalizados*. En las secciones siguientes se describe cada tipo de control y se ofrecen recomendaciones para elegir el tipo para utilizar en los proyectos.  
   
-### Controles compuestos  
- Un control compuesto es una colección de controles de formularios Windows Forms encapsulados en un contenedor común.  Este tipo de control a veces se denomina *control de usuario*.  Los controles contenidos se denominan *controles constituyentes*.  
+### <a name="composite-controls"></a>Controles compuestos  
+ Un control compuesto es una colección de controles de Windows Forms encapsulados en un contenedor común. Este tipo de control se denomina a veces *control de usuario*. Los controles contenidos se denominan *controles constituyentes*.  
   
- El control compuesto conserva toda la funcionalidad inherente asociada a cada uno de los controles de formularios Windows Forms contenidos y permite exponer y enlazar sus propiedades de forma selectiva.  El control compuesto también proporciona gran cantidad de funcionalidad de control de teclado predeterminada sin ningún esfuerzo adicional de desarrollo por su parte.  
+ El control compuesto conserva toda la funcionalidad inherente asociada a cada uno de los controles de Windows Forms contenidos, y permite exponer y enlazar sus propiedades de forma selectiva. Un control compuesto también proporciona gran parte de la funcionalidad predeterminada del teclado sin ningún esfuerzo de desarrollo adicional por su parte.  
   
- Por ejemplo, se puede compilar un control compuesto para mostrar los datos relacionados con la dirección del cliente desde una base de datos.  Este control puede incluir un control <xref:System.Windows.Forms.DataGridView> para mostrar los campos de la base de datos, un <xref:System.Windows.Forms.BindingSource> para controlar el enlace a un origen de datos y un control <xref:System.Windows.Forms.BindingNavigator> para moverse por los registros.  Podría exponer las propiedades de enlace de datos de forma selectiva y podría empaquetar y reutilizar todo el control de una aplicación a otra.  Para obtener un ejemplo de este tipo de control compuesto, vea [Cómo: Aplicar atributos en controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Un ejemplo de un control compuesto podría ser un control creado para mostrar los datos de dirección de los clientes de una base de datos. Este control puede incluir un <xref:System.Windows.Forms.DataGridView> control para mostrar los campos de la base de datos, un <xref:System.Windows.Forms.BindingSource> para controlar el enlace a un origen de datos y un <xref:System.Windows.Forms.BindingNavigator> control para desplazarse por los registros. Las propiedades de enlace de datos se podrían exponer de forma selectiva, y el control completo se podría empaquetar y reutilizar en distintas aplicaciones. Para obtener un ejemplo de este tipo de control compuesto, consulte [Cómo: Aplicar atributos en controles de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Para crear un control compuesto, derive de la clase <xref:System.Windows.Forms.UserControl>.  La clase base <xref:System.Windows.Forms.UserControl> proporciona enrutamiento de teclado a los controles secundarios permitiéndoles trabajar como grupo.  Para obtener más información, vea [Desarrollar un control de formularios Windows Forms compuesto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+ Para crear un control compuesto, derive de la <xref:System.Windows.Forms.UserControl> clase. La <xref:System.Windows.Forms.UserControl> clase base proporciona el enrutamiento de teclado para secundarios controlan y permite a los controles secundarios para que funcione como un grupo. Para obtener más información, vea [Desarrollar un control de formularios Windows Forms compuesto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
   
  **Recomendación**  
   
  Herede de la clase <xref:System.Windows.Forms.UserControl> si:  
   
--   Desea combinar la funcionalidad de varios controles de formularios Windows Forms en una sola unidad reutilizable.  
+-   Quiere combinar la funcionalidad de varios controles de Windows Forms en una sola unidad reutilizable.  
   
-### Controles ampliados  
- Puede derivar un control heredado de cualquier control existente de formularios Windows Forms.  Este método permite conservar toda la funcionalidad inherente a un control de formularios Windows Forms y, a continuación, ampliarla agregando propiedades, métodos y otras características personalizadas.  Esta opción permite reemplazar la lógica de representación del control base y, a continuación, extender la interfaz de usuario cambiando su apariencia.  
+### <a name="extended-controls"></a>Controles extendidos  
+ Puede derivar un control heredado de cualquier control de Windows Forms existente. Este enfoque permite conservar toda la funcionalidad inherente de un control de Windows Forms y, después, ampliarla agregando propiedades, métodos u otras características personalizadas. Con esta opción, puede invalidar la lógica de dibujo del control base y, a continuación, cambiar la apariencia de la interfaz de usuario para extenderla.  
   
- Por ejemplo, puede crear un control derivado del control <xref:System.Windows.Forms.Button> que controle el número de veces que el usuario ha hecho clic en él.  
+ Por ejemplo, puede crear un control derivado de la <xref:System.Windows.Forms.Button> control que realiza el seguimiento de cuántas veces un usuario haya hecho clic en él.  
   
- En algunos controles, también es posible agregar una apariencia personalizada a la interfaz gráfica del control; para ello, deberá reemplazar el método <xref:System.Windows.Forms.Control.OnPaint%2A> de la clase base.  Para crear un botón ampliado que controla el número de clics, reemplace el método <xref:System.Windows.Forms.Control.OnPaint%2A> para llamar a la implementación base de <xref:System.Windows.Forms.Control.OnPaint%2A>, y luego representar el contador de clics en una esquina del área de cliente del control <xref:System.Windows.Forms.Button>.  
+ En algunos controles, también puede agregar una apariencia personalizada a la interfaz gráfica de usuario del control invalidando el <xref:System.Windows.Forms.Control.OnPaint%2A> método de la clase base. Para un botón extendido que realiza el seguimiento de clics, puede invalidar la <xref:System.Windows.Forms.Control.OnPaint%2A> método para llamar a la implementación base de <xref:System.Windows.Forms.Control.OnPaint%2A>y, a continuación, dibuje el recuento de hacer clic en una de las esquinas de la <xref:System.Windows.Forms.Button> área cliente del control.  
   
  **Recomendación**  
   
- Herede de un control de formularios Windows Forms si:  
+ Herede de un control de Windows Forms si:  
   
--   La mayor parte de la funcionalidad necesaria es ya idéntica a la de un control de formularios Windows Forms existente.  
+-   La mayor parte de la funcionalidad que necesita es idéntica a la de un control de Windows Forms existente.  
   
--   No necesita una interfaz gráfica de usuario personalizada o desea diseñar una nueva interfaz gráfica de usuario para un control existente.  
+-   No necesita una interfaz gráfica de usuario personalizada o quiere diseñar una nueva interfaz gráfica de usuario para un control existente.  
   
-### Controles personalizados  
- Otra forma de crear un control consiste en crear uno prácticamente desde el principio mediante la herencia de <xref:System.Windows.Forms.Control>.  La clase <xref:System.Windows.Forms.Control> proporciona toda la funcionalidad básica que requieren los controles, incluso los eventos de control del teclado y del mouse, pero no proporciona una funcionalidad ni una interfaz gráfica específicas para el control.  
+### <a name="custom-controls"></a>Controles personalizados  
+ Otra manera de crear un control consiste en crear uno prácticamente desde el principio heredando de <xref:System.Windows.Forms.Control>. La <xref:System.Windows.Forms.Control> clase proporciona toda la funcionalidad básica requerida por los controles, incluidos los mouse y teclado al control de eventos, pero ninguna funcionalidad específica del control o la interfaz gráfica.  
   
- Crear un control mediante la herencia de la clase <xref:System.Windows.Forms.Control> requiere mucho más esfuerzo que heredar de <xref:System.Windows.Forms.UserControl> o de un control de formularios Windows Forms existente.  Como debe realizar mucha implementación, el control puede tener una mayor flexibilidad que un control compuesto o ampliado, lo que permite crear controles a medida para que se ajusten exactamente a las necesidades.  
+ Crear un control heredando de la <xref:System.Windows.Forms.Control> clase requiere mucho más esfuerzo que heredar <xref:System.Windows.Forms.UserControl> o un control de formularios Windows Forms existente. Como puede realizar gran parte de la implementación, el control puede tener mayor flexibilidad que un control compuesto o ampliado, y puede personalizar el control exactamente para sus necesidades.  
   
- Para implementar un control personalizado, debe escribir el código para el evento <xref:System.Windows.Forms.Control.OnPaint%2A> del control, así como cualquier código específico de la característica que necesita.  También puede reemplazar el método <xref:System.Windows.Forms.Control.WndProc%2A> y controlar directamente los mensajes de ventanas.  Éste es el modo más eficaz de crear un control, pero para utilizar esta técnica con eficacia, necesita estar familiarizado con la API de Microsoft Win32®.  
+ Para implementar un control personalizado, debe escribir código para el <xref:System.Windows.Forms.Control.OnPaint%2A> eventos de control, así como cualquier código específico de la característica que necesita. También puede invalidar el <xref:System.Windows.Forms.Control.WndProc%2A> directamente mensajes de windows de método y controlador. Esta es la manera más eficaz de crear un control, pero para utilizar esta técnica de forma eficaz, debe estar familiarizado con la API Win32 de Microsoft®.  
   
- Un ejemplo de control personalizado es un control de reloj que duplique la apariencia y el comportamiento de un reloj analógico.  Sería necesario invocar una representación personalizada para hacer que las manecillas de reloj se movieran en respuesta a eventos <xref:System.Windows.Forms.Timer.Tick> procedentes de un componente <xref:System.Windows.Forms.Timer> interno.  Para obtener más información, vea [Cómo: Desarrollar un control de formularios Windows Forms sencillo](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+ Un ejemplo de un control personalizado es un control de reloj que reproduce la apariencia y el funcionamiento de un reloj analógico. Dibujo personalizado se invoca para hacer que las manecillas del reloj se movieran en respuesta a <xref:System.Windows.Forms.Timer.Tick> eventos desde un interno <xref:System.Windows.Forms.Timer> componente. Para obtener más información, vea [Cómo: Desarrollar un control de formularios Windows Forms sencillo](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
   
  **Recomendación**  
   
  Herede de la clase <xref:System.Windows.Forms.Control> si:  
   
--   Desea proporcionar una representación gráfica personalizada del control.  
+-   Quiere proporcionar una representación gráfica personalizada del control.  
   
--   Necesita implementar funcionalidad personalizad que no se encuentre disponible por medio de controles estándar.  
+-   Necesita implementar funcionalidad personalizada que no está disponible en los controles estándar.  
   
-### Controles ActiveX  
- Aunque la infraestructura de los formularios Windows Forms se ha optimizado para que hospeden controles de formularios Windows Forms, puede seguir utilizando controles ActiveX.  Visual Studio ofrece compatibilidad para esta tarea.  Para obtener más información, vea [Cómo: Agregar controles ActiveX a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+### <a name="activex-controls"></a>Controles ActiveX  
+ Aunque la infraestructura de Windows Forms se han optimizado para hospedar controles de Windows Forms, todavía puede utilizar los controles ActiveX. Visual Studio es compatible con esta tarea. Para obtener más información, consulte [Cómo: Agregar controles de Windows Forms a documentos de Office](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
   
-### Controles sin ventana  
- Las tecnologías de Microsoft Visual Basic® 6.0 y ActiveX admiten los controles *sin ventana*.  Los controles sin ventana no se admiten en los formularios Windows Forms.  
+### <a name="windowless-controls"></a>Controles sin ventana  
+ Las tecnologías de Microsoft Visual Basic® 6.0 y ActiveX admiten controles *sin ventanas*. Los controles sin ventana no se admiten en Windows Forms.  
   
-## Experiencia de diseño personalizada  
- Si se necesita implementar una experiencia personalizada en tiempo de diseño, puede crear a su propio diseñador.  Para los controles compuestos, derive la clase de diseñador personalizada de las clases <xref:System.Windows.Forms.Design.ParentControlDesigner> o <xref:System.Windows.Forms.Design.DocumentDesigner>.  Para los controles ampliados y personalizados, derive la clase de diseñador personalizada de la clase <xref:System.Windows.Forms.Design.ControlDesigner>.  
+## <a name="custom-design-experience"></a>Experiencia de diseño personalizada  
+ Si necesita implementar una experiencia personalizada en tiempo de diseño, puede crear su propio diseñador. Para los controles compuestos, derive su clase de diseñador personalizado de la <xref:System.Windows.Forms.Design.ParentControlDesigner> o <xref:System.Windows.Forms.Design.DocumentDesigner> clases. Para los controles extendidos y personalizados, derive su clase de diseñador personalizado de la <xref:System.Windows.Forms.Design.ControlDesigner> clase.  
   
- Utilice <xref:System.ComponentModel.DesignerAttribute> para asociar el control al diseñador.  Para obtener más información, vea [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md) y [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md).  
+ Use la <xref:System.ComponentModel.DesignerAttribute> para asociar el control a su diseñador. Para obtener más información, consulte [Ampliar compatibilidad en tiempo de diseño](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2) y [Cómo: Crear un control de formularios Windows Forms que aproveche las características en tiempo de diseño](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
-## Vea también  
- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Cómo: Desarrollar un control de formularios Windows Forms sencillo](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)   
- [Desarrollar un control de formularios Windows Forms compuesto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)   
- [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)   
- [How to: Create a Windows Forms Control That Takes Advantage of Design\-Time Features](../Topic/How%20to:%20Create%20a%20Windows%20Forms%20Control%20That%20Takes%20Advantage%20of%20Design-Time%20Features.md)
+## <a name="see-also"></a>Vea también  
+ [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [Desarrollar un control de formularios Windows Forms sencillo](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
+ [Desarrollar un control de formularios Windows Forms compuesto](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)  
+ [Ampliar compatibilidad en tiempo de diseño](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Cómo: Crear un control de Windows Forms que aproveche las características en tiempo de diseño](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)

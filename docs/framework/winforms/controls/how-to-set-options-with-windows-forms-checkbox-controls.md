@@ -1,37 +1,41 @@
 ---
-title: "C&#243;mo: Establecer opciones con los controles CheckBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "checked"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "casillas, utilizar para establecer opciones"
-  - "CheckBox (control) [Windows Forms], estado activado"
-  - "CheckBox (control) [Windows Forms], utilizar para establecer opciones"
+title: "Cómo: Establecer opciones con los controles CheckBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+f1_keywords: checked
+helpviewer_keywords:
+- CheckBox control [Windows Forms], checked state
+- check boxes [Windows Forms], using to set options
+- CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b7d3ddb090488f6503c0765f6054308c28d4ab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer opciones con los controles CheckBox de formularios Windows Forms
-El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms se utiliza para ofrecer a los usuarios opciones de tipo Verdadero\/Falso o Sí\/No.  El control muestra una marca de verificación cuando está seleccionado.  
+# <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Cómo: Establecer opciones con los controles CheckBox de formularios Windows Forms
+Un formulario Windows Forms <xref:System.Windows.Forms.CheckBox> control se utiliza para proporcionar a los usuarios True/False o Sí/No (opciones). El control muestra una marca de verificación cuando se selecciona.  
   
-### Para establecer opciones con controles CheckBox  
+### <a name="to-set-options-with-checkbox-controls"></a>Para establecer opciones con controles CheckBox  
   
-1.  Examine el valor de la propiedad <xref:System.Windows.Forms.CheckBox.Checked%2A> para determinar su estado y utilice este valor para establecer una opción.  
+1.  Examine el valor de la <xref:System.Windows.Forms.CheckBox.Checked%2A> propiedad para determinar su estado y usar ese valor para establecer una opción.  
   
-     En el ejemplo de código siguiente, cuando se produce el evento <xref:System.Windows.Forms.CheckBox.CheckedChanged> del control <xref:System.Windows.Forms.CheckBox>, la propiedad <xref:System.Windows.Forms.Control.AllowDrop%2A> del formulario se establece en `false` si se activa la casilla.  Esto es útil en situaciones en las que se desee limitar la interacción del usuario.  
+     En el ejemplo de código siguiente, cuando la <xref:System.Windows.Forms.CheckBox> del control <xref:System.Windows.Forms.CheckBox.CheckedChanged> se genera el evento, el formulario <xref:System.Windows.Forms.Control.AllowDrop%2A> propiedad está establecida en `false` si está activada la casilla de verificación. Esto es útil en situaciones donde desea restringir la interacción del usuario.  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -42,7 +46,6 @@ El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms
           Me.AllowDrop = False  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -55,7 +58,6 @@ El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms
           this.AllowDrop = false;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -72,8 +74,8 @@ El control <xref:System.Windows.Forms.CheckBox> de los formularios Windows Forms
        }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.CheckBox>   
- [Información general sobre el control CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)   
- [Cómo: Responder a clics en casillas de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)   
- [CheckBox \(Control\)](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.CheckBox>  
+ [Información general sobre el control CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [Responder a clics en casillas de Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [CheckBox (control)](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

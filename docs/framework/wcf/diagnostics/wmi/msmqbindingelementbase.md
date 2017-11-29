@@ -1,25 +1,28 @@
 ---
-title: "MsmqBindingElementBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MsmqBindingElementBase
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 009596ee8fd7218a07487183d932e91dad07797c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# MsmqBindingElementBase
+# <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class MsmqBindingElementBase : TransportBindingElement  
@@ -38,95 +41,95 @@ class MsmqBindingElementBase : TransportBindingElement
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase TraceListenerArgument no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase MsmqBindingElementBase tiene las siguientes propiedades:  
   
-### CustomDeadLetterQueue  
+### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Un URI que contiene la ubicación de la cola de mensajes no enviados de cada aplicación, donde se colocan los mensajes que han expirado o cuya transferencia o envío han fallado.  
   
-### DeadLetterQueue  
+### <a name="deadletterqueue"></a>DeadLetterQueue  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Un valor de enumeración que indica el tipo de cola de mensajes no enviados que se ha de usar.  
   
-### Durable  
+### <a name="durable"></a>Durable  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Un valor que indica si los mensajes procesados por este enlace son duraderos o volátiles.  
   
-### ExactlyOnce  
+### <a name="exactlyonce"></a>ExactlyOnce  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Un valor booleano que indica si los mensajes procesados por este enlace se reciben solo una vez.  
   
-### MaxRetryCycles  
+### <a name="maxretrycycles"></a>MaxRetryCycles  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de ciclos de reintento de entrega de mensajes a la aplicación receptora.  
   
-### ReceiveErrorHandling  
+### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Los valores para el control de mensajes dudosos.  
   
-### ReceiveRetryCount  
+### <a name="receiveretrycount"></a>ReceiveRetryCount  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de intentos de reintento inmediato en un mensaje que se lee desde la cola de la aplicación.  
   
-### RetryCycleDelay  
+### <a name="retrycycledelay"></a>RetryCycleDelay  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un valor que indica el tiempo de retardo entre los ciclos de reintento al intentar entregar un mensaje que no se pudo entregar inmediatamente.  
   
-### TimeToLive  
+### <a name="timetolive"></a>TimeToLive  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  El intervalo de tiempo que indica cuánto tiempo pueden estar en la cola los mensajes procesados por este enlace antes de expirar.  
   
-### UseMsmqTracing  
+### <a name="usemsmqtracing"></a>UseMsmqTracing  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Un valor booleano que indica si los mensajes procesados por este enlace se deberían seguir paso a paso.  
   
-### UseSourceJournal  
+### <a name="usesourcejournal"></a>UseSourceJournal  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Un valor booleano que indica si las copias de mensajes procesados por este enlace deberían almacenarse en la cola de diario de origen.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
- <xref:System.ServiceModel.NetMsmqBinding>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.MsmqBindingBase>

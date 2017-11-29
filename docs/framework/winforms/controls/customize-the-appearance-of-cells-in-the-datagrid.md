@@ -1,44 +1,48 @@
 ---
-title: "C&#243;mo: Personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "celdas, personalizar en el control DataGridView"
-  - "cuadrículas de datos, personalizar celdas"
-  - "DataGridView (control) [Windows Forms], personalizar celdas"
+title: "Cómo: Personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data grids [Windows Forms], customizing cells
+- DataGridView control [Windows Forms], customizing cells
+- cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 478b20c9-625c-4116-9c5c-5a16e6f4ec67
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 545a3bff5e810f9c0a995366e7f6460930f9e936
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms
-Puede personalizar la apariencia de cualquier celda mediante el control del evento <xref:System.Windows.Forms.DataGridView.CellPainting> del control <xref:System.Windows.Forms.DataGridView>.  Puede extraer el <xref:System.Drawing.Graphics> del control <xref:System.Windows.Forms.DataGridView> de la propiedad <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> de <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>.  Con <xref:System.Drawing.Graphics>, puede modificar la apariencia de todo el control <xref:System.Windows.Forms.DataGridView>, pero normalmente querrá modificar sólo a la apariencia de la celda que se está pintando actualmente.  La propiedad <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> de <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> le permite restringir sus operaciones de representación a la celda que está pintando.  
+# <a name="how-to-customize-the-appearance-of-cells-in-the-windows-forms-datagridview-control"></a>Cómo: Personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms
+Puede personalizar la apariencia de cualquier celda controlando el <xref:System.Windows.Forms.DataGridView> del control <xref:System.Windows.Forms.DataGridView.CellPainting> eventos. Puede extraer el <xref:System.Windows.Forms.DataGridView> del control <xref:System.Drawing.Graphics> desde el <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.Graphics%2A> propiedad de la <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs>. Con esto <xref:System.Drawing.Graphics>, pueden afectar a la apariencia de todo el <xref:System.Windows.Forms.DataGridView> control, pero normalmente es conveniente afectan únicamente a la apariencia de la celda que se está dibujando actualmente. El <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs.ClipBounds%2A> propiedad de la <xref:System.Windows.Forms.DataGridViewCellPaintingEventArgs> le permite restringir las operaciones de dibujo a la celda que se está dibujando actualmente.  
   
- En el ejemplo de código siguiente, pintará todas las celdas en una columna `ContactName` mediante la combinación de colores del control <xref:System.Windows.Forms.DataGridView>.  El contenido de texto de cada celda se pinta en la propiedad <xref:System.Drawing.Color.Crimson%2A> y se dibuja un rectángulo de bajorrelieve en el mismo color que la propiedad <xref:System.Windows.Forms.DataGridView.GridColor%2A> del control <xref:System.Windows.Forms.DataGridView>.  
+ En el ejemplo de código siguiente, se dibujará todas las celdas en una `ContactName` de columna con el <xref:System.Windows.Forms.DataGridView> combinación de colores del control. El contenido de texto de cada celda se pinta en <xref:System.Drawing.Color.Crimson%2A>, y se dibuja un rectángulo de bajorrelieve en el mismo color que el <xref:System.Windows.Forms.DataGridView> del control <xref:System.Windows.Forms.DataGridView.GridColor%2A> propiedad.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.DataGridViewCellPainting#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/CS/form1.cs#10)]
  [!code-vb[System.Windows.Forms.DataGridViewCellPainting#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/VB/form1.vb#10)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un control <xref:System.Windows.Forms.DataGridView> denominado `dataGridView1` con una columna `ContactName` como la de la tabla Customers de la base de datos de ejemplo Northwind.  
+-   A <xref:System.Windows.Forms.DataGridView> control denominado `dataGridView1` con un `ContactName` columna como la de la tabla Customers de la base de datos de ejemplo Northwind.  
   
 -   Referencias a los ensamblados System, System.Windows.Forms y System.Drawing.  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.CellPainting>   
- [Personalizar el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.CellPainting>  
+ [Personalizar el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)

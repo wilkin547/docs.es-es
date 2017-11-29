@@ -1,29 +1,35 @@
 ---
-title: "C&#243;mo: Borrar la entrada manuscrita en un control personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles personalizados, borrar entrada manuscrita en"
-  - "entrada manuscrita, borrar en controles personalizados"
+title: "Cómo: Borrar la entrada manuscrita en un control personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [WPF], erasing ink on
+- ink [WPF], erasing on custom control
 ms.assetid: d88c50f9-b4d8-4962-a28b-67d6a15a5fe0
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23d234d97d6b25394df87016f0671d86b10a2853
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Borrar la entrada manuscrita en un control personalizado
-<xref:System.Windows.Ink.IncrementalStrokeHitTester> determina si el trazo dibujado actualmente se cruza con otro trazo.  Es útil para crear un control que permita al usuario borrar partes de un trazo de la misma manera que lo hace en un <xref:System.Windows.Controls.InkCanvas> cuando la propiedad <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> está establecida en <xref:System.Windows.Controls.InkCanvasEditingMode>.  
+# <a name="how-to-erase-ink-on-a-custom-control"></a>Cómo: Borrar la entrada manuscrita en un control personalizado
+El <xref:System.Windows.Ink.IncrementalStrokeHitTester> determina si el trazo dibujado actualmente se cruza con otro trazo.  Esto es útil para crear un control que permite al usuario borrar partes de un trazo, la forma en que un usuario puede en un <xref:System.Windows.Controls.InkCanvas> cuando el <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> está establecido en <xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>.  
   
-## Ejemplo  
- En el ejemplo siguiente se crea un control personalizado que permite al usuario borrar partes de trazos.  En el ejemplo se crea un control que contiene entrada de lápiz cuando se inicializa.  Para crear un control que recopile entradas de lápiz, vea [Creación de un control de entrada manuscrita](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se crea un control personalizado que permite al usuario borrar partes de trazos.  En este ejemplo se crea un control que contiene la entrada de lápiz cuando se inicializa.  Para crear un control que recopile tinta, consulte [crear un Control de entrada manuscrita](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  
   
  [!code-csharp[HowToEraseInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToEraseInk/CSharp/InkEraser.cs#1)]
  [!code-vb[HowToEraseInk#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HowToEraseInk/VisualBasic/InkEraser.vb#1)]

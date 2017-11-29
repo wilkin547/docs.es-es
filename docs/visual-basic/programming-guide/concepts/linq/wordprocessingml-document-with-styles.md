@@ -1,36 +1,32 @@
 ---
-title: Documento WordprocessingML con Styles2 | Documentos de Microsoft
+title: Documento de WordprocessingML con Styles2
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ae85aef4ab2f5e1be5b62b038f5f09faf29480e3
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ac833daca2e4ba12d61a1ee3c9526b7368baee74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Documento de WordprocessingML con estilos
 Los documentos WordprocessingML más complicados tienen párrafos formateados con estilos.  
   
  Resultan útiles algunas indicaciones acerca de la creación de documentos WordprocessingML. Los documentos WordprocessingML se almacenan en paquetes. Los paquetes tienen varias partes. Éstas tienen un significado explícito si se usan el contexto de los paquetes; básicamente, las partes son archivos que se comprimen para formar un paquete. Si un documento contiene párrafos que se formatean con estilos, habrá una parte de documento que contendrá párrafos con estilos aplicados a éstos. También habrá una parte de estilo que contendrá los estilos a los que hace referencia el documento.  
   
- Cuando se obtiene acceso a los paquetes, es importante hacerlo mediante la relación entre las partes, en lugar de usar una ruta de acceso arbitraria. Este problema está fuera del ámbito de manipular contenido en un tutorial del documento WordprocessingML, pero los programas de ejemplo que se incluyen en este tutorial demuestran el método correcto.  
+ Cuando se obtiene acceso a los paquetes, es importante hacerlo mediante la relación entre las partes, en lugar de usar una ruta de acceso arbitraria. Este problema se encuentra fuera del ámbito del tutorial Manipular contenido en un documento de WordprocessingML, aunque los programas de ejemplo incluidos en este tutorial demuestran el método correcto.  
   
 ## <a name="a-document-that-uses-styles"></a>Documento que usa estilos  
- El ejemplo de WordML presentado en el [forma de los documentos WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tema es muy simple. El documento siguiente es más complicado: tiene párrafos que están formateados con estilos. La manera más fácil de ver el XML que constituye un documento XML abierto de Office es ejecutar el [ejemplo que partes de documento de XML abierto de salidas Office (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
+ El ejemplo de WordML presentado en el [forma de los documentos WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) tema es muy simple. El documento siguiente es más complicado: tiene párrafos que están formateados con estilos. La manera más fácil de ver el código XML que constituye un documento XML abierto de Office es ejecutar el [ejemplo que partes de documento de XML abierto de salidas de Office (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md).  
   
  En el documento siguiente, el primer párrafo tiene el estilo `Heading1`. Hay varios párrafos que tienen el estilo predeterminado. Asimismo, existen diversos párrafos con el estilo `Code`. Debido a esta complejidad relativa, resulta más interesante analizar este documento con LINQ to XML.  
   
@@ -151,4 +147,4 @@ Los documentos WordprocessingML más complicados tienen párrafos formateados co
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ [Detalles de Office documentos WordprocessingML XML abierto (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

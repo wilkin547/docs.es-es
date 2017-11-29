@@ -1,39 +1,44 @@
 ---
-title: "C&#243;mo: Recorrer en iteraci&#243;n todos los nodos del control TreeView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [Windows Forms], TreeView (control)"
-  - "nodos de árbol en el control TreeView, recorrer en iteración"
-  - "TreeView (control) [Windows Forms], recorrer nodos en iteración"
+title: "Cómo: Recorrer en iteración todos los nodos del control TreeView de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], TreeView control
+- TreeView control [Windows Forms], iterating through nodes
+- tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 057612bfb28333df0aebaa5ca19555f4c4951687
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Recorrer en iteraci&#243;n todos los nodos del control TreeView de formularios Windows Forms
-En ocasiones es útil examinar todos los nodos de un control <xref:System.Windows.Forms.TreeView> de formularios Windows Forms para ejecutar ciertos cálculos sobre los valores de los nodos.  Esta operación puede realizarse por medio de un procedimiento recursivo \(un método recursivo en C\# y C\+\+\) que recorra en iteración los nodos de cada colección del árbol.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Cómo: Recorrer en iteración todos los nodos del control TreeView de formularios Windows Forms
+A veces resulta útil examinar todos los nodos de un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control con el fin de realizar algún cálculo en los valores de nodo. Esta operación puede realizarse mediante un procedimiento recursivo (un método recursivo en C# y C++) que recorre en iteración los nodos de cada colección del árbol.  
   
- Cada objeto <xref:System.Windows.Forms.TreeNode> de una vista de árbol tiene propiedades que puede utilizar para navegar por la vista de árbol: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A> y <xref:System.Windows.Forms.TreeNode.Parent%2A>.  El valor de la propiedad <xref:System.Windows.Forms.TreeNode.Parent%2A> es el nodo principal del nodo actual.  Los nodos secundarios del nodo actual, si existen, se enumeran en su propiedad <xref:System.Windows.Forms.TreeNode.Nodes%2A>.  El propio control <xref:System.Windows.Forms.TreeView> dispone de la propiedad <xref:System.Windows.Forms.TreeView.TopNode%2A>, que es el nodo raíz de toda la vista de árbol.  
+ Cada <xref:System.Windows.Forms.TreeNode> objeto en una vista de árbol tiene propiedades que puede usar para navegar por la vista de árbol: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, y <xref:System.Windows.Forms.TreeNode.Parent%2A>. El valor de la <xref:System.Windows.Forms.TreeNode.Parent%2A> propiedad es el nodo primario del nodo actual. Los nodos secundarios del nodo actual, si existe alguna, se muestran en su <xref:System.Windows.Forms.TreeNode.Nodes%2A> propiedad. El <xref:System.Windows.Forms.TreeView> propio control tiene el <xref:System.Windows.Forms.TreeView.TopNode%2A> propiedad, que es el nodo raíz de la vista de árbol completo.  
   
-### Para recorrer en iteración todos los nodos del control TreeView  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Para recorrer en iteración todos los nodos del control TreeView  
   
-1.  Cree un procedimiento recursivo \(un método recursivo en C\# y C\+\+\) que compruebe cada nodo.  
+1.  Cree un procedimiento recursivo (un método recursivo en C# y C++) que compruebe cada nodo.  
   
 2.  Llame al procedimiento.  
   
-     En el ejemplo siguiente se muestra cómo imprimir la propiedad <xref:System.Windows.Forms.TreeNode.Text%2A> de cada objeto <xref:System.Windows.Forms.TreeNode>:  
+     En el ejemplo siguiente se muestra cómo imprimir cada vez que <xref:System.Windows.Forms.TreeNode> del objeto <xref:System.Windows.Forms.TreeNode.Text%2A> propiedad:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -52,7 +57,6 @@ En ocasiones es útil examinar todos los nodos de un control <xref:System.Window
           PrintRecursive(n)  
        Next  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -78,7 +82,6 @@ En ocasiones es útil examinar todos los nodos de un control <xref:System.Window
           PrintRecursive(n);  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -130,6 +133,6 @@ En ocasiones es útil examinar todos los nodos de un control <xref:System.Window
        }  
     ```  
   
-## Vea también  
- [TreeView \(Control\)](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)   
- [Procedimientos recursivos](../Topic/Recursive%20Procedures%20\(Visual%20Basic\).md)
+## <a name="see-also"></a>Vea también  
+ [TreeView (control)](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [Procedimientos recursivos](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

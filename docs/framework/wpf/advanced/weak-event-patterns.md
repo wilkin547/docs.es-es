@@ -1,67 +1,69 @@
 ---
-title: "Modelos de evento d&#233;bil | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controladores de eventos, modelo de evento débil"
-  - "IWeakEventListener (interfaz)"
-  - "implementación del modelo de evento débil"
-  - "WeakEventManager (clase)"
+title: "Modelos de evento débil"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- weak event pattern implementation [WPF]
+- event handlers [WPF], weak event pattern
+- IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Modelos de evento d&#233;bil
-En las aplicaciones típicas, es posible que los controladores asociados a los orígenes de eventos no se destruyan en coordinación con el objeto de agente de escucha que adjuntó el controlador al origen.  Esta situación puede provocar pérdidas de memoria.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduce un modelo de diseño concreto que se puede usar para resolver este problema; para ello, proporciona una clase de administrador dedicada para eventos concretos e implementa una interfaz para los agentes de escucha de ese evento.  Este modelo de diseño se denomina *modelo de evento débil*.  
+# <a name="weak-event-patterns"></a>Modelos de evento débil
+En las aplicaciones, es posible que los controladores que están conectados a los orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que se adjunta el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Introduce un modelo de diseño que puede utilizarse para solucionar este problema, debe proporcionar una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
   
-## ¿Por qué implementar el modelo de evento débil?  
- Realizar escuchas de eventos puede provocar pérdidas de memoria.  La técnica típica para realizar escuchas de eventos consiste en utilizar la sintaxis específica del lenguaje que asocia un controlador a un evento en un origen.  Por ejemplo, en [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], esa sintaxis es: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+## <a name="why-implement-the-weak-event-pattern"></a>¿Por qué implementar el modelo de evento débil?  
+ Realizar escuchas de eventos pueden provocar pérdidas de memoria. La técnica típica para realizar escuchas de eventos es utilizar la sintaxis específica del lenguaje que asocia un controlador a un evento en un origen. Por ejemplo, en [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], que la sintaxis es: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
- Esta técnica crea una referencia segura desde el origen de evento al agente de escucha de evento.  En general, al adjuntar un controlador de eventos para un agente de escucha, la duración de objeto del origen influye en la duración de objeto del agente \(a menos que el controlador de eventos se quite explícitamente\).  Sin embargo, en determinadas circunstancias puede ser conveniente controlar la duración de objeto del agente de escucha mediante otros factores, tales como si pertenece actualmente al árbol visual de la aplicación, no mediante la duración del origen.  Cada vez que la duración de objeto del origen es superior a la del agente de escucha, el modelo de eventos normal provoca una pérdida de memoria: el agente de escucha se mantiene activo más tiempo del previsto.  
+ Esta técnica crea una referencia segura desde el origen de eventos para el agente de escucha de eventos. Por lo general, asociar un controlador de eventos para un agente de escucha hace que el agente de escucha tienen una duración de los objetos que se ven afectada por la duración del objeto de origen (a menos que explícitamente se quita el controlador de eventos). Sin embargo, en ciertas circunstancias, podrían desear la duración de los objetos del agente de escucha esté controlada por otros factores, como si actualmente pertenece al árbol visual de la aplicación y no por la duración del origen. Cada vez que la duración del objeto de origen se extiende más allá de la duración de los objetos del agente de escucha, el patrón de eventos normales conduce a una pérdida de memoria: el agente de escucha se mantiene activo más tiempo del previsto.  
   
- El modelo de evento débil está diseñado para resolver este problema de pérdida de memoria.  Se puede utilizar el modelo de evento débil cada vez que un agente de escucha necesita registrarse para un evento, pero el agente de escucha no sabe explícitamente cuándo cancelar el registro.  También se puede usar el modelo de evento débil cuando la duración de los objetos del origen supera la duración útil de los objetos del agente de escucha.  \(En este caso, *útil* es determinado por el desarrollador\). El modelo de evento débil permite al agente de escucha registrarse para el evento y recibirlo sin que ello afecte en modo alguno a sus características de duración de objeto.  En efecto, la referencia implícita del origen no determina si el agente de escucha es apto para la recolección de elementos no utilizados.  Se trata de una referencia débil, concepto del que toman su nombre el modelo de evento débil y las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas.  El agente de escucha puede someterse a la recopilación de elementos no utilizados o destruirse de alguna otra forma, y el origen puede continuar sin conservar las referencias al objeto que se ha destruido no recopilables en el controlador.  
+ El modelo de evento débil está diseñado para resolver este problema de pérdida de memoria. El modelo de evento débil se pueden usar cuando un agente de escucha debe suscribirse a un evento, pero el agente de escucha no sabe explícitamente cuándo se debe anular el registro. También se puede utilizar el modelo de evento débil siempre que la duración de los objetos del origen supera la duración de los objetos útiles del agente de escucha. (En este caso, *útil* se determina por el usuario.) El modelo de evento débil permite que el agente de escucha registrar y reciban el evento sin que afecte a las características de duración de objeto del agente de escucha de ninguna manera. De hecho, la referencia implícita del origen no determina si el agente de escucha es apto para la recolección de elementos no utilizados. La referencia es una referencia débil, por lo tanto la denominación de modelo de evento débil y relacionado [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. El agente de escucha puede ser elementos no utilizados o en caso contrario, se destruye y el origen puede continuar sin conservar las referencias de controlador no recopilables a un objeto que se ha destruido.  
   
-## ¿Quién debe implementar el modelo de evento débil?  
- Implementar el modelo de evento débil resulta interesante principalmente para los autores de controles.  El autor de un control es responsable en gran medida del comportamiento y la contención del control y del efecto que ejerce en las aplicaciones en las que se inserta.  Esto incluye el comportamiento de la duración de objeto del control, y en particular de la administración del problema de pérdida de memoria descrito.  
+## <a name="who-should-implement-the-weak-event-pattern"></a>¿Que deben implementar el modelo de evento débil?  
+ Implementar el patrón de eventos débiles es interesante principalmente para los autores de controles. Como autor de un control, es responsable en gran medida el comportamiento y la contención de su control y el impacto en las aplicaciones en el que se inserta. Esto incluye el comportamiento de duración de objetos de control, en particular el tratamiento del problema de pérdida de memoria descrito.  
   
- Algunos escenarios se prestan de forma inherente a la aplicación del modelo de evento débil.  Un escenario de este tipo es el enlace de datos.  En el enlace de datos, es común que el objeto de origen sea completamente independiente del objeto de agente de escucha, que es un destino de un enlace.  El modelo de evento débil ya se aplica a muchos aspectos del enlace de datos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en lo relativo a cómo se implementan los eventos.  
+ Algunos escenarios se prestan de forma inherente a la aplicación del modelo de evento débil. Uno de estos escenarios es el enlace de datos. En el enlace de datos, es común para el objeto de origen que sean completamente independientes del objeto de agente de escucha, que es un destino de un enlace. Muchos aspectos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enlace de datos ya tiene el modelo de evento débil aplicado en cómo se implementan los eventos.  
   
-## Cómo implementar el modelo de evento débil  
- Hay tres maneras de implementar el modelo de evento débil.  La tabla siguiente se enumeran los tres enfoques y proporciona alguna orientación para cuándo debe utilizarse cada uno.  
+## <a name="how-to-implement-the-weak-event-pattern"></a>Cómo implementar el modelo de evento débil  
+ Hay tres maneras de implementar el modelo de evento débil. En la tabla siguiente se enumera los tres enfoques y proporciona cierta orientación acerca de cuándo se debe utilizar cada una.  
   
-|Método|cuándo implementar|  
-|------------|------------------------|  
-|Utilice una clase parcial existente del administrador de eventos|Si el evento que desea suscribirse tiene <xref:System.Windows.WeakEventManager>correspondiente, utilice el administrador parcial existente del evento.  Para obtener una lista de administradores débiles de eventos que se incluye con WPF, vea la jerarquía de herencia en la clase de <xref:System.Windows.WeakEventManager> .  Observe, sin embargo, que hay relativamente pocos administradores débiles de eventos incluidos en WPF, lo que probablemente necesitará elegir uno de los otros enfoques.|  
-|Utilice una clase parcial genérica de administrador de evento|Utilice <xref:System.Windows.WeakEventManager%602> genérico cuando <xref:System.Windows.WeakEventManager> existente no está disponible, desea una manera fácil de implementar, y no le preocupa la eficacia.  <xref:System.Windows.WeakEventManager%602> genérico es menos eficaz que un existente o un administrador débil de eventos personalizados.  Por ejemplo, la clase genérica hace más reflexión para detectar el evento dado el nombre del evento.  Además, el código para registrar el evento con <xref:System.Windows.WeakEventManager%602> genérico es más detallado que mediante un existente o <xref:System.Windows.WeakEventManager>personalizado.|  
-|Cree una clase parcial personalizada del administrador de eventos|Cree <xref:System.Windows.WeakEventManager> personalizado cuando se <xref:System.Windows.WeakEventManager> existente no está disponible y desea que la mejor eficacia.  Mediante un generador <xref:System.Windows.WeakEventManager> suscribirse a un evento será más eficaz, pero se incurre en el costo de escribir más código al principio.|  
+|Enfoque|Cuándo implementar|  
+|--------------|-----------------------|  
+|Utilizar una clase de administrador de eventos débiles existente|Si el evento que desea suscribirse a tiene su correspondiente <xref:System.Windows.WeakEventManager>, use el Administrador de eventos débiles existentes. Para obtener una lista de administradores de eventos débiles que se incluyen con WPF, vea la jerarquía de herencia en la <xref:System.Windows.WeakEventManager> clase. Sin embargo, tenga en cuenta que hay relativamente pocos administradores de eventos débiles que se incluyen con WPF, por lo que probablemente tendrá que elegir uno de los otros métodos.|  
+|Use una clase de administrador de eventos débiles genérico|Usar un tipo genérico <xref:System.Windows.WeakEventManager%602> cuando existente <xref:System.Windows.WeakEventManager> es no disponible, desea una manera fácil de implementar, y no están preocupada con eficacia. La interfaz genérica <xref:System.Windows.WeakEventManager%602> resulta menos eficaz que un administrador de eventos débiles existentes o personalizadas. Por ejemplo, la clase genérica hace más de reflexión para detectar el evento que tiene el nombre del evento. Además, el código para registrar el evento mediante la interfaz genérica <xref:System.Windows.WeakEventManager%602> es más detallado que el uso de una existente o personalizado <xref:System.Windows.WeakEventManager>.|  
+|Crear una clase de administrador de eventos débiles personalizado|Crear una personalizada <xref:System.Windows.WeakEventManager> cuando se existente <xref:System.Windows.WeakEventManager> no está disponible y desea que la mejor eficacia. Usando un comparador <xref:System.Windows.WeakEventManager> para suscribirse a un evento será más eficaz, pero se incurre en el costo de escribir más código al principio.|  
   
- Las secciones siguientes describen cómo implementar el modelo de evento débil.  Para los propósitos de este tutorial, el evento para suscribirse tiene las siguientes características.  
+ Las secciones siguientes describen cómo implementar el patrón de eventos débiles.  Para fines de este análisis, el evento para suscribirse a tiene las siguientes características.  
   
--   el nombre de evento es `SomeEvent`.  
+-   Es el nombre del evento `SomeEvent`.  
   
--   El evento es desencadenado por la clase de `EventSource` .  
+-   El evento es desencadenado por la `EventSource` clase.  
   
--   el controlador de eventos ha escrito: `SomeEventEventHandler` \(o `EventHandler<SomeEventEventArgs>`\).  
+-   El controlador de eventos tiene el tipo: `SomeEventEventHandler` (o `EventHandler<SomeEventEventArgs>`).  
   
--   El evento pasa un parámetro de `SomeEventEventArgs` escriba en los controladores de eventos.  
+-   El evento pasa un parámetro de tipo `SomeEventEventArgs` a los controladores de eventos.  
   
-### Mediante una clase de administrador de evento existente Parciales  
+### <a name="using-an-existing-weak-event-manager-class"></a>Usar una clase de evento Manager débil existente  
   
-1.  Busque un administrador parcial existente del evento.  
+1.  Encuentra el Administrador de un evento débil existente.  
   
-     Para obtener una lista de administradores débiles de eventos que se incluye con WPF, vea la jerarquía de herencia en la clase de <xref:System.Windows.WeakEventManager> .  
+     Para obtener una lista de administradores de eventos débiles que se incluyen con WPF, vea la jerarquía de herencia en la <xref:System.Windows.WeakEventManager> clase.  
   
-2.  Utilice el nuevo administrador de evento débil en lugar de vinculación normal del evento.  
+2.  Use el nuevo administrador de eventos débiles en lugar de los enlaces de eventos normales.  
   
      Por ejemplo, si el código usa el modelo siguiente para suscribirse a un evento:  
   
@@ -69,49 +71,49 @@ En las aplicaciones típicas, es posible que los controladores asociados a los o
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Cambiar el modelo siguiente:  
+     Cambia al siguiente patrón:  
   
     ```  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     De igual forma, si el código usa el modelo siguiente para cancelar la suscripción a un evento:  
+     De forma similar, si el código usa el modelo siguiente para cancelar la suscripción a un evento:  
   
     ```  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     Cambiar el modelo siguiente:  
+     Cambia al siguiente patrón:  
   
     ```  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-### Mediante la clase de administrador de evento genérica Parciales  
+### <a name="using-the-generic-weak-event-manager-class"></a>Uso de la clase de administrador de eventos débiles genérico  
   
-1.  Utilice la clase genérica de <xref:System.Windows.WeakEventManager%602> en lugar de vinculación normal del evento.  
+1.  Usar la interfaz genérica <xref:System.Windows.WeakEventManager%602> clase en lugar de los enlaces de eventos normales.  
   
-     Cuando se utiliza <xref:System.Windows.WeakEventManager%602> para registrar los agentes de escucha de eventos, se proporciona el origen y <xref:System.EventArgs> escritos como los parámetros de tipo a la clase y llama a <xref:System.Windows.WeakEventManager%602.AddHandler%2A> tal y como se muestra en el código siguiente:  
+     Cuando usas <xref:System.Windows.WeakEventManager%602> para registrar los agentes de escucha de eventos, se proporciona el origen del evento y <xref:System.EventArgs> tipo como parámetros de tipo para la clase y llamar a <xref:System.Windows.WeakEventManager%602.AddHandler%2A> tal como se muestra en el código siguiente:  
   
     ```  
     WeakEventManager<EventSource, SomeEventEventArgs>.AddHandler(source, "SomeEvent", source_SomeEvent);  
     ```  
   
-### Crear una clase de administrador de evento débil  
+### <a name="creating-a-custom-weak-event-manager-class"></a>Crear una clase de evento Manager débil personalizada  
   
-1.  Copie la plantilla siguiente de clase al proyecto.  
+1.  Copie la siguiente plantilla de clase al proyecto.  
   
-     Esta clase se hereda de la clase <xref:System.Windows.WeakEventManager>.  
+     Esta clase hereda de la <xref:System.Windows.WeakEventManager> clase.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  reemplace el nombre de `SomeEventWeakEventManager` con el propio nombre.  
+2.  Reemplace el `SomeEventWeakEventManager` nombre con su propio nombre.  
   
-3.  Reemplace los tres nombres descritos previamente con nombres correspondientes para el evento.  \(`SomeEvent`, `EventSource`, y `SomeEventEventArgs`\)  
+3.  Reemplace los nombres de tres descritos previamente con los nombres correspondientes para el evento. (`SomeEvent`, `EventSource`, y `SomeEventEventArgs`)  
   
-4.  Establezca la visibilidad \(pública\/interna o private\) de la clase parcial del administrador de eventos a la misma visibilidad que el evento administra.  
+4.  Establecer la visibilidad (pública / interna / privada) de la clase de eventos débiles manager a la misma visibilidad que administra el evento.  
   
-5.  Utilice el nuevo administrador de evento débil en lugar de vinculación normal del evento.  
+5.  Use el nuevo administrador de eventos débiles en lugar de los enlaces de eventos normales.  
   
      Por ejemplo, si el código usa el modelo siguiente para suscribirse a un evento:  
   
@@ -119,26 +121,26 @@ En las aplicaciones típicas, es posible que los controladores asociados a los o
     source.SomeEvent += new SomeEventEventHandler(OnSomeEvent);  
     ```  
   
-     Cambiar el modelo siguiente:  
+     Cambia al siguiente patrón:  
   
     ```  
     SomeEventWeakEventManager.AddHandler(source, OnSomeEvent);  
     ```  
   
-     De igual forma, si el código usa el modelo siguiente para cancelar la suscripción a un evento:  
+     De forma similar, si el código usa el modelo siguiente para cancelar la suscripción a un evento:  
   
     ```  
     source.SomeEvent -= new SomeEventEventHandler(OnSome);  
     ```  
   
-     Cambiar el modelo siguiente:  
+     Cambia al siguiente patrón:  
   
     ```  
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## Vea también  
- <xref:System.Windows.WeakEventManager>   
- <xref:System.Windows.IWeakEventListener>   
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.WeakEventManager>  
+ <xref:System.Windows.IWeakEventListener>  
+ [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)

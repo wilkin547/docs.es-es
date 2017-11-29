@@ -1,33 +1,37 @@
 ---
-title: "C&#243;mo: Hacer un control no visible en tiempo de ejecuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], convertir en invisible en tiempo de ejecución"
-  - "controles personalizados [Windows Forms], invisibles"
-  - "controles invisibles"
-  - "tiempo de ejecución, hacer que los controles sean invisibles"
-  - "controles de usuario [Windows Forms], invisibles"
+title: "Cómo: Hacer un control no visible en tiempo de ejecución"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [Windows Forms], making invisible at run time
+- invisible controls
+- user controls [Windows Forms], invisible
+- custom controls [Windows Forms], invisible
+- run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 310750df0786eb07158909eb5e322369d157d1cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Hacer un control no visible en tiempo de ejecuci&#243;n
-Hay ocasiones en las que quizá desee crear un control de usuario que sea invisible en tiempo de ejecución.  Por ejemplo, un control que sea un reloj despertador puede ser invisible excepto cuando suene la alarma.  Esto se consigue fácilmente estableciendo la propiedad <xref:System.Windows.Forms.Control.Visible%2A>.  Si la propiedad <xref:System.Windows.Forms.Control.Visible%2A> es `true`, el control aparecerá de la forma habitual.  Si es `false`, el control estará oculto.  Aunque el código del control puede seguir ejecutándose mientras está invisible, no se puede interactuar con el control a través de la interfaz de usuario.  Si desea crear un control invisible que responda a los datos proporcionados por el usuario \(por ejemplo, a los clic del mouse\), debe crear un control transparente.  Para obtener más información, vea [Proporcionar un fondo transparente a un control](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  
+# <a name="how-to-make-your-control-invisible-at-run-time"></a>Cómo: Hacer un control no visible en tiempo de ejecución
+Hay ocasiones cuando desea crear un control de usuario que sea invisible en tiempo de ejecución. Por ejemplo, un control que es un reloj de alarma podría ser invisible excepto cuando suene la alarma. Esto se consigue fácilmente estableciendo la <xref:System.Windows.Forms.Control.Visible%2A> propiedad. Si el <xref:System.Windows.Forms.Control.Visible%2A> propiedad es `true`, el control aparecerá como normal. Si `false`, se ocultará el control. Aunque todavía puede ejecutar código en el control al invisible, no podrá interactuar con el control a través de la interfaz de usuario. Si desea crear un control invisible que responda a la entrada (por ejemplo, clics del mouse) del usuario, debe crear un control transparente. Para obtener más información, consulte [que proporciona el Control de un fondo transparente](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md).  
   
-### Hacer un control no visible en tiempo de ejecución  
+### <a name="to-make-your-control-invisible-at-run-time"></a>Para hacer que el control sea invisible en tiempo de ejecución  
   
 1.  Establezca la propiedad <xref:System.Windows.Forms.Control.Visible%2A> en `false`.  
   
@@ -36,7 +40,6 @@ Hay ocasiones en las que quizá desee crear un control de usuario que sea invisi
     Me.Visible = False  
     ' To set the Visible property from another object.  
     myControl1.Visible = False  
-  
     ```  
   
     ```csharp  
@@ -44,10 +47,9 @@ Hay ocasiones en las que quizá desee crear un control de usuario que sea invisi
     this.Visible = false;  
     // To set the Visible property from another object.  
     myControl1.Visible = false;  
-  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.Control.Visible%2A>   
- [Desarrollar controles personalizados de formularios Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Cómo: Proporcionar un fondo transparente a un control](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.Control.Visible%2A>  
+ [Desarrollar controles personalizados de Windows Forms con .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [Proporcionar un fondo transparente a un control](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)

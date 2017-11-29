@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.PortSharing.PortSharingDuplicatedSocket | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.PortSharing.PortSharingDuplicatedSocket
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7fd7a35d-3ade-44c2-b40e-2236c3ff18c5
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 472961b2a06d92ebda2b10bffc05b79d6306dc8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.PortSharing.PortSharingDuplicatedSocket
+# <a name="systemservicemodelportsharingportsharingduplicatedsocket"></a>System.ServiceModel.PortSharing.PortSharingDuplicatedSocket
 System.ServiceModel.PortSharing.PortSharingDuplicatedSocket  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Se duplicó un socket correctamente.  
   
-## Vea también  
- [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [Uso del seguimiento para solucionar problemas de su aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>Vea también  
+ [Seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [Uso del seguimiento para solucionar problemas de la aplicación](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)

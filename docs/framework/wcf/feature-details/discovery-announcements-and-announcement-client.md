@@ -1,105 +1,107 @@
 ---
-title: "Anuncios de detecci&#243;n y cliente de anuncio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Anuncios de detección y cliente de anuncio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 36003933a9fb49fe4fe4f0b677ee584066d415ac
+ms.sourcegitcommit: ea1fd4ff4c36169fc722ef263e24884c5cd431a2
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2017
 ---
-# Anuncios de detecci&#243;n y cliente de anuncio
-La característica de detección de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a los componentes anunciar su disponibilidad.Si se configura para ello, un servicio envía anuncios de hola y de adiós.Clientes u otros componentes pueden realizar escuchas de dichos mensajes de anuncio y actuar de forma correspondiente.Esto proporciona un método alternativo para que los clientes sean consciente de los servicios.La funcionalidad de anuncios tiene varios usos. Por ejemplo, si los servicios acceden y dejan una red con frecuencia, los anuncios pueden ser una mejor alternativa que la búsqueda de servicios.Con este enfoque, el tráfico de red se reduce y el cliente puede obtener información sobre la presencia o salida del servicio en cuanto se reciban los anuncios.  
+# <a name="discovery-announcements-and-announcement-client"></a>Anuncios de detección y cliente de anuncio
+La característica de detección de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permite a los componentes anunciar su disponibilidad. Si se configura para ello, un servicio envía anuncios de hola y de adiós. Clientes u otros componentes pueden realizar escuchas de dichos mensajes de anuncio y actuar de forma correspondiente. Esto proporciona un método alternativo para que los clientes sean consciente de los servicios. La funcionalidad de anuncios tiene varios usos. Por ejemplo, si los servicios acceden y dejan una red con frecuencia, los anuncios pueden ser una mejor alternativa que la búsqueda de servicios. Con este enfoque, el tráfico de red se reduce y el cliente puede obtener información sobre la presencia o salida del servicio en cuanto se reciban los anuncios.  
   
-## Anuncios de detección  
- Cuando un servicio configurado para anuncios se une a una red y se vuelve reconocible, envía un mensaje de Hola que anuncia su disponibilidad a los clientes que realizan escuchas.El mensaje contiene información relacionada con la detección sobre el servicio, como el contrato, la dirección del extremo y los ámbitos asociados.Puede especificar dónde se envía el mensaje de anuncio mediante la clase <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>.Si el extremo del anuncio es una clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, el hola y el adiós se transmiten de forma adecuada o, si el extremo del anuncio es una unidifusión, los mensajes se envían directamente al extremo especificado.  
+## <a name="discovery-announcements"></a>Anuncios de detección  
+ Cuando un servicio configurado para anuncios se une a una red y se vuelve reconocible, envía un mensaje de Hola que anuncia su disponibilidad a los clientes que realizan escuchas. El mensaje contiene información relacionada con la detección sobre el servicio, como el contrato, la dirección del extremo y los ámbitos asociados. Puede especificar dónde se envía el mensaje de anuncio mediante la clase <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>. Si el extremo del anuncio es una clase <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, el hola y el adiós se transmiten de forma adecuada o, si el extremo del anuncio es una unidifusión, los mensajes se envían directamente al extremo especificado.  
   
 > [!NOTE]
->  Los anuncios se envían cuando el host de servicio se abre y se cierra.Si estas llamadas no finalizan correctamente, no se puede mandar el mensaje del anuncio.Por ejemplo, si el servicio falla, no se envía el mensaje de anuncio de adiós.  
+>  Los anuncios se envían cuando el host de servicio se abre y se cierra. Si estas llamadas no finalizan correctamente, no se puede mandar el mensaje del anuncio. Por ejemplo, si el servicio falla, no se envía el mensaje de anuncio de adiós.  
   
 > [!TIP]
 >  Puede personalizar la funcionalidad del anuncio para enviar los anuncios cuando lo desee.  
   
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] define <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> como extremos estándar para permitir a los servicios y a los clientes enviar con facilidad anuncios de hola y de adiós.  
   
-### Anuncios en el servicio  
- Para configurar el servicio para enviar anuncios, agregue una clase <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> con un extremo de anuncio.En el siguiente ejemplo, se muestra cómo agregar este comportamiento al host de servicio mediante programación.Este ejemplo utiliza `UdpAnnouncementEndpoint`, que implica que los anuncios se envían a través de multidifusión a una ubicación especificada por ese extremo estándar.  
+### <a name="announcements-on-the-service"></a>Anuncios en el servicio  
+ Para configurar el servicio para enviar anuncios, agregue una clase <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> con un extremo de anuncio. En el siguiente ejemplo, se muestra cómo agregar este comportamiento al host de servicio mediante programación. Este ejemplo utiliza `UdpAnnouncementEndpoint`, que implica que los anuncios se envían a través de multidifusión a una ubicación especificada por ese extremo estándar.  
   
 ```  
-ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();  
-serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint());  
-serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);  
+ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();
+serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint());
+serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
 ```  
   
  El comportamiento también se puede configurar en el archivo de configuración, tal y como se muestra en el siguiente ejemplo.  
   
-```  
-<services>  
-  <service behaviorConfiguration="CalculatorBehavior" name="Microsoft.Samples.Discovery.CalculatorService">  
-    <!--Add Discovery Endpoint-->  
-    <endpoint name="udpDiscoveryEpt" kind="udpDiscoveryEndpoint" />  
-  </service>  
-</services>  
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name="CalculatorBehavior">  
-      <!--Add Discovery behavior-->  
-      <serviceDiscovery>  
-        <announcementEndpoints>  
-          <endpoint kind="udpAnnouncementEndpoint" />  
-        </announcementEndpoints>  
-      </serviceDiscovery>  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<services>
+  <service behaviorConfiguration="CalculatorBehavior" name="Microsoft.Samples.Discovery.CalculatorService">
+    <!--Add Discovery Endpoint-->
+    <endpoint name="udpDiscoveryEpt" kind="udpDiscoveryEndpoint" />
+  </service>
+</services>
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="CalculatorBehavior">
+      <!--Add Discovery behavior-->
+      <serviceDiscovery>
+        <announcementEndpoints>
+          <endpoint kind="udpAnnouncementEndpoint" />
+        </announcementEndpoints>
+      </serviceDiscovery>
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
 ```  
   
- Los ejemplos anteriores configuran un servicio para enviar mensajes de anuncio automáticamente.También puede enviar mensajes de anuncio explícitamente mediante la clase <xref:System.ServiceModel.Discovery.AnnouncementClient>.  
+ Los ejemplos anteriores configuran un servicio para enviar mensajes de anuncio automáticamente. También puede enviar mensajes de anuncio explícitamente mediante la clase <xref:System.ServiceModel.Discovery.AnnouncementClient>.  
   
-### Anuncios en el cliente  
- Una aplicación cliente debe hospedar un servicio de anuncio para responder a los mensajes de hola y de adiós y suscribe a los eventos <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> y <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived>.En el ejemplo siguiente, se muestra cómo hacerlo.  
+### <a name="announcements-on-the-client"></a>Anuncios en el cliente  
+ Una aplicación cliente debe hospedar un servicio de anuncio para responder a los mensajes de hola y de adiós y suscribe a los eventos <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> y <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived>. En el ejemplo siguiente se muestra cómo hacerlo.  
   
 ```  
-// Create an AnnouncementService instance  
-AnnouncementService announcementService = new AnnouncementService();  
+// Create an AnnouncementService instance
+AnnouncementService announcementService = new AnnouncementService();
   
-// Subscribe the announcement events  
-announcementService.OnlineAnnouncementReceived += OnOnlineEvent;  
-announcementService.OfflineAnnouncementReceived += OnOfflineEvent;  
+// Subscribe the announcement events
+announcementService.OnlineAnnouncementReceived += OnOnlineEvent;
+announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
-// Create ServiceHost for the AnnouncementService  
-using (ServiceHost announcementServiceHost = new ServiceHost(announcementService))  
+// Create ServiceHost for the AnnouncementService
+using (ServiceHost announcementServiceHost = new ServiceHost(announcementService))
 {  
-    // Listen for the announcements sent over UDP multicast  
-    announcementServiceHost.AddServiceEndpoint(new UdpAnnouncementEndpoint());  
-    announcementServiceHost.Open();  
+    // Listen for the announcements sent over UDP multicast
+    announcementServiceHost.AddServiceEndpoint(new UdpAnnouncementEndpoint());
+    announcementServiceHost.Open();
   
-    Console.WriteLine("Press <ENTER> to terminate.");  
-    Console.ReadLine();  
+    Console.WriteLine("Press <ENTER> to terminate.");
+    Console.ReadLine();
 }  
-  
 ```  
   
  Cuando se recibe un mensaje de hola o de adiós, puede acceder a los metadatos de detección de extremos a través de <xref:System.ServiceModel.Discovery.AnnouncementEventArgs>, tal y como se muestra en el siguiente ejemplo.  
   
 ```  
-static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
-{  
-    Console.WriteLine("Received an online announcement from {0}",   
-e.EndpointDiscoveryMetadata.Address);  
-}  
-  
-static void OnOfflineEvent(object sender, AnnouncementEventArgs e)  
-{  
-    Console.WriteLine("Received an offline announcement from {0}",   
-e.EndpointDiscoveryMetadata.Address);  
-}  
+static void OnOnlineEvent(object sender, AnnouncementEventArgs e)
+{
+    Console.WriteLine("Received an online announcement from {0}", 
+e.EndpointDiscoveryMetadata.Address);
+}
+
+static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
+{
+    Console.WriteLine("Received an offline announcement from {0}", 
+e.EndpointDiscoveryMetadata.Address);
+}
 ```

@@ -1,87 +1,92 @@
 ---
-title: "Recopilaci&#243;n de entradas manuscritas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "recopilación de entrada manuscrita"
-  - "DefaultDrawingAttributes (propiedad)"
-  - "entrada manuscrita digital, recopilar"
-  - "DrawingAttributes (propiedad)"
-  - "entrada manuscrita, recopilar"
-  - "InkCanvas (elemento)"
-  - "propiedades, DefaultDrawingAttributes"
-  - "propiedades, DrawingAttributes"
+title: "Recopilación de entradas manuscritas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ink [WPF], collecting
+- InkCanvas element [WPF]
+- properties [WPF], DrawingAttributes
+- collecting digital ink [WPF]
+- digital ink [WPF], collecting
+- properties [WPF], DefaultDrawingAttributes
+- DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 81ed657de0c0e4d07fcb10b099cbf5e5c80a71fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Recopilaci&#243;n de entradas manuscritas
-La plataforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) recopila las entradas de lápiz digitales como parte básica de su funcionalidad.  En este tema se tratan los métodos para la recopilación de entradas de lápiz en [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+# <a name="collecting-ink"></a>Recopilación de entradas manuscritas
+La plataforma [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) recopila entradas de lápiz digitales como parte esencial de su funcionalidad. En este tema se describen los métodos de recopilación de entradas de lápiz en [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
   
-## Requisitos previos  
- Para utilizar los ejemplos siguientes, debe instalar primero [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] y [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].  También debe comprender la escritura de aplicaciones para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Para obtener más información acerca de cómo empezar con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vea [Tutorial: Introducción a WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+## <a name="prerequisites"></a>Requisitos previos  
+ Para usar los siguientes ejemplos, debe instalar primero [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)] y [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. También debe saber cómo escribir aplicaciones para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obtener más información acerca de cómo empezar a usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Tutorial: Mi primera aplicación de escritorio de WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-## Utilizar el elemento InkCanvas  
- El elemento <xref:System.Windows.Controls.InkCanvas> proporciona la manera más fácil de recopilar entradas de lápiz en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  El elemento <xref:System.Windows.Controls.InkCanvas> es similar al objeto <xref:Microsoft.Ink.InkOverlay> de [!INCLUDE[TLA2#tla_tpclssdk](../../../../includes/tla2sharptla-tpclssdk-md.md)] y de versiones anteriores.  
+## <a name="using-the-inkcanvas-element"></a>Uso del elemento InkCanvas  
+ El <xref:System.Windows.Controls.InkCanvas> elemento proporciona la manera más fácil de recopilar entradas manuscritas en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El <xref:System.Windows.Controls.InkCanvas> elemento es similar a la [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/microsoft.ink.inkoverlay\(v=vs.90\).aspx) objeto desde el [!INCLUDE[TLA2#tla_tpclssdk](../../../../includes/tla2sharptla-tpclssdk-md.md)] y versiones anteriores.  
   
- Utilice un elemento <xref:System.Windows.Controls.InkCanvas> para recibir y mostrar la entrada de entradas de lápiz.  Normalmente, la entrada de entradas de lápiz se efectúa mediante un lápiz óptico, que interactúa con un digitalizador para generar los trazos de las entradas de lápiz.  También puede utilizarse un mouse en lugar de un lápiz óptico.  Los trazos creados se representan como objetos <xref:System.Windows.Ink.Stroke> y se pueden manipular, tanto mediante programación como por acciones del usuario.  <xref:System.Windows.Controls.InkCanvas> permite al usuario seleccionar, modificar o eliminar un objeto <xref:System.Windows.Ink.Stroke> existente.  
+ Use un <xref:System.Windows.Controls.InkCanvas> elemento para recibir y mostrar entradas de lápiz. Normalmente, la entrada de lápiz se realiza con un lápiz, que interactúa con un digitalizador para generar trazos de lápiz. También se puede usar un mouse en lugar de un lápiz. Los trazos creados se representan como <xref:System.Windows.Ink.Stroke> objetos y se pueden manipular mediante programación y usuario de entrada. El <xref:System.Windows.Controls.InkCanvas> permite a los usuarios seleccionar, modificar o eliminar una existente <xref:System.Windows.Ink.Stroke>.  
   
- XAML puede utilizarse para configurar la recopilación de entradas de lápiz con la misma facilidad que se agrega un elemento `InkCanvas` al árbol.  En el ejemplo siguiente se agrega un elemento <xref:System.Windows.Controls.InkCanvas> a un proyecto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] predeterminado creado en [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)].  
+ XAML permite configurar la recopilación de entrada de lápiz fácilmente: solo tiene que agregar un elemento `InkCanvas` al árbol. En el ejemplo siguiente se agrega un <xref:System.Windows.Controls.InkCanvas> a un valor predeterminado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proyecto creado en [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)].  
   
- [!code-xml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]  
+ [!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]  
   
- El elemento `InkCanvas` también puede contener elementos secundarios que permiten agregar funciones de entrada de lápiz a casi todos los tipos de elementos XAML.  Por ejemplo, para agregar funciones de escritura a mano a un elemento de texto, basta con convertirlo en un elemento secundario de <xref:System.Windows.Controls.InkCanvas>.  
+ El elemento `InkCanvas` también puede contener elementos secundarios, lo que permite agregar funcionalidades de anotación de entrada de lápiz a casi cualquier tipo de elemento XAML. Por ejemplo, para agregar capacidades de escritura a mano a un elemento de texto, simplemente hará que sea un elemento secundario de un <xref:System.Windows.Controls.InkCanvas>.  
   
- [!code-xml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]  
+ [!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]  
   
- Agregar compatibilidad para marcar una imagen con una entrada de lápiz resulta igual de sencillo.  
+ Agregar compatibilidad para marcar una imagen con entrada de lápiz es así de fácil.  
   
- [!code-xml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]  
+ [!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]  
   
-### Modos de InkCollection  
- <xref:System.Windows.Controls.InkCanvas> proporciona compatibilidad con varios modos de entrada mediante su propiedad <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>.  
+### <a name="inkcollection-modes"></a>Modos de InkCollection  
+ El <xref:System.Windows.Controls.InkCanvas> proporciona compatibilidad para varios modos a través de entrada su <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> propiedad.  
   
-### Manipular las entradas de lápiz  
- <xref:System.Windows.Controls.InkCanvas> admite numerosas operaciones de edición de entradas de lápiz.  Por ejemplo, <xref:System.Windows.Controls.InkCanvas> admite el borrado inmediato sin que se requiera ningún código adicional para agregar la funcionalidad al elemento.  
+### <a name="manipulating-ink"></a>Manipulación de la entrada de lápiz  
+ El <xref:System.Windows.Controls.InkCanvas> proporciona compatibilidad para muchas operaciones de edición de tinta. Por ejemplo, <xref:System.Windows.Controls.InkCanvas> es compatible con copia de la punta borrar con ningún código adicional necesario para agregar la funcionalidad para el elemento.  
   
-#### Selection  
- Configurar el modo de selección es tan sencillo como establecer la propiedad <xref:System.Windows.Controls.InkCanvasEditingMode> en **Select**.  El código siguiente configura el modo de edición según el valor de <xref:System.Windows.Forms.CheckBox>:  
+#### <a name="selection"></a>Selección  
+ Establecer el modo de selección es tan sencillo como configuración de la <xref:System.Windows.Controls.InkCanvasEditingMode> propiedad **seleccione**. El código siguiente establece el modo de edición en función del valor de un <xref:System.Windows.Forms.CheckBox>:  
   
  [!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
  [!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]  
   
-#### DrawingAttributes  
- Utilice la propiedad <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> para cambiar la apariencia de los trazos de las entradas de lápiz.  Por ejemplo, el miembro <xref:System.Windows.Ink.DrawingAttributes.Color%2A> de <xref:System.Windows.Ink.DrawingAttributes> establece el color de <xref:System.Windows.Ink.Stroke> representado.  En el ejemplo siguiente se cambia el color de los trazos seleccionados a rojo.  
+#### <a name="drawingattributes"></a>DrawingAttributes  
+ Use la <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propiedad para cambiar la apariencia de los trazos de tinta. Por ejemplo, el <xref:System.Windows.Ink.DrawingAttributes.Color%2A> miembro de <xref:System.Windows.Ink.DrawingAttributes> establece el color de la representado <xref:System.Windows.Ink.Stroke>. En el ejemplo siguiente se cambia el color de los trazos seleccionados a rojo.  
   
  [!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
  [!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]  
   
-### DefaultDrawingAttributes  
- La propiedad <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> proporciona acceso a propiedades tales como el alto, ancho y color de los trazos que se van a crear en un elemento <xref:System.Windows.Controls.InkCanvas>.  Cuando se cambia <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, todos los trazos futuros que se escriben en <xref:System.Windows.Controls.InkCanvas> se representan con los nuevos valores de propiedad.  
+### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes  
+ El <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> propiedad proporciona acceso a propiedades, como el alto, ancho y color de los trazos que se creen en un <xref:System.Windows.Controls.InkCanvas>. Una vez que cambie la <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, todos los trazos futuros especificados en el <xref:System.Windows.Controls.InkCanvas> se representan con los nuevos valores de propiedad.  
   
- Además de modificar la propiedad <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> en el archivo de código subyacente, puede utilizar la sintaxis XAML para especificar las propiedades <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>.  En el ejemplo de código XAML siguiente se muestra cómo establecer la propiedad <xref:System.Windows.Ink.DrawingAttributes.Color%2A>.  Para usar este código, cree un nuevo proyecto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] llamado "HelloInkCanvas" en Visual Studio 2005.  Reemplace el código del archivo Window1.xaml con el código siguiente.  
+ Además de modificar la <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> en el archivo de código subyacente, puede usar la sintaxis de XAML para especificar <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> propiedades. El siguiente código XAML muestra cómo establecer el <xref:System.Windows.Ink.DrawingAttributes.Color%2A> propiedad. Para usar este código, cree un nuevo proyecto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denominado "HelloInkCanvas" en Visual Studio 2005. Reemplace el código del archivo Window1.xaml por el código siguiente.  
   
- [!code-xml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]  
+ [!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]  
   
- A continuación, agregue los controladores de eventos de botón siguientes al archivo de código subyacente, dentro de la clase Window1.  
+ A continuación, agregue los siguientes controladores de eventos de botón en el archivo de código subyacente, dentro de la clase Window1.  
   
  [!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]  
   
- Después de copiar el código, presione **F5** en Microsoft Visual Studio 2005 para ejecutar el programa en el depurador.  
+ Después de copiar este código, presione **F5** en Microsoft Visual Studio 2005 para ejecutar el programa en el depurador.  
   
- Observe cómo <xref:System.Windows.Controls.StackPanel> coloca los botones encima de <xref:System.Windows.Controls.InkCanvas>.  Si intenta realizar entradas de lápiz sobre la parte superior de los botones, <xref:System.Windows.Controls.InkCanvas> las recolecciona y representa detrás de los botones.  Esto se debe a que los botones están en el mismo nivel que <xref:System.Windows.Controls.InkCanvas>, no son elementos secundarios.  Además, los botones ocupan niveles superiores en el orden z, por lo que la entrada de lápiz se representa detrás de ellos.  
+ Observe cómo la <xref:System.Windows.Controls.StackPanel> coloca los botones en la parte superior de la <xref:System.Windows.Controls.InkCanvas>. Si trata de tinta sobre la parte superior de los botones, el <xref:System.Windows.Controls.InkCanvas> recopila y presenta la tinta detrás de los botones. Esto es porque los botones están relacionados con el <xref:System.Windows.Controls.InkCanvas> en lugar de los elementos secundarios. Además, los botones son superiores en el orden de z, por lo que la entrada de lápiz se representa detrás de ellos.  
   
-## Vea también  
- <xref:System.Windows.Ink.DrawingAttributes>   
- <xref:System.Windows.InkCanvas.DefaultDrawingAttributes%2A>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Ink.DrawingAttributes>  
+ <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>  
  <xref:System.Windows.Ink>

@@ -1,25 +1,28 @@
 ---
-title: "C&#243;mo serializar y deserializar datos JSON | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo serializar y deserializar datos JSON"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 14029250f3bc26ff8598e0b8d4ccce8e9fcca331
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo serializar y deserializar datos JSON
+# <a name="how-to-serialize-and-deserialize-json-data"></a>Cómo serializar y deserializar datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
   
- Este tema muestra cómo serializar objetos de tipo .NET en datos codificados mediante JSON y, a continuación, deserializar los datos en formato JSON en instancias de tipos de .NET mediante el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. En este ejemplo, se usa un contrato de datos para mostrar la serialización y deserialización de un tipo `Person` definido por el usuario.  
+ En este tema se muestra cómo serializar objetos de tipo .NET en datos codificados mediante JSON y, a continuación, deserializar los datos en formato JSON en instancias de tipos .NET mediante el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. En este ejemplo, se usa un contrato de datos para mostrar la serialización y deserialización de un tipo `Person` definido por el usuario.  
   
  Normalmente, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] controla automáticamente la serialización y deserialización de JSON cuando utiliza tipos de contrato de datos en operaciones de servicio que se exponen sobre extremos con AJAX habilitado. Sin embargo, en algunos casos puede necesitar trabajar directamente con datos de JSON; éste es el escenario que este tema describe.  
   
@@ -30,7 +33,7 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 ### <a name="to-define-the-data-contract-for-a-person"></a>Para definir el contrato de datos de una Persona  
   
-1.  Definir el contrato de datos `Person` adjuntando el <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y <xref:System.Runtime.Serialization.DataMemberAttribute> atributo a los miembros que desee serializar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]contratos de datos, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
+1.  Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]contratos de datos, vea [diseñar contratos de servicio](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
     ```  
     [DataContract]  
@@ -54,14 +57,14 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
     p.age = 42;  
     ```  
   
-2.  Serializar la `Person` objeto en una secuencia de memoria utilizando la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2.  Serialice el objeto `Person` a una secuencia de memoria utilizando el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
     ```  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  Utilice la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> método para escribir datos JSON en la secuencia.  
+3.  Utilice el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> para escribir datos JSON en la secuencia.  
   
     ```  
     ser.WriteObject(stream1, p);  
@@ -78,7 +81,7 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
   
 ### <a name="to-deserialize-an-instance-of-type-person-from-json"></a>Deserialización de una instancia de tipo Persona a partir de JSON  
   
-1.  Deserializar los datos codificados con JSON en una nueva instancia de `Person` utilizando la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> método de la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+1.  Deserialice los datos codificados con JSON en una nueva instancia de `Person` utilizando el método <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> de <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
   
     ```  
     stream1.Position = 0;  
@@ -125,7 +128,6 @@ public static User ReadToObject(string json)
     ms.Close();  
     return deserializedUser;  
 }  
-  
 ```  
   
 > [!NOTE]
@@ -147,5 +149,5 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Serialización independiente de JSON](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)   
- [Compatibilidad para JSON y otros datos de formatos de transferencia](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Serialización de JSON independiente](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
+ [Compatibilidad con JSON y otros datos de formatos de transferencia](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

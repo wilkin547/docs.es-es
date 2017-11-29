@@ -1,6 +1,6 @@
 ---
 title: "Genéricos (F#)"
-description: "Genéricos (F#)"
+description: "Obtenga información acerca de cómo usar las funciones genéricas de F # y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código."
 keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 98f65de4f3434aea9ee0b78848b85ba398543974
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generics"></a>Genéricos
 
 Los valores de función, los métodos, las propiedades y los tipos agregados de F#, como las clases, los registros y las uniones discriminadas, pueden ser *genéricos*. Las construcciones genéricas contienen al menos un parámetro de tipo que, por lo general, proporciona el usuario de la construcción genérica. Las funciones y los tipos genéricos permiten escribir código que funciona con una variedad de tipos sin repetir el código para cada tipo. Convertir el código en genérico puede ser sencillo en F#, porque a menudo se infiere implícitamente el código para que sea genérico por la inferencia de tipos del compilador y los mecanismos de generalización automáticos.
@@ -81,7 +80,7 @@ En el código siguiente se muestra el uso de las funciones que se definen en las
 Hay dos maneras de hacer referencia a un tipo genérico por nombre. Por ejemplo, `list<int>` e `int list` son dos formas de hacer referencia a un tipo genérico `list` que tiene un único argumento de tipo `int`. Por convención, la segunda forma solo se usa con tipos de F# integrados como `list` y `option`. Si hay varios argumentos de tipo, normalmente se usa la sintaxis `Dictionary<int, string>`, pero también se puede usar la sintaxis `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Caracteres comodín como argumentos de tipo
-Para especificar que el compilador debe inferir un argumento de tipo, se puede usar un subrayado o símbolo comodín (`_`), en lugar de un argumento de tipo con nombre. Esto se muestra en el siguiente código.
+Para especificar que el compilador debe inferir un argumento de tipo, se puede usar un subrayado o símbolo comodín (`_`), en lugar de un argumento de tipo con nombre. Esto se muestra en el código siguiente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
     
@@ -103,7 +102,7 @@ Hay dos clases de parámetros de tipo que se pueden usar en programas de F#. La 
 
 [Parámetros de tipo resueltos estáticamente](statically-resolved-type-parameters.md)
 
-[Genéricos en .NET Framework](https://msdn.microsoft.com/library/ms172192.aspx)
+[Genéricos en .NET Framework](~/docs/standard/generics/index.md)
 
 [Generalización automática](automatic-generalization.md)
 

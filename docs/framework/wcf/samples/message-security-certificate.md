@@ -1,28 +1,27 @@
 ---
-title: "Certificado de seguridad de mensaje | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Seguridad WS"
+title: Certificado de seguridad de mensaje
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-caps.latest.revision: 51
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 51
+caps.latest.revision: "51"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0587883a7f354ec03e3fd47ea362b93f006028ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Certificado de seguridad de mensaje
-Este ejemplo muestra cómo implementar una aplicación que utiliza WS\-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor.Este ejemplo utiliza la configuración predeterminada de tal modo que todos los mensajes de la aplicación entre el cliente y el servidor se firman y cifran.Este ejemplo está basado en [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) y consiste en un programa de consola de cliente y una biblioteca de servicios hospedados por IIS \(Servicios de Internet Information Server\) \(IIS\).El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
+# <a name="message-security-certificate"></a>Certificado de seguridad de mensaje
+Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor. Este ejemplo utiliza la configuración predeterminada de tal modo que todos los mensajes de la aplicación entre el cliente y el servidor se firman y cifran. En este ejemplo se basa en el [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) y consta de un programa de consola de cliente y una biblioteca de servicios hospedados por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
@@ -43,9 +42,9 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- El servicio expone un extremo para comunicar con el servicio y un extremo para exponer el documento WSDL del servicio mediante el protocolo WS\-MetadataExchange, definido utilizando el archivo de configuración \(Web.config\).El extremo está compuesto por una dirección, un enlace y un contrato.El enlace se configura con un elemento [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) estándar, que usa la seguridad de mensaje de forma predeterminada.Este ejemplo establece el atributo `clientCredentialType` para certificar que se requiere la autenticación del cliente.  
+ El servicio expone un extremo para comunicar con el servicio y un extremo para exponer el documento WSDL del servicio mediante el protocolo WS-MetadataExchange, definido utilizando el archivo de configuración (Web.config). El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento, que utiliza la seguridad de los mensajes de forma predeterminada. Este ejemplo establece el atributo `clientCredentialType` para certificar que se requiere la autenticación del cliente.  
   
-```  
+```xml  
 <system.serviceModel>  
     <protocolMapping>  
       <add scheme="http" binding="wsHttpBinding"/>  
@@ -92,12 +91,11 @@ public class CalculatorService : ICalculator
       </serviceBehaviors>  
     </behaviors>  
   </system.serviceModel>  
-  
 ```  
   
- El comportamiento especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio.El nombre de asunto del certificado del servidor se especifica en el atributo `findValue` en el elemento [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
+ El comportamiento especifica las credenciales del servicio que se utilizan cuando el cliente autentica el servicio. El nombre de sujeto del certificado de servidor se especifica en el `findValue` de atributo en el [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) elemento.  
   
-```  
+```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
 <behaviors>  
       <serviceBehaviors>  
@@ -126,12 +124,11 @@ public class CalculatorService : ICalculator
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
 ```  
   
- La configuración de extremo de cliente está compuesta por una dirección absoluta para el extremo de servicio, el enlace y el contrato.El enlace del cliente se configura con el modo de seguridad y el modo de autenticación apropiados.Si se trata de un escenario de varios equipos, asegúrese de que se cambie la dirección del extremo de servicio según corresponda.  
+ La configuración de punto de conexión de cliente está compuesta de una dirección absoluta para el punto de conexión de servicio, el enlace y el contrato. El enlace del cliente se configura con el modo de seguridad y el modo de autenticación apropiados. Si se trata de un escenario de varios equipos, asegúrese de que se cambie la dirección del extremo de servicio según corresponda.  
   
-```  
+```xml  
 <system.serviceModel>  
     <client>  
       <!-- Use a behavior to configure the client certificate to present to the service. -->  
@@ -153,12 +150,11 @@ public class CalculatorService : ICalculator
     </bindings>  
 ...  
 </system.serviceModel>  
-  
 ```  
   
- La implementación del cliente puede establecer el certificado que se debe utilizar, bien sea a través del archivo de configuración o a través de código.El ejemplo siguiente muestra cómo establecer el certificado para utilizar en el archivo de configuración.  
+ La implementación del cliente puede establecer el certificado que se debe utilizar, bien sea a través del archivo de configuración o a través de código. El ejemplo siguiente muestra cómo establecer el certificado para utilizar en el archivo de configuración.  
   
-```  
+```xml  
 <system.serviceModel>  
   ...  
   
@@ -189,7 +185,6 @@ public class CalculatorService : ICalculator
     </behaviors>  
   
 </system.serviceModel>  
-  
 ```  
   
  El ejemplo siguiente muestra cómo llamar al servicio en su programa.  
@@ -205,7 +200,7 @@ Console.WriteLine(client.GetCallerIdentity());
 client.Close();  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  
 CN=client.com  
@@ -216,11 +211,11 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- El archivo por lotes Setup.bat incluido con los ejemplos de Message Security permite configurar el cliente y el servidor con los certificados pertinentes para ejecutar una aplicación hospedada que exija seguridad basada en certificado.El archivo por lotes se puede ejecutar en tres modos.Para la ejecución en el modo de un único equipo, escriba **setup.bat** en un símbolo del sistema de Visual Studio; para el modo de servicio escriba **setup.bat service** y para el modo de cliente escriba **setup.bat client**.Utilice el modo de cliente y servidor cuando ejecute el ejemplo en varios equipos.Para obtener más detalles, vea el procedimiento de configuración al final de este tema.A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.  
+ El archivo por lotes Setup.bat incluido con los ejemplos de Message Security permite configurar el cliente y el servidor con los certificados pertinentes para ejecutar una aplicación hospedada que exija seguridad basada en certificado. El archivo por lotes se puede ejecutar en tres modos. Para que se ejecute en modo de solo equipo, escriba **setup.bat** en un símbolo del sistema de Visual Studio; para el modo de servicio escriba **setup.bat servicio**; y para el tipo de modo de cliente **setup.bat cliente** . Utilice el modo de cliente y servidor cuando ejecute el ejemplo en varios equipos. Para obtener más detalles, vea el procedimiento de configuración al final de este tema. A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.  
   
 -   Crear el certificado del cliente.  
   
-     La línea siguiente en el archivo por lotes crea el certificado de cliente.El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado.El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.  
+     La línea siguiente en el archivo por lotes crea el certificado de cliente. El nombre de cliente especificado se utiliza en el nombre del asunto del certificado creado. El certificado se guarda en el almacén `My`, en la ubicación de almacenamiento `CurrentUser`.  
   
     ```  
     echo ************  
@@ -231,7 +226,7 @@ Press <ENTER> to terminate client.
   
 -   Instalar el certificado de cliente en el almacén de certificados de confianza del servidor.  
   
-     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma.Para que un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe establecerse en el valor `PeerOrChainTrust` o `PeerTrust`.Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo lograrlo con un archivo de configuración.  
+     La línea siguiente del archivo por lotes copia el certificado de cliente en el almacén TrustedPeople del servidor para que el servidor pueda tomar decisiones basadas en la confianza o la ausencia de la misma. Para que un servicio de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] confíe en un certificado instalado en el almacén TrustedPeople, el modo de validación del certificado de cliente debe establecerse en el valor `PeerOrChainTrust` o `PeerTrust`. Vea el ejemplo de configuración de servicio anterior para obtener información sobre cómo lograrlo con un archivo de configuración.  
   
     ```  
     echo ************  
@@ -254,11 +249,11 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     La variable %SERVER\_NAME% especifica el nombre del servidor.El certificado se almacena en el almacén LocalMachine.Si el archivo por lotes Setup.bat se ejecuta con un argumento de servicio \(como **setup.bat service**\), %SERVER\_NAME% contiene el nombre de dominio completo del equipo.De lo contrario, tiene como valor predeterminado el host local.  
+     La variable %SERVER_NAME% especifica el nombre del servidor. El certificado se almacena en el almacén LocalMachine. Si el archivo por lotes Setup.bat se ejecuta con un argumento de servicio (como por ejemplo, **setup.bat servicio**) % SERVER_NAME % contiene el nombre de dominio completo del equipo. De lo contrario, tiene como valor predeterminado el host local.  
   
 -   Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.  
   
-     La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente.Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe.Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
+     La línea siguiente copia el certificado de servidor en el almacén de personas de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
@@ -280,72 +275,72 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  Si está utilizando una edición que no esté en inglés de EE. UU.de Windows, debe editar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\\NETWORK SERVICE" con su equivalente regional.  
+    >  Si está utilizando una edición que no esté en inglés de EE. UU. de Windows, debe editar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.  
   
 > [!NOTE]
->  Las herramientas utilizadas en este archivo por lotes se encuentran en C:\\Program Files\\Microsoft Visual Studio 8\\Common7\\tools o C:\\Program Files\\Microsoft SDKs\\Windows\\v6.0\\binUno de estos directorios debe estar en su ruta de acceso del sistema.Si tiene Visual Studio instalado, la manera más fácil de obtener este directorio en su ruta de acceso es abrir el símbolo del sistema de Visual Studio.Haga clic en **Inicio** y, a continuación, seleccione **Todos los programas**, **Visual Studio 2012** y **Herramientas**.Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas.De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
+>  Las herramientas utilizadas en este archivo por lotes se encuentran en C:\Program Files\Microsoft Visual Studio 8\Common7\tools o C:\Program Files\Microsoft SDKs\Windows\v6.0\bin Uno de estos directorios debe estar en su ruta de acceso del sistema. Si tiene Visual Studio instalado, la manera más fácil de obtener este directorio en su ruta de acceso es abrir el símbolo del sistema de Visual Studio. Haga clic en **iniciar**y, a continuación, seleccione **todos los programas**, **Visual Studio 2012**, **herramientas**. Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas. De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar:  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar:  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio:  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio:  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar el código de la edición .NET de C\# o Visual Basic de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-### Para ejecutar el ejemplo en el mismo equipo  
+### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1.  Abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo.De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
+1.  Abra un símbolo del sistema de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio.Requiere que la variable de entorno path señale al directorio donde está instalado el SDK.Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio \(2010\).  
+    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio (2010).  
   
-2.  Compruebe el acceso al servicio en un explorador utilizando la dirección `http://localhost/servicemodelsamples/service.svc`.  
+2.  Comprobar el acceso al servicio utilizando un explorador escribiendo la dirección `http://localhost/servicemodelsamples/service.svc`.  
   
-3.  Inicie Client.exe desde \\client\\bin.La actividad del cliente se muestra en la aplicación de consola del cliente.  
+3.  Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### Para ejecutar el ejemplo en varios equipos  
+### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
-1.  Cree un directorio en el equipo del servicio.Cree una aplicación virtual denominada "servicemodelsamples" para este directorio utilizando la herramienta de administración de Internet Information Services \(IIS\).  
+1.  Cree un directorio en el equipo del servicio. Cree una aplicación virtual denominada "servicemodelsamples" para este directorio utilizando la herramienta de administración de Internet Information Services (IIS).  
   
-2.  Copie los archivos de programa de servicio del directorio \\inetpub\\wwwroot\\servicemodelsamples al directorio virtual del equipo de servicio.Asegúrese de que copia los archivos en el subdirectorio \\bin.Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el equipo del servicio.  
+2.  Copie los archivos de programa de servicio del directorio \inetpub\wwwroot\servicemodelsamples al directorio virtual del equipo de servicio. Asegúrese de que copia los archivos en el subdirectorio \bin. Copie también los archivos Setup.bat, Cleanup.bat e ImportClientCert.bat en el equipo del servicio.  
   
 3.  Cree un directorio en el equipo cliente para los archivos binarios del cliente.  
   
-4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente.Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
+4.  Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5.  En el servidor, ejecute **setup.bat service** en un símbolo del sistema de Visual Studio con privilegios de administrador.Al ejecutar **setup.bat** con el argumento **service** se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
+5.  En el servidor, ejecute **setup.bat servicio** en un símbolo del sistema de Visual Studio con privilegios de administrador. Ejecuta **setup.bat** con el **servicio** argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service.cer.  
   
-6.  Edite Web.config para reflejar el nuevo nombre del certificado \(en el atributo `findValue` en [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)\), que es igual que el nombre de dominio completo del equipo.  
+6.  Edite el archivo Web.config para reflejar el nuevo nombre de certificado (en el `findValue` de atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo.  
   
 7.  Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-8.  En el cliente, ejecute **setup.bat client** en un símbolo del sistema de Visual Studio con privilegios de administrador.Al ejecutar **setup.bat** con el argumento **client**, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
+8.  En el cliente, ejecute **setup.bat client** en un símbolo del sistema de Visual Studio con privilegios de administrador. Ejecuta **setup.bat** con el **cliente** argumento crea un certificado de cliente denominado client.com y exporta el certificado de cliente a un archivo denominado Client.cer.  
   
-9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del extremo para que coincida con la nueva dirección de su servicio.Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.  
+9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.  
   
 10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
   
-11. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de Visual Studio con privilegios de administrador.Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser \- TrustedPeople.  
+11. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de Visual Studio con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
   
-12. En el servidor, ejecute ImportClientCert.bat en un símbolo del sistema de Visual Studio con privilegios de administrador.De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine \- TrustedPeople.  
+12. En el servidor, ejecute ImportClientCert.bat en un símbolo del sistema de Visual Studio con privilegios de administrador. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.  
   
-13. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema.Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/es-es/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [Troubleshooting Tips](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
   
-### Para realizar una limpieza después de ejecutar el ejemplo  
+### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 -   Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos.Si ha ejecutado ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser \- TrustedPeople.Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] que usan certificados en varios equipos, asegúrese de borrar los certificados del servicio que se hayan instalado en el almacén CurrentUser - TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
-## Vea también
+## <a name="see-also"></a>Vea también

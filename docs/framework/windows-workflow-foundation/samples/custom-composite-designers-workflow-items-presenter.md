@@ -1,48 +1,55 @@
 ---
-title: "Dise&#241;adores compuestos personalizados - Moderador de elementos de flujo de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5390aed3af9146700a4dca7c5b56ddabdca993dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dise&#241;adores compuestos personalizados - Moderador de elementos de flujo de trabajo
-<xref:System.Activities.Design.WorkflowItemsPresenter> es un tipo clave en el modelo de programación de diseñador de WF que permite la edición de una colección de elementos incluidos.En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.  
+# <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
+<xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> es un tipo clave en el modelo de programación de diseñador de WF que permite la edición de una colección de elementos incluidos. En este ejemplo se muestra cómo compilar un diseñador de actividad que muestra este tipo de colección modificable.  
   
  En este ejemplo se explica cómo:  
   
--   Crear un diseñador de actividades personalizado con un objeto <xref:System.Activities.Design.WorkflowItemsPresenter>.  
+-   Crear un diseñador de actividad personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>.  
   
 -   Crear un diseñador de actividad con una vista "contraída" y "expandida".  
   
 -   Invalidar un diseñador predeterminado en una aplicación hospedada en otro host.  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Abra la solución de ejemplo **UsingWorkflowItemsPresenter.sln** para C\# o para VB en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Abra la **UsingWorkflowItemsPresenter.sln** solución de ejemplo para C# o VB en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Compile y ejecute la solución.Se debe abrir una aplicación de diseñador de flujo de trabajo hospedada en otro host; puede arrastrar actividades al lienzo.  
+2.  Compile y ejecute la solución. Se debe abrir una aplicación de diseñador de flujo de trabajo hospedada en otro host; puede arrastrar actividades al lienzo.  
   
-## Aspectos que se deben destacar del ejemplo  
+## <a name="sample-highlights"></a>Aspectos que se deben destacar del ejemplo  
  El código de este ejemplo muestra lo siguiente:  
   
 -   La actividad para la que se compila un diseñador: `Parallel`  
   
--   La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Design.WorkflowItemsPresenter>.Elementos que se deben señalar:  
+-   La creación de un diseñador de actividades personalizado con un objeto <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Elementos que se deben señalar:  
   
-    -   Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Branches`.`ModelItem` es la propiedad de <xref:System.Activities.Design.WorkflowElementDesigner> que hace referencia al objeto subyacente para el que se está usando el diseñador, en este caso nuestro `Parallel`.  
+    -   Observe el uso de enlace de datos de WPF para enlazarse a `ModelItem.Branches`. `ModelItem` es la propiedad de `WorkflowElementDesigner` que hace referencia al objeto subyacente para el que se está usando el diseñador, en este caso nuestro `Parallel`.  
   
-    -   La propiedad <xref:System.Activities.Design.WorkflowItemsPresenter.SpacerTemplate%2A> se puede utilizar para colocar un elemento visual que se mostrará entre los elementos individuales de la colección.  
+    -   La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> se puede utilizar para colocar un elemento visual que se mostrará entre los elementos individuales de la colección.  
   
-    -   La propiedad <xref:System.Activities.Design.WorkflowItemsPresenter.ItemsPanel%2A> es una plantilla que se puede proporcionar para determinar el diseño de los elementos de la colección.En este caso, se usa un panel de apilamiento horizontal.  
+    -   La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> es una plantilla que se puede proporcionar para determinar el diseño de los elementos de la colección. En este caso, se usa un panel de apilamiento horizontal.  
   
  El ejemplo de código siguiente muestra cómo hacerlo.  
   
@@ -60,7 +67,6 @@ caps.handback.revision: 12
       </ItemsPanelTemplate>  
     </sad:WorkflowItemsPresenter.ItemsPanel>  
   </sad:WorkflowItemsPresenter>  
-  
 ```  
   
 -   Realice una asociación de `DesignerAttribute` al tipo `Parallel` y, a continuación, genere los atributos indicados.  
@@ -73,7 +79,6 @@ caps.handback.revision: 12
 // register metadata  
 (new DesignerMetadata()).Register();  
 RegisterCustomMetadata();  
-  
 ```  
   
 ```vb  
@@ -82,15 +87,12 @@ Dim metadata = New DesignerMetadata()
 metadata.Register()  
 ' register custom metadata  
 RegisterCustomMetadata()  
-  
 ```  
   
--   -   A continuación, invalide el paralelo en el método `RegisterCustomMetadata`.  
+    -   A continuación, invalide el paralelo en el método `RegisterCustomMetadata`.  
   
- El siguiente código muestra esta acción en C\# y Visual Basic.  
-  
- C\#  
-  
+ El siguiente código muestra esta acción en C# y Visual Basic.  
+ 
 ```csharp  
 void RegisterCustomMetadata()  
 {  
@@ -98,7 +100,6 @@ void RegisterCustomMetadata()
       builder.AddCustomAttributes(typeof(Parallel), new DesignerAttribute(typeof(CustomParallelDesigner)));  
       MetadataStore.AddAttributeTable(builder.CreateTable());  
 }  
-  
 ```  
   
 ```vb  
@@ -107,7 +108,6 @@ Sub RegisterCustomMetadata()
    builder.AddCustomAttributes(GetType(Parallel), New DesignerAttribute(GetType(CustomParallelDesigner)))  
    MetadataStore.AddAttributeTable(builder.CreateTable())  
 End Sub  
-  
 ```  
   
 -   Por último, observe el uso de diferentes plantillas de datos y desencadenadores para seleccionar la plantilla adecuada en función de la propiedad `IsRootDesigner`.  
@@ -155,18 +155,17 @@ End Sub
     <ContentPresenter Style="{DynamicResource ExpandOrCollapsedStyle}" Content="{Binding}"/>  
   </Grid>  
 </sad: ActivityDesigner>  
-  
 ```  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
-## Vea también  
- <xref:System.Activities.Presentation.WorkflowItemsPresenter>   
- [Desarrollar aplicaciones con el Diseñador de flujo de trabajo](../Topic/Developing%20Applications%20with%20the%20Workflow%20Designer.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
+ [Desarrollar aplicaciones con el Diseñador de flujo de trabajo](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

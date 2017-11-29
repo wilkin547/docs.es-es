@@ -1,41 +1,44 @@
 ---
-title: "C&#243;mo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DomainUpDown (control) [Windows Forms], quitar elementos"
-  - "control de botón de número, quitar elementos"
+title: "Cómo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- DomainUpDown control [Windows Forms], removing items from
+- spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7cab9bf4445c7322c1b4824f26c0821de8c58657
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms
-Se pueden quitar los elementos del control <xref:System.Windows.Forms.DomainUpDown> de formularios Windows Forms llamando al método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> de la clase <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>.  El método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> quita un elemento específico, mientras que el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> quita un elemento según su posición.  
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Cómo: Quitar elementos de los controles DomainUpDown de formularios Windows Forms
+Puede quitar los elementos de los formularios de Windows <xref:System.Windows.Forms.DomainUpDown> control mediante una llamada a la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> o <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase. El <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método quita un elemento específico, mientras que la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método quita un elemento por su posición.  
   
-### Para quitar un elemento  
+### <a name="to-remove-an-item"></a>Para quitar un elemento  
   
--   Utilice el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> de la clase <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> para quitar un elemento por nombre.  
+-   Use la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> método de la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> clase para quitar un elemento por su nombre.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
-  
     ```  
   
     ```csharp  
     domainUpDown1.Items.Remove("noodles");  
-  
     ```  
   
     ```cpp  
@@ -44,18 +47,16 @@ Se pueden quitar los elementos del control <xref:System.Windows.Forms.DomainUpDo
   
      O bien  
   
--   Utilice el método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> para quitar un elemento por su posición.  
+-   Use la <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> método para quitar un elemento por su posición.  
   
     ```vb  
     ' Removes the first item in the list.  
     DomainUpDown1.Items.RemoveAt(0)  
-  
     ```  
   
     ```csharp  
     // Removes the first item in the list.  
     domainUpDown1.Items.RemoveAt(0);  
-  
     ```  
   
     ```cpp  
@@ -63,9 +64,9 @@ Se pueden quitar los elementos del control <xref:System.Windows.Forms.DomainUpDo
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.DomainUpDown>   
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=fullName>   
- [DomainUpDown \(Control\)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.DomainUpDown>  
+ <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>  
+ [DomainUpDown (control)](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
  [Información general sobre el control DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)

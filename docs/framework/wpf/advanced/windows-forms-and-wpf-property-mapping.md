@@ -1,65 +1,68 @@
 ---
-title: "Asignaci&#243;n de propiedades en formularios Windows Forms y WPF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "interoperabilidad [WPF], Windows Forms"
-  - "asignación de propiedades [interoperabilidad con WPF]"
-  - "formularios Windows Forms [WPF], interoperabilidad con"
-  - "Windows Forms, interoperabilidad con WPF"
-  - "asignación de propiedades del elemento WindowsFormsHost"
+title: "Asignación de propiedades en formularios Windows Forms y WPF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- property mapping [WPF interoperability]
+- Windows Forms [WPF], interoperability with
+- Windows Forms [WPF], WPF interoperation
+- interoperability [WPF], Windows Forms
+- WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1a0af1015747e2f27b19c2cac2c896dd60214264
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignaci&#243;n de propiedades en formularios Windows Forms y WPF
-Las tecnologías de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] tienen dos modelos de propiedades similares pero diferentes.  La *asignación de propiedades* admite la interoperabilidad entre las dos arquitecturas y proporciona las funciones siguientes:  
+# <a name="windows-forms-and-wpf-property-mapping"></a>Asignación de propiedades en formularios Windows Forms y WPF
+El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tecnologías tienen dos modelos de propiedades similares pero diferentes. *Asignación de propiedad* admite la interoperación entre las dos arquitecturas y proporciona las siguientes capacidades:  
   
--   Facilita la asignación de los cambios de las propiedades pertinentes en el entorno del host al control o elemento hospedado.  
+-   Hace fácil asignar los cambios de propiedad correspondiente en el entorno de host para el control o elemento hospedado.  
   
--   Proporciona el control predeterminado para asignar las propiedades más utilizadas.  
+-   Proporciona propiedades de control predeterminado para asignar más comúnmente utilizadas.  
   
--   Facilita la eliminación, invalidación o extensión de las propiedades predeterminadas.  
+-   Permite que facilita la eliminación, reemplazar o extensión de las propiedades predeterminadas.  
   
--   Permite asegurarse de que los cambios de los valores de propiedad en el host se detecten y traduzcan automáticamente al control o elemento hospedado.  
+-   Se asegura de que cambia de valor de propiedad en el host automáticamente se detectan y se convierten en el control o elemento hospedado.  
   
 > [!NOTE]
->  Los eventos de cambio de propiedad no se propagan en sentido ascendente por la jerarquía del control o elemento de hospedaje.  La conversión de propiedades no se efectúa si el valor local de una propiedad no cambia por la existencia de mecanismos que modifican el valor de la propiedad, tales como establecimiento directo, estilos, herencia, enlaces de datos u otros.  
+>  Eventos de cambio de propiedad no se propagan hacia arriba el control host o la jerarquía de elementos. No se realiza la traducción de la propiedad si el valor local de una propiedad no cambia debido a la configuración directa, estilos, herencia, enlace de datos u otros mecanismos que cambie el valor de la propiedad.  
   
- Utilice la propiedad <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> y la propiedad <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> del control <xref:System.Windows.Forms.Integration.ElementHost> para tener acceso a la asignación de propiedades.  
+ Use la <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> propiedad en el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento y el <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> propiedad <xref:System.Windows.Forms.Integration.ElementHost> control para tener acceso a la asignación de propiedad.  
   
-## Asignación de propiedades con el elemento WindowsFormsHost  
- El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> convierte las propiedades predeterminadas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en sus equivalentes en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] utilizando la tabla de conversión siguiente.  
+## <a name="property-mapping-with-the-windowsformshost-element"></a>Asignación de propiedad con el elemento WindowsFormsHost  
+ El <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento traduce predeterminado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades a sus [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] equivalentes con la siguiente tabla de traducción.  
   
 |Hospedaje de Windows Presentation Foundation|Windows Forms|Comportamiento de interoperación|  
-|--------------------------------------------------|-------------------|--------------------------------------|  
-|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> \(<xref:System.Drawing.Color?displayProperty=fullName>\)|El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> establece las propiedades <xref:System.Windows.Forms.Control.BackColor%2A> y <xref:System.Windows.Forms.Control.BackgroundImage%2A> del control hospedado.  La asignación se efectúa mediante las reglas siguientes:<br /><br /> -   Si <xref:System.Windows.Controls.Control.Background%2A> es un color sólido, se convierte y utiliza para establecer la propiedad <xref:System.Windows.Forms.Control.BackColor%2A> del control hospedado.  La propiedad <xref:System.Windows.Forms.Control.BackColor%2A> no se establece en el control hospedado, porque el control hospedado puede heredar el valor de la propiedad <xref:System.Windows.Forms.Control.BackColor%2A>. **Note:**  El control hospedado no admite la transparencia.  Todos los colores que se asignen a <xref:System.Windows.Forms.Control.BackColor%2A> deberán ser totalmente opacos, con un valor de alfa de 0xFF. <br /><br /> -   Si <xref:System.Windows.Controls.Control.Background%2A> no es un color sólido, el control <xref:System.Windows.Forms.Integration.WindowsFormsHost> crea un mapa de bits a partir de la propiedad <xref:System.Windows.Controls.Control.Background%2A>.  El control <xref:System.Windows.Forms.Integration.WindowsFormsHost> asigna este mapa de bits a la propiedad <xref:System.Windows.Forms.Control.BackgroundImage%2A> del control hospedado.  Esto proporciona un efecto que es similar a la transparencia. **Note:**  Puede invalidar este comportamiento o quitar la asignación de la propiedad <xref:System.Windows.Controls.Control.Background%2A>.|  
-|<xref:System.Windows.FrameworkElement.Cursor%2A>|<xref:System.Windows.Forms.Control.Cursor%2A>|Si no se ha reasignado la asignación predeterminada, el control <xref:System.Windows.Forms.Integration.WindowsFormsHost> recorre su jerarquía de antecesores hasta que encuentra uno cuya propiedad <xref:System.Windows.FrameworkElement.Cursor%2A> está establecida.  Este valor se convierte en el cursor de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] correspondiente más cercano.<br /><br /> Si no se ha reasignado la asignación predeterminada para la propiedad <xref:System.Windows.FrameworkElement.ForceCursor%2A>, el recorrido se detiene en el primer antecesor cuya propiedad <xref:System.Windows.FrameworkElement.ForceCursor%2A> está establecida en `true`.|  
-|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> \(<xref:System.Windows.FlowDirection?displayProperty=fullName>\)|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> \(<xref:System.Windows.Forms.RightToLeft?displayProperty=fullName>\)|<xref:System.Windows.FlowDirection> se asigna a <xref:System.Windows.Forms.RightToLeft>.<br /><br /> <xref:System.Windows.FlowDirection> se asigna a <xref:System.Windows.Forms.RightToLeft>.<br /><br /> <xref:System.Windows.Forms.RightToLeft> no se asigna.<br /><br /> <xref:System.Windows.FlowDirection?displayProperty=fullName> se asigna a <xref:System.Windows.Forms.RightToLeft?displayProperty=fullName>.|  
-|<xref:System.Windows.Controls.Control.FontStyle%2A>|Propiedad <xref:System.Drawing.Font.Style%2A> del objeto <xref:System.Drawing.Font?displayProperty=fullName> del control hospedado.|El conjunto de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se convierte a la <xref:System.Drawing.Font> correspondiente.  Cuando alguna de estas propiedades cambia, se crea una nueva <xref:System.Drawing.Font>.  Para <xref:System.Windows.FontStyles.Normal%2A>: <xref:System.Drawing.FontStyle> está deshabilitado.  Para <xref:System.Windows.FontStyles.Italic%2A> o <xref:System.Windows.FontStyles.Oblique%2A>: <xref:System.Drawing.FontStyle> está habilitado.|  
-|<xref:System.Windows.Controls.Control.FontWeight%2A>|Propiedad <xref:System.Drawing.Font.Style%2A> del objeto <xref:System.Drawing.Font?displayProperty=fullName> del control hospedado.|El conjunto de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se convierte a la <xref:System.Drawing.Font> correspondiente.  Cuando alguna de estas propiedades cambia, se crea una nueva <xref:System.Drawing.Font>.  Para <xref:System.Windows.FontWeights.Black%2A>, <xref:System.Windows.FontWeights.Bold%2A>, <xref:System.Windows.FontWeights.DemiBold%2A>, <xref:System.Windows.FontWeights.ExtraBold%2A>, <xref:System.Windows.FontWeights.Heavy%2A>, <xref:System.Windows.FontWeights.Medium%2A>, <xref:System.Windows.FontWeights.SemiBold%2A> o <xref:System.Windows.FontWeights.UltraBold%2A>: <xref:System.Drawing.FontStyle> está habilitado.  Para <xref:System.Windows.FontWeights.ExtraLight%2A>, <xref:System.Windows.FontWeights.Light%2A>, <xref:System.Windows.FontWeights.Normal%2A>, <xref:System.Windows.FontWeights.Regular%2A>, <xref:System.Windows.FontWeights.Thin%2A> o <xref:System.Windows.FontWeights.UltraLight%2A>: <xref:System.Drawing.FontStyle> está deshabilitado.|  
-|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> \(<xref:System.Drawing.Font?displayProperty=fullName>\)|El conjunto de propiedades de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se convierte a la <xref:System.Drawing.Font> correspondiente.  Cuando alguna de estas propiedades cambia, se crea una nueva <xref:System.Drawing.Font>.  El tamaño del control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado cambia dependiendo del tamaño de fuente.<br /><br /> En [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], el tamaño de fuente se expresa en noventa y seisavos de pulgada; mientras que en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] se expresa en setenta y dosavos de pulgada.  La conversión correspondiente es:<br /><br /> Tamaño de fuente en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] \= tamaño de fuente en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] \* 72,0 \/ 96,0.|  
-|<xref:System.Windows.Controls.Control.Foreground%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\)|<xref:System.Windows.Forms.Control.ForeColor%2A><br /><br /> \(<xref:System.Drawing.Color?displayProperty=fullName>\)|La asignación de la propiedad <xref:System.Windows.Controls.Control.Foreground%2A> se realiza utilizando las reglas siguientes:<br /><br /> -   Si <xref:System.Windows.Controls.Control.Foreground%2A> es un <xref:System.Windows.Media.SolidColorBrush>, se utiliza <xref:System.Windows.Media.SolidColorBrush.Color%2A> para <xref:System.Windows.Forms.Control.ForeColor%2A>.<br />-   Si <xref:System.Windows.Controls.Control.Foreground%2A> es un <xref:System.Windows.Media.GradientBrush>, se utiliza el color de <xref:System.Windows.Media.GradientStop> con el valor de desplazamiento más bajo para <xref:System.Windows.Forms.Control.ForeColor%2A>.<br />-   Para todos los demás tipos de <xref:System.Windows.Media.Brush>, se deja <xref:System.Windows.Forms.Control.ForeColor%2A> sin cambios.  Esto significa que se utiliza el valor predeterminado.|  
-|<xref:System.Windows.UIElement.IsEnabled%2A>|<xref:System.Windows.Forms.Control.Enabled%2A>|Cuando se establece <xref:System.Windows.UIElement.IsEnabled%2A>, el elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> establece la propiedad <xref:System.Windows.Forms.Control.Enabled%2A> del control hospedado.|  
-|<xref:System.Windows.Controls.Control.Padding%2A>|<xref:System.Windows.Forms.Control.Padding%2A>|Los cuatro valores de la propiedad <xref:System.Windows.Forms.Control.Padding%2A> en el control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado se establecen en el mismo valor de <xref:System.Windows.Thickness>.<br /><br /> -   Los valores mayores que <xref:System.Int32.MaxValue> se establecen en <xref:System.Int32.MaxValue>.<br />-   Los valores menores que <xref:System.Int32.MinValue> se establecen en <xref:System.Int32.MinValue>.|  
-|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Control.Visible%2A>|-   <xref:System.Windows.Visibility> se asigna a <xref:System.Windows.Forms.Control.Visible%2A> \= `true`.  El control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado está visible.  No se recomienda establecer explícitamente la propiedad <xref:System.Windows.Forms.Control.Visible%2A> del control hospedado en `false`.<br />-   <xref:System.Windows.Visibility> se asigna a <xref:System.Windows.Forms.Control.Visible%2A> \= `true` o `false`.  No se dibuja el control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado y se contrae su área.<br />-   <xref:System.Windows.Visibility>: el control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado ocupa espacio en el diseño, pero no está visible.  En este caso, la propiedad <xref:System.Windows.Forms.Control.Visible%2A> se establece en `true`.  No se recomienda establecer explícitamente la propiedad <xref:System.Windows.Forms.Control.Visible%2A> del control hospedado en `false`.|  
+|---------------------------------------------|-------------------|-----------------------------|  
+|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|El <xref:System.Windows.Forms.Integration.WindowsFormsHost> conjuntos de elementos del <xref:System.Windows.Forms.Control.BackColor%2A> propiedad del control hospedado y <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad del control hospedado. Asignación se realiza mediante las reglas siguientes:<br /><br /> -If <xref:System.Windows.Controls.Control.Background%2A> es un color sólido, se convierte y se usa para establecer el <xref:System.Windows.Forms.Control.BackColor%2A> propiedad del control hospedado. El <xref:System.Windows.Forms.Control.BackColor%2A> propiedad no se establece en el control hospedado, porque el control hospedado puede heredar el valor de la <xref:System.Windows.Forms.Control.BackColor%2A> propiedad. **Nota:** el control hospedado no admiten la transparencia. Cualquier color asignado al <xref:System.Windows.Forms.Control.BackColor%2A> debe ser completamente opaco, con un valor alfa de 0xFF. <br /><br /> -If <xref:System.Windows.Controls.Control.Background%2A> no es un color sólido, el <xref:System.Windows.Forms.Integration.WindowsFormsHost> control crea un mapa de bits de la <xref:System.Windows.Controls.Control.Background%2A> propiedad. El <xref:System.Windows.Forms.Integration.WindowsFormsHost> control asigna este mapa de bits para el <xref:System.Windows.Forms.Control.BackgroundImage%2A> propiedad del control hospedado. Esto proporciona un efecto que es similar a la transparencia. **Nota:** puede invalidar este comportamiento o quitar la <xref:System.Windows.Controls.Control.Background%2A> asignación de propiedad.|  
+|<xref:System.Windows.FrameworkElement.Cursor%2A>|<xref:System.Windows.Forms.Control.Cursor%2A>|Si no se ha reasignado la asignación predeterminada, <xref:System.Windows.Forms.Integration.WindowsFormsHost> control recorre su jerarquía de antecesores hasta que encuentra un antecesor con su <xref:System.Windows.FrameworkElement.Cursor%2A> conjunto de propiedades. Este valor se convierte en la correspondiente más cercano [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] cursor.<br /><br /> Si la asignación predeterminada para la <xref:System.Windows.FrameworkElement.ForceCursor%2A> no se ha reasignado propiedad, el recorrido se detiene en el primer antecesor con <xref:System.Windows.FrameworkElement.ForceCursor%2A> establecido en `true`.|  
+|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FlowDirection.LeftToRight> se asigna a <xref:System.Windows.Forms.RightToLeft.No>.<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft> se asigna a <xref:System.Windows.Forms.RightToLeft.Yes>.<br /><br /> <xref:System.Windows.Forms.RightToLeft.Inherit>no está asignada.<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> se asigna a <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType>.|  
+|<xref:System.Windows.Controls.Control.FontStyle%2A>|<xref:System.Drawing.Font.Style%2A>en el control hospedado<xref:System.Drawing.Font?displayProperty=nameWithType>|El conjunto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades se traduce en su correspondiente <xref:System.Drawing.Font>. Cuando se cambia una de estas propiedades, un nuevo <xref:System.Drawing.Font> se crea. Para <xref:System.Windows.FontStyles.Normal%2A>: <xref:System.Drawing.FontStyle.Italic> está deshabilitado. Para <xref:System.Windows.FontStyles.Italic%2A> o <xref:System.Windows.FontStyles.Oblique%2A>: <xref:System.Drawing.FontStyle.Italic> está habilitado.|  
+|<xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Drawing.Font.Style%2A>en el control hospedado<xref:System.Drawing.Font?displayProperty=nameWithType>|El conjunto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades se traduce en su correspondiente <xref:System.Drawing.Font>. Cuando se cambia una de estas propiedades, un nuevo <xref:System.Drawing.Font> se crea. Para <xref:System.Windows.FontWeights.Black%2A>, <xref:System.Windows.FontWeights.Bold%2A>, <xref:System.Windows.FontWeights.DemiBold%2A>, <xref:System.Windows.FontWeights.ExtraBold%2A>, <xref:System.Windows.FontWeights.Heavy%2A>, <xref:System.Windows.FontWeights.Medium%2A>, <xref:System.Windows.FontWeights.SemiBold%2A>, o <xref:System.Windows.FontWeights.UltraBold%2A>: <xref:System.Drawing.FontStyle.Bold> está habilitado. Para <xref:System.Windows.FontWeights.ExtraLight%2A>, <xref:System.Windows.FontWeights.Light%2A>, <xref:System.Windows.FontWeights.Normal%2A>, <xref:System.Windows.FontWeights.Regular%2A>, <xref:System.Windows.FontWeights.Thin%2A>, o <xref:System.Windows.FontWeights.UltraLight%2A>: <xref:System.Drawing.FontStyle.Bold> está deshabilitado.|  
+|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|El conjunto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades se traduce en su correspondiente <xref:System.Drawing.Font>. Cuando se cambia una de estas propiedades, un nuevo <xref:System.Drawing.Font> se crea. Hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control cambia de tamaño en función del tamaño de fuente.<br /><br /> Tamaño de fuente de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se expresa como un noventa sexto de pulgada y en [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] como un segundo setenta de una pulgada. La conversión correspondiente es:<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]tamaño de fuente = [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tamaño de fuente * 72,0 / 96,0.|  
+|<xref:System.Windows.Controls.Control.Foreground%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.ForeColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|El <xref:System.Windows.Controls.Control.Foreground%2A> asignación de propiedad se realiza mediante las siguientes reglas:<br /><br /> -If <xref:System.Windows.Controls.Control.Foreground%2A> es un <xref:System.Windows.Media.SolidColorBrush>, use <xref:System.Windows.Media.SolidColorBrush.Color%2A> para <xref:System.Windows.Forms.Control.ForeColor%2A>.<br />-If <xref:System.Windows.Controls.Control.Foreground%2A> es un <xref:System.Windows.Media.GradientBrush>, use el color de la <xref:System.Windows.Media.GradientStop> con el valor de desplazamiento más bajo de <xref:System.Windows.Forms.Control.ForeColor%2A>.<br />-Para cualquier otro <xref:System.Windows.Media.Brush> escriba, deje <xref:System.Windows.Forms.Control.ForeColor%2A> sin cambios. Esto significa que se utiliza el valor predeterminado.|  
+|<xref:System.Windows.UIElement.IsEnabled%2A>|<xref:System.Windows.Forms.Control.Enabled%2A>|Cuando <xref:System.Windows.UIElement.IsEnabled%2A> está establecida, <xref:System.Windows.Forms.Integration.WindowsFormsHost> conjuntos de elementos del <xref:System.Windows.Forms.Control.Enabled%2A> propiedad en el control hospedado.|  
+|<xref:System.Windows.Controls.Control.Padding%2A>|<xref:System.Windows.Forms.Control.Padding%2A>|Los cuatro valores de la <xref:System.Windows.Forms.Control.Padding%2A> propiedad hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control se establecen en el mismo <xref:System.Windows.Thickness> valor.<br /><br /> -Valores mayores que <xref:System.Int32.MaxValue> se establecen en <xref:System.Int32.MaxValue>.<br />-Valores inferior a <xref:System.Int32.MinValue> se establecen en <xref:System.Int32.MinValue>.|  
+|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Control.Visible%2A>|-   <xref:System.Windows.Visibility.Visible>se asigna a <xref:System.Windows.Forms.Control.Visible%2A>  =  `true`. Hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control es visible. Cuando se establece explícitamente el <xref:System.Windows.Forms.Control.Visible%2A> propiedad en el control hospedado a `false` no se recomienda.<br />-   <xref:System.Windows.Visibility.Collapsed>se asigna a <xref:System.Windows.Forms.Control.Visible%2A>  =  `true` o `false`. Hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no se dibujará el control y se contrae su área.<br />-   <xref:System.Windows.Visibility.Hidden>: Hospedado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no ocupa espacio en el diseño del control, pero no está visible. En este caso, el <xref:System.Windows.Forms.Control.Visible%2A> propiedad está establecida en `true`. Cuando se establece explícitamente el <xref:System.Windows.Forms.Control.Visible%2A> propiedad en el control hospedado a `false` no se recomienda.|  
   
- El elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> admite plenamente las propiedades asociadas a los elementos contenedor.  
+ Propiedades adjuntas en elementos contenedores son totalmente compatibles con el <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento.  
   
- Para obtener más información, consulte [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Para obtener más información, consulte [Tutorial: propiedades de asignación utilizando el elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
-## Actualizaciones de propiedades primarias  
- Al cambiar la mayoría de las propiedades primarias, se producen notificaciones al control secundario hospedado.  En la lista siguiente se describen las propiedades que no dan lugar a notificaciones cuando sus valores cambian.  
+## <a name="updates-to-parent-properties"></a>Actualizaciones a las propiedades del elemento primario  
+ Los cambios a la mayoría de las propiedades primario generarán notificaciones en el control secundario hospedado. En la lista siguiente describe las propiedades que no se generarán notificaciones cuando cambian sus valores.  
   
 -   <xref:System.Windows.Controls.Control.Background%2A>  
   
@@ -69,14 +72,14 @@ Las tecnologías de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharp
   
 -   <xref:System.Windows.UIElement.Visibility%2A>  
   
- Por ejemplo, si cambia el valor de la propiedad <xref:System.Windows.Controls.Control.Background%2A> del elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, la propiedad <xref:System.Windows.Forms.Control.BackColor%2A> del control hospedado no cambia.  
+ Por ejemplo, si cambia el valor de la <xref:System.Windows.Controls.Control.Background%2A> propiedad de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento, el <xref:System.Windows.Forms.Control.BackColor%2A> no cambia la propiedad del control hospedado.  
   
-## Asignación de propiedades con el control ElementHost  
- Las propiedades siguientes proporcionan notificación de cambios integrada.  No llame al método <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> cuando asigne estas propiedades:  
+## <a name="property-mapping-with-the-elementhost-control"></a>Asignación de propiedad con el Control ElementHost  
+ Las propiedades siguientes proporcionan notificación de cambios integrada. No llame a la <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> método cuando se asignan estas propiedades:  
   
 -   AutoSize  
   
--   BackColor  
+-   Color de fondo  
   
 -   BackgroundImage  
   
@@ -92,13 +95,13 @@ Las tecnologías de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharp
   
 -   Cursor  
   
--   Dock  
+-   Acoplar  
   
--   Enabled  
+-   Habilitado  
   
--   Fuente  
+-   Tipo de letra  
   
--   ForeColor  
+-   Color de primer plano  
   
 -   Ubicación  
   
@@ -106,45 +109,45 @@ Las tecnologías de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharp
   
 -   Relleno  
   
--   Primario  
+-   Elemento primario  
   
 -   Región  
   
 -   RightToLeft  
   
--   Size  
+-   Tamaño  
   
 -   TabIndex  
   
 -   TabStop  
   
--   Text  
+-   Texto  
   
 -   Visible  
   
- El control <xref:System.Windows.Forms.Integration.ElementHost> convierte las propiedades predeterminadas de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] en sus equivalentes en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizando la tabla de conversión siguiente.  
+ El <xref:System.Windows.Forms.Integration.ElementHost> control traduce predeterminado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] propiedades a sus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalentes mediante el uso de la siguiente tabla de traducción.  
   
- Para obtener más información, consulte [Tutorial: Asignar propiedades mediante el uso del control ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Para obtener más información, consulte [Tutorial: propiedades de asignación mediante el ElementHost Control](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
-|Hospedaje de formularios Windows Forms|Windows Presentation Foundation|Comportamiento de interoperación|  
-|--------------------------------------------|-------------------------------------|--------------------------------------|  
-|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> \(<xref:System.Drawing.Color?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\) en el elemento hospedado|Al establecer esta propiedad fuerza a que se vuelva a pintar con <xref:System.Windows.Media.ImageBrush>.  Si la propiedad <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> está establecida en `false` \(el valor predeterminado\), <xref:System.Windows.Media.ImageBrush> se basará en el aspecto del control <xref:System.Windows.Forms.Integration.ElementHost>, incluidas sus propiedades <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A>, y en todos los controladores de pintura asociados.<br /><br /> Si la propiedad <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> está establecida en `true`, <xref:System.Windows.Media.ImageBrush> se basa en el aspecto del elemento primario del control <xref:System.Windows.Forms.Integration.ElementHost>, incluidas las propiedades <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> del elemento primario, y en todos los controladores de pintura asociados.|  
-|<xref:System.Windows.Forms.Control.BackgroundImage%2A><br /><br /> \(<xref:System.Drawing.Image?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\) en el elemento hospedado|Establecer esta propiedad produce el mismo comportamiento descrito para la asignación de <xref:System.Windows.Forms.Control.BackColor%2A>.|  
-|<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A>|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> \(<xref:System.Windows.Media.Brush?displayProperty=fullName>\) en el elemento hospedado|Establecer esta propiedad produce el mismo comportamiento descrito para la asignación de <xref:System.Windows.Forms.Control.BackColor%2A>.|  
-|<xref:System.Windows.Forms.Control.Cursor%2A><br /><br /> \(<xref:System.Windows.Forms.Cursor?displayProperty=fullName>\)|<xref:System.Windows.FrameworkElement.Cursor%2A><br /><br /> \(<xref:System.Windows.Input.Cursor?displayProperty=fullName>\)|El cursor estándar de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] se convierte al cursor estándar correspondiente de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  Si el de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no es un cursor estándar, se asigna el valor predeterminado.|  
-|<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>|Cuando se establece <xref:System.Windows.Forms.Control.Enabled%2A>, el control <xref:System.Windows.Forms.Integration.ElementHost> establece la propiedad <xref:System.Windows.UIElement.IsEnabled%2A> del elemento hospedado.|  
-|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> \(<xref:System.Drawing.Font?displayProperty=fullName>\)|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|El valor de <xref:System.Windows.Forms.Control.Font%2A> se convierte a un conjunto correspondiente de propiedades de fuente de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A> en el elemento hospedado|Si el valor de <xref:System.Drawing.Font.Bold%2A> es `true`, el valor de <xref:System.Windows.Controls.Control.FontWeight%2A> se establece en <xref:System.Windows.FontWeights.Bold%2A>.<br /><br /> Si la dirección <xref:System.Drawing.Font.Bold%2A> es `false`, <xref:System.Windows.Controls.Control.FontWeight%2A> se establece en <xref:System.Windows.FontWeights.Normal%2A>.|  
-|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A> en el elemento hospedado|Si el valor de <xref:System.Drawing.Font.Italic%2A> es `true`, el valor de <xref:System.Windows.Controls.Control.FontStyle%2A> se establece en <xref:System.Windows.FontStyles.Italic%2A>.<br /><br /> Si el valor de <xref:System.Drawing.Font.Italic%2A> es `false`, el valor de <xref:System.Windows.Controls.Control.FontStyle%2A> se establece en <xref:System.Windows.FontStyles.Normal%2A>.|  
-|<xref:System.Drawing.Font.Strikeout%2A>|<xref:System.Windows.TextDecorations> en el elemento hospedado|Sólo se aplica al hospedar un control <xref:System.Windows.Controls.TextBlock>.|  
-|<xref:System.Drawing.Font.Underline%2A>|<xref:System.Windows.TextDecorations> en el elemento hospedado|Sólo se aplica al hospedar un control <xref:System.Windows.Controls.TextBlock>.|  
-|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> \(<xref:System.Windows.Forms.RightToLeft?displayProperty=fullName>\)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> \(<xref:System.Windows.FlowDirection>\)|<xref:System.Windows.Forms.RightToLeft> se asigna a <xref:System.Windows.FlowDirection>.<br /><br /> <xref:System.Windows.Forms.RightToLeft> se asigna a <xref:System.Windows.FlowDirection>.|  
-|<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|El control <xref:System.Windows.Forms.Integration.ElementHost> establece la propiedad <xref:System.Windows.UIElement.Visibility%2A> en el elemento hospedado utilizando las reglas siguientes:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> \= `true` se asigna a <xref:System.Windows.Visibility>.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> \= `false` se asigna a <xref:System.Windows.Visibility>.|  
+|Hospedaje de Windows Forms|Windows Presentation Foundation|Comportamiento de interoperación|  
+|---------------------------|-------------------------------------|-----------------------------|  
+|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>) en el elemento hospedado|Al establecer esta propiedad hace vuelva a dibujarse con un <xref:System.Windows.Media.ImageBrush>. Si el <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> propiedad está establecida en `false` (el valor predeterminado), esto <xref:System.Windows.Media.ImageBrush> se basa en la apariencia de la <xref:System.Windows.Forms.Integration.ElementHost> controlar, incluida su <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> propiedades y cualquier adjunto paint controladores.<br /><br /> Si el <xref:System.Windows.Forms.Integration.ElementHost.BackColorTransparent%2A> propiedad está establecida en `true`, el <xref:System.Windows.Media.ImageBrush> se basa en la apariencia de la <xref:System.Windows.Forms.Integration.ElementHost> primario del control, incluida la primaria <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Control.BackgroundImageLayout%2A> propiedades y cualquier adjunto paint controladores.|  
+|<xref:System.Windows.Forms.Control.BackgroundImage%2A><br /><br /> (<xref:System.Drawing.Image?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>) en el elemento hospedado|Al establecer esta propiedad hace que el mismo comportamiento descrito para la <xref:System.Windows.Forms.Control.BackColor%2A> asignación.|  
+|<xref:System.Windows.Forms.Control.BackgroundImageLayout%2A>|<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>) en el elemento hospedado|Al establecer esta propiedad hace que el mismo comportamiento descrito para la <xref:System.Windows.Forms.Control.BackColor%2A> asignación.|  
+|<xref:System.Windows.Forms.Control.Cursor%2A><br /><br /> (<xref:System.Windows.Forms.Cursor?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.Cursor%2A><br /><br /> (<xref:System.Windows.Input.Cursor?displayProperty=nameWithType>)|El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] cursor estándar se traduce a la correspondiente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] cursor estándar. Si el [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] no es un cursor estándar, se asigna el valor predeterminado.|  
+|<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>|Cuando <xref:System.Windows.Forms.Control.Enabled%2A> se establece, el <xref:System.Windows.Forms.Integration.ElementHost> conjuntos de controles el <xref:System.Windows.UIElement.IsEnabled%2A> propiedad en el elemento hospedado.|  
+|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|El <xref:System.Windows.Forms.Control.Font%2A> valor se convierte en un conjunto correspondiente de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] propiedades de fuente.|  
+|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A>en el elemento hospedado|Si el valor de <xref:System.Drawing.Font.Bold%2A> es `true`, el valor de <xref:System.Windows.Controls.Control.FontWeight%2A> se establece en <xref:System.Windows.FontWeights.Bold%2A>.<br /><br /> Si el valor de <xref:System.Drawing.Font.Bold%2A> es `false`, el valor de <xref:System.Windows.Controls.Control.FontWeight%2A> se establece en <xref:System.Windows.FontWeights.Normal%2A>.|  
+|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A>en el elemento hospedado|Si el valor de <xref:System.Drawing.Font.Italic%2A> es `true`, el valor de <xref:System.Windows.Controls.Control.FontStyle%2A> se establece en <xref:System.Windows.FontStyles.Italic%2A>.<br /><br /> Si el valor de <xref:System.Drawing.Font.Italic%2A> es `false`, el valor de <xref:System.Windows.Controls.Control.FontStyle%2A> se establece en <xref:System.Windows.FontStyles.Normal%2A>.|  
+|<xref:System.Drawing.Font.Strikeout%2A>|<xref:System.Windows.TextDecorations>en el elemento hospedado|Se aplica solo al hospedar un <xref:System.Windows.Controls.TextBlock> control.|  
+|<xref:System.Drawing.Font.Underline%2A>|<xref:System.Windows.TextDecorations>en el elemento hospedado|Se aplica solo al hospedar un <xref:System.Windows.Controls.TextBlock> control.|  
+|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No> se asigna a <xref:System.Windows.FlowDirection.LeftToRight>.<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes> se asigna a <xref:System.Windows.FlowDirection.RightToLeft>.|  
+|<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|El <xref:System.Windows.Forms.Integration.ElementHost> conjuntos de controles el <xref:System.Windows.UIElement.Visibility%2A> propiedad en el elemento hospedado utilizando las reglas siguientes:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true`se asigna a <xref:System.Windows.Visibility.Visible>.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false`se asigna a <xref:System.Windows.Visibility.Hidden>.|  
   
-## Vea también  
- <xref:System.Windows.Forms.Integration.ElementHost>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)   
- [Interoperabilidad entre Windows Forms y WPF](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)   
- [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.Integration.ElementHost>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [Interoperabilidad de WPF y Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [Interoperabilidad entre Windows Forms y WPF](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
+ [Tutorial: Asignar propiedades mediante el uso del elemento WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)  
  [Tutorial: Asignar propiedades mediante el uso del control ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)

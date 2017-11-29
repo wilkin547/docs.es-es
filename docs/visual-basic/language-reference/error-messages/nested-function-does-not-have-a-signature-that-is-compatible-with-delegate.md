@@ -1,37 +1,35 @@
 ---
-title: "La funci&#243;n anidada no tiene una signatura compatible con el delegado &#39;&lt;nombreDeDelegado&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc36532"
-  - "bc36532"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36532"
+title: "Función anidada no tiene una firma que es compatible con el delegado &#39; &lt;nombredelegado&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc36532
+- bc36532
+helpviewer_keywords: BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-caps.latest.revision: 5
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 60cf15343023110561da3e3fcf202bd00394127a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# La funci&#243;n anidada no tiene una signatura compatible con el delegado &#39;&lt;nombreDeDelegado&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Se ha asignado una expresión lambda a un delegado que tiene una firma incompatible.  Por ejemplo, en el código siguiente, el delegado `Del` tiene dos parámetros enteros.  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>Función anidada no tiene una firma que es compatible con el delegado &#39; &lt;nombredelegado&gt;&#39;
+Se ha asignado una expresión lambda a un delegado que tiene una firma compatible. Por ejemplo, en el código siguiente, el delegado `Del` tiene dos parámetros de entero.  
   
-```vb#  
+```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- Si una expresión lambda con un argumento se declara como tipo `Del`, se producirá el error:  
+ El error se produce si una expresión lambda con un argumento se declara como tipo `Del`:  
   
-```vb#  
+```vb  
 ' Neither of these is valid.   
 ' Dim lambda1 As Del = Function(n As Integer) n + 1  
 ' Dim lambda2 As Del = Function(n) n + 1  
@@ -39,10 +37,10 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
   
  **Id. de error:** BC36532  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Ajuste la definición de delegado o la expresión lambda asignada para que las firmas sean compatibles.  
+-   Ajuste la definición de delegado o la expresión lambda asignada para que las firmas son compatibles.  
   
-## Vea también  
- [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
+## <a name="see-also"></a>Vea también  
+ [Conversión de delegado flexible](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
  [Expresiones lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

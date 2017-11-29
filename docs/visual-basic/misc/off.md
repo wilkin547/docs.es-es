@@ -1,34 +1,34 @@
 ---
-title: "Off (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Off"
-  - "vb.Off"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Off (palabra clave)"
+title: Off (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Off
+- vb.Off
+helpviewer_keywords: Off keyword [Visual Basic]
 ms.assetid: e0b5aa68-bde1-4cdd-b9e4-152798ae1b8b
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cddbac85a54f000656a758468240ddfbaf5ebafd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Off (Visual Basic)
+# <a name="off-visual-basic"></a>Off (Visual Basic)
 Desactiva una opción del compilador.  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  La palabra clave `Off` se puede usar en los siguientes contextos:  
   
- [Option Explicit \(Instrucción\)](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Explicit (instrucción)](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [Option Strict \(Instrucción\)](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict (instrucción)](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [Option Infer \(instrucción\)](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Infer (instrucción)](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Palabras clave](../../visual-basic/language-reference/keywords/index.md)

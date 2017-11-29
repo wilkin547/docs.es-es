@@ -1,40 +1,44 @@
 ---
-title: "C&#243;mo: Agregar columnas al control ListView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "columnas [Windows Forms], agregar a controles ListView"
-  - "vistas de lista, agregar columnas"
-  - "ListView (control) [Windows Forms], agregar encabezados de columna"
+title: "Cómo: Agregar columnas al control ListView de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], adding column headers
+- columns [Windows Forms], adding to ListView controls
+- list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8df87e62e8c19ee6e30ffdbc2a4e473b444f538
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Agregar columnas al control ListView de formularios Windows Forms
-En la vista Detalles, el control <xref:System.Windows.Forms.ListView> puede mostrar varias columnas para cada elemento de la lista.  Puede utilizar las columnas para mostrar al usuario información de diversos tipos acerca de cada elemento de la lista.  Por ejemplo, una lista de archivos puede mostrar el nombre de archivo, el tipo de archivo, el tamaño y la fecha de la última modificación.  Para obtener información sobre cómo rellenar las columnas una vez creadas, vea [Cómo: Mostrar subelementos en columnas con el control ListView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>Cómo: Agregar columnas al control ListView de formularios Windows Forms
+En la vista de detalles, el <xref:System.Windows.Forms.ListView> control puede mostrar varias columnas para cada elemento de lista. Puede utilizar las columnas para mostrar al usuario varios tipos de información sobre cada elemento de lista. Por ejemplo, una lista de archivos podría mostrar el nombre de archivo, el tipo de archivo, el tamaño y la fecha de que última modificación del archivo. Para obtener información acerca de cómo rellenar las columnas después de que se creen, consulte [Cómo: Mostrar subelementos en columnas con el ListView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
   
-### Para agregar columnas mediante programación  
+### <a name="to-add-columns-programmatically"></a>Para agregar columnas mediante programación  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.ListView.View%2A> del control en <xref:System.Windows.Forms.View>.  
+1.  Establecer el control <xref:System.Windows.Forms.ListView.View%2A> propiedad <xref:System.Windows.Forms.View.Details>.  
   
-2.  Utilice el método <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> de la propiedad <xref:System.Windows.Forms.ListView.Columns%2A> de la vista de la lista.  
+2.  Use la <xref:System.Windows.Forms.ListView.ColumnHeaderCollection.Add%2A> método de la vista de lista <xref:System.Windows.Forms.ListView.Columns%2A> propiedad.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#31)]  
   
-## Vea también  
- <xref:System.Windows.Forms.ListView>   
- [ListView \(Control\)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ListView>  
+ [ListView (Control)](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [Información general del control ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

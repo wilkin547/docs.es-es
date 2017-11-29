@@ -1,53 +1,57 @@
 ---
-title: "Utilizar la transformaci&#243;n de coordenadas universales | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "gráficos, transformación universal"
-  - "transformación universal, ejemplos"
+title: "Utilizar la transformación de coordenadas universales"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], world transformation
+- world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5b2a8de0644e71a5e6ae1a5ca796f580f0c4f23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizar la transformaci&#243;n de coordenadas universales
-La transformación de coordenadas universales es una propiedad de la clase <xref:System.Drawing.Graphics>.  Los números que especifican la transformación de coordenadas universales están almacenados en un objeto <xref:System.Drawing.Drawing2D.Matrix> que representa una matriz de 3x3.  Las clases <xref:System.Drawing.Drawing2D.Matrix> y<xref:System.Drawing.Graphics> tienen varios métodos para establecer los números en la matriz de transformación de coordenadas universales.  
+# <a name="using-the-world-transformation"></a>Utilizar la transformación de coordenadas universales
+La transformación universal es una propiedad de la <xref:System.Drawing.Graphics> clase. Los números que especifican la transformación universal se almacenan en un <xref:System.Drawing.Drawing2D.Matrix> objeto, que representa una matriz de 3 x 3. El <xref:System.Drawing.Drawing2D.Matrix> y <xref:System.Drawing.Graphics> clases tienen varios métodos para establecer los números en la matriz de transformación universal.  
   
-## Tipos diferente de transformaciones  
- En el ejemplo siguiente, el código crea primero un rectángulo de 50x50 y lo sitúa en el origen \(0, 0\).  El origen está en la esquina superior izquierda del área de cliente.  
+## <a name="different-types-of-transformations"></a>Distintos tipos de transformaciones  
+ En el ejemplo siguiente, el código primero crea un rectángulo de 50 x 50 y busca en el origen (0, 0). El origen está en la esquina superior izquierda del área cliente.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
- El código siguiente aplica una transformación de ajuste de tamaño que expande el rectángulo por un factor de 1,75 en la dirección del eje x y lo encoge por un factor de 0,5 en la dirección del eje y:  
+ El código siguiente aplica una transformación de escala que se expande el rectángulo por un factor de 1,75 en la dirección del eje x y se reduce el rectángulo por un factor de 0,5 y la dirección:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
- El resultado es un rectángulo que es más largo en la dirección x y más corto en la dirección y que el original.  
+ El resultado es un rectángulo que es más largo en la dirección del eje x y la dirección del eje y menor que el original.  
   
- Para girar el rectángulo en lugar de cambiar su tamaño, use el código siguiente:  
+ Para girar el rectángulo en lugar de escalado, utilice el código siguiente:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
   
- Para trasladar el rectángulo, use el código siguiente:  
+ Para traducir el rectángulo, utilice el código siguiente:  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## Vea también  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [Sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [Usar transformaciones en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [Sistemas de coordenadas y transformaciones](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Usar transformaciones en la interfaz GDI+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

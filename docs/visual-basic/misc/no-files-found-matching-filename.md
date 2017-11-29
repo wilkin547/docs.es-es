@@ -1,24 +1,26 @@
 ---
-title: "No se encontraron archivos coincidentes con &#39;&lt;nombreDeArchivo&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrKILL_NoFilesFound1"
+title: No se encontraron coincidencia &#39; archivos &lt;filename&gt;&#39;
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrKILL_NoFilesFound1
 ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4e47e8b75173a431c2b2948c8eae9de9497d4b70
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# No se encontraron archivos coincidentes con &#39;&lt;nombreDeArchivo&gt;&#39;
+# <a name="no-files-found-matching-39ltfilenamegt39"></a>No se encontraron coincidencia &#39; archivos &lt;filename&gt;&#39;
 El nombre de archivo es incorrecto o el archivo no existe.  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
 1.  Asegúrese de que el nombre de archivo sea correcto.  
   
-## Vea también  
- [My.Computer.FileSystem \(Objeto\)](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a>Vea también  
+ [My.Computer.FileSystem (objeto)](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)

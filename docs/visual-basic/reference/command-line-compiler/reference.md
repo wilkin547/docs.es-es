@@ -1,14 +1,11 @@
 ---
-title: /Reference (Visual Basic) | Documentos de Microsoft
-ms.date: 2015-07-20
+title: /reference (Visual Basic)
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
 - r compiler option [Visual Basic]
@@ -17,31 +14,17 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12344dba82131d6be2c32127de287a6e9e3efa39
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f8c6851802afa818cc80b3f6d7eafc2ef47ac689
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reference-visual-basic"></a>/reference (Visual Basic)
-Hace que el compilador disponer de información de tipo en los ensamblados especificados al proyecto que se está compilando.  
+Hace que el compilador para que estén disponibles para el proyecto que se está compilando la información de tipo en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,35 +38,35 @@ Hace que el compilador disponer de información de tipo en los ensamblados espec
   
 |Término|Definición|  
 |---|---|  
-|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivo de ensamblado. Si el nombre de archivo contiene un espacio, encierre el nombre entre comillas.|  
+|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los archivos importados deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. El [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opción importa metadatos de un módulo.  
+ Los archivos importados deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. El [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) opción importa los metadatos de un módulo.  
   
- Si hace referencia a un ensamblado (ensamblado A) que hace referencia a otro ensamblado (ensamblado B), deberá hacer referencia al ensamblado B si:  
+ Si hace referencia a un ensamblado (A) que hiciera referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
   
--   Un tipo en el ensamblado A hereda de un tipo o implementa una interfaz del ensamblado B.  
+-   Un tipo del ensamblado A hereda de un tipo o implementa una interfaz del ensamblado B.  
   
--   Se invoca un campo, propiedad, evento o un método que tiene un tipo de parámetro o tipo de valor devuelto del ensamblado B.  
+-   Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Utilice [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
+ Use [/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
- Para que el compilador reconozca un tipo en un ensamblado (no un módulo), debe obligársele a resolver el tipo. Un ejemplo de cómo se puede hacer es definir una instancia del tipo. Hay otras formas resolver los nombres de tipo en un ensamblado para el compilador. Por ejemplo, si se hereda de un tipo en un ensamblado, el nombre del tipo, a continuación, se convierte en el compilador conoce.  
+ Para que el compilador reconozca un tipo en un ensamblado (no un módulo), debe forzarse para resolver el tipo. Un ejemplo de cómo se puede hacer esto es definir una instancia del tipo. Otras maneras de están disponibles para resolver los nombres de tipo en un ensamblado para el compilador. Por ejemplo, si se hereda de un tipo en un ensamblado, el nombre de tipo, a continuación, se convierte en el compilador conoce.  
   
- El archivo de respuesta Vbc.rsp, que normalmente se utilizan referencias [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] ensamblados, se utiliza de forma predeterminada. Utilice `/noconfig` si no desea que el compilador utilice Vbc.rsp.  
+ El archivo de respuesta Vbc.rsp, que utiliza habitualmente referencias [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados, se utiliza de forma predeterminada. Usar `/noconfig` si no desea que el compilador utilice Vbc.rsp.  
   
  La forma abreviada de `/reference` es `/r`.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente origen de código compila archivos`nput.vb` y hacer referencia a ensamblados de M`etad1.dll` y M`etad2.dll` para producir O`ut.exe`.  
+ El código siguiente compila el archivo de origen `Input.vb` y hace referencia a ensamblados de `Metad1.dll` y `Metad2.dll` para generar `Out.exe`.  
   
 ```  
 vbc /reference:metad1.dll,metad2.dll /out:out.exe input.vb  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)   
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)   
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)   
- [Público](../../../visual-basic/language-reference/modifiers/public.md)   
+ [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
+ [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

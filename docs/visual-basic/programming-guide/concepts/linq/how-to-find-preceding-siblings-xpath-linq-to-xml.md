@@ -1,40 +1,36 @@
 ---
-title: "Cómo: buscar elementos relacionados (XPath-LINQ to XML) anteriores (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar anteriores del mismo nivel (XPath-LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 59055718-d0a7-4db3-8901-18dd33587703
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 250028f73eff7aad3926ee4916aef7d118b6fbea
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 54d70c1bfb3f1c2d3882b7582f6a11682eea46a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar elementos relacionados (XPath-LINQ to XML) anteriores (Visual Basic)
-Este tema compara la expresión XPath `preceding-sibling` eje para el [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] secundarios <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>eje.</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-visual-basic"></a>Cómo: buscar anteriores del mismo nivel (XPath-LINQ to XML) (Visual Basic)
+En este tema se compara el eje XPath `preceding-sibling` con el eje secundario de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
   
  La expresión XPath es:  
   
  `preceding-sibling::*`  
   
- Tenga en cuenta que los resultados de <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>y <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>están en orden del documento.</xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> </xref:System.Xml.XPath.Extensions.XPathSelectElements%2A>  
+ Observe que los resultados de <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> y de <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> aparecen en el mismo orden que en el documento.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo busca el elemento `FullAddress` y, a continuación, recupera los elementos anteriores utilizando el eje `preceding-sibling`.  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de ejemplo: clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de muestra: clientes y pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  

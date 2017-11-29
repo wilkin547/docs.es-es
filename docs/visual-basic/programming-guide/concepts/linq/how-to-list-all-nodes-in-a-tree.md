@@ -1,31 +1,27 @@
 ---
-title: "Cómo: enumerar todos los nodos en un árbol (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: mostrar todos los nodos en un árbol (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e3aa8df843b8b601b2724f6de48d66d1a806db4
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 988c531451162560cac99d8b8e1c25861ef82ae5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Cómo: enumerar todos los nodos en un árbol (Visual Basic)
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a>Cómo: mostrar todos los nodos en un árbol (Visual Basic)
 A veces resulta útil enumerar todos los nodos de un árbol. Puede resultar útil cuando se aprende exactamente cómo afecta al árbol un método o propiedad. Un enfoque para enumerar todos los nodos en formato de texto consiste en generar una expresión XPath que identifique de forma exacta y específica cualquier nodo del árbol.  
   
- No resulta particularmente útil ejecutar expresiones XPath mediante [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Las expresiones XPath tienen un rendimiento menor que las consultas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] y las consultas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] son mucho más eficaces. No obstante, como forma de identificar nodos en el árbol XML, XPath funciona bien.  
+ No resulta particularmente útil ejecutar expresiones XPath mediante [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Las expresiones XPath tienen un rendimiento menor que las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y las consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] son mucho más eficaces. No obstante, como forma de identificar nodos en el árbol XML, XPath funciona bien.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestra una función con el nombre `GetXPath` que genera una expresión XPath específica para cualquier nodo en el árbol XML. Genera expresiones XPath adecuadas incluso cuando hay nodos en un espacio de nombres. Las expresiones XPath se generan usando prefijos de espacio de nombres.  
@@ -245,7 +241,7 @@ End Module
   
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

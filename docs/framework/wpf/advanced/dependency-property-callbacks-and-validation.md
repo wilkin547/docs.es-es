@@ -1,90 +1,96 @@
 ---
-title: "Devoluciones de llamada y validaci&#243;n de las propiedades de dependencia | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "devoluciones de llamada, validación"
-  - "CoerceValue Callbacks"
-  - "propiedades de dependencia, devoluciones de llamada"
-  - "propiedades de dependencia, validación"
-  - "validación de propiedades de dependencia"
+title: "Devoluciones de llamada y validación de las propiedades de dependencia"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], validation
+- coerce value callbacks [WPF]
+- callbacks [WPF], validation
+- dependency properties [WPF], callbacks
+- validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Devoluciones de llamada y validaci&#243;n de las propiedades de dependencia
-En este tema se describe cómo crear propiedades de dependencia utilizando implementaciones personalizadas alternativas para las características relacionadas con propiedades, tales como la determinación de validación, las devoluciones de llamada que se invocan cada vez que cambia el valor efectivo de la propiedad, y la invalidación de posibles influencias externas para la determinación del valor.  En este tema también se explican los escenarios donde es apropiado expandir los comportamientos del sistema de propiedades predeterminado mediante estas técnicas.  
+# <a name="dependency-property-callbacks-and-validation"></a>Devoluciones de llamada y validación de las propiedades de dependencia
+En este tema se describe cómo crear propiedades de dependencia mediante implementaciones personalizadas alternativas de características relacionadas con las propiedades, como la determinación de la validación, las devoluciones de llamada que se invocan cuando cambia el valor efectivo de la propiedad y la invalidación de posibles influencias externas en la determinación del valor. En este tema también se describen los escenarios donde es apropiado expandir los comportamientos predeterminados del sistema de propiedades mediante estas técnicas.  
   
-   
+  
   
 <a name="prerequisites"></a>   
-## Requisitos previos  
- En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia, así como la aplicación de una propiedad a una propiedad de dependencia personalizada.  Vea [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) para obtener contexto.  
+## <a name="prerequisites"></a>Requisitos previos  
+ En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia y cómo se aplican los metadatos a una propiedad de dependencia personalizada. Consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) para obtener contexto.  
   
 <a name="Validation_Callbacks"></a>   
-## Devoluciones de llamada de validación  
- Las devoluciones de llamada de validación se pueden asignar a una propiedad de dependencia cuando se registra por primera vez.  La devolución de llamada de validación no forma parte de los metadatos de la propiedad; es una entrada directa del método <xref:System.Windows.DependencyProperty.Register%2A>.  Por consiguiente, una vez creada una devolución de llamada de validación para una propiedad de dependencia, no puede invalidarse mediante una nueva implementación.  
+## <a name="validation-callbacks"></a>Devoluciones de llamada de validación  
+ Las devoluciones de llamada de validación pueden asignarse a una propiedad de dependencia cuando se registra por primera vez. La devolución de llamada de validación no forma parte de los metadatos de propiedad; es una entrada directa de la <xref:System.Windows.DependencyProperty.Register%2A> método. Por lo tanto, una vez creada una devolución de llamada de validación para una propiedad de dependencia, una nueva implementación no puede invalidarla.  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Las devoluciones de llamada se implementan de modo que se les proporcione un valor de objeto.  Devuelven `true` si el valor proporcionado es válido para la propiedad; de lo contrario, devuelven `false`.  Se supone que la propiedad es del tipo correcto con respecto al tipo registrado en el sistema de propiedades, por lo que normalmente no se comprueba su tipo dentro de las devoluciones de llamada.  El sistema de propiedades utiliza las devoluciones de llamada en varias operaciones diferentes.  Entre ellas, se incluyen la inicialización de tipos por valores predeterminados, el cambio mediante programación invocando el método <xref:System.Windows.DependencyObject.SetValue%2A>, o los intentos de invalidación de metadatos con el nuevo valor predeterminado proporcionado.  Si cualquiera de estas operaciones invoca la devolución de llamada de validación, y devuelve `false`, entonces se inicia una excepción.  El autor de la aplicación debe estar preparado para administrar estas excepciones.  Un uso común de las devoluciones de llamada de validación es la validación de valores de enumeración, o la restricción de valores de tipo Integer o Double cuando la propiedad establece medidas que deben ser mayores o iguales que cero.  
+ Las devoluciones de llamada se implementan de forma que obtienen un valor de objeto. Devuelven `true` si el valor proporcionado es válido para la propiedad; en caso contrario, devuelven `false`. Se supone que la propiedad es del tipo correcto por el tipo registrado con el sistema de propiedades, por lo que la comprobación de tipo en las devoluciones de llamada no se suele llevar a cabo. El sistema de propiedades usa las devoluciones de llamada en distintas operaciones. Esto incluye la inicialización de tipos por valor predeterminado, el cambio mediante programación invocando <xref:System.Windows.DependencyObject.SetValue%2A>, o intenta reemplazar los metadatos con el nuevo valor predeterminado proporcionado. Si cualquiera de estas operaciones invoca la devolución de llamada de validación y devuelve `false`, se generará una excepción. Los escritores de aplicaciones deben estar preparados para controlar estas excepciones. Un uso común de las devoluciones de llamada de validación es validar los valores de enumeración o restringir los valores de números enteros o dobles cuando la propiedad establece medidas que deben ser cero o un valor superior.  
   
- Las devoluciones de llamada de validación están diseñadas específicamente como validadores de clase, no de instancias.  Los parámetros de la devolución de llamada no comunican un objeto <xref:System.Windows.DependencyObject> concreto para el que se establecen las propiedades que se van a validar.  Por consiguiente, las devoluciones de llamada de validación no resultan útiles para aplicar las posibles "dependencias" que podrían influir en el valor de una propiedad, donde el valor específico de la instancia de una propiedad depende de factores tales como los valores específicos de la instancia de otras propiedades, o el estado en tiempo de ejecución.  
+ Las devoluciones de llamada de validación están diseñadas específicamente como validadores de clase, no como validadores de instancia. Los parámetros de la devolución de llamada no comunican un determinado <xref:System.Windows.DependencyObject> en que se establecen las propiedades para validar. Por lo tanto, las devoluciones de llamada de validación no resultan útiles para aplicar las posibles "dependencias" que podrían influir en un valor de propiedad, donde el valor específico de la instancia de una propiedad depende de factores, tales como los valores específicos de la instancia de otras propiedades o el estado de tiempo de ejecución.  
   
- A continuación, se muestra un ejemplo de código para un escenario de devolución de llamada de validación muy simple: se valida que el valor de una propiedad cuyo tipo primitivo es <xref:System.Double> no es <xref:System.Double.PositiveInfinity> ni <xref:System.Double.NegativeInfinity>.  
+ El siguiente es un código de ejemplo para un escenario de devolución de llamada de validación muy simple: validar que una propiedad que se escribe como el <xref:System.Double> primitivo no es <xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity>.  
   
  [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
  [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
-## Devoluciones de llamada de forzado de valores y eventos de cambio de propiedad  
- Las devoluciones de llamada de forzado de valores pasan la instancia de <xref:System.Windows.DependencyObject> específica para las propiedades, al igual que las implementaciones de <xref:System.Windows.PropertyChangedCallback> que invoca el sistema de propiedades cada vez que cambia el valor de una propiedad de dependencia.  Mediante el uso combinado de estas dos devoluciones de llamada, puede crear una serie de propiedades de elementos de tal forma que los cambios de una propiedad fuercen una conversión o reevaluación de otra propiedad.  
+## <a name="coerce-value-callbacks-and-property-changed-events"></a>Devoluciones de llamada de valor de coerción y eventos de propiedad cambiada  
+ Convertir el valor de las devoluciones de llamada pasar específico del <xref:System.Windows.DependencyObject> instancia para las propiedades, como hace <xref:System.Windows.PropertyChangedCallback> implementaciones invocados por el sistema de propiedades cada vez que cambia el valor de una propiedad de dependencia. Con estas dos devoluciones de llamada combinadas, puede crear una serie de propiedades en aquellos elementos donde los cambios en una propiedad forzarán una coerción o reevaluación de otra propiedad.  
   
- Un escenario típico en que se suele usar la vinculación de propiedades de dependencia es aquél en que existe una propiedad controlada por la interfaz de usuario donde el elemento contiene una propiedad para cada valor mínimo y máximo, y una tercera propiedad para el valor real o actual.  Aquí, si el máximo se ajustara de tal modo que el valor actual superase el nuevo máximo, sería deseable forzar el valor actual de manera que no fuese mayor que el nuevo máximo, con una relación similar entre los valores mínimo y actual.  
+ Un escenario típico para usar la vinculación de propiedades de dependencia es cuando tiene una propiedad controlada por la interfaz de usuario donde el elemento contiene una propiedad para el valor mínimo y otra para el máximo, además de una tercera propiedad para el valor real o actual. Aquí, si el máximo está ajustado de manera que el valor actual supera el nuevo máximo, querrá forzar el valor actual para que no supere el nuevo máximo, además de una relación similar entre los valores mínimo y actual.  
   
- A continuación, se muestra un ejemplo de código muy breve con una sola de las tres propiedades de dependencia que ilustran esta relación.  En el ejemplo se muestra cómo se registra la propiedad `CurrentReading` de un conjunto Min\/Max\/Current de propiedades \*Reading.  Se utiliza la validación como se indica en la sección anterior.  
+ El siguiente es un código de ejemplo muy breve para una sola de las tres propiedades de dependencia que ilustran esta relación. En el ejemplo se muestra cómo está registrada la propiedad `CurrentReading` de un conjunto Min/Max/Current de propiedades *Reading relacionadas. Usa la validación como se muestra en la sección anterior.  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- La devolución de llamada de cambio de propiedad para el valor Current se utiliza para reenviar el cambio a otras propiedades dependientes, invocando explícitamente las devoluciones de llamada de forzado de valores registradas para esas otras propiedades:  
+ La devolución de llamada de la propiedad cambiada Current se usa para reenviar el cambio a otras propiedades dependientes, mediante la invocación explícita de las devoluciones de llamada del valor de coerción registradas para esas otras propiedades:  
   
  [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
  [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
- La devolución de llamada de forzado de valores comprueba los valores de las propiedades de las que depende potencialmente la propiedad actual y fuerza el valor actual si es necesario:  
+ La devolución de llamada de valor de coerción comprueba los valores de propiedades de las que depende potencialmente la propiedad actual y fuerza el valor actual si es necesario:  
   
  [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
  [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
->  Los valores predeterminados de las propiedades no se fuerzan.  Puede ocurrir que se produzca un valor de propiedad igual al predeterminado si un valor de propiedad sigue teniendo su valor predeterminado inicial, o si se borran otros valores con el método <xref:System.Windows.DependencyObject.ClearValue%2A>.  
+>  Los valores predeterminados de las propiedades no se fuerzan. Un valor de propiedad igual que el valor predeterminado podría producirse si un valor de propiedad todavía tiene su valor predeterminado inicial, o si se borran otros valores con <xref:System.Windows.DependencyObject.ClearValue%2A>.  
   
- Las devoluciones de llamada de forzado de valores y de cambio de propiedad forman parte de los metadatos de una propiedad.  Por consiguiente, puede cambiar las devoluciones de llamada para una propiedad de dependencia determinada cuando existe en un tipo que se deriva del tipo que posee la propiedad de dependencia, invalidando los metadatos para esa propiedad en el tipo.  
+ Las devoluciones de llamada de valor de coerción y propiedad cambiada forman parte de los metadatos de las propiedades. Por lo tanto, puede cambiar las devoluciones de llamada de una propiedad de dependencia determinada, tal como existe en un tipo que se deriva del tipo que posee la propiedad de dependencia, mediante la invalidación de los metadatos de esa propiedad en el tipo.  
   
 <a name="Advanced"></a>   
-## Escenarios avanzados de forzado y devolución de llamada  
+## <a name="advanced-coercion-and-callback-scenarios"></a>Escenarios de coerción y llamada de devolución avanzados  
   
-### Restricciones y valores deseados  
- El sistema de propiedades utiliza las devoluciones de llamada de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> para forzar un valor de conformidad con la lógica que se declara, pero un valor forzado de una propiedad establecida localmente conservará internamente un "valor deseado".  Si las restricciones se basan en otros valores de propiedad que pueden cambiar dinámicamente en el transcurso de la duración de la aplicación, también se cambian dinámicamente las restricciones de forzado, con lo que puede suceder que cambie el valor de la propiedad restringida a fin de acercarse lo más posible al valor deseado en virtud de esas nuevas restricciones.  El valor se convertirá en el valor deseado si se retiran todas las restricciones.  Potencialmente, es posible incluir algunos escenarios de dependencia bastante complicados si tiene varias propiedades dependientes entre sí de manera circular.  Por ejemplo, en el escenario Min\/Max\/Current \(con tres valores: mínimo, máximo y actual\), podría permitir al usuario establecer el mínimo y el máximo.  En este caso, podría ser necesario forzar el valor máximo para que siempre sea mayor que el mínimo, y viceversa.  Pero si ese forzado está activo, y el máximo se fuerza al mínimo, dejará el valor actual en un estado que no permite establecerlo, porque depende de ambos valores y está restringido al intervalo comprendido entre ellos, que es cero.  A continuación, si se ajustan el máximo y el mínimo, el valor actual parecerá "seguir" a uno de los valores, porque el valor deseado del valor actual sigue estando almacenado e intenta alcanzar el valor deseado cuando se retiran las restricciones.  
+### <a name="constraints-and-desired-values"></a>Restricciones y valores deseados  
+ El <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> las devoluciones de llamada usará el sistema de propiedades para convertir un valor de acuerdo con la lógica que se declara, pero un valor forzado de establecida localmente propiedad aún conservarán internamente un "valor deseado". Si las restricciones se basan en otros valores de propiedad que pueden cambiar dinámicamente durante el ciclo de vida de la aplicación, las restricciones de coerción también cambian de forma dinámica y la propiedad restringida puede cambiar su valor para que se aproxime al valor deseado lo máximo posible según las nuevas restricciones. El valor se convertirá en el valor deseado si se levantan todas las restricciones. Se pueden introducir algunos escenarios de dependencia complejos en el caso de tener varias propiedades que sean dependientes entre sí de manera circular. Por ejemplo, en el escenario Min/Max/Current, puede elegir que las propiedades Minimum y Maximum las pueda establecer el usuario. En este caso, es posible que deba forzar que Maximum sea siempre mayor que Minimum y viceversa. No obstante, si esa coerción está activa y la propiedad Maximum fuerza la propiedad Minimum, Current no se puede establecer, ya que depende de ambas y está restringida al intervalo entre los valores, que es cero. A continuación, si se ajustan las propiedades Maximum o Minimum, parecerá que Current "sigue" a uno de los valores, ya que el valor deseado de Current sigue estando almacenado e intenta alcanzar el valor deseado a medida que se suavizan las restricciones.  
   
- Técnicamente, no hay nada de malo en establecer dependencias complejas, pero pueden provocar un ligero deterioro del rendimiento si requieren grandes cantidades de reevaluaciones, además de resultar confusas para los usuarios si afectan directamente a la interfaz de usuario.  Extreme las precauciones con las devoluciones de llamada de cambio de propiedad y de forzado de valores: asegúrese de que el forzado previsto se pueda tratar del modo menos ambiguo posible y no cree un exceso de restricción.  
+ Técnicamente, no hay nada incorrecto en las dependencias complejas, pero pueden suponer un ligero deterioro del rendimiento si requieren grandes cantidades de reevaluaciones y también pueden ser confusas para los usuarios si afectan a la interfaz de usuario directamente. Tenga cuidado con las devoluciones de llamada de propiedad cambiada y valor de coerción, y asegúrese de que la coerción que se está intentando pueda tratarse de la manera más ambigua posible y no sea "sobrerrestrictiva".  
   
-### Utilizar valores de forzado para cancelar cambios de valor  
- El sistema de propiedades tratará cualquier <xref:System.Windows.CoerceValueCallback> que devuelva el valor <xref:System.Windows.DependencyProperty.UnsetValue> como un caso especial.  Este caso especial significa que el sistema de propiedades debe rechazar el cambio de propiedad que ha dado lugar a la llamada a <xref:System.Windows.CoerceValueCallback>, y que el sistema de propiedades debe comunicar, en su lugar, el valor anterior que tenía la propiedad.  Este mecanismo puede ser útil para comprobar si los cambios de una propiedad iniciados de manera asincrónica siguen siendo válidos para el estado actual del objeto y suprimirlos en caso negativo.  Otro escenario posible es la supresión selectiva de un valor dependiendo de qué componente de la determinación del valor de propiedad sea responsable del valor comunicado.  Para ello, puede utilizar el objeto <xref:System.Windows.DependencyProperty> pasado en la devolución de llamada y el identificador de propiedad como entrada para el método <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A> y, a continuación, procesar <xref:System.Windows.ValueSource>.  
+### <a name="using-coercevalue-to-cancel-value-changes"></a>Uso de CoerceValue para cancelar cambios de valor  
+ El sistema de propiedades tratará cualquier <xref:System.Windows.CoerceValueCallback> que devuelve el valor <xref:System.Windows.DependencyProperty.UnsetValue> como un caso especial. En este caso especial significa que el cambio de propiedad que dan como resultado la <xref:System.Windows.CoerceValueCallback> que se llama se debe rechazar por el sistema de propiedades, y que el sistema de propiedades en su lugar, debería notificar cualquier valor anterior que tenía la propiedad. Este mecanismo puede ser útil para comprobar que los cambios en una propiedad iniciados de manera asincrónica siguen siendo válidos para el estado actual del objeto y suprimirlos si no lo son. Otro escenario posible es la posibilidad de suprimir de manera selectiva un valor según el componente de determinación del valor propiedad que sea responsable del valor comunicado. Para ello, puede usar el <xref:System.Windows.DependencyProperty> pasan en la devolución de llamada y el identificador de la propiedad como entrada para <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>y, a continuación, procesar el <xref:System.Windows.ValueSource>.  
   
-## Vea también  
- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
+## <a name="see-also"></a>Vea también  
+ [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

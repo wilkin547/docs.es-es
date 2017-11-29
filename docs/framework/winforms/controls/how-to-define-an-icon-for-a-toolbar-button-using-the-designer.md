@@ -1,57 +1,58 @@
 ---
-title: "C&#243;mo: Definir un icono para un bot&#243;n del control ToolBar mediante el Dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "botones [Windows Forms], imágenes"
-  - "ejemplos [Windows Forms], barras de herramientas"
-  - "iconos [Windows Forms], botones de la barra de herramientas"
-  - "imágenes [Windows Forms], botones de la barra de herramientas"
-  - "ToolBar (control) [Windows Forms], agregar iconos a los botones"
-  - "barras de herramientas [Windows Forms], agregar iconos a los botones"
+title: "Cómo: Definir un icono para un botón del control ToolBar mediante el Diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms], adding icons to buttons
+- examples [Windows Forms], toolbars
+- images [Windows Forms], toolbar buttons
+- buttons [Windows Forms], images
+- icons [Windows Forms], toolbar buttons
+- ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1d8bdad3aa17c964871c0d35f6e33b8098f2c649
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Definir un icono para un bot&#243;n del control ToolBar mediante el Dise&#241;ador
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Cómo: Definir un icono para un botón del control ToolBar mediante el Diseñador
 > [!NOTE]
->  Aunque el control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>, este control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y, en su caso, de uso futuro.  
+>  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
- Los botones <xref:System.Windows.Forms.ToolBar> pueden mostrar iconos dentro de ellos para facilitar la identificación por parte de los usuarios.  Esto se logra a través de agregar las imágenes al componente <xref:System.Windows.Forms.ImageList> y asociarlo al control <xref:System.Windows.Forms.ToolBar>.  
+ <xref:System.Windows.Forms.ToolBar>botones pueden mostrar iconos dentro de ellos para identificarlo fácilmente por los usuarios. Esto se consigue mediante la adición de imágenes para la <xref:System.Windows.Forms.ImageList> componente y asociarla con el <xref:System.Windows.Forms.ToolBar> control.  
   
- El procedimiento siguiente requiere un proyecto de **Aplicación para Windows** con un formulario que contiene un control <xref:System.Windows.Forms.ToolBar> y un componente <xref:System.Windows.Forms.ImageList>.  Para obtener información sobre cómo configurar tal proyecto, vea [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ El procedimiento siguiente requiere un **aplicación de Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.ToolBar> control y un <xref:System.Windows.Forms.ImageList> componente. Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Para establecer un icono para un botón de la barra de herramientas en tiempo de diseño  
+### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Para establecer un icono para un botón de barra de herramientas en tiempo de diseño  
   
-1.  Agregue las imágenes al componente <xref:System.Windows.Forms.ImageList>.  Para obtener más información, vea [Cómo: Agregar o quitar imágenes del componente ImageList mediante el Diseñador](../../../../docs/framework/winforms/controls/how-to-add-or-remove-imagelist-images-with-the-designer.md).  
+1.  Agregar imágenes a la <xref:System.Windows.Forms.ImageList> componente. Para obtener más información, consulte [Cómo: agregar o quitar imágenes del componente ImageList con el diseñador](../../../../docs/framework/winforms/controls/how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
-2.  Seleccione el control <xref:System.Windows.Forms.ToolBar> del formulario.  
+2.  Seleccione el <xref:System.Windows.Forms.ToolBar> control en el formulario.  
   
-3.  En la ventana **Propiedades**, establezca la propiedad <xref:System.Windows.Forms.ToolBar.ImageList%2A> del control <xref:System.Windows.Forms.ToolBar> en el componente <xref:System.Windows.Forms.ImageList>.  
+3.  En el **propiedades** ventana, establezca el <xref:System.Windows.Forms.ToolBar> del control <xref:System.Windows.Forms.ToolBar.ImageList%2A> propiedad a la <xref:System.Windows.Forms.ImageList> componente.  
   
-4.  Haga clic en la propiedad <xref:System.Windows.Forms.ToolBar.Buttons%2A> del control <xref:System.Windows.Forms.ToolBar> para seleccionarla y después haga clic en el botón de puntos suspensivos \(![Captura de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\) para abrir el **Editor de la colección ToolBarButton**.  
+4.  Haga clic en el <xref:System.Windows.Forms.ToolBar> del control <xref:System.Windows.Forms.ToolBar.Buttons%2A> propiedad para seleccionarlo y haga clic en el botón de puntos suspensivos (![de pantalla de VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) para abrir el **Editor de colecciones ToolBarButton**.  
   
-5.  Utilice el botón **Agregar** para agregar botones al control <xref:System.Windows.Forms.ToolBar>.  
+5.  Use la **agregar** botón Agregar botones a la <xref:System.Windows.Forms.ToolBar> control.  
   
-6.  En la ventana **Propiedades** que aparece en el panel en la parte derecha del **Editor de la colección ToolBarButton**, establezca la propiedad <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> de cada botón de la barra de herramientas en uno de los valores de la lista, que se obtiene de las imágenes que se han agregado al componente <xref:System.Windows.Forms.ImageList>.  
+6.  En el **propiedades** ventana que aparece en el panel del lado derecho de la **Editor de colecciones ToolBarButton**, establezca el <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> propiedad de cada botón de barra de herramientas a uno de los valores en la lista, que se dibuja desde las imágenes que agregó a la <xref:System.Windows.Forms.ImageList> componente.  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolBar>   
- [Cómo: Desencadenar eventos de menú para los botones de la barra de herramientas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)   
- [Barra de herramientas \(Control\)](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)   
- [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ToolBar>  
+ [Cómo: Desencadenar eventos de menú para los botones de la barra de herramientas](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [ToolBar (control)](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
+ [ImageList (componente)](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

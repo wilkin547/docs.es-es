@@ -1,48 +1,49 @@
 ---
-title: "Comportamiento de AutoSize en el control TableLayoutPanel | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cambiar de tamaño de forma automática"
-  - "AutoSize (propiedad), TableLayoutPanel (control)"
-  - "AutoSizeMode (propiedad)"
-  - "controles [Windows Forms], ajustar el tamaño"
-  - "diseño [Windows Forms], AutoSize"
-  - "adaptar formularios"
-  - "ajustar el tamaño, automáticamente"
-  - "TableLayoutPanel (control) [Windows Forms], comportamiento de AutoSize"
+title: Comportamiento de AutoSize en el control TableLayoutPanel
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- AutoSize property [Windows Forms], tableLayoutPanel control
+- controls [Windows Forms], sizing
+- localizing forms
+- layout [Windows Forms], AutoSize
+- sizing [Windows Forms], automatic
+- TableLayoutPanel control [Windows Forms], AutoSize behavior
+- automatic sizing
+- AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3d4813b7bd37c0c5bd9b04b37cb825067b35ce3d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Comportamiento de AutoSize en el control TableLayoutPanel
-## Distintos comportamientos de AutoSize  
- El control <xref:System.Windows.Forms.TableLayoutPanel> admite las siguientes maneras del comportamiento de cambio de tamaño automático:  
+# <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Comportamiento de AutoSize en el control TableLayoutPanel
+## <a name="distinct-autosize-behaviors"></a>Distintos comportamientos de AutoSize  
+ El <xref:System.Windows.Forms.TableLayoutPanel> control admite el comportamiento de ajuste automático de tamaño de las maneras siguientes:  
   
--   A través de la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A>;  
+-   A través de la <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad;  
   
--   A través de la propiedad <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> en los estilos de fila y columna del control <xref:System.Windows.Forms.TableLayoutPanel>.  
+-   A través de la <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propiedad en el <xref:System.Windows.Forms.TableLayoutPanel> estilos de fila y columna del control.  
   
-### La propiedad AutoSize con estilos de fila y columna  
- En la tabla siguiente se describe la interacción entre la propiedad <xref:System.Windows.Forms.Control.AutoSize%2A> y los estilos de fila y columna del control <xref:System.Windows.Forms.TableLayoutPanel>.  
+### <a name="the-autosize-property-with-row-and-column-styles"></a>La propiedad AutoSize con estilos de columna y fila  
+ En la tabla siguiente se describe la interacción entre el <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad y el <xref:System.Windows.Forms.TableLayoutPanel> estilos de fila y columna del control.  
   
-|Configuración de AutoSize|Interacción de estilo|  
-|-------------------------------|---------------------------|  
-|`false`|El control <xref:System.Windows.Forms.TableLayoutPanel> se realiza de izquierda a derecha y asigna el espacio para la columna o fila o en el orden siguiente.<br /><br /> 1.  Si la propiedad <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> se establece en <xref:System.Windows.Forms.SizeType>, se asigna el número de píxeles especificado por <xref:System.Windows.Forms.ColumnStyle.Width%2A> o <xref:System.Windows.Forms.RowStyle.Height%2A>.<br />2.  Si la propiedad <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> se establece en <xref:System.Windows.Forms.SizeType>, se asigna el número de píxeles devuelto por el método <xref:System.Windows.Forms.Control.GetPreferredSize%2A> del control secundario.<br />3.  Después de que se haya asignado el espacio para todas las filas o columnas de <xref:System.Windows.Forms.SizeType> y <xref:System.Windows.Forms.SizeType>, se utilizan todas las filas o columnas con <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> establecidas en <xref:System.Windows.Forms.SizeType> para asignar proporcionalmente el espacio disponible restante.|  
-|`true`|Similar a la interacción anterior, excepto que las columnas o filas de <xref:System.Windows.Forms.SizeType> adquieren un aspecto de cambio de tamaño automático.<br /><br /> El control <xref:System.Windows.Forms.TableLayoutPanel> amplía la columna o fila para crear el espacio necesario, de tal forma que ninguna columna o fila con estilo <xref:System.Windows.Forms.SizeType> recorte su contenido.  El control <xref:System.Windows.Forms.TableLayoutPanel> asigna proporcionalmente el nuevo espacio en función de la propiedad <xref:System.Windows.Forms.ColumnStyle.Width%2A> o <xref:System.Windows.Forms.RowStyle.Height%2A>.|  
+|Ajuste automático de tamaño|Interacción de estilo|  
+|----------------------|-----------------------|  
+|`false`|El <xref:System.Windows.Forms.TableLayoutPanel> control avanza de izquierda a derecha y asigna espacio para la columna o fila o en el siguiente orden.<br /><br /> 1.  Si el <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propiedad está establecida en <xref:System.Windows.Forms.SizeType.Absolute>, el número de píxeles especificado por <xref:System.Windows.Forms.ColumnStyle.Width%2A> o <xref:System.Windows.Forms.RowStyle.Height%2A> está asignada.<br />2.  Si el <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> propiedad está establecida en <xref:System.Windows.Forms.SizeType.AutoSize>, el número de píxeles devuelto por el control secundario <xref:System.Windows.Forms.Control.GetPreferredSize%2A> se asigna el método.<br />3.  Después de un espacio para todos los <xref:System.Windows.Forms.SizeType.Absolute> y <xref:System.Windows.Forms.SizeType.AutoSize> está asignado el columnas o filas, las columnas o filas con <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> establecido en <xref:System.Windows.Forms.SizeType.Percent> se usan para asignar proporcionalmente el espacio libre restante|  
+|`true`|Similar a la interacción anterior, con la excepción que <xref:System.Windows.Forms.SizeType.Percent> columnas o filas adquieren un aspecto de ajuste automático de tamaño.<br /><br /> El <xref:System.Windows.Forms.TableLayoutPanel> control expande la columna o fila para crear espacio libre suficiente, por lo que ninguna columna o fila con <xref:System.Windows.Forms.SizeType.Percent> estilo recorta su contenido. El <xref:System.Windows.Forms.TableLayoutPanel> control asigna el nuevo espacio proporcionalmente conforme a la <xref:System.Windows.Forms.ColumnStyle.Width%2A> o <xref:System.Windows.Forms.RowStyle.Height%2A> propiedad.|  
   
-## Vea también  
- <xref:System.Windows.Forms.TableLayoutPanel>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
  [Información general sobre el control TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

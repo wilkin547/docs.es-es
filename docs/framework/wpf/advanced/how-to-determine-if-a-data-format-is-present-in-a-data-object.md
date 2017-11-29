@@ -1,54 +1,60 @@
 ---
-title: "C&#243;mo: Determinar si un formato de datos est&#225; presente en un objeto de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "formatos de datos [WPF], determinar si existen"
-  - "DataFormats (clase) [WPF]"
-  - "arrastrar y colocar [WPF], buscar formatos existentes"
+title: "Cómo: Determinar si un formato de datos está presente en un objeto de datos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- DataFormats class [WPF]
+- drag-and-drop [WPF], data formats present
+- data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9e5eaad64e18ff955340a8e91bfe8bd0e09dd8d7
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Determinar si un formato de datos est&#225; presente en un objeto de datos
-En los ejemplos siguientes se muestra cómo utilizar las diversas sobrecargas del método <xref:System.Windows.DataObject.GetDataPresent%2A> para consultar si un formato de datos determinado se encuentra en un objeto de datos.  
+# <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Cómo: Determinar si un formato de datos está presente en un objeto de datos
+Los ejemplos siguientes muestran cómo usar las distintas <xref:System.Windows.DataObject.GetDataPresent%2A> sobrecargas de método para consultar si un formato de datos determinado se encuentra presente en un objeto de datos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- En el ejemplo de código siguiente, se usa la sobrecarga del método <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> para consultar la presencia de un formato de datos concreto por cadena del descriptor.  
+### <a name="description"></a>Descripción  
+ El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetDataPresent%28System.String%29> sobrecarga para consultar la presencia de un formato de datos concreto por cadena del descriptor.  
   
-### Código  
+### <a name="code"></a>Código  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_string)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_String](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_string)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- En el ejemplo de código siguiente, se usa la sobrecarga del método <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> para consultar la presencia de un formato de datos concreto por tipo.  
+### <a name="description"></a>Descripción  
+ El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetDataPresent%28System.Type%29> sobrecarga para consultar la presencia de un formato de datos concreto por tipo.  
   
-### Código  
+### <a name="code"></a>Código  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_type)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Type](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_type)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-### Descripción  
- En el ejemplo siguiente, se usa la sobrecarga del método <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> para consultar los datos por cadena del descriptor y especificar cómo tratar los formatos de datos de autoconversión.  
+### <a name="description"></a>Descripción  
+ El código de ejemplo siguiente usa el <xref:System.Windows.DataObject.GetDataPresent%28System.String%2CSystem.Boolean%29> sobrecargar para consultar los datos por cadena del descriptor y especificar cómo tratar los formatos de datos automática.  
   
-### Código  
+### <a name="code"></a>Código  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_querydataformats_autoconvert)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.Windows.IDataObject>

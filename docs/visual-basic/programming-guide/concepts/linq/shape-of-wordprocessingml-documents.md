@@ -1,27 +1,22 @@
 ---
-title: Forma de los documentos WordprocessingML (Visual Basic) | Documentos de Microsoft
+title: Forma de los documentos WordprocessingML (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1982110ccf01f52ace20db6985d7329407357d8
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: f29ed78062337c7036ada2405fa610ff1f883feb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma de los documentos WordprocessingML (Visual Basic)
 En este tema se presenta la forma XML de un documento WordprocessingML.  
@@ -69,7 +64,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  La forma más sencilla de ver el contenido de un documento WordprocessingML en forma XML es crear un documento mediante Microsoft Word, guardarlo y después ejecutar el siguiente programa que muestra XML en la consola.  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -106,8 +101,7 @@ End Module
   
  [Información general de WordprocessingML](http://go.microsoft.com/fwlink/?LinkId=98094)  
   
- [Office 2003: Página de descargas de esquemas de referencia XML](http://go.microsoft.com/fwlink/?LinkId=98095)  
+ [Office 2003: página de descargas de esquemas de referencia XML](http://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>Vea también  
  [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

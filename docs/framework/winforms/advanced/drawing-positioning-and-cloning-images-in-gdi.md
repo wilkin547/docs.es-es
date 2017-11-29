@@ -1,63 +1,67 @@
 ---
-title: "Dibujar, colocar y clonar im&#225;genes en GDI+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "dibujar, imágenes"
-  - "dibujar, imágenes de trama"
-  - "GDI+, clonar imágenes"
-  - "GDI+, dibujar imágenes"
-  - "GDI+, colocar imágenes"
-  - "imágenes [Windows Forms], clonar"
-  - "imágenes [Windows Forms], dibujar"
-  - "imágenes [Windows Forms], colocar"
-  - "imágenes de trama"
+title: "Dibujar, colocar y clonar imágenes en GDI+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- raster images [Windows Forms]
+- images [Windows Forms], positioning
+- drawing [Windows Forms], images
+- drawing [Windows Forms], raster images
+- images [Windows Forms], cloning
+- images [Windows Forms], drawing
+- GDI+, drawing images
+- GDI+, cloning images
+- GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a3ba716a36280d2ac08dae907abbdbe05e563dfc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Dibujar, colocar y clonar im&#225;genes en GDI+
-La clase <xref:System.Drawing.Bitmap> puede utilizarse para cargar y mostrar imágenes de tramas y la clase <xref:System.Drawing.Imaging.Metafile> puede utilizarse para cargar y mostrar imágenes vectoriales.  Las clases <xref:System.Drawing.Bitmap> y <xref:System.Drawing.Imaging.Metafile> heredan de la clase <xref:System.Drawing.Image>.  Para mostrar una imagen vectorial, necesita una instancia de la clase <xref:System.Drawing.Graphics> y <xref:System.Drawing.Imaging.Metafile>.  Para mostrar una imagen de tramas, necesita una instancia de la clase <xref:System.Drawing.Graphics> y <xref:System.Drawing.Bitmap>.  La instancia de la clase <xref:System.Drawing.Graphics> proporciona el método <xref:System.Drawing.Graphics.DrawImage%2A>, que recibe <xref:System.Drawing.Imaging.Metafile> o <xref:System.Drawing.Bitmap> como argumento.  
+# <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Dibujar, colocar y clonar imágenes en GDI+
+Puede usar el <xref:System.Drawing.Bitmap> clase para cargar y mostrar imágenes de trama y se puede utilizar el <xref:System.Drawing.Imaging.Metafile> clase para cargar y mostrar imágenes vectoriales. El <xref:System.Drawing.Bitmap> y <xref:System.Drawing.Imaging.Metafile> clases heredan de la <xref:System.Drawing.Image> clase. Para mostrar una imagen vectorial, necesita una instancia de la <xref:System.Drawing.Graphics> clase y un <xref:System.Drawing.Imaging.Metafile>. Para mostrar una imagen de trama, necesita una instancia de la <xref:System.Drawing.Graphics> clase y un <xref:System.Drawing.Bitmap>. La instancia de la <xref:System.Drawing.Graphics> clase proporciona el <xref:System.Drawing.Graphics.DrawImage%2A> método, que recibe el <xref:System.Drawing.Imaging.Metafile> o <xref:System.Drawing.Bitmap> como un argumento.  
   
-## Tipos de archivos y clonación  
- En el siguiente ejemplo de código se muestra cómo se construye un objeto <xref:System.Drawing.Bitmap> desde el archivo Climber.jpg y se muestra el mapa de bits.  El punto de destino de la esquina superior izquierda de la imagen, \(10, 10\), se especifica en el segundo y tercer parámetros.  
+## <a name="file-types-and-cloning"></a>Tipos de archivos y clonación  
+ En el ejemplo de código siguiente se muestra cómo construir un <xref:System.Drawing.Bitmap> desde el archivo Climber.jpg y se muestra el mapa de bits. El punto de destino de la esquina superior izquierda de la imagen, (10, 10), se especifica en los parámetros segundo y tercero.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#11)]  
   
- En la siguiente ilustración se muestra la imagen.  
+ En la siguiente ilustración muestra la imagen.  
   
- ![Ejemplo de imagen](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.png "AboutGdip03\_Art04")  
+ ![Ejemplo de la imagen](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art04.gif "AboutGdip03_Art04")  
   
- Se pueden construir objetos <xref:System.Drawing.Bitmap> a partir de diversos formatos de archivos de gráficos: BMP, GIF, JPEG, EXIF, PNG, TIFF e ICON.  
+ Puede construir <xref:System.Drawing.Bitmap> formatos de archivo de objetos desde una variedad de gráficos: BMP, GIF, JPEG, EXIF, PNG, TIFF e icono.  
   
- En el siguiente ejemplo de código se muestra cómo se construyen objetos <xref:System.Drawing.Bitmap> a partir de diversos tipos de archivo y después se muestran los mapas de bits.  
+ En el ejemplo de código siguiente se muestra cómo construir <xref:System.Drawing.Bitmap> objetos desde una variedad de tipos de archivo y, a continuación, muestra los mapas de bits.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#12)]  
   
- La clase <xref:System.Drawing.Bitmap> proporciona un método <xref:System.Drawing.Bitmap.Clone%2A> que puede utilizarse para hacer una copia de un objeto <xref:System.Drawing.Bitmap> existente.  El método <xref:System.Drawing.Bitmap.Clone%2A> tiene un parámetro de rectángulo de origen que puede utilizarse para especificar la parte del mapa de bits original que se desea copiar.  En el ejemplo de código siguiente se muestra cómo crear un objeto <xref:System.Drawing.Bitmap> clonando la mitad superior de un objeto <xref:System.Drawing.Bitmap> existente.  Después, se dibujan ambas imágenes.  
+ El <xref:System.Drawing.Bitmap> clase proporciona un <xref:System.Drawing.Bitmap.Clone%2A> método que puede usar para realizar una copia de un miembro de <xref:System.Drawing.Bitmap>. El <xref:System.Drawing.Bitmap.Clone%2A> método tiene un parámetro de rectángulo de origen que se puede utilizar para especificar la parte del mapa de bits original que se van a copiar. En el ejemplo de código siguiente se muestra cómo crear un <xref:System.Drawing.Bitmap> mediante la clonación de la mitad superior de un objeto <xref:System.Drawing.Bitmap>. A continuación, se dibujan las imágenes.  
   
  [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#13)]  
   
- En la siguiente ilustración se muestran las dos imágenes.  
+ La ilustración siguiente muestra las dos imágenes.  
   
- ![Recortar](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.png "AboutGdip03\_Art05")  
+ ![Recortar](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
-## Vea también  
- [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
+## <a name="see-also"></a>Vea también  
+ [Imágenes, mapas de bits y metarchivos](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

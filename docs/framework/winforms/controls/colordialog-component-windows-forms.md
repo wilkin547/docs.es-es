@@ -1,49 +1,50 @@
 ---
-title: "ColorDialog (Componente, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadro de diálogo de colores"
-  - "ColorDialog (componente)"
-  - "colores, cuadro de diálogo"
+title: ColorDialog (Componente, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColorDialog component
+- colors [Windows Forms], dialog box
+- color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: db5604002deed73f6fcbfcd4d33d46fac8cd7243
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# ColorDialog (Componente, formularios Windows Forms)
-El componente <xref:System.Windows.Forms.ColorDialog> de formularios Windows Forms es un cuadro de diálogo preconfigurado que permite que el usuario seleccione un color de una paleta y agregue colores personalizados a la paleta.  Es el mismo cuadro de diálogo que se ve en otras aplicaciones para Windows y que permite seleccionar colores.  Utilícelo dentro de la aplicación basada en Windows como una solución sencilla, en lugar de configurar un cuadro de diálogo propio.  
+# <a name="colordialog-component-windows-forms"></a>ColorDialog (Componente, formularios Windows Forms)
+Los formularios de Windows <xref:System.Windows.Forms.ColorDialog> componente es un cuadro de diálogo preconfigurado que permite al usuario seleccionar un color de una paleta y agregue colores personalizados a la paleta. Es el mismo cuadro de diálogo que se ve en otras aplicaciones basadas en Windows para seleccionar colores. Utilícelo en la aplicación basada en Windows como una solución sencilla, en lugar de configurar su propio cuadro de diálogo.  
   
-## En esta sección  
- [Información general sobre el componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
- Presenta conceptos generales acerca del componente <xref:System.Windows.Forms.ColorDialog>, que permite mostrar un cuadro de diálogo preconfigurado que los usuarios pueden utilizar para seleccionar colores de una paleta.  
+## <a name="in-this-section"></a>En esta sección  
+ [Información general del componente ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ Presenta los conceptos generales de la <xref:System.Windows.Forms.ColorDialog> componente, que permite mostrar un cuadro de diálogo preconfigurado que los usuarios puede utilizar para seleccionar colores de una paleta.  
   
- [Cómo: Cambiar la apariencia del componente ColorDialog de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
- Describe cómo cambiar los colores disponibles para los usuarios, así como otras propiedades.  
+ [Cómo: Cambiar la apariencia del componente ColorDialog de Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
+ Describe cómo cambiar los colores disponibles para los usuarios y otras propiedades.  
   
  [Cómo: Mostrar una paleta de colores con el componente ColorDialog](../../../../docs/framework/winforms/controls/how-to-show-a-color-palette-with-the-colordialog-component.md)  
- Explica cómo seleccionar un color en tiempo de ejecución con una instancia del componente <xref:System.Windows.Forms.ColorDialog>.  
+ Explica cómo seleccionar un color en tiempo de ejecución por medio de una instancia de la <xref:System.Windows.Forms.ColorDialog> componente.  
   
-## Secciones relacionadas  
- [Controles que se pueden utilizar en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.  
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Controles que puede utilizar en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.  
   
- [ColorDialog \(clase\)](frlrfSystemWindowsFormsColorDialogClassTopic)  
+ <xref:System.Windows.Forms.ColorDialog>  
  Proporciona información de referencia acerca de la clase <xref:System.Windows.Forms.ColorDialog> y sus miembros.  
   
- [Código esencial para cuadros de diálogo con formularios Windows Forms](vbtchEssentialCodeForWindowsFormsDialogBoxes)  
- Explica los controles y componentes de los cuadros de diálogo de los formularios Windows Forms, y el código necesario para ejecutar sus funciones básicas.  
+ [Código esencial para los cuadros de diálogo de Windows Forms](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
+ Describe los componentes y controles de cuadros de diálogo de Windows Forms y el código necesario para ejecutar sus funciones básicas.  
   
  [Controles y componentes de cuadros de diálogo](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Enumera un conjunto de controles que permite a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.
+ Enumera un conjunto de controles que permiten a los usuarios llevar a cabo interacciones estándar con la aplicación o el sistema.

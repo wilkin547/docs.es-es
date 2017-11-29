@@ -1,42 +1,46 @@
 ---
-title: "C&#243;mo: Enumerar los descodificadores instalados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "códecs de imagen, mostrar"
-  - "descodificadores de imágenes, mostrar"
+title: "Cómo: Enumerar los descodificadores instalados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- image codecs [Windows Forms], listing
+- image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 17cbdebfa6cbb0cacacd923de4bd22125c812938
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Enumerar los descodificadores instalados
-Puede enumerar los descodificadores de imágenes disponibles en un equipo, para determinar si la aplicación puede leer un formato de archivo de imagen determinado.  La clase <xref:System.Drawing.Imaging.ImageCodecInfo> proporciona los métodos estáticos <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> para que pueda determinar qué descodificadores de imágenes están disponibles.  <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> devuelve una matriz de objetos <xref:System.Drawing.Imaging.ImageCodecInfo>.  
+# <a name="how-to-list-installed-decoders"></a>Cómo: Enumerar los descodificadores instalados
+Puede que desee enumerar los descodificadores de imágenes disponibles en un equipo, para determinar si la aplicación puede leer un formato de archivo de imagen determinado. El <xref:System.Drawing.Imaging.ImageCodecInfo> clase proporciona el <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> métodos estáticos para que pueda determinar qué imagen descodificadores están disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>Devuelve una matriz de <xref:System.Drawing.Imaging.ImageCodecInfo> objetos.  
   
-## Ejemplo  
- El ejemplo de código siguiente genera la lista de los descodificadores instalados y sus valores de propiedad.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se genera la lista de los descodificadores instalados y sus valores de propiedad.  
   
  [!code-csharp[UsingImageEncodersDecoders#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#2)]
  [!code-vb[UsingImageEncodersDecoders#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#2)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una aplicación de formularios Windows Forms.  
+-   Una aplicación de Windows Forms.  
   
--   Un argumento <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+-   A <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Vea también  
- [Cómo: Enumerar los codificadores instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [Usar codificadores y descodificadores de imagen en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>Vea también  
+ [Enumerar los codificadores instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
