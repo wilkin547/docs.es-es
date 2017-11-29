@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 24abe4d2cc9a540f134ea32dbd6a44a630ff5524
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e23ec35b94196d1f8a597d3a74850b5292a4ef09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Cambios en la autenticación NTLM para HttpWebRequest en la versión 3.5 SP1
 Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> y relacionadas del espacio de nombres System.Net controlan la autenticación integrada de Windows. Estos cambios pueden afectar a las aplicaciones que usan estas clases para realizar solicitudes web y recibir respuestas donde se emplea la autenticación integrada de Windows basada en NTLM. Este cambio puede afectar a los servidores web y a las aplicaciones cliente configurados para usar autenticación integrada de Windows.  
@@ -39,9 +33,9 @@ Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afe
   
  Cuando se ha configurado para implementaciones grandes, también es común que se asigne un nombre único de servidor virtual a la implementación con los nombres de equipos subyacentes no usados nunca por aplicaciones cliente y usuarios finales. Por ejemplo, se podría asignar el nombre www.contoso.com al servidor, pero en una red interna, usar simplemente "contoso". Este nombre se denomina encabezado de host en la solicitud de web cliente. Como especifica el protocolo HTTP, el campo de encabezado o solicitud de host especifica el número de puerto y el host de Internet del recurso que se solicita. Esta información se obtiene del URI original proporcionado por el usuario o el recurso que hace referencia (normalmente una dirección URL HTTP). En .NET Framework versión 4, esta información también puede establecerla el cliente con la nueva propiedad <xref:System.Net.HttpWebRequest.Host%2A>.  
   
- La clase <xref:System.Net.AuthenticationManager> controla los componentes de autenticación administrados ("módulos") usados por las clases derivadas <xref:System.Net.WebRequest> y la clase <xref:System.Net.WebClient>. La clase <xref:System.Net.AuthenticationManager> proporciona una propiedad que expone un objeto <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>, indexado por cadena URI, para que las aplicaciones proporcionen una cadena SPN personalizada que se use durante la autenticación.  
+ La clase <xref:System.Net.AuthenticationManager> controla los componentes de autenticación administrados ("módulos") usados por las clases derivadas <xref:System.Net.WebRequest> y la clase <xref:System.Net.WebClient>. La clase <xref:System.Net.AuthenticationManager> proporciona una propiedad que expone un objeto <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>, indexado por cadena URI, para que las aplicaciones proporcionen una cadena SPN personalizada que se use durante la autenticación.  
   
- Ahora el comportamiento predeterminado de SP1 versión 3.5 es especificar el nombre de host usado en la dirección URL de solicitud del SPN en el intercambio de autenticación NTLM (NT LAN Manager) cuando la propiedad <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> no está establecida. El nombre de host usado en la dirección URL de solicitud puede ser diferente al encabezado de host especificado en <xref:System.Net.HttpRequestHeader?displayProperty=fullName> en la solicitud de cliente. El nombre de host usado en la dirección URL de solicitud puede ser diferente al nombre de host real del servidor, el nombre de equipo del servidor, la dirección IP del equipo o la dirección de bucle invertido. En estos casos se produce un error en la solicitud de autenticación de Windows. Para solucionar el problema, es necesario notificar a Windows que el nombre de host usado en la dirección URL de solicitud en la solicitud de cliente (por ejemplo, "contoso") es realmente un nombre alternativo para el equipo local.  
+ Ahora el comportamiento predeterminado de SP1 versión 3.5 es especificar el nombre de host usado en la dirección URL de solicitud del SPN en el intercambio de autenticación NTLM (NT LAN Manager) cuando la propiedad <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> no está establecida. El nombre de host usado en la dirección URL de solicitud puede ser diferente al encabezado de host especificado en <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType> en la solicitud de cliente. El nombre de host usado en la dirección URL de solicitud puede ser diferente al nombre de host real del servidor, el nombre de equipo del servidor, la dirección IP del equipo o la dirección de bucle invertido. En estos casos se produce un error en la solicitud de autenticación de Windows. Para solucionar el problema, es necesario notificar a Windows que el nombre de host usado en la dirección URL de solicitud en la solicitud de cliente (por ejemplo, "contoso") es realmente un nombre alternativo para el equipo local.  
   
  Existen varios métodos posibles para que una aplicación de servidor solucione este cambio. El enfoque recomendado consiste en asignar el nombre de host usado en la dirección URL de solicitud a la clave `BackConnectionHostNames` del Registro en el servidor. La clave `BackConnectionHostNames` del Registro normalmente se usa para asignar un nombre de host a una dirección de bucle invertido. Los pasos se indican a continuación.  
   
@@ -66,7 +60,6 @@ Se han realizado cambios de seguridad en .NET Framework versión 3.5 SP1 que afe
  Una solución menos segura es deshabilitar la comprobación de bucle inverso, como se explica en [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Esto deshabilita la protección contra ataques de reflejo. Por eso es mejor restringir el conjunto de nombres alternativos a solo aquellos que espera que use el equipo en realidad.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=fullName>   
- <xref:System.Net.HttpRequestHeader?displayProperty=fullName>   
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=fullName>
-
+ <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
+ <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
+ <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

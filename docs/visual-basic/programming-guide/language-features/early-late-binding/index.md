@@ -1,50 +1,32 @@
 ---
 title: "Enlace en tiempo de compilación y en tiempo de ejecución (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- early binding
+- early binding [Visual Basic]
 - objects [Visual Basic], late-bound
 - objects [Visual Basic], early-bound
 - objects [Visual Basic], late bound
-- early binding, Visual Basic compiler
-- binding, late and early
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
 - objects [Visual Basic], early bound
 - Visual Basic compiler, early and late binding
-- late binding
-- late binding, Visual Basic compiler
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: aceffe59fb6043b3089621b9a3f95b0425f9a522
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Enlace en tiempo de compilación y en tiempo de ejecución (Visual Basic)
 El compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lleva a cabo un proceso denominado `binding` cuando se asigna un objeto a una variable de objeto. Un objeto se *enlaza de manera anticipada* cuando se asigna a una variable que se declara de un tipo de objeto específico. Los objetos enlazados de manera anticipada permiten al compilador asignar memoria y realizar otras optimizaciones antes de que se ejecute la aplicación. Por ejemplo, el fragmento de código siguiente declara que una variable es de tipo <xref:System.IO.FileStream>:  
@@ -64,7 +46,6 @@ El compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lleva a cabo un proces
 >  El enlace en tiempo de ejecución solo puede utilizarse para acceder a miembros de tipo declarados como `Public`. El acceso a miembros declarados como `Friend` o `Protected Friend` produce un error en tiempo de ejecución.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
- [Duración de los objetos: cómo se crean y destruyen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
+ <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>  
+ [Duración de los objetos: cómo se crean y destruyen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
  [Tipo de objeto de datos](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-

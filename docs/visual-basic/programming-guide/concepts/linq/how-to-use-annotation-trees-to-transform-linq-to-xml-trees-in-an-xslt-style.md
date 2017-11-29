@@ -1,30 +1,22 @@
 ---
-title: "Cómo: usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17324fb6dca653aa3c15e3bad2fcc5ac35828bef
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e2e5fce154d5d59657302deb2ce0be80a3bc3ac6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Cómo: usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT (Visual Basic)
 Se puede usar anotaciones para facilitar transformaciones de un árbol XML.  
@@ -35,7 +27,7 @@ Se puede usar anotaciones para facilitar transformaciones de un árbol XML.
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Para cualquier nodo de texto dado puede haber cualquier número de elementos secundarios `<b>` y `<i>`. Este enfoque se extiende a un número de otras situaciones: por ejemplo, páginas que contienen una variedad de elementos secundarios, como párrafos normales, párrafos con viñetas o mapas de bits. Las celdas de una tabla pueden contener texto, listas desplegables o mapas de bits. Una de las características principal del XML centrado en documentos es que no se sabe qué elemento secundario puede tener cualquier elemento particular.  
+ Para cualquier nodo de texto dado puede haber cualquier número de elementos secundarios `<b>` y `<i>`. Este enfoque se extiende a otras situaciones: por ejemplo, las páginas que pueden contener varios elementos secundarios, como párrafos normales, párrafos con viñetas o mapas de bits. Las celdas de una tabla pueden contener texto, listas desplegables o mapas de bits. Una de las características principal del XML centrado en documentos es que no se sabe qué elemento secundario puede tener cualquier elemento particular.  
   
  Si desea transformar elementos de un árbol en el que no conoce el elemento secundario de los elementos que desea transformar, entonces este enfoque que usa anotaciones en un enfoque efectivo.  
   
@@ -47,13 +39,13 @@ Se puede usar anotaciones para facilitar transformaciones de un árbol XML.
   
  En detalle, el enfoque consiste en:  
   
--   Ejecutar una o más consultas LINQ to XML que devuelvan el conjunto de elementos que desea transformar de una forma a otra. Para cada elemento de la consulta, agregue un nuevo <xref:System.Xml.Linq.XElement>objeto como una anotación al elemento.</xref:System.Xml.Linq.XElement> Este nuevo elemento sustituirá el elemento anotado en el nuevo árbol transformado. Es un código sencillo de escribir, tal como lo demuestra el ejemplo.  
+-   Ejecutar una o más consultas LINQ to XML que devuelvan el conjunto de elementos que desea transformar de una forma a otra. Para cada elemento de la consulta, agregue un nuevo objeto <xref:System.Xml.Linq.XElement> como anotación al elemento. Este nuevo elemento sustituirá el elemento anotado en el nuevo árbol transformado. Es un código sencillo de escribir, tal como lo demuestra el ejemplo.  
   
 -   El nuevo elemento que se agrega como anotación puede contener nodos secundarios; puede formar un subárbol con cualquier forma que se desee.  
   
 -   Existe una regla especial; si un nodo secundario del nuevo elemento está en un espacio de nombres diferente, un espacio de nombres creado con esa finalidad (en este ejemplo, el espacio de nombres es `http://www.microsoft.com/LinqToXmlTransform/2007`), entonces el elemento secundario no se copia al nuevo árbol. En su lugar, si el espacio de nombres es el espacio de nombres especial mencionado anteriormente y el nombre local del elemento es `ApplyTransforms`, los nodos secundarios del elemento del árbol de origen se recorren en iteración y se copian al nuevo árbol (con la excepción que los elementos secundarios anotados se transforman de acuerdo con esas reglas).  
   
--   Esto es parecido a la especificación de transformaciones en XSL. La consulta que selecciona un conjunto de nodos es análoga a la expresión XPath para una plantilla. El código para crear el nuevo <xref:System.Xml.Linq.XElement>que se guarda como anotación es análogo al constructor de secuencias en XSL y el `ApplyTransforms` es análogo en función al elemento el `xsl:apply-templates` elemento XSL.</xref:System.Xml.Linq.XElement>  
+-   Esto es parecido a la especificación de transformaciones en XSL. La consulta que selecciona un conjunto de nodos es análoga a la expresión XPath para una plantilla. El código para crear el nuevo <xref:System.Xml.Linq.XElement> que se guarda como anotación es análogo al constructor de secuencias en XSL y el elemento `ApplyTransforms` es análogo en función al elemento `xsl:apply-templates` en XSL.  
   
 -   Una ventaja de este enfoque es que al formular consultas siempre se escriben consultas en el árbol de origen sin modificar. No hay que preocuparse de cómo afectan a las consultas que se están escribiendo las modificaciones del árbol.  
   
@@ -396,4 +388,4 @@ After Transform
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

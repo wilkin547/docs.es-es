@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c67018df35816b38828e548a88d25efe16d6a15a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2e21b1f92c6694c6572d4651e94964e5d2d93c51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento de .NET Framework
 En este tema se proporciona una lista de los contadores de rendimiento que se pueden encontrar en el [Monitor de rendimiento](http://technet.microsoft.com/library/cc749249.aspx).  
@@ -137,7 +130,7 @@ En este tema se proporciona una lista de los contadores de rendimiento que se pu
 |**Número de colecciones de gen. 0**|Muestra el número de veces que los objetos de generación 0 (es decir, los objetos asignados más recientemente) se recolectan como elementos no utilizados desde que se inició la aplicación.<br /><br /> La recolección de elementos no utilizados de generación 0 se produce cuando la memoria disponible en la generación 0 no es suficiente para satisfacer una solicitud de asignación. Este contador se incrementa al final de una recolección de elementos no utilizados de generación 0. Las recolecciones de elementos no utilizados de generación superior incluyen todas las recolecciones de generación inferior. Este contador se incrementa explícitamente cuando se produce una recolección de elementos no utilizados de generación superior (generación 1 o 2).<br /><br /> Este contador muestra el último valor observado. El valor del contador **_Global\_** no es preciso y debe omitirse.|  
 |**Número de colecciones de gen. 1**|Muestra el número de veces que los objetos de generación 1 se recolectan como elementos no utilizados desde que se inició la aplicación.<br /><br /> El contador se incrementa al final de una recolección de elementos no utilizados de generación 1. Las recolecciones de elementos no utilizados de generación superior incluyen todas las recolecciones de generación inferior. Este contador se incrementa explícitamente cuando se produce una recolección de elementos no utilizados de generación superior (generación 2).<br /><br /> Este contador muestra el último valor observado. El valor del contador **_Global\_** no es preciso y debe omitirse.|  
 |**Número de colecciones de gen. 2**|Muestra el número de veces que los objetos de generación 2 se recolectan como elementos no utilizados desde que se inició la aplicación. Este contador se incrementa al final de una recolección de elementos no utilizados de generación 2 (también llamada recolección completa de elementos no utilizados).<br /><br /> Este contador muestra el último valor observado. El valor del contador **_Global\_** no es preciso y debe omitirse.|  
-|**Número de GC provocados**|Muestra el número máximo de veces que se realizó la recolección de elementos no utilizados debido a una llamada explícita a <xref:System.GC.Collect%2A?displayProperty=fullName>. Es conveniente dejar que el recolector de elementos no utilizados ajuste la frecuencia de las colecciones.|  
+|**Número de GC provocados**|Muestra el número máximo de veces que se realizó la recolección de elementos no utilizados debido a una llamada explícita a <xref:System.GC.Collect%2A?displayProperty=nameWithType>. Es conveniente dejar que el recolector de elementos no utilizados ajuste la frecuencia de las colecciones.|  
 |**Número de objetos anclados**|Muestra el número de objetos anclados que se encontraron en la última recolección de elementos no utilizados. Un objeto anclado es un objeto que el recolector de elementos no utilizados no puede mover en la memoria. Este contador realiza un seguimiento de los objetos anclados únicamente en los montones que se recolectan como elementos no utilizados. Por ejemplo, una recolección de elementos no utilizados de generación 0 enumera los objetos anclados solo en el montón de generación 0.|  
 |**Número de bloques de sincronización en uso**|Muestra el número actual de bloques de sincronización en uso. Los bloques de sincronización son estructuras de datos por objeto asignadas para almacenar información de sincronización. Contienen referencias débiles a objetos administrados y deben someterse al análisis del recolector de elementos no utilizados. Los bloques de sincronización no se limitan a almacenar información de sincronización; también pueden almacenar metadatos de interoperabilidad COM. Este contador indica problemas de rendimiento con un uso intensivo de primitivos de sincronización.|  
 |**Número de bytes totales confirmados**|Muestra la cantidad de memoria virtual en bytes confirmada actualmente por el recolector de elementos no utilizados. La memoria asignada es la memoria física para la que se reservó espacio en el archivo de paginación de disco.|  
@@ -267,6 +260,5 @@ for (int i = 0; i < Array.Length; i++)
 |**Número total de comprobaciones en tiempo de ejecución**|Muestra el número total de comprobaciones de seguridad de acceso del código en tiempo de ejecución realizadas desde que se inició la aplicación. Las comprobaciones de seguridad de acceso del código en tiempo de ejecución se realizan cuando un llamador solicita un determinado permiso. La comprobación en tiempo de ejecución se realiza en cada llamada del llamador y examina la pila del subproceso actual del llamador. Cuando se usa con el contador de **Profundidad del recorrido de la pila**, este contador indica la disminución del rendimiento que tiene lugar para las comprobaciones de seguridad.|  
   
 ## <a name="see-also"></a>Vea también  
- [Contadores de rendimiento](../../../docs/framework/debug-trace-profile/performance-counters.md)   
+ [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [Generar perfiles en tiempo de ejecución](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
-

@@ -1,29 +1,35 @@
 ---
-title: "Consultar DataSets con establecimiento de tipos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Consultar objetos DataSet con tipo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bd78b4f47d7f48d7b4cbacdf53140758a05b7869
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Consultar DataSets con establecimiento de tipos
-Si el esquema de <xref:System.Data.DataSet> se conoce en tiempo de diseño de la aplicación, se recomienda usar un <xref:System.Data.DataSet> con tipo al utilizar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  Un <xref:System.Data.DataSet> con tipo es una clase que se deriva de un <xref:System.Data.DataSet>.  Como tal, hereda todos los métodos, eventos y propiedades de un <xref:System.Data.DataSet>.  Además, un <xref:System.Data.DataSet> con tipo proporciona métodos, eventos y propiedades fuertemente tipados.  Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección.  Esto hace que las consultas sean más sencillas y más legibles.  Para obtener más información, consulta [DataSets con establecimiento de tipos](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
+# <a name="querying-typed-datasets"></a>Consultar objetos DataSet con tipo
+Si el esquema de <xref:System.Data.DataSet> se conoce en tiempo de diseño de la aplicación, se recomienda usar un <xref:System.Data.DataSet> con tipo al utilizar [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Un tipo <xref:System.Data.DataSet> es una clase que deriva de un <xref:System.Data.DataSet>. Como tal, hereda todos los métodos, eventos y propiedades de un <xref:System.Data.DataSet>. Además, un tipo <xref:System.Data.DataSet> proporciona métodos fuertemente tipados, eventos y propiedades. Esto significa que se puede tener acceso a tablas y columnas por su nombre, en lugar de utilizar métodos de una colección. Esto hace que las consultas sean más sencillas y más legibles. Para obtener más información, consulte [conjuntos de datos con tipo](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] también admite las consultas en un <xref:System.Data.DataSet> con tipo.  Con un <xref:System.Data.DataSet> con tipo no hay que usar el método <xref:System.Data.DataRowExtensions.Field%2A> genérico o el método <xref:System.Data.DataRowExtensions.SetField%2A> para tener acceso a los datos de la columna.  Los nombres de propiedad están disponibles en el tiempo de compilación porque la información de tipo se incluye en <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] proporciona acceso a valores de columna como tipo correcto para que los errores de no coincidencia de tipos se detecten cuando se compile el código en lugar de en tiempo de ejecución.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]también admite las consultas en un tipo <xref:System.Data.DataSet>. Con un tipo <xref:System.Data.DataSet>, no es necesario utilizar la interfaz genérica <xref:System.Data.DataRowExtensions.Field%2A> método o <xref:System.Data.DataRowExtensions.SetField%2A> método para acceder a los datos de columna.  Los nombres de propiedad están disponibles en tiempo de compilación porque la información de tipo se incluye en el <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]proporciona acceso a valores de columna como tipo correcto para que los errores de falta de coincidencia de tipos se interceptan cuando se compila el código en lugar de en tiempo de ejecución.  
   
- Antes de poder empezar a consultar un <xref:System.Data.DataSet> con tipo se debe generar la clase usando el Diseñador de DataSet de [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Para obtener más información, consulta [Cómo: Crear un conjunto de datos con tipo](../Topic/Create%20and%20configure%20datasets%20in%20Visual%20Studio.md).  
+ Antes de poder empezar a consultar un <xref:System.Data.DataSet> con tipo se debe generar la clase usando el Diseñador de DataSet de [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Para obtener más información, vea [Crear y configurar conjuntos de datos](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra una consulta sobre un <xref:System.Data.DataSet> con tipo:  
   
 ```csharp  
@@ -60,7 +66,7 @@ For Each Dim onlineOrder In query
 Next  
 ```  
   
-## Vea también  
- [Consultar DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)   
- [Consultas entre tablas](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)   
+## <a name="see-also"></a>Vea también  
+ [Consultar conjuntos de datos](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Consultas entre tablas](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  [Consultas de tabla única](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

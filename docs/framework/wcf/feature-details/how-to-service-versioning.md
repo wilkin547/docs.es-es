@@ -1,30 +1,33 @@
 ---
-title: "C&#243;mo: Control de versiones del servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Control de versiones del servicio"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: 6
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4c4bd28c1a59d422c4ec0c65e133d253cabf16c4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Control de versiones del servicio
-Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio.En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` \(v1\) y `regularCalc` \(v2\).Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos.Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
+# <a name="how-to-service-versioning"></a>Cómo: Control de versiones del servicio
+Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
   
 > [!WARNING]
->  Para enrutar un mensaje a una versión de servicio concreta, el servicio de enrutamiento debe poder determinar el destino del mensaje en función del contenido del mensaje.En el método mostrado a continuación, el cliente especificará la versión insertando información en un encabezado del mensaje.Existen métodos de control de versiones del servicio que no requieren que los clientes pasen datos adicionales.Por ejemplo, un mensaje se podría enrutar a la versión más reciente o más compatible de un servicio, o el enrutador podría usar una parte del sobre SOAP estándar.  
+>  Para enrutar un mensaje a una versión de servicio concreta, el servicio de enrutamiento debe poder determinar el destino del mensaje en función del contenido del mensaje. En el método mostrado a continuación, el cliente especificará la versión insertando información en un encabezado del mensaje. Existen métodos de control de versiones del servicio que no requieren que los clientes pasen datos adicionales. Por ejemplo, un mensaje se podría enrutar a la versión más reciente o más compatible de un servicio, o el enrutador podría usar una parte del sobre SOAP estándar.  
   
  Las operaciones expuestas por ambos servicios son:  
   
--   Sumar  
+-   Add  
   
 -   Restar  
   
@@ -32,19 +35,19 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
 -   Dividir  
   
- Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud.Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.  
+ Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud. Por ejemplo, no se pueden utilizar los filtros de acción porque las acciones predeterminadas para ambos servicios son las mismas.  
   
- Esto se puede resolver de varias maneras: exponiendo un extremo concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
+ Esto se puede resolver de varias maneras: exponiendo un extremo concreto en el enrutador para cada versión del servicio o agregando un elemento de encabezado personalizado al mensaje para indicar la versión del servicio.  Cada uno de estos sistemas le permite enrutar los mensajes entrantes de forma única a una versión concreta del servicio. Sin embargo, el empleo de contenidos de mensaje únicos es el método preferido para diferenciar entre las solicitudes de versiones del servicio diferentes.  
   
- En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud.Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje.Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc.Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un extremo para recibir mensajes destinados a ambas versiones del servicio.Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:  
+ En este ejemplo, la aplicación cliente agrega el encabezado personalizado 'CalcVer' al mensaje de solicitud. Este encabezado contendrá un valor que indica la versión del servicio al que se debería enrutar el mensaje. Un valor de '1' indica que el servicio roundingCalc debe procesar el mensaje, mientras que un valor de '2' indica el servicio de regularCalc. Esto permite que la aplicación cliente controle directamente que versión del servicio procesará el mensaje.  Como el encabezado personalizado es un valor contenido dentro del mensaje, puede utilizar un extremo para recibir mensajes destinados a ambas versiones del servicio. Se puede utilizar el siguiente código en la aplicación cliente para agregar este encabezado personalizado al mensaje:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### Implementación de versiones del servicio  
+### <a name="implement-service-versioning"></a>Implementación de versiones del servicio  
   
-1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio.En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes.También se definen los extremos del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` \(v1\) y `regularCalc` \(v2\).  
+1.  Cree la configuración de servicio de enrutamiento básica especificando el extremo de servicio expuesto por el servicio. En el siguiente ejemplo, se define un extremo de servicio único que se utilizará para recibir mensajes. También se definen los extremos del cliente que se utilizarán para enviar mensajes a los servicios `roundingCalc` (v1) y `regularCalc` (v2).  
   
     ```xml  
     <services>  
@@ -74,10 +77,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
                     binding="wsHttpBinding"  
                     contract="*" />  
         </client>  
-  
     ```  
   
-2.  Defina los filtros usados para enrutar mensajes a los extremos del destino.En este ejemplo, el filtro XPath se usa para detectar el valor del encabezado personalizado "CalcVer" para determinar a qué versión debe enrutarse el mensaje.También se utiliza un filtro XPath para detectar mensajes que no contienen el encabezado "CalcVer".En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
+2.  Defina los filtros usados para enrutar mensajes a los puntos de conexión del destino.  En este ejemplo, el filtro XPath se usa para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje. También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -102,9 +104,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres "http:\/\/www.w3.org\/2003\/05\/soap\-envelope".  
+    >  El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres "http://www.w3.org/2003/05/soap-envelope".  
   
-3.  Defina la tabla de filtro, que asocia cada filtro a un extremo del cliente.Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc.Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc.Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
+3.  Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc. Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc. Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
   
      El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
   
@@ -125,7 +127,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los extremos de servicio mediante el comportamiento de enrutamiento.En el siguiente ejemplo, se muestra cómo asociar "filterTable1" a los extremos de servicio:  
+4.  Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento.  En el ejemplo siguiente se muestra cómo asociar "filterTable1" a los extremos de servicio:  
   
     ```xml  
     <behaviors>  
@@ -136,10 +138,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  A continuación, se muestra una lista completa del archivo de configuración.  
   
 ```xml  
@@ -220,14 +221,12 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  A continuación, se muestra una lista completa de la aplicación cliente.  
   
 ```csharp  
-  
 using System;  
 using System.ServiceModel;  
 using System.ServiceModel.Channels;  
@@ -333,8 +332,7 @@ namespace Microsoft.Samples.AdvancedFilters
         }  
     }  
 }  
-  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

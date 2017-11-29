@@ -1,37 +1,40 @@
 ---
-title: "Espacios de nombres MEF para .NET para aplicaciones de la Tienda Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MEF para .NET para aplicaciones de la tienda de Windows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-caps.latest.revision: 3
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7f427656f9b385214db5b3bd26c4addb1122b35a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Espacios de nombres MEF para .NET para aplicaciones de la Tienda Windows
-<xref:System.Composition?displayProperty=fullName> y los espacios de nombres secundarios contienen tipos para desarrollar aplicaciones extensibles de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] con Managed Extensibility Framework \(MEF\).  Estos espacios de nombres forman parte del subconjunto de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] para el sistema operativo [!INCLUDE[win8](../../../includes/win8-md.md)].  
+# <a name="mef-for-net-for-windows-store-apps"></a>MEF para .NET para aplicaciones de la tienda de Windows
+<xref:System.Composition?displayProperty=nameWithType>y sus espacios de nombres secundarios contienen tipos para desarrollar extensibles [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicaciones con Managed Extensibility Framework (MEF). Estos espacios de nombres forman parte de la [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] subconjunto para el [!INCLUDE[win8](../../../includes/win8-md.md)] sistema operativo.  
   
- Estos espacios de nombres no forman parte de la biblioteca de clases básica distribuida con .NET Framework.  Para instalar estos espacios de nombres siguientes, abra el proyecto de [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **Manage NuGet Packages** en el menú **Proyecto** y busque en línea el paquete Microsoft.Composition.  
+ Estos espacios de nombres no forman parte de la biblioteca de clases básica distribuida con .NET Framework. Para instalar estos espacios de nombres, abra el proyecto en [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], elija **administrar paquetes de NuGet** desde el **proyecto** menú y busque en línea el paquete Microsoft.Composition.  
   
--   <xref:System.Composition?displayProperty=fullName> proporciona clases que constituyen MEF de base para las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+-   <xref:System.Composition?displayProperty=nameWithType>Proporciona clases que constituyen el núcleo de MEF para [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicaciones.  
   
--   <xref:System.Composition.Convention?displayProperty=fullName> proporciona tipos que admiten el uso de MEF con un modelo configuración basado en convenciones.  
+-   <xref:System.Composition.Convention?displayProperty=nameWithType>Proporciona tipos que admiten el uso de MEF con un modelo de configuración basada en convenciones.  
   
--   <xref:System.Composition.Hosting?displayProperty=fullName> proporciona tipos MEF que son útiles para los desarrolladores de aplicaciones host.  
+-   <xref:System.Composition.Hosting?displayProperty=nameWithType>Proporciona los tipos MEF que son útiles para los desarrolladores de aplicaciones de host.  
   
--   <xref:System.Composition.Hosting.Core?displayProperty=fullName> proporciona los tipos MEF usados internamente por el motor de composición.  
+-   <xref:System.Composition.Hosting.Core?displayProperty=nameWithType>Proporciona los tipos MEF utilizados internamente por el motor de composición.  
   
- Para obtener más información sobre [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y una lista de espacios de nombres y tipos que contiene, vea [.NET para obtener información general sobre las aplicaciones del almacén de Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312) en el centro dev de Windows.  
+ Para obtener más información acerca de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y ver una lista de espacios de nombres y tipos que contiene, [información general de aplicaciones de .NET para la tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312) en el centro de desarrollo de Windows.  
   
-## Vea también  
- [Información general de .NET para aplicaciones de la Tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312)   
- [.NET para Windows almacena las aplicaciones – API compatible](http://go.microsoft.com/fwlink/p/?LinkID=247912)   
- [Managed Extensibility Framework \(MEF\)](../../../docs/framework/mef/index.md)
+## <a name="see-also"></a>Vea también  
+ [Información general de aplicaciones de .NET para la tienda Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312)  
+ [.NET para aplicaciones de la Tienda Windows: API admitidas](http://go.microsoft.com/fwlink/p/?LinkID=247912)  
+ [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: ddd27a1609ea06bcd333d0a1927d1cd22495744b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19116aba3049dce6612ca1a7170030f7ced6705e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Novedades de Windows Identity Foundation 4.5
 La primera versión de Windows Identity Foundation (WIF) se suministró como una descarga independiente y se conoce como WIF 3.5 porque se introdujo en el período de tiempo de .NET 3.5 SP1. A partir de .NET 4.5, WIF forma parte de .NET Framework. Poder disponer de las clases de WIF directamente en el marco de trabajo permite una integración mucho más profunda de la identidad basada en notificaciones en .NET, lo que facilita el uso de notificaciones. Las aplicaciones escritas para WIF 3.5 se tendrán que modificar para poder aprovechar el nuevo modelo; para obtener información, vea [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md) (Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5).  
@@ -27,10 +25,10 @@ La primera versión de Windows Identity Foundation (WIF) se suministró como una
  A continuación, encontrará algunos aspectos destacados de los cambios principales.  
   
 ## <a name="wif-is-now-part-of-the-net-framework"></a>WIF ahora forma parte de .NET Framework  
- Las clases de WIF se extienden ahora por varios ensamblados, siendo los principales `mscorlib`, `System.IdentityModel`, `System.IdentityModel.Services` y `System.ServiceModel`. De igual manera, las clases de WIF se extienden por varios espacios de nombres: <xref:System.Security.Claims?displayProperty=fullName>, varios espacios de nombres [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) y <xref:System.ServiceModel.Security?displayProperty=fullName>. El espacio de nombres <xref:System.Security.Claims?displayProperty=fullName> contiene las nuevas clases <xref:System.Security.Claims.ClaimsPrincipal> y <xref:System.Security.Claims.ClaimsIdentity> (véase a continuación). Todas las entidades de seguridad de .NET se derivan ahora de <xref:System.Security.Claims.ClaimsPrincipal>. Para obtener información más detallada sobre los espacios de nombres de WIF y los tipos de clases que contienen, vea [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Referencia de API de WIF). Para obtener información sobre la asignación de espacios de nombres entre WIF 3.5 y WIF 4.5, vea [Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) (Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5).  
+ Las clases de WIF se extienden ahora por varios ensamblados, siendo los principales `mscorlib`, `System.IdentityModel`, `System.IdentityModel.Services` y `System.ServiceModel`. De igual manera, las clases de WIF se extienden por varios espacios de nombres: <xref:System.Security.Claims?displayProperty=nameWithType>, varios espacios de nombres [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) y <xref:System.ServiceModel.Security?displayProperty=nameWithType>. El espacio de nombres <xref:System.Security.Claims?displayProperty=nameWithType> contiene las nuevas clases <xref:System.Security.Claims.ClaimsPrincipal> y <xref:System.Security.Claims.ClaimsIdentity> (véase a continuación). Todas las entidades de seguridad de .NET se derivan ahora de <xref:System.Security.Claims.ClaimsPrincipal>. Para obtener información más detallada sobre los espacios de nombres de WIF y los tipos de clases que contienen, vea [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Referencia de API de WIF). Para obtener información sobre la asignación de espacios de nombres entre WIF 3.5 y WIF 4.5, vea [Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) (Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5).  
   
 ## <a name="new-claims-model-and-principal-object"></a>Nuevo modelo de notificaciones y objeto de entidad de seguridad  
- Las notificaciones forman parte del núcleo de .NET Framework 4.5. Toda las clases de notificación base (<xref:System.Security.Claims.Claim>, <xref:System.Security.Claims.ClaimsIdentity>, <xref:System.Security.Claims.ClaimsPrincipal>, <xref:System.Security.Claims.ClaimTypes> y <xref:System.Security.Claims.ClaimValueTypes>) se encuentran directamente en `mscorlib` en el espacio de nombres <xref:System.Security.Claims?displayProperty=fullName>. Ya no es necesario utilizar interfaces para conectar notificaciones en el sistema de identidad de .NET: <xref:System.Security.Principal.WindowsPrincipal>, <xref:System.Security.Principal.GenericPrincipal> y <xref:System.Web.Security.RolePrincipal> heredan ahora de <xref:System.Security.Claims.ClaimsPrincipal>; y <xref:System.Security.Principal.WindowsIdentity>, <xref:System.Security.Principal.GenericIdentity> y <xref:System.Web.Security.FormsIdentity> heredan ahora de <xref:System.Security.Claims.ClaimsIdentity>. En resumen, cada clase de entidad de seguridad servirá ahora notificaciones. De esta manera, se han eliminado las interfaces y las clases de integración de WIF 3.5 (`WindowsClaimsIdentity`, `WindowsClaimsPrincipal`, `IClaimsPrincipal`, `IClaimsIdentity`). Además, la clase <xref:System.Security.Claims.ClaimsIdentity> expone ahora métodos que facilitan la consulta de la colección de notificaciones de identidad.  
+ Las notificaciones forman parte del núcleo de .NET Framework 4.5. Toda las clases de notificación base (<xref:System.Security.Claims.Claim>, <xref:System.Security.Claims.ClaimsIdentity>, <xref:System.Security.Claims.ClaimsPrincipal>, <xref:System.Security.Claims.ClaimTypes> y <xref:System.Security.Claims.ClaimValueTypes>) se encuentran directamente en `mscorlib` en el espacio de nombres <xref:System.Security.Claims?displayProperty=nameWithType>. Ya no es necesario utilizar interfaces para conectar notificaciones en el sistema de identidad de .NET: <xref:System.Security.Principal.WindowsPrincipal>, <xref:System.Security.Principal.GenericPrincipal> y <xref:System.Web.Security.RolePrincipal> heredan ahora de <xref:System.Security.Claims.ClaimsPrincipal>; y <xref:System.Security.Principal.WindowsIdentity>, <xref:System.Security.Principal.GenericIdentity> y <xref:System.Web.Security.FormsIdentity> heredan ahora de <xref:System.Security.Claims.ClaimsIdentity>. En resumen, cada clase de entidad de seguridad servirá ahora notificaciones. De esta manera, se han eliminado las interfaces y las clases de integración de WIF 3.5 (`WindowsClaimsIdentity`, `WindowsClaimsPrincipal`, `IClaimsPrincipal`, `IClaimsIdentity`). Además, la clase <xref:System.Security.Claims.ClaimsIdentity> expone ahora métodos que facilitan la consulta de la colección de notificaciones de identidad.  
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>Cambios en la experiencia de Visual Studio de WIF 4.5  
   
@@ -42,7 +40,7 @@ La primera versión de Windows Identity Foundation (WIF) se suministró como una
   
 ## <a name="changes-to-the-wif-45-api"></a>Cambios en la API de WIF 4.5  
   
--   En general, las clases relacionadas con notificaciones se encuentran en el espacio de nombres <xref:System.Security.Claims?displayProperty=fullName>; las clases relacionadas con WCF (contratos de servicio, canales, generadores de canales y hosts de servicio que se usan para escenarios de WS-Trust) se encuentran en <xref:System.ServiceModel.Security?displayProperty=fullName>; y el resto de las clases de WIF se extienden por diversos espacios de nombres [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) (entre estas se incluyen, por ejemplo, las clases que representan artefactos de WS-* y SAML, controladores de tokens y clases relacionadas, y clases usadas en escenarios de WS-Federation). Para obtener más información, vea [Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) (Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5) y [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Referencia de API de WIF).  
+-   En general, las clases relacionadas con notificaciones se encuentran en el espacio de nombres <xref:System.Security.Claims?displayProperty=nameWithType>; las clases relacionadas con WCF (contratos de servicio, canales, generadores de canales y hosts de servicio que se usan para escenarios de WS-Trust) se encuentran en <xref:System.ServiceModel.Security?displayProperty=nameWithType>; y el resto de las clases de WIF se extienden por diversos espacios de nombres [System.IdentityModel](http://go.microsoft.com/fwlink/?LinkId=272004) (entre estas se incluyen, por ejemplo, las clases que representan artefactos de WS-* y SAML, controladores de tokens y clases relacionadas, y clases usadas en escenarios de WS-Federation). Para obtener más información, vea [Namespace Mapping between WIF 3.5 and WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) (Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5) y [WIF API Reference](../../../docs/framework/security/wif-api-reference.md) (Referencia de API de WIF).  
   
 -   La clave del equipo se ha habilitado para usarla en cookies de sesión para escenarios de granjas de servidores web. Para obtener más información, vea [WIF and Web Farms](../../../docs/framework/security/wif-and-web-farms.md) (WIF y granjas de servidores web).  
   
@@ -54,7 +52,7 @@ La primera versión de Windows Identity Foundation (WIF) se suministró como una
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>Cambios de WCF como resultado de la integración de WIF:  
   
--   El modelo de identidad basado en notificaciones de WCF se reemplaza por WIF. Esto significa que se deben quitar las clases de los espacios de nombres <xref:System.IdentityModel.Claims?displayProperty=fullName>, <xref:System.IdentityModel.Policy?displayProperty=fullName> y <xref:System.IdentityModel.Selectors?displayProperty=fullName> y que se deben usar las clases de WIF.  
+-   El modelo de identidad basado en notificaciones de WCF se reemplaza por WIF. Esto significa que se deben quitar las clases de los espacios de nombres <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> y <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> y que se deben usar las clases de WIF.  
   
 -   WIF se habilita ahora en un servicio WCF especificando el atributo `useIdentityConfiguration` en el elemento `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` como en el siguiente código XML:  
   
@@ -68,8 +66,7 @@ La primera versión de Windows Identity Foundation (WIF) se suministró como una
      Al usar **Identity and Access Tool for Visual Studio 2012** (vea la sección anterior **Cambios en la experiencia de Visual Studio**), la herramienta agrega un elemento `<serviceCredentials>` con el atributo `useIdentityConfiguration` establecido en el archivo de configuración para el usuario. También agrega un elemento [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) correspondiente que contiene las opciones de configuración de WIF y agrega un enlace y otros valores necesarios para externalizar la autenticación al STS elegido.  
   
 ## <a name="see-also"></a>Vea también  
- [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)   
- [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)   
- [Referencia de API de WIF](../../../docs/framework/security/wif-api-reference.md)   
+ [Directrices para migrar a WIF 4.5 una aplicación compilada con WIF 3.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+ [Asignación de espacio de nombres entre WIF 3.5 y WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [Referencia de API de WIF](../../../docs/framework/security/wif-api-reference.md)  
  [Referencia de configuración de WIF](../../../docs/framework/security/wif-configuration-reference.md)
-

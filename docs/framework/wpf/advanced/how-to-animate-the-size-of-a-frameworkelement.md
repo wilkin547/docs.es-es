@@ -1,34 +1,37 @@
 ---
-title: "C&#243;mo: Animar el tama&#241;o de un elemento FrameworkElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, tamaño de FrameworkElement"
-  - "FrameworkElement, animar el tamaño de"
+title: "Cómo: Animar el tamaño de un elemento FrameworkElement"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], FrameworkElement size
+- FrameworkElement [WPF], animating size of
 ms.assetid: d4cd5a13-c20d-4a6f-a2ba-14f2c9ce4cef
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 17882494e48c5d692c8a774e6d77408557976c71
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# C&#243;mo: Animar el tama&#241;o de un elemento FrameworkElement
-Para animar el tamaño de un elemento <xref:System.Windows.FrameworkElement>, puede animar sus propiedades <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> o bien utilizar un objeto <xref:System.Windows.Media.ScaleTransform> animado.  
+# <a name="how-to-animate-the-size-of-a-frameworkelement"></a>Cómo: Animar el tamaño de un elemento FrameworkElement
+Animar el tamaño de un <xref:System.Windows.FrameworkElement>, o bien puede animar su <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades o use un elemento animado <xref:System.Windows.Media.ScaleTransform>.  
   
- En el ejemplo siguiente se anima el tamaño de dos botones utilizando estos dos enfoques.  El tamaño de un botón se cambia animando su propiedad <xref:System.Windows.FrameworkElement.Width%2A> y el tamaño del otro se cambia animando un objeto <xref:System.Windows.Media.ScaleTransform> aplicado a su propiedad <xref:System.Windows.UIElement.RenderTransform%2A>.  Cada botón contiene texto.  Inicialmente, el texto tiene el mismo aspecto en ambos botones, pero al cambiar el tamaño de los botones, el texto del segundo botón se distorsiona.  
+ En el ejemplo siguiente anima el tamaño de dos botones utilizando estos dos enfoques. Se cambia el tamaño de un botón animando su <xref:System.Windows.FrameworkElement.Width%2A> se cambia el tamaño de propiedad y otro animando un <xref:System.Windows.Media.ScaleTransform> aplica a su <xref:System.Windows.UIElement.RenderTransform%2A> propiedad. Cada botón contiene texto. Inicialmente, el texto aparece el mismo en ambos botones, pero cuando se cambia el tamaño de los botones, el texto en el segundo botón deformado.  
   
-## Ejemplo  
- [!code-xml[transformanimations_snip#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/AnimatingSizeExample.xaml#1)]  
+## <a name="example"></a>Ejemplo  
+ [!code-xaml[transformanimations_snip#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/AnimatingSizeExample.xaml#1)]  
   
- Al transformar un elemento, se transforma el elemento completo y su contenido.  Al modificar directamente el tamaño de un elemento, como en el caso del primer botón, el contenido del elemento no cambia de tamaño a no ser que su tamaño y posición dependan del tamaño de su elemento primario.  
+ Cuando se transforma un elemento, se transforma todo el elemento y su contenido. Cuando se modifica directamente el tamaño de un elemento, como en el caso del primer botón, el contenido del elemento no se cambia el tamaño a menos que su tamaño y posición dependen del tamaño de su elemento primario.  
   
- Al animar el tamaño de un elemento aplicando una transformación animada a su propiedad <xref:System.Windows.UIElement.RenderTransform%2A> se obtiene un rendimiento mejor que al animar sus propiedades <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> directamente, porque la propiedad <xref:System.Windows.UIElement.RenderTransform%2A> no activa un paso de diseño.  
+ Animar el tamaño de un elemento aplicando una transformación animada a su <xref:System.Windows.UIElement.RenderTransform%2A> propiedad proporciona un mejor rendimiento que anima su <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> directamente, porque la <xref:System.Windows.UIElement.RenderTransform%2A> propiedad desencadenar un paso de diseño.  
   
- Para obtener más información sobre la animación de propiedades, vea [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  Para obtener más información acerca de las transformaciones, vea [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).
+ Para obtener más información sobre la animación de propiedades, vea la [información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Para obtener más información acerca de las transformaciones, consulte el [Transforms Overview](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).

@@ -1,51 +1,52 @@
 ---
-title: "CheckedListBox (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "marcas de verificación"
-  - "elementos de lista activados, controles de Windows Forms"
-  - "CheckedListBox (control) [Windows Forms]"
-  - "CheckedListBox (control) [Windows Forms], referencia"
-  - "controles de cuadros de lista"
-  - "cuadros de lista"
-  - "cuadros de lista, mostrar marcas de verificación"
-  - "cuadros de lista, controles de Windows Forms"
-  - "controles de lista, Windows Forms"
-  - "elementos de lista, controles de Windows Forms que muestran"
+title: CheckedListBox (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CheckedListBox control [Windows Forms], reference
+- checked list items [Windows Forms], Windows Forms controls
+- list controls [Windows Forms], Windows Forms
+- CheckedListBox control [Windows Forms]
+- list box controls [Windows Forms]
+- check marks
+- list boxes [Windows Forms], displaying check marks
+- list boxes [Windows Forms], Windows Forms controls
+- list items [Windows Forms], Windows Forms controls that display
+- list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6926d72f5aae82588cb45d1a231e8f1b413b22c
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# CheckedListBox (Control, formularios Windows Forms)
-El control `CheckedListBox` de formularios Windows Forms muestra una lista de elementos, como el control <xref:System.Windows.Forms.ListBox> y también puede mostrar una marca de verificación junto a los elementos de la lista.  
+# <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox (Control, formularios Windows Forms)
+Los formularios Windows Forms `CheckedListBox` control muestra una lista de elementos, como el <xref:System.Windows.Forms.ListBox> controlar y también puede mostrar una marca de verificación junto a los elementos de la lista.  
   
-## En esta sección  
- [Información general sobre el control CheckedListBox](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+## <a name="in-this-section"></a>En esta sección  
+ [CheckedListBox Control Overview](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ Explica qué es este control y sus propiedades y características clave.  
   
- [Cómo: Determinar los elementos activados en el control CheckedListBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- Describe cómo examinar una lista para determinar los elementos que están comprobados.  
+ [Determinar los elementos activados en el control CheckedListBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ Describe cómo recorrer una lista para determinar qué elementos están activados.  
   
-## Referencia  
- <xref:System.Windows.Forms.CheckedListBox> \(clase\)  
+## <a name="reference"></a>Referencia  
+ Clase <xref:System.Windows.Forms.CheckedListBox>  
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Proporciona una lista de cosas que puede hacer con cuadros de lista, cuadros combinados, y cuadros de lista activados.  
+ Proporciona una lista de acciones que puede realizar con cuadros de lista, cuadros combinados y cuadros de lista activados.  
   
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+ Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

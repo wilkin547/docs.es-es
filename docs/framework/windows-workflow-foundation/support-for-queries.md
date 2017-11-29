@@ -1,50 +1,54 @@
 ---
-title: "Soporte t&#233;cnico para consultas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Soporte técnico para consultas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d4f338f9ae5cc6967885d0518eb573d9f9535fc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Soporte t&#233;cnico para consultas
-El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propiedades conocidas en el almacén.Los usuarios pueden consultar instancias basadas en estas propiedades.La siguiente lista contiene algunas de estas propiedades conocidas:  
+# <a name="support-for-queries"></a>Soporte técnico para consultas
+El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propiedades conocidas en el almacén. Los usuarios pueden consultar instancias basadas en estas propiedades. La siguiente lista contiene algunas de estas propiedades conocidas:  
   
 -   **Nombre del sitio.** Nombre del sitio web que contiene el servicio.  
   
--   **Ruta de acceso de aplicación relativa.** Ruta de acceso de la aplicación relativa al sitio web.  
+-   **Ruta de acceso relativa.** Ruta de acceso de la aplicación relativa al sitio web.  
   
--   **Ruta de acceso del servicio relativa.** Ruta de acceso del servicio relativa a la aplicación.  
+-   **Ruta de acceso relativa del servicio.** Ruta de acceso del servicio relativa a la aplicación.  
   
--   **Nombre del servicio.** Nombre del servicio.  
+-   **Nombre de servicio.** Nombre del servicio.  
   
--   **Espacio de nombres del servicio.** Nombre del espacio de nombres que usa el servicio.  
+-   **Namespace de servicio.** Nombre del espacio de nombres que usa el servicio.  
   
--   **Equipo actual.**  
+-   **Máquina actual.**  
   
--   **Último equipo**.El equipo en el que la instancia de servicio del flujo de trabajo se ejecutó la última vez.  
+-   **Último equipo**. El equipo en el que la instancia de servicio del flujo de trabajo se ejecutó la última vez.  
   
 > [!NOTE]
->  En el caso de los escenarios auto\-hospedados con el host de servicio de flujo de trabajo, sólo se rellenan las últimas cuatro propiedades.En el caso de escenarios de aplicación de flujo de trabajo, solo se rellena la última propiedad.  
+>  En el caso de los escenarios auto-hospedados con el host de servicio de flujo de trabajo, sólo se rellenan las últimas cuatro propiedades. En el caso de escenarios de aplicación de flujo de trabajo, solo se rellena la última propiedad.  
   
- El tiempo de ejecución del flujo de trabajo proporciona los valores para las primeras tres propiedades.El host de servicio de flujo de trabajo proporciona el valor de la propiedad **Motivo de la suspensión**.El propio almacén de instancias de flujo de trabajo de SQL proporciona los valores para la propiedad **Último equipo actualizado**.  
+ El tiempo de ejecución del flujo de trabajo proporciona los valores para las primeras tres propiedades. El host de servicio de flujo de trabajo proporciona el valor de la **motivo de la suspensión** propiedad. El propio almacén de instancia de flujo de trabajo SQL proporciona los valores para la **último equipo actualizado** propiedad.  
   
- La característica Almacén de instancias de flujo de trabajo SQL también le permite especificar las propiedades personalizadas para las que desea almacenar los valores en la base de datos de persistencia y que desea usar en consultas.Para obtener más información acerca de las promociones personalizadas, vea [Extensibilidad de almacén](../../../docs/framework/windows-workflow-foundation//store-extensibility.md).  
+ La característica Almacén de instancias de flujo de trabajo SQL también le permite especificar las propiedades personalizadas para las que desea almacenar los valores en la base de datos de persistencia y que desea usar en consultas. Para obtener más información acerca de las promociones personalizadas, consulte [extensibilidad del almacén de](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
   
-## Vistas  
- El almacén de instancias contiene las siguientes vistas.Vea [Esquema de base de datos de persistencia](../../../docs/framework/windows-workflow-foundation//persistence-database-schema.md) para obtener información más detallada.  
+## <a name="views"></a>Vistas  
+ El almacén de instancias contiene las siguientes vistas. Vea [esquema de base de datos de persistencia](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) para obtener más detalles.  
   
-### Vista Instances  
+### <a name="the-instances-view"></a>Vista Instances  
  La vista Instances contiene los siguientes campos:  
   
-1.  **Id**  
+1.  **Id.**  
   
 2.  **PendingTimer**  
   
@@ -64,7 +68,7 @@ El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propie
   
 10. **LastMachine**  
   
-11. **ExecutionStatus**  
+11. **Estado de ejecución**  
   
 12. **IsInitialized**  
   
@@ -82,10 +86,10 @@ El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propie
   
 19. **WriteOnlyComplexDataProperties**  
   
-### Vista ServiceDeployments  
+### <a name="the-servicedeployments-view"></a>Vista ServiceDeployments  
  La vista ServiceDeployments contiene los siguientes campos:  
   
-1.  **SiteName**  
+1.  **Nombre del sitio**  
   
 2.  **RelativeServicePath**  
   
@@ -95,13 +99,13 @@ El almacén de instancias de flujo de trabajo de SQL graba un conjunto de propie
   
 5.  **ServiceNamespace**  
   
-### Vista InstancePromotedProperties  
- La vista InstancePromotedProperties contiene los siguientes campos.Para obtener detalles sobre las propiedades promovidas, consulte el tema [Extensibilidad de almacén](../../../docs/framework/windows-workflow-foundation//store-extensibility.md).  
+### <a name="the-instancepromotedproperties-view"></a>Vista InstancePromotedProperties  
+ La vista InstancePromotedProperties contiene los siguientes campos. Para obtener información detallada sobre las propiedades promocionadas, consulte el [extensibilidad del almacén](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tema.  
   
 1.  **InstanceId**  
   
 2.  **EncodingOption**  
   
-3.  **PromotionName**  
+3.  **Valor de PromotionName**  
   
-4.  **Value\#** \(un intervalo de campos desde **Value1** hasta **Value64**\).
+4.  **Value #** (un intervalo de campos de **Value1** a **Value64**).

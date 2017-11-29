@@ -1,40 +1,44 @@
 ---
-title: "Actividades de acceso a bases de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Actividades de acceso a bases de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 10066c1d5e6bd0d03d91337a2fed987c881b23b6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Actividades de acceso a bases de datos
-Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo.Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar información y usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  
+# <a name="database-access-activities"></a>Actividades de acceso a bases de datos
+Las actividades de acceso a bases de datos permiten tener acceso a una base de datos dentro de un flujo de trabajo. Estas actividades permiten tener acceso a las bases de datos para recuperar o modificar la información y usar [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) para tener acceso a la base de datos.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a \(página de descarga\) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a (página de descarga) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
-## Actividades de base de datos  
+## <a name="database-activities"></a>Actividades de base de datos  
  En las siguientes secciones se detalla la lista de actividades incluidas en este ejemplo.  
   
-## DbUpdate  
- Ejecuta una consulta SQL que genera una modificación en la base de datos \(inserción, actualización, eliminación y otras modificaciones\).  
+## <a name="dbupdate"></a>DbUpdate  
+ Ejecuta una consulta SQL que genera una modificación en la base de datos (inserción, actualización, eliminación y otras modificaciones).  
   
- Esta clase realiza su trabajo de forma asincrónica \(deriva de <xref:System.Activities.AsyncCodeActivity> y usa sus capacidades asincrónicas\).  
+ Esta clase realiza su trabajo de forma asincrónica (deriva de <xref:System.Activities.AsyncCodeActivity> y usa sus capacidades asincrónicas).  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.  
   
  La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
   
@@ -74,27 +78,26 @@ Public class DbUpdate: AsyncCodeActivity
 }  
 ```  
   
-|||  
-|-|-|  
 |Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
+|-|-|  
+|ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|  
+|ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|  
+|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
 |Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
+|Parámetros|Colección de los parámetros de la consulta SQL.|  
 |AffectedRecords|Número de registros afectado por la última operación.|  
   
-## DbQueryScalar  
+## <a name="dbqueryscalar"></a>DbQueryScalar  
  Ejecuta una consulta que recupera un único valor de la base de datos.  
   
- Esta clase realiza su trabajo de forma asincrónica \(deriva de <xref:System.Activities.AsyncCodeActivity%601> y usa sus capacidades asincrónicas\).  
+ Esta clase realiza su trabajo de forma asincrónica (deriva de <xref:System.Activities.AsyncCodeActivity%601> y usa sus capacidades asincrónicas).  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.  
   
  La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
   
- Una vez ejecutado `DbQueryScalar`, el valor escalar se devuelve en el argumento `Result``out` \(de tipo `TResult`, que se define en la clase base <xref:System.Activities.AsyncCodeActivity%601>\).  
+ Después de `DbQueryScalar` es ejecuta, se devuelve el valor escalar en el `Result``out` argumento (de tipo `TResult`, que es definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -128,25 +131,24 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 }  
 ```  
   
-|||  
-|-|-|  
 |Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
+|-|-|  
+|ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|  
+|ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|  
+|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
 |Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|Result|Valor escalar que se obtiene una vez ejecutada la consulta.Este argumento es de tipo `TResult`.|  
+|Parámetros|Colección de los parámetros de la consulta SQL.|  
+|Resultado|Valor escalar que se obtiene una vez ejecutada la consulta. Este argumento es de tipo `TResult`.|  
   
-## DbQuery  
- Ejecuta una consulta que recupera una lista de objetos.Una vez ejecutada la consulta, se ejecuta una función de asignación \(puede ser <xref:System.Func%601>\<`DbDataReader`, `TResult`\> o <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult` \>\).Esta función de asignación obtiene un registro de `DbDataReader` y lo asigna al objeto que se va a devolver.  
+## <a name="dbquery"></a>DbQuery  
+ Ejecuta una consulta que recupera una lista de objetos. Después de ejecuta la consulta, se ejecuta una función de asignación (puede ser <xref:System.Func%601> < `DbDataReader`, `TResult`> o un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>). Esta función de asignación obtiene un registro de `DbDataReader` y lo asigna al objeto que se va a devolver.  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.  
   
  La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
   
- Los resultados de la consulta SQL se recuperan utilizando `DbDataReader`.La actividad recorre en iteración `DbDataReader` y asigna las filas de `DbDataReader` a una instancia de `TResult`.El usuario de `DbQuery` tiene que proporcionar el código de asignación, lo que se puede llevar a cabo de dos maneras: mediante <xref:System.Func%601>\<`DbDataReader`, `TResult`\> o <xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>.En el primer caso, la asignación se realiza en un pulso único de ejecución.Por tanto, es más rápida, pero esto no se puede serializar en XAML.En el último caso, la asignación se realiza en varios pulsos.Por tanto, puede ser más lenta pero se serializar en XAML y crear mediante declaración \(cualquier actividad existente puede participar en la asignación\).  
+ Los resultados de la consulta SQL se recuperan utilizando `DbDataReader`. La actividad recorre en iteración `DbDataReader` y asigna las filas de `DbDataReader` a una instancia de `TResult`. El usuario de `DbQuery` tiene que proporcionar el código de asignación y, por lo que pueden hacerse de dos maneras: mediante un <xref:System.Func%601> < `DbDataReader`, `TResult`> o un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>. En el primer caso, la asignación se realiza en un pulso único de ejecución. Por tanto, es más rápida, pero esto no se puede serializar en XAML. En el último caso, la asignación se realiza en varios pulsos. Por tanto, puede ser más lenta pero se serializar en XAML y crear mediante declaración (cualquier actividad existente puede participar en la asignación).  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -188,27 +190,26 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 }  
 ```  
   
-|||  
-|-|-|  
 |Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
+|-|-|  
+|ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|  
+|ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|  
+|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
 |Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|Mapper|Función de asignación \(<xref:System.Func%601>\<`DbDataReader`, `TResult`\>\) que toma un registro de `DataReader` obtenido como resultado de la ejecución de la consulta y devuelve una instancia de un objeto de tipo `TResult` que se va a agregar a la colección `Result`.<br /><br /> En este caso, la asignación se realiza mediante un único pulso de ejecución, pero no se puede crear mediante declaración utilizando el diseñador.|  
-|MapperFunc|Función de asignación \(<xref:System.Activities.ActivityFunc%601>\<`DbDataReader`, `TResult`\>\) que toma un registro de `DataReader` obtenido como resultado de la ejecución de la consulta y devuelve una instancia de un objeto de tipo `TResult` que se va a agregar a la colección `Result`.<br /><br /> En este caso, la asignación se realiza en varios pulsos de ejecución.Esta función se puede serializar en XAML y crear mediante declaración \(cualquier actividad existente puede participar en la asignación\).|  
-|Result|Lista de objetos obtenidos como resultado de ejecutar la consulta y ejecutar la función de asignación para cada registro de `DataReader`.|  
+|Parámetros|Colección de los parámetros de la consulta SQL.|  
+|Mapper|Función de asignación (<xref:System.Func%601><`DbDataReader`, `TResult`>) que toma un registro el `DataReader` obtenido como resultado de ejecutar la consulta y devuelve una instancia de un objeto de tipo `TResult` va a agregar a la `Result` colección.<br /><br /> En este caso, la asignación se realiza mediante un único pulso de ejecución, pero no se puede crear mediante declaración utilizando el diseñador.|  
+|MapperFunc|Función de asignación (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) que toma un registro el `DataReader` obtenido como resultado de ejecutar la consulta y devuelve una instancia de un objeto de tipo `TResult` va a agregar a la `Result` colección.<br /><br /> En este caso, la asignación se realiza en varios pulsos de ejecución. Esta función se puede serializar en XAML y crear mediante declaración (cualquier actividad existente puede participar en la asignación).|  
+|Resultado|Lista de objetos obtenidos como resultado de ejecutar la consulta y ejecutar la función de asignación para cada registro de `DataReader`.|  
   
-## DbQueryDataSet  
- Ejecuta una consulta que devuelve una clase <xref:System.Data.DataSet>.Esta clase realiza su trabajo de forma asincrónica.Deriva de <xref:System.Activities.AsyncCodeActivity>\<`TResult`\> y utiliza sus capacidades asincrónicas.  
+## <a name="dbquerydataset"></a>DbQueryDataSet  
+ Ejecuta una consulta que devuelve una clase <xref:System.Data.DataSet>. Esta clase realiza su trabajo de forma asincrónica. Deriva de <xref:System.Activities.AsyncCodeActivity> < `TResult`> y utiliza sus capacidades asincrónicas.  
   
- La información de conexión se puede configurar estableciendo un nombre invariable de proveedor \(`ProviderName`\) y la cadena de conexión \(`ConnectionString`\) o simplemente utilizando un nombre de configuración de cadena de conexión \(`ConfigFileSectionName`\) del archivo de configuración de la aplicación.  
+ La información de conexión se puede configurar estableciendo un nombre invariable de proveedor (`ProviderName`) y la cadena de conexión (`ConnectionString`) o simplemente utilizando un nombre de configuración de cadena de conexión (`ConfigFileSectionName`) del archivo de configuración de la aplicación.  
   
  La consulta que se va a ejecutar se configura en su propiedad `Sql` y los parámetros se pasan a través de la colección `Parameters`.  
   
- Una vez ejecutado `DbQueryDataSet`, la clase `DataSet` se devuelve en el argumento `Result``out` \(de tipo `TResult`, que se define en la clase base <xref:System.Activities.AsyncCodeActivity%601>\).  
+ Después de la `DbQueryDataSet` se ejecuta la `DataSet` se devuelve en el `Result``out` argumento (de tipo `TResult`, es decir definido en la clase base <xref:System.Activities.AsyncCodeActivity%601>).  
   
 ```  
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>  
@@ -242,19 +243,18 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 }  
 ```  
   
-|||  
-|-|-|  
 |Argumento|Descripción|  
-|ProviderName|Nombre invariable de proveedor de ADO.NET.Si se establece este argumento, también se debe establecer `ConnectionString`.|  
-|ConnectionString|Cadena de conexión para conectar a la base de datos.Si se establece este argumento, también se debe establecer `ProviderName`.|  
-|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión.Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
+|-|-|  
+|ProviderName|Nombre invariable de proveedor de ADO.NET. Si se establece este argumento, también se debe establecer `ConnectionString`.|  
+|ConnectionString|Cadena de conexión para conectar a la base de datos. Si se establece este argumento, también se debe establecer `ProviderName`.|  
+|ConfigName|Nombre de la sección de archivo de configuración donde se almacena la información de conexión. Cuando se establece este argumento no se requieren `ProviderName` ni `ConnectionString`.|  
 |CommandType|Tipo de <xref:System.Data.Common.DbCommand> que se va a ejecutar.|  
 |Sql|El comando SQL que se va a ejecutar.|  
-|Parameters|Colección de los parámetros de la consulta SQL.|  
-|Result|<xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.|  
+|Parámetros|Colección de los parámetros de la consulta SQL.|  
+|Resultado|<xref:System.Data.DataSet> que se obtiene una vez ejecutada la consulta.|  
   
-## Configurar información de conexión  
- Todas las actividades de base de datos comparten los mismos parámetros de configuración.Se pueden configurar de dos maneras:  
+## <a name="configuring-connection-information"></a>Configurar información de conexión  
+ Todas las actividades de base de datos comparten los mismos parámetros de configuración. Se pueden configurar de dos maneras:  
   
 -   `ConnectionString + InvariantName`: establezca el nombre invariable de proveedor de ADO.NET y la cadena de conexión.  
   
@@ -271,7 +271,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 -   `ConfigName`: establezca el nombre de la sección de configuración que contiene la información de conexión.  
   
-    ```  
+    ```xml  
     <connectionStrings>      
         <add name="DbActivitiesSample"  
              providerName="System.Data.SqlClient"  
@@ -289,10 +289,10 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };  
     ```  
   
-## Ejecutar este ejemplo  
+## <a name="running-this-sample"></a>Ejecutar este ejemplo  
   
-### Instrucciones de instalación  
- En este ejemplo se utiliza una base de datos.Con el ejemplo se proporciona un script de instalación y carga \(Setup.cmd\).Debe ejecutar ese archivo mediante el símbolo del sistema.  
+### <a name="setup-instructions"></a>Instrucciones de instalación  
+ En este ejemplo se utiliza una base de datos. Con el ejemplo se proporciona un script de instalación y carga (Setup.cmd). Debe ejecutar ese archivo mediante el símbolo del sistema.  
   
  El script Setup.cmd invoca el archivo de script CreateDb.sql, que contiene comandos SQL con los que realiza lo siguiente:  
   
@@ -306,34 +306,34 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
   
 -   Inserta doce registros en la tabla Employees.  
   
-##### Para ejecutar Setup.cmd  
+##### <a name="to-run-setupcmd"></a>Para ejecutar Setup.cmd  
   
 1.  Abra un símbolo del sistema.  
   
 2.  Vaya a la carpeta de ejemplo DbActivities.  
   
-3.  Escriba "setup.cmd" y presione Entrar.  
+3.  Escriba "setup.cmd" y presione ENTRAR.  
   
     > [!NOTE]
-    >  Setup.cmd intenta instalar el ejemplo en la instancia de SqlExpress del equipo local.Si desea instalarlo en otra instancia de SQL Server, modifique Setup.cmd con el nombre de la nueva instancia.  
+    >  Setup.cmd intenta instalar el ejemplo en la instancia de SqlExpress del equipo local. Si desea instalarlo en otra instancia de SQL Server, modifique Setup.cmd con el nombre de la nueva instancia.  
   
-##### Para desinstalar la base de datos de ejemplo  
+##### <a name="to-uninstall-the-sample-database"></a>Para desinstalar la base de datos de ejemplo  
   
 1.  Ejecute Cleanup.cmd desde la carpeta de ejemplo en un símbolo del sistema.  
   
-##### Para ejecutar el ejemplo  
+##### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
   
 1.  Abra la solución en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-3.  Para ejecutar el ejemplo sin depurar, presione CTRL\+F5.  
+3.  Para ejecutar el ejemplo sin depurar, presione CTRL+F5.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

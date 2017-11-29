@@ -1,23 +1,26 @@
 ---
-title: "C&#243;mo: Implementar un proxy de detecci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Implementar un proxy de detección"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d3c4dd0ec54334cb59b8cc896ddcd9fcc6af482e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Implementar un proxy de detecci&#243;n
-En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] la característica de detección en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vea [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).Puede implementarse un proxy de detección creando una clase que extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>.Hay otras clases de compatibiildad definidas y usadas en este ejemplo.`OnResolveAsyncResult`, `OnFindAsyncResult` y `AsyncResult`.Estas clases implementan la interfaz <xref:System.IAsyncResult>.[!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult>, vea [System.IAsyncResult \(Interfaz\)](http://go.microsoft.com/fwlink/?LinkId=128519)  
+# <a name="how-to-implement-a-discovery-proxy"></a>Cómo: Implementar un proxy de detección
+En este tema se explica cómo implementar un proxy de detección. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la característica de detección de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consulte [información general sobre la detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Puede implementarse un proxy de detección creando una clase que extienda la clase abstracta <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Hay otras clases de compatibiildad definidas y usadas en este ejemplo. `OnResolveAsyncResult`, `OnFindAsyncResult` y `AsyncResult`. Estas clases implementan la interfaz <xref:System.IAsyncResult>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> vea [interfaz System.IAsyncResult](xref:System.IAsyncResult).
   
  La implementación de un proxy de detección se divide en tres partes principales en este tema:  
   
@@ -27,11 +30,11 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
   
 -   Hospede el proxy de detección.  
   
-### Para crear un nuevo proyecto de aplicación de consola  
+### <a name="to-create-a-new-console-application-project"></a>Para crear un nuevo proyecto de aplicación de consola  
   
 1.  Inicie [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-2.  Cree un nuevo proyecto de aplicación de consola.Asigne al proyecto el nombre `DiscoveryProxy` y, a la solución, `DiscoveryProxyExample`.  
+2.  Cree un nuevo proyecto de aplicación de consola. Asigne al proyecto el nombre `DiscoveryProxy` y, a la solución, `DiscoveryProxyExample`.  
   
 3.  Agregue las siguientes referencias al proyecto:  
   
@@ -42,7 +45,7 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     > [!CAUTION]
     >  Asegúrese de que indica la versión 4.0 o posterior de estos ensamblados.  
   
-### Para implementar la clase ProxyDiscoveryService  
+### <a name="to-implement-the-proxydiscoveryservice-class"></a>Para implementar la clase ProxyDiscoveryService  
   
 1.  Agregue un nuevo archivo de código a su proyecto y denomínelo DiscoveryProxy.cs.  
   
@@ -56,7 +59,7 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     using System.Xml;  
     ```  
   
-3.  Derive `DiscoveryProxyService` de <xref:System.ServiceModel.Discovery.DiscoveryProxy>.Aplique el atributo `ServiceBehavior` a la clase, tal y como se muestra en el ejemplo siguiente.  
+3.  Derive `DiscoveryProxyService` de <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Aplique el atributo `ServiceBehavior` a la clase, tal y como se muestra en el ejemplo siguiente.  
   
     ```  
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods  
@@ -64,7 +67,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     public class DiscoveryProxyService : DiscoveryProxy  
     {  
     }  
-  
     ```  
   
 4.  Dentro de la clase `DiscoveryProxy` defina un diccionario para retener los servicios registrados.  
@@ -72,7 +74,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     ```  
     // Repository to store EndpointDiscoveryMetadata.   
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;  
-  
     ```  
   
 5.  Defina un constructor que inicializa el diccionario.  
@@ -82,12 +83,11 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
             {  
                 this.onlineServices = new Dictionary<EndpointAddress, EndpointDiscoveryMetadata>();  
             }  
-  
     ```  
   
-### Para definir los métodos usados para actualizar la memoria caché del proxy de detección  
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Para definir los métodos usados para actualizar la memoria caché del proxy de detección  
   
-1.  Implemente el método `AddOnlineservice` para agregar servicios a la memoria caché.Se llama a este método cada vez que el proxy recibe un mensaje de anuncio.  
+1.  Implemente el método `AddOnlineservice` para agregar servicios a la memoria caché. Se llama a este método cada vez que el proxy recibe un mensaje de anuncio.  
   
     ```  
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -99,7 +99,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
   
                 PrintDiscoveryMetadata(endpointDiscoveryMetadata, "Adding");  
             }  
-  
     ```  
   
 2.  Implemente el método `RemoveOnlineService` que se utiliza para quitar servicios de la memoria caché.  
@@ -117,7 +116,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                     PrintDiscoveryMetadata(endpointDiscoveryMetadata, "Removing");  
                 }      
             }  
-  
     ```  
   
 3.  Implemente los métodos `MatchFromOnlineService` que intentan coincidir un servicio con un servicio en el diccionario.  
@@ -136,7 +134,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                     }  
                 }  
             }  
-  
     ```  
   
     ```  
@@ -155,7 +152,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                 }  
                 return matchingEndpoint;  
             }  
-  
     ```  
   
 4.  Implemente el método `PrintDiscoveryMetadata` que ofrece al usuario el resultado de texto de la consola de lo que hace el proxy de detección.  
@@ -171,10 +167,9 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                 }  
                 Console.WriteLine("**** Operation Completed");  
             }  
-  
     ```  
   
-5.  Agregue las clases AsyncResult siguientes a DiscoveryProxyService.Estas clases se utilizan para diferenciar entre los diferentes resultados de la operación asincrónica.  
+5.  Agregue las clases AsyncResult siguientes a DiscoveryProxyService. Estas clases se utilizan para diferenciar entre los diferentes resultados de la operación asincrónica.  
   
     ```  
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult  
@@ -236,12 +231,11 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                     return thisPtr.matchingEndpoint;  
                 }  
             }  
-  
     ```  
   
-### Para definir los métodos que implementan la funcionalidad de proxy de detección  
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>Para definir los métodos que implementan la funcionalidad de proxy de detección  
   
-1.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOnlineAnnouncement%2A>.Se llama a este método cuando el proxy de detección recibe un mensaje de anuncio en línea.  
+1.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección recibe un mensaje de anuncio en línea.  
   
     ```  
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy  
@@ -250,20 +244,18 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                 this.AddOnlineService(endpointDiscoveryMetadata);  
                 return new OnOnlineAnnouncementAsyncResult(callback, state);  
             }  
-  
     ```  
   
-2.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndOnlineAnnouncement%2A>.Se llama a este método cuando el proxy de detección finaliza el procesamiento de un mensaje de anuncio.  
+2.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección finaliza el procesamiento de un mensaje de anuncio.  
   
     ```  
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)  
             {  
                 OnOnlineAnnouncementAsyncResult.End(result);  
             }  
-  
     ```  
   
-3.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginOfflineAnnouncement%2A>.Se llama a este método cuando el proxy de detección recibe un mensaje de anuncio sin conexión.  
+3.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección recibe un mensaje de anuncio sin conexión.  
   
     ```  
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy  
@@ -272,20 +264,18 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                 this.RemoveOnlineService(endpointDiscoveryMetadata);  
                 return new OnOfflineAnnouncementAsyncResult(callback, state);  
             }  
-  
     ```  
   
-4.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndOfflineAnnouncement%2A>.Se llama a este método cuando el proxy de detección finaliza el procesamiento de un mensaje de anuncio sin conexión.  
+4.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección finaliza el procesamiento de un mensaje de anuncio sin conexión.  
   
     ```  
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)  
             {  
                 OnOfflineAnnouncementAsyncResult.End(result);  
             }  
-  
     ```  
   
-5.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginFind%2A>.Se llama a este método cuando el proxy de detección recibe una solicitud de búsqueda.  
+5.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección recibe una solicitud de búsqueda.  
   
     ```  
     // OnBeginFind method is called when a Probe request message is received by the Proxy  
@@ -304,17 +294,16 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     }  
     ```  
   
-6.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndFind%2A>.Se llama a este método cuando el proxy de detección finaliza el procesamiento de una solicitud de búsqueda.  
+6.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección finaliza el procesamiento de una solicitud de búsqueda.  
   
     ```  
     protected override void OnEndFind(IAsyncResult result)  
             {  
                 OnFindAsyncResult.End(result);  
             }  
-  
     ```  
   
-7.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginResolve%2A>.Se llama a este método cuando el proxy de detección recibe un mensaje de resolución.  
+7.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección recibe un mensaje de resolución.  
   
     ```  
     // OnBeginFind method is called when a Resolve request message is received by the Proxy  
@@ -331,19 +320,18 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     }  
     ```  
   
-8.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndResolve%2A>.Se llama a este método cuando el proxy de detección finaliza el procesamiento de un mensaje de resolución.  
+8.  Invalide el método <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType>. Se llama a este método cuando el proxy de detección finaliza el procesamiento de un mensaje de resolución.  
   
     ```  
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)  
     {  
         return OnResolveAsyncResult.End(result);  
     }  
-  
     ```  
   
- Los métodos OnBegin..\/ OnEnd..proporcionan la lógica para las operaciones de detección subsiguientes.Por ejemplo, los métodos <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnBeginFind%2A> y <xref:System.ServiceModel.Discovery.DiscoveryProxyBase.OnEndFind%2A> implementan la lógica de búsqueda para el proxy de detección.Cuando el proxy de detección recibe un mensaje de sondeo, estos métodos se ejecutan para devolver una respuesta al cliente.Puede modificar la lógica de búsqueda como desee; por ejemplo, puede incorporar una coincidencia de ámbito personalizada mediante algoritmos o un análisis de metadatos XML específico de la aplicación como parte de la operación de búsqueda.  
+ Los métodos OnBegin.. / OnEnd.. métodos proporcionan la lógica para las operaciones de detección subsiguientes. Por ejemplo, los métodos <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> y <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implementan la lógica de búsqueda para el proxy de detección. Cuando el proxy de detección recibe un mensaje de sondeo, estos métodos se ejecutan para devolver una respuesta al cliente. Puede modificar la lógica de búsqueda como desee; por ejemplo, puede incorporar una coincidencia de ámbito personalizada mediante algoritmos o un análisis de metadatos XML específico de la aplicación como parte de la operación de búsqueda.  
   
-### Para implementar la clase AsyncResult  
+### <a name="to-implement-the-asyncresult-class"></a>Para implementar la clase AsyncResult  
   
 1.  Defina la clase base abstracta AsyncResult que se utiliza para derivar las diversas clases Result asincrónicas.  
   
@@ -354,7 +342,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     ```  
     using System;  
     using System.Threading;  
-  
     ```  
   
 4.  Agregue la siguiente clase AsyncResult.  
@@ -506,10 +493,9 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                 Complete(completedSynchronously);  
             }  
         }  
-  
     ```  
   
-### Para hospedar DiscoveryProxy  
+### <a name="to-host-the-discoveryproxy"></a>Para hospedar DiscoveryProxy  
   
 1.  Abra el archivo Program.cs en el proyecto DiscoveryProxyExample.  
   
@@ -521,7 +507,7 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  Agregue el código siguiente en el método `Main()`.De esta forma se crea una instancia de la clase `DiscoveryProxy`.  
+3.  Agregue el código siguiente en el método `Main()`. De esta forma se crea una instancia de la clase `DiscoveryProxy`.  
   
     ```  
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
@@ -529,7 +515,6 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
   
                 // Host the DiscoveryProxy service  
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());  
-  
     ```  
   
 4.  Luego, agregue el siguiente código para agregar un extremo de detección y un extremo de anuncio.  
@@ -571,12 +556,11 @@ En este tema se explica cómo implementar un proxy de detección.[!INCLUDE[crabo
                   Console.WriteLine("Aborting the service...");  
                   proxyServiceHost.Abort();  
               }  
-  
     ```  
   
- Ha completado la implementación del proxy de detección.Continúe en el procedimiento [Cómo: Implementar un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).  
+ Ha completado la implementación del proxy de detección. Ir a [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Esta es la lista completa del código empleado en este tema.  
   
 ```  
@@ -778,7 +762,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -939,7 +922,6 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -1003,11 +985,10 @@ namespace Microsoft.Samples.Discovery
         }  
     }  
 }  
-  
 ```  
   
-## Vea también  
- [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Cómo: Implementar un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)   
- [Cómo: Implementar una aplicación cliente que utiliza el proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)   
- [Cómo: Probar el proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre la detección WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [Cómo: implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Cómo: implementar una aplicación de cliente que utiliza el Proxy de detección para buscar un servicio](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [Cómo: probar el Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

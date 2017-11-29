@@ -1,87 +1,89 @@
 ---
-title: "Elemento &lt;bypassTrustedAppStrongNames&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bypassTrustedAppStrongNames> (elemento)"
-  - "bypassTrustedAppStrongNames (elemento)"
-  - "característica de omisión de nombres seguros"
-  - "ensamblados con nombre seguro, cargar en dominios de aplicación de confianza"
+title: '&lt;bypassTrustedAppStrongNames&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- strong-name bypass feature
+- bypassTrustedAppStrongNames element
+- strong-named assemblies, loading into trusted application domains
+- <bypassTrustedAppStrongNames> element
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2b3e1cb839e9e7fd81a5452c0e034c3552b230cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;bypassTrustedAppStrongNames&gt;
-Especifica si se va a omitir la validación de nombres seguros en ensamblados de plena confianza que se cargan en un objeto <xref:System.AppDomain> de plena confianza.  
+# <a name="ltbypasstrustedappstrongnamesgt-element"></a>&lt;bypassTrustedAppStrongNames&gt; elemento
+Especifica si se debe omitir la validación de nombres seguros en los ensamblados de plena confianza que se cargan en plena confianza <xref:System.AppDomain>.  
   
-## Sintaxis  
+ \<configuration>  
+\<en tiempo de ejecución >  
+\<bypassTrustedAppStrongNames >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <bypassTrustedAppStrongNames    
    enabled="true|false"/>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si la característica de omisión que impide que se validen los nombres seguros de los ensamblados de plena confianza está habilitada.  Cuando esta característica está habilitada, no se valida la corrección de los nombres seguros cuando se carga el ensamblado.  El valor predeterminado es `true`.|  
+|---------------|-----------------|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si está habilitada la característica de omisión que evite la validación de nombres seguros para los ensamblados de plena confianza. Cuando esta característica está habilitada, no se validan los nombres seguros son correctos cuando se carga el ensamblado. De manera predeterminada, es `true`.|  
   
-## Atributo enabled  
+## <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`true`|Las firmas con nombre seguro de ensamblados de plena confianza no se validan cuando los ensamblados se cargan en un objeto <xref:System.AppDomain> de plena confianza.  Éste es el valor predeterminado.|  
-|`false`|Las firmas con nombre seguro de ensamblados de plena confianza se validan cuando los ensamblados se cargan en un objeto <xref:System.AppDomain> de plena confianza.  La firma con nombre seguro se comprueba únicamente para validar la exactitud de la firma; no se compara con otros nombres seguros en busca de coincidencias.|  
+|`true`|Las firmas de nombre seguro de ensamblados de plena confianza no se validan cuando los ensamblados se cargan en plena confianza <xref:System.AppDomain>. Este es el valor predeterminado.|  
+|`false`|Las firmas de nombre seguro en los ensamblados de plena confianza se validan cuando los ensamblados se cargan en plena confianza <xref:System.AppDomain>. Se comprueba la firma de nombre seguro solo para la exactitud de la firma; no se compara con otro nombre seguro para una coincidencia.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## Comentarios  
- La característica de omisión de nombres seguros evita la sobrecarga que supone la comprobación de firmas con nombre seguro de ensamblados de plena confianza.  
+## <a name="remarks"></a>Comentarios  
+ La característica de omisión de nombres seguros evita la sobrecarga de la comprobación de firma de nombre seguro de ensamblados de plena confianza.  
   
- La característica de omisión se aplica a cualquier ensamblado que esté firmado con un nombre seguro y que tenga las siguientes características:  
+ La característica de omisión se aplica a cualquier ensamblado que esté firmado con un nombre seguro y que:  
   
--   Sea de plena confianza y no tenga la evidencia <xref:System.Security.Policy.StrongName> \(que tenga, por ejemplo, la evidencia de zona `MyComputer`\).  
+-   Plena confianza sin el <xref:System.Security.Policy.StrongName> evidencia (por ejemplo, tiene `MyComputer` evidencia de zona).  
   
--   Esté cargado en un objeto <xref:System.AppDomain> de plena confianza.  
+-   se cargue en un <xref:System.AppDomain> de plena confianza;  
   
--   Se haya cargado desde una ubicación situada bajo la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> de ese objeto <xref:System.AppDomain>.  
+-   se cargue desde una ubicación en la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> de ese <xref:System.AppDomain>;  
   
--   No se haya firmado con retraso.  
+-   no tenga firma retrasada.  
   
 > [!NOTE]
->  Si la característica de omisión se desactivó en todas las aplicaciones del equipo mediante una clave del Registro, este valor del archivo de configuración no tiene ningún efecto.  Para obtener más información, vea [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
+>  Si la característica de omisión se ha desactivado para todas las aplicaciones en el equipo mediante el uso de una clave del registro, este archivo de configuración no tiene ningún efecto. Para obtener más información, consulte [Cómo: deshabilitar la característica de omisión de nombres seguros](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo se especifica el comportamiento que valida la firma con nombre seguro de ensamblados de plena confianza.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo especificar el comportamiento que valida la firma de nombre seguro en los ensamblados de plena confianza.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <bypassTrustedAppStrongNames enabled="false"/>  
@@ -89,7 +91,7 @@ Especifica si se va a omitir la validación de nombres seguros en ensamblados de
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+## <a name="see-also"></a>Vea también  
+ [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [How to: Disable the Strong-Name Bypass Feature](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md) (Cómo: Deshabilitar la característica de omisión de nombres seguros).

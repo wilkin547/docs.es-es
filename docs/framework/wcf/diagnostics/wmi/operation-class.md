@@ -1,25 +1,28 @@
 ---
-title: "Clase de operaci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Clase de operación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 739f8309e7a01eeecf921b50fcde24417fbbc515
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Clase de operaci&#243;n
+# <a name="operation-class"></a>Clase de operación
 Operación  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class Operation  
@@ -39,101 +42,101 @@ class Operation
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase Operación no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase Operación tiene las siguientes propiedades:  
   
-### Acción  
+### <a name="action"></a>Acción  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
- La acción WS\-Addressing del mensaje de solicitud.  
+ La acción WS-Addressing del mensaje de solicitud.  
   
-### AsyncPattern  
+### <a name="asyncpattern"></a>AsyncPattern  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
- Indica que una operación se implementa de forma asincrónica mediante `Begin` \[abrir\/cerrar corchetes angulares\] y `End` \[abrir\/cerrar corchetes angulares\] el par de método en un contrato de servicios.  
+ Indica que una operación se implementa de forma asincrónica con un `Begin`[Abrir/cerrar corchetes angulares] y `End`[Abrir/cerrar corchetes] el par de métodos en un contrato de servicio.  
   
-### Comportamientos  
+### <a name="behaviors"></a>comportamientos  
  Tipo de datos: matriz de comportamientos  
   
  Tipo de acceso: solo lectura  
   
  Los comportamientos asociados a esta operación.  
   
-### IsCallback  
+### <a name="iscallback"></a>IsCallback  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Verdadero cuando la operación es una operación de devolución de llamada.  
   
-### IsInitiating  
+### <a name="isinitiating"></a>IsInitiating  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Indica si el método implementa una operación que puede iniciar una sesión en el servidor.  
   
-### IsOneWay  
+### <a name="isoneway"></a>IsOneWay  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Indica si una operación devuelve un mensaje de respuesta.  
   
-### IsTerminating  
+### <a name="isterminating"></a>IsTerminating  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Indica si una operación devuelve un mensaje de respuesta.  
   
-### MethodSignature  
+### <a name="methodsignature"></a>MethodSignature  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  La firma del método de la operación.  
   
-### Nombre  
+### <a name="name"></a>Nombre  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
- El nombre de la operación.  
+ Nombre de la operación.  
   
-### ParameterTypes  
+### <a name="parametertypes"></a>ParameterTypes  
  Tipo de datos: matriz de cadenas  
   
  Tipo de acceso: solo lectura  
   
  Tipos de los parámetros de la operación.  
   
-### ReplyAction  
+### <a name="replyaction"></a>ReplyAction  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El valor de la acción SOAP para el mensaje de respuesta de la operación.  
   
-### ReturnType  
+### <a name="returntype"></a>ReturnType  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Tipo devuelto de la operación.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Description.OperationDescription>

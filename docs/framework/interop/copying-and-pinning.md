@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="copying-and-pinning"></a>Copiar y fijar
 Al serializar datos, el serializador de interoperabilidad puede copiar o anclar los datos que se van a serializar. Copiar los datos coloca una copia de datos desde una ubicación de memoria en otra. En la siguiente ilustración se muestran las diferencias entre copiar un tipo de valor y copiar un tipo pasado por referencia de memoria administrada a memoria no administrada.  
@@ -88,13 +81,12 @@ Tipos de referencia pasados por valor y por referencia
 > [!CAUTION]
 >  Cuando se pasa una cadena por valor, el destinatario nunca debe modificar la referencia que pasa el serializador. Esto puede dañar el montón administrado.  
   
- Cuando se pasa <xref:System.String?displayProperty=fullName> por referencia, el serializador copia el contenido de la cadena en un búfer secundario antes de realizar la llamada. Después, copia el contenido del búfer en una nueva cadena en la devolución de la llamada. Esta técnica garantiza que la cadena administrada inmutable permanece sin modificar.  
+ Cuando se pasa <xref:System.String?displayProperty=nameWithType> por referencia, el serializador copia el contenido de la cadena en un búfer secundario antes de realizar la llamada. Después, copia el contenido del búfer en una nueva cadena en la devolución de la llamada. Esta técnica garantiza que la cadena administrada inmutable permanece sin modificar.  
   
- Cuando se pasa <xref:System.Text.StringBuilder?displayProperty=fullName> por valor, el serializador pasa una referencia al búfer interno de **StringBuilder** directamente al autor de la llamada. El autor de la llamada y el destinatario deben acordar el tamaño del búfer. El autor de la llamada es responsable de crear un **StringBuilder** de la longitud adecuada. El destinatario debe tomar las precauciones necesarias para asegurarse de que el búfer no se desborda. **StringBuilder** es una excepción a la regla de que los tipos de referencia que se pasan por valor se pasan como parámetros In de forma predeterminada. Siempre se pasa como In/Out.  
+ Cuando se pasa <xref:System.Text.StringBuilder?displayProperty=nameWithType> por valor, el serializador pasa una referencia al búfer interno de **StringBuilder** directamente al autor de la llamada. El autor de la llamada y el destinatario deben acordar el tamaño del búfer. El autor de la llamada es responsable de crear un **StringBuilder** de la longitud adecuada. El destinatario debe tomar las precauciones necesarias para asegurarse de que el búfer no se desborda. **StringBuilder** es una excepción a la regla de que los tipos de referencia que se pasan por valor se pasan como parámetros In de forma predeterminada. Siempre se pasa como In/Out.  
   
 ## <a name="see-also"></a>Vea también  
- [Comportamiento de serialización predeterminado](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Administración de memoria con el serializador de interoperabilidad](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [Atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Serialización de interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)
-
+ [Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Administración de memoria con el serializador de interoperabilidad](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [Atributos direccionales](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Serialización para interoperabilidad](../../../docs/framework/interop/interop-marshaling.md)

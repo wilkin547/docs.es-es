@@ -1,60 +1,58 @@
 ---
-title: "Skip (Cl&#225;usula, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QuerySkip"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "consultas [Visual Basic], Skip"
-  - "Skip (cláusula)"
-  - "Skip (instrucción)"
+title: "Skip (Cláusula, Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QuerySkip
+helpviewer_keywords:
+- queries [Visual Basic], Skip
+- Skip statement [Visual Basic]
+- Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 508f3c094df4c834305bcb4a78223c1cee82b1c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Skip (Cl&#225;usula, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="skip-clause-visual-basic"></a>Skip (Cláusula, Visual Basic)
 Omite un número especificado de elementos de una colección y, a continuación, devuelve los elementos restantes.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 Skip count  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `count`  
- Obligatorio.  Valor o expresión que se evalúa como el número de elementos de la secuencia que se van a omitir.  
+ Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a omitir.  
   
-## Comentarios  
- La cláusula `Skip` hace que una consulta omita elementos al principio de una lista de resultados y devuelva los elementos restantes.  El parámetro `count` especifica el número de elementos que se van a omitir.  
+## <a name="remarks"></a>Comentarios  
+ El `Skip` cláusula hace que una consulta omita los elementos al principio de una lista de resultados y devolver los elementos restantes. El número de elementos que se van a omitir se identifica mediante el `count` parámetro.  
   
- Puede usar la cláusula `Skip` con la cláusula `Take` para que se devuelva un intervalo de datos de cualquier segmento de una consulta.  Para ello, pase el índice del primer elemento del intervalo a la cláusula `Skip` y el tamaño del intervalo a la cláusula `Take`.  
+ Puede usar el `Skip` cláusula con el `Take` cláusula para devolver un intervalo de datos de cualquier segmento de una consulta. Para ello, pase el índice del primer elemento del intervalo para el `Skip` cláusula y el tamaño del intervalo para el `Take` cláusula.  
   
- Al usar la cláusula `Skip` en una consulta, puede que también necesite asegurar que los resultados se devuelven en un orden que permita a la cláusula `Skip` omitir los resultados en cuestión.  Para obtener más información sobre cómo ordenar los resultados de una consulta, vea [Order By \(Cláusula\)](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ Cuando se usa el `Skip` cláusula en una consulta, también debe asegurarse de que los resultados se devuelven en un orden que permita la `Skip` cláusula para omitir los resultados previstos. Para obtener más información sobre cómo ordenar los resultados de la consulta, vea [cláusula Order By](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Puede usar la cláusula `SkipWhile` para especificar que únicamente se omitan ciertos elementos, dependiendo de la condición proporcionada.  
+ Puede usar el `SkipWhile` cláusula para especificar que sólo ciertos elementos se omiten, dependiendo de la condición proporcionada.  
   
-## Ejemplo  
- En el ejemplo de código siguiente se usa la cláusula `Skip` junto con la cláusula `Take` para que se devuelvan los datos de una consulta en páginas.  La función `GetCustomers` usa la cláusula `Skip` para que se omitan los clientes de la lista hasta el valor de índice de inicio proporcionado, y usa la cláusula `Take` para que se devuelva una página de los clientes a partir de ese valor de índice.  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo de código utiliza el `Skip` cláusula junto con el `Take` cláusula se devuelven datos de una consulta en páginas. El `GetCustomers` función utiliza la `Skip` cláusula para omitir los clientes en la lista hasta que la proporcionada a partir de índice valor y se utiliza el `Take` cláusula para devolver una página de los clientes a partir de ese valor de índice.  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-clause_1.vb)]  
   
-## Vea también  
- [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Consultas](../../../visual-basic/language-reference/queries/queries.md)   
- [Select \(Cláusula\)](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From \(Cláusula\)](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By \(Cláusula\)](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Skip While \(Cláusula\)](../../../visual-basic/language-reference/queries/skip-while-clause.md)   
- [Take \(Cláusula\)](../../../visual-basic/language-reference/queries/take-clause.md)
+## <a name="see-also"></a>Vea también  
+ [Introducción a LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [Consultas](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select (cláusula)](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From (cláusula)](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Order By (cláusula)](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Skip While (cláusula)](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
+ [Take (cláusula)](../../../visual-basic/language-reference/queries/take-clause.md)

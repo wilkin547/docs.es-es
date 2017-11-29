@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -21,26 +16,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56a536ccdd9b4ad67bc6a07f4a6d2a225f6fa565
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webrequest"></a>Derivar de WebRequest
 La clase <xref:System.Net.WebRequest> es una clase base abstracta que proporciona las propiedades y métodos básicos para crear un controlador de solicitudes específico del protocolo adecuado al modelo de protocolo acoplable de .NET Framework. Las aplicaciones que usan la clase **WebRequest** pueden solicitar datos mediante cualquier protocolo admitido sin necesidad de especificar el protocolo empleado.  
   
- Para usar una clase específica del protocolo como protocolo acoplable se deben cumplir dos criterios: la clase debe implementar la interfaz <xref:System.Net.IWebRequestCreate> y se debe registrar con el método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName>. La clase debe invalidar todos los métodos y propiedades abstractos de **WebRequest** para proporcionar la interfaz acoplable.  
+ Para usar una clase específica del protocolo como protocolo acoplable se deben cumplir dos criterios: la clase debe implementar la interfaz <xref:System.Net.IWebRequestCreate> y se debe registrar con el método <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>. La clase debe invalidar todos los métodos y propiedades abstractos de **WebRequest** para proporcionar la interfaz acoplable.  
   
  Las instancias de **WebRequest** están diseñadas para un solo uso; si quiere realizar otra solicitud, cree una nueva instancia de **WebRequest**. **WebRequest** admite la interfaz <xref:System.Runtime.Serialization.ISerializable> para permitir que los desarrolladores serialicen una plantilla **WebRequest** y luego vuelvan a crear la plantilla para otras solicitudes.  
   
 ## <a name="iwebrequest-create-method"></a>Método Create de IWebRequest  
- El método <xref:System.Net.IWebRequestCreate.Create%2A> es responsable de inicializar una nueva instancia de la clase específica del protocolo. Cuando se crea una instancia de **WebRequest**, el método <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> combina el URI solicitado con los prefijos URI registrados con el método **RegisterPrefix**. El método **Create** del descendiente correcto específico del protocolo debe devolver una instancia inicializada del descendiente capaz de realizar una transacción estándar de solicitud/respuesta para el protocolo sin necesidad de modificar ningún campo específico del protocolo.  
+ El método <xref:System.Net.IWebRequestCreate.Create%2A> es responsable de inicializar una nueva instancia de la clase específica del protocolo. Cuando se crea una instancia de **WebRequest**, el método <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> combina el URI solicitado con los prefijos URI registrados con el método **RegisterPrefix**. El método **Create** del descendiente correcto específico del protocolo debe devolver una instancia inicializada del descendiente capaz de realizar una transacción estándar de solicitud/respuesta para el protocolo sin necesidad de modificar ningún campo específico del protocolo.  
   
 ## <a name="connectiongroupname-property"></a>Propiedad ConnectionGroupName  
  La propiedad <xref:System.Net.WebRequest.ConnectionGroupName%2A> se usa para asignar nombre a un grupo de conexiones a un recurso de modo que se puedan realizar varias solicitudes en una única conexión. Para implementar el uso compartido de conexiones, debe usar un método específico del protocolo de agrupación y asignación de conexiones. Por ejemplo, la clase <xref:System.Net.ServicePointManager> proporcionada implementa el uso compartido de conexiones para la clase <xref:System.Net.HttpWebRequest>. La clase **ServicePointManager** crea un elemento <xref:System.Net.ServicePoint> que proporciona una conexión a un servidor concreto para cada grupo de conexiones.  
@@ -59,7 +53,7 @@ La clase <xref:System.Net.WebRequest> es una clase base abstracta que proporcion
 ## <a name="headers-property"></a>Propiedad Headers  
  La propiedad <xref:System.Net.WebRequest.Headers%2A> contiene una colección arbitraria de pares nombre-valor de metadatos asociados a la solicitud. Los metadatos que necesita el protocolo y que se pueden expresar como un par nombre-valor se pueden incluir en la propiedad **Headers**. Normalmente, esta información se debe establecer antes de llamar a los métodos <xref:System.Net.WebRequest.GetRequestStream%2A> o <xref:System.Net.WebRequest.GetResponse%2A>; una vez que se ha realizado la solicitud, los metadatos se consideran de solo lectura.  
   
- No es necesario usar la propiedad **Headers** para usar los metadatos de encabezado. Los metadatos específicos del protocolo pueden exponerse como propiedades; por ejemplo, la propiedad <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> expone el encabezado HTTP **Usuario-Agente**. Cuando se exponen metadatos de encabezado como una propiedad, no se debe permitir que se establezca la misma propiedad mediante la propiedad **Headers**.  
+ No es necesario usar la propiedad **Headers** para usar los metadatos de encabezado. Los metadatos específicos del protocolo pueden exponerse como propiedades; por ejemplo, la propiedad <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> expone el encabezado HTTP **Usuario-Agente**. Cuando se exponen metadatos de encabezado como una propiedad, no se debe permitir que se establezca la misma propiedad mediante la propiedad **Headers**.  
   
 ## <a name="method-property"></a>Propiedad Method  
  La propiedad <xref:System.Net.WebRequest.Method%2A> contiene el verbo o la acción que la solicitud pide al servidor que realice. El valor predeterminado de la propiedad **Method** debe habilitar una acción estándar de solicitud/respuesta sin necesidad de establecer ninguna propiedad específica del protocolo. Por ejemplo, el método <xref:System.Net.HttpWebResponse.Method%2A> tiene como valor predeterminado GET, que solicita un recurso de un servidor web y devuelve la respuesta.  
@@ -104,9 +98,8 @@ La clase <xref:System.Net.WebRequest> es una clase base abstracta que proporcion
  El método **GetResponse** es responsable de crear un descendiente **WebResponse** adecuado para contener la respuesta entrante.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.FileWebRequest>  
+ [Programming Pluggable Protocols (Programar protocolos acoplables)](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Derivar de WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-

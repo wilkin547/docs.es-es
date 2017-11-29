@@ -1,25 +1,28 @@
 ---
-title: "BinaryMessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: BinaryMessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 09d43ed76ef70f4478aa1029c254a7b1686a8d08
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# BinaryMessageEncodingBindingElement
+# <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -31,45 +34,45 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase BinaryMessageEncodingBindingElement no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase BinaryMessageEncodingBindingElement tiene las propiedades siguientes.  
   
-## MaxReadPoolSize  
+## <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores.  
   
-## maxSessionSize  
+## <a name="maxsessionsize"></a>maxSessionSize  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  Valor que especifica el tamaño, en bytes, del búfer usado para codificar.  
   
-## MaxWritePoolSize  
+## <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores.  
   
-## ReaderQuotas  
+## <a name="readerquotas"></a>ReaderQuotas  
  Tipo de datos: XmlDictionaryReaderQuotas  
   
  Tipo de acceso: solo lectura  
   
  Las cuotas de los lectores.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

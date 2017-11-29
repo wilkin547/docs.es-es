@@ -1,25 +1,28 @@
 ---
-title: "LocalServiceSecuritySettings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: LocalServiceSecuritySettings
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 74eff3a6193e6507c1049accf4c43c3ecc8d30a6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# LocalServiceSecuritySettings
+# <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class LocalServiceSecuritySettings  
@@ -41,115 +44,115 @@ class LocalServiceSecuritySettings
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase LocalServiceSecuritySettings no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase LocalServiceSecuritySettings tiene las siguientes propiedades:  
   
-### DetectReplays  
+### <a name="detectreplays"></a>DetectReplays  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente.  
   
-### InactivityTimeout  
+### <a name="inactivitytimeout"></a>InactivityTimeout  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de sesiones de seguridad pendientes que el servicio admite.  
   
-### IssuedCookieLifetime  
+### <a name="issuedcookielifetime"></a>IssuedCookieLifetime  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan que especifica la duración emitida a todas las nuevas cookies de seguridad.  
   
-### MaxCachedCookies  
+### <a name="maxcachedcookies"></a>MaxCachedCookies  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de cookies que pueden estar almacenadas en memoria caché.  
   
-### MaxClockSkew  
+### <a name="maxclockskew"></a>MaxClockSkew  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan que especifica la diferencia máxima de tiempo entre los relojes del sistema de las dos partes en comunicación.  
   
-### MaxPendingSessions  
+### <a name="maxpendingsessions"></a>MaxPendingSessions  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de conexiones pendientes en el servicio.  
   
-### MaxStatefulNegotiations  
+### <a name="maxstatefulnegotiations"></a>MaxStatefulNegotiations  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número de negociaciones de seguridad que pueden estar activas de manera simultánea.  
   
-### NegotiationTimeout  
+### <a name="negotiationtimeout"></a>NegotiationTimeout  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan que especifica la duración máxima para la fase de negociación de seguridad entre servidor y cliente.  
   
-### ReconnectTransportOnFailure  
+### <a name="reconnecttransportonfailure"></a>ReconnectTransportOnFailure  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
- Un valor booleano que especifica si las conexiones que usan mensajería WS\-Reliable intentan volverse a conectar después de los errores de transporte.  
+ Un valor booleano que especifica si las conexiones que usan mensajería WS-Reliable intentan volverse a conectar después de los errores de transporte.  
   
-### ReplayCacheSize  
+### <a name="replaycachesize"></a>ReplayCacheSize  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
- El número de valores de seguridad \(nonce\) almacenados en memoria caché usados para la detección de reproducción.  
+ El número de valores de seguridad (nonce) almacenados en memoria caché usados para la detección de reproducción.  
   
-### ReplayWindow  
+### <a name="replaywindow"></a>ReplayWindow  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan que especifica la duración en la que los nonces de mensajes particulares son válidos.  
   
-### SessionKeyRenewalInterval  
+### <a name="sessionkeyrenewalinterval"></a>SessionKeyRenewalInterval  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan que especifica la duración después de la cual el iniciador renueva la clave para la sesión de seguridad.  
   
-### SessionKeyRolloverInterval  
+### <a name="sessionkeyrolloverinterval"></a>SessionKeyRolloverInterval  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan que especifica el intervalo de tiempo durante el cual una clave de sesión anterior es válida en mensajes entrantes durante una renovación de clave.  
   
-### TimestampValidityDuration  
+### <a name="timestampvalidityduration"></a>TimestampValidityDuration  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  Un TimeSpan positivo que especifica la duración en la que una marca de tiempo es válida.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>

@@ -1,22 +1,28 @@
 ---
-title: "C&#243;mo habilitar la transmisi&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo habilitar la transmisión"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8436ceefea936ddbf708aa3f79c5f7bd8153ac66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo habilitar la transmisi&#243;n
+# <a name="how-to-enable-streaming"></a>Cómo habilitar la transmisión
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] puede enviar mensajes mediante transferencias almacenadas en búfer o por secuencias. En el modo de transferencia almacenado en búfer (predeterminado), se debe entregar completamente un mensaje antes de que un receptor pueda leerlo. En modo de transferencia de transmisión por secuencias, el receptor puede empezar a procesar el mensaje antes de se entregue completamente. El modo de transmisión por secuencias es útil cuando la información que se pasa es larga y puede procesarse en serie. El modo de transmisión por secuencias también es útil cuando el mensaje es demasiado grande para que se almacene en búfer completamente.  
   
  Para habilitar la transmisión por secuencias, defina apropiadamente `OperationContract` y habilite la transmisión por secuencias en el nivel de transporte.  
@@ -27,7 +33,7 @@ caps.handback.revision: 13
   
     1.  El parámetro que contiene los datos que se van a transmitir debe ser el único parámetro del método. Por ejemplo, si el mensaje de entrada es el que se va a transmitir por secuencia, la operación debe tener exactamente un parámetro de entrada. De igual forma, si el mensaje de salida se va a transmitir por secuencia, la operación debe tener exactamente un parámetro de salida o un valor devuelto.  
   
-    2.  Al menos uno de los tipos de valor de parámetro y valor devuelto debería ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, o <xref:System.Xml.Serialization.IXmlSerializable>.  
+    2.  Al menos uno de los tipos del parámetro y el valor devuelto debería ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>o <xref:System.Xml.Serialization.IXmlSerializable>.  
   
      A continuación se muestra un ejemplo de los datos.  
   
@@ -52,7 +58,7 @@ caps.handback.revision: 13
   
     1.  El siguiente fragmento de código de configuración del ejemplo muestra cómo establecer la propiedad `TransferMode` en la transmisión por secuencias en `basicHttpBinding` y un enlace HTTP personalizado.  
   
-         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
   
     2.  El siguiente fragmento de código muestra cómo establecer la propiedad `TransferMode` para la transmisión por secuencias en `basicHttpBinding` y un enlace HTTP personalizado.  
   
@@ -71,7 +77,7 @@ caps.handback.revision: 13
   
 ### <a name="writing-a-custom-stream"></a>Escritura de una secuencia personalizada  
   
-1.  Para hacer un procesamiento especial en cada fragmento de un flujo de datos mientras se envía o recibe, derive una clase de secuencia personalizada de <xref:System.IO.Stream>. Como un ejemplo de una secuencia personalizada, el siguiente código contiene un método `GetReversedStream` y una clase `ReverseStream`.  
+1.  Para hacer un procesamiento especial en cada fragmento de un flujo de datos mientras se envía o recibe, derive una clase de flujo personalizada de <xref:System.IO.Stream>. Como un ejemplo de una secuencia personalizada, el siguiente código contiene un método `GetReversedStream` y una clase `ReverseStream`.  
   
      `GetReversedStream` crea y devuelve una nueva instancia de `ReverseStream`. El procesamiento real se produce cuando el sistema lee desde el objeto `ReverseStream`. El método `ReverseStream.Read` lee un fragmento de bytes del archivo subyacente, los invierte y después devuelve los bytes invertidos. Este método no invierte el contenido del archivo completo, sino un fragmento de bytes cada vez. Este ejemplo muestra cómo puede realizar el procesamiento de la secuencia cuando el contenido se lee o escribe desde la secuencia.  
   
@@ -79,5 +85,5 @@ caps.handback.revision: 13
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Vea también  
- [Datos de gran tamaño y la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)   
+ [Datos de gran tamaño y la transmisión por secuencias](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  [Secuencia](../../../../docs/framework/wcf/samples/stream.md)

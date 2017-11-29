@@ -1,83 +1,85 @@
 ---
-title: "Elemento &lt;relativeBindForResources&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<relativeBindForResources> (elemento)"
-  - "RelativeBindForResources (elemento)"
+title: '&lt;relativeBindForResources&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RelativeBindForResources element
+- <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ffd5b62e0759b3a4f97e105e884912a41f0117de
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;relativeBindForResources&gt;
-Optimiza el buscar ensamblados satélite.  
+# <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt; elemento
+Optimiza el sondeo de ensamblados satélite.  
   
-## Sintaxis  
+ \<Configuración > elemento  
+\<en tiempo de ejecución > elemento  
+\<relativeBindForResources > elemento  
   
-```vb  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml
 <relativeBindForResources    
    enabled="true|false" />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si Common Language Runtime optimiza el buscar ensamblados satélite.|  
+|---------------|-----------------|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si common language runtime optimiza el sondeo de los ensamblados satélite.|  
   
-## Atributo enabled  
+## <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`false`|El runtime no optimiza el buscar ensamblados satélite.  Este es el valor predeterminado.|  
-|`true`|El tiempo de ejecución optimiza el buscar ensamblados satélite.|  
+|`false`|El tiempo de ejecución no optimizar el sondeo de los ensamblados satélite. Este es el valor predeterminado.|  
+|`true`|El tiempo de ejecución, optimiza el sondeo de los ensamblados satélite.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## Comentarios  
- Normalmente comprobaciones del administrador de recursos para los recursos, como se documenta en el tema de [Empaquetar e implementar recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) .  Esto significa que cuando el motor del administrador de recursos para una versión localizada determinada de un recurso, puede buscar en la caché global de ensamblados, buscar en una carpeta cultura\- concreta en la base de código de aplicación, ver Windows Installer para los ensamblados satélite, y generar el evento de <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> .  El elemento de `<relativeBindForResources>` optimiza la manera en que los métodos del administrador de recursos para los ensamblados satélite.  Puede mejorar el rendimiento al buscar para los recursos en las condiciones siguientes:  
+## <a name="remarks"></a>Comentarios  
+ En general, el Administrador de recursos sondea los recursos, como se documenta en la [empaquetar e implementar recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) tema. Esto significa que cuando el Administrador de recursos sondea una determinada versión localizada de un recurso, puede buscar en la caché global de ensamblados, busque los ensamblados satélite en una carpeta específica de la referencia cultural en la consulta de base de código de la aplicación Windows Installer y generar el <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos. El `<relativeBindForResources>` elemento optimiza la manera en que el Administrador de recursos sondea los ensamblados satélite. Puede mejorar el rendimiento cuando la búsqueda de recursos en las siguientes condiciones:  
   
--   Cuando se implementan en el ensamblado satélite en la misma ubicación que el ensamblado del código.  Es decir si el ensamblado de código está instalado en la caché global de ensamblados, los ensamblados satélite también deben instalarse allí.  Si el ensamblado del código se instala en la base de código de aplicación, ensamblados satélite también deben instalarse en una carpeta cultura\- concreta en la base de código.  
+-   Cuando se implementa el ensamblado satélite en la misma ubicación que el ensamblado de código. En otras palabras, si el ensamblado de código está instalado en la caché global de ensamblados, los ensamblados satélite deben también instalarse no existe. Si el ensamblado de código está instalado en la base de código de la aplicación, los ensamblados satélite también deben instalarse en una carpeta específica de la referencia cultural de la base de código.  
   
--   Cuando Windows Installer no se utiliza o se utiliza sólo raramente para instalación a petición de ensamblados satélite.  
+-   Cuando Windows Installer no se utiliza o se usa sólo en raras ocasiones para la instalación a petición de ensamblados satélite.  
   
--   Cuando el código de aplicación no controla el evento de <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> .  
+-   Cuando el código de aplicación no controla el <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
   
- Estableciendo el atributo de `enabled` de elemento de `<relativeBindForResources>` a `true` optimiza el sondeo del administrador de recursos para los ensamblados satélite como sigue:  
+ Establecer el `enabled` atributo de la `<relativeBindForResources>` elemento `true` optimiza el sondeo del Administrador de recursos de los ensamblados satélite como se indica a continuación:  
   
--   Utiliza la ubicación del ensamblado de código principal debe buscar el ensamblado satélite.  
+-   La ubicación del ensamblado de código principal usa para buscar el ensamblado satélite.  
   
--   No consulta Windows Installer para los ensamblados satélite.  
+-   No se consulta a Windows Installer para los ensamblados satélite.  
   
--   No provoca el evento de <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> .  
+-   No provoca la <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
   
-## Vea también  
- [Empaquetar e implementar recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Empaquetar e implementar recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
+ [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)

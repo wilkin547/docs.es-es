@@ -1,47 +1,48 @@
 ---
-title: "PictureBox (Control, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles de imagen [Windows Forms]"
-  - "imágenes [Windows Forms], agregar a un control PictureBox"
-  - "PictureBox (control) [Windows Forms]"
+title: PictureBox (Control, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PictureBox control [Windows Forms]
+- image controls [Windows Forms]
+- images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0438ff11577e74d7de0b0ca30abab74fcab953e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# PictureBox (Control, formularios Windows Forms)
-El control `PictureBox` de Windows Forms se utiliza para mostrar gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.  
+# <a name="picturebox-control-windows-forms"></a>PictureBox (Control, formularios Windows Forms)
+Los formularios Windows Forms `PictureBox` control se utiliza para mostrar gráficos en formato de mapa de bits, GIF, JPEG, metarchivo o icono.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control PictureBox](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- Explica qué es este control y describe sus características y propiedades más importantes.  
+ Explica qué es este control y sus propiedades y características clave.  
   
- [Cómo: Modificar el tamaño o la situación de una imagen en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- Explica qué hace la propiedad <xref:System.Windows.Forms.PictureBox.SizeMode%2A> y cómo se establece.  
+ [Modificar el tamaño o la situación de una imagen en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ Explica qué es la <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propiedad hace y cómo establecerla.  
   
- [Cómo: Establecer imágenes en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- Describe cómo se muestra y se borra una imagen en tiempo de ejecución.  
+ [Establecer imágenes en tiempo de ejecución](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
+ Describe cómo mostrar y borrar una imagen en tiempo de ejecución.  
   
- [Cómo: Cargar una imagen mediante el Diseñador](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- Describe cómo se carga y se muestra una imagen en un formulario en tiempo de diseño.  
+ [Cargar una imagen mediante el Diseñador](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ Describe cómo cargar y mostrar una imagen en un formulario en tiempo de diseño.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.PictureBox>  
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

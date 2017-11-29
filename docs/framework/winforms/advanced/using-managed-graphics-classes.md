@@ -1,72 +1,73 @@
 ---
-title: "Utilizar clases gr&#225;ficas administradas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, clases administradas"
-  - "gráficos, clases administradas"
-  - "gráficos, usar en Windows Forms"
+title: "Utilizar clases gráficas administradas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- GDI+, managed classes
+- graphics [Windows Forms], using in Windows Forms
+- graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-caps.latest.revision: 21
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizar clases gr&#225;ficas administradas
-En los temas siguientes se describe cómo utilizar la API de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] en el marco de trabajo de clases administradas.  
+# <a name="using-managed-graphics-classes"></a>Utilizar clases gráficas administradas
+Los temas siguientes describen cómo utilizar el [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API en el marco de trabajo de la clase administrada.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Introducción a la programación de gráficos](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Describe cómo llevar a cabo tareas básicas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Describe cómo realizar tareas básicas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
  [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Muestra cómo construir un lápiz y utilizarlo para dibujar una variedad de líneas y formas.  
+ Muestra cómo construir un lápiz y utilizarlo para dibujar una serie de líneas y formas.  
   
  [Utilizar un pincel para rellenar formas](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
  Muestra cómo construir un pincel y rellenar formas con una variedad de efectos.  
   
  [Utilizar un pincel degradado para rellenar formas](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Muestra cómo crear y utilizar tipos diferentes de pinceles de degradado.  
+ Muestra cómo crear y utilizar diferentes tipos de pinceles degradados.  
   
  [Trabajar con imágenes, mapas de bits, iconos y metarchivos](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Muestra cómo construir y manipular las imágenes.  
+ Muestra cómo crear y manipular imágenes.  
   
- [Líneas y rellenos con mezcla alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Muestra cómo lograr la transparencia para las formas y líneas.  
+ [Líneas y rellenos con combinación alfa](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
+ Muestra cómo lograr la transparencia para formas y líneas.  
   
  [Utilizar fuentes y texto](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
  Muestra cómo dibujar texto y utilizar fuentes y familias de fuentes.  
   
  [Crear y dibujar curvas](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Muestra cómo dibujar curvas spline cardinal y Bezier.  
+ Muestra cómo dibujar curvas spline cardinales y Bézier.  
   
  [Crear y dibujar trazados](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
  Muestra cómo crear ilustraciones con rutas de acceso.  
   
- [Usar transformaciones en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Muestra las transformaciones de la matriz.  
+ [Usar transformaciones en la interfaz GDI+ administrada](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ Muestra las transformaciones de matrices.  
   
  [Utilizar contenedores de gráficos](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
- Muestra cómo administrar el estado de objetos gráficos y los contenedores de gráficos anidados.  
+ Muestra cómo administrar contenedores de gráficos anidados y estado de objeto de gráficos.  
   
  [Utilizar regiones](../../../../docs/framework/winforms/advanced/using-regions.md)  
- Muestra la comprobación de visitas y el recorte con regiones.  
+ Muestra la comprobación de visitas y recorte con regiones.  
   
  [Cambiar el color de las imágenes](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- Muestra distintos aspectos de manipular los colores.  
+ Muestra varios aspectos de manipular los colores.  
   
- [Usar codificadores y descodificadores de imagen en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Muestra cómo utilizar codificadores y descodificadores de imágenes para manipular imágenes.  
+ [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ Se muestra cómo utilizar descodificadores y codificadores de imágenes para manipular imágenes.  
   
  [Gráficos de doble búfer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Muestra cómo reducir el parpadeo con búfer doble.
+ Muestra cómo reducir el parpadeo con doble búfer.

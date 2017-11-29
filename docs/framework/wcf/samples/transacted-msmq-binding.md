@@ -1,34 +1,37 @@
 ---
-title: "Enlace MSMQ por transacciones | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Enlace MSMQ por transacciones
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: 50
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 50
+caps.latest.revision: "50"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 247627cdf52f7e08490cc95d88b4dd4ab539d97e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Enlace MSMQ por transacciones
-Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing \(MSMQ\).  
+# <a name="transacted-msmq-binding"></a>Enlace MSMQ por transacciones
+Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ).  
   
 > [!NOTE]
->  El procedimiento de configuración y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- En la comunicación con colas, el cliente se comunica con el servicio mediante una cola.Más exactamente, el cliente envía los mensajes a una cola.El servicio recibe los mensajes de la cola.El servicio y el cliente no se tienen que estar ejecutando simultáneamente para comunicarse mediante una cola.  
+ En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no se tienen que estar ejecutando simultáneamente para comunicarse mediante una cola.  
   
- Cuando las transacciones se utilizan para enviar y recibir los mensajes, hay en realidad dos transacciones independientes.Cuando el cliente envía los mensajes dentro del ámbito de una transacción, la transacción es local para el cliente y el administrador de cola del cliente.Cuando el servicio recibe los mensajes dentro del ámbito de la transacción, la transacción es local para el servicio y el administrador de cola receptor.Es muy importante recordar que el cliente y el servicio no están participando en la misma transacción; más bien, están utilizando distintas transacciones al realizar sus operaciones \(como enviar y recibir\) con la cola.  
+ Cuando las transacciones se utilizan para enviar y recibir los mensajes, hay en realidad dos transacciones independientes. Cuando el cliente envía los mensajes dentro del ámbito de una transacción, la transacción es local para el cliente y el administrador de cola del cliente. Cuando el servicio recibe los mensajes dentro del ámbito de la transacción, la transacción es local para el servicio y el administrador de cola receptor. Es muy importante recordar que el cliente y el servicio no están participando en la misma transacción; más bien, están utilizando distintas transacciones al realizar sus operaciones (como enviar y recibir) con la cola.  
   
- En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción.El servicio recibe a continuación los mensajes enviados a la cola dentro del ámbito de la transacción definido por el servicio.  
+ En este ejemplo, el cliente envía un lote de mensajes al servicio desde dentro del ámbito de una transacción. El servicio recibe a continuación los mensajes enviados a la cola dentro del ámbito de la transacción definido por el servicio.  
   
- El contrato de servicios es `IOrderProcessor`, tal y como se muestra en el código de ejemplo siguiente.La interfaz define un servicio unidireccional que es conveniente para su uso con las colas.  
+ El contrato de servicios es `IOrderProcessor`, tal y como se muestra en el código de ejemplo siguiente. La interfaz define un servicio unidireccional que es conveniente para su uso con las colas.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -39,10 +42,9 @@ public interface IOrderProcessor
 }  
 ```  
   
- El comportamiento del servicio define un comportamiento de la operación con `TransactionScopeRequired` definido en `true`.Esto garantiza que los administradores de recursos a los que el método tiene acceso utilizan el mismo ámbito de la transacción usado para recuperar el mensaje de la cola.También garantiza que si el método produce una excepción, el mensaje se devuelva a la cola.Sin establecer este comportamiento de operación, un canal en cola crea una transacción para leer el mensaje de la cola y lo confirma automáticamente antes de la expedición de tal manera que si se produce un error en la operación, el mensaje se pierde.El escenario más común es para que las operaciones de servicio den de alta en la transacción que se utiliza para leer el mensaje de la cola, tal y como se muestra en el código siguiente.  
+ El comportamiento del servicio define un comportamiento de la operación con `TransactionScopeRequired` definido en `true`. Esto garantiza que los administradores de recursos a los que el método tiene acceso utilizan el mismo ámbito de la transacción usado para recuperar el mensaje de la cola. También garantiza que si el método produce una excepción, el mensaje se devuelva a la cola. Sin establecer este comportamiento de operación, un canal en cola crea una transacción para leer el mensaje de la cola y lo confirma automáticamente antes de la expedición de tal manera que si se produce un error en la operación, el mensaje se pierde. El escenario más común es para que las operaciones de servicio den de alta en la transacción que se utiliza para leer el mensaje de la cola, tal y como se muestra en el código siguiente.  
   
 ```  
-  
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -55,10 +57,9 @@ public interface IOrderProcessor
      }  
   …  
 }  
-  
 ```  
   
- El servicio es autohospedado.Al utilizar el transporte de MSMQ, la cola utilizada debe crearse previamente.Esto se puede hacer manualmente o a través de código.En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si no existe.El nombre de la cola se lee desde el archivo de configuración.Se utiliza la dirección base de la [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy al servicio.  
+ El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si no existe. El nombre de la cola se lee del archivo de configuración. La dirección base es utilizada por la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el proxy para el servicio.  
   
 ```  
 // Host the service within this EXE console application.  
@@ -87,21 +88,20 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-  
 ```  
   
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.  
   
-```  
+```xml  
 <appSettings>  
     <add key="queueName" value=".\private$\ServiceModelSamplesTransacted" />  
 </appSettings>  
 ```  
   
 > [!NOTE]
->  El nombre de la cola usa un punto \(.\) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso al crear la cola mediante <xref:System.Messaging>.El extremo de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la dirección de la cola con el esquema net.msmq, usa el "localhost" para designar el equipo local y emplea barras diagonales en su ruta de acceso.  
+>  El nombre de la cola usa un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso al crear la cola mediante <xref:System.Messaging>. El extremo de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utiliza la dirección de la cola con el esquema net.msmq, usa el "localhost" para designar el equipo local y emplea barras diagonales en su ruta de acceso.  
   
- El cliente crea un ámbito de transacción.La comunicación con la cola tiene lugar dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde se envían todos los mensajes a la cola o no se envía ninguno.La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A> en el ámbito de la transacción.  
+ El cliente crea un ámbito de transacción. La comunicación con la cola tiene lugar dentro del ámbito de la transacción, provocando que se trate como una unidad atómica donde se envían todos los mensajes a la cola o no se envía ninguno. La transacción se confirma llamando a <xref:System.Transactions.TransactionScope.Complete%2A> en el ámbito de la transacción.  
   
 ```  
 // Create a client.  
@@ -151,7 +151,7 @@ Console.ReadLine();
   
  Dado que no se completa la transacción, los mensajes no se envían a la cola.  
   
- Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio.Puede ver los mensajes recibidos por el servicio desde el cliente.Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente.Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.  
+ Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Puede ver los mensajes recibidos por el servicio desde el cliente. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente. Observe que debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes.  
   
 ```  
 The service is ready.  
@@ -164,36 +164,35 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
                 Order LineItem: 890 of Red Widget @unit price: $45.89  
         Total cost of this order: $42461.56  
         Order status: Pending  
-  
 ```  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de realizar el procedimiento de [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente.Si la cola no está presente, el servicio creará una.Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ.Siga estos pasos para crear una cola en Windows 2008.  
+2.  Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.  
   
     1.  Abra el Administrador del servidor en [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
-    2.  Expanda la pestaña **Características**.  
+    2.  Expanda el **características** ficha.  
   
-    3.  Haga clic con el botón secundario en **Cola de mensajes privados** y seleccione **Nuevo**, **Cola privada**.  
+    3.  Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.  
   
-    4.  Active la casilla **Transaccional**.  
+    4.  Compruebe el **transaccional** cuadro.  
   
-    5.  Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.  
+    5.  Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.  
   
-3.  Para compilar el código de la edición .NET de C\# o Visual Basic de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- De forma predeterminada, con <xref:System.ServiceModel.NetMsmqBinding>, la seguridad de transporte está habilitada.Hay dos propiedades importantes para la seguridad del transporte de MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> y <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>.De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`.Para MSMQ proporcionar la autenticación y la característica de firma, debe formar parte de un dominio y debe instalarse la opción de integración de Active Directory para MSMQ.Si ejecuta este ejemplo en un equipo que no satisface estos criterios, recibirá un error.  
+ De forma predeterminada con <xref:System.ServiceModel.NetMsmqBinding>, la seguridad de transporte está habilitada. Hay dos propiedades importantes para la seguridad del transporte de MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> y <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ proporcionar la autenticación y la característica de firma, debe formar parte de un dominio y debe instalarse la opción de integración de Active Directory para MSMQ. Si ejecuta este ejemplo en un equipo que no satisface estos criterios, recibirá un error.  
   
-### Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo o sin la integración de Active Directory  
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo o sin la integración de Active Directory  
   
 1.  Si su equipo no es parte de un dominio o no tiene la integración Active Directory instalada, desactive la seguridad de transporte estableciendo el modo de autenticación y el nivel de protección en `None`, tal y como se muestra en el código de configuración de ejemplo siguiente:  
   
-    ```  
+    ```xml  
     <system.serviceModel>  
       <services>  
         <service name="Microsoft.ServiceModel.Samples.OrderProcessorService"  
@@ -233,7 +232,6 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
         </behaviors>  
   
       </system.serviceModel>  
-  
     ```  
   
 2.  Asegúrese de que cambia la configuración en el servidor y el cliente antes de ejecutar el ejemplo.  
@@ -242,12 +240,12 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
     >  Establecer `security``mode` en `None` es equivalente a definir la seguridad de <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> y `Message` en `None`.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

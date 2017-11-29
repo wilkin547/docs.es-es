@@ -1,30 +1,29 @@
 ---
-title: "No se puede hacer referencia a un miembro de instancia de una clase desde un m&#233;todo compartido o un inicializador de m&#233;todo compartido sin una instancia expl&#237;cita de la clase | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30369"
-  - "bc30369"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30369"
-  - "Shared"
+title: "No se puede hacer referencia a un miembro de instancia de una clase desde un método compartido o un inicializador de método compartido sin una instancia explícita de la clase"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30369
+- bc30369
+helpviewer_keywords:
+- Shared
+- BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6a15d36c0b3a4d6b1657d583de0dc61621da960d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# No se puede hacer referencia a un miembro de instancia de una clase desde un m&#233;todo compartido o un inicializador de m&#233;todo compartido sin una instancia expl&#237;cita de la clase
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Ha intentado hacer referencia a un miembro no compartido de una clase desde dentro de un procedimiento compartido.  El ejemplo siguiente muestra este tipo de situación.  
+# <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>No se puede hacer referencia a un miembro de instancia de una clase desde un método compartido o un inicializador de método compartido sin una instancia explícita de la clase
+Ha intentado hacer referencia a un miembro no compartido de una clase desde dentro de un procedimiento compartido. En el ejemplo siguiente se muestra esta situación.  
   
 ```  
 Class sample  
@@ -35,21 +34,21 @@ Class sample
 End Class  
 ```  
   
- En el ejemplo anterior, la instrucción de asignación `x = 10` genera este mensaje de error.  Esto es porque un procedimiento compartido está intentando tener acceso a una variable de instancia.  
+ En el ejemplo anterior, la instrucción de asignación `x = 10` genera este mensaje de error. Esto es porque un procedimiento compartido está intentando tener acceso a una variable de instancia.  
   
- La variable `x` es un miembro de instancia porque no se declara como [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  Cada instancia de clase `sample` contiene su propia variable `x` individual.  Cuando una instancia establece o cambia el valor de `x`, no afecta al valor de `x` de ninguna otra instancia.  
+ La variable `x` es un miembro de instancia porque no está declarado como [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Cada instancia de clase `sample` contiene su propia variable individual `x`. Cuando una instancia establece o cambia el valor de `x`, no afecta al valor de `x` en cualquier otra instancia.  
   
- Sin embargo, el procedimiento `setX` es `Shared` entre todas las instancias de clase `sample`.  Esto significa que no está asociado con ninguna instancia de la clase, sino que funciona independientemente de las instancias individuales.  Dado que no tiene ninguna conexión con una instancia determinada, `setX` no puede tener acceso a una variable de instancia.  Sólo debe funcionar en variables `Shared`.  Cuando `setX` establece o cambia el valor de una variable compartida, este nuevo valor está disponible para todas las instancias de la clase.  
+ Sin embargo, el procedimiento `setX` es `Shared` entre todas las instancias de clase `sample`. Esto significa no está asociado a ninguna instancia de la clase, sino que funciona independientemente de las instancias individuales. Porque no tiene ninguna conexión con una instancia concreta, `setX` no se puede obtener acceso a una variable de instancia. Debe funcionar solo en `Shared` variables. Cuando `setX` establece o cambia el valor de una variable compartida, que el nuevo valor está disponible para todas las instancias de la clase.  
   
- **Identificador de error:** BC30369  
+ **Id. de error:** BC30369  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1.  Decida si desea compartir el miembro entre todas las instancias de la clase o que sea individual para cada instancia.  
+1.  Decida si desea que el miembro se comparten entre todas las instancias de la clase, o sea individual para cada instancia.  
   
-2.  Si desea compartir una copia única del miembro entre todas las instancias, agregue la palabra clave `Shared` a la declaración de miembro.  Incluya la palabra clave `Shared` en la declaración de procedimiento.  
+2.  Si desea que una sola copia del miembro que se comparten entre todas las instancias, agregue el `Shared` palabra clave para la declaración del miembro. Conservar el `Shared` palabra clave en la declaración de procedimiento.  
   
-3.  Si desea que cada instancia tenga su propia copia individual del miembro, no especifique `Shared` para la declaración de miembro.  Quite la palabra clave `Shared` de la declaración de procedimiento.  
+3.  Si desea que cada instancia tiene su propia copia individual del miembro, no especifique `Shared` para la declaración del miembro. Quitar el `Shared` palabra clave de la declaración de procedimiento.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

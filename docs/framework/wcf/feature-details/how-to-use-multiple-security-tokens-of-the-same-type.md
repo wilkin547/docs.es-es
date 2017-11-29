@@ -1,27 +1,30 @@
 ---
-title: "C&#243;mo: Utilizar m&#250;ltiples tokens de seguridad del mismo tipo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Utilizar múltiples tokens de seguridad del mismo tipo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 9827d43ba4b0693d16380d93b066948d464bb978
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Utilizar m&#250;ltiples tokens de seguridad del mismo tipo
--   En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un mensaje de cliente solo contenía un token de un tipo dado.  Ahora, los mensajes de cliente pueden contener múltiples tokens de un tipo.  En este tema se muestra cómo incluir múltiples tokens del mismo tipo en un mensaje de cliente.  
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Cómo: Utilizar múltiples tokens de seguridad del mismo tipo
+-   En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un mensaje de cliente solo contenía un token de un tipo dado. Ahora, los mensajes de cliente pueden contener múltiples tokens de un tipo. En este tema se muestra cómo incluir múltiples tokens del mismo tipo en un mensaje de cliente.  
   
 -   Tenga en cuenta que no se puede configurar un servicio de esta manera: un servicio puede contener sólo un token auxiliar.  
   
-### Utilizar múltiples tokens de seguridad del mismo tipo  
+### <a name="to-use-multiple-security-tokens-of-the-same-type"></a>Utilizar múltiples tokens de seguridad del mismo tipo  
   
 1.  Cree una colección vacía de elementos de enlace para rellenarla.  
   
@@ -51,10 +54,10 @@ caps.handback.revision: 8
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Lo siguiente es el método completo descrito por el procedimiento anterior.  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
-## Vea también  
- [Security Architecture](http://msdn.microsoft.com/es-es/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Vea también  
+ [Arquitectura de seguridad](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -1,28 +1,26 @@
 ---
-title: "Cl&#225;usulas (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "cláusulas [Visual Basic]"
+title: "Cláusulas (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: clauses [Visual Basic]
 ms.assetid: 5e89f5f3-d129-4ed1-8857-30cd71cff95e
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1a4166cc480541f913dd47952782a6015c5348a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Cl&#225;usulas (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los temas de esta sección documentan las cláusulas en tiempo de ejecución de Visual Basic.  
+# <a name="clauses-visual-basic"></a>Cláusulas (Visual Basic)
+Los temas en esta sección documentan cláusulas de tiempo de ejecución de Visual Basic.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
   
  [As](../../../visual-basic/language-reference/statements/as-clause.md)  
@@ -37,7 +35,7 @@ Los temas de esta sección documentan las cláusulas en tiempo de ejecución de 
   
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Referencia del lenguaje Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

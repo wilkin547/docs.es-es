@@ -1,30 +1,32 @@
 ---
-title: "C&#243;mo configurar los par&#225;metros de los servicios COM+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "COM+ [WCF], configuración de los parámetros del servicio."
+title: "Cómo configurar los parámetros de los servicios COM+"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7cbe038b55358ec8607d54b67861ef1743c2e301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo configurar los par&#225;metros de los servicios COM+
-Cuando se agrega o quita una interfaz de aplicaciones mediante la herramienta de configuración de servicio de COM\+, la configuración del servicio web se actualiza en el archivo de configuración de la aplicación.  En el modo hospedado de COM\+, el archivo Application.config se encuentra en el directorio raíz de la aplicación \(%PROGRAMFILES%\\ComPlus Applications\\{appid} es el archivo predeterminado\).  En cualquiera de los modos hospedados en la web, el archivo Web.config se encuentra en el directorio vroot especificado.  
+# <a name="how-to-configure-com-service-settings"></a>Cómo configurar los parámetros de los servicios COM+
+Cuando se agrega o quita una interfaz de aplicaciones mediante la herramienta de configuración de servicio de COM+, la configuración del servicio web se actualiza en el archivo de configuración de la aplicación. En el modo hospedado de COM +, el archivo Application.config se coloca en el directorio raíz de la aplicación (%PROGRAMFILES%\ComPlus aplicaciones\\{appid} es el valor predeterminado). En cualquiera de los modos hospedados en la web, el archivo Web.config se encuentra en el directorio vroot especificado.  
   
 > [!NOTE]
->  La utilización de la firma de los mensajes protege de la alteración de los mensajes entre el cliente y un servidor.  Además, la utilización del cifrado en el nivel del mensaje o del transporte protege contra la divulgación de información de los mensajes entre un cliente y un servidor.  Al igual que con los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], debe utilizarse la limitación de peticiones para restringir el número de llamadas, conexiones, instancias y operaciones pendientes que se producen simultáneamente.  Así se contribuye a evitar el consumo excesivo de recursos.  El comportamiento del límite de peticiones se especifica mediante los valores del archivo de configuración del servicio.  
+>  La utilización de la firma de los mensajes protege de la alteración de los mensajes entre el cliente y un servidor. Además, la utilización del cifrado en el nivel del mensaje o del transporte protege contra la divulgación de información de los mensajes entre un cliente y un servidor. Al igual que con los servicios [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], debe utilizarse la limitación de peticiones para restringir el número de llamadas, conexiones, instancias y operaciones pendientes que se producen simultáneamente. Así se contribuye a evitar el consumo excesivo de recursos. El comportamiento del límite de peticiones se especifica mediante los valores del archivo de configuración del servicio.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  Considere un componente que implementa la siguiente interfaz:  
   
 ```  
@@ -34,7 +36,6 @@ public interface IFinances
     string Debit(string accountNo, double amount);  
     string Credit(string accountNo, double amount);  
 }  
-  
 ```  
   
  Si el componente se expone como un servicio web, el contrato de servicios correspondiente que se expone, y con el que los clientes deberán ser compatibles, es como sigue:  
@@ -50,7 +51,6 @@ public interface IFinancesContract : IDisposable
     [OperationContract]  
     string Credit(string accountNo, double amount);  
 }  
-  
 ```  
   
 > [!NOTE]
@@ -58,19 +58,19 @@ public interface IFinancesContract : IDisposable
   
  Las aplicaciones cliente que utilizan este servicio deberán ser conformes a este contrato, así como utilizar un enlace compatible con el que se especificó en la configuración de la aplicación.  
   
- El siguiente ejemplo de código muestra un archivo de configuración predeterminado.  Dado un servicio web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], esto es conforme al esquema de configuración del modelo de servicio estándar y puede editarse del mismo modo que otros archivos de configuración de servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ El siguiente ejemplo de código muestra un archivo de configuración predeterminado. Dado un servicio web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], esto es conforme al esquema de configuración del modelo de servicio estándar y puede editarse del mismo modo que otros archivos de configuración de servicios [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  En las modificaciones típicas se incluye:  
   
--   Cambiar la dirección del extremo del formulario predeterminado ApplicationName\/ComponentName\/InterfaceName a un formulario más útil.  
+-   Cambiar la dirección del extremo del formulario predeterminado ApplicationName/ComponentName/InterfaceName a un formulario más útil.  
   
--   Modificar el espacio de nombres del servicio del formulario predeterminado "http:\/\/tempuri.org\/InterfaceID" a un formulario más relevante.  
+-   Modificar el espacio de nombres del servicio del formulario predeterminado "http://tempuri.org/InterfaceID" a un formulario más relevante.  
   
 -   Cambiar el extremo para utilizar un enlace de transporte diferente.  
   
-     En el caso de hospedaje en COM\+, se utiliza el transporte de las canalizaciones con nombre de manera predeterminada, aunque en su lugar puede utilizarse un transporte fuera de equipo, tipo TCP.  
+     En el caso de hospedaje en COM+, se utiliza el transporte de las canalizaciones con nombre de manera predeterminada, aunque en su lugar puede utilizarse un transporte fuera de equipo, tipo TCP.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
     <system.serviceModel>  
@@ -103,8 +103,7 @@ public interface IFinancesContract : IDisposable
         </services>  
     </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Vea también  
- [Integración en aplicaciones COM\+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a>Vea también  
+ [Integración con aplicaciones COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

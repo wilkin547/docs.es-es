@@ -1,30 +1,34 @@
 ---
-title: "C&#243;mo: Crear un almac&#233;n de instancias personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Crear un almacén de instancias personalizado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c383d3af92ba2f76f8ba09bc194220c170beaa0b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Crear un almac&#233;n de instancias personalizado
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contiene <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un almacén de instancias que usa SQL Server para conservar datos del flujo de trabajo.  Si la aplicación necesita conservar los datos del flujo de trabajo en otro medio, como una base de datos diferente o un sistema de archivos, puede implementar un almacén de instancias personalizado.  Un almacén de instancias personalizado se crea extendiendo la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta e implementando los métodos necesarios para la implementación.  Para ver una implementación completa de un almacén de instancias personalizado, vea el ejemplo de [Proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  
+# <a name="how-to-create-a-custom-instance-store"></a>Cómo: Crear un almacén de instancias personalizado
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] contiene <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, un almacén de instancias que usa SQL Server para conservar datos del flujo de trabajo. Si la aplicación necesita conservar los datos del flujo de trabajo en otro medio, como una base de datos diferente o un sistema de archivos, puede implementar un almacén de instancias personalizado. Un almacén de instancias personalizado se crea extendiendo la clase <xref:System.Runtime.DurableInstancing.InstanceStore> abstracta e implementando los métodos necesarios para la implementación. Para una implementación completa de un almacén de instancias personalizado, consulte el [proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) ejemplo.  
   
-## Implementar el método BeginTryCommand  
- El motor de persistencia envía <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> al almacén de instancias.  El tipo del parámetro `command` indica qué comando se está ejecutando; este parámetro puede ser de los tipos siguientes:  
+## <a name="implementing-the-begintrycommand-method"></a>Implementar el método BeginTryCommand  
+ El motor de persistencia envía <xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> al almacén de instancias. El tipo del parámetro `command` indica qué comando se está ejecutando; este parámetro puede ser de los tipos siguientes:  
   
--   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: el motor de persistencia envía este comando al almacén de instancias cuando un flujo de trabajo se va a conservar en el medio de almacenamiento.  Los datos de persistencia del flujo de trabajo se proporcionan al método en el miembro <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> del parámetro `command`.  
+-   <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: el motor de persistencia envía este comando al almacén de instancias cuando un flujo de trabajo se va a conservar en el medio de almacenamiento. Los datos de persistencia del flujo de trabajo se proporcionan al método en el miembro <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A> del parámetro `command`.  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: el motor de persistencia envía este comando al almacén de instancias cuando un flujo de trabajo se va a cargar desde el medio de almacenamiento.  El identificador de instancia del flujo de trabajo que se va a cargar se proporciona al método en el parámetro `instanceId` de la propiedad <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> del parámetro `context`.  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowCommand>: el motor de persistencia envía este comando al almacén de instancias cuando un flujo de trabajo se va a cargar desde el medio de almacenamiento. El identificador de instancia del flujo de trabajo que se va a cargar se proporciona al método en el parámetro `instanceId` de la propiedad <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.InstanceView%2A> del parámetro `context`.  
   
--   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: el motor de persistencia envía este comando al almacén de instancias cuando <xref:System.ServiceModel.Activities.WorkflowServiceHost> se debe registrar como propietario del bloqueo.  El identificador de instancia del flujo de trabajo actual se debe proporcionar al almacén de instancias usando el método <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> del parámetro `context`.  
+-   <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>: el motor de persistencia envía este comando al almacén de instancias cuando <xref:System.ServiceModel.Activities.WorkflowServiceHost> se debe registrar como propietario del bloqueo. El identificador de instancia del flujo de trabajo actual se debe proporcionar al almacén de instancias usando el método <xref:System.Runtime.DurableInstancing.InstancePersistenceContext.BindInstanceOwner%2A> del parámetro `context`.  
   
      El fragmento de código siguiente muestra cómo implementar el comando CreateWorkflowOwner para asignar un propietario explícito de bloqueo.  
   
@@ -44,10 +48,9 @@ caps.handback.revision: 11
                                    createCommand,  
                                    TimeSpan.FromSeconds(30)).InstanceOwner;  
     childInstance.AddInitialInstanceValues(new Dictionary<XName, object>() { { WorkflowHostTypeName, WFInstanceScopeName } });  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: el motor de persistencia envía este comando al almacén de instancias cuando el identificador de instancia de un propietario de bloqueo se puede quitar del almacén de instancias.  Como en <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, la aplicación debe proporcionar el identificador del propietario de bloqueo.  
+-   <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>: el motor de persistencia envía este comando al almacén de instancias cuando el identificador de instancia de un propietario de bloqueo se puede quitar del almacén de instancias. Como en <xref:System.Activities.DurableInstancing.CreateWorkflowOwnerCommand>, la aplicación debe proporcionar el identificador del propietario de bloqueo.  
   
      El fragmento de código siguiente muestra cómo liberar un bloqueo mediante <xref:System.Activities.DurableInstancing.DeleteWorkflowOwnerCommand>.  
   
@@ -72,10 +75,9 @@ caps.handback.revision: 11
             store.DefaultInstanceOwner = null;  
         }  
     }  
-  
     ```  
   
-     Se debe llamar al método anterior en un bloque Try\/Catch cuando se ejecute una instancia secundaria.  
+     Se debe llamar al método anterior en un bloque Try/Catch cuando se ejecute una instancia secundaria.  
   
     ```  
     try  
@@ -90,14 +92,13 @@ caps.handback.revision: 11
     {  
         FreeHandleAndDeleteOwner(store, ownerHandle);  
     }  
-  
     ```  
   
--   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: el motor de persistencia envía este comando al almacén de instancias cuando una instancia de flujo de trabajo se va a cargar mediante la clave de la instancia de flujo de trabajo.  El identificador de la clave de instancia se puede determinar mediante el parámetro <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> del comando.  
+-   <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand>: el motor de persistencia envía este comando al almacén de instancias cuando una instancia de flujo de trabajo se va a cargar mediante la clave de la instancia de flujo de trabajo. El identificador de la clave de instancia se puede determinar mediante el parámetro <xref:System.Activities.DurableInstancing.LoadWorkflowByInstanceKeyCommand.LookupInstanceKey%2A> del comando.  
   
--   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: el motor de persistencia envía este comando al almacén de instancias para recuperar parámetros de activación para los flujos de trabajo conservados con el fin de crear un host de flujo de trabajo que pueda cargar flujos de trabajo.  El motor envía este comando como respuesta al almacén de instancias que produce <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> en el host cuando encuentra una instancia que se puede activar.  Se debe sondear el almacén de instancias para determinar si hay flujos de trabajo que se pueden activar.  
+-   <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>: el motor de persistencia envía este comando al almacén de instancias para recuperar parámetros de activación para los flujos de trabajo conservados con el fin de crear un host de flujo de trabajo que pueda cargar flujos de trabajo. El motor envía este comando como respuesta al almacén de instancias que produce <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> en el host cuando encuentra una instancia que se puede activar. Se debe sondear el almacén de instancias para determinar si hay flujos de trabajo que se pueden activar.  
   
--   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: el motor de persistencia envía este comando al almacén de instancias para cargar instancias de flujo de trabajo ejecutables.  El motor envía este comando como respuesta al almacén de instancias que produce <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> en el host cuando encuentra una instancia que se puede ejecutar.  Se debe sondear el almacén de instancias para ver qué flujos de trabajo se pueden ejecutar.  El fragmento de código siguiente muestra cómo sondear un almacén de instancias para flujos de trabajo que se pueden ejecutar o activar.  
+-   <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>: el motor de persistencia envía este comando al almacén de instancias para cargar instancias de flujo de trabajo ejecutables. El motor envía este comando como respuesta al almacén de instancias que produce <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> en el host cuando encuentra una instancia que se puede ejecutar. Se debe sondear el almacén de instancias para ver qué flujos de trabajo se pueden ejecutar. El fragmento de código siguiente muestra cómo sondear un almacén de instancias para flujos de trabajo que se pueden ejecutar o activar.  
   
     ```  
     public void PollForEvents()  
@@ -135,10 +136,9 @@ caps.handback.revision: 11
             }  
         }  
     }  
-  
     ```  
   
-     En el fragmento de código anterior, el almacén de instancias consulta los eventos disponibles y examina cada uno de ellos para determinar si es un evento <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>.  Si encuentra alguno, se llama a <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> para notificar al host que envíe un comando al almacén de instancias.  El fragmento de código siguiente muestra una implementación de un controlador para este comando.  
+     En el fragmento de código anterior, el almacén de instancias consulta los eventos disponibles y examina cada uno de ellos para determinar si es un evento <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>. Si encuentra alguno, se llama a <xref:System.Runtime.DurableInstancing.InstanceStore.SignalEvent%2A> para notificar al host que envíe un comando al almacén de instancias.  El fragmento de código siguiente muestra una implementación de un controlador para este comando.  
   
     ```  
     If (command is TryLoadRunnableWorkflowCommand)  
@@ -227,19 +227,17 @@ caps.handback.revision: 11
             break;  
         }  
     }  
-  
     ```  
   
-     En el fragmento de código anterior, el almacén de instancias busca instancias ejecutables.  Si se encuentra una instancia, se enlaza al contexto de ejecución y se carga.  
+     En el fragmento de código anterior, el almacén de instancias busca instancias ejecutables. Si se encuentra una instancia, se enlaza al contexto de ejecución y se carga.  
   
-## Usar un almacén de instancias personalizado  
- Para implementar un almacén de instancias personalizado, asigne una instancia del almacén de instancias a <xref:System.Activities.WorkflowApplication.InstanceStore%2A> e implemente el método de <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>.  Consulte el tutorial [Cómo: Crear y ejecutar un flujo de trabajo de larga ejecución](../../../docs/framework/windows-workflow-foundation//how-to-create-and-run-a-long-running-workflow.md) para obtener información específica.  
+## <a name="using-a-custom-instance-store"></a>Usar un almacén de instancias personalizado  
+ Para implementar un almacén de instancias personalizado, asigne una instancia del almacén de instancias a <xref:System.Activities.WorkflowApplication.InstanceStore%2A> e implemente el método de <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>.  Consulte la [Cómo: crear y ejecutar un flujo de trabajo de ejecución larga](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) tutorial para obtener información específica.  
   
-## Un almacén de instancias de ejemplo  
- El siguiente ejemplo de código es una implementación completa de almacén de instancias, tomada del ejemplo de [Proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md).  Este almacén de instancias conserva los datos del flujo de trabajo en un archivo mediante XML.  
+## <a name="a-sample-instance-store"></a>Un almacén de instancias de ejemplo  
+ El ejemplo de código siguiente es una implementación de almacén de instancia completa, tomada de la [proceso de compra corporativa](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) ejemplo. Este almacén de instancias conserva los datos del flujo de trabajo en un archivo mediante XML.  
   
 ```  
-  
 using System;  
 using System.Activities.DurableInstancing;  
 using System.Collections.Generic;  
@@ -400,5 +398,4 @@ namespace Microsoft.Samples.WF.PurchaseProcess
         }  
     }  
 }  
-  
 ```

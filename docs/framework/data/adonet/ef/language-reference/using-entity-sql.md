@@ -1,53 +1,51 @@
 ---
-title: "USING (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: USING (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c506484908d6b0ffe3a11e33b51d0bcc2d27c25c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# USING (Entity SQL)
+# <a name="using-entity-sql"></a>USING (Entity SQL)
 Especifica espacios de nombres que se usan en una expresión de consulta.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 USING [ alias = ] namespace  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a>Argumentos  
  `alias`  
  Especifica un alias más breve con el que calificar un espacio de nombres.  
   
  `namespace`  
  Cualquier espacio de nombres válido.  
   
-## Ejemplo  
- En la consulta de Entity SQL siguiente se usa el operador USING para especificar los espacios de nombres que se usan en la expresión de consulta.  Para compilar y ejecutar esta consulta, siga estos pasos:  
+## <a name="example"></a>Ejemplo  
+ En la consulta de Entity SQL siguiente se usa el operador USING para especificar los espacios de nombres que se usan en la expresión de consulta. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1.  Siga el procedimiento de [Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1.  Siga el procedimiento de [Cómo: ejecutar una consulta que muestra los resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery`:  
+2.  Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
 ```  
 using SqlServer; RAND()  
 ```  
   
-## Vea también  
- [Espacios de nombres](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [Espacios de nombres](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
  [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

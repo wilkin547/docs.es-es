@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eedeb700adc6c010677959831de8c3ad59c43ea3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b0e507e44fd9ce50269081c39eabc953e5b56dfd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-samples"></a>Ejemplos de programación de red
 En esta sección se incluyen descripciones y vínculos a ejemplos de programación para redes que se pueden descargar y que usan clases en los espacios de nombres <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> y relacionados.  
@@ -80,7 +74,6 @@ En esta sección se incluyen descripciones y vínculos a ejemplos de programaci�
  <xref:System.Net.Sockets>  
   
 ## <a name="see-also"></a>Vea también  
- [Network Programming in the .NET Framework (Programación para redes en .NET Framework)](../../../docs/framework/network-programming/index.md)   
- [Temas de procedimientos de programación de redes](../../../docs/framework/network-programming/network-programming-how-to-topics.md)   
+ [Programación para redes en .NET Framework](../../../docs/framework/network-programming/index.md)  
+ [Temas de procedimientos de programación de red](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Ejemplos de redes para .NET](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-

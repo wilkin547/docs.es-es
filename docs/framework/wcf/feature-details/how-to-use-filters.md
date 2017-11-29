@@ -1,23 +1,26 @@
 ---
-title: "C&#243;mo: Utilizar los filtros | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Utilizar los filtros"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 20e9fd7bd962adb20d2c4bc394012603c7e0f2ae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Utilizar los filtros
-Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza múltiples filtros.  En este ejemplo, los mensajes se enrutan a dos implementaciones de un servicio de la calculadora, regularCalc y roundingCalc.  Ambas implementaciones admiten las mismas operaciones; sin embargo, un servicio redondea todos los cálculos al valor entero más cercano antes de devolverlos.  Una aplicación cliente debe poder indicar si se debe utilizar la versión del redondeo del servicio; si no se especifica ninguna preferencia de servicio, la carga del mensaje se equilibra entre los dos servicios.  Las operaciones expuestas por ambos servicios son:  
+# <a name="how-to-use-filters"></a>Cómo: Utilizar los filtros
+Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que utiliza múltiples filtros. En este ejemplo, los mensajes se enrutan a dos implementaciones de un servicio de la calculadora, regularCalc y roundingCalc. Ambas implementaciones admiten las mismas operaciones; sin embargo, un servicio redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar si se debe utilizar la versión del redondeo del servicio; si no se especifica ninguna preferencia de servicio, la carga del mensaje se equilibra entre los dos servicios. Las operaciones expuestas por ambos servicios son:  
   
 -   Add  
   
@@ -27,27 +30,26 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
 -   Dividir  
   
- Dado que ambos servicios implementan las mismas operaciones, no puede utilizar el filtro Action porque la acción especificada en el mensaje no será única.  En su lugar, debe realizar un trabajo adicional para asegurarse de que los mensajes se enrutan a los extremos adecuados.  
+ Dado que ambos servicios implementan las mismas operaciones, no puede utilizar el filtro Action porque la acción especificada en el mensaje no será única. En su lugar, debe realizar un trabajo adicional para asegurarse de que los mensajes se enrutan a los extremos adecuados.  
   
-### Determinación de datos únicos  
+### <a name="determine-unique-data"></a>Determinación de datos únicos  
   
-1.  Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud.  Sin embargo, si la aplicación cliente agrega un valor de encabezado único al mensaje, puede utilizar este valor para determinar cómo se debería enrutar el mensaje.  
+1.  Como ambas implementaciones del servicio administran las mismas operaciones y son prácticamente idénticas exceptuando los datos que devuelven, los datos base incluidos en mensajes enviados de las aplicaciones cliente no son lo suficientemente exclusivos como para permitirle determinar cómo enrutar la solicitud. Sin embargo, si la aplicación cliente agrega un valor de encabezado único al mensaje, puede utilizar este valor para determinar cómo se debería enrutar el mensaje.  
   
      En este ejemplo, si la aplicación cliente necesita procesar el mensaje mediante la calculadora de redondeo, agrega un encabezado personalizado mediante el siguiente código:  
   
     ```csharp  
     messageHeadersElement.Add(MessageHeader.CreateHeader("RoundingCalculator",   
                                    "http://my.custom.namespace/", "rounding"));  
-  
     ```  
   
      Ahora, puede utilizar el filtro XPath para inspeccionar los mensajes de este encabezado y enrutar mensajes que contengan el encabezado al servicio roundCalc.  
   
 2.  Además el servicio de enrutamiento expone dos extremos de servicio virtuales que se pueden utilizar con los filtros EndpointName, EndpointAddress o PrefixEndpointAddress para enrutar de forma exclusiva los mensajes entrantes a una implementación de la calculadora concreta en función del extremo al que la aplicación cliente envía la solicitud.  
   
-### Definición de los extremos  
+### <a name="define-endpoints"></a>Definición de los extremos  
   
-1.  Al definir los extremos utilizados por el servicio de enrutamiento, debería determinar primero la forma del canal empleado por sus clientes y servicios.  En este escenario, ambos servicios de destino utilizan un patrón de solicitud\-respuesta, de modo que se utiliza <xref:System.ServiceModel.Routing.IRequestReplyRouter>.  En el siguiente ejemplo, se definen los extremos de servicio expuestos por el servicio de enrutamiento.  
+1.  Al definir los extremos utilizados por el servicio de enrutamiento, debería determinar primero la forma del canal empleado por sus clientes y servicios. En este escenario, ambos servicios de destino utilizan un patrón de solicitud-respuesta, de modo que se utiliza <xref:System.ServiceModel.Routing.IRequestReplyRouter>. En el siguiente ejemplo, se definen los extremos de servicio expuestos por el servicio de enrutamiento.  
   
     ```xml  
     <services>  
@@ -77,12 +79,11 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
   
           </service>  
     </services>  
-  
     ```  
   
-     Con esta configuración, el servicio de enrutamiento expone tres extremos independientes.  Según las opciones de tiempo de ejecución, la aplicación cliente envía mensajes a una de estas direcciones.  Los mensajes que llegan a uno de los extremos de servicio "virtuales" \("redondeo\/calculadora" o "normal\/calculadora"\) se reenvían a la implementación de la calculadora correspondiente.  Si la aplicación cliente no envía la solicitud a un extremo determinado, el mensaje se dirige al extremo general.  Independientemente del extremo elegido, la aplicación cliente también puede decidir incluir el encabezado personalizado para indicar que el mensaje se debería reenviar a la implementación de calculadora de redondeo.  
+     Con esta configuración, el servicio de enrutamiento expone tres extremos independientes. Según las opciones de tiempo de ejecución, la aplicación cliente envía mensajes a una de estas direcciones. Los mensajes que llegan a uno de los extremos de servicio "virtuales" ("redondeo/calculadora" o "normal/calculadora") se reenvían a la implementación de calculadora correspondiente. Si la aplicación cliente no envía la solicitud a un punto de conexión determinado, el mensaje se dirige al punto de conexión general. Independientemente del extremo elegido, la aplicación cliente también puede decidir incluir el encabezado personalizado para indicar que el mensaje se debería reenviar a la implementación de calculadora de redondeo.  
   
-2.  El siguiente ejemplo define los extremos del cliente \(destino\) a los que el servicio de enrutamiento enruta los mensajes.  
+2.  El siguiente ejemplo define los extremos del cliente (destino) a los que el servicio de enrutamiento enruta los mensajes.  
   
     ```xml  
     <client>  
@@ -96,14 +97,13 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
                     binding="netTcpBinding"  
                     contract="*" />  
     </client>  
-  
     ```  
   
      Estos extremos se utilizan en la tabla de filtros para indicar el extremo de destino al que se envía el mensaje cuando coincide con un filtro concreto.  
   
-### Definición de filtros  
+### <a name="define-filters"></a>Definición de filtros  
   
-1.  Para enrutar mensajes en función del encabezado personalizado "RoundingCalculator" que la aplicación cliente agrega al mensaje, defina un filtro que utilice una consulta XPath para comprobar la presencia de este encabezado.  Dado que este encabezado se define utilizando un espacio de nombres personalizado, agregue también una entrada de espacio de nombres que defina un prefijo de espacio de nombres "personalizado" que se utilizará en la consulta XPath.  En el siguiente ejemplo, se define la sección de enrutamiento necesaria, la tabla de espacio de nombres y el filtro XPath.  
+1.  Para enrutar mensajes basados en el encabezado personalizado "RoundingCalculator" que la aplicación cliente agrega al mensaje, defina un filtro que usa una consulta XPath para comprobar la presencia de este encabezado. Dado que este encabezado se define mediante el uso de un espacio de nombres personalizado, agregue también una entrada de espacio de nombres que define un prefijo de espacio de nombres personalizado de "personalizado" que se utilizará en la consulta XPath. En el siguiente ejemplo, se define la sección de enrutamiento necesaria, la tabla de espacio de nombres y el filtro XPath.  
   
     ```xml  
     <routing>  
@@ -118,44 +118,41 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
                     filterData="/s12:Envelope/s12:Header/custom:RoundingCalculator = 'rounding'"/>  
           </filters>  
     </routing>  
-  
     ```  
   
-     **MessageFilter** busca un encabezado RoundingCalculator en el mensaje que contenga un valor de "redondeo".  El cliente establece este encabezado para indicar que el mensaje se debería enrutar al servicio de roundingCalc.  
+     Esto **MessageFilter** busca un encabezado RoundingCalculator en el mensaje que contiene un valor de "redondeo". El cliente establece este encabezado para indicar que el mensaje se debería enrutar al servicio de roundingCalc.  
   
     > [!NOTE]
-    >  El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres "http:\/\/www.w3.org\/2003\/05\/soap\-envelope".  
+    >  El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres "http://www.w3.org/2003/05/soap-envelope".  
   
-2.  También debe definir los filtros que buscan mensajes recibidos en los dos extremos virtuales.  El primer extremo virtual es el extremo "normal\/calculadora".  El cliente puede enviar solicitudes a este extremo para indicar que el mensaje se debería enrutar al servicio de regularCalc.  La siguiente configuración define un filtro que utiliza <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para determinar si el mensaje llegó a través de un extremo con el nombre especificado en filterData.  
+2.  También debe definir los filtros que buscan mensajes recibidos en los dos puntos de conexión virtuales. El primer extremo virtual es el punto de conexión "normal/calculadora". El cliente puede enviar solicitudes a este punto de conexión para indicar que el mensaje se debería enrutar al servicio de regularCalc. La siguiente configuración define un filtro que utiliza <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> para determinar si el mensaje llegó a través de un extremo con el nombre especificado en filterData.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
-  
     ```  
   
-     Si el extremo de servicio recibe un mensaje denominado "calculatorEndpoint", este filtro se evalúa como `true`.  
+     Si se recibe un mensaje por el extremo de servicio denominado "calculatorEndpoint", este filtro se evalúa como `true`.  
   
-3.  A continuación, defina un filtro que busque los mensajes enviados a la dirección de roundingEndpoint.  El cliente puede enviar solicitudes a este extremo para indicar que el mensaje se debería enrutar al servicio de roundingCalc.  La siguiente configuración define un filtro que utiliza <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> para determinar si el mensaje llegó al extremo de "redondeo\/calculadora".  
+3.  A continuación, defina un filtro que busque los mensajes enviados a la dirección de roundingEndpoint. El cliente puede enviar solicitudes a este punto de conexión para indicar que el mensaje se debería enrutar al servicio de roundingCalc. La siguiente configuración define un filtro que utiliza el <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> para determinar si el mensaje llegó al punto de conexión de "redondeo/calculadora".  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"  
             filterData="http://localhost/routingservice/router/rounding/"/>  
-  
     ```  
   
-     Si se recibe un mensaje en una dirección que comienza por "http:\/\/localhost\/routingservice\/router\/rounding\/", este filtro se evalúa como **true**.  Dado que la dirección base utilizada por esta configuración es "http:\/\/localhost\/routingservice\/router" y la dirección especificada para roundingEndpoint es "redondeo\/calculadora", la dirección completa empleada para comunicarse con este extremo es "http:\/\/localhost\/routingservice\/router\/rounding\/calculator", que coincide con este filtro.  
+     Si se recibe un mensaje en una dirección que empieza por "http://localhost/routingservice/router/rounding/", a continuación, este filtro se evalúa como **true**. Dado que la dirección base utilizada por esta configuración es "http://localhost/routingservice/router" y la dirección especificada para roundingEndpoint es "redondeo/calculadora", la dirección completa empleada para comunicarse con este extremo es "http://localhost/ routingservice/router/redondeo/calculadora", que coincide con este filtro.  
   
     > [!NOTE]
-    >  El filtro PrefixEndpointAddress no evalúa el nombre de host al realizar una coincidencia, porque se puede hacer referencia a un host único utilizando diversos nombres de host que pueden ser todos ellos métodos válidos para hacer referencia al host de la aplicación cliente.  Por ejemplo, todos los nombres siguientes pueden hacer referencia al mismo host:  
+    >  El filtro PrefixEndpointAddress no evalúa el nombre de host al realizar una coincidencia, porque se puede hacer referencia a un host único utilizando diversos nombres de host que pueden ser todos ellos métodos válidos para hacer referencia al host de la aplicación cliente. Por ejemplo, todos los nombres siguientes pueden hacer referencia al mismo host:  
     >   
     >  -   localhost  
     > -   127.0.0.1  
     > -   www.contoso.com  
     > -   ContosoWeb01  
   
-4.  El filtro final debe admitir el enrutamiento de mensajes que llegan al extremo general sin el encabezado personalizado.  En este escenario, los mensajes deberían alternar entre los servicios de regularCalc y roundingCalc.  Para admitir el enrutamiento de "operación por turnos" de estos mensajes, utilice un filtro personalizado que permita que una instancia del filtro busque coincidencias con cada mensaje procesado.  A continuación, se definen dos instancias de RoundRobinMessageFilter, que se agrupan para indicar que deberían alternar entre sí.  
+4.  El filtro final debe admitir el enrutamiento de mensajes que llegan al extremo general sin el encabezado personalizado. En este escenario, los mensajes deberían alternar entre los servicios de regularCalc y roundingCalc. Para admitir el enrutamiento de "operación por turnos" de estos mensajes, utilice un filtro personalizado que permite a una instancia del filtro busque coincidencias con cada mensaje procesado.  A continuación, se definen dos instancias de RoundRobinMessageFilter, que se agrupan para indicar que deberían alternar entre sí.  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -167,19 +164,18 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
     <filter name="RoundRobinFilter2" filterType="Custom"  
                     customType="CustomFilterAssembly.RoundRobinMessageFilter, CustomFilterAssembly"  
                     filterData="group1"/>  
-  
     ```  
   
-     Durante el tiempo de ejecución, este tipo de filtro alterna entre todas las instancias de filtro definidas de este tipo que están configuradas como el mismo grupo en una recopilación.  Esto hace que los mensajes procesados mediante este filtro personalizado se alternen para devolver `true` a RoundRobinFilter1 y RoundRobinFilter2.  
+     Durante el tiempo de ejecución, este tipo de filtro alterna entre todas las instancias de filtro definidas de este tipo que están configuradas como el mismo grupo en una recopilación. Esto hace que los mensajes procesados mediante este filtro personalizado se alternen para devolver `true` a RoundRobinFilter1 y RoundRobinFilter2.  
   
-### Definición de tablas de filtros  
+### <a name="define-filter-tables"></a>Definición de tablas de filtros  
   
-1.  Para asociar los filtros a extremos de cliente concretos, debe colocarlos dentro de una tabla de filtros.  Este ejemplo de escenario también utiliza una configuración de prioridad de filtros, que es una configuración opcional que le permite indicar el orden en el que se procesan los filtros.  Si no se especifica ninguna prioridad de filtro, todos los filtros se evalúan simultáneamente.  
+1.  Para asociar los filtros a extremos de cliente concretos, debe colocarlos dentro de una tabla de filtros. Este ejemplo de escenario también utiliza una configuración de prioridad de filtros, que es una configuración opcional que le permite indicar el orden en el que se procesan los filtros. Si no se especifica ninguna prioridad de filtro, todos los filtros se evalúan simultáneamente.  
   
     > [!NOTE]
-    >  Aunque una prioridad de filtro le permite controlar el orden en el que se procesan los filtros, puede afectar negativamente al rendimiento del servicio de enrutamiento.  Cuando sea posible, cree una lógica de filtro para que no se requiera el uso de prioridades de filtro.  
+    >  Aunque una prioridad de filtro le permite controlar el orden en el que se procesan los filtros, puede afectar negativamente al rendimiento del servicio de enrutamiento. Cuando sea posible, cree una lógica de filtro para que no se requiera el uso de prioridades de filtro.  
   
-     A continuación, se define la tabla de filtros y se agrega el "XPathFilter" definido anteriormente a la tabla con la prioridad 2.  Esta entrada también especifica que, si "XPathFilter" coincide con el mensaje, el mensaje se enrutará a "roundingCalcEndpoint".  
+     El siguiente define la tabla de filtros y agrega el "XPathFilter" definido anteriormente a la tabla con una prioridad de 2. Esta entrada también especifica que si el "XPathFilter" coincide con el mensaje, el mensaje se enrutará a roundingcalcendpoint "."  
   
     ```xml  
     <routing>  
@@ -196,24 +192,22 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
             </table>  
           <filterTables>  
     </routing>  
-  
     ```  
   
-     Al especificar una prioridad de filtro, los filtros con prioridad máxima se evalúan primero.  Si coinciden uno o más filtros en un nivel de prioridad concreto, no se evaluará ningún filtro en los niveles de menor prioridad.  Para este escenario, 2 es la prioridad máxima especificada y ésta es la única entrada de filtro en este nivel.  
+     Al especificar una prioridad de filtro, los filtros con prioridad máxima se evalúan primero. Si coinciden uno o más filtros en un nivel de prioridad concreto, no se evaluará ningún filtro en los niveles de menor prioridad. Para este escenario, 2 es la prioridad máxima especificada y ésta es la única entrada de filtro en este nivel.  
   
-2.  Las entradas de filtro se han definido para comprobar si se recibe un mensaje se recibe en un extremo concreto inspeccionando el nombre de extremo o el prefijo de dirección.  Las siguientes entradas suman ambas entradas de filtro a la tabla de filtros y las asocian a los extremos de destino a los que se enrutará el mensaje.  Estos filtros están establecidos con una prioridad 1 para indicar que solo se deberían ejecutar si el filtro XPath anterior no coincidiera con el mensaje.  
+2.  Las entradas de filtro se han definido para comprobar si se recibe un mensaje se recibe en un extremo concreto inspeccionando el nombre de extremo o el prefijo de dirección. Las siguientes entradas suman ambas entradas de filtro a la tabla de filtros y las asocian a los extremos de destino a los que se enrutará el mensaje. Estos filtros están establecidos con una prioridad 1 para indicar que solo se deberían ejecutar si el filtro XPath anterior no coincidiera con el mensaje.  
   
     ```xml  
     <!--if the header wasn't there, send the message based on which virtual endpoint it arrived at-->  
     <!--we determine this through the endpoint name, or through the address prefix-->  
     <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint" priority="1"/>  
     <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint" priority="1"/>  
-  
     ```  
   
-     Dado que estos filtros tienen una prioridad de filtro de 1, solo se evaluarán si el filtro de nivel de prioridad 2 no coincide con el mensaje.  Asimismo, como ambos filtros tienen el mismo nivel de prioridad, se evaluarán simultáneamente.  Dado que ambos filtros son mutuamente excluyentes, es posible que solo uno u otro coincida con un mensaje.  
+     Dado que estos filtros tienen una prioridad de filtro de 1, solo se evaluarán si el filtro de nivel de prioridad 2 no coincide con el mensaje. Asimismo, como ambos filtros tienen el mismo nivel de prioridad, se evaluarán simultáneamente. Dado que ambos filtros son mutuamente excluyentes, es posible que solo uno u otro coincida con un mensaje.  
   
-3.  Si un mensaje no coincide con ninguno de los filtros anteriores, dicho mensaje se recibió a través del extremo de servicio genérico y no contenía ninguna información de encabezado que indicara dónde enrutarlo.  El filtro personalizado administrará estos mensajes para equilibrar su carga entre los dos servicios de la calculadora.  En el siguiente ejemplo, se muestra cómo agregar las entradas de filtro a la tabla de filtros; cada filtro se asocia a uno de los dos extremos de destino.  
+3.  Si un mensaje no coincide con ninguno de los filtros anteriores, dicho mensaje se recibió a través del extremo de servicio genérico y no contenía ninguna información de encabezado que indicara dónde enrutarlo. El filtro personalizado administrará estos mensajes para equilibrar su carga entre los dos servicios de la calculadora. En el siguiente ejemplo, se muestra cómo agregar las entradas de filtro a la tabla de filtros; cada filtro se asocia a uno de los dos extremos de destino.  
   
     ```xml  
     <!--if none of the other filters have matched,   
@@ -222,14 +216,13 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
     <!--round robin these requests between the two services-->  
     <add filterName="RoundRobinFilter1" endpointName="regularCalcEndpoint" priority="0"/>  
     <add filterName="RoundRobinFilter2" endpointName="roundingCalcEndpoint" priority="0"/>  
-  
     ```  
   
-     Dado que estas entradas especifican una prioridad de 0, solo se evaluarán si ningún filtro con una prioridad más alta coincide con el mensaje.  Asimismo, como ambos tienen la misma prioridad, se evaluarán simultáneamente.  
+     Dado que estas entradas especifican una prioridad de 0, solo se evaluarán si ningún filtro con una prioridad más alta coincide con el mensaje. Asimismo, como ambos tienen la misma prioridad, se evaluarán simultáneamente.  
   
-     Tal y como se ha indicado previamente, el filtro personalizado utilizado por estas definiciones de filtro solo evalúa uno u otro como `true` por cada mensaje recibido.  Dado que solo se han definido dos filtros utilizando este filtro, con la misma configuración de grupo especificada, el efecto es que el servicio de enrutamiento alterna entre el envío a regularCalcEndpoint y a RoundingCalcEndpoint.  
+     Tal y como se ha indicado previamente, el filtro personalizado utilizado por estas definiciones de filtro solo evalúa uno u otro como `true` por cada mensaje recibido. Dado que solo se han definido dos filtros utilizando este filtro, con la misma configuración de grupo especificada, el efecto es que el servicio de enrutamiento alterna entre el envío a regularCalcEndpoint y a RoundingCalcEndpoint.  
   
-4.  Para evaluar los mensajes con respecto a los filtros, la tabla de filtros debe estar asociada primero a los extremos de servicio que se utilizarán para recibir mensajes.  En el siguiente ejemplo, se muestra cómo asociar la tabla de enrutamiento a los extremos de servicio utilizando el comportamiento de enrutamiento:  
+4.  Para evaluar los mensajes con respecto a los filtros, la tabla de filtros debe estar asociada primero a los extremos de servicio que se utilizarán para recibir mensajes.  En el siguiente ejemplo, se muestra cómo asociar la tabla de enrutamiento a los puntos de conexión de servicio utilizando el comportamiento de enrutamiento:  
   
     ```xml  
     <behaviors>  
@@ -242,7 +235,7 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
     </behaviors>  
     ```  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  A continuación, se muestra una lista completa del archivo de configuración.  
   
 ```xml  
@@ -340,8 +333,7 @@ Este tema describe los pasos básicos necesarios para crear una configuración d
     </routing>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Servicios de enrutamiento](../../../../docs/framework/wcf/samples/routing-services.md)

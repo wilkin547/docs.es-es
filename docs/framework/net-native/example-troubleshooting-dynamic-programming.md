@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 25a384fa2465be6f4e523410e69aba6813e5c22d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Ejemplo: solucionar problemas de programación dinámica
 > [!NOTE]
@@ -60,9 +58,9 @@ AppViewModel.Current.LayoutVM.PageMap
   
  Una causa probable del error es que a `App.Core.ViewModels.Layout.LayoutApplicationVM` le falten metadatos porque está en un espacio de nombres diferente.  
   
- En este caso, agregar una directiva de tiempo de ejecución para `App.Core.ViewModels` ha resuelto el problema. La causa principal ha sido una llamada de la API al método <xref:System.Type.GetType%28System.String%29?displayProperty=fullName> que ha devuelto **NULL**, y la aplicación ha omitido el problema de forma silenciosa hasta que se ha producido un bloqueo.  
+ En este caso, agregar una directiva de tiempo de ejecución para `App.Core.ViewModels` ha resuelto el problema. La causa principal ha sido una llamada de la API al método <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> que ha devuelto **NULL**, y la aplicación ha omitido el problema de forma silenciosa hasta que se ha producido un bloqueo.  
   
- En programación dinámica, una buena práctica cuando se utilizan las API de reflexión en [!INCLUDE[net_native](../../../includes/net-native-md.md)] consiste en usar las sobrecargas <xref:System.Type.GetType%2A?displayProperty=fullName> que generan una excepción en caso de error.  
+ En programación dinámica, una buena práctica cuando se utilizan las API de reflexión en [!INCLUDE[net_native](../../../includes/net-native-md.md)] consiste en usar las sobrecargas <xref:System.Type.GetType%2A?displayProperty=nameWithType> que generan una excepción en caso de error.  
   
 ## <a name="is-this-an-isolated-case"></a>¿Es un caso aislado?  
  También pueden surgir otros problemas al utilizar `App.Core.ViewModels`.  Debe decidir si merece la pena identificar y corregir cada excepción debida a la falta de metadatos, o ahorrar tiempo y agregar directivas para una clase más grande de tipos.  Aquí, agregar metadatos `dynamic` para `App.Core.ViewModels` podría ser el mejor método si el aumento de tamaño resultante del archivo binario de salida no supone un problema.  
@@ -71,6 +69,5 @@ AppViewModel.Current.LayoutVM.PageMap
  Si la aplicación hubiera usado `typeof(LayoutApplicationVM)` en lugar de `Type.GetType("LayoutApplicationVM")`, la cadena de herramientas podría haber conservado los metadatos de `browse`.  En cambio, aun así no habría creado metadatos de `invoke`, que habrían producido una excepción [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) al crear una instancia del tipo. Para evitar la excepción, se tendría que agregar una directiva de tiempo de ejecución para el espacio de nombres o el tipo que especifica la directiva `dynamic`. Para obtener información sobre las directivas de tiempo de ejecución, vea [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Ejemplo: control de excepciones al enlazar datos](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
-

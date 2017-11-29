@@ -1,39 +1,39 @@
 ---
-title: "Introducci&#243;n al control MonthCalendar (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MonthCalendar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles de calendario, Windows Forms"
-  - "calendarios, controles de Windows Forms"
-  - "MonthCalendar (control) [Windows Forms], establecer el primer día de la semana"
+title: "Introducción al control MonthCalendar (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MonthCalendar
+helpviewer_keywords:
+- calendars [Windows Forms], Windows Forms controls
+- calendar controls [Windows Forms], Windows Forms
+- MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dba245df31ad14150e57188c95ab3a980ae8d3db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Introducci&#243;n al control MonthCalendar (formularios Windows Forms)
-El control <xref:System.Windows.Forms.MonthCalendar> de Windows Forms muestra una intuitiva interfaz gráfica de usuario para que los usuarios vean y establezcan información relativa a fechas.  El control muestra un calendario: una cuadrícula que contiene el número de días del mes, ordenado en columnas debajo de los días de la semana con el intervalo de fechas seleccionado resaltado  Para seleccionar un mes diferente, puede hacer clic en los botones de fecha a los lados de la leyenda del mes.  A diferencia del control <xref:System.Windows.Forms.DateTimePicker> similar, puede seleccionar más de una fecha con este control.  Para obtener más información sobre el control <xref:System.Windows.Forms.DateTimePicker>, vea [DateTimePicker \(Control\)](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).  
+# <a name="monthcalendar-control-overview-windows-forms"></a>Introducción al control MonthCalendar (formularios Windows Forms)
+Los formularios Windows Forms <xref:System.Windows.Forms.MonthCalendar> control presenta una interfaz gráfica intuitiva para los usuarios ver y establecer la información de fecha. El control muestra un calendario: una cuadrícula que contiene los días numerados del mes, organizados en columnas bajo los días de la semana, con el intervalo de fechas resaltado seleccionado. Puede seleccionar un mes diferente, haga clic en los botones de flecha a cada lado del título del mes. A diferencia de la similar <xref:System.Windows.Forms.DateTimePicker> (control), puede seleccionar más de una fecha con este control. Para obtener más información sobre la <xref:System.Windows.Forms.DateTimePicker> control, vea [DateTimePicker (Control)](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).  
   
-## Configurar el control MonthCalendar  
- El aspecto del control <xref:System.Windows.Forms.MonthCalendar> es muy configurable.  De manera predeterminada, la fecha de hoy se muestra con un círculo y se muestra en la parte inferior de la cuadrícula.  Puede cambiar esta característica estableciendo las propiedades <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> y <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> en `false`.  También puede agregar los números de la semana al calendario estableciendo la propiedad <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> en `true`.  Estableciendo la propiedad <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>, puede tener varios meses mostrados horizontal y verticalmente.  De manera predeterminada, el domingo se muestra como el primer día de la semana, pero se puede designar cualquier día utilizando la propiedad <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A>.  
+## <a name="configuring-the-monthcalendar-control"></a>Configurar el Control MonthCalendar  
+ El <xref:System.Windows.Forms.MonthCalendar> apariencia del control es altamente configurable. De forma predeterminada, fecha de hoy en día se muestra con un círculo y también se indica en la parte inferior de la cuadrícula. Puede cambiar esta característica estableciendo la <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> y <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> propiedades para `false`. También puede agregar números de semana al calendario estableciendo la <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> propiedad `true`. Estableciendo la <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> propiedad, puede tener varios meses que se muestran horizontal y verticalmente. De forma predeterminada, el domingo se muestra como el primer día de la semana, pero se puede designar cualquier día utilizando la <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> propiedad.  
   
- También puede establecer que se muestren determinadas fechas en negrita una sola vez, anual o mensualmente, agregando objetos <xref:System.DateTime> a las propiedades <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> y <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A>.  Para obtener más información, vea [Cómo: Mostrar días específicos en negrita con el control MonthCalendar de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md).  
+ También puede establecer determinadas fechas para mostrarse en negrita de manera ocasional, anualmente o mensualmente, agregando <xref:System.DateTime> objetos a la <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, y <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> propiedades. Para obtener más información, consulte [Cómo: mostrar días específicos en negrita con el MonthCalendar Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md).  
   
- La propiedad clave del control <xref:System.Windows.Forms.MonthCalendar> es <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, el intervalo de fechas seleccionado en el control.  El valor <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> no puede superar el número máximo de días que se pueden seleccionar, establecido en la propiedad <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>.  Las propiedades <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> y <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> determinan las primeras y últimas fechas que puede seleccionar el usuario.  
+ La propiedad clave de la <xref:System.Windows.Forms.MonthCalendar> control es <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, el intervalo de fechas seleccionado en el control. El <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> valor no puede superar el número máximo de días que se pueden seleccionar, establecido el <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> propiedad. El usuario puede seleccionar las fechas de primera y últimas vienen determinadas por la <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> y <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> propiedades.  
   
-## Vea también  
- <xref:System.Windows.Forms.MonthCalendar>   
- [MonthCalendar \(Control\)](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.MonthCalendar>  
+ [MonthCalendar (control)](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)

@@ -1,45 +1,25 @@
 ---
 title: Matrices en Visual Basic
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.Array
-dev_langs:
-- VB
+f1_keywords: vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
-ms.contentlocale: es-es
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 04deeccd19fd4edb3f2c88310d660eedf5c707d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="arrays-in-visual-basic"></a>Matrices en Visual Basic
 Una matriz es un conjunto de valores que están relacionados de forma lógica entre sí, como, por ejemplo, el número de alumnos de cada curso en una escuela primaria.  Si necesita ayuda sobre las matrices en Visual Basic para Aplicaciones (VBA), vea la [referencia del lenguaje](https://msdn.microsoft.com/library/office/gg264383\(v=office.14\).aspx).  
@@ -115,7 +95,7 @@ Dim sales()() As Double = New Double(11)() {}
  ![Imagen de una matriz que muestra el número de estudiantes](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool")  
 Elementos de la matriz "students"  
   
- El ejemplo siguiente muestra cómo hacer referencia al primero, segundo y último elemento de la matriz `students`.  
+ El ejemplo siguiente muestra cómo hacer referencia al primer, segundo y último elemento de la matriz `students`.  
   
  [!code-vb[VbVbalrArrays#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#3)]  
   
@@ -168,11 +148,11 @@ Elementos de la matriz "students"
  En el ejemplo anterior, se produciría un error si el número de elementos en los literales de matriz anidados no coincidiese. También se producirá un error si se declarara de manera explícita que la variable de matriz no es bidimensional.  
   
 > [!NOTE]
->  Para evitar que se produzca un error al proporcionar literales de matriz anidados de distintas dimensiones, incluya los literales de matriz internos entre paréntesis. Los paréntesis fuerzan la evaluación de la expresión de literal de matriz y los valores resultantes se usan con el literal de matriz exterior, tal como muestra el código siguiente.  
+>  Para evitar que se produzca un error al proporcionar literales de matriz anidados de distintas dimensiones, incluya los literales de matriz internos entre paréntesis. Los paréntesis fuerzan la evaluación de la expresión de literal de matriz y los valores resultantes se usan con el literal de matriz externo, tal como muestra el código siguiente.  
   
  [!code-vb[VbVbalrCollectionInitializers#11](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#11)]  
   
- Es posible usar la inferencia de tipos al crear una matriz multidimensional usando literales de matriz anidados. Cuando se usa la inferencia de tipos, el tipo inferido es el tipo dominante para todos los valores de todos los literales de matriz de un nivel de anidamiento. En el ejemplo de código siguiente se crea una matriz bidimensional del tipo `Double` a partir de valores del tipo `Integer` y `Double`.  
+ Es posible usar la inferencia de tipos al crear una matriz multidimensional con literales de matriz anidados. Cuando se usa la inferencia de tipos, el tipo inferido es el tipo dominante para todos los valores de todos los literales de matriz de un nivel de anidamiento. En el ejemplo de código siguiente se crea una matriz bidimensional del tipo `Double` a partir de valores del tipo `Integer` y `Double`.  
   
  [!code-vb[VbVbalrCollectionInitializers#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#8)]  
   
@@ -206,7 +186,7 @@ Elementos de la matriz "students"
   
  [!code-vb[VbVbalrArrays#51](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#51)]  
   
- En el ejemplo siguiente, la función `GetNumbersMultiDim` devuelve un `Integer(,)`. Este tipo de matriz es una matriz bidimensional de tipo `Integer`.  El procedimiento `ShowNumbersMultiDim` acepta un argumento `Integer(,)` .  
+ En el ejemplo siguiente, la función `GetNumbersMultiDim` devuelve `Integer(,)`. Este tipo de matriz es una matriz bidimensional de tipo `Integer`.  El procedimiento `ShowNumbersMultiDim` acepta un argumento `Integer(,)` .  
   
  [!code-vb[VbVbalrArrays#52](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#52)]  
   
@@ -257,11 +237,11 @@ Dim prices(3, 4, 5) As Long
 ##  <a name="BKMK_ArrayTypes"></a> Tipos de matriz y otros tipos  
  Cada matriz tiene un tipo de datos, pero difiere del tipo de datos de sus elementos. No existe ningún tipo de datos para todas las matrices. En su lugar, el tipo de datos de una matriz lo determina el número de dimensiones, o *rango*, de la matriz y el tipo de datos de los elementos de la matriz. Se considera que dos variables de matriz son del mismo tipo de datos solo cuando tienen el mismo rango y sus elementos tienen el mismo tipo de datos. Las longitudes de las dimensiones de una matriz no influyen en el tipo de datos de la matriz.  
   
- Cada matriz hereda la clase <xref:System.Array?displayProperty=fullName> y puede declarar una variable del tipo `Array`, pero no puede crear una matriz del tipo `Array`. Además, la [Instrucción ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) no puede funcionar en una variable declarada de tipo `Array`. Por estas razones y para mayor seguridad del tipo, es aconsejable declarar cada matriz como un tipo específico, como `Integer` en el ejemplo anterior.  
+ Cada matriz hereda la clase <xref:System.Array?displayProperty=nameWithType> y puede declarar una variable del tipo `Array`, pero no puede crear una matriz del tipo `Array`. Además, la [Instrucción ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md) no puede funcionar en una variable declarada de tipo `Array`. Por estas razones y para mayor seguridad del tipo, es aconsejable declarar cada matriz como un tipo específico, como `Integer` en el ejemplo anterior.  
   
  Puede averiguar el tipo de datos de una matriz o de sus elementos de varias maneras.  
   
--   Puede llamar al método <xref:System.Object.GetType%2A?displayProperty=fullName> en la variable para recibir un objeto <xref:System.Type> para el tipo en tiempo de ejecución de la variable. El objeto <xref:System.Type> contiene amplia información en sus propiedades y métodos.  
+-   Puede llamar al método <xref:System.Object.GetType%2A?displayProperty=nameWithType> en la variable para recibir un objeto <xref:System.Type> para el tipo en tiempo de ejecución de la variable. El objeto <xref:System.Type> contiene amplia información en sus propiedades y métodos.  
   
 -   Puede pasar la variable a la función <xref:Microsoft.VisualBasic.Information.TypeName%2A> para recibir un `String` que contiene el nombre de tipo en tiempo de ejecución.  
   
@@ -278,12 +258,12 @@ Dim prices(3, 4, 5) As Long
   
  Para algunas colecciones, puede asignar una clave a cualquier objeto que incluya en la colección para, de este modo, recuperar rápidamente el objeto con la clave.  
   
- Si la colección contiene elementos de un solo tipo de datos, puede usar una de las clases del espacio de nombres <xref:System.Collections.Generic?displayProperty=fullName> . Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella. Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.  
+ Si la colección contiene elementos de un solo tipo de datos, puede usar una de las clases del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType> . Una colección genérica cumple la seguridad de tipos para que ningún otro tipo de datos se pueda agregar a ella. Cuando recupera un elemento de una colección genérica, no tiene que determinar su tipo de datos ni convertirlo.  
   
  Para más información sobre las colecciones, vea [Colecciones](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
 ### <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa la clase genérica [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Collections.Generic.List%601?displayProperty=fullName> para crear una colección de listas de objetos `Customer`.  
+ En el ejemplo siguiente se usa la clase genérica [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> para crear una colección de listas de objetos `Customer`.  
   
  [!code-vb[VbVbalrArrays#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#1)]  
   
@@ -300,7 +280,6 @@ Dim prices(3, 4, 5) As Long
 |[Solución de problemas de matrices](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)|Describe algunos problemas comunes que surgen al trabajar con matrices.|  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Array>   
- [Instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)   
+ <xref:System.Array>  
+ [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)  
  [ReDim (instrucción)](../../../../visual-basic/language-reference/statements/redim-statement.md)
-

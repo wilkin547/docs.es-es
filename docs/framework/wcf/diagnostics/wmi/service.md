@@ -1,25 +1,28 @@
 ---
-title: "Servicio | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Servicio
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd784b470810e16b86ba7537b1f45681ac3e1ed1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Servicio
+# <a name="service"></a>Servicio
 Servicio  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class Service  
@@ -39,98 +42,98 @@ class Service
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase Service no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase Service posee las siguientes propiedades:  
   
-### BaseAddresses  
+### <a name="baseaddresses"></a>BaseAddresses  
  Tipo de datos: matriz de cadenas  
   
  Tipo de acceso: solo lectura  
   
  Las direcciones base utilizadas por el servicio.  
   
-### Comportamientos  
+### <a name="behaviors"></a>Comportamientos  
  Tipo de datos: matriz de comportamientos  
   
  Tipo de acceso: solo lectura  
   
  Los comportamientos asociados a este servicio.  
   
-### ConfigurationName  
+### <a name="configurationname"></a>ConfigurationName  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
- ServiceElement\_BehaviorConfiguration  
+ ServiceElement_BehaviorConfiguration  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Nombre de la instancia de los contadores de rendimiento del servicio.  
   
-### DistinguishedName  
+### <a name="distinguishedname"></a>DistinguishedName  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Nombre de servicio en la dirección.  
   
-### Extensiones  
+### <a name="extensions"></a>Extensiones  
  Tipo de datos: matriz de cadenas  
   
  Tipo de acceso: solo lectura  
   
  Los contextos de instancia para las extensiones de la instancia de servicio.  
   
-### Metadatos  
+### <a name="metadata"></a>Metadatos  
  Tipo de datos: matriz de cadenas  
   
  Tipo de acceso: solo lectura  
   
  Los valores de metadatos de servicio.  
   
-### Name  
+### <a name="name"></a>Nombre  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El nombre único de este servicio.  
   
-### Espacio de nombres  
+### <a name="namespace"></a>Espacio de nombres  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El espacio de nombres del servicio.  
   
-### Abierto  
+### <a name="opened"></a>Abierto  
  Tipo de datos: datetime  
   
  Tipo de acceso: solo lectura  
   
  El momento en el que se abrió el servicio.  
   
-### OutgoingChannels  
+### <a name="outgoingchannels"></a>OutgoingChannels  
  Tipo de datos: matriz de canal  
   
  Tipo de acceso: solo lectura  
   
  Los canales que salen de la instancia del servicio.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El id. de proceso que hospeda el servicio.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|

@@ -1,36 +1,41 @@
 ---
-title: "C&#243;mo: Habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [formularios Windows Forms], cuadros de texto"
-  - "arrastrar y colocar, control RichTextBox"
-  - "cuadros de texto, operaciones de arrastrar y colocar"
-  - "RichTextBox (control) [formularios Windows Forms], operaciones de arrastrar y colocar"
+title: "Cómo: Habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- drag and drop [Windows Forms], richTextBox control
+- text boxes [Windows Forms], drag-and-drop operations
+- RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91739643aaa2d7fe3ea302d0d35edabbae0ab14f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms
-Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms se realizan mediante el control de los eventos <xref:System.Windows.Forms.RichTextBox.DragEnter> y <xref:System.Windows.Forms.RichTextBox.DragDrop>. Por lo tanto, las operaciones de arrastrar y colocar son extremadamente sencillas con el control <xref:System.Windows.Forms.RichTextBox>.  
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Cómo: Habilitar operaciones de arrastrar y colocar con el control RichTextBox de formularios Windows Forms
+Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms se realizan mediante el control de los eventos <xref:System.Windows.Forms.RichTextBox.DragEnter> y <xref:System.Windows.Forms.RichTextBox.DragDrop> . Por lo tanto, las operaciones de arrastrar y colocar son extremadamente sencillas con el control <xref:System.Windows.Forms.RichTextBox> .  
   
-### Para habilitar las operaciones de arrastre en un control RichTextBox  
+### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Para habilitar las operaciones de arrastre en un control RichTextBox  
   
 1.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> del control <xref:System.Windows.Forms.RichTextBox> en `true`.  
   
-2.  Escriba código en el controlador de eventos del evento <xref:System.Windows.Forms.RichTextBox.DragEnter>. Use una declaración `if` para asegurarse de que los datos que se arrastran son de un tipo aceptable \(en este caso, texto\). La propiedad <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=fullName> se puede establecer en cualquier valor de la enumeración <xref:System.Windows.Forms.DragDropEffects>.  
+2.  Escriba código en el controlador de eventos del evento <xref:System.Windows.Forms.RichTextBox.DragEnter> . Use una declaración `if` para asegurarse de que los datos que se arrastran son de un tipo aceptable (en este caso, texto). La propiedad <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> se puede establecer en cualquier valor de la enumeración <xref:System.Windows.Forms.DragDropEffects>.  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -42,7 +47,6 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
           e.Effect = DragDropEffects.None  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
        else  
           e.Effect = DragDropEffects.None;  
     }  
-  
     ```  
   
     ```cpp  
@@ -69,7 +72,7 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -83,9 +86,9 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  Escriba código para controlar el evento <xref:System.Windows.Forms.RichTextBox.DragDrop>. Utilice el método <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> para recuperar los datos que se están arrastrando.  
+3.  Escriba código para controlar el evento <xref:System.Windows.Forms.RichTextBox.DragDrop> . Utilice el método <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> para recuperar los datos que se están arrastrando.  
   
-     En el ejemplo siguiente, el código establece la propiedad <xref:System.Windows.Forms.RichTextBox.Text%2A> del control <xref:System.Windows.Forms.RichTextBox> igual a los datos que se están arrastrando. Si ya hay texto en el control <xref:System.Windows.Forms.RichTextBox>, el texto arrastrado se inserta en el punto de inserción.  
+     En el ejemplo siguiente, el código establece la propiedad <xref:System.Windows.Forms.RichTextBox.Text%2A> del control <xref:System.Windows.Forms.RichTextBox> igual a los datos que se están arrastrando. Si ya hay texto en el control <xref:System.Windows.Forms.RichTextBox> , el texto arrastrado se inserta en el punto de inserción.  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -104,7 +107,6 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
           e.Data.GetData(DataFormats.Text).ToString()  
        RichTextBox1.Text = RichTextBox1.Text + s  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -124,7 +126,6 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
           e.Data.GetData(DataFormats.Text).ToString();  
        richTextBox1.Text = richTextBox1.Text + s;  
     }  
-  
     ```  
   
     ```cpp  
@@ -147,13 +148,12 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
         System.Windows.Forms.DragEventHandler  
         (this.richTextBox1_DragDrop);  
-  
     ```  
   
     ```cpp  
@@ -162,20 +162,20 @@ Las operaciones de arrastrar y colocar con el control <xref:System.Windows.Forms
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
   
-### Para probar la funcionalidad de arrastrar y colocar en la aplicación  
+### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Para probar la funcionalidad de arrastrar y colocar en la aplicación  
   
 1.  Guarde y compile la aplicación. Mientras se esté ejecutando, ejecute WordPad.  
   
-     WordPad es un editor de texto instalado por Windows que permite operaciones de arrastrar y colocar. Para acceder a este, haga clic en el botón **Inicio**, seleccione **Ejecutar**, escriba `WordPad` en el cuadro de texto del cuadro de diálogo **Ejecutar** y, después, haga clic en **Aceptar**.  
+     WordPad es un editor de texto instalado por Windows que permite operaciones de arrastrar y colocar. Para acceder a este, haga clic en el botón **Inicio** , seleccione **Ejecutar**, escriba `WordPad` en el cuadro de texto del cuadro de diálogo **Ejecutar** y, después, haga clic en **Aceptar**.  
   
 2.  Una vez abierto WordPad, escriba una cadena de texto en esta aplicación. Use el mouse para seleccionar el texto y, después, arrastre el texto seleccionado al control <xref:System.Windows.Forms.RichTextBox> de la aplicación Windows.  
   
-     Observe que, cuando el mouse señala el control <xref:System.Windows.Forms.RichTextBox> \(y, por consiguiente, genera el evento <xref:System.Windows.Forms.RichTextBox.DragEnter>\), el cursor cambia y puede colocar el texto seleccionado en el control <xref:System.Windows.Forms.RichTextBox>.  
+     Observe que, cuando el mouse señala el control <xref:System.Windows.Forms.RichTextBox> (y, por consiguiente, genera el evento <xref:System.Windows.Forms.RichTextBox.DragEnter> ), el cursor cambia y puede colocar el texto seleccionado en el control <xref:System.Windows.Forms.RichTextBox> .  
   
-     Al soltar el botón del mouse, se quita el texto seleccionado \(es decir, se genera el evento <xref:System.Windows.Forms.RichTextBox.DragDrop>\) y se inserta en el control <xref:System.Windows.Forms.RichTextBox>.  
+     Al soltar el botón del mouse, se quita el texto seleccionado (es decir, se genera el evento <xref:System.Windows.Forms.RichTextBox.DragDrop> ) y se inserta en el control <xref:System.Windows.Forms.RichTextBox> .  
   
-## Vea también  
- <xref:System.Windows.Forms.RichTextBox>   
- [How to: Perform Drag\-and\-Drop Operations Between Applications](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)   
- [RichTextBox \(Control\)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [Llevar a cabo operaciones de arrastrar y colocar entre aplicaciones](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [RichTextBox (control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
