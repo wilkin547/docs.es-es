@@ -1,79 +1,82 @@
 ---
-title: "Implementing the UI Automation Grid Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control patterns, grid"
-  - "grid control pattern"
-  - "UI Automation, grid control pattern"
+title: "Implementar el patrón de control Grid de UI Automation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control patterns, grid
+- grid control pattern
+- UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-caps.latest.revision: 27
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 123bc1454a58391bc6503fd3f60d477fd5498306
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation Grid Control Pattern
+# <a name="implementing-the-ui-automation-grid-control-pattern"></a><span data-ttu-id="15232-102">Implementar el patrón de control Grid de UI Automation</span><span class="sxs-lookup"><span data-stu-id="15232-102">Implementing the UI Automation Grid Control Pattern</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="15232-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="15232-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="15232-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="15232-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IGridProvider>, incluida la información sobre propiedades, métodos y eventos. Al final de la información general se proporcionan vínculos a referencias adicionales.  
+ <span data-ttu-id="15232-105">En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IGridProvider>, incluida la información sobre propiedades, métodos y eventos.</span><span class="sxs-lookup"><span data-stu-id="15232-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IGridProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="15232-106">Al final de la información general se proporcionan vínculos a referencias adicionales.</span><span class="sxs-lookup"><span data-stu-id="15232-106">Links to additional references are listed at the end of the overview.</span></span>  
   
- El patrón de control <xref:System.Windows.Automation.GridPattern> se usa para admitir controles que actúen como contenedores para una colección de elementos secundarios. Los elementos secundarios de este elemento deben implementar <xref:System.Windows.Automation.Provider.IGridItemProvider> y organizarse en un sistema de coordenadas lógico bidimensional que se pueda recorrer por filas y columnas. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="15232-107">El patrón de control <xref:System.Windows.Automation.GridPattern> se usa para admitir controles que actúen como contenedores para una colección de elementos secundarios.</span><span class="sxs-lookup"><span data-stu-id="15232-107">The <xref:System.Windows.Automation.GridPattern> control pattern is used to support controls that act as containers for a collection of child elements.</span></span> <span data-ttu-id="15232-108">Los elementos secundarios de este elemento deben implementar <xref:System.Windows.Automation.Provider.IGridItemProvider> y organizarse en un sistema de coordenadas lógico bidimensional que se pueda recorrer por filas y columnas.</span><span class="sxs-lookup"><span data-stu-id="15232-108">The children of this element must implement <xref:System.Windows.Automation.Provider.IGridItemProvider> and be organized in a two-dimensional logical coordinate system that can be traversed by row and column.</span></span> <span data-ttu-id="15232-109">Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span><span class="sxs-lookup"><span data-stu-id="15232-109">For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Directrices y convenciones de implementación  
- Al implementar el patrón de control Grid, tenga en cuenta las siguientes directrices y convenciones:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="15232-110">Directrices y convenciones de implementación</span><span class="sxs-lookup"><span data-stu-id="15232-110">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="15232-111">Al implementar el patrón de control Grid, tenga en cuenta las siguientes directrices y convenciones:</span><span class="sxs-lookup"><span data-stu-id="15232-111">When implementing the Grid control pattern, note the following guidelines and conventions:</span></span>  
   
--   Las coordenadas de la cuadrícula son de base cero, donde la celda superior izquierda \(o la superior derecha, según la configuración regional\) tiene las coordenadas \(0, 0\).  
+-   <span data-ttu-id="15232-112">Las coordenadas de la cuadrícula son de base cero, donde la celda superior izquierda (o la superior derecha, según la configuración regional) tiene las coordenadas (0, 0).</span><span class="sxs-lookup"><span data-stu-id="15232-112">Grid coordinates are zero-based with the upper left (or upper right cell depending on locale) having coordinates (0, 0).</span></span>  
   
--   Si una celda está vacía, todavía debe devolverse un elemento de Automatización de la interfaz de usuario para admitir la propiedad <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> en esa celda. Esto es posible si el diseño de elementos secundarios de la cuadrícula es similar a una matriz irregular \(consulte el ejemplo siguiente\).  
+-   <span data-ttu-id="15232-113">Si una celda está vacía, todavía debe devolverse un elemento de Automatización de la interfaz de usuario para admitir la propiedad <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> en esa celda.</span><span class="sxs-lookup"><span data-stu-id="15232-113">If a cell is empty, a UI Automation element must still be returned in order to support the <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> property for that cell.</span></span> <span data-ttu-id="15232-114">Esto es posible si el diseño de elementos secundarios de la cuadrícula es similar a una matriz irregular (consulte el ejemplo siguiente).</span><span class="sxs-lookup"><span data-stu-id="15232-114">This is possible when the layout of child elements in the grid is similar to a ragged array (see example below).</span></span>  
   
- ![Vista del Explorador de Windows mostrando un diseño irregular.](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA\_GridPattern\_Ragged\_Array")  
-Ejemplo de un control Grid con coordenadas vacías  
+ <span data-ttu-id="15232-115">![El Explorador de Windows Vista que muestra un diseño irregular. ] (../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")</span><span class="sxs-lookup"><span data-stu-id="15232-115">![Windows Explorer view showing ragged layout.](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")</span></span>  
+<span data-ttu-id="15232-116">Ejemplo de un control Grid con coordenadas vacías</span><span class="sxs-lookup"><span data-stu-id="15232-116">Example of a Grid Control with Empty Coordinates</span></span>  
   
--   Sigue siendo necesaria una cuadrícula con un elemento único para implementar <xref:System.Windows.Automation.Provider.IGridProvider> si lógicamente se considera una cuadrícula. El número de elementos secundarios de la cuadrícula es irrelevante.  
+-   <span data-ttu-id="15232-117">Sigue siendo necesaria una cuadrícula con un elemento único para implementar <xref:System.Windows.Automation.Provider.IGridProvider> si lógicamente se considera una cuadrícula.</span><span class="sxs-lookup"><span data-stu-id="15232-117">A grid with a single item is still required to implement <xref:System.Windows.Automation.Provider.IGridProvider> if it is logically considered to be a grid.</span></span> <span data-ttu-id="15232-118">El número de elementos secundarios de la cuadrícula es irrelevante.</span><span class="sxs-lookup"><span data-stu-id="15232-118">The number of child items in the grid is immaterial.</span></span>  
   
--   Las filas y columnas ocultas, según la implementación del proveedor, se pueden cargar en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y, por tanto, se reflejarán en las propiedades <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> y <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A>. Si las filas y columnas ocultas todavía no se han cargado, no deben contarse.  
+-   <span data-ttu-id="15232-119">Las filas y columnas ocultas, según la implementación del proveedor, se pueden cargar en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y, por tanto, se reflejarán en las propiedades <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> y <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> .</span><span class="sxs-lookup"><span data-stu-id="15232-119">Hidden rows and columns, depending on the provider implementation, may be loaded in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree and therefore will be reflected in the <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> and <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> properties.</span></span> <span data-ttu-id="15232-120">Si las filas y columnas ocultas todavía no se han cargado, no deben contarse.</span><span class="sxs-lookup"><span data-stu-id="15232-120">If the hidden rows and columns have not yet been loaded, they should not be counted.</span></span>  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> no permite la manipulación activa de una cuadrícula; <xref:System.Windows.Automation.Provider.ITransformProvider> debe implementarse para habilitar esta funcionalidad.  
+-   <span data-ttu-id="15232-121"><xref:System.Windows.Automation.Provider.IGridProvider> no permite la manipulación activa de una cuadrícula; <xref:System.Windows.Automation.Provider.ITransformProvider> debe implementarse para habilitar esta funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="15232-121"><xref:System.Windows.Automation.Provider.IGridProvider> does not enable active manipulation of a grid; <xref:System.Windows.Automation.Provider.ITransformProvider> must be implemented to enable this functionality.</span></span>  
   
--   Use un elemento <xref:System.Windows.Automation.StructureChangedEventHandler> para permanecer a la escucha de cambios estructurales o de diseño en la cuadrícula, como por ejemplo, celdas que se hayan agregado, quitado o combinado.  
+-   <span data-ttu-id="15232-122">Use un elemento <xref:System.Windows.Automation.StructureChangedEventHandler> para permanecer a la escucha de cambios estructurales o de diseño en la cuadrícula, como por ejemplo, celdas que se hayan agregado, quitado o combinado.</span><span class="sxs-lookup"><span data-stu-id="15232-122">Use a <xref:System.Windows.Automation.StructureChangedEventHandler> to listen for structural or layout changes to the grid such as cells that have been added, removed, or merged.</span></span>  
   
--   Use un elemento <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> para realizar un seguimiento del recorrido a través de los elementos o las celdas de una cuadrícula.  
+-   <span data-ttu-id="15232-123">Use un elemento <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> para realizar un seguimiento del recorrido a través de los elementos o las celdas de una cuadrícula.</span><span class="sxs-lookup"><span data-stu-id="15232-123">Use a <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> to track traversal through the items or cells of a grid.</span></span>  
   
 <a name="Required_Members_for_IGridProvider"></a>   
-## Miembros requeridos para IGridProvider  
- Se requieren los métodos y propiedades siguientes para implementar la interfaz de IGridProvider.  
+## <a name="required-members-for-igridprovider"></a><span data-ttu-id="15232-124">Miembros requeridos para IGridProvider</span><span class="sxs-lookup"><span data-stu-id="15232-124">Required Members for IGridProvider</span></span>  
+ <span data-ttu-id="15232-125">Se requieren los métodos y propiedades siguientes para implementar la interfaz de IGridProvider.</span><span class="sxs-lookup"><span data-stu-id="15232-125">The following properties and methods are required for implementing the IGridProvider interface.</span></span>  
   
-|Miembros requeridos|Tipo|Notas|  
-|-------------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propiedad|Ninguno|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Método|Ninguna|  
+|<span data-ttu-id="15232-126">Miembros requeridos</span><span class="sxs-lookup"><span data-stu-id="15232-126">Required members</span></span>|<span data-ttu-id="15232-127">Tipo</span><span class="sxs-lookup"><span data-stu-id="15232-127">Type</span></span>|<span data-ttu-id="15232-128">Notas</span><span class="sxs-lookup"><span data-stu-id="15232-128">Notes</span></span>|  
+|----------------------|----------|-----------|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|<span data-ttu-id="15232-129">Propiedad</span><span class="sxs-lookup"><span data-stu-id="15232-129">Property</span></span>|<span data-ttu-id="15232-130">Ninguno</span><span class="sxs-lookup"><span data-stu-id="15232-130">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|<span data-ttu-id="15232-131">Propiedad</span><span class="sxs-lookup"><span data-stu-id="15232-131">Property</span></span>|<span data-ttu-id="15232-132">Ninguno</span><span class="sxs-lookup"><span data-stu-id="15232-132">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|<span data-ttu-id="15232-133">Método</span><span class="sxs-lookup"><span data-stu-id="15232-133">Method</span></span>|<span data-ttu-id="15232-134">Ninguno</span><span class="sxs-lookup"><span data-stu-id="15232-134">None</span></span>|  
   
- Este patrón de control no tiene eventos asociados.  
+ <span data-ttu-id="15232-135">Este patrón de control no tiene eventos asociados.</span><span class="sxs-lookup"><span data-stu-id="15232-135">This control pattern has no associated events.</span></span>  
   
 <a name="Exceptions"></a>   
-## Excepciones  
- Los proveedores deben producir las siguientes excepciones.  
+## <a name="exceptions"></a><span data-ttu-id="15232-136">Excepciones</span><span class="sxs-lookup"><span data-stu-id="15232-136">Exceptions</span></span>  
+ <span data-ttu-id="15232-137">Los proveedores deben producir las siguientes excepciones.</span><span class="sxs-lookup"><span data-stu-id="15232-137">Providers must throw the following exceptions.</span></span>  
   
-|Tipo de excepción|Condición|  
-|-----------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   Si la coordenada de la fila solicitada es mayor que el valor de <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordenada de la columna es mayor que el valor de <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -   Si las coordenadas de fila o columna solicitadas son menores que cero.|  
+|<span data-ttu-id="15232-138">Tipo de excepción</span><span class="sxs-lookup"><span data-stu-id="15232-138">Exception type</span></span>|<span data-ttu-id="15232-139">Condición</span><span class="sxs-lookup"><span data-stu-id="15232-139">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> <span data-ttu-id="15232-140">-Si la coordenada de la fila solicitada es mayor que el <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordenada de la columna es mayor que el <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.</span><span class="sxs-lookup"><span data-stu-id="15232-140">-   If the requested row coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> or the column coordinate is larger than the <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.</span></span>|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> <span data-ttu-id="15232-141">-Si cualquiera de la fila o columna solicitadas coordenadas es menor que cero.</span><span class="sxs-lookup"><span data-stu-id="15232-141">-   If either of the requested row or column coordinates is less than zero.</span></span>|  
   
-## Vea también  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Implementing the UI Automation GridItem Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a><span data-ttu-id="15232-142">Vea también</span><span class="sxs-lookup"><span data-stu-id="15232-142">See Also</span></span>  
+ [<span data-ttu-id="15232-143">Información general del patrones de Control UI Automation</span><span class="sxs-lookup"><span data-stu-id="15232-143">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="15232-144">Patrones de Control compatibles en un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="15232-144">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="15232-145">Patrones de Control UI Automation para clientes</span><span class="sxs-lookup"><span data-stu-id="15232-145">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="15232-146">Implementar el patrón de Control GridItem UI Automation</span><span class="sxs-lookup"><span data-stu-id="15232-146">Implementing the UI Automation GridItem Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
+ [<span data-ttu-id="15232-147">Información general sobre el árbol de automatización de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="15232-147">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="15232-148">Usar almacenamiento en caché en la UI Automation</span><span class="sxs-lookup"><span data-stu-id="15232-148">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

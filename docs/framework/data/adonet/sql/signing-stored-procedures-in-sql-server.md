@@ -1,61 +1,64 @@
 ---
-title: "Firmar procedimientos almacenados en SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Firmar procedimientos almacenados en SQL Server
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 86c2a6c3f2c84c931df15e4809980a76cb6d826c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Firmar procedimientos almacenados en SQL Server
-Puede firmar un procedimiento almacenado con un certificado o una clave asimétrica.  Esto está diseñado para los casos en los que no se pueden heredar permisos mediante encadenamiento de propiedad o cuando la cadena de propiedad está rota, como en SQL dinámico.  Entonces, se crea un usuario asignado al certificado, el cual concede permisos de usuario en los objetos a los que el procedimiento almacenado necesita tener acceso.  
+# <a name="signing-stored-procedures-in-sql-server"></a><span data-ttu-id="48c98-102">Firmar procedimientos almacenados en SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-102">Signing Stored Procedures in SQL Server</span></span>
+<span data-ttu-id="48c98-103">Puede firmar un procedimiento almacenado con un certificado o una clave asimétrica.</span><span class="sxs-lookup"><span data-stu-id="48c98-103">You can sign a stored procedure with a certificate or an asymmetric key.</span></span> <span data-ttu-id="48c98-104">Esto está diseñado para los casos en los que no se pueden heredar permisos mediante encadenamiento de propiedad o cuando la cadena de propiedad está rota, como en SQL dinámico.</span><span class="sxs-lookup"><span data-stu-id="48c98-104">This is designed for scenarios when permissions cannot be inherited through ownership chaining or when the ownership chain is broken, such as dynamic SQL.</span></span> <span data-ttu-id="48c98-105">Entonces, se crea un usuario asignado al certificado, el cual concede permisos de usuario en los objetos a los que el procedimiento almacenado necesita tener acceso.</span><span class="sxs-lookup"><span data-stu-id="48c98-105">You then create a user mapped to the certificate, granting the certificate user permissions on the objects the stored procedure needs to access.</span></span>  
   
- Cuando se ejecuta el procedimiento almacenado, SQL Server combina los permisos del usuario del certificado con los del llamador.  A diferencia de la cláusula EXECUTE AS, aquí no cambia el contexto de ejecución del procedimiento.  La funciones integradas que devuelven nombres de usuario e inicio de sesión devuelven el nombre del llamador, no el nombre de usuario del certificado.  
+ <span data-ttu-id="48c98-106">Cuando se ejecuta el procedimiento almacenado, SQL Server combina los permisos del usuario del certificado con los del llamador.</span><span class="sxs-lookup"><span data-stu-id="48c98-106">When the stored procedure is executed, SQL Server combines the permissions of the certificate user with those of the caller.</span></span> <span data-ttu-id="48c98-107">A diferencia de la cláusula EXECUTE AS, aquí no cambia el contexto de ejecución del procedimiento.</span><span class="sxs-lookup"><span data-stu-id="48c98-107">Unlike the EXECUTE AS clause, it does not change the execution context of the procedure.</span></span> <span data-ttu-id="48c98-108">La funciones integradas que devuelven nombres de usuario e inicio de sesión devuelven el nombre del llamador, no el nombre de usuario del certificado.</span><span class="sxs-lookup"><span data-stu-id="48c98-108">Built-in functions that return login and user names return the name of the caller, not the certificate user name.</span></span>  
   
- Una firma digital es un resumen de datos cifrados con una clave privada del firmante.  La clave privada garantiza que la firma digital sea única para su portador o propietario.  Se pueden firmar procedimientos almacenados, funciones o desencadenadores.  
-  
-> [!NOTE]
->  Se puede crear un certificado en la base de datos maestra para conceder permisos a nivel de servidor.  
-  
-## Crear certificados  
- Al firmar un procedimiento almacenado con un certificado, se crea mediante la clave privada un resumen de datos que consta de hash cifrado de código del procedimiento almacenado.  En tiempo de ejecución, el resumen de datos se descifra con la clave pública y se compara con el valor hash del procedimiento almacenado.  La modificación del procedimiento almacenado invalida el valor hash, de manera que la firma digital ya no coincide.  Con ello, se evita que alguien que no tenga acceso a la clave privada pueda cambiar el código del procedimiento almacenado.  Por lo tanto, deberá volver a firmar el procedimiento almacenado cada vez que lo modifique.  
-  
- Son cuatro los pasos que implica la firma de un módulo:  
-  
-1.  Crear un certificado mediante la instrucción Transact\-SQL `CREATE CERTIFICATE [certificateName]`.  Esta instrucción tiene varias opciones para establecer una fecha de inicio y finalización, así como una contraseña.  La fecha de expiración predeterminada es un año  
-  
-2.  Crear una base de datos asociada a un certificado utilizando la instrucción Transact\-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`.  Este usuario existe únicamente en la base de datos y no está asociado a un inicio de sesión.  
-  
-3.  Conceder al usuario del certificado los permisos necesarios en los objetos de la base de datos.  
+ <span data-ttu-id="48c98-109">Una firma digital es un resumen de datos cifrados con una clave privada del firmante.</span><span class="sxs-lookup"><span data-stu-id="48c98-109">A digital signature is a data digest encrypted with the private key of the signer.</span></span> <span data-ttu-id="48c98-110">La clave privada garantiza que la firma digital sea única para su portador o propietario.</span><span class="sxs-lookup"><span data-stu-id="48c98-110">The private key ensures that the digital signature is unique to its bearer or owner.</span></span> <span data-ttu-id="48c98-111">Se pueden firmar procedimientos almacenados, funciones o desencadenadores.</span><span class="sxs-lookup"><span data-stu-id="48c98-111">You can sign stored procedures, functions, or triggers.</span></span>  
   
 > [!NOTE]
->  Un certificado no puede conceder permisos a un usuario que tiene permisos revocados con la instrucción DENY.  DENY siempre tiene prioridad sobre GRANT, lo que evita que el llamador herede permisos concedidos al usuario del certificado.  
+>  <span data-ttu-id="48c98-112">Se puede crear un certificado en la base de datos maestra para conceder permisos a nivel de servidor.</span><span class="sxs-lookup"><span data-stu-id="48c98-112">You can create a certificate in the master database to grant server-level permissions.</span></span>  
   
-1.  Firmar el procedimiento con el certificado utilizando la instrucción Transact\-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
+## <a name="creating-certificates"></a><span data-ttu-id="48c98-113">Crear certificados</span><span class="sxs-lookup"><span data-stu-id="48c98-113">Creating Certificates</span></span>  
+ <span data-ttu-id="48c98-114">Al firmar un procedimiento almacenado con un certificado, se crea mediante la clave privada un resumen de datos que consta de hash cifrado de código del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="48c98-114">When you sign a stored procedure with a certificate, a data digest consisting of the encrypted hash of the stored procedure code is created using the private key.</span></span> <span data-ttu-id="48c98-115">En tiempo de ejecución, el resumen de datos se descifra con la clave pública y se compara con el valor hash del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="48c98-115">At run time, the data digest is decrypted with the public key and compared with the hash value of the stored procedure.</span></span> <span data-ttu-id="48c98-116">La modificación del procedimiento almacenado invalida el valor hash, de manera que la firma digital ya no coincide.</span><span class="sxs-lookup"><span data-stu-id="48c98-116">Modifying the stored procedure invalidates the hash value so that the digital signature no longer matches.</span></span> <span data-ttu-id="48c98-117">Con ello, se evita que alguien que no tenga acceso a la clave privada pueda cambiar el código del procedimiento almacenado.</span><span class="sxs-lookup"><span data-stu-id="48c98-117">This prevents someone who does not have access to the private key from changing the stored procedure code.</span></span> <span data-ttu-id="48c98-118">Por lo tanto, deberá volver a firmar el procedimiento almacenado cada vez que lo modifique.</span><span class="sxs-lookup"><span data-stu-id="48c98-118">Therefore you must re-sign the procedure each time you modify it.</span></span>  
   
-## Recursos externos  
- Para obtener más información, vea los siguientes recursos.  
+ <span data-ttu-id="48c98-119">Son cuatro los pasos que implica la firma de un módulo:</span><span class="sxs-lookup"><span data-stu-id="48c98-119">There are four steps involved in signing a module:</span></span>  
   
-|Recurso|Descripción|  
-|-------------|-----------------|  
-|[Firma de módulos \(Motor de base de datos\)](http://go.microsoft.com/fwlink/?LinkId=98590) en los Libros en pantalla de SQL Server.|Describe la firma de módulos, con un caso de ejemplo, y proporciona vínculos a los temas importantes de Transact\-SQL.|  
-|[Tutorial: Firmar procedimientos almacenados con un certificado](http://msdn.microsoft.com/library/bb283630.aspx) en los Libros en pantalla de SQL Server.|Proporciona un tutorial sobre la firma de procedimientos almacenados con un certificado.|  
+1.  <span data-ttu-id="48c98-120">Crear un certificado mediante la instrucción Transact-SQL `CREATE CERTIFICATE [certificateName]`.</span><span class="sxs-lookup"><span data-stu-id="48c98-120">Create a certificate using the Transact-SQL `CREATE CERTIFICATE [certificateName]` statement.</span></span> <span data-ttu-id="48c98-121">Esta instrucción tiene varias opciones para establecer una fecha de inicio y finalización, así como una contraseña.</span><span class="sxs-lookup"><span data-stu-id="48c98-121">This statement has several options for setting a start and end date and a password.</span></span> <span data-ttu-id="48c98-122">La fecha de expiración predeterminada es un año</span><span class="sxs-lookup"><span data-stu-id="48c98-122">The default expiration date is one year</span></span>  
   
-## Vea también  
- [Proteger aplicaciones de ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Información general sobre seguridad de SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)   
- [Escenarios de seguridad de aplicaciones en SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)   
- [Administrar permisos con procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)   
- [Escribir SQL dinámico seguro en SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)   
- [Personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)   
- [Modificar datos con procedimientos almacenados](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+2.  <span data-ttu-id="48c98-123">Crear una base de datos asociada a un certificado utilizando la instrucción Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`.</span><span class="sxs-lookup"><span data-stu-id="48c98-123">Create a database user associated with that certificate using the Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` statement.</span></span> <span data-ttu-id="48c98-124">Este usuario existe únicamente en la base de datos y no está asociado a un inicio de sesión.</span><span class="sxs-lookup"><span data-stu-id="48c98-124">This user exists in the database only and is not associated with a login.</span></span>  
+  
+3.  <span data-ttu-id="48c98-125">Conceder al usuario del certificado los permisos necesarios en los objetos de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="48c98-125">Grant the certificate user the required permissions on the database objects.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="48c98-126">Un certificado no puede conceder permisos a un usuario que tiene permisos revocados con la instrucción DENY.</span><span class="sxs-lookup"><span data-stu-id="48c98-126">A certificate cannot grant permissions to a user that has had permissions revoked using the DENY statement.</span></span> <span data-ttu-id="48c98-127">DENY siempre tiene prioridad sobre GRANT, lo que evita que el llamador herede permisos concedidos al usuario del certificado.</span><span class="sxs-lookup"><span data-stu-id="48c98-127">DENY always takes precedence over GRANT, preventing the caller from inheriting permissions granted to the certificate user.</span></span>  
+  
+1.  <span data-ttu-id="48c98-128">Firmar el procedimiento con el certificado utilizando la instrucción Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.</span><span class="sxs-lookup"><span data-stu-id="48c98-128">Sign the procedure with the certificate using the Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` statement.</span></span>  
+  
+## <a name="external-resources"></a><span data-ttu-id="48c98-129">Recursos externos</span><span class="sxs-lookup"><span data-stu-id="48c98-129">External Resources</span></span>  
+ <span data-ttu-id="48c98-130">Para obtener más información, vea los siguientes recursos.</span><span class="sxs-lookup"><span data-stu-id="48c98-130">For more information, see the following resources.</span></span>  
+  
+|<span data-ttu-id="48c98-131">Recurso</span><span class="sxs-lookup"><span data-stu-id="48c98-131">Resource</span></span>|<span data-ttu-id="48c98-132">Descripción</span><span class="sxs-lookup"><span data-stu-id="48c98-132">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="48c98-133">[La firma de módulos](http://go.microsoft.com/fwlink/?LinkId=98590) en libros en pantalla de SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-133">[Module Signing](http://go.microsoft.com/fwlink/?LinkId=98590) in SQL Server Books Online</span></span>|<span data-ttu-id="48c98-134">Describe la firma de módulos, con un caso de ejemplo, y proporciona vínculos a los temas importantes de Transact-SQL.</span><span class="sxs-lookup"><span data-stu-id="48c98-134">Describes module signing, providing a sample scenario and links to the relevant Transact-SQL topics.</span></span>|  
+|<span data-ttu-id="48c98-135">[Procedimientos almacenados con un certificado de firma](http://msdn.microsoft.com/library/bb283630.aspx) en libros en pantalla de SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-135">[Signing Stored Procedures with a Certificate](http://msdn.microsoft.com/library/bb283630.aspx) in SQL Server Books Online</span></span>|<span data-ttu-id="48c98-136">Proporciona un tutorial sobre la firma de procedimientos almacenados con un certificado.</span><span class="sxs-lookup"><span data-stu-id="48c98-136">Provides a tutorial for signing a stored procedure with a certificate.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="48c98-137">Vea también</span><span class="sxs-lookup"><span data-stu-id="48c98-137">See Also</span></span>  
+ [<span data-ttu-id="48c98-138">Proteger aplicaciones de ADO.NET</span><span class="sxs-lookup"><span data-stu-id="48c98-138">Securing ADO.NET Applications</span></span>](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="48c98-139">Información general de seguridad de SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-139">Overview of SQL Server Security</span></span>](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
+ [<span data-ttu-id="48c98-140">Escenarios de seguridad de la aplicación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-140">Application Security Scenarios in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
+ [<span data-ttu-id="48c98-141">Administrar permisos con procedimientos almacenados en SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-141">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [<span data-ttu-id="48c98-142">Escribir SQL dinámico seguro en SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-142">Writing Secure Dynamic SQL in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [<span data-ttu-id="48c98-143">Personalizar permisos con suplantación en SQL Server</span><span class="sxs-lookup"><span data-stu-id="48c98-143">Customizing Permissions with Impersonation in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [<span data-ttu-id="48c98-144">Modificar datos con procedimientos almacenados</span><span class="sxs-lookup"><span data-stu-id="48c98-144">Modifying Data with Stored Procedures</span></span>](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [<span data-ttu-id="48c98-145">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="48c98-145">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

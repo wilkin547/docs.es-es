@@ -1,36 +1,42 @@
 ---
-title: "Navegar por DataRelations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Navegar por objetos DataRelation
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5b90b58595c86fc3c4dcaf7fd453c517d6f14904
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Navegar por DataRelations
-Una de las principales funciones de una <xref:System.Data.DataRelation> es permitir la navegación de una <xref:System.Data.DataTable> a otra dentro de un <xref:System.Data.DataSet>.  Esto permite recuperar todos los objetos <xref:System.Data.DataRow> relacionados de una **DataTable** cuando se da una única **DataRow** de una **DataTable** relacionada.  Por ejemplo, después de establecer una **DataRelation** entre una tabla de clientes y una tabla de pedidos, es posible recuperar todas las filas de pedidos de una fila de clientes determinada mediante **GetChildRows**.  
+# <a name="navigating-datarelations"></a><span data-ttu-id="da6d0-102">Navegar por objetos DataRelation</span><span class="sxs-lookup"><span data-stu-id="da6d0-102">Navigating DataRelations</span></span>
+<span data-ttu-id="da6d0-103">Una de las principales funciones de una <xref:System.Data.DataRelation> es permitir la navegación de una <xref:System.Data.DataTable> a otra dentro de un <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="da6d0-103">One of the primary functions of a <xref:System.Data.DataRelation> is to allow navigation from one <xref:System.Data.DataTable> to another within a <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="da6d0-104">Esto le permite recuperar todos relacionado <xref:System.Data.DataRow> objetos en una **DataTable** cuando se especifica una sola **DataRow** desde un relacionados **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="da6d0-104">This allows you to retrieve all the related <xref:System.Data.DataRow> objects in one **DataTable** when given a single **DataRow** from a related **DataTable**.</span></span> <span data-ttu-id="da6d0-105">Por ejemplo, después de establecer un **DataRelation** entre una tabla de clientes y una tabla de pedidos, puede recuperar todas las filas de pedidos de una fila de clientes determinada mediante **GetChildRows**.</span><span class="sxs-lookup"><span data-stu-id="da6d0-105">For example, after establishing a **DataRelation** between a table of customers and a table of orders, you can retrieve all the order rows for a particular customer row using **GetChildRows**.</span></span>  
   
- En el siguiente ejemplo de código se crea una **DataRelation** entre la tabla **Customers** y la tabla **Orders** de un **DataSet**, y se devuelven todos los pedidos de cada cliente.  
+ <span data-ttu-id="da6d0-106">En el ejemplo de código siguiente se crea un **DataRelation** entre el **clientes** tabla y la **pedidos** tabla de un **conjunto de datos** y devuelve todos los pedidos de cada cliente.</span><span class="sxs-lookup"><span data-stu-id="da6d0-106">The following code example creates a **DataRelation** between the **Customers** table and the **Orders** table of a **DataSet** and returns all the orders for each customer.</span></span>  
   
  [!code-csharp[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableRelation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableRelation/VB/source.vb#1)]  
   
- El ejemplo siguiente se basa en el anterior; se relacionan cuatro tablas y se navega por dichas relaciones.  Como en el ejemplo anterior, **CustomerID** relaciona la tabla **Customers** con la tabla **Orders**.  Para cada cliente de la tabla **Customers** se determinan todas las filas secundarias de la tabla **Orders** con el fin de devolver el número de pedidos que tiene un cliente concreto y sus valores de **OrderID**.  
+ <span data-ttu-id="da6d0-107">El ejemplo siguiente se basa en el anterior; se relacionan cuatro tablas y se navega por dichas relaciones.</span><span class="sxs-lookup"><span data-stu-id="da6d0-107">The next example builds on the preceding example, relating four tables together and navigating those relationships.</span></span> <span data-ttu-id="da6d0-108">Como se muestra en el ejemplo anterior, **CustomerID** está relacionada con la **clientes** la tabla a la **pedidos** tabla.</span><span class="sxs-lookup"><span data-stu-id="da6d0-108">As in the previous example, **CustomerID** relates the **Customers** table to the **Orders** table.</span></span> <span data-ttu-id="da6d0-109">Para cada cliente en el **clientes** de tabla, todas las filas secundarias en el **pedidos** se determinan la tabla, con el fin de devolver el número de pedidos que tiene un cliente concreto y sus **OrderID** valores.</span><span class="sxs-lookup"><span data-stu-id="da6d0-109">For each customer in the **Customers** table, all the child rows in the **Orders** table are determined, in order to return the number of orders a particular customer has and their **OrderID** values.</span></span>  
   
- El ejemplo ampliado también devuelve los valores de las tablas **OrderDetails** y **Products**.  La tabla **Orders** está relacionada con la tabla **OrderDetails** mediante **OrderID** con el fin de determinar, para cada pedido de cliente, qué productos y cantidades se pidieron.  Como la tabla **OrderDetails** sólo contiene el **ProductID** de un producto pedido, **OrderDetails** está relacionada con **Products** mediante **ProductID** para devolver el **ProductName**.  En esta relación, **Products** es la tabla primaria y **Order Details** es la secundaria.  Por lo tanto, al recorrer en iteración la tabla **OrderDetails**, se llama a **GetParentRow** para recuperar el valor de **ProductName** relacionado.  
+ <span data-ttu-id="da6d0-110">El ejemplo ampliado también devuelve los valores de la **OrderDetails** y **productos** tablas.</span><span class="sxs-lookup"><span data-stu-id="da6d0-110">The expanded example also returns the values from the **OrderDetails** and **Products** tables.</span></span> <span data-ttu-id="da6d0-111">El **pedidos** tabla se relaciona con la **OrderDetails** tabla mediante **OrderID** para determinar, para cada pedido de cliente, qué productos y cantidades se pidieron.</span><span class="sxs-lookup"><span data-stu-id="da6d0-111">The **Orders** table is related to the **OrderDetails** table using **OrderID** to determine, for each customer order, what products and quantities were ordered.</span></span> <span data-ttu-id="da6d0-112">Dado que la **OrderDetails** tabla contiene solo el **ProductID** de un producto pedido, **OrderDetails** está relacionado con **productos** usar **ProductID** para devolver el **ProductName**.</span><span class="sxs-lookup"><span data-stu-id="da6d0-112">Because the **OrderDetails** table only contains the **ProductID** of an ordered product, **OrderDetails** is related to **Products** using **ProductID** in order to return the **ProductName**.</span></span> <span data-ttu-id="da6d0-113">En esta relación, el **productos** es la tabla primaria y la **Order Details** tabla es el elemento secundario.</span><span class="sxs-lookup"><span data-stu-id="da6d0-113">In this relation, the **Products** table is the parent and the **Order Details** table is the child.</span></span> <span data-ttu-id="da6d0-114">Como resultado, al recorrer en iteración la **OrderDetails** tabla, **GetParentRow** se llama para recuperar el relacionados **ProductName** valor.</span><span class="sxs-lookup"><span data-stu-id="da6d0-114">As a result, when iterating through the **OrderDetails** table, **GetParentRow** is called to retrieve the related **ProductName** value.</span></span>  
   
- Hay que tener en cuenta que al crear la **DataRelation** para las tablas **Customers** y **Orders** no se especifica ningún valor para la marca **createConstraints** \(el valor predeterminado es **true**\).  Se supone que todas las filas de la tabla **Orders** tienen un valor **CustomerID** que existe en la tabla primaria **Customers**.  Si un **CustomerID** existe en la tabla **Orders** pero no existe en la tabla **Customers**, una <xref:System.Data.ForeignKeyConstraint> hará que se inicie una excepción.  
+ <span data-ttu-id="da6d0-115">Tenga en cuenta que, cuando la **DataRelation** se crea para la **clientes** y **pedidos** tablas, no se especifica ningún valor para el **createConstraints**marca (el valor predeterminado es **true**).</span><span class="sxs-lookup"><span data-stu-id="da6d0-115">Notice that when the **DataRelation** is created for the **Customers** and **Orders** tables, no value is specified for the **createConstraints** flag (the default is **true**).</span></span> <span data-ttu-id="da6d0-116">Se supone que todas las filas de la **pedidos** tabla tiene un **CustomerID** valor que existe en el elemento primario **clientes** tabla.</span><span class="sxs-lookup"><span data-stu-id="da6d0-116">This assumes that all the rows in the **Orders** table have a **CustomerID** value that exists in the parent **Customers** table.</span></span> <span data-ttu-id="da6d0-117">Si un **CustomerID** existe en el **pedidos** tabla que no existe en el **clientes** tabla, un <xref:System.Data.ForeignKeyConstraint> hace que se produzca una excepción.</span><span class="sxs-lookup"><span data-stu-id="da6d0-117">If a **CustomerID** exists in the **Orders** table that does not exist in the **Customers** table, a <xref:System.Data.ForeignKeyConstraint> causes an exception to be thrown.</span></span>  
   
- Cuando la columna secundaria pueda contener valores no incluidos en la columna primaria, hay que asignar el valor **false** a la marca **createConstraints** cuando se agregue la **DataRelation**.  En el ejemplo, la marca **createConstraints** tiene el valor **false** para la **DataRelation** entre las tablas **Orders** y **OrderDetails**.  Esto permite que la aplicación devuelva todos los registros de la tabla **OrderDetails** y sólo un subconjunto de registros de la tabla **Orders** sin generar una excepción en tiempo de ejecución.  El ejemplo ampliado genera el resultado con el siguiente formato.  
+ <span data-ttu-id="da6d0-118">Cuando la columna secundaria pueda contener valores que no contienen la columna primaria, establezca la **createConstraints** indicador en **false** al agregar el **DataRelation**.</span><span class="sxs-lookup"><span data-stu-id="da6d0-118">When the child column might contain values that the parent column does not contain, set the **createConstraints** flag to **false** when adding the **DataRelation**.</span></span> <span data-ttu-id="da6d0-119">En el ejemplo, el **createConstraints** marca se establece en **false** para el **DataRelation** entre el **pedidos** tabla y el  **OrderDetails** tabla.</span><span class="sxs-lookup"><span data-stu-id="da6d0-119">In the example, the **createConstraints** flag is set to **false** for the **DataRelation** between the **Orders** table and the **OrderDetails** table.</span></span> <span data-ttu-id="da6d0-120">Esto permite que la aplicación devolver todos los registros de la **OrderDetails** tabla y solo un subconjunto de registros desde el **pedidos** tabla sin generar una excepción en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="da6d0-120">This enables the application to return all the records from the **OrderDetails** table and only a subset of records from the **Orders** table without generating a run-time exception.</span></span> <span data-ttu-id="da6d0-121">El ejemplo ampliado genera el resultado con el siguiente formato.</span><span class="sxs-lookup"><span data-stu-id="da6d0-121">The expanded sample generates output in the following format.</span></span>  
   
 ```  
 Customer ID: NORTS  
@@ -48,11 +54,11 @@ Customer ID: NORTS
           Quantity: 3  
 ```  
   
- El siguiente ejemplo de código es un ejemplo ampliado en el que se devuelven los valores de las tablas **OrderDetails** y **Products**, y sólo se devuelve un subconjunto de los registros de la tabla **Orders**.  
+ <span data-ttu-id="da6d0-122">El ejemplo de código siguiente es un ejemplo ampliado donde los valores de la **OrderDetails** y **productos** tablas, y se devuelven solo un subconjunto de los registros de la **pedidos**tabla que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="da6d0-122">The following code example is an expanded sample where the values from the **OrderDetails** and **Products** tables are returned, with only a subset of the records in the **Orders** table being returned.</span></span>  
   
  [!code-csharp[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
-## Vea también  
- [DataSets, DataTables y DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="da6d0-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="da6d0-123">See Also</span></span>  
+ [<span data-ttu-id="da6d0-124">Objetos DataSet, DataTable y DataView</span><span class="sxs-lookup"><span data-stu-id="da6d0-124">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="da6d0-125">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="da6d0-125">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

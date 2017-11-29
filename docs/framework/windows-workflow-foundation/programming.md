@@ -1,62 +1,66 @@
 ---
-title: "Programaci&#243;n de Windows Workflow Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "programar [WF]"
-  - "WF [WF], programar"
-  - "Windows Workflow Foundation [WF], programar"
+title: "Programación de Windows Workflow Foundation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Workflow Foundation [WF], programming
+- programming [WF]
+- WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 952f1f16ff610282f2f15c9d78bf3d45d5c354da
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Programaci&#243;n de Windows Workflow Foundation
-Esta sección incluye un conjunto de temas principales que debería comprender para llegar a ser un programador competente de [!INCLUDE[wf](../../../includes/wf-md.md)].  
+# <a name="windows-workflow-foundation-programming"></a><span data-ttu-id="83080-102">Programación de Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="83080-102">Windows Workflow Foundation Programming</span></span>
+<span data-ttu-id="83080-103">Esta sección incluye un conjunto de temas principales que debería comprender para llegar a ser un programador competente de [!INCLUDE[wf](../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="83080-103">This section contains a set of primer topics that you should understand to become a proficient [!INCLUDE[wf](../../../includes/wf-md.md)] programmer.</span></span>  
   
-## En esta sección  
- [Diseñar flujos de trabajo](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)  
- Temas en los que se describen los paradigmas de control de flujos utilizados en el desarrollo de los flujos de trabajo.  
+## <a name="in-this-section"></a><span data-ttu-id="83080-104">En esta sección</span><span class="sxs-lookup"><span data-stu-id="83080-104">In This Section</span></span>  
+ [<span data-ttu-id="83080-105">Diseño de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-105">Designing Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ <span data-ttu-id="83080-106">Temas en los que se describen los paradigmas de control de flujos utilizados en el desarrollo de los flujos de trabajo.</span><span class="sxs-lookup"><span data-stu-id="83080-106">Topics that describe the flow-control paradigms used in workflow development.</span></span>  
   
- [Usar y crear actividades](../../../docs/framework/windows-workflow-foundation//using-and-creating-activities.md)  
- Temas en los que se describen las actividades proporcionadas por el sistema que están disponibles en [!INCLUDE[wf](../../../includes/wf-md.md)].  
+ [<span data-ttu-id="83080-107">Uso y creación de actividades</span><span class="sxs-lookup"><span data-stu-id="83080-107">Using and Creating Activities</span></span>](../../../docs/framework/windows-workflow-foundation/using-and-creating-activities.md)  
+ <span data-ttu-id="83080-108">Temas en los que se describen las actividades proporcionadas por el sistema que están disponibles en [!INCLUDE[wf](../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="83080-108">Topics that describes the system-provided activities available in [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span>  
   
- [Modelo de datos de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//data-model.md)  
- Temas en los que se describen variables, argumentos y expresiones en [!INCLUDE[wf1](../../../includes/wf1-md.md)].  
+ [<span data-ttu-id="83080-109">Modelo de datos de Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="83080-109">Windows Workflow Foundation Data Model</span></span>](../../../docs/framework/windows-workflow-foundation/data-model.md)  
+ <span data-ttu-id="83080-110">Temas en los que se describen variables, argumentos y expresiones en [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="83080-110">Topics that describe variables, arguments and expressions in [!INCLUDE[wf1](../../../includes/wf1-md.md)].</span></span>  
   
- [Esperar entrada en un flujo de trabajo](../../../docs/framework/windows-workflow-foundation//waiting-for-input-in-a-workflow.md)  
- Temas en los que se describe cómo utilizar marcadores y actividades de mensajería.  
+ [<span data-ttu-id="83080-111">Espera de la entrada en un flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-111">Waiting for Input in a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
+ <span data-ttu-id="83080-112">Temas en los que se describe cómo utilizar marcadores y actividades de mensajería.</span><span class="sxs-lookup"><span data-stu-id="83080-112">Topics that describes how to use bookmarks and messaging activities.</span></span>  
   
- [Excepciones, transacciones y compensación](../../../docs/framework/windows-workflow-foundation//exceptions-transactions-and-compensation.md)  
- Temas en los que se describe cómo utilizar controladores de excepciones, transacciones y compensaciones para administrar los errores en tiempo de ejecución.  
+ [<span data-ttu-id="83080-113">Excepciones, transacciones y compensación</span><span class="sxs-lookup"><span data-stu-id="83080-113">Exceptions, Transactions, and Compensation</span></span>](../../../docs/framework/windows-workflow-foundation/exceptions-transactions-and-compensation.md)  
+ <span data-ttu-id="83080-114">Temas en los que se describe cómo utilizar controladores de excepciones, transacciones y compensaciones para administrar los errores en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="83080-114">Topics that describe how to use exception handlers, transactions, and compensation to handle run-time errors.</span></span>  
   
- [Hospedar flujos de trabajo](../../../docs/framework/windows-workflow-foundation//hosting-workflows.md)  
- Temas en los que se describen los detalles para escribir las aplicaciones de host de flujo de trabajo.  
+ [<span data-ttu-id="83080-115">Hospedaje de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-115">Hosting Workflows</span></span>](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)  
+ <span data-ttu-id="83080-116">Temas en los que se describen los detalles para escribir las aplicaciones de host de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="83080-116">Topics that describe the details for writing workflow host applications.</span></span>  
   
- [actualización dinámica](../../../docs/framework/windows-workflow-foundation//dynamic-update.md)  
- Describe cómo usar las actualizaciones dinámicas para actualizar la definición de flujo de trabajo de una instancia de flujo de trabajo persistente.  
+ [<span data-ttu-id="83080-117">Actualización dinámica</span><span class="sxs-lookup"><span data-stu-id="83080-117">Dynamic Update</span></span>](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)  
+ <span data-ttu-id="83080-118">Describe cómo usar las actualizaciones dinámicas para actualizar la definición de flujo de trabajo de una instancia de flujo de trabajo persistente.</span><span class="sxs-lookup"><span data-stu-id="83080-118">Describes how to use dynamic update to update the workflow definition of a persisted workflow instance.</span></span>  
   
- [Servicios de flujo de trabajo](../../../docs/framework/wcf/feature-details/workflow-services.md)  
- Temas en los que se describe el modelo de programación que permite escribir servicios mediante declaración.  
+ [<span data-ttu-id="83080-119">Servicios de flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-119">Workflow Services</span></span>](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ <span data-ttu-id="83080-120">Temas en los que se describe el modelo de programación que permite escribir servicios mediante declaración.</span><span class="sxs-lookup"><span data-stu-id="83080-120">Topics that describe the programming model that supports writing services declaratively.</span></span>  
   
- [Persistencia del flujo de trabajo](../../../docs/framework/windows-workflow-foundation//workflow-persistence.md)  
- Temas en los que se describen las opciones para conservar automática o manualmente datos de flujo de trabajo, así como para descargar flujos de trabajo de la memoria.  
+ [<span data-ttu-id="83080-121">Persistencia del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-121">Workflow Persistence</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ <span data-ttu-id="83080-122">Temas en los que se describen las opciones para conservar automática o manualmente datos de flujo de trabajo, así como para descargar flujos de trabajo de la memoria.</span><span class="sxs-lookup"><span data-stu-id="83080-122">Topics that describe the options for automatically or manually persisting workflow data and unloading workflows from memory.</span></span>  
   
- [Guía de migración](../../../docs/framework/windows-workflow-foundation//migration-guidance.md)  
- Temas en los que se describe cómo migrar flujos de trabajo de versiones anteriores de [!INCLUDE[wf](../../../includes/wf-md.md)].  
+ [<span data-ttu-id="83080-123">Guía de migración</span><span class="sxs-lookup"><span data-stu-id="83080-123">Migration Guidance</span></span>](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)  
+ <span data-ttu-id="83080-124">Temas en los que se describe cómo migrar flujos de trabajo de versiones anteriores de [!INCLUDE[wf](../../../includes/wf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="83080-124">Topics that describe how to migrate workflows from previous versions of [!INCLUDE[wf](../../../includes/wf-md.md)].</span></span>  
   
- [Seguimiento y traza del flujo de trabajo](../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)  
- Temas en los que se describe el seguimiento y la traza de los flujos de trabajo, y cómo estas características se utilizan para supervisar las aplicaciones de flujo de trabajo.  
+ [<span data-ttu-id="83080-125">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-125">Workflow Tracking and Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ <span data-ttu-id="83080-126">Temas en los que se describe el seguimiento y la traza de los flujos de trabajo, y cómo estas características se utilizan para supervisar las aplicaciones de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="83080-126">Topics that describe workflow tracking and tracing and how these features are used for monitoring workflow applications.</span></span>  
   
- [Seguridad del flujo de trabajo](../../../docs/framework/windows-workflow-foundation//workflow-security.md)  
- Aborda cómo mantener su flujo de trabajo protegido al usar SQL y [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+ [<span data-ttu-id="83080-127">Seguridad de los flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="83080-127">Workflow Security</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
+ <span data-ttu-id="83080-128">Aborda cómo mantener su flujo de trabajo protegido al usar SQL y [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span><span class="sxs-lookup"><span data-stu-id="83080-128">Discusses how to keep your workflow secure when using SQL and [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].</span></span>  
   
- [Rendimiento de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//performance.md)  
- Describe el rendimiento de [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 y lo compara con la versión anterior de WF.
+ [<span data-ttu-id="83080-129">Rendimiento de Windows Workflow Foundation 4</span><span class="sxs-lookup"><span data-stu-id="83080-129">Windows Workflow Foundation 4 Performance</span></span>](../../../docs/framework/windows-workflow-foundation/performance.md)  
+ <span data-ttu-id="83080-130">Describe el rendimiento de [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 y lo compara con la versión anterior de WF.</span><span class="sxs-lookup"><span data-stu-id="83080-130">Discusses [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 performance and compares it to the previous version of WF.</span></span>

@@ -1,37 +1,39 @@
 ---
-title: "Proveedores de servicios de datos personalizados (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicios de datos de Microsoft WCF, proveedores"
+title: Proveedores de servicios de datos personalizados (WCF Data Services)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 90e837739edc74ee469f42720f52789ee1c8f6fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Proveedores de servicios de datos personalizados (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] incluye un conjunto de proveedores que permite definir un modelo de datos basado en tipos de datos enlazados en tiempo de ejecución.  
+# <a name="custom-data-service-providers-wcf-data-services"></a><span data-ttu-id="e1834-102">Proveedores de servicios de datos personalizados (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="e1834-102">Custom Data Service Providers (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="e1834-103"> incluye un conjunto de proveedores que permite definir un modelo de datos basado en tipos de datos enlazados en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="e1834-103"> includes a set of providers that enables you to define a data model based on late-bound data types.</span></span>  
   
-|Proveedor|Descripción|  
-|---------------|-----------------|  
-|Proveedor de metadatos|Este es el proveedor principal de servicios de datos personalizados que permite definir un modelo de datos personalizado en tiempo de ejecución implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.|  
-|Proveedor de consultas|Este proveedor permite ejecutar las consultas sobre un modelo de datos personalizado que se define utilizando la interfaz <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.  El proveedor de consultas se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceQueryProvider>.|  
-|Proveedor de actualizaciones|Este proveedor permite realizar actualizaciones a los tipos expuestos en un proveedor de servicio de datos personalizado y administrar la simultaneidad.  El proveedor de actualizaciones se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>.|  
-|Proveedor de paginaciones|Este proveedor se utiliza con el proveedor del servicio de datos personalizado para habilitar la compatibilidad con la paginación controlada por servidor.  Un proveedor de paginaciones para un servicio de datos personalizado se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServicePagingProvider>.|  
-|Proveedor de transmisiones por secuencias|Este proveedor permite exponer tipos de datos de objetos binarios grandes como una secuencia.  Si implementa la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, se crea un proveedor de transmisiones por secuencias.  El proveedor de transmisiones por secuencias también se puede utilizar con Entity Framework y proveedores de orígenes de datos de reflexión.  Para obtener más información, consulta [Proveedor de transmisión por secuencias](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
+|<span data-ttu-id="e1834-104">Proveedor</span><span class="sxs-lookup"><span data-stu-id="e1834-104">Provider</span></span>|<span data-ttu-id="e1834-105">Descripción</span><span class="sxs-lookup"><span data-stu-id="e1834-105">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="e1834-106">Proveedor de metadatos</span><span class="sxs-lookup"><span data-stu-id="e1834-106">Metadata provider</span></span>|<span data-ttu-id="e1834-107">Este es el proveedor principal de servicios de datos personalizados que permite definir un modelo de datos personalizado en tiempo de ejecución implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.</span><span class="sxs-lookup"><span data-stu-id="e1834-107">This is the core custom data service provider that enables you to define a custom data model at runtime by implementing the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span>|  
+|<span data-ttu-id="e1834-108">Proveedor de consultas</span><span class="sxs-lookup"><span data-stu-id="e1834-108">Query provider</span></span>|<span data-ttu-id="e1834-109">Este proveedor permite ejecutar las consultas sobre un modelo de datos personalizado que se define utilizando la interfaz <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.</span><span class="sxs-lookup"><span data-stu-id="e1834-109">This provider enables you to execute queries against a custom data model that is defined by using the <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> interface.</span></span> <span data-ttu-id="e1834-110">El proveedor de consultas se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceQueryProvider>.</span><span class="sxs-lookup"><span data-stu-id="e1834-110">The query provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceQueryProvider> interface.</span></span>|  
+|<span data-ttu-id="e1834-111">Proveedor de actualizaciones</span><span class="sxs-lookup"><span data-stu-id="e1834-111">Update provider</span></span>|<span data-ttu-id="e1834-112">Este proveedor permite realizar actualizaciones a los tipos expuestos en un proveedor de servicio de datos personalizado y administrar la simultaneidad.</span><span class="sxs-lookup"><span data-stu-id="e1834-112">This provider enables you to make updates to types that are exposed in a custom data service provider and to manage concurrency.</span></span> <span data-ttu-id="e1834-113">El proveedor de actualizaciones se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServiceUpdateProvider>.</span><span class="sxs-lookup"><span data-stu-id="e1834-113">An update provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceUpdateProvider> interface</span></span>|  
+|<span data-ttu-id="e1834-114">Proveedor de paginaciones</span><span class="sxs-lookup"><span data-stu-id="e1834-114">Paging provider</span></span>|<span data-ttu-id="e1834-115">Este proveedor se utiliza con el proveedor del servicio de datos personalizado para habilitar la compatibilidad con la paginación controlada por servidor.</span><span class="sxs-lookup"><span data-stu-id="e1834-115">This provider is used with the custom data service provider to enable server-driven paging support.</span></span> <span data-ttu-id="e1834-116">Un proveedor de paginaciones para un servicio de datos personalizado se crea implementando la interfaz <xref:System.Data.Services.Providers.IDataServicePagingProvider>.</span><span class="sxs-lookup"><span data-stu-id="e1834-116">A paging provider for a custom data service is created by implementing the <xref:System.Data.Services.Providers.IDataServicePagingProvider> interface.</span></span>|  
+|<span data-ttu-id="e1834-117">Proveedor de transmisiones por secuencias</span><span class="sxs-lookup"><span data-stu-id="e1834-117">Streaming provider</span></span>|<span data-ttu-id="e1834-118">Este proveedor permite exponer tipos de datos de objetos binarios grandes como una secuencia.</span><span class="sxs-lookup"><span data-stu-id="e1834-118">This provider enables you to expose binary large object data types as a stream.</span></span> <span data-ttu-id="e1834-119">Si implementa la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, se crea un proveedor de transmisiones por secuencias.</span><span class="sxs-lookup"><span data-stu-id="e1834-119">A streaming provider is created by implementing the <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interface.</span></span> <span data-ttu-id="e1834-120">El proveedor de transmisiones por secuencias también se puede utilizar con Entity Framework y proveedores de orígenes de datos de reflexión.</span><span class="sxs-lookup"><span data-stu-id="e1834-120">The streaming provider can also be used with Entity Framework and reflection data source providers.</span></span> <span data-ttu-id="e1834-121">Para obtener más información, consulte [proveedor de transmisión por secuencias](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e1834-121">For more information, see [Streaming Provider](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).</span></span>|  
   
- Para obtener más información, vea el artículo sobre [Proveedores de servicios de datos personalizados](http://go.microsoft.com/fwlink/?LinkID=186850) y el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Kit de herramientas para proveedores en el [SDK de OData](http://go.microsoft.com/fwlink/?LinkId=186069).  
+ <span data-ttu-id="e1834-122">Para obtener más información, vea el artículo [proveedores de servicios de datos personalizados](http://go.microsoft.com/fwlink/?LinkID=186850) y [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Kit de herramientas de proveedor en el [SDK de OData](http://go.microsoft.com/fwlink/?LinkId=186069).</span><span class="sxs-lookup"><span data-stu-id="e1834-122">For more information, see the article [Custom Data Service Providers](http://go.microsoft.com/fwlink/?LinkID=186850) and the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Provider Toolkit in the [OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069).</span></span>  
   
-## Vea también  
- [Proveedores de servicios de datos](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)   
- [Proveedor de Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)   
- [Proveedor de reflexión](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="e1834-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="e1834-123">See Also</span></span>  
+ [<span data-ttu-id="e1834-124">Proveedores de servicios de datos</span><span class="sxs-lookup"><span data-stu-id="e1834-124">Data Services Providers</span></span>](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [<span data-ttu-id="e1834-125">Proveedor de Entity Framework</span><span class="sxs-lookup"><span data-stu-id="e1834-125">Entity Framework Provider</span></span>](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
+ [<span data-ttu-id="e1834-126">Proveedor de reflexión</span><span class="sxs-lookup"><span data-stu-id="e1834-126">Reflection Provider</span></span>](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

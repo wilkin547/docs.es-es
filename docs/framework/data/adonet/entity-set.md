@@ -1,56 +1,59 @@
 ---
-title: "conjunto de entidades | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: conjunto de entidades
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 6b28be2b3bdddd9457874881e930ea978ef5c2b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# conjunto de entidades
-Un *conjunto de entidades* es un contenedor lógico para las instancias de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) y las instancias de cualquier tipo que se deriven de ese tipo de entidad.  \(Para obtener información acerca de los tipos derivados, vea [Entity Data Model: Herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)\). La relación entre un tipo de entidad y un conjunto de entidades es análoga a la relación entre una fila y una tabla en una base de datos relacional: al igual que una fila, un tipo de entidad describe la estructura de los datos y, al igual que una tabla, un conjunto de entidades contiene instancias de una determinada estructura.  Un conjunto de entidades no es una construcción de modelado de datos, ya que no describe la estructura de los datos.  En su lugar, un conjunto de entidades proporciona una construcción para que un entorno de hospedaje o de almacenamiento \(como Common Language Runtime o una base de datos de SQL Server\) agrupe las instancias del tipo de entidad y se puedan asignar a un almacén de datos.  
+# <a name="entity-set"></a><span data-ttu-id="8032a-102">conjunto de entidades</span><span class="sxs-lookup"><span data-stu-id="8032a-102">entity set</span></span>
+<span data-ttu-id="8032a-103">Un *conjunto de entidades* es un contenedor lógico para instancias de un [tipo de entidad](../../../../docs/framework/data/adonet/entity-type.md) y las instancias de cualquier tipo derivado de ese tipo de entidad.</span><span class="sxs-lookup"><span data-stu-id="8032a-103">An *entity set* is a logical container for instances of an [entity type](../../../../docs/framework/data/adonet/entity-type.md) and instances of any type derived from that entity type.</span></span> <span data-ttu-id="8032a-104">(Para obtener información sobre los tipos derivados, vea [Entity Data Model: herencia](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) La relación entre un tipo de entidad y un conjunto de entidades es análoga a la relación entre una fila y una tabla en una base de datos relacional: al igual que una fila, un tipo de entidad describe la estructura de los datos y, al igual que una tabla, un conjunto de entidades contiene instancias de una determinada estructura.</span><span class="sxs-lookup"><span data-stu-id="8032a-104">(For information about derived types, see [Entity Data Model: Inheritance](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) The relationship between an entity type and an entity set is analogous to the relationship between a row and a table in a relational database: Like a row, an entity type describes data structure, and, like a table, an entity set contains instances of a given structure.</span></span> <span data-ttu-id="8032a-105">Un conjunto de entidades no es una construcción de modelado de datos, ya que no describe la estructura de los datos.</span><span class="sxs-lookup"><span data-stu-id="8032a-105">An entity set is not a data modeling construct; it does not describe the structure of data.</span></span> <span data-ttu-id="8032a-106">En su lugar, un conjunto de entidades proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias del tipo de entidad y se puedan asignar a un almacén de datos.</span><span class="sxs-lookup"><span data-stu-id="8032a-106">Instead, an entity set provides a construct for a hosting or storage environment (such as the common language runtime or a SQL Server database) to group entity type instances so that they can be mapped to a data store.</span></span>  
   
- Un conjunto de entidades se define dentro de un [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md), que es una agrupación lógica de conjuntos de entidades y [conjuntos de asociaciones](../../../../docs/framework/data/adonet/association-set.md).  
+ <span data-ttu-id="8032a-107">Un conjunto de entidades se define dentro de un [contenedor de entidades](../../../../docs/framework/data/adonet/entity-container.md), que es una agrupación lógica de conjuntos de entidades y [conjuntos de asociaciones](../../../../docs/framework/data/adonet/association-set.md).</span><span class="sxs-lookup"><span data-stu-id="8032a-107">An entity set is defined within an [entity container](../../../../docs/framework/data/adonet/entity-container.md), which is a logical grouping of entity sets and [association sets](../../../../docs/framework/data/adonet/association-set.md).</span></span>  
   
- Para que una instancia de tipo de entidad exista en un conjunto de entidades, deben cumplirse las condiciones siguientes:  
+ <span data-ttu-id="8032a-108">Para que una instancia de tipo de entidad exista en un conjunto de entidades, deben cumplirse las condiciones siguientes:</span><span class="sxs-lookup"><span data-stu-id="8032a-108">For an entity type instance to exist in an entity set, the following must be true:</span></span>  
   
--   El tipo de la instancia puede ser el mismo que el tipo de entidad en el que se basa el conjunto de entidades, o un subtipo del tipo de entidad.  
+-   <span data-ttu-id="8032a-109">El tipo de la instancia puede ser el mismo que el tipo de entidad en el que se basa el conjunto de entidades, o un subtipo del tipo de entidad.</span><span class="sxs-lookup"><span data-stu-id="8032a-109">The type of the instance is either the same as the entity type on which the entity set is based, or the type of the instance is a subtype of the entity type.</span></span>  
   
--   La [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) para la instancia es única dentro del conjunto de entidades.  
+-   <span data-ttu-id="8032a-110">El [clave de entidad](../../../../docs/framework/data/adonet/entity-key.md) para la instancia es única en el conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="8032a-110">The [entity key](../../../../docs/framework/data/adonet/entity-key.md) for the instance is unique within the entity set.</span></span>  
   
--   La instancia no existe en ningún otro conjunto de entidades.  
+-   <span data-ttu-id="8032a-111">La instancia no existe en ningún otro conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="8032a-111">The instance does not exist in any other entity set.</span></span>  
   
     > [!NOTE]
-    >  Se pueden definir varios conjuntos de entidades usando el mismo tipo de entidad, pero una instancia de un tipo de entidad determinado solo puede existir en un conjunto de entidades.  
+    >  <span data-ttu-id="8032a-112">Se pueden definir varios conjuntos de entidades usando el mismo tipo de entidad, pero una instancia de un tipo de entidad determinado solo puede existir en un conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="8032a-112">Multiple entity sets can be defined using the same entity type, but an instance of a given entity type can only exist in one entity set.</span></span>  
   
- No es necesario definir un conjunto de entidades para cada tipo de entidad de un modelo conceptual.  
+ <span data-ttu-id="8032a-113">No es necesario definir un conjunto de entidades para cada tipo de entidad de un modelo conceptual.</span><span class="sxs-lookup"><span data-stu-id="8032a-113">You do not have to define an entity set for each entity type in a conceptual model.</span></span>  
   
-## Ejemplo  
- El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.  
+## <a name="example"></a><span data-ttu-id="8032a-114">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="8032a-114">Example</span></span>  
+ <span data-ttu-id="8032a-115">El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.</span><span class="sxs-lookup"><span data-stu-id="8032a-115">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
   
- ![Modelo de ejemplo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ <span data-ttu-id="8032a-116">![Ejemplo de modelo](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span><span class="sxs-lookup"><span data-stu-id="8032a-116">![Example Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")</span></span>  
   
- El diagrama siguiente muestra dos conjuntos de entidades \(`Books` y `Publishers`\) y un conjunto de asociaciones \(`PublishedBy`\) basados en el modelo conceptual mostrado anteriormente.  En el conjunto de entidades `Books`, Bi representa una instancia del tipo de entidad `Book` en tiempo de ejecución.  De igual forma, Pj representa una instancia de `Publisher` en el conjunto de entidades `Publishers`.  BiPj representa una instancia de la asociación `PublishedBy` en el conjunto de asociaciones `PublishedBy`.  
+ <span data-ttu-id="8032a-117">El diagrama siguiente muestra dos conjuntos de entidades (`Books` y `Publishers`) y un conjunto de asociaciones (`PublishedBy`) basados en el modelo conceptual mostrado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="8032a-117">The following diagram shows two entity sets (`Books` and `Publishers`) and an association set (`PublishedBy`) based on the conceptual model shown above.</span></span> <span data-ttu-id="8032a-118">BI en el `Books` conjunto de entidades representa una instancia de la `Book` tipo de entidad en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="8032a-118">Bi in the `Books` entity set represents an instance of the `Book` entity type at run time.</span></span> <span data-ttu-id="8032a-119">De forma similar, Pj representan un `Publisher` de instancia de la `Publishers` conjunto de entidades.</span><span class="sxs-lookup"><span data-stu-id="8032a-119">Similarly, Pj represent a `Publisher` instance in the `Publishers` entity set.</span></span> <span data-ttu-id="8032a-120">BiPj representa una instancia de la `PublishedBy` asociación en el `PublishedBy` conjunto de asociaciones.</span><span class="sxs-lookup"><span data-stu-id="8032a-120">BiPj represents an instance of the `PublishedBy` association in the `PublishedBy` association set.</span></span>  
   
- ![Ejemplo de conjuntos](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ <span data-ttu-id="8032a-121">![Establece en el ejemplo se](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")</span><span class="sxs-lookup"><span data-stu-id="8032a-121">![Sets Example](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")</span></span>  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio \(DSL\) denominado lenguaje de definición de esquemas conceptuales \([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)\) para definir los modelos conceptuales.  El código CSDL siguiente define un contenedor de entidades con un conjunto de entidades para cada tipo de entidad del modelo conceptual mostrado anteriormente.  Tenga en cuenta que el nombre y el tipo de entidad de cada conjunto de entidades se definen mediante atributos XML.  
+ <span data-ttu-id="8032a-122">El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales.</span><span class="sxs-lookup"><span data-stu-id="8032a-122">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="8032a-123">El código CSDL siguiente define un contenedor de entidades con un conjunto de entidades para cada tipo de entidad del modelo conceptual mostrado anteriormente.</span><span class="sxs-lookup"><span data-stu-id="8032a-123">The following CSDL defines an entity container with one entity set for each entity type in the conceptual model shown above.</span></span> <span data-ttu-id="8032a-124">Tenga en cuenta que el nombre y el tipo de entidad de cada conjunto de entidades se definen mediante atributos XML.</span><span class="sxs-lookup"><span data-stu-id="8032a-124">Note that the name and entity type for each entity set are defined using XML attributes.</span></span>  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- Es posible definir varios conjuntos de entidades por tipo \(MEST\).  El código CSDL siguiente define un contenedor de entidades con dos conjuntos de entidades para el tipo de entidad `Book`:  
+ <span data-ttu-id="8032a-125">Es posible definir varios conjuntos de entidades por tipo (MEST).</span><span class="sxs-lookup"><span data-stu-id="8032a-125">It is possible to define multiple entity sets per type (MEST).</span></span> <span data-ttu-id="8032a-126">El código CSDL siguiente define un contenedor de entidades con dos conjuntos de entidades para el tipo de entidad `Book`:</span><span class="sxs-lookup"><span data-stu-id="8032a-126">The following CSDL defines an entity container with two entity sets for the `Book` entity type:</span></span>  
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## Vea también  
- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="8032a-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="8032a-127">See Also</span></span>  
+ [<span data-ttu-id="8032a-128">Conceptos básicos de modelo de datos de entidad</span><span class="sxs-lookup"><span data-stu-id="8032a-128">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="8032a-129">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="8032a-129">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

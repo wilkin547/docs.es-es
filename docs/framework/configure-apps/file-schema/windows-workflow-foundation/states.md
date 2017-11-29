@@ -1,88 +1,97 @@
 ---
-title: "&lt;states&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;Estados&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73848bd1b8b23d6135572dc7fbb7b5e15b169554
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;states&gt;
-Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
+# <a name="ltstatesgt"></a><span data-ttu-id="ffab6-102">&lt;Estados&gt;</span><span class="sxs-lookup"><span data-stu-id="ffab6-102">&lt;states&gt;</span></span>
+<span data-ttu-id="ffab6-103">Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ffab6-103">Represents a collection of subscribed states from the tracked workflow instance when the tracking records are created.</span></span>  
   
- Para obtener más información sobre las consultas de los perfiles de seguimiento, consulte [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)  
+ <span data-ttu-id="ffab6-104">Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span><span class="sxs-lookup"><span data-stu-id="ffab6-104">For more information on tracking profile queries, see [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
-## Sintaxis  
+<span data-ttu-id="ffab6-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="ffab6-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="ffab6-106">\<seguimiento ></span><span class="sxs-lookup"><span data-stu-id="ffab6-106">\<tracking></span></span>  
+<span data-ttu-id="ffab6-107">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="ffab6-107">\<trackingProfile></span></span>  
+<span data-ttu-id="ffab6-108">\<flujo de trabajo ></span><span class="sxs-lookup"><span data-stu-id="ffab6-108">\<workflow></span></span>  
+<span data-ttu-id="ffab6-109">\<workflowInstanceQueries ></span><span class="sxs-lookup"><span data-stu-id="ffab6-109">\<workflowInstanceQueries></span></span>  
+<span data-ttu-id="ffab6-110">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="ffab6-110">\<workflowInstanceQuery></span></span>  
+<span data-ttu-id="ffab6-111">\<Estados ></span><span class="sxs-lookup"><span data-stu-id="ffab6-111">\<states></span></span>  
   
-```vb  
+## <a name="syntax"></a><span data-ttu-id="ffab6-112">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ffab6-112">Syntax</span></span>  
   
-<tracking>  
-   <trackingProfile name="Name">  
-       <workflow>  
-          <workflowInstanceQueries>  
-             <workflowInstanceQuery>  
-                <states>  
-                   <state name="Name"/>  
-                </states>  
-            </workflowInstanceQuery>  
-         </workflowInstanceQueries>  
-       </workflow>  
-   </trackingProfile>  
+```xml  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="Name"/>
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+    </workflow>
+  </trackingProfile>
 </tracking>  
-  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ffab6-113">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ffab6-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="ffab6-114">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="ffab6-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="ffab6-115">Atributos</span><span class="sxs-lookup"><span data-stu-id="ffab6-115">Attributes</span></span>  
+ <span data-ttu-id="ffab6-116">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="ffab6-116">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="ffab6-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ffab6-117">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<state\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Un estado suscrito de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crea el registro del seguimiento.|  
+|<span data-ttu-id="ffab6-118">Elemento</span><span class="sxs-lookup"><span data-stu-id="ffab6-118">Element</span></span>|<span data-ttu-id="ffab6-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="ffab6-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ffab6-120">\<estado ></span><span class="sxs-lookup"><span data-stu-id="ffab6-120">\<state></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|<span data-ttu-id="ffab6-121">Un estado suscrito de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crea el registro del seguimiento.</span><span class="sxs-lookup"><span data-stu-id="ffab6-121">A subscribed state from the tracked workflow instance when the tracking record is created.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="ffab6-122">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ffab6-122">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<workflowInstanceQuery\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.|  
+|<span data-ttu-id="ffab6-123">Elemento</span><span class="sxs-lookup"><span data-stu-id="ffab6-123">Element</span></span>|<span data-ttu-id="ffab6-124">Descripción</span><span class="sxs-lookup"><span data-stu-id="ffab6-124">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="ffab6-125">\<workflowInstanceQuery ></span><span class="sxs-lookup"><span data-stu-id="ffab6-125">\<workflowInstanceQuery></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|<span data-ttu-id="ffab6-126">Una consulta que realiza el seguimiento de los cambios del ciclo de vida de la instancia de flujo de trabajo, como por ejemplo, un evento iniciado o completado.</span><span class="sxs-lookup"><span data-stu-id="ffab6-126">A query that tracks workflow instance life cycle changes such as a started or completed event.</span></span>|  
   
-## Comentarios  
- Los registros devueltos se filtran por los estados de esta colección.  
+## <a name="remarks"></a><span data-ttu-id="ffab6-127">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ffab6-127">Remarks</span></span>  
+ <span data-ttu-id="ffab6-128">Los registros devueltos se filtran por los estados de esta colección.</span><span class="sxs-lookup"><span data-stu-id="ffab6-128">The returned records are filtered by the states in this collection.</span></span>  
   
- En la siguiente tabla se describen los valores de estado posibles.  
+ <span data-ttu-id="ffab6-129">En la siguiente tabla se describen los valores de estado posibles.</span><span class="sxs-lookup"><span data-stu-id="ffab6-129">Possible state values are described in the following table.</span></span>  
   
-|Estado|Descripción|  
-|------------|-----------------|  
-|Anulado|Se ha anulado la instancia de flujo de trabajo.|  
-|Completado|Se ha completado la instancia de flujo de trabajo.|  
-|Deleted|Se ha eliminado la instancia de flujo de trabajo.|  
-|Inactivo|La instancia de flujo de trabajo está inactiva.|  
-|Conservado|Se ha guardado la instancia de flujo de trabajo.|  
-|Reanudado|Se ha reanudado la instancia de flujo de trabajo.|  
-|Comenzado|Se ha iniciado la instancia de flujo de trabajo.|  
-|UnhandledException|La instancia de flujo de trabajo ha detectado una excepción no controlada.|  
-|Unloaded|Se ha descargado la instancia de flujo de trabajo.|  
-|Cancelado|Se ha cancelado la instancia de flujo de trabajo.|  
-|Suspendido|Se suspende la instancia de flujo de trabajo.|  
-|Terminado|Se ha terminado la instancia de flujo de trabajo.|  
-|No suspendido|No se suspende la instancia de flujo de trabajo.|  
+|<span data-ttu-id="ffab6-130">Estado</span><span class="sxs-lookup"><span data-stu-id="ffab6-130">State</span></span>|<span data-ttu-id="ffab6-131">Descripción</span><span class="sxs-lookup"><span data-stu-id="ffab6-131">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="ffab6-132">Anulado</span><span class="sxs-lookup"><span data-stu-id="ffab6-132">Aborted</span></span>|<span data-ttu-id="ffab6-133">Se ha anulado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-133">The workflow instance is aborted.</span></span>|  
+|<span data-ttu-id="ffab6-134">Completado</span><span class="sxs-lookup"><span data-stu-id="ffab6-134">Completed</span></span>|<span data-ttu-id="ffab6-135">Se ha completado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-135">The workflow instance is completed.</span></span>|  
+|<span data-ttu-id="ffab6-136">Deleted</span><span class="sxs-lookup"><span data-stu-id="ffab6-136">Deleted</span></span>|<span data-ttu-id="ffab6-137">Se ha eliminado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-137">The workflow instance is deleted.</span></span>|  
+|<span data-ttu-id="ffab6-138">Inactivo</span><span class="sxs-lookup"><span data-stu-id="ffab6-138">Idle</span></span>|<span data-ttu-id="ffab6-139">La instancia de flujo de trabajo está inactiva.</span><span class="sxs-lookup"><span data-stu-id="ffab6-139">The workflow instance is idle.</span></span>|  
+|<span data-ttu-id="ffab6-140">Conservado</span><span class="sxs-lookup"><span data-stu-id="ffab6-140">Persisted</span></span>|<span data-ttu-id="ffab6-141">Se ha guardado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-141">The workflow instance is persisted.</span></span>|  
+|<span data-ttu-id="ffab6-142">Reanudado</span><span class="sxs-lookup"><span data-stu-id="ffab6-142">Resumed</span></span>|<span data-ttu-id="ffab6-143">Se ha reanudado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-143">The workflow instance is resumed.</span></span>|  
+|<span data-ttu-id="ffab6-144">Comenzado</span><span class="sxs-lookup"><span data-stu-id="ffab6-144">Started</span></span>|<span data-ttu-id="ffab6-145">Se ha iniciado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-145">The workflow instance is started.</span></span>|  
+|<span data-ttu-id="ffab6-146">UnhandledException</span><span class="sxs-lookup"><span data-stu-id="ffab6-146">UnhandledException</span></span>|<span data-ttu-id="ffab6-147">La instancia de flujo de trabajo ha detectado una excepción no controlada.</span><span class="sxs-lookup"><span data-stu-id="ffab6-147">The workflow instance encountered an unhandled exception.</span></span>|  
+|<span data-ttu-id="ffab6-148">Unloaded</span><span class="sxs-lookup"><span data-stu-id="ffab6-148">Unloaded</span></span>|<span data-ttu-id="ffab6-149">Se ha descargado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-149">The workflow instance is unloaded.</span></span>|  
+|<span data-ttu-id="ffab6-150">Cancelado</span><span class="sxs-lookup"><span data-stu-id="ffab6-150">Canceled</span></span>|<span data-ttu-id="ffab6-151">Se ha cancelado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-151">The workflow instance is canceled.</span></span>|  
+|<span data-ttu-id="ffab6-152">Suspendido</span><span class="sxs-lookup"><span data-stu-id="ffab6-152">Suspended</span></span>|<span data-ttu-id="ffab6-153">Se suspende la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-153">The workflow instance is suspended.</span></span>|  
+|<span data-ttu-id="ffab6-154">Terminado</span><span class="sxs-lookup"><span data-stu-id="ffab6-154">Terminated</span></span>|<span data-ttu-id="ffab6-155">Se ha terminado la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-155">The workflow instance is terminated.</span></span>|  
+|<span data-ttu-id="ffab6-156">No suspendido</span><span class="sxs-lookup"><span data-stu-id="ffab6-156">Unsuspended</span></span>|<span data-ttu-id="ffab6-157">No se suspende la instancia de flujo de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffab6-157">The workflow instance is unsuspended.</span></span>|  
   
-## Ejemplo  
- La siguiente configuración se suscribe a los registros de seguimiento de nivel de instancia de flujo de trabajo del estado de instancia `Started` mediante esta consulta.  
+## <a name="example"></a><span data-ttu-id="ffab6-158">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="ffab6-158">Example</span></span>  
+ <span data-ttu-id="ffab6-159">La siguiente configuración se suscribe a los registros de seguimiento de nivel de instancia de flujo de trabajo del estado de instancia `Started` mediante esta consulta.</span><span class="sxs-lookup"><span data-stu-id="ffab6-159">The following configuration subscribes to workflow instance-level tracking records for the `Started` instance state using this query.</span></span>  
   
-```  
-  
+```xml  
 <workflowInstanceQueries>  
     <workflowInstanceQuery>  
       <states>  
@@ -90,12 +99,11 @@ Representa una colección de estados suscritos de la instancia de flujo de traba
       </states>  
     </workflowInstanceQuery>  
 </workflowInstanceQueries>  
-  
 ```  
   
-## Vea también  
- [System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement](assetId:///System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?qualifyHint=False&amp;autoUpgrade=True)   
- [System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?qualifyHint=False&amp;autoUpgrade=True)   
- [System.Activities.Tracking.WorkflowInstanceQuery](assetId:///System.Activities.Tracking.WorkflowInstanceQuery?qualifyHint=False&amp;autoUpgrade=True)   
- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)   
- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)
+## <a name="see-also"></a><span data-ttu-id="ffab6-160">Vea también</span><span class="sxs-lookup"><span data-stu-id="ffab6-160">See Also</span></span>  
+ <span data-ttu-id="ffab6-161"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ffab6-161"><xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="ffab6-162"><xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ffab6-162"><xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType></span></span>       
+ <span data-ttu-id="ffab6-163"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="ffab6-163"><xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType></span></span>       
+ [<span data-ttu-id="ffab6-164">Seguimiento y traza de flujos de trabajo</span><span class="sxs-lookup"><span data-stu-id="ffab6-164">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [<span data-ttu-id="ffab6-165">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ffab6-165">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

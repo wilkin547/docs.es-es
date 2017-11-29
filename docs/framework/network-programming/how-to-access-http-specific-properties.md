@@ -8,26 +8,23 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a0c5a2c3a159e4d10da03a584b29e4b77720534
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f277321ab94874970cb392dfe7f84a52a1cc2c40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-access-http-specific-properties"></a>Cómo: obtener acceso a propiedades específicas de HTTP
-En este ejemplo se muestra cómo desactivar el comportamiento de **conexión persistente** HTTP y obtener el número de versión del protocolo de servidor web.  
+# <a name="how-to-access-http-specific-properties"></a><span data-ttu-id="1ea8c-102">Cómo: obtener acceso a propiedades específicas de HTTP</span><span class="sxs-lookup"><span data-stu-id="1ea8c-102">How to: Access HTTP-Specific Properties</span></span>
+<span data-ttu-id="1ea8c-103">En este ejemplo se muestra cómo desactivar el comportamiento de **conexión persistente** HTTP y obtener el número de versión del protocolo de servidor web.</span><span class="sxs-lookup"><span data-stu-id="1ea8c-103">This sample shows how to turn off the HTTP **Keep-alive** behavior and get the protocol version number from the Web server.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="1ea8c-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1ea8c-104">Example</span></span>  
   
 ```vb  
 Dim HttpWReq As HttpWebRequest= _  
@@ -56,13 +53,12 @@ String ver = HttpWResp.ProtocolVersion.ToString();
 HttpWResp.Close();  
 ```  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="1ea8c-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="1ea8c-105">Compiling the Code</span></span>  
+ <span data-ttu-id="1ea8c-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="1ea8c-106">This example requires:</span></span>  
   
--   Referencias al espacio de nombres **System.Net**.  
+-   <span data-ttu-id="1ea8c-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="1ea8c-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Usar protocolos de aplicaciones](../../../docs/framework/network-programming/using-application-protocols.md)   
- [HTTP](../../../docs/framework/network-programming/http.md)
-
+## <a name="see-also"></a><span data-ttu-id="1ea8c-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="1ea8c-108">See Also</span></span>  
+ [<span data-ttu-id="1ea8c-109">Acceso a Internet a través de un proxy</span><span class="sxs-lookup"><span data-stu-id="1ea8c-109">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [<span data-ttu-id="1ea8c-110">Usar protocolos de aplicaciones</span><span class="sxs-lookup"><span data-stu-id="1ea8c-110">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [<span data-ttu-id="1ea8c-111">HTTP</span><span class="sxs-lookup"><span data-stu-id="1ea8c-111">HTTP</span></span>](../../../docs/framework/network-programming/http.md)

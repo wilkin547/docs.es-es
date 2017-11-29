@@ -1,65 +1,68 @@
 ---
-title: "Implementing the UI Automation SelectionItem Control Pattern | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Selection Item control pattern"
-  - "UI Automation, Selection Item control pattern"
-  - "control patterns, Selection Item"
+title: "Implementación del patrón de control SelectionItem de UI Automation"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Selection Item control pattern
+- UI Automation, Selection Item control pattern
+- control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-caps.latest.revision: 22
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 28e28faee25dd89fa646bb6e82958746b6b5932e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implementing the UI Automation SelectionItem Control Pattern
+# <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a><span data-ttu-id="8a37d-102">Implementación del patrón de control SelectionItem de UI Automation</span><span class="sxs-lookup"><span data-stu-id="8a37d-102">Implementing the UI Automation SelectionItem Control Pattern</span></span>
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  <span data-ttu-id="8a37d-103">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="8a37d-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="8a37d-104">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](http://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="8a37d-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, incluida la información sobre propiedades, métodos y eventos. Al final de la información general se proporcionan vínculos a referencias adicionales.  
+ <span data-ttu-id="8a37d-105">En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, incluida la información sobre propiedades, métodos y eventos.</span><span class="sxs-lookup"><span data-stu-id="8a37d-105">This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, including information about properties, methods, and events.</span></span> <span data-ttu-id="8a37d-106">Al final de la información general se proporcionan vínculos a referencias adicionales.</span><span class="sxs-lookup"><span data-stu-id="8a37d-106">Links to additional references are listed at the end of the overview.</span></span>  
   
- El patrón de control <xref:System.Windows.Automation.SelectionItemPattern> se usa para admitir controles que actúan como elementos secundarios individuales y seleccionables de controles de contenedor que implementan <xref:System.Windows.Automation.Provider.ISelectionProvider>. Para obtener ejemplos de controles que implementan el patrón de control SelectionItem, vea [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <span data-ttu-id="8a37d-107">El patrón de control <xref:System.Windows.Automation.SelectionItemPattern> se usa para admitir controles que actúan como elementos secundarios individuales y seleccionables de controles de contenedor que implementan <xref:System.Windows.Automation.Provider.ISelectionProvider>.</span><span class="sxs-lookup"><span data-stu-id="8a37d-107">The <xref:System.Windows.Automation.SelectionItemPattern> control pattern is used to support controls that act as individual, selectable child items of container controls that implement <xref:System.Windows.Automation.Provider.ISelectionProvider>.</span></span> <span data-ttu-id="8a37d-108">Para obtener ejemplos de controles que implementan el patrón de control SelectionItem, vea [asignación de patrones de Control para clientes de UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)</span><span class="sxs-lookup"><span data-stu-id="8a37d-108">For examples of controls that implement the SelectionItem control pattern, see [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)</span></span>  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## Directrices y convenciones de implementación  
- Al implementar el patrón de control Selection Item, tenga en cuenta las siguientes directrices y convenciones:  
+## <a name="implementation-guidelines-and-conventions"></a><span data-ttu-id="8a37d-109">Directrices y convenciones de implementación</span><span class="sxs-lookup"><span data-stu-id="8a37d-109">Implementation Guidelines and Conventions</span></span>  
+ <span data-ttu-id="8a37d-110">Al implementar el patrón de control Selection Item, tenga en cuenta las siguientes directrices y convenciones:</span><span class="sxs-lookup"><span data-stu-id="8a37d-110">When implementing the Selection Item control pattern, note the following guidelines and conventions:</span></span>  
   
--   Los controles de selección única que administran los controles secundarios que implementan <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, como el control deslizante de **Resolución de pantalla** del cuadro de diálogo de **Propiedades de pantalla**, deben implementar <xref:System.Windows.Automation.Provider.ISelectionProvider> y sus elementos secundarios deben implementar tanto <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> como <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+-   <span data-ttu-id="8a37d-111">Los controles de selección única que administran los controles secundarios que implementan <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, como el control deslizante de **Resolución de pantalla** del cuadro de diálogo de **Propiedades de pantalla** , deben implementar <xref:System.Windows.Automation.Provider.ISelectionProvider> y sus elementos secundarios deben implementar tanto <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> como <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.</span><span class="sxs-lookup"><span data-stu-id="8a37d-111">Single-selection controls that manage child controls that implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, such as the **Screen Resolution** slider in the **Display Properties** dialog box, should implement <xref:System.Windows.Automation.Provider.ISelectionProvider> and their children should implement both <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.</span></span>  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
-## Miembros requeridos para ISelectionItemProvider  
- Para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, se requieren las siguientes propiedades, métodos y eventos.  
+## <a name="required-members-for-iselectionitemprovider"></a><span data-ttu-id="8a37d-112">Miembros requeridos para ISelectionItemProvider</span><span class="sxs-lookup"><span data-stu-id="8a37d-112">Required Members for ISelectionItemProvider</span></span>  
+ <span data-ttu-id="8a37d-113">Para implementar <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, se requieren las siguientes propiedades, métodos y eventos.</span><span class="sxs-lookup"><span data-stu-id="8a37d-113">The following properties, methods, and events are required for implementing <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.</span></span>  
   
-|Miembros requeridos|Tipo de miembro|Notas|  
-|-------------------------|---------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Método|Ninguna|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Evento|Se produce cuando una selección de un contenedor ha cambiado de manera considerable y requiere el envío de más eventos <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> y <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> de lo que permite la constante <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit>.|  
+|<span data-ttu-id="8a37d-114">Miembros requeridos</span><span class="sxs-lookup"><span data-stu-id="8a37d-114">Required members</span></span>|<span data-ttu-id="8a37d-115">Tipo de miembro</span><span class="sxs-lookup"><span data-stu-id="8a37d-115">Member type</span></span>|<span data-ttu-id="8a37d-116">Notas</span><span class="sxs-lookup"><span data-stu-id="8a37d-116">Notes</span></span>|  
+|----------------------|-----------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|<span data-ttu-id="8a37d-117">Propiedad</span><span class="sxs-lookup"><span data-stu-id="8a37d-117">Property</span></span>|<span data-ttu-id="8a37d-118">Ninguno</span><span class="sxs-lookup"><span data-stu-id="8a37d-118">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|<span data-ttu-id="8a37d-119">Propiedad</span><span class="sxs-lookup"><span data-stu-id="8a37d-119">Property</span></span>|<span data-ttu-id="8a37d-120">Ninguno</span><span class="sxs-lookup"><span data-stu-id="8a37d-120">None</span></span>|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|<span data-ttu-id="8a37d-121">Método</span><span class="sxs-lookup"><span data-stu-id="8a37d-121">Method</span></span>|<span data-ttu-id="8a37d-122">Ninguna</span><span class="sxs-lookup"><span data-stu-id="8a37d-122">None</span></span>|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|<span data-ttu-id="8a37d-123">Evento</span><span class="sxs-lookup"><span data-stu-id="8a37d-123">Event</span></span>|<span data-ttu-id="8a37d-124">Se produce cuando una selección de un contenedor ha cambiado de manera considerable y requiere el envío de más eventos <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> y <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> de lo que permite la constante <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> .</span><span class="sxs-lookup"><span data-stu-id="8a37d-124">Raised when a selection in a container has changed significantly and requires sending more <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> and <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> events than the <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> constant permits.</span></span>|  
   
--   Si el resultado de <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A> o <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> es un elemento seleccionado único, se debe generar un <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>; en caso contrario, envíe <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>\/<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> según sea adecuado.  
+-   <span data-ttu-id="8a37d-125">Si el resultado de <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>o <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> es un elemento seleccionado único, se debe generar un <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ; en caso contrario, envíe <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> según sea adecuado.</span><span class="sxs-lookup"><span data-stu-id="8a37d-125">If the result of a <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, an <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>, or a <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> is a single selected item, an <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> should be raised; otherwise send <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> as appropriate.</span></span>  
   
 <a name="Exceptions"></a>   
-## Excepciones  
- Los proveedores deben producir las siguientes excepciones.  
+## <a name="exceptions"></a><span data-ttu-id="8a37d-126">Excepciones</span><span class="sxs-lookup"><span data-stu-id="8a37d-126">Exceptions</span></span>  
+ <span data-ttu-id="8a37d-127">Los proveedores deben producir las siguientes excepciones.</span><span class="sxs-lookup"><span data-stu-id="8a37d-127">Providers must throw the following exceptions.</span></span>  
   
-|Tipo de excepción|Condición|  
-|-----------------------|---------------|  
-|<xref:System.InvalidOperationException>|Cuando se intenten cualquiera de las siguientes opciones:<br /><br /> -   Se llama a <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> \= `true` y ya hay un elemento seleccionado.<br />-   Se llama a <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> en un contenedor de selección múltiple donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> \= `true` y solo hay un elemento seleccionado.<br />-   Se llama a <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> \= `false` y ya hay otro elemento seleccionado.|  
+|<span data-ttu-id="8a37d-128">Tipo de excepción</span><span class="sxs-lookup"><span data-stu-id="8a37d-128">Exception type</span></span>|<span data-ttu-id="8a37d-129">Condición</span><span class="sxs-lookup"><span data-stu-id="8a37d-129">Condition</span></span>|  
+|--------------------|---------------|  
+|<xref:System.InvalidOperationException>|<span data-ttu-id="8a37d-130">Cuando se intenten cualquiera de las siguientes opciones:</span><span class="sxs-lookup"><span data-stu-id="8a37d-130">When any of the following are attempted:</span></span><br /><br /> <span data-ttu-id="8a37d-131">-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A>se llama en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty>  =  `true` y ya hay un elemento seleccionado.</span><span class="sxs-lookup"><span data-stu-id="8a37d-131">-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> is called on a single-selection container where <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` and an element is already selected.</span></span><br /><span data-ttu-id="8a37d-132">-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> en un contenedor de selección múltiple donde <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` y solo hay un elemento seleccionado.</span><span class="sxs-lookup"><span data-stu-id="8a37d-132">-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.RemoveFromSelection%2A> is called on a multiple-selection container where <xref:System.Windows.Automation.SelectionPattern.IsSelectionRequiredProperty> = `true` and only one element is selected.</span></span><br /><span data-ttu-id="8a37d-133">-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> en un contenedor de selección única donde <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` y ya hay otro elemento seleccionado.</span><span class="sxs-lookup"><span data-stu-id="8a37d-133">-   <xref:System.Windows.Automation.Provider.ISelectionItemProvider.AddToSelection%2A> is called on a single-selection container where <xref:System.Windows.Automation.SelectionPattern.CanSelectMultipleProperty> = `false` and another element is already selected.</span></span>|  
   
-## Vea también  
- [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)   
- [Support Control Patterns in a UI Automation Provider](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)   
- [UI Automation Control Patterns for Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)   
- [Implementing the UI Automation Selection Control Pattern](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)   
- [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)   
- [Use Caching in UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)   
- [Fragment Provider Sample](http://msdn.microsoft.com/es-es/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a><span data-ttu-id="8a37d-134">Vea también</span><span class="sxs-lookup"><span data-stu-id="8a37d-134">See Also</span></span>  
+ [<span data-ttu-id="8a37d-135">Información general del patrones de Control UI Automation</span><span class="sxs-lookup"><span data-stu-id="8a37d-135">UI Automation Control Patterns Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [<span data-ttu-id="8a37d-136">Patrones de Control compatibles en un proveedor de UI Automation</span><span class="sxs-lookup"><span data-stu-id="8a37d-136">Support Control Patterns in a UI Automation Provider</span></span>](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
+ [<span data-ttu-id="8a37d-137">Patrones de Control UI Automation para clientes</span><span class="sxs-lookup"><span data-stu-id="8a37d-137">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="8a37d-138">Implementar el patrón de Control Selection de UI Automation</span><span class="sxs-lookup"><span data-stu-id="8a37d-138">Implementing the UI Automation Selection Control Pattern</span></span>](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)  
+ [<span data-ttu-id="8a37d-139">Información general sobre el árbol de automatización de interfaz de usuario</span><span class="sxs-lookup"><span data-stu-id="8a37d-139">UI Automation Tree Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
+ [<span data-ttu-id="8a37d-140">Usar almacenamiento en caché en la UI Automation</span><span class="sxs-lookup"><span data-stu-id="8a37d-140">Use Caching in UI Automation</span></span>](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
+ [<span data-ttu-id="8a37d-141">Ejemplo de proveedor de fragmento</span><span class="sxs-lookup"><span data-stu-id="8a37d-141">Fragment Provider Sample</span></span>](http://msdn.microsoft.com/en-us/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

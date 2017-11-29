@@ -1,64 +1,72 @@
 ---
-title: "C&#243;mo: Permitir que los usuarios resuelvan horas ambiguas | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "hora ambigua [.NET Framework]"
-  - "zonas horarias [.NET Framework], hora ambigua"
+title: "Cómo: permitir que los usuarios a resolver horas ambiguas"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time zones [.NET Framework], ambiguous time
+- ambiguous time [.NET Framework]
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 6409e676944f64931b197fda1a6a7b392c268c97
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Permitir que los usuarios resuelvan horas ambiguas
-Una hora ambigua es aquella que se asigna a más de una hora universal coordinada \(UTC\).  Se produce al retrasar los relojes, como en el cambio de horario de verano a horario estándar.  Para tratar una hora ambigua, puede elegir una de las siguientes acciones:  
-  
--   Si la hora ambigua es un elemento de datos especificado por el usuario, puede dejar que el usuario resuelva la ambigüedad.  
-  
--   Haga una suposición sobre cómo se asigna la hora a la hora UTC.  Por ejemplo, puede suponer que una hora ambigua siempre se expresa en la hora estándar de la zona horaria.  
-  
- En este tema se muestra cómo permitir a un usuario resolver una hora ambigua.  
-  
-### Para permitir a un usuario resolver una hora ambigua  
-  
-1.  Obtenga la entrada de fecha y hora del usuario.  
-  
-2.  Llame al método <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> para determinar si la hora es ambigua.  
-  
-3.  Si la hora es ambigua, llame al método <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> para recuperar una matriz de objetos <xref:System.TimeSpan>.  Cada elemento de la matriz contiene una diferencia respecto a la hora UTC a la que puede ser asignada la hora ambigua.  
-  
-4.  Permita al usuario seleccionar la diferencia deseada.  
-  
-5.  Obtenga la fecha y hora UTC restando a la hora local la diferencia seleccionada por el usuario.  
-  
-6.  Llame al método <xref:System.DateTime.SpecifyKind%2A> `static` \(`Shared` en Visual Basic .NET\) para establecer la propiedad <xref:System.DateTime.Kind%2A> del valor de fecha y hora UTC en <xref:System.DateTimeKind?displayProperty=fullName>.  
-  
-## Ejemplo  
- En el ejemplo siguiente se pide al usuario que escriba un valor de fecha y hora y, si la hora es ambigua, le permite seleccionar la hora UTC a la que se asignará esta hora ambigua.  
-  
- [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
- [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]  
-  
- El núcleo del código de ejemplo utiliza una matriz de objetos <xref:System.TimeSpan> para indicar las posibles diferencias de la hora ambigua respecto a la hora UTC.  Sin embargo, probablemente estas diferencias no resultan significativas para el usuario.  Para aclarar el significado de las diferencias, el código también indica si una diferencia representa la hora estándar de la zona horaria local o del horario de verano.  El código determina qué hora es la estándar y cuál pertenece al horario de verano comparando la diferencia con el valor de la propiedad <xref:System.TimeZoneInfo.BaseUtcOffset%2A>.  Esta propiedad indica la diferencia entre la hora UTC y la hora estándar de la zona horaria.  
-  
- En este ejemplo, todas las referencias a la zona horaria local se realizan a través de la propiedad <xref:System.TimeZoneInfo.Local%2A?displayProperty=fullName>; la zona horaria local nunca se asigna a una variable de objeto.  Este es un procedimiento recomendado porque una llamada al método <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=fullName> invalida todos los objetos a los que la zona horaria local está asignada.  
-  
-## Compilar el código  
- Para este ejemplo se necesita:  
-  
--   Que se agregue al proyecto una referencia a System.Core.dll.  
-  
--   Que se importe el espacio de nombres <xref:System> con la instrucción `using` \(necesaria en código de C\#\).  
-  
-## Vea también  
- [Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)   
- [Cómo: Resolver horas ambiguas](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+# <a name="how-to-let-users-resolve-ambiguous-times"></a><span data-ttu-id="cedc0-102">Cómo: permitir que los usuarios a resolver horas ambiguas</span><span class="sxs-lookup"><span data-stu-id="cedc0-102">How to: Let users resolve ambiguous times</span></span>
+
+<span data-ttu-id="cedc0-103">Una hora ambigua es aquella que se asigna a más de una hora universal coordinada (UTC).</span><span class="sxs-lookup"><span data-stu-id="cedc0-103">An ambiguous time is a time that maps to more than one Coordinated Universal Time (UTC).</span></span> <span data-ttu-id="cedc0-104">Esto sucede cuando la hora del reloj se atrasa, como durante la transición del horario de verano de una zona horaria al horario estándar.</span><span class="sxs-lookup"><span data-stu-id="cedc0-104">It occurs when the clock time is adjusted back in time, such as during the transition from a time zone's daylight saving time to its standard time.</span></span> <span data-ttu-id="cedc0-105">Cuando se enfrente a una hora ambigua, puede realizar una de las siguientes acciones:</span><span class="sxs-lookup"><span data-stu-id="cedc0-105">When handling an ambiguous time, you can do one of the following:</span></span>
+
+* <span data-ttu-id="cedc0-106">Si la hora ambigua es un dato introducido por el usuario, puede dejar que el usuario resuelva la ambigüedad.</span><span class="sxs-lookup"><span data-stu-id="cedc0-106">If the ambiguous time is an item of data entered by the user, you can leave it to the user to resolve the ambiguity.</span></span>
+
+* <span data-ttu-id="cedc0-107">Piense cómo se corresponde esa hora con la hora UTC.</span><span class="sxs-lookup"><span data-stu-id="cedc0-107">Make an assumption about how the time maps to UTC.</span></span> <span data-ttu-id="cedc0-108">Por ejemplo, puede dar por supuesto que una hora ambigua siempre se expresa en la hora estándar de la zona horaria.</span><span class="sxs-lookup"><span data-stu-id="cedc0-108">For example, you can assume that an ambiguous time is always expressed in the time zone's standard time.</span></span>
+
+<span data-ttu-id="cedc0-109">En este tema se muestra cómo permitir que los usuarios a resolver una hora ambigua.</span><span class="sxs-lookup"><span data-stu-id="cedc0-109">This topic shows how to let a user resolve an ambiguous time.</span></span>
+
+### <a name="to-let-a-user-resolve-an-ambiguous-time"></a><span data-ttu-id="cedc0-110">Para permitir que un usuario resuelva una hora ambigua</span><span class="sxs-lookup"><span data-stu-id="cedc0-110">To let a user resolve an ambiguous time</span></span>
+
+1. <span data-ttu-id="cedc0-111">Obtenga la entrada de fecha y hora del usuario.</span><span class="sxs-lookup"><span data-stu-id="cedc0-111">Get the date and time input by the user.</span></span>
+
+2. <span data-ttu-id="cedc0-112">Llame a la <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> método para determinar si la hora es ambigua.</span><span class="sxs-lookup"><span data-stu-id="cedc0-112">Call the <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> method to determine whether the time is ambiguous.</span></span>
+
+3. <span data-ttu-id="cedc0-113">Si la hora es ambigua, llame a la <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> método para recuperar una matriz de <xref:System.TimeSpan> objetos.</span><span class="sxs-lookup"><span data-stu-id="cedc0-113">If the time is ambiguous, call the <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> method to retrieve an array of <xref:System.TimeSpan> objects.</span></span> <span data-ttu-id="cedc0-114">Cada elemento de la matriz contiene un desplazamiento de UTC que asignar a la hora ambigua.</span><span class="sxs-lookup"><span data-stu-id="cedc0-114">Each element in the array contains a UTC offset that the ambiguous time can map to.</span></span>
+
+4. <span data-ttu-id="cedc0-115">Permita que el usuario seleccione la diferencia horaria que quiera.</span><span class="sxs-lookup"><span data-stu-id="cedc0-115">Let the user select the desired offset.</span></span>
+
+5. <span data-ttu-id="cedc0-116">Para obtener la fecha y hora UTC, reste de la hora local la diferencia horaria que ha seleccionado el usuario.</span><span class="sxs-lookup"><span data-stu-id="cedc0-116">Get the UTC date and time by subtracting the offset selected by the user from the local time.</span></span>
+
+6. <span data-ttu-id="cedc0-117">Llame a la `static` (`Shared` en Visual Basic. NET) <xref:System.DateTime.SpecifyKind%2A> método para establecer la fecha y hora valor UTC <xref:System.DateTime.Kind%2A> propiedad <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="cedc0-117">Call the `static` (`Shared` in Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> method to set the UTC date and time value's <xref:System.DateTime.Kind%2A> property to <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.</span></span>
+
+## <a name="example"></a><span data-ttu-id="cedc0-118">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="cedc0-118">Example</span></span>
+
+<span data-ttu-id="cedc0-119">En el ejemplo siguiente se le pide al usuario que escriba un valor de fecha y hora y, si es ambiguo, se permite que el usuario seleccione la hora UTC con la que se corresponde dicha hora ambigua.</span><span class="sxs-lookup"><span data-stu-id="cedc0-119">The following example prompts the user to enter a date and time and, if it is ambiguous, lets the user select the UTC time that the ambiguous time maps to.</span></span>
+
+[!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
+[!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
+
+<span data-ttu-id="cedc0-120">El núcleo del código de ejemplo utiliza una matriz de <xref:System.TimeSpan> objetos para indicar los desplazamientos posibles de la hora ambigua a la hora UTC.</span><span class="sxs-lookup"><span data-stu-id="cedc0-120">The core of the example code uses an array of <xref:System.TimeSpan> objects to indicate possible offsets of the ambiguous time from UTC.</span></span> <span data-ttu-id="cedc0-121">Pero es probable que estas diferencias horarias sean poco significativas para el usuario.</span><span class="sxs-lookup"><span data-stu-id="cedc0-121">However, these offsets are unlikely to be meaningful to the user.</span></span> <span data-ttu-id="cedc0-122">Para aclarar el significado de las diferencias horarias, el código también indica si una diferencia horaria representa la hora estándar o el horario de verano de la zona horaria local.</span><span class="sxs-lookup"><span data-stu-id="cedc0-122">To clarify the meaning of the offsets, the code also notes whether an offset represents the local time zone's standard time or its daylight saving time.</span></span> <span data-ttu-id="cedc0-123">El código determina qué hora es estándar y qué hora es verano comparando el desplazamiento con el valor de la <xref:System.TimeZoneInfo.BaseUtcOffset%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="cedc0-123">The code determines which time is standard and which time is daylight by comparing the offset with the value of the <xref:System.TimeZoneInfo.BaseUtcOffset%2A> property.</span></span> <span data-ttu-id="cedc0-124">Esta propiedad indica la diferencia entre la hora UTC y la hora estándar de la zona horaria.</span><span class="sxs-lookup"><span data-stu-id="cedc0-124">This property indicates the difference between the UTC and the time zone's standard time.</span></span>
+
+<span data-ttu-id="cedc0-125">En este ejemplo, todas las referencias a la zona horaria local se realizan a través del <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> propiedad; la hora local zona nunca se asigna a una variable de objeto.</span><span class="sxs-lookup"><span data-stu-id="cedc0-125">In this example, all references to the local time zone are made through the <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> property; the local time zone is never assigned to an object variable.</span></span> <span data-ttu-id="cedc0-126">Esto es una práctica recomendada porque una llamada a la <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> método invalida cualquier objeto asignado a la zona horaria local.</span><span class="sxs-lookup"><span data-stu-id="cedc0-126">This is a recommended practice because a call to the <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> method invalidates any objects that the local time zone is assigned to.</span></span>
+
+## <a name="compiling-the-code"></a><span data-ttu-id="cedc0-127">Compilación del código</span><span class="sxs-lookup"><span data-stu-id="cedc0-127">Compiling the code</span></span>
+
+<span data-ttu-id="cedc0-128">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="cedc0-128">This example requires:</span></span>
+
+* <span data-ttu-id="cedc0-129">Que se agregará al proyecto una referencia a System.Core.dll.</span><span class="sxs-lookup"><span data-stu-id="cedc0-129">That a reference to System.Core.dll be added to the project.</span></span>
+
+* <span data-ttu-id="cedc0-130">Que el <xref:System> espacio de nombres se importan con el `using` instrucción (obligatorio en el código de C#).</span><span class="sxs-lookup"><span data-stu-id="cedc0-130">That the <xref:System> namespace be imported with the `using` statement (required in C# code).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="cedc0-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="cedc0-131">See also</span></span>
+
+<span data-ttu-id="cedc0-132">[Fechas, horas y zonas horarias](../../../docs/standard/datetime/index.md)
+[Cómo: resolver horas ambiguas](../../../docs/standard/datetime/resolve-ambiguous-times.md)</span><span class="sxs-lookup"><span data-stu-id="cedc0-132">[Dates, times, and time zones](../../../docs/standard/datetime/index.md)
+[How to: Resolve ambiguous times](../../../docs/standard/datetime/resolve-ambiguous-times.md)</span></span>

@@ -1,65 +1,62 @@
 ---
-title: "TOP (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: TOP (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 9b1d3d1b07a349ab1a5efb4a7c41f9b9b34fc55f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# TOP (Entity SQL)
-La cláusula SELECT puede tener una subcláusula TOP opcional después del modificador opcional ALL\/DISTINCT. La subcláusula TOP especifica que solo se devolverá el primer conjunto de filas del resultado de la consulta.  
+# <a name="top-entity-sql"></a><span data-ttu-id="7ac31-102">TOP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="7ac31-102">TOP (Entity SQL)</span></span>
+<span data-ttu-id="7ac31-103">La cláusula SELECT puede tener una subcláusula TOP opcional después del modificador opcional ALL/DISTINCT.</span><span class="sxs-lookup"><span data-stu-id="7ac31-103">The SELECT clause can have an optional TOP sub-clause following the optional ALL/DISTINCT modifier.</span></span> <span data-ttu-id="7ac31-104">La subcláusula TOP especifica que solo se devolverá el primer conjunto de filas del resultado de la consulta.</span><span class="sxs-lookup"><span data-stu-id="7ac31-104">The TOP sub-clause specifies that only the first set of rows will be returned from the query result.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="7ac31-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="7ac31-105">Syntax</span></span>  
   
 ```  
-  
 [ TOP (n) ]  
 ```  
   
-## Argumentos  
+## <a name="arguments"></a><span data-ttu-id="7ac31-106">Argumentos</span><span class="sxs-lookup"><span data-stu-id="7ac31-106">Arguments</span></span>  
  `n`  
- Expresión numérica válida que especifica el número de filas que se va a devolver.`n` puede ser un literal numérico único o un parámetro único.  
+ <span data-ttu-id="7ac31-107">Expresión numérica válida que especifica el número de filas que se va a devolver.</span><span class="sxs-lookup"><span data-stu-id="7ac31-107">The numeric expression that specifies the number of rows to be returned.</span></span> <span data-ttu-id="7ac31-108">`n` puede ser un literal numérico único o un parámetro único.</span><span class="sxs-lookup"><span data-stu-id="7ac31-108">`n` could be a single numeric literal or a single parameter.</span></span>  
   
-## Comentarios  
- La expresión TOP debe ser un literal numérico único o un parámetro único. Si se utiliza un literal constante, el tipo de literal debe poderse promocionar implícitamente a Edm.Int64 \(byte, int16, int32 o int64, o cualquier tipo de proveedor que se asigna a un tipo que se puede promocionar a Edm.Int64\) y su valor debe ser igual o mayor que cero. De lo contrario, se producirá una excepción. Si un parámetro se utiliza como una expresión, el tipo de parámetro también debe poderse promocionar implícitamente a Edm.Int64, pero no habrá ninguna validación del valor de parámetro real durante la compilación porque los valores de parámetro se enlazan en tiempo de ejecución.  
+## <a name="remarks"></a><span data-ttu-id="7ac31-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="7ac31-109">Remarks</span></span>  
+ <span data-ttu-id="7ac31-110">La expresión TOP debe ser un literal numérico único o un parámetro único.</span><span class="sxs-lookup"><span data-stu-id="7ac31-110">The TOP expression must be either a single numeric literal or a single parameter.</span></span> <span data-ttu-id="7ac31-111">Si se utiliza un literal constante, el tipo de literal debe poderse promocionar implícitamente a Edm.Int64 (byte, int16, int32 o int64, o cualquier tipo de proveedor que se asigna a un tipo que se puede promocionar a Edm.Int64) y su valor debe ser igual o mayor que cero.</span><span class="sxs-lookup"><span data-stu-id="7ac31-111">If a constant literal is used, the literal type must be implicitly promotable to Edm.Int64 (byte, int16, int32 or int64 or any provider type that maps to a type that is promotable to Edm.Int64) and its value must be greater than or equal to zero.</span></span> <span data-ttu-id="7ac31-112">De lo contrario, se producirá una excepción.</span><span class="sxs-lookup"><span data-stu-id="7ac31-112">Otherwise an exception will be raised.</span></span> <span data-ttu-id="7ac31-113">Si un parámetro se utiliza como una expresión, el tipo de parámetro también debe poderse promocionar implícitamente a Edm.Int64, pero no habrá ninguna validación del valor de parámetro real durante la compilación porque los valores de parámetro se enlazan en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="7ac31-113">If a parameter is used as an expression, the parameter type must also be implicitly promotable to Edm.Int64, but there will be no validation of the actual parameter value during compilation because the parameter values are late bounded.</span></span>  
   
- El siguiente es un ejemplo de expresión TOP constante:  
+ <span data-ttu-id="7ac31-114">El siguiente es un ejemplo de expresión TOP constante:</span><span class="sxs-lookup"><span data-stu-id="7ac31-114">The following is an example of constant TOP expression:</span></span>  
   
  `select distinct top(10) c.a1, c.a2 from T as a`  
   
- El siguiente es un ejemplo de expresión TOP constante con parámetros:  
+ <span data-ttu-id="7ac31-115">El siguiente es un ejemplo de expresión TOP constante con parámetros:</span><span class="sxs-lookup"><span data-stu-id="7ac31-115">The following is an example of parametrized TOP expression:</span></span>  
   
  `select distinct top(@topParam) c.a1, c.a2 from T as a`  
   
- TOP es no determinista a menos que la consulta esté ordenada. Si necesita un resultado determinista, utilice las subcláusulas [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) y [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) en la cláusula [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md). TOP y SKIP\/LIMIT se excluyen mutuamente.  
+ <span data-ttu-id="7ac31-116">TOP es no determinista a menos que la consulta esté ordenada.</span><span class="sxs-lookup"><span data-stu-id="7ac31-116">TOP is non-deterministic unless the query is sorted.</span></span> <span data-ttu-id="7ac31-117">Si necesita un resultado determinista, utilice las subcláusulas [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) y [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) en la cláusula [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) .</span><span class="sxs-lookup"><span data-stu-id="7ac31-117">If you require a deterministic result, use the [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) and [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) sub-clauses in the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause.</span></span> <span data-ttu-id="7ac31-118">TOP y SKIP/LIMIT se excluyen mutuamente.</span><span class="sxs-lookup"><span data-stu-id="7ac31-118">The TOP and SKIP/LIMIT are mutually exclusive.</span></span>  
   
-## Ejemplo  
- La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa la cláusula TOP para especificar la fila superior que se va a devolver del resultado de la consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+## <a name="example"></a><span data-ttu-id="7ac31-119">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="7ac31-119">Example</span></span>  
+ <span data-ttu-id="7ac31-120">La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa la cláusula TOP para especificar la fila superior que se va a devolver del resultado de la consulta.</span><span class="sxs-lookup"><span data-stu-id="7ac31-120">The following [!INCLUDE[esql](../../../../../../includes/esql-md.md)] query uses the TOP to specify the top one row to be returned from the query result.</span></span> <span data-ttu-id="7ac31-121">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="7ac31-121">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="7ac31-122">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="7ac31-122">To compile and run this query, follow these steps:</span></span>  
   
-1.  Siga el procedimiento de [Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="7ac31-123">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="7ac31-123">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="7ac31-124">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="7ac31-124">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]  
   
-## Vea también  
- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)   
- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)   
- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)   
- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)   
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="7ac31-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="7ac31-125">See Also</span></span>  
+ [<span data-ttu-id="7ac31-126">SELECCIONE</span><span class="sxs-lookup"><span data-stu-id="7ac31-126">SELECT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)  
+ [<span data-ttu-id="7ac31-127">SKIP</span><span class="sxs-lookup"><span data-stu-id="7ac31-127">SKIP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)  
+ [<span data-ttu-id="7ac31-128">LÍMITE</span><span class="sxs-lookup"><span data-stu-id="7ac31-128">LIMIT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)  
+ [<span data-ttu-id="7ac31-129">ORDENAR POR</span><span class="sxs-lookup"><span data-stu-id="7ac31-129">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)  
+ [<span data-ttu-id="7ac31-130">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="7ac31-130">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

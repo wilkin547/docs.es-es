@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
 - managed debugging assistants (MDAs), StreamWriter data buffering
@@ -23,27 +17,26 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3903e2814cc15ac2678a0a5102046445d332ce75
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: fa6b64d37052c40dbef83a25b622e415f6946c1e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="streamwriterbuffereddatalost-mda"></a>MDA de streamWriterBufferedDataLost
-El Asistente para la depuración administrada (MDA) `streamWriterBufferedDataLost` se activa cuando se escribe un <xref:System.IO.StreamWriter>, pero después no se llama al método <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> antes de que se destruya la instancia del <xref:System.IO.StreamWriter>. Cuando este MDA está habilitado, el tiempo de ejecución determina si los datos almacenados en búfer todavía existen en <xref:System.IO.StreamWriter>. Si existen datos almacenados en búfer, se activa el MDA. Llamar a los métodos <xref:System.GC.Collect%2A> y <xref:System.GC.WaitForPendingFinalizers%2A> puede forzar la ejecución de los finalizadores. En caso contrario, los finalizadores se ejecutarán en momentos aparentemente arbitrarios y posiblemente no lo hagan en la salida del proceso. La ejecución explícita de los finalizadores con este MDA habilitado ayudará a reproducir este tipo de problema de forma más confiable.  
+# <a name="streamwriterbuffereddatalost-mda"></a><span data-ttu-id="5251e-102">MDA de streamWriterBufferedDataLost</span><span class="sxs-lookup"><span data-stu-id="5251e-102">streamWriterBufferedDataLost MDA</span></span>
+<span data-ttu-id="5251e-103">El Asistente para la depuración administrada (MDA) `streamWriterBufferedDataLost` se activa cuando se escribe un <xref:System.IO.StreamWriter>, pero después no se llama al método <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> antes de que se destruya la instancia del <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="5251e-103">The `streamWriterBufferedDataLost` managed debugging assistant (MDA) is activated when a <xref:System.IO.StreamWriter> is written to, but the <xref:System.IO.StreamWriter.Flush%2A> or <xref:System.IO.StreamWriter.Close%2A> method is not subsequently called before the instance of the <xref:System.IO.StreamWriter> is destroyed.</span></span> <span data-ttu-id="5251e-104">Cuando este MDA está habilitado, el tiempo de ejecución determina si los datos almacenados en búfer todavía existen en <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="5251e-104">When this MDA is enabled, the runtime determines whether any buffered data still exists within the <xref:System.IO.StreamWriter>.</span></span> <span data-ttu-id="5251e-105">Si existen datos almacenados en búfer, se activa el MDA.</span><span class="sxs-lookup"><span data-stu-id="5251e-105">If buffered data does exist, the MDA is activated.</span></span> <span data-ttu-id="5251e-106">Llamar a los métodos <xref:System.GC.Collect%2A> y <xref:System.GC.WaitForPendingFinalizers%2A> puede forzar la ejecución de los finalizadores.</span><span class="sxs-lookup"><span data-stu-id="5251e-106">Calling the <xref:System.GC.Collect%2A> and <xref:System.GC.WaitForPendingFinalizers%2A> methods can force finalizers to run.</span></span> <span data-ttu-id="5251e-107">En caso contrario, los finalizadores se ejecutarán en momentos aparentemente arbitrarios y posiblemente no lo hagan en la salida del proceso.</span><span class="sxs-lookup"><span data-stu-id="5251e-107">Finalizers will otherwise run at seemingly arbitrary times, and possibly not at all on process exit.</span></span> <span data-ttu-id="5251e-108">La ejecución explícita de los finalizadores con este MDA habilitado ayudará a reproducir este tipo de problema de forma más confiable.</span><span class="sxs-lookup"><span data-stu-id="5251e-108">Explicitly running finalizers with this MDA enabled will help to more reliably reproduce this type of problem.</span></span>  
   
-## <a name="symptoms"></a>Síntomas  
- <xref:System.IO.StreamWriter> no escribe los últimos 1-4 KB de datos en un archivo.  
+## <a name="symptoms"></a><span data-ttu-id="5251e-109">Síntomas</span><span class="sxs-lookup"><span data-stu-id="5251e-109">Symptoms</span></span>  
+ <span data-ttu-id="5251e-110"><xref:System.IO.StreamWriter> no escribe los últimos 1-4 KB de datos en un archivo.</span><span class="sxs-lookup"><span data-stu-id="5251e-110">A <xref:System.IO.StreamWriter> does not write the last 1–4 KB of data to a file.</span></span>  
   
-## <a name="cause"></a>Motivo  
- <xref:System.IO.StreamWriter> almacena en búfer los datos internamente, lo que requiere que se llame al método <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> para escribir los datos almacenados en búfer en el almacén de datos subyacente. Si no se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> adecuadamente, es posible que los datos almacenados en búfer en la instancia de <xref:System.IO.StreamWriter> no se escriban de la forma esperada.  
+## <a name="cause"></a><span data-ttu-id="5251e-111">Motivo</span><span class="sxs-lookup"><span data-stu-id="5251e-111">Cause</span></span>  
+ <span data-ttu-id="5251e-112"><xref:System.IO.StreamWriter> almacena en búfer los datos internamente, lo que requiere que se llame al método <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> para escribir los datos almacenados en búfer en el almacén de datos subyacente.</span><span class="sxs-lookup"><span data-stu-id="5251e-112">The <xref:System.IO.StreamWriter> buffers data internally, which requires that the <xref:System.IO.StreamWriter.Close%2A> or <xref:System.IO.StreamWriter.Flush%2A> method be called to write the buffered data to the underlying data store.</span></span> <span data-ttu-id="5251e-113">Si no se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> adecuadamente, es posible que los datos almacenados en búfer en la instancia de <xref:System.IO.StreamWriter> no se escriban de la forma esperada.</span><span class="sxs-lookup"><span data-stu-id="5251e-113">If <xref:System.IO.StreamWriter.Close%2A> or <xref:System.IO.StreamWriter.Flush%2A> is not appropriately called, data buffered in the <xref:System.IO.StreamWriter> instance might not be written as expected.</span></span>  
   
- El siguiente es un ejemplo de código mal escrito que este MDA debería detectar.  
+ <span data-ttu-id="5251e-114">El siguiente es un ejemplo de código mal escrito que este MDA debería detectar.</span><span class="sxs-lookup"><span data-stu-id="5251e-114">The following is an example of poorly written code that this MDA should catch.</span></span>  
   
 ```csharp  
 // Poorly written code.  
@@ -55,15 +48,15 @@ void Write()
 }  
 ```  
   
- El código anterior activará este MDA de una manera más confiable si se desencadena una recolección de elementos no utilizados y después se suspende hasta que hayan terminado los finalizadores. Para realizar un seguimiento de este tipo de problema, puede agregar el código siguiente al final del método anterior en una compilación de depuración. Esto ayudará a activar el MDA de forma confiable, pero por supuesto no soluciona la causa del problema.  
+ <span data-ttu-id="5251e-115">El código anterior activará este MDA de una manera más confiable si se desencadena una recolección de elementos no utilizados y después se suspende hasta que hayan terminado los finalizadores.</span><span class="sxs-lookup"><span data-stu-id="5251e-115">The preceding code will activate this MDA more reliably if a garbage collection is triggered and then suspended until finalizers have finished.</span></span> <span data-ttu-id="5251e-116">Para realizar un seguimiento de este tipo de problema, puede agregar el código siguiente al final del método anterior en una compilación de depuración.</span><span class="sxs-lookup"><span data-stu-id="5251e-116">To track down this type of problem, you can add the following code to the end of the preceding method in a debug build.</span></span> <span data-ttu-id="5251e-117">Esto ayudará a activar el MDA de forma confiable, pero por supuesto no soluciona la causa del problema.</span><span class="sxs-lookup"><span data-stu-id="5251e-117">This will help to reliably activate the MDA, but of course it does not fix the cause of the problem.</span></span>  
   
 ```csharp
 GC.Collect();  
 GC.WaitForPendingFinalizers();  
 ```  
   
-## <a name="resolution"></a>Resolución  
- Asegúrese de que se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> en <xref:System.IO.StreamWriter> antes de cerrar una aplicación o cualquier bloque de código que tenga una instancia de <xref:System.IO.StreamWriter>. Uno de los mejores mecanismos para conseguirlo es crear la instancia con un bloque `using` de C# (`Using` en Visual Basic), que se asegurará de que se invoca el método <xref:System.IO.StreamWriter.Dispose%2A> para el escritor y, como resultado, la instancia se cerrará correctamente.  
+## <a name="resolution"></a><span data-ttu-id="5251e-118">Resolución</span><span class="sxs-lookup"><span data-stu-id="5251e-118">Resolution</span></span>  
+ <span data-ttu-id="5251e-119">Asegúrese de que se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> en <xref:System.IO.StreamWriter> antes de cerrar una aplicación o cualquier bloque de código que tenga una instancia de <xref:System.IO.StreamWriter>.</span><span class="sxs-lookup"><span data-stu-id="5251e-119">Make sure you call <xref:System.IO.StreamWriter.Close%2A> or <xref:System.IO.StreamWriter.Flush%2A> on the <xref:System.IO.StreamWriter> before closing an application or any code block that has an instance of a <xref:System.IO.StreamWriter>.</span></span> <span data-ttu-id="5251e-120">Uno de los mejores mecanismos para conseguirlo es crear la instancia con un bloque `using` de C# (`Using` en Visual Basic), que se asegurará de que se invoca el método <xref:System.IO.StreamWriter.Dispose%2A> para el escritor y, como resultado, la instancia se cerrará correctamente.</span><span class="sxs-lookup"><span data-stu-id="5251e-120">One of the best mechanisms for achieving this is creating the instance with a C# `using` block (`Using` in Visual Basic), which will ensure the <xref:System.IO.StreamWriter.Dispose%2A> method for the writer is invoked, resulting in the instance being correctly closed.</span></span>  
   
 ```csharp
 using(StreamWriter sw = new StreamWriter("file.txt"))   
@@ -72,7 +65,7 @@ using(StreamWriter sw = new StreamWriter("file.txt"))
 }  
 ```  
   
- En el código siguiente se muestra la misma solución, usando `try/finally` en lugar de `using`.  
+ <span data-ttu-id="5251e-121">En el código siguiente se muestra la misma solución, usando `try/finally` en lugar de `using`.</span><span class="sxs-lookup"><span data-stu-id="5251e-121">The following code shows the same solution, using `try/finally` instead of `using`.</span></span>  
   
 ```csharp
 StreamWriter sw;  
@@ -88,7 +81,7 @@ finally
 }  
 ```  
   
- Si ninguna de estas soluciones se pueden usar (por ejemplo, si un <xref:System.IO.StreamWriter> se almacena en una variable estática y no se puede ejecutar fácilmente código al final de su duración), llamar a <xref:System.IO.StreamWriter.Flush%2A> en <xref:System.IO.StreamWriter> después de su último uso o establecer la propiedad <xref:System.IO.StreamWriter.AutoFlush%2A> en `true` antes de su primer uso debería evitar este problema.  
+ <span data-ttu-id="5251e-122">Si ninguna de estas soluciones se pueden usar (por ejemplo, si un <xref:System.IO.StreamWriter> se almacena en una variable estática y no se puede ejecutar fácilmente código al final de su duración), llamar a <xref:System.IO.StreamWriter.Flush%2A> en <xref:System.IO.StreamWriter> después de su último uso o establecer la propiedad <xref:System.IO.StreamWriter.AutoFlush%2A> en `true` antes de su primer uso debería evitar este problema.</span><span class="sxs-lookup"><span data-stu-id="5251e-122">If neither of these solutions can be used (for example, if a <xref:System.IO.StreamWriter> is stored in a static variable and you cannot easily run code at the end of its lifetime), then calling <xref:System.IO.StreamWriter.Flush%2A> on the <xref:System.IO.StreamWriter> after its last use or setting the <xref:System.IO.StreamWriter.AutoFlush%2A> property to `true` before its first use should avoid this problem.</span></span>  
   
 ```csharp
 private static StreamWriter log;  
@@ -103,13 +96,13 @@ static WriteToFile()
 }  
 ```  
   
-## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
- Este MDA no tiene ningún efecto en el tiempo de ejecución.  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="5251e-123">Efecto en el Runtime</span><span class="sxs-lookup"><span data-stu-id="5251e-123">Effect on the Runtime</span></span>  
+ <span data-ttu-id="5251e-124">Este MDA no tiene ningún efecto en el tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="5251e-124">This MDA has no effect on the runtime.</span></span>  
   
-## <a name="output"></a>Salida  
- Un mensaje que indica que se produjo esta infracción.  
+## <a name="output"></a><span data-ttu-id="5251e-125">Salida</span><span class="sxs-lookup"><span data-stu-id="5251e-125">Output</span></span>  
+ <span data-ttu-id="5251e-126">Un mensaje que indica que se produjo esta infracción.</span><span class="sxs-lookup"><span data-stu-id="5251e-126">A message indicating that this violation occurred.</span></span>  
   
-## <a name="configuration"></a>Configuración  
+## <a name="configuration"></a><span data-ttu-id="5251e-127">Configuración</span><span class="sxs-lookup"><span data-stu-id="5251e-127">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -119,7 +112,6 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- <xref:System.IO.StreamWriter>   
- [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+## <a name="see-also"></a><span data-ttu-id="5251e-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="5251e-128">See Also</span></span>  
+ <xref:System.IO.StreamWriter>  
+ [<span data-ttu-id="5251e-129">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="5251e-129">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

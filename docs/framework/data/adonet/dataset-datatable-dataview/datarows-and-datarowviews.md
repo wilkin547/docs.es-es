@@ -1,27 +1,33 @@
 ---
-title: "DataRows y DataRowViews | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Objetos DataRow y DataRowView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e342ce805880da848da1e17700c055aba2c74f19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# DataRows y DataRowViews
-Un <xref:System.Data.DataView> expone una colección enumerable de objetos <xref:System.Data.DataRowView>.  Los objetos **DataRowView** exponen valores como matrices de objetos indizadas por el nombre o la referencia ordinal de la columna de la tabla subyacente.  Mediante la propiedad <xref:System.Data.DataRowView.Row%2A> puede tener acceso a la <xref:System.Data.DataRow> expuesta por la propiedad **DataRowView** de la **DataRowView**.  
+# <a name="datarows-and-datarowviews"></a><span data-ttu-id="fe7f7-102">Objetos DataRow y DataRowView</span><span class="sxs-lookup"><span data-stu-id="fe7f7-102">DataRows and DataRowViews</span></span>
+<span data-ttu-id="fe7f7-103">Un <xref:System.Data.DataView> expone una colección enumerable de objetos <xref:System.Data.DataRowView>.</span><span class="sxs-lookup"><span data-stu-id="fe7f7-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="fe7f7-104">El **DataRowView** objetos exponen valores como matrices de objetos indizadas por el nombre o la referencia ordinal de la columna en la tabla subyacente.</span><span class="sxs-lookup"><span data-stu-id="fe7f7-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="fe7f7-105">Puede tener acceso a la <xref:System.Data.DataRow> que se expone mediante el **DataRowView** mediante el uso de la <xref:System.Data.DataRowView.Row%2A> propiedad de la **DataRowView**.</span><span class="sxs-lookup"><span data-stu-id="fe7f7-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
   
- Cuando se ven valores mediante **DataRowView**, la propiedad <xref:System.Data.DataView.RowStateFilter%2A> de la **DataView** determina qué versión de fila de la **DataRow** subyacente se expone.  Para obtener información sobre cómo obtener acceso a las diferentes versiones de fila mediante **DataRow**, vea [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ <span data-ttu-id="fe7f7-106">Cuando se ven valores mediante el uso de un **DataRowView**, <xref:System.Data.DataView.RowStateFilter%2A> propiedad de la **DataView** determina qué versión de fila de subyacente **DataRow** se expone.</span><span class="sxs-lookup"><span data-stu-id="fe7f7-106">When you view values by using a **DataRowView**, the <xref:System.Data.DataView.RowStateFilter%2A> property of the **DataView** determines which row version of the underlying **DataRow** is exposed.</span></span> <span data-ttu-id="fe7f7-107">Para obtener información acerca del acceso a diferentes versiones de fila mediante una **DataRow**, consulte [Estados de fila y versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="fe7f7-107">For information about accessing different row versions using a **DataRow**, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
   
- El siguiente ejemplo de código muestra todos los valores actuales y originales de una tabla.  
+ <span data-ttu-id="fe7f7-108">El siguiente ejemplo de código muestra todos los valores actuales y originales de una tabla.</span><span class="sxs-lookup"><span data-stu-id="fe7f7-108">The following code example displays all the current and original values in a table.</span></span>  
   
 ```vb  
 Dim catView As DataView = New DataView(catDS.Tables("Categories"))  
@@ -42,7 +48,6 @@ Public Shared Sub WriteView(thisDataView As DataView)
     Console.WriteLine()  
   Next  
 End Sub  
-  
 ```  
   
 ```csharp  
@@ -64,10 +69,10 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## Vea también  
- <xref:System.Data.DataRowVersion>   
- <xref:System.Data.DataViewRowState>   
- <xref:System.Data.DataView>   
- <xref:System.Data.DataRowView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="fe7f7-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="fe7f7-109">See Also</span></span>  
+ <xref:System.Data.DataRowVersion>  
+ <xref:System.Data.DataViewRowState>  
+ <xref:System.Data.DataView>  
+ <xref:System.Data.DataRowView>  
+ [<span data-ttu-id="fe7f7-110">Objetos DataView</span><span class="sxs-lookup"><span data-stu-id="fe7f7-110">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="fe7f7-111">Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet</span><span class="sxs-lookup"><span data-stu-id="fe7f7-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

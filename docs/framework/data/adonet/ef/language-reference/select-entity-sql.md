@@ -1,119 +1,116 @@
 ---
-title: "SELECT (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "ESQL"
+title: SELECT (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3123d76d5999d9f7201e1415d6bc4313f9767098
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# SELECT (Entity SQL)
-Especifica los elementos devueltos por una consulta.  
+# <a name="select-entity-sql"></a><span data-ttu-id="1e0ff-102">SELECT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1e0ff-102">SELECT (Entity SQL)</span></span>
+<span data-ttu-id="1e0ff-103">Especifica los elementos devueltos por una consulta.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-103">Specifies the elements returned by a query.</span></span>  
   
-## Sintaxis  
+## <a name="syntax"></a><span data-ttu-id="1e0ff-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1e0ff-104">Syntax</span></span>  
   
 ```  
-  
 SELECT [ ALL | DISTINCT ] [ topSubclause ] aliasedExpr   
       [{ , aliasedExpr }] FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause ]  
 or  
 SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE whereClause ] [ GROUP BY groupByClause [ HAVING havingClause ] ] [ ORDER BY orderByClause  
 ```  
   
-## Argumentos  
- ALL  
- Especifica que el conjunto de resultados puede incluir resultados duplicados. ALL es el valor predeterminado.  
+## <a name="arguments"></a><span data-ttu-id="1e0ff-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="1e0ff-105">Arguments</span></span>  
+ <span data-ttu-id="1e0ff-106">ALL</span><span class="sxs-lookup"><span data-stu-id="1e0ff-106">ALL</span></span>  
+ <span data-ttu-id="1e0ff-107">Especifica que el conjunto de resultados puede incluir resultados duplicados.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-107">Specifies that duplicates can appear in the result set.</span></span> <span data-ttu-id="1e0ff-108">ALL es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-108">ALL is the default.</span></span>  
   
- DISTINCT  
- Especifica que el conjunto de resultados solo puede incluir resultados únicos.  
+ <span data-ttu-id="1e0ff-109">DISTINCT</span><span class="sxs-lookup"><span data-stu-id="1e0ff-109">DISTINCT</span></span>  
+ <span data-ttu-id="1e0ff-110">Especifica que el conjunto de resultados solo puede incluir resultados únicos.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-110">Specifies that only unique results can appear in the result set.</span></span>  
   
- VALUE  
- Solo permite que se especifique un elemento y no agrega un contenedor de filas.  
+ <span data-ttu-id="1e0ff-111">VALUE</span><span class="sxs-lookup"><span data-stu-id="1e0ff-111">VALUE</span></span>  
+ <span data-ttu-id="1e0ff-112">Solo permite que se especifique un elemento y no agrega un contenedor de filas.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-112">Allows only one item to be specified, and does not add on a row wrapper.</span></span>  
   
  `topSubclause`  
- Cualquier expresión válida que indique el número de primeros resultados que ha de devolver la consulta, del tipo `top (``expr``)`.  
+ <span data-ttu-id="1e0ff-113">Cualquier expresión válida que indique el número de primeros resultados que ha de devolver la consulta, del tipo `top (``expr``)`.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-113">Any valid expression that indicates the number of first results to return from the query, of the form `top (``expr``)`.</span></span>  
   
- El parámetro LIMIT del operador [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) también permite seleccionar los primeros n elementos del conjunto de resultados.  
+ <span data-ttu-id="1e0ff-114">El parámetro de límite de la [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operador también permite seleccionar los primeros n elementos del conjunto de resultados.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-114">The LIMIT parameter of the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operator also lets you select the first n items in the result set.</span></span>  
   
  `aliasedExpr`  
- Expresión del tipo:  
+ <span data-ttu-id="1e0ff-115">Expresión del tipo:</span><span class="sxs-lookup"><span data-stu-id="1e0ff-115">An expression of the form:</span></span>  
   
- `expr` como `identifier` &#124; `expr`  
+ <span data-ttu-id="1e0ff-116">`expr`como `identifier` &#124;`expr`</span><span class="sxs-lookup"><span data-stu-id="1e0ff-116">`expr` as `identifier` &#124; `expr`</span></span>  
   
  `expr`  
- Literal o expresión.  
+ <span data-ttu-id="1e0ff-117">Literal o expresión.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-117">A literal or expression.</span></span>  
   
-## Comentarios  
- La cláusula SELECT se evalúa después de que se evalúen las cláusulas [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) y [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md). La cláusula SELECT solo puede hacer referencia a elementos que están actualmente en el ámbito \(de la cláusula FROM o de ámbitos externos\). Si se ha especificado una cláusula GROUP BY, la cláusula SELECT solo se permite para hacer referencia a los alias para las claves GROUP BY. La referencia a los elementos de la cláusula de FROM solo se permite en funciones de agregado.  
+## <a name="remarks"></a><span data-ttu-id="1e0ff-118">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1e0ff-118">Remarks</span></span>  
+ <span data-ttu-id="1e0ff-119">La cláusula SELECT se evalúa después de la [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), y [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) cláusulas se han evaluado.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-119">The SELECT clause is evaluated after the [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), and [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) clauses have been evaluated.</span></span> <span data-ttu-id="1e0ff-120">La cláusula SELECT solo puede hacer referencia a elementos que están actualmente en el ámbito (de la cláusula FROM o de ámbitos externos).</span><span class="sxs-lookup"><span data-stu-id="1e0ff-120">The SELECT clause can only refer to items currently in-scope (from the FROM clause, or from outer scopes).</span></span> <span data-ttu-id="1e0ff-121">Si se ha especificado una cláusula GROUP BY, la cláusula SELECT solo se permite para hacer referencia a los alias para las claves GROUP BY.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-121">If a GROUP BY clause has been specified, the SELECT clause is only allowed to reference the aliases for the GROUP BY keys.</span></span> <span data-ttu-id="1e0ff-122">La referencia a los elementos de la cláusula de FROM solo se permite en funciones de agregado.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-122">Referring to the FROM clause items is only permitted in aggregate functions.</span></span>  
   
- La lista de una o más expresiones de consulta que siguen a la palabra clave SELECT se conoce como lista de selección o más formalmente como proyección. La forma más general de proyección es una expresión de consulta única. Si selecciona un miembro `member1` de una colección `collection1`, generará una nueva colección de todos los valores de `member1` para cada objeto de `collection1`, como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="1e0ff-123">La lista de una o más expresiones de consulta que siguen a la palabra clave SELECT se conoce como lista de selección o más formalmente como proyección.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-123">The list of one or more query expressions following the SELECT keyword is known as the select list, or more formally as the projection.</span></span> <span data-ttu-id="1e0ff-124">La forma más general de proyección es una expresión de consulta única.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-124">The most general form of projection is a single query expression.</span></span> <span data-ttu-id="1e0ff-125">Si selecciona un miembro `member1` de una colección `collection1`, generará una nueva colección de todos los valores de `member1` para cada objeto de `collection1`, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-125">If you select a member `member1` from a collection `collection1`, you will produce a new collection of all the `member1` values for each object in `collection1`, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT collection1.member1 FROM collection1  
 ```  
   
- Por ejemplo, si `customers` es una colección de tipo `Customer` que tiene una propiedad `Name` que es de tipo `string`, la acción de seleccionar `Name` de `customers` producirá una colección de cadenas, como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="1e0ff-126">Por ejemplo, si `customers` es una colección de tipo `Customer` que tiene una propiedad `Name` que es de tipo `string`, la acción de seleccionar `Name` de `customers` producirá una colección de cadenas, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-126">For example, if `customers` is a collection of type `Customer` that has a property `Name` that is of type `string`, selecting `Name` from `customers` will yield a collection of strings, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT customers.Name FROM customers AS c  
 ```  
   
- También es posible utilizar la sintaxis de JOIN \(FULL, INNER, LEFT, OUTER, ON y RIGHT\). ON se requiere para combinaciones internas y no se permite para combinaciones cruzadas.  
+ <span data-ttu-id="1e0ff-127">También es posible utilizar la sintaxis de JOIN (FULL, INNER, LEFT, OUTER, ON y RIGHT).</span><span class="sxs-lookup"><span data-stu-id="1e0ff-127">It is also possible to use JOIN syntax (FULL, INNER, LEFT, OUTER, ON, and RIGHT).</span></span> <span data-ttu-id="1e0ff-128">ON se requiere para combinaciones internas y no se permite para combinaciones cruzadas.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-128">ON is required for inner joins and is nto allowed for cross joins.</span></span>  
   
-## Cláusulas de selección de fila y valor  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite dos variantes de la cláusula SELECT. La primera variante, selección de fila, se identifica mediante la palabra clave SELECT y se puede utilizar para especificar uno o más valores que se deben proyectar externamente. Dado que un contenedor de filas se agrega implícitamente encapsulando los valores devueltos, el resultado de la expresión de consulta siempre es un conjunto múltiple de filas.  
+## <a name="row-and-value-select-clauses"></a><span data-ttu-id="1e0ff-129">Cláusulas de selección de fila y valor</span><span class="sxs-lookup"><span data-stu-id="1e0ff-129">Row and Value Select Clauses</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="1e0ff-130"> admite dos variantes de la cláusula SELECT.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-130"> supports two variants of the SELECT clause.</span></span> <span data-ttu-id="1e0ff-131">La primera variante, selección de fila, se identifica mediante la palabra clave SELECT y se puede utilizar para especificar uno o más valores que se deben proyectar externamente. Dado que un contenedor de filas se agrega implícitamente encapsulando los valores devueltos, el resultado de la expresión de consulta siempre es un conjunto múltiple de filas.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-131">The first variant, row select, is identified by the SELECT keyword, and can be used to specify one or more values that should be projected out. Because a row wrapper is implicitly added around the values returned, the result of the query expression is always a multiset of rows.</span></span>  
   
- Cada expresión de consulta en una selección de filas debe especificar un alias. Si no se especifica un alias, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno usando las reglas de generación de alias.  
+ <span data-ttu-id="1e0ff-132">Cada expresión de consulta en una selección de filas debe especificar un alias.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-132">Each query expression in a row select must specify an alias.</span></span> <span data-ttu-id="1e0ff-133">Si no se especifica un alias,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno usando las reglas de generación de alias.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-133">If no alias is specified,[!INCLUDE[esql](../../../../../../includes/esql-md.md)] attempts to generate an alias by using the alias generation rules.</span></span>  
   
- La otra variante de la cláusula SELECT, selección de valor, se identifica mediante la palabra clave SELECT VALUE. Solo permite que se especifique un valor y no agrega un contenedor de filas.  
+ <span data-ttu-id="1e0ff-134">La otra variante de la cláusula SELECT, selección de valor, se identifica mediante la palabra clave SELECT VALUE.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-134">The other variant of the SELECT clause, value select, is identified by the SELECT VALUE keyword.</span></span> <span data-ttu-id="1e0ff-135">Solo permite que se especifique un valor y no agrega un contenedor de filas.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-135">It allows only one value to be specified, and does not add a row wrapper.</span></span>  
   
- Una selección de fila siempre se puede expresar en términos de VALUE SELECT, como se muestra en el ejemplo siguiente.  
+ <span data-ttu-id="1e0ff-136">Una selección de fila siempre se puede expresar en términos de VALUE SELECT, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-136">A row select is always expressible in terms of VALUE SELECT, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT 1 AS a, "abc" AS b FROM C  
 SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C   
 ```  
   
-## Modificadores All y Distinct  
- Las dos variantes de SELECT en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permiten la especificación de un modificador ALL o DISTINCT. Si se especifica el modificador DISTINCT, los resultados duplicados se eliminan de la colección producida por la expresión de consulta \(hasta la cláusula SELECT e incluida dicha cláusula\). Si se especifica el modificador ALL, no se lleva a cabo la eliminación de resultados duplicados; ALL es el valor predeterminado.  
+## <a name="all-and-distinct-modifiers"></a><span data-ttu-id="1e0ff-137">Modificadores All y Distinct</span><span class="sxs-lookup"><span data-stu-id="1e0ff-137">All and Distinct Modifiers</span></span>  
+ <span data-ttu-id="1e0ff-138">Las dos variantes de SELECT en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permiten la especificación de un modificador ALL o DISTINCT.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-138">Both variants of SELECT in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allow the specification of an ALL or DISTINCT modifier.</span></span> <span data-ttu-id="1e0ff-139">Si se especifica el modificador DISTINCT, los resultados duplicados se eliminan de la colección producida por la expresión de consulta (hasta la cláusula SELECT e incluida dicha cláusula).</span><span class="sxs-lookup"><span data-stu-id="1e0ff-139">If the DISTINCT modifier is specified, duplicates are eliminated from the collection produced by the query expression (up to and including the SELECT clause).</span></span> <span data-ttu-id="1e0ff-140">Si se especifica el modificador ALL, no se lleva a cabo la eliminación de resultados duplicados; ALL es el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-140">If the ALL modifier is specified, no duplicate elimination is performed; ALL is the default.</span></span>  
   
-## Diferencias respecto de Transact\-SQL  
- A diferencia de Transact\-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no admite el uso del argumento \* en la cláusula SELECT.  En su lugar, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite que las consultas proyecten externamente registros completos haciendo referencia a los alias para la colección de la cláusula FROM, como se muestra en el ejemplo siguiente.  
+## <a name="differences-from-transact-sql"></a><span data-ttu-id="1e0ff-141">Diferencias respecto de Transact-SQL</span><span class="sxs-lookup"><span data-stu-id="1e0ff-141">Differences from Transact-SQL</span></span>  
+ <span data-ttu-id="1e0ff-142">A diferencia de Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no admite el uso del argumento * en la cláusula SELECT.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-142">Unlike Transact-SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] does not support use of the * argument in the SELECT clause.</span></span>  <span data-ttu-id="1e0ff-143">En su lugar, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite que las consultas proyecten externamente registros completos haciendo referencia a los alias para la colección de la cláusula FROM, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-143">Instead, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] allows queries to project out entire records by referencing the collection aliases from the FROM clause, as illustrated in the following example.</span></span>  
   
 ```  
 SELECT * FROM T1, T2  
 ```  
   
- La expresión de consulta [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] anterior se expresa en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de la manera siguiente.  
+ <span data-ttu-id="1e0ff-144">La expresión de consulta [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] anterior se expresa en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de la manera siguiente.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-144">The previous [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] query expression is expressed in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] in the following way.</span></span>  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
 ```  
   
-## Ejemplo  
- La consulta de Entity SQL siguiente utiliza el operador SELECT para especificar los elementos que ha de devolver una consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+## <a name="example"></a><span data-ttu-id="1e0ff-145">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1e0ff-145">Example</span></span>  
+ <span data-ttu-id="1e0ff-146">La consulta de Entity SQL siguiente utiliza el operador SELECT para especificar los elementos que ha de devolver una consulta.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-146">The following Entity SQL query uses the SELECT operator to specify the elements to be returned by a query.</span></span> <span data-ttu-id="1e0ff-147">La consulta se basa en el modelo AdventureWorks Sales.</span><span class="sxs-lookup"><span data-stu-id="1e0ff-147">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="1e0ff-148">Para compilar y ejecutar esta consulta, siga estos pasos:</span><span class="sxs-lookup"><span data-stu-id="1e0ff-148">To compile and run this query, follow these steps:</span></span>  
   
-1.  Siga el procedimiento de [Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  <span data-ttu-id="1e0ff-149">Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="1e0ff-149">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery`:  
+2.  <span data-ttu-id="1e0ff-150">Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :</span><span class="sxs-lookup"><span data-stu-id="1e0ff-150">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## Vea también  
- [Expresiones de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)   
- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)   
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a><span data-ttu-id="1e0ff-151">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e0ff-151">See Also</span></span>  
+ [<span data-ttu-id="1e0ff-152">Expresiones de consulta</span><span class="sxs-lookup"><span data-stu-id="1e0ff-152">Query Expressions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
+ [<span data-ttu-id="1e0ff-153">Referencia de Entity SQL</span><span class="sxs-lookup"><span data-stu-id="1e0ff-153">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="1e0ff-154">ARRIBA</span><span class="sxs-lookup"><span data-stu-id="1e0ff-154">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
