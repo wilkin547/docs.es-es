@@ -1,35 +1,38 @@
 ---
-title: "5001 - DCSerializeWithSurrogateStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 5001 - DCSerializeWithSurrogateStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 42cb442e-ff16-4809-bbee-6d31f012b9b2
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ebda2a103dedc56319fb5c84bc9cf024a68e3998
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 5001 - DCSerializeWithSurrogateStart
-## Propiedades  
+# <a name="5001---dcserializewithsurrogatestart"></a><span data-ttu-id="9f2a2-102">5001 - DCSerializeWithSurrogateStart</span><span class="sxs-lookup"><span data-stu-id="9f2a2-102">5001 - DCSerializeWithSurrogateStart</span></span>
+## <a name="properties"></a><span data-ttu-id="9f2a2-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="9f2a2-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|5001|  
-|Palabras clave|Serialización|  
-|Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="9f2a2-104">Id.</span><span class="sxs-lookup"><span data-stu-id="9f2a2-104">ID</span></span>|<span data-ttu-id="9f2a2-105">5001</span><span class="sxs-lookup"><span data-stu-id="9f2a2-105">5001</span></span>|  
+|<span data-ttu-id="9f2a2-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="9f2a2-106">Keywords</span></span>|<span data-ttu-id="9f2a2-107">Serialización</span><span class="sxs-lookup"><span data-stu-id="9f2a2-107">Serialization</span></span>|  
+|<span data-ttu-id="9f2a2-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="9f2a2-108">Level</span></span>|<span data-ttu-id="9f2a2-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="9f2a2-109">Verbose</span></span>|  
+|<span data-ttu-id="9f2a2-110">Canal</span><span class="sxs-lookup"><span data-stu-id="9f2a2-110">Channel</span></span>|<span data-ttu-id="9f2a2-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9f2a2-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Este evento se genera cuando DataContract serializa con inicios suplentes.  
+## <a name="description"></a><span data-ttu-id="9f2a2-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="9f2a2-112">Description</span></span>  
+ <span data-ttu-id="9f2a2-113">Este evento se genera cuando DataContract serializa con inicios suplentes.</span><span class="sxs-lookup"><span data-stu-id="9f2a2-113">This event is emitted when the DataContract serialize with surrogates starts.</span></span>  
   
-## Mensaje  
- Inicio de la serialización de DataContract %1 con suplentes.  
+## <a name="message"></a><span data-ttu-id="9f2a2-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="9f2a2-114">Message</span></span>  
+ <span data-ttu-id="9f2a2-115">Inicio de la serialización de DataContract %1 con suplentes.</span><span class="sxs-lookup"><span data-stu-id="9f2a2-115">DataContract serialize %1 with surrogates start.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="9f2a2-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="9f2a2-116">Details</span></span>

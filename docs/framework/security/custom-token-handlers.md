@@ -5,30 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="custom-token-handlers"></a>Controladores de token personalizados
-En este tema, se describen los controladores de token en WIF y cómo se usan para procesar tokens. El tema también trata la necesidad de crear controladores personalizados de token para los tipos de token que no se admiten de manera predeterminada en WIF.  
+# <a name="custom-token-handlers"></a><span data-ttu-id="a6dc0-102">Controladores de token personalizados</span><span class="sxs-lookup"><span data-stu-id="a6dc0-102">Custom Token Handlers</span></span>
+<span data-ttu-id="a6dc0-103">En este tema, se describen los controladores de token en WIF y cómo se usan para procesar tokens.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-103">This topic discusses token handlers in WIF and how they are used to process tokens.</span></span> <span data-ttu-id="a6dc0-104">El tema también trata la necesidad de crear controladores personalizados de token para los tipos de token que no se admiten de manera predeterminada en WIF.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-104">The topic also covers what is necessary to create custom token handlers for token types that are not supported by default in WIF.</span></span>  
   
-## <a name="introduction-to-token-handlers-in-wif"></a>Introducción a los controladores de token en WIF  
- WIF se basa en los controladores de token de seguridad para crear, leer, escribir y para validar los tokens para una aplicación de usuario de confianza (RP) o un servicio de token de seguridad (STS). Los controladores de token son puntos de extensibilidad para agregar un controlador personalizado de token en la canalización de WIF, o para personalizar la manera en que un controlador de token existente administra los tokens. WIF proporciona nueve controladores integrados de token de seguridad que pueden modificarse o reemplazarse completamente para cambiar la función según sea necesario.  
+## <a name="introduction-to-token-handlers-in-wif"></a><span data-ttu-id="a6dc0-105">Introducción a los controladores de token en WIF</span><span class="sxs-lookup"><span data-stu-id="a6dc0-105">Introduction to Token Handlers in WIF</span></span>  
+ <span data-ttu-id="a6dc0-106">WIF se basa en los controladores de token de seguridad para crear, leer, escribir y para validar los tokens para una aplicación de usuario de confianza (RP) o un servicio de token de seguridad (STS).</span><span class="sxs-lookup"><span data-stu-id="a6dc0-106">WIF relies on security token handlers to create, read, write, and validate tokens for a relying party (RP) application or a security token service (STS).</span></span> <span data-ttu-id="a6dc0-107">Los controladores de token son puntos de extensibilidad para agregar un controlador personalizado de token en la canalización de WIF, o para personalizar la manera en que un controlador de token existente administra los tokens.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-107">Token handlers are extensibility points for you to add a custom token handler in the WIF pipeline, or to customize the way that an existing token handler manages tokens.</span></span> <span data-ttu-id="a6dc0-108">WIF proporciona nueve controladores integrados de token de seguridad que pueden modificarse o reemplazarse completamente para cambiar la función según sea necesario.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-108">WIF provides nine built-in security token handlers that can be modified or entirely overridden to change the functionality as necessary.</span></span>  
   
-## <a name="built-in-security-token-handlers-in-wif"></a>Controladores integrados de token de seguridad en WIF  
- WIF 4.5 incluye nueve clases de controlador de token de seguridad que derivan de la clase base abstracta <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:  
+## <a name="built-in-security-token-handlers-in-wif"></a><span data-ttu-id="a6dc0-109">Controladores integrados de token de seguridad en WIF</span><span class="sxs-lookup"><span data-stu-id="a6dc0-109">Built-In Security Token Handlers in WIF</span></span>  
+ <span data-ttu-id="a6dc0-110">WIF 4.5 incluye nueve clases de controlador de token de seguridad que derivan de la clase base abstracta <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span><span class="sxs-lookup"><span data-stu-id="a6dc0-110">WIF 4.5 includes nine security token handler classes that derive from the abstract base class <xref:System.IdentityModel.Tokens.SecurityTokenHandler>:</span></span>  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -48,14 +46,14 @@ En este tema, se describen los controladores de token en WIF y cómo se usan par
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## <a name="adding-a-custom-token-handler"></a>Agregar un controlador personalizado de token  
- Algunos tipos de token, como los tokens web simples (SWT) y los tokens web JSON (JWT) no tienen controladores integrados de token proporcionados por WIF. Para estos tipos de token y para otros que no tienen un controlador integrado, debe realizar los pasos siguientes para crear un controlador personalizado de token.  
+## <a name="adding-a-custom-token-handler"></a><span data-ttu-id="a6dc0-111">Agregar un controlador personalizado de token</span><span class="sxs-lookup"><span data-stu-id="a6dc0-111">Adding a Custom Token Handler</span></span>  
+ <span data-ttu-id="a6dc0-112">Algunos tipos de token, como los tokens web simples (SWT) y los tokens web JSON (JWT) no tienen controladores integrados de token proporcionados por WIF.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-112">Some token types, such as Simple Web Tokens (SWT) and JSON Web Tokens (JWT) do not have built-in token handlers provided by WIF.</span></span> <span data-ttu-id="a6dc0-113">Para estos tipos de token y para otros que no tienen un controlador integrado, debe realizar los pasos siguientes para crear un controlador personalizado de token.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-113">For these token types and for others that do not have a built-in handler, you need to perform the following steps to create a custom token handler.</span></span>  
   
-#### <a name="adding-a-custom-token-handler"></a>Agregar un controlador personalizado de token  
+#### <a name="adding-a-custom-token-handler"></a><span data-ttu-id="a6dc0-114">Agregar un controlador personalizado de token</span><span class="sxs-lookup"><span data-stu-id="a6dc0-114">Adding a custom token handler</span></span>  
   
-1.  Cree una clase que derive de <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1.  <span data-ttu-id="a6dc0-115">Cree una clase que derive de <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-115">Create a new class that derives from <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.</span></span>  
   
-2.  Invalide los métodos siguientes y proporcione su propia implementación:  
+2.  <span data-ttu-id="a6dc0-116">Invalide los métodos siguientes y proporcione su propia implementación:</span><span class="sxs-lookup"><span data-stu-id="a6dc0-116">Override the following methods and provide your own implementation:</span></span>  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -69,7 +67,7 @@ En este tema, se describen los controladores de token en WIF y cómo se usan par
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Agregue una referencia al nuevo controlador personalizado de token del archivo *Web.config* o *App.config*, dentro de la sección **\<system.identityModel>** que se aplica a WIF. Por ejemplo, el marcado siguiente de configuración especifica un nuevo controlador de token denominado **MyCustomTokenHandler** que reside en el espacio de nombres **CustomToken**.  
+3.  <span data-ttu-id="a6dc0-117">Agregue una referencia al nuevo controlador personalizado de token del archivo *Web.config* o *App.config*, dentro de la sección **\<system.identityModel>** que se aplica a WIF.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-117">Add a reference to the new custom token handler in the *Web.config* or *App.config* file, within the **\<system.identityModel>** section that applies to WIF.</span></span> <span data-ttu-id="a6dc0-118">Por ejemplo, el marcado siguiente de configuración especifica un nuevo controlador de token denominado **MyCustomTokenHandler** que reside en el espacio de nombres **CustomToken**.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-118">For example, the following configuration markup specifies a new token handler named **MyCustomTokenHandler** that resides in the **CustomToken** namespace.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -81,7 +79,7 @@ En este tema, se describen los controladores de token en WIF y cómo se usan par
     </system.identityModel>  
     ```  
   
-     Observe que si proporciona su propio controlador de token para controlar un tipo de token que ya tiene un controlador integrado de token, necesita agregar un elemento **\<remove>** para quitar el controlador predeterminado y usar su controlador personalizado en su lugar. Por ejemplo, la siguiente configuración reemplaza el elemento <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> predeterminado por el controlador personalizado de token:  
+     <span data-ttu-id="a6dc0-119">Observe que si proporciona su propio controlador de token para controlar un tipo de token que ya tiene un controlador integrado de token, necesita agregar un elemento **\<remove>** para quitar el controlador predeterminado y usar su controlador personalizado en su lugar.</span><span class="sxs-lookup"><span data-stu-id="a6dc0-119">Note that if you are providing your own token handler to handle a token type that already has a built-in token handler, you need to add a **\<remove>** element to drop the default handler and use your custom handler instead.</span></span> <span data-ttu-id="a6dc0-120">Por ejemplo, la siguiente configuración reemplaza el elemento <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> predeterminado por el controlador personalizado de token:</span><span class="sxs-lookup"><span data-stu-id="a6dc0-120">For example, the following configuration replaces the default <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> with the custom token handler:</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -93,4 +91,3 @@ En este tema, se describen los controladores de token en WIF y cómo se usan par
         </identityConfiguration>  
     </system.identityModel>  
     ```
-

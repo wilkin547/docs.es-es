@@ -1,47 +1,53 @@
 ---
-title: "C&#243;mo: Convertir datos enlazados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlazar datos, convertir datos enlazados"
-  - "convertir, datos enlazados"
-  - "enlace de datos, convertir datos enlazados"
+title: "Cómo: Convertir datos enlazados"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- converting [WPF], bound data
+- data binding [WPF], converting bound data
+- binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 88e248c7c8e60fbe8e55567cb642200820b25214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Convertir datos enlazados
-En este ejemplo se muestra cómo aplicar la conversión a datos que se utilizan en enlaces.  
+# <a name="how-to-convert-bound-data"></a><span data-ttu-id="70be9-102">Cómo: Convertir datos enlazados</span><span class="sxs-lookup"><span data-stu-id="70be9-102">How to: Convert Bound Data</span></span>
+<span data-ttu-id="70be9-103">En este ejemplo se muestra cómo aplicar la conversión a datos que se utilizan en enlaces.</span><span class="sxs-lookup"><span data-stu-id="70be9-103">This example shows how to apply conversion to data that is used in bindings.</span></span>  
   
- Para convertir datos durante el enlace, debe crear una clase que implemente la interfaz <xref:System.Windows.Data.IValueConverter>, que incluye los métodos <xref:System.Windows.Data.IValueConverter.Convert%2A> y <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>.  
+ <span data-ttu-id="70be9-104">Para convertir datos durante el enlace, debe crear una clase que implementa el <xref:System.Windows.Data.IValueConverter> interfaz, que incluye el <xref:System.Windows.Data.IValueConverter.Convert%2A> y <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> métodos.</span><span class="sxs-lookup"><span data-stu-id="70be9-104">To convert data during binding, you must create a class that implements the <xref:System.Windows.Data.IValueConverter> interface, which includes the <xref:System.Windows.Data.IValueConverter.Convert%2A> and <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> methods.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra la implementación de un convertidor de fecha que convierte el valor de fecha pasado de manera que sólo muestre el año, el mes y el día.  Al implementar la interfaz <xref:System.Windows.Data.IValueConverter>, es recomendable decorar la implementación con un atributo <xref:System.Windows.Data.ValueConversionAttribute> para indicar a las herramientas de programación los tipos de datos que participan en la conversión, como en el ejemplo siguiente:  
+## <a name="example"></a><span data-ttu-id="70be9-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="70be9-105">Example</span></span>  
+ <span data-ttu-id="70be9-106">En el ejemplo siguiente se muestra la implementación de un convertidor de fecha que convierte el valor de fecha pasado de manera que solo muestra el año, mes y día.</span><span class="sxs-lookup"><span data-stu-id="70be9-106">The following example shows the implementation of a date converter that converts the date value passed in so that it only shows the year, the month, and the day.</span></span> <span data-ttu-id="70be9-107">Al implementar el <xref:System.Windows.Data.IValueConverter> interfaz, es una buena práctica para decorar la implementación con un <xref:System.Windows.Data.ValueConversionAttribute> atributo para indicar al desarrollo de herramientas de los tipos de datos implicados en la conversión, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="70be9-107">When implementing the <xref:System.Windows.Data.IValueConverter> interface, it is a good practice to decorate the implementation with a <xref:System.Windows.Data.ValueConversionAttribute> attribute to indicate to development tools the data types involved in the conversion, as in the following example:</span></span>  
   
  [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
- Una vez creado un convertidor, puede agregarlo como recurso en el archivo [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  En el ejemplo siguiente, *src* se asigna al espacio de nombres en el que se define *DateConverter*.  
+ <span data-ttu-id="70be9-108">Una vez haya creado un convertidor, puede agregarlo como recurso en el [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivo.</span><span class="sxs-lookup"><span data-stu-id="70be9-108">Once you have created a converter, you can add it as a resource in your [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file.</span></span> <span data-ttu-id="70be9-109">En el ejemplo siguiente, *src* se asigna al espacio de nombres en el que *DateConverter* está definido.</span><span class="sxs-lookup"><span data-stu-id="70be9-109">In the following example, *src* maps to the namespace in which *DateConverter* is defined.</span></span>  
   
- [!code-xml[DataBindingLab#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
+ [!code-xaml[DataBindingLab#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
- Por último, puede utilizar el convertidor en el enlace mediante la sintaxis siguiente.  En el ejemplo siguiente, el contenido de texto de <xref:System.Windows.Controls.TextBlock> se enlaza a *StartDate*, que es una propiedad de un origen de datos externo.  
+ <span data-ttu-id="70be9-110">Por último, puede usar el convertidor en el enlace mediante la sintaxis siguiente.</span><span class="sxs-lookup"><span data-stu-id="70be9-110">Finally, you can use the converter in your binding using the following syntax.</span></span> <span data-ttu-id="70be9-111">En el ejemplo siguiente, el texto del contenido de la <xref:System.Windows.Controls.TextBlock> está enlazado a *StartDate*, que es una propiedad de un origen de datos externo.</span><span class="sxs-lookup"><span data-stu-id="70be9-111">In the following example, the text content of the <xref:System.Windows.Controls.TextBlock> is bound to *StartDate*, which is a property of an external data source.</span></span>  
   
- [!code-xml[DataBindingLab#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
+ [!code-xaml[DataBindingLab#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
- Los recursos de estilo a los que se hace referencia en el ejemplo anterior se definen en una sección de recurso que no se muestra en este tema.  
+ <span data-ttu-id="70be9-112">Los recursos de estilo que se hace referencia en el ejemplo anterior se definen en una sección de recursos que no se muestra en este tema.</span><span class="sxs-lookup"><span data-stu-id="70be9-112">The style resources referenced in the above example are defined in a resource section not shown in this topic.</span></span>  
   
-## Vea también  
- [Implementar la validación de enlaces](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)   
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="70be9-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="70be9-113">See Also</span></span>  
+ [<span data-ttu-id="70be9-114">Implementar la validación de enlaces</span><span class="sxs-lookup"><span data-stu-id="70be9-114">Implement Binding Validation</span></span>](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
+ [<span data-ttu-id="70be9-115">Información general sobre el enlace de datos</span><span class="sxs-lookup"><span data-stu-id="70be9-115">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="70be9-116">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="70be9-116">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

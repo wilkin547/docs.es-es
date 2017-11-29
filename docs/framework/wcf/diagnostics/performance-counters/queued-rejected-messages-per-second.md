@@ -1,27 +1,30 @@
 ---
-title: "Mensajes en cola rechazados por segundo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mensajes en cola rechazados por segundo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 77ea9aa3-b9e2-4a1d-a65e-5ca115ba0567
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0a773d30cc9cb33a9bd3a1e1fb5562026bcfb7e2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Mensajes en cola rechazados por segundo
-Nombre de contador: mensajes en cola rechazados por segundo.  
+# <a name="queued-rejected-messages-per-second"></a><span data-ttu-id="d7ac9-102">Mensajes en cola rechazados por segundo</span><span class="sxs-lookup"><span data-stu-id="d7ac9-102">Queued Rejected Messages Per Second</span></span>
+<span data-ttu-id="d7ac9-103">Nombre de contador: mensajes en cola rechazados por segundo.</span><span class="sxs-lookup"><span data-stu-id="d7ac9-103">Counter Name: Queued Messages Rejected Per Second.</span></span>  
   
-## Descripción  
- Número de mensajes rechazados cada segundo por el transporte en cola en este servicio.  
+## <a name="description"></a><span data-ttu-id="d7ac9-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="d7ac9-104">Description</span></span>  
+ <span data-ttu-id="d7ac9-105">Número de mensajes rechazados cada segundo por el transporte en cola en este servicio.</span><span class="sxs-lookup"><span data-stu-id="d7ac9-105">Number of messages that are rejected by the queued transport at this service in a second.</span></span>  
   
- Este contador es un tipo de contador de rendimiento [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula mediante la fórmula siguiente.  
+ <span data-ttu-id="d7ac9-106">Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), cuyo valor se calcula con la siguiente fórmula.</span><span class="sxs-lookup"><span data-stu-id="d7ac9-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ <span data-ttu-id="d7ac9-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="d7ac9-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

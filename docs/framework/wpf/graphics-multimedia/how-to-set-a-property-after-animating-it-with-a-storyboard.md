@@ -1,74 +1,79 @@
 ---
-title: "C&#243;mo: Establecer una propiedad despu&#233;s de animarla con un gui&#243;n gr&#225;fico | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "animación, cambiar valores de propiedad después"
+title: "Cómo: Establecer una propiedad después de animarla con un guión gráfico"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 357a9bb6c1a01b00e7f9bcfc17267797f20366b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer una propiedad despu&#233;s de animarla con un gui&#243;n gr&#225;fico
-En algunos casos, puede parecer que no es posible cambiar el valor de una propiedad después de animarla.  
+# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a><span data-ttu-id="fced5-102">Cómo: Establecer una propiedad después de animarla con un guión gráfico</span><span class="sxs-lookup"><span data-stu-id="fced5-102">How to: Set a Property After Animating It with a Storyboard</span></span>
+<span data-ttu-id="fced5-103">En algunos casos, puede aparecer que no se puede cambiar el valor de una propiedad después de que se ha animado.</span><span class="sxs-lookup"><span data-stu-id="fced5-103">In some cases, it might appear that you can't change the value of a property after it has been animated.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente, se utiliza un objeto <xref:System.Windows.Media.Animation.Storyboard> para animar el color de <xref:System.Windows.Media.SolidColorBrush>.  El guión gráfico se activa al hacer clic en el botón.  El evento <xref:System.Windows.Media.Animation.Timeline.Completed> se controla para que se notifique al programa cuando se completa <xref:System.Windows.Media.Animation.ColorAnimation>.  
+## <a name="example"></a><span data-ttu-id="fced5-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fced5-104">Example</span></span>  
+ <span data-ttu-id="fced5-105">En el ejemplo siguiente, un <xref:System.Windows.Media.Animation.Storyboard> se usa para animar el color de un <xref:System.Windows.Media.SolidColorBrush>.</span><span class="sxs-lookup"><span data-stu-id="fced5-105">In the following example, a <xref:System.Windows.Media.Animation.Storyboard> is used to animate the color of a <xref:System.Windows.Media.SolidColorBrush>.</span></span> <span data-ttu-id="fced5-106">El guión gráfico se desencadena cuando se hace clic en el botón.</span><span class="sxs-lookup"><span data-stu-id="fced5-106">The storyboard is triggered when the button is clicked.</span></span> <span data-ttu-id="fced5-107">El <xref:System.Windows.Media.Animation.Timeline.Completed> evento está controlado por lo que se notifique al programa cuando el <xref:System.Windows.Media.Animation.ColorAnimation> completa.</span><span class="sxs-lookup"><span data-stu-id="fced5-107">The <xref:System.Windows.Media.Animation.Timeline.Completed> event is handled so that the program is notified when the <xref:System.Windows.Media.Animation.ColorAnimation> completes.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton1Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton1declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton1Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton1declaration)]  
   
-## Ejemplo  
- Después de completarse <xref:System.Windows.Media.Animation.ColorAnimation>, el programa intenta cambiar el color del pincel a azul.  
+## <a name="example"></a><span data-ttu-id="fced5-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fced5-108">Example</span></span>  
+ <span data-ttu-id="fced5-109">Después de la <xref:System.Windows.Media.Animation.ColorAnimation> completa, el programa intenta cambiar el color del pincel a azul.</span><span class="sxs-lookup"><span data-stu-id="fced5-109">After the <xref:System.Windows.Media.Animation.ColorAnimation> completes, the program attempts to change the brush's color to blue.</span></span>  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton1Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton1handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton1Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton1handler)]  
   
- Parece que el código anterior no surte efecto alguno: el pincel sigue siendo amarillo, que es el valor proporcionado por el objeto <xref:System.Windows.Media.Animation.ColorAnimation> que animó el pincel.  El valor de propiedad subyacente \(el valor base\) sí se cambia a azul.  Sin embargo, el valor efectivo, o actual, sigue siendo amarillo porque <xref:System.Windows.Media.Animation.ColorAnimation> continúa invalidando el valor base.  Si desea que el valor base pase a ser de nuevo el valor efectivo, debe conseguir que la animación deje de influir en la propiedad.  Hay tres maneras de hacer esto con las animaciones de guión gráfico:  
+ <span data-ttu-id="fced5-110">El código anterior no parece hacer nada: la permanece pincel amarillo, que es el valor proporcionado por el <xref:System.Windows.Media.Animation.ColorAnimation> que animar el pincel.</span><span class="sxs-lookup"><span data-stu-id="fced5-110">The previous code doesn't appear to do anything: the brush remains yellow, which is the value supplied by the <xref:System.Windows.Media.Animation.ColorAnimation> that animated the brush.</span></span> <span data-ttu-id="fced5-111">El valor de propiedad subyacente (el valor base) sí se cambia a azul.</span><span class="sxs-lookup"><span data-stu-id="fced5-111">The underlying property value (the base value) is actually changed to blue.</span></span> <span data-ttu-id="fced5-112">Sin embargo, el valor efectivo, o actual, sigue siendo amarillo porque la <xref:System.Windows.Media.Animation.ColorAnimation> continúa invalidando el valor base.</span><span class="sxs-lookup"><span data-stu-id="fced5-112">However, the effective, or current, value remains yellow because the <xref:System.Windows.Media.Animation.ColorAnimation> is still overriding the base value.</span></span> <span data-ttu-id="fced5-113">Si desea que el valor base se convierta en el valor efectivo de nuevo, debe detener la animación de influir en la propiedad.</span><span class="sxs-lookup"><span data-stu-id="fced5-113">If you want the base value to become the effective value again, you must stop the animation from influencing the property.</span></span> <span data-ttu-id="fced5-114">Hay tres modos para hacer esto con las animaciones de guión gráfico:</span><span class="sxs-lookup"><span data-stu-id="fced5-114">There are three ways to do this with storyboard animations:</span></span>  
   
--   Establecer la propiedad <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> de la animación en <xref:System.Windows.Media.Animation.FillBehavior>  
+-   <span data-ttu-id="fced5-115">Establecer la animación <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad<xref:System.Windows.Media.Animation.FillBehavior.Stop></span><span class="sxs-lookup"><span data-stu-id="fced5-115">Set the animation's <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property to <xref:System.Windows.Media.Animation.FillBehavior.Stop></span></span>  
   
--   Quitar el guión gráfico completo.  
+-   <span data-ttu-id="fced5-116">Quitar el guión gráfico.</span><span class="sxs-lookup"><span data-stu-id="fced5-116">Remove the entire Storyboard.</span></span>  
   
--   Quitar la animación de la propiedad individual.  
+-   <span data-ttu-id="fced5-117">Quitar la animación de la propiedad individual.</span><span class="sxs-lookup"><span data-stu-id="fced5-117">Remove the animation from the individual property.</span></span>  
   
-## Establecer la propiedad FillBehavior de la animación en Stop  
- Al establecer <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> en <xref:System.Windows.Media.Animation.FillBehavior>, le está indicando a la animación que deje de afectar a su propiedad de destino una vez finalice su período activo.  
+## <a name="set-the-animations-fillbehavior-property-to-stop"></a><span data-ttu-id="fced5-118">Establezca la propiedad de comportamiento de relleno de la animación en Stop</span><span class="sxs-lookup"><span data-stu-id="fced5-118">Set the animation's FillBehavior property to Stop</span></span>  
+ <span data-ttu-id="fced5-119">Estableciendo <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> a <xref:System.Windows.Media.Animation.FillBehavior.Stop>, puede indicar a la animación se deje de afectar a su propiedad de destino una vez que llega al final de su período activo.</span><span class="sxs-lookup"><span data-stu-id="fced5-119">By setting <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> to <xref:System.Windows.Media.Animation.FillBehavior.Stop>, you tell the animation to stop affecting its target property after it reaches the end of its active period.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton2Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton2declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton2Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton2declaration)]  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton2Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton2handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton2Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton2handler)]  
   
-## Quitar el guión gráfico completo  
- Al utilizar un desencadenador de <xref:System.Windows.Media.Animation.RemoveStoryboard> o el método <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=fullName>, está indicando a las animaciones de guión gráfico que dejen de afectar a las propiedades de destino.  La diferencia entre este enfoque y establecer la propiedad <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> es que el guión gráfico se puede quitar en cualquier momento, mientras que la propiedad <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> sólo surte efecto cuando la animación llega al final de su período activo.  
+## <a name="remove-the-entire-storyboard"></a><span data-ttu-id="fced5-120">Quitar el guión gráfico</span><span class="sxs-lookup"><span data-stu-id="fced5-120">Remove the entire storyboard</span></span>  
+ <span data-ttu-id="fced5-121">Mediante el uso de un <xref:System.Windows.Media.Animation.RemoveStoryboard> desencadenador o la <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType> método, puede indicar a las animaciones de guión gráfico para que deje de afectar a sus propiedades de destino.</span><span class="sxs-lookup"><span data-stu-id="fced5-121">By using a <xref:System.Windows.Media.Animation.RemoveStoryboard> trigger or the <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType> method, you tell the storyboard animations to stop affecting their target properties.</span></span> <span data-ttu-id="fced5-122">La diferencia entre este enfoque y la configuración de la <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad consiste en que puede quitar el guión gráfico en cualquier momento, mientras el <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propiedad solo tiene efecto cuando la animación llega al final de su período activo.</span><span class="sxs-lookup"><span data-stu-id="fced5-122">The difference between this approach and setting the <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property is that you can remove the storyboard at anytime, while the <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> property only has an effect when the animation reaches the end of its active period.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton3Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton3declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton3Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton3declaration)]  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton3Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton3handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton3Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton3handler)]  
   
-## Quitar una animación de una propiedad individual  
- Otra técnica para conseguir que una animación deje de afectar a una propiedad es utilizar el método <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> del objeto animado.  Especifique la propiedad animada como primer parámetro y `null`, como segundo.  
+## <a name="remove-an-animation-from-an-individual-property"></a><span data-ttu-id="fced5-123">Quitar una animación de una propiedad individual</span><span class="sxs-lookup"><span data-stu-id="fced5-123">Remove an animation from an individual property</span></span>  
+ <span data-ttu-id="fced5-124">Otra técnica para detener una animación de afectar a una propiedad consiste en utilizar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> método del objeto que se está animando.</span><span class="sxs-lookup"><span data-stu-id="fced5-124">Another technique to stop an animation from affecting a property is to use the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> method of the object being animated.</span></span> <span data-ttu-id="fced5-125">Especifique la propiedad que se está animada como primer parámetro y `null` como el segundo.</span><span class="sxs-lookup"><span data-stu-id="fced5-125">Specify the property being animated as the first parameter and `null` as the second.</span></span>  
   
- [!code-xml[timingbehaviors_snip#GraphicsMMButton4Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton4declaration)]  
+ [!code-xaml[timingbehaviors_snip#GraphicsMMButton4Declaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml#graphicsmmbutton4declaration)]  
   
  [!code-csharp[timingbehaviors_snip#GraphicsMMButton4Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AnimateThenSetPropertyExample.xaml.cs#graphicsmmbutton4handler)]
  [!code-vb[timingbehaviors_snip#GraphicsMMButton4Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/animatethensetpropertyexample.xaml.vb#graphicsmmbutton4handler)]  
   
- Esta técnica también funciona para animaciones que no son de guión gráfico.  
+ <span data-ttu-id="fced5-126">Esta técnica también funciona para las animaciones sin guiones gráficos.</span><span class="sxs-lookup"><span data-stu-id="fced5-126">This technique also works for non-storyboard animations.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>   
- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=fullName>   
- <xref:System.Windows.Media.Animation.RemoveStoryboard>   
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Información general sobre técnicas de animación de propiedades](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a><span data-ttu-id="fced5-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="fced5-127">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
+ <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Media.Animation.RemoveStoryboard>  
+ [<span data-ttu-id="fced5-128">Información general sobre animaciones</span><span class="sxs-lookup"><span data-stu-id="fced5-128">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="fced5-129">Información general sobre técnicas de animación de propiedades</span><span class="sxs-lookup"><span data-stu-id="fced5-129">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

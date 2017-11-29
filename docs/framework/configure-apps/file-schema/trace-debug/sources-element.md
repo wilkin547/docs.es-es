@@ -1,70 +1,72 @@
 ---
-title: "&lt;sources&gt; (Elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#sources"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<sources> (elemento)"
-  - "sources (elemento)"
-  - "orígenes de seguimiento"
+title: "&lt;orígenes&gt; elemento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#sources
+helpviewer_keywords:
+- sources element
+- trace sources
+- <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-caps.latest.revision: 7
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 58e9ff8787916132406a7e63aff511c9fb221b73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;sources&gt; (Elemento)
-Especifica orígenes de traza que inician mensajes de traza.  
+# <a name="ltsourcesgt-element"></a><span data-ttu-id="96820-102">&lt;orígenes&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="96820-102">&lt;sources&gt; Element</span></span>
+<span data-ttu-id="96820-103">Especifica los orígenes de seguimiento que inician mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="96820-103">Specifies trace sources that initiate tracing messages.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="96820-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="96820-104">\<configuration></span></span>  
+<span data-ttu-id="96820-105">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="96820-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="96820-106">\<orígenes ></span><span class="sxs-lookup"><span data-stu-id="96820-106">\<sources></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="96820-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="96820-107">Syntax</span></span>  
+  
+```xml  
 <sources>  
    <source>...</source>  
 </sources>  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="96820-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="96820-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="96820-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="96820-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
- Ninguno.  
+### <a name="attributes"></a><span data-ttu-id="96820-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="96820-110">Attributes</span></span>  
+ <span data-ttu-id="96820-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="96820-111">None.</span></span>  
   
-### Elementos secundarios  
+### <a name="child-elements"></a><span data-ttu-id="96820-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="96820-112">Child Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Elemento necesario.<br /><br /> Especifica un origen de traza que inicia mensajes de traza.|  
+|<span data-ttu-id="96820-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="96820-113">Element</span></span>|<span data-ttu-id="96820-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="96820-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="96820-115">\<source></span><span class="sxs-lookup"><span data-stu-id="96820-115">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="96820-116">Elemento necesario.</span><span class="sxs-lookup"><span data-stu-id="96820-116">Required element.</span></span><br /><br /> <span data-ttu-id="96820-117">Contiene un origen de seguimiento que inicia mensajes de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="96820-117">Specifies a trace source that initiates tracing messages.</span></span>|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="96820-118">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="96820-118">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
+|<span data-ttu-id="96820-119">Elemento</span><span class="sxs-lookup"><span data-stu-id="96820-119">Element</span></span>|<span data-ttu-id="96820-120">Descripción</span><span class="sxs-lookup"><span data-stu-id="96820-120">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="96820-121">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="96820-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="96820-122">Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.</span><span class="sxs-lookup"><span data-stu-id="96820-122">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
   
-## Comentarios  
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+## <a name="remarks"></a><span data-ttu-id="96820-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="96820-123">Remarks</span></span>  
+ <span data-ttu-id="96820-124">Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.</span><span class="sxs-lookup"><span data-stu-id="96820-124">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar el elemento `<sources>`  para agregar el origen de traza `mySource` y establecer el nivel del modificador de origen denominado `sourceSwitch`.  Se agrega un agente de escucha de traza de la consola que escribe información de traza en la consola.  
+## <a name="example"></a><span data-ttu-id="96820-125">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="96820-125">Example</span></span>  
+ <span data-ttu-id="96820-126">En el ejemplo siguiente se muestra cómo utilizar el `<sources>` elemento que se va a agregar el origen de seguimiento `mySource` y para establecer el nivel para el modificador de origen denominado `sourceSwitch`.</span><span class="sxs-lookup"><span data-stu-id="96820-126">The following example shows how to use the `<sources>` element to add the trace source `mySource` and to set the level for the source switch named `sourceSwitch`.</span></span> <span data-ttu-id="96820-127">Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.</span><span class="sxs-lookup"><span data-stu-id="96820-127">A console trace listener is added that writes trace information to the console.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
@@ -87,12 +89,12 @@ Especifica orígenes de traza que inician mensajes de traza.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.TraceListener>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.TextWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [\<source\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a><span data-ttu-id="96820-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="96820-128">See Also</span></span>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.TextWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ [<span data-ttu-id="96820-129">Esquema de la configuración de seguimiento y depuración</span><span class="sxs-lookup"><span data-stu-id="96820-129">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="96820-130">\<source></span><span class="sxs-lookup"><span data-stu-id="96820-130">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

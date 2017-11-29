@@ -1,71 +1,73 @@
 ---
-title: "&lt;shadowCopyVerifyByTimestamp&gt; (Elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<shadowCopyTimeStampVerification> (elemento)"
-  - "shadowCopyTimeStampVerification (elemento)"
+title: '&lt;shadowCopyVerifyByTimestamp&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <shadowCopyTimeStampVerification> element
+- shadowCopyTimeStampVerification element
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
-caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 261962819e9b2b37682a13bffb53d2912a660566
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;shadowCopyVerifyByTimestamp&gt; (Elemento)
-Especifica si la instantánea usa el comportamiento de inicio predeterminado introducido en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], o revierte al comportamiento de inicio de las versiones anteriores de .NET Framework.  
+# <a name="ltshadowcopyverifybytimestampgt-element"></a><span data-ttu-id="08bc7-102">&lt;shadowCopyVerifyByTimestamp&gt; elemento</span><span class="sxs-lookup"><span data-stu-id="08bc7-102">&lt;shadowCopyVerifyByTimestamp&gt; Element</span></span>
+<span data-ttu-id="08bc7-103">Especifica si la creación de instantáneas usa el comportamiento de inicio predeterminado especificado en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o se revierte el comportamiento de inicio de versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="08bc7-103">Specifies whether shadow copying uses the default startup behavior introduced in the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], or reverts to the startup behavior of earlier versions of the .NET Framework.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="08bc7-104">\<Configuración > elemento</span><span class="sxs-lookup"><span data-stu-id="08bc7-104">\<configuration> Element</span></span>  
+<span data-ttu-id="08bc7-105">\<en tiempo de ejecución > elemento</span><span class="sxs-lookup"><span data-stu-id="08bc7-105">\<runtime> Element</span></span>  
+<span data-ttu-id="08bc7-106">\<shadowCopyVerifyByTimestamp > elemento</span><span class="sxs-lookup"><span data-stu-id="08bc7-106">\<shadowCopyVerifyByTimestamp> Element</span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="08bc7-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="08bc7-107">Syntax</span></span>  
+  
+```xml  
 <shadowCopyVerifyByTimestamp enabled="true|false" />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="08bc7-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="08bc7-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="08bc7-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="08bc7-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="08bc7-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="08bc7-110">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|enabled|Atributo necesario.<br /><br /> Especifica si los dominios de aplicación que utilizan la instantánea comparan las marcas de tiempo del ensamblado en el inicio, para determinar si un ensamblado se ha actualizado antes de la instantánea del ensamblado.|  
+|<span data-ttu-id="08bc7-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="08bc7-111">Attribute</span></span>|<span data-ttu-id="08bc7-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="08bc7-112">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="08bc7-113">enabled</span><span class="sxs-lookup"><span data-stu-id="08bc7-113">enabled</span></span>|<span data-ttu-id="08bc7-114">Atributo necesario.</span><span class="sxs-lookup"><span data-stu-id="08bc7-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="08bc7-115">Especifica si los dominios de aplicación que utilizan instantáneas comparan marcas de tiempo de ensamblado al iniciarse, para determinar si un ensamblado se ha actualizado antes de copiar el ensamblado de instantáneas.</span><span class="sxs-lookup"><span data-stu-id="08bc7-115">Specifies whether application domains that use shadow copying compare assembly time stamps when starting up, to determine whether an assembly has been updated before shadow copying the assembly.</span></span>|  
   
-## Atributo enabled  
+## <a name="enabled-attribute"></a><span data-ttu-id="08bc7-116">Atributo enabled</span><span class="sxs-lookup"><span data-stu-id="08bc7-116">enabled Attribute</span></span>  
   
-|Valor|Descripción|  
+|<span data-ttu-id="08bc7-117">Valor</span><span class="sxs-lookup"><span data-stu-id="08bc7-117">Value</span></span>|<span data-ttu-id="08bc7-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="08bc7-118">Description</span></span>|  
 |-----------|-----------------|  
-|true|En el inicio, solo copia ensamblados que se han actualizado desde que se copiaron la última vez en el directorio de instantánea.  Este es el valor predeterminado de [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
-|false|Revierte al comportamiento de inicio de las versiones anteriores de .NET Framework, que era copiar todos los archivos en el inicio.|  
+|<span data-ttu-id="08bc7-119">true</span><span class="sxs-lookup"><span data-stu-id="08bc7-119">true</span></span>|<span data-ttu-id="08bc7-120">Al iniciarse, copia solo los ensamblados que se han actualizado desde la última que se copiaron en el directorio de instantáneas.</span><span class="sxs-lookup"><span data-stu-id="08bc7-120">At startup, copies only assemblies that have been updated since they were last copied to the shadow copy directory.</span></span> <span data-ttu-id="08bc7-121">Este es el valor predeterminado para el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="08bc7-121">This is the default for the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>|  
+|<span data-ttu-id="08bc7-122">false</span><span class="sxs-lookup"><span data-stu-id="08bc7-122">false</span></span>|<span data-ttu-id="08bc7-123">Revierte el comportamiento de inicio de las versiones anteriores de .NET Framework, que era copiar todos los archivos en el inicio.</span><span class="sxs-lookup"><span data-stu-id="08bc7-123">Reverts to the startup behavior of previous versions of the .NET Framework, which was to copy all files at startup.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="08bc7-124">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="08bc7-124">Child Elements</span></span>  
+ <span data-ttu-id="08bc7-125">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="08bc7-125">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="08bc7-126">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="08bc7-126">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
+|<span data-ttu-id="08bc7-127">Elemento</span><span class="sxs-lookup"><span data-stu-id="08bc7-127">Element</span></span>|<span data-ttu-id="08bc7-128">Descripción</span><span class="sxs-lookup"><span data-stu-id="08bc7-128">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="08bc7-129">Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="08bc7-129">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="08bc7-130">Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="08bc7-130">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## Comentarios  
- Desde [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], solo se copia una instantánea de los ensamblados si sus marcas de tiempo indican que han cambiado desde que se copiaron la última vez en el directorio de instantánea.  Esto mejora los tiempos de inicio de muchas aplicaciones que utilizan instantáneas, tal y como se describe en [Copias sombra de ensamblados](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md).  Las aplicaciones que tienen un alto porcentaje y frecuencia de actualizaciones del ensamblado no podrían beneficiarse de este cambio de comportamiento.  En ese caso, puede utilizar este elemento para restaurar el comportamiento de las versiones anteriores de .NET Framework.  
+## <a name="remarks"></a><span data-ttu-id="08bc7-131">Comentarios</span><span class="sxs-lookup"><span data-stu-id="08bc7-131">Remarks</span></span>  
+ <span data-ttu-id="08bc7-132">A partir de la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], los ensamblados son instantáneas sólo si sus marcas de tiempo indican que han cambiado desde la última que se copiaron en el directorio de instantáneas.</span><span class="sxs-lookup"><span data-stu-id="08bc7-132">Starting with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], assemblies are shadow copied only if their time stamps indicate that they have changed since they were last copied to the shadow copy directory.</span></span> <span data-ttu-id="08bc7-133">Esto mejora los tiempos de inicio para muchas aplicaciones que utilizan instantáneas, tal y como se describe en [copias sombra de ensamblados](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="08bc7-133">This improves startup times for many applications that use shadow copying, as described in [Shadow Copying Assemblies](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md).</span></span> <span data-ttu-id="08bc7-134">Las aplicaciones que tienen un alto porcentaje y la frecuencia de actualizaciones del ensamblado no pueden beneficiarse de este cambio de comportamiento.</span><span class="sxs-lookup"><span data-stu-id="08bc7-134">Applications that have a high percentage and frequency of assembly updates might not benefit from this change in behavior.</span></span> <span data-ttu-id="08bc7-135">En ese caso, puede usar este elemento para restaurar el comportamiento de las versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="08bc7-135">In that case, you can use this element to restore the behavior of previous versions of the .NET Framework.</span></span>  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo deshabilitar el comportamiento de inicio predeterminado de la instantánea en [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], y revertir al comportamiento de inicio de las versiones anteriores de .NET Framework.  
+## <a name="example"></a><span data-ttu-id="08bc7-136">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="08bc7-136">Example</span></span>  
+ <span data-ttu-id="08bc7-137">En el ejemplo siguiente se muestra cómo deshabilitar el comportamiento de inicio predeterminada de instantáneas en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]y revertir al comportamiento de inicio de las versiones anteriores de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="08bc7-137">The following example shows how to disable the default startup behavior of shadow copying in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], and revert to the startup behavior of previous versions of the .NET Framework.</span></span>  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <shadowCopyVerifyByTimestamp enabled="false" />  
@@ -73,7 +75,7 @@ Especifica si la instantánea usa el comportamiento de inicio predeterminado int
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Copias sombra de ensamblados](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="08bc7-138">Vea también</span><span class="sxs-lookup"><span data-stu-id="08bc7-138">See Also</span></span>  
+ [<span data-ttu-id="08bc7-139">Esquema de la configuración de Common Language Runtime</span><span class="sxs-lookup"><span data-stu-id="08bc7-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="08bc7-140">Esquema de los archivos de configuración</span><span class="sxs-lookup"><span data-stu-id="08bc7-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="08bc7-141">Copias sombra de ensamblados</span><span class="sxs-lookup"><span data-stu-id="08bc7-141">Shadow Copying Assemblies</span></span>](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

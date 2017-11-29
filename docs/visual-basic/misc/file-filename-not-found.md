@@ -1,24 +1,26 @@
 ---
-title: "No se ha encontrado el archivo &#39;&lt;nombreArchivo&gt;&#39;. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrFileSystem_FileNotFound1"
+title: Archivo de &#39; &lt;filename&gt;&#39; no se encuentra
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrFileSystem_FileNotFound1
 ms.assetid: b45bffc9-5b16-4b9b-a413-98a8d726e226
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 28345564dcc40e2471045523669b201a39d77b25
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# No se ha encontrado el archivo &#39;&lt;nombreArchivo&gt;&#39;.
-Un nombre de archivo es incorrecto o el archivo no existe.  
+# <a name="file-39ltfilenamegt39-not-found"></a><span data-ttu-id="2aa8a-102">Archivo de &#39; &lt;filename&gt;&#39; no se encuentra</span><span class="sxs-lookup"><span data-stu-id="2aa8a-102">File &#39;&lt;filename&gt;&#39; not found</span></span>
+<span data-ttu-id="2aa8a-103">Un nombre de archivo es incorrecto o el archivo no existe.</span><span class="sxs-lookup"><span data-stu-id="2aa8a-103">A file name is incorrect or the file does not exist.</span></span>  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2aa8a-104">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="2aa8a-104">To correct this error</span></span>  
   
-1.  Asegúrese de que el nombre de archivo es correcto y que existe.  
+1.  <span data-ttu-id="2aa8a-105">Asegúrese de que el nombre de archivo es correcto y que existe.</span><span class="sxs-lookup"><span data-stu-id="2aa8a-105">Ensure that the file name is correct and that it exists.</span></span>  
   
-## Vea también  
- [My.Computer.FileSystem \(Objeto\)](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a><span data-ttu-id="2aa8a-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="2aa8a-106">See Also</span></span>  
+ [<span data-ttu-id="2aa8a-107">My.Computer.FileSystem (objeto)</span><span class="sxs-lookup"><span data-stu-id="2aa8a-107">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)

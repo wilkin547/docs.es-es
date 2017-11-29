@@ -1,38 +1,41 @@
 ---
-title: "C&#243;mo: Modificar el extremo en el final de una l&#237;nea o segmento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "gráficos, Shape (extremos)"
-  - "Shape (elementos), extremos"
-  - "Shape (elementos), extremos"
+title: "Cómo: Modificar el extremo en el final de una línea o segmento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Shape elements [WPF], ends
+- Shape elements [WPF], caps
+- graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e062b82e698a99705a2b06588aa9aae3a0c93157
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Modificar el extremo en el final de una l&#237;nea o segmento
-En este ejemplo se muestra cómo modificar la forma al principio o al fin de un elemento <xref:System.Windows.Shapes.Shape> abierto.  Para cambiar el remate inicial de un objeto <xref:System.Windows.Shapes.Shape> abierto, utilice su propiedad <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A>.  Para cambiar el remate final de un objeto <xref:System.Windows.Shapes.Shape> abierto, utilice su propiedad <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A>.  Para ver los remates de línea disponibles, vea la enumeración <xref:System.Windows.Media.PenLineCap>.  
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a><span data-ttu-id="14939-102">Cómo: Modificar el extremo en el final de una línea o segmento</span><span class="sxs-lookup"><span data-stu-id="14939-102">How to: Modify the Cap at the End of a Line or Segment</span></span>
+<span data-ttu-id="14939-103">Este ejemplo muestra cómo modificar la forma al principio o al final de un circuito abierto <xref:System.Windows.Shapes.Shape> elemento.</span><span class="sxs-lookup"><span data-stu-id="14939-103">This example shows how to modify the shape at the start or end of an open <xref:System.Windows.Shapes.Shape> element.</span></span> <span data-ttu-id="14939-104">Para cambiar el extremo al principio de un formato de archivo <xref:System.Windows.Shapes.Shape>, usar su <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="14939-104">To change the cap at the beginning of an open <xref:System.Windows.Shapes.Shape>, use its <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> property.</span></span> <span data-ttu-id="14939-105">Para cambiar el extremo al final de un formato de archivo <xref:System.Windows.Shapes.Shape>, usar su <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="14939-105">To change the cap at the end of an open <xref:System.Windows.Shapes.Shape>, use its <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> property.</span></span> <span data-ttu-id="14939-106">Para ver los extremos de línea disponibles, vea el <xref:System.Windows.Media.PenLineCap> enumeración.</span><span class="sxs-lookup"><span data-stu-id="14939-106">To view the available line caps, see the <xref:System.Windows.Media.PenLineCap> enumeration.</span></span>  
   
 > [!NOTE]
->  Esta propiedad sólo afecta a una forma abierta, como un elemento <xref:System.Windows.Shapes.Line>, un elemento <xref:System.Windows.Shapes.Polyline>o un elemento <xref:System.Windows.Shapes.Path> abierto.  
+>  <span data-ttu-id="14939-107">Esta propiedad solo afecta a una forma abierta, como un <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Polyline>, o abierto <xref:System.Windows.Shapes.Path> elemento.</span><span class="sxs-lookup"><span data-stu-id="14939-107">This property only affects an open shape, such as a <xref:System.Windows.Shapes.Line>, a <xref:System.Windows.Shapes.Polyline>, or an open <xref:System.Windows.Shapes.Path> element.</span></span>  
   
- En el ejemplo siguiente se dibujan cuatro elementos <xref:System.Windows.Shapes.Polyline> y utiliza un conjunto diferente de formas en los extremos de cada uno.  
+ <span data-ttu-id="14939-108">En el ejemplo siguiente se dibuja cuatro <xref:System.Windows.Shapes.Polyline> elementos y utiliza un conjunto diferente de formas en los extremos de cada uno.</span><span class="sxs-lookup"><span data-stu-id="14939-108">The following example draws four <xref:System.Windows.Shapes.Polyline> elements and uses a different set of shapes on the ends of each.</span></span>  
   
-## Ejemplo  
- [!code-xml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
+## <a name="example"></a><span data-ttu-id="14939-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="14939-109">Example</span></span>  
+ [!code-xaml[drawingwithshapeelements#ShapeLineCaps1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/linecapsandjoinsexample.xaml#shapelinecaps1)]  
   
- Este ejemplo forma parte de un ejemplo más extenso; para obtener el ejemplo completo, vea [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ <span data-ttu-id="14939-110">Este ejemplo forma parte de un ejemplo más extenso; Para obtener un ejemplo completo, vea [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span><span class="sxs-lookup"><span data-stu-id="14939-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## Vea también  
- <xref:System.Windows.Shapes.Polyline>   
+## <a name="see-also"></a><span data-ttu-id="14939-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="14939-111">See Also</span></span>  
+ <xref:System.Windows.Shapes.Polyline>  
  <xref:System.Windows.Media.PenLineCap>

@@ -1,70 +1,52 @@
 ---
-title: Tipo de miembro &quot;&lt;membername&gt;&quot; no es conforme a CLS | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Tipo de miembro &#39; &lt;membername&gt;&#39; no es conforme a CLS
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc40025
 - vbc40025
-dev_langs:
-- VB
-helpviewer_keywords:
-- BC40025
+helpviewer_keywords: BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ea35f54cf8f0fb5a11148b8017456feb8d3524a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2c09a71675275758220691ad09eeab48e53309f8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Tipo de miembro '&lt;membername&gt;' no es compatible con CLS
-El tipo de datos especificado para este miembro no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](https://msdn.microsoft.com/library/12a7a7h3) (CLS). Esto no es un error en su componente, porque la [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] y [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] admiten este tipo de datos. Sin embargo, otro componente escrito en código estrictamente compatible con CLS podría no admitir este tipo de datos. Un componente no puede interactuar correctamente con su componente.  
+# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a><span data-ttu-id="1bb92-102">Tipo de miembro &#39; &lt;membername&gt;&#39; no es conforme a CLS</span><span class="sxs-lookup"><span data-stu-id="1bb92-102">Type of member &#39;&lt;membername&gt;&#39; is not CLS-compliant</span></span>
+<span data-ttu-id="1bb92-103">El tipo de datos especificado para este miembro no es parte de la [independencia del lenguaje y componentes independientes del lenguaje](https://msdn.microsoft.com/library/12a7a7h3) (CLS).</span><span class="sxs-lookup"><span data-stu-id="1bb92-103">The data type specified for this member is not part of the [Language Independence and Language-Independent Components](https://msdn.microsoft.com/library/12a7a7h3) (CLS).</span></span> <span data-ttu-id="1bb92-104">Esto no es un error dentro de un componente, porque la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] y [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] admiten este tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="1bb92-104">This is not an error within your component, because the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] and [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] support this data type.</span></span> <span data-ttu-id="1bb92-105">Sin embargo, otro componente escrito en código estrictamente conforme a CLS podría no admitir este tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="1bb92-105">However, another component written in strictly CLS-compliant code might not support this data type.</span></span> <span data-ttu-id="1bb92-106">Posible que un componente de ese tipo no pueda interactuar correctamente con su componente.</span><span class="sxs-lookup"><span data-stu-id="1bb92-106">Such a component might not be able to interact successfully with your component.</span></span>  
   
- Los siguientes tipos de datos [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] no son conformes con CLS:  
+ <span data-ttu-id="1bb92-107">Los siguientes tipos de datos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] no son conformes con CLS:</span><span class="sxs-lookup"><span data-stu-id="1bb92-107">The following [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] data types are not CLS-compliant:</span></span>  
   
--   [SByte (tipo de datos)](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [<span data-ttu-id="1bb92-108">SByte (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="1bb92-108">SByte Data Type</span></span>](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger (tipo de datos)](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [<span data-ttu-id="1bb92-109">UInteger (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="1bb92-109">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong (tipo de datos)](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [<span data-ttu-id="1bb92-110">ULong (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="1bb92-110">ULong Data Type</span></span>](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort (tipo de datos)](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [<span data-ttu-id="1bb92-111">UShort (tipo de datos)</span><span class="sxs-lookup"><span data-stu-id="1bb92-111">UShort Data Type</span></span>](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- De forma predeterminada, este mensaje es una advertencia. Para obtener más información sobre cómo ocultar las advertencias o tratar las advertencias como errores, vea [configurar advertencias en Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="1bb92-112">De forma predeterminada, este mensaje es una advertencia.</span><span class="sxs-lookup"><span data-stu-id="1bb92-112">By default, this message is a warning.</span></span> <span data-ttu-id="1bb92-113">Para obtener más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [configurar advertencias en Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="1bb92-113">For more information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **Id. de error:** BC40025  
+ <span data-ttu-id="1bb92-114">**Id. de error:** BC40025</span><span class="sxs-lookup"><span data-stu-id="1bb92-114">**Error ID:** BC40025</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corregir este error  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1bb92-115">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="1bb92-115">To correct this error</span></span>  
   
--   Si su componente interactúa con otros [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] componentes o no interactúen con cualquier otro componente, no es necesario cambiar nada.  
+-   <span data-ttu-id="1bb92-116">Si el componente se comunica solo con otros [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] componentes o no interactúen con cualquier otro componente, no necesita cambiar nada.</span><span class="sxs-lookup"><span data-stu-id="1bb92-116">If your component interfaces only with other [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] components, or does not interface with any other components, you do not need to change anything.</span></span>  
   
--   Si trabaja con un componente no escrito para la [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], es posible que pueda determinar, ya sea mediante reflexión o documentación, si admite este tipo de datos. Si lo hace, no es necesario cambiar nada.  
+-   <span data-ttu-id="1bb92-117">Si interactúa con un componente no escrito para el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], es posible que pueda determinar, ya sea mediante reflexión o en documentación, si admite este tipo de datos.</span><span class="sxs-lookup"><span data-stu-id="1bb92-117">If you are interfacing with a component not written for the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], you might be able to determine, either through reflection or from documentation, whether it supports this data type.</span></span> <span data-ttu-id="1bb92-118">Si es así, no es necesario cambiar nada.</span><span class="sxs-lookup"><span data-stu-id="1bb92-118">If it does, you do not need to change anything.</span></span>  
   
--   Si dispone de interfaz con un componente que no admite este tipo de datos, debe reemplazarlo con el tipo compatible con CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
+-   <span data-ttu-id="1bb92-119">Si interactúa con un componente que no admite este tipo de datos, debe reemplazar por el tipo conforme a CLS más próximo.</span><span class="sxs-lookup"><span data-stu-id="1bb92-119">If you are interfacing with a component that does not support this data type, you must replace it with the closest CLS-compliant type.</span></span> <span data-ttu-id="1bb92-120">Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647.</span><span class="sxs-lookup"><span data-stu-id="1bb92-120">For example, in place of `UInteger` you might be able to use `Integer` if you do not need the value range above 2,147,483,647.</span></span> <span data-ttu-id="1bb92-121">Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.</span><span class="sxs-lookup"><span data-stu-id="1bb92-121">If you do need the extended range, you can replace `UInteger` with `Long`.</span></span>  
   
--   Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]. Por ejemplo, `uint` suele ser de 16 bits en otros entornos. Si se pasa un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en administradas [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] código.  
+-   <span data-ttu-id="1bb92-122">Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="1bb92-122">If you are interfacing with Automation or COM objects, keep in mind that some types have different data widths than in the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="1bb92-123">Por ejemplo, `uint` suele ser de 16 bits en otros entornos.</span><span class="sxs-lookup"><span data-stu-id="1bb92-123">For example, `uint` is often 16 bits in other environments.</span></span> <span data-ttu-id="1bb92-124">Al pasar un argumento de 16 bits a esos componentes, declárelo como `UShort` en lugar de `UInteger` en su administrado [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] código.</span><span class="sxs-lookup"><span data-stu-id="1bb92-124">If you are passing a 16-bit argument to such a component, declare it as `UShort` instead of `UInteger` in your managed [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] code.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [Reflexión](http://msdn.microsoft.com/library/d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775)   
- [\<PAVE sobre > escribir código conforme a CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+## <a name="see-also"></a><span data-ttu-id="1bb92-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="1bb92-125">See Also</span></span>  
+ [<span data-ttu-id="1bb92-126">Reflexión</span><span class="sxs-lookup"><span data-stu-id="1bb92-126">Reflection</span></span>](../../../framework/reflection-and-codedom/reflection.md)  
+ [<span data-ttu-id="1bb92-127">\<PAVE sobre > escribir código conforme a CLS</span><span class="sxs-lookup"><span data-stu-id="1bb92-127">\<PAVE OVER> Writing CLS-Compliant Code</span></span>](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)

@@ -1,56 +1,56 @@
 ---
-title: "C&#243;mo: Agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el Dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.DataGridViewAddColumnDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView (control) [Windows Forms], agregar columnas"
-  - "DataGridView (control) [Windows Forms], quitar columnas"
+title: "Cómo: Agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vs.DataGridViewAddColumnDialog
+helpviewer_keywords:
+- DataGridView control [Windows Forms], adding columns
+- DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 71b02124dd68299552737df35163e3b766d4df73
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el Dise&#241;ador
-El control <xref:System.Windows.Forms.DataGridView> de los formularios Windows Forms debe contener las columnas para mostrar los datos.  Si está pensando en rellenar manualmente el control, debe agregar las columnas.  O bien, puede enlazar el control a un origen de datos, que genera y rellena automáticamente las columnas.  Si el origen de datos contiene más columnas de las que desea mostrar, puede quitar las columnas innecesarias.  
+# <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="eeee8-102">Cómo: Agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el Diseñador</span><span class="sxs-lookup"><span data-stu-id="eeee8-102">How to: Add and Remove Columns in the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="eeee8-103">Los formularios Windows Forms <xref:System.Windows.Forms.DataGridView> control debe contener las columnas para mostrar los datos.</span><span class="sxs-lookup"><span data-stu-id="eeee8-103">The Windows Forms <xref:System.Windows.Forms.DataGridView> control must contain columns in order to display data.</span></span> <span data-ttu-id="eeee8-104">Si tiene previsto rellenar el control manualmente, debe agregar las columnas.</span><span class="sxs-lookup"><span data-stu-id="eeee8-104">If you plan to populate the control manually, you must add the columns yourself.</span></span> <span data-ttu-id="eeee8-105">Como alternativa, puede enlazar el control a un origen de datos, que genera y rellena las columnas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="eeee8-105">Alternately, you can bind the control to a data source, which generates and populates the columns automatically.</span></span> <span data-ttu-id="eeee8-106">Si el origen de datos contiene más columnas de las que desea mostrar, puede quitar las columnas innecesarias.</span><span class="sxs-lookup"><span data-stu-id="eeee8-106">If the data source contains more columns than you want to display, you can remove the unwanted columns.</span></span>  
   
- El procedimiento siguiente requiere un proyecto de **Aplicación para Windows** con un formulario que contiene un control <xref:System.Windows.Forms.DataGridView>.  Para obtener información sobre cómo configurar tal proyecto, vea [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ <span data-ttu-id="eeee8-107">Los procedimientos siguientes requieren un **aplicación de Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.DataGridView> control.</span><span class="sxs-lookup"><span data-stu-id="eeee8-107">The following procedures require a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="eeee8-108">Para obtener información acerca de cómo configurar un proyecto de este tipo, consulte [Cómo: crear un proyecto de aplicación de Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) y [Cómo: agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="eeee8-108">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="eeee8-109">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="eeee8-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="eeee8-110">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="eeee8-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="eeee8-111">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="eeee8-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Para agregar una columna mediante el diseñador  
+### <a name="to-add-a-column-using-the-designer"></a><span data-ttu-id="eeee8-112">Para agregar una columna mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="eeee8-112">To add a column using the designer</span></span>  
   
-1.  Haga clic en el glifo de la etiqueta inteligente \(![Glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\) situado en la esquina superior derecha del control <xref:System.Windows.Forms.DataGridView> y seleccione **Agregar columna**.  
+1.  <span data-ttu-id="eeee8-113">Haga clic en el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) en la esquina superior derecha de la <xref:System.Windows.Forms.DataGridView> control y, a continuación, seleccione **Agregar columna**.</span><span class="sxs-lookup"><span data-stu-id="eeee8-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control, and then select **Add Column**.</span></span>  
   
-2.  En el cuadro de diálogo **Agregar columna**, elija la opción **Columna de enlace de datos** y seleccione una columna en el origen de datos, o seleccione la opción **Columna sin enlazar** y defina la columna mediante los campos proporcionados.  
+2.  <span data-ttu-id="eeee8-114">En el **Agregar columna** diálogo cuadro, elija la **columna enlazada a datos** opción y seleccione una columna del origen de datos o elija la **columna sin enlazar** opción y definir la columna uso de los campos correspondientes.</span><span class="sxs-lookup"><span data-stu-id="eeee8-114">In the **Add Column** dialog box, choose the **Databound Column** option and select a column from the data source, or choose the **Unbound Column** option and define the column using the fields provided.</span></span>  
   
-3.  Haga clic en el botón **Agregar** para agregar la columna, haciendo que aparezca en el diseñador si las columnas existentes no han rellenado el área de presentación del control.  
+3.  <span data-ttu-id="eeee8-115">Haga clic en el **agregar** botón para agregar la columna, provocando que aparecen en el diseñador si las columnas existentes no han rellenan el área de presentación del control.</span><span class="sxs-lookup"><span data-stu-id="eeee8-115">Click the **Add** button to add the column, causing it to appear in the designer if the existing columns do not already fill the control display area.</span></span>  
   
     > [!NOTE]
-    >  Puede modificar las propiedades de columna en el cuadro de diálogo **Editar columnas**, al que puede tener acceso desde la etiqueta inteligente de control.  
+    >  <span data-ttu-id="eeee8-116">Puede modificar las propiedades de columna en la **Editar columnas** cuadro de diálogo que se puede acceder desde la etiqueta inteligente del control.</span><span class="sxs-lookup"><span data-stu-id="eeee8-116">You can modify column properties in the **Edit Columns** dialog box, which you can access from the control's smart tag.</span></span>  
   
-### Para quitar una columna mediante el diseñador  
+### <a name="to-remove-a-column-using-the-designer"></a><span data-ttu-id="eeee8-117">Para quitar una columna mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="eeee8-117">To remove a column using the designer</span></span>  
   
-1.  Elija **Editar columnas** en la etiqueta inteligente del control.  
+1.  <span data-ttu-id="eeee8-118">Elija **Editar columnas** de etiquetas inteligentes del control.</span><span class="sxs-lookup"><span data-stu-id="eeee8-118">Choose **Edit Columns** from the control's smart tag.</span></span>  
   
-2.  Seleccione una columna en la lista **Columnas seleccionadas**.  
+2.  <span data-ttu-id="eeee8-119">Seleccione una columna en la **columnas seleccionadas** lista.</span><span class="sxs-lookup"><span data-stu-id="eeee8-119">Select a column from the **Selected Columns** list.</span></span>  
   
-3.  Haga clic en el botón **Quitar** para eliminar la columna, con lo que desaparece del diseñador.  
+3.  <span data-ttu-id="eeee8-120">Haga clic en el **quitar** botón para eliminar la columna, haciendo que desaparezca desde el diseñador.</span><span class="sxs-lookup"><span data-stu-id="eeee8-120">Click the **Remove** button to delete the column, causing it to disappear from the designer.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/es-es/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [Cómo: Agregar controles a formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="eeee8-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="eeee8-121">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="eeee8-122">Cómo: crear un proyecto de aplicación de Windows</span><span class="sxs-lookup"><span data-stu-id="eeee8-122">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="eeee8-123">Cómo: Agregar controles a Windows Forms</span><span class="sxs-lookup"><span data-stu-id="eeee8-123">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

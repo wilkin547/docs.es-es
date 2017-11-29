@@ -1,44 +1,40 @@
 ---
-title: "Modificar árboles XML (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Modificar árboles XML (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf605973e68230e9e3e09f0abf6de49635cd5845
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: de66788186f3ffd09560d8eacdebbbaa5edf067c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>Modificar árboles XML (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] es el almacén de datos en memoria para un árbol XML. Una vez que haya cargado o analizado un árbol XML desde un origen, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] le permite modificar ese árbol y luego serializarlo, quizá guardarlo en un archivo o enviarlos a un servidor remoto.  
+# <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a><span data-ttu-id="e2617-102">Modificar árboles XML (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-102">Modifying XML Trees (LINQ to XML) (Visual Basic)</span></span>
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="e2617-103"> es el almacén de datos en memoria para un árbol XML.</span><span class="sxs-lookup"><span data-stu-id="e2617-103"> is an in-memory store for an XML tree.</span></span> <span data-ttu-id="e2617-104">Una vez haya cargado o analizado un árbol XML a partir de un origen, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] le permitirá modificarlo en el momento, para luego serializarlo, quizá con el objetivo de guardarlo en un archivo o de enviarlo a un servidor remoto.</span><span class="sxs-lookup"><span data-stu-id="e2617-104">After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.</span></span>  
   
- Cuando se modifica un árbol en su lugar, puede utilizar ciertos métodos, como <xref:System.Xml.Linq.XContainer.Add%2A>.</xref:System.Xml.Linq.XContainer.Add%2A>  
+ <span data-ttu-id="e2617-105">A la hora de modificar un árbol, puede utilizar ciertos métodos, como por ejemplo, <xref:System.Xml.Linq.XContainer.Add%2A>.</span><span class="sxs-lookup"><span data-stu-id="e2617-105">When you modify a tree in place, you use certain methods, such as <xref:System.Xml.Linq.XContainer.Add%2A>.</span></span>  
   
- No obstante, existe otra aproximación posible, la cual consiste en utilizar una construcción funcional para generar un árbol nuevo que tenga un aspecto diferente. Dependiendo de los tipos de cambios que necesite hacer en el árbol XML y del tamaño de éste, es posible que esta aproximación resulte más robusta y sencilla de desarrollar. El primer punto de esta sección compara ambas aproximaciones.  
+ <span data-ttu-id="e2617-106">No obstante, existe otra aproximación posible, la cual consiste en utilizar una construcción funcional para generar un árbol nuevo que tenga un aspecto diferente.</span><span class="sxs-lookup"><span data-stu-id="e2617-106">However, there is another approach, which is to use functional construction to generate a new tree with a different shape.</span></span> <span data-ttu-id="e2617-107">Dependiendo de los tipos de cambios que necesite hacer en el árbol XML y del tamaño de éste, es posible que esta aproximación resulte más robusta y sencilla de desarrollar.</span><span class="sxs-lookup"><span data-stu-id="e2617-107">Depending on the types of changes that you need to make to your XML tree, and depending on the size of the tree, this approach can be more robust and easier to develop.</span></span> <span data-ttu-id="e2617-108">El primer punto de esta sección compara ambas aproximaciones.</span><span class="sxs-lookup"><span data-stu-id="e2617-108">The first topic in this section compares these two approaches.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a><span data-ttu-id="e2617-109">En esta sección</span><span class="sxs-lookup"><span data-stu-id="e2617-109">In This Section</span></span>  
   
-|Tema|Descripción|  
+|<span data-ttu-id="e2617-110">Tema</span><span class="sxs-lookup"><span data-stu-id="e2617-110">Topic</span></span>|<span data-ttu-id="e2617-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="e2617-111">Description</span></span>|  
 |-----------|-----------------|  
-|[Diferencias entre la modificación del árbol XML en memoria y Construcción funcional (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)|Comparación entre modificar un árbol XML en memoria y mediante una construcción funcional|  
-|[Agregar elementos, atributos y nodos a un árbol XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|Proporciona información acerca de cómo agregar elementos, atributos o nodos a un árbol XML.|  
-|[Modificar elementos, atributos y nodos de un árbol XML](../../../../visual-basic/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|Proporciona información acerca de cómo modificar elementos, atributos o nodos ya existentes.|  
-|[Quitar elementos, atributos y nodos de un árbol XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|Proporciona información acerca de cómo eliminar elementos, atributos o nodos de un árbol XML.|  
-|[Mantenimiento de pares nombre/valor (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|Describe cómo mantener aquella información de la aplicación que es mejor guardar en forma de pares nombre/valor, como por ejemplo, información sobre configuración o valores globales.|  
-|[Cómo: cambiar el Namespace para un árbol XML completo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Muestra cómo mover un árbol XML de un espacio de nombres a otro.|  
+|[<span data-ttu-id="e2617-112">Diferencias entre la modificación del árbol XML en memoria y Construcción funcional (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-112">In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)|<span data-ttu-id="e2617-113">Comparación entre modificar un árbol XML en memoria y mediante una construcción funcional</span><span class="sxs-lookup"><span data-stu-id="e2617-113">Compares modifying an XML tree in memory to functional construction.</span></span>|  
+|[<span data-ttu-id="e2617-114">Agregar elementos, atributos y nodos a un árbol XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-114">Adding Elements, Attributes, and Nodes to an XML Tree (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/adding-elements-attributes-and-nodes-to-an-xml-tree.md)|<span data-ttu-id="e2617-115">Proporciona información acerca de cómo agregar elementos, atributos o nodos a un árbol XML.</span><span class="sxs-lookup"><span data-stu-id="e2617-115">Provides information about adding elements, attributes, or nodes to an XML tree.</span></span>|  
+|[<span data-ttu-id="e2617-116">Modificar elementos, atributos y nodos de un árbol XML</span><span class="sxs-lookup"><span data-stu-id="e2617-116">Modifying Elements, Attributes, and Nodes in an XML Tree</span></span>](../../../../visual-basic/programming-guide/concepts/linq/modifying-elements-attributes-and-nodes-in-an-xml-tree.md)|<span data-ttu-id="e2617-117">Proporciona información acerca de cómo modificar elementos, atributos o nodos ya existentes.</span><span class="sxs-lookup"><span data-stu-id="e2617-117">Provides information about modifying existing elements, attributes, or nodes.</span></span>|  
+|[<span data-ttu-id="e2617-118">Quitar elementos, atributos y nodos de un árbol XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-118">Removing Elements, Attributes, and Nodes from an XML Tree (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/removing-elements-attributes-and-nodes-from-an-xml-tree.md)|<span data-ttu-id="e2617-119">Proporciona información acerca de cómo eliminar elementos, atributos o nodos de un árbol XML.</span><span class="sxs-lookup"><span data-stu-id="e2617-119">Provides information about removing elements, attributes, or nodes from the XML tree.</span></span>|  
+|[<span data-ttu-id="e2617-120">Mantenimiento de pares de nombre/valor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-120">Maintaining Name/Value Pairs (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/maintaining-name-value-pairs.md)|<span data-ttu-id="e2617-121">Describe cómo mantener aquella información de la aplicación que es mejor guardar en forma de pares nombre/valor, como por ejemplo, información sobre configuración o valores globales.</span><span class="sxs-lookup"><span data-stu-id="e2617-121">Describes how to maintain application information that is best kept as name/value pairs, such as configuration information or global settings.</span></span>|  
+|[<span data-ttu-id="e2617-122">Cómo: cambiar el Namespace para todo un árbol XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-122">How to: Change the Namespace for an Entire XML Tree (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|<span data-ttu-id="e2617-123">Muestra cómo mover un árbol XML de un espacio de nombres a otro.</span><span class="sxs-lookup"><span data-stu-id="e2617-123">Shows how to move an XML tree from one namespace into another.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Guía de programación (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="e2617-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="e2617-124">See Also</span></span>  
+ [<span data-ttu-id="e2617-125">Guía de programación (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e2617-125">Programming Guide (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -1,35 +1,38 @@
 ---
-title: "5011 - DCGenReaderStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 5011 - DCGenReaderStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7d59368a-5ef0-4d3c-8bfe-8bb509b90afa
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c55464c80170afdfafeea35fb5f1c64f73e15c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 5011 - DCGenReaderStop
-## Propiedades  
+# <a name="5011---dcgenreaderstop"></a><span data-ttu-id="25477-102">5011 - DCGenReaderStop</span><span class="sxs-lookup"><span data-stu-id="25477-102">5011 - DCGenReaderStop</span></span>
+## <a name="properties"></a><span data-ttu-id="25477-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="25477-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|5011|  
-|Palabras clave|Serialización|  
-|Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="25477-104">Id.</span><span class="sxs-lookup"><span data-stu-id="25477-104">ID</span></span>|<span data-ttu-id="25477-105">5011</span><span class="sxs-lookup"><span data-stu-id="25477-105">5011</span></span>|  
+|<span data-ttu-id="25477-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="25477-106">Keywords</span></span>|<span data-ttu-id="25477-107">Serialización</span><span class="sxs-lookup"><span data-stu-id="25477-107">Serialization</span></span>|  
+|<span data-ttu-id="25477-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="25477-108">Level</span></span>|<span data-ttu-id="25477-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="25477-109">Verbose</span></span>|  
+|<span data-ttu-id="25477-110">Canal</span><span class="sxs-lookup"><span data-stu-id="25477-110">Channel</span></span>|<span data-ttu-id="25477-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="25477-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Se genera este evento cuando la generación de DataContract se detiene.  
+## <a name="description"></a><span data-ttu-id="25477-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="25477-112">Description</span></span>  
+ <span data-ttu-id="25477-113">Se genera este evento cuando la generación de DataContract se detiene.</span><span class="sxs-lookup"><span data-stu-id="25477-113">This event is emitted when the DataContract generation stops.</span></span>  
   
-## Mensaje  
- Detención de la generación de DataContract.  
+## <a name="message"></a><span data-ttu-id="25477-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="25477-114">Message</span></span>  
+ <span data-ttu-id="25477-115">Detención de la generación de DataContract.</span><span class="sxs-lookup"><span data-stu-id="25477-115">DataContract generation stop.</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="25477-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="25477-116">Details</span></span>

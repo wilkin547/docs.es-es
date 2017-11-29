@@ -1,35 +1,34 @@
 ---
-title: "Contrato de mensaje predeterminado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "Contrato de mensaje"
+title: Contrato de mensaje predeterminado
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-caps.latest.revision: 35
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 35
+caps.latest.revision: "35"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 765e531530342af5cf0fccfb759626341103114a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Contrato de mensaje predeterminado
-El ejemplo de contrato de mensaje predeterminado muestra un servicio donde un mensaje personalizado definido por el usuario se pasa a las operaciones de servicio y desde ellas.Este ejemplo se basa en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa una interfaz de calculadora como un servicio con tipos.En lugar de las operaciones de servicio individuales para la suma, resta, multiplicación y división utilizadas en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md), este ejemplo pasa un mensaje personalizado que contiene a los operandos y el operador, y devuelve el resultado del cálculo aritmético.  
+# <a name="default-message-contract"></a><span data-ttu-id="4bd8b-102">Contrato de mensaje predeterminado</span><span class="sxs-lookup"><span data-stu-id="4bd8b-102">Default Message Contract</span></span>
+<span data-ttu-id="4bd8b-103">El ejemplo de contrato de mensaje predeterminado muestra un servicio donde un mensaje personalizado definido por el usuario se pasa a las operaciones de servicio y desde ellas.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-103">The Default Message Contract sample demonstrates a service where a custom user-defined message is passed to and from service operations.</span></span> <span data-ttu-id="4bd8b-104">En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa una interfaz de calculadora como un servicio con tipo.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator interface as a typed service.</span></span> <span data-ttu-id="4bd8b-105">En lugar de las operaciones de servicio individuales de suma, resta, multiplicación y división que se usa en la [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), este ejemplo pasa un mensaje personalizado que contiene los operandos y el operador y devuelve el resultado del cálculo aritmético.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-105">Instead of the individual service operations for addition, subtraction, multiplication, and division used in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), this sample passes a custom message that contains both the operands and the operator, and returns the result of the arithmetic calculation.</span></span>  
   
- El cliente es un programa de la consola \(.exe\) e Internet Information Services \(IIS\) hospeda la biblioteca de servicio.La actividad del cliente es visible en la ventana de la consola.  
+ <span data-ttu-id="4bd8b-106">El cliente es un programa de la consola (.exe) e Internet Information Services (IIS) hospeda la biblioteca de servicio.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-106">The client is a console program (.exe) and the service library (.dll) is hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="4bd8b-107">La actividad del cliente es visible en la ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-107">Client activity is visible in the console window.</span></span>  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  <span data-ttu-id="4bd8b-108">El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-108">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- En el servicio, se define una única operación de servicio que acepta y devuelve mensajes personalizados de tipo `MyMessage`.Aunque en este ejemplo los mensajes de solicitud y respuesta son del mismo tipo, podrían ser desde luego contratos de mensaje diferentes si fuera necesario.  
+ <span data-ttu-id="4bd8b-109">En el servicio, se define una única operación de servicio que acepta y devuelve mensajes personalizados de tipo `MyMessage`.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-109">In the service, a single service operation is defined that accepts and returns custom messages of type `MyMessage`.</span></span> <span data-ttu-id="4bd8b-110">Aunque en este ejemplo los mensajes de solicitud y respuesta son del mismo tipo, podrían ser desde luego contratos de mensaje diferentes si fuera necesario.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-110">Although in this sample the request and response messages are of the same type, they could of course be different message contracts if necessary.</span></span>  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -39,10 +38,9 @@ public interface ICalculator
                   ReplyAction="http://test/MyMessage_action")]  
     MyMessage Calculate(MyMessage request);  
 }  
-  
 ```  
   
- Se define el mensaje personalizado `MyMessage` en una clase anotada con los atributos <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> y <xref:System.ServiceModel.MessageBodyMemberAttribute>.Sólo se usa el tercer constructor en este ejemplo.Utilizar los contratos de mensaje le permite ejercer control completo sobre el mensaje SOAP.En este ejemplo, el atributo <xref:System.ServiceModel.MessageHeaderAttribute> se utiliza para colocar `Operation` en un encabezado SOAP.Los operandos `N1`, `N2` y `Result` aparecen dentro del cuerpo de SOAP porque tienen el atributo <xref:System.ServiceModel.MessageBodyMemberAttribute> aplicado.  
+ <span data-ttu-id="4bd8b-111">Se define el mensaje personalizado `MyMessage` en una clase anotada con los atributos <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> y <xref:System.ServiceModel.MessageBodyMemberAttribute>.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-111">The custom message `MyMessage` is defined in a class annotated with <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> and <xref:System.ServiceModel.MessageBodyMemberAttribute> attributes.</span></span> <span data-ttu-id="4bd8b-112">Sólo se usa el tercer constructor en este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-112">Only the third constructor is used in this sample.</span></span> <span data-ttu-id="4bd8b-113">Utilizar los contratos de mensaje le permite ejercer control completo sobre el mensaje SOAP.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-113">Using message contracts allows you to exercise full control over the SOAP message.</span></span> <span data-ttu-id="4bd8b-114">En este ejemplo, el atributo <xref:System.ServiceModel.MessageHeaderAttribute> se utiliza para colocar `Operation` en un encabezado SOAP.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-114">In this sample, the <xref:System.ServiceModel.MessageHeaderAttribute> attribute is used to put `Operation` in a SOAP header.</span></span> <span data-ttu-id="4bd8b-115">Los operandos `N1`, `N2` y `Result` aparecen dentro del cuerpo de SOAP porque tienen el atributo <xref:System.ServiceModel.MessageBodyMemberAttribute> aplicado.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-115">The operands `N1`, `N2` and the `Result` appear within the SOAP body because they have the <xref:System.ServiceModel.MessageBodyMemberAttribute> attribute applied.</span></span>  
   
 ```  
 [MessageContract]  
@@ -108,7 +106,7 @@ public class MyMessage
 }  
 ```  
   
- La clase de implementación contiene el código para la operación de servicio `Calculate`.La clase `CalculateService` obtiene los operandos y el operador del mensaje de solicitud y crea un mensaje de respuesta que contiene el resultado del cálculo solicitado, tal y como se muestra en el código de ejemplo siguiente.  
+ <span data-ttu-id="4bd8b-116">La clase de implementación contiene el código para la operación de servicio `Calculate`.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-116">The implementation class contains the code for the `Calculate` service operation.</span></span> <span data-ttu-id="4bd8b-117">La clase `CalculateService` obtiene los operandos y el operador del mensaje de solicitud y crea un mensaje de respuesta que contiene el resultado del cálculo solicitado, tal y como se muestra en el código de ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-117">The `CalculateService` class obtains the operands and operator from the request message and creates a response message that contains the result of the requested calculation, as shown in the following sample code.</span></span>  
   
 ```  
 // Service class which implements the service contract.  
@@ -142,13 +140,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- El código de cliente generado para el cliente se creó con la herramienta [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).La herramienta crea automáticamente los tipos de contratos de mensaje en el código de cliente generado si es necesario.La opción de comando `/messageContract` puede especificarse para forzar la generación de los contratos de mensaje.  
+ <span data-ttu-id="4bd8b-118">El código de cliente generado para el cliente se creó con la [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-118">The generated client code for the client was created with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool.</span></span> <span data-ttu-id="4bd8b-119">La herramienta crea automáticamente los tipos de contratos de mensaje en el código de cliente generado si es necesario.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-119">The tool automatically creates message contract types in the generated client code if necessary.</span></span> <span data-ttu-id="4bd8b-120">La opción de comando `/messageContract` puede especificarse para forzar la generación de los contratos de mensaje.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-120">The `/messageContract` command option may be specified to force the generation of message contracts.</span></span>  
   
 ```  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- El código de ejemplo siguiente muestra el cliente mediante el mensaje `MyMessage`.  
+ <span data-ttu-id="4bd8b-121">El código de ejemplo siguiente muestra el cliente mediante el mensaje `MyMessage`.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-121">The following sample code demonstrates the client using the `MyMessage` message.</span></span>  
   
 ```  
 // Create a client with given client endpoint configuration  
@@ -164,36 +162,34 @@ MyMessage response = ((ICalculator)client).Calculate(request);
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
- Al ejecutar el ejemplo, se muestran los cálculos en la ventana de la consola del cliente.Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ <span data-ttu-id="4bd8b-122">Al ejecutar el ejemplo, se muestran los cálculos en la ventana de la consola del cliente.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-122">When you run the sample, the calculations are displayed in the client console window.</span></span> <span data-ttu-id="4bd8b-123">Presione ENTRAR en la ventana de cliente para cerrar el cliente.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-123">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
-  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
 Divide(22,7) = 3.14285714285714  
   
 Press <ENTER> to terminate client.  
-  
 ```  
   
- En este punto, los mensajes definidos por el usuario personalizados han pasado entre la operación de cliente y de servicio.El contrato del mensaje definió que los operandos y los resultados estuvieran en el cuerpo del mensaje y que el operador estuviera en un encabezado del mensaje.Se puede configurar el registro de mensajes para observar esta estructura de mensaje.  
+ <span data-ttu-id="4bd8b-124">En este punto, los mensajes definidos por el usuario personalizados han pasado entre la operación de cliente y de servicio.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-124">At this point, custom user-defined messages have passed between the client and the service operation.</span></span> <span data-ttu-id="4bd8b-125">El contrato del mensaje definió que los operandos y los resultados estuvieran en el cuerpo del mensaje y que el operador estuviera en un encabezado del mensaje.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-125">The message contract defined that the operands and results were in the message body and that the operator was in a message header.</span></span> <span data-ttu-id="4bd8b-126">Se puede configurar el registro de mensajes para observar esta estructura de mensaje.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-126">Message logging can be configured to observe this message structure.</span></span>  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="4bd8b-127">Configurar, compilar y ejecutar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="4bd8b-127">To set up, build, and run the sample</span></span>  
   
-1.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  <span data-ttu-id="4bd8b-128">Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4bd8b-128">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  <span data-ttu-id="4bd8b-129">Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4bd8b-129">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  Para ejecutar el ejemplo en una configuración con un único equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  <span data-ttu-id="4bd8b-130">Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="4bd8b-130">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  <span data-ttu-id="4bd8b-131">Puede que los ejemplos ya estén instalados en su equipo.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-131">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4bd8b-132">Compruebe el siguiente directorio (predeterminado) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-132">Check for the following (default) directory before continuing.</span></span>  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  <span data-ttu-id="4bd8b-133">Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="4bd8b-133">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4bd8b-134">Este ejemplo se encuentra en el siguiente directorio.</span><span class="sxs-lookup"><span data-stu-id="4bd8b-134">This sample is located in the following directory.</span></span>  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## Vea también
+## <a name="see-also"></a><span data-ttu-id="4bd8b-135">Vea también</span><span class="sxs-lookup"><span data-stu-id="4bd8b-135">See Also</span></span>

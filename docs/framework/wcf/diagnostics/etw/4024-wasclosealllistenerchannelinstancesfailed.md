@@ -1,35 +1,38 @@
 ---
-title: "4024 - WasCloseAllListenerChannelInstancesFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4024 - WasCloseAllListenerChannelInstancesFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73f0dc73-f0b7-4c13-8328-9fdc262009ec
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ce63dfd3ce7309cb63158656513cac613d2dab76
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 4024 - WasCloseAllListenerChannelInstancesFailed
-## Propiedades  
+# <a name="4024---wasclosealllistenerchannelinstancesfailed"></a><span data-ttu-id="1dab5-102">4024 - WasCloseAllListenerChannelInstancesFailed</span><span class="sxs-lookup"><span data-stu-id="1dab5-102">4024 - WasCloseAllListenerChannelInstancesFailed</span></span>
+## <a name="properties"></a><span data-ttu-id="1dab5-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="1dab5-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|4024|  
-|Palabras clave|ActivationServices|  
-|Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|<span data-ttu-id="1dab5-104">Id.</span><span class="sxs-lookup"><span data-stu-id="1dab5-104">ID</span></span>|<span data-ttu-id="1dab5-105">4024</span><span class="sxs-lookup"><span data-stu-id="1dab5-105">4024</span></span>|  
+|<span data-ttu-id="1dab5-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="1dab5-106">Keywords</span></span>|<span data-ttu-id="1dab5-107">ActivationServices</span><span class="sxs-lookup"><span data-stu-id="1dab5-107">ActivationServices</span></span>|  
+|<span data-ttu-id="1dab5-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="1dab5-108">Level</span></span>|<span data-ttu-id="1dab5-109">Error</span><span class="sxs-lookup"><span data-stu-id="1dab5-109">Error</span></span>|  
+|<span data-ttu-id="1dab5-110">Canal</span><span class="sxs-lookup"><span data-stu-id="1dab5-110">Channel</span></span>|<span data-ttu-id="1dab5-111">Microsoft-Windows-Application Server-Applications/Analytic</span><span class="sxs-lookup"><span data-stu-id="1dab5-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## Descripción  
- Se genera este evento cuando se ha producido un error en el cierre de todas las instancias del canal del agente de escucha.  
+## <a name="description"></a><span data-ttu-id="1dab5-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="1dab5-112">Description</span></span>  
+ <span data-ttu-id="1dab5-113">Se genera este evento cuando se ha producido un error en el cierre de todas las instancias del canal del agente de escucha.</span><span class="sxs-lookup"><span data-stu-id="1dab5-113">This event is emitted when the closing of all listener channel instances has failed.</span></span>  
   
-## Mensaje  
- Código de error:%1  
+## <a name="message"></a><span data-ttu-id="1dab5-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="1dab5-114">Message</span></span>  
+ <span data-ttu-id="1dab5-115">Código de error:%1</span><span class="sxs-lookup"><span data-stu-id="1dab5-115">Error Code:%1</span></span>  
   
-## Detalles
+## <a name="details"></a><span data-ttu-id="1dab5-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="1dab5-116">Details</span></span>

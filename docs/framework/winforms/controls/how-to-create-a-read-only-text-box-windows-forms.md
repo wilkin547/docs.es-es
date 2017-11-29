@@ -1,43 +1,44 @@
 ---
-title: "C&#243;mo: Crear un cuadro de texto de s&#243;lo lectura (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadros de texto de sólo lectura"
-  - "cuadros de texto, solo lectura"
-  - "TextBox (control) [Windows Forms], solo lectura"
+title: "Cómo: Crear un cuadro de texto de sólo lectura (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TextBox control [Windows Forms], read-only
+- read-only text boxes
+- text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9cf6064442c3b648116f98f98f169dac12e5e88c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Crear un cuadro de texto de s&#243;lo lectura (formularios Windows Forms)
-Puede transformar un cuadro de texto editable de formularios Windows Forms en un control de sólo lectura.  Por ejemplo, el cuadro de texto podría mostrar un valor que normalmente se edita pero que no se puede modificar en este caso debido al estado de la aplicación.  
+# <a name="how-to-create-a-read-only-text-box-windows-forms"></a><span data-ttu-id="bf3b0-102">Cómo: Crear un cuadro de texto de sólo lectura (formularios Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="bf3b0-102">How to: Create a Read-Only Text Box (Windows Forms)</span></span>
+<span data-ttu-id="bf3b0-103">Puede transformar un cuadro de texto editable de formularios Windows Forms en un control de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-103">You can transform an editable Windows Forms text box into a read-only control.</span></span> <span data-ttu-id="bf3b0-104">Por ejemplo, el cuadro de texto puede mostrar un valor que normalmente se edita pero no puede estar en la actualidad, debido al estado de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-104">For example, the text box may display a value that is usually edited but may not be currently, due to the state of the application.</span></span>  
   
-### Para crear un cuadro de texto de sólo lectura  
+### <a name="to-create-a-read-only-text-box"></a><span data-ttu-id="bf3b0-105">Para crear un cuadro de texto de solo lectura</span><span class="sxs-lookup"><span data-stu-id="bf3b0-105">To create a read-only text box</span></span>  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> del control <xref:System.Windows.Forms.TextBox> en `true`.  Con la propiedad establecida en `true`, los usuarios pueden continuar desplazándose por el texto del cuadro de texto y resaltándolo, pero no pueden hacer cambios.  En un cuadro de texto se puede utilizar el comando **Copiar**; en cambio, no se pueden utilizar los comandos **Cortar** y **Pegar**.  
+1.  <span data-ttu-id="bf3b0-106">Establecer el <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-106">Set the <xref:System.Windows.Forms.TextBox> control's <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> property to `true`.</span></span> <span data-ttu-id="bf3b0-107">Con la propiedad establecida en `true`, los usuarios todavía pueden desplazarse y resaltar texto en un cuadro de texto sin permitir que los cambios.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-107">With the property set to `true`, users can still scroll and highlight text in a text box without allowing changes.</span></span> <span data-ttu-id="bf3b0-108">A **copia** comando es funcional en un cuadro de texto, pero **cortar** y **pegar** comandos no están.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-108">A **Copy** command is functional in a text box, but **Cut** and **Paste** commands are not.</span></span>  
   
     > [!NOTE]
-    >  La propiedad <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> sólo afecta a la interacción del usuario con el programa en tiempo de ejecución.  Podrá seguir modificando el contenido del cuadro de texto mediante programación en tiempo de ejecución; para ello, cambie la propiedad <xref:System.Windows.Forms.TextBox.Text%2A> del cuadro de texto.  
+    >  <span data-ttu-id="bf3b0-109">El <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> propiedad solo afecta a la interacción del usuario en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-109">The <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> property only affects user interaction at run time.</span></span> <span data-ttu-id="bf3b0-110">Se puede cambiar el contenido del cuadro de texto mediante programación en tiempo de ejecución cambiando el <xref:System.Windows.Forms.TextBox.Text%2A> propiedad del cuadro de texto.</span><span class="sxs-lookup"><span data-stu-id="bf3b0-110">You can still change text box contents programmatically at run time by changing the <xref:System.Windows.Forms.TextBox.Text%2A> property of the text box.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.TextBox>   
- [Información general sobre el control TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)   
- [Cómo: Controlar el punto de inserción en un control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)   
- [Cómo: Crear un cuadro de texto de contraseña con el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)   
- [Cómo: Insertar comillas en una cadena](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)   
- [Cómo: Seleccionar texto en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)   
- [Cómo: Ver múltiples líneas en el control TextBox de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)   
- [TextBox \(Control\)](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="bf3b0-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="bf3b0-111">See Also</span></span>  
+ <xref:System.Windows.Forms.TextBox>  
+ [<span data-ttu-id="bf3b0-112">Información general sobre el control TextBox</span><span class="sxs-lookup"><span data-stu-id="bf3b0-112">TextBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="bf3b0-113">Controlar el punto de inserción en un control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bf3b0-113">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="bf3b0-114">Crear un cuadro de texto de contraseña con el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bf3b0-114">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="bf3b0-115">Insertar comillas en una cadena</span><span class="sxs-lookup"><span data-stu-id="bf3b0-115">How to: Put Quotation Marks in a String</span></span>](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [<span data-ttu-id="bf3b0-116">Seleccionar texto en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bf3b0-116">How to: Select Text in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="bf3b0-117">Ver múltiples líneas en el control TextBox de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bf3b0-117">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [<span data-ttu-id="bf3b0-118">Control TextBox</span><span class="sxs-lookup"><span data-stu-id="bf3b0-118">TextBox Control</span></span>](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

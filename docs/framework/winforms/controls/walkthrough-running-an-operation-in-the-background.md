@@ -1,114 +1,118 @@
 ---
-title: "Tutorial: Ejecutar una operaci&#243;n en segundo plano | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "operaciones en segundo plano"
-  - "tareas en segundo plano"
-  - "subprocesos en segundo plano"
-  - "BackgroundWorker (clase), ejemplos"
-  - "formularios, operaciones en segundo plano"
-  - "formularios, multithreading"
-  - "subprocesamiento [Windows Forms], operaciones en segundo plano"
+title: "Tutorial: Ejecutar una operación en segundo plano"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- background tasks
+- forms [Windows Forms], multithreading
+- forms [Windows Forms], background operations
+- background threads
+- BackgroundWorker class [Windows Forms], examples
+- threading [Windows Forms], background operations
+- background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: de485eb0b9c67ee9c3c897b6521971f50aaf751c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tutorial: Ejecutar una operaci&#243;n en segundo plano
-Si tiene una operación que llevará mucho tiempo completarse y no desea que provoque demoras en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.  
+# <a name="walkthrough-running-an-operation-in-the-background"></a><span data-ttu-id="2e6a9-102">Tutorial: Ejecutar una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="2e6a9-102">Walkthrough: Running an Operation in the Background</span></span>
+<span data-ttu-id="2e6a9-103">Si tiene una operación que tarda mucho tiempo en completarse y no desea causar retrasos en la interfaz de usuario, puede utilizar la clase <xref:System.ComponentModel.BackgroundWorker> para ejecutar la operación en otro subproceso.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-103">If you have an operation that will take a long time to complete, and you do not want to cause delays in your user interface, you can use the <xref:System.ComponentModel.BackgroundWorker> class to run the operation on another thread.</span></span>  
   
- Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ <span data-ttu-id="2e6a9-104">Para obtener una lista completa del código utilizado en este ejemplo, vea [Cómo: ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).</span><span class="sxs-lookup"><span data-stu-id="2e6a9-104">For a complete listing of the code used in this example, see [How to: Run an Operation in the Background](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).</span></span>  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  <span data-ttu-id="2e6a9-105">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="2e6a9-106">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="2e6a9-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="2e6a9-107">Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span><span class="sxs-lookup"><span data-stu-id="2e6a9-107">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### Para ejecutar en segundo plano una operación  
+### <a name="to-run-an-operation-in-the-background"></a><span data-ttu-id="2e6a9-108">Para ejecutar una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="2e6a9-108">To run an operation in the background</span></span>  
   
-1.  Con el formulario activo en el Diseñador de Windows Forms, arrastre dos controles <xref:System.Windows.Forms.Button> del **Cuadro de herramientas** al formulario y después establezca las propiedades `Name` y <xref:System.Windows.Forms.Control.Text%2A> de los botones de acuerdo con la tabla siguiente.  
+1.  <span data-ttu-id="2e6a9-109">Con el formulario activo en el Diseñador de Windows Forms, arrastre dos <xref:System.Windows.Forms.Button> controla desde el **cuadro de herramientas** al formulario y, a continuación, establezca el `Name` y <xref:System.Windows.Forms.Control.Text%2A> propiedades de los botones de acuerdo con la tabla siguiente.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-109">With your form active in the Windows Forms Designer, drag two <xref:System.Windows.Forms.Button> controls from the **Toolbox** to the form, and then set the `Name` and <xref:System.Windows.Forms.Control.Text%2A> properties of the buttons according to the following table.</span></span>  
   
-    |Button|Name|Text|  
+    |<span data-ttu-id="2e6a9-110">Botón</span><span class="sxs-lookup"><span data-stu-id="2e6a9-110">Button</span></span>|<span data-ttu-id="2e6a9-111">Nombre</span><span class="sxs-lookup"><span data-stu-id="2e6a9-111">Name</span></span>|<span data-ttu-id="2e6a9-112">Texto</span><span class="sxs-lookup"><span data-stu-id="2e6a9-112">Text</span></span>|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|Iniciar|  
-    |`button2`|`cancelBtn`|Cancelar|  
+    |`button1`|`startBtn`|<span data-ttu-id="2e6a9-113">**Start**</span><span class="sxs-lookup"><span data-stu-id="2e6a9-113">**Start**</span></span>|  
+    |`button2`|`cancelBtn`|<span data-ttu-id="2e6a9-114">**Cancelar**</span><span class="sxs-lookup"><span data-stu-id="2e6a9-114">**Cancel**</span></span>|  
   
-2.  Abra el **Cuadro de herramientas**, haga clic en la ficha **Componentes** y, a continuación, arrastre el componente <xref:System.ComponentModel.BackgroundWorker> al formulario.  
+2.  <span data-ttu-id="2e6a9-115">Abra la **cuadro de herramientas**, haga clic en el **componentes** ficha y, a continuación, arrastre el <xref:System.ComponentModel.BackgroundWorker> componente al formulario.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-115">Open the **Toolbox**, click the **Components** tab, and then drag the <xref:System.ComponentModel.BackgroundWorker> component onto your form.</span></span>  
   
-     Aparecerá el componente `backgroundWorker1` en la **Bandeja de componentes**.  
+     <span data-ttu-id="2e6a9-116">El `backgroundWorker1` componente aparecerá en el **Bandeja de componentes**.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-116">The `backgroundWorker1` component appears in the **Component Tray**.</span></span>  
   
-3.  En la ventana **Propiedades**, establezca la propiedad <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> en `true`.  
+3.  <span data-ttu-id="2e6a9-117">En el **propiedades** ventana, establezca el <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> propiedad `true`.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-117">In the **Properties** window, set the <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> property to `true`.</span></span>  
   
-4.  En la ventana **Propiedades**, haga clic en el botón **Eventos** y, a continuación, haga doble clic en los eventos <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> para crear los controladores de eventos.  
+4.  <span data-ttu-id="2e6a9-118">En el **propiedades** ventana, haga clic en el **eventos** botón y, a continuación, haga doble clic en el <xref:System.ComponentModel.BackgroundWorker.DoWork> y <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> eventos para crear controladores de eventos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-118">In the **Properties** window, click on the **Events** button, and then double-click the <xref:System.ComponentModel.BackgroundWorker.DoWork> and <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> events to create event handlers.</span></span>  
   
-5.  Inserte el código que lleva mucho tiempo en el controlador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork>.  
+5.  <span data-ttu-id="2e6a9-119">Inserte el código que consumen muchos recursos en el <xref:System.ComponentModel.BackgroundWorker.DoWork> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-119">Insert your time-consuming code into the <xref:System.ComponentModel.BackgroundWorker.DoWork> event handler.</span></span>  
   
-6.  Extraiga los parámetros necesarios para la operación de la propiedad <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> del parámetro <xref:System.ComponentModel.DoWorkEventArgs>.  
+6.  <span data-ttu-id="2e6a9-120">Extraer todos los parámetros requeridos por la operación de la <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> propiedad de la <xref:System.ComponentModel.DoWorkEventArgs> parámetro.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-120">Extract any parameters required by the operation from the <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> property of the <xref:System.ComponentModel.DoWorkEventArgs> parameter.</span></span>  
   
-7.  Asigne el resultado del cálculo a la propiedad <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> de <xref:System.ComponentModel.DoWorkEventArgs>.  
+7.  <span data-ttu-id="2e6a9-121">Asignar el resultado del cálculo para la <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> propiedad de la <xref:System.ComponentModel.DoWorkEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-121">Assign the result of the computation to the <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> property of the <xref:System.ComponentModel.DoWorkEventArgs>.</span></span>  
   
-     Éste estará disponible al controlador de eventos <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>.  
+     <span data-ttu-id="2e6a9-122">Esta forma se estén disponibles para el <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-122">This is will be available to the <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> event handler.</span></span>  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  Inserte el código para recuperar el resultado de la operación en el controlador de eventos <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>.  
+8.  <span data-ttu-id="2e6a9-123">Inserte código para recuperar el resultado de la operación en el <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-123">Insert code for retrieving the result of your operation in the <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> event handler.</span></span>  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
   
-9. Implemente el método `TimeConsumingOperation`.  
+9. <span data-ttu-id="2e6a9-124">Implemente el método `TimeConsumingOperation`.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-124">Implement the `TimeConsumingOperation` method.</span></span>  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#4)]  
   
-10. En el Diseñador de Windows Forms, haga doble clic en `startButton` para crear el controlador de eventos <xref:System.Windows.Forms.Control.Click>.  
+10. <span data-ttu-id="2e6a9-125">En el Diseñador de Windows Forms, haga doble clic en `startButton` para crear el <xref:System.Windows.Forms.Control.Click> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-125">In the Windows Forms Designer, double-click `startButton` to create the <xref:System.Windows.Forms.Control.Click> event handler.</span></span>  
   
-11. Llame al método <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> en el controlador de eventos <xref:System.Windows.Forms.Control.Click> para `startButton`.  
+11. <span data-ttu-id="2e6a9-126">Llame a la <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> método en el <xref:System.Windows.Forms.Control.Click> controlador de eventos para `startButton`.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-126">Call the <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> method in the <xref:System.Windows.Forms.Control.Click> event handler for `startButton`.</span></span>  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#5)]  
   
-12. En el Diseñador de Windows Forms, haga doble clic en `cancelButton` para crear el controlador de eventos <xref:System.Windows.Forms.Control.Click>.  
+12. <span data-ttu-id="2e6a9-127">En el Diseñador de Windows Forms, haga doble clic en `cancelButton` para crear el <xref:System.Windows.Forms.Control.Click> controlador de eventos.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-127">In the Windows Forms Designer, double-click `cancelButton` to create the <xref:System.Windows.Forms.Control.Click> event handler.</span></span>  
   
-13. Llame al método <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> en el controlador de eventos <xref:System.Windows.Forms.Control.Click> para `cancelButton`.  
+13. <span data-ttu-id="2e6a9-128">Llame a la <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> método en el <xref:System.Windows.Forms.Control.Click> controlador de eventos para `cancelButton`.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-128">Call the <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> method in the <xref:System.Windows.Forms.Control.Click> event handler for `cancelButton`.</span></span>  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#6)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#6)]  
   
-14. En la parte superior del archivo, importe los espacios de nombres System.ComponentModel y System.Threading.  
+14. <span data-ttu-id="2e6a9-129">En la parte superior del archivo, importe los espacios de nombres System.ComponentModel y System.Threading.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-129">At the top of the file, import the System.ComponentModel and System.Threading namespaces.</span></span>  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#7)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#7)]  
   
-15. Presione F6 para compilar la solución y, a continuación, presione CTRL\-F5 para ejecutar la aplicación fuera del depurador.  
+15. <span data-ttu-id="2e6a9-130">Presione F6 para compilar la solución y, a continuación, presione CTRL-F5 para ejecutar la aplicación fuera del depurador.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-130">Press F6 to build the solution, and then press CTRL-F5 to run the application outside the debugger.</span></span>  
   
 > [!NOTE]
->  Si presiona F5 para ejecutar la aplicación bajo el depurador, éste detectará y mostrará la excepción generada en el método `TimeConsumingOperation`.  Cuando ejecuta la aplicación fuera del depurador, <xref:System.ComponentModel.BackgroundWorker> controla la excepción y la almacena en memoria caché en la propiedad <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> de <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
+>  <span data-ttu-id="2e6a9-131">Si presiona F5 para ejecutar la aplicación en el depurador, la excepción se produce en el `TimeConsumingOperation` método es detectado y mostrado por el depurador.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-131">If you press F5 to run the application under the debugger, the exception raised in the `TimeConsumingOperation` method is caught and displayed by the debugger.</span></span> <span data-ttu-id="2e6a9-132">Al ejecutar la aplicación fuera del depurador, el <xref:System.ComponentModel.BackgroundWorker> controla la excepción y lo almacena en caché en el <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> propiedad de la <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-132">When you run the application outside the debugger, the <xref:System.ComponentModel.BackgroundWorker> handles the exception and caches it in the <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> property of the <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.</span></span>  
   
-1.  Haga clic en el botón **Iniciar** para ejecutar una operación asincrónica y, a continuación, haga clic en el botón **Cancelar** para detener una operación asincrónica en ejecución.  
+1.  <span data-ttu-id="2e6a9-133">Haga clic en el **iniciar** para ejecutar una operación asincrónica y, a continuación, haga clic en el **cancelar** botón para detener una operación asincrónica en ejecución.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-133">Click the **Start** button to run an asynchronous operation, and then click the **Cancel** button to stop a running asynchronous operation.</span></span>  
   
-     El resultado de cada operación se muestra en <xref:System.Windows.Forms.MessageBox>.  
+     <span data-ttu-id="2e6a9-134">El resultado de cada operación se muestra en un elemento <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-134">The outcome of each operation is displayed in a <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
-## Pasos siguientes  
+## <a name="next-steps"></a><span data-ttu-id="2e6a9-135">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="2e6a9-135">Next Steps</span></span>  
   
--   Implemente un formulario que informa del progreso a medida que prosigue la operación asincrónica.  Para obtener más información, vea [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   <span data-ttu-id="2e6a9-136">Implementar un formulario que informa del progreso mientras se realiza una operación asincrónica.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-136">Implement a form that reports progress as an asynchronous operation proceeds.</span></span> <span data-ttu-id="2e6a9-137">Para obtener más información, consulte [Cómo: implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).</span><span class="sxs-lookup"><span data-stu-id="2e6a9-137">For more information, see [How to: Implement a Form That Uses a Background Operation](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).</span></span>  
   
--   Implemente una clase que admite el Modelo asincrónico para componentes.  Para obtener más información, vea [Implementing the Event\-based Asynchronous Pattern](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+-   <span data-ttu-id="2e6a9-138">Implementar una clase que admita el modelo asincrónico para componentes.</span><span class="sxs-lookup"><span data-stu-id="2e6a9-138">Implement a class that supports the Asynchronous Pattern for Components.</span></span> <span data-ttu-id="2e6a9-139">Para obtener más información, consulte [implementar el modelo asincrónico basado en eventos](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).</span><span class="sxs-lookup"><span data-stu-id="2e6a9-139">For more information, see [Implementing the Event-based Asynchronous Pattern](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).</span></span>  
   
-## Vea también  
- <xref:System.ComponentModel.BackgroundWorker>   
- <xref:System.ComponentModel.DoWorkEventArgs>   
- [Cómo: Implementar un formulario que utiliza una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)   
- [Cómo: Ejecutar una operación en segundo plano](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)   
- [BackgroundWorker \(Componente\)](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a><span data-ttu-id="2e6a9-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="2e6a9-140">See Also</span></span>  
+ <xref:System.ComponentModel.BackgroundWorker>  
+ <xref:System.ComponentModel.DoWorkEventArgs>  
+ [<span data-ttu-id="2e6a9-141">Cómo: Implementar un formulario que utiliza una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="2e6a9-141">How to: Implement a Form That Uses a Background Operation</span></span>](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [<span data-ttu-id="2e6a9-142">Ejecutar una operación en segundo plano</span><span class="sxs-lookup"><span data-stu-id="2e6a9-142">How to: Run an Operation in the Background</span></span>](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [<span data-ttu-id="2e6a9-143">Componente BackgroundWorker</span><span class="sxs-lookup"><span data-stu-id="2e6a9-143">BackgroundWorker Component</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

@@ -5,226 +5,223 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3dfd8b17e4ca01802651087ff20988744a411ed2
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="thread-pool-etw-events"></a>Eventos ETW de grupo de subprocesos
-<a name="top"></a> Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.  
+# <a name="thread-pool-etw-events"></a><span data-ttu-id="78bbc-102">Eventos ETW de grupo de subprocesos</span><span class="sxs-lookup"><span data-stu-id="78bbc-102">Thread Pool ETW Events</span></span>
+<span data-ttu-id="78bbc-103"><a name="top"></a> Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
   
- Hay dos grupos de eventos de grupo de subprocesos:  
+ <span data-ttu-id="78bbc-104">Hay dos grupos de eventos de grupo de subprocesos:</span><span class="sxs-lookup"><span data-stu-id="78bbc-104">There are two groups of thread pool events:</span></span>  
   
--   [Eventos de grupo de subprocesos de trabajo](#worker), que proporcionan información sobre cómo una aplicación usa el grupo de subprocesos y el efecto de las cargas de trabajo en el control de simultaneidad.  
+-   <span data-ttu-id="78bbc-105">[Eventos de grupo de subprocesos de trabajo](#worker), que proporcionan información sobre cómo una aplicación usa el grupo de subprocesos y el efecto de las cargas de trabajo en el control de simultaneidad.</span><span class="sxs-lookup"><span data-stu-id="78bbc-105">[Worker thread pool events](#worker), which provide information about how an application uses the thread pool, and the effect of workloads on concurrency control.</span></span>  
   
--   [Eventos de grupo de subprocesos de E/S](#io), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.  
+-   <span data-ttu-id="78bbc-106">[Eventos de grupo de subprocesos de E/S](#io), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-106">[I/O thread pool events](#io), which provide information about I/O threads that are created, retired, unretired, or terminated in the thread pool.</span></span>  
   
 <a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Eventos de grupo de subprocesos de trabajo  
- Estos eventos se relacionan con el grupo de subprocesos de trabajo de runtime y proporcionan notificaciones de eventos de subproceso (por ejemplo, cuando se crea o se detiene un subproceso). El grupo de subprocesos de trabajo usa un algoritmo adaptable para el control de simultaneidad, en el que el número de subprocesos se calcula en función del rendimiento medido. Los eventos de grupo de subprocesos de trabajo pueden usarse para saber cómo una aplicación utiliza el grupo de subprocesos y el efecto que ciertas cargas de trabajo pueden tener en el control de simultaneidad.  
+## <a name="worker-thread-pool-events"></a><span data-ttu-id="78bbc-107">Eventos de grupo de subprocesos de trabajo</span><span class="sxs-lookup"><span data-stu-id="78bbc-107">Worker Thread Pool Events</span></span>  
+ <span data-ttu-id="78bbc-108">Estos eventos se relacionan con el grupo de subprocesos de trabajo de runtime y proporcionan notificaciones de eventos de subproceso (por ejemplo, cuando se crea o se detiene un subproceso).</span><span class="sxs-lookup"><span data-stu-id="78bbc-108">These events relate to the runtime's worker thread pool and provide notifications for thread events (for example, when a thread is created or stopped).</span></span> <span data-ttu-id="78bbc-109">El grupo de subprocesos de trabajo usa un algoritmo adaptable para el control de simultaneidad, en el que el número de subprocesos se calcula en función del rendimiento medido.</span><span class="sxs-lookup"><span data-stu-id="78bbc-109">The worker thread pool uses an adaptive algorithm for concurrency control, where the number of threads is calculated based on the measured throughput.</span></span> <span data-ttu-id="78bbc-110">Los eventos de grupo de subprocesos de trabajo pueden usarse para saber cómo una aplicación utiliza el grupo de subprocesos y el efecto que ciertas cargas de trabajo pueden tener en el control de simultaneidad.</span><span class="sxs-lookup"><span data-stu-id="78bbc-110">Worker thread pool events can be used to understand how an application is using the thread pool, and the effect that certain workloads may have on concurrency control.</span></span>  
   
-### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart y ThreadPoolWorkerThreadStop  
- En la tabla siguiente se muestra la palabra clave y el nivel correspondientes a estos eventos. (Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)).  
+### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a><span data-ttu-id="78bbc-111">ThreadPoolWorkerThreadStart y ThreadPoolWorkerThreadStop</span><span class="sxs-lookup"><span data-stu-id="78bbc-111">ThreadPoolWorkerThreadStart and ThreadPoolWorkerThreadStop</span></span>  
+ <span data-ttu-id="78bbc-112">En la tabla siguiente se muestra la palabra clave y el nivel correspondientes a estos eventos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-112">The following table shows the keyword and level for these events.</span></span> <span data-ttu-id="78bbc-113">(Para obtener más información, vea [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)).</span><span class="sxs-lookup"><span data-stu-id="78bbc-113">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-114">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-114">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-115">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-115">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-116">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-116">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-117">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-117">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-118">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-118">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Se genera cuando|  
+|<span data-ttu-id="78bbc-119">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-119">Event</span></span>|<span data-ttu-id="78bbc-120">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-120">Event ID</span></span>|<span data-ttu-id="78bbc-121">Se genera cuando</span><span class="sxs-lookup"><span data-stu-id="78bbc-121">Raised when</span></span>|  
 |-|-|-|  
-|`ThreadPoolWorkerThreadStart`|50|Se crea un subproceso de trabajo.|  
-|`ThreadPoolWorkerThreadStop`|51|Se detiene un subproceso de trabajo.|  
-|`ThreadPoolWorkerThreadRetirementStart`|52|Se retira un subproceso de trabajo.|  
-|`ThreadPoolWorkerThreadRetirementStop`|53|Un subproceso de trabajo retirado se vuelve activo.|  
+|`ThreadPoolWorkerThreadStart`|<span data-ttu-id="78bbc-122">50</span><span class="sxs-lookup"><span data-stu-id="78bbc-122">50</span></span>|<span data-ttu-id="78bbc-123">Se crea un subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-123">A worker thread is created.</span></span>|  
+|`ThreadPoolWorkerThreadStop`|<span data-ttu-id="78bbc-124">51</span><span class="sxs-lookup"><span data-stu-id="78bbc-124">51</span></span>|<span data-ttu-id="78bbc-125">Se detiene un subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-125">A worker thread is stopped.</span></span>|  
+|`ThreadPoolWorkerThreadRetirementStart`|<span data-ttu-id="78bbc-126">52</span><span class="sxs-lookup"><span data-stu-id="78bbc-126">52</span></span>|<span data-ttu-id="78bbc-127">Se retira un subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-127">A worker thread retires.</span></span>|  
+|`ThreadPoolWorkerThreadRetirementStop`|<span data-ttu-id="78bbc-128">53</span><span class="sxs-lookup"><span data-stu-id="78bbc-128">53</span></span>|<span data-ttu-id="78bbc-129">Un subproceso de trabajo retirado se vuelve activo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-129">A retired worker thread becomes active again.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-130">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-130">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-131">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-131">Field name</span></span>|<span data-ttu-id="78bbc-132">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-132">Data type</span></span>|<span data-ttu-id="78bbc-133">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-133">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|ActiveWorkerThreadCount|win:UInt32|Número de subprocesos de trabajo disponibles para procesar trabajo, incluidos los que ya están procesando trabajo.|  
-|RetiredWorkerThreadCount|win:UInt32|Número de subprocesos de trabajo que no están disponibles para procesar trabajo, pero que se mantienen en reserva en caso de que posteriormente se necesiten más subprocesos.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-134">ActiveWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="78bbc-134">ActiveWorkerThreadCount</span></span>|<span data-ttu-id="78bbc-135">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="78bbc-135">win:UInt32</span></span>|<span data-ttu-id="78bbc-136">Número de subprocesos de trabajo disponibles para procesar trabajo, incluidos los que ya están procesando trabajo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-136">Number of worker threads available to process work, including those that are already processing work.</span></span>|  
+|<span data-ttu-id="78bbc-137">RetiredWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="78bbc-137">RetiredWorkerThreadCount</span></span>|<span data-ttu-id="78bbc-138">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="78bbc-138">win:UInt32</span></span>|<span data-ttu-id="78bbc-139">Número de subprocesos de trabajo que no están disponibles para procesar trabajo, pero que se mantienen en reserva en caso de que posteriormente se necesiten más subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-139">Number of worker threads that are not available to process work, but that are being held in reserve in case more threads are needed later.</span></span>|  
+|<span data-ttu-id="78bbc-140">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-140">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-141">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-141">Win:UInt16</span></span>|<span data-ttu-id="78bbc-142">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-142">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
- Estos eventos de grupo de subprocesos proporcionan información para entender y depurar el comportamiento del algoritmo de inserción de subprocesos (control de simultaneidad). El grupo de subprocesos de trabajo usa la información internamente.  
+### <a name="threadpoolworkerthreadadjustment"></a><span data-ttu-id="78bbc-143">ThreadPoolWorkerThreadAdjustment</span><span class="sxs-lookup"><span data-stu-id="78bbc-143">ThreadPoolWorkerThreadAdjustment</span></span>  
+ <span data-ttu-id="78bbc-144">Estos eventos de grupo de subprocesos proporcionan información para entender y depurar el comportamiento del algoritmo de inserción de subprocesos (control de simultaneidad).</span><span class="sxs-lookup"><span data-stu-id="78bbc-144">These thread pool events provide information for understanding and debugging the behavior of the thread injection (concurrency control) algorithm.</span></span> <span data-ttu-id="78bbc-145">El grupo de subprocesos de trabajo usa la información internamente.</span><span class="sxs-lookup"><span data-stu-id="78bbc-145">The information is used internally by the worker thread pool.</span></span>  
   
-#### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+#### <a name="threadpoolworkerthreadadjustmentsample"></a><span data-ttu-id="78bbc-146">ThreadPoolWorkerThreadAdjustmentSample</span><span class="sxs-lookup"><span data-stu-id="78bbc-146">ThreadPoolWorkerThreadAdjustmentSample</span></span>  
+ <span data-ttu-id="78bbc-147">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-147">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-148">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-148">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-149">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-149">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-150">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-150">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-151">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-151">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-152">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-152">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Descripción|  
+|<span data-ttu-id="78bbc-153">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-153">Event</span></span>|<span data-ttu-id="78bbc-154">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-154">Event ID</span></span>|<span data-ttu-id="78bbc-155">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-155">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentSample`|54|Se refiere a la recopilación de información para un ejemplo; es decir, una medición del rendimiento con un determinado nivel de simultaneidad en un instante de tiempo.|  
+|`ThreadPoolWorkerThreadAdjustmentSample`|<span data-ttu-id="78bbc-156">54</span><span class="sxs-lookup"><span data-stu-id="78bbc-156">54</span></span>|<span data-ttu-id="78bbc-157">Se refiere a la recopilación de información para un ejemplo; es decir, una medición del rendimiento con un determinado nivel de simultaneidad en un instante de tiempo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-157">Refers to the collection of information for one sample; that is, a measurement of throughput with a certain concurrency level, in an instant of time.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-158">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-158">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-159">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-159">Field name</span></span>|<span data-ttu-id="78bbc-160">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-160">Data type</span></span>|<span data-ttu-id="78bbc-161">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-161">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Rendimiento|win:Double|Número de finalizaciones por unidad de tiempo.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-162">Rendimiento</span><span class="sxs-lookup"><span data-stu-id="78bbc-162">Throughput</span></span>|<span data-ttu-id="78bbc-163">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-163">win:Double</span></span>|<span data-ttu-id="78bbc-164">Número de finalizaciones por unidad de tiempo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-164">Number of completions per unit of time.</span></span>|  
+|<span data-ttu-id="78bbc-165">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-165">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-166">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-166">Win:UInt16</span></span>|<span data-ttu-id="78bbc-167">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-167">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-#### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+#### <a name="threadpoolworkerthreadadjustmentadjustment"></a><span data-ttu-id="78bbc-168">ThreadPoolWorkerThreadAdjustmentAdjustment</span><span class="sxs-lookup"><span data-stu-id="78bbc-168">ThreadPoolWorkerThreadAdjustmentAdjustment</span></span>  
+ <span data-ttu-id="78bbc-169">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-169">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-170">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-170">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-171">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-171">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-172">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-172">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-173">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-173">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-174">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-174">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Descripción|  
+|<span data-ttu-id="78bbc-175">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-175">Event</span></span>|<span data-ttu-id="78bbc-176">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-176">Event ID</span></span>|<span data-ttu-id="78bbc-177">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-177">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra un cambio en el control, cuando el algoritmo de inserción de subproceso (hill-climbing) determina que tiene lugar un cambio en el nivel de simultaneidad.|  
+|`ThreadPoolWorkerThreadAdjustmentAdjustment`|<span data-ttu-id="78bbc-178">55</span><span class="sxs-lookup"><span data-stu-id="78bbc-178">55</span></span>|<span data-ttu-id="78bbc-179">Registra un cambio en el control, cuando el algoritmo de inserción de subproceso (hill-climbing) determina que tiene lugar un cambio en el nivel de simultaneidad.</span><span class="sxs-lookup"><span data-stu-id="78bbc-179">Records a change in control, when the thread injection (hill-climbing) algorithm determines that a change in concurrency level is in place.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-180">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-180">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-181">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-181">Field name</span></span>|<span data-ttu-id="78bbc-182">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-182">Data type</span></span>|<span data-ttu-id="78bbc-183">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-183">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|AverageThroughput|win:Double|Rendimiento medio de un ejemplo de mediciones.|  
-|NewWorkerThreadCount|win:UInt32|Nuevo número de subprocesos de trabajo activos.|  
-|Motivo|win:UInt32|Razón para el ajuste.<br /><br /> 0x00: preparación.<br /><br /> 0x01: inicializando.<br /><br /> 0x02: movimiento aleatorio.<br /><br /> 0x03: movimiento escalada.<br /><br /> 0x04: cambiar punto.<br /><br /> 0x05: estabilización.<br /><br /> 0x06: colapso.<br /><br /> 0x07: tiempo de espera de subproceso agotado.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-184">AverageThroughput</span><span class="sxs-lookup"><span data-stu-id="78bbc-184">AverageThroughput</span></span>|<span data-ttu-id="78bbc-185">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-185">win:Double</span></span>|<span data-ttu-id="78bbc-186">Rendimiento medio de un ejemplo de mediciones.</span><span class="sxs-lookup"><span data-stu-id="78bbc-186">Average throughput of a sample of measurements.</span></span>|  
+|<span data-ttu-id="78bbc-187">NewWorkerThreadCount</span><span class="sxs-lookup"><span data-stu-id="78bbc-187">NewWorkerThreadCount</span></span>|<span data-ttu-id="78bbc-188">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="78bbc-188">win:UInt32</span></span>|<span data-ttu-id="78bbc-189">Nuevo número de subprocesos de trabajo activos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-189">New number of active worker threads.</span></span>|  
+|<span data-ttu-id="78bbc-190">Motivo</span><span class="sxs-lookup"><span data-stu-id="78bbc-190">Reason</span></span>|<span data-ttu-id="78bbc-191">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="78bbc-191">win:UInt32</span></span>|<span data-ttu-id="78bbc-192">Razón para el ajuste.</span><span class="sxs-lookup"><span data-stu-id="78bbc-192">Reason for the adjustment.</span></span><br /><br /> <span data-ttu-id="78bbc-193">0x00: preparación.</span><span class="sxs-lookup"><span data-stu-id="78bbc-193">0x00 - Warmup.</span></span><br /><br /> <span data-ttu-id="78bbc-194">0x01: inicializando.</span><span class="sxs-lookup"><span data-stu-id="78bbc-194">0x01 - Initializing.</span></span><br /><br /> <span data-ttu-id="78bbc-195">0x02: movimiento aleatorio.</span><span class="sxs-lookup"><span data-stu-id="78bbc-195">0x02 - Random move.</span></span><br /><br /> <span data-ttu-id="78bbc-196">0x03: movimiento escalada.</span><span class="sxs-lookup"><span data-stu-id="78bbc-196">0x03 - Climbing move.</span></span><br /><br /> <span data-ttu-id="78bbc-197">0x04: cambiar punto.</span><span class="sxs-lookup"><span data-stu-id="78bbc-197">0x04 - Change point.</span></span><br /><br /> <span data-ttu-id="78bbc-198">0x05: estabilización.</span><span class="sxs-lookup"><span data-stu-id="78bbc-198">0x05 - Stabilizing.</span></span><br /><br /> <span data-ttu-id="78bbc-199">0x06: colapso.</span><span class="sxs-lookup"><span data-stu-id="78bbc-199">0x06 - Starvation.</span></span><br /><br /> <span data-ttu-id="78bbc-200">0x07: tiempo de espera de subproceso agotado.</span><span class="sxs-lookup"><span data-stu-id="78bbc-200">0x07 - Thread timed out.</span></span>|  
+|<span data-ttu-id="78bbc-201">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-201">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-202">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-202">Win:UInt16</span></span>|<span data-ttu-id="78bbc-203">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-203">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-#### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+#### <a name="threadpoolworkerthreadadjustmentstats"></a><span data-ttu-id="78bbc-204">ThreadPoolWorkerThreadAdjustmentStats</span><span class="sxs-lookup"><span data-stu-id="78bbc-204">ThreadPoolWorkerThreadAdjustmentStats</span></span>  
+ <span data-ttu-id="78bbc-205">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-205">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-206">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-206">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-207">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-207">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-208">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-208">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-209">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-209">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-210">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-210">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Descripción|  
+|<span data-ttu-id="78bbc-211">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-211">Event</span></span>|<span data-ttu-id="78bbc-212">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-212">Event ID</span></span>|<span data-ttu-id="78bbc-213">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-213">Description</span></span>|  
 |-----------|--------------|-----------------|  
-|`ThreadPoolWorkerThreadAdjustmentStats`|56|Recopila datos en el grupo de subprocesos.|  
+|`ThreadPoolWorkerThreadAdjustmentStats`|<span data-ttu-id="78bbc-214">56</span><span class="sxs-lookup"><span data-stu-id="78bbc-214">56</span></span>|<span data-ttu-id="78bbc-215">Recopila datos en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-215">Gathers data on the thread pool.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-216">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-216">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-217">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-217">Field name</span></span>|<span data-ttu-id="78bbc-218">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-218">Data type</span></span>|<span data-ttu-id="78bbc-219">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-219">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Duración|win:Double|Cantidad de tiempo, en segundos, durante el que se recopilaron estas estadísticas.|  
-|Rendimiento|win:Double|Promedio de finalizaciones por segundo durante este intervalo.|  
-|ThreadWave|win:Double|Reservado para uso interno.|  
-|ThroughputWave|win:Double|Reservado para uso interno.|  
-|ThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
-|AverageThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
-|ThroughputRatio|win:Double|Mejora relativa en el rendimiento producida por variaciones en el número de subprocesos de trabajo activos durante este intervalo.|  
-|Confidence|win:Double|Medida de la validez del campo ThroughputRatio.|  
-|NewcontrolSetting|win:Double|El número de subprocesos de trabajo activos que servirá de línea de base para las variaciones futuras en el recuento de subprocesos activos.|  
-|NewThreadWaveMagnitude|Win:UInt16|La magnitud de variaciones futuras en el recuento de subprocesos activos.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-220">Duración</span><span class="sxs-lookup"><span data-stu-id="78bbc-220">Duration</span></span>|<span data-ttu-id="78bbc-221">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-221">win:Double</span></span>|<span data-ttu-id="78bbc-222">Cantidad de tiempo, en segundos, durante el que se recopilaron estas estadísticas.</span><span class="sxs-lookup"><span data-stu-id="78bbc-222">Amount of time, in seconds, during which these statistics were collected.</span></span>|  
+|<span data-ttu-id="78bbc-223">Rendimiento</span><span class="sxs-lookup"><span data-stu-id="78bbc-223">Throughput</span></span>|<span data-ttu-id="78bbc-224">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-224">win:Double</span></span>|<span data-ttu-id="78bbc-225">Promedio de finalizaciones por segundo durante este intervalo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-225">Average number of completions per second during this interval.</span></span>|  
+|<span data-ttu-id="78bbc-226">ThreadWave</span><span class="sxs-lookup"><span data-stu-id="78bbc-226">ThreadWave</span></span>|<span data-ttu-id="78bbc-227">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-227">win:Double</span></span>|<span data-ttu-id="78bbc-228">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="78bbc-228">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="78bbc-229">ThroughputWave</span><span class="sxs-lookup"><span data-stu-id="78bbc-229">ThroughputWave</span></span>|<span data-ttu-id="78bbc-230">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-230">win:Double</span></span>|<span data-ttu-id="78bbc-231">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="78bbc-231">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="78bbc-232">ThroughputErrorEstimate</span><span class="sxs-lookup"><span data-stu-id="78bbc-232">ThroughputErrorEstimate</span></span>|<span data-ttu-id="78bbc-233">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-233">win:Double</span></span>|<span data-ttu-id="78bbc-234">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="78bbc-234">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="78bbc-235">AverageThroughputErrorEstimate</span><span class="sxs-lookup"><span data-stu-id="78bbc-235">AverageThroughputErrorEstimate</span></span>|<span data-ttu-id="78bbc-236">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-236">win:Double</span></span>|<span data-ttu-id="78bbc-237">Reservado para uso interno.</span><span class="sxs-lookup"><span data-stu-id="78bbc-237">Reserved for internal use.</span></span>|  
+|<span data-ttu-id="78bbc-238">ThroughputRatio</span><span class="sxs-lookup"><span data-stu-id="78bbc-238">ThroughputRatio</span></span>|<span data-ttu-id="78bbc-239">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-239">win:Double</span></span>|<span data-ttu-id="78bbc-240">Mejora relativa en el rendimiento producida por variaciones en el número de subprocesos de trabajo activos durante este intervalo.</span><span class="sxs-lookup"><span data-stu-id="78bbc-240">The relative improvement in throughput caused by variations in active worker thread count during this interval.</span></span>|  
+|<span data-ttu-id="78bbc-241">Confidence</span><span class="sxs-lookup"><span data-stu-id="78bbc-241">Confidence</span></span>|<span data-ttu-id="78bbc-242">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-242">win:Double</span></span>|<span data-ttu-id="78bbc-243">Medida de la validez del campo ThroughputRatio.</span><span class="sxs-lookup"><span data-stu-id="78bbc-243">A measure of the validity of the ThroughputRatio field.</span></span>|  
+|<span data-ttu-id="78bbc-244">NewcontrolSetting</span><span class="sxs-lookup"><span data-stu-id="78bbc-244">NewcontrolSetting</span></span>|<span data-ttu-id="78bbc-245">win:Double</span><span class="sxs-lookup"><span data-stu-id="78bbc-245">win:Double</span></span>|<span data-ttu-id="78bbc-246">El número de subprocesos de trabajo activos que servirá de línea de base para las variaciones futuras en el recuento de subprocesos activos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-246">The number of active worker threads that will serve as the baseline for future variations in active thread count.</span></span>|  
+|<span data-ttu-id="78bbc-247">NewThreadWaveMagnitude</span><span class="sxs-lookup"><span data-stu-id="78bbc-247">NewThreadWaveMagnitude</span></span>|<span data-ttu-id="78bbc-248">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-248">Win:UInt16</span></span>|<span data-ttu-id="78bbc-249">La magnitud de variaciones futuras en el recuento de subprocesos activos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-249">The magnitude of future variations in active thread count.</span></span>|  
+|<span data-ttu-id="78bbc-250">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-250">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-251">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-251">Win:UInt16</span></span>|<span data-ttu-id="78bbc-252">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-252">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [Volver al principio](#top)  
+ [<span data-ttu-id="78bbc-253">Volver al principio</span><span class="sxs-lookup"><span data-stu-id="78bbc-253">Back to top</span></span>](#top)  
   
 <a name="io"></a>   
-## <a name="io-thread-events"></a>Eventos de subprocesos de E/S  
- Estos eventos de grupo de subprocesos se producen para los subprocesos del grupo de subprocesos de E/S (puertos de finalización), que es asincrónico.  
+## <a name="io-thread-events"></a><span data-ttu-id="78bbc-254">Eventos de subprocesos de E/S</span><span class="sxs-lookup"><span data-stu-id="78bbc-254">I/O Thread Events</span></span>  
+ <span data-ttu-id="78bbc-255">Estos eventos de grupo de subprocesos se producen para los subprocesos del grupo de subprocesos de E/S (puertos de finalización), que es asincrónico.</span><span class="sxs-lookup"><span data-stu-id="78bbc-255">These thread pool events occur for threads in the I/O thread pool (completion ports), which is asynchronous.</span></span>  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+### <a name="iothreadcreatev1"></a><span data-ttu-id="78bbc-256">IOThreadCreate_V1</span><span class="sxs-lookup"><span data-stu-id="78bbc-256">IOThreadCreate_V1</span></span>  
+ <span data-ttu-id="78bbc-257">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-257">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-258">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-258">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-259">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-259">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-260">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-260">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-261">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-261">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-262">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-262">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Se genera cuando|  
+|<span data-ttu-id="78bbc-263">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-263">Event</span></span>|<span data-ttu-id="78bbc-264">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-264">Event ID</span></span>|<span data-ttu-id="78bbc-265">Se genera cuando</span><span class="sxs-lookup"><span data-stu-id="78bbc-265">Raised when</span></span>|  
 |-|-|-|  
-|`IOThreadCreate_V1`|44|Se crea un subproceso de E/S en el grupo de subprocesos.|  
+|`IOThreadCreate_V1`|<span data-ttu-id="78bbc-266">44</span><span class="sxs-lookup"><span data-stu-id="78bbc-266">44</span></span>|<span data-ttu-id="78bbc-267">Se crea un subproceso de E/S en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-267">An I/O thread is created in the thread pool.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-268">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-268">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-269">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-269">Field name</span></span>|<span data-ttu-id="78bbc-270">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-270">Data type</span></span>|<span data-ttu-id="78bbc-271">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-271">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S, incluido el subproceso recién creado.|  
-|NumRetired|win:UInt64|Número de subprocesos de trabajo retirados.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-272">Recuento</span><span class="sxs-lookup"><span data-stu-id="78bbc-272">Count</span></span>|<span data-ttu-id="78bbc-273">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-273">win:UInt64</span></span>|<span data-ttu-id="78bbc-274">Número de subprocesos de E/S, incluido el subproceso recién creado.</span><span class="sxs-lookup"><span data-stu-id="78bbc-274">Number of I/O threads, including the newly created thread.</span></span>|  
+|<span data-ttu-id="78bbc-275">NumRetired</span><span class="sxs-lookup"><span data-stu-id="78bbc-275">NumRetired</span></span>|<span data-ttu-id="78bbc-276">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-276">win:UInt64</span></span>|<span data-ttu-id="78bbc-277">Número de subprocesos de trabajo retirados.</span><span class="sxs-lookup"><span data-stu-id="78bbc-277">Number of retired worker threads.</span></span>|  
+|<span data-ttu-id="78bbc-278">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-278">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-279">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-279">Win:UInt16</span></span>|<span data-ttu-id="78bbc-280">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-280">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+### <a name="iothreadretirev1"></a><span data-ttu-id="78bbc-281">IOThreadRetire_V1</span><span class="sxs-lookup"><span data-stu-id="78bbc-281">IOThreadRetire_V1</span></span>  
+ <span data-ttu-id="78bbc-282">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-282">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-283">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-283">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-284">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-284">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-285">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-285">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-286">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-286">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-287">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-287">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Se genera cuando|  
+|<span data-ttu-id="78bbc-288">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-288">Event</span></span>|<span data-ttu-id="78bbc-289">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-289">Event ID</span></span>|<span data-ttu-id="78bbc-290">Se genera cuando</span><span class="sxs-lookup"><span data-stu-id="78bbc-290">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadRetire_V1`|46|Un subproceso de E/S se convierte en un candidato para la retirada.|  
+|`IOThreadRetire_V1`|<span data-ttu-id="78bbc-291">46</span><span class="sxs-lookup"><span data-stu-id="78bbc-291">46</span></span>|<span data-ttu-id="78bbc-292">Un subproceso de E/S se convierte en un candidato para la retirada.</span><span class="sxs-lookup"><span data-stu-id="78bbc-292">An I/O thread becomes a retirement candidate.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-293">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-293">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-294">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-294">Field name</span></span>|<span data-ttu-id="78bbc-295">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-295">Data type</span></span>|<span data-ttu-id="78bbc-296">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-296">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
-|NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-297">Recuento</span><span class="sxs-lookup"><span data-stu-id="78bbc-297">Count</span></span>|<span data-ttu-id="78bbc-298">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-298">win:UInt64</span></span>|<span data-ttu-id="78bbc-299">Número de subprocesos de E/S restantes en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-299">Number of I/O threads remaining in the thread pool.</span></span>|  
+|<span data-ttu-id="78bbc-300">NumRetired</span><span class="sxs-lookup"><span data-stu-id="78bbc-300">NumRetired</span></span>|<span data-ttu-id="78bbc-301">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-301">win:UInt64</span></span>|<span data-ttu-id="78bbc-302">Número de subprocesos de E/S retirados.</span><span class="sxs-lookup"><span data-stu-id="78bbc-302">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="78bbc-303">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-303">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-304">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-304">Win:UInt16</span></span>|<span data-ttu-id="78bbc-305">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-305">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+### <a name="iothreadunretirev1"></a><span data-ttu-id="78bbc-306">IOThreadUnretire_V1</span><span class="sxs-lookup"><span data-stu-id="78bbc-306">IOThreadUnretire_V1</span></span>  
+ <span data-ttu-id="78bbc-307">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-307">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-308">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-308">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-309">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-309">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-310">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-310">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-311">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-311">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-312">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-312">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Se genera cuando|  
+|<span data-ttu-id="78bbc-313">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-313">Event</span></span>|<span data-ttu-id="78bbc-314">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-314">Event ID</span></span>|<span data-ttu-id="78bbc-315">Se genera cuando</span><span class="sxs-lookup"><span data-stu-id="78bbc-315">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadUnretire_V1`|47|La retirada de un subproceso de E/S se anula debido a que llega una E/S dentro de un período de espera y después de que el subproceso se convierte en un candidato para la retirada.|  
+|`IOThreadUnretire_V1`|<span data-ttu-id="78bbc-316">47</span><span class="sxs-lookup"><span data-stu-id="78bbc-316">47</span></span>|<span data-ttu-id="78bbc-317">La retirada de un subproceso de E/S se anula debido a que llega una E/S dentro de un período de espera y después de que el subproceso se convierte en un candidato para la retirada.</span><span class="sxs-lookup"><span data-stu-id="78bbc-317">An I/O thread is unretired because of I/O that arrives within a waiting period after the thread becomes a retirement candidate.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-318">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-318">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-319">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-319">Field name</span></span>|<span data-ttu-id="78bbc-320">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-320">Data type</span></span>|<span data-ttu-id="78bbc-321">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-321">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S en el grupo de subprocesos, incluido este.|  
-|NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-322">Recuento</span><span class="sxs-lookup"><span data-stu-id="78bbc-322">Count</span></span>|<span data-ttu-id="78bbc-323">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-323">win:UInt64</span></span>|<span data-ttu-id="78bbc-324">Número de subprocesos de E/S en el grupo de subprocesos, incluido este.</span><span class="sxs-lookup"><span data-stu-id="78bbc-324">Number of I/O threads in the thread pool, including this one.</span></span>|  
+|<span data-ttu-id="78bbc-325">NumRetired</span><span class="sxs-lookup"><span data-stu-id="78bbc-325">NumRetired</span></span>|<span data-ttu-id="78bbc-326">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-326">win:UInt64</span></span>|<span data-ttu-id="78bbc-327">Número de subprocesos de E/S retirados.</span><span class="sxs-lookup"><span data-stu-id="78bbc-327">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="78bbc-328">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-328">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-329">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-329">Win:UInt16</span></span>|<span data-ttu-id="78bbc-330">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-330">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="iothreadterminate"></a>IOThreadTerminate  
- En la tabla siguiente se muestra la palabra clave y el nivel.  
+### <a name="iothreadterminate"></a><span data-ttu-id="78bbc-331">IOThreadTerminate</span><span class="sxs-lookup"><span data-stu-id="78bbc-331">IOThreadTerminate</span></span>  
+ <span data-ttu-id="78bbc-332">En la tabla siguiente se muestra la palabra clave y el nivel.</span><span class="sxs-lookup"><span data-stu-id="78bbc-332">The following table shows the keyword and level.</span></span>  
   
-|Palabra clave para generar el evento|Nivel|  
+|<span data-ttu-id="78bbc-333">Palabra clave para generar el evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-333">Keyword for raising the event</span></span>|<span data-ttu-id="78bbc-334">Nivel</span><span class="sxs-lookup"><span data-stu-id="78bbc-334">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Informativo (4)|  
+|<span data-ttu-id="78bbc-335">`ThreadingKeyword` (0x10000)</span><span class="sxs-lookup"><span data-stu-id="78bbc-335">`ThreadingKeyword` (0x10000)</span></span>|<span data-ttu-id="78bbc-336">Informativo (4)</span><span class="sxs-lookup"><span data-stu-id="78bbc-336">Informational (4)</span></span>|  
   
- En la siguiente tabla se muestra la información del evento.  
+ <span data-ttu-id="78bbc-337">En la siguiente tabla se muestra la información del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-337">The following table shows the event information.</span></span>  
   
-|Evento|Id. de evento|Se genera cuando|  
+|<span data-ttu-id="78bbc-338">Evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-338">Event</span></span>|<span data-ttu-id="78bbc-339">Id. de evento</span><span class="sxs-lookup"><span data-stu-id="78bbc-339">Event ID</span></span>|<span data-ttu-id="78bbc-340">Se genera cuando</span><span class="sxs-lookup"><span data-stu-id="78bbc-340">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Se crea un subproceso de E/S en el grupo de subprocesos.|  
+|`IOThreadTerminate`|<span data-ttu-id="78bbc-341">45</span><span class="sxs-lookup"><span data-stu-id="78bbc-341">45</span></span>|<span data-ttu-id="78bbc-342">Se crea un subproceso de E/S en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-342">An I/O thread is created in the thread pool.</span></span>|  
   
- En la siguiente tabla se muestran los datos del evento.  
+ <span data-ttu-id="78bbc-343">En la siguiente tabla se muestran los datos del evento.</span><span class="sxs-lookup"><span data-stu-id="78bbc-343">The following table shows the event data.</span></span>  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|<span data-ttu-id="78bbc-344">Nombre de campo</span><span class="sxs-lookup"><span data-stu-id="78bbc-344">Field name</span></span>|<span data-ttu-id="78bbc-345">Tipo de datos</span><span class="sxs-lookup"><span data-stu-id="78bbc-345">Data type</span></span>|<span data-ttu-id="78bbc-346">Descripción</span><span class="sxs-lookup"><span data-stu-id="78bbc-346">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|Recuento|win:UInt64|Número de subprocesos de E/S restantes en el grupo de subprocesos.|  
-|NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
-|ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
+|<span data-ttu-id="78bbc-347">Recuento</span><span class="sxs-lookup"><span data-stu-id="78bbc-347">Count</span></span>|<span data-ttu-id="78bbc-348">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-348">win:UInt64</span></span>|<span data-ttu-id="78bbc-349">Número de subprocesos de E/S restantes en el grupo de subprocesos.</span><span class="sxs-lookup"><span data-stu-id="78bbc-349">Number of I/O threads remaining in the thread pool.</span></span>|  
+|<span data-ttu-id="78bbc-350">NumRetired</span><span class="sxs-lookup"><span data-stu-id="78bbc-350">NumRetired</span></span>|<span data-ttu-id="78bbc-351">win:UInt64</span><span class="sxs-lookup"><span data-stu-id="78bbc-351">win:UInt64</span></span>|<span data-ttu-id="78bbc-352">Número de subprocesos de E/S retirados.</span><span class="sxs-lookup"><span data-stu-id="78bbc-352">Number of retired I/O threads.</span></span>|  
+|<span data-ttu-id="78bbc-353">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="78bbc-353">ClrInstanceID</span></span>|<span data-ttu-id="78bbc-354">Win:UInt16</span><span class="sxs-lookup"><span data-stu-id="78bbc-354">Win:UInt16</span></span>|<span data-ttu-id="78bbc-355">Identificador único para la instancia de CLR o CoreCLR.</span><span class="sxs-lookup"><span data-stu-id="78bbc-355">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [CLR ETW Events (Eventos ETW de CLR)](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="78bbc-356">Vea también</span><span class="sxs-lookup"><span data-stu-id="78bbc-356">See Also</span></span>  
+ [<span data-ttu-id="78bbc-357">CLR ETW Events (Eventos ETW de CLR)</span><span class="sxs-lookup"><span data-stu-id="78bbc-357">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

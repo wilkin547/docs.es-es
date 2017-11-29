@@ -1,59 +1,67 @@
 ---
-title: "&lt;privacyNoticeAt&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;privacyNoticeAt&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 46a27dcc35c01d25391c9224d4967937b0a02d52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;privacyNoticeAt&gt;
-Representa un elemento de configuración que especifica un aviso de privacidad usado en el enlace `wsFederationHttp`.  
+# <a name="ltprivacynoticeatgt"></a><span data-ttu-id="56db9-102">&lt;privacyNoticeAt&gt;</span><span class="sxs-lookup"><span data-stu-id="56db9-102">&lt;privacyNoticeAt&gt;</span></span>
+<span data-ttu-id="56db9-103">Representa un elemento de configuración que especifica un aviso de privacidad usado en el enlace `wsFederationHttp`.</span><span class="sxs-lookup"><span data-stu-id="56db9-103">Represents a configuration element that specifies a privacy notice used in `wsFederationHttp` binding.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="56db9-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="56db9-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="56db9-105">\<enlaces ></span><span class="sxs-lookup"><span data-stu-id="56db9-105">\<bindings></span></span>  
+<span data-ttu-id="56db9-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="56db9-106">\<customBinding></span></span>  
+<span data-ttu-id="56db9-107">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="56db9-107">\<binding></span></span>  
+<span data-ttu-id="56db9-108">\<privacyNotice ></span><span class="sxs-lookup"><span data-stu-id="56db9-108">\<privacyNotice></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="56db9-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="56db9-109">Syntax</span></span>  
   
+```xml  
 <privacyNotice url="String"  
         version="Integer" />  
 ```  
   
-## Tipo  
+## <a name="type"></a><span data-ttu-id="56db9-110">Tipo</span><span class="sxs-lookup"><span data-stu-id="56db9-110">Type</span></span>  
  `Type`  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="56db9-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="56db9-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="56db9-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="56db9-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="56db9-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="56db9-113">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`url`|Una cadena que especifica el URI en el que el aviso de privacidad se encuentra.|  
-|`version`|Un entero que especifica la versión de este aviso de privacidad.|  
+|<span data-ttu-id="56db9-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="56db9-114">Attribute</span></span>|<span data-ttu-id="56db9-115">Descripción</span><span class="sxs-lookup"><span data-stu-id="56db9-115">Description</span></span>|  
+|---------------|-----------------|  
+|`url`|<span data-ttu-id="56db9-116">Una cadena que especifica el URI en el que el aviso de privacidad se encuentra.</span><span class="sxs-lookup"><span data-stu-id="56db9-116">A string that specifies the URI at which the privacy notice is located.</span></span>|  
+|`version`|<span data-ttu-id="56db9-117">Un entero que especifica la versión de este aviso de privacidad.</span><span class="sxs-lookup"><span data-stu-id="56db9-117">An integer that specifies the version of this privacy notice.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="56db9-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="56db9-118">Child Elements</span></span>  
+ <span data-ttu-id="56db9-119">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="56db9-119">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="56db9-120">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="56db9-120">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enlace\>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|<span data-ttu-id="56db9-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="56db9-121">Element</span></span>|<span data-ttu-id="56db9-122">Descripción</span><span class="sxs-lookup"><span data-stu-id="56db9-122">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="56db9-123">\<enlace ></span><span class="sxs-lookup"><span data-stu-id="56db9-123">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="56db9-124">Define todas las funcionalidades de enlace del enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="56db9-124">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>   
- <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="56db9-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="56db9-125">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>  
+ <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="56db9-126">Enlaces</span><span class="sxs-lookup"><span data-stu-id="56db9-126">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="56db9-127">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="56db9-127">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="56db9-128">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="56db9-128">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="56db9-129">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="56db9-129">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

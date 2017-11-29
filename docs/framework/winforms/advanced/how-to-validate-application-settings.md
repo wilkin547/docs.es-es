@@ -1,60 +1,64 @@
 ---
-title: "How to: Validate Application Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "validating application settings"
-  - "application settings, Windows Forms"
-  - "application settings, validating"
+title: "Cómo: Validar la configuración de la aplicación"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating application settings
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Validate Application Settings
-Este tema muestra cómo validar la configuración de la aplicación antes de guardarse.  
+# <a name="how-to-validate-application-settings"></a><span data-ttu-id="ae3cd-102">Cómo: Validar la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="ae3cd-102">How to: Validate Application Settings</span></span>
+<span data-ttu-id="ae3cd-103">En este tema se muestra cómo validar la configuración de la aplicación antes de conservarla.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-103">This topic demonstrates how to validate application settings before they are persisted.</span></span>  
   
- Dado que la configuración de la aplicación está fuertemente tipada, puede confiar en que los usuarios no puedan asignar datos de un tipo incorrecto a una configuración determinada.  Sin embargo, un usuario podría intentar asignar un valor a un valor de configuración que se encuentre fuera de los límites aceptados, por ejemplo, proporcionar una fecha de nacimiento que se produzca en el futuro.  <xref:System.Configuration.ApplicationSettingsBase>, la clase primaria de todas las clases de configuración de la aplicación, expone cuatro eventos para habilitar la comprobación de estos límites.  Al controlar estos eventos se incluye todo el código de la validación en una ubicación única, en lugar de esparcirlo a lo largo del proyecto.  
+ <span data-ttu-id="ae3cd-104">Como la configuración de la aplicación está fuertemente tipada, tiene cierta confianza en que los usuarios no puedan asignar los datos de un tipo incorrecto a una configuración especificada.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-104">Because application settings are strongly typed, you have some confidence that users cannot assign data of an incorrect type to a given setting.</span></span> <span data-ttu-id="ae3cd-105">Sin embargo, aún es posible que un usuario intente asignar un valor a una configuración que se encuentre fuera de los límites aceptables (por ejemplo, proporcionar una fecha de nacimiento perteneciente al futuro).</span><span class="sxs-lookup"><span data-stu-id="ae3cd-105">However, a user still may attempt to assign a value to a setting that falls outside of acceptable bounds—for example, supplying a birth date that occurs in the future.</span></span> <span data-ttu-id="ae3cd-106"><xref:System.Configuration.ApplicationSettingsBase>, la clase primaria de todas las clases de configuración de la aplicación, expone cuatro eventos para habilitar la comprobación de estos límites.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-106"><xref:System.Configuration.ApplicationSettingsBase>, the parent class of all application settings classes, exposes four events to enable such bounds checking.</span></span> <span data-ttu-id="ae3cd-107">Al controlarse estos eventos, se incluye todo el código de validación en una sola ubicación, en lugar de dispersarse por todo el proyecto.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-107">Handling these events puts all of your validation code in a single location, rather than scattering it throughout your project.</span></span>  
   
- El evento que utilice depende del momento en que necesite validar la configuración, tal como se describe en la siguiente tabla.  
+ <span data-ttu-id="ae3cd-108">El evento que use depende de cuándo es necesario validar la configuración, como se describe en la siguiente tabla.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-108">The event you use depends upon when you need to validate your settings, as described in the following table.</span></span>  
   
-|Evento|Uso y frecuencia|  
-|------------|----------------------|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|Se produce después de la carga inicial de un grupo de propiedades de configuración.<br /><br /> Utilice este evento para validar los valores iniciales del grupo de propiedades completo antes de utilizarse dentro de la aplicación.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|Se produce antes de cambiar el valor de una propiedad de configuración única.<br /><br /> Utilice este evento para validar una propiedad única antes de modificarla.  Puede proporcionar comentarios inmediatos a los usuarios en relación con sus acciones y opciones.|  
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|Se produce después de cambiar el valor de una propiedad de configuración única.<br /><br /> Utilice este evento para validar una propiedad única después de modificarla.  Este evento raramente se utiliza para la validación a menos que se requiera un proceso de validación largo y asincrónico.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|Se produce antes de almacenar el grupo de propiedades de configuración.<br /><br /> Utilice este evento para validar los valores del grupo de propiedades completo antes de guardarlos en el disco.|  
+|<span data-ttu-id="ae3cd-109">Evento</span><span class="sxs-lookup"><span data-stu-id="ae3cd-109">Event</span></span>|<span data-ttu-id="ae3cd-110">Repetición y uso</span><span class="sxs-lookup"><span data-stu-id="ae3cd-110">Occurrence and use</span></span>|  
+|-----------|------------------------|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|<span data-ttu-id="ae3cd-111">Se produce después de la carga inicial de un grupo de propiedades de configuración.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-111">Occurs after the initial loading of a settings property group.</span></span><br /><br /> <span data-ttu-id="ae3cd-112">Use este evento para validar los valores iniciales de todo el grupo de propiedades antes de que se utilicen dentro de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-112">Use this event to validate initial values for the entire property group before they are used within the application.</span></span>|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|<span data-ttu-id="ae3cd-113">Se produce antes de cambiarse el valor de una sola propiedad de configuración.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-113">Occurs before the value of a single settings property is changed.</span></span><br /><br /> <span data-ttu-id="ae3cd-114">Use este evento para validar una sola propiedad antes de que se cambie.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-114">Use this event to validate a single property before it is changed.</span></span> <span data-ttu-id="ae3cd-115">Puede proporcionar comentarios inmediatos a los usuarios relacionados con sus acciones y opciones.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-115">It can provide immediate feedback to users regarding their actions and choices.</span></span>|  
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|<span data-ttu-id="ae3cd-116">Se produce después de cambiarse el valor de una sola propiedad de configuración.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-116">Occurs after the value of a single settings property is changed.</span></span><br /><br /> <span data-ttu-id="ae3cd-117">Use este evento para validar una sola propiedad tras cambiarse.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-117">Use this event to validate a single property after it is changed.</span></span> <span data-ttu-id="ae3cd-118">Este evento no suele utilizarse para la validación a menos que sea necesario un proceso de validación prolongado y asincrónico.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-118">This event is rarely used for validation unless a lengthy, asynchronous validation process is required.</span></span>|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|<span data-ttu-id="ae3cd-119">Se produce antes de almacenarse el grupo de propiedades de configuración.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-119">Occurs before the settings property group is stored.</span></span><br /><br /> <span data-ttu-id="ae3cd-120">Use este evento para validar los valores de todo el grupo de propiedades antes de que se conserven en el disco.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-120">Use this event to validate values for the entire property group before they are persisted to disk.</span></span>|  
   
- Normalmente, no utilizará todos estos eventos dentro de la misma aplicación con fines de validación.  Por ejemplo, a menudo es posible cumplir todos los requisitos de validación controlando sólo el evento <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>.  
+ <span data-ttu-id="ae3cd-121">Normalmente, no utilizará todos estos eventos dentro de la misma aplicación con fines de validación.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-121">Typically, you will not use all of these events within the same application for validation purposes.</span></span> <span data-ttu-id="ae3cd-122">Por ejemplo, a menudo es posible cumplir todos los requisitos de validación controlando sólo el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-122">For example, it is often possible to fulfill all validation requirements by handling only the <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> event.</span></span>  
   
- Un controlador de eventos generalmente realiza una de las acciones siguientes cuando detecta un valor no válido:  
+ <span data-ttu-id="ae3cd-123">Un controlador de eventos suele realizar una de las siguientes acciones al detectar un valor no válido:</span><span class="sxs-lookup"><span data-stu-id="ae3cd-123">An event handler generally performs one of the following actions when it detects an invalid value:</span></span>  
   
--   Automáticamente proporciona un valor conocido como correcto, como el valor predeterminado.  
+-   <span data-ttu-id="ae3cd-124">Proporciona automáticamente un valor conocido como correcto, como el valor predeterminado.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-124">Automatically supplies a value known to be correct, such as the default value.</span></span>  
   
--   Vuelve a solicitar información al usuario del código del servidor.  
+-   <span data-ttu-id="ae3cd-125">Vuelve a consultar al usuario del código de servidor para obtener información.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-125">Re-queries the user of server code for information.</span></span>  
   
--   Para los eventos producidos antes de sus acciones asociadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> y <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, utiliza el argumento <xref:System.ComponentModel.CancelEventArgs> para cancelar la operación.  
+-   <span data-ttu-id="ae3cd-126">Para los eventos producidos antes de sus acciones asociadas, como <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> y <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, usa el <xref:System.ComponentModel.CancelEventArgs> argumento para cancelar la operación.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-126">For events raised before their associated actions, such as <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> and <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, uses the <xref:System.ComponentModel.CancelEventArgs> argument to cancel the operation.</span></span>  
   
- Para obtener más información sobre el control de eventos, vea [Event Handlers Overview](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ <span data-ttu-id="ae3cd-127">Para más información sobre el control de eventos, consulte [Información general sobre controladores de eventos](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="ae3cd-127">For more information about event handling, see [Event Handlers Overview](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span></span>  
   
- Los procedimientos siguientes muestran cómo probar con una fecha de nacimiento válida utilizando <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o el evento <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>.  Los procedimientos se han escrito teniendo en cuenta que ya ha creado la configuración de la aplicación; en este ejemplo, se comprobarán los límites de un valor de configuración denominado  `DateOfBirth`.  Para obtener más información acerca de la creación de valores de configuración, vea [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ <span data-ttu-id="ae3cd-128">Los procedimientos siguientes muestran cómo probar para una fecha de nacimiento válido mediante el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> o <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> eventos.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-128">The following procedures show how to test for a valid birth date using either the <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> or the <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> event.</span></span> <span data-ttu-id="ae3cd-129">Los procedimientos se han escrito partiendo de la base de que ya ha creado la configuración de la aplicación; en este ejemplo, realizaremos una comprobación de los límites en un valor de configuración denominado `DateOfBirth`.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-129">The procedures were written under the assumption that you have already created your application settings; in this example, we will perform bounds checking on a setting named `DateOfBirth`.</span></span> <span data-ttu-id="ae3cd-130">Para más información sobre la creación de la configuración, consulte [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md) (Cómo: Crear la configuración de la aplicación).</span><span class="sxs-lookup"><span data-stu-id="ae3cd-130">For more information about creating settings, see [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).</span></span>  
   
-### Para obtener el objeto de configuración de la aplicación  
+### <a name="to-obtain-the-application-settings-object"></a><span data-ttu-id="ae3cd-131">Para obtener el objeto de configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="ae3cd-131">To obtain the application settings object</span></span>  
   
--   Obtenga una referencia al objeto \(la instancia del contenedor\) de configuración de la aplicación finalizando uno de los siguientes puntos:  
+-   <span data-ttu-id="ae3cd-132">Obtenga una referencia al objeto de configuración de la aplicación (la instancia del contenedor) completando uno de los siguientes elementos con viñetas:</span><span class="sxs-lookup"><span data-stu-id="ae3cd-132">Obtain a reference to the application settings object (the wrapper instance) by completing one of the following bulleted items:</span></span>  
   
-    -   Si ha creado un valor de configuración utilizando el cuadro de diálogo Configuración de la aplicación de Visual Studio del **Editor de propiedades**, puede recuperar el objeto de configuración de aplicación generado para su lenguaje mediante la expresión siguiente.  
+    -   <span data-ttu-id="ae3cd-133">Si ha creado la configuración con el cuadro de diálogo Visual Studio Application Settings (Configuración de la aplicación de Visual Studio) en el **Editor de propiedades**, puede recuperar el objeto de configuración predeterminado generado para su lenguaje a través de la siguiente expresión.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-133">If you created your settings using the Visual Studio Application Settings dialog box in the **Property Editor**, you can retrieve the default settings object generated for your language through the following expression.</span></span>  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -64,13 +68,13 @@ Este tema muestra cómo validar la configuración de la aplicación antes de gua
         MySettings.Default   
         ```  
   
-         O bien  
+         <span data-ttu-id="ae3cd-134">O bien</span><span class="sxs-lookup"><span data-stu-id="ae3cd-134">-or-</span></span>  
   
-    -   Si es desarrollador de Visual Basic y ha creado la configuración de la aplicación mediante el Diseñador de proyectos, puede recuperar los valores de configuración utilizando [My.Settings \(Objeto\)](../../../../ocs/visual-basic/language-reference/objects/my-settings-object.md).  
+    -   <span data-ttu-id="ae3cd-135">Si es desarrollador de Visual Basic y ha creado la configuración de la aplicación mediante el Diseñador de proyectos, puede recuperar la configuración con [My.Settings (Objeto)](~/docs/visual-basic/language-reference/objects/my-settings-object.md).</span><span class="sxs-lookup"><span data-stu-id="ae3cd-135">If you are a Visual Basic developer and you created your application settings using the Project Designer, you can retrieve your settings by using the [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md).</span></span>  
   
-         O bien  
+         <span data-ttu-id="ae3cd-136">O bien</span><span class="sxs-lookup"><span data-stu-id="ae3cd-136">-or-</span></span>  
   
-    -   Si ha creado los valores de configuración derivándolos directamente de <xref:System.Configuration.ApplicationSettingsBase>, necesita crear manualmente instancias de su clase.  
+    -   <span data-ttu-id="ae3cd-137">Si ha creado la configuración derivando de <xref:System.Configuration.ApplicationSettingsBase> directamente, debe crear manualmente una instancia de la clase.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-137">If you created your settings by deriving from <xref:System.Configuration.ApplicationSettingsBase> directly, you need to instantiate your class manually.</span></span>  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -80,15 +84,15 @@ Este tema muestra cómo validar la configuración de la aplicación antes de gua
         Dim Settings as New MyCustomSettings()  
         ```  
   
- Los procedimientos siguientes se escribieron suponiendo que el objeto de configuración de la aplicación se obtuvo finalizando el último punto de este procedimiento.  
+ <span data-ttu-id="ae3cd-138">Los siguientes procedimientos se han escrito partiendo de la base de que el objeto de configuración de la aplicación se ha obtenido completando el último elemento con viñetas de este procedimiento.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-138">The following procedures were written under the assumption that the application settings object was obtained by completing the last bulleted item in this procedure.</span></span>  
   
-### Para validar la configuración de la aplicación cuando se está modificando un valor de configuración  
+### <a name="to-validate-application-settings-when-a-setting-is-changing"></a><span data-ttu-id="ae3cd-139">Para validar la configuración de la aplicación al cambiar un valor de configuración</span><span class="sxs-lookup"><span data-stu-id="ae3cd-139">To validate Application Settings when a setting is changing</span></span>  
   
-1.  Si es desarrollador de C\#, en el formulario o el evento  `Load`  del control, agregue un controlador de eventos para el evento <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>.  
+1.  <span data-ttu-id="ae3cd-140">Si es un programador de C#, en el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> eventos.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-140">If you are a C# developer, in your form or control's `Load` event, add an event handler for the <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> event.</span></span>  
   
-     O bien  
+     <span data-ttu-id="ae3cd-141">O bien</span><span class="sxs-lookup"><span data-stu-id="ae3cd-141">-or-</span></span>  
   
-     Si es desarrollador de Visual Basic, debería declarar la variable `Settings` mediante la palabra clave `WithEvents`.  
+     <span data-ttu-id="ae3cd-142">Si es desarrollador de Visual Basic, debe declarar la variable `Settings` mediante la palabra clave `WithEvents`.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-142">If you are a Visual Basic developer, you should declare the `Settings` variable using the `WithEvents` keyword.</span></span>  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -103,7 +107,7 @@ Este tema muestra cómo validar la configuración de la aplicación antes de gua
     End Sub   
     ```  
   
-2.  Defina el controlador de eventos y escriba el código dentro de él para realizar la comprobación de los límites de la fecha de nacimiento.  
+2.  <span data-ttu-id="ae3cd-143">Defina el controlador de eventos y escriba el código dentro de él para realizar una comprobación de los límites en la fecha de nacimiento.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-143">Define the event handler, and write the code inside of it to perform bounds checking on the birth date.</span></span>  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -130,9 +134,9 @@ Este tema muestra cómo validar la configuración de la aplicación antes de gua
     End Sub  
     ```  
   
-### Para validar la configuración de la aplicación cuando se almacena  
+### <a name="to-validate-application-settings-when-a-save-occurs"></a><span data-ttu-id="ae3cd-144">Para validar la configuración de la aplicación al guardar</span><span class="sxs-lookup"><span data-stu-id="ae3cd-144">To validate Application Settings when a Save occurs</span></span>  
   
-1.  Agregue un controlador de eventos para el evento <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> en el formulario o el evento  `Load`  del control.  
+1.  <span data-ttu-id="ae3cd-145">En el formulario o un control `Load` evento, agregue un controlador de eventos para el <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> eventos.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-145">In your form or control's `Load` event, add an event handler for the <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> event.</span></span>  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -147,7 +151,7 @@ Este tema muestra cómo validar la configuración de la aplicación antes de gua
     End Sub  
     ```  
   
-2.  Defina el controlador de eventos y escriba el código dentro de él para realizar la comprobación de los límites de la fecha de nacimiento.  
+2.  <span data-ttu-id="ae3cd-146">Defina el controlador de eventos y escriba el código dentro de él para realizar una comprobación de los límites en la fecha de nacimiento.</span><span class="sxs-lookup"><span data-stu-id="ae3cd-146">Define the event handler, and write the code inside of it to perform bounds checking on the birth date.</span></span>  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  
@@ -166,6 +170,6 @@ Este tema muestra cómo validar la configuración de la aplicación antes de gua
     End Sub  
     ```  
   
-## Vea también  
- [Creating Event Handlers in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a><span data-ttu-id="ae3cd-147">Vea también</span><span class="sxs-lookup"><span data-stu-id="ae3cd-147">See Also</span></span>  
+ [<span data-ttu-id="ae3cd-148">Crear controladores de eventos en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae3cd-148">Creating Event Handlers in Windows Forms</span></span>](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [<span data-ttu-id="ae3cd-149">Cómo: Crear la configuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="ae3cd-149">How to: Create Application Settings</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

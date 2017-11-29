@@ -1,39 +1,43 @@
 ---
-title: "C&#243;mo: Utilizar l&#225;piz para dibujar l&#237;neas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "líneas, dibujar"
-  - "lápices, dibujar líneas"
+title: "Cómo: Utilizar lápiz para dibujar líneas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lines [Windows Forms], drawing
+- pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 481200d1383fd6cc5e95379823af651c78275cb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Utilizar l&#225;piz para dibujar l&#237;neas
-Para dibujar líneas son necesarios un objeto <xref:System.Drawing.Graphics> y un objeto <xref:System.Drawing.Pen>.  El objeto <xref:System.Drawing.Graphics> proporciona el método <xref:System.Drawing.Graphics.DrawLine%2A>, y el objeto <xref:System.Drawing.Pen> almacena características de la línea, como el color y el ancho.  
+# <a name="how-to-use-a-pen-to-draw-lines"></a><span data-ttu-id="889ae-102">Cómo: Utilizar lápiz para dibujar líneas</span><span class="sxs-lookup"><span data-stu-id="889ae-102">How to: Use a Pen to Draw Lines</span></span>
+<span data-ttu-id="889ae-103">Para dibujar líneas, necesita un <xref:System.Drawing.Graphics> objeto y un <xref:System.Drawing.Pen> objeto.</span><span class="sxs-lookup"><span data-stu-id="889ae-103">To draw lines, you need a <xref:System.Drawing.Graphics> object and a <xref:System.Drawing.Pen> object.</span></span> <span data-ttu-id="889ae-104">El <xref:System.Drawing.Graphics> objeto proporciona el <xref:System.Drawing.Graphics.DrawLine%2A> método y el <xref:System.Drawing.Pen> objeto almacena las características de la línea, como el color y ancho.</span><span class="sxs-lookup"><span data-stu-id="889ae-104">The <xref:System.Drawing.Graphics> object provides the <xref:System.Drawing.Graphics.DrawLine%2A> method, and the <xref:System.Drawing.Pen> object stores features of the line, such as color and width.</span></span>  
   
-## Ejemplo  
- En el siguiente ejemplo se dibuja una línea de \(20, 10\) a \(300, 100\).  En la primera instrucción se utiliza el constructor de la clase <xref:System.Drawing.Pen.%23ctor%2A> para crear un lápiz de color negro.  El argumento pasado al constructor <xref:System.Drawing.Pen.%23ctor%2A> es un objeto <xref:System.Drawing.Color> creado con el método <xref:System.Drawing.Color.FromArgb%2A>.  Los valores utilizados para crear el objeto <xref:System.Drawing.Color>, \(255, 0, 0, 0\), corresponden a los componentes alfa, rojo, verde y azul del color.  Estos valores definen un lápiz de color negro opaco.  
+## <a name="example"></a><span data-ttu-id="889ae-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="889ae-105">Example</span></span>  
+ <span data-ttu-id="889ae-106">En el ejemplo siguiente se dibuja una línea de (20, 10) a (300, 100).</span><span class="sxs-lookup"><span data-stu-id="889ae-106">The following example draws a line from (20, 10) to (300, 100).</span></span> <span data-ttu-id="889ae-107">La primera instrucción se utiliza el <xref:System.Drawing.Pen.%23ctor%2A> constructor de clase para crear un lápiz de color negro.</span><span class="sxs-lookup"><span data-stu-id="889ae-107">The first statement uses the <xref:System.Drawing.Pen.%23ctor%2A> class constructor to create a black pen.</span></span> <span data-ttu-id="889ae-108">El argumento que se pasa a la <xref:System.Drawing.Pen.%23ctor%2A> constructor es un <xref:System.Drawing.Color> objeto creado con la <xref:System.Drawing.Color.FromArgb%2A> método.</span><span class="sxs-lookup"><span data-stu-id="889ae-108">The one argument passed to the <xref:System.Drawing.Pen.%23ctor%2A> constructor is a <xref:System.Drawing.Color> object created with the <xref:System.Drawing.Color.FromArgb%2A> method.</span></span> <span data-ttu-id="889ae-109">Los valores utilizados para crear el <xref:System.Drawing.Color> objeto: (255, 0, 0, 0), corresponden a los componentes alfabéticos, rojos, verde y azules del color.</span><span class="sxs-lookup"><span data-stu-id="889ae-109">The values used to create the <xref:System.Drawing.Color> object — (255, 0, 0, 0) — correspond to the alpha, red, green, and blue components of the color.</span></span> <span data-ttu-id="889ae-110">Estos valores definen un lápiz de color negro opaco.</span><span class="sxs-lookup"><span data-stu-id="889ae-110">These values define an opaque black pen.</span></span>  
   
  [!code-csharp[System.Drawing.UsingAPen#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingAPen#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
-## Compilar el código  
- El ejemplo anterior está diseñado para formularios Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador del evento <xref:System.Windows.Forms.Control.Paint>.  
+## <a name="compiling-the-code"></a><span data-ttu-id="889ae-111">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="889ae-111">Compiling the Code</span></span>  
+ <span data-ttu-id="889ae-112">El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>.</span><span class="sxs-lookup"><span data-stu-id="889ae-112">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## Vea también  
- <xref:System.Drawing.Pen>   
- [Utilizar lápiz para dibujar líneas y formas](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
- [Lápices, líneas y rectángulos en GDI\+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="889ae-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="889ae-113">See Also</span></span>  
+ <xref:System.Drawing.Pen>  
+ [<span data-ttu-id="889ae-114">Utilizar lápiz para dibujar líneas y formas</span><span class="sxs-lookup"><span data-stu-id="889ae-114">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [<span data-ttu-id="889ae-115">Lápices, líneas y rectángulos en GDI+</span><span class="sxs-lookup"><span data-stu-id="889ae-115">Pens, Lines, and Rectangles in GDI+</span></span>](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)

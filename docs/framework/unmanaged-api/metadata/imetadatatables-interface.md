@@ -1,0 +1,66 @@
+---
+title: IMetaDataTables (Interfaz)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: IMetaDataTables
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: IMetaDataTables
+helpviewer_keywords: IMetaDataTables interface [.NET Framework metadata]
+ms.assetid: 31272cce-506a-4f18-bcbf-01ee45e36356
+topic_type: apiref
+caps.latest.revision: "13"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: c89d615fbeeff4a60eb386d58c573ee7905f538d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
+---
+# <a name="imetadatatables-interface"></a><span data-ttu-id="ca107-102">IMetaDataTables (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ca107-102">IMetaDataTables Interface</span></span>
+<span data-ttu-id="ca107-103">Proporciona métodos para el almacenamiento y la recuperación de información de metadatos en tablas.</span><span class="sxs-lookup"><span data-stu-id="ca107-103">Provides methods for the storage and retrieval of metadata information in tables.</span></span>  
+  
+## <a name="methods"></a><span data-ttu-id="ca107-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="ca107-104">Methods</span></span>  
+  
+|<span data-ttu-id="ca107-105">Método</span><span class="sxs-lookup"><span data-stu-id="ca107-105">Method</span></span>|<span data-ttu-id="ca107-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="ca107-106">Description</span></span>|  
+|------------|-----------------|  
+|[<span data-ttu-id="ca107-107">GetBlob (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-107">GetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|<span data-ttu-id="ca107-108">Obtiene un puntero para el objeto binario grande (BLOB) en el índice de la columna especificada.</span><span class="sxs-lookup"><span data-stu-id="ca107-108">Gets a pointer to the binary large object (BLOB) at the specified column index.</span></span>|  
+|[<span data-ttu-id="ca107-109">GetBlobHeapSize (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-109">GetBlobHeapSize Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|<span data-ttu-id="ca107-110">Obtiene el tamaño, en bytes, del montón de objetos binarios.</span><span class="sxs-lookup"><span data-stu-id="ca107-110">Gets the size, in bytes, of the BLOB heap.</span></span>|  
+|[<span data-ttu-id="ca107-111">GetCodedTokenInfo (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-111">GetCodedTokenInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|<span data-ttu-id="ca107-112">Obtiene un puntero a una matriz de símbolos (tokens) asociado con el índice de fila especificado.</span><span class="sxs-lookup"><span data-stu-id="ca107-112">Gets a pointer to an array of tokens associated with the specified row index.</span></span>|  
+|[<span data-ttu-id="ca107-113">GetColumn (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-113">GetColumn Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|<span data-ttu-id="ca107-114">Obtiene un puntero a los valores contenidos en la columna en el índice de columna especificado en la tabla en el índice de la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="ca107-114">Gets a pointer to the values contained in the column at the specified column index, in the table at the specified table index.</span></span>|  
+|[<span data-ttu-id="ca107-115">GetColumnInfo (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-115">GetColumnInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|<span data-ttu-id="ca107-116">Obtiene datos sobre la columna especificada en la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="ca107-116">Gets data about the specified column in the specified table.</span></span>|  
+|[<span data-ttu-id="ca107-117">GetGuid (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-117">GetGuid Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|<span data-ttu-id="ca107-118">Obtiene un identificador GUID de la fila en el índice especificado.</span><span class="sxs-lookup"><span data-stu-id="ca107-118">Gets a GUID from the row at the specified index.</span></span>|  
+|[<span data-ttu-id="ca107-119">GetGuidHeapSize (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-119">GetGuidHeapSize Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|<span data-ttu-id="ca107-120">Obtiene el tamaño, en bytes, del montón GUID.</span><span class="sxs-lookup"><span data-stu-id="ca107-120">Gets the size, in bytes, of the GUID heap.</span></span>|  
+|[<span data-ttu-id="ca107-121">GetNextBlob (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-121">GetNextBlob Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|<span data-ttu-id="ca107-122">Obtiene el índice del siguiente objeto BLOB en la tabla.</span><span class="sxs-lookup"><span data-stu-id="ca107-122">Gets the index of the next BLOB in the table.</span></span>|  
+|[<span data-ttu-id="ca107-123">GetNextGuid (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-123">GetNextGuid Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|<span data-ttu-id="ca107-124">Obtiene el índice del siguiente valor de GUID en la columna de tabla actual.</span><span class="sxs-lookup"><span data-stu-id="ca107-124">Gets the index of the next GUID value in the current table column.</span></span>|  
+|[<span data-ttu-id="ca107-125">GetNextString (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-125">GetNextString Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|<span data-ttu-id="ca107-126">Obtiene el índice de la cadena siguiente en la columna de tabla actual.</span><span class="sxs-lookup"><span data-stu-id="ca107-126">Gets the index of the next string in the current table column.</span></span>|  
+|[<span data-ttu-id="ca107-127">GetNextUserString (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-127">GetNextUserString Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|<span data-ttu-id="ca107-128">Obtiene el índice de la fila que contiene la siguiente cadena codificados de forma rígida en la columna de tabla actual.</span><span class="sxs-lookup"><span data-stu-id="ca107-128">Gets the index of the row that contains the next hard-coded string in the current table column.</span></span>|  
+|[<span data-ttu-id="ca107-129">GetNumTables (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-129">GetNumTables Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|<span data-ttu-id="ca107-130">Obtiene el número de tablas en el ámbito del elemento actual `IMetaDataTables` instancia.</span><span class="sxs-lookup"><span data-stu-id="ca107-130">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>|  
+|[<span data-ttu-id="ca107-131">GetRow (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-131">GetRow Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|<span data-ttu-id="ca107-132">Obtiene la fila en el índice de fila especificado, en la tabla en el índice de la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="ca107-132">Gets the row at the specified row index, in the table at the specified table index.</span></span>|  
+|[<span data-ttu-id="ca107-133">GetString (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-133">GetString Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|<span data-ttu-id="ca107-134">Obtiene la cadena en el índice especificado de la columna de tabla en el ámbito de referencia actual.</span><span class="sxs-lookup"><span data-stu-id="ca107-134">Gets the string at the specified index from the table column in the current reference scope.</span></span>|  
+|[<span data-ttu-id="ca107-135">GetStringHeapSize (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-135">GetStringHeapSize Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|<span data-ttu-id="ca107-136">Obtiene el tamaño, en bytes, del montón de cadenas.</span><span class="sxs-lookup"><span data-stu-id="ca107-136">Gets the size, in bytes, of the string heap.</span></span>|  
+|[<span data-ttu-id="ca107-137">GetTableIndex (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-137">GetTableIndex Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|<span data-ttu-id="ca107-138">Obtiene el índice de la tabla al que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="ca107-138">Gets the index for the table referenced by the specified token.</span></span>|  
+|[<span data-ttu-id="ca107-139">GetTableInfo (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-139">GetTableInfo Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|<span data-ttu-id="ca107-140">Obtiene el nombre, el tamaño de fila, el número de filas, número de columnas y el índice de columna de clave de la tabla en el índice de la tabla especificada.</span><span class="sxs-lookup"><span data-stu-id="ca107-140">Gets the name, row size, number of rows, number of columns, and key column index of the table at the specified table index.</span></span>|  
+|[<span data-ttu-id="ca107-141">GetUserString (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-141">GetUserString Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|<span data-ttu-id="ca107-142">Obtiene la cadena codificada de forma rígida en el índice especificado en la columna de cadena en el ámbito actual.</span><span class="sxs-lookup"><span data-stu-id="ca107-142">Gets the hard-coded string at the specified index in the string column in the current scope.</span></span>|  
+|[<span data-ttu-id="ca107-143">GetUserStringHeapSize (método)</span><span class="sxs-lookup"><span data-stu-id="ca107-143">GetUserStringHeapSize Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|<span data-ttu-id="ca107-144">Obtiene el tamaño, en bytes, del montón de cadenas de usuario.</span><span class="sxs-lookup"><span data-stu-id="ca107-144">Gets the size, in bytes, of the user string heap.</span></span>|  
+  
+## <a name="requirements"></a><span data-ttu-id="ca107-145">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ca107-145">Requirements</span></span>  
+ <span data-ttu-id="ca107-146">**Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca107-146">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ca107-147">**Encabezado:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ca107-147">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="ca107-148">**Biblioteca:** usada como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ca107-148">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+  
+ <span data-ttu-id="ca107-149">**Versiones de .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca107-149">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ca107-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="ca107-150">See Also</span></span>  
+ [<span data-ttu-id="ca107-151">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="ca107-151">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
+ [<span data-ttu-id="ca107-152">IMetaDataTables2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="ca107-152">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -1,48 +1,48 @@
 ---
-title: "Informaci&#243;n general sobre el control ContextMenuStrip | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ContextMenuStrip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "menús contextuales, ContextMenuStrip (control) [Windows Forms]"
-  - "ContextMenuStrip (control) [Windows Forms], acerca del control ContextMenuStrip"
-  - "menús contextuales, ContextMenuStrip (control) [Windows Forms]"
+title: "Información general sobre el control ContextMenuStrip"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ContextMenuStrip
+helpviewer_keywords:
+- context menus [Windows Forms], ContextMenuStrip control [Windows Forms]
+- shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
+- ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c04e8095d84468ee7574b31f0a30fb6f2d2b03a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Informaci&#243;n general sobre el control ContextMenuStrip
+# <a name="contextmenustrip-control-overview"></a><span data-ttu-id="7f628-102">Información general sobre el control ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="7f628-102">ContextMenuStrip Control Overview</span></span>
 > [!NOTE]
->  Aunque el control <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega la funcionalidad al control <xref:System.Windows.Forms.ContextMenu>, el control <xref:System.Windows.Forms.ContextMenu> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
+>  <span data-ttu-id="7f628-103">El <xref:System.Windows.Forms.ContextMenuStrip> control reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control; sin embargo, el <xref:System.Windows.Forms.ContextMenu> control se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.</span><span class="sxs-lookup"><span data-stu-id="7f628-103">The <xref:System.Windows.Forms.ContextMenuStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control; however, the <xref:System.Windows.Forms.ContextMenu> control is retained for backward compatibility and future use if you choose.</span></span>  
   
- Los menús contextuales aparecen en la posición del mouse cuando el usuario hace clic con el botón secundario.  Los *menús contextuales* proporcionan opciones para el área de cliente o el control en la ubicación del puntero del mouse.  
+ <span data-ttu-id="7f628-104">Menús contextuales, aparecen en la posición del mouse cuando el usuario hace clic en el botón secundario del mouse.</span><span class="sxs-lookup"><span data-stu-id="7f628-104">Shortcut menus, also called context menus, appear at the mouse position when the user clicks the right mouse button.</span></span> <span data-ttu-id="7f628-105">Acceso directo *menús* proporcionan opciones para el área de cliente o el control en la ubicación del puntero del mouse.</span><span class="sxs-lookup"><span data-stu-id="7f628-105">Shortcut *menus* provide options for the client area or the control at the mouse pointer location.</span></span>  
   
- El control <xref:System.Windows.Forms.ContextMenuStrip> está pensado para funcionar de forma transparente con los nuevos controles <xref:System.Windows.Forms.ToolStrip> relacionados, pero puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con otros controles de forma igualmente sencilla.  
+ <span data-ttu-id="7f628-106">El <xref:System.Windows.Forms.ContextMenuStrip> control está diseñado para funcionar perfectamente con el nuevo <xref:System.Windows.Forms.ToolStrip> y controles relacionados, pero se puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con otros controles como fácilmente.</span><span class="sxs-lookup"><span data-stu-id="7f628-106">The <xref:System.Windows.Forms.ContextMenuStrip> control is designed to work seamlessly with the new <xref:System.Windows.Forms.ToolStrip> and related controls, but you can associate a <xref:System.Windows.Forms.ContextMenuStrip> with other controls just as easily.</span></span>  
   
- En la tabla siguiente se muestran las clases <xref:System.Windows.Forms.ContextMenuStrip> complementarias importantes.  
+ <span data-ttu-id="7f628-107">La siguiente tabla muestra las importantes <xref:System.Windows.Forms.ContextMenuStrip> clases complementarias.</span><span class="sxs-lookup"><span data-stu-id="7f628-107">The following table shows the important <xref:System.Windows.Forms.ContextMenuStrip> companion classes.</span></span>  
   
-|Clase|Descripción|  
+|<span data-ttu-id="7f628-108">Clase</span><span class="sxs-lookup"><span data-stu-id="7f628-108">Class</span></span>|<span data-ttu-id="7f628-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="7f628-109">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Representa una opción seleccionable mostrada en un <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Representa una control que permite al usuario seleccionar un elemento de la lista que se muestra cuando el usuario hace clic en un <xref:System.Windows.Forms.ToolStripDropDownButton> o en un elemento de menú de nivel superior.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Proporciona la funcionalidad básica para controles derivados de <xref:System.Windows.Forms.ToolStripItem> que muestra los elementos desplegables cuando se hace clic en ellos.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<span data-ttu-id="7f628-110">Representa una opción seleccionable mostrada en un <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="7f628-110">Represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<span data-ttu-id="7f628-111">Representa un control que permite al usuario seleccionar un único elemento de una lista que se muestra cuando el usuario hace clic en un <xref:System.Windows.Forms.ToolStripDropDownButton> o un elemento de menú de nivel superior.</span><span class="sxs-lookup"><span data-stu-id="7f628-111">Represents a control that enables the user to select a single item from a list that is displayed when the user clicks a <xref:System.Windows.Forms.ToolStripDropDownButton> or a higher-level menu item.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|<span data-ttu-id="7f628-112">Proporciona la funcionalidad básica para los controles derivan de <xref:System.Windows.Forms.ToolStripItem> que mostrar los elementos de lista desplegable al hacer clic en.</span><span class="sxs-lookup"><span data-stu-id="7f628-112">Provides basic functionality for controls derived from <xref:System.Windows.Forms.ToolStripItem> that display drop-down items when clicked.</span></span>|  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ContextMenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
+## <a name="see-also"></a><span data-ttu-id="7f628-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="7f628-113">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
  <xref:System.Windows.Forms.ToolStripDropDown>

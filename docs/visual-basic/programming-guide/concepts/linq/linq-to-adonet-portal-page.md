@@ -1,56 +1,48 @@
 ---
-title: "LINQ to ADO.NET (Portal de página) | Documentos de Microsoft"
+title: "LINQ to ADO.NET (Página de portal)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c71b304dbff960320b1a9f46e38259705b8dadc
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b5cbbca716cc7de36541aecd630eb9a98815f5a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Página de portal)
-[!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)]le permite consultar cualquier objeto enumerable en [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] utilizando el [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] modelo de programación.  
+# <a name="linq-to-adonet-portal-page"></a><span data-ttu-id="684b4-102">LINQ to ADO.NET (Página de portal)</span><span class="sxs-lookup"><span data-stu-id="684b4-102">LINQ to ADO.NET (Portal Page)</span></span>
+[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)]<span data-ttu-id="684b4-103"> permite consultar sobre cualquier objeto enumerable de [!INCLUDE[vstecado](~/includes/vstecado-md.md)] mediante el modelo de programación de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="684b4-103"> enables you to query over any enumerable object in [!INCLUDE[vstecado](~/includes/vstecado-md.md)] by using the [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] programming model.</span></span>  
   
 > [!NOTE]
->  El [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)] documentación se encuentra en la sección ADO.NET de .NET Framework SDK: [LINQ y ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).  
+>  <span data-ttu-id="684b4-104">La documentación de [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] se encuentra en la sección ADO.NET del SDK de .NET Framework: [LINQ y ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).</span><span class="sxs-lookup"><span data-stu-id="684b4-104">The [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] documentation is located in the ADO.NET section of the .NET Framework SDK: [LINQ and ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).</span></span>  
   
- Existen tres tecnologías [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] de ADO.NET independientes: [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)], [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] y [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)]. [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)]Proporciona consultas más enriquecidas y optimizadas en el <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] le permite consultar directamente [!INCLUDE[ssNoVersion](../../../../csharp/programming-guide/concepts/linq/includes/ssnoversion_md.md)] esquemas, la base de datos y [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)] permite consultar un [!INCLUDE[adonet_edm](../../../../csharp/programming-guide/concepts/linq/includes/adonet_edm_md.md)].</xref:System.Data.DataSet>  
+ <span data-ttu-id="684b4-105">Existen tres tecnologías [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] de ADO.NET independientes: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)].</span><span class="sxs-lookup"><span data-stu-id="684b4-105">There are three separate ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] technologies: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], and [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)].</span></span> [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]<span data-ttu-id="684b4-106"> proporciona consultas más ricas y optimizadas de <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] permite consultar directamente los esquemas de base de datos de [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] y [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] permite consultar un [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)].</span><span class="sxs-lookup"><span data-stu-id="684b4-106"> provides richer, optimized querying over the <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] enables you to directly query [!INCLUDE[ssNoVersion](~/includes/ssnoversion-md.md)] database schemas, and [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] allows you to query an [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)].</span></span>  
   
-## <a name="linq-to-dataset"></a>LINQ to DataSet  
- El <xref:System.Data.DataSet>es uno de los componentes más ampliamente utilizados en [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)], y es un elemento clave de programación desconectada modelo que [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] se basa en.</xref:System.Data.DataSet> A pesar de esta importancia, sin embargo, el <xref:System.Data.DataSet>tiene capacidades de consulta limitadas.</xref:System.Data.DataSet>  
+## <a name="linq-to-dataset"></a><span data-ttu-id="684b4-107">LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="684b4-107">LINQ to DataSet</span></span>  
+ <span data-ttu-id="684b4-108"><xref:System.Data.DataSet> es uno de los componentes más usados de [!INCLUDE[vstecado](~/includes/vstecado-md.md)], además de un elemento clave del modelo de programación desconectado en el que se basa [!INCLUDE[vstecado](~/includes/vstecado-md.md)].</span><span class="sxs-lookup"><span data-stu-id="684b4-108">The <xref:System.Data.DataSet> is one of the most widely used components in [!INCLUDE[vstecado](~/includes/vstecado-md.md)], and is a key element of the disconnected programming model that [!INCLUDE[vstecado](~/includes/vstecado-md.md)] is built on.</span></span> <span data-ttu-id="684b4-109">En cambio, a pesar de su importancia, <xref:System.Data.DataSet> tiene funciones de consulta limitadas.</span><span class="sxs-lookup"><span data-stu-id="684b4-109">Despite this prominence, however, the <xref:System.Data.DataSet> has limited query capabilities.</span></span>  
   
- [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)]le permite crear capacidades de consulta más complejas en <xref:System.Data.DataSet>utilizando la misma funcionalidad de consulta que está disponible para muchos otros orígenes de datos.</xref:System.Data.DataSet>  
+ [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]<span data-ttu-id="684b4-110"> le permite compilar funciones de consulta más complejas en <xref:System.Data.DataSet> mediante la misma función de consulta disponible para muchos otros orígenes de datos.</span><span class="sxs-lookup"><span data-stu-id="684b4-110"> enables you to build richer query capabilities into <xref:System.Data.DataSet> by using the same query functionality that is available for many other data sources.</span></span>  
   
- Para obtener más información, consulte [LINQ to DataSet](http://msdn.microsoft.com/library/743e3755-3ecb-45a2-8d9b-9ed41f0dcf17).  
+ <span data-ttu-id="684b4-111">Para más información, vea [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="684b4-111">For more information, see [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).</span></span>  
   
-## <a name="linq-to-sql"></a>LINQ to SQL  
- [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] proporciona una infraestructura en tiempo de ejecución para administrar los datos relacionales como objetos. En [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)], el modelo de datos de una base de datos relacional se asigna a un modelo de objeto expresado en el lenguaje de programación del desarrollador. Al ejecutar la aplicación [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] convierte las consultas integradas en el lenguaje del modelo de objetos a SQL y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] traduce en objetos que se pueden manipular.  
+## <a name="linq-to-sql"></a><span data-ttu-id="684b4-112">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="684b4-112">LINQ to SQL</span></span>  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]<span data-ttu-id="684b4-113"> proporciona una infraestructura en tiempo de ejecución para administrar los datos relacionales como objetos.</span><span class="sxs-lookup"><span data-stu-id="684b4-113"> provides a run-time infrastructure for managing relational data as objects.</span></span> <span data-ttu-id="684b4-114">En [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación del desarrollador.</span><span class="sxs-lookup"><span data-stu-id="684b4-114">In [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], the data model of a relational database is mapped to an object model expressed in the programming language of the developer.</span></span> <span data-ttu-id="684b4-115">Cuando se ejecuta la aplicación, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] convierte a SQL las consultas integradas en el lenguaje en el modelo de objetos y las envía a la base de datos para su ejecución.</span><span class="sxs-lookup"><span data-stu-id="684b4-115">When you execute the application, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] translates language-integrated queries in the object model into SQL and sends them to the database for execution.</span></span> <span data-ttu-id="684b4-116">Cuando la base de datos devuelve los resultados, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] los vuelve a convertir en objetos que se pueden manipular.</span><span class="sxs-lookup"><span data-stu-id="684b4-116">When the database returns the results, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] translates them back into objects that you can manipulate.</span></span>  
   
- [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]incluye compatibilidad con los procedimientos almacenados y funciones definidas por el usuario en la base de datos y para la herencia en el modelo de objetos.  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]<span data-ttu-id="684b4-117"> incluye compatibilidad con los procedimientos almacenados y las funciones definidas por el usuario de la base de datos, además de con la herencia en el modelo de objetos.</span><span class="sxs-lookup"><span data-stu-id="684b4-117"> includes support for stored procedures and user-defined functions in the database, and for inheritance in the object model.</span></span>  
   
- Para obtener más información, consulte [LINQ to SQL](https://msdn.microsoft.com/library/bb386976).  
+ <span data-ttu-id="684b4-118">Para más información, vea [LINQ to SQL](https://msdn.microsoft.com/library/bb386976).</span><span class="sxs-lookup"><span data-stu-id="684b4-118">For more information, see [LINQ to SQL](https://msdn.microsoft.com/library/bb386976).</span></span>  
   
-## <a name="linq-to-entities"></a>LINQ to Entities  
- A través de [!INCLUDE[adonet_edm](../../../../csharp/programming-guide/concepts/linq/includes/adonet_edm_md.md)], los datos relacionales se exponen como objetos en el entorno .NET. Esto hace de la capa de objetos un objetivo idóneo para la compatibilidad con [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], ya que permite a los programadores formular consultas en la base de datos con el lenguaje usado para compilar la lógica empresarial. Esta función se conoce como [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)]. Consulte [LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d) para obtener más información.  
+## <a name="linq-to-entities"></a><span data-ttu-id="684b4-119">LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="684b4-119">LINQ to Entities</span></span>  
+ <span data-ttu-id="684b4-120">A través de [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)], los datos relacionales se exponen como objetos en el entorno .NET.</span><span class="sxs-lookup"><span data-stu-id="684b4-120">Through the [!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)], relational data is exposed as objects in the .NET environment.</span></span> <span data-ttu-id="684b4-121">Esto hace de la capa de objetos un objetivo idóneo para la compatibilidad con [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], ya que permite a los programadores formular consultas en la base de datos con el lenguaje usado para compilar la lógica empresarial.</span><span class="sxs-lookup"><span data-stu-id="684b4-121">This makes the object layer an ideal target for [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] support, allowing developers to formulate queries against the database from the language used to build the business logic.</span></span> <span data-ttu-id="684b4-122">Esta función se conoce como [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)].</span><span class="sxs-lookup"><span data-stu-id="684b4-122">This capability is known as [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)].</span></span> <span data-ttu-id="684b4-123">Para más información, vea [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md).</span><span class="sxs-lookup"><span data-stu-id="684b4-123">See [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md) for more information.</span></span>  
   
-## <a name="see-also"></a>Vea también  
- [LINQ y ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)   
- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a><span data-ttu-id="684b4-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="684b4-124">See Also</span></span>  
+ [<span data-ttu-id="684b4-125">LINQ y ADO.NET</span><span class="sxs-lookup"><span data-stu-id="684b4-125">LINQ and ADO.NET</span></span>](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)  
+ [<span data-ttu-id="684b4-126">Language-Integrated Query (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="684b4-126">Language-Integrated Query (LINQ) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/index.md)

@@ -1,28 +1,38 @@
 ---
-title: "&lt;peerAuthentication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;peerAuthentication&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fd18acaf76b2d5ccceb12b62398357b0b1655cb0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;peerAuthentication&gt;
-Especifica los valores de autenticación para un certificado del mismo nivel usado por el remitente del mensaje.  
+# <a name="ltpeerauthenticationgt"></a><span data-ttu-id="729bd-102">&lt;peerAuthentication&gt;</span><span class="sxs-lookup"><span data-stu-id="729bd-102">&lt;peerAuthentication&gt;</span></span>
+<span data-ttu-id="729bd-103">Especifica los valores de autenticación para un certificado del mismo nivel usado por el remitente del mensaje.</span><span class="sxs-lookup"><span data-stu-id="729bd-103">Specifies authentication settings for a peer certificate used by a peer node.</span></span>  
   
-## Sintaxis  
+ <span data-ttu-id="729bd-104">\<sistema. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="729bd-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="729bd-105">\<comportamientos ></span><span class="sxs-lookup"><span data-stu-id="729bd-105">\<behaviors></span></span>  
+<span data-ttu-id="729bd-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="729bd-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="729bd-107">\<comportamiento ></span><span class="sxs-lookup"><span data-stu-id="729bd-107">\<behavior></span></span>  
+<span data-ttu-id="729bd-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="729bd-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="729bd-109">\<punto ></span><span class="sxs-lookup"><span data-stu-id="729bd-109">\<peer></span></span>  
+<span data-ttu-id="729bd-110">\<peerAuthentication ></span><span class="sxs-lookup"><span data-stu-id="729bd-110">\<peerAuthentication></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="729bd-111">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="729bd-111">Syntax</span></span>  
   
+```xml  
 <peerAuthentication  
       customCertificateValidatorType="namespace.typeName, [,AssemblyName] [,Version=version number] [,Culture=culture] [,PublicKeyToken=token]"  
       certificateValidationMode="ChainTrust/None/PeerTrust/PeerOrChainTrust/Custom"  
@@ -31,38 +41,38 @@ Especifica los valores de autenticación para un certificado del mismo nivel usa
 />  
 ```  
   
-## Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="729bd-112">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="729bd-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="729bd-113">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="729bd-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### Atributos  
+### <a name="attributes"></a><span data-ttu-id="729bd-114">Atributos</span><span class="sxs-lookup"><span data-stu-id="729bd-114">Attributes</span></span>  
   
-|Atributo|Descripción|  
-|--------------|-----------------|  
-|`certificateValidationMode`|Enumeración opcional.  Especifica uno de los tres modos utilizados para validar las credenciales.  Este atributo es del tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>.  Si se establece en `Custom`, también debe proporcionarse un `customCertificateValidator`.|  
-|`customCertificateValidatorType`|Cadena opcional.  Especifica un tipo y ensamblado utilizados para validar un tipo personalizado.  Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.  Este atributo es del tipo <xref:System.IdentityModel.Selectors.X509CertificateValidator>.  [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] proporciona un validador de certificado predeterminado del mismo nivel que comprueba el certificado del mismo nivel con el almacén de personas de confianza.  También comprueba las cadenas de certificados hasta una raíz válida.  Puede implementar un validador personalizado para especificar un comportamiento diferente y usar este atributo para señalar al validador personalizado.|  
-|`revocationMode`|Enumeración opcional.  Especifica el modo de revocación de certificados.  Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.  El sistema busca en la lista de certificados revocados y comprueba que el certificado del mismo nivel no se ha revocado.  Esta comprobación se puede realizar tanto en línea como con una lista de revocaciones almacenada en memoria caché.  La comprobación de la revocación se puede desactivar estableciendo esta atributo en NoCheck.|  
-|`trustedStoreLocation`|Enumeración opcional.  Especifica la ubicación del almacén fiable donde el sistema de seguridad [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] valida el certificado del mismo nivel.  Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.|  
+|<span data-ttu-id="729bd-115">Atributo</span><span class="sxs-lookup"><span data-stu-id="729bd-115">Attribute</span></span>|<span data-ttu-id="729bd-116">Descripción</span><span class="sxs-lookup"><span data-stu-id="729bd-116">Description</span></span>|  
+|---------------|-----------------|  
+|`certificateValidationMode`|<span data-ttu-id="729bd-117">Enumeración opcional.</span><span class="sxs-lookup"><span data-stu-id="729bd-117">Optional enumeration.</span></span> <span data-ttu-id="729bd-118">Especifica uno de los tres modos utilizados para validar las credenciales.</span><span class="sxs-lookup"><span data-stu-id="729bd-118">Specifies one of three modes used to validate credentials.</span></span> <span data-ttu-id="729bd-119">Este atributo es del tipo <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span><span class="sxs-lookup"><span data-stu-id="729bd-119">This attribute is of type <xref:System.ServiceModel.Security.X509CertificateValidationMode>.</span></span> <span data-ttu-id="729bd-120">Si se establece en `Custom`, también debe proporcionarse un `customCertificateValidator`.</span><span class="sxs-lookup"><span data-stu-id="729bd-120">If set to `Custom`, then a `customCertificateValidator` must also be supplied.</span></span>|  
+|`customCertificateValidatorType`|<span data-ttu-id="729bd-121">Cadena opcional.</span><span class="sxs-lookup"><span data-stu-id="729bd-121">Optional string.</span></span> <span data-ttu-id="729bd-122">Especifica un tipo y ensamblado utilizados para validar un tipo personalizado.</span><span class="sxs-lookup"><span data-stu-id="729bd-122">Specifies a type and assembly used to validate a custom type.</span></span> <span data-ttu-id="729bd-123">Se debe establecer este atributo cuando `certificateValidationMode` está establecido en `Custom`.</span><span class="sxs-lookup"><span data-stu-id="729bd-123">This attribute must be set when `certificateValidationMode` is set to `Custom`.</span></span> <span data-ttu-id="729bd-124">Este atributo es del tipo <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span><span class="sxs-lookup"><span data-stu-id="729bd-124">This attribute is of type <xref:System.IdentityModel.Selectors.X509CertificateValidator>.</span></span> [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<span data-ttu-id="729bd-125"> proporciona un validador de certificado predeterminado del mismo nivel que comprueba el certificado del mismo nivel con el almacén de personas de confianza.</span><span class="sxs-lookup"><span data-stu-id="729bd-125"> provides a default peer certificate validator that verifies the peer certificate against the trusted people store.</span></span> <span data-ttu-id="729bd-126">También comprueba las cadenas de certificados hasta una raíz válida.</span><span class="sxs-lookup"><span data-stu-id="729bd-126">It also verifies that the certificate chains up to a valid root.</span></span> <span data-ttu-id="729bd-127">Puede implementar un validador personalizado para especificar un comportamiento diferente y usar este atributo para señalar al validador personalizado.</span><span class="sxs-lookup"><span data-stu-id="729bd-127">You can implement a custom validator to specify a different behavior and use this attribute to point to the custom validator.</span></span>|  
+|`revocationMode`|<span data-ttu-id="729bd-128">Enumeración opcional.</span><span class="sxs-lookup"><span data-stu-id="729bd-128">Optional enumeration.</span></span> <span data-ttu-id="729bd-129">Especifica el modo de revocación de certificados.</span><span class="sxs-lookup"><span data-stu-id="729bd-129">Specifies the certificate revocation mode.</span></span> <span data-ttu-id="729bd-130">Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span><span class="sxs-lookup"><span data-stu-id="729bd-130">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>.</span></span> <span data-ttu-id="729bd-131">El sistema busca en la lista de certificados revocados y comprueba que el certificado del mismo nivel no se ha revocado.</span><span class="sxs-lookup"><span data-stu-id="729bd-131">The system verifies that the peer certificate has not been revoked by looking it up in the revoked certificate list.</span></span> <span data-ttu-id="729bd-132">Esta comprobación se puede realizar tanto en línea como con una lista de revocaciones almacenada en memoria caché.</span><span class="sxs-lookup"><span data-stu-id="729bd-132">This check can be performed either by checking online or against a cached revocation list.</span></span> <span data-ttu-id="729bd-133">La comprobación de la revocación se puede desactivar estableciendo esta atributo en NoCheck.</span><span class="sxs-lookup"><span data-stu-id="729bd-133">Revocation checking can be turned off by setting this attribute to NoCheck.</span></span>|  
+|`trustedStoreLocation`|<span data-ttu-id="729bd-134">Enumeración opcional.</span><span class="sxs-lookup"><span data-stu-id="729bd-134">Optional enumeration.</span></span> <span data-ttu-id="729bd-135">Especifica la ubicación del almacén fiable donde el sistema de seguridad [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] valida el certificado del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="729bd-135">Specifies the trusted store location where the peer certificate is validated by the [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] security system.</span></span> <span data-ttu-id="729bd-136">Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span><span class="sxs-lookup"><span data-stu-id="729bd-136">This attribute is of type <xref:System.Security.Cryptography.X509Certificates.StoreLocation>.</span></span>|  
   
-### Elementos secundarios  
- Ninguno.  
+### <a name="child-elements"></a><span data-ttu-id="729bd-137">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="729bd-137">Child Elements</span></span>  
+ <span data-ttu-id="729bd-138">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="729bd-138">None.</span></span>  
   
-### Elementos primarios  
+### <a name="parent-elements"></a><span data-ttu-id="729bd-139">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="729bd-139">Parent Elements</span></span>  
   
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<peer\>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Especifica las credenciales actuales de un nodo del mismo nivel.|  
+|<span data-ttu-id="729bd-140">Elemento</span><span class="sxs-lookup"><span data-stu-id="729bd-140">Element</span></span>|<span data-ttu-id="729bd-141">Descripción</span><span class="sxs-lookup"><span data-stu-id="729bd-141">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="729bd-142">\<punto ></span><span class="sxs-lookup"><span data-stu-id="729bd-142">\<peer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|<span data-ttu-id="729bd-143">Especifica las credenciales actuales de un nodo del mismo nivel.</span><span class="sxs-lookup"><span data-stu-id="729bd-143">Specifies the current credentials for a peer node.</span></span>|  
   
-## Comentarios  
- El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>.  Este elemento especifica un validador, que se invoca durante la autenticación entre vecinos en la malla.  Cuando un nuevo par intenta establecer una conexión de vecino, pasa su propia credencial al par que responde.  El validador del contestador se invoca para comprobar la credencial de la parte remota.  Cuando una conexión del mismo nivel se establece en la malla, se autentican ambos pares mutuamente, lo que significa que se invocan los validadores en ambos extremos.  
+## <a name="remarks"></a><span data-ttu-id="729bd-144">Comentarios</span><span class="sxs-lookup"><span data-stu-id="729bd-144">Remarks</span></span>  
+ <span data-ttu-id="729bd-145">El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>.</span><span class="sxs-lookup"><span data-stu-id="729bd-145">The `<authentication>` element corresponds to the <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> class.</span></span> <span data-ttu-id="729bd-146">Este elemento especifica un validador, que se invoca durante la autenticación entre vecinos en la malla.</span><span class="sxs-lookup"><span data-stu-id="729bd-146">This element specifies a validator, which is invoked during neighbor-to-neighbor authentication in the mesh.</span></span> <span data-ttu-id="729bd-147">Cuando un nuevo par intenta establecer una conexión de vecino, pasa su propia credencial al par que responde.</span><span class="sxs-lookup"><span data-stu-id="729bd-147">When a new peer tries to establish a neighbor connection, it passes its own credential to the responding peer.</span></span> <span data-ttu-id="729bd-148">El validador del contestador se invoca para comprobar la credencial de la parte remota.</span><span class="sxs-lookup"><span data-stu-id="729bd-148">The validator of the responder is invoked to verify the credential of the remote party.</span></span> <span data-ttu-id="729bd-149">Cuando una conexión del mismo nivel se establece en la malla, se autentican ambos pares mutuamente, lo que significa que se invocan los validadores en ambos extremos.</span><span class="sxs-lookup"><span data-stu-id="729bd-149">Whenever a peer connection is established in the mesh, both peers are mutually authenticated, meaning validators on both ends are invoked.</span></span>  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.PeerCredentialElement>   
- <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>   
- <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>   
- <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>   
- [Trabajar con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [Conexión de redes punto a punto](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)   
- [Peer Channel Message Authentication](http://msdn.microsoft.com/es-es/80e73386-514e-4c30-9e4a-b9ca8c173a95)   
- [Peer Channel Custom Authentication](http://msdn.microsoft.com/es-es/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)   
- [Protección de las aplicaciones de canal del mismo nivel](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+## <a name="see-also"></a><span data-ttu-id="729bd-150">Vea también</span><span class="sxs-lookup"><span data-stu-id="729bd-150">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement>  
+ <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>  
+ <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>  
+ <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
+ [<span data-ttu-id="729bd-151">Trabajar con certificados</span><span class="sxs-lookup"><span data-stu-id="729bd-151">Working with Certificates</span></span>](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="729bd-152">Redes de punto a punto</span><span class="sxs-lookup"><span data-stu-id="729bd-152">Peer-to-Peer Networking</span></span>](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [<span data-ttu-id="729bd-153">Autenticación de mensajes del canal del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="729bd-153">Peer Channel Message Authentication</span></span>](http://msdn.microsoft.com/en-us/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [<span data-ttu-id="729bd-154">Canal del mismo nivel de autenticación personalizada</span><span class="sxs-lookup"><span data-stu-id="729bd-154">Peer Channel Custom Authentication</span></span>](http://msdn.microsoft.com/en-us/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [<span data-ttu-id="729bd-155">Proteger las aplicaciones de canal del mismo nivel</span><span class="sxs-lookup"><span data-stu-id="729bd-155">Securing Peer Channel Applications</span></span>](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

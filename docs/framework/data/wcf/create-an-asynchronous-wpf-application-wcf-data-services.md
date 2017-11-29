@@ -1,38 +1,43 @@
 ---
-title: "C&#243;mo: Crear una aplicaci&#243;n asincr&#243;nica de Windows Presentation Framework (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicios de datos de Microsoft WCF, operaciones asincrónicas"
+title: "Cómo: Crear una aplicación asincrónica de Windows Presentation Framework (Data Services de WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: WCF Data Services, asynchronous operations
 ms.assetid: 834614df-1427-4839-b0be-90f68e5afffd
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 351812d632a394612e8ea241b7fea388066b4199
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Crear una aplicaci&#243;n asincr&#243;nica de Windows Presentation Framework (WCF Data Services)
-Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede enlazar los datos obtenidos de un servicio de datos a los elementos de la interfaz de usuario de una aplicación de Windows Presentation Framework \(WPF\).  Para obtener más información, vea [Enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md). También puede ejecutar operaciones con el servicio de datos de una manera asincrónica, lo que permite a la aplicación continuar respondiendo mientras espera una respuesta a una solicitud al servicio de datos.  Las aplicaciones para Silverlight deben tener acceso al servicio de datos de forma asincrónica.  Para obtener más información, consulta [Operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-create-an-asynchronous-windows-presentation-framework-application-wcf-data-services"></a><span data-ttu-id="2df6f-102">Cómo: Crear una aplicación asincrónica de Windows Presentation Framework (Data Services de WCF)</span><span class="sxs-lookup"><span data-stu-id="2df6f-102">How to: Create an Asynchronous Windows Presentation Framework Application (WCF Data Services)</span></span>
+<span data-ttu-id="2df6f-103">Con [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], puede enlazar los datos obtenidos de un servicio de datos a los elementos de la interfaz de usuario de una aplicación de Windows Presentation Framework (WPF).</span><span class="sxs-lookup"><span data-stu-id="2df6f-103">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can bind data obtained from a data service to UI element of a Windows Presentation Framework (WPF) application.</span></span> <span data-ttu-id="2df6f-104">Para obtener más información, consulte [enlazar datos a controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md). También puede ejecutar operaciones en el servicio de datos de manera asincrónica, lo que permite a la aplicación pueda continuar responder mientras se espera una respuesta a una solicitud de servicio de datos.</span><span class="sxs-lookup"><span data-stu-id="2df6f-104">For more information, see [Binding Data to Controls](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).You can also execute operations against the data service in an asynchronous manner, which enables the application to continue to respond while waiting for a response to a data service request.</span></span> <span data-ttu-id="2df6f-105">Las aplicaciones para Silverlight deben tener acceso al servicio de datos de forma asincrónica.</span><span class="sxs-lookup"><span data-stu-id="2df6f-105">Applications for Silverlight are required to access the data service asynchronously.</span></span> <span data-ttu-id="2df6f-106">Para obtener más información, consulte [operaciones asincrónicas](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="2df6f-106">For more information, see [Asynchronous Operations](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).</span></span>  
   
- En este tema se muestra cómo tener acceso a un servicio de datos de forma asincrónica y enlazar los resultados a los elementos de una aplicación WPF.  En los ejemplos de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos del cliente generadas automáticamente.  Se crean este servicio y las clases de datos del cliente al completar el [tutorial rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ <span data-ttu-id="2df6f-107">En este tema se muestra cómo tener acceso a un servicio de datos de forma asincrónica y enlazar los resultados a los elementos de una aplicación WPF.</span><span class="sxs-lookup"><span data-stu-id="2df6f-107">This topic shows how to access a data service asynchronously and bind the results to elements of a WPF application.</span></span> <span data-ttu-id="2df6f-108">En los ejemplos de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos del cliente generadas automáticamente.</span><span class="sxs-lookup"><span data-stu-id="2df6f-108">The examples in this topic use the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="2df6f-109">Se crean este servicio y las clases de datos de cliente al completar la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="2df6f-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## Ejemplo  
- El código XAML siguiente define la ventana de la aplicación WPF.  
+## <a name="example"></a><span data-ttu-id="2df6f-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2df6f-110">Example</span></span>  
+ <span data-ttu-id="2df6f-111">El código XAML siguiente define la ventana de la aplicación WPF.</span><span class="sxs-lookup"><span data-stu-id="2df6f-111">The following XAML defines the window of the WPF application.</span></span>  
   
- [!code-xml[Astoria Northwind Client#WpfDataBindingAsyncXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerordersasync.xaml#wpfdatabindingasyncxaml)]  
+ [!code-xaml[Astoria Northwind Client#WpfDataBindingAsyncXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerordersasync.xaml#wpfdatabindingasyncxaml)]  
   
-## Ejemplo  
- La página de codigos subyacente siguiente para el archivo XAML ejecuta una consulta asincrónica usando el servicio de datos y enlaza los resultados a los elementos de la ventana de WPF.  
+## <a name="example"></a><span data-ttu-id="2df6f-112">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2df6f-112">Example</span></span>  
+ <span data-ttu-id="2df6f-113">La página de codigos subyacente siguiente para el archivo XAML ejecuta una consulta asincrónica usando el servicio de datos y enlaza los resultados a los elementos de la ventana de WPF.</span><span class="sxs-lookup"><span data-stu-id="2df6f-113">The following code-behind page for the XAML file executes an asynchronous query by using the data service and binds the results to elements in the WPF window.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerordersasync.xaml.cs#wpfdatabindingasync)]
  [!code-vb[Astoria Northwind Client#WpfDataBindingAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerordersasync.xaml.vb#wpfdatabindingasync)]  
   
-## Vea también  
- [Biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a><span data-ttu-id="2df6f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="2df6f-114">See Also</span></span>  
+ [<span data-ttu-id="2df6f-115">Biblioteca cliente de Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="2df6f-115">WCF Data Services Client Library</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

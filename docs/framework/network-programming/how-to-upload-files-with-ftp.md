@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b90049c11e8eb1113155a400b7af159f2b6938ca
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 08002bf223d96d49cffb67ec744659747fa49e26
+ms.sourcegitcommit: 32f5e1db8755ed7dfac0b4ec764fa809e5a7548c
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2017
 ---
-# <a name="how-to-upload-files-with-ftp"></a>Cómo: cargar archivos con FTP
-En este ejemplo se muestra cómo cargar un archivo en un servidor FTP.  
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="11a5d-102">Cómo: cargar archivos con FTP</span><span class="sxs-lookup"><span data-stu-id="11a5d-102">How to: Upload Files with FTP</span></span>
+<span data-ttu-id="11a5d-103">En este ejemplo se muestra cómo cargar un archivo en un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="11a5d-103">This sample shows how to upload a file to an FTP server.</span></span>  
   
-## <a name="example"></a>Ejemplo  
+## <a name="example"></a><span data-ttu-id="11a5d-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="11a5d-104">Example</span></span>  
   
 ```csharp  
 using System;  
@@ -63,18 +57,16 @@ namespace Examples.System.Net
             Console.WriteLine("Upload File Complete, status {0}", response.StatusDescription);  
   
             response.Close();  
-            }  
         }  
     }  
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Compilar el código  
- Para este ejemplo se necesita:  
+## <a name="compiling-the-code"></a><span data-ttu-id="11a5d-105">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="11a5d-105">Compiling the Code</span></span>  
+ <span data-ttu-id="11a5d-106">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="11a5d-106">This example requires:</span></span>  
   
--   Referencias al espacio de nombres **System.Net**.  
+-   <span data-ttu-id="11a5d-107">Referencias al espacio de nombres **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="11a5d-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="robust-programming"></a>Programación sólida  
+## <a name="robust-programming"></a><span data-ttu-id="11a5d-108">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="11a5d-108">Robust Programming</span></span>  
   
-## <a name="net-framework-security"></a>Seguridad de .NET Framework
-
+## <a name="net-framework-security"></a><span data-ttu-id="11a5d-109">Seguridad de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="11a5d-109">.NET Framework Security</span></span>

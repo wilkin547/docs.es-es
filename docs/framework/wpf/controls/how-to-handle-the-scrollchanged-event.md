@@ -1,38 +1,44 @@
 ---
-title: "C&#243;mo: Controlar el evento ScrollChanged | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ScrollChanged (eventos)"
-  - "ScrollViewer (control), provocar eventos ScrollChanged"
+title: "Cómo: Controlar el evento ScrollChanged"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ScrollViewer control [WPF], raising ScrollChanged events
+- ScrollChanged events [WPF]
 ms.assetid: 42c695d8-ee28-49d4-80fd-fc71e9be7f29
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b8a4f4831b8ed25eb900692e78b5e28bccb86a86
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Controlar el evento ScrollChanged
-## Ejemplo  
- En este ejemplo se muestra cómo controlar el evento <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> de un objeto <xref:System.Windows.Controls.ScrollViewer>.  
+# <a name="how-to-handle-the-scrollchanged-event"></a><span data-ttu-id="f9805-102">Cómo: Controlar el evento ScrollChanged</span><span class="sxs-lookup"><span data-stu-id="f9805-102">How to: Handle the ScrollChanged Event</span></span>
+## <a name="example"></a><span data-ttu-id="f9805-103">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f9805-103">Example</span></span>  
+ <span data-ttu-id="f9805-104">Este ejemplo muestra cómo controlar la <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> eventos de un <xref:System.Windows.Controls.ScrollViewer>.</span><span class="sxs-lookup"><span data-stu-id="f9805-104">This example shows how to handle the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event of a <xref:System.Windows.Controls.ScrollViewer>.</span></span>  
   
- Un elemento <xref:System.Windows.Documents.FlowDocument> con partes <xref:System.Windows.Documents.Paragraph> se define en código [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  Cuando se produce el evento <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> debido a la interacción con el usuario, se invoca un controlador y el texto se escribe en <xref:System.Windows.Controls.TextBlock>, que indica que el evento se ha producido.  
+ <span data-ttu-id="f9805-105">A <xref:System.Windows.Documents.FlowDocument> elemento con <xref:System.Windows.Documents.Paragraph> partes se definen en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f9805-105">A <xref:System.Windows.Documents.FlowDocument> element with <xref:System.Windows.Documents.Paragraph> parts is defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="f9805-106">Cuando el <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> evento tiene lugar debido a la interacción del usuario, se invoca un controlador y se escribe texto en un <xref:System.Windows.Controls.TextBlock> que indica que se ha producido el evento.</span><span class="sxs-lookup"><span data-stu-id="f9805-106">When the <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> event occurs due to user interaction, a handler is invoked, and text is written to a <xref:System.Windows.Controls.TextBlock> indicating that the event has occurred.</span></span>  
   
- [!code-xml[scrollchangedeventargsLayout#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#1)]  
-[!code-xml[scrollchangedeventargsLayout#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#2)]  
+ [!code-xaml[scrollchangedeventargsLayout#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#1)]  
+[!code-xaml[scrollchangedeventargsLayout#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml#2)]  
   
  [!code-csharp[scrollchangedeventargsLayout#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/scrollchangedeventargsLayout/CSharp/Window1.xaml.cs#3)]
  [!code-vb[scrollchangedeventargsLayout#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
   
-## Vea también  
- <xref:System.Windows.Controls.ScrollViewer>   
- <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>   
- <xref:System.Windows.Controls.ScrollChangedEventHandler>   
+## <a name="see-also"></a><span data-ttu-id="f9805-107">Vea también</span><span class="sxs-lookup"><span data-stu-id="f9805-107">See Also</span></span>  
+ <xref:System.Windows.Controls.ScrollViewer>  
+ <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>  
+ <xref:System.Windows.Controls.ScrollChangedEventHandler>  
  <xref:System.Windows.Controls.ScrollChangedEventArgs>

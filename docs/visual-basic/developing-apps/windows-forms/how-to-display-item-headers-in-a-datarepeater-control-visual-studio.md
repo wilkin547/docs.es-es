@@ -1,75 +1,74 @@
 ---
-title: "C&#243;mo: Mostrar los encabezados de los elementos en un control DataRepeater (Visual Studio) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DataRepeater, encabezados de elementos"
-  - "DataRepeater, indicadores de selección"
+title: "Cómo: Mostrar los encabezados de los elementos en un control DataRepeater (Visual Studio)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- DataRepeater, item headers
+- DataRepeater, selection indicators
 ms.assetid: 37321447-0ffa-43e1-bdc9-0480e392b90f
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: da02f9374471a581a58131e26d618f91d7cbb7af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Mostrar los encabezados de los elementos en un control DataRepeater (Visual Studio)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-El encabezado de elemento en un control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> proporciona un indicador visual cuando <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> está seleccionado.  Si la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles> \(valor predeterminado\), el encabezado de elemento se muestra a la izquierda de cada elemento.  Si la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>, el encabezado de elemento se muestra encima de cada elemento.  
+# <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a><span data-ttu-id="69ffa-102">Cómo: Mostrar los encabezados de los elementos en un control DataRepeater (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="69ffa-102">How to: Display Item Headers in a DataRepeater Control (Visual Studio)</span></span>
+<span data-ttu-id="69ffa-103">El encabezado de elemento en un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control proporciona un indicador visual cuando un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> está seleccionada.</span><span class="sxs-lookup"><span data-stu-id="69ffa-103">The item header in a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control provides a visual indicator when a <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> is selected.</span></span> <span data-ttu-id="69ffa-104">Cuando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (valor predeterminado), se muestra el encabezado de elemento a la izquierda de cada elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-104">When the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> property is set to <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (the default), the item header is displayed to the left of each item.</span></span> <span data-ttu-id="69ffa-105">Cuando el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, el encabezado de elemento se muestra en la parte superior de cada elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-105">When the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> property is set to <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, the item header is displayed at the top of each item.</span></span>  
   
- Al seleccionarlo por primera vez, el encabezado de elemento se muestra en el color especificado por la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> y aparece un icono de flecha blanca.  
+ <span data-ttu-id="69ffa-106">Cuando se selecciona por primera vez, el encabezado de elemento se muestra en el color que se especifica mediante el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> se muestra la propiedad y un icono de flecha blanca.</span><span class="sxs-lookup"><span data-stu-id="69ffa-106">When it is first selected, the item header is displayed in the color that is specified by the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> property, and a white arrow icon is displayed.</span></span>  
   
 > [!NOTE]
->  Si establece <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> en <xref:System.Drawing.Color.White%2A>, el símbolo de selección no estará visible al seleccionar por primera vez el elemento.  
+>  <span data-ttu-id="69ffa-107">Si establece la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> a <xref:System.Drawing.Color.White%2A>, el símbolo de selección no estará visible cuando se selecciona el elemento por primera vez.</span><span class="sxs-lookup"><span data-stu-id="69ffa-107">If you set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> to <xref:System.Drawing.Color.White%2A>, the selection symbol will not be visible when the item is first selected.</span></span>  
   
- Cuando un campo de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> tiene el foco, el color del encabezado de elemento cambia al color de fondo de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> y el icono de flecha pasa a ser negro.  Si se modifican datos, se muestra un símbolo de lápiz en el encabezado del elemento.  
+ <span data-ttu-id="69ffa-108">Cuando un campo en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> tiene el foco, el color de los cambios de elemento de encabezado para el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> color del fondo y los cambios de icono de flecha en negro.</span><span class="sxs-lookup"><span data-stu-id="69ffa-108">When a field in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> has focus, the color of the item header changes to the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A> background color and the arrow icon changes to black.</span></span> <span data-ttu-id="69ffa-109">Si se cambian los datos, se muestra un símbolo de lápiz en el encabezado de elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-109">If data is changed, a pencil symbol is displayed in the item header.</span></span>  
   
- El ancho predeterminado \(o el alto cuando la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles>\) del encabezado de elemento es de 15 píxeles.  Puede cambiar el ancho estableciendo la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A>.  
-  
-> [!NOTE]
->  Si la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> está establecida en un valor menor que 11, no se mostrarán los símbolos de indicador en el encabezado del elemento.  
-  
- Puede ocultar los encabezados de elemento estableciendo la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> en **False**.  Cuando <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> está establecido en **False**, la única indicación de que un elemento está seleccionado es una línea de puntos alrededor del perímetro de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+ <span data-ttu-id="69ffa-110">El ancho predeterminado (o alto cuando los <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> propiedad está establecida en <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) del elemento de encabezado es 15 píxeles.</span><span class="sxs-lookup"><span data-stu-id="69ffa-110">The default width (or height when the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> property is set to <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>) of the item header is 15 pixels.</span></span> <span data-ttu-id="69ffa-111">Puede cambiar el ancho estableciendo la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="69ffa-111">You can change the width by setting the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> property.</span></span>  
   
 > [!NOTE]
->  También puede proporcionar su propio indicador de selección supervisando la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> en el evento <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  Para obtener más información, vea <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.  
+>  <span data-ttu-id="69ffa-112">Si el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> propiedad está establecida en un valor que es menor que 11, no se mostrarán los símbolos de indicador en el encabezado de elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-112">If the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> property is set to a value that is less than 11, the indicator symbols in the item header will not be displayed.</span></span>  
   
-### Para cambiar la apariencia de los encabezados de elemento  
+ <span data-ttu-id="69ffa-113">Puede ocultar los encabezados de elemento estableciendo la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> propiedad **False**.</span><span class="sxs-lookup"><span data-stu-id="69ffa-113">You can hide the item headers by setting the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> property to **False**.</span></span> <span data-ttu-id="69ffa-114">Cuando <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> está establecido en **False**, la única indicación de que se selecciona un elemento es una línea de puntos alrededor del perímetro de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</span><span class="sxs-lookup"><span data-stu-id="69ffa-114">When <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> is set to **False**, the only indication that an item is selected is a dotted line around the perimeter of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</span></span>  
   
-1.  En el Diseñador de Windows Forms, seleccione la región inferior del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+> [!NOTE]
+>  <span data-ttu-id="69ffa-115">También puede proporcionar su propio indicador de selección mediante la supervisión de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> propiedad de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> eventos de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="69ffa-115">You can also provide your own selection indicator by monitoring the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A> property of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> event of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span> <span data-ttu-id="69ffa-116">Para obtener más información, consulta <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.</span><span class="sxs-lookup"><span data-stu-id="69ffa-116">For more information, see <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem.IsCurrent%2A>.</span></span>  
   
-    > [!NOTE]
-    >  Debe seleccionar la región inferior del control.  Si selecciona la sección de plantilla de elemento, aparecerá un conjunto de propiedades distinto en la ventana Propiedades.  
+### <a name="to-change-the-appearance-of-item-headers"></a><span data-ttu-id="69ffa-117">Para cambiar la apariencia de los encabezados de elemento</span><span class="sxs-lookup"><span data-stu-id="69ffa-117">To change the appearance of item headers</span></span>  
   
-2.  En la ventana Propiedades, utilice la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> para cambiar el color de los encabezados de elemento.  
-  
-    > [!NOTE]
-    >  Si establece <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> en <xref:System.Drawing.Color.White%2A>, el símbolo de selección no estará visible al seleccionar por primera vez el elemento.  
-  
-3.  Utilice la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> para cambiar el ancho \(o el alto\) de los encabezados de elemento.  
+1.  <span data-ttu-id="69ffa-118">En el Diseñador de Windows Forms, seleccione la región inferior de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="69ffa-118">In the Windows Forms Designer, select the lower region of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
   
     > [!NOTE]
-    >  Si la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> está establecida en un valor menor que 11, no se mostrarán los símbolos de indicador en el encabezado del elemento.  
+    >  <span data-ttu-id="69ffa-119">Debe seleccionar la región inferior del control.</span><span class="sxs-lookup"><span data-stu-id="69ffa-119">You must select the lower region of the control.</span></span> <span data-ttu-id="69ffa-120">Si selecciona la sección de la plantilla de elemento, aparecerá un conjunto diferente de propiedades en la ventana Propiedades.</span><span class="sxs-lookup"><span data-stu-id="69ffa-120">If you select the item template section, a different set of properties will appear in the Properties window.</span></span>  
   
-### Para ocultar los encabezados de elemento  
-  
-1.  En el Diseñador de Windows Forms, seleccione la región inferior del control <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>.  
+2.  <span data-ttu-id="69ffa-121">En la ventana Propiedades, use el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> propiedad para cambiar el color de los encabezados de elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-121">In the Properties window, use the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> property to change the color of the item headers.</span></span>  
   
     > [!NOTE]
-    >  Debe seleccionar la región inferior del control.  Si selecciona la sección de plantilla de elemento, aparecerá un conjunto de propiedades distinto en la ventana Propiedades.  
+    >  <span data-ttu-id="69ffa-122">Si establece la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> a <xref:System.Drawing.Color.White%2A>, el símbolo de selección no estará visible cuando se selecciona el elemento por primera vez.</span><span class="sxs-lookup"><span data-stu-id="69ffa-122">If you set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> to <xref:System.Drawing.Color.White%2A>, the selection symbol will not be visible when the item is first selected.</span></span>  
   
-2.  En la ventana Propiedades, establezca la propiedad <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> en **False**.  
+3.  <span data-ttu-id="69ffa-123">Use la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> propiedad para cambiar el ancho (o el alto) de los encabezados de elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-123">Use the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> property to change the width (or height) of the item headers.</span></span>  
   
-     Cuando un elemento de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> está seleccionado, la única indicación será una línea de puntos alrededor del perímetro de <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.  
+    > [!NOTE]
+    >  <span data-ttu-id="69ffa-124">Si el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> propiedad está establecida en un valor que es menor que 11, no se mostrarán los símbolos de indicador en el encabezado de elemento.</span><span class="sxs-lookup"><span data-stu-id="69ffa-124">If the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> property is set to a value that is less than 11, the indicator symbols in the item header will not be displayed.</span></span>  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   
- [Introducción al control DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)   
- [Cómo: Cambiar la apariencia de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)   
- [Cómo: Cambiar el diseño de un control DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)   
- [Solución de problemas del control DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+### <a name="to-hide-item-headers"></a><span data-ttu-id="69ffa-125">Para ocultar los encabezados de elemento</span><span class="sxs-lookup"><span data-stu-id="69ffa-125">To hide item headers</span></span>  
+  
+1.  <span data-ttu-id="69ffa-126">En el Diseñador de Windows Forms, seleccione la región inferior de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span><span class="sxs-lookup"><span data-stu-id="69ffa-126">In the Windows Forms Designer, select the lower region of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> control.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="69ffa-127">Debe seleccionar la región inferior del control.</span><span class="sxs-lookup"><span data-stu-id="69ffa-127">You must select the lower region of the control.</span></span> <span data-ttu-id="69ffa-128">Si selecciona la sección de la plantilla de elemento, aparecerá un conjunto diferente de propiedades en la ventana Propiedades.</span><span class="sxs-lookup"><span data-stu-id="69ffa-128">If you select the item template section, a different set of properties will appear in the Properties window.</span></span>  
+  
+2.  <span data-ttu-id="69ffa-129">En la ventana Propiedades, establezca la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> propiedad **False**.</span><span class="sxs-lookup"><span data-stu-id="69ffa-129">In the Properties window, set the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderVisible%2A> property to **False**.</span></span>  
+  
+     <span data-ttu-id="69ffa-130">Cuando un elemento en el <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> está seleccionada, la única indicación será una línea de puntos alrededor del perímetro de la <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</span><span class="sxs-lookup"><span data-stu-id="69ffa-130">When an item in the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> is selected, the only indication will be a dotted line around the perimeter of the <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="69ffa-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="69ffa-131">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
+ [<span data-ttu-id="69ffa-132">Introducción al control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="69ffa-132">Introduction to the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="69ffa-133">Cambiar la apariencia de un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="69ffa-133">How to: Change the Appearance of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="69ffa-134">Cambiar el diseño de un control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="69ffa-134">How to: Change the Layout of a DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [<span data-ttu-id="69ffa-135">Solución de problemas del control DataRepeater</span><span class="sxs-lookup"><span data-stu-id="69ffa-135">Troubleshooting the DataRepeater Control</span></span>](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

@@ -1,46 +1,52 @@
 ---
-title: "C&#243;mo: Controlar un evento enrutado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propagar eventos"
-  - "eventos enrutados, controlar"
+title: "Cómo: Controlar un evento enrutado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- routed events [WPF], handling
+- bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-caps.latest.revision: 23
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 83f59f2df9311f30995b18529a733a5569c85ee0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Controlar un evento enrutado
-En este ejemplo se muestra cómo funcionan los eventos de [propagación](GTMT) y cómo se escribe un controlador capaz de procesar los datos del [evento enrutado](GTMT).  
+# <a name="how-to-handle-a-routed-event"></a><span data-ttu-id="b753a-102">Cómo: Controlar un evento enrutado</span><span class="sxs-lookup"><span data-stu-id="b753a-102">How to: Handle a Routed Event</span></span>
+<span data-ttu-id="b753a-103">En este ejemplo se muestra cómo funciona la propagación de eventos y cómo se escribe un controlador capaz de procesar los datos de eventos enrutados.</span><span class="sxs-lookup"><span data-stu-id="b753a-103">This example shows how bubbling events work and how to write a handler that can process the routed event data.</span></span>  
   
-## Ejemplo  
- En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], los elementos se organizan organizados en una estructura de [árbol de elementos](GTMT).  El elemento primario puede participar en el control de los eventos provocados inicialmente por elementos secundarios del árbol de elementos.  Esto es posible gracias al [enrutamiento de eventos](GTMT).  
+## <a name="example"></a><span data-ttu-id="b753a-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b753a-104">Example</span></span>  
+ <span data-ttu-id="b753a-105">En [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], los elementos se organizan en una estructura de árbol de elementos.</span><span class="sxs-lookup"><span data-stu-id="b753a-105">In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], elements are arranged in an element tree structure.</span></span> <span data-ttu-id="b753a-106">El elemento primario puede participar en el control de eventos generados inicialmente por elementos secundarios en el árbol de elementos.</span><span class="sxs-lookup"><span data-stu-id="b753a-106">The parent element can participate in the handling of events that are initially raised by child elements in the element tree.</span></span> <span data-ttu-id="b753a-107">Esto es posible gracias al enrutamiento de eventos.</span><span class="sxs-lookup"><span data-stu-id="b753a-107">This is possible because of event routing.</span></span>  
   
- Los eventos enrutados suelen seguir una de las dos estrategias de enrutamiento, [propagación](GTMT) o [túnel](GTMT).  Este ejemplo se centra en el evento de [propagación](GTMT) y utiliza el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click?displayProperty=fullName> para mostrar cómo funciona el enrutamiento.  
+ <span data-ttu-id="b753a-108">Normalmente, los eventos enrutados siguen una de las dos estrategias de enrutamiento posibles: propagación o tunelización.</span><span class="sxs-lookup"><span data-stu-id="b753a-108">Routed events typically follow one of two routing strategies, bubbling or tunneling.</span></span> <span data-ttu-id="b753a-109">En este ejemplo se centra en el evento de propagación y usa el <xref:System.Windows.Controls.Primitives.ButtonBase.Click?displayProperty=nameWithType> eventos para mostrar cómo funciona el enrutamiento.</span><span class="sxs-lookup"><span data-stu-id="b753a-109">This example focuses on the bubbling event and uses the <xref:System.Windows.Controls.Primitives.ButtonBase.Click?displayProperty=nameWithType> event to show how routing works.</span></span>  
   
- En el ejemplo siguiente se crean dos controles <xref:System.Windows.Controls.Button> y se utiliza la sintaxis de atributo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para adjuntar un controlador de eventos a un elemento primario común, que en este ejemplo es <xref:System.Windows.Controls.StackPanel>.  En lugar de asociar los controladores de eventos individuales a cada elemento secundario <xref:System.Windows.Controls.Button>, en el ejemplo se utiliza la sintaxis de atributo para asociar el controlador de eventos al elemento primario <xref:System.Windows.Controls.StackPanel>.  Este modelo de control de eventos muestra cómo utilizar el enrutamiento de eventos como técnica para reducir el número de elementos a los que se asocia un controlador.  Todos los eventos de [propagación](GTMT) de cada <xref:System.Windows.Controls.Button> se enrutan a través del elemento primario.  
+ <span data-ttu-id="b753a-110">En el ejemplo siguiente se crea dos <xref:System.Windows.Controls.Button> controla y usa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atributo sintaxis para adjuntar un controlador de eventos a un elemento primario común, que en este ejemplo es <xref:System.Windows.Controls.StackPanel>.</span><span class="sxs-lookup"><span data-stu-id="b753a-110">The following example creates two <xref:System.Windows.Controls.Button> controls and uses [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attribute syntax to attach an event handler to a common parent element, which in this example is <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="b753a-111">En lugar de adjuntar controladores de eventos individuales para cada <xref:System.Windows.Controls.Button> elemento secundario, el ejemplo usa la sintaxis de atributo para asociar el controlador de eventos para el <xref:System.Windows.Controls.StackPanel> elemento primario.</span><span class="sxs-lookup"><span data-stu-id="b753a-111">Instead of attaching individual event handlers for each <xref:System.Windows.Controls.Button> child element, the example uses attribute syntax to attach the event handler to the <xref:System.Windows.Controls.StackPanel> parent element.</span></span> <span data-ttu-id="b753a-112">Este patrón de control de eventos muestra cómo usar el enrutamiento de eventos como técnica para reducir el número de elementos en los que se adjunta un controlador.</span><span class="sxs-lookup"><span data-stu-id="b753a-112">This event-handling pattern shows how to use event routing as a technique for reducing the number of elements where a handler is attached.</span></span> <span data-ttu-id="b753a-113">Todos los eventos de propagación para cada <xref:System.Windows.Controls.Button> ruta a través del elemento primario.</span><span class="sxs-lookup"><span data-stu-id="b753a-113">All the bubbling events for each <xref:System.Windows.Controls.Button> route through the parent element.</span></span>  
   
- Observe que en el elemento primario <xref:System.Windows.Controls.StackPanel>, el nombre del evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> especificado como atributo se certifica parcialmente nombrando la clase <xref:System.Windows.Controls.Button>.  La clase <xref:System.Windows.Controls.Button> es una clase derivada de <xref:System.Windows.Controls.Primitives.ButtonBase> que tiene el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> en su lista de miembros.  Esta técnica de la certificación parcial para asociar un controlador de eventos es necesaria si el evento controlado no existe en la lista de miembros del elemento al que está asociado el controlador del evento enrutado.  
+ <span data-ttu-id="b753a-114">Tenga en cuenta que en el registro primario <xref:System.Windows.Controls.StackPanel> elemento, el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> nombre de evento especificado como el atributo se certifica parcialmente nombrando la <xref:System.Windows.Controls.Button> clase.</span><span class="sxs-lookup"><span data-stu-id="b753a-114">Note that on the parent <xref:System.Windows.Controls.StackPanel> element, the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event name specified as the attribute is partially qualified by naming the <xref:System.Windows.Controls.Button> class.</span></span> <span data-ttu-id="b753a-115">El <xref:System.Windows.Controls.Button> clase es un <xref:System.Windows.Controls.Primitives.ButtonBase> clase derivada que tiene el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento en su lista de miembros.</span><span class="sxs-lookup"><span data-stu-id="b753a-115">The <xref:System.Windows.Controls.Button> class is a <xref:System.Windows.Controls.Primitives.ButtonBase> derived class that has the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event in its members listing.</span></span> <span data-ttu-id="b753a-116">Esta técnica de calificación parcial para adjuntar un controlador de eventos es necesaria si el evento que se controla no existe en la lista de miembros del elemento donde está adjunto el controlador de eventos enrutados.</span><span class="sxs-lookup"><span data-stu-id="b753a-116">This partial qualification technique for attaching an event handler is necessary if the event that is being handled does not exist in the members listing of the element where the routed event handler is attached.</span></span>  
   
- [!code-xml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
- En el siguiente ejemplo se controla el evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.  El ejemplo notifica qué elemento controla el evento y qué elemento genera el evento.  El controlador de eventos se ejecuta cuando el usuario hace clic en cualquiera de los botones.  
+ <span data-ttu-id="b753a-117">El siguiente ejemplo se controla el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.</span><span class="sxs-lookup"><span data-stu-id="b753a-117">The following example handles the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span>  <span data-ttu-id="b753a-118">En el ejemplo se notifican el elemento que controla el evento y el elemento que lo genera.</span><span class="sxs-lookup"><span data-stu-id="b753a-118">The example reports which element handles the event and which element raises the event.</span></span> <span data-ttu-id="b753a-119">El controlador de eventos se ejecuta cuando el usuario hace clic en cualquiera de los botones.</span><span class="sxs-lookup"><span data-stu-id="b753a-119">The event handler is executed when the user clicks either button.</span></span>  
   
  [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
  [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
-## Vea también  
- <xref:System.Windows.RoutedEvent>   
- [Información general sobre acciones del usuario](../../../../docs/framework/wpf/advanced/input-overview.md)   
- [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)   
- [Detalles de la sintaxis XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a><span data-ttu-id="b753a-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="b753a-120">See Also</span></span>  
+ <xref:System.Windows.RoutedEvent>  
+ [<span data-ttu-id="b753a-121">Información general sobre acciones del usuario</span><span class="sxs-lookup"><span data-stu-id="b753a-121">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="b753a-122">Información general sobre eventos enrutados</span><span class="sxs-lookup"><span data-stu-id="b753a-122">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [<span data-ttu-id="b753a-123">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="b753a-123">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [<span data-ttu-id="b753a-124">Detalles de la sintaxis XAML</span><span class="sxs-lookup"><span data-stu-id="b753a-124">XAML Syntax In Detail</span></span>](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

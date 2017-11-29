@@ -1,75 +1,78 @@
 ---
-title: "x:Arguments Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "x:Arguments directive [XAML Services]"
-  - "Arguments directive in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Arguments directive"
+title: x:Arguments (Directiva)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- x:Arguments directive [XAML Services]
+- Arguments directive in XAML [XAML Services]
+- XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: 12
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 00f605bba709f0ce5f3238ccc3c6ac6cd962f0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# x:Arguments Directive
-Argumentos de construcción de paquetes para una declaración de elemento de objeto de constructor no predeterminado en XAM, o para una declaración de objeto del método de generador.  
+# <a name="xarguments-directive"></a><span data-ttu-id="4ef4c-102">x:Arguments (Directiva)</span><span class="sxs-lookup"><span data-stu-id="4ef4c-102">x:Arguments Directive</span></span>
+<span data-ttu-id="4ef4c-103">Argumentos de construcción de paquetes de una declaración de elemento de objeto de constructor no predeterminado en XAML o de una declaración de objeto del método de fábrica.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-103">Packages construction arguments for a non-default constructor object element declaration in XAML, or for a factory method object declaration.</span></span>  
   
-## Uso de elementos de XAML \(constructor no predeterminado\)  
+## <a name="xaml-element-usage-nondefault-constructor"></a><span data-ttu-id="4ef4c-104">Uso de elementos de XAML (constructor no predeterminado)</span><span class="sxs-lookup"><span data-stu-id="4ef4c-104">XAML Element Usage (Nondefault constructor)</span></span>  
   
 ```  
-<object ...>  
+<object ...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## Uso de elementos de XAML \(método de generador\)  
+## <a name="xaml-element-usage-factory-method"></a><span data-ttu-id="4ef4c-105">Uso de elementos de XAML (método de fábrica)</span><span class="sxs-lookup"><span data-stu-id="4ef4c-105">XAML Element Usage (factory method)</span></span>  
   
 ```  
-<object x:FactoryMethod="methodName"...>  
+<object x:FactoryMethod="methodName"...>  
   <x:Arguments>  
     oneOrMoreObjectElements  
   </x:Arguments>  
 </object>  
 ```  
   
-## Valores XAML  
+## <a name="xaml-values"></a><span data-ttu-id="4ef4c-106">Valores XAML</span><span class="sxs-lookup"><span data-stu-id="4ef4c-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`oneOrMoreObjectElements`|Uno o más elementos de objeto que especifican argumentos que se van a pasar al método generador o constructor de respaldo no predeterminado.<br /><br /> El uso típico consiste en utilizar texto de inicialización en los elementos del objeto para especificar los valores de los argumentos reales.  Vea la sección de ejemplos.<br /><br /> El orden de los elementos es significativo.  Los tipos XAML ordenados deben coincidir con los tipos del constructor de respaldo o sobrecarga de método del generador y el orden de estos.|  
-|`methodName`|Nombre del método de generador que debe procesar cualquier argumento `x:Arguments`.|  
+|`oneOrMoreObjectElements`|<span data-ttu-id="4ef4c-107">Uno o más elementos de objeto que especifican argumentos que se pasan a la copia de seguridad no predeterminado constructor o método generador.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-107">One or more object elements that specify arguments to be passed to the backing non-default constructor or factory method.</span></span><br /><br /> <span data-ttu-id="4ef4c-108">Uso habitual consiste en usar texto de inicialización de los elementos de objeto para especificar los valores de argumento real.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-108">Typical usage is to use initialization text within the object elements to specify the actual argument values.</span></span> <span data-ttu-id="4ef4c-109">Vea la sección ejemplos.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-109">See Examples section.</span></span><br /><br /> <span data-ttu-id="4ef4c-110">El orden de los elementos es significativo.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-110">The order of the elements is significant.</span></span> <span data-ttu-id="4ef4c-111">Los tipos XAML en orden deben coinciden con los tipos y tipo de orden de la sobrecarga del método de constructor o un generador de respaldo.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-111">The XAML types in order must match the types and type order of the backing constructor or factory method overload.</span></span>|  
+|`methodName`|<span data-ttu-id="4ef4c-112">El nombre del método de generador que debe procesar cualquier `x:Arguments` argumentos.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-112">The name of the factory method that should process any `x:Arguments` arguments.</span></span>|  
   
-## Dependencias  
- `x:FactoryMethod` puede modificar el ámbito y comportamiento donde se aplica `x:Arguments`.  
+## <a name="dependencies"></a><span data-ttu-id="4ef4c-113">Dependencias</span><span class="sxs-lookup"><span data-stu-id="4ef4c-113">Dependencies</span></span>  
+ <span data-ttu-id="4ef4c-114">`x:FactoryMethod`puede modificar el ámbito y comportamiento donde `x:Arguments` se aplica.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-114">`x:FactoryMethod` can modify the scope and behavior where `x:Arguments` applies.</span></span>  
   
- Si no se especifica ningún `x:FactoryMethod`, `x:Arguments` se aplica a firmas alternativas \(no predeterminadas\) de los constructores de respaldo.  
+ <span data-ttu-id="4ef4c-115">Si no hay ningún `x:FactoryMethod` se especifica, `x:Arguments` se aplica a firmas alternativas de (no predeterminada) de los constructores de copias de seguridad.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-115">If no `x:FactoryMethod` is specified, `x:Arguments` applies to alternate (non-default) signatures of the backing constructors.</span></span>  
   
- Si se especifica `x:FactoryMethod`, `x:Arguments` se aplica en una sobrecarga del método con nombre.  
+ <span data-ttu-id="4ef4c-116">Si `x:FactoryMethod` se especifica, `x:Arguments` se aplica a una sobrecarga del método con nombre.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-116">If `x:FactoryMethod` is specified, `x:Arguments` applies to an overload of the named method.</span></span>  
   
-## Comentarios  
- XAML 2006 puede admitir la inicialización no predeterminada a través de texto de inicialización.  Sin embargo, se limita la aplicación práctica de una técnica de construcción de texto de inicialización.  El texto de inicialización se trata como una única cadena de texto; por lo tanto, sólo agrega la capacidad para una única inicialización de parámetro, a menos que se defina un convertidor de tipos para el comportamiento de construcción que pueda analizar los elementos de información personalizados y los delimitadores personalizados de la cadena.  Asimismo, la cadena de texto a la lógica del objeto es posiblemente un convertidor de tipos predeterminado nativo de un analizador de XAML determinado para controlar tipos primitivos que no son una cadena verdadera.  
+## <a name="remarks"></a><span data-ttu-id="4ef4c-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4ef4c-117">Remarks</span></span>  
+ <span data-ttu-id="4ef4c-118">XAML 2006 puede admitir la inicialización no predeterminada a través de texto de inicialización.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-118">XAML 2006 can support non-default initialization through initialization text.</span></span> <span data-ttu-id="4ef4c-119">Sin embargo, la aplicación práctica de una técnica de construcción de texto de inicialización es limitada.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-119">However, the practical application of an initialization text construction technique is limited.</span></span> <span data-ttu-id="4ef4c-120">Texto de inicialización se trata como una cadena de texto; por lo tanto, solo agrega capacidad para la inicialización de un único parámetro, salvo que se define un convertidor de tipos para el comportamiento de construcción que puede analizar los elementos de información personalizada y delimitadores personalizados de la cadena.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-120">Initialization text is treated as a single text string; therefore, it only adds capability for a single parameter initialization unless a type converter is defined for the construction behavior that can parse custom information items and custom delimiters from the string.</span></span> <span data-ttu-id="4ef4c-121">Además, la cadena de texto a la lógica de objeto es potencialmente convertidor de tipos predeterminado nativo del analizador XAML determinado para el tratamiento de tipos primitivos que no sea una cadena es true.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-121">Also, the text string to object logic is potentially a given XAML parser's native default type converter for handling primitives other than a true string.</span></span>  
   
- La sintaxis del XAML de `x:Arguments` no es una sintaxis de elemento de propiedad en el sentido típico, porque el marcado de la directiva no hace referencia al tipo del elemento del objeto que contiene.  Es más semejante a otras directivas como `x:Code` donde el elemento demarca un intervalo en el que el marcado se debería interpretar como un contenido distinto del contenido secundario predeterminado.  En este caso, el tipo XAML de cada elemento de objeto comunica información sobre los tipos de argumento que, a su vez, usan los analizadores XAML para determinar a qué firma específica de método de generador del constructor intenta hacer referencia un uso de `x:Arguments`.  
+ <span data-ttu-id="4ef4c-122">El `x:Arguments` uso de XAML no es el uso de elementos de propiedad en el sentido típico, porque el marcado de la directiva no hace referencia el tipo del elemento de objeto contenedor.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-122">The `x:Arguments` XAML usage is not property element usage in the typical sense, because the directive markup does not reference the containing object element's type.</span></span> <span data-ttu-id="4ef4c-123">Es más similar a otras directivas como `x:Code` donde el elemento demarks un intervalo en el que el marcado debe interpretarse como que no sea el valor predeterminado para el contenido secundario.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-123">It is more akin to other directives such as `x:Code` where the element demarks a range in which the markup should be interpreted as other than the default for child contents.</span></span> <span data-ttu-id="4ef4c-124">En este caso, el tipo XAML de cada elemento de objeto comunica información sobre los tipos de argumento, que es utilizado por los analizadores XAML para determinar qué firma del método de fábrica de constructor específico un `x:Arguments` uso está intentando hacer referencia.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-124">In this case, the XAML type of each object element communicates information about the argument types, which is used by XAML parsers to determine which specific constructor factory method signature an `x:Arguments` usage is attempting to reference.</span></span>  
   
- El parámetro `x:Arguments` de un elemento de objeto en construcción debe preceder a cualquier otro elemento de propiedad, contenido, texto interno o cadenas de inicialización del elemento de objeto.  Los elementos de objeto incluidos en `x:Arguments` pueden incluir atributos y cadenas de inicialización, tal y como se permite por ese tipo XAML y su constructor de respaldo o método de generador.  Para el objeto o los argumentos, puede especificar tipos XAML personalizados o tipos XAML que, de lo contrario, se encuentren fuera del espacio de nombres XAML predeterminado haciendo referencia a asignaciones de prefijo establecidas.  
+ <span data-ttu-id="4ef4c-125">`x:Arguments`para un elemento de objeto que se está construyendo debe preceder a los otros elementos de propiedad, el contenido, texto interno o cadenas de inicialización del elemento de objeto.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-125">`x:Arguments` for an object element being constructed must precede any other property elements, content, inner text, or initialization strings of the object element.</span></span> <span data-ttu-id="4ef4c-126">Los elementos de objeto dentro de `x:Arguments` puede incluir atributos y cadenas de inicialización, según lo permitido por ese tipo XAML y su constructor de respaldo para el método de fábrica.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-126">The object elements within `x:Arguments` can include attributes and initialization strings, as permitted by that XAML type and its backing constructor or factory method.</span></span> <span data-ttu-id="4ef4c-127">Para el objeto o los argumentos, puede especificar tipos XAML personalizados o tipos XAML que resulten fuera del espacio de nombres XAML predeterminado haciendo referencia a las asignaciones de prefijo establecido.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-127">For either the object or the arguments, you can specify custom XAML types or XAML types that are otherwise outside the default XAML namespace by referencing established prefix mappings.</span></span>  
   
- Los procesadores XAML usan las siguientes directrices para determinar cómo deben usarse los argumentos especificados en `x:Arguments` para construir un objeto.  Si se especifica `x:FactoryMethod`, la información se compara con el `x:FactoryMethod` especificado \(observe que el valor de `x:FactoryMethod` es el nombre del método y el método con nombre puede tener sobrecargas.  Si no se especifica `x:FactoryMethod`, la información se compara con el conjunto de todas las sobrecargas del constructor público del objeto.  A continuación, la lógica de procesamiento de XAML compara el número de parámetros y selecciona la sobrecarga coincidente.  Si hay más de una coincidencia, el procesador XAML debe comparar los tipos de parámetros en función de los tipos XAML de los elementos de objeto especificados.  Si hay todavía más de una coincidencia, el comportamiento del procesador XAML no está definido.  Si se especifica `x:FactoryMethod` pero el método no se puede resolver, un procesador XAML debe producir una excepción.  
+ <span data-ttu-id="4ef4c-128">Los procesadores XAML usan las siguientes directrices para determinar cómo se especifican los argumentos en `x:Arguments` debe usarse para construir un objeto.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-128">XAML processors use the following guidelines to determine how the arguments specified in `x:Arguments` should be used to construct an object.</span></span> <span data-ttu-id="4ef4c-129">Si `x:FactoryMethod` se especifica, se compara la información a los especificados `x:FactoryMethod` (tenga en cuenta que el valor de `x:FactoryMethod` es el nombre del método y el método con nombre puede tener sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-129">If `x:FactoryMethod` is specified, information is compared to the specified `x:FactoryMethod` (note that the value of `x:FactoryMethod` is the method name, and the named method can have overloads.</span></span> <span data-ttu-id="4ef4c-130">Si `x:FactoryMethod` no se especifica, la información se compara con el conjunto de todas las sobrecargas de constructor público del objeto.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-130">If `x:FactoryMethod` is not specified, information is compared to the set of all public constructor overloads of the object.</span></span> <span data-ttu-id="4ef4c-131">Lógica de procesamiento de XAML, a continuación, compara el número de parámetros y selecciona la sobrecarga con aridad coincidente.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-131">XAML processing logic then compares the number of parameters and selects the overload with matching arity.</span></span> <span data-ttu-id="4ef4c-132">Si hay más de una coincidencia, el procesador XAML debe comparar los tipos de los parámetros en función de los tipos XAML de los elementos de objeto.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-132">If there is more than one match, the XAML processor should compare the types of the parameters based on the XAML types of the provided object elements.</span></span> <span data-ttu-id="4ef4c-133">Si hay todavía más de una coincidencia, el comportamiento del procesador XAML es indefinido.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-133">If there is still more than one match, the XAML processor behavior is undefined.</span></span> <span data-ttu-id="4ef4c-134">Si un `x:FactoryMethod` se especifica, pero el método no se puede resolver, un procesador XAML debe producir una excepción.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-134">If a `x:FactoryMethod` is specified but the method cannot be resolved, a XAML processor should throw an exception.</span></span>  
   
- Un uso de atributos XAML `<x:Arguments>string</x:Arguments>` es técnicamente posible.  Sin embargo, no proporciona ninguna funcionalidad aparte de lo que puede hacerse de otra manera a través del texto y los convertidores de tipos de inicialización, y el uso de esta sintaxis no es la intención del diseño de las características del método generador 2009 de XAML.  
+ <span data-ttu-id="4ef4c-135">Un uso de atributos XAML `<x:Arguments>string</x:Arguments>` es técnicamente posible.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-135">A XAML attribute usage `<x:Arguments>string</x:Arguments>` is technically possible.</span></span> <span data-ttu-id="4ef4c-136">Sin embargo, esto no proporciona ningún capacidades más allá de lo que podría hacer lo contrario a través de los convertidores de texto y el tipo de inicialización, y el uso de esta sintaxis no es la intención de diseño de las características de método de fábrica de XAML 2009.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-136">However, this provides no capabilities beyond what could be done otherwise through initialization text and type converters, and using this syntax is not the design intention of the XAML 2009 factory method features.</span></span>  
   
-## Ejemplos  
- En el ejemplo siguiente se muestra una firma de constructor no predeterminado y, a continuación, el uso de XAML de `x:Arguments` que obtiene acceso a esa firma.  
+## <a name="examples"></a><span data-ttu-id="4ef4c-137">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="4ef4c-137">Examples</span></span>  
+ <span data-ttu-id="4ef4c-138">En el ejemplo siguiente se muestra un constructor no predeterminado, firma y, a continuación, el uso XAML de `x:Arguments` que tiene acceso a esa firma.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-138">The following example shows a non-default constructor signature, then the XAML usage of `x:Arguments` that accesses that signature.</span></span>  
   
 ```csharp  
 public class Food {  
@@ -82,7 +85,7 @@ public class Food {
 }  
 ```  
   
-```  
+```xaml  
 <my:Food>  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -91,7 +94,7 @@ public class Food {
 </my:Food>  
 ```  
   
- En el ejemplo siguiente se muestra una firma de método del generador de destino y, a continuación, el uso de XAML de `x:Arguments` que obtiene acceso a esa firma.  
+ <span data-ttu-id="4ef4c-139">En el ejemplo siguiente se muestra una firma de método de fábrica de destino y, a continuación, el uso XAML de `x:Arguments` que tiene acceso a esa firma.</span><span class="sxs-lookup"><span data-stu-id="4ef4c-139">The following example shows a target factory method signature, then the XAML usage of `x:Arguments` that accesses that signature.</span></span>  
   
 ```csharp  
 public Food TryLookupFood(string name)  
@@ -105,7 +108,7 @@ public Food TryLookupFood(string name)
 }  
 ```  
   
-```  
+```xaml  
 <my:Food x:FactoryMethod="TryLookupFood">  
     <x:Arguments>  
         <x:String>Apple</x:String>  
@@ -113,6 +116,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## Vea también  
- [Defining Custom Types for Use with .NET Framework XAML Services](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)   
- [Información general sobre XAML \(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="4ef4c-140">Vea también</span><span class="sxs-lookup"><span data-stu-id="4ef4c-140">See Also</span></span>  
+ [<span data-ttu-id="4ef4c-141">Definir tipos personalizados para usarlos con los servicios XAML de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4ef4c-141">Defining Custom Types for Use with .NET Framework XAML Services</span></span>](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
+ [<span data-ttu-id="4ef4c-142">Información general sobre XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="4ef4c-142">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

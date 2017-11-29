@@ -1,47 +1,43 @@
 ---
-title: 'Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic) | Documentos de Microsoft'
+title: 'Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)'
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b655d528382bf26137ed7233c762f8bd5df3ce5
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: cd84b8cc9f3c959913b2eac943e7fac16862d4c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)
-En este tutorial se muestra cómo aplicar el enfoque de transformación funcional y LINQ to XML para manipular documentos XML. Los ejemplos de Visual Basic consultan y manipulan información en documento WordprocessingML XML abierto de Office que guarda Microsoft Word.  
+# <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a><span data-ttu-id="89589-102">Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-102">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>
+<span data-ttu-id="89589-103">En este tutorial se muestra cómo aplicar el enfoque de transformación funcional y LINQ to XML para manipular documentos XML.</span><span class="sxs-lookup"><span data-stu-id="89589-103">This tutorial shows how to apply the functional transformational approach and LINQ to XML to manipulate XML documents.</span></span> <span data-ttu-id="89589-104">Los ejemplos de Visual Basic consultan y manipulan información en los documentos WordprocessingML XML abierto de Office que guarda Microsoft Word.</span><span class="sxs-lookup"><span data-stu-id="89589-104">The Visual Basic examples query and manipulate information in Office Open XML WordprocessingML documents that are saved by Microsoft Word.</span></span>  
   
- Para obtener más información, consulte el [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) sitio Web.  
+ <span data-ttu-id="89589-105">Para obtener más información, visite el sitio web [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573).</span><span class="sxs-lookup"><span data-stu-id="89589-105">For more information, see the [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) Web site.</span></span>  
   
-## <a name="in-this-section"></a>En esta sección  
+## <a name="in-this-section"></a><span data-ttu-id="89589-106">En esta sección</span><span class="sxs-lookup"><span data-stu-id="89589-106">In This Section</span></span>  
   
-|Tema|Descripción|  
+|<span data-ttu-id="89589-107">Tema</span><span class="sxs-lookup"><span data-stu-id="89589-107">Topic</span></span>|<span data-ttu-id="89589-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="89589-108">Description</span></span>|  
 |-----------|-----------------|  
-|[Forma de los documentos WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|Proporciona una explicación rápida de los detalles de un documento WordprocessingML.|  
-|[Crear el documento de origen Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|Proporciona instrucciones paso a paso para crear el documento de origen para consultas de este tutorial.|  
-|[Buscar el estilo de párrafo predeterminado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|Muestra una consulta para buscar el nombre del estilo predeterminado para un documento.|  
-|[Recuperar los párrafos y sus estilos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|Muestra una consulta que recupera una recopilación de los párrafos de un documento.|  
-|[Recuperar el texto de los párrafos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|Amplía la consulta anterior para recuperar el texto de cada párrafo.|  
-|[Refactorizar utilizando un método de extensión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|Simplifica el código refactorizando mediante un método de extensión.|  
-|[Refactorizar utilizando una función pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|Simplifica más el código refactorizando mediante una función pura.|  
-|[Proyectar un XML con una forma diferente (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|Completa una transformación XML proyectando XML de una forma diferente que el documento original.|  
-|[Buscar texto en documentos de Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Utiliza las consultas anteriores para buscar en un documento una cadena de texto especificada.|  
-|[Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Proporciona algunos detalles de los documentos WordprocessingML XML abierto de Office.|  
+|[<span data-ttu-id="89589-109">Forma de los documentos WordprocessingML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-109">Shape of WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|<span data-ttu-id="89589-110">Proporciona una explicación rápida de los detalles de un documento WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="89589-110">Provides a quick explanation of details of a WordprocessingML document.</span></span>|  
+|[<span data-ttu-id="89589-111">Crear el documento XML abierto de Office de origen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-111">Creating the Source Office Open XML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|<span data-ttu-id="89589-112">Proporciona instrucciones paso a paso para crear el documento de origen para consultas de este tutorial.</span><span class="sxs-lookup"><span data-stu-id="89589-112">Provides step-by-step instructions to create the source document for queries in this tutorial.</span></span>|  
+|[<span data-ttu-id="89589-113">Buscar el estilo de párrafo predeterminado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-113">Finding the Default Paragraph Style (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)|<span data-ttu-id="89589-114">Muestra una consulta para buscar el nombre del estilo predeterminado para un documento.</span><span class="sxs-lookup"><span data-stu-id="89589-114">Shows a query to find the name of the default style for a document.</span></span>|  
+|[<span data-ttu-id="89589-115">Recuperar los párrafos y sus estilos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-115">Retrieving the Paragraphs and Their Styles (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)|<span data-ttu-id="89589-116">Muestra una consulta que recupera una recopilación de los párrafos de un documento.</span><span class="sxs-lookup"><span data-stu-id="89589-116">Shows a query that retrieves a collection of the paragraphs of a document.</span></span>|  
+|[<span data-ttu-id="89589-117">Recupera el texto de los párrafos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-117">Retrieving the Text of the Paragraphs (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)|<span data-ttu-id="89589-118">Amplía la consulta anterior para recuperar el texto de cada párrafo.</span><span class="sxs-lookup"><span data-stu-id="89589-118">Augments the previous query to retrieve the text of each paragraph.</span></span>|  
+|[<span data-ttu-id="89589-119">Refactorizar utilizando un método de extensión (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-119">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)|<span data-ttu-id="89589-120">Simplifica el código refactorizando mediante un método de extensión.</span><span class="sxs-lookup"><span data-stu-id="89589-120">Simplifies the code by refactoring using an extension method.</span></span>|  
+|[<span data-ttu-id="89589-121">Refactorizar mediante una función pura (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-121">Refactoring Using a Pure Function (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)|<span data-ttu-id="89589-122">Simplifica más el código refactorizando mediante una función pura.</span><span class="sxs-lookup"><span data-stu-id="89589-122">Further simplifies the code by refactoring using a pure function.</span></span>|  
+|[<span data-ttu-id="89589-123">Proyectando XML de una forma diferente (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-123">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)|<span data-ttu-id="89589-124">Completa una transformación XML proyectando XML de una forma diferente que el documento original.</span><span class="sxs-lookup"><span data-stu-id="89589-124">Completes an XML transformation by projecting XML in a different shape than the original document.</span></span>|  
+|[<span data-ttu-id="89589-125">Buscar texto en documentos de Word (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-125">Finding Text in Word Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)|<span data-ttu-id="89589-126">Utiliza las consultas anteriores para buscar en un documento una cadena de texto especificada.</span><span class="sxs-lookup"><span data-stu-id="89589-126">Uses the previous queries to find a specified text string in a document.</span></span>|  
+|[<span data-ttu-id="89589-127">Detalles de Office documentos WordprocessingML XML abierto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-127">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|<span data-ttu-id="89589-128">Proporciona algunos detalles de los documentos WordprocessingML XML abierto de Office.</span><span class="sxs-lookup"><span data-stu-id="89589-128">Provides some details of Office Open XML WordprocessingML documents.</span></span>|  
   
-## <a name="see-also"></a>Vea también  
- [Transformaciones funcionales puras de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)   
- [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+## <a name="see-also"></a><span data-ttu-id="89589-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="89589-129">See Also</span></span>  
+ [<span data-ttu-id="89589-130">Transformaciones funcionales puras de XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-130">Pure Functional Transformations of XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+ [<span data-ttu-id="89589-131">Introducción a las transformaciones funcionales puras (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="89589-131">Introduction to Pure Functional Transformations (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

@@ -1,95 +1,98 @@
 ---
-title: "Escenarios asincr&#243;nicos en los que se usa HTTP, TCP o canalizaciones con nombre | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c697069aad590013ff360eb6ee4cba39468b89d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Escenarios asincr&#243;nicos en los que se usa HTTP, TCP o canalizaciones con nombre
-En este tema se describen las actividades y transferencias para diferentes escenarios asincrónicos de solicitud\-respuesta, con solicitudes de varios subprocesos, utilizando HTTP, TCP o canalización con nombre.  
+# <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="91200-102">Escenarios asincrónicos en los que se usa HTTP, TCP o canalizaciones con nombre</span><span class="sxs-lookup"><span data-stu-id="91200-102">Asynchronous Scenarios using HTTP, TCP, or Named-Pipe</span></span>
+<span data-ttu-id="91200-103">En este tema se describen las actividades y transferencias para diferentes escenarios asincrónicos de solicitud-respuesta, con solicitudes de varios subprocesos, utilizando HTTP, TCP o canalización con nombre.</span><span class="sxs-lookup"><span data-stu-id="91200-103">This topic describes the activities and transfers for different asynchronous request/reply scenarios, with multithreaded requests using HTTP, TCP, or named pipe.</span></span>  
   
-## Solicitud\-respuesta asincrónica sin errores  
- En esta sección se describen las actividades y transferencias para un escenario asincrónico de solicitud\-respuesta válido, con clientes de varios subprocesos.  
+## <a name="asynchronous-requestreply-without-errors"></a><span data-ttu-id="91200-104">Solicitud-respuesta asincrónica sin errores</span><span class="sxs-lookup"><span data-stu-id="91200-104">Asynchronous Request/Reply without Errors</span></span>  
+ <span data-ttu-id="91200-105">En esta sección se describen las actividades y transferencias para un escenario asincrónico de solicitud-respuesta válido, con clientes de varios subprocesos.</span><span class="sxs-lookup"><span data-stu-id="91200-105">This section describes the activities and transfers for an asynchronous request/reply scenario, with multithreaded clients.</span></span>  
   
- La actividad de llamador finaliza cuando `beginCall` vuelve, y `endCall` vuelve.Si se llama a una devolución de llamada, la devolución de llamada vuelve.  
+ <span data-ttu-id="91200-106">La actividad de llamador finaliza cuando `beginCall` vuelve, y `endCall` vuelve.</span><span class="sxs-lookup"><span data-stu-id="91200-106">The caller activity terminates when `beginCall` returns, and `endCall` returns.</span></span> <span data-ttu-id="91200-107">Si se llama a una devolución de llamada, la devolución de llamada vuelve.</span><span class="sxs-lookup"><span data-stu-id="91200-107">If a callback is called, the callback returns.</span></span>  
   
- La actividad llamada finaliza cuando `beginCall` vuelve, `endCall` vuelve o cuando la devolución de llamada vuelve si fue llamada desde esa actividad.  
+ <span data-ttu-id="91200-108">La actividad llamada finaliza cuando `beginCall` vuelve, `endCall` vuelve o cuando la devolución de llamada vuelve si fue llamada desde esa actividad.</span><span class="sxs-lookup"><span data-stu-id="91200-108">The called activity terminates when `beginCall` returns, `endCall` returns, or when the callback returns if it was called from that activity.</span></span>  
   
-### Cliente asincrónico sin devolución de llamada  
+### <a name="asynchronous-client-without-callback"></a><span data-ttu-id="91200-109">Cliente asincrónico sin devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="91200-109">Asynchronous Client without Callback</span></span>  
   
-#### La propagación está habilitada en ambos lados, utilizando HTTP  
- ![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")  
+#### <a name="propagation-is-enabled-on-both-sides-using-http"></a><span data-ttu-id="91200-110">La propagación está habilitada en ambos lados, utilizando HTTP</span><span class="sxs-lookup"><span data-stu-id="91200-110">Propagation is Enabled on Both Sides, using HTTP</span></span>  
+ <span data-ttu-id="91200-111">![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")</span><span class="sxs-lookup"><span data-stu-id="91200-111">![Asynchronous scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/media/asyn1.gif "Asyn1")</span></span>  
   
- Figura 1.Cliente asincrónico, sin devolución de llamada, `propagateActivity`\=`true` en ambos lados, HTTP  
+ <span data-ttu-id="91200-112">Figura 1.</span><span class="sxs-lookup"><span data-stu-id="91200-112">Figure 1.</span></span> <span data-ttu-id="91200-113">Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `true` en ambos lados, HTTP</span><span class="sxs-lookup"><span data-stu-id="91200-113">Asynchronous client, no callback, `propagateActivity`=`true` on both sides, HTTP</span></span>  
   
- Si `propagateActivity`\=`true`, ProcessMessage indica a qué actividad ProcessAction debe transferirse.  
+ <span data-ttu-id="91200-114">Si `propagateActivity` = `true`, ProcessMessage indica a qué actividad processaction debe transferirse a.</span><span class="sxs-lookup"><span data-stu-id="91200-114">If `propagateActivity`=`true`, ProcessMessage indicates which ProcessAction activity to transfer to.</span></span>  
   
- Para los escenarios basados en HTTP, ReceiveBytes se invoca en el primer mensaje para enviar y existe para la duración de la solicitud.  
+ <span data-ttu-id="91200-115">Para los escenarios basados en HTTP, ReceiveBytes se invoca en el primer mensaje para enviar y existe para la duración de la solicitud.</span><span class="sxs-lookup"><span data-stu-id="91200-115">For HTTP-based scenarios, ReceiveBytes is invoked on the first message to send, and exists for the lifetime of the request.</span></span>  
   
-#### La propagación está deshabilitada en cualquier lado, utilizando HTTP  
- Si `propagateActivity`\=`false` en cualquier lado, ProcessMessage no indica a qué actividad ProcessAction debe transferirse.Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id.Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local.La actividad ProcessAction actual se puede transferir a con ese id.  
+#### <a name="propagation-is-disabled-on-either-sides-using-http"></a><span data-ttu-id="91200-116">La propagación está deshabilitada en cualquier lado, utilizando HTTP</span><span class="sxs-lookup"><span data-stu-id="91200-116">Propagation is Disabled on Either Sides, using HTTP</span></span>  
+ <span data-ttu-id="91200-117">Si `propagateActivity` = `false` en cualquier lado, ProcessMessage no indica a qué actividad processaction debe transferirse a.</span><span class="sxs-lookup"><span data-stu-id="91200-117">If `propagateActivity`=`false` on either side, ProcessMessage does not indicate which ProcessAction activity to transfer to.</span></span> <span data-ttu-id="91200-118">Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id.</span><span class="sxs-lookup"><span data-stu-id="91200-118">Therefore, a new temporary ProcessAction activity with a new ID is invoked.</span></span> <span data-ttu-id="91200-119">Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local.</span><span class="sxs-lookup"><span data-stu-id="91200-119">When the asynchronous response is matched to the request in ServiceModel code, the Activity ID can be retrieved from the local context.</span></span> <span data-ttu-id="91200-120">La actividad ProcessAction actual se puede transferir a con ese id.</span><span class="sxs-lookup"><span data-stu-id="91200-120">The actual ProcessAction activity can be transferred to with that ID.</span></span>  
   
- ![Escenarios asincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ <span data-ttu-id="91200-121">![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")</span><span class="sxs-lookup"><span data-stu-id="91200-121">![Asynchronous scenarios using HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")</span></span>  
   
- Figura 2.Cliente asincrónico, sin devolución de llamada, `propagateActivity`\=`false` en cualquier lado, HTTP  
+ <span data-ttu-id="91200-122">Figura 2.</span><span class="sxs-lookup"><span data-stu-id="91200-122">Figure 2.</span></span> <span data-ttu-id="91200-123">Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` a ambos lados, HTTP</span><span class="sxs-lookup"><span data-stu-id="91200-123">Asynchronous client, no callback, `propagateActivity`=`false` on either side, HTTP</span></span>  
   
- Para los escenarios basados en HTTP, ReceiveBytes se invoca en el primer mensaje para enviar y existe para la duración de la solicitud.  
+ <span data-ttu-id="91200-124">Para los escenarios basados en HTTP, ReceiveBytes se invoca en el primer mensaje para enviar y existe para la duración de la solicitud.</span><span class="sxs-lookup"><span data-stu-id="91200-124">For HTTP-based scenarios, ReceiveBytes is invoked on the first message to send, and exists for the lifetime of the request.</span></span>  
   
- Se crea una actividad ActionProcess en un cliente asincrónico cuando `propagateActivity`\=`false` en el llamador o destinatario y cuando el mensaje de respuesta no incluye un encabezado de acción.  
+ <span data-ttu-id="91200-125">Se crea una actividad procesar acción en un cliente asincrónico cuando `propagateActivity` = `false` en el llamador o destinatario, y cuando el mensaje de respuesta no incluye un encabezado de acción.</span><span class="sxs-lookup"><span data-stu-id="91200-125">A Process Action activity is created on an asynchronous client when `propagateActivity`=`false` at the caller or callee, and when the response message does not include an Action header.</span></span>  
   
-#### La propagación está habilitada en ambos lados, utilizando TCP o canalización con nombre  
- ![Escenarios asincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+#### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a><span data-ttu-id="91200-126">La propagación está habilitada en ambos lados, utilizando TCP o canalización con nombre</span><span class="sxs-lookup"><span data-stu-id="91200-126">Propagation is Enabled on Both Sides, using TCP or Named Pipe</span></span>  
+ <span data-ttu-id="91200-127">![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Canalización con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")</span><span class="sxs-lookup"><span data-stu-id="91200-127">![Asynchronous scenarios using HTTP&#47;TCP&#47;Named Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")</span></span>  
   
- Figura 3.Cliente asincrónico, sin devolución de llamada, `propagateActivity`\=`true` en ambos lados, canalización con nombre\/TCP  
+ <span data-ttu-id="91200-128">Figura 3:</span><span class="sxs-lookup"><span data-stu-id="91200-128">Figure 3.</span></span> <span data-ttu-id="91200-129">Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `true` en ambos lados, canalización con nombre/TCP</span><span class="sxs-lookup"><span data-stu-id="91200-129">Asynchronous client, no callback, `propagateActivity`=`true` on both sides, Named-Pipe/TCP</span></span>  
   
- Para una canalización con nombre o escenario basado en TCP, ReceiveBytes se invoca cuando se abre el cliente, y existe para la duración de la conexión.  
+ <span data-ttu-id="91200-130">Para una canalización con nombre o escenario basado en TCP, ReceiveBytes se invoca cuando se abre el cliente, y existe para la duración de la conexión.</span><span class="sxs-lookup"><span data-stu-id="91200-130">For a Named-Pipe or TCP-based scenario, ReceiveBytes is invoked when the client is opened, and exists for the lifetime of the connection.</span></span>  
   
- Similar a la Figura 1, si `propagateActivity`\=`true`, ProcessMessage indica a qué actividad ProcessAction debe transferirse.  
+ <span data-ttu-id="91200-131">Similar a la figura 1, si `propagateActivity` = `true`, ProcessMessage indica a qué actividad processaction debe transferirse a.</span><span class="sxs-lookup"><span data-stu-id="91200-131">Similar to Figure 1, if `propagateActivity`=`true`, ProcessMessage indicates which ProcessAction activity to transfer to.</span></span>  
   
-#### La propagación está deshabilitada en cualquier lado, utilizando TCP o canalización con nombre  
- Para una canalización con nombre o escenario basado en TCP, ReceiveBytes se invoca cuando se abre el cliente, y existe para la duración de la conexión.  
+#### <a name="propagation-is-disabled-on-either-sides-using-tcp-or-named-pipe"></a><span data-ttu-id="91200-132">La propagación está deshabilitada en cualquier lado, utilizando TCP o canalización con nombre</span><span class="sxs-lookup"><span data-stu-id="91200-132">Propagation is Disabled on Either Sides, using TCP or Named Pipe</span></span>  
+ <span data-ttu-id="91200-133">Para una canalización con nombre o escenario basado en TCP, ReceiveBytes se invoca cuando se abre el cliente, y existe para la duración de la conexión.</span><span class="sxs-lookup"><span data-stu-id="91200-133">For a Named-Pipe or TCP-based scenario, ReceiveBytes is invoked when the client is opened, and exists for the lifetime of the connection.</span></span>  
   
- Similar a Fig.2, si `propagateActivity`\=`false` en cualquier lado, ProcessMessage no indica a qué actividad ProcessAction debe transferirse.Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id.Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local.La actividad ProcessAction actual se puede transferir a con ese id.  
+ <span data-ttu-id="91200-134">Similar a Fig.2, si `propagateActivity` = `false` en cualquier lado, ProcessMessage no indica a qué actividad processaction debe transferirse a.</span><span class="sxs-lookup"><span data-stu-id="91200-134">Similar to Fig.2, If `propagateActivity`=`false` on either side, ProcessMessage does not indicate which ProcessAction activity to transfer to.</span></span> <span data-ttu-id="91200-135">Por consiguiente, se invoca una nueva actividad ProcessAction temporal con un nuevo id.</span><span class="sxs-lookup"><span data-stu-id="91200-135">Therefore, a new temporary ProcessAction activity with a new ID is invoked.</span></span> <span data-ttu-id="91200-136">Cuando la respuesta asincrónica coincide con la solicitud en el código ServiceModel, el id. de actividad se puede recuperar del contexto local.</span><span class="sxs-lookup"><span data-stu-id="91200-136">When the asynchronous response is matched to the request in ServiceModel code, the Activity ID can be retrieved from the local context.</span></span> <span data-ttu-id="91200-137">La actividad ProcessAction actual se puede transferir a con ese id.</span><span class="sxs-lookup"><span data-stu-id="91200-137">The actual ProcessAction activity can be transferred to with that ID.</span></span>  
   
- ![Escenarios asincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ <span data-ttu-id="91200-138">![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")</span><span class="sxs-lookup"><span data-stu-id="91200-138">![Asynchronous scenarios using HTTP&#47;TCP&#47; Named Pipes](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")</span></span>  
   
- Figura 4.Cliente asincrónico, sin devolución de llamada, `propagateActivity`\=`false` en cualquier lado, canalización con nombre\/TCP  
+ <span data-ttu-id="91200-139">Figura 4.</span><span class="sxs-lookup"><span data-stu-id="91200-139">Figure 4.</span></span> <span data-ttu-id="91200-140">Cliente asincrónico, sin devolución de llamada, `propagateActivity` = `false` a ambos lados, canalización con nombre/TCP</span><span class="sxs-lookup"><span data-stu-id="91200-140">Asynchronous client, no callback, `propagateActivity`=`false` on either side, Named-Pipe/TCP</span></span>  
   
-### Cliente asincrónico con devolución de llamada  
- Este escenario agrega las actividades G y A', para la devolución de llamada y `endCall`y sus transferencias dentro\/fuera.  
+### <a name="asynchronous-client-with-callback"></a><span data-ttu-id="91200-141">Cliente asincrónico con devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="91200-141">Asynchronous client with Callback</span></span>  
+ <span data-ttu-id="91200-142">Este escenario agrega las actividades G y A', para la devolución de llamada y `endCall`y sus transferencias dentro/fuera.</span><span class="sxs-lookup"><span data-stu-id="91200-142">This scenario adds activities G and A’, for the callback and `endCall`, and their transfers in/out.</span></span>  
   
- Esta sección solo muestra cómo utilizar HTTP con `propragateActivity`\=`true`.Sin embargo, las actividades adicionales y transferencias también se aplican a los otros casos \(es decir, `propagateActivity`\=`false`, utilizando TCP o canalización con nombre\).  
+ <span data-ttu-id="91200-143">Esta sección solo se muestra el uso de HTTP con `propragateActivity` = `true`.</span><span class="sxs-lookup"><span data-stu-id="91200-143">This section only demonstrates using HTTP with `propragateActivity`=`true`.</span></span> <span data-ttu-id="91200-144">Sin embargo, las actividades adicionales y transferencias también se aplican a los otros casos (es decir, `propagateActivity` = `false`, utilizando TCP o canalizaciones con nombre).</span><span class="sxs-lookup"><span data-stu-id="91200-144">However, the additional activities and transfers also apply to the other cases (that is, `propagateActivity`=`false`, using TCP or Named-Pipe).</span></span>  
   
- La devolución de llamada crea una nueva actividad \(G\) cuando el cliente llama al código de usuario para notificar que los resultados están listos.A continuación, el código de usuario llama a `endCall` dentro de la devolución de llamada \(como se muestra en la figura 5\) o fuera de la devolución de llamada \(figura 6\).Puesto que no se sabe desde qué actividad de usuario se está llamando a `endCall`, esta actividad se identifica como `A’`.Es posible que A' puede ser idéntico o diferente de A.  
+ <span data-ttu-id="91200-145">La devolución de llamada crea una nueva actividad (G) cuando el cliente llama al código de usuario para notificar que los resultados están listos.</span><span class="sxs-lookup"><span data-stu-id="91200-145">The callback creates a new activity (G) when the client calls user code to notify that results are ready.</span></span> <span data-ttu-id="91200-146">A continuación, el código de usuario llama a `endCall` dentro de la devolución de llamada (como se muestra en la figura 5) o fuera de la devolución de llamada (figura 6).</span><span class="sxs-lookup"><span data-stu-id="91200-146">User code then calls `endCall` within the callback (as shown in Figure 5) or outside the callback (Figure 6).</span></span> <span data-ttu-id="91200-147">Dado que no se sabe qué actividad de usuario `endCall` se llama desde, esta actividad con la etiqueta `A’`.</span><span class="sxs-lookup"><span data-stu-id="91200-147">Because it is not known which user activity `endCall` is being called from, this activity is labeled `A’`.</span></span> <span data-ttu-id="91200-148">Es posible que A' puede ser idéntico o diferente de A.</span><span class="sxs-lookup"><span data-stu-id="91200-148">It is possible that A’ can be identical to or different from A.</span></span>  
   
- ![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")  
+ <span data-ttu-id="91200-149">![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")</span><span class="sxs-lookup"><span data-stu-id="91200-149">![Asynchronous scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback1.gif "AsyncCallback1")</span></span>  
   
- Figura 5.Cliente asincrónico con devolución de llamada, `endCall` en la devolución de llamada  
+ <span data-ttu-id="91200-150">Figura 5.</span><span class="sxs-lookup"><span data-stu-id="91200-150">Figure 5.</span></span> <span data-ttu-id="91200-151">Cliente asincrónico con devolución de llamada, `endCall` en la devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="91200-151">Asynchronous client with callback, `endCall` in Callback</span></span>  
   
- ![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback2.gif "AsyncCallback2")  
+ <span data-ttu-id="91200-152">![Escenarios asincrónicos](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback2.gif "AsyncCallback2")</span><span class="sxs-lookup"><span data-stu-id="91200-152">![Asynchronous Scenarios](../../../../../docs/framework/wcf/diagnostics/tracing/media/asynccallback2.gif "AsyncCallback2")</span></span>  
   
- Figura 6.Cliente asincrónico con devolución de llamada, `endCall` fuera de la devolución de llamada  
+ <span data-ttu-id="91200-153">Figura 6.</span><span class="sxs-lookup"><span data-stu-id="91200-153">Figure 6.</span></span> <span data-ttu-id="91200-154">Cliente asincrónico con devolución de llamada, `endCall` fuera de la devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="91200-154">Asynchronous client with callback, `endCall` outside of Callback</span></span>  
   
-### Servidor asincrónico con devolución de llamada  
- ![Escenarios asincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+### <a name="asynchronous-server-with-callback"></a><span data-ttu-id="91200-155">Servidor asincrónico con devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="91200-155">Asynchronous Server with Callback</span></span>  
+ <span data-ttu-id="91200-156">![Escenarios asincrónicos mediante HTTP &#47; TCP &#47; Con el nombre &#45; Canalización](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")</span><span class="sxs-lookup"><span data-stu-id="91200-156">![Asynchronous scenarios using HTTP&#47;TCP&#47; Named&#45;Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")</span></span>  
   
- Figura 7.Servidor asincrónico con devolución de llamada  
+ <span data-ttu-id="91200-157">Figura 7.</span><span class="sxs-lookup"><span data-stu-id="91200-157">Figure 7.</span></span> <span data-ttu-id="91200-158">Servidor asincrónico con devolución de llamada</span><span class="sxs-lookup"><span data-stu-id="91200-158">Asynchronous server, with callback</span></span>  
   
- La pila del canal llama al cliente al recibir el mensaje: las trazas para este procesamiento se emiten en la propia actividad ProcessRequest.  
+ <span data-ttu-id="91200-159">La pila del canal llama al cliente al recibir el mensaje: las trazas para este procesamiento se emiten en la propia actividad ProcessRequest.</span><span class="sxs-lookup"><span data-stu-id="91200-159">The channel stack calls back the client on Message Receive: traces for this processing are emitted in the ProcessRequest activity itself.</span></span>  
   
-## Solicitud\-respuesta asincrónica con errores  
- Los errores del mensaje de error se reciben durante `endCall`.De lo contrario, las actividades y transferencias son similares a los escenarios anteriores.  
+## <a name="asynchronous-requestreply-with-errors"></a><span data-ttu-id="91200-160">Solicitud-respuesta asincrónica con errores</span><span class="sxs-lookup"><span data-stu-id="91200-160">Asynchronous Request/Reply with Errors</span></span>  
+ <span data-ttu-id="91200-161">Los errores del mensaje de error se reciben durante `endCall`.</span><span class="sxs-lookup"><span data-stu-id="91200-161">Fault message errors are received during `endCall`.</span></span> <span data-ttu-id="91200-162">De lo contrario, las actividades y transferencias son similares a los escenarios anteriores.</span><span class="sxs-lookup"><span data-stu-id="91200-162">Otherwise, activities and transfers are similar to previous scenarios.</span></span>  
   
-## Unidireccional asincrónico con o sin errores  
- No se devuelve ninguna respuesta o error al cliente.
+## <a name="asynchronous-one-way-with-or-without-errors"></a><span data-ttu-id="91200-163">Unidireccional asincrónico con o sin errores</span><span class="sxs-lookup"><span data-stu-id="91200-163">Asynchronous One-Way with or without Errors</span></span>  
+ <span data-ttu-id="91200-164">No se devuelve ninguna respuesta o error al cliente.</span><span class="sxs-lookup"><span data-stu-id="91200-164">No response or fault is returned to the client.</span></span>

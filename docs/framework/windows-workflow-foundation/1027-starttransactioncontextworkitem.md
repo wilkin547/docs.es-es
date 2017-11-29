@@ -1,40 +1,44 @@
 ---
-title: "1027 - StartTransactionContextWorkItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1027 - StartTransactionContextWorkItem
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 116ae5ec-b9d5-4231-824e-270d00eea7b8
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: be35a4d478f4f2af0921cac942ebb95d6aed38d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 1027 - StartTransactionContextWorkItem
-## Propiedades  
+# <a name="1027---starttransactioncontextworkitem"></a><span data-ttu-id="9b70d-102">1027 - StartTransactionContextWorkItem</span><span class="sxs-lookup"><span data-stu-id="9b70d-102">1027 - StartTransactionContextWorkItem</span></span>
+## <a name="properties"></a><span data-ttu-id="9b70d-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="9b70d-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|Id.|1027|  
-|Palabras clave|WFRuntime|  
-|Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|<span data-ttu-id="9b70d-104">Id.</span><span class="sxs-lookup"><span data-stu-id="9b70d-104">ID</span></span>|<span data-ttu-id="9b70d-105">1027</span><span class="sxs-lookup"><span data-stu-id="9b70d-105">1027</span></span>|  
+|<span data-ttu-id="9b70d-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="9b70d-106">Keywords</span></span>|<span data-ttu-id="9b70d-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="9b70d-107">WFRuntime</span></span>|  
+|<span data-ttu-id="9b70d-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="9b70d-108">Level</span></span>|<span data-ttu-id="9b70d-109">Detallado</span><span class="sxs-lookup"><span data-stu-id="9b70d-109">Verbose</span></span>|  
+|<span data-ttu-id="9b70d-110">Canal</span><span class="sxs-lookup"><span data-stu-id="9b70d-110">Channel</span></span>|<span data-ttu-id="9b70d-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="9b70d-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## Descripción  
- Indica que un TransactionContextWorkItem está iniciando la ejecución.  
+## <a name="description"></a><span data-ttu-id="9b70d-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="9b70d-112">Description</span></span>  
+ <span data-ttu-id="9b70d-113">Indica que un TransactionContextWorkItem está iniciando la ejecución.</span><span class="sxs-lookup"><span data-stu-id="9b70d-113">Indicates a TransactionContextWorkItem is starting execution.</span></span>  
   
-## Mensaje  
- Iniciando la ejecución de un TransactionContextWorkItem para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  
+## <a name="message"></a><span data-ttu-id="9b70d-114">Mensaje</span><span class="sxs-lookup"><span data-stu-id="9b70d-114">Message</span></span>  
+ <span data-ttu-id="9b70d-115">Iniciando la ejecución de un TransactionContextWorkItem para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.</span><span class="sxs-lookup"><span data-stu-id="9b70d-115">Starting execution of a TransactionContextWorkItem for Activity '%1', DisplayName: '%2', InstanceId: '%3'.</span></span>  
   
-## Detalles  
+## <a name="details"></a><span data-ttu-id="9b70d-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="9b70d-116">Details</span></span>  
   
-|Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
-|----------------------------------|--------------------------------|-----------------|  
-|Actividad|xs:string|El nombre de tipo de la actividad.|  
-|DisplayName|xs:string|El nombre para mostrar de la actividad.|  
-|InstanceId|xs:string|La identificación de instancia de la actividad.|  
-|AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|
+|<span data-ttu-id="9b70d-117">Nombre del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="9b70d-117">Data Item Name</span></span>|<span data-ttu-id="9b70d-118">Tipo del elemento de datos</span><span class="sxs-lookup"><span data-stu-id="9b70d-118">Data Item Type</span></span>|<span data-ttu-id="9b70d-119">Descripción</span><span class="sxs-lookup"><span data-stu-id="9b70d-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="9b70d-120">Actividad</span><span class="sxs-lookup"><span data-stu-id="9b70d-120">Activity</span></span>|<span data-ttu-id="9b70d-121">xs:string</span><span class="sxs-lookup"><span data-stu-id="9b70d-121">xs:string</span></span>|<span data-ttu-id="9b70d-122">El nombre de tipo de la actividad.</span><span class="sxs-lookup"><span data-stu-id="9b70d-122">The type name of the activity.</span></span>|  
+|<span data-ttu-id="9b70d-123">DisplayName</span><span class="sxs-lookup"><span data-stu-id="9b70d-123">DisplayName</span></span>|<span data-ttu-id="9b70d-124">xs:string</span><span class="sxs-lookup"><span data-stu-id="9b70d-124">xs:string</span></span>|<span data-ttu-id="9b70d-125">El nombre para mostrar de la actividad.</span><span class="sxs-lookup"><span data-stu-id="9b70d-125">The display name of the activity.</span></span>|  
+|<span data-ttu-id="9b70d-126">InstanceId</span><span class="sxs-lookup"><span data-stu-id="9b70d-126">InstanceId</span></span>|<span data-ttu-id="9b70d-127">xs:string</span><span class="sxs-lookup"><span data-stu-id="9b70d-127">xs:string</span></span>|<span data-ttu-id="9b70d-128">La identificación de instancia de la actividad.</span><span class="sxs-lookup"><span data-stu-id="9b70d-128">The instance id of the activity.</span></span>|  
+|<span data-ttu-id="9b70d-129">AppDomain</span><span class="sxs-lookup"><span data-stu-id="9b70d-129">AppDomain</span></span>|<span data-ttu-id="9b70d-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="9b70d-130">xs:string</span></span>|<span data-ttu-id="9b70d-131">La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="9b70d-131">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

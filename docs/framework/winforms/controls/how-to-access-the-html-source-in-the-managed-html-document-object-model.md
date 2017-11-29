@@ -1,56 +1,60 @@
 ---
-title: "C&#243;mo: Obtener acceso al c&#243;digo fuente HTML en el Modelo de objetos de documento HTML administrado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "HTML, obtener acceso a Windows Forms"
-  - "DOM HTML administrado"
+title: "Cómo: Obtener acceso al código fuente HTML en el Modelo de objetos de documento HTML administrado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- managed HTML DOM
+- HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ef9839029e1c60cbc0d713e8982baa5708a281f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Obtener acceso al c&#243;digo fuente HTML en el Modelo de objetos de documento HTML administrado
-Las propiedades <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> y <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> del control <xref:System.Windows.Forms.WebBrowser> devuelven el HTML del documento actual tal y como existía cuando se mostró por primera vez.  Sin embargo, si modifica la página usando llamadas a métodos y propiedades, como <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> y <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, estos cambios no aparecerán cuando llame a <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> y <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>.  Para obtener el código fuente HTML más actualizado para el DOM, debe llamar a la propiedad <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> del elemento HTML.  
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a><span data-ttu-id="6e300-102">Cómo: Obtener acceso al código fuente HTML en el Modelo de objetos de documento HTML administrado</span><span class="sxs-lookup"><span data-stu-id="6e300-102">How to: Access the HTML Source in the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="6e300-103">Las propiedades <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> y <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> del control <xref:System.Windows.Forms.WebBrowser> devuelven el HTML del documento actual tal y como existía cuando se mostró por primera vez.</span><span class="sxs-lookup"><span data-stu-id="6e300-103">The <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> and <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> properties on the <xref:System.Windows.Forms.WebBrowser> control return the HTML of the current document as it existed when it was first displayed.</span></span> <span data-ttu-id="6e300-104">Sin embargo, si modifica la página usando llamadas a métodos y propiedades, como <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> y <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, estos cambios no aparecerán cuando llame a <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> y <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>.</span><span class="sxs-lookup"><span data-stu-id="6e300-104">However, if you modify the page using method and property calls such as <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> and <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, these changes will not appear when you call <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> and <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>.</span></span> <span data-ttu-id="6e300-105">Para obtener el código fuente HTML más actualizado para el DOM, debe llamar a la propiedad <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> del elemento HTML.</span><span class="sxs-lookup"><span data-stu-id="6e300-105">To obtain the most up-to-date HTML source for the DOM, you must call the <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> property on the HTML element.</span></span>  
   
- El procedimiento siguiente muestra cómo recuperar el código fuente dinámico y mostrarlo en un menú contextual diferente.  
+ <span data-ttu-id="6e300-106">El procedimiento siguiente muestra cómo recuperar el código fuente dinámico y mostrarlo en un menú contextual diferente.</span><span class="sxs-lookup"><span data-stu-id="6e300-106">The following procedure shows how to retrieve the dynamic source and display it in a separate shortcut menu.</span></span>  
   
-### Recuperar el código fuente dinámico con la propiedad OuterHtml  
+### <a name="retrieving-the-dynamic-source-with-the-outerhtml-property"></a><span data-ttu-id="6e300-107">Recuperar el código fuente dinámico con la propiedad OuterHtml</span><span class="sxs-lookup"><span data-stu-id="6e300-107">Retrieving the dynamic source with the OuterHtml property</span></span>  
   
-1.  Cree una nueva aplicación de Windows Forms.  Comience con un solo <xref:System.Windows.Forms.Form> y asígnele el nombre `Form1`.  
+1.  <span data-ttu-id="6e300-108">Cree una nueva aplicación de Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6e300-108">Create a new Windows Forms application.</span></span> <span data-ttu-id="6e300-109">Comience con un solo <xref:System.Windows.Forms.Form>y llámelo `Form1`.</span><span class="sxs-lookup"><span data-stu-id="6e300-109">Start with a single <xref:System.Windows.Forms.Form>, and call it `Form1`.</span></span>  
   
-2.  Hospede el control <xref:System.Windows.Forms.WebBrowser> en su aplicación de Windows Forms y asígnele el nombre `WebBrowser1`.  Para obtener más información, vea [Cómo: Agregar funciones de explorador Web a una aplicación de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
+2.  <span data-ttu-id="6e300-110">Host de la <xref:System.Windows.Forms.WebBrowser> controlar en su aplicación de Windows Forms y asígnele el nombre `WebBrowser1`.</span><span class="sxs-lookup"><span data-stu-id="6e300-110">Host the <xref:System.Windows.Forms.WebBrowser> control in your Windows Forms application, and name it `WebBrowser1`.</span></span> <span data-ttu-id="6e300-111">Para obtener más información, consulte [Cómo: agregar funciones de explorador Web a una aplicación de Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).</span><span class="sxs-lookup"><span data-stu-id="6e300-111">For more information, see [How to: Add Web Browser Capabilities to a Windows Forms Application](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).</span></span>  
   
-3.  Cree un segundo <xref:System.Windows.Forms.Form> en su aplicación llamado `CodeForm`.  
+3.  <span data-ttu-id="6e300-112">Cree un segundo <xref:System.Windows.Forms.Form> en su aplicación llamado `CodeForm`.</span><span class="sxs-lookup"><span data-stu-id="6e300-112">Create a second <xref:System.Windows.Forms.Form> in your application called `CodeForm`.</span></span>  
   
-4.  Agregue un control <xref:System.Windows.Forms.RichTextBox> a `CodeForm` y establezca su propiedad <xref:System.Windows.Forms.Control.Dock%2A> en `Fill`.  
+4.  <span data-ttu-id="6e300-113">Agregar un <xref:System.Windows.Forms.RichTextBox> el control a `CodeForm` y establecer su <xref:System.Windows.Forms.Control.Dock%2A> propiedad `Fill`.</span><span class="sxs-lookup"><span data-stu-id="6e300-113">Add a <xref:System.Windows.Forms.RichTextBox> control to `CodeForm` and set its <xref:System.Windows.Forms.Control.Dock%2A> property to `Fill`.</span></span>  
   
-5.  Cree una propiedad pública en `CodeForm` llamada `Code`.  
+5.  <span data-ttu-id="6e300-114">Cree una propiedad pública en `CodeForm` denominado `Code`.</span><span class="sxs-lookup"><span data-stu-id="6e300-114">Create a public property on `CodeForm` called `Code`.</span></span>  
   
      [!code-csharp[DisplayWebBrowserCode#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/CodeForm.cs#1)]
      [!code-vb[DisplayWebBrowserCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/CodeForm.vb#1)]  
   
-6.  Agregue un control <xref:System.Windows.Forms.Button> llamado `Button1` al <xref:System.Windows.Forms.Form> y supervise el evento <xref:System.Windows.Forms.Control.Click>.  Para obtener información sobre cómo supervisar eventos, vea [Eventos](../../../../docs/standard/events/index.md).  
+6.  <span data-ttu-id="6e300-115">Agregar un <xref:System.Windows.Forms.Button> control denominado `Button1` a su <xref:System.Windows.Forms.Form>y supervise la <xref:System.Windows.Forms.Control.Click> eventos.</span><span class="sxs-lookup"><span data-stu-id="6e300-115">Add a <xref:System.Windows.Forms.Button> control named `Button1` to your <xref:System.Windows.Forms.Form>, and monitor for the <xref:System.Windows.Forms.Control.Click> event.</span></span> <span data-ttu-id="6e300-116">Para obtener más información sobre cómo supervisar eventos, vea [eventos](../../../../docs/standard/events/index.md).</span><span class="sxs-lookup"><span data-stu-id="6e300-116">For details on monitoring events, see [Events](../../../../docs/standard/events/index.md).</span></span>  
   
-7.  Agregue el código siguiente al controlador de eventos <xref:System.Windows.Forms.Control.Click>.  
+7.  <span data-ttu-id="6e300-117">Agregue el código siguiente al controlador de eventos <xref:System.Windows.Forms.Control.Click>.</span><span class="sxs-lookup"><span data-stu-id="6e300-117">Add the following code to the <xref:System.Windows.Forms.Control.Click> event handler.</span></span>  
   
      [!code-csharp[DisplayWebBrowserCode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/Form1.cs#2)]
      [!code-vb[DisplayWebBrowserCode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/Form1.vb#2)]  
   
-## Programación eficaz  
- Pruebe siempre el valor de <xref:System.Windows.Forms.WebBrowser.Document%2A> antes de intentar recuperarlo.  Si la página actual no termina de cargarse, puede que <xref:System.Windows.Forms.WebBrowser.Document%2A> o alguno de sus objetos secundarios no se haya inicializado.  
+## <a name="robust-programming"></a><span data-ttu-id="6e300-118">Programación sólida</span><span class="sxs-lookup"><span data-stu-id="6e300-118">Robust Programming</span></span>  
+ <span data-ttu-id="6e300-119">Pruebe siempre el valor de <xref:System.Windows.Forms.WebBrowser.Document%2A> antes de intentar recuperarlo.</span><span class="sxs-lookup"><span data-stu-id="6e300-119">Always test the value of <xref:System.Windows.Forms.WebBrowser.Document%2A> before attempting to retrieve it.</span></span> <span data-ttu-id="6e300-120">Si la página actual no termina de cargarse, puede que <xref:System.Windows.Forms.WebBrowser.Document%2A> o alguno de sus objetos secundarios no se haya inicializado.</span><span class="sxs-lookup"><span data-stu-id="6e300-120">If the current page is not finished loading, <xref:System.Windows.Forms.WebBrowser.Document%2A> or one or more of its child objects may not be initialized.</span></span>  
   
-## Vea también  
- [Utilizar el Modelo de objetos de documento HTML administrado](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)   
- [Información general sobre el control WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6e300-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="6e300-121">See Also</span></span>  
+ [<span data-ttu-id="6e300-122">Utilizar el Modelo de objetos de documento HTML administrado</span><span class="sxs-lookup"><span data-stu-id="6e300-122">Using the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ [<span data-ttu-id="6e300-123">Información general sobre el control WebBrowser</span><span class="sxs-lookup"><span data-stu-id="6e300-123">WebBrowser Control Overview</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)

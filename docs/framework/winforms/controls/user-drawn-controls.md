@@ -1,95 +1,96 @@
 ---
-title: "Controles dibujados por el usuario | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles personalizados [Windows Forms], dibujados por el usuario"
-  - "OnPaint (método) [Windows Forms]"
-  - "controles dibujados por el usuario [Windows Forms]"
+title: Controles dibujados por el usuario
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], user-drawn
+- OnPaint method [Windows Forms]
+- user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42f208d10b1c111f98af3c803148590466baddf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Controles dibujados por el usuario
-Gracias a .NET Framework podrá programar fácilmente controles propios.  Puede crear un control de usuario, que es un conjunto de controles estándar enlazados mediante código, o bien diseñar un control propio desde el principio.  Es posible, incluso, utilizar la herencia para crear un control que herede de un control existente y hacer adiciones a su funcionalidad inherente.  Independientemente del método que se utilice, .NET Framework proporciona la funcionalidad necesaria para dibujar una interfaz gráfica personalizada para cualquier control que se cree.  
+# <a name="user-drawn-controls"></a><span data-ttu-id="5ed05-102">Controles dibujados por el usuario</span><span class="sxs-lookup"><span data-stu-id="5ed05-102">User-Drawn Controls</span></span>
+<span data-ttu-id="5ed05-103">.NET Framework proporciona la capacidad de desarrollar fácilmente sus propios controles.</span><span class="sxs-lookup"><span data-stu-id="5ed05-103">The .NET Framework provides you with the ability to easily develop your own controls.</span></span> <span data-ttu-id="5ed05-104">Puede crear un control de usuario, que es un conjunto de controles estándar Unidos mediante código, o puede diseñar su propio control desde el principio de seguridad.</span><span class="sxs-lookup"><span data-stu-id="5ed05-104">You can create a user control, which is a set of standard controls bound together by code, or you can design your own control from the ground up.</span></span> <span data-ttu-id="5ed05-105">Incluso puede usar la herencia para crear un control que hereda de un control existente y agregar a su funcionalidad inherente.</span><span class="sxs-lookup"><span data-stu-id="5ed05-105">You can even use inheritance to create a control that inherits from an existing control and add to its inherent functionality.</span></span> <span data-ttu-id="5ed05-106">Independientemente del método que utilice, .NET Framework proporciona la funcionalidad necesaria para dibujar una interfaz gráfica personalizada para cualquier control que cree.</span><span class="sxs-lookup"><span data-stu-id="5ed05-106">Whatever approach you use, the .NET Framework provides the functionality to draw a custom graphical interface for any control you create.</span></span>  
   
- La representación de un control se realiza mediante la ejecución del código del método <xref:System.Windows.Forms.Control.OnPaint%2A> del control.  El único argumento del método <xref:System.Windows.Forms.Control.OnPaint%2A> es un objeto <xref:System.Windows.Forms.PaintEventArgs> que proporciona toda la información y la funcionalidad necesarias para representar el control.  El objeto <xref:System.Windows.Forms.PaintEventArgs> proporciona, en forma de propiedades, dos objetos principales que se utilizarán para la representación del control:  
+ <span data-ttu-id="5ed05-107">Representación de un control se realiza mediante la ejecución de código en el control <xref:System.Windows.Forms.Control.OnPaint%2A> método.</span><span class="sxs-lookup"><span data-stu-id="5ed05-107">Painting of a control is accomplished by the execution of code in the control's <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="5ed05-108">El único argumento de la <xref:System.Windows.Forms.Control.OnPaint%2A> método es un <xref:System.Windows.Forms.PaintEventArgs> objeto que proporciona toda la información y la funcionalidad necesaria para representar el control.</span><span class="sxs-lookup"><span data-stu-id="5ed05-108">The single argument of the <xref:System.Windows.Forms.Control.OnPaint%2A> method is a <xref:System.Windows.Forms.PaintEventArgs> object that provides all of the information and functionality required to render your control.</span></span> <span data-ttu-id="5ed05-109">El <xref:System.Windows.Forms.PaintEventArgs> proporciona como propiedades de dos objetos principales que se utilizarán en la representación del control:</span><span class="sxs-lookup"><span data-stu-id="5ed05-109">The <xref:System.Windows.Forms.PaintEventArgs> provides as properties two principal objects that will be used in the rendering of your control:</span></span>  
   
--   Objeto <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>: rectángulo que representa la parte del control que se dibujará.  Puede ser el control entero o parte del mismo, dependiendo de cómo se dibuje el control.  
+-   <span data-ttu-id="5ed05-110"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>objeto: el rectángulo que representa la parte del control que se va a dibujar.</span><span class="sxs-lookup"><span data-stu-id="5ed05-110"><xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> object - the rectangle that represents the part of the control that will be drawn.</span></span> <span data-ttu-id="5ed05-111">Esto puede ser todo el control, o parte del control dependiendo de cómo se dibujará el control.</span><span class="sxs-lookup"><span data-stu-id="5ed05-111">This can be the entire control, or part of the control depending on how the control is drawn.</span></span>  
   
--   Objeto <xref:System.Drawing.Graphics>: encapsula varios objetos y métodos orientados a gráficos que proporcionan la funcionalidad necesaria para dibujar el control.  
+-   <span data-ttu-id="5ed05-112"><xref:System.Drawing.Graphics>objeto: encapsula varios gráficos y orientada a objetos y métodos que proporcionan la funcionalidad necesaria para dibujar el control.</span><span class="sxs-lookup"><span data-stu-id="5ed05-112"><xref:System.Drawing.Graphics> object - encapsulates several graphics-oriented objects and methods that provide the functionality necessary to draw your control.</span></span>  
   
- Para obtener más información acerca del objeto <xref:System.Drawing.Graphics> y cómo utilizarlo, vea [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ <span data-ttu-id="5ed05-113">Para obtener más información sobre la <xref:System.Drawing.Graphics> objeto y cómo utilizarlo, vea [Cómo: crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span><span class="sxs-lookup"><span data-stu-id="5ed05-113">For more information on the <xref:System.Drawing.Graphics> object and how to use it, see [How to: Create Graphics Objects for Drawing](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).</span></span>  
   
- El evento <xref:System.Windows.Forms.Control.OnPaint%2A> se inicia cada vez que se dibuja o se actualiza el control en la pantalla, y el objeto <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> representa el rectángulo en el que tendrá lugar el proceso de dibujo.  Si es necesario actualizar todo el control, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> representará el tamaño del control entero.  En cambio, si sólo es necesario actualizar parte del control, el objeto <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> representará únicamente la región que se debe dibujar de nuevo.  Un ejemplo sería cuando un control se ve oscurecido parcialmente por otro control o formulario en la interfaz de usuario.  
+ <span data-ttu-id="5ed05-114">El <xref:System.Windows.Forms.Control.OnPaint%2A> evento se desencadena siempre que el control se dibuja o se actualiza en la pantalla y la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> objeto representa el rectángulo en el que llevará a cabo dibujo.</span><span class="sxs-lookup"><span data-stu-id="5ed05-114">The <xref:System.Windows.Forms.Control.OnPaint%2A> event is fired whenever the control is drawn or refreshed on the screen, and the <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> object represents the rectangle in which painting will take place.</span></span> <span data-ttu-id="5ed05-115">Si todo el control tiene que actualizarse, la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> representará el tamaño de todo el control.</span><span class="sxs-lookup"><span data-stu-id="5ed05-115">If the entire control needs to be refreshed, the <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> will represent the size of the entire control.</span></span> <span data-ttu-id="5ed05-116">Si sólo parte del control debe actualizarse, sin embargo, la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> objeto representará únicamente la región que se debe volver a dibujar.</span><span class="sxs-lookup"><span data-stu-id="5ed05-116">If only part of the control needs to be refreshed, however, the <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> object will represent only the region that needs to be redrawn.</span></span> <span data-ttu-id="5ed05-117">Un ejemplo de este caso sería cuando un control se oculta parcialmente por otro control o formulario en la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="5ed05-117">An example of such a case would be when a control was partially obscured by another control or form in the user interface.</span></span>  
   
- Cuando herede de la clase <xref:System.Windows.Forms.Control>, deberá reemplazar el método <xref:System.Windows.Forms.Control.OnPaint%2A> y proporcionar en él código de representación gráfica.  Si desea proporcionar una interfaz gráfica personalizada para un control de usuario o un control heredado, reemplace el método <xref:System.Windows.Forms.Control.OnPaint%2A>.  A continuación se muestra un ejemplo:  
+ <span data-ttu-id="5ed05-118">Al heredar de la <xref:System.Windows.Forms.Control> (clase), es necesario reemplazar el <xref:System.Windows.Forms.Control.OnPaint%2A> método y se proporciona código de representación de gráficos en.</span><span class="sxs-lookup"><span data-stu-id="5ed05-118">When inheriting from the <xref:System.Windows.Forms.Control> class, you must override the <xref:System.Windows.Forms.Control.OnPaint%2A> method and provide graphics-rendering code within.</span></span> <span data-ttu-id="5ed05-119">Si desea proporcionar una interfaz gráfica personalizada para un control de usuario o un control heredado, puede hacerlo mediante la invalidación del <xref:System.Windows.Forms.Control.OnPaint%2A> método.</span><span class="sxs-lookup"><span data-stu-id="5ed05-119">If you want to provide a custom graphical interface to a user control or an inherited control, you can also do so by overriding the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span> <span data-ttu-id="5ed05-120">A continuación se muestra un ejemplo:</span><span class="sxs-lookup"><span data-stu-id="5ed05-120">An example is shown below:</span></span>  
   
 ```vb  
-Protected Overrides Sub OnPaint(ByVal pe As PaintEventArgs)  
+Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
    ' Call the OnPaint method of the base class.  
-   MyBase.OnPaint(pe)  
+   MyBase.OnPaint(e)  
   
    ' Declare and instantiate a drawing pen.  
-   Dim myPen As System.Drawing.Pen = New System.Drawing.Pen(Color.Aqua)  
-  
-   ' Draw an aqua rectangle in the rectangle represented by the control.  
-   pe.Graphics.DrawRectangle(myPen, New Rectangle(Me.Location, Me.Size))  
+   Using myPen As System.Drawing.Pen = New System.Drawing.Pen(Color.Aqua)  
+      ' Draw an aqua rectangle in the rectangle represented by the control.  
+      e.Graphics.DrawRectangle(myPen, New Rectangle(Me.Location, Me.Size))  
+   End Using
 End Sub  
-  
 ```  
   
 ```csharp  
-protected override void OnPaint(PaintEventArgs pe)  
+protected override void OnPaint(PaintEventArgs e)  
 {  
    // Call the OnPaint method of the base class.  
-   base.OnPaint(pe);  
+   base.OnPaint(e);  
   
    // Declare and instantiate a new pen.  
-   System.Drawing.Pen myPen = new System.Drawing.Pen(Color.Aqua);  
-  
-   // Draw an aqua rectangle in the rectangle represented by the control.  
-   pe.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,   
-      this.Size));  
+   using (System.Drawing.Pen myPen = new System.Drawing.Pen(Color.Aqua))  
+   {
+      // Draw an aqua rectangle in the rectangle represented by the control.  
+      e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,   
+         this.Size));  
+   }
 }  
-  
 ```  
   
- El ejemplo anterior muestra cómo dibujar un control con una representación gráfica muy sencilla.  Llama al método <xref:System.Windows.Forms.Control.OnPaint%2A> de la clase base, crea un objeto <xref:System.Drawing.Pen> para dibujar y, finalmente, dibuja una elipse en el rectángulo determinada por los parámetros <xref:System.Windows.Forms.Control.Location%2A> y <xref:System.Windows.Forms.Control.Size%2A> del control.  Aunque la mayor parte del código de representación será significativamente más complicada que éste, este ejemplo muestra el uso del objeto <xref:System.Drawing.Graphics> contenido en el objeto <xref:System.Windows.Forms.PaintEventArgs>.  Observe que, si está heredando de una clase que ya tiene una representación gráfica, como, por ejemplo, <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Button> y no desea incorporar esa representación en la propia, no deberá llamar al método <xref:System.Windows.Forms.Control.OnPaint%2A> de la clase base.  
+ <span data-ttu-id="5ed05-121">En el ejemplo anterior se muestra cómo representar un control con una representación gráfica muy sencilla.</span><span class="sxs-lookup"><span data-stu-id="5ed05-121">The preceding example demonstrates how to render a control with a very simple graphical representation.</span></span> <span data-ttu-id="5ed05-122">Lo llama el <xref:System.Windows.Forms.Control.OnPaint%2A> método de la clase base, crea un <xref:System.Drawing.Pen> objeto con el que se va a dibujar y, por último, dibuja una elipse en el rectángulo determinada por la <xref:System.Windows.Forms.Control.Location%2A> y <xref:System.Windows.Forms.Control.Size%2A> del control.</span><span class="sxs-lookup"><span data-stu-id="5ed05-122">It calls the <xref:System.Windows.Forms.Control.OnPaint%2A> method of the base class, it creates a <xref:System.Drawing.Pen> object with which to draw, and finally draws an ellipse in the rectangle determined by the <xref:System.Windows.Forms.Control.Location%2A> and <xref:System.Windows.Forms.Control.Size%2A> of the control.</span></span> <span data-ttu-id="5ed05-123">Aunque la mayoría del código de representación será significativamente más complicada que éste, este ejemplo muestra el uso de la <xref:System.Drawing.Graphics> objeto dentro de la <xref:System.Windows.Forms.PaintEventArgs> objeto.</span><span class="sxs-lookup"><span data-stu-id="5ed05-123">Although most rendering code will be significantly more complicated than this, this example demonstrates the use of the <xref:System.Drawing.Graphics> object contained within the <xref:System.Windows.Forms.PaintEventArgs> object.</span></span> <span data-ttu-id="5ed05-124">Tenga en cuenta que si se hereda de una clase que ya tiene una representación gráfica, como <xref:System.Windows.Forms.UserControl> o <xref:System.Windows.Forms.Button>y no desea incorporar esa representación en la propia, no debería llamar a la clase base <xref:System.Windows.Forms.Control.OnPaint%2A> método.</span><span class="sxs-lookup"><span data-stu-id="5ed05-124">Note that if you are inheriting from a class that already has a graphical representation, such as <xref:System.Windows.Forms.UserControl> or <xref:System.Windows.Forms.Button>, and you do not wish to incorporate that representation into your rendering, you should not call your base class's <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
- El código del método <xref:System.Windows.Forms.Control.OnPaint%2A> del control se ejecutará cuando el control se dibuje por primera vez y siempre que se actualice.  Para asegurarse de que el control se dibuje de nuevo cada vez que cambie de tamaño, agregue la línea siguiente al constructor del control:  
+ <span data-ttu-id="5ed05-125">El código en el <xref:System.Windows.Forms.Control.OnPaint%2A> método del control se ejecutará cuando el control se dibuja primero y siempre que se actualice.</span><span class="sxs-lookup"><span data-stu-id="5ed05-125">The code in the <xref:System.Windows.Forms.Control.OnPaint%2A> method of your control will execute when the control is first drawn, and whenever it is refreshed.</span></span> <span data-ttu-id="5ed05-126">Para asegurarse de que el control vuelve a dibujarse cada vez se cambia el tamaño, agregue la línea siguiente al constructor del control:</span><span class="sxs-lookup"><span data-stu-id="5ed05-126">To ensure that your control is redrawn every time it is resized, add the following line to the constructor of your control:</span></span>  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
-  
 ```  
   
 ```csharp  
 SetStyle(ControlStyles.ResizeRedraw, true);  
-  
 ```  
   
 > [!NOTE]
->  Utilice la propiedad <xref:System.Windows.Forms.Control.Region%2A?displayProperty=fullName> para implementar un control no rectangular.  
+>  <span data-ttu-id="5ed05-127">Use la <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> propiedad que se va a implementar un control no rectangular.</span><span class="sxs-lookup"><span data-stu-id="5ed05-127">Use the <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> property to implement a non-rectangular control.</span></span>  
   
-## Vea también  
- <xref:System.Windows.Forms.Control.Region%2A>   
- <xref:System.Windows.Forms.ControlStyles>   
- <xref:System.Drawing.Graphics>   
- <xref:System.Windows.Forms.Control.OnPaint%2A>   
- <xref:System.Windows.Forms.PaintEventArgs>   
- [Cómo: Crear objetos Graphics para dibujar](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)   
- [Controles constituyentes](../../../../docs/framework/winforms/controls/constituent-controls.md)   
- [Variedades de controles personalizados](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a><span data-ttu-id="5ed05-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="5ed05-128">See Also</span></span>  
+ <xref:System.Windows.Forms.Control.Region%2A>  
+ <xref:System.Windows.Forms.ControlStyles>  
+ <xref:System.Drawing.Graphics>  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>  
+ <xref:System.Windows.Forms.PaintEventArgs>  
+ [<span data-ttu-id="5ed05-129">Crear objetos Graphics para dibujar</span><span class="sxs-lookup"><span data-stu-id="5ed05-129">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [<span data-ttu-id="5ed05-130">Controles constituyentes</span><span class="sxs-lookup"><span data-stu-id="5ed05-130">Constituent Controls</span></span>](../../../../docs/framework/winforms/controls/constituent-controls.md)  
+ [<span data-ttu-id="5ed05-131">Variedades de controles personalizados</span><span class="sxs-lookup"><span data-stu-id="5ed05-131">Varieties of Custom Controls</span></span>](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

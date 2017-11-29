@@ -1,44 +1,50 @@
 ---
-title: "C&#243;mo: Geometr&#237;a de una prueba de seguimiento en un objeto visual | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Geometry (objetos), objetos visuales que incluyen"
-  - "prueba de visitas, en objetos visuales que incluyen objetos de geometría"
-  - "objetos visuales, pruebas de posicionamiento en"
+title: "Cómo: Geometría de una prueba de seguimiento en un objeto visual"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hit tests [WPF], on visual objects comprising Geometry objects [WPF]
+- visual objects [WPF], hit tests on
+- Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ab125fe4031b5408eb202f21ce0fdf4314781f1a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Geometr&#237;a de una prueba de seguimiento en un objeto visual
-En este ejemplo se muestra cómo realizar una [prueba de posicionamiento](GTMT) en un objeto visual compuesto de uno o más objetos <xref:System.Windows.Media.Geometry>.  
+# <a name="how-to-hit-test-geometry-in-a-visual"></a><span data-ttu-id="eecfb-102">Cómo: Geometría de una prueba de seguimiento en un objeto visual</span><span class="sxs-lookup"><span data-stu-id="eecfb-102">How to: Hit Test Geometry in a Visual</span></span>
+<span data-ttu-id="eecfb-103">Este ejemplo muestra cómo realizar una prueba de posicionamiento en un objeto visual que se compone de uno o varios <xref:System.Windows.Media.Geometry> objetos.</span><span class="sxs-lookup"><span data-stu-id="eecfb-103">This example shows how to perform a hit test on a visual object that is composed of one or more <xref:System.Windows.Media.Geometry> objects.</span></span>  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo recuperar <xref:System.Windows.Media.DrawingGroup> de un objeto visual que utiliza el método <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A>.  A continuación, se realiza una prueba de posicionamiento en el contenido representado de cada dibujo de <xref:System.Windows.Media.DrawingGroup> para determinar a qué geometría se obtuvo acceso.  
+## <a name="example"></a><span data-ttu-id="eecfb-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="eecfb-104">Example</span></span>  
+ <span data-ttu-id="eecfb-105">En el ejemplo siguiente se muestra cómo recuperar el <xref:System.Windows.Media.DrawingGroup> desde un objeto visual que usa el <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> método.</span><span class="sxs-lookup"><span data-stu-id="eecfb-105">The following example shows how to retrieve the <xref:System.Windows.Media.DrawingGroup> from a visual object that uses the <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> method.</span></span> <span data-ttu-id="eecfb-106">A continuación, se realiza una prueba de posicionamiento en el contenido representado de cada dibujo el <xref:System.Windows.Media.DrawingGroup> para determinar qué geometría se obtuvo acceso.</span><span class="sxs-lookup"><span data-stu-id="eecfb-106">A hit test is then performed on the rendered content of each drawing in the <xref:System.Windows.Media.DrawingGroup> to determine which geometry was hit.</span></span>  
   
 > [!NOTE]
->  En la mayoría de los casos, se utiliza el método <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> para determinar si un punto interseca con cualquier parte del contenido representado de un objeto visual.  
+>  <span data-ttu-id="eecfb-107">En la mayoría de los casos, se utilizaría la <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> método para determinar si un punto forma una intersección con el contenido representado de un objeto visual.</span><span class="sxs-lookup"><span data-stu-id="eecfb-107">In most cases, you would use the <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> method to determine whether a point intersects any of the rendered content of a visual.</span></span>  
   
  [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
  [!code-vb[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
- El método <xref:System.Windows.Media.Geometry.FillContains%2A> es un método sobrecargado que permite realizar las pruebas de posicionamiento mediante un objeto <xref:System.Windows.Point> o <xref:System.Windows.Media.Geometry> especificado.  Si se traza una geometría, el trazo puede extenderse fuera del límite del relleno.  En cuyo caso, puede que sea conveniente llamar a <xref:System.Windows.Media.Geometry.StrokeContains%2A> además de a <xref:System.Windows.Media.Geometry.FillContains%2A>.  
+ <span data-ttu-id="eecfb-108">El <xref:System.Windows.Media.Geometry.FillContains%2A> método es un método sobrecargado que permite realizar pruebas de posicionamiento mediante el uso de un determinado <xref:System.Windows.Point> o <xref:System.Windows.Media.Geometry>.</span><span class="sxs-lookup"><span data-stu-id="eecfb-108">The <xref:System.Windows.Media.Geometry.FillContains%2A> method is an overloaded method that allows you to hit test by using a specified <xref:System.Windows.Point> or <xref:System.Windows.Media.Geometry>.</span></span> <span data-ttu-id="eecfb-109">Si se traza una geometría, el trazo puede extenderse fuera del límite del relleno.</span><span class="sxs-lookup"><span data-stu-id="eecfb-109">If a geometry is stroked, the stroke can extend outside the fill bounds.</span></span> <span data-ttu-id="eecfb-110">En este caso, puede que desee llamar a <xref:System.Windows.Media.Geometry.StrokeContains%2A> además <xref:System.Windows.Media.Geometry.FillContains%2A>.</span><span class="sxs-lookup"><span data-stu-id="eecfb-110">In which case, you may want to call <xref:System.Windows.Media.Geometry.StrokeContains%2A> in addition to <xref:System.Windows.Media.Geometry.FillContains%2A>.</span></span>  
   
- También puede proporcionar un tipo <xref:System.Windows.Media.ToleranceType> que se utiliza para el aplanamiento de curvas Bézier.  
+ <span data-ttu-id="eecfb-111">También puede proporcionar un <xref:System.Windows.Media.ToleranceType> que se usa para los propósitos de reducción de Bézier.</span><span class="sxs-lookup"><span data-stu-id="eecfb-111">You can also provide a <xref:System.Windows.Media.ToleranceType> that is used for the purposes of Bezier flattening.</span></span>  
   
 > [!NOTE]
->  En este ejemplo no se tiene en cuenta ninguna transformación ni recorte que se puede aplicar a la geometría.  Además, este ejemplo no funcionará con un control con estilo, puesto que no tiene ningún dibujo asociado directamente a él.  
+>  <span data-ttu-id="eecfb-112">Esta muestra no tiene en cuenta ninguna transformación o recorte que pueda aplicarse a la geometría.</span><span class="sxs-lookup"><span data-stu-id="eecfb-112">This sample does not take into account any transforms or clipping that may be applied to the geometry.</span></span> <span data-ttu-id="eecfb-113">Además, este ejemplo no funcionará con un control con estilo, puesto que no tiene los dibujos asociados a él.</span><span class="sxs-lookup"><span data-stu-id="eecfb-113">In addition, this sample will not work with a styled control, since it does not have any drawings directly associated with it.</span></span>  
   
-## Vea también  
- [Realizar pruebas de posicionamiento en la capa visual](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)   
- [Realizar una prueba de posicionamiento usando Geometry como parámetro](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
+## <a name="see-also"></a><span data-ttu-id="eecfb-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="eecfb-114">See Also</span></span>  
+ [<span data-ttu-id="eecfb-115">Realizar pruebas de posicionamiento en la capa visual</span><span class="sxs-lookup"><span data-stu-id="eecfb-115">Hit Testing in the Visual Layer</span></span>](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [<span data-ttu-id="eecfb-116">Realizar una prueba de posicionamiento usando Geometry como parámetro</span><span class="sxs-lookup"><span data-stu-id="eecfb-116">Hit Test Using Geometry as a Parameter</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
