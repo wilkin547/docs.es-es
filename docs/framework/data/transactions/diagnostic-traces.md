@@ -1,28 +1,32 @@
 ---
-title: "Trazas de diagn&#243;stico  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Seguimiento del diagnóstico"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 59e91b76245c7bdfd40f6fc449edbbcd47449f3f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Trazas de diagn&#243;stico 
-Las trazas son la publicación de mensajes concretos que se generan durante la ejecución de la aplicación.Cuando se utiliza traza debe existir un mecanismo para recopilar y registrar los mensajes que se envían.Los agentes de escucha son los objetos encargados de recibir los mensajes de seguimiento.Un agente de escucha se encarga de recopilar, almacenar y enrutar los mensajes de seguimiento.Los agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.  
+# <a name="diagnostic-traces"></a>Seguimiento del diagnóstico
+Los rastros son la publicación de mensajes concretos que se generan durante la ejecución de la aplicación. Cuando se utiliza traza debe existir un mecanismo para recopilar y registrar los mensajes que se envían. Los agentes de escucha son los objetos encargados de recibir los mensajes de seguimiento. Un agente de escucha se encarga de recopilar, almacenar y enrutar los mensajes de seguimiento. Los agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.  
   
- Un tal agente de escucha, <xref:System.Diagnostics.DefaultTraceListener>, se crea y se inicializa automáticamente si la traza está habilitada.Si desea que los resultados de la traza se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.Los agentes de escucha que cree deben reflejar sus necesidades particulares.Por ejemplo, podría desear obtener un registro de texto con todo el resultado del seguimiento.En este caso, debe crear un agente de escucha que escriba en un nuevo archivo de texto cuando se habilite.Por otro lado, podría desear ver los resultados durante la aplicación de la ejecución.En ese caso, podría crear un agente de escucha que enviara todos los resultados a una ventana de consola.<xref:System.Diagnostics.EventLogTraceListener> puede enviar los resultados del seguimiento a un registro de eventos, y <xref:System.Diagnostics.TextWriterTraceListener> puede escribir esos mismos resultados en una secuencia  
+ Un tal agente de escucha, <xref:System.Diagnostics.DefaultTraceListener>, se crea y se inicializa automáticamente si la traza está habilitada. Si desea que los resultados de la traza se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales. Los agentes de escucha que cree deben reflejar sus necesidades particulares. Por ejemplo, podría desear obtener un registro de texto con todo el resultado del seguimiento. En este caso, debe crear un agente de escucha que escriba en un nuevo archivo de texto cuando se habilite. Por otro lado, podría desear ver los resultados durante la aplicación de la ejecución. En ese caso, podría crear un agente de escucha que enviara todos los resultados a una ventana de consola. <xref:System.Diagnostics.EventLogTraceListener> puede enviar los resultados del seguimiento a un registro de eventos, y <xref:System.Diagnostics.TextWriterTraceListener> puede escribir esos mismos resultados en una secuencia  
   
-## Habilitar el seguimiento  
- Para habilitar los rastros durante el procesamiento de transacciones, debe modificar el archivo de configuración de su aplicación.Lo siguiente es un ejemplo:  
+## <a name="enabling-tracing"></a>Habilitar el seguimiento  
+ Para habilitar los rastros durante el procesamiento de transacciones, debe modificar el archivo de configuración de su aplicación. A continuación se muestra un ejemplo.  
   
-```  
+```xml  
 <configuration>  
 <system.diagnostics>  
      <sources>  
@@ -36,42 +40,41 @@ Las trazas son la publicación de mensajes concretos que se generan durante la e
      </sources>  
 </system.diagnostics>  
 </configuration>  
-  
 ```  
   
- Los rastros <xref:System.Transactions> se escriben en el origen denominado "System.Transactions."Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar.En nuestra configuración del ejemplo, denominamos "tx" del agente de escucha y agregamos el agente de escucha de seguimiento de .NET Framework estándar \(<xref:System.Diagnostics.XmlWriterTraceListener>\) como el tipo que deseamos utilizar.Utilice `initializeData` para establecer el nombre del archivo de registro para ese agente de escucha.Además, puede sustituir una ruta de acceso completa para un nombre de archivo simple.  
+ Los rastros <xref:System.Transactions> se escriben en el origen denominado "System.Transactions." Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar. En nuestra configuración del ejemplo, denominamos "tx" del agente de escucha y agregamos el agente de escucha de seguimiento de .NET Framework estándar (<xref:System.Diagnostics.XmlWriterTraceListener>) como el tipo que deseamos utilizar. Utilice `initializeData` para establecer el nombre del archivo de registro para ese agente de escucha. Además, puede sustituir una ruta de acceso completa para un nombre de archivo simple.  
   
- A cada tipo de mensaje de seguimiento le está asignado un nivel para indicar su grado de importancia.Si el dominio de aplicación del nivel de seguimiento es igual o menor que el nivel de un tipo de evento, a continuación, se genera ese mensaje.`switchValue` controla el nivel de seguimiento en el archivo de configuración.Los niveles que están asociados a mensajes de seguimiento de diagnóstico se definen en la tabla siguiente.  
+ A cada tipo de mensaje de seguimiento le está asignado un nivel para indicar su grado de importancia. Si el dominio de aplicación del nivel de seguimiento es igual o menor que el nivel de un tipo de evento, a continuación, se genera ese mensaje. `switchValue` controla el nivel de seguimiento en el archivo de configuración. Los niveles que están asociados a mensajes de seguimiento de diagnóstico se definen en la tabla siguiente.  
   
 |Nivel de seguimiento|Descripción|  
-|--------------------------|-----------------|  
-|Crítico|Los errores serios, como lo siguiente, han producido:<br /><br /> -   Error que puede producir una pérdida inmediata de funcionalidad del usuario.<br />-   Evento que exige a un administrador que tome medidas para evitar la pérdida de funcionalidad.<br />-   El código no responde.<br />-   Este nivel de la traza también puede proporcionar el contexto suficiente para interpretar otros rastros críticos.Esto puede ayudar a identificar la secuencia de operaciones que conducen a un error serio.|  
-|Error|Se ha producido un error \(por ejemplo, configuración no válida o comportamiento de la red\) que puede producir una pérdida de funcionalidad del usuario.|  
-|Advertencia|Existe una condición que puede producir como consecuencia un error o error crítico \(por ejemplo, error de asignación o aproximación a un límite\).El procesamiento normal de errores del código de usuario \(por ejemplo, transacciones anuladas, tiempos de espera, error en la autenticación\) también puede generar un mensaje de advertencia.|  
-|Información|Se han generado mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o perfilar.Éstos pueden incluir transacción e inscripción de los eventos perpetuos, como una transacción que se está creando o confirmando, el cruce de un límite significativo o la asignación de recursos significativos.Un programador puede utilizar a continuación tal información para el diseño de la capacidad y gestión de rendimiento.|  
+|-----------------|-----------------|  
+|Crítico|Los errores serios, como lo siguiente, han producido:<br /><br /> -Un error que puede provocar una pérdida de inmediata en funciones de usuario.<br />-Un evento que requiere que un administrador tomar medidas para evitar la pérdida de funcionalidad.<br />-Se bloquea el código.<br />: Este nivel de seguimiento también puede proporcionar suficiente contexto para interpretar otros seguimientos críticos. Esto puede ayudar a identificar la secuencia de operaciones que conducen a un error serio.|  
+|Error|Se ha producido un error (por ejemplo, configuración no válida o comportamiento de la red) que puede producir una pérdida de funcionalidad del usuario.|  
+|Advertencia|Existe una condición que puede producir como consecuencia un error o error crítico (por ejemplo, error de asignación o aproximación a un límite). El procesamiento normal de errores del código de usuario (por ejemplo, transacciones anuladas, tiempos de espera, error en la autenticación) también puede generar un mensaje de advertencia.|  
+|Información|Se han generado mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o perfilar. Éstos pueden incluir transacción e inscripción de los eventos perpetuos, como una transacción que se está creando o confirmando, el cruce de un límite significativo o la asignación de recursos significativos. Un programador puede utilizar a continuación tal información para el diseño de la capacidad y gestión de rendimiento.|  
   
-## Códigos de seguimiento  
- La tabla siguiente hace una lista de los códigos de seguimiento que se generan mediante la infraestructura <xref:System.Transactions>.Se incluye en la tabla el identificador de código de seguimiento, el nivel de enumeración <xref:System.Diagnostics.EventTypeFilter.EventType%2A> para el seguimiento, y los datos adicionales contenidas en **TraceRecord** para el seguimiento.Además, el nivel de seguimiento correspondiente del seguimiento también está almacenado en  **TraceRecord**.  
+## <a name="trace-codes"></a>Códigos de seguimiento  
+ La tabla siguiente hace una lista de los códigos de seguimiento que se generan mediante la infraestructura <xref:System.Transactions>. Incluido en la tabla son el identificador de código de seguimiento, la <xref:System.Diagnostics.EventTypeFilter.EventType%2A> nivel de enumeración para el seguimiento y los datos adicionales incluidos en el **TraceRecord** para el seguimiento. Además, el nivel de seguimiento correspondiente del seguimiento también se almacena en la **TraceRecord**.  
   
 |TraceCode|EventType|Datos adicionales en TraceRecord|  
-|---------------|---------------|--------------------------------------|  
+|---------------|---------------|-------------------------------|  
 |TransactionCreated|Info|TransactionTraceId|  
 |TransactionPromoted|Info|TransactionTraceId local, TransactionTraceId distribuido|  
-|EnlistmentCreated|Info|TransactionTraceId, EnlistmentTraceId, EnlistmentType \(durable\/volátil\), EnlistmentOptions|  
-|EnlistmentCallbackNegative|Advertencia|TransactionTraceId, EnlistmentTraceId<br /><br /> Devolución de llamada \(deshecho forzado\/anulado\/dudoso\)|  
+|EnlistmentCreated|Info|TransactionTraceId, EnlistmentTraceId, EnlistmentType (durable/volátil), EnlistmentOptions|  
+|EnlistmentCallbackNegative|Advertencia|TransactionTraceId, EnlistmentTraceId<br /><br /> Devolución de llamada (deshecho forzado/anulado/dudoso)|  
 |TransactionRollbackCalled|Advertencia|TransactionTraceId|  
 |TransactionAborted|Advertencia|TransactionTraceId|  
 |TransactionInDoubt|Advertencia|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult, que puede ser lo siguientes:<br /><br /> -   Nueva transacción.<br />-   La transacción pasó.<br />-   La transacción dependiente pasó.<br />-   Utilizando la transacción actual.<br />-   Sin transacción.<br /><br /> Nueva TransactionTraceId actual|  
-|TransactionScopeDisposed|Info|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
-|TransactionScopeIncomplete|Advertencia|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
-|TransactionScopeNestedIncorrectly|Advertencia|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
+|TransactionScopeCreated|Info|TransactionScopeResult, que puede ser lo siguientes:<br /><br /> -Nueva transacción.<br />-Se pasa transaction.<br />-Pasa la transacción dependiente.<br />-Utilizando la transacción actual.<br />-No hay ninguna transacción.<br /><br /> Nueva TransactionTraceId actual|  
+|TransactionScopeDisposed|Info|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
+|TransactionScopeIncomplete|Advertencia|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
+|TransactionScopeNestedIncorrectly|Advertencia|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
 |TransactionScopeCurrentTransactionChanged|Advertencia|TransactionTraceId actual anterior, otro TransactionTraceId|  
-|TransactionScopeTimeout|Advertencia|TransactionTraceId de la transacción actual "esperada" del ámbito.|  
-|DependentCloneCreated|Info|TransactionTraceId, tipo de transacción dependiente creada \(RollbackIfNotComplete\/BlockCommitUntilComplete\)|  
+|TransactionScopeTimeout|Advertencia|TransactionTraceId de ámbito de la transacción actual "había esperado".|  
+|DependentCloneCreated|Info|TransactionTraceId, tipo de transacción dependiente creada (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|Info|TransactionTraceId|  
-|RecoveryComplete|Info|Recurso Administrador GUID \(de la base\)|  
-|Reenlist|Info|Recurso Administrador GUID \(de la base\)|  
+|RecoveryComplete|Info|Recurso Administrador GUID (de la base)|  
+|Reenlist|Info|Recurso Administrador GUID (de la base)|  
 |TransactionSerialized|Info|TransactionTraceId.|  
 |TransactionException|Error|Mensaje de la excepción|  
 |InvalidOperationException|Error|Mensaje de la excepción|  
@@ -82,7 +85,7 @@ Las trazas son la publicación de mensajes concretos que se generan durante la e
   
  El esquema XML para cada uno de los elementos de datos adicionales anteriores tiene el formato siguiente.  
   
-### TransactionTraceIdentifier  
+### <a name="transactiontraceidentifier"></a>TransactionTraceIdentifier  
  `<TransactionTraceIdentifier>`  
   
  `<TransactionIdentifier >`  
@@ -99,7 +102,7 @@ Las trazas son la publicación de mensajes concretos que se generan durante la e
   
  `</TransactionTraceIdentifier>`  
   
-### EnlistmentTraceIdentifier  
+### <a name="enlistmenttraceidentifier"></a>EnlistmentTraceIdentifier  
  `<EnlistmentTraceIdentifier>`  
   
  `<ResourceManagerId>`  
@@ -132,12 +135,12 @@ Las trazas son la publicación de mensajes concretos que se generan durante la e
   
  `</EnlistmentTraceIdentifier>`  
   
-### Identificador del administrador de recursos  
+### <a name="resource-manager-identifier"></a>Identificador del administrador de recursos  
  `<ResourceManagerId>`  
   
  `string form of guid`  
   
  `</ResourceManagerId>`  
   
-## Problemas de seguridad para seguimiento  
- Cuando usted como administrador comience el seguimiento, la información confidencial se podría escribir en un registro de seguimiento que está de forma predeterminada públicamente visible.Para mitigar cualquier posible amenaza de seguridad, debería considerar almacenar el registro de seguimiento en una ubicación segura controlado por recurso compartido y permisos de acceso del sistema de archivos.
+## <a name="security-issues-for-tracing"></a>Problemas de seguridad para seguir paso a paso  
+ Cuando usted como administrador activa el seguimiento, la información confidencial puede escribirse en un registro de seguimiento que está visible públicamente de forma predeterminada. Para mitigar ninguna amenaza de seguridad posible, considere la posibilidad de almacenar el registro de seguimiento en una ubicación segura que se controla mediante permisos de acceso de sistema de archivos y recursos compartidos.

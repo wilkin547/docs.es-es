@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6712035c5502d56ac9d67a334fe3e47365027de
-ms.contentlocale: es-es
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a7054102af46badc46ee7f987355cfce36860c6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnethttpbindinggt"></a>&lt;netHttpBinding&gt;
 Representa un enlace que un servicio de [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] puede usar para configurar y exponer extremos que pueden comunicarse sobre HTTP. Cuando se usa con un contrato dúplex, se usará WebSockets; si no, se usará HTTP.  
@@ -30,12 +28,7 @@ Representa un enlace que un servicio de [!INCLUDE[indigo1](../../../../../includ
   
 ## <a name="syntax"></a>Sintaxis  
 
-<!-- todo: missing sample  
-```vb  
-```  
--->
-  
-```csharp  
+```xml  
 <netHttpBinding>  
    <binding   
        allowCookies="Boolean"  
@@ -195,12 +188,11 @@ Representa un enlace que un servicio de [!INCLUDE[indigo1](../../../../../includ
  Para obtener más información acerca de la configuración predeterminada y enlaces anónimos y los comportamientos, consulte [configuración simplificada](../../../../../docs/framework/wcf/simplified-configuration.md) y [configuración simplificada para los servicios WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<enlace >](../../../../../docs/framework/misc/binding.md)
-

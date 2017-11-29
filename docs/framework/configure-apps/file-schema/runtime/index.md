@@ -5,35 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - schema runtime settings
 - configuration schema [.NET Framework], runtime settings
 - runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f457546a07e95e57ac1282bd2d1a2bab6024cdf3
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 83323c02e726416e02895ef60be4c1073d41bdcc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-settings-schema"></a>Esquema de la configuración de Common Language Runtime
 Common Language Runtime usa la configuración del motor en tiempo de ejecución para configurar las aplicaciones destinadas a .NET Framework.  
   
- [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+ [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
  [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
  [\<alwaysFlowImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)  
  [\<AppContextSwitchOverrides>](../../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)  
@@ -122,7 +115,7 @@ Common Language Runtime usa la configuración del motor en tiempo de ejecución 
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contiene una colección de valores de configuración para la instancia de `namedCache` .|  
 |[<NetFx40_LegacySecurityPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)|Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.|  
 |[<NetFx40_PInvokeStackResilience>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx40-pinvokestackresilience-element.md)|Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.|  
-|[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>.|  
+|[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Especifica si el runtime usa una cantidad de memoria fija para calcular los códigos hash para el método <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>.|  
 |[\<PreferComInsteadOfManagedRemoting>](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|Especifica que el runtime usará interoperabilidad COM en lugar de comunicación remota entre límites de dominio de aplicación.|  
 |[\<probing>](../../../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)|Especifica los subdirectorios en los que busca el runtime cuando se cargan los ensamblados.|  
 |[\<publisherPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)|Especifica si el tiempo de ejecución aplica la directiva de editor.|  
@@ -141,7 +134,6 @@ Common Language Runtime usa la configuración del motor en tiempo de ejecución 
 |[\<UseSmallInternalThreadStacks>](../../../../../docs/framework/configure-apps/file-schema/runtime/usesmallinternalthreadstacks-element.md)|Solicita que el runtime use tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar del tamaño de pila predeterminado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Cómo: Deshabilitar la recolección simultánea de elementos no utilizados](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)   
+ [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Cómo: deshabilitar la recolección de elementos no utilizados simultánea](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-

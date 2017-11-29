@@ -1,25 +1,28 @@
 ---
-title: "MtomMessageEncodingBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MtomMessageEncodingBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c5fd2858688634ee48a67b930755fc3ceebbebf8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# MtomMessageEncodingBindingElement
+# <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class MtomMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -31,45 +34,45 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase MtomMessageEncodingBindingElement no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase MtomMessageEncodingBindingElement tiene las propiedades siguientes:  
   
-### Codificación  
+### <a name="encoding"></a>Codificación  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace.  
   
-### MaxReadPoolSize  
+### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores.  
   
-### MaxWritePoolSize  
+### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores.  
   
-### ReaderQuotas  
+### <a name="readerquotas"></a>ReaderQuotas  
  Tipo de datos: XmlDictionaryReaderQuotas  
   
  Tipo de acceso: solo lectura  
   
  Las cuotas de los lectores.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

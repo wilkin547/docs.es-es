@@ -1,30 +1,27 @@
 ---
-title: Windows Forms | Microsoft Docs
+title: Windows Forms
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- jsharp
 helpviewer_keywords:
 - Windows Forms
 - user interface
-- user interface, forms
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 224597edb87943e4572a44a9d59f3b61cd6c198f
-ms.lasthandoff: 04/08/2017
-
+ms.openlocfilehash: 2799bd6652c9f575be8758f47c9770d3fde93580
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="windows-forms"></a>Windows Forms
 Como los formularios son la unidad básica de la aplicación, es esencial realizar algunas consideraciones sobre su función y diseño. En última instancia, un formulario es una pizarra en blanco que usted, como desarrollador, mejora con controles para crear una interfaz de usuario y con código para manipular los datos. Para ello, [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] proporciona un entorno de desarrollo integrado (IDE) que ayuda a escribir código, así como un completo conjunto de controles escrito con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Complementando la funcionalidad de estos controles con el código, puede desarrollar las soluciones que necesita de forma fácil y rápida.  
@@ -46,16 +43,16 @@ Como los formularios son la unidad básica de la aplicación, es esencial realiz
  [Información general de gráficos](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
  Describe cómo crear gráficos, dibujar texto y manipular imágenes gráficas como objetos mediante la implementación avanzada de la interfaz de diseño de gráficos de Windows.  
   
- [Seguridad e implementación ClickOnce](http://msdn.microsoft.com/library/abab6d34-c3c2-45c1-a8b6-43c7d3131e7a)  
+ [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
  Describe los principios de la implementación ClickOnce.  
   
- [Diferencias de programación entre formularios Windows Forms y MFC](http://msdn.microsoft.com/library/f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51)  
+ [Diferencias de programación entre formularios Windows Forms y MFC](/cpp/dotnet/windows-forms-mfc-programming-differences)  
  Describe las diferencias entre las aplicaciones de MFC y de Windows Forms.  
   
- [Obtener acceso a los datos en Visual Studio](http://msdn.microsoft.com/library/9812a6d5-23d2-4427-8b98-70a2abfec3bc)  
+ [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
  Comenta la incorporación de características de acceso a datos en las aplicaciones.  
   
- [Aplicaciones de Windows Forms](http://msdn.microsoft.com/library/7092ee7f-8378-4def-aef8-1695bd97cf14)  
+ [Aplicaciones de Windows Forms](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Explica el proceso de depuración de aplicaciones creadas con la plantilla de proyecto de aplicación de Windows, y cómo cambiar las configuraciones de depuración y lanzamiento.  
   
  [Implementar aplicaciones, servicios y componentes](https://msdn.microsoft.com/library/wtzawcsz)  

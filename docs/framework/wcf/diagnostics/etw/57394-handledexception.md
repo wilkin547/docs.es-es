@@ -1,35 +1,38 @@
 ---
-title: "57394 - HandledException | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 57394 - HandledException
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9e63436-6550-4891-9673-cbc72dda20e3
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: aba9180b305554045de8e712a877ddd994ab5ae9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 57394 - HandledException
-## Propiedades  
+# <a name="57394---handledexception"></a>57394 - HandledException
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|57394|  
 |Palabras clave|Infraestructura|  
 |Nivel|Información|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Este evento se genera al controlar una excepción.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  Control de una excepción.  
   
-## Detalles
+## <a name="details"></a>Detalles

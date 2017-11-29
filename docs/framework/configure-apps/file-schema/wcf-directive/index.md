@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02aa885ca5ce761d8b34b4f867f8eb4fe9f1912a
-ms.contentlocale: es-es
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: b86f690848795b3e7880de42cc0860ec19b9cb9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wcf-directive-syntax"></a>Sintaxis de directivas WCF
 Especifica valores usados por las directivas [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] en los archivos .svc para dirigir los compiladores. Cada directiva puede contener uno o varios atributos (emparejados con valores), que son específicos de esa directiva. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] solo tiene la directiva [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).  
@@ -36,7 +34,6 @@ Especifica valores usados por las directivas [!INCLUDE[indigo1](../../../../../i
  Describe cómo se usa la directiva @ServiceHost al hospedar un servicio en el Servicio de activación de procesos de Windows (WAS).  
   
 ## <a name="see-also"></a>Vea también  
- [Hospedaje](../../../../../docs/framework/wcf/feature-details/hosting.md)   
- [Hospedaje en Internet Information Services](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
+ [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [Hospedaje en Internet Information Services](../../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [Hospedaje en Servicio de activación de procesos de Windows](../../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
-

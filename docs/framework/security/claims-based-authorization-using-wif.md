@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorización basada en notificaciones con WIF
 En una aplicación de usuario de confianza, la autorización determina los recursos a los que una identidad autenticada puede tener acceso y las operaciones que puede realizar en estos. Una autorización incorrecta o débil da lugar a la revelación de información y a la alteración de los datos. En este tema se describen distintos enfoques para implementar la autorización para aplicaciones web y servicios Web ASP.NET compatibles con notificaciones mediante Windows Identity Foundation (WIF) y un servicio de token de seguridad (STS), por ejemplo, el Servicio de control de acceso (ACS) de Microsoft Azure.  
@@ -72,4 +70,3 @@ En una aplicación de usuario de confianza, la autorización determina los recur
 5.  El acceso se concede si el resultado es true y se deniega si es false. Por ejemplo, la regla podría ser que el usuario tenga 21 años o más y resida en el estado de Washington.  
   
  <xref:System.Security.Claims.ClaimsAuthorizationManager> es útil para exteriorizar la lógica de decisión de la autorización basada en notificaciones de las aplicaciones. ClaimsAuthorizationManager es un componente de WIF que se distribuye como parte de .NET 4.5. ClaimsAuthorizationManager permite interceptar solicitudes entrantes e implementar la lógica deseada para tomar decisiones de autorización en función de las notificaciones entrantes. Esto es importante cuando es necesario cambiar la lógica de autorización. En ese caso, el uso de ClaimsAuthorizationManager no afectará a la integridad de la aplicación y se reducirá la probabilidad de un error de aplicación como resultado del cambio. Para más información sobre cómo usar ClaimsAuthorizationManager para implementar el control de acceso basado en notificaciones, vea [Procedimiento: Implementación de autorización de notificaciones en aplicaciones ASP.Net compatible con notificaciones mediante WIF y ACS](http://go.microsoft.com/fwlink/?LinkID=247446).
-

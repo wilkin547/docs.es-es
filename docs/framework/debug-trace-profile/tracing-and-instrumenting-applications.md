@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework]
 - debugging [.NET Framework], instrumentation
@@ -23,19 +20,18 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 899776c29fc0d0c6a43f28c089c51b9695a1ef6f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
-El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=fullName>, <xref:System.Diagnostics.Debug?displayProperty=fullName> y <xref:System.Diagnostics.TraceSource?displayProperty=fullName> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
+El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
   
  El término *instrumentación* hace referencia a la capacidad de supervisar o medir el nivel de rendimiento de un producto y diagnosticar errores. En programación, esto significa la capacidad de una aplicación para incorporar:  
   
@@ -126,7 +122,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Debe tener especial cuidado al colocar las instrucciones de seguimiento para su uso durante el tiempo de ejecución. Considere qué información de seguimiento puede ser necesaria en una aplicación implementada de modo que estén bien cubiertos todos los escenarios de seguimiento probables. Puesto que las diferencias entre aplicaciones que usan el seguimiento son enormes, no existen directrices generales para la colocación estratégica del seguimiento. Para más información sobre cómo colocar instrucciones de seguimiento, vea [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
   
 ## <a name="output-from-tracing"></a>Salida del seguimiento  
- La salida del seguimiento se recopila mediante objetos denominados *agentes de escucha*. Un agente de escucha es un objeto que recibe la salida de seguimiento y la escribe en un dispositivo de salida (normalmente un archivo de texto, registro o ventana). Cuando se crea un agente de escucha, normalmente se agrega a la colección <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=fullName>, lo que le permite recibir toda la salida del seguimiento.  
+ La salida del seguimiento se recopila mediante objetos denominados *agentes de escucha*. Un agente de escucha es un objeto que recibe la salida de seguimiento y la escribe en un dispositivo de salida (normalmente un archivo de texto, registro o ventana). Cuando se crea un agente de escucha, normalmente se agrega a la colección <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, lo que le permite recibir toda la salida del seguimiento.  
   
  La información de seguimiento siempre se escribe al menos en el destino de salida predeterminado de <xref:System.Diagnostics.Trace>, que es <xref:System.Diagnostics.DefaultTraceListener>. Si por algún motivo se ha eliminado <xref:System.Diagnostics.DefaultTraceListener> sin agregar otros agentes de escucha a la colección <xref:System.Diagnostics.Trace.Listeners%2A>, no recibirá ningún mensaje de seguimiento. Para más información, vea [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -154,15 +150,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Si no deshabilita el seguimiento y la depuración antes de implementar una aplicación ASP.NET, la aplicación puede revelar información sobre sí misma que podría ser aprovechada por un programa malintencionado. Para más información, vea [Cómo: Realizar compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [Compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio) y [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). La depuración también es configurable a través de Internet Information Services (IIS).  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- [Contratos de código](../../../docs/framework/debug-trace-profile/code-contracts.md)   
- [Tipos de proyectos de C#, F# y Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)   
- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [Cómo: Realizar compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [Cómo: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
- [Cómo: Usar TraceSource y filtros con agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)   
- [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ [Contratos de código](../../../docs/framework/debug-trace-profile/code-contracts.md)  
+ [Tipos de proyectos de C#, F# y Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)  
+ [Cómo: agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Cómo: realizar compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [Cómo: crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [Cómo: crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Cómo: Utilizar TraceSource y filtros con agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

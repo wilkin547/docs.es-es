@@ -1,66 +1,63 @@
 ---
-title: "&lt;mailSettings&gt; (Elemento, Configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<mailSettings> (elemento)"
-  - "mailSettings (elemento)"
+title: '&lt;mailSettings&gt; Element (Network Settings)'
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings
+helpviewer_keywords:
+- mailSettings element
+- <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-caps.latest.revision: 20
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: a42b10574a1f44d310f86fe3fa99490f2f1981c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;mailSettings&gt; (Elemento, Configuraci&#243;n de red)
+# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; Element (Network Settings)
 Configura opciones de envío de correo.  
+
+\<configuration>  
+\<System.NET >  
+\<mailSettings >  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-      <mailSettings  
+```xml  
+<mailSettings>
   <smtp> … </smtp>  
-/mailsettings>  
+</mailSettings>
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|[\<smtp\> \(Elemento, Configuración de red\)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configura las opciones de protocolo simple de transferencia de correo.|  
+|---------------|-----------------|  
+|[\<SMTP > elemento (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Configurar las opciones de Protocolo Simple de transferencia de correo electrónico.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[\<system.Net\> \(elemento\) \(configuración de red\)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene los valores de configuración que especifican cómo se conecta a la red .NET Framework.|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[Elemento \<system.Net> (configuración de red)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
-## Ejemplo  
- En el ejemplo de código siguiente se especifican los parámetros SMTP adecuados para enviar correo electrónico mediante las credenciales de red predeterminadas.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se especifica los parámetros SMTP adecuados para enviar correo electrónico mediante las credenciales de red predeterminadas.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
@@ -76,6 +73,6 @@ Configura opciones de envío de correo.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Net.Mail.SmtpClient>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Net.Mail.SmtpClient>  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

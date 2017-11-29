@@ -1,28 +1,37 @@
 ---
-title: "Elemento &lt;message&gt; de &lt;wsFederationHttpBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Elemento &lt;message&gt; de &lt;wsFederationHttpBinding&gt;
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-caps.latest.revision: 28
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7b17a6325b84382d9d22b4da3ccf7e1598dc42df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;message&gt; de &lt;wsFederationHttpBinding&gt;
-Obtiene la configuración de seguridad a nivel de mensaje para el elemento [\<wsFederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+# <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>Elemento &lt;message&gt; de &lt;wsFederationHttpBinding&gt;
+Define la configuración de la seguridad de nivel de mensaje para la [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
-## Sintaxis  
+ \<sistema. ServiceModel >  
+\<enlaces >  
+\<wsFederatedBinding >  
+\<enlace >  
+\<seguridad >  
+\<mensaje >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <wsFederationBinding>  
      <binding >  
          <security>  
@@ -81,61 +90,60 @@ Obtiene la configuración de seguridad a nivel de mensaje para el elemento [\<ws
 </wsFederationBinding>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves.  Vea la tabla de "atributo algorithmSuite" para ver los valores válidos de este atributo.  El valor predeterminado es `Basic256`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad \(WS\-SecurityPolicy\).|  
-|issuedKeyType|Especifica el tipo de clave que se va a emitir.  Los valores válidos son los siguientes:<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> De manera predeterminada, es `SymmetricKey`.  Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|issuedTokenType|Una cadena que contiene un URI que especifica el tipo de token que se va a emitir.  De manera predeterminada, es `null`.|  
-|negotiateServiceCredential|Un valor booleano que especifica si la credencial del servicio se debería intercambiar como parte de negociación o estar disponible fuera de la banda.  El valor predeterminado es `true`, que significa que se negocia la credencial del servicio.|  
+|---------------|-----------------|  
+|algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Vea la tabla de "atributo algorithmSuite" para ver los valores válidos de este atributo. El valor predeterminado es `Basic256`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Estos algoritmos se asignan a los indicados en la especificación Lenguaje de directiva de seguridad (WS-SecurityPolicy).|  
+|issuedKeyType|Especifica el tipo de clave que se va a emitir. Los valores válidos son los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> De manera predeterminada, es `SymmetricKey`. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedTokenType|Una cadena que contiene un URI que especifica el tipo de token que se va a emitir. De manera predeterminada, es `null`.|  
+|negotiateServiceCredential|Un valor booleano que especifica si la credencial del servicio se debería intercambiar como parte de negociación o estar disponible fuera de la banda. El valor predeterminado es `true`, que significa que se negocia la credencial del servicio.|  
   
-## atributo algorithmSuite  
+## <a name="algorithmsuite-attribute"></a>atributo algorithmSuite  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Basic128|Utilice el cifrado Basic128, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic192|Utilice el cifrado Basic192, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic256|Utilice el cifrado Basic256, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
+|Basic128|Utilice el cifrado Basic128, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
+|Basic192|Utilice el cifrado Basic192, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
+|Basic256|Utilice el cifrado Basic256, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
 |Basic256Rsa15|Utilice Basic256 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
 |Basic192Rsa15|Utilice Basic192 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|TripleDes|Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
+|TripleDes|Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
 |Basic128Rsa15|Utilice Basic128 para el cifrado de mensajes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
 |TripleDesRsa15|Utilice el cifrado TripleDes, Sha1 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
-|Basic128Sha256|Utilice Basic128 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic192Sha256|Utilice Basic192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|Basic256Sha256|Utilice Basic256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
-|TripleDesSha256|Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa\-oaep\-mgf1p para el encapsulado de claves.|  
+|Basic128Sha256|Utilice Basic128 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
+|Basic192Sha256|Utilice Basic192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
+|Basic256Sha256|Utilice Basic256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
+|TripleDesSha256|Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa-oaep-mgf1p para el encapsulado de claves.|  
 |Basic128Sha256Rsa15|Utilice Basic128 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
 |Basic192Sha256Rsa15|Utilice Aes192 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
 |Basic256Sha256Rsa15|Utilice Basic256 para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
 |TripleDesSha256Rsa15|Utilice TripleDes para el cifrado de mensajes, Sha256 para la síntesis del mensaje y Rsa15 para el encapsulado de claves.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<claimTypeRequirements\>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace.  Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|issuer|Especifica un extremo que emite un token de seguridad.  Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|issuerMetadata|Especifica la dirección del extremo del emisor.|  
-|[\<tokenRequestParameters\>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token.  Cada parámetro es un elemento XML.|  
+|-------------|-----------------|  
+|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Especifica una colección de tipos de demanda para este enlace. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|issuer|Especifica un extremo que emite un token de seguridad. Este elemento es del tipo <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|issuerMetadata|Especifica la dirección del punto de conexión del emisor.|  
+|[\<tokenRequestParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<seguridad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
+|-------------|-----------------|  
+|[\<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Define la configuración de seguridad de un enlace.|  
   
-## Vea también  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityElement>   
- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [Enlaces](../../../../../docs/framework/wcf/bindings.md)   
- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/es-es/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<enlace\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>  
+ `System.ServiceModel.Configuration.FederatedMessageSecurityElement`[Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
+ [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [Utilización de enlaces para configurar los clientes y servicios de Windows Communication Foundation](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<enlace >](../../../../../docs/framework/misc/binding.md)

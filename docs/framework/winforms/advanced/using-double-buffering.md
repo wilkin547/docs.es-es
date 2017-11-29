@@ -1,50 +1,51 @@
 ---
-title: "Utilizar el doble b&#250;fer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "almacenamiento en búfer, doble búfer"
-  - "doble búfer"
-  - "parpadeo, reducir en formularios Windows Forms"
-  - "gráficos, doble búfer"
+title: "Utilizar el doble búfer"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [Windows Forms], double buffering
+- double buffering
+- flicker [Windows Forms], reducing in Windows Forms
+- buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5ad51e27c3d31ece1d11831c953023bedba3a97
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Utilizar el doble b&#250;fer
-Puede utilizar gráficos de doble búfer para reducir el parpadeo en las aplicaciones que contienen operaciones de dibujo complejas.  .NET Framework contiene soporte integrado para búfer doble o puede administrar y representar manualmente los gráficos.  
+# <a name="using-double-buffering"></a>Utilizar el doble búfer
+Puede usar gráficos de doble búfer para reducir el parpadeo en las aplicaciones que contienen operaciones de dibujo complejas. .NET Framework contiene compatibilidad integrada para almacenamiento en búfer doble o puede administrar y representar manualmente gráficos.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Gráficos de doble búfer](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Introduce el concepto de búfer doble y esquematiza la compatibilidad de .NET Framework.  
+ Introduce el soporte de con .NET Framework concepto y los contornos de almacenamiento en búfer doble.  
   
- [Cómo: Reducir el parpadeo de los gráficos con un búfer doble en formularios y controles](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- Muestra cómo utilizar la compatibilidad del búfer doble predeterminada en .NET Framework.  
+ [Reducir el parpadeo de los gráficos con un búfer doble en formularios y controles](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ Muestra cómo utilizar el valor predeterminado el doble búfer soporte técnico de .NET Framework.  
   
- [Cómo: Administrar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- Muestra cómo administrar el búfer doble en aplicaciones.  
+ [Administrar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
+ Muestra cómo administrar el almacenamiento en búfer doble en aplicaciones.  
   
- [Cómo: Representar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
- Muestra cómo representar gráficos de búfer doble.  
+ [Representar manualmente gráficos almacenados en búfer](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ Muestra cómo representar gráficos de doble búfer.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- Método de control que habilita el búfer doble.  
+ Método de control que permite el almacenamiento en búfer doble.  
   
  <xref:System.Drawing.BufferedGraphicsContext> ,  
  Proporciona métodos para crear búferes de gráficos.  
   
  <xref:System.Drawing.BufferedGraphicsManager>  
- Proporciona el acceso al contexto gráfico almacenado en búfer para un dominio de aplicación.
+ Proporciona acceso al contexto de gráficos almacenados en búfer para un dominio de aplicación.

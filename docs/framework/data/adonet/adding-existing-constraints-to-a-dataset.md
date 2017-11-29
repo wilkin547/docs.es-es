@@ -1,32 +1,38 @@
 ---
-title: "Agregar restricciones existentes a DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Agregar restricciones existentes a un conjunto de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0e457113eff471c620ccdbf78337d2013d7a62bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Agregar restricciones existentes a DataSet
-El método **Fill** de **DataAdapter** llena un <xref:System.Data.DataSet> sólo con las columnas y filas de un origen de datos. Aunque las restricciones se suelen establecer en el origen de datos, el método **Fill** no agrega de forma predeterminada esta información del esquema al **DataSet**.  Para llenar un **DataSet** con la información de restricciones de clave principal existentes en el origen de datos, puede llamar al método **FillSchema** de **DataAdapter** o establecer la propiedad **MissingSchemaAction** de **DataAdapter** con el valor **AddWithKey** antes de llamar a **Fill**.  De esta forma se garantiza que las restricciones de clave principal del **DataSet** reflejan las del origen de datos.  La información de restricciones de clave externa no se incluye y se debe crear explícitamente, como se muestra en [Restricciones de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+# <a name="adding-existing-constraints-to-a-dataset"></a>Agregar restricciones existentes a un conjunto de datos
+El **rellenar** método de la **DataAdapter** rellena un <xref:System.Data.DataSet> sólo con las columnas y filas de un origen de datos; aunque las restricciones se suelen establecer en el origen de datos, el **derelleno** método no agrega esta información de esquema para el **conjunto de datos** de forma predeterminada. Para rellenar un **conjunto de datos** con la información de restricción de clave principal existente de un origen de datos, puede llamar a la **FillSchema** método de la **DataAdapter**, o establecer la **MissingSchemaAction** propiedad de la **DataAdapter** a **AddWithKey** antes de llamar a **rellenar**. Así asegurará de que la clave principal restricciones en la **conjunto de datos** las del origen de datos reflejan. Información de restricción de clave externa no están incluidas y deben crearse de forma explícita, como se muestra en [restricciones de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
- Al agregar la información del esquema a un **DataSet** antes de llenarlo con datos, se garantiza que se incluyen las restricciones de clave principal con los objetos <xref:System.Data.DataTable> en el **DataSet**.  Como resultado, al realizar llamadas adicionales para llenar el **DataSet**, la información de la columna de clave principal se puede utilizar para hacer coincidir las nuevas filas del origen de datos con las filas actuales de cada una de las tablas **DataTable**, con lo que los datos actuales de las tablas se sobrescriben con los del origen de datos.  Sin la información del esquema, las filas nuevas del origen de datos se agregan al **DataSet**, con lo que se obtienen filas duplicadas.  
+ Agregar información del esquema a un **conjunto de datos** antes de llenarlo con datos garantiza que las restricciones primary key se incluyen con el <xref:System.Data.DataTable> objetos en el **conjunto de datos**. Como resultado, cuando adicionales llamadas para rellenar el **conjunto de datos** se realizan, la principal información de columna de clave se usa para hacer coincidir filas nuevas del origen de datos con las filas actuales en cada uno **DataTable**y los datos actuales en las tablas se sobrescriben con datos procedentes del origen de datos. Sin la información de esquema, las nuevas filas del origen de datos se anexan a la **conjunto de datos**, da lugar a las filas duplicadas.  
   
 > [!NOTE]
->  Si una columna del origen de datos es de incremento automático, el método **FillSchema** o el método **Fill** con el valor **AddWithKey** en la propiedad **MissingSchemaAction** crean una **DataColumn** con el valor de la propiedad **AutoIncrement** establecido como `true`.  Sin embargo, en este caso debe definir manualmente los valores de **AutoIncrementStep** y **AutoIncrementSeed**.  Para obtener más información sobre las columnas de incremento automático, vea [Crear columnas AutoIncrement](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+>  Si una columna de un origen de datos se identifica como incremento automático, el **FillSchema** método, o la **rellenar** método con un **MissingSchemaAction** de  **AddWithKey**, crea un **DataColumn** con una **AutoIncrement** propiedad establecida en `true`. Sin embargo, debe establecer el **AutoIncrementStep** y **AutoIncrementSeed** valores usted mismo. Para obtener más información acerca de las columnas de incremento automático, consulte [crear columnas de incremento automático](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
- Al utilizar **FillSchema** o establecer el valor **AddWithKey** en **MissingSchemaAction**, se precisa un proceso adicional en el origen de datos para determinar la información de la columna de clave principal.  Este proceso adicional puede reducir el rendimiento.  Si conoce en la fase de diseño la información de la clave principal, es aconsejable especificar de modo explícito la columna o columnas que la forman para mejorar el rendimiento.  Para obtener más información sobre la especificación de modo explícito de información de la clave principal de una tabla, vea [Definir claves principales](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ Usar **FillSchema** o la configuración de la **MissingSchemaAction** a **AddWithKey** requiere un procesamiento adicional en el origen de datos para determinar la información de columna de clave principal. Este proceso adicional puede reducir el rendimiento. Si conoce en la fase de diseño la información de la clave principal, es aconsejable especificar de modo explícito la columna o columnas que la forman para mejorar el rendimiento. Para obtener información acerca de cómo establecer explícitamente la información de clave principal para una tabla, vea [definir claves principales](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
- En el ejemplo de código siguiente se muestra cómo agregar la información del esquema a un **DataSet** mediante **FillSchema**.  
+ En el ejemplo de código siguiente se muestra cómo agregar información de esquema a un **conjunto de datos** con **FillSchema**.  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -42,7 +48,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- En el ejemplo de código siguiente se muestra la forma de agregar la información del esquema a un **DataSet** mediante la propiedad **MissingSchemaAction.AddWithKey** del método **Fill**.  
+ En el ejemplo de código siguiente se muestra cómo agregar información de esquema a un **conjunto de datos** mediante la **MissingSchemaAction.AddWithKey** propiedad de la **rellenar** método.  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -58,14 +64,14 @@ custAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
-## Controlar varios conjuntos de resultados  
- Cuando **DataAdapter** encuentra varios conjuntos de resultados devueltos por **SelectCommand**, crea varias tablas en el **DataSet**.  Las tablas reciben de forma predeterminada el nombre secuencial que comienza en cero **Table** *N*, comenzando por **Table** en lugar de "Table0".  Si se pasa un nombre de tabla como argumento al método **FillSchema**, las tablas reciben el nombre secuencial que comienza por cero **TableName** *N*, comenzando por **TableName** en lugar de "TableName0".  
+## <a name="handling-multiple-result-sets"></a>Controlar varios conjuntos de resultados  
+ Si el **DataAdapter** encuentra varios conjuntos de resultados devueltos por la **SelectCommand**, creará varias tablas en el **conjunto de datos**. Las tablas se proporcionará un nombre predeterminado incremental basado en cero de **tabla** *N*, comenzando por **tabla** en lugar de "Table0". Si se pasa un nombre de tabla como argumento a la **FillSchema** método, las tablas se proporcionará un nombre basado en cero de **TableName** *N*, comenzando por **TableName** en lugar de "TableName0".  
   
 > [!NOTE]
->  Si se llama al método **FillSchema** del objeto **OleDbDataAdapter** para un comando que devuelve múltiples conjuntos de resultados, sólo se devuelve la información del esquema del primer conjunto de resultados.  Al devolver la información del esquema de múltiples conjuntos de resultados mediante **OleDbDataAdapter**, es aconsejable asignar a la propiedad **MissingSchemaAction** el valor **AddWithKey** y obtener la información del esquema al llamar al método **Fill**.  
+>  Si el **FillSchema** método de la **OleDbDataAdapter** objeto se llama para un comando que devuelve múltiples conjuntos de resultados, se devuelve la información de esquema del primer conjunto de resultados. Al devolver la información de esquema de resultados múltiples conjuntos de uso de la **OleDbDataAdapter**, se recomienda que especifique una **MissingSchemaAction** de **AddWithKey** y obtener la información del esquema al llamar a la **rellenar** método.  
   
-## Vea también  
- [DataAdapters y DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [DataSets, DataTables y DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [Recuperación y modificación de datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Objetos DataSet, DataTable y DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

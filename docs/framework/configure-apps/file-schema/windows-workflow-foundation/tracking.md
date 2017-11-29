@@ -1,104 +1,111 @@
 ---
-title: "&lt;tracking&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;seguimiento&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7a03f3ca7159cd6e7b402bafd421cfee1a1d56d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;tracking&gt;
+# <a name="lttrackinggt"></a>&lt;seguimiento&gt;
 Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.  
   
- Para obtener más información acerca del seguimiento del flujo de trabajo y su configuración, consulte [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md) y [Configurar seguimiento para un flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md).  
+ Para obtener más información del seguimiento de flujo de trabajo y su configuración, consulte [seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) y [configuración del seguimiento para un flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-## Sintaxis  
+\<system.serviceModel >  
+\<seguimiento >  
   
-```vb  
+## <a name="syntax"></a>Sintaxis  
   
-<system.serviceModel>  
-  <tracking>    
-     <participants>   
-      <add name="String"   
-           profileName="String"  
-           type="String" />   
-     </participants>   
-    <trackingProfile name="String">  
-      <workflow activityDefinitionId="String">  
-          <activityScheduledQueries>  
-             <activityScheduledQuery activityName="String"  
-                 childActivityName="String"/>  
-          </activityScheduledQueries>  
-             <activityStateQuery activityName="String" />  
-                <arguments>  
-                   <argument name="String"/>  
-                </arguments>  
-                <states>  
-                   <state name="String"/>  
-                </states>  
-                <variables>  
-                   <variable name="String"/>  
-                </variables>  
-          </activityStateQueries>  
-          <bookmarkResumptionQueries>  
-             <bookmarkResumptionQuery name="String" />  
-          </bookmarkResumptionQueries>  
-          <cancelRequestQueries>  
-             <cancelRequestQuery activityName="String"  
-                 childActivityName="String"/>  
-          </cancelRequestQueries>  
-          <customTrackingQueries>  
-             <customTrackingQuery activityName="String"  
-                 name="String"/>  
-          </customTrackingQueries>  
-          <faultPropagationQueries>  
-             <faultPropagationQuery activityName="String"  
-                 faultHandlerActivityName="String"/>  
-          </faultPropagationQueries>  
-         <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-              <states>  
-                 <state name="String"/>  
-              </states>  
-          </workflowInstanceQuery>  
-        </workflowInstanceQueries>  
-      </workflow>  
-    </trackingProfile>          
-   </profiles>  
-  </tracking>  
+```xml  
+<system.serviceModel>
+  <tracking>
+    <profiles>
+      <participants>
+        <add name="String" 
+             profileName="String" 
+             type="String" />
+      </participants>
+      <trackingProfile name="String">
+        <workflow activityDefinitionId="String">
+          <activityScheduledQueries>
+            <activityScheduledQuery activityName="String" 
+                                    childActivityName="String"/>
+          </activityScheduledQueries>
+          <activityStateQueries>
+            <activityStateQuery activityName="String" />
+            <arguments>
+              <argument name="String" />
+            </arguments>
+            <states>
+              <state name="String"  />
+            </states>
+            <variables>
+              <variable name="String" />
+            </variables>
+          </activityStateQueries>
+          <bookmarkResumptionQueries>
+            <bookmarkResumptionQuery name="String" />
+          </bookmarkResumptionQueries>
+          <cancelRequestQueries>
+            <cancelRequestQuery activityName="String" 
+                                childActivityName="String"/>
+          </cancelRequestQueries>
+          <customTrackingQueries>
+            <customTrackingQuery activityName="String" 
+                                 name="String"/>
+          </customTrackingQueries>
+          <faultPropagationQueries>
+            <faultPropagationQuery activityName="String" 
+                                   faultHandlerActivityName="String" />
+          </faultPropagationQueries>
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="String" />
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
 </system.serviceModel>  
-  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<participants\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Una colección de elementos de configuración que definen participantes que se suscriben a los registros de seguimiento.  Los participantes de seguimiento contienen la lógica para procesar la carga de los registros de seguimiento \(por ejemplo, podrían escribir en un archivo\).|  
-|[\<trackingProfile\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Un perfil de seguimiento para filtrar registros de seguimiento emitidos desde una instancia de flujo de trabajo.|  
+|-------------|-----------------|  
+|[\<los participantes >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Una colección de elementos de configuración que definen a participantes que se suscriben a los registros de seguimiento. Los participantes de seguimiento contienen la lógica para procesar la carga de los registros de seguimiento (por ejemplo, podrían escribir en un archivo).|  
+|[\<trackingProfile >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Un perfil de seguimiento para filtrar registros de seguimiento emitidos desde una instancia de flujo de trabajo.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |system.ServiceModel|El elemento raíz de todos los elementos de configuración de flujo de trabajo.|  
   
-## Comentarios  
- El seguimiento ofrece la posibilidad de examinar la ejecución de un flujo de trabajo.  La infraestructura de seguimiento del flujo de trabajo instrumenta un flujo de trabajo para emitir registros que reflejan los eventos clave durante la ejecución.  Por ejemplo, cuando una instancia de flujo de trabajo se inicia o completa, se emiten los registros de seguimiento.  El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo.  Por ejemplo, si el flujo de trabajo representa un sistema de procesamiento de pedidos, el Id. del pedido se puede extraer junto con el registro de seguimiento.  En general, la habilitación del seguimiento de WF facilita el diagnóstico o los análisis comerciales durante la ejecución de un flujo de trabajo.  
+## <a name="remarks"></a>Comentarios  
+ El seguimiento ofrece la posibilidad de examinar la ejecución de un flujo de trabajo. La infraestructura de seguimiento del flujo de trabajo instrumenta un flujo de trabajo para emitir registros que reflejan los eventos clave durante la ejecución. Por ejemplo, cuando una instancia de flujo de trabajo se inicia o completa, se emiten los registros de seguimiento. El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo. Por ejemplo, si el flujo de trabajo representa un sistema de procesamiento de pedidos, el Id. del pedido se puede extraer junto con el registro de seguimiento. En general, la habilitación del seguimiento de WF facilita el diagnóstico o los análisis comerciales durante la ejecución de un flujo de trabajo.  
   
-## Vea también  
- [System.ServiceModel.Activities.Tracking.Configuration.TrackingSection](assetId:///System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?qualifyHint=False&amp;autoUpgrade=True)   
- [Seguimiento y traza del flujo de trabajo](../../../../../docs/framework/windows-workflow-foundation//workflow-tracking-and-tracing.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>       
+ [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

@@ -1,39 +1,42 @@
 ---
-title: "Asignar restricciones keyref de esquema XML (XSD) a las restricciones de DataSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 4ca72292bd2c43fec6f3833d521ddb83c01c32c9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignar restricciones keyref de esquema XML (XSD) a las restricciones de DataSet
-El elemento **keyref** permite establecer vínculos entre elementos dentro de un documento.  Esto es similar a una relación de clave externa en una base de datos relacional.  Si un esquema especifica el elemento **keyref**, durante el proceso de asignación del esquema el elemento se convertirá en una restricción de clave externa correspondiente en las columnas de las tablas del <xref:System.Data.DataSet>.  De manera predeterminada, el elemento **keyref** genera también una relación donde se especifican las propiedades **ParentTable**, **ChildTable**, **ParentColumn** y **ChildColumn**.  
+# <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Asignar restricciones KEYREF de un esquema XML (XSD) a restricciones de conjuntos de datos
+El **keyref** elemento permite establecer vínculos entre elementos dentro de un documento. Esto es similar a una relación de clave externa en una base de datos relacional. Si un esquema especifica la **keyref** elemento, el elemento se convierte durante el proceso de asignación de esquema para una restricción de clave externa correspondiente en las columnas de las tablas de la <xref:System.Data.DataSet>. De forma predeterminada, el **keyref** elemento también genera una relación con la **ParentTable**, **ChildTable**, **ParentColumn**y  **ChildColumn** propiedades especificadas en la relación.  
   
- En la siguiente tabla se describen los atributos **msdata** que puede especificar en el elemento **keyref**.  
+ La siguiente tabla se describen los **msdata** atributos que puede especificar en el **keyref** elemento.  
   
 |Nombre del atributo|Descripción|  
-|-------------------------|-----------------|  
-|**msdata:ConstraintOnly**|Si se especifica **ConstraintOnly\="true"** en el elemento **keyref** del esquema, se crea una restricción, pero no se crea ninguna relación.  Si no se especifica este atributo \(o si se establece como **False**\), tanto la restricción como la relación se crearán en el **DataSet**.|  
-|**msdata:ConstraintName**|Si se especifica el atributo **ConstraintName**, su valor se utiliza como nombre de la restricción.  De lo contrario, el atributo **name** del elemento **keyref** del esquema proporciona el nombre de restricción del **DataSet**.|  
-|**msdata:UpdateRule**|Si se especifica el atributo **UpdateRule** en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **UpdateRule** del **DataSet**.  De lo contrario, la propiedad **UpdateRule** se establece como **Cascade**.|  
-|**msdata:DeleteRule**|Si se especifica el atributo **DeleteRule** en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **DeleteRule** del **DataSet**.  De lo contrario, la propiedad **DeleteRule** se establece como **Cascade**.|  
-|**msdata:AcceptRejectRule**|Si se especifica el atributo **AcceptRejectRule** en el elemento **keyref** del esquema, su valor se asigna a la propiedad de restricción **AcceptRejectRule** del **DataSet**.  De lo contrario, la propiedad **AcceptRejectRule** se establece como **None**.|  
+|--------------------|-----------------|  
+|**msdata: ConstraintOnly**|Si **ConstraintOnly = "true"** se especifica en el **keyref** elemento en el esquema, se crea una restricción, pero se crea ninguna relación. Si no se especifica este atributo (o se establece en **False**), tanto la restricción como la relación se crean en el **conjunto de datos**.|  
+|**msdata: ConstraintName**|Si el **ConstraintName** atributo se especifica, su valor se utiliza como el nombre de la restricción. En caso contrario, el **nombre** atributo de la **keyref** elemento en el esquema proporciona el nombre de restricción en la **conjunto de datos**.|  
+|**msdata:UpdateRule**|Si el **UpdateRule** atributo se especifica en el **keyref** elemento en el esquema, su valor se asigna a la **UpdateRule** propiedad de restricción en la  **Conjunto de datos**. En caso contrario, el **UpdateRule** propiedad está establecida en **Cascade**.|  
+|**msdata:DeleteRule**|Si el **DeleteRule** atributo se especifica en el **keyref** elemento en el esquema, su valor se asigna a la **DeleteRule** propiedad de restricción en la  **Conjunto de datos**. En caso contrario, el **DeleteRule** propiedad está establecida en **Cascade**.|  
+|**msdata:AcceptRejectRule**|Si el **AcceptRejectRule** atributo se especifica en el **keyref** elemento en el esquema, su valor se asigna a la **AcceptRejectRule** propiedad de restricción en la  **Conjunto de datos**. En caso contrario, el **AcceptRejectRule** propiedad está establecida en **ninguno**.|  
   
- El ejemplo siguiente contiene un esquema que especifica las relaciones **key** y **keyref** entre el elemento secundario **OrderNumber** del elemento **Order** y el elemento secundario **OrderNo** del elemento **OrderDetail**.  
+ El ejemplo siguiente contiene un esquema que especifica la **clave** y **keyref** las relaciones entre la **OrderNumber** elemento secundario de la **orden**  elemento y el **OrderNo** elemento secundario de la **OrderDetail** elemento.  
   
- En el ejemplo, el elemento secundario **OrderNumber** del elemento **OrderDetail** hace referencia al elemento secundario de clave **OrderNo** del elemento **Order**.  
+ En el ejemplo, el **OrderNumber** elemento secundario de la **OrderDetail** elemento hace referencia a la **OrderNo** elemento secundario de clave de la **orden**elemento.  
   
-```  
+```xml  
 <xs:schema id="MyDataSet" xmlns=""   
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -73,19 +76,18 @@ El elemento **keyref** permite establecer vínculos entre elementos dentro de un
 </xs:schema>  
 ```  
   
- El proceso de asignación del esquema del lenguaje de definición de esquemas XML \(XSD\) crea el siguiente **DataSet** con dos tablas:  
+ El proceso de asignación de esquema de lenguaje (XSD) de esquema XML definición produce el siguiente **conjunto de datos** con dos tablas:  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Además, el **DataSet** define las restricciones siguientes:  
+ Además, el **conjunto de datos** define las restricciones siguientes:  
   
--   Una restricción única en la tabla **Order**.  
+-   Una restricción unique en la **orden** tabla.  
   
     ```  
-  
               Table: Order  
     Columns: OrderNumber   
     ConstraintName: OrderNumberKey  
@@ -93,10 +95,9 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Una relación entre las tablas **Order** y **OrderDetail**.  La propiedad **Nested** se establece como **False** porque los dos elementos no están anidados en el esquema.  
+-   Una relación entre la **orden** y **OrderDetail** tablas. El **Nested** propiedad está establecida en **False** porque los dos elementos no están anidados en el esquema.  
   
     ```  
-  
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -107,10 +108,9 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Una restricción de clave externa en la tabla **OrderDetail**.  
+-   Una restricción foreign key en la **OrderDetail** tabla.  
   
     ```  
-  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -119,7 +119,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## Vea también  
- [Asignar restricciones de esquema XML \(XSD\) a las restricciones de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [Generar las relaciones de DataSet desde la definición de esquemas XML \(XSD\)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Asignar restricciones de esquema (XSD) de XML a las restricciones de conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Generar las relaciones de conjunto de datos desde un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

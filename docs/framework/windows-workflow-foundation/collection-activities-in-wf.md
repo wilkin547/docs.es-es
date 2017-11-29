@@ -1,26 +1,30 @@
 ---
-title: "Actividades de colecci&#243;n en WF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Actividades de colección en WF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f1feb09c67051c1e99ac199adc20fe6ca4d6e4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Actividades de colecci&#243;n en WF
-Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo.  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección.  `ExistsInCollection` y `RemoveFromCollectio` tienen un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, que indica el resultado.  
+# <a name="collection-activities-in-wf"></a>Actividades de colección en WF
+Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection`y `RemoveFromCollection` tiene un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, lo que indica el resultado.  
   
 > [!IMPORTANT]
 >  Si se ejecuta una actividad de colección antes de establecer el objeto de colección subyacente, se inicia una excepción <xref:System.InvalidOperationException> y se produce un error en la actividad.  
   
-## Actividades de colección  
+## <a name="collection-activities"></a>Actividades de colección  
   
 |||  
 |-|-|  
@@ -29,8 +33,8 @@ Las actividades de colección se usan para trabajar con objetos de colección en
 |<xref:System.Activities.Statements.ExistsInCollection%601>|Devuelve `true` si un elemento ya existe en una colección.|  
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Quita un elemento de una colección especificada y devuelve `true` si el elemento se quitó correctamente.|  
   
-## Usar actividades de colección  
- El siguiente ejemplo de código muestra cómo interactuar con un colección declarada como una variable de flujo de trabajo.  La colección usada es una <xref:System.Collections.Generic.List%E2%80%991> de objetos <xref:System.String> denominada `fruitList`.  
+## <a name="using-collection-activities"></a>Usar actividades de colección  
+ El siguiente ejemplo de código muestra cómo interactuar con un colección declarada como una variable de flujo de trabajo. La colección usada es una <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` de <xref:System.String> objetos denominados `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -85,7 +89,6 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
 ```xaml  
@@ -229,7 +232,6 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
  Los ejemplos de código anteriores también se pueden crear mediante <xref:Microsoft.CSharp.Activities.CSharpValue%601> en lugar de <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
@@ -287,10 +289,9 @@ Activity wf = new Sequence
         }  
     }  
 };  
-  
 ```  
   
-```  
+```xml  
 <Sequence  
    xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
    xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -431,8 +432,7 @@ Activity wf = new Sequence
     </If.Then>  
   </If>  
 </Sequence>  
-  
 ```  
   
-## Vea también  
- [Crear flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>Vea también  
+ [Creación de flujos de trabajo, actividades y expresiones mediante código imperativo](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -1,81 +1,84 @@
 ---
-title: "Elemento &lt;bindingRedirect&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<bindingRedirect> (elemento)"
-  - "bindingRedirect (elemento)"
-  - "etiquetas contenedoras, <bindingRedirect> (elemento)"
+title: '&lt;bindingRedirect&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect
+helpviewer_keywords:
+- <bindingRedirect> element
+- container tags, <bindingRedirect> element
+- bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-caps.latest.revision: 12
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 3bc8abc019ddb271c8c1246b280be754585bfd61
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;bindingRedirect&gt;
+# <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; elemento
 Redirige una versión de ensamblado a otra versión.  
   
-## Sintaxis  
+ \<configuration>  
+\<en tiempo de ejecución >  
+\<assemblyBinding >  
+\<dependentAssembly >  
+\<bindingRedirect >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-   <bindingRedirect    
+```xml  
+   <bindingRedirect    
 oldVersion="existing assembly version"  
 newVersion="new assembly version"/>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`oldVersion`|Atributo necesario.<br /><br /> Especifica la versión del ensamblado solicitada originalmente.  El formato de número de versión del ensamblado es *major.minor.build.revision*.  Los valores válidos para cada una de las partes de este número de versión van del 0 al 65535.<br /><br /> También se puede especificar un intervalo de versiones con el siguiente formato:<br /><br /> *n.n.n.n \- n.n.n.n*|  
-|`newVersion`|Atributo necesario.<br /><br /> Especifica la versión del ensamblado que se va a usar, en lugar de la versión solicitada originalmente, con el formato: *n.n.n.n*<br /><br /> Este valor puede especificar una versión anterior a `oldVersion`.|  
+|---------------|-----------------|  
+|`oldVersion`|Atributo necesario.<br /><br /> Especifica la versión del ensamblado solicitada originalmente. El formato de un número de versión de ensamblado es *principal.secundaria.compilación.revisión*. Los valores válidos para cada una de las partes de este número de versión van del 0 al 65535.<br /><br /> También se puede especificar un intervalo de versiones con el siguiente formato:<br /><br /> *n.n.n.n - n.n.n.n*|  
+|`newVersion`|Atributo necesario.<br /><br /> Especifica la versión del ensamblado que se va a usar en lugar de la versión solicitada inicialmente en el formato: *n.n.n.n*<br /><br /> Este valor puede especificar una versión anterior a `oldVersion`.|  
   
-### Elementos secundarios  
-  
-|Elemento|Descripción|  
-|--------------|-----------------|  
-|Ninguno||  
-  
-### Elementos primarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
+|Ninguna||  
+  
+### <a name="parent-elements"></a>Elementos primarios  
+  
+|Elemento|Descripción|  
+|-------------|-----------------|  
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado.  Use un elemento dependentAssembly para cada ensamblado.|  
+|`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un elemento dependentAssembly para cada ensamblado.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## Comentarios  
- Al compilar una aplicación .NET Framework en un ensamblado con nombre seguro, la aplicación usa esa versión del ensamblado en tiempo de ejecución de forma predeterminada, aunque haya disponible otra versión posterior.  No obstante, la aplicación puede configurarse para ejecutarla en una versión más reciente del ensamblado.  Para obtener información detallada sobre cómo el runtime usa estos archivos para determinar la versión del ensamblado que se va a emplear, vea el tema sobre [cómo el runtime busca ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="remarks"></a>Comentarios  
+ Al compilar una aplicación .NET Framework en un ensamblado con nombre seguro, la aplicación usa esa versión del ensamblado en tiempo de ejecución de forma predeterminada, aunque haya disponible otra versión posterior. No obstante, la aplicación puede configurarse para ejecutarla en una versión más reciente del ensamblado. Para obtener más información sobre cómo el runtime usa estos archivos para determinar qué versión del ensamblado, vea [cómo el tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Se puede redirigir más de una versión de ensamblado con la inclusión de varios elementos `bindingRedirect` en un elemento `dependentAssembly`.  También puede redirigirse de una versión más reciente a una versión anterior del ensamblado.  
+ Se puede redirigir más de una versión de ensamblado con la inclusión de varios elementos `bindingRedirect` en un elemento `dependentAssembly`. También puede redirigirse de una versión más reciente a una versión anterior del ensamblado.  
   
- Para realizar una redirección de enlaces de ensamblado de forma explícita en un archivo de configuración, se precisa permiso de seguridad.  Esto se aplica a la redirección de los ensamblados de .NET Framework y de los ensamblados de otros proveedores.  El permiso se otorga estableciendo la marca de [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) en la [clase SecurityPermission](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic).  Para obtener más información, vea [Permiso de seguridad para la redirección de enlace de ensamblados](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Para realizar una redirección de enlaces de ensamblado de forma explícita en un archivo de configuración, se precisa permiso de seguridad. Esto se aplica a la redirección de los ensamblados de .NET Framework y de los ensamblados de otros proveedores. El permiso se otorga estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca en el <xref:System.Security.Permissions.SecurityPermission>. Para obtener más información, consulte [permiso de seguridad de redirección de enlace de ensamblado](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo redirigir una versión de ensamblado a otra versión.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -91,7 +94,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

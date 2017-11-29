@@ -1,28 +1,27 @@
 ---
-title: "Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF [WCF]"
-  - "Windows Communication Foundation [WCF]"
-ms.assetid: 96aad289-58bc-4389-89d0-b09dfc4d5c58
-caps.latest.revision: 2
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+title: Windows Communication Foundation
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF]
+- WCF [WCF]
+ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d0e4a33f83cc8bbd0b67a7f21d786ac9f646bd5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] es el modelo de programación unificado de Microsoft para compilar aplicaciones orientadas a servicios.  Permite a los desarrolladores compilar soluciones de transacción seguras y de confianza que se integran en las plataformas e interaccionan con inversiones existentes.  
-  
-## En esta sección  
+# <a name="developing-service-oriented-applications-with-wcf"></a>Desarrollar aplicaciones orientadas a servicios mediante WCF
+Esta sección de la documentación proporciona información sobre Windows Communication Foundation (WCF), que es un modelo de programación unificado para compilar aplicaciones orientadas a servicios. Permite a los desarrolladores compilar soluciones de transacción seguras y confiables que se integran en diferentes plataformas y que interactúan con las inversiones existentes.
+ 
+## <a name="in-this-section"></a>En esta sección  
  [Novedades de Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)  
  Describe las características nuevas de Windows Communication Foundation.  
   
@@ -33,7 +32,7 @@ caps.handback.revision: 10
  Descripción de la documentación de WCF  
   
  [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
- Resume la información sobre el sistema de mensajería de Windows Communication Foundation \(WCF\) y las clases que admiten su uso.  
+ Resume la información sobre el sistema de mensajería de Windows Communication Foundation (WCF) y las clases que admiten su uso.  
   
  [Tutorial de introducción](../../../docs/framework/wcf/getting-started-tutorial.md)  
  Tutorial paso a paso para crear un servicio WCF y un cliente  
@@ -48,7 +47,7 @@ caps.handback.revision: 10
  Describe cómo modificar y extender los componentes del tiempo de ejecución de WCF  
   
  [Instrucciones y procedimientos recomendados](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- Proporciona instrucciones para crear aplicaciones de Windows Communication Foundation \(WCF\).  
+ Proporciona instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).  
   
  [Administración y diagnóstico](../../../docs/framework/wcf/diagnostics/index.md)  
  Describe las características de diagnóstico de WCF.  
@@ -83,9 +82,5 @@ caps.handback.revision: 10
  [Comentarios y comunidad](../../../docs/framework/wcf/feedback-and-community.md)  
  Información sobre cómo proporcionar comentarios sobre Windows Communication Foundation  
   
- [Información de la privacidad](../../../docs/framework/wcf/privacy-information.md)  
+ [Información de privacidad](../../../docs/framework/wcf/privacy-information.md)  
  Información relacionada con WCF y la privacidad  
-  
-## Referencia  
-  
-## Secciones relacionadas

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0bb682c6eaebf7e1a0c2c2de5b584c28e4c192c5
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 22c2272118c8f8a42523d9bc8ceaa2007c0b7b57
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="wif-and-web-farms"></a>WIF y granjas de servidores web
 Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de una aplicación de usuario de confianza (RP) implementada en una granja de servidores web, debe realizar determinados pasos para garantizar que WIF pueda procesar tokens de instancias de la aplicación de RP que se ejecutan en equipos diferentes de la granja de servidores. Este proceso implica la validación de firmas de token de sesión, el cifrado y descifrado de tokens de sesión, el almacenamiento en caché de tokens de sesión y la detección de tokens de seguridad reproducidos.  
@@ -51,7 +49,7 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
     </securityTokenHandlers>  
     ```  
   
--   Derive de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implemente el almacenamiento en caché distribuido, es decir, una memoria caché que sea accesible desde todos los equipos de la granja de servidores en la que se puede ejecutar el RP. Configure el RP para que use la memoria caché distribuida al especificar el elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) del archivo de configuración. Puede invalidar el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=fullName> de la clase derivada para implementar elementos secundarios del elemento `<sessionSecurityTokenCache>` si fueran necesarios.  
+-   Derive de <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> e implemente el almacenamiento en caché distribuido, es decir, una memoria caché que sea accesible desde todos los equipos de la granja de servidores en la que se puede ejecutar el RP. Configure el RP para que use la memoria caché distribuida al especificar el elemento [\<sessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md) del archivo de configuración. Puede invalidar el método <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType> de la clase derivada para implementar elementos secundarios del elemento `<sessionSecurityTokenCache>` si fueran necesarios.  
   
     ```xml  
     <caches>  
@@ -262,8 +260,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>   
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>   
- <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>   
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>  
+ <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+ <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>  
  [Administración de sesiones de WIF](../../../docs/framework/security/wif-session-management.md)
-

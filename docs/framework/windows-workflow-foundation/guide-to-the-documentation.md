@@ -1,43 +1,47 @@
 ---
-title: "Gu&#237;a para la documentaci&#243;n de Windows Workflow | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WF [WF], guía"
-  - "Windows Workflow Foundation [WF], guía"
+title: "Guía para la documentación de Windows Workflow"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WF [WF], guide to
+- Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 55859cb83c98c28ced862a66bd56dd86a828c1fc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Gu&#237;a para la documentaci&#243;n de Windows Workflow
-Este tema contiene información sobre cómo usar la documentación de Windows Workflow Foundation.Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  
+# <a name="guide-to-the-windows-workflow-documentation"></a>Guía para la documentación de Windows Workflow
+Este tema contiene información sobre cómo usar la documentación de Windows Workflow Foundation. Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  
   
-## Novedades en la programación de Windows Workflow Foundation  
+## <a name="new-to-windows-workflow-foundation-programming"></a>Novedades en la programación de Windows Workflow Foundation  
   
--   Si está comenzando a programar con Windows Workflow Foundation y sólo desea ver algunas aplicaciones de ejemplo que funcionen, vea los temas que aparecen debajo de [Ejemplos de Windows Workflow](../../../docs/framework/windows-workflow-foundation/samples/index.md).  
+-   Si está familiarizado con la programación con Windows Workflow Foundation y simplemente desea ver algunas aplicaciones de ejemplo que funcionan, vea los temas enumerados en [ejemplos de Windows Workflow](../../../docs/framework/windows-workflow-foundation/samples/index.md).  
   
--   Para ver una discusión sobre los modelos de control de flujo de Windows Workflow Foundation, vea [Diseñar flujos de trabajo](../../../docs/framework/windows-workflow-foundation//designing-workflows.md).  
+-   Para obtener una explicación de los distintos modelos de control de flujo de Windows Workflow Foundation, consulte [diseñar flujos de trabajo](../../../docs/framework/windows-workflow-foundation/designing-workflows.md).  
   
--   Para ver un tutorial que describe los pasos básicos para crear una aplicación Windows Workflow Foundation, vea [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md).  
+-   Para obtener un tutorial que le guía por los pasos básicos para crear una aplicación de Windows Workflow Foundation, consulte [Tutorial de introducción](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md).  
   
--   Si está interesado en los conceptos de Windows Workflow Foundation, vea los temas de la sección [Información general conceptual de Windows Workflow](../../../docs/framework/windows-workflow-foundation//conceptual-overview.md).  
+-   Si está interesado en los conceptos relativos a Windows Workflow Foundation, vea los temas de la [información general Conceptual de Windows Workflow](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) sección.  
   
--   Para obtener una lista de condiciones usadas en la documentación de Windows Workflow Foundation, vea [Glosario de Windows Workflow Foundation para .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation//glossary.md).  
+-   Para obtener una lista de los términos usados en la documentación de Windows Workflow Foundation, consulte [Glosario de Windows Workflow Foundation de .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md).  
   
--   Para ver una lista de nuevos conceptos y funcionalidades, vea [Novedades de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//whats-new.md).  
+-   Para obtener una lista de los nuevos conceptos y funcionalidades, consulte [¿qué novedades presenta Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md).  
   
-## Programación en profundidad  
+## <a name="programming-in-depth"></a>Programación en profundidad  
   
--   Para ver una discusión detallada del modelo de objeto de Windows Workflow Foundation, vea [Arquitectura de Windows Workflow](../../../docs/framework/windows-workflow-foundation//architecture.md).  
+-   Para obtener una explicación más detallada del modelo de objetos de Windows Workflow Foundation, consulte [arquitectura de flujo de trabajo de Windows](../../../docs/framework/windows-workflow-foundation/architecture.md).  
   
--   Si está listo para comenzar a desarrollar una aplicación, vea [Programación de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//programming.md).  
+-   Si está listo para empezar a desarrollar una aplicación, consulte [programación de Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md).  
   
--   Si desea ampliar o personalizar Windows Workflow Foundation para ajustarse a sus requisitos, vea [Ampliar Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation//extend.md).
+-   Si desea ampliar o personalizar Windows Workflow Foundation para satisfacer sus necesidades, vea [ampliar Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md).

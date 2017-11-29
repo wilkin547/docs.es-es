@@ -1,26 +1,25 @@
 ---
-title: "Especificaci&#243;n SSDL | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "Especificación SSDL"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9d6b29da-b363-4930-ba57-989f9d6dbf3f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 32eef196d341d0a47a619b06e4c64894fbd85492
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Especificaci&#243;n SSDL
-El sitio [msdn.microsoft.com\/data\/ef](http://msdn.microsoft.com/data/ef) es ahora la ubicación principal para el contenido de Entity Framework.  
+# <a name="ssdl-specification"></a>Especificación SSDL
+El [msdn.microsoft.com/data/ef](http://msdn.microsoft.com/data/ef) sitio ahora es la ubicación principal para el contenido de Entity Framework.  
   
- El contenido de este tema está disponible en la página siguiente: [Especificación de SSDL](http://msdn.microsoft.com/data/jj652016).
+ El contenido de este tema está disponible en la página siguiente: [especificación de SSDL](http://msdn.microsoft.com/data/jj652016).

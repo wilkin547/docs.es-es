@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - initializing trace listeners
 - trace listeners, creating
@@ -21,19 +18,18 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 38b2240f3f245e01f3aefaec14f5b7510a67ceae
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d48c8f64a4dbdc7f1254a2cc2f0857f2714d6b2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Cómo: Crear e inicializar agentes de escucha de seguimiento
-Las clases <xref:System.Diagnostics.Debug?displayProperty=fullName> y <xref:System.Diagnostics.Trace?displayProperty=fullName> envían mensajes a objetos denominados agentes de escucha que reciben y procesan estos mensajes. Un agente de escucha de este tipo, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=fullName>, se crea y se inicializa automáticamente si la traza o la depuración está habilitada. Si desea que los resultados de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.  
+Las clases <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace?displayProperty=nameWithType> envían mensajes a objetos denominados agentes de escucha que reciben y procesan estos mensajes. Un agente de escucha de este tipo, <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, se crea y se inicializa automáticamente si la traza o la depuración está habilitada. Si desea que los resultados de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.Debug> se envíen a otros destinos adicionales, deberá crear e inicializar agentes de escucha adicionales.  
   
  Los agentes de escucha que cree deben reflejar las necesidades de la aplicación. Por ejemplo, si desea un registro de texto de todo el resultado de traza, cree un agente de escucha <xref:System.Diagnostics.TextWriterTraceListener>, que escribe todo el resultado en un nuevo archivo de texto cuando se habilita. Por otra parte, si desea ver el resultado solo durante la ejecución de la aplicación, cree un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener>, que envía todo el resultado a una ventana de consola. <xref:System.Diagnostics.EventLogTraceListener> puede dirigir el resultado de traza a un registro de eventos. Para más información, vea [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -107,8 +103,7 @@ Las clases <xref:System.Diagnostics.Debug?displayProperty=fullName> y <xref:Syst
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
- [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)   
- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
+ [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [Cómo: agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
  [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-

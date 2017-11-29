@@ -1,34 +1,30 @@
 ---
-title: "Cómo: proyectar un nuevo tipo (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: proyectar un nuevo tipo (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a7cbbce130aa78a7e14ffd61a1dcd76b969e1b35
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 73b677e45be1d457d54de01331c93f60348e6bfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Cómo: proyectar un nuevo tipo (LINQ to XML) (Visual Basic)
-Otros ejemplos de esta sección han mostrado consultados que devuelven resultados como <xref:System.Collections.Generic.IEnumerable%601>de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601>de `string`, y <xref:System.Collections.Generic.IEnumerable%601>de `int`.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.Generic.IEnumerable%601> </xref:System.Xml.Linq.XElement> </xref:System.Collections.Generic.IEnumerable%601> Se trata de tipos de resultados comunes, pero no son adecuados para cada caso. En muchos casos, le interesará sus consultas devuelvan un <xref:System.Collections.Generic.IEnumerable%601>de algún otro tipo.</xref:System.Collections.Generic.IEnumerable%601>  
+Otros ejemplos de esta sección han mostrado consultados que devuelven resultados como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string` y <xref:System.Collections.Generic.IEnumerable%601> de `int`. Se trata de tipos de resultados comunes, pero no son adecuados para cada caso. En muchos casos querrá que sus consultas devuelvan un <xref:System.Collections.Generic.IEnumerable%601> de algún otro tipo.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra como crear instancias de objetos en la cláusula `Select`. El código primero define una nueva clase con un constructor y después modifica la instrucción `Select` para que la expresión sea una nueva instancia de la nueva clase.  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de ejemplo: pedido de compra típico (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Sample XML File: Typical Purchase Order (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) (Archivo XML de ejemplo: pedido de compra común [LINQ to XML]).  
   
 ```vb  
 Public Class NameQty  

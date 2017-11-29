@@ -1,63 +1,56 @@
 ---
-title: "Code Access Security | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "named permission sets, code access security"
-  - "call stacks"
-  - "malicious code"
-  - "stack walk"
-  - "security [.NET Framework], code access security"
-  - "permissions [.NET Framework], code access security"
-  - "trusted code"
-  - "mobile code security"
-  - "unmanaged code, code access security"
-  - "granting permissions, code access security"
-  - "user authentication, code access security"
-  - "code access security"
+title: "Seguridad de acceso del código"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- named permission sets, code access security
+- call stacks
+- malicious code
+- stack walk
+- security [.NET Framework], code access security
+- permissions [.NET Framework], code access security
+- trusted code
+- mobile code security
+- unmanaged code, code access security
+- granting permissions, code access security
+- user authentication, code access security
+- code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "25"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3582516dece69589d98acb66f1dde2249d9d8832
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Code Access Security
-Los equipos conectados de hoy en día suelen estar expuestos a código procedente de varios orígenes, posiblemente desconocidos.  El código puede adjuntarse por correo electrónico, incluirse en documentos o descargarse a través de Internet.  Por desgracia, muchos usuarios de equipos han experimentado personalmente las consecuencias del código móvil malintencionado, como virus y gusanos, que pueden dañar o destruir datos y costar tiempo y dinero.  
+# <a name="code-access-security"></a>Seguridad de acceso del código
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Los mecanismos de seguridad más comunes conceden derechos a los usuarios según sus credenciales de inicio de sesión \(normalmente, una contraseña\) y limitan los recursos \(a menudo, directorios y archivos\) a los que puede acceder el usuario.  Sin embargo, este enfoque no soluciona algunos problemas: los usuarios obtienen el código de muchos orígenes, algunos de los cuales pueden ser confiables. Además, el código puede contener errores o vulnerabilidades que permitan que lo explote el código malintencionado y el usuario, a veces, no sabe cómo actuará el código.  En consecuencia, los equipos pueden resultar dañados y se pueden perder datos privados si un usuario precavido y de confianza ejecuta software malintencionado o que contenga errores.  La mayoría de los mecanismos de seguridad de los sistemas operativos requiere que cada fragmento de código sea de plena confianza para ejecutarse, con la excepción, quizás, de los scripts de una página web.  Por lo tanto, sigue siendo necesario un mecanismo de seguridad de amplia aplicación que permita que el código que se origina en un equipo se ejecute con protección en otro sistema, aunque no haya ninguna relación de confianza entre los sistemas.  
+ Los equipos conectados de hoy en día suelen estar expuestos a código procedente de varios orígenes, posiblemente desconocidos. El código puede adjuntarse por correo electrónico, incluirse en documentos o descargarse a través de Internet. Por desgracia, muchos usuarios de equipos han experimentado personalmente las consecuencias del código móvil malintencionado, como virus y gusanos, que pueden dañar o destruir datos y costar tiempo y dinero.  
   
- .NET Framework proporciona un mecanismo de seguridad denominado “seguridad de acceso del código” para contribuir a proteger los sistemas informáticos del código móvil malintencionado, permitir que el código de origen desconocido se ejecute con protección y evitar que el código de confianza ponga en riesgo la seguridad, ya sea de manera intencionada o accidental.  La seguridad de acceso del código proporciona al código varios grados de confianza, dependiendo de su procedencia y de otros aspectos de la identidad del código.  La seguridad de acceso del código también exige al código los distintos niveles de confianza, lo que reduce la cantidad de código que debe ser de plena confianza para ejecutarse.  Al utilizar la seguridad de acceso del código, se puede reducir la probabilidad de que un código malintencionado o con errores use el código de la forma que no debe.  Puede reducir su responsabilidad, ya que usted puede especificar el conjunto de operaciones que debe poder realizar el código.  La seguridad de acceso del código también puede contribuir a minimizar el daño que puede derivarse de las vulnerabilidades de seguridad en el código.  
+ Los mecanismos de seguridad más comunes conceden derechos a los usuarios según sus credenciales de inicio de sesión (normalmente, una contraseña) y limitan los recursos (a menudo, directorios y archivos) a los que puede acceder el usuario. Sin embargo, este enfoque no soluciona algunos problemas: los usuarios obtienen el código de muchos orígenes, algunos de los cuales pueden ser confiables. Además, el código puede contener errores o vulnerabilidades que permitan que lo explote el código malintencionado y el usuario, a veces, no sabe cómo actuará el código. En consecuencia, los equipos pueden resultar dañados y se pueden perder datos privados si un usuario precavido y de confianza ejecuta software malintencionado o que contenga errores. La mayoría de los mecanismos de seguridad de los sistemas operativos requiere que cada fragmento de código sea de plena confianza para ejecutarse, con la excepción, quizás, de los scripts de una página web. Por lo tanto, sigue siendo necesario un mecanismo de seguridad de amplia aplicación que permita que el código que se origina en un equipo se ejecute con protección en otro sistema, aunque no haya ninguna relación de confianza entre los sistemas.  
+  
+ .NET Framework proporciona un mecanismo de seguridad denominado “seguridad de acceso del código” para contribuir a proteger los sistemas informáticos del código móvil malintencionado, permitir que el código de origen desconocido se ejecute con protección y evitar que el código de confianza ponga en riesgo la seguridad, ya sea de manera intencionada o accidental. La seguridad de acceso del código proporciona al código varios grados de confianza, dependiendo de su procedencia y de otros aspectos de la identidad del código. La seguridad de acceso del código también exige al código los distintos niveles de confianza, lo que reduce la cantidad de código que debe ser de plena confianza para ejecutarse. Al utilizar la seguridad de acceso del código, se puede reducir la probabilidad de que un código malintencionado o con errores use el código de la forma que no debe. Puede reducir su responsabilidad, ya que usted puede especificar el conjunto de operaciones que debe poder realizar el código. La seguridad de acceso del código también puede contribuir a minimizar el daño que puede derivarse de las vulnerabilidades de seguridad en el código.  
   
 > [!NOTE]
->  Se realizaron cambios importantes en la seguridad de acceso del código en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)].  El cambio más notable fue la [transparencia de seguridad](../../../docs/framework/misc/security-transparent-code.md), pero hay otros cambios importantes que afectan a la seguridad de acceso del código.  Para más información sobre estos cambios, consulte [Cambios de seguridad](../../../docs/framework/security/security-changes.md).  
+>  Se realizaron cambios importantes en la seguridad de acceso del código en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. El cambio más notable fue [transparencia en seguridad](../../../docs/framework/misc/security-transparent-code.md), pero también hay otros cambios importantes que afectan a la seguridad de acceso del código. Para obtener información sobre estos cambios, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).  
   
- La seguridad de acceso del código afecta, principalmente, al código de las bibliotecas y a las aplicaciones de confianza parcial.  Los desarrolladores de bibliotecas deben proteger sus códigos del acceso no autorizado desde las aplicaciones de confianza parcial.  Las aplicaciones de confianza parcial son aplicaciones que se cargan desde orígenes externos, como Internet.  Las aplicaciones que se instalan en el escritorio o en la intranet local se ejecutan con plena confianza.  Las aplicaciones de plena confianza no se ven afectadas por la seguridad de acceso del código, salvo que estén marcadas como [transparentes en seguridad](../../../docs/framework/misc/security-transparent-code.md), porque sean de plena confianza.  La única limitación de las aplicaciones de plena confianza es que las aplicaciones marcadas con el atributo <xref:System.Security.SecurityTransparentAttribute> no pueden llamar al código marcado con el atributo <xref:System.Security.SecurityCriticalAttribute>.  Las aplicaciones de confianza parcial se deben ejecutar en un espacio aislado \(por ejemplo, en Internet Explorer\) para que se pueda aplicar la seguridad de acceso del código.  Si descarga una aplicación de Internet y trata de ejecutarla desde el escritorio, obtendrá un <xref:System.NotSupportedException> con el mensaje: “Se intentó cargar un ensamblado desde una ubicación de red, por lo que el ensamblado habría sido incluido en un espacio aislado de versiones anteriores de .NET Framework.  Esta versión de .NET Framework no habilita la directiva CAS de forma predeterminada, por lo que esta carga puede ser peligrosa”. Si tiene la certeza de que se puede confiar en la aplicación, puede habilitarla para que se ejecute como de plena confianza con el [elemento \<loadFromRemoteSources\>](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md).  Para más información sobre la ejecución de una aplicación en un espacio aislado, consulte [How to: Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ La seguridad de acceso del código afecta, principalmente, al código de las bibliotecas y a las aplicaciones de confianza parcial. Los desarrolladores de bibliotecas deben proteger sus códigos del acceso no autorizado desde las aplicaciones de confianza parcial. Las aplicaciones de confianza parcial son aplicaciones que se cargan desde orígenes externos, como Internet. Las aplicaciones que se instalan en el escritorio o en la intranet local se ejecutan con plena confianza. Aplicaciones de plena confianza no se ven afectadas por la seguridad de acceso del código, a menos que estén marcadas como [transparente en seguridad](../../../docs/framework/misc/security-transparent-code.md), ya sean de plena confianza. La única limitación de las aplicaciones de plena confianza es que las aplicaciones marcadas con el atributo <xref:System.Security.SecurityTransparentAttribute> no pueden llamar al código marcado con el atributo <xref:System.Security.SecurityCriticalAttribute>. Las aplicaciones de confianza parcial se deben ejecutar en un espacio aislado (por ejemplo, en Internet Explorer) para que se pueda aplicar la seguridad de acceso del código. Si descarga una aplicación de Internet y trata de ejecutarla desde el escritorio, obtendrá un <xref:System.NotSupportedException> con el mensaje: “Se intentó cargar un ensamblado desde una ubicación de red, por lo que el ensamblado habría sido incluido en un espacio aislado de versiones anteriores de .NET Framework. Esta versión de .NET Framework no habilita la directiva CAS de forma predeterminada, por lo que esta carga puede ser peligrosa”. Si estás seguro de que se puede confiar en la aplicación, puede habilitarlo para ejecutarse como de plena confianza mediante el uso de la [ \<loadFromRemoteSources > elemento](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obtener información acerca de cómo ejecutar una aplicación en un espacio aislado, consulte [Cómo: ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
- Todo el código administrado que tiene como destino el Common Language Runtime se beneficia de la seguridad de acceso del código, aunque ese código no haga ni una sola llamada de seguridad de acceso del código.  Para más información, consulte [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md).  
-  
-> [!CAUTION]
->  Seguridad de acceso del código y código de confianza parcial  
->   
->  .NET Framework proporciona seguridad de acceso del código \(CAS\), que es un mecanismo para el cumplimiento de los distintos niveles de confianza en diferentes códigos que se ejecutan en la misma aplicación.  La seguridad de acceso del código en .NET Framework no debe usarse como límite de seguridad para código de confianza parcial, especialmente si se trata de código de origen desconocido.  Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas.  
->   
->  Esta directiva se aplica a todas las versiones de .NET Framework, pero no se aplica a la versión de .NET Framework incluida en Silverlight.  
+ Todo el código administrado que tiene como destino el Common Language Runtime se beneficia de la seguridad de acceso del código, aunque ese código no haga ni una sola llamada de seguridad de acceso del código. Para obtener más información, vea [Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
 <a name="key_functions"></a>   
-## Funciones clave de la seguridad de acceso del código  
- La seguridad de acceso del código contribuye a limitar el acceso que tiene el código a operaciones y recursos protegidos.  En .NET Framework, la seguridad de acceso del código realiza las funciones siguientes:  
+## <a name="key-functions-of-code-access-security"></a>Funciones clave de la seguridad de acceso del código  
+ La seguridad de acceso del código contribuye a limitar el acceso que tiene el código a operaciones y recursos protegidos. En .NET Framework, la seguridad de acceso del código realiza las funciones siguientes:  
   
 -   Define permisos y conjuntos de permisos que representan el derecho de acceso a varios recursos del sistema.  
   
@@ -68,22 +61,22 @@ Los equipos conectados de hoy en día suelen estar expuestos a código procedent
 -   Impone restricciones en el código en tiempo de ejecución mediante la comparación de los permisos concedidos a cada llamador en la pila de llamadas con los permisos que deben poseer.  
   
 <a name="walking_the_call_stack"></a>   
-## Recorrido de la pila de llamadas  
- Para averiguar si el código tiene autorización para acceder a un recurso o para ejecutar una operación, el sistema de seguridad en tiempo de ejecución recorre la pila de llamadas y compara los permisos concedidos a cada llamador con el permiso que se pide.  Si algún llamador de la pila de llamadas no tiene el permiso solicitado, se iniciará una excepción de seguridad y se rechazará el acceso.  El recorrido de la pila está diseñado para evitar los ataques por señuelo, en los que el código de menor confianza llama a código de confianza alta y lo utiliza para realizar acciones no autorizadas.  La solicitud de permisos a todos los llamadores en tiempo de ejecución afecta al rendimiento, pero es esencial para proteger el código de los ataques por señuelo del código de menor confianza.  Para optimizar el rendimiento, puede hacer que el código realice menos recorridos de la pila. Sin embargo, debe tener la seguridad de que no está exponiendo un punto débil de la seguridad cada vez que lo hace.  
+## <a name="walking-the-call-stack"></a>Recorrido de la pila de llamadas  
+ Para averiguar si el código tiene autorización para acceder a un recurso o para ejecutar una operación, el sistema de seguridad en tiempo de ejecución recorre la pila de llamadas y compara los permisos concedidos a cada llamador con el permiso que se pide. Si algún llamador de la pila de llamadas no tiene el permiso solicitado, se iniciará una excepción de seguridad y se rechazará el acceso. El recorrido de la pila está diseñado para evitar los ataques por señuelo, en los que el código de menor confianza llama a código de confianza alta y lo utiliza para realizar acciones no autorizadas. La solicitud de permisos a todos los llamadores en tiempo de ejecución afecta al rendimiento, pero es esencial para proteger el código de los ataques por señuelo del código de menor confianza. Para optimizar el rendimiento, puede hacer que el código realice menos recorridos de la pila. Sin embargo, debe tener la seguridad de que no está exponiendo un punto débil de la seguridad cada vez que lo hace.  
   
  La siguiente ilustración muestra el recorrido de la pila que se produce cuando un método del ensamblado A4 solicita que sus llamadores tengan el permiso P.  
   
- ![Seguridad de acceso del código](../../../docs/framework/misc/media/slide-10a.gif "slide\_10a")  
+ ![Seguridad de acceso del código](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")  
 Recorrido de la pila de seguridad  
   
 <a name="related_topics"></a>   
-## Temas relacionados  
+## <a name="related-topics"></a>Temas relacionados  
   
 |Título|Descripción|  
-|------------|-----------------|  
-|[Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md)|Describe la seguridad de acceso del código y sus usos más comunes.|  
-|[Security\-Transparent Code, Level 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Describe el modelo de transparencia de seguridad de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
-|[Using Libraries from Partially Trusted Code](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Describe cómo habilitar bibliotecas para usarlas con código no administrado y cómo usar las bibliotecas desde el código no administrado.|  
-|[Key Security Concepts](../../../docs/standard/security/key-security-concepts.md)|Proporciona información general sobre muchos de los términos y conceptos clave que se usan en el sistema de seguridad de .NET Framework.|  
-|[Role\-Based Security](../../../docs/standard/security/role-based-security.md)|Describe cómo incorporar la seguridad basada en roles.|  
-|[Servicios criptográficos](../../../docs/standard/security/cryptographic-services.md)|Describe cómo incorporar la criptografía en las aplicaciones.|
+|-----------|-----------------|  
+|[Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)|Describe la seguridad de acceso del código y sus usos más comunes.|  
+|[Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Describe el modelo de transparencia de seguridad de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
+|[Utilizar bibliotecas de código de confianza parcial](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Describe cómo habilitar bibliotecas para usarlas con código no administrado y cómo usar las bibliotecas desde el código no administrado.|  
+|[Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)|Proporciona información general sobre muchos de los términos y conceptos clave que se usan en el sistema de seguridad de .NET Framework.|  
+|[Seguridad basada en roles](../../../docs/standard/security/role-based-security.md)|Describe cómo incorporar la seguridad basada en roles.|  
+|[Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)|Describe cómo incorporar la criptografía en las aplicaciones.|

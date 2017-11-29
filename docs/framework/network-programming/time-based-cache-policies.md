@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - time-based cache policies
 - cache synchronization date policy
@@ -28,16 +23,15 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2915139d6a3c46de06bd2bdb0cb12f95f611af3b
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1d4cfa67d7fba06140838e04bdbff71102a2a303
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-based-cache-policies"></a>directivas de caché de duración definida
 Una directiva de caché de duración definida define la actualización de las entradas almacenadas en caché según la hora a la que se ha recuperado el recurso, los encabezados devueltos con este y la hora actual. Al establecer una directiva de caché de duración definida, puede usar la directiva de duración definida <xref:System.Net.Cache.HttpRequestCacheLevel.Default> o crear una directiva de duración definida personalizada. Al usar la directiva predeterminada de duración definida para los recursos obtenidos mediante el protocolo de transferencia de hipertexto (HTTP), el comportamiento de caché exacto viene determinado por los encabezados incluidos en la respuesta almacenada en caché y por los comportamientos especificados en las secciones 13 y 14 del RFC 2616, disponible en [http://www.ietf.org](http://www.ietf.org/). Para obtener un ejemplo de código en el que se muestra cómo establecer la directiva predeterminada de duración definida para los recursos HTTP, vea [How to: Set the Default Time-Based Cache Policy for an Application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md) (Cómo establecer la directiva predeterminada de duración definida para una aplicación). Para obtener ejemplos de código que muestran cómo crear y usar directivas de caché, vea [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -77,9 +71,8 @@ Una directiva de caché de duración definida define la actualización de las en
 -   [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Cache Management for Network Applications (Administración de la memoria caché para aplicaciones de red)](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)   
- [Directivas de caché basadas en la ubicación](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)   
+ [Administración de la memoria caché para aplicaciones de red](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Directiva de caché](../../../docs/framework/network-programming/cache-policy.md)  
+ [Location-Based Cache Policies (Directivas de caché basadas en la ubicación)](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [Elemento \<requestCaching> (configuración de red)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

@@ -1,26 +1,22 @@
 ---
-title: "Recuperar los párrafos y sus estilos (Visual Basic) | Documentos de Microsoft"
+title: "Recuperar los párrafos y sus estilos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bb6d68296a720a796a319502c4cb2f0319727459
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 95c85b4731a9ada0a6af1a9d825bef9b873e89ee
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Recuperar los párrafos y sus estilos (Visual Basic)
 En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de un documento WordprocessingML. También identifica el estilo de cada uno de los párrafos.  
@@ -36,7 +32,7 @@ En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de u
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- Esta expresión es similar al origen de la consulta en el ejemplo anterior, [buscar el estilo de párrafo predeterminado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La principal diferencia es que usa el <xref:System.Xml.Linq.XContainer.Descendants%2A>eje en lugar de la <xref:System.Xml.Linq.XContainer.Elements%2A>eje.</xref:System.Xml.Linq.XContainer.Elements%2A> </xref:System.Xml.Linq.XContainer.Descendants%2A> La consulta usa el <xref:System.Xml.Linq.XContainer.Descendants%2A>eje porque en los documentos que tienen secciones, lo párrafos no serán los secundarios directos del elemento body; en su lugar, los párrafos estarán dos niveles por debajo en la jerarquía.</xref:System.Xml.Linq.XContainer.Descendants%2A> Mediante el uso de la <xref:System.Xml.Linq.XContainer.Descendants%2A>eje, el código funcionará si el documento use secciones o no.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ Esta expresión es similar al origen de la consulta en el ejemplo anterior, [buscar el estilo de párrafo predeterminado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). La diferencia principal radica en que usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> en lugar del eje <xref:System.Xml.Linq.XContainer.Elements%2A>. La consulta usa el eje <xref:System.Xml.Linq.XContainer.Descendants%2A> porque en los documentos que tienen secciones, lo párrafos no serán los secundarios directos del elemento de cuerpo; en su lugar, los párrafos estarán dos niveles por debajo en la jerarquía. Mediante el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>, el código funcionará independientemente de que el documento use secciones o no.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta usa una cláusula `Let` para determinar el elemento que contiene el nodo de estilo. Si no hay ningún elemento, `styleNode` se establece en `Nothing`:  
@@ -45,16 +41,16 @@ xDoc.Root.<w:body>...<w:p>
 Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()  
 ```  
   
- El `Let` primero se utiliza la cláusula el <xref:System.Xml.Linq.XContainer.Elements%2A>eje para encontrar todos los elementos llamados `pPr`, a continuación, utiliza el <xref:System.Xml.Linq.Extensions.Elements%2A>método de extensión para encontrar todos los elementos secundarios llamados `pStyle`y por último usa el <xref:System.Linq.Enumerable.FirstOrDefault%2A>operador de consulta estándar para convertir la colección en un singleton.</xref:System.Linq.Enumerable.FirstOrDefault%2A> </xref:System.Xml.Linq.Extensions.Elements%2A> </xref:System.Xml.Linq.XContainer.Elements%2A> Si la colección está vacía, `styleNode` se establece en `Nothing`. Se trata de un método útil para buscar el nodo descendiente `pStyle`. Tenga en cuenta que si el nodo secundario `pPr` no existe, el código no produce errores generando una excepción; en su lugar, `styleNode` se establece en `Nothing`, que es el comportamiento deseado de esta cláusula `Let`.  
+ La cláusula `Let` usa primero el eje <xref:System.Xml.Linq.XContainer.Elements%2A> para encontrar todos los elementos llamados `pPr`, luego usa el método de extensión <xref:System.Xml.Linq.Extensions.Elements%2A> para encontrar todos los elementos secundarios llamados `pStyle` y por último usa el operador de consulta estándar <xref:System.Linq.Enumerable.FirstOrDefault%2A> para convertir la colección en un singleton. Si la colección está vacía, `styleNode` se establece en `Nothing`. Se trata de un método útil para buscar el nodo descendiente `pStyle`. Tenga en cuenta que si el nodo secundario `pPr` no existe, el código no produce errores generando una excepción; en su lugar, `styleNode` se establece en `Nothing`, que es el comportamiento deseado de esta cláusula `Let`.  
   
  La consulta proyecta una colección de un tipo anónimo con dos miembros, `StyleName` y `ParagraphNode`.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo de cada uno de los párrafos. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra la nueva consulta.  
   
- Puede encontrar instrucciones para crear el documento de origen para este ejemplo en [crear Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Encontrará instrucciones para crear el documento de origen para este ejemplo en [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -124,7 +120,7 @@ Module Module1
 End Module  
 ```  
   
- Este ejemplo produce el siguiente resultado cuando se aplica al documento descrito en [crear Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Este ejemplo produce el siguiente resultado cuando se aplica al documento se describe en [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
 ```  
 StyleName:Heading1  

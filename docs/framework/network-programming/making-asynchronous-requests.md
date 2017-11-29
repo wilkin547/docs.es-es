@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, asynchronous access
 - Networking
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d0ed1eea11049a1e6f026c71a2eb41134f87fd8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="making-asynchronous-requests"></a>Realizar solicitudes asincrónicas
 Las clases <xref:System.Net> usan el modelo de programación asincrónica estándar de .NET Framework para obtener acceso asincrónico a recursos de Internet. Los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A> de la clase <xref:System.Net.WebRequest> inician y completan las solicitudes asincrónicas para un recurso de Internet.  
   
 > [!NOTE]
->  El uso de llamadas sincrónicas en métodos de devolución de llamada asincrónica puede afectar gravemente al rendimiento. Las solicitudes de Internet realizadas con **WebRequest** y sus descendientes deben usar <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName> para leer la secuencia devuelta por el método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName>.  
+>  El uso de llamadas sincrónicas en métodos de devolución de llamada asincrónica puede afectar gravemente al rendimiento. Las solicitudes de Internet realizadas con **WebRequest** y sus descendientes deben usar <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> para leer la secuencia devuelta por el método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>.  
   
  En el código de ejemplo siguiente se muestra cómo usar llamadas asincrónicas con la clase **WebRequest**. El ejemplo es un programa de consola que toma un URI de la línea de comandos, solicita el recurso en el URI y, después, imprime datos en la consola cuando se reciben desde Internet.  
   
@@ -348,4 +345,3 @@ End Class
   
 ## <a name="see-also"></a>Vea también  
  [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)
-

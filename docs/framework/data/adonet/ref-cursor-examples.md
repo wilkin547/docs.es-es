@@ -1,37 +1,40 @@
 ---
-title: "Ejemplos de cursores REF CURSOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Ejemplos de REF CURSOR
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 112f544531bfeed3aa791fa9215e316f05f99169
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Ejemplos de cursores REF CURSOR
+# <a name="ref-cursor-examples"></a>Ejemplos de REF CURSOR
 Los ejemplos de cursores REF CURSOR constan de los siguientes tres ejemplos de Microsoft Visual Basic que muestran el uso de los cursores REF CURSOR.  
   
 |Ejemplo|Descripción|  
-|-------------|-----------------|  
-|[Parámetros REF CURSOR en un OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|En este ejemplo se ejecuta un procedimiento almacenado PL\/SQL que devuelve un parámetro REF CURSOR y lee el valor como un <xref:System.Data.OracleClient.OracleDataReader>.|  
-|[Recuperación de datos de varios cursores REF CURSOR mediante un OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|En este ejemplo se ejecuta un procedimiento almacenado PL\/SQL que devuelve dos parámetros REF CURSOR y lee los valores mediante un **OracleDataReader**.|  
-|[Relleno de un DataSet mediante uno o más cursores REF CURSOR](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|En este ejemplo se ejecuta un procedimiento almacenado PL\/SQL que devuelve dos parámetros REF CURSOR y llena un <xref:System.Data.DataSet> con las filas que se devuelven.|  
+|------------|-----------------|  
+|[Parámetros REF CURSOR en un objeto OracleDataReader](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|En este ejemplo se ejecuta un procedimiento almacenado PL/SQL que devuelve un parámetro REF CURSOR y lee el valor como un <xref:System.Data.OracleClient.OracleDataReader>.|  
+|[Recuperación de datos de varios cursores REF cursor utilizando un objeto OracleDataReader](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|Este ejemplo ejecuta un procedimiento almacenado PL/SQL que devuelve dos parámetros REF CURSOR y lee los valores mediante un **OracleDataReader**.|  
+|[Rellenar un conjunto de datos con uno o varios parámetros REF cursor](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|En este ejemplo se ejecuta un procedimiento almacenado PL/SQL que devuelve dos parámetros REF CURSOR y llena un <xref:System.Data.DataSet> con las filas que se devuelven.|  
   
- Para utilizar estos ejemplos, puede que tenga que crear las tablas de Oracle, y deberá crear un paquete PL\/SQL y el cuerpo del paquete.  
+ Para utilizar estos ejemplos, puede que tenga que crear las tablas de Oracle, y deberá crear un paquete PL/SQL y el cuerpo del paquete.  
   
-## Creación de las tablas de Oracle  
- En estos ejemplos se utilizan tablas que se definen en el esquema Scott\/Tiger de Oracle.  El esquema Scott\/Tiger de Oracle se incluye en la mayoría de las instalaciones de Oracle.  Si no existe este esquema, puede utilizar el archivo de comandos SQL situado en {OracleHome}\\rdbms\\admin\\scott.sql para crear las tablas y los índices necesarios para estos ejemplos.  
+## <a name="creating-the-oracle-tables"></a>Creación de las tablas de Oracle  
+ En estos ejemplos se utilizan tablas que se definen en el esquema Scott/Tiger de Oracle. El esquema Scott/Tiger de Oracle se incluye en la mayoría de las instalaciones de Oracle. Si no existe este esquema, puede utilizar el archivo de comandos SQL situado en {OracleHome}\rdbms\admin\scott.sql para crear las tablas y los índices necesarios para estos ejemplos.  
   
-## Creación del paquete de Oracle y el cuerpo del paquete  
- En estos ejemplos es necesario el siguiente paquete PL\/SQL y cuerpo del paquete en el servidor.  Cree el siguiente paquete de Oracle en el servidor de Oracle.  
+## <a name="creating-the-oracle-package-and-package-body"></a>Creación del paquete de Oracle y el cuerpo del paquete  
+ En estos ejemplos es necesario el siguiente paquete PL/SQL y cuerpo del paquete en el servidor. Cree el siguiente paquete de Oracle en el servidor de Oracle.  
   
 ```  
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -86,6 +89,6 @@ END CURSPKG;
 /  
 ```  
   
-## Vea también  
- [Cursores REF CURSOR de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Cursores REF cursor de Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

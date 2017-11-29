@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - unmanaged code, interoperation
 - managed code, interoperation with unmanaged code
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ff86b062efddde6f97555efb97247f60a6e1db98
-ms.contentlocale: es-es
-ms.lasthandoff: 09/18/2017
-
+ms.openlocfilehash: 2db5b8c2425637e24086f54e8ef69b0e5aac3633
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperar con código no administrado
 .NET Framework promueve la interacción con componentes COM, servicios COM+, bibliotecas de tipos externas y muchos servicios del sistema operativo. Los tipos de datos, las firmas de método y los mecanismos de control de errores varían entre los modelos de objetos administrados y no administrados. Para simplificar la interoperación entre los componentes de .NET Framework y el código no administrado, así como para facilitar la ruta de migración, Common Language Runtime oculta a los clientes y servidores las diferencias en estos modelos de objetos.  
@@ -67,4 +60,3 @@ ms.lasthandoff: 09/18/2017
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Interoperabilidad COM avanzada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.
-

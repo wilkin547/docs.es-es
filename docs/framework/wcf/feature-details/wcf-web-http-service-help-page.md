@@ -1,32 +1,35 @@
 ---
-title: "P&#225;gina de ayuda del servicio web HTTP de WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Página de ayuda del servicio web HTTP de WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 96c54320c77de766f00bde1e560eb5b0f0df2671
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# P&#225;gina de ayuda del servicio web HTTP de WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF.Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas.Esta funcionalidad se desactiva de forma predeterminada.Cuando un usuario examina un servicio WEB HTTP de WCF y anexa "\/Ayuda" al final de la dirección URL, por ejemplo http:\/\/localhost:8000\/Customers\/Help, aparece una página de ayuda como la siguiente.  
+# <a name="wcf-web-http-service-help-page"></a>Página de ayuda del servicio web HTTP de WCF
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario examina un servicio WEB HTTP de WCF y anexa "/Ayuda" al final de la dirección URL, por ejemplo http://localhost:8000/Customers/Help, aparece una página de ayuda como la siguiente.  
   
- ![Página de Ayuda de WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.png "WCFRESTHELPPAGEMAIN")  
+ ![Página de Ayuda de REST de WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
- A continuación, el usuario puede hacer clic en cualquier método descrito en la página de ayuda para visualizar la página detallada de esa operación en la que se muestra más información sobre el método, incluidos formatos de mensajes y respuestas de ejemplo.La siguiente imagen es un ejemplo de una página de ayuda para un método.  
+ A continuación, el usuario puede hacer clic en cualquier método descrito en la página de ayuda para visualizar la página detallada de esa operación en la que se muestra más información sobre el método, incluidos formatos de mensajes y respuestas de ejemplo. La siguiente imagen es un ejemplo de una página de ayuda para un método.  
   
- ![Detalles de la página de Ayuda de WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.png "WCFRESTHELPPAGEDETAIL2")  
+ ![Detalles de la página de ayuda REST de WCF](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
   
-## Utilizar la página de ayuda web HTTP de WCF  
- La página de ayuda WEB HTTP de WCF muestra una breve descripción de cada operación siempre que haya especificado una con <xref:System.ComponentModel.DescriptionAttribute>.Este atributo toma una cadena que contiene una breve descripción de la operación a la que se aplica.Por ejemplo, el siguiente código muestra cómo utilizar <xref:System.ComponentModel.DescriptionAttribute> para proporcionar una breve descripción.  
+## <a name="using-the-wcf-web-http-help-page"></a>Utilizar la página de ayuda web HTTP de WCF  
+ La página de ayuda WEB HTTP de WCF muestra una breve descripción de cada operación siempre que haya especificado una con <xref:System.ComponentModel.DescriptionAttribute>. Este atributo toma una cadena que contiene una breve descripción de la operación a la que se aplica. Por ejemplo, el siguiente código muestra cómo utilizar <xref:System.ComponentModel.DescriptionAttribute> para proporcionar una breve descripción.  
   
 ```  
 [OperationContract]  
@@ -35,9 +38,9 @@ caps.handback.revision: 11
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- Para activar la página de ayuda WEB HTTP de WCF, debe agregar un comportamiento de extremo a los extremos del servicio.Esto se puede hacer en la configuración o a través de un código.Para habilitar la página de ayuda WEB HTTP de WCF en la configuración, agregue un comportamiento de extremo con un elemento `<webHttp>`, establezca `enableHelp` en `true` y agregue un extremo y configúrelo para utilizar el comportamiento del extremo.El código de configuración siguiente muestra cómo realizar esta operación.  
+ Para activar la página de ayuda WEB HTTP de WCF, debe agregar un comportamiento de extremo a los extremos del servicio. Esto se puede hacer en la configuración o a través de un código. Para habilitar la página de ayuda WEB HTTP de WCF en la configuración, agregue un comportamiento de extremo con un elemento `<webHttp>`, establezca `enableHelp` en `true` y agregue un extremo y configúrelo para utilizar el comportamiento del extremo. El código de configuración siguiente muestra cómo realizar esta operación.  
   
-```  
+```xml  
 <endpointBehaviors>  
    <behavior name="RESTEndpointBehavior">  
       <webHttp enableHelp="true"/>  
@@ -52,7 +55,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Para habilitar la página de ayuda web HTTP de WCF a través de un código, agregue un extremo de servicio y agregue <xref:System.ServiceModel.Description.WebHttpBehavior> a la configuración de extremo <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A> a `true`.El código siguiente muestra cómo hacerlo.  
+ Para habilitar la página de Ayuda de Web HTTP de WCF en el código, agregue un punto de conexión de servicio y agregue un <xref:System.ServiceModel.Description.WebHttpBehavior> a la configuración de punto de conexión <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` a `true`. El código siguiente muestra cómo hacerlo.  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -63,12 +66,12 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- La página de ayuda se basa en XHTML con marcado que identifica las diferentes partes de la página.Esto permite a los clientes tener acceso mediante programación a la página mediante <xref:System.Xml.Linq.XElement> u otros API XLinq.  
+ La página de ayuda se basa en XHTML con marcado que identifica las diferentes partes de la página. Esto permite a los clientes tener acceso mediante programación a la página mediante <xref:System.Xml.Linq.XElement> u otros API XLinq.  
   
-## Esquemas empleados en la página de ayuda del servicio Web HTTP de WCF  
+## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>Esquemas empleados en la página de ayuda del servicio Web HTTP de WCF  
  En la página de ayuda del servicio Web HTTP de WCF se emplean los siguientes esquemas.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
   <xs:element name="anyType" nillable="true" type="xs:anyType" />  
@@ -245,7 +248,6 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
   </xs:complexType>  
   <xs:element name="ArrayOfQName" nillable="true" type="tns:ArrayOfQName" />  
 </xs:schema>  
-  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el esquema de serialización de contratos de datos, vea [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]el esquema de serialización de contrato de datos, vea [referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

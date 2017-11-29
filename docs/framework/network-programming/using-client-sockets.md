@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d18e1f2575481522e54c6c50256418ac026dfb7
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3df78be14da96d0bb7b8875a5c7532c003d1dbc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-client-sockets"></a>Usar sockets de cliente
 Antes de poder iniciar una conversación a través de un <xref:System.Net.Sockets.Socket>, debe crear una canalización de datos entre su aplicación y el dispositivo remoto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear una conexión TCP/IP a un servicio remoto.  
@@ -90,8 +87,7 @@ try {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [Usar un socket de cliente asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [Cómo crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
+ [Usar un Socket de cliente sincrónico](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Usar un Socket de cliente asincrónico](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Cómo: crear un socket](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)
-

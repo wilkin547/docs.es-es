@@ -1,26 +1,32 @@
 ---
-title: "C&#243;mo: Usar funciones definidas por el usuario con valores de tabla | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Cómo: Usar funciones con valores de tabla definidas por el usuario"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 58a1803618845e3914d57d425a1b3d1e5e857aac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Usar funciones definidas por el usuario con valores de tabla
-Una función con valores de tabla devuelve un conjunto de filas único \(a diferencia de los procedimientos almacenados, que pueden devolver varias formas de resultados\).  Dado que el tipo devuelto de una función con valores de tabla es `Table`, una función con valores de tabla se puede usar en cualquier lugar de SQL donde se pueda usar una tabla.  La función con valores de tabla se puede tratar como se trataría una tabla.  
+# <a name="how-to-use-table-valued-user-defined-functions"></a>Cómo: Usar funciones con valores de tabla definidas por el usuario
+Una función con valores de tabla devuelve un conjunto de filas único (a diferencia de los procedimientos almacenados, que pueden devolver varias formas de resultados). Dado que el tipo devuelto de una función con valores de tabla es `Table`, una función con valores de tabla se puede usar en cualquier lugar de SQL donde se pueda usar una tabla. La función con valores de tabla se puede tratar como se trataría una tabla.  
   
-## Ejemplo  
- La función de SQL siguiente declara explícitamente que devuelve `TABLE`.  Por lo tanto, la estructura de conjunto de filas devuelta se define implícitamente.  
+## <a name="example"></a>Ejemplo  
+ La función de SQL siguiente declara explícitamente que devuelve `TABLE`. Por lo tanto, la estructura de conjunto de filas devuelta se define implícitamente.  
   
 ```  
 CREATE FUNCTION ProductsCostingMoreThan(@cost money)  
@@ -37,7 +43,7 @@ RETURN
  [!code-csharp[DLinqUDFS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/northwind-tfunc.cs#1)]
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El código de SQL siguiente muestra cómo se puede unir a la tabla devuelta por la función y, si no, tratarla como lo haría con cualquier otra tabla:  
   
 ```  
@@ -51,5 +57,5 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
  [!code-csharp[DLinqUDFS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqUDFS/cs/Program.cs#2)]
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Funciones definidas por el usuario](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

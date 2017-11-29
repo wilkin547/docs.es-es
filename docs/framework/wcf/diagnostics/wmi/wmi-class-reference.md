@@ -1,22 +1,25 @@
 ---
-title: "Referencia de clases WMI | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Referencia de clases WMI
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ee03f0c567f2b154eaf2e7fdf608b093cfbe2d1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Referencia de clases WMI
+# <a name="wmi-class-reference"></a>Referencia de clases WMI
 En esta sección se detallan todas las clases WMI expuestas por el proveedor de WMI [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
   
 ## <a name="accessing-wmi-instances"></a>Tener acceso a las instancias de WMI  
@@ -31,7 +34,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
- "Clase de comportamiento"  
+ "Clase behavior"  
   
  [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
@@ -59,7 +62,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
- [Extremo](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
+ [Punto de conexión](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
  [HttpsTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/httpstransportbindingelement.md)  
   
@@ -71,7 +74,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
- [MsmqBindingElementBase](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
+ [Tracelistenerargument](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
   
  [MsmqIntegrationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
   
@@ -87,7 +90,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
- "Clase de operación"  
+ "Operation (clase)"  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   
@@ -97,7 +100,7 @@ En esta sección se detallan todas las clases WMI expuestas por el proveedor de 
   
  [PeerSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
   
- [PeerTransportBindingElement.](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
+ [PeerTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
   
  [PeerTransportSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
   

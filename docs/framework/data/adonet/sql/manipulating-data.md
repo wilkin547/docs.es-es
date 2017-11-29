@@ -1,32 +1,38 @@
 ---
-title: "Manipular datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Manipular datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 5117d2aba6fe368a7a17e3d35d8c4887582267e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Manipular datos
-Antes de la introducción de Varios conjuntos de resultados activos \(MARS\), los programadores tenían que utilizar varias conexiones o cursores en el servidor para solucionar determinadas situaciones.  Además, cuando se utilizaban varias conexiones en una situación transaccional, era necesario enlazar las conexiones \(con **sp\_getbindtoken** y **sp\_bindsession**\).  En las siguientes situaciones se muestra cómo utilizar una conexión habilitada para MARS en lugar de varias conexiones.  
+# <a name="manipulating-data"></a>Manipular datos
+Antes de la introducción de Varios conjuntos de resultados activos (MARS), los programadores tenían que utilizar varias conexiones o cursores en el servidor para solucionar determinadas situaciones. Además, cuando se utilizaban varias conexiones en una situación transaccional, enlazar las conexiones (con **sp_getbindtoken** y **sp_bindsession**) se necesitaban. En las siguientes situaciones se muestra cómo utilizar una conexión habilitada para MARS en lugar de varias conexiones.  
   
-## Uso de varias comandos con MARS  
+## <a name="using-multiple-commands-with-mars"></a>Uso de varias comandos con MARS  
  La siguiente aplicación de consola demuestra cómo utilizar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con dos objetos <xref:System.Data.SqlClient.SqlCommand> y un solo objeto <xref:System.Data.SqlClient.SqlConnection> teniendo MARS habilitado.  
   
-### Ejemplo  
- En el ejemplo se abre una única conexión a la base de datos **AdventureWorks**.  Al utilizar un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea un objeto <xref:System.Data.SqlClient.SqlDataReader>.  A medida que se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, que utiliza datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada a la cláusula WHERE del segundo lector.  
+### <a name="example"></a>Ejemplo  
+ En el ejemplo se abre una única conexión a la **AdventureWorks** base de datos. Al utilizar un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea un objeto <xref:System.Data.SqlClient.SqlDataReader>. A medida que se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, que utiliza datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada a la cláusula WHERE del segundo lector.  
   
 > [!NOTE]
->  En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local.  Modifique la cadena de conexión según sea necesario para su entorno.  
+>  En el ejemplo siguiente se utiliza el ejemplo **AdventureWorks** base de datos incluida con [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.  
   
 ```vb  
 Option Strict On  
@@ -167,14 +173,14 @@ static void Main()
 }  
 ```  
   
-## Lectura y actualización de datos con MARS  
- MARS permite que se utilice una conexión para las operaciones de lectura y de lenguaje de manipulación de datos \(DML\) con más de una operación pendiente.  Esta característica elimina la necesidad de que las aplicaciones solucionen los errores de falta de disponibilidad de las conexiones.  Además, MARS puede reemplazar al uso de cursores en el servidor, que generalmente consume más recursos.  Finalmente, como es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de utilizar los procedimientos almacenados del sistema **sp\_getbindtoken** y **sp\_bindsession**.  
+## <a name="reading-and-updating-data-with-mars"></a>Lectura y actualización de datos con MARS  
+ MARS permite que se utilice una conexión para las operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que las aplicaciones solucionen los errores de falta de disponibilidad de las conexiones. Además, MARS puede reemplazar al uso de cursores en el servidor, que generalmente consume más recursos. Por último, dado que pueden realizar varias operaciones en una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar **sp_getbindtoken** y **sp_bindsession** almacenados del sistema procedimientos.  
   
-### Ejemplo  
- La siguiente aplicación de consola demuestra cómo utilizar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un solo objeto <xref:System.Data.SqlClient.SqlConnection> teniendo MARS habilitado.  El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5.  El segundo objeto de comando utiliza el id. de proveedor proporcionado a partir de un <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular.  El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro de producto.  Para determinar cuál debe ser la nueva **OnOrderQty** se realiza un cálculo.  Luego, el tercer objeto de comando se utiliza para actualizar la tabla **ProductVendor** con el nuevo valor.  Todo este proceso tiene lugar en una única transacción, que al final se revierte.  
+### <a name="example"></a>Ejemplo  
+ La siguiente aplicación de consola demuestra cómo utilizar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un solo objeto <xref:System.Data.SqlClient.SqlConnection> teniendo MARS habilitado. El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5. El segundo objeto de comando utiliza el id. de proveedor proporcionado a partir de un <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular. El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro de producto. Se realiza un cálculo para determinar la nueva **OnOrderQty** debe ser. El tercer objeto de comando, a continuación, se utiliza para actualizar la **ProductVendor** tabla con el nuevo valor. Todo este proceso tiene lugar en una única transacción, que al final se revierte.  
   
 > [!NOTE]
->  En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local.  Modifique la cadena de conexión según sea necesario para su entorno.  
+>  En el ejemplo siguiente se utiliza el ejemplo **AdventureWorks** base de datos incluida con [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.  
   
 ```vb  
 Option Strict On  
@@ -406,6 +412,6 @@ private static string GetConnectionString()
 }  
 ```  
   
-## Vea también  
- [Varios conjuntos de resultados activos \(MARS\)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Conjuntos de resultados activos múltiples (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

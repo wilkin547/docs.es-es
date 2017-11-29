@@ -1,35 +1,38 @@
 ---
-title: "3390 - ClientSendPreambleStop | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3390 - ClientSendPreambleStop
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fbf6e4ed-8538-417e-b4d1-a30b45ee6b5d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 45f1cce9aa6fa3b59d047ecadd75e6dbe63f0e3c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3390 - ClientSendPreambleStop
-## Propiedades  
+# <a name="3390---clientsendpreamblestop"></a>3390 - ClientSendPreambleStop
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|3390|  
 |Palabras clave|Canal|  
 |Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Este evento se genera cuando se detiene del envío de preámbulos por parte de cliente.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  Cliente enviando la detención del preámbulo.  
   
-## Detalles
+## <a name="details"></a>Detalles

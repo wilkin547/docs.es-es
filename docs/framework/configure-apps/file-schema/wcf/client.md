@@ -1,34 +1,36 @@
 ---
-title: "&lt;cliente&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#client"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;cliente&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 67f91f4462fc8c11b1769d5805a4ad1407385a50
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;cliente&gt;
+# <a name="ltclientgt"></a>&lt;cliente&gt;
 El elemento `client` define una lista de extremos a los que un cliente puede conectarse.  
   
-## Sintaxis  
+ \<sistema. ServiceModel >  
+\<cliente >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <system.serviceModel>  
     <client>  
         <endpoint>  
@@ -39,33 +41,33 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 </system.serviceModel>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguna  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<extremo\>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contiene una colección de elementos de extremo, que especifica los extremos a los que este cliente puede conectarse.|  
-|[\<metadatos\>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contiene los valores para procesar los metadatos.|  
+|-------------|-----------------|  
+|[\<punto de conexión >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contiene una colección de elementos de punto de conexión, que especifica los puntos de conexión a los que este cliente puede conectarse.|  
+|[\<metadatos >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contiene los valores para procesar los metadatos.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<system.serviceModel\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|El elemento raíz de todos los elementos de configuración de la Windows Communication Foundation \(WCF\).|  
+|-------------|-----------------|  
+|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|El elemento raíz de todos los elementos de configuración de la Windows Communication Foundation (WCF).|  
   
-## Comentarios  
- La sección `client` define una lista de extremos a los que un cliente puede conectarse.  Cada extremo enumerado en la sección de cliente define su propio enlace, comportamiento y contrato.  La combinación de los atributos `contract` y `name` identifica singularmente.  El código de cliente especifica el `name` para conectar el servicio que el cliente implementa a un extremo.  Si se omite el atributo de `name`, el extremo actúa como el extremo predeterminado para el contrato que implementa.  
+## <a name="remarks"></a>Comentarios  
+ La sección `client` define una lista de extremos a los que un cliente puede conectarse. Cada extremo enumerado en la sección de cliente define su propio enlace, comportamiento y contrato. La combinación de los atributos `name` y `contract` identifica singularmente. El código de cliente especifica el `name` para conectar el servicio que el cliente implementa a un extremo. Si se omite el atributo de `name`, el extremo actúa como el extremo predeterminado para el contrato que implementa.  
   
  Además, esta sección también especifica los valores para procesar los metadatos.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
-```  
+```xml  
 <client>  
     <endpoint address="/HelloWorld/"  
               bindingConfiguration="usingDefaults"  
@@ -78,8 +80,8 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 </client>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.ClientSection>   
- <xref:System.ServiceModel.Configuration.MetadataElement>   
- [Configuración del cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Configuration.ClientSection>  
+ <xref:System.ServiceModel.Configuration.MetadataElement>  
+ [Configuración de cliente WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
  [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)

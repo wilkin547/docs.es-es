@@ -1,70 +1,71 @@
 ---
-title: "Elemento &lt;switches&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#switches"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<switches> (elemento)"
-  - "switches (elemento)"
-  - "modificadores de seguimiento, <switches> (elemento)"
+title: '&lt;conmutadores&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#switches
+helpviewer_keywords:
+- <switches> element
+- switches element
+- trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6240f8192f2a31faeb81528e54481eb06cc04d04
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;switches&gt;
-Contiene modificadores de seguimiento y el nivel donde éstos se establecen.  
+# <a name="ltswitchesgt-element"></a>&lt;conmutadores&gt; elemento
+Contiene modificadores de seguimiento y el nivel en el que están establecidos.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.Diagnostics >  
+\<conmutadores >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-      <switches>   
+```xml  
+      <switches>   
 </switches>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<agregar\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Especifica el nivel donde se establece un modificador de seguimiento.|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|Especifica el nivel en el que está establecido un modificador de seguimiento.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`System.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
+|`System.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
-## Comentarios  
- Puede cambiar el nivel de un modificador de seguimiento si lo pone en un archivo de configuración.  Si el modificador es un <xref:System.Diagnostics.BooleanSwitch>, es posible activarlo y desactivarlo.  Si el modificador es un <xref:System.Diagnostics.TraceSwitch>, es posible asignarle distintos niveles para especificar los tipos de mensajes de seguimiento o de depuración que genera la aplicación.  
+## <a name="remarks"></a>Comentarios  
+ Puede cambiar el nivel de un modificador de seguimiento colocándola en un archivo de configuración. Si el modificador está un <xref:System.Diagnostics.BooleanSwitch>, se puede activar y desactivar. Si el modificador está un <xref:System.Diagnostics.TraceSwitch>, puede asignar distintos niveles para especificar los tipos de seguimiento de mensajes o de depuración genera la aplicación.  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo utilizar el elemento de **\<modificador\>** para establecer el modificador de traza de `General` al nivel de [TraceLevel.Error](frlrfSystemDiagnosticsTraceLevelClassTopic) , y habilitar el modificador TRACE booleano de `Data` .  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el  **\<cambiar >** elemento que se va a establecer el `General` modificador de seguimiento para la <xref:System.Diagnostics.TraceLevel> nivel y habilitar la `Data` modificador de seguimiento booleano.  
   
-```  
+```xml  
 <configuration>  
    <system.diagnostics>  
       <switches>  
@@ -75,8 +76,8 @@ Contiene modificadores de seguimiento y el nivel donde éstos se establecen.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.Switch>   
- <xref:System.Diagnostics.TraceSwitch>   
- <xref:System.Diagnostics.BooleanSwitch>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Diagnostics.Switch>  
+ <xref:System.Diagnostics.TraceSwitch>  
+ <xref:System.Diagnostics.BooleanSwitch>  
  [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

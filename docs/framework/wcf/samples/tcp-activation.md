@@ -1,39 +1,42 @@
 ---
-title: "Activaci&#243;n TCP | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Activación TCP"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f02528828c3751b2f8e34bd7ebb8a1a789feeb2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Activaci&#243;n TCP
-Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows \(WAS\) para activar un servicio que comunica a través del protocolo de net.tcp.  Este ejemplo se basa en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+# <a name="tcp-activation"></a>Activación TCP
+Este ejemplo muestra cómo hospedar un servicio que utiliza el servicio de activación de procesos de Windows (WAS) para activar un servicio que comunica a través del protocolo de net.tcp. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
 >  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.  Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)].  Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
- El ejemplo está compuesto por un programa \(.exe\) de consola de cliente y una biblioteca de servicios \(.dll\) hospedados en un proceso de trabajo activado por WAS.  La actividad del cliente es visible en la ventana de la consola.  
+ El ejemplo está compuesto por un programa (.exe) de consola de cliente y una biblioteca de servicios (.dll) hospedados en un proceso de trabajo activado por WAS. La actividad del cliente es visible en la ventana de la consola.  
   
- El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  La interfaz `ICalculator`, que expone las operaciones matemáticas \(Sumar, Restar, Multiplicar y Dividir\), define el contrato, tal y como se muestra en el código muestra siguiente:  
+ El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta. La interfaz `ICalculator`, que expone las operaciones matemáticas (Sumar, Restar, Multiplicar y Dividir), define el contrato, tal y como se muestra en el código muestra siguiente:  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -75,11 +78,11 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- El ejemplo utiliza una variante del net.tcp que enlaza con el uso compartido de un puerto TCP habilitado y con la seguridad desactivada.  Si desea utilizar un enlace del TCP seguro, cambie el modo de seguridad del servidor al valor deseado y re\-ejecute Svcutil.exe en el cliente para generar un archivo de configuración de cliente de actualización.  
+ El ejemplo utiliza una variante del net.tcp que enlaza con el uso compartido de un puerto TCP habilitado y con la seguridad desactivada. Si desea utilizar un enlace del TCP seguro, cambie el modo de seguridad del servidor al valor deseado y re-ejecute Svcutil.exe en el cliente para generar un archivo de configuración de cliente de actualización.  
   
  El ejemplo siguiente muestra la configuración para el servicio:  
   
-```  
+```xml  
 <system.serviceModel>  
   
     <services>  
@@ -117,7 +120,7 @@ public class CalculatorService : ICalculator
   
  El extremo del cliente se configura como se muestra en el código muestra siguiente:  
   
-```  
+```xml  
 <system.serviceModel>  
     <bindings>  
         <netTcpBinding>  
@@ -134,7 +137,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>  
 ```  
   
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente.  Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
+ Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -145,36 +148,36 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### Configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] está instalado.  [!INCLUDE[iisver](../../../../includes/iisver-md.md)] es necesario para la activación de WAS.  
+1.  Asegúrese de que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] está instalado. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] es necesario para la activación de WAS.  
   
-2.  Asegúrese de realizar los [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
      Además, debe instalar los componentes de activación que no son HTTP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
   
-    1.  En el menú **Inicio**, elija **Panel de control**.  
+    1.  Desde el **iniciar** menú, elija **el Panel de Control**.  
   
-    2.  Seleccione **Programas y características**.  
+    2.  Seleccione **programas y características**.  
   
-    3.  Haga clic en **Activar o desactivar los componentes Windows.**  
+    3.  Haga clic en **activar o desactivar el componentes de Windows**.  
   
-    4.  Expanda el nodo  **Microsoft .NET Framework 3.0** y compruebe la característica  **Activación No HTTP de Windows Communication Foundation** .  
+    4.  Expanda el **Microsoft .NET Framework 3.0** nodo y compruebe el **activación no HTTP de Windows Communication Foundation** característica.  
   
 3.  Configure WAS para admitir la activación del TCP.  
   
      Para su comodidad, los dos pasos siguientes se implementan en un archivo de información llamado AddNetTcpSiteBinding.cmd localizado en el directorio de ejemplo.  
   
-    1.  Para admitir la activación del net.tcp, el sitio web predeterminado debe enlazarse primero a un puerto net.tcp.  Esto se puede hacer utilizando Appcmd.exe, que se instala con el conjunto de herramientas de administración Internet Information Server 7.0 \(IIS\).  Desde un símbolo del sistema del nivel administrador, ejecute el comando siguiente:  
+    1.  Para admitir la activación del net.tcp, el sitio web predeterminado debe enlazarse primero a un puerto net.tcp. Esto se puede hacer utilizando Appcmd.exe, que se instala con el conjunto de herramientas de administración Internet Information Server 7.0 (IIS). Desde un símbolo del sistema del nivel administrador, ejecute el comando siguiente:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
         > [!TIP]
-        >  Este comando es una sola línea de texto.  Este comando agrega un enlace del sitio net.tcp al sitio web predeterminado que realiza escuchas en puerto TCP 808 con cualquier nombre del host.  
+        >  Este comando es una sola línea de texto. Este comando agrega un enlace del sitio net.tcp al sitio web predeterminado que realiza escuchas en puerto TCP 808 con cualquier nombre del host.  
   
-    2.  Aunque todas las aplicaciones dentro de un sitio comparten un enlace net. tcp común, cada aplicación puede habilitar la compatibilidad net. tcp individualmente.  Para habilitar el net.tcp para la aplicación \/servicemodelsamples, ejecute el comando siguiente desde un símbolo del sistema del nivel del administrador:  
+    2.  Aunque todas las aplicaciones dentro de un sitio comparten un enlace net. tcp común, cada aplicación puede habilitar la compatibilidad net. tcp individualmente. Para habilitar el net.tcp para la aplicación /servicemodelsamples, ejecute el comando siguiente desde un símbolo del sistema del nivel del administrador:  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -182,11 +185,11 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Este comando es una sola línea de texto.  Este comando habilita la aplicación \/servicemodelsamples para tener acceso utilizando http:\/\/localhost\/servicemodelsamples y net.tcp:\/\/localhost\/servicemodelsamples.  
+        >  Este comando es una sola línea de texto. Este comando habilita la aplicación /servicemodelsamples para tener acceso utilizando http://localhost/servicemodelsamples y net.tcp://localhost/servicemodelsamples.  
   
-4.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Para ejecutar el ejemplo en una configuración de equipo único o varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
      Elimine el enlace del sitio de net.tcp que ha agregado para este ejemplo.  
   
@@ -212,5 +215,5 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Este comando se debe escribir en una sola línea de texto.  
   
-## Vea también  
- [Ejemplos de Hospedaje y persistencia de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a>Vea también  
+ [Ejemplos de persistencia y el hospedaje de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193961)

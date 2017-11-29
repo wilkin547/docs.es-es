@@ -1,28 +1,34 @@
 ---
-title: "Rendimiento DataView | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Rendimiento de DataView
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 3b1f702740b1085302e413120f2bdd23c1613b25
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Rendimiento DataView
+# <a name="dataview-performance"></a>Rendimiento de DataView
 En este tema se abordan las ventajas del uso de los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> de la clase <xref:System.Data.DataView>, y del almacenamiento en memoria caché de <xref:System.Data.DataView> en una aplicación web.  
   
-## Find y FindRows  
- <xref:System.Data.DataView> construye un índice.  Un índice contiene claves compiladas a partir de una o varias columnas de la tabla o la vista.  Dichas claves están almacenadas en una estructura que permite que <xref:System.Data.DataView> busque de forma rápida y eficiente la fila o filas asociadas a los valores de cada clave.  Las operaciones que utilizan el índice, como las de filtro y ordenación, ven aumentar significativamente el rendimiento.  El índice de <xref:System.Data.DataView> se compila cuando se crea <xref:System.Data.DataView> y cuando se modifica cualquier información de filtro u ordenación.  La creación de <xref:System.Data.DataView> y el posterior establecimiento de información de filtro y ordenación hace que el índice se compile al menos dos veces: una cuando se crea <xref:System.Data.DataView> y la otra cuando se modifica cualquiera de las propiedades de ordenación y filtrado.  Para obtener más información sobre el filtrado y la ordenación con <xref:System.Data.DataView>, vea [Filtrar con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) y [Ordenar con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
+## <a name="find-and-findrows"></a>Find y FindRows  
+ <xref:System.Data.DataView> construye un índice. Un índice contiene claves compiladas a partir de una o varias columnas de la tabla o la vista. Dichas claves están almacenadas en una estructura que permite que <xref:System.Data.DataView> busque de forma rápida y eficiente la fila o filas asociadas a los valores de cada clave. Las operaciones que utilizan el índice, como las de filtro y ordenación, ven aumentar significativamente el rendimiento. El índice de <xref:System.Data.DataView> se compila cuando se crea <xref:System.Data.DataView> y cuando se modifica cualquier información de filtro u ordenación. La creación de <xref:System.Data.DataView> y el posterior establecimiento de información de filtro y ordenación hace que el índice se compile al menos dos veces: una cuando se crea <xref:System.Data.DataView> y la otra cuando se modifica cualquiera de las propiedades de ordenación y filtrado. Para obtener más información sobre el filtrado y ordenación con <xref:System.Data.DataView>, consulte [filtrar con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) y [ordenar con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
- Si desea devolver los resultados de una consulta determinada en los datos, en lugar de proporcionar una vista dinámica de un subconjunto de los datos, para conseguir el máximo rendimiento puede utilizar los métodos <xref:System.Data.DataView.Find%2A> o <xref:System.Data.DataView.FindRows%2A> de la <xref:System.Data.DataView>, en lugar de establecer la propiedad <xref:System.Data.DataView.RowFilter%2A>.  La propiedad <xref:System.Data.DataView.RowFilter%2A> es más idónea en una aplicación enlazada a datos donde un control enlazado muestra resultados filtrados.  El establecimiento de la propiedad <xref:System.Data.DataView.RowFilter%2A> hace que se recompile el índice de los datos, lo que agrega sobrecarga a la aplicación y reduce el rendimiento.  Los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> utilizan el índice actual, sin necesidad de recompilarlo.  Si va a llamar a <xref:System.Data.DataView.Find%2A> o a <xref:System.Data.DataView.FindRows%2A> una única vez, entonces debería utilizar el <xref:System.Data.DataView> existente.  Si va a llamar a <xref:System.Data.DataView.Find%2A> o a <xref:System.Data.DataView.FindRows%2A> varias veces, debería crear un nuevo <xref:System.Data.DataView> para recompilar el índice en la columna en la que desea buscar y, a continuación, llamar a los métodos <xref:System.Data.DataView.Find%2A> o <xref:System.Data.DataView.FindRows%2A>.  Para obtener más información acerca de los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> vea [Buscar filas](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+ Si desea devolver los resultados de una consulta determinada en los datos, en lugar de proporcionar una vista dinámica de un subconjunto de los datos, para conseguir el máximo rendimiento puede utilizar los métodos <xref:System.Data.DataView.Find%2A> o <xref:System.Data.DataView.FindRows%2A> de la <xref:System.Data.DataView>, en lugar de establecer la propiedad <xref:System.Data.DataView.RowFilter%2A>. La propiedad <xref:System.Data.DataView.RowFilter%2A> es más idónea en una aplicación enlazada a datos donde un control enlazado muestra resultados filtrados. El establecimiento de la propiedad <xref:System.Data.DataView.RowFilter%2A> hace que se recompile el índice de los datos, lo que agrega sobrecarga a la aplicación y reduce el rendimiento. Los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> utilizan el índice actual, sin necesidad de recompilarlo. Si va a llamar a <xref:System.Data.DataView.Find%2A> o a <xref:System.Data.DataView.FindRows%2A> una única vez, entonces debería utilizar el <xref:System.Data.DataView> existente. Si va a llamar a <xref:System.Data.DataView.Find%2A> o a <xref:System.Data.DataView.FindRows%2A> varias veces, debería crear un nuevo <xref:System.Data.DataView> para recompilar el índice en la columna en la que desea buscar y, a continuación, llamar a los métodos <xref:System.Data.DataView.Find%2A> o <xref:System.Data.DataView.FindRows%2A>. Para obtener más información sobre la <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> métodos, vea [buscar filas](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
   
  El ejemplo siguiente utiliza el método <xref:System.Data.DataView.Find%2A> para buscar un contacto con el apellido "Zhu".  
   
@@ -34,8 +40,8 @@ En este tema se abordan las ventajas del uso de los métodos <xref:System.Data.D
  [!code-csharp[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromqueryfindrows)]
  [!code-vb[DP DataView Samples#LDVFromQueryFindRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromqueryfindrows)]  
   
-## ASP.NET  
- ASP.NET dispone de un mecanismo de almacenamiento en memoria caché de objetos cuya creación en memoria requiere una gran cantidad de recursos del servidor.  Si se almacenan estos tipos de recursos en la memoria caché se puede mejorar de forma significativa el rendimiento de la aplicación.  La clase <xref:System.Web.Caching.Cache> implementa el almacenamiento en memoria caché, con instancias de la memoria caché privadas para cada aplicación.  Dado que la creación de un objeto <xref:System.Data.DataView> nuevo puede consumir muchos recursos, quizás desee utilizar esta funcionalidad de almacenamiento en caché en aplicaciones web para que <xref:System.Data.DataView> no tenga que recompilarse cada vez que se actualiza la página web.  
+## <a name="aspnet"></a>ASP.NET  
+ ASP.NET dispone de un mecanismo de almacenamiento en memoria caché de objetos cuya creación en memoria requiere una gran cantidad de recursos del servidor. Si se almacenan estos tipos de recursos en la memoria caché se puede mejorar de forma significativa el rendimiento de la aplicación. La clase <xref:System.Web.Caching.Cache> implementa el almacenamiento en memoria caché, con instancias de la memoria caché privadas para cada aplicación. Dado que la creación de un objeto <xref:System.Data.DataView> nuevo puede consumir muchos recursos, quizás desee utilizar esta funcionalidad de almacenamiento en caché en aplicaciones web para que <xref:System.Data.DataView> no tenga que recompilarse cada vez que se actualiza la página web.  
   
  En el ejemplo siguiente, <xref:System.Data.DataView> se almacena en caché para que los datos no tengan que volver a ordenarse cuando la página se actualice.  
   
@@ -90,5 +96,5 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Enlace de datos y LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

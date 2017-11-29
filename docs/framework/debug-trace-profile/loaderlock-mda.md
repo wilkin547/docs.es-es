@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock (MDA)
 El Asistente para la depuración administrada (MDA) `loaderLock` detecta los intentos de ejecutar código administrado en un subproceso que contiene el bloqueo del cargador del sistema operativo Microsoft Windows.  Cualquier ejecución de este tipo no es válida porque puede causar interbloqueos y el uso de archivos DLL antes de que se hayan inicializado por el cargador del sistema operativo.  
@@ -45,7 +38,7 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
  Por último, hay casos donde las llamadas a archivos DLL pueden producirse antes de que el cargador del sistema operativo haya inicializado correctamente esos archivos DLL.  A diferencia de los errores de interbloqueo, que se pueden diagnosticar examinando las pilas de todos los subprocesos implicados en el interbloqueo, es muy difícil diagnosticar el uso de archivos DLL no inicializados sin usar este MDA.  
   
 ## <a name="cause"></a>Motivo  
- Los ensamblados de C++ administrados y no administrados mixtos compilados para las versiones 1.0 o 1.1 de .NET Framework suelen intentar ejecutar código administrado dentro del bloqueo del cargador a menos que se hayan tomado precauciones especiales, por ejemplo, vinculándolos con **/NOENTRY**.  Para obtener una descripción detallada de estos problemas, vea "Mixed DLL Loading Problem" (Problema de carga de archivos DLL mixtos) en MSDN Library.  
+ Los ensamblados de C++ administrados y no administrados mixtos compilados para las versiones 1.0 o 1.1 de .NET Framework suelen intentar ejecutar código administrado dentro del bloqueo del cargador a menos que se hayan tomado precauciones especiales, por ejemplo, vinculándolos con **/NOENTRY**.
   
  Los ensamblados de C++ administrados y no administrados mixtos compilados para versión 2.0 de .NET Framework son menos susceptibles a estos problemas, y tienen el mismo riesgo reducido que las aplicaciones que usan archivos DLL no administrados que infringen las reglas del sistema operativo.  Por ejemplo, si el punto de entrada `DllMain` de un archivo DLL no administrado llama a `CoCreateInstance` para obtener un objeto administrado que se haya expuesto a COM, el resultado es un intento de ejecutar código administrado dentro del bloqueo del cargador. Para más información sobre problemas de bloqueo del cargador en la versión 2.0 y posteriores de .NET Framework, vea [Inicialización de ensamblados mixtos](/cpp/dotnet/initialization-of-mixed-assemblies).  
   
@@ -71,5 +64,4 @@ El Asistente para la depuración administrada (MDA) `loaderLock` detecta los int
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Diagnóstico de errores con asistentes para la depuración administrada](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
+ [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

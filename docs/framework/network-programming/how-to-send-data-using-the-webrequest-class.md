@@ -8,24 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c840792182c012ba74b3ba3ef297748f58e4b92a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2102fce150f512a49093eb2b214258ac35e276e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Cómo enviar datos mediante la clase WebRequest
 En el procedimiento siguiente se describen los pasos que se llevan a cabo para enviar datos a un servidor. Este procedimiento se suele usar para publicar datos en una página web.  
@@ -136,7 +133,7 @@ En el procedimiento siguiente se describen los pasos que se llevan a cabo para e
     ```  
   
     > [!NOTE]
-    >  Cuando haya acabado de usar un objeto <xref:System.Net.WebResponse>, debe cerrarlo llamando al método <xref:System.Net.WebResponse.Close%2A>. De manera alternativa, si ha obtenido la secuencia de respuesta del objeto de respuesta, puede cerrar la secuencia llamando al método <xref:System.IO.Stream.Close%2A?displayProperty=fullName>. Si no cierra la respuesta o la secuencia, la aplicación se quedará sin conexiones con el servidor y no podrá procesar más solicitudes.  
+    >  Cuando haya acabado de usar un objeto <xref:System.Net.WebResponse>, debe cerrarlo llamando al método <xref:System.Net.WebResponse.Close%2A>. De manera alternativa, si ha obtenido la secuencia de respuesta del objeto de respuesta, puede cerrar la secuencia llamando al método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Si no cierra la respuesta o la secuencia, la aplicación se quedará sin conexiones con el servidor y no podrá procesar más solicitudes.  
   
 10. Puede obtener acceso a las propiedades de **WebResponse** o convertir **WebResponse** en una instancia específica de protocolo para leer propiedades específicas de protocolo. Por ejemplo, para obtener acceso a las propiedades de <xref:System.Net.HttpWebResponse> específicas de HTTP, convierta **WebResponse** en una referencia **HttpWebResponse**.  
   
@@ -268,9 +265,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear solicitudes de Internet](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [Usar flujos en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)   
+ [Crear solicitudes de Internet](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Al utilizar secuencias en la red](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Acceso a Internet a través de un proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Solicitud de datos](../../../docs/framework/network-programming/requesting-data.md)  
  [Cómo solicitar datos mediante la clase WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-

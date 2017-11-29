@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 11d20e346bba9ae6300f88c5d5bf48f99ec27904
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5b4bcf0a7a7d23dd54fad36b341e3ed241975b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
 Un nombre de mismo nivel representa un punto de conexión para la comunicación, que puede ser un equipo, un usuario, un grupo, un servicio o cualquier elemento asociado a un elemento del mismo nivel que se puede resolver en una dirección IPv6. El Protocolo de resolución de nombres de mismo nivel (PNRP) toma el nombre de mismo nivel estadísticamente único para la creación de un identificador PNRP, que se usa para identificar a los miembros de la nube.  
@@ -46,6 +40,5 @@ Un nombre de mismo nivel representa un punto de conexión para la comunicación,
  Esta combinación de identificador P2P y ubicación del servicio permite registrar varios identificadores PNRP desde un solo equipo.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.PeerToPeer.PeerName>   
+ <xref:System.Net.PeerToPeer.PeerName>  
  <xref:System.Net.PeerToPeer>
-

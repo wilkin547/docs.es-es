@@ -1,32 +1,35 @@
 ---
-title: "Compatibilidad con POCO | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Compatibilidad con POCO
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0607ea270b32aa0ae02e6ed0b0eecfa6c4c0d054
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Compatibilidad con POCO
-En este ejemplo se muestra la compatibilidad para la serialización de los tipos sin marca; es decir, tipos a los que no se han aplicado atributos de serialización, a veces conocidos como tipos de objetos CLR antiguos sin formato \(POCO\).<xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos para todos los tipos públicos sin marca que tienen un constructor predeterminado.Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios.[!INCLUDE[crabout](../../../../includes/crabout-md.md)] los tipos no marcados, vea [Tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+# <a name="poco-support"></a>Compatibilidad con POCO
+En este ejemplo se muestra la compatibilidad para la serialización de los tipos sin marca; es decir, tipos a los que no se han aplicado atributos de serialización, a veces conocidos como tipos de objetos CLR antiguos sin formato (POCO). <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos para todos los tipos públicos sin marca que tienen un constructor predeterminado. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]los tipos no marcados, consulte [tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
- Este ejemplo está basado en [Introducción:](../../../../docs/framework/wcf/samples/getting-started-sample.md), pero utiliza los números complejos en lugar de los tipos numéricos primitivos.También es similar al ejemplo [Contrato de datos básico](../../../../docs/framework/wcf/samples/basic-data-contract.md), solo que no se utilizan los atributos <xref:System.Runtime.Serialization.DataMemberAttribute> y <xref:System.Runtime.Serialization.DataContractAttribute>.  
+ En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), pero utiliza números complejos en lugar de los tipos numéricos primitivos. También es similar a la [contrato de datos básica](../../../../docs/framework/wcf/samples/basic-data-contract.md) de ejemplo, salvo que la <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> no se utilizan los atributos.  
   
- El cliente es una aplicación de consola \(.exe\) e Internet Information Services \(IIS\) hospeda el servicio.  
+ El cliente es una aplicación de consola (.exe) e Internet Information Services (IIS) hospeda el servicio.  
   
 > [!NOTE]
->  El procedimiento de configuración y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+>  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- La clase `ServiceContract` se utiliza en la clase `ComplexNumber`.El tipo `ComplexNumber` no tiene los atributos <xref:System.Runtime.Serialization.DataMemberAttribute> y <xref:System.Runtime.Serialization.DataContractAttribute>, como se muestra en el siguiente código de ejemplo.De manera predeterminada, se serializan todas las propiedades y campos públicos.  
+ La clase `ComplexNumber` se utiliza en la clase `ServiceContract`. El tipo `ComplexNumber` no tiene los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute>, como se muestra en el siguiente código de ejemplo. De manera predeterminada, se serializan todas las propiedades y campos públicos.  
   
 ```  
 public class ComplexNumber  
@@ -46,23 +49,23 @@ public class ComplexNumber
 }  
 ```  
   
-### Para configurar, compilar y ejecutar el ejemplo  
+### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1.  Asegúrese de que ha realizado [Procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Asegúrese de que ha llevado a cabo la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Para compilar el código C\# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Compilación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2.  Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Para ejecutar el ejemplo en una configuración con un único equipo o con varios, siga las instrucciones de [Ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Para ejecutar el ejemplo en una configuración de equipo único o de varios, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
+>  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
-## Vea también  
- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
  [Tipos serializables](../../../../docs/framework/wcf/feature-details/serializable-types.md)

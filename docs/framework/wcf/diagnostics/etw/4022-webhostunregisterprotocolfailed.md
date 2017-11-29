@@ -1,35 +1,38 @@
 ---
-title: "4022 - WebhostUnregisterProtocolFailed | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 4022 - WebhostUnregisterProtocolFailed
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cdebf42c-d880-4509-82be-8fdc9f88d203
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 668aea30565aa98a1bf00e4d00849dd53138cd22
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 4022 - WebhostUnregisterProtocolFailed
-## Propiedades  
+# <a name="4022---webhostunregisterprotocolfailed"></a>4022 - WebhostUnregisterProtocolFailed
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|4022|  
 |Palabras clave|ActivationServices|  
 |Nivel|Error|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Analytic|  
+|Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Este evento se genera cuando el protocolo no registrado de host web produce un error.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  Código de error:%1  
   
-## Detalles
+## <a name="details"></a>Detalles

@@ -1,54 +1,60 @@
 ---
-title: "Crear la aplicaci&#243;n cliente de .NET Framework (Tutorial r&#225;pido de WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2d654ad24f8d23a47d2a3be3b07c42c104bb9b70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Crear la aplicaci&#243;n cliente de .NET Framework (Tutorial r&#225;pido de WCF Data Services)
-Esta es la tarea final del tutorial rápido de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  En esta tarea, agregará una aplicación de consola a la solución, agregará una referencia a la fuente de [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] en esta nueva aplicación cliente y obtendrá acceso a la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] desde la aplicación cliente usando las clases del servicio de datos del cliente y las bibliotecas de cliente generadas.  
+# <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Crear la aplicación cliente de .NET Framework (Inicio rápido de Data Services de WCF)
+Esta es la tarea final de la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inicio rápido. En esta tarea, agregará una aplicación de consola a la solución, agregue una referencia a la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] incorporar esta nueva aplicación de cliente y el acceso a la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de la aplicación cliente mediante el uso de las clases de servicio de datos de cliente generado y cliente bibliotecas.  
   
 > [!NOTE]
->  No es necesaria una aplicación cliente basada en .NET Framework para obtener acceso a una fuente de datos.  Cualquier componente de aplicación que utilice una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] puede tener acceso al servicio de datos.  Para obtener más información, consulta [Usar un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
+>  No es necesaria una aplicación cliente basada en .NET Framework para obtener acceso a una fuente de datos. Cualquier componente de aplicación que utilice una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] puede tener acceso al servicio de datos. Para obtener más información, consulte [mediante un servicio de datos en una aplicación cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
-### Para crear la aplicación cliente mediante Visual Studio  
+### <a name="to-create-the-client-application-by-using-visual-studio"></a>Para crear la aplicación cliente mediante Visual Studio  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario en la solución, haga clic en **Agregar** y, a continuación, haga clic en **Nuevo proyecto**.  
+1.  En **el Explorador de soluciones**, haga clic en la solución, haga clic en **agregar**y, a continuación, haga clic en **nuevo proyecto**.  
   
-2.  En **Tipos de proyecto**, haga clic en **Windows** y, a continuación, seleccione **Aplicación WPF** en el panel **Templates**.  
+2.  En **tipos de proyecto**, haga clic en **Windows**y, a continuación, seleccione **aplicación WPF** en el **plantillas** panel.  
   
-3.  Escriba `NorthwindClient` como nombre del proyecto y haga clic en **Aceptar**.  
+3.  Escriba `NorthwindClient` para el nombre del proyecto y, a continuación, haga clic en **Aceptar**.  
   
 4.  Abra el archivo MainWindow.xaml y reemplace el código XAML con el código siguiente:  
   
-     [!code-xml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]  
+     [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]  
   
-### Para agregar al proyecto una referencia al servicio de datos  
+### <a name="to-add-a-data-service-reference-to-the-project"></a>Para agregar al proyecto una referencia al servicio de datos  
   
-1.  Haga clic con el botón secundario en el proyecto NorthwindClient, haga clic en **Agregar referencia de servicio** y, a continuación, haga clic en **Detectar**.  
+1.  Haga clic en el proyecto NorthwindClient, haga clic en **Agregar referencia de servicio**y, a continuación, haga clic en **Discover**.  
   
      De este modo se muestra el servicio de datos de Northwind que creó en la primera tarea.  
   
-2.  En el cuadro de texto **Espacio de nombres**, escriba `Northwind` y, a continuación, haga clic en **Aceptar**.  
+2.  En el **Namespace** cuadro de texto, escriba `Northwind`y, a continuación, haga clic en **Aceptar**.  
   
-     De este modo se agrega un nuevo archivo de código al proyecto, que contiene las clases de datos que se usan para obtener acceso e interactuar con los recursos del servicio de datos como objetos.  Las clases de datos se crean en el espacio de nombres `NorthwindClient.Northwind`.  
+     De este modo se agrega un nuevo archivo de código al proyecto, que contiene las clases de datos que se usan para obtener acceso e interactuar con los recursos del servicio de datos como objetos. Las clases de datos se crean en el espacio de nombres `NorthwindClient.Northwind`.  
   
-### Para tener acceso a los datos del servicio de datos en la aplicación WPF  
+### <a name="to-access-data-service-data-in-the-wpf-application"></a>Para tener acceso a los datos del servicio de datos en la aplicación WPF  
   
-1.  En el **Explorador de soluciones**, en **NorthwindClient**, haga clic con el botón secundario en el proyecto y haga clic en **Agregar referencia**.  
+1.  En **el Explorador de soluciones** en **NorthwindClient**, haga clic en el proyecto y haga clic en **Agregar referencia**.  
   
-2.  En el cuadro de diálogo Agregar referencia, haga clic en la pestaña **.NET**, seleccione el ensamblado System.Data.Services.Client.dll y, a continuación, haga clic en **Aceptar**.  En el **Explorador de soluciones**, en **NorthwindClient**, abra la página de codigos para el archivo MainWindow.xaml y agregue la instrucción `using` siguiente \(`Imports` en Visual Basic\).  
+2.  En el cuadro de diálogo Agregar referencia, haga clic en el **.NET** , seleccione el ensamblado System.Data.Services.Client.dll y, a continuación, haga clic en **Aceptar**. En **el Explorador de soluciones** en **NorthwindClient**, abra la página de códigos para el archivo MainWindow.xaml y agregue el siguiente `using` instrucción (`Imports` en Visual Basic).  
   
      [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
      [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]  
@@ -66,24 +72,24 @@ Esta es la tarea final del tutorial rápido de [!INCLUDE[ssAstoria](../../../../
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]  
   
-### Para compilar y ejecutar la aplicación NorthwindClient  
+### <a name="to-build-and-run-the-northwindclient-application"></a>Para compilar y ejecutar la aplicación NorthwindClient  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario en el proyecto NorthwindClient y seleccione **Establecer como proyecto de inicio**.  
+1.  En **el Explorador de soluciones**, haga clic en el proyecto NorthwindClient y seleccione **establecer como proyecto de inicio**.  
   
 2.  Presione F5 para iniciar la aplicación.  
   
-     Se compila la solución y se inicia la aplicación cliente.  Los datos se solicitarán al servicio y se mostrarán en la consola.  
+     Se compila la solución y se inicia la aplicación cliente. Los datos se solicitarán al servicio y se mostrarán en la consola.  
   
-3.  Edite un valor de la columna **Cantidad** de la cuadrícula de datos y, a continuación, haga clic en **Guardar**.  
+3.  Editar un valor en el **cantidad** columna de la cuadrícula de datos y, a continuación, haga clic en **guardar**.  
   
      Los cambios se guardan en el servicio de datos.  
   
     > [!NOTE]
     >  Esta versión de la aplicación NorthwindClient no admite agregar ni eliminar entidades.  
   
-## Pasos siguientes  
- Ha creado correctamente la aplicación cliente que tiene acceso a la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind de ejemplo.  También ha completado el tutorial rápido de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] el acceso a una fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] desde una aplicación de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], vea [Biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+## <a name="next-steps"></a>Pasos siguientes  
+ Ha creado correctamente la aplicación cliente que tiene acceso a la fuente de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Northwind de ejemplo. También ha completado el tutorial rápido de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]obtener acceso a un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fuente de distribución desde un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplicación, consulte [biblioteca de cliente de WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
-## Vea también  
- [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)   
+## <a name="see-also"></a>Vea también  
+ [Introducción](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [Recursos](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

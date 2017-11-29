@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b9769d4e3936e127407f68de81f9b5b5da4fbc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pnrp-clouds"></a>Nubes PNRP
 Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí a través de la red. El término "nube" es sinónimo de "malla del mismo nivel" y "grafo punto a punto".  
@@ -47,6 +41,5 @@ Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí
  Una vez que se ha creado u obtenido una instancia Cloud, se pueden registrar con ella nombres del mismo nivel para crear una malla de elementos conocidos del mismo nivel.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Net.PeerToPeer.Cloud>   
+ <xref:System.Net.PeerToPeer.Cloud>  
  [Protocolo de resolución de nombres del mismo nivel](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
-

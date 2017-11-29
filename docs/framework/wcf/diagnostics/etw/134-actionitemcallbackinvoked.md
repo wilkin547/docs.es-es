@@ -1,35 +1,38 @@
 ---
-title: "134 - ActionItemCallbackInvoked | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 134 - ActionItemCallbackInvoked
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9547f8a6-8f75-4c64-9d6d-391385557d8c
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f8518c72b8d242169466a941c6e583ead7344244
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 134 - ActionItemCallbackInvoked
-## Propiedades  
+# <a name="134---actionitemcallbackinvoked"></a>134 - ActionItemCallbackInvoked
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|134|  
 |Palabras clave|Subprocesos|  
 |Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Se genera este evento cuando la devolución del programador de subproceso IO invoca a extremos.  
   
-## Mensaje  
- Devolución de llamada del programador de subprocesos de E\/S invocada.  
+## <a name="message"></a>Mensaje  
+ Devolución de llamada del programador de subprocesos de E/S invocada.  
   
-## Detalles
+## <a name="details"></a>Detalles

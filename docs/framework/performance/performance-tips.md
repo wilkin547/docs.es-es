@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,25 +14,24 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 625e772ff603f6454012606902f2fde53c8be327
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 93db69b67bfac3bcefbc818032aae64df0fd47b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-performance-tips"></a>Sugerencias para mejorar el rendimiento de .NET
 El término *rendimiento* suele hacer referencia a la velocidad de ejecución de un programa. A veces se puede aumentar la velocidad de ejecución si se siguen algunas reglas básicas en el código fuente. En algunos programas, es importante examinar el código detenidamente y usar generadores de perfiles para asegurarse de que se está ejecutando lo más rápidamente posible. En otros programas, no es necesario realizar esta optimización, ya que el código se ejecuta con una velocidad aceptable mientras se escribe. En este artículo se enumeran algunas áreas donde el rendimiento puede verse afectado y sugerencias para mejorar, así como vínculos a temas de rendimiento adicionales. Para más información sobre cómo planear y medir el rendimiento, vea [Rendimiento](../../../docs/framework/performance/index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Conversión boxing y conversión unboxing  
- Es mejor evitar el uso de tipos de valor en situaciones en las que se debe aplicar la conversión boxing un gran número de veces, por ejemplo, en las clases de colecciones no genéricas como <xref:System.Collections.ArrayList?displayProperty=fullName>. Puede evitar la conversión boxing de tipos de valor mediante el uso de colecciones genéricas como <xref:System.Collections.Generic.List%601?displayProperty=fullName>. Las conversiones boxing y unboxing son procesos que consumen muchos recursos. Cuando se aplica la conversión boxing a un tipo de valor, se debe crear un objeto completamente nuevo. Esto puede tardar hasta 20 veces más que la asignación de una referencia simple. Cuando se aplica la conversión unboxing, el proceso de conversión puede tardar cuatro veces más que una asignación. Para más información, vea [Conversión boxing y unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Es mejor evitar el uso de tipos de valor en situaciones en las que se debe aplicar la conversión boxing un gran número de veces, por ejemplo, en las clases de colecciones no genéricas como <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Puede evitar la conversión boxing de tipos de valor mediante el uso de colecciones genéricas como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Las conversiones boxing y unboxing son procesos que consumen muchos recursos. Cuando se aplica la conversión boxing a un tipo de valor, se debe crear un objeto completamente nuevo. Esto puede tardar hasta 20 veces más que la asignación de una referencia simple. Cuando se aplica la conversión unboxing, el proceso de conversión puede tardar cuatro veces más que una asignación. Para más información, vea [Conversión boxing y unboxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
   
 ## <a name="strings"></a>Cadenas  
- Al concatenar un gran número de variables de cadena, por ejemplo en un bucle compacto, use <xref:System.Text.StringBuilder?displayProperty=fullName> en lugar del [operador +](~/docs/csharp/language-reference/operators/addition-operator.md) de C# o los [operadores de concatenación](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) de Visual Basic. Para más información, vea [Cómo: Concatenar varias cadenas](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) y [Operadores de concatenación en Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Al concatenar un gran número de variables de cadena, por ejemplo en un bucle compacto, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> en lugar del [operador +](~/docs/csharp/language-reference/operators/addition-operator.md) de C# o los [operadores de concatenación](~/docs/visual-basic/language-reference/operators/concatenation-operators.md) de Visual Basic. Para más información, vea [Cómo: Concatenar varias cadenas](~/docs/csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md) y [Operadores de concatenación en Visual Basic](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Destructores  
  No se deben utilizar destructores vacíos. Cuando una clase contiene un destructor, se crea una entrada en la cola Finalize. Cuando se llama al destructor, se invoca al recolector de elementos no utilizados para procesar la cola. Si el destructor está vacío, simplemente se produce una pérdida de rendimiento. Para más información, vea [Destructores](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) y [Duración de los objetos: cómo se crean y destruyen](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
@@ -53,8 +51,7 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
 -   [Rico Mariani's Performance Tidbits](http://go.microsoft.com/fwlink/?LinkId=115679) (Curiosidades sobre rendimiento de Rico Mariani)  
   
 ## <a name="see-also"></a>Vea también  
- [Rendimiento](../../../docs/framework/performance/index.md)   
- [Conceptos de programación](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)   
- [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)   
+ [Rendimiento](../../../docs/framework/performance/index.md)  
+ [Conceptos de programación](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
+ [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)  
  [Guía de programación de C#](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
-

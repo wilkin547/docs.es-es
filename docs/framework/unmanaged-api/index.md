@@ -1,72 +1,75 @@
 ---
-title: "Referencia de la API no administrada | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "en tiempo de ejecución, las API no administradas"
-  - "CLR, las API no administradas"
-  - "referencia de API nativa [.NET Framework]"
-  - "referencia de API no administrada [.NET Framework]"
+title: Referencia de la API no administrada
+ms.custom: 
+ms.date: 11/06/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- runtime, unmanaged APIs
+- common language runtime, unmanaged APIs
+- native API reference [.NET Framework]
+- unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-caps.latest.revision: 24
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 24
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
+ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/15/2017
 ---
-# Referencia de la API no administrada
+# <a name="unmanaged-api-reference"></a>Referencia de la API no administrada
 En esta sección se incluye información acerca de las API no administradas que se pueden utilizar en aplicaciones relacionadas con código administrado, como hosts en tiempo de ejecución, compiladores, desensambladores, ofuscadores, depuradores y generadores de perfiles.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Tipos de datos comunes](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
  Enumera los tipos de datos comunes que se usan, especialmente en las API de depuración y de generación de perfiles no administradas.  
   
- [ALink](../../../ml/index.xml)  
+ [ALink](../../../docs/framework/unmanaged-api/alink/index.md)  
  Describe la API ALink, que admite la creación de ensamblados .NET Framework y módulos no enlazados.  
   
- [Authenticode](../../../ml/index.xml)  
+ [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
  Admite el módulo de creación y verificación de licencias Authenticode XrML.  
   
  [Constantes](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Describe las constantes que se definen en CorSym.idl.  
   
- [Atributos de interfaz personalizados](http://msdn.microsoft.com/es-es/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
- Describe los atributos de interfaz personalizados del Modelo de objetos componentes \(COM\).  
+ [Atributos de interfaz personalizados](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ Describe los atributos de interfaz personalizados del Modelo de objetos componentes (COM).  
   
- [Depuración](../../../ml/index.xml)  
- Describe la API de depuración, que permite a un depurador depurar el código que se ejecuta en el entorno de Common Language Runtime \(CLR\).  
+ [Depuración](../../../docs/framework/unmanaged-api/debugging/index.md)  
+ Describe la API de depuración, que permite a un depurador depurar el código que se ejecuta en el entorno de Common Language Runtime (CLR).  
   
- [Almacén de símbolos de diagnóstico](../../../ml/index.xml)  
+ [Almacén de símbolos de diagnósticos](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
  Describe la API de almacén de símbolos de diagnóstico, que permite a un compilador generar información sobre símbolos para que la use un depurador.  
   
- [Fusión](../../../ml/index.xml)  
+ [Fusión](../../../docs/framework/unmanaged-api/fusion/index.md)  
  Describe la API de fusión, que permite a un host de tiempo de ejecución acceder a las propiedades de los recursos de una aplicación para encontrar las versiones correctas de estos recursos para la aplicación.  
   
- [Hospedaje](../../../ml/index.xml)  
+ [Hospedar aplicaciones de WPF](../../../docs/framework/unmanaged-api/hosting/index.md)  
  Describe la API de hospedaje, que permite a los hosts no administrados integrar CLR en sus aplicaciones.  
   
- [Metadatos](../../../ml/index.xml)  
+ [Metadatos](../../../docs/framework/unmanaged-api/metadata/index.md)  
  Describe la API de metadatos, que permite a un cliente, como un compilador, generar o acceder a los metadatos de un componente sin que CLR cargue los tipos.  
   
- [Generación de perfiles](../../../ml/index.xml)  
+ [Generación de perfiles](../../../docs/framework/unmanaged-api/profiling/index.md)  
  Describe la API de generación de perfiles, que permite a un generador de perfiles supervisar la ejecución que CLR hace de un programa.  
   
- [Nombres seguros](../../../ml/index.xml)  
+ [Nombre seguro](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
  Describe la API de nombres seguros, que permite a un cliente administrar la firma de ensamblados con nombre seguro.  
+
+ [Contadores de rendimiento y WMI](wmi/index.md)  
+ Describe las API que encapsulan llamadas a las bibliotecas de Windows Management Instrumentation (WMI).
   
- [Funciones auxiliares Tlbexp](../../../ml/index.xml)  
- Describe las dos funciones auxiliares y la interfaz que usa el Exportador de la biblioteca de tipos \(Tlbexp.exe\) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
+ [Funciones auxiliares de Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ Describe las dos funciones auxiliares y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Guía de desarrollo](../../../docs/framework/development-guide.md)  
   
- [Información avanzada para .NET Framework](http://msdn.microsoft.com/es-es/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Información avanzada para .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)

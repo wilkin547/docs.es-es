@@ -1,25 +1,31 @@
 ---
-title: "Managed Extensibility Framework (MEF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Managed Extensibility Framework, información general"
-  - "MEF, información general"
+title: Managed Extensibility Framework (MEF)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Managed Extensibility Framework, overview
+- MEF, overview
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
-caps.latest.revision: 31
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0994303cb758439dda08ee7df206f0a3bcecd854
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/21/2017
 ---
-# Managed Extensibility Framework (MEF)
+# <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 En este tema se proporciona información general sobre la biblioteca Managed Extensibility Framework que se incluye en .NET Framework 4.  
   
 <a name="what_is_mef"></a>   
@@ -64,16 +70,16 @@ En este tema se proporciona información general sobre la biblioteca Managed Ext
 ## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: aplicación de ejemplo  
  La manera más sencilla de ver qué puede hacer MEF es compilar una aplicación sencilla con él. En este ejemplo, compilará una calculadora muy sencilla denominada SimpleCalculator. El objetivo de SimpleCalculator es crear una aplicación de consola que acepte comandos aritméticos básicos, con el formato "5+3" ó "6-2", y devuelva respuestas correctas. Con MEF, podrá agregar nuevos operadores sin cambiar el código de la aplicación.  
   
- Para descargar el código completo de este ejemplo, consulte el [ejemplo SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).  
+ Para descargar el código completo de este ejemplo, vea el [ejemplo SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).  
   
 > [!NOTE]
->  La finalidad de SimpleCalculator es mostrar los conceptos y la sintaxis de MEF, más que proporcionar un escenario realista para su uso. Muchas de las aplicaciones que más se beneficiarían de todo lo que MEF puede ofrecer son más complejas que SimpleCalculator. Para obtener ejemplos más exhaustivos, vea la [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282) en Codeplex.  
+>  La finalidad de SimpleCalculator es mostrar los conceptos y la sintaxis de MEF, más que proporcionar un escenario realista para su uso. Muchas de las aplicaciones que más se beneficiarían de todo lo que MEF puede ofrecer son más complejas que SimpleCalculator. Para obtener ejemplos más exhaustivos, vea el [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef) en GitHub.
   
  Para empezar, en [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)], cree un nuevo proyecto de aplicación de consola denominado `SimpleCalculator`. Agregue una referencia al ensamblado System.ComponentModel.Composition, donde reside MEF. Abra Module1.vb o Program.cs y agregue instrucciones `Imports` o `using` para System.ComponentModel.Composition y System.ComponentModel.Composition.Hosting. Estos dos espacios de nombres contienen tipos MEF que necesitará para desarrollar una aplicación extensible. En Visual Basic, agregue la palabra clave `Public` a la línea que declara el módulo `Module1`.  
   
 <a name="composition_container_and_catalogs"></a>   
 ## <a name="composition-container-and-catalogs"></a>Contenedor de composición y catálogos  
- El núcleo del modelo de composición de MEF es el *contenedor de composición*, que contiene todos los elementos disponibles y realiza la composición.  (Es decir, la concordancia de importaciones y exportaciones).  Es el tipo más común de contenedor de composición <xref:System.ComponentModel.Composition.Hosting.CompositionContainer>, y lo utilizará en SimpleCalculator.  
+ El núcleo del modelo de composición de MEF es el *contenedor de composición*, que contiene todos los elementos disponibles y realiza la composición.  (Es decir, la concordancia de importaciones y exportaciones).  El tipo más común de contenedor de composición es <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> y lo utilizará en SimpleCalculator.  
   
  En Visual Basic, en Module1.vb, agregue una clase pública denominada `Program`. A continuación, agregue la línea siguiente a la clase `Program` en Module1.vb o Program.cs:  
   
@@ -138,7 +144,7 @@ private Program()
 ## <a name="imports-and-exports-with-attributes"></a>Importaciones y exportaciones con atributos  
  Primeramente, haga que `Program` importe una calculadora. Esto permite la separación de los problemas de la interfaz de usuario, como la entrada y salida de consola que irá a `Program`, de la lógica de la calculadora.  
   
- Agregue el código siguiente a la clase `Program` :  
+ Agregue el código siguiente a la clase `Program`:  
   
 ```vb  
 <Import(GetType(ICalculator))>  
@@ -150,7 +156,7 @@ Public Property calculator As ICalculator
 public ICalculator calculator;  
 ```  
   
- Observe que la declaración de la `calculator` objeto no es rara, pero se decora con el <xref:System.ComponentModel.Composition.ImportAttribute> atributo.  Este atributo declara que algo es una importación, es decir, el motor de la composición la completará cuando se cree el objeto.  
+ Observe que la declaración del objeto `calculator` no es rara, pero se decora con el atributo <xref:System.ComponentModel.Composition.ImportAttribute>.  Este atributo declara que algo es una importación, es decir, el motor de la composición la completará cuando se cree el objeto.  
   
  Cada importación tiene un *contrato*, que determina qué exportaciones coincidirá con. El contrato puede ser una cadena especificada explícitamente o MEF puede generarla automáticamente a partir de un tipo determinado, en este caso la interfaz `ICalculator`.  Cualquier exportación declarada con un contrato coincidente completará esta importación.  Tenga en cuenta que mientras el tipo del objeto `calculator` sea de hecho `ICalculator`, esto no es necesario. El contrato es independiente del tipo del objeto de importación.  (En este caso, podría omitir `typeof(ICalculator)`.  MEF adoptará automáticamente el contrato que se va a basar en el tipo de importación, a menos que lo especifique explícitamente).  
   
@@ -225,9 +231,9 @@ static void Main(string[] args)
   
 <a name="further_imports_and_importmany"></a>   
 ## <a name="further-imports-and-importmany"></a>Más importaciones e ImportMany  
- Para que SimpleCalculator sea extensible, necesita importar una lista de operaciones. Un normal <xref:System.ComponentModel.Composition.ImportAttribute> atributo se rellena mediante una y solamente una <xref:System.ComponentModel.Composition.ExportAttribute>.  Si hay más de uno disponible, el motor de la composición genera un error.  Para crear una importación que pueda ser completada por cualquier número de exportaciones, puede utilizar el <xref:System.ComponentModel.Composition.ImportManyAttribute> atributo.  
+ Para que SimpleCalculator sea extensible, necesita importar una lista de operaciones. Un atributo <xref:System.ComponentModel.Composition.ImportAttribute> lo completa un atributo <xref:System.ComponentModel.Composition.ExportAttribute> y solo uno.  Si hay más de uno disponible, el motor de la composición genera un error.  Para crear una importación que pueda ser completada por cualquier número de exportaciones, puede usar el atributo <xref:System.ComponentModel.Composition.ImportManyAttribute>.  
   
- Agregue la siguiente propiedad de operaciones a la `MySimpleCalculator` clase:  
+ Agregue la siguiente propiedad de operaciones para la `MySimpleCalculator` clase:  
   
 ```vb  
 <ImportMany()>  
@@ -239,7 +245,7 @@ Public Property operations As IEnumerable(Of Lazy(Of IOperation, IOperationData)
 IEnumerable<Lazy<IOperation, IOperationData>> operations;  
 ```  
   
- <xref:System.Lazy%602> es un tipo proporcionado por MEF que contiene referencias indirectas a las exportaciones.</T, TMetadata>  Aquí, además del propio objeto exportado, también obtendrá *exportar metadatos*, o la información que describe el objeto exportado. Cada <xref:System.Lazy%602> contiene un `IOperation` objeto que representa una operación real y un `IOperationData` objeto, que representa sus metadatos.\</T, TMetadata>  
+ <xref:System.Lazy%602> es un tipo de colección proporcionado por MEF que contiene referencias indirectas a las exportaciones.  En este caso, además del propio objeto exportado, también obtendrá *exportar los metadatos*, o la información que describe el objeto exportado. Cada colección <xref:System.Lazy%602> contiene un objeto `IOperation`, que representa una operación real, y un objeto `IOperationData`, que representa sus metadatos.  
   
  Agregue estas sencillas interfaces al módulo o al espacio de nombres `SimpleCalculator`:  
   
@@ -291,7 +297,7 @@ class Add: IOperation
 }  
 ```  
   
- El <xref:System.ComponentModel.Composition.ExportAttribute> atributo funciones como antes.  El <xref:System.ComponentModel.Composition.ExportMetadataAttribute> atributo adjunta metadatos, en forma de un par de nombre y valor a esa exportación.  Mientras que la clase `Add` implementa `IOperation`, no se define explícitamente una clase que implementa `IOperationData`. En su lugar, MEF crea implícitamente una clase con propiedades basadas en los nombres de los metadatos proporcionados.  (Esta es una de las maneras de tener acceso a los metadatos en MEF).  
+ El atributo <xref:System.ComponentModel.Composition.ExportAttribute> funciona igual que antes.  El atributo <xref:System.ComponentModel.Composition.ExportMetadataAttribute> adjunta metadatos, con formato de un par nombre-valor, a esa exportación.  Mientras que la clase `Add` implementa `IOperation`, no se define explícitamente una clase que implementa `IOperationData`. En su lugar, MEF crea implícitamente una clase con propiedades basadas en los nombres de los metadatos proporcionados.  (Esta es una de las maneras de tener acceso a los metadatos en MEF).  
   
  Composición en MEF es *recursiva*. Compuso el objeto `Program` explícitamente, que importó un `ICalculator` que resultó de ser del tipo `MySimpleCalculator`.  A su vez, `MySimpleCalculator` importa una colección de objetos `IOperation` y se completará cuando se cree `MySimpleCalculator`, al mismo tiempo que las importaciones de `Program`. Si la clase `Add` declarara una importación más extensa, también tendría que completarse, y así sucesivamente. Toda importación que quede incompleta dará error en la composición.  (Es posible, sin embargo, declarar las importaciones para que sean opcionales o asignarles valores predeterminados).  
   
@@ -353,7 +359,7 @@ public String Calculate(String input)
 }  
 ```  
   
- Los pasos iniciales analizan la cadena de entrada en los operandos izquierdo y derecho, y un carácter de operador.  En el bucle de `foreach`, se examina cada miembro de la colección `operations`. Estos objetos son de tipo <xref:System.Lazy%602>, y puede tener acceso a sus valores de metadatos y el objeto exportado con el <xref:System.Lazy%602.Metadata%2A> propiedad y el <xref:System.Lazy%601.Value%2A>propiedad respectivamente.</T, TMetadata> En este caso, si la propiedad `Symbol` del objeto `IOperationData` se detecta como una coincidencia, la calculadora llama al método `Operate` del objeto `IOperation` y devuelve el resultado.  
+ Los pasos iniciales analizan la cadena de entrada en los operandos izquierdo y derecho, y un carácter de operador.  En el bucle de `foreach`, se examina cada miembro de la colección `operations`. Estos objetos son de tipo <xref:System.Lazy%602>; se puede obtener acceso a los valores de sus metadatos y al objeto exportado con las propiedades <xref:System.Lazy%602.Metadata%2A> y <xref:System.Lazy%601.Value%2A>, respectivamente. En este caso, si la propiedad `Symbol` del objeto `IOperationData` se detecta como una coincidencia, la calculadora llama al método `Operate` del objeto `IOperation` y devuelve el resultado.  
   
  Para completar la calculadora, también necesita un método auxiliar que devuelve la posición del primer carácter de una cadena que no sea un dígito.  Agregue el método auxiliar siguiente a la clase `MySimpleCalculator`:  
   
@@ -411,11 +417,11 @@ class Subtract : IOperation
   
 <a name="extending_simplecalculator_using_a_new_assembly"></a>   
 ## <a name="extending-simplecalculator-using-a-new-assembly"></a>Extender SimpleCalculator con un nuevo ensamblado  
- Agregar clases al código fuente es bastante sencillo, pero MEF permite buscar elementos fuera del propio origen de una aplicación. Para demostrar esto, necesitará modificar SimpleCalculator para que busque un directorio, así como su propio ensamblado, para las partes, agregando un <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>.  
+ Agregar clases al código fuente es bastante sencillo, pero MEF permite buscar elementos fuera del propio origen de una aplicación. Para demostrar esto, necesitará modificar SimpleCalculator para que busque los elementos en un directorio y en su propio ensamblado agregando <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog>.  
   
  Agregar un nuevo directorio denominado `Extensions` al proyecto SimpleCalculator.  Asegúrese de agregarlo en el nivel del proyecto y no en el nivel de la solución. A continuación, agregue un nuevo proyecto de biblioteca de clases a la solución, denominada `ExtendedOperations`. El nuevo proyecto se compilará en un ensamblado independiente.  
   
- Abra el Diseñador de proyectos para el proyecto ExtendedOperations y haga clic en el **compilar** o **crear** ficha. Cambiar el **ruta de acceso de salida de compilación** o **ruta de acceso de salida** para que apunte al directorio Extensions en el directorio del proyecto SimpleCalculator (.. \SimpleCalculator\Extensions\\).  
+ Abra el Diseñador de proyectos para el proyecto ExtendedOperations y haga clic en el **compilar** o **generar** ficha. Cambiar el **ruta de acceso de salida de compilación** o **ruta de acceso de salida** para que apunte al directorio Extensions en el directorio del proyecto SimpleCalculator (.. \SimpleCalculator\Extensions\\).  
   
  En Module1.vb o Program.cs, agregue la línea siguiente al constructor `Program`:  
   
@@ -427,7 +433,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));  
 ```  
   
- Reemplace la ruta de acceso del ejemplo por la ruta de acceso del directorio Extensions.  (Esta ruta de acceso absoluta es para fines de depuración solamente.  En una aplicación de producción, usaría una ruta de acceso relativa). El <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> agregará los elementos encontrados en cualquier ensamblado del directorio Extensions al contenedor de composición.  
+ Reemplace la ruta de acceso del ejemplo por la ruta de acceso del directorio Extensions.  (Esta ruta de acceso absoluta es para fines de depuración solamente.  En una aplicación de producción, usaría una ruta de acceso relativa). <xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> agregará los elementos encontrados en cualquier ensamblado del directorio Extensions al contenedor de composición.  
   
  En el proyecto ExtendedOperations, agregue referencias a SimpleCalculator y System.ComponentModel.Composition. En el archivo de clase ExtendedOperations, agregue una instrucción `Imports` o `using` para System.ComponentModel.Composition. En Visual Basic, agregue también una instrucción `Imports` para SimpleCalculator. Después, agregue la clase siguiente al archivo de clase ExtendedOperations:  
   
@@ -455,7 +461,7 @@ public class Mod : SimpleCalculator.IOperation
 }  
 ```  
   
- Tenga en cuenta que para el contrato coincida, el <xref:System.ComponentModel.Composition.ExportAttribute> atributo debe tener el mismo tipo que el <xref:System.ComponentModel.Composition.ImportAttribute>.  
+ Tenga en cuenta que para que el contrato coincida, el atributo <xref:System.ComponentModel.Composition.ExportAttribute> debe tener el mismo tipo que <xref:System.ComponentModel.Composition.ImportAttribute>.  
   
  Compile y ejecute el proyecto. Pruebe el nuevo operador Mod (%).  
   
@@ -473,6 +479,6 @@ public class Mod : SimpleCalculator.IOperation
   
 <a name="where_do_i_go_now"></a>   
 ## <a name="where-do-i-go-now"></a>¿Por dónde seguir?  
- Para descargar el código completo de este ejemplo, consulte el [ejemplo SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).  
+ Para descargar el código completo de este ejemplo, vea el [ejemplo SimpleCalculator](http://code.msdn.microsoft.com/windowsdesktop/Simple-Calculator-MEF-1152654e).  
   
- Para obtener más información y ejemplos de código, consulte [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282). Para obtener una lista de los tipos MEF, vea el <xref:System.ComponentModel.Composition?displayProperty=fullName> espacio de nombres.
+ Para obtener más información y ejemplos de código, vea [Managed Extensibility Framework](http://go.microsoft.com/fwlink/?LinkId=144282). Para obtener una lista de los tipos de MEF, vea el espacio de nombres <xref:System.ComponentModel.Composition?displayProperty=nameWithType>.

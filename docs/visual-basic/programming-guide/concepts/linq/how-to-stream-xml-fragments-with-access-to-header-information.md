@@ -1,40 +1,31 @@
 ---
-title: "Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 299a938cd4b10dbca308685e389fab76656ac20b
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f745d0725b9b05620b4b967e51b452e54fe5e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Cómo: transmitir por secuencias fragmentos XML con acceso a la información de encabezado (Visual Basic)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
   
- Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> Sin embargo, desea utilizar [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, consulte [Cómo: escribir un LINQ al método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Una opción consiste en escribir la aplicación usando <xref:System.Xml.XmlReader>. Pero quizás prefiera usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para consultar el árbol XML. En ese caso, puede escribir su propio método de eje personalizado. Para obtener más información, consulte [Cómo: escribir un LINQ en método de eje XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
- Para escribir su propio método de eje, debe escribir un pequeño método que utiliza el <xref:System.Xml.XmlReader>para leer hasta que llega a uno de los nodos en el que esté interesado.</xref:System.Xml.XmlReader> A continuación, llama al método <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de la <xref:System.Xml.XmlReader>y crea instancias de un fragmento XML.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.ReadFrom%2A> A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
+ Para escribir su propio método de eje, debe escribir un pequeño método que utiliza los nodos <xref:System.Xml.XmlReader> para leer hasta que llega a uno de los nodos en el que está interesado. A continuación el método llama a <xref:System.Xml.Linq.XNode.ReadFrom%2A>, que lee de <xref:System.Xml.XmlReader> y crea una instancia de un fragmento XML. A continuación puede escribir las consultas LINQ en su método de eje personalizado.  
   
- Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Estándar de cierto operadores de consulta, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, ordenan y finalmente producen el primer elemento de la secuencia.</xref:System.Linq.Enumerable.OrderBy%2A> Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña.  
+ Las técnicas de transmisión por secuencias se aplican mejor en situaciones en las que el documento de origen solo se debe procesar una vez y se pueden procesar los elementos en el orden del documento. Ciertos operadores de consulta estándar, como <xref:System.Linq.Enumerable.OrderBy%2A>, recorren en iteración su origen, recaban todos los datos, los ordenan y finalmente producen el primer elemento de la secuencia. Tenga en cuenta que si utiliza un operador de consulta que materializa su origen antes de producir el primer elemento, no retendrá una superficie de memoria pequeña.  
   
 ## <a name="example"></a>Ejemplo  
  A veces el problema se pone un poco más interesante. En el siguiente documento XML, el consumidor de su método de eje personalizado también tiene que conocer el nombre del cliente al que pertenece cada elemento.  
@@ -249,5 +240,4 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+ [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

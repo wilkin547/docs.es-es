@@ -1,37 +1,40 @@
 ---
-title: "Elemento &lt;listeners&gt; de &lt;source&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<listeners> (elemento) para <source>"
-  - "listeners (elemento) para <source>"
+title: '&lt;los agentes de escucha&gt; (elemento) para &lt;origen&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
+helpviewer_keywords:
+- listeners element for <source>
+- <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 71b11cbc34bdbb5d414aa250ea2c2fce85cfac0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;listeners&gt; de &lt;source&gt;
-Agrega o quita los agentes de escucha de la colección <xref:System.Diagnostics.TraceSource.Listeners%2A> para un origen <xref:System.Diagnostics.TraceSource>.  Los agentes de escucha dirigen los resultados de la traza a un destino apropiado, como un registro, una ventana o un archivo de texto.  
+# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;los agentes de escucha&gt; (elemento) para &lt;origen&gt;
+Agrega o quita los agentes de escucha de la <xref:System.Diagnostics.TraceSource.Listeners%2A> colección para un <xref:System.Diagnostics.TraceSource>. Agentes de escucha dirigen los resultados del seguimiento a un destino apropiado, como un registro, una ventana o un archivo de texto.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.Diagnostics >  
+\<orígenes >  
+\<origen >  
+\<los agentes de escucha > elemento  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <listeners>   
   <add>...</add>  
   <remove ... />  
@@ -39,38 +42,38 @@ Agrega o quita los agentes de escucha de la colección <xref:System.Diagnostics.
 </listeners>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<add\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<remove\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la colección `Listeners`.|  
-|[\<clear\>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` para un origen de traza.|  
+|-------------|-----------------|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Agrega un agente de escucha a la colección `Listeners`.|  
+|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Quita un agente de escucha de la `Listeners` colección.|  
+|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Borra la colección `Listeners` de un origen de seguimiento.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, y el nivel donde se establece un modificador de seguimiento.|  
-|`sources`|Contiene orígenes de traza que inician mensajes de traza.|  
-|`source`|Especifica un origen de traza que inicia mensajes de traza.|  
+|`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
+|`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
+|`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
   
-## Archivo de configuración  
- Este elemento se puede utilizar en el archivo de configuración del equipo \(Machine.config\) y en el archivo de configuración de la aplicación.  
+## <a name="configuration-file"></a>Archivo de configuración  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de aplicación.  
   
-## Ejemplo  
- El ejemplo siguiente muestra cómo utilizar el elemento `<listeners>`  para agregar un agente de escucha de traza de consola al origen `mySource` y para quitar el agente de escucha de traza predeterminado.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el `<listeners>` elemento que se va a agregar un agente de escucha de seguimiento de consola a la `mySource` origen y para quitar el agente de escucha de seguimiento predeterminado.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -93,7 +96,7 @@ Agrega o quita los agentes de escucha de la colección <xref:System.Diagnostics.
 </configuration>  
 ```  
   
-## Vea también  
- <xref:System.Diagnostics.TraceListener>   
- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)   
- [Trace Listeners](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Diagnostics.TraceListener>  
+ [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

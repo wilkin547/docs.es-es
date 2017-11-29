@@ -1,27 +1,31 @@
 ---
-title: "C&#243;digo en el cuerpo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Código en el cuerpo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ef7d4dbf94dcdef42d2db0a9f88e85f6bd0413d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;digo en el cuerpo
+# <a name="code-bodied"></a>Código en el cuerpo
 Esta sección contiene ejemplos de actividades personalizadas creadas mediante declaración en código.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Marcadores](../../../../docs/framework/windows-workflow-foundation/samples/bookmarks.md)  
  En este ejemplo se muestra cómo escribir una actividad personalizada que crea un marcador para recibir entrada externa.  
   
- [Compuesto personalizado utilizando la actividad Native](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
+ [Compuesto personalizado utilizando la actividad nativa](../../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)  
  En este ejemplo se muestra cómo escribir un objeto <xref:System.Activities.NativeActivity> que programa otros objetos <xref:System.Activities.Activity> para controlar el flujo de ejecución de un flujo de trabajo.  
   
  [Propiedades de ejecución](../../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md)  
@@ -30,8 +34,8 @@ Esta sección contiene ejemplos de actividades personalizadas creadas mediante d
  [Exponer e invocar ActivityActions](../../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)  
  En este ejemplo se muestra cómo desarrollar una actividad personalizada que tiene un objeto <xref:System.Activities.ActivityAction>.  
   
- [Usar AsyncOperationContext en una actividad](../../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)  
- En este ejemplo se muestra cómo desarrollar una actividad <xref:System.Activities.CodeActivity> personalizada que utiliza <xref:System.Activities.AsyncOperationContext> para realizar trabajo de forma asincrónica fuera del flujo de trabajo.  
+ [Usar AsyncCodeActivityContext en una actividad](../../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)  
+ En este ejemplo se muestra cómo desarrollar una actividad <xref:System.Activities.CodeActivity> personalizada que utiliza <xref:System.Activities.AsyncCodeActivityContext> para realizar trabajo de forma asincrónica fuera del flujo de trabajo. 
   
  [Actividad personalizada Hello World](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
  En este ejemplo se muestran varias características clave de [!INCLUDE[wf](../../../../includes/wf-md.md)], incluido cómo crear una actividad personalizada simple.  

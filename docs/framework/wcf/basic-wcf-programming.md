@@ -1,39 +1,39 @@
 ---
-title: "Programaci&#243;n b&#225;sica de WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "programación básica [WCF]"
-  - "WCF [WCF], programación básica"
-  - "WCF [WCF], programar"
-  - "Windows Communication Foundation [WCF], programación básica"
-  - "Windows Communication Foundation [WCF], programar"
+title: "Programación básica de WCF"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- basic programming [WCF]
+- WCF [WCF], basic programming
+- WCF [WCF], programming
+- Windows Communication Foundation [WCF], basic programming
+- Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fa43705fd20a60512ca4c460bb3048220aa1e193
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Programaci&#243;n b&#225;sica de WCF
+# <a name="basic-wcf-programming"></a>Programación básica de WCF
 En esta sección se presentan los principios para crear aplicaciones de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Ciclo de vida de programación básica](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  Describe el ciclo de vida del diseño, creación e implementación de aplicaciones de servicio y cliente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
  [Diseño e implementación de servicios](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- Describe cómo diseñar e implementar un contrato de servicios, elegir un modelo de intercambio de mensajes, especificar un contrato de errores y otros aspectos básicos de los servicios.  
+ Describe cómo diseñar e implementar un contrato de servicios, elegir un patrón de intercambio de mensajes, especificar un contrato de errores y otros aspectos básicos de los servicios.  
   
  [Configuración de servicios](../../../docs/framework/wcf/configuring-services.md)  
  Describe cómo configurar un servicio de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para admitir los requisitos de contrato, personalizar el comportamiento en tiempo de ejecución local e indicar la dirección para publicar el servicio.  
@@ -53,14 +53,14 @@ En esta sección se presentan los principios para crear aplicaciones de [!INCLUD
  [WCF y ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
  Describe las dos tecnologías, cómo se relacionan entre sí y cuándo se deben usar.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  [Requisitos del sistema](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
  [Información conceptual](../../../docs/framework/wcf/conceptual-overview.md)  
@@ -71,9 +71,9 @@ En esta sección se presentan los principios para crear aplicaciones de [!INCLUD
   
  [Herramientas de Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/es-es/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Ejemplos de Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [Introducción:](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Introducción](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
  [Hospedaje de IIS utilizando código en línea](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   

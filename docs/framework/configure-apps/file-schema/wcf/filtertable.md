@@ -1,67 +1,58 @@
 ---
-title: "&lt;filterTable&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;filterTable&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 04780d51cfd1d1d0049fc608cf7bd304be382b9b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;filterTable&gt;
-Representa una tabla de enrutamiento que contiene una lista de filtros con respecto a la cual evaluar los mensajes y el extremo del cliente al que enrutar los mensajes a si el filtro se evalúa como verdadero.  
+# <a name="ltfiltertablegt"></a>&lt;filterTable&gt;
+Representa una tabla de enrutamiento que contiene una lista de filtros para evaluar los mensajes con respecto a y el punto de conexión de cliente para enrutar mensajes a si el filtro se evalúa como true.  
   
-## Sintaxis  
+ \<system.serviceModel >  
+\<enrutamiento >  
+\<routingTables >  
+\<tabla >  
   
-```vb  
+## <a name="syntax"></a>Sintaxis  
   
-<routing>  
-      <filterTables>  
-        <filterTable name="String">  
-          <entries>  
-            <add backupList=”String”  
-                 endpointName="String"   
-                 filterName="String"   
-                 priority="Integer" />  
-          </entries>  
-        </table>  
-      </routingTables>  
-</routing>  
-  
-```  
-  
-```csharp  
-  
-```  
-  
-## Atributos y elementos  
+```xml
+   <routing>      <filterTables>        <filterTable name="String">          <entries>            <add backupList="String"                 endpointName="String"                  filterName="String"                  priority="Integer" />          </entries>        </table>      </routingTables></routing>  
+```
+
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |name|Cadena que contiene el nombre exclusivo de este elemento de configuración.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<filtros\>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Asignaciones entre los filtros de enrutamiento y los extremos de destino a los que enviar mensajes cuando el filtro coincide.|  
+|-------------|-----------------|  
+|[\<filtros >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Asignaciones entre los filtros de enrutamiento y los puntos de conexión de destino a los que enviar mensajes cuando el filtro coincide.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<enrutar\>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sección de configuración que contiene tablas de enrutamiento.|  
+|-------------|-----------------|  
+|[\<enrutamiento >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sección de configuración que contiene tablas de enrutamiento.|  
   
-## Vea también  
- [System.ServiceModel.Routing.Configuration.RoutingSection](assetId:///System.ServiceModel.Routing.Configuration.RoutingSection?qualifyHint=False&amp;autoUpgrade=True)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>    

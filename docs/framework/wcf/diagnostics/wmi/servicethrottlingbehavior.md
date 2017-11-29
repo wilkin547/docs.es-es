@@ -1,25 +1,28 @@
 ---
-title: "ServiceThrottlingBehavior | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ServiceThrottlingBehavior
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 779aabf5ec9b1bca7151eaf781c6dd6f2631b58f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceThrottlingBehavior
+# <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
 ServiceThrottlingBehavior  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class ServiceThrottlingBehavior : Behavior  
@@ -30,38 +33,38 @@ class ServiceThrottlingBehavior : Behavior
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase ServiceThrottlingBehavior no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase ServiceThrottlingBehavior tiene las propiedades siguientes:  
   
-### MaxConcurrentCalls  
+### <a name="maxconcurrentcalls"></a>MaxConcurrentCalls  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de mensajes que se procesan activamente en todos los objetos de distribuidor en un ServiceHost.  
   
-### MaxConcurrentInstances  
+### <a name="maxconcurrentinstances"></a>MaxConcurrentInstances  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de objetos de servicio que se pueden ejecutar simultáneamente.  
   
-### MaxConcurrentSessions  
+### <a name="maxconcurrentsessions"></a>MaxConcurrentSessions  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El número máximo de sesiones que un host puede aceptar al mismo tiempo.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>

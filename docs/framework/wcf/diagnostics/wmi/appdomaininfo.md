@@ -1,25 +1,28 @@
 ---
-title: "AppDomainInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AppDomainInfo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 97818cf1fc6fa1c59b8b0eeaab69a73b21360151
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# AppDomainInfo
+# <a name="appdomaininfo"></a>AppDomainInfo
 Información del dominio de aplicaciones  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class AppDomainInfo  
@@ -39,98 +42,98 @@ class AppDomainInfo
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase AppDomainInfo no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase AppDomainInfo tiene las propiedades siguientes:  
   
-### AppDomainId  
+### <a name="appdomainid"></a>AppDomainId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El id. de appdomain.  
   
-### IsDefault  
+### <a name="isdefault"></a>IsDefault  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Indica si appdomain es el appdomain predeterminado.  
   
-### LogMalformedMessages  
+### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Tipo de datos: booleano  
   
- Tipo de acceso: lectura\/escritura  
+ Tipo de acceso: lectura/escritura  
   
  Valor booleano que especifica si se registran los mensajes con formato erróneo.  
   
-### LogMessagesAtServiceLevel  
+### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Tipo de datos: booleano  
   
- Tipo de acceso: lectura\/escritura  
+ Tipo de acceso: lectura/escritura  
   
- Valor booleano que especifica si los mensajes se siguen en el nivel de servicio \(antes del cifrado y las transformaciones relacionadas con transporte\).  
+ Valor booleano que especifica si los mensajes se siguen en el nivel de servicio (antes del cifrado y las transformaciones relacionadas con transporte).  
   
-### LogMessagesAtTransportLevel  
+### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Tipo de datos: booleano  
   
- Tipo de acceso: lectura\/escritura  
+ Tipo de acceso: lectura/escritura  
   
  Valor booleano que especifica si los mensajes se siguen en el nivel de transporte.  
   
-### MessageLoggingTraceListeners  
+### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
  Matriz TraceListener de tipo de datos  
   
  Tipo de acceso: solo lectura  
   
  Los agentes de escucha de seguimiento de colección que escuchan el origen de seguimiento de System.Wmi.MessageLogging.  
   
-### Nombre  
+### <a name="name"></a>Nombre  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El nombre de appdomain.  
   
-### PerformanceCounters  
+### <a name="performancecounters"></a>PerformanceCounters  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  El ámbito de contadores de rendimiento activos en el appdomain.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  Tipo de datos: sint32  
   
  Tipo de acceso: solo lectura  
   
  El id. de proceso.  
   
-### ServiceConfigPath  
+### <a name="serviceconfigpath"></a>ServiceConfigPath  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Ruta de acceso a la configuración del servicio.  
   
-### TraceLevel  
+### <a name="tracelevel"></a>TraceLevel  
  Tipo de datos: cadena  
   
- Tipo de acceso: lectura\/escritura  
+ Tipo de acceso: lectura/escritura  
   
  El nivel de seguimiento del origen de seguimiento de System.Wmi.  
   
-### ServiceModelTraceListeners  
+### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
  Matriz TraceListener de tipo de datos  
   
  Tipo de acceso: solo lectura  
   
  Una colección de agentes de escucha del origen de seguimiento de System.ServiceModel.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|

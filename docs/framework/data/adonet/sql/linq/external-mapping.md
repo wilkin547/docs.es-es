@@ -1,48 +1,51 @@
 ---
-title: "Asignaci&#243;n externa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Asignación externa"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7a0650f444f901d37797ca81343f06cb566f8112
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignaci&#243;n externa
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite *asignación externa*, un proceso por el cual se utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y el modelo de objetos.  Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
+# <a name="external-mapping"></a>Asignación externa
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]admite *asignación externa*, un proceso por el que utiliza un archivo XML independiente para especificar la asignación entre el modelo de datos de la base de datos y su modelo de objetos. Las ventajas de utilizar una archivo de asignación externa son las siguientes:  
   
--   Puede separar el código de la asignación del código de la aplicación.  Este enfoque reduce el desorden en el código de la aplicación.  
+-   Puede separar el código de la asignación del código de la aplicación. Este enfoque reduce el desorden en el código de la aplicación.  
   
--   Puede tratar un archivo de asignación externo de forma similar a un archivo de configuración.  Por ejemplo, puede actualizar cómo se comportará su aplicación después de distribuir los binarios simplemente cambiando el archivo de asignación externo.  
+-   Puede tratar un archivo de asignación externo de forma similar a un archivo de configuración. Por ejemplo, puede actualizar cómo se comportará su aplicación después de distribuir los binarios simplemente cambiando el archivo de asignación externo.  
   
-## Requisitos  
- El archivo de asignación debe ser un archivo XML y se debe validar con un archivo de definición de esquema \(.xsd\) de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+## <a name="requirements"></a>Requisitos  
+ El archivo de asignación debe ser un archivo XML y el archivo debe validarse con un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] archivo (.xsd) de definición de esquemas.  
   
  Se aplican las siguientes reglas:  
   
 -   El archivo de asignación debe ser un archivo XML.  
   
--   El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML.  Para obtener más información, consulta [Cómo: Validar archivos de asignación externa y DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+-   El archivo de asignación XML debe ser válido según el archivo de definición de esquema XML. Para obtener más información, consulte [Cómo: validar archivos DBML y externos de asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
--   La asignación externa invalida la asignación basada en atributos.  En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases.  Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
+-   La asignación externa invalida la asignación basada en atributos. En otras palabras, al utilizar un origen de asignación externo para crear un <xref:System.Data.Linq.DataContext>, el <xref:System.Data.Linq.DataContext> omite todos los atributos de asignación que se han creado en las clases. Este comportamiento es cierto si la clase está incluida en el archivo de asignación externo.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación \(basado en atributos y externo\).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite el uso híbrido de los dos enfoques de asignación (basado en atributos y externo).  
   
-## Archivo de definición de esquema XML  
+## <a name="xml-schema-definition-file"></a>Archivo de definición de esquema XML  
  La asignación externa en [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] debe ser válida según la siguiente definición de esquema XML.  
   
- Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML.  Para obtener más información, vea [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Distinga este archivo de definición de esquema del archivo de definición de esquema que se utiliza para validar un archivo DBML. Para obtener más información, consulte [generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Los usuarios de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también encontrarán este archivo XSD en el cuadro de diálogo Esquemas XML como "LinqToSqlMapping.xsd".  Para utilizar correctamente este archivo para validar un archivo de asignación externa, vea [Cómo: Validar archivos de asignación externa y DBML](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Los usuarios de [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] también encontrarán este archivo XSD en el cuadro de diálogo Esquemas XML como "LinqToSqlMapping.xsd". Para usar este archivo correctamente para validar un archivo de asignación externo, consulte [Cómo: validar archivos DBML y externo asignación](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -148,7 +151,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## Vea también  
- [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)   
- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+## <a name="see-also"></a>Vea también  
+ [Generación de código en LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Cómo: generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

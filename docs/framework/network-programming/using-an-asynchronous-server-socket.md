@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Usar un socket de servidor asincrónico
 Los sockets de servidor asincrónico usan el modelo de programación asincrónico de .NET Framework para procesar las solicitudes de servicio de red. La clase <xref:System.Net.Sockets.Socket> sigue el patrón estándar de nomenclatura asincrónico de .NET Framework; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Accept%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginAccept%2A> y <xref:System.Net.Sockets.Socket.EndAccept%2A>.  
@@ -69,7 +66,7 @@ listener.BeginAccept(
     listener);  
 ```  
   
- Los sockets asincrónicos usan subprocesos del grupo de subprocesos del sistema para procesar las conexiones entrantes. Un subproceso es responsable de aceptar conexiones, otro subproceso se usa para controlar cada conexión entrante y otro subproceso es responsable de recibir los datos de la conexión. Podría tratarse del mismo subproceso dependiendo del subproceso que esté asignado por el grupo de subprocesos. En el ejemplo siguiente, la clase <xref:System.Threading.ManualResetEvent?displayProperty=fullName> suspende la ejecución del subproceso principal e indica cuándo puede continuar la ejecución.  
+ Los sockets asincrónicos usan subprocesos del grupo de subprocesos del sistema para procesar las conexiones entrantes. Un subproceso es responsable de aceptar conexiones, otro subproceso se usa para controlar cada conexión entrante y otro subproceso es responsable de recibir los datos de la conexión. Podría tratarse del mismo subproceso dependiendo del subproceso que esté asignado por el grupo de subprocesos. En el ejemplo siguiente, la clase <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> suspende la ejecución del subproceso principal e indica cuándo puede continuar la ejecución.  
   
  En el ejemplo siguiente se muestra un método asincrónico que crea un socket de TCP/IP asincrónico en el equipo local y comienza a aceptar conexiones. Presupone que hay un **ManualResetEvent** global denominado `allDone`, que el método es miembro de una clase denominada `SocketListener` y que hay definido un método de devolución de llamada denominado `acceptCallback`.  
   
@@ -274,8 +271,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Using a Synchronous Server Socket (Empleo de un socket de servidor sincrónico)](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
- [Ejemplo de sockets de servidor asincrónicos](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Subprocesamiento](../../../docs/standard/threading/index.md)   
+ [Usar un Socket de servidor sincrónico](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Ejemplo de sockets de servidor asincrónicos](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [Subprocesamiento](../../../docs/standard/threading/index.md)  
  [Escuchas con sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
-

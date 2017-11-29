@@ -1,39 +1,42 @@
 ---
-title: "Funciones de agregado (Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Funciones de agregado (Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ff9462b1a5a6f6f9f4614098c38bb5fab14a5203
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Funciones de agregado (Entity SQL)
-Un agregado es una construcción de lenguaje que comprime una colección en una propiedad escalar como parte de una operación de grupo.  Los agregados de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tienen dos formas:  
+# <a name="aggregate-functions-entity-sql"></a>Funciones de agregado (Entity SQL)
+Un agregado es una construcción de lenguaje que comprime una colección en una propiedad escalar como parte de una operación de grupo. Los agregados de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tienen dos formas:  
   
--   Funciones de colección de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] que se pueden usar en cualquier parte de una expresión. Esto incluye el uso de funciones de agregado en proyecciones y predicados que actúan como colecciones. Las funciones de colección constituyen el modo preferido de especificar agregados en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+-   [!INCLUDE[esql](../../../../../../includes/esql-md.md)]funciones de colección que se pueden usar en cualquier parte en una expresión. Esto incluye el uso de funciones de agregado en proyecciones y predicados que actúan en colecciones. Las funciones de colección constituyen el modo preferido de especificar agregados en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   Agregados basados en grupos en expresiones de consulta que tienen una cláusula GROUP BY.  Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados de grupo aceptan los modificadores DISTINCT y ALL como modificadores para la entrada agregada.  
+-   Agregados basados en grupos en expresiones de consulta que tienen una cláusula GROUP BY. Como en [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], los agregados de grupo aceptan los modificadores DISTINCT y ALL como modificadores para la entrada agregada.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] primero intenta interpretar una expresión como una función de colección y, si la expresión está en el contexto de una expresión SELECT, lo interpreta como un agregado de grupo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]primero intenta interpretar una expresión como una función de colección y, si la expresión es en el contexto de una expresión SELECT interpreta como un agregado de grupo.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] define un operador agregado especial denominado [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md).  Este operador permite obtener una referencia al conjunto de entrada agrupado.  Esto permite más consultas de agrupación avanzadas, donde los resultados de la cláusula GROUP BY se pueden utilizar en lugares distintos de las funciones de colección o los agregados de grupo.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]define un operador agregado especial denominado [GROUPPARTITION](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md). Este operador permite obtener una referencia al conjunto de entrada agrupado. Esto permite más consultas de agrupación avanzadas, donde los resultados de la cláusula GROUP BY se pueden utilizar en lugares distintos de las funciones de colección o los agregados de grupo.  
   
-## Funciones de colección  
- Las funciones de colección operan en colecciones y devuelven un valor escalar.  Por ejemplo, si `orders` es una colección de todos los pedidos \(`orders`\), puede calcular la fecha de entrega más reciente con la expresión siguiente:  
+## <a name="collection-functions"></a>Funciones de colección  
+ Las funciones de colección operan en colecciones y devuelven un valor escalar. Por ejemplo, si `orders` es una colección de todos los pedidos (`orders`), puede calcular la fecha de entrega más reciente con la expresión siguiente:  
   
  `min(select value o.ShipDate from LOB.Orders as o)`  
   
-## Agregados basados en grupo  
- Los agregados basados en un grupo se calculan sobre un resultado de grupo según define la cláusula GROUP BY.  La cláusula GROUP BY divide los datos en grupos.  Para cada grupo del resultado, se aplica la función de agregado y se calcula un agregado diferente utilizando los elementos de cada grupo como entradas del cálculo del agregado.  Cuando se usa una cláusula GROUP BY en una expresión SELECT, solo pueden estar presentes en la cláusula ORDER BY, HAVING o de la proyección los nombres de la expresión de agrupamiento, los agregados o las expresiones constantes.  
+## <a name="group-aggregates"></a>Agregados basados en grupo  
+ Los agregados basados en un grupo se calculan sobre un resultado de grupo según define la cláusula GROUP BY. La cláusula GROUP BY divide los datos en grupos. Para cada grupo del resultado, se aplica la función de agregado y se calcula un agregado diferente utilizando los elementos de cada grupo como entradas del cálculo del agregado. Cuando se usa una cláusula GROUP BY en una expresión SELECT, solo pueden estar presentes en la cláusula ORDER BY, HAVING o de la proyección los nombres de la expresión de agrupamiento, los agregados o las expresiones constantes.  
   
  En el ejemplo siguiente se calcula la cantidad promedio pedida de cada producto.  
   
@@ -41,7 +44,7 @@ Un agregado es una construcción de lenguaje que comprime una colección en una 
   
  `group by ol.Product as p`  
   
- Es posible tener un agregado basado en un grupo sin una cláusula GROUP BY explícita en la expresión SELECT.  Todos los elementos se tratarán como un grupo único, como en el caso de especificar una agrupación basada en una constante.  
+ Es posible tener un agregado basado en un grupo sin una cláusula GROUP BY explícita en la expresión SELECT. Todos los elementos se tratarán como un grupo único, como en el caso de especificar una agrupación basada en una constante.  
   
  `select avg(ol.Quantity) from LOB.OrderLines as ol`  
   
@@ -49,5 +52,5 @@ Un agregado es una construcción de lenguaje que comprime una colección en una 
   
  Las expresiones usadas en la clausula GROUP BY se evalúan usando el mismo ámbito de resolución de nombres que sería visible para la expresión de la cláusula WHERE.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Funciones](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

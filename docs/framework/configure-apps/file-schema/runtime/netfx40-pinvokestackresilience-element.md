@@ -1,80 +1,82 @@
 ---
-title: "&lt;NetFx40_PInvokeStackResilience&gt; (Elemento) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<NetFx40_PInvokeStackResilience> (elemento)"
-  - "NetFx40_PInvokeStackResilience (elemento)"
+title: '&lt;NetFx40_PInvokeStackResilience&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- <NetFx40_PInvokeStackResilience> element
+- NetFx40_PInvokeStackResilience element
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
-caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 3e77e43ed9d7520cbbcf453d067a49de3a86de3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;NetFx40_PInvokeStackResilience&gt; (Elemento)
-Especifica si el runtime corrige automáticamente en tiempo de ejecución las declaraciones de invocación de plataforma incorrectas, a costa de transiciones más lentas entre código administrado y no administrado.  
+# <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; elemento
+Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.  
   
-## Sintaxis  
+ \<configuration>  
+\<en tiempo de ejecución >  
+< NetFx40_PInvokeStackResilience >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <NetFx40_PInvokeStackResilience  enabled="1|0"/>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si el runtime detecta las declaraciones de la invocación de plataforma incorrectas y corrige la pila automáticamente en tiempo de ejecución en plataformas de 32 bits.|  
+|---------------|-----------------|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si el tiempo de ejecución detecta incorrecta de la plataforma declaraciones de invocación y corrige automáticamente la pila en tiempo de ejecución en plataformas de 32 bits.|  
   
-## Atributo enabled  
+## <a name="enabled-attribute"></a>Atributo enabled  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`0`|El runtime usa la arquitectura del cálculo de referencias de interoperabilidad más rápida incluida en [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], que no detecta ni corrige las declaraciones de invocación de plataforma incorrectas.  Éste es el valor predeterminado.|  
-|`1`|El runtime usa transiciones más lentas que detectan y corrigen declaraciones de invocación de plataforma incorrectas.|  
+|`0`|El runtime usa la arquitectura que se introdujo en referencias interoperativo más rápido el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], que no detecta y declaraciones de invocación de plataforma incorrectas de corrección. Este es el valor predeterminado.|  
+|`1`|El runtime usa transiciones más lentas que detectan y corrigen incorrecta de la plataforma de declaraciones de invocación.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## Comentarios  
- Este elemento le permite intercambiar el cálculo de referencias de interoperabilidad más rápidamente para mayor resistencia en tiempo de ejecución contra las declaraciones de invocación de plataforma incorrectas.  
+## <a name="remarks"></a>Comentarios  
+ Este elemento le permite realizar transacciones comerciales más rápidos de referencias interoperativo para las declaraciones de invocación de resistencia de tiempo de ejecución con la plataforma incorrecta.  
   
- A partir de [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], una arquitectura del cálculo de referencias de interoperabilidad simplificada proporciona una mejora de rendimiento significativa para las transiciones del código administrado al código no administrado.  En versiones anteriores de .NET Framework, el nivel de cálculo de referencias detectó declaraciones de invocación de plataforma incorrectas en plataformas de 32 bits y automáticamente fija la pila.  La nueva arquitectura de cálculo de referencias elimina este paso.  Como resultado, las transiciones son muy rápidas, pero una declaración de la invocación de plataforma incorrecta puede producir un error del programa.  
+ A partir de la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], una arquitectura de serialización de interoperabilidad simplificada proporciona una mejora significativa del rendimiento para las transiciones desde el código administrado a código no administrado. En versiones anteriores de .NET Framework, la plataforma incorrecta de capa detectado serialización invocar declaraciones en plataformas de 32 bits y automáticamente fija la pila. La nueva arquitectura de cálculo de referencias elimina este paso. Como resultado, las transiciones son muy rápidas, pero declaración de invocación de una plataforma incorrecta puede producir un error de programa.  
   
- Para facilitar la tarea de detectar declaraciones incorrectas durante desarrollo, se ha mejorado la experiencia de depuración de Visual Studio.  El asistente para la depuración administrada \(MDA\) [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) notifica las declaraciones de invocación de plataforma incorrectas cuando su aplicación se está ejecutando con el depurador adjunto.  
+ Para facilitar la detectar declaraciones incorrectas durante el desarrollo, se ha mejorado la experiencia de depuración de Visual Studio. El [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Asistente para la depuración administrada (MDA) notifica sobre incorrecta de la plataforma declaraciones de invocación cuando se ejecuta la aplicación con el depurador adjunto.  
   
- Para resolver aquellos escenarios en donde la aplicación utiliza componentes que no se pueden volver a compilar, y presentan declaraciones de invocación de plataforma incorrectas, puede utilizar el elemento `NetFx40_PInvokeStackResilience`.  Al agregar este elemento al archivo de configuración de la aplicación con `enabled="1"` se opta en un modo de compatibilidad con el comportamiento de versiones anteriores de .NET Framework, a costa de las transiciones más lentas.  Los ensamblados que se han compilado basándose en versiones anteriores del .NET Framework eligen automáticamente este modo de compatibilidad y no necesitan este elemento.  
+ Para resolver escenarios donde la aplicación usa componentes que no se puede volver a compilar, y que haya incorrecta declaraciones invocación de plataforma, puede usar el `NetFx40_PInvokeStackResilience` elemento. Agregar este elemento a su archivo de configuración de aplicación con `enabled="1"` opta por participar en un modo de compatibilidad con el comportamiento de versiones anteriores de .NET Framework, pero a costa de transiciones más lentas. Los ensamblados que se han compilado con versiones anteriores de .NET Framework se suscriben automáticamente en este modo de compatibilidad y no es necesario este elemento.  
   
-## Archivo de configuración  
- Este elemento sólo puede utilizarse en el archivo de configuración de la aplicación.  
+## <a name="configuration-file"></a>Archivo de configuración  
+ Este elemento se puede usar únicamente en el archivo de configuración de aplicación.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo optar a una mayor resistencia contra las declaraciones de invocación de plataforma incorrectas para una aplicación, a costa de transiciones más lentas entre código administrado y no administrado.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente muestra cómo no formen parte de una mayor resistencia contra incorrecta de invocación de plataforma declaraciones para una aplicación, a costa de transiciones más lentas entre código administrado y.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <NetFx40_PInvokeStackResilience enabled="1"/>  
@@ -82,7 +84,7 @@ Especifica si el runtime corrige automáticamente en tiempo de ejecución las de
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

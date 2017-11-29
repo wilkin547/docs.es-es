@@ -1,44 +1,45 @@
 ---
-title: "ErrorProvider (Componente, Formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "mensajes de error, mostrar"
-  - "ErrorProvider (componente) [Windows Forms]"
-  - "errores [Windows Forms]"
+title: ErrorProvider (Componente, Formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error messages [Windows Forms], displaying
+- errors [Windows Forms]
+- ErrorProvider component [Windows Forms]
 ms.assetid: c0f2e231-c5c9-413d-a507-75af2db499b6
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c1dd0cfd8062274d4e2ad9ce75ae41ed69e703d4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# ErrorProvider (Componente, Formularios Windows Forms)
-El componente `ErrorProvider` de formularios Windows Forms se utiliza para indicar al usuario, de forma no intrusiva, que algo va mal.  Habitualmente, se utiliza junto con la validación de entrada del usuario en un formulario o con la presentación de errores dentro de un conjunto de datos.  
+# <a name="errorprovider-component-windows-forms"></a>ErrorProvider (Componente, Formularios Windows Forms)
+Los formularios de Windows `ErrorProvider` componente se utiliza para mostrar al usuario de forma no intrusiva que algo no funciona correctamente. Normalmente se utiliza junto con la validación proporcionados por el usuario en un formulario o mostrar los errores dentro de un conjunto de datos.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del componente ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
- Explica qué es este componente y describe sus características y propiedades más importantes.  
+ Explica qué es este componente y sus características clave y propiedades.  
   
- [Cómo: Mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
- Proporciona instrucciones para validar la entrada de datos del usuario con un componente proveedor de errores.  
+ [Mostrar iconos de error para la validación de formularios con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)  
+ Proporciona instrucciones para validar la entrada del usuario con un error de componente de proveedor.  
   
- [Cómo: Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- Proporciona instrucciones para utilizar un componente proveedor de errores con el fin de mostrar los errores de los datos.  
+ [Ver errores de un conjunto de datos con el componente ErrorProvider de formularios Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ Proporciona instrucciones para utilizar un componente de proveedor de errores para mostrar los errores de datos.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.ErrorProvider>  
  Describe esta clase y contiene vínculos a todos sus miembros.  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

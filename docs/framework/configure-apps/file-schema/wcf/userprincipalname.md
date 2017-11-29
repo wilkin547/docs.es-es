@@ -1,67 +1,72 @@
 ---
-title: "&lt;userPrincipalName&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;userPrincipalName&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b93a0cc24953024e265df418ec6dd738598dd0f1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;userPrincipalName&gt;
-Especifica el Nombre principal de usuario \(UPN\) de un servicio que va a autenticar el cliente.  
+# <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
+Especifica el Nombre principal de usuario (UPN) de un servicio que va a autenticar el cliente.  
   
- Para obtener más información sobre la configuración de UPN, consulte [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Para obtener más información acerca de cómo establecer el UPN, consulte [autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## Sintaxis  
+\<identidad >  
+\<userPrincipalName >  
   
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
+<userPrincipalName value="String" />  
 ```  
   
-<userPrincipalName value = "String" />  
-```  
-  
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|value|Un nombre de cuenta de usuario \(a veces denominado nombre de inicio de sesión de usuario\) y un nombre de dominio que identifica el dominio en el que se ubica la cuenta de usuario.  Éste es el uso estándar para iniciar sesión en un dominio de Windows.  El formato es: nombre@ejemplo.com \(para una dirección de correo electrónico\).|  
+|---------------|-----------------|  
+|value|Un nombre de cuenta de usuario (a veces denominado nombre de inicio de sesión de usuario) y un nombre de dominio que identifica el dominio en el que se ubica la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (para una dirección de correo electrónico).|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
-|[\<identidad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
+|-------------|-----------------|  
+|[\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
-## Comentarios  
+## <a name="remarks"></a>Comentarios  
  Un cliente [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] seguro que se conecta a un extremo con esta identidad utiliza UPN al realizar la autenticación de SSPI con el extremo.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El código de configuración siguiente especifica el UPN del servicio que va a autenticar el cliente.  
   
-```  
+```xml  
 <identity>  
   <userPrincipalName value="someone@cohowinery.com" />  
 </identity>  
 ```  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.IdentityElement>   
- <xref:System.ServiceModel.EndpointAddress>   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>   
- <xref:System.ServiceModel.UpnEndpointIdentity>   
- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)   
- [\<identidad\>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Configuration.IdentityElement>  
+ <xref:System.ServiceModel.EndpointAddress>  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
+ <xref:System.ServiceModel.UpnEndpointIdentity>  
+ [Autenticación e identidad de servicio](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
+ [\<identidad >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

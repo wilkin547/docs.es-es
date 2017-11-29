@@ -1,34 +1,37 @@
 ---
-title: "C&#243;mo: Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Servicios de datos de Microsoft WCF, personalizar"
-  - "Servicios de datos de Microsoft WCF, personalizar fuentes"
+title: "Cómo: Personalizar fuentes con el proveedor de Entity Framework (Data Services de WCF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, customizing
+- WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 44dfa0a8371ff8184462e15da71f8a9f0f9767d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# C&#243;mo: Personalizar fuentes con el proveedor de Entity Framework (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a los elementos no usados que se definen en el protocolo AtomPub.  En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework.  Para obtener más información, consulta [Personalización de fuentes](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
+# <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Cómo: Personalizar fuentes con el proveedor de Entity Framework (Data Services de WCF)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] le permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a los elementos no usados que se definen en el protocolo AtomPub. En este tema se explica cómo definir los atributos de asignación para los tipos de entidad en un modelo de datos definido en un archivo .edmx utilizando el proveedor de Entity Framework. Para obtener más información, consulte [personalización de fuente](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
- En este tema modificará manualmente el archivo .edmx generado por la herramienta que contiene el modelo de datos.  Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo.  Para obtener más información sobre el archivo .edmx generado por las herramientas de Entity Data Model, vea [.edmx File Overview](http://msdn.microsoft.com/es-es/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente.  Se crean este servicio y las clases de datos del cliente al completar el [tutorial rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ En este tema modificará manualmente el archivo .edmx generado por la herramienta que contiene el modelo de datos. Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo. Para obtener más información acerca del archivo .edmx que generan las herramientas de Entity Data Model, vea [información general sobre archivo .edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4). En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Se crean este servicio y las clases de datos de cliente al completar la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
-### Para modificar manualmente el archivo Northwind.edmx para agregar los atributos de personalización de fuente  
+### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Para modificar manualmente el archivo Northwind.edmx para agregar los atributos de personalización de fuente  
   
-1.  En el **Explorador de soluciones**, haga clic con el botón secundario del mouse en el archivo `Northwind.edmx` y, a continuación, elija **Abrir con**.  
+1.  En **el Explorador de soluciones**, haga clic en el `Northwind.edmx` de archivos y, a continuación, haga clic en **abrir con**.  
   
-2.  En el cuadro de diálogo **Abrir con \- Northwind.edmx**, seleccione **Editor XML** y, a continuación, haga clic en **Aceptar**.  
+2.  En el **abrir con - Northwind.edmx** cuadro de diálogo, seleccione **Editor XML**y, a continuación, haga clic en **Aceptar**.  
   
 3.  Busque el elemento `ConceptualModels` y reemplace el tipo de entidad `Customers` existente con el siguiente elemento que contiene los atributos de asignación de personalización de la fuente:  
   
@@ -36,16 +39,16 @@ caps.handback.revision: 3
   
 4.  Guarde los cambios y cierre el archivo Northwind.edmx.  
   
-5.  \(Opcional\) Haga clic con el botón secundario en el archivo Northwind.edmx y, a continuación, haga clic en **Ejecutar herramienta personalizada**.  
+5.  (Opcional) Haga clic en el archivo Northwind.edmx y, a continuación, haga clic en **ejecutar herramienta personalizada**.  
   
      Esto regenera el archivo de capa de objeto, que puede ser necesario.  
   
 6.  Compile de nuevo el proyecto.  
   
-## Ejemplo  
- En el ejemplo anterior se devuelve el resultado siguiente para el URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo anterior se devuelve el resultado siguiente para el identificador URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Proveedor de Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

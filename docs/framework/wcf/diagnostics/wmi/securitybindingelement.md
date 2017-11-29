@@ -1,25 +1,28 @@
 ---
-title: "SecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SecurityBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b567c173c5a04421bce57585d96b8b45144c5625
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# SecurityBindingElement
+# <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 class SecurityBindingElement : BindingElement  
@@ -33,59 +36,59 @@ class SecurityBindingElement : BindingElement
 };  
 ```  
   
-## Métodos  
+## <a name="methods"></a>Métodos  
  La clase SecurityBindingElement no define ningún método.  
   
-## Propiedades  
+## <a name="properties"></a>Propiedades  
  La clase SecurityBindingElement posee las siguientes propiedades:  
   
-### DefaultAlgorithmSuite  
+### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Especifica los algoritmos que se van a utilizar con la clase.  
   
-### IncludeTimestamp  
+### <a name="includetimestamp"></a>IncludeTimestamp  
  Tipo de datos: booleano  
   
  Tipo de acceso: solo lectura  
   
  Valor booleano que especifica si cada mensaje contiene una marca de tiempo.  
   
-### KeyEntropyMode  
+### <a name="keyentropymode"></a>KeyEntropyMode  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Origen de la entropía utilizada para crear claves.  
   
-### LocalServiceSecuritySettings  
+### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
  Tipo de datos: LocalServiceSecuritySettings  
   
  Tipo de acceso: solo lectura  
   
  Las propiedades de seguridad específicas del enlace del servicio local.  
   
-### MessageSecurityVersion  
+### <a name="messagesecurityversion"></a>MessageSecurityVersion  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Versión utilizada para la seguridad del mensaje.  
   
-### SecurityHeaderLayout  
+### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
  Tipo de datos: cadena  
   
  Tipo de acceso: solo lectura  
   
  Orden de los elementos en el encabezado de seguridad de este enlace.  
   
-## Requisitos  
+## <a name="requirements"></a>Requisitos  
   
 |MOF|Se declara en Servicemodel.mof.|  
-|---------|-------------------------------------|  
-|Espacio de nombres|Se define en root\\ServiceModel|  
+|---------|-----------------------------------|  
+|Espacio de nombres|Se define en root\ServiceModel|  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>

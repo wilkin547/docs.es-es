@@ -1,25 +1,28 @@
 ---
-title: "Mensajes en cola quitados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Mensajes en cola quitados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2125e32b-837c-4de9-ac02-750ad8f7472f
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0ab55c5c1e5823610b1b9c5dacbbe5b90dc36e5d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Mensajes en cola quitados
+# <a name="queue-dropped-messages"></a>Mensajes en cola quitados
 Nombre de contador: Mensajes en cola quitados.  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Número de mensajes quitados por el transporte en cola en este servicio.  
   
- Vea [Control de mensajes dudosos](http://go.microsoft.com/fwlink/?LinkId=96233) para obtener más información sobre cuándo se quitan los mensajes.
+ Vea [de mensajes dudosos](http://go.microsoft.com/fwlink/?LinkId=96233) para obtener más información sobre cuándo se quitan los mensajes.

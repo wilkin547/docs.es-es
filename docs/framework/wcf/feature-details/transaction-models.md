@@ -1,43 +1,46 @@
 ---
-title: "Modelos de transacci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Modelos de transacción"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 182a394b7698c7a1a59a4db50ee81caed4d2e75f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Modelos de transacci&#243;n
+# <a name="transaction-models"></a>Modelos de transacción
 En este tema se describe la relación entre los modelos de programación de la transacción y los componentes de infraestructura que Microsoft proporciona.  
   
  Al utilizar las transacciones en [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], es importante entender que no está seleccionando entre modelos transaccionales diferentes, sino operando en diferentes capas de un modelo integrado y coherente.  
   
  Las secciones siguientes describen los tres componentes de transacción primarios.  
   
-## Transacciones de Windows Communication Foundation  
- La compatibilidad con transacciones en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite escribir servicios transaccionales.Además, con su compatibilidad para el protocolo WS\-AtomicTransaction \(WS\-AT\), las aplicaciones pueden hacer fluir transacciones a los servicios web creados mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o tecnologías de otros fabricantes.  
+## <a name="windows-communication-foundation-transactions"></a>Transacciones de Windows Communication Foundation  
+ La compatibilidad con transacciones en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] le permite escribir servicios transaccionales. Además, con su compatibilidad para el protocolo WS-AtomicTransaction (WS-AT), las aplicaciones pueden hacer fluir transacciones a los servicios web creados mediante [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] o tecnologías de otros fabricantes.  
   
  En un servicio o aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], las características de transacciones de  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] proporcionan atributos y configuración para especificar de manera declarativa cómo y cuándo la infraestructura debería crearse, fluir y sincronizar transacciones.  
   
-## Información general sobre las transacciones de System.Transactions  
+## <a name="systemtransactions-transactions"></a>Información general sobre las transacciones de System.Transactions  
  El espacio de nombres <xref:System.Transactions> proporciona un modelo de programación explícito según la clase <xref:System.Transactions.Transaction>, así como un modelo de programación implícito utilizando la clase <xref:System.Transactions.TransactionScope>, en la que la infraestructura administra automáticamente las transacciones.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cómo crear una aplicación transaccional mediante estos dos modelos, vea[Escritura de una aplicación transaccional](http://go.microsoft.com/fwlink/?LinkId=94947).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]cómo crear una aplicación transaccional mediante estos dos modelos, vea [escribir una aplicación transaccional](http://go.microsoft.com/fwlink/?LinkId=94947).  
   
  En un servicio o aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.Transactions> proporciona el modelo de programación para crear las transacciones dentro de una aplicación cliente y para interactuar explícitamente con una transacción, cuando se requiera, dentro de un servicio.  
   
-## Transacciones de MSDTC  
- Microsoft DTC \(Coordinador de transacciones distribuidas\) \(MSDTC\) es un administrador de transacciones que proporciona compatibilidad con transacciones distribuidas.  
+## <a name="msdtc-transactions"></a>Transacciones de MSDTC  
+ Microsoft DTC (Coordinador de transacciones distribuidas) (MSDTC) es un administrador de transacciones que proporciona compatibilidad con transacciones distribuidas.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la [Referencia del programador de DTC](http://go.microsoft.com/fwlink/?LinkId=94948).  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]el [referencia del programador de DTC](http://go.microsoft.com/fwlink/?LinkId=94948).  
   
  En un servicio o aplicación de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], MSDTC proporciona la infraestructura para la coordinación de transacciones creada dentro de un cliente o servicio.

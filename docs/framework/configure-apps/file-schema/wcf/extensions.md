@@ -1,26 +1,28 @@
 ---
-title: "&lt;extensiones&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;extensiones&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5bdfd491cdc39accb396664500eef7c66142ef9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;extensiones&gt;
-Este elemento de configuración contiene una colección de elementos XML que contienen metadatos personalizados que se van a publicar junto con los metadatos detectables estándar \(EPR, ContractTypeName, BindingName, Scope y ListenURI\).  A continuación, se muestra un ejemplo del uso de este elemento de configuración.  
+# <a name="ltextensionsgt"></a>&lt;extensiones&gt;
+Este elemento de configuración contiene una colección de elementos XML que contienen metadatos personalizados que se van a publicar junto con los metadatos detectables estándar (EPR, ContractTypeName, BindingName, Scope y ListenURI). A continuación, se muestra un ejemplo del uso de este elemento de configuración.  
   
-```  
-  
+```xml  
 <services>  
   <service name="CalculatorService"  
            behaviorConfiguration="CalculatorServiceBehavior">  
@@ -51,8 +53,7 @@ Este elemento de configuración contiene una colección de elementos XML que con
     </behavior>  
   </endpointBehaviors>  
 </behaviors>  
-  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

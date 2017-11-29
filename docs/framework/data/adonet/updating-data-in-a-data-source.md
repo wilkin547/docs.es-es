@@ -1,28 +1,34 @@
 ---
-title: "Actualizar datos en un origen de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Actualizar datos de un origen de datos
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 91e6a5f2b956816b5e001701a7fbe4a40e7866e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Actualizar datos en un origen de datos
-Las instrucciones SQL que modifican datos \(por ejemplo INSERT, UPDATE o DELETE\) no devuelven ninguna fila.  De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas.  Para ejecutar comandos que no devuelvan filas, cree un objeto **Command** con el comando SQL adecuado y una **Connection**, incluidos los **Parameters** necesarios.  El comando se debe ejecutar con el método **ExecuteNonQuery** del objeto **Command**.  
+# <a name="updating-data-in-a-data-source"></a>Actualizar datos de un origen de datos
+Las instrucciones SQL que modifican datos (por ejemplo INSERT, UPDATE o DELETE) no devuelven ninguna fila. De la misma forma, muchos procedimientos almacenados realizan alguna acción pero no devuelven filas. Para ejecutar comandos que no devuelven filas, debe crear un **comando** objeto con el comando SQL adecuado y un **conexión**, los necesarios incluidos **parámetros**. Ejecute el comando con el **ExecuteNonQuery** método de la **comando** objeto.  
   
- El método **ExecuteNonQuery** devuelve un entero que representa el número de filas que se ven afectadas por la instrucción o por el procedimiento almacenado que se haya ejecutado.  Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
+ El **ExecuteNonQuery** método devuelve un entero que representa el número de filas afectadas por la instrucción o procedimiento almacenado que se ejecutó. Si se ejecutan varias instrucciones, el valor devuelto es la suma de los registros afectados por todas las instrucciones ejecutadas.  
   
-## Ejemplo  
- En el ejemplo de código siguiente se ejecuta una instrucción INSERT para insertar un registro en una base de datos mediante el método **ExecuteNonQuery**.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se ejecuta una instrucción INSERT para insertar un registro en una base de datos mediante **ExecuteNonQuery**.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -46,9 +52,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- En el ejemplo de código siguiente se ejecuta el procedimiento almacenado que se creó con el ejemplo de código de la sección [Realizar operaciones de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md).  El procedimiento almacenado no devuelve ninguna fila, por lo que se utiliza el método **ExecuteNonQuery**, aunque el procedimiento almacenado reciba un parámetro de entrada y devuelva un parámetro de salida y un valor devuelto.  
+ En el ejemplo de código siguiente se ejecuta el procedimiento almacenado creado por el código de ejemplo en [realizar operaciones de catálogo](../../../../docs/framework/data/adonet/performing-catalog-operations.md). No se devuelven filas por el procedimiento almacenado, por lo que la **ExecuteNonQuery** se utiliza el método, pero el procedimiento almacenado reciba un parámetro de entrada y devuelve un parámetro de salida y un valor devuelto.  
   
- En el caso del objeto <xref:System.Data.OleDb.OleDbCommand>, se debe agregar en primer lugar el parámetro **ReturnValue** a la colección **Parameters**.  
+ Para el <xref:System.Data.OleDb.OleDbCommand> objeto, el **ReturnValue** parámetro debe agregarse a la **parámetros** colección primero.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -95,8 +101,8 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## Vea también  
- [Utilizar comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [Actualizar orígenes de datos con DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Usar comandos para modificar datos](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

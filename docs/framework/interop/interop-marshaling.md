@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ebe7d3aa48fa77287f20781938a0b9863f60de5f
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -88,7 +81,7 @@ Proceso de serialización en el mismo apartamento
  Si planea exportar un servidor administrado, tenga en cuenta que el cliente COM determina el apartamento del servidor. Un servidor administrado llamado por un cliente COM inicializado en un MTA debe garantizar la seguridad de subprocesos.  
   
 ### <a name="managed-clients-and-com-servers"></a>Clientes administrados y servidores COM  
- La configuración predeterminada para apartamentos de cliente administrado es MTA; sin embargo, el tipo de aplicación del cliente .NET puede cambiar la configuración predeterminada. Por ejemplo, una configuración de apartamento de cliente [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] es STA. Puede usar <xref:System.STAThreadAttribute?displayProperty=fullName>, <xref:System.MTAThreadAttribute?displayProperty=fullName>, la propiedad <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> o la propiedad <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=fullName> para examinar y cambiar la configuración de apartamento de un cliente administrado.  
+ La configuración predeterminada para apartamentos de cliente administrado es MTA; sin embargo, el tipo de aplicación del cliente .NET puede cambiar la configuración predeterminada. Por ejemplo, una configuración de apartamento de cliente [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] es STA. Puede usar <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la propiedad <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> o la propiedad <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> para examinar y cambiar la configuración de apartamento de un cliente administrado.  
   
  El autor del componente establece la afinidad del subproceso de un servidor COM. En la tabla siguiente se muestran las combinaciones de configuraciones de apartamentos para clientes .NET y servidores COM. También se muestran los requisitos de serialización resultantes para las combinaciones.  
   
@@ -160,12 +153,12 @@ Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
   
 |Título|Descripción|  
 |-----------|-----------------|  
-|[Comportamiento de serialización predeterminado](../../../docs/framework/interop/default-marshaling-behavior.md)|Describe las reglas que usa el servicio de serialización de interoperabilidad para serializar datos.|  
+|[Comportamiento predeterminado del cálculo de referencias](../../../docs/framework/interop/default-marshaling-behavior.md)|Describe las reglas que usa el servicio de serialización de interoperabilidad para serializar datos.|  
 |[Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|  
 |[Serialización de datos con la interoperabilidad COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Describe cómo se personalizan los contenedores COM para alterar el comportamiento de la serialización.|  
 |[Cómo: Migrar código administrado DCOM a WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Describe cómo se migra de DCOM a WCF.|  
 |[Asignar resultados HRESULT y excepciones](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Describe cómo se asignan excepciones personalizadas a valores HRESULT y proporciona la asignación completa de cada HRESULT a su clase de excepción comparable en .NET Framework.|  
-|[Interoperar utilizando tipos genéricos](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
+|[Interoperar mediante tipos genéricos](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.|  
 |[Interoperating with Unmanaged Code](../../../docs/framework/interop/index.md) (Interoperar con código no administrado)|Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.|  
 |[Interoperabilidad COM avanzada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.|  
 |[Consideraciones de diseño para interoperaciones](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Proporciona sugerencias para escribir componentes COM integrados.|  
@@ -174,7 +167,6 @@ Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Referencia  
- <xref:System.Runtime.InteropServices?displayProperty=fullName>  
+ <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [Volver al principio](#top)
-

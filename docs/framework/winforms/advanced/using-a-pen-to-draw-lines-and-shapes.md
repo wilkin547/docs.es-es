@@ -1,53 +1,54 @@
 ---
-title: "Utilizar l&#225;piz para dibujar l&#237;neas y formas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "dibujar"
-  - "ejemplos [Windows Forms], dibujar líneas y formas"
-  - "ejemplos [Windows Forms], lápices"
-  - "lápices"
+title: "Utilizar lápiz para dibujar líneas y formas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pens
+- examples [Windows Forms], drawing lines and shapes
+- examples [Windows Forms], pens
+- drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0913dc2745e1b244e4b03c0e6b946441a401c5b1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizar l&#225;piz para dibujar l&#237;neas y formas
-Utilice objetos `Pen` de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar segmentos de línea, curvas y los contornos de formas.  En esta sección, la palabra *línea* hace referencia a cualquiera de esos elementos, a menos que se indique que se trata únicamente de un segmento de línea.  Establezca las propiedades de un lápiz \(objeto de la clase Pen\) para controlar el color, el ancho, la alineación y el estilo de las líneas que se dibujen con él.  
+# <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizar lápiz para dibujar líneas y formas
+Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objetos que se va a dibujar segmentos de línea, curvas y los contornos de formas. En esta sección, *línea* hace referencia a cualquiera de estos, a menos que indique que se trata únicamente de un segmento de línea. Establecer las propiedades de un lápiz para controlar el color, el ancho, la alineación y el estilo de las líneas dibujadas con ese lápiz.  
   
-## En esta sección  
- [Cómo: Utilizar lápiz para dibujar líneas](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
- Explica cómo dibujar las líneas.  
+## <a name="in-this-section"></a>En esta sección  
+ [Utilizar lápiz para dibujar líneas](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
+ Explica cómo dibujar líneas.  
   
- [Cómo: Utilizar lápiz para dibujar rectángulos](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
- Describe cómo dibujar los rectángulos.  
+ [Utilizar lápiz para dibujar rectángulos](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
+ Describe cómo dibujar rectángulos.  
   
- [Cómo: Establecer el ancho y la alineación del lápiz](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
- Explica cómo cambiar el ancho y la alineación de un objeto `Pen`.  
+ [Establecer el ancho y la alineación del lápiz](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
+ Explica cómo cambiar el ancho y la alineación de un `Pen` objeto.  
   
- [Cómo: Dibujar una línea con extremos de línea](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
- Describe cómo agregar extremos de línea al dibujar una línea.  
+ [Dibujar una línea con extremos de línea](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
+ Describe cómo agregar extremos al dibujar una línea.  
   
- [Cómo: Unir líneas](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
- Muestra cómo unir dos líneas.  
+ [Unir líneas](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
+ Muestra cómo combinar las dos líneas.  
   
- [Cómo: Dibujar una línea discontinua personalizada](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
- Describe cómo dibujar una línea de guiones.  
+ [Dibujar una línea discontinua personalizada](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
+ Describe cómo dibujar una línea discontinua.  
   
- [Cómo: Dibujar una línea rellena con una textura](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
- Explica cómo dibujar una línea rellenada con una textura.  
+ [Dibujar una línea rellena con una textura](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
+ Explica cómo dibujar una línea de relleno de textura.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Drawing.Pen>  
  Describe esta clase y contiene vínculos a todos sus miembros.

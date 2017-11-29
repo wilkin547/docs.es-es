@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d7aa4e4010da70f90bb18db9cd4e8179925bb58d
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="downloading-the-validating-issuer-name-registry-package"></a>Descargar el paquete de validación del Registro de nombres de emisores
 En este tema se explica cómo descargar y usar el Registro de nombres del emisor que valida (VINR) en el proyecto.  
@@ -50,4 +48,3 @@ En este tema se explica cómo descargar y usar el Registro de nombres del emisor
     ```  
   
 3.  Los últimos ensamblados VINR se descargarán y agregarán al proyecto.
-

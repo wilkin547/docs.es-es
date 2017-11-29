@@ -1,35 +1,38 @@
 ---
-title: "3354 - ServiceSecurityNegotiationCompleted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3354 - ServiceSecurityNegotiationCompleted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 093aeefe-1609-4409-b6d2-00f71772bcf7
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e1fac85d86aeaa5a39b784e105731769bb734ca2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# 3354 - ServiceSecurityNegotiationCompleted
-## Propiedades  
+# <a name="3354---servicesecuritynegotiationcompleted"></a>3354 - ServiceSecurityNegotiationCompleted
+## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |Id.|3354|  
 |Palabras clave|Seguridad|  
 |Nivel|Detallado|  
-|Canal|Microsoft\-Windows\-Application Server\-Applications\/Debug|  
+|Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
-## Descripción  
+## <a name="description"></a>Descripción  
  Se genera este evento cuando se completa la negociación de seguridad del servicio.  
   
-## Mensaje  
+## <a name="message"></a>Mensaje  
  Se completó la negociación de seguridad del servicio.  
   
-## Detalles
+## <a name="details"></a>Detalles

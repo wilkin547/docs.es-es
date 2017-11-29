@@ -1,27 +1,22 @@
 ---
-title: Rendimiento de consultas encadenadas (LINQ to XML) (Visual Basic) | Documentos de Microsoft
+title: Rendimiento de consultas encadenadas (LINQ to XML) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 589f2adc-69f9-404d-b9d6-4c28dabea7f7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd5b63f255107c5864108cfbb87bef6e53a971a0
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 281eb8ea62760507da991ea878270befe458bb38
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a>Rendimiento de consultas encadenadas (LINQ to XML) (Visual Basic)
 Una de las ventajas más importantes de LINQ (y LINQ to XML) es que las consultas encadenadas funcionan igual de bien que una sola consulta más grande y complicada.  
@@ -48,11 +43,11 @@ Next
   
  Esta consulta encadenada proporciona el mismo perfil de rendimiento que si se recorriese en iteración una lista vinculada.  
   
--   El <xref:System.Xml.Linq.XContainer.Elements%2A>eje tiene básicamente el mismo rendimiento que recorrer una lista vinculada.</xref:System.Xml.Linq.XContainer.Elements%2A> <xref:System.Xml.Linq.XContainer.Elements%2A>se implementa como un iterador con ejecución aplazada.</xref:System.Xml.Linq.XContainer.Elements%2A> Es decir, realiza trabajo adicional además de recorrer en iteración la lista vinculada, como asignar el objeto iterador y mantener el seguimiento del estado de la ejecución. Este trabajo se puede dividir en dos categorías: el trabajo que se realiza cuando se configura el iterador y el que se lleva a cabo durante cada iteración. El trabajo de configuración es un trabajo mínimo y fijo, mientras que el realizado durante cada iteración es proporcional al número de elementos de la colección de origen.  
+-   El eje <xref:System.Xml.Linq.XContainer.Elements%2A> tiene básicamente el mismo rendimiento que si se recorriese en iteración una lista vinculada. <xref:System.Xml.Linq.XContainer.Elements%2A> se implementa como iterador con ejecución aplazada. Es decir, realiza trabajo adicional además de recorrer en iteración la lista vinculada, como asignar el objeto iterador y mantener el seguimiento del estado de la ejecución. Este trabajo se puede dividir en dos categorías: el trabajo que se realiza cuando se configura el iterador y el que se lleva a cabo durante cada iteración. El trabajo de configuración es un trabajo mínimo y fijo, mientras que el realizado durante cada iteración es proporcional al número de elementos de la colección de origen.  
   
--   En `query1`, `Where` cláusula hace que la consulta llame a la <xref:System.Linq.Enumerable.Where%2A>método.</xref:System.Linq.Enumerable.Where%2A> Este método también se implementa como iterador. El trabajo de configuración está formado por la creación de una instancia del delegado que hará referencia a la expresión lambda, más la configuración normal de un iterador. Con cada iteración, se llama al delegado para que ejecute el predicado. El trabajo de configuración y el realizado durante cada iteración es parecido al llevado a cabo mientras se recorre en iteración el eje.  
+-   En `query1`, la cláusula `Where` provoca la llamada al método <xref:System.Linq.Enumerable.Where%2A> por parte de la consulta. Este método también se implementa como iterador. El trabajo de configuración está formado por la creación de una instancia del delegado que hará referencia a la expresión lambda, más la configuración normal de un iterador. Con cada iteración, se llama al delegado para que ejecute el predicado. El trabajo de configuración y el realizado durante cada iteración es parecido al llevado a cabo mientras se recorre en iteración el eje.  
   
--   En `query1`, la cláusula select hace que la consulta llamar a la <xref:System.Linq.Enumerable.Select%2A>método.</xref:System.Linq.Enumerable.Select%2A> Este método tiene el mismo perfil de rendimiento que el <xref:System.Linq.Enumerable.Where%2A>método.</xref:System.Linq.Enumerable.Where%2A>  
+-   En `query1`, la cláusula Select provoca la llamada al método <xref:System.Linq.Enumerable.Select%2A> por parte de la consulta. Este método tiene el mismo perfil de rendimiento que el método <xref:System.Linq.Enumerable.Where%2A>.  
   
 -   En `query2`, tanto la cláusula `Where` como la cláusula `Select` tienen el mismo perfil de rendimiento que en `query1`.  
   
@@ -60,4 +55,3 @@ Next
   
 ## <a name="see-also"></a>Vea también  
  [Rendimiento (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-

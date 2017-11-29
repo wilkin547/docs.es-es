@@ -1,26 +1,29 @@
 ---
-title: "Colecciones de esquemas ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Colecciones de esquemas de ODBC
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 889e84db39af1257d709ef049e18d4397ea700d0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Colecciones de esquemas ODBC
+# <a name="odbc-schema-collections"></a>Colecciones de esquemas de ODBC
 En esta sección se describe la compatibilidad de las colecciones de esquemas con los controladores ODBC de Microsoft SQL Server, Oracle y Microsoft Jet.  
   
-## Controlador ODBC para Microsoft SQL Server  
- El controlador ODBC de Microsoft SQL Server admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
+## <a name="microsoft-sql-server-odbc-driver"></a>Controlador ODBC para Microsoft SQL Server  
+ El controlador ODBC de Microsoft SQL Server admite además las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
   
 -   Tablas  
   
@@ -36,131 +39,131 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
   
 -   Vistas  
   
-### Tablas y vistas  
+### <a name="tables-and-views"></a>Tablas y vistas  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_CAT|String|  
-|TABLE\_SCHEM|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
+|----------------|--------------|  
+|TABLE_CAT|String|  
+|TABLE_SCHEM|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |REMARKS|String|  
   
-### Índices  
+### <a name="indexes"></a>Índices  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_CAT|String|  
-|TABLE\_SCHEM|String|  
-|TABLE\_NAME|String|  
-|NON\_UNIQUE|Int16|  
-|INDEX\_QUALIFIER|String|  
-|INDEX\_NAME|String|  
+|----------------|--------------|  
+|TABLE_CAT|String|  
+|TABLE_SCHEM|String|  
+|TABLE_NAME|String|  
+|NON_UNIQUE|Int16|  
+|INDEX_QUALIFIER|String|  
+|INDEX_NAME|String|  
 |TYPE|Int16|  
-|ORDINAL\_POSITION|Int16|  
-|COLUMN\_NAME|String|  
-|ASC\_OR\_DESC|String|  
+|ORDINAL_POSITION|Int16|  
+|COLUMN_NAME|String|  
+|ASC_OR_DESC|String|  
 |CARDINATLITY|Int32|  
 |PAGES|Int32|  
-|FILTER\_CONDITION|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|FILTER_CONDITION|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-### Columnas  
+### <a name="columns"></a>Columnas  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_CAT|String|  
-|TABLE\_SCHEM|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|TABLE_CAT|String|  
+|TABLE_SCHEM|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
-|SS\_TYPE\_CATALOG|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|String|  
+|SS_TYPE_CATALOG|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-### Procedimientos  
+### <a name="procedures"></a>Procedimientos  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|NUM\_INPUT\_PARAMS|Int32|  
-|NUM\_OUTPUT\_PARAMS|Int32|  
-|NUM\_RESULT\_SETS|Int32|  
+|----------------|--------------|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|NUM_INPUT_PARAMS|Int32|  
+|NUM_OUTPUT_PARAMS|Int32|  
+|NUM_RESULT_SETS|Int32|  
 |REMARKS|String|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
-|SS\_TYPE\_CATALOG|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|String|  
+|SS_TYPE_CATALOG|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
-|SS\_TYPE\_CATALOG|String|  
-|SS\_TYPE\_SCHEMA|String|  
-|SS\_DATA\_TYPE|Byte|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|String|  
+|SS_TYPE_CATALOG|String|  
+|SS_TYPE_SCHEMA|String|  
+|SS_DATA_TYPE|Byte|  
   
-## Controlador ODBC para Oracle de Microsoft  
- El controlador ODBC para Oracle de Microsoft SQL Server admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
+## <a name="microsoft-oracle-odbc-driver"></a>Controlador ODBC para Oracle de Microsoft  
+ El controlador ODBC de Oracle de Microsoft SQL Server admite además las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
   
 -   Tablas  
   
@@ -176,58 +179,58 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
   
 -   Índices  
   
-### Tablas y vistas  
+### <a name="tables-and-views"></a>Tablas y vistas  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |REMARKS|String|  
   
-### Columnas  
+### <a name="columns"></a>Columnas  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
 |RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### Procedimientos  
+### <a name="procedures"></a>Procedimientos  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|NUM\_INPUT\_PARAMS|Int16|  
-|NUM\_OUTPUT\_PARAMS|Int16|  
-|NUM\_RESULT\_SETS|Int16|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|NUM_INPUT_PARAMS|Int16|  
+|NUM_OUTPUT_PARAMS|Int16|  
+|NUM_RESULT_SETS|Int16|  
 |REMARKS|String|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
@@ -235,9 +238,9 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 |NULLABLE|Int16|  
 |REMARKS|String|  
 |OVERLOAD|Int32|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-## Controlador ODBC de Microsoft para Jet  
+## <a name="microsoft-jet-odbc-driver"></a>Controlador ODBC de Microsoft para Jet  
  El controlador ODBC de Microsoft para Jet admite, además de las colecciones de esquemas comunes, las siguientes colecciones de esquemas específicas:  
   
 -   Tablas  
@@ -254,58 +257,58 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
   
 -   Vistas  
   
-### Tablas y vistas  
+### <a name="tables-and-views"></a>Tablas y vistas  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|TABLE\_TYPE|String|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|TABLE_TYPE|String|  
 |REMARKS|String|  
   
-### Columnas  
+### <a name="columns"></a>Columnas  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|TABLE\_QUALIFIER|String|  
-|TABLE\_OWNER|String|  
-|TABLE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|----------------|--------------|  
+|TABLE_QUALIFIER|String|  
+|TABLE_OWNER|String|  
+|TABLE_NAME|String|  
+|COLUMN_NAME|String|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
 |RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### Procedimientos  
+### <a name="procedures"></a>Procedimientos  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|NUM\_INPUT\_PARAMS|Int16|  
-|NUM\_OUTPUT\_PARAMS|Int16|  
-|NUM\_RESULT\_SETS|Int16|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|NUM_INPUT_PARAMS|Int16|  
+|NUM_OUTPUT_PARAMS|Int16|  
+|NUM_RESULT_SETS|Int16|  
 |REMARKS|String|  
-|PROCEDURE\_TYPE|Int16|  
+|PROCEDURE_TYPE|Int16|  
   
-### ProcedureColumns  
+### <a name="procedurecolumns"></a>ProcedureColumns  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_QUALIFIER|String|  
-|PROCEDURE\_OWNER|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
+|----------------|--------------|  
+|PROCEDURE_QUALIFIER|String|  
+|PROCEDURE_OWNER|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
 |PRECISION|Int32|  
 |LENGTH|Int32|  
 |SCALE|Int16|  
@@ -313,31 +316,31 @@ En esta sección se describe la compatibilidad de las colecciones de esquemas co
 |NULLABLE|Int16|  
 |REMARKS|String|  
 |OVERLOAD|Int32|  
-|ORDINAL\_POSITION|Int32|  
+|ORDINAL_POSITION|Int32|  
   
-### ProcedureParameters  
+### <a name="procedureparameters"></a>ProcedureParameters  
   
 |ColumName|DataType|  
-|---------------|--------------|  
-|PROCEDURE\_CAT|String|  
-|PROCEDURE\_SCHEM|String|  
-|PROCEDURE\_NAME|String|  
-|COLUMN\_NAME|String|  
-|COLUMN\_TYPE|Int16|  
-|DATA\_TYPE|Int16|  
-|TYPE\_NAME|String|  
-|COLUMN\_SIZE|Int32|  
-|BUFFER\_LENGTH|Int32|  
-|DECIMAL\_DIGITS|Int16|  
-|NUM\_PREC\_RADIX|Int16|  
+|----------------|--------------|  
+|PROCEDURE_CAT|String|  
+|PROCEDURE_SCHEM|String|  
+|PROCEDURE_NAME|String|  
+|COLUMN_NAME|String|  
+|COLUMN_TYPE|Int16|  
+|DATA_TYPE|Int16|  
+|TYPE_NAME|String|  
+|COLUMN_SIZE|Int32|  
+|BUFFER_LENGTH|Int32|  
+|DECIMAL_DIGITS|Int16|  
+|NUM_PREC_RADIX|Int16|  
 |NULLABLE|Int16|  
 |REMARKS|String|  
-|COLUMN\_DEF|String|  
-|SQL\_DATA\_TYPE|Int16|  
-|SQL\_DATETIME\_SUB|Int16|  
-|CHAR\_OCTET\_LENGTH|Int32|  
-|ORDINAL\_POSITION|Int32|  
-|IS\_NULLABLE|String|  
+|COLUMN_DEF|String|  
+|SQL_DATA_TYPE|Int16|  
+|SQL_DATETIME_SUB|Int16|  
+|CHAR_OCTET_LENGTH|Int32|  
+|ORDINAL_POSITION|Int32|  
+|IS_NULLABLE|Cadena|  
   
-## Vea también  
- [Proveedores administrados de ADO.NET y centro de desarrolladores de conjuntos de datos](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Vea también  
+ [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

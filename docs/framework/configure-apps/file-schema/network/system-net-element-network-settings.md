@@ -1,106 +1,106 @@
 ---
-title: "&lt;system.Net&gt; (elemento) (configuraci&#243;n de red) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<system.Net> (elemento)"
-  - "system.Net (elemento)"
+title: "&lt;system.Net&gt; elemento (configuración de red)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.Net
+helpviewer_keywords:
+- system.Net element
+- <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d2eb903b8a84410aa08504c12e78a016d2368923
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;system.Net&gt; (elemento) (configuraci&#243;n de red)
-Contiene los valores de configuración que especifican cómo se conecta a la red .NET Framework.  
+# <a name="ltsystemnetgt-element-network-settings"></a>&lt;system.Net&gt; elemento (configuración de red)
+Contiene valores que especifican cómo se conecta .NET Framework a la red.  
   
-## Sintaxis  
+ \<configuration>  
+\<System.NET >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
-      <system.net>   
+```xml  
+<system.net>   
 </system.net>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
  Ninguno.  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos utilizados para autenticar las solicitudes de Internet.|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de Internet.|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto \(HTTP\).|  
-|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configura opciones para el envío de correo del Protocolo simple de transferencia de correo \(SMTP\).|  
-|[el requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo del almacenamiento en caché para las solicitudes de la red.|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura las opciones de red básicas para las clases de <xref:System.Net> y los espacios de nombres secundarios relacionados.|  
-|[\<webRequestModules\> \(Elemento, Configuración de red\)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizan para solicitar información a hosts de Internet.|  
+|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Configura el servidor proxy de Protocolo de transferencia de hipertexto (HTTP).|  
+|[mailSettings](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configura opciones de envío de correo de Protocolo Simple de transferencia de correo (SMTP).|  
+|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché las solicitudes de red.|  
+|[Configuración](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básica para las clases en el <xref:System.Net> y espacios de nombres secundarios relacionados.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Especifica los módulos que se utilizan para solicitar información de hosts de Internet.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
-|**Elemento**|**Descripción**|  
-|------------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene los valores de configuración para todos los espacios de nombres.|  
+|**Element**|**Descripción**|  
+|-----------------|---------------------|  
+|[configuración](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Contiene valores para todos los espacios de nombres.|  
   
-## Comentarios  
- El elemento de [\<system.net\>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contiene los valores de las clases en <xref:System.Net> y los espacios de nombres secundarios relacionados.  Los valores configuran los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de hosts de Internet.  
+## <a name="remarks"></a>Comentarios  
+ El [ \<system.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elemento contiene los valores de las clases de la <xref:System.Net> y espacios de nombres secundarios relacionados. La configuración de módulos de autenticación, administración de conexiones, configuración de correo electrónico, el servidor proxy y módulos de solicitud de Internet para recibir información de hosts de Internet.  
   
-## Ejemplo  
- El ejemplo de código siguiente muestra una configuración típica utilizada por clases <xref:System.Net>.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra una configuración típica utilizada por <xref:System.Net> clases.  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
     <authenticationModules>  
-      <add type = "System.Net.DigestClient" />  
-      <add type = "System.Net.NegotiateClient" />  
-      <add type = "System.Net.KerberosClient" />  
-      <add type = "System.Net.NtlmClient" />  
-      <add type = "System.Net.BasicClient" />  
+      <add type="System.Net.DigestClient" />  
+      <add type="System.Net.NegotiateClient" />  
+      <add type="System.Net.KerberosClient" />  
+      <add type="System.Net.NtlmClient" />  
+      <add type="System.Net.BasicClient" />  
     </authenticationModules>  
     <connectionManagement>  
-      <add address = "*" maxconnection = "2" />  
+      <add address="*" maxconnection="2" />  
     </connectionManagement>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault = "true"  
-        bypassonlocal = "true"  
+        usesystemdefault="true"  
+        bypassonlocal="true"  
       />  
     </defaultProxy>  
     <webRequestModules>  
-      <add prefix = "http"  
-        type = "System.Net.HttpRequestCreator"  
+      <add prefix="http"  
+           type="System.Net.HttpRequestCreator"  
       />  
-      <add prefix = "https"  
-        type = "System.Net.HttpRequestCreator"  
+      <add prefix="https"  
+           type="System.Net.HttpRequestCreator"  
       />  
-      <add prefix = "file"  
-        type = "System.Net.FileWebRequestCreator"  
+      <add prefix="file"  
+           type="System.Net.FileWebRequestCreator"  
       />  
     </webRequestModules>  
   </system.net>  
 </configuration>  
 ```  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

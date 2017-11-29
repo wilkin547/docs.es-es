@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 81de172df01879af97aa66b0892a97505178c93c
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="constrained-execution-regions"></a>regiones de ejecución restringidas
 Una región de ejecución restringida (CER) es parte de un mecanismo para crear código administrado de confianza. Una CER define un área en la que Common Language Runtime (CLR) no puede producir excepciones fuera de banda que eviten que el código del área se ejecute en su totalidad. Dentro de esa región, el código de usuario no puede ejecutar código que pueda producir excepciones fuera de banda. El método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> debe ir inmediatamente antes del bloque `try` y marca los bloques `catch`, `finally` y `fault` como regiones de ejecución restringidas. Una vez marcada como región restringida, el código solo debe llamar a otro código con contratos de fiabilidad estables y no debe asignar ni realizar llamadas virtuales a métodos no preparados o no confiables a menos que esté preparado para controlar errores. CLR retrasa las anulaciones de subprocesos del código que se está ejecutando en una CER.  
@@ -126,4 +124,3 @@ Una región de ejecución restringida (CER) es parte de un mecanismo para crear 
   
 ## <a name="see-also"></a>Vea también  
  [Reliability Best Practices (Procedimientos recomendados para la confiabilidad)](../../../docs/framework/performance/reliability-best-practices.md)
-

@@ -1,28 +1,33 @@
 ---
-title: "&lt;comContract&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;comContract&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: b22c8d0b72d4dfc63eb5fa9afa073f993f75418e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;comContract&gt;
-Especifica un contrato de servicio de integración de COM\+.  
+# <a name="ltcomcontractgt"></a>&lt;comContract&gt;
+Especifica un contrato de servicio de integración de COM+.  
   
-## Sintaxis  
+ \<sistema. ServiceModel >  
+\<comContracts >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
   
+```xml  
 <comContracts>  
   <comContract  
       contract="string"  
@@ -48,36 +53,36 @@ Especifica un contrato de servicio de integración de COM\+.
 </comContracts>  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
+|---------------|-----------------|  
 |contrato|Una cadena que contiene el tipo de contrato.|  
 |name|Una cadena que contiene el nombre del contrato.|  
 |namespace|Una cadena que contiene el espacio de nombres del contrato.|  
-|requiresSession|Un valor booleano que especifica si el contrato sólo se puede utilizar en enlaces con canal.  Cuando se inicializa el servicio, el tiempo de ejecución de integración garantiza que este valor es coherente con el tipo de enlace que se va a usar.  Se genera una excepción si uno o más de los enlaces para el contrato están en conflicto.  Si esta propiedad es `false`, y un canal unidireccional está en uso y hay parámetros \[fuera\], también se genera una excepción.|  
+|requiresSession|Un valor booleano que especifica si el contrato sólo se puede utilizar en enlaces con canal. Cuando se inicializa el servicio, el tiempo de ejecución de integración garantiza que este valor es coherente con el tipo de enlace que se va a usar. Se genera una excepción si uno o más de los enlaces para el contrato están en conflicto. Si esta propiedad es `false`, y un canal unidireccional está en uso y hay parámetros [fuera], también se genera una excepción.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |persistableTypes|Todos los tipos con persistencia.|  
-|userDefinedTypes|Una colección de tipos definidos por el usuario \(UDT\) que se va a incluir en el contrato del servicio.|  
-|exposedMethods|Una colección de métodos COM\+ que se exponen cuando la interfaz en un componente de COM\+ se expone como un servicio Web.|  
+|userDefinedTypes|Una colección de tipos definidos por el usuario (UDT) que se va a incluir en el contrato del servicio.|  
+|exposedMethods|Una colección de métodos COM+ que se exponen cuando la interfaz en un componente de COM+ se expone como un servicio Web.|  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |comContracts|Contiene una colección de elementos `comContract`.|  
   
-## Comentarios  
- Los contratos de servicio de integración de COM\+ están restringidos actualmente al espacio de nombres "http:\/\/tempuri.org" y el nombre del contrato se deriva de la interfaz COM de apoyo.  Puede, sin embargo, especificar las alternativas utilizando la sección `comContracts`, así como el elemento `comContract` en el archivo de configuración.  Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres, el nombre del contrato y los tipos definidos por el usuario que se van incluir, así como otros valores para un contrato de servicios.  
+## <a name="remarks"></a>Comentarios  
+ Contratos de servicio de integración de COM + están restringidos actualmente al espacio de nombres "http://tempuri.org" y el nombre del contrato se deriva de la interfaz COM de apoyo. Puede, sin embargo, especificar las alternativas utilizando la sección `comContracts`, así como el elemento `comContract` en el archivo de configuración. Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres, el nombre del contrato y los tipos definidos por el usuario que se van incluir, así como otros valores para un contrato de servicios.  
   
-```  
+```xml  
 <comContracts>  
   <comContract  
       contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
@@ -95,10 +100,10 @@ Especifica un contrato de servicio de integración de COM\+.
   
  Cuando se inicializa el servicio, los espacios de nombres y nombres del contrato especificados se aplican a las descripciones de servicio generadas.  
   
-## Vea también  
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>   
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>   
- <xref:System.ServiceModel.Configuration.ComContractElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [Integración en aplicaciones COM\+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [Cómo configurar los parámetros de los servicios COM\+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComContractElement>  
+ [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [Integración con aplicaciones COM +](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [Cómo: configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -1,70 +1,74 @@
 ---
-title: "Elemento &lt;oidEntry&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<oidEntry> (elemento)"
-  - "oidEntry (elemento)"
+title: '&lt;oidEntry&gt; elemento'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#oidEntry
+helpviewer_keywords:
+- <oidEntry> element
+- oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 12c3b87f1cec72798ea92357f34ecc25b7e6edcf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Elemento &lt;oidEntry&gt;
-Asigna un identificador de objeto \(OID\) en formato ASN.1 a un nombre descriptivo.  
+# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; elemento
+Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.  
   
-## Sintaxis  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<oidMap >  
+\<oidEntry >  
   
-```  
+## <a name="syntax"></a>Sintaxis  
+  
+```xml  
 <oidEntry OID="object identifier number" name="friendly name" />  
 ```  
   
-## Atributos y elementos  
+## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
-### Atributos  
+### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
-|--------------|-----------------|  
-|**OID**|Atributo necesario.<br /><br /> Especifica el identificador de objeto \(OID\) en formato ASN.1 correspondiente al algoritmo implementado por la clase.|  
-|**nombre**|Atributo necesario.<br /><br /> Especifica el valor del atributo de **name** en la etiqueta de [\<nameEntry\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) .|  
+|---------------|-----------------|  
+|**OID**|Atributo necesario.<br /><br /> Especifica el OID ASN.1 correspondiente al algoritmo implementado por la clase.|  
+|**name**|Atributo necesario.<br /><br /> Especifica el valor de la **nombre** de atributo en el [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiqueta.|  
   
-### Elementos secundarios  
+### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
-### Elementos primarios  
+### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
-|--------------|-----------------|  
+|-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`cryptographySettings`|Este elemento contiene la configuración de criptografía.|  
-|`mscorlib`|Contiene el elemento `cryptographySettings`.|  
-|`oidMap`|Este elemento contiene las asignaciones de identificadores de objetos \(OID\) a clases en formato ASN.1.|  
+|`cryptographySettings`|Contiene la configuración de criptografía.|  
+|`mscorlib`|Contiene el `cryptographySettings` elemento.|  
+|`oidMap`|Contiene asignaciones de identificador (OID) de objeto ASN.1 a clases.|  
   
-## Comentarios  
- Los identificadores de objetos en formato ASN.1 identifican algoritmos en algunos formatos criptográficos.  Asigne identificadores de objetos a los nombres descriptivos de los algoritmos que desee identificar.  Para obtener más información sobre identificadores de objetos, vea MSDN Library.  
+## <a name="remarks"></a>Comentarios  
+ Los identificadores de objeto ASN.1 identifican algoritmos en algunos formatos criptográficos. Asignar identificadores de objetos a los nombres descriptivos de los algoritmos que desea identificar.  
   
-## Ejemplo  
- El ejemplo siguiente se muestra cómo utilizar el elemento de **\<oidEntry\>** para asignar un identificador de objeto para el algoritmo hash RIPEMD\-160 a una implementación del algoritmo hash.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo utilizar el  **\<oidEntry >** elemento que se va a asignar un identificador de objeto para el algoritmo de hash RIPEMD-160 a una implementación de ese algoritmo hash.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -84,9 +88,9 @@ Asigna un identificador de objeto \(OID\) en formato ASN.1 a un nombre descripti
 </configuration>  
 ```  
   
-## Vea también  
- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [Servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)   
- [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)   
+## <a name="see-also"></a>Vea también  
+ [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Servicios criptográficos](../../../../../docs/standard/security/cryptographic-services.md)  
+ [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  [Asignar identificadores de objeto a algoritmos de criptografía](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
