@@ -1,49 +1,55 @@
 ---
-title: "C&#243;mo: Usar el corrector ortogr&#225;fico con un men&#250; contextual | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "habilitar la revisión ortográfica en un cuadro de texto [WPF]"
-  - "volver a habilitar la revisión ortográfica en un cuadro de texto [WPF]"
-  - "corrector ortográfico con un menú contextual [WPF]"
+title: "Cómo: Usar el corrector ortográfico con un menú contextual"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- enabling spell checking in a text box [WPF]
+- reenabling spell checking in a text box [WPF]
+- spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 257f343a7fa01e251159797a83e89b533292b6b8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Usar el corrector ortogr&#225;fico con un men&#250; contextual
-De manera predeterminada, al habilitar la revisión ortográfica en un control de edición como <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>, se obtienen las opciones de revisión ortográfica en el menú contextual.  Por ejemplo, cuando los usuarios hacen clic con el botón secundario en una palabra incorrecta, obtienen un conjunto de sugerencias ortográficas, o la opción a **Omitir todas**.  Sin embargo, si invalida el menú contextual predeterminado con su propio menú contextual personalizado, se pierde esta funcionalidad y es preciso escribir código para volver a habilitar la característica de revisión ortográfica en el menú contextual.  En el ejemplo siguiente se muestra cómo habilitarla en un control <xref:System.Windows.Controls.TextBox>.  
+# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Cómo: Usar el corrector ortográfico con un menú contextual
+De forma predeterminada, cuando se habilita el corrector ortográfico en un control de edición como <xref:System.Windows.Controls.TextBox> o <xref:System.Windows.Controls.RichTextBox>, obtendrá las opciones de revisión ortográfica en el menú contextual. Por ejemplo, cuando los usuarios haga clic en una palabra mal escrita, obtener un conjunto de sugerencias de ortografía o la opción de **omitir todas**. Sin embargo, cuando se reemplaza con su propio menú contextual personalizado en el menú contextual de predeterminado, esta funcionalidad se pierde y necesita escribir código para volver a habilitar la característica de corrector ortográfico en el menú contextual. En el ejemplo siguiente se muestra cómo habilitarla en un <xref:System.Windows.Controls.TextBox>.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que crea un control <xref:System.Windows.Controls.TextBox> con algunos eventos que se emplean para implementar el menú contextual.  
+## <a name="example"></a>Ejemplo  
+ El siguiente ejemplo se muestra la [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que crea un <xref:System.Windows.Controls.TextBox> con algunos eventos que se usan para implementar el menú contextual.  
   
- [!code-xml[TextBoxMiscSnippets_snip#SpellerCustomContextMenuExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml#spellercustomcontextmenuexamplewholepage)]  
+ [!code-xaml[TextBoxMiscSnippets_snip#SpellerCustomContextMenuExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml#spellercustomcontextmenuexamplewholepage)]  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el código que implementa el menú contextual.  
   
  [!code-csharp[TextBoxMiscSnippets_snip#SpellerCustomContextMenuCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml.cs#spellercustomcontextmenucodeexamplewholepage)]
  [!code-vb[TextBoxMiscSnippets_snip#SpellerCustomContextMenuCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/speller_custom_context_menu.xaml.vb#spellercustomcontextmenucodeexamplewholepage)]  
   
- El código utilizado para ello con un control <xref:System.Windows.Controls.RichTextBox> es similar.  La diferencia principal reside en el parámetro que se pasa al método `GetSpellingError`.  Para <xref:System.Windows.Controls.TextBox>, se pasa el índice de tipo entero correspondiente a la posición del símbolo de intercalación:  
+ El código utilizado para hacer esto con un <xref:System.Windows.Controls.RichTextBox> es similar. La diferencia principal radica en el parámetro pasado a la `GetSpellingError` método. Para una <xref:System.Windows.Controls.TextBox>, pase el índice de entero de la posición del símbolo de intercalación:  
   
  `spellingError = myTextBox.GetSpellingError(caretIndex);`  
   
- Para <xref:System.Windows.Controls.RichTextBox>, se pasa el objeto <xref:System.Windows.Documents.TextPointer> que especifica la posición del símbolo de intercalación:  
+ Para una <xref:System.Windows.Controls.RichTextBox>, pasar la <xref:System.Windows.Documents.TextPointer> que especifica la posición del símbolo de intercalación:  
   
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
-## Vea también  
- [Información general sobre TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)   
- [Información general sobre el control RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)   
- [Habilitar el corrector ortográfico en un control de edición de texto](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)   
+## <a name="see-also"></a>Vea también  
+ [Información general sobre TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [RichTextBox Overview](../../../../docs/framework/wpf/controls/richtextbox-overview.md) (Introducción a RichTextBox)  
+ [Habilitar el corrector ortográfico en un control de edición de texto](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
  [Usar un menú contextual personalizado con un control TextBox](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)

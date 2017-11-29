@@ -1,26 +1,22 @@
 ---
-title: Refactorizar en funciones puras (Visual Basic) | Documentos de Microsoft
+title: Refactorizar en funciones puras (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e622436905893872521994f6dc1a5bc1c8b3d06a
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0a1b8d314cf1403ef5065e5432f7acd15ebb440
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-into-pure-functions-visual-basic"></a>Refactorizar en funciones puras (Visual Basic)
 Un aspecto importante de las transformaciones funcionales puras es aprender cómo refactorizar código usando funciones puras.  
@@ -62,7 +58,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- Tenga en cuenta que es irrelevante si los datos que se está modificaciones tienen `public` o `private` tener acceso, o es una `shared` o un miembro de instancia. Una función pura no cambia datos fuera de la función.  
+ Tenga en cuenta que es irrelevante si tienen los datos que se está modificaciones `public` o `private` acceder, o es una `shared` miembro o un miembro de instancia. Una función pura no cambia datos fuera de la función.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>Función no pura que cambia un argumento  
  Asimismo, la siguiente versión de esta misma función no es pura porque modifica el contenido de su parámetro, `sb`.  
@@ -81,7 +77,7 @@ Module Module1
 End Module  
 ```  
   
- Esta versión del programa crea el mismo resultado que la primera versión, porque la `HypenatedConcat` función ha cambiado el valor (estado) de su primer parámetro invocando la <xref:System.Text.StringBuilder.Append%2A>función miembro.</xref:System.Text.StringBuilder.Append%2A> Tenga en cuenta que esta modificación se produce a pesar del hecho que `HypenatedConcat` usar el paso de parámetros llamada por valor.  
+ Esta versión del programa crea el mismo resultado que la primera versión porque la función `HypenatedConcat` ha cambiado el valor (estado) de su primer parámetro invocando la función de miembro <xref:System.Text.StringBuilder.Append%2A>. Tenga en cuenta que esta modificación se produce a pesar del hecho que `HypenatedConcat` usar el paso de parámetros llamada por valor.  
   
 > [!IMPORTANT]
 >  Para los tipos de referencia, si pasa un parámetro por valor, tiene como resultado una copia de la referencia a un objeto que se está pasando. Esta copia sigue asociada con los mismos datos de la instancia que la referencia original (hasta que la variable de referencia se asigna a un objeto nuevo). La llamada por referencia no es necesariamente requerida para que una función modifique un parámetro.  
@@ -113,5 +109,5 @@ End Module
  Para obtener más información, consulte [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
+ [Introducción a las transformaciones funcionales puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [Diferencias entre la programación funcional y Programación imperativa (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

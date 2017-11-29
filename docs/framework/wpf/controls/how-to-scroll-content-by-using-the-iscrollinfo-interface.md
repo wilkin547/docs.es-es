@@ -1,42 +1,48 @@
 ---
-title: "C&#243;mo: Desplazarse por contenido utilizando la interfaz IScrollInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IScrollInfo (interfaz)"
-  - "desplazarse por el contenido"
-  - "ScrollViewer (control), desplazarse por el contenido"
+title: "Cómo: Desplazarse por contenido utilizando la interfaz IScrollInfo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ScrollViewer control [WPF], scrolling content
+- scrolling content [WPF]
+- IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1895507c30ad5267d4c2b1afff3acf004e872d40
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Desplazarse por contenido utilizando la interfaz IScrollInfo
-En este ejemplo se muestra cómo desplazar contenido utilizando la interfaz <xref:System.Windows.Controls.Primitives.IScrollInfo>.  
+# <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Cómo: Desplazarse por contenido utilizando la interfaz IScrollInfo
+Este ejemplo muestra cómo desplazarse por el contenido mediante el uso de la <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestran las características de la interfaz <xref:System.Windows.Controls.Primitives.IScrollInfo>.  El ejemplo crea un elemento <xref:System.Windows.Controls.StackPanel> en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] anidado en un objeto <xref:System.Windows.Controls.ScrollViewer> primario.  Los elementos secundarios del objeto <xref:System.Windows.Controls.StackPanel> se pueden desplazar lógicamente utilizando los métodos definidos por la interfaz <xref:System.Windows.Controls.Primitives.IScrollInfo>y convertir a la instancia de <xref:System.Windows.Controls.StackPanel> \(`sp1`\) en código.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo siguiente muestra las características de la <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz. El ejemplo se crea un <xref:System.Windows.Controls.StackPanel> elemento [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] que está anidada en una carpeta primaria <xref:System.Windows.Controls.ScrollViewer>. Los elementos secundarios de la <xref:System.Windows.Controls.StackPanel> se pueden desplazar lógicamente utilizando los métodos definidos por el <xref:System.Windows.Controls.Primitives.IScrollInfo> interfaz y la conversión a la instancia de <xref:System.Windows.Controls.StackPanel> (`sp1`) en el código.  
   
- [!code-xml[IScrollInfoMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml#2)]  
+ [!code-xaml[IScrollInfoMethods#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml#2)]  
   
- Cada objeto <xref:System.Windows.Controls.Button> del archivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] desencadena un método personalizado asociado que controla el comportamiento del desplazamiento en <xref:System.Windows.Controls.StackPanel>.  En el ejemplo siguiente se muestra cómo utilizar los métodos <xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> y <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>; también muestra genéricamente cómo utilizar todos los métodos de posición que define la clase <xref:System.Windows.Controls.Primitives.IScrollInfo>.  
+ Cada <xref:System.Windows.Controls.Button> en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivo desencadena un método personalizado asociado que controla el comportamiento de desplazamiento en <xref:System.Windows.Controls.StackPanel>. En el ejemplo siguiente se muestra cómo utilizar el <xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> y <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A> métodos; también genéricamente se muestra cómo usar los métodos de posición que el <xref:System.Windows.Controls.Primitives.IScrollInfo> define la clase.  
   
  [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
  [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
-## Vea también  
- <xref:System.Windows.Controls.ScrollViewer>   
- <xref:System.Windows.Controls.Primitives.IScrollInfo>   
- <xref:System.Windows.Controls.StackPanel>   
- [Información general sobre ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Controls.ScrollViewer>  
+ <xref:System.Windows.Controls.Primitives.IScrollInfo>  
+ <xref:System.Windows.Controls.StackPanel>  
+ [Información general sobre ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
+ [Temas de procedimientos](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
  [Información general sobre elementos Panel](../../../../docs/framework/wpf/controls/panels-overview.md)

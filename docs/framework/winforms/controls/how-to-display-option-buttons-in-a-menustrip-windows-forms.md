@@ -1,99 +1,103 @@
 ---
-title: "C&#243;mo: Mostrar botones de opci&#243;n en un control MenuStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "mostrar botones de opción, MenuStrip [Windows Forms]"
-  - "MenuStrip [Windows Forms], mostrar botones de opción"
-  - "botones de opción [Windows Forms], mostrar en MenuStrip"
+title: "Cómo: Mostrar botones de opción en un control MenuStrip (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- MenuStrip [Windows Forms], displaying option buttons
+- displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
+- option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 15f2d1492148a4b00a4b96844f546a4dc968eef6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Mostrar botones de opci&#243;n en un control MenuStrip (Windows Forms)
-Los botones de opción, también denominados botones de radio, son similares a las casillas, salvo que los usuarios sólo pueden seleccionarlos de uno en uno.  Aunque, de forma predeterminada, la clase <xref:System.Windows.Forms.ToolStripMenuItem> no proporciona el comportamiento de botón de opción, proporciona el comportamiento de casilla, que se puede personalizar para implementar el comportamiento de botón de opción para los elementos de menú en un control <xref:System.Windows.Forms.MenuStrip>.  
+# <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Cómo: Mostrar botones de opción en un control MenuStrip (Windows Forms)
+Botones de opción, también conocidos como botones de radio, son similares a las casillas excepto en que los usuarios pueden seleccionar sólo uno en uno. Aunque de forma predeterminada el <xref:System.Windows.Forms.ToolStripMenuItem> clase no proporciona el comportamiento de botón de opción, la clase proporcionar un comportamiento de casilla de verificación que se puede personalizar para implementar el comportamiento de botón de opción para elementos de menú en un <xref:System.Windows.Forms.MenuStrip> control.  
   
- Cuando la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> de un elemento de menú es `true`, los usuarios pueden hacer clic en el elemento para alternar la presentación de una marca de verificación.  La propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> indica el estado actual del elemento.  Para implementar el comportamiento de botón de opción básico, debe garantizar que, cuando se seleccione un elemento, se establezca la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> del elemento anteriormente seleccionado en `false`.  
+ Cuando el <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> la propiedad de un elemento de menú es `true`, los usuarios puedan seleccionar el elemento para alternar la presentación de una marca de verificación. El <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propiedad indica el estado actual del elemento. Para implementar el comportamiento de botón de opción básico, debe asegurarse de que, al que se selecciona un elemento, establezca la <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> propiedad del elemento seleccionado anteriormente para `false`.  
   
- Los procedimientos siguientes describen cómo implementar este comportamiento y la funcionalidad adicional de una clase que hereda de la clase <xref:System.Windows.Forms.ToolStripMenuItem>.  La clase `ToolStripRadioButtonMenuItem` reemplaza miembros como <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> y <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> para proporcionar la apariencia y el comportamiento de selección de los botones de opción.  Además, esta clase reemplaza la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> para que las opciones de un submenú se deshabiliten a menos que se seleccione el elemento primario.  
+ Los procedimientos siguientes describen cómo implementar esto y funciones adicionales en una clase que hereda la <xref:System.Windows.Forms.ToolStripMenuItem> clase. El `ToolStripRadioButtonMenuItem` clase reemplaza a los miembros como <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> y <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> para proporcionar el comportamiento de la selección y la apariencia de los botones de opción. Además, esta clase reemplaza el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad para que las opciones de un submenú están deshabilitados a menos que se selecciona el elemento primario.  
   
-### Para implementar el comportamiento de selección de botón de opción  
+### <a name="to-implement-option-button-selection-behavior"></a>Para implementar el comportamiento de selección de botón de opción  
   
-1.  Inicialice la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> en `true` para habilitar la selección de elementos.  
+1.  Inicializar el <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> propiedad `true` para habilitar la selección de elementos.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#110)]
      [!code-vb[ToolStripRadioButtonMenuItem#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#110)]  
   
-2.  Reemplace el método <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> para anular la selección del elemento anteriormente seleccionado cuando se seleccione un nuevo elemento.  
+2.  Invalidar el <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> método para borrar la selección del elemento seleccionado anteriormente cuando se selecciona un nuevo elemento.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#120)]
      [!code-vb[ToolStripRadioButtonMenuItem#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#120)]  
   
-3.  Reemplace el método <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> para garantizar que al hacer clic en un elemento ya seleccionado, no se anulará la selección.  
+3.  Invalidar el <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> método para asegurarse de que al hacer clic en un elemento que ya se ha seleccionado no borrará la selección.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#130)]
      [!code-vb[ToolStripRadioButtonMenuItem#130](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#130)]  
   
-### Para modificar la apariencia de los elementos de botón de opción  
+### <a name="to-modify-the-appearance-of-the-option-button-items"></a>Para modificar la apariencia de los elementos de botón de opción  
   
-1.  Invalide el método <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> para reemplazar la marca de verificación predeterminada por un botón de opción usando la clase <xref:System.Windows.Forms.RadioButtonRenderer>.  
+1.  Invalidar el <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> método para reemplazar la marca de verificación de forma predeterminada con un botón de opción mediante el <xref:System.Windows.Forms.RadioButtonRenderer> clase.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#140)]
      [!code-vb[ToolStripRadioButtonMenuItem#140](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#140)]  
   
-2.  Reemplace los métodos <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A> y <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> para realizar un seguimiento del estado del mouse y garantizar que el método <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> pinta el estado del botón de opción correcto.  
+2.  Invalidar el <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, y <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> métodos para hacer un seguimiento del estado del mouse y asegúrese de que el <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> método pinta el estado del botón de opción correctos.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#150)]
      [!code-vb[ToolStripRadioButtonMenuItem#150](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#150)]  
   
-### Para deshabilitar las opciones de un submenú cuando no se selecciona el elemento primario  
+### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a>Para deshabilitar las opciones en un submenú cuando no se selecciona el elemento primario  
   
-1.  Reemplace la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> para que el elemento se deshabilite cuando tenga un elemento primario con la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> establecida en `true` y la propiedad <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> establecida en `false`.  
+1.  Invalidar el <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propiedad para que el elemento está deshabilitado cuando tiene un elemento primario con ambos un <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> valo `true` y un <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> valo `false`.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#160)]
      [!code-vb[ToolStripRadioButtonMenuItem#160](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#160)]  
   
-2.  Reemplace el método <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> para suscribirse al evento <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> del elemento primario.  
+2.  Invalidar el <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> método para suscribirse a las <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> eventos del elemento primario.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#170)]
      [!code-vb[ToolStripRadioButtonMenuItem#170](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#170)]  
   
-3.  En el controlador del evento <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> del elemento primario, invalide el elemento para actualizar la pantalla con el nuevo estado habilitado.  
+3.  En el controlador para el elemento principal <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> eventos, invalide el elemento para actualizar la pantalla con el nuevo estado habilitado.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  
   
-## Ejemplo  
- En el ejemplo de código siguiente se proporciona la clase `ToolStripRadioButtonMenuItem` completa, así como las clases <xref:System.Windows.Forms.Form> y `Program` para mostrar el comportamiento del botón de opción.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se proporciona la sección completa `ToolStripRadioButtonMenuItem` (clase) y un <xref:System.Windows.Forms.Form> clase y `Program` clase para demostrar el comportamiento de botón de opción.  
   
  [!code-csharp[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]
  [!code-vb[ToolStripRadioButtonMenuItem#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#000)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 -   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
-## Vea también  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
- <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.RadioButtonRenderer>   
- [MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [Cómo: Implementar un control ToolStripRenderer personalizado](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.RadioButtonRenderer>  
+ [Control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [Implementar un control ToolStripRenderer personalizado](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)

@@ -1,35 +1,39 @@
 ---
-title: "Proceso de aprobaci&#243;n de un documento | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Proceso de aprobación de un documento"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Proceso de aprobaci&#243;n de un documento
-En este ejemplo se muestra el uso de varias características de [!INCLUDE[wf](../../../../includes/wf-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] al mismo tiempo.Juntas implementan un escenario de proceso de aprobación de un documento.Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos.Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación.El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación.Existen actividades para obtener una aprobación única, una aprobación de quórum \(un porcentaje de un conjunto de aprobadores\) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
+# <a name="document-approval-process"></a>Proceso de aprobación de un documento
+En este ejemplo se muestra el uso de varias características de [!INCLUDE[wf](../../../../includes/wf-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] al mismo tiempo. Juntas implementan un escenario de proceso de aprobación de un documento. Una aplicación cliente puede enviar documentos para su aprobación y aprobar documentos. Existe una aplicación de administrador de aprobaciones para facilitar las comunicaciones entre los clientes y aplicar las reglas del proceso de aprobación. El proceso de aprobación es un flujo de trabajo que puede ejecutar varios tipos de aprobación. Existen actividades para obtener una aprobación única, una aprobación de quórum (un porcentaje de un conjunto de aprobadores) y un proceso de aprobación compleja que consta de una aprobación de quórum y una aprobación única en una secuencia.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>: \WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
-## Detalles del ejemplo  
+## <a name="sample-details"></a>Detalles del ejemplo  
  El siguiente gráfico muestra el flujo de trabajo del proceso de aprobación de un documento.  
   
- ![Flujo de trabajo del proceso de aprobación de un documento](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Un flujo de trabajo del proceso de aprobación de documentos](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
   
  Desde la perspectiva del cliente, el proceso de aprobación funciona del siguiente modo:  
   
@@ -37,7 +41,7 @@ En este ejemplo se muestra el uso de varias características de [!INCLUDE[wf](..
   
 2.  Un cliente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la envía a un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hospedado por la aplicación de administrador de aprobaciones.  
   
-3.  Se devuelve un Id. de usuario único al cliente.El cliente puede participar ahora en los procesos de aprobación.  
+3.  Se devuelve un Id. de usuario único al cliente. El cliente puede participar ahora en los procesos de aprobación.  
   
 4.  Una vez admitido, un cliente puede enviar un documento para su aprobación mediante un proceso de aprobación única, de quórum o compleja.  
   
@@ -67,90 +71,90 @@ En este ejemplo se muestra el uso de varias características de [!INCLUDE[wf](..
   
 2.  Un servicio de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en el administrador de aprobaciones recibe una solicitud para formar parte del sistema del proceso de aprobación.  
   
-3.  Se genera un identificador único para el cliente.La información sobre el usuario se almacena en una base de datos.  
+3.  Se genera un identificador único para el cliente. La información sobre el usuario se almacena en una base de datos.  
   
 4.  El identificador único se envía al usuario.  
   
-5.  Se recibe una solicitud de aprobación.El administrador de aprobaciones ejecuta un proceso de aprobación.  
+5.  Se recibe una solicitud de aprobación. El administrador de aprobaciones ejecuta un proceso de aprobación.  
   
 6.  El administrador de aprobaciones recibe una solicitud de aprobación, lo que inicia un nuevo flujo de trabajo.  
   
-7.  Según el tipo de solicitud \(simple, quórum o compleja\), se ejecuta una actividad diferente.  
+7.  Según el tipo de solicitud (simple, quórum o compleja), se ejecuta una actividad diferente.  
   
 8.  Las actividades Send y Receive con correlación se utilizan para enviar la solicitud de aprobación al cliente para su revisión y recibir la respuesta.  
   
 9. El resultado del flujo de trabajo del proceso de aprobación se envía al cliente.  
   
-## Utilizar el ejemplo  
+## <a name="using-the-sample"></a>Utilizar el ejemplo  
   
-##### Para configurar la base de datos  
+##### <a name="to-set-up-the-database"></a>Para configurar la base de datos  
   
 1.  Desde un símbolo del sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] abierto con privilegios de administrador, navegue a esta carpeta DocumentApprovalProcess y ejecute Setup.cmd.  
   
-##### Para configurar la aplicación  
+##### <a name="to-set-up-the-application"></a>Para configurar la aplicación  
   
 1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución de DocumentApprovalProcess.sln.  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-3.  Para ejecutar la solución, inicie la aplicación de administrador de aprobaciones haciendo clic con el botón secundario en el proyecto ApprovalManager en el **Explorador de soluciones** y, a continuación, en **Depurar**\-\>**Iniciar nueva instancia** en el menú contextual.  
+3.  Para ejecutar la solución, inicie la aplicación Administrador de aprobaciones haciendo clic en el proyecto ApprovalManager en el **el Explorador de soluciones** y haga clic en **depurar**->**iniciar**  nueva instancia en el menú contextual.  
   
      Espere a que el resultado del administrador le indique que está listo.  
   
-##### Para ejecutar el escenario de aprobación única  
+##### <a name="to-run-the-single-approval-scenario"></a>Para ejecutar el escenario de aprobación única  
   
 1.  Abra un símbolo del sistema con permisos de administrador.  
   
 2.  Navegue al directorio que contiene la solución.  
   
-3.  Navegue a la carpeta ApprovalClient\\Bin\\Debug y ejecute dos instancias de ApprovalClient.exe.  
+3.  Navegue a la carpeta ApprovalClient\Bin\Debug y ejecute dos instancias de ApprovalClient.exe.  
   
-4.  Haga clic en **detectar** y espere a que se habilite el botón **suscribir**.  
+4.  Haga clic en **detectar**, espere hasta que el **suscribirse** botón está habilitado.  
   
-5.  Escriba un nombre de usuario y haga clic en **suscribir**.Para un cliente, use `UserType1` y para el otro, escriba `UserType2`.  
+5.  Escriba un nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para el otro, escriba `UserType2`.  
   
-6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido.Haga clic en **Solicitar aprobación**.  
+6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar la aprobación**.  
   
-7.  En el cliente `UserType2`, aparecerá un documento a la espera de aprobación.Selecciónelo y presione **aprobar** o **rechazar**.Los resultados deberían mostrarse en el cliente `UserType1`.  
+7.  En el cliente `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar** o **rechazar**. Los resultados deberían mostrarse en el cliente `UserType1`.  
   
-##### Para ejecutar el escenario de aprobación de quórum  
-  
-1.  Abra un símbolo del sistema con permisos de administrador.  
-  
-2.  Navegue al directorio que contiene la solución.  
-  
-3.  Navegue a la carpeta ApprovalClient\\Bin\\Debug y ejecute tres instancias de ApprovalClient.exe.  
-  
-4.  Haga clic en **detectar** y espere a que se habilite el botón **suscribir**.  
-  
-5.  Escriba un nombre de usuario y haga clic en **suscribir**.Para un cliente, use `UserType1` y para los otros dos, escriba `UserType2`.  
-  
-6.  En el cliente `UserType1`, seleccione el tipo de aprobación de quórum en el menú desplegable y escriba un nombre de documento y su contenido.Haga clic en **Solicitar aprobación**.Este tipo de aprobación requieres que los dos clientes `UserType2` aprueben o rechacen el documento.Aunque los dos clientes `UserType2` deben responder, solo uno de ellos necesita aprobar el documento para que se considere aprobado.  
-  
-7.  En los clientes `UserType2`, aparecerá un documento a la espera de aprobación.Selecciónelo y presione **aprobar** o **rechazar**.Los resultados deberían mostrarse en el cliente `UserType1`.  
-  
-##### Para ejecutar el escenario de aprobación compleja  
+##### <a name="to-run-the-quorum-approval-scenario"></a>Para ejecutar el escenario de aprobación de quórum  
   
 1.  Abra un símbolo del sistema con permisos de administrador.  
   
 2.  Navegue al directorio que contiene la solución.  
   
-3.  Navegue a la carpeta ApprovalClient\\Bin\\Debug y ejecute cuatro instancias de ApprovalClient.exe.  
+3.  Navegue a la carpeta ApprovalClient\Bin\Debug y ejecute tres instancias de ApprovalClient.exe.  
   
-4.  Haga clic en **detectar** y espere a que se habilite el botón **suscribir**.  
+4.  Haga clic en **detectar**, espere hasta que el **suscribirse** botón está habilitado.  
   
-5.  Escriba un nombre de usuario y haga clic en **suscribir**.Para un cliente, use `UserType2`, para los otros dos, escriba `UserType1` y en el último, use `UserType3`.  
+5.  Escriba un nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1` y para los otros dos, escriba `UserType2`.  
   
-6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido.Haga clic en **Solicitar aprobación**.  
+6.  En el cliente `UserType1`, seleccione el tipo de aprobación de quórum en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar la aprobación**. Este tipo de aprobación requieres que los dos clientes `UserType2` aprueben o rechacen el documento. Aunque los dos clientes `UserType2` deben responder, solo uno de ellos necesita aprobar el documento para que se considere aprobado.  
   
-7.  En los clientes `UserType2`, aparecerá un documento a la espera de aprobación.Selecciónelo y presione **aprobar**; el documento se pasará al cliente `UserType3`.  
+7.  En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar** o **rechazar**. Los resultados deberían mostrarse en el cliente `UserType1`.  
+  
+##### <a name="to-run-the-complex-approval-scenario"></a>Para ejecutar el escenario de aprobación compleja  
+  
+1.  Abra un símbolo del sistema con permisos de administrador.  
+  
+2.  Navegue al directorio que contiene la solución.  
+  
+3.  Navegue a la carpeta ApprovalClient\Bin\Debug y ejecute cuatro instancias de ApprovalClient.exe.  
+  
+4.  Haga clic en **detectar**, espere hasta que el **suscribirse** botón está habilitado.  
+  
+5.  Escriba un nombre de usuario y haga clic en **suscribirse**. Para un cliente, use `UserType1`, para los otros dos, escriba `UserType2` y en el último, use `UserType3`.  
+  
+6.  En el cliente `UserType1`, seleccione el tipo de aprobación única en el menú desplegable y escriba un nombre de documento y su contenido. Haga clic en **solicitar la aprobación**.  
+  
+7.  En los clientes `UserType2`, aparecerá un documento a la espera de aprobación. Selecciónelo y presione **aprobar**, el documento se pasa a la `UserType3` cliente.  
   
      Si el primer quórum `UserType2` aprueba el documento, el documento se pasa al cliente `UserType3`.  
   
-8.  Apruebe o rechace el documento en el cliente `UserType3`.Los resultados deberían mostrarse en el cliente `UserType1`.  
+8.  Apruebe o rechace el documento en el cliente `UserType3`. Los resultados deberían mostrarse en el cliente `UserType1`.  
   
-##### Para realizar una limpieza  
+##### <a name="to-clean-up"></a>Para realizar una limpieza  
   
 1.  En un símbolo de sistema de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], navegue a la carpeta DocumentApprovalProcess y ejecute Cleanup.cmd.  
   
-## Vea también
+## <a name="see-also"></a>Vea también

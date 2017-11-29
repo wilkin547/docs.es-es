@@ -1,49 +1,48 @@
 ---
-title: "My.Computer.FileSystem (Objeto) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "FileClose (función)"
-  - "FileGet (función)"
-  - "FileGetObject (función)"
-  - "FileOpen (función)"
-  - "FilePut (función)"
-  - "FilePutObject (función)"
-  - "FileSystem (módulo)"
-  - "My.Computer.FileSystem (objeto)"
-  - "Seek (función)"
+title: My.Computer.FileSystem (Objeto)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- FileSystem module
+- FileClose function
+- FileGet function
+- My.Computer.FileSystem object
+- FilePutObject function
+- FilePut function
+- FileGetObject function
+- Seek function
+- FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aa6b61333152e6cb52fac969551e93d6b3697e53
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# My.Computer.FileSystem (Objeto)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Proporciona las propiedades y los métodos para trabajar con unidades, archivos y directorios.  
+# <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem (Objeto)
+Proporciona propiedades y métodos para trabajar con unidades, archivos y directorios.  
   
-## Comentarios  
- Para obtener información sobre los métodos y las propiedades del objeto de `My.Computer.FileSystem` , vea <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+## <a name="remarks"></a>Comentarios  
+ Para obtener información acerca de los métodos y propiedades de la `My.Computer.FileSystem` de objetos, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- Para obtener más información, vea [Acceso a archivos con Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Para obtener más información, consulte [acceso a archivos con Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
->  También puede usar clases del espacio de nombres <xref:System.IO?displayProperty=fullName> para trabajar con unidades, archivos, y directorios.  
+>  También puede utilizar clases en el <xref:System.IO?displayProperty=nameWithType> espacio de nombres para trabajar con unidades, archivos y directorios.  
   
-## Requisitos  
- **Espacio de nombres:** <xref:Microsoft.VisualBasic.MyServices>  
+## <a name="requirements"></a>Requisitos  
+ **Namespace:**<xref:Microsoft.VisualBasic.MyServices>  
   
- **clase:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> \(proporciona acceso a <xref:Microsoft.VisualBasic.FileIO.FileSystem>\)  
+ **Clase:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (proporciona acceso a <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Ensamblado:** biblioteca en tiempo de ejecución de Visual Basic \(en Microsoft.VisualBasic.dll\)  
+ **Ensamblado:** biblioteca de tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## Vea también  
- [My.Computer.FileSystem.SpecialDirectories \(Objeto\)](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)   
- [My.Computer \(Objeto\)](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>Vea también  
+ [My.Computer.FileSystem.SpecialDirectories (objeto)](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  
+ [My.Computer (objeto)](../../../visual-basic/language-reference/objects/my-computer-object.md)

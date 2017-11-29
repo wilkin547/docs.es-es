@@ -1,63 +1,61 @@
 ---
-title: "Static (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Static"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Static (palabra clave)"
-  - "static (modificador)"
+title: Static (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Static
+helpviewer_keywords:
+- static modifier
+- Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: e08f46076281e766a5bc0b99cd61fee9cd41ece5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Static (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica si una o varias variables locales declaradas deben seguir existiendo y conservar sus últimos valores tras la finalización del procedimiento en el que se han declarado.  
+# <a name="static-visual-basic"></a>Static (Visual Basic)
+Especifica que una o varias variables locales declaradas deben seguir existiendo y conservar sus últimos valores tras la finalización del procedimiento en el que se declaran.  
   
-## Comentarios  
- Normalmente, una variable local de un procedimiento deja de existir en cuanto finaliza el procedimiento.  Una variable estática sigue existiendo y conserva su valor más reciente.  La próxima vez que su código llame al procedimiento, no se reinicializa la variable y sigue conservando el último valor asignado.  Una variable estática sigue existiendo mientras dure la clase o módulo en donde está definida.  
+## <a name="remarks"></a>Comentarios  
+ Normalmente, una variable local en un procedimiento deja de existir cuando se detiene el procedimiento. Una variable estática sigue existiendo y conserva su valor más reciente. La próxima vez que el código llama al procedimiento, no se reinicializa la variable y se mantiene el último valor asignado a él. Una variable estática sigue existiendo durante la vigencia de la clase o módulo que se define en.  
   
-## Reglas  
+## <a name="rules"></a>Reglas  
   
--   **Contexto de la declaración.** Sólo se puede utilizar `Static` en variables locales.  Esto significa que el contexto de la declaración para una variable `Static` debe ser un procedimiento o un bloque en un procedimiento y no puede ser un archivo de código fuente, un espacio de nombres, una clase, una estructura o un módulo.  
+-   **Contexto de la declaración.** Puede usar `Static` solo en las variables locales. Esto significa que el contexto de la declaración de un `Static` variable debe ser un procedimiento o un bloque en un procedimiento y no puede ser un archivo de código fuente, espacio de nombres, clase, estructura o módulo.  
   
-     No puede utilizar `Static` dentro de un procedimiento de estructura.  
+     No se puede utilizar `Static` dentro de un procedimiento de estructura.  
   
--   No se pueden deducir los tipos de datos de las variables locales `Static`.  Para obtener más información, vea [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+-   Los tipos de datos de `Static` no se pueden inferir variables locales. Para obtener más información, consulte [inferencia de tipo Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
--   **Modificadores combinados.** No se puede especificar `Static` junto con `ReadOnly`, `Shadows` o `Shared` en la misma declaración.  
+-   **Modificadores combinados.** No se puede especificar `Static` junto con `ReadOnly`, `Shadows`, o `Shared` en la misma declaración.  
   
-## Comportamiento  
- Cuando se declara una variable estática en un procedimiento de `Shared` , sólo una copia de la variable estática está disponible para toda la aplicación.  Se llama a un procedimiento de `Shared` utilizando el nombre de clase, no una variable que apunta a una instancia de la clase.  
+## <a name="behavior"></a>Comportamiento  
+ Cuando se declara una variable estática en un `Shared` procedimiento, solo una copia de la variable estática está disponible para toda la aplicación. Se llama a un `Shared` nombre de este procedimiento mediante la clase, no una variable que apunta a una instancia de la clase.  
   
- Cuando se declara una variable estática en un procedimiento que no es `Shared`, sólo una copia de la variable disponible para cada instancia de la clase.  Se llama a un procedimiento no compartido mediante una variable que apunta a una instancia concreta de la clase.  
+ Cuando se declara una variable estática en un procedimiento que no es `Shared`, sólo una copia de la variable está disponible para cada instancia de la clase. Se llama a un procedimiento no compartido mediante una variable que apunta a una instancia específica de la clase.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra el uso de `Static`.  
   
  [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
- El valor `totalSales` de la variable `Static` únicamente se inicializa en 0 una vez.  Cada vez que se escribe `updateSales`, `totalSales` sigue teniendo el valor calculado más reciente.  
+ El `Static` variable `totalSales` se inicializa en 0 solo una vez. Cada vez que escriba `updateSales`, `totalSales` aún tiene el valor más reciente que se ha calculado para él.  
   
- El modificador `Static` se puede utilizar en este contexto:  
+ El `Static` modificador se puede usar en este contexto:  
   
- [Dim \(Instrucción\)](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
-## Vea también  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)   
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Período de duración en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Declaración de variable](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
+## <a name="see-also"></a>Vea también  
+ [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Duración en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [Declaración de variables](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [Estructuras](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Inferencia de tipo de variable local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Objetos y clases](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

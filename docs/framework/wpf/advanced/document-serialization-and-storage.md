@@ -1,90 +1,92 @@
 ---
-title: "Almacenamiento y serializaci&#243;n de documentos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "documentos, serialización"
-  - "documentos, storage"
-  - "serialización de documentos"
-  - "almacenamiento de documentos"
+title: "Almacenamiento y serialización de documentos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 'serialization of documents [WPF], , '
+- documents [WPF], storage
+- documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-caps.latest.revision: 24
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 23
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 34b517366a5f143a86388abff5ae13022bc710c3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Almacenamiento y serializaci&#243;n de documentos
-[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] proporciona un entorno eficaz para crear y mostrar documentos de gran calidad.  Las características mejoradas que admiten tanto documentos fijos como dinámicos y controles de vista avanzados, todo ello combinado con eficaces funciones gráficas 2D y 3D aportan a las aplicaciones [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] un nuevo nivel de calidad y experiencia del usuario.  La posibilidad de administrar con flexibilidad una representación en memoria de un documento es una característica clave de [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]. Por su parte, la capacidad de guardar y cargar con eficacia documentos de un almacén de datos es algo imprescindible en casi todas las aplicaciones.  El proceso de convertir un documento de una representación en memoria interna en un almacén de datos externo se denomina [serialización](GTMT).  El proceso inverso de leer un almacén de datos y volver a crear la instancia en memoria original se denomina deserialización.  
+# <a name="document-serialization-and-storage"></a>Almacenamiento y serialización de documentos
+[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] proporciona un entorno eficaz para crear y mostrar documentos de alta calidad.  Las características mejoradas que admiten tanto documentos fijos como documentos dinámicos y los controles avanzados de visualización, combinados con las eficaces capacidades gráficas 2D y 3D, llevan a las aplicaciones [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] a un nuevo nivel de calidad y experiencia del usuario.  La capacidad de administrar con flexibilidad una representación en memoria de un documento es una característica clave de [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], y poder guardar y cargar documentos de manera eficaz desde un almacén de datos es una necesidad de casi cualquier aplicación.  El proceso de convertir un documento de una representación en memoria interna a un almacén de datos externo se denomina “serialización”.  El proceso inverso de leer un almacén de datos y volver a crear la instancia en memoria original se denomina “deserialización”.  
   
-   
+ 
   
 <a name="AboutSerialization"></a>   
-## Serialización de documentos  
- En una situación ideal, el proceso de [serializar](GTMT) un documento a partir de su representación en memoria y de deserializarlo para volver a crear una instancia de él en memoria resulta transparente a la aplicación.  La aplicación llama a un método serializador de "escritura" para guardar el documento, mientras que un método deserializador de "lectura" obtiene acceso al almacén de datos y vuelve a crear la instancia original en memoria.  Normalmente, la aplicación no tiene que ocuparse del formato concreto en el que se almacenan los datos, siempre que el proceso de serialización y deserialización vuelva a crear el documento en su forma original.  
+## <a name="about-document-serialization"></a>Acerca de la serialización de documentos  
+ Lo ideal es que el proceso de serialización y deserialización de un documento desde la memoria y de vuelta hacia esta sea transparente para la aplicación.  La aplicación llama a un método serializador de "escritura" para guardar el documento, mientras que un método deserializador de "lectura" obtiene acceso al almacén de datos y vuelve a crear la instancia original en memoria.  En general, la aplicación no se encarga del formato específico en que se almacenan los datos, siempre que el proceso de serialización y deserialización vuelva a crear el documento en su forma original.  
   
- Con frecuencia, las aplicaciones proporcionan varias opciones de serialización que permiten al usuario guardar documentos en un soporte diferente o con un formato diferente.  Por ejemplo, una aplicación podría ofrecer a opciones de "Guardar como" para almacenar un documento en un archivo de disco, una base de datos o un servicio Web.  De igual modo, diferentes serializadores podrían almacenar el documento en diversos formatos, tales como HTML, RTF, XML, XP o, como alternativa, en un formato de otro fabricante.  Para la aplicación, la serialización define una interfaz que aísla los detalles del soporte de almacenamiento dentro de la implementación de cada serializador concreto.  Además de las ventajas de encapsular los detalles del almacenamiento, las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]<xref:System.Windows.Documents.Serialization> proporcionan otras características importantes.  
+ Las aplicaciones suelen proporcionar varias opciones de serialización que permiten al usuario guardar documentos en distintos soportes o en un formato diferente.  Por ejemplo, una aplicación podría ofrecer la opción "Guardar como" para almacenar un documento en un archivo de disco, una base de datos o un servicio web.  De forma similar, diferentes serializadores podrían almacenar el documento en formatos diferentes, por ejemplo, HTML, RTF, XML, XPS o, como alternativa, un formato de otro fabricante.  Para la aplicación, la serialización define una interfaz que aísla los detalles del soporte de almacenamiento dentro de la implementación de cada serializador concreto.  Además de las ventajas de encapsular los detalles de almacenamiento, el [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] proporcionan varias otras características importantes.  
   
-### Características de los serializadores de documentos de .NET Framework 3.0  
+### <a name="features-of-net-framework-30-document-serializers"></a>Características de los serializadores de documentos de .NET Framework 3.0  
   
--   El acceso directo a los objetos de documento de alto nivel \([árbol lógico](GTMT) y visual\) permite el almacenamiento eficaz de contenido paginado, elementos 2D y 3D, imágenes, multimedia, hipervínculos, anotaciones y otro contenido de compatibilidad.  
+-   El acceso directo a los objetos de documento de alto nivel (árbol lógico y elementos visuales) permite el almacenamiento eficiente de contenido paginado, elementos 2D o 3D, imágenes, elementos multimedia, hipervínculos, anotaciones y otro contenido de compatibilidad.  
   
--   Funcionamiento [sincrónico](GTMT) y [asincrónico](GTMT).  
+-   Funcionamiento sincrónico y asincrónico.  
   
 -   Compatibilidad con los serializadores de complemento con funciones mejoradas:  
   
-    -   Acceso en todo el sistema para su uso por parte de todas las aplicaciones [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
+    -   Acceso a todo el sistema para su uso por todas las aplicaciones [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)].  
   
-    -   Sencilla capacidad de detectar complementos de aplicaciones.  
+    -   Capacidad sencilla de detectar complementos de aplicaciones.  
   
-    -   Implementación, instalación y actualización sencillas de complementos personalizados de otros fabricantes.  
+    -   Implementación, instalación y actualización sencillas de complementos personalizados de terceros.  
   
-    -   Compatibilidad de la interfaz de usuario con la configuración y las opciones personalizadas en tiempo de ejecución.  
+    -   Compatibilidad de interfaz de usuario para opciones y configuración personalizadas en tiempo de ejecución.  
   
-### Ruta de acceso de impresión de XPS  
- La ruta de acceso de impresión de [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)][!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] proporciona, además, un mecanismo extensible para la escritura de documentos incluida su salida impresa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] actúa como formato de archivo de documento y, a la vez, es el formato nativo de cola de impresión para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Los documentos [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] se pueden enviar directamente a las impresoras compatibles con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)], sin que sea necesario pasarlos a un formato intermedio.  Consulte [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md) para obtener información adicional sobre las opciones y funciones de salida de la ruta de acceso de impresión.  
+### <a name="xps-print-path"></a>Ruta de impresión XPS  
+ La ruta de impresión de [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] proporciona también un mecanismo extensible para escribir documentos a través de la salida impresa.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] funciona como formato de archivo de documento y es el formato nativo de cola de impresión para [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  Los documentos de [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pueden enviarse directamente a impresoras compatibles con [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sin necesidad de convertirlos a un formato intermedio.  Consulte la [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md) para obtener información adicional sobre las capacidades y opciones de salida de la ruta de impresión.  
   
 <a name="PluginSerializers"></a>   
-## Serializadores de complemento  
- Las API <xref:System.Windows.Documents.Serialization> proporcionan compatibilidad con serializadores de complemento y serializadores vinculados que se instalan por separado con respecto a la aplicación, se enlazan en tiempo de ejecución y permiten el acceso mediante el mecanismo de detección <xref:System.Windows.Documents.Serialization.SerializerProvider>.  Los serializadores de complemento proporcionan ventajas mejoradas de facilidad de implementación y uso en todo el sistema.  Los serializadores vinculados también se pueden implementar para los entornos de [confianza parcial](GTMT) tales como [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], donde no es posible tener acceso a los serializadores de complemento.  Los serializadores vinculados, que se basan en una implementación derivada de la clase <xref:System.Windows.Documents.Serialization.SerializerWriter>, se compilan y vinculan directamente en la aplicación.  Tanto los serializadores de complemento como los vinculados funcionan a través de métodos y eventos públicos idénticos, lo que facilita el uso de uno o ambos tipos de serializadores en la misma aplicación.  
+## <a name="plug-in-serializers"></a>Serializadores de complemento  
+ El <xref:System.Windows.Documents.Serialization> API proporcionan compatibilidad para los serializadores de complemento y serializadores vinculados que se instalan por separado de la aplicación, enlazar en tiempo de ejecución y se tiene acceso mediante la <xref:System.Windows.Documents.Serialization.SerializerProvider> mecanismo de detección.  Los serializadores de complemento proporcionan ventajas mejoradas de facilidad de implementación y uso en todo el sistema.  Los serializadores vinculados también pueden implementarse para entornos de confianza parcial, como [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], donde no se tiene acceso a los serializadores de complemento.  Vincular los serializadores, que se basan en una implementación derivada de la <xref:System.Windows.Documents.Serialization.SerializerWriter> clase, que se compila y se vincula directamente en la aplicación.  Tanto los serializadores de complemento como los serializadores vinculados funcionan mediante métodos y eventos públicos idénticos que facilitan el uso de uno o ambos tipos de serializadores en la misma aplicación.  
   
- Los serializadores de complemento ayudan a los programadores de aplicaciones proporcionando extensibilidad a los nuevos diseños de almacenamiento y formatos de archivo sin tener que codificar directamente cada formato potencial en tiempo de compilación.  Los serializadores de complemento también benefician a los programadores de otros fabricantes, al constituir un medio normalizado para implementar, instalar y actualizar complementos accesibles por el sistema para los formatos de archivo personalizados o de propietario.  
+ Los serializadores de complemento ayudan a los desarrolladores de aplicaciones, al proporcionar extensibilidad a nuevos diseños de almacenamiento y formatos de archivo sin tener que programar directamente para cada formato potencial en tiempo de compilación.  Los serializadores de complemento también benefician a los desarrolladores externos, al proporcionar un medio estandarizado para implementar, instalar y actualizar complementos accesibles por el sistema para formatos de archivo personalizados o de propietario.  
   
-### Utilizar un serializador de complemento  
- Los serializadores de complemento son de uso sencillo.  La clase <xref:System.Windows.Documents.Serialization.SerializerProvider> enumera un objeto <xref:System.Windows.Documents.Serialization.SerializerDescriptor> para cada complemento instalado en el sistema.  La propiedad <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> filtra los complementos instalados según la configuración actual y comprueba que la aplicación pueda cargar y utilizar el serializador.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> también proporciona otras propiedades, tales como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> y <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, que la aplicación puede utilizar para solicitar al usuario la selección de un serializador para un formato de salida disponible.  Se proporciona un serializador de complemento predeterminado para [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] con [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], que siempre se enumera.  Después de que el usuario selecciona un formato de salida, se utiliza el método <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> para crear una clase <xref:System.Windows.Documents.Serialization.SerializerWriter> para el formato concreto.  A continuación, se puede llamar al método <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> para generar la secuencia de salida del documento al almacén de datos.  
+### <a name="using-a-plug-in-serializer"></a>Usar un serializador de complemento  
+ Los serializadores de complemento son fáciles de usar.  El <xref:System.Windows.Documents.Serialization.SerializerProvider> clase enumera un <xref:System.Windows.Documents.Serialization.SerializerDescriptor> de objeto para cada complemento instalado en el sistema.  El <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> propiedad filtra los complementos instalados según la configuración actual y comprueba que el serializador se puede cargar y utilizado por la aplicación.  El <xref:System.Windows.Documents.Serialization.SerializerDescriptor> también proporciona otras propiedades, como <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> y <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, que la aplicación puede utilizar para solicitar al usuario en la selección de un serializador para un formato de salida disponible.  Se proporciona un serializador de complemento predeterminado para [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] con [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], que siempre se enumera.  Cuando el usuario selecciona un formato de salida, el <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> método se utiliza para crear un <xref:System.Windows.Documents.Serialization.SerializerWriter> para el formato específico.  El <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> , a continuación, se puede llamar el método para el flujo de documento en el almacén de datos de salida.  
   
- En el ejemplo siguiente se muestra una aplicación que utiliza el método <xref:System.Windows.Documents.Serialization.SerializerProvider> en una propiedad "PlugInFileFilter".  PlugInFileFilter enumera los complementos instalados y compila una cadena de filtro con las opciones de archivo disponibles para <xref:Microsoft.Win32.SaveFileDialog>.  
+ En el ejemplo siguiente se muestra una aplicación que utiliza el <xref:System.Windows.Documents.Serialization.SerializerProvider> método en una propiedad "PlugInFileFilter".  PlugInFileFilter enumera los complementos instalados y genera una cadena de filtro con las opciones de archivo disponibles para un <xref:Microsoft.Win32.SaveFileDialog>.  
   
  [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
- Una vez seleccionado por el usuario un nombre del archivo de salida, en el ejemplo siguiente se muestra el uso del método <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> para almacenar un documento determinado en un formato especificado.  
+ Después de un nombre de archivo de salida se ha seleccionado por el usuario, en el ejemplo siguiente se muestra el uso de la <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> método utilizado para almacenar un documento determinado en un formato especificado.  
   
  [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
-### Instalar serializadores de complemento  
- La clase <xref:System.Windows.Documents.Serialization.SerializerProvider> proporciona la interfaz de aplicaciones de nivel superior para la detección del serializador de complemento y tener acceso a él.  <xref:System.Windows.Documents.Serialization.SerializerProvider> busca y proporciona a la aplicación una lista de los serializadores instalados y accesibles en el sistema.  Las características concretas de los serializadores instalados se definen mediante valores de configuración del Registro.  Los serializadores de complemento se pueden agregar al Registro mediante el método <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A>; o bien, si [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] no está instalado aún, el propio script de instalación del complemento puede configurar directamente los valores del Registro.  El método <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> se puede utilizar para quitar un complemento previamente instalado; si se prefiere, la configuración del Registro se puede restablecer mediante un script de desinstalación.  
+### <a name="installing-plug-in-serializers"></a>Instalar serializadores de complemento  
+ La <xref:System.Windows.Documents.Serialization.SerializerProvider> clase proporciona la interfaz de aplicación de nivel superior para la detección de serializador del complemento y acceso.  <xref:System.Windows.Documents.Serialization.SerializerProvider>Busca y proporciona una lista de los serializadores que están instalados y son accesibles en el sistema de la aplicación.  Los detalles de los serializadores instalados se definen mediante la configuración del registro.  Los serializadores de complemento se pueden agregar al registro mediante el <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> método; o si [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] aún no está instalado, el script de instalación de un complemento puede tener directamente conjuntos del registro valores propio.  El <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> método se puede utilizar para quitar instalado previamente un complemento, o la configuración del registro se puede restablecer de forma similar por una secuencia de comandos de desinstalación.  
   
-### Crear un serializador de complemento  
- Tanto los serializadores de complemento como los serializadores vinculados utilizan los mismos métodos y eventos públicos expuestos; de igual modo, pueden diseñarse para funcionar de manera [sincrónica](GTMT) o [asincrónica](GTMT).  Para crear un serializador de complemento se suelen seguir tres pasos básicos:  
+### <a name="creating-a-plug-in-serializer"></a>Crear un serializador de complemento  
+ Tanto los serializadores de complemento como los serializadores vinculados utilizan los mismos métodos y eventos públicos expuestos y, de forma similar, se pueden diseñar para funcionar de forma sincrónica o asincrónica.  Existen tres pasos básicos que se suelen seguir para crear un serializador de complemento:  
   
-1.  Implementar y depurar el serializador en primer lugar como serializador vinculado.  Crear inicialmente el serializador compilado y vinculado directamente en una aplicación de prueba proporciona acceso total a los puntos de interrupción y a otros servicios de depuración útiles para la realización de pruebas.  
+1.  Implementar y depurar el serializador en primer lugar como serializador vinculado.  Crear inicialmente el serializador compilado y vinculado directamente en una aplicación de prueba proporciona acceso total a los puntos de interrupción y otros servicios de depuración útiles para realizar pruebas.  
   
-2.  Una vez probado completamente el serializador, se agrega una interfaz <xref:System.Windows.Documents.Serialization.ISerializerFactory> para crear un complemento.  La interfaz <xref:System.Windows.Documents.Serialization.ISerializerFactory> permite el acceso pleno a todos los objetos [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], lo que incluye el árbol lógico, los objetos <xref:System.Windows.UIElement>, <xref:System.Windows.Documents.IDocumentPaginatorSource> y los elementos <xref:System.Windows.Media.Visual>.  Por añadidura, <xref:System.Windows.Documents.Serialization.ISerializerFactory> proporciona los mismos métodos y eventos sincrónicos y asincrónicos utilizados por los serializadores vinculados.  Puesto que los documentos grandes pueden tardar tiempo en generarse, se recomiendan operaciones asincrónicas para mantener la sensibilidad a las interacciones con el usuario y proporcionar una opción de cancelación si se presenta cualquier problema con el almacén de datos.  
+2.  Después de que el serializador está probado completamente, un <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfaz se agrega al crear un complemento.  El <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfaz permite el acceso completo a todos los [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] objetos que incluye el árbol lógico, <xref:System.Windows.UIElement> objetos, <xref:System.Windows.Documents.IDocumentPaginatorSource>, y <xref:System.Windows.Media.Visual> elementos.  Además <xref:System.Windows.Documents.Serialization.ISerializerFactory> proporciona los mismos métodos sincrónicos y asincrónicos y eventos utilizados por los serializadores vinculados.  Dado que los documentos de gran tamaño pueden tardar tiempo en generarse, se recomiendan las operaciones asincrónicas para mantener una interacción receptiva con el usuario y ofrecer la opción "Cancelar" si se produce algún problema con el almacén de datos.  
   
-3.  Una vez creado el serializador de complemento, se implementa un script de instalación para distribuir e instalar \(y desinstalar\) el complemento \(consulte la sección anterior "[Instalar serializadores de complemento](#InstallingPluginSerializers)"\).  
+3.  Después de crear el serializador del complemento, se implementa un script de instalación para distribuir e instalar (y desinstalar) el complemento (véase más arriba, "[Instalar serializadores de complemento](#InstallingPluginSerializers)").  
   
-## Vea también  
- <xref:System.Windows.Documents.Serialization>   
- <xref:System.Windows.Xps.XpsDocumentWriter>   
- <xref:System.Windows.Xps.Packaging.XpsDocument>   
- [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)   
- [XML Paper Specification: Overview](http://go.microsoft.com/fwlink?LinkID=106246)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Documents.Serialization>  
+ <xref:System.Windows.Xps.XpsDocumentWriter>  
+ <xref:System.Windows.Xps.Packaging.XpsDocument>  
+ [Documentos en WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Información general sobre impresión](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [XML Paper Specification (XPS): Overview](http://go.microsoft.com/fwlink?LinkID=106246) (XML Paper Specification (XPS): Información general)

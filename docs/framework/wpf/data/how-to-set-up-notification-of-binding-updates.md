@@ -1,44 +1,47 @@
 ---
-title: "C&#243;mo: Configurar la notificaci&#243;n de actualizaciones de enlaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlace, actualizaciones, notificaciones de"
-  - "enlace de datos, notificación de actualizaciones de enlaces"
-  - "notificaciones, actualizaciones de enlaces"
+title: "Cómo: Configurar la notificación de actualizaciones de enlaces"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- notifications [WPF], binding updates
+- data binding [WPF], notification of binding updates
+- binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0e75ec53a769099e199b60f5466eeb4037b86862
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Configurar la notificaci&#243;n de actualizaciones de enlaces
-En este ejemplo se muestra cómo establecer que se le notifique cuando se actualice la propiedad de [destino de enlace](GTMT) \(destino\) o de [origen de enlace](GTMT) \(origen\) de un enlace.  
+# <a name="how-to-set-up-notification-of-binding-updates"></a>Cómo: Configurar la notificación de actualizaciones de enlaces
+En este ejemplo se muestra cómo configurar la notificación cuando se ha actualizado la propiedad de destino del enlace (destino) o el origen del enlace (origen) de un enlace.  
   
-## Ejemplo  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] genera un evento de actualización de datos cada vez que se actualiza el origen o el destino de enlace.  Internamente, este evento se utiliza para informar a la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de que debe actualizarse, porque los datos de enlace han cambiado.  Tenga en cuenta que, para que estos eventos y el enlace uni o bidireccional funcionen correctamente, es preciso implementar la clase de datos mediante la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  Para obtener más información, consulte [Implementar la notificación de cambio de propiedad](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
+## <a name="example"></a>Ejemplo  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] genera un evento de actualización de datos cada vez que se actualiza el origen o el destino del enlace. Internamente, este evento se usar para informar a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que debe actualizarse porque se han cambiado los datos enlazados. Tenga en cuenta que para estos eventos para que funcionen y también para el enlace unidireccional o bidireccional funcione correctamente, debe implementar la clase de datos mediante la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz. Para más información, consulte [Cómo: Implementar la notificación de cambio de propiedad](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md).  
   
- Establezca la propiedad <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> o <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> \(o ambas\) en `true` en el enlace.  El controlador que se proporciona para realizar escuchas a fin de detectar este evento debe estar asociado directamente al elemento sobre cuyos cambios desea ser informado, o al contexto de datos global si desea tener conocimiento de cualquier cambio en el contexto.  
+ Establecer el <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> o <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> propiedad (o ambos) para `true` en el enlace. El controlador que proporcione para la escucha de este evento debe adjuntarse directamente al elemento donde desee que se le informe de los cambios, o en el contexto de datos general si quiere que se le notifiquen los cambios en el contexto.  
   
- A continuación figura un ejemplo que muestra cómo configurar la notificación cuando se actualiza una propiedad de destino.  
+ Este es un ejemplo que muestra cómo configurar las notificaciones cuando se ha actualizado una propiedad de destino.  
   
- [!code-xml[DirectionalBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#2)]  
+ [!code-xaml[DirectionalBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#2)]  
   
- A continuación, puede asignar un controlador basado en el delegado EventHandler\<T\>, *OnTargetUpdated* en este ejemplo, para controlar el evento:  
+ Después puede asignar un controlador basado en el delegado EventHandler\<T>, *OnTargetUpdated* en este ejemplo, para controlar el evento:  
   
  [!code-csharp[DirectionalBinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml.cs#3)]  
 [!code-csharp[DirectionalBinding#EndEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml.cs#endevent)]  
   
- Se pueden utilizar parámetros del evento para determinar los sobre la propiedad que ha cambiado \(como el tipo o el elemento concreto, si el mismo controlador está asociado a más de un elemento\); esto puede resultar útil si hay varias propiedades enlazadas al mismo elemento.  
+ Los parámetros del evento pueden usarse para determinar los detalles sobre la propiedad que ha cambiado (como el tipo o el elemento específico si el mismo controlador se adjunta a más de un elemento), lo que puede resultar útil si hay varias propiedades enlazadas en un único elemento.  
   
-## Vea también  
- [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

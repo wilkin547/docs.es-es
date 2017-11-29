@@ -1,36 +1,28 @@
 ---
-title: "Cómo: crear una unión de C ++ mediante atributos (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: crear una unión de C y C++ mediante el uso de atributos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ff1686328630b233b25839c79d0009d48aab5ab
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: eb25f8e8664bf0c99fd19dd66031fcb5ba8dd799
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Cómo: crear una unión de C/c ++ mediante atributos (Visual Basic)
-Mediante el uso de atributos puede personalizar cómo se organizan los structs en la memoria. Por ejemplo, puede crear lo que se conoce como una unión de C o C++ mediante el `StructLayout(LayoutKind.Explicit)` y `FieldOffset` atributos.  
+Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.  
   
 ## <a name="example"></a>Ejemplo  
- En este segmento de código, todos los campos de `TestUnion` iniciar en la misma ubicación en la memoria.  
+ En este segmento de código, todos los campos de `TestUnion` empiezan en la misma ubicación en la memoria.  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -53,12 +45,12 @@ End Structure
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente es otro ejemplo que campos comienzan en diferentes establece explícitamente ubicaciones.  
+ A continuación se muestra otro ejemplo en el que los campos empiezan en ubicaciones diferentes establecidas explícitamente.  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
   
- <System.Runtime.InteropServices.StructLayout(   
+ <System.Runtime.InteropServices.StructLayout(  
       System.Runtime.InteropServices.LayoutKind.Explicit)>   
 Structure TestExplicit  
      <System.Runtime.InteropServices.FieldOffset(0)>   
@@ -81,14 +73,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- Los campos de dos enteros, `i1` y `i2`, comparten las mismas posiciones de memoria como `lg`. Este tipo de control sobre el diseño de la estructura es útil cuando se usa la invocación de plataforma.  
+ Los dos campos enteros, `i1` e `i2`, tiene las mismas ubicaciones en la memoria que `lg`. Este tipo de control sobre el diseño del struct es útil cuando se usa la invocación de plataforma.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Reflection></xref:System.Reflection>   
- <xref:System.Attribute></xref:System.Attribute>   
- [Guía de programación de Visual Basic](../../../../visual-basic/programming-guide/index.md)   
- [Atributos](https://msdn.microsoft.com/library/5x6cd29c)   
- [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
- [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)   
- [Crear atributos personalizados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [Acceso a atributos mediante reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [Guía de programación en Visual Basic](../../../../visual-basic/programming-guide/index.md)  
+ [Atributos](https://msdn.microsoft.com/library/5x6cd29c)  
+ [Reflexión (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [Atributos (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
+ [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Creación de atributos personalizados [Visual Basic])  
+ [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Acceso a atributos mediante reflexión [Visual Basic])

@@ -1,57 +1,62 @@
 ---
-title: "Tipos de enumeraci&#243;n en contratos de datos | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "contratos de datos [WCF], tipos de enumeración"
+title: "Tipos de enumeración en contratos de datos"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ea76ae136695ce2dc9eca0a9c7660e4e1ffe547d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tipos de enumeraci&#243;n en contratos de datos
-Las enumeraciones se pueden expresar en el modelo del contrato de datos.  En este tema se exponen varios ejemplos que explican el modelo de programación.  
+# <a name="enumeration-types-in-data-contracts"></a>Tipos de enumeración en contratos de datos
+Las enumeraciones se pueden expresar en el modelo del contrato de datos. En este tema se exponen varios ejemplos que explican el modelo de programación.  
   
-## Fundamentos de enumeración  
- Una manera de utilizar tipos de enumeración en el modelo del contrato de datos es aplicar el atributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo.  Debe aplicar a continuación el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> a cada miembro que debe estar incluido en el contrato de datos.  
+## <a name="enumeration-basics"></a>Fundamentos de enumeración  
+ Una manera de utilizar tipos de enumeración en el modelo del contrato de datos es aplicar el atributo <xref:System.Runtime.Serialization.DataContractAttribute> al tipo. Debe aplicar a continuación el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> a cada miembro que debe estar incluido en el contrato de datos.  
   
- En el ejemplo siguiente se muestran dos clases.  El primero utiliza la enumeración y el segundo define la enumeración.  
+ En el ejemplo siguiente se muestran dos clases. El primero utiliza la enumeración y el segundo define la enumeración.  
   
  [!code-csharp[c_DataContractEnumerations#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#1)]
  [!code-vb[c_DataContractEnumerations#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#1)]  
   
- Una instancia de la clase `Car` se puede enviar o recibir solo si el campo `condition` está establecido en uno de los valores `New`, `Used`o `Rental`.  Si la propiedad `condition` es `Broken` o `Stolen`, se produce <xref:System.Runtime.Serialization.SerializationException>.  
+ Una instancia de la clase `Car` se puede enviar o recibir solo si el campo `condition` está establecido en uno de los valores `New`, `Used`o `Rental`. Si la propiedad `condition` es `Broken` o `Stolen`, se produce <xref:System.Runtime.Serialization.SerializationException>.  
   
- Puede utilizar las propiedades \(<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> y <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>\) <xref:System.Runtime.Serialization.DataContractAttribute> de forma habitual para los contratos de datos de enumeración.  
+ Puede utilizar las propiedades (<xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>) <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> de forma habitual para los contratos de datos de enumeración.  
   
-### Valores miembro de enumeración  
- Generalmente, el contrato de datos incluye nombres miembro de enumeración, no valores numéricos.  Sin embargo, al utilizar el modelo del contrato de datos, si el lado receptor es un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el esquema exportado conserva los valores numéricos.  Tenga en cuenta que no se da el caso cuando utiliza [Utilización de la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+### <a name="enumeration-member-values"></a>Valores miembro de enumeración  
+ Generalmente, el contrato de datos incluye nombres miembro de enumeración, no valores numéricos. Sin embargo, al utilizar el modelo del contrato de datos, si el lado receptor es un cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], el esquema exportado conserva los valores numéricos. Tenga en cuenta que esto no es el caso cuando se usa el [mediante la clase XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
- En el ejemplo anterior, si `condition` está establecido en `Used` y se serializan los datos a XML, el XML resultante es `<condition>Used</condition>``<condition>1</condition>` y no .  Por consiguiente, el contrato de datos siguiente es equivalente al contrato de datos de `CarConditionEnum`.  
+ En el ejemplo anterior, si `condition` está establecido en `Used` y se serializan los datos a XML, el XML resultante es `<condition>Used</condition>``<condition>1</condition>` y no . Por consiguiente, el contrato de datos siguiente es equivalente al contrato de datos de `CarConditionEnum`.  
   
  [!code-csharp[c_DataContractEnumerations#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#2)]
  [!code-vb[c_DataContractEnumerations#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#2)]  
   
- Por ejemplo, puede utilizar `CarConditionEnum` en el lado emisor y `CarConditionWithNumbers` en el lado receptor.  Aunque el lado emisor usa el valor "1" para `Used` y el lado receptor usa el valor "20", la representación XML es `<condition>Used</condition>` para ambos lados.  
+ Por ejemplo, puede utilizar `CarConditionEnum` en el lado emisor y `CarConditionWithNumbers` en el lado receptor. Aunque el lado emisor usa el valor "1" para `Used` y el lado receptor usa el valor "20", la representación XML es `<condition>Used</condition>` para ambos lados.  
   
- Para que se incluya en el contrato de datos, debe aplicar el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], puede aplicar siempre el valor especial 0 \(cero\) a una enumeración, que también es el valor predeterminado para cualquier enumeración.  Sin embargo, este valor especial cero no se puede serializar a menos que se marque con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
+ Para que se incluya en el contrato de datos, debe aplicar el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>. En [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], puede aplicar siempre el valor especial 0 (cero) a una enumeración, que también es el valor predeterminado para cualquier enumeración. Sin embargo, este valor especial cero no se puede serializar a menos que se marque con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
   
  Existen dos excepciones a esto:  
   
--   Enumeraciones de marcas \(se describe más adelante en este tema\).  
+-   Enumeraciones de marcas (se describe más adelante en este tema).  
   
--   Miembros de datos de enumeración con la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> establecida en `false` \(en cuyo caso la enumeración con el valor cero se omite de los datos serializados\).  
+-   Miembros de datos de enumeración con la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> establecida en `false` (en cuyo caso la enumeración con el valor cero se omite de los datos serializados).  
   
-### Personalización de valores miembro de enumeración  
+### <a name="customizing-enumeration-member-values"></a>Personalización de valores miembro de enumeración  
  Puede personalizar el valor miembro de enumeración que constituye una parte del contrato de datos utilizando la propiedad <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> del atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  
   
  Por ejemplo, el siguiente contrato de datos es también equivalente al contrato de datos de `CarConditionEnum`.  
@@ -61,35 +66,35 @@ Las enumeraciones se pueden expresar en el modelo del contrato de datos.  En est
   
  Cuando se serializa, el valor de `PreviouslyOwned` tiene representación XML `<condition>Used</condition>`.  
   
-## Enumeraciones simples  
- También puede serializar los tipos de enumeración a los que no se ha aplicado el atributo <xref:System.Runtime.Serialization.DataContractAttribute>.  Estos tipos de enumeración se tratan tal y como se ha descrito anteriormente, a excepción de que cada miembro \(que no tiene el atributo <xref:System.NonSerializedAttribute> aplicado\) se trata como si se hubiera aplicado el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  Por ejemplo, la enumeración siguiente tiene de forma implícita un contrato de datos equivalente al del ejemplo de `CarConditionEnum` anterior.  
+## <a name="simple-enumerations"></a>Enumeraciones simples  
+ También puede serializar los tipos de enumeración a los que no se ha aplicado el atributo <xref:System.Runtime.Serialization.DataContractAttribute>. Estos tipos de enumeración se tratan tal y como se ha descrito anteriormente, a excepción de que cada miembro (que no tiene el atributo <xref:System.NonSerializedAttribute> aplicado) se trata como si se hubiera aplicado el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>. Por ejemplo, la enumeración siguiente tiene de forma implícita un contrato de datos equivalente al del ejemplo de `CarConditionEnum` anterior.  
   
  [!code-csharp[c_DataContractEnumerations#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#6)]
  [!code-vb[c_DataContractEnumerations#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#6)]  
   
  Puede usar las enumeraciones simples cuando no necesite personalizar el espacio de nombres y el nombre del contrato de datos de la enumeración y los valores miembro de la enumeración.  
   
-#### Notas en enumeraciones simples  
+#### <a name="notes-on-simple-enumerations"></a>Notas en enumeraciones simples  
  Aplicar el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> a las enumeraciones simples no tiene ningún efecto.  
   
  No se produce ninguna diferencia si se aplica el atributo <xref:System.SerializableAttribute> o no a la enumeración.  
   
- El hecho que la clase <xref:System.Runtime.Serialization.DataContractSerializer> acepte el atributo <xref:System.NonSerializedAttribute> aplicado a los miembros de enumeración es diferente del comportamiento de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.  Ambos de esos serializadores omiten el atributo <xref:System.NonSerializedAttribute>.  
+ El hecho que la clase <xref:System.Runtime.Serialization.DataContractSerializer> acepte el atributo <xref:System.NonSerializedAttribute> aplicado a los miembros de enumeración es diferente del comportamiento de <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Ambos de esos serializadores omiten el atributo <xref:System.NonSerializedAttribute>.  
   
-## Enumeraciones de marcas  
- Puede aplicar el atributo <xref:System.FlagsAttribute> a enumeraciones.  En ese caso, una lista de cero o más valores de enumeración se puede enviar o recibir simultáneamente.  
+## <a name="flag-enumerations"></a>Enumeraciones de marcas  
+ Puede aplicar el atributo <xref:System.FlagsAttribute> a enumeraciones. En ese caso, una lista de cero o más valores de enumeración se puede enviar o recibir simultáneamente.  
   
- Para ello, aplique el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a la enumeración de marca y, a continuación, marque todos los miembros que son potencias de dos con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>.  Tenga en cuenta que para utilizar una enumeración de marca, la progresión debe ser una secuencia ininterrumpida de potencias de 2 \(por ejemplo, 1, 2, 4, 8, 16, 32, 64\).  
+ Para ello, aplique el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a la enumeración de marca y, a continuación, marque todos los miembros que son potencias de dos con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute>. Tenga en cuenta que para utilizar una enumeración de marca, la progresión debe ser una secuencia ininterrumpida de potencias de 2 (por ejemplo, 1, 2, 4, 8, 16, 32, 64).  
   
  Los pasos siguientes se aplican al envío de un valor de enumeración de un marca:  
   
-1.  Intente buscar un miembro de enumeración \(con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado\) que asigna al valor numérico.  Si lo encuentra, envíe una lista que contenga solo ese miembro.  
+1.  Intente buscar un miembro de enumeración (con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que asigna al valor numérico. Si lo encuentra, envíe una lista que contenga solo ese miembro.  
   
-2.  Intente desglosar el valor numérico en una suma de tal forma que haya miembros de enumeración \(cada uno con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado\) que estén asignados a cada parte de la suma.  Envíe la lista de todos estos miembros.  Tenga en cuenta que se usa el *algoritmo voraz \(greedy\)* para buscar la suma, y, por lo tanto, no hay ninguna garantía de que se vaya a encontrar, aunque exista.  Para evitar este problema, asegúrese de que los valores numéricos de los miembros de enumeración son potencias de dos.  
+2.  Intente desglosar el valor numérico en una suma de tal forma que haya miembros de enumeración (cada uno con el atributo <xref:System.Runtime.Serialization.EnumMemberAttribute> aplicado) que estén asignados a cada parte de la suma. Envíe la lista de todos estos miembros. Tenga en cuenta que la *algoritmo voraz* se usa para buscar como una suma, y, por tanto, no hay ninguna garantía de que se encuentra una de esas sumas incluso si está presente. Para evitar este problema, asegúrese de que los valores numéricos de los miembros de enumeración son potencias de dos.  
   
-3.  Si los dos pasos anteriores fallan, y el valor numérico es distinto de cero, inicie <xref:System.Runtime.Serialization.SerializationException>.  Si el valor numérico es cero, envíe la lista vacía.  
+3.  Si los dos pasos anteriores fallan, y el valor numérico es distinto de cero, inicie <xref:System.Runtime.Serialization.SerializationException>. Si el valor numérico es cero, envíe la lista vacía.  
   
-### Ejemplo  
+### <a name="example"></a>Ejemplo  
  El ejemplo de enumeración siguiente se puede utilizar en una operación de la marca.  
   
  [!code-csharp[c_DataContractEnumerations#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#4)]
@@ -100,7 +105,7 @@ Las enumeraciones se pueden expresar en el modelo del contrato de datos.  En est
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## Vea también  
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- [Utilización de contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)   
- [Especificación de transferencia de datos en contratos de servicio](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ [Usar contratos de datos](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+ [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -1,48 +1,51 @@
 ---
-title: "C&#243;mo: Establecer informaci&#243;n sobre herramientas en controles de Windows Forms en tiempo de dise&#241;o | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [Windows Forms], información sobre herramientas"
-  - "información sobre herramientas [Windows Forms], para controles"
+title: "Cómo: Establecer información sobre herramientas en controles de Windows Forms en tiempo de diseño"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- tooltips [Windows Forms], for controls
+- examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 81716be53468242734c3d722eb21e020e58f65ff
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Establecer informaci&#243;n sobre herramientas en controles de Windows Forms en tiempo de dise&#241;o
-Puede establecer una cadena <xref:System.Windows.Forms.ToolTip> en el código o en el Diseñador de Windows Forms.  Para obtener más información sobre el componente <xref:System.Windows.Forms.ToolTip>, vea [Información general sobre el componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Cómo: Establecer información sobre herramientas en controles de Windows Forms en tiempo de diseño
+Puede establecer un <xref:System.Windows.Forms.ToolTip> cadena en el código o en el Diseñador de Windows Forms. Para obtener más información sobre la <xref:System.Windows.Forms.ToolTip> componente, vea [información general del componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.  Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas**.  Para obtener más información, vea [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/es-es/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para obtener más información, vea [Personalizar la configuración de desarrollo en Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Para establecer información sobre herramientas mediante programación  
+### <a name="to-set-a-tooltip-programmatically"></a>Para establecer una información sobre herramientas mediante programación  
   
-1.  Agregue el control que va a mostrar la información sobre herramientas.  
+1.  Agregue el control que se mostrará la información sobre herramientas.  
   
-2.  Utilice el método <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> del componente <xref:System.Windows.Forms.ToolTip>.  
+2.  Use la <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> método de la <xref:System.Windows.Forms.ToolTip> componente.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
     ToolTip1.SetToolTip(Button1, "Save changes")  
-  
     ```  
   
     ```csharp  
     // In this example, button1 is the control to display the ToolTip.  
     toolTip1.SetToolTip(button1, "Save changes");  
-  
     ```  
   
     ```cpp  
@@ -50,15 +53,15 @@ Puede establecer una cadena <xref:System.Windows.Forms.ToolTip> en el código o 
     toolTip1->SetToolTip(button1, "Save changes");  
     ```  
   
-### Para establecer una información sobre herramientas en el diseñador  
+### <a name="to-set-a-tooltip-in-the-designer"></a>Para establecer una información sobre herramientas en el diseñador  
   
 1.  Agregue un componente <xref:System.Windows.Forms.ToolTip> al formulario.  
   
-2.  Seleccione el control que va a mostrar la información sobre herramientas o agréguelo al formulario.  
+2.  Seleccione el control que se muestre la información sobre herramientas, o se agregarán al formulario.  
   
-3.  En la ventana **Propiedades**, establezca una cadena de texto adecuada como valor de **Información sobre herramientas en ToolTip1**.  
+3.  En el **propiedades** ventana, establezca el **información sobre herramientas en ToolTip1** valor a una cadena de texto adecuada.  
   
-## Vea también  
- [Información general sobre el componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)   
- [Cómo: Cambiar el retardo del componente ToolTip de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)   
- [ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ [Información general sobre el componente ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+ [Cambiar el retardo del componente ToolTip de Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ [ToolTip (componente)](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

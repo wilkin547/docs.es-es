@@ -1,42 +1,40 @@
 ---
-title: "Se esperaba una declaraci&#243;n | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30188"
-  - "bc30188"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30188"
+title: "Se esperaba una declaración"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30188
+- bc30188
+helpviewer_keywords: BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 97bd1701a8a07c39d08a9276cdb929bc9425c1f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Se esperaba una declaraci&#243;n
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Hay una instrucción no declarativa, como una instrucción de asignación o bucle, fuera de un procedimiento.  Sólo se permiten declaraciones fuera de los procedimientos.  
+# <a name="declaration-expected"></a>Se esperaba una declaración
+Una instrucción no declarativa, como una asignación o una instrucción del bucle, se produce fuera de cualquier procedimiento. Sólo se permiten declaraciones procedimientos externos.  
   
- Como alternativa, se declara un elemento de programación sin una palabra clave de declaración como `Dim` o `Const`.  
+ Como alternativa, un elemento de programación se declara sin una palabra clave de declaración como `Dim` o `Const`.  
   
- **Identificador de error:** BC30188  
+ **Id. de error:** BC30188  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Mueva la instrucción no declarativa al cuerpo de un procedimiento.  
+-   Mueva la instrucción no declarativa en el cuerpo de un procedimiento.  
   
 -   Comience la declaración con una palabra clave de declaración adecuada.  
   
--   Asegúrese de que la palabra clave de declaración no esté mal escrita.  
+-   Asegúrese de que una palabra clave no está mal escrita.  
   
-## Vea también  
- [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Dim \(Instrucción\)](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Vea también  
+ [Procedimientos](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
+ [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)

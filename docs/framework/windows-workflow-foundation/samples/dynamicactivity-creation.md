@@ -1,25 +1,29 @@
 ---
-title: "Creaci&#243;n de DynamicActivity | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creación de DynamicActivity"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4a579606bd3ee9d3f11669d59c6e7c9767b6eaf4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Creaci&#243;n de DynamicActivity
+# <a name="dynamicactivity-creation"></a>Creación de DynamicActivity
 En este ejemplo se muestran dos maneras diferentes de crear una actividad en tiempo de ejecución utilizando la actividad <xref:System.Activities.DynamicActivity>.  
   
- En este ejemplo, se crea una actividad en tiempo de ejecución con un cuerpo que contiene una actividad <xref:System.Activities.Statements.Sequence> que incluye las actividades <xref:System.Activities.Statements.Assign%601> y <xref:System.Activities.Statements.ForEach%601>.Se pasa una lista de entrada de enteros a la actividad y se establece como una propiedad.A continuación, la actividad <xref:System.Activities.Statements.ForEach%601> recorre en iteración la lista de valores y la acumula.En la actividad <xref:System.Activities.Statements.Assign%601>, el valor medio se calcula dividiendo el acumulador por el número de elementos en la lista y asignándolo a la media.  
+ En este ejemplo, se crea una actividad en tiempo de ejecución con un cuerpo que contiene una actividad <xref:System.Activities.Statements.Sequence> que incluye las actividades <xref:System.Activities.Statements.ForEach%601> y <xref:System.Activities.Statements.Assign%601>. Se pasa una lista de entrada de enteros a la actividad y se establece como una propiedad. A continuación, la actividad <xref:System.Activities.Statements.ForEach%601> recorre en iteración la lista de valores y la acumula. En la actividad <xref:System.Activities.Statements.Assign%601>, el valor medio se calcula dividiendo el acumulador por el número de elementos en la lista y asignándolo a la media.  
   
- En el ejemplo se muestra el uso de una actividad <xref:System.Activities.DynamicActivity> que pasa variables como argumentos de entrada y devuelve valores como argumentos de salida.La actividad tiene un argumento de entrada denominado `Numbers` que es una lista de enteros.La actividad <xref:System.Activities.Statements.ForEach%601> recorre en iteración la lista de valores y la acumula.En la actividad <xref:System.Activities.Statements.Assign%601>, el valor medio se calcula dividiendo el acumulador por el número de elementos en la lista y asignándolo a la media.La media se devuelve como un argumento de salida denominado `Average`.  
+ En el ejemplo se muestra el uso de una actividad <xref:System.Activities.DynamicActivity> que pasa variables como argumentos de entrada y devuelve valores como argumentos de salida. La actividad tiene un argumento de entrada denominado `Numbers` que es una lista de enteros. La actividad <xref:System.Activities.Statements.ForEach%601> recorre en iteración la lista de valores y la acumula. En la actividad <xref:System.Activities.Statements.Assign%601>, el valor medio se calcula dividiendo el acumulador por el número de elementos en la lista y asignándolo a la media. La media se devuelve como un argumento de salida denominado `Average`.  
   
  Cuando se crea la actividad dinámica mediante programación, la entrada y la salida se declaran como se muestra en el siguiente ejemplo de código.  
   
@@ -45,7 +49,6 @@ DynamicActivity act = new DynamicActivity()
         }  
     },  
 };  
-  
 ```  
   
  El siguiente ejemplo de código muestra la definición completa de `DynamicActivity` que calcula la media de los valores de una lista.  
@@ -104,7 +107,7 @@ DynamicActivity act = new DynamicActivity()
   
  Cuando se crean en XAML, la entrada y salida se declaran como se muestra en el siguiente ejemplo.  
   
-```  
+```xml  
 <Activity x:Class="Microsoft.Samples.DynamicActivityCreation.FindAverage"  
           xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"  
           xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"  
@@ -118,41 +121,39 @@ DynamicActivity act = new DynamicActivity()
 </Activity>  
 ```  
   
- El XAML se puede crear visualmente utilizando [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].Si está incluido en un proyecto de Visual Studio, asegúrese de establecer su "Acción de compilación" en "Ninguna" para evitar que se compile.El XAML se puede cargar entonces dinámicamente utilizando la siguiente llamada.  
+ El XAML se puede crear visualmente utilizando [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]. Si se incluye en un proyecto de Visual Studio, asegúrese de establecer su "acción de compilación" en "None" para evitar que se está compilando. El XAML se puede cargar entonces dinámicamente utilizando la siguiente llamada.  
   
 ```  
 Activity act2 = ActivityXamlServices.Load(@"FindAverage.xaml");  
-  
 ```  
   
- La instancia de <xref:System.Activities.DynamicActivity> creada mediante programación o a través de la carga de un flujo de trabajo de XAML se puede utilizar como se muestra en el siguiente ejemplo de código.Observe que el "acto" pasado a `WorkflowInvoker.Invoke` es el "acto" <xref:System.Activities.Activity> definido en el primer ejemplo de código.  
+ La instancia de <xref:System.Activities.DynamicActivity> creada mediante programación o a través de la carga de un flujo de trabajo de XAML se puede utilizar como se muestra en el siguiente ejemplo de código. Tenga en cuenta que el "acto" pasado a la `WorkflowInvoker.Invoke` es el "acto" <xref:System.Activities.Activity> definido en el primer ejemplo de código.  
   
 ```  
 IDictionary<string, object> results = WorkflowInvoker.Invoke(act, new Dictionary<string, object> { { "Numbers", numbers } });  
   
 Console.WriteLine("The average calculated using the code activity is = " + results["Average"]);  
-  
 ```  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  Abra el archivo de solución de DynamicActivityCreation.sln con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  Para ejecutar la solución, presione CTRL+F5.  
   
-## Argumentos de línea de comandos  
- En este ejemplo se aceptan los argumentos de la línea de comandos.Los usuarios pueden proporcionar una lista de números para que la actividad calcule su media.La lista de números que se va a utilizar se pasa como una lista de números separados por un espacio.Por ejemplo, para calcular la media de 5, 10 y 32, invoque el ejemplo utilizando la siguiente línea de comandos.  
+## <a name="command-line-arguments"></a>Argumentos de la línea de comandos  
+ En este ejemplo se aceptan los argumentos de la línea de comandos. Los usuarios pueden proporcionar una lista de números para que la actividad calcule su media. La lista de números que se va a utilizar se pasa como una lista de números separados por un espacio. Por ejemplo, para calcular la media de 5, 10 y 32, invoque el ejemplo utilizando la siguiente línea de comandos.  
   
- **DynamicActivityCreation 5 10 32**   
+ **DynamicActivityCreation 5 10 32**  
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\DynamicActivity\DynamicActivityCreation`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

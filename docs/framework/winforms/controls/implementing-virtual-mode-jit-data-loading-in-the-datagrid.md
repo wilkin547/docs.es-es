@@ -1,86 +1,90 @@
 ---
-title: "Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "datos [Windows Forms], administrar conjuntos de datos grandes"
-  - "DataGridView (control) [Windows Forms], conjuntos de datos grandes"
-  - "DataGridView (control) [Windows Forms], modo virtual"
-  - "ejemplos [Windows Forms], carga de datos Just-In-Time"
-  - "carga de datos Just-In-Time"
-  - "modo virtual, carga de datos Just-In-Time"
+title: Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- examples [Windows Forms], just-in-time data loading
+- data [Windows Forms], managing large data sets
+- DataGridView control [Windows Forms], virtual mode
+- just-in-time data loading
+- DataGridView control [Windows Forms], large data sets
+- virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0bddac01a0d85ae985b54587619bcac6de5f966f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms
-Una razón para implementar el modo virtual en el control <xref:System.Windows.Forms.DataGridView> es recuperar datos únicamente cuando se necesiten.  Esto se denomina *carga de datos Just\-in\-time \(JIT\)*.  
+# <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms
+Una razón para implementar el modo virtual en el <xref:System.Windows.Forms.DataGridView> control consiste en recuperar datos sólo según sea necesario. Esto se denomina *carga de datos just-in-time*.  
   
- Por ejemplo, si está trabajando con una tabla muy extensa en una base de datos remota, querrá evitar los retrasos del inicio recuperando sólo los datos que sean necesarios para mostrar y recuperar datos adicionales sólo cuando el usuario desplace nuevas filas a la vista.  Si los equipos de cliente que ejecutan la aplicación tienen una cantidad limitada de memoria disponible para almacenar datos, también querrá descartar los datos no utilizados al recuperar nuevos valores de la base de datos.  
+ Si está trabajando con una tabla muy grande en una base de datos remota, por ejemplo, puede evitar retrasos en el inicio, recuperar únicamente los datos que sean necesarios para mostrar y recuperar datos adicionales sólo cuando el usuario desplaza nuevas filas en la vista. Si los equipos cliente que se ejecuta la aplicación tienen una cantidad limitada de memoria disponible para almacenar datos, también puede descartar los datos no utilizados al recuperar nuevos valores de la base de datos.  
   
- Las secciones siguientes describen cómo utilizar un control <xref:System.Windows.Forms.DataGridView> con una caché Just\-in\-time.  
+ Las secciones siguientes describen cómo utilizar un <xref:System.Windows.Forms.DataGridView> control con una caché just-in-time.  
   
- Para copiar el código de este tema como un listado sencillo, vea [Cómo: Implementar el modo virtual con la carga de datos Just\-In\-Time en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
+ Para copiar el código de este tema como una sola lista, vea [Cómo: implementar el modo Virtual con la carga de datos Just en el DataGridView Control de formularios Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
-## El formulario  
- En el ejemplo de código siguiente se define un formulario que contiene un control <xref:System.Windows.Forms.DataGridView> de sólo lectura que interactúa con un objeto `Cache` mediante un controlador de eventos <xref:System.Windows.Forms.DataGridView.CellValueNeeded>.  El objeto `Cache` administra los valores localmente almacenados y utiliza un objeto `DataRetriever`para recuperar los valores desde la tabla Orders de la base de datos de ejemplo Northwind.  El objeto `DataRetriever`, que implementa la interfaz `IDataPageRetriever` requerida por la clase `Cache`, también se utiliza para inicializar las filas y columnas del control <xref:System.Windows.Forms.DataGridView>.  
+## <a name="the-form"></a>El formulario  
+ En el ejemplo de código siguiente se define un formulario que contenga solo lectura <xref:System.Windows.Forms.DataGridView> control que interactúa con un `Cache` objeto a través de un <xref:System.Windows.Forms.DataGridView.CellValueNeeded> controlador de eventos. El `Cache` objeto administra los valores almacenados localmente y usa un `DataRetriever` objeto que se va a recuperar los valores de la tabla Orders de la base de datos de ejemplo Northwind. El `DataRetriever` objeto, que implementa el `IDataPageRetriever` interfaz requerida por el `Cache` de clases, también se utiliza para inicializar el <xref:System.Windows.Forms.DataGridView> controlar las filas y columnas.  
   
- Los tipos `IDataPageRetriever`, `DataRetriever` y `Cache` se describen más adelante en este tema.  
+ El `IDataPageRetriever`, `DataRetriever`, y `Cache` tipos se describen más adelante en este tema.  
   
 > [!NOTE]
->  El hecho de almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación.  El uso de la autenticación de Windows \(también conocida como seguridad integrada\) es un modo más seguro de controlar el acceso a una base de datos.  Para obtener más información, vea [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+>  Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación. El uso de la autenticación de Windows (también conocida como seguridad integrada) es un modo más seguro de controlar el acceso a una base de datos. Para más información, consulte [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
-## La interfaz IDataPageRetriever  
- En el ejemplo de código siguiente se define la interfaz `IDataPageRetriever`, que es implementada por la clase `DataRetriever`.  El único método declarado en esta interfaz es el método `SupplyPageOfData`, que requiere un índice de filas inicial y un contador del número de filas en una única página de datos.  El implementador utiliza estos valores para recuperar un subconjunto de datos de un origen de datos.  
+## <a name="the-idatapageretriever-interface"></a>La interfaz IDataPageRetriever  
+ En el ejemplo de código siguiente se define la `IDataPageRetriever` interfaz, que se implementa mediante la `DataRetriever` clase. El único método declarado en esta interfaz es la `SupplyPageOfData` método, que requiere un índice de fila inicial y un recuento del número de filas en una sola página de datos. Estos valores se usan por el implementador para recuperar un subconjunto de datos de un origen de datos.  
   
- El objeto `Cache` utiliza una implementación de esta interfaz durante la construcción para cargar dos páginas iniciales de datos.  Siempre que se necesite a un valor que no esté en la caché, ésta descarta una de estas páginas y solicita una nueva página que contiene el valor de `IDataPageRetriever`.  
+ Un `Cache` objeto utiliza una implementación de esta interfaz durante la construcción para cargar dos páginas iniciales de datos. Cada vez que se necesita un valor sin almacenar en caché, la memoria caché descarta una de estas páginas y solicita una nueva página que contiene el valor de la `IDataPageRetriever`.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
-## La clase DataRetriever  
- En el ejemplo de código siguiente se define la clase `DataRetriever`, que implementa la interfaz `IDataPageRetriever` para recuperar paginas de los datos de un servidor.  La clase `DataRetriever` también proporciona las propiedades `Columns` y `RowCount`, que utiliza el control <xref:System.Windows.Forms.DataGridView> para crear las columnas necesarias y agregar el número adecuado de filas vacías a la colección <xref:System.Windows.Forms.DataGridView.Rows%2A>.  Agregar filas vacías es necesario para que el control se comporte como si tuviera todos los datos en la tabla.  Esto significa que el cuadro de desplazamiento de la barra de desplazamiento tendrá el tamaño apropiado, y que el usuario podrá tener acceso a cualquier fila de la tabla.  El controlador de eventos <xref:System.Windows.Forms.DataGridView.CellValueNeeded> rellena sólo las filas cuando se desplazan en la vista.  
+## <a name="the-dataretriever-class"></a>La clase DataRetriever  
+ En el ejemplo de código siguiente se define la `DataRetriever` de la clase, que implementa el `IDataPageRetriever` interfaz para recuperar las páginas de datos de un servidor. El `DataRetriever` clase también proporciona `Columns` y `RowCount` propiedades, que la <xref:System.Windows.Forms.DataGridView> control usa para crear las columnas necesarias y para agregar el número adecuado de filas vacías para los <xref:System.Windows.Forms.DataGridView.Rows%2A> colección. Agregar filas vacías es necesario para que el control se comporte como si tuviera todos los datos de la tabla. Esto significa que el cuadro de desplazamiento en la barra de desplazamiento tendrá el tamaño adecuado y el usuario podrá tener acceso a cualquier fila de la tabla. Las filas se rellenan el <xref:System.Windows.Forms.DataGridView.CellValueNeeded> controlador de eventos solo cuando se desplazan en la vista.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
-## La clase Cache  
- En el ejemplo de código siguiente se define la clase `Cache`, que administra dos páginas de datos rellenas mediante a una implementación de `IDataPageRetriever`.  La clase `Cache` define una estructura `DataPage` interna, que contiene un <xref:System.Data.DataTable> para almacenar los valores en una única página de caché y que calcula los índices de fila que representan los límites superior e inferior de la página.  
+## <a name="the-cache-class"></a>Cache (clase)  
+ En el ejemplo de código siguiente se define la `Cache` (clase), que administra dos páginas de datos que se rellenan a través de un `IDataPageRetriever` implementación. El `Cache` clase define interior `DataPage` estructura que contiene un <xref:System.Data.DataTable> para almacenar los valores en una memoria caché única página y que calcula la fila de índices que representan los límites superiores e inferiores de la página.  
   
- La clase `Cache` carga dos páginas de datos en tiempo de construcción.  Siempre que el evento <xref:System.Windows.Forms.DataGridView.CellValueNeeded> solicite un valor, el objeto `Cache` determina si el valor está disponible en una de sus dos páginas y, si es así, lo devuelve.  Si el valor no está disponible localmente, el objeto `Cache` determina cuál de sus dos páginas está más alejada de las dos filas mostradas actualmente y reemplaza la página con una nueva que contiene el valor solicitado, que devuelve a continuación.  
+ La `Cache` clase carga dos páginas de datos en tiempo de construcción. Cada vez que la <xref:System.Windows.Forms.DataGridView.CellValueNeeded> evento solicita un valor, la `Cache` objeto determina si el valor está disponible en una de sus dos páginas y, si es así, lo devuelve. Si el valor no está disponible localmente, el `Cache` objeto determina cuál de sus dos páginas está más alejado de las filas mostradas actualmente y reemplaza la página con uno nuevo que contiene el valor solicitado, que, a continuación, devuelve.  
   
- Suponiendo que el número de filas de una página de datos es el mismo que el número de filas que se pueden mostrar en la pantalla de una sola vez, este modelo permite a los usuarios desplazarse por las páginas de la tabla para devolver de forma eficaz la página vista más recientemente.  
+ Suponiendo que el número de filas de una página de datos es el mismo que el número de filas que se pueden mostrar en pantalla al mismo tiempo, este modelo permite a los usuarios paginar a través de la tabla devolver de forma eficaz la página vista más recientemente.  
   
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
-## Consideraciones adicionales  
- En los ejemplos de código anteriores se proporcionan como una demostración de carga de datos Just\-in\-time \(JIT\).  Necesitará modificar el código en función de sus necesidades para lograr la máxima eficacia.  Como mínimo, tendrá que elegir un valor adecuado para el número de filas por página de datos en la caché.  Este valor se pasa en el constructor `Cache`.  El número de filas por página no debería ser menor que el número de filas que se pueden mostrar simultáneamente en el control <xref:System.Windows.Forms.DataGridView>.  
+## <a name="additional-considerations"></a>Consideraciones adicionales  
+ Los ejemplos de código anteriores se proporcionan como una demostración de la carga de datos just-in-time. Debe modificar el código para sus propias necesidades lograr la máxima eficiencia. Como mínimo, debe elegir un valor adecuado para el número de filas por página de datos en la memoria caché. Este valor se pasa en el `Cache` constructor. El número de filas por página debe ser no menor que el número de filas que se pueden mostrar simultáneamente en el <xref:System.Windows.Forms.DataGridView> control.  
   
- Para obtener un mejor resultado, tendrá que realizar una prueba de rendimiento y de uso para determinar los requisitos del sistema y de los usuarios.  Entre los diversos factores que tendrá que tomar en consideración se incluyen el total de memoria en los equipos de cliente que están ejecutando la aplicación, el ancho de banda disponible de la conexión de red utilizada y la latencia del servidor utilizado.  El ancho de banda y la latencia deberían determinarse en los momentos de uso máximo.  
+ Para obtener mejores resultados, debe llevar a cabo pruebas de rendimiento y las pruebas de facilidad de uso para determinar los requisitos del sistema y los usuarios. Algunos factores que debe tomar en consideración incluyen la cantidad de memoria en los equipos cliente ejecutan la aplicación, el ancho de banda disponible de la conexión de red utilizada y la latencia del servidor utilizado. La latencia y al ancho de banda deben determinarse en los momentos de uso máximo.  
   
- Para mejorar el rendimiento del desplazamiento de la aplicación, puede aumentar la cantidad de datos almacenados localmente.  No obstante, para mejorar el tiempo de inicio debe evitar cargar inicialmente demasiado datos.  Quizá desee modificar la clase `Cache` para aumentar el número de páginas de datos que puede almacenar.  Utilizar más páginas de datos puede mejorar la eficacia del desplazamiento, pero tendrá que determinar el número de filas idóneo en una página de datos, dependiendo del ancho de banda disponible y de la latencia del servidor.  Con un menor número de páginas, tendrá acceso con más frecuencia al servidor, pero tardará menos tiempo en devolver los datos solicitados.  Si la latencia supone más problema que el ancho de banda, utilice un mayor número de páginas de datos.  
+ Para mejorar el rendimiento del desplazamiento de la aplicación, puede aumentar la cantidad de datos almacenados localmente. Sin embargo, para mejorar el tiempo de inicio, debe evitar cargar inicialmente demasiado datos. Puede que desee modificar el `Cache` clase para aumentar el número de páginas de datos que puede almacenar. Uso de más páginas de datos puede mejorar la eficacia de desplazamiento, pero debe determinar el número ideal de filas en una página de datos, según el ancho de banda disponible y la latencia del servidor. Con páginas más pequeñas, el servidor de acceso con más frecuencia, pero tardará menos tiempo para devolver los datos solicitados. Si la latencia es superior de un problema de ancho de banda, puede que desee usar las páginas de datos mayor.  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>   
- [Ajuste del rendimiento del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)   
- [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)   
- [Modo virtual del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)   
- [Tutorial: Implementar el modo virtual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)   
- [Cómo: Implementar el modo virtual con la carga de datos Just\-In\-Time en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
+ [Ajuste del rendimiento del control DataGridView en Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Procedimientos recomendados para ajustar la escala del control DataGridView en formularios Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [Modo virtual del control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  
+ [Tutorial: Implementar el modo virtual en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+ [Implementar el modo virtual con la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

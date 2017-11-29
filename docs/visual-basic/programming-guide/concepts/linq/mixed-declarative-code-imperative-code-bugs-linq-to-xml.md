@@ -1,39 +1,30 @@
 ---
-title: "Declarativo código imperativo errores mixtos (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Errores en código imperativo código declarativo (LINQ to XML) mixtos (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Errores (LINQ to XML) en códigos declarativos/imperativos mixtos (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] incluye numerosos métodos que le permiten modificar directamente un árbol XML. Puede agregar elementos, eliminarlos, cambiar sus contenidos, agregar atributos, etc. Esta interfaz de programación que se describe en [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Si de iterar a través de uno de los ejes, como <xref:System.Xml.Linq.XContainer.Elements%2A>y recorrer en iteración el eje está modificando el árbol XML, puede que acabe encontrando errores extraños.</xref:System.Xml.Linq.XContainer.Elements%2A>  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Errores de código (LINQ to XML) en códigos declarativos/imperativos mixtos (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye numerosos métodos que le permiten modificar directamente un árbol XML. Puede agregar elementos, eliminarlos, cambiar sus contenidos, agregar atributos, etc. Esta interfaz de programación se describe en [Modificar árboles XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Si está llevando a cabo una iteración por uno de los ejes, como puede ser <xref:System.Xml.Linq.XContainer.Elements%2A>, y está modificando el árbol XML a medida que recorre el eje, es posible que acabe encontrando errores extraños.  
   
  En ocasiones, a este problema se le conoce como "El problema de Halloween".  
   
 ## <a name="definition-of-the-problem"></a>Definición del problema  
- Cuando se escribe cierto código utilizando LINQ para iterar por una colección, se utiliza un código de estilo declarativo. Es más parecido a la descripción *lo* desea que, en su lugar *cómo* que desea realizar. Si escribe un código que 1) obtenga el primer elemento, 2) lo compruebe con una cierta condición, 3) lo modifique y 4) lo coloque nuevamente en la lista, entonces se trata de un código imperativo. Está indicando al ordenador *cómo* a hacer lo que desea.  
+ Cuando se escribe cierto código utilizando LINQ para iterar por una colección, se utiliza un código de estilo declarativo. Es un método que se aproxima más a definir *qué* es lo que quiere, en vez de especificar *cómo* quiere hacerlo. Si escribe un código que 1) obtenga el primer elemento, 2) lo compruebe con una cierta condición, 3) lo modifique y 4) lo coloque nuevamente en la lista, entonces se trata de un código imperativo. Le está indicando al ordenador *cómo* hacer lo que quiere.  
   
  Si se combinan ambos estilos de código en una misma operación, es cuando aparecen los problemas. Considere el siguiente caso:  
   
@@ -66,7 +57,7 @@ Next
   
  Este código entrará en un bucle infinito. La instrucción `foreach` lleva a cabo una iteración a lo largo del eje `Elements()`, agregando nuevos elementos al elemento `doc`. Al final, acaba realizando dicha iteración por los elementos que se acaban de agregar. Y, dado que coloca los nuevos objetos en cada una de las iteraciones del bucle, llegará un momento en el que consuma toda la memoria disponible.  
   
- Puede solucionar este problema almacenando en memoria utilizando la colección la <xref:System.Linq.Enumerable.ToList%2A>operador de consulta estándar, como sigue:</xref:System.Linq.Enumerable.ToList%2A>  
+ Puede resolver este problema almacenando en memoria la colección mediante el operador de consulta estándar <xref:System.Linq.Enumerable.ToList%2A>, de la siguiente forma:  
   
 ```vb  
 Dim root As XElement = _  
@@ -121,7 +112,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- La solución es volver a llamar a <xref:System.Linq.Enumerable.ToList%2A>para materializar la colección, como sigue:</xref:System.Linq.Enumerable.ToList%2A>  
+ De nuevo, la solución pasa por llamar a <xref:System.Linq.Enumerable.ToList%2A> para materializar la colección, de la siguiente forma:  
   
 ```vb  
 Dim root As XElement = _  
@@ -142,7 +133,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- Como alternativa, puede eliminar la iteración entera llamando a <xref:System.Xml.Linq.XElement.RemoveAll%2A>en el elemento primario:</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+ Como alternativa, puede eliminar la iteración entera llamando a <xref:System.Xml.Linq.XElement.RemoveAll%2A> en el elemento primario:  
   
 ```vb  
 Dim root As XElement = _  
@@ -195,5 +186,4 @@ Console.WriteLine(newRoot)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Avanzada de LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-
+ [Avanzada de LINQ to XML programación (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -1,0 +1,49 @@
+---
+title: IAssemblyCacheItem (Interfaz)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: IAssemblyCacheItem
+api_location: fusion.dll
+api_type: COM
+f1_keywords: IAssemblyCacheItem
+helpviewer_keywords: IAssemblyCacheItem interface [.NET Framework fusion]
+ms.assetid: ccc9387a-9f44-4f4f-bf8f-0ea6d2afa21b
+topic_type: apiref
+caps.latest.revision: "10"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: e61b8dd90bb9311c1314a4cb4d68d75e0cd511c5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
+---
+# <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem (Interfaz)
+Representa un único ensamblado en la caché global de ensamblados.  
+  
+## <a name="methods"></a>Métodos  
+  
+|Método|Descripción|  
+|------------|-----------------|  
+|[AbortItem (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Permite que el ensamblado en la caché global de ensamblados realizar operaciones de limpieza antes de su publicación.|  
+|[Commit (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Confirma la referencia de ensamblado en la caché a la memoria.|  
+|[CreateStream (método)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Crea una secuencia con el nombre especificado y el formato.|  
+  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** vea [requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Encabezado:** Fusion.h  
+  
+ **Versiones de .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>Vea también  
+ [Interfaces de Fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Caché global de ensamblados](../../../../docs/framework/app-domains/gac.md)  
+ [IAssemblyCache (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

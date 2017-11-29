@@ -1,41 +1,44 @@
 ---
-title: "Eventos de vista previa | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "eventos, Vista previa"
-  - "eventos, suprimir"
-  - "eventos de vista previa"
-  - "suprimir eventos"
+title: Eventos de vista previa
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Preview events [WPF]
+- suppressing events [WPF]
+- events [WPF], Preview
+- events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Eventos de vista previa
-Los eventos de vista previa, también denominados eventos de túnel, son eventos enrutados cuya dirección de ruta se desplaza desde la raíz de la aplicación hacia el elemento que ha provocado el evento y se comunica como el origen en los datos de evento.  No todos los escenarios de eventos admiten o requieren los eventos de vista previa; en este tema se describen las situaciones en que existe este tipo de eventos, cómo deben controlarlos las aplicaciones o los componentes, y los casos en que puede ser conveniente crearlos en componentes o clases personalizados.  
+# <a name="preview-events"></a>Eventos de vista previa
+Eventos de vista previa, también conocidos como eventos de túnel, son eventos enrutados que se pasa la dirección de la ruta desde la raíz de la aplicación hacia el elemento que provocó el evento y se notifica como el origen de datos del evento. No todos los escenarios de eventos admiten o requieren los eventos de vista previa. en este tema se describe las situaciones donde existen eventos de vista previa, cómo las aplicaciones o componentes deben controlar, y los casos donde la creación de eventos de vista previa en componentes personalizados o de clases puede ser adecuado.  
   
-## Eventos de vista previa y entrada  
- Al administrar eventos de vista previa en general, extreme las precauciones en relación con marcarlos como controlados en los datos de evento.  Controlar un evento de vista previa para cualquier elemento que no sea el que lo provocó \(aquél que se comunica como origen en los datos de evento\) hace que no se proporcione a este último la oportunidad de controlar el evento que ha provocado.  A veces, éste es el resultado deseado, en particular si los elementos en cuestión existan en relaciones contenidas en una composición de controles de un control.  
+## <a name="preview-events-and-input"></a>Eventos de vista previa y entrada  
+ Cuando se controla la vista previa de eventos en general, tenga cuidado al marcar los eventos en el evento controla datos. Controle un evento de vista previa en cualquier elemento distinto del elemento que generó (es decir, el elemento que se notifica como el origen de los datos del evento) tiene el efecto de no proporciona la oportunidad de controlar el evento que se haya originado de un elemento. A veces, esto es el resultado deseado, especialmente si los elementos en cuestión existan en relaciones dentro de la composición de un control.  
   
- En concreto para los eventos de entrada, los eventos de vista previa también comparten instancias de datos de evento con el evento de propagación equivalente.  Si utiliza un controlador de clase de evento de vista previa para marcar como controlado el evento de entrada, no se invocará el controlador de clase de evento de entrada de propagación.  Por otra parte, si utiliza un controlador de instancia de evento de vista previa para marcar el evento como controlado, normalmente no se invocarán los controladores correspondientes al evento de propagación.  Los controladores de clase o de instancia se pueden registrar o asociar con la opción de invocarlos aunque el evento esté marcado como controlado, pero se trata de una técnica de uso poco frecuente.  
+ Para eventos de entrada en concreto, eventos de vista previa también comparten instancias de datos de evento con el evento de propagación equivalente. Si usa un controlador de clase de eventos de vista previa para marcar el evento de entrada controlado, no se invocará el controlador de clase de evento de entrada propagación. O bien, si utiliza un controlador de instancia de evento de vista previa para marcar el evento como controlado, controladores para el evento de propagación no normalmente se invocará. Controladores de clase o instancia se registrado o asociados con una opción que se debe invocar incluso si el evento está marcado como controlado, pero esta técnica no suele utilizarse.  
   
- Para obtener más información sobre el control de clases y su relación con los eventos de vista previa, vea [Marcar eventos enrutados como controlados y control de clases](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Para obtener más información sobre el control de clases y cómo se relaciona con los eventos de vista previa vea [Marcar eventos enrutados como Handled and Class Handling](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
   
-### Evitar la supresión de eventos por parte de los controles  
- Un escenario donde se suelen utilizar eventos de vista previa es el control de eventos de entrada en controles compuestos.  A veces, el autor del control impide que se provoque determinado evento desde su control, quizás para sustituir un evento definido por el componente que lleva más información o implica un comportamiento más concreto.  Por ejemplo, un <xref:System.Windows.Controls.Button> de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] suprime los eventos de propagación <xref:System.Windows.UIElement.MouseLeftButtonDown> y <xref:System.Windows.UIElement.MouseLeftButtonDown> generados por el objeto <xref:System.Windows.Controls.Button> o sus elementos compuestos a favor de capturar el mouse y generar un evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click> que siempre lo genera el propio objeto <xref:System.Windows.Controls.Button>.  El evento y sus datos siguen su curso a lo largo de la ruta, pero puesto que <xref:System.Windows.Controls.Button> marca los datos de evento como <xref:System.Windows.RoutedEventArgs.Handled%2A>, únicamente se invoca a los controladores del evento cuya actuación se indica específicamente en el caso `handledEventsToo`.  Si otros elementos situados más cerca de la raíz de la aplicación tuvieran que tener la oportunidad de controlar un evento suprimido por un control, una alternativa consiste en adjuntar controladores en código especificando `handledEventsToo` en `true`.  Sin embargo, es más sencilla la técnica de cambiar la dirección de enrutamiento que se administra de modo que sea el equivalente de vista previa de un evento de entrada.  Por ejemplo, si un control suprime <xref:System.Windows.UIElement.MouseLeftButtonDown>, intente adjuntar en su lugar un controlador para <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>.  Esta técnica sólo funciona para los eventos de entrada del elemento base, como <xref:System.Windows.UIElement.MouseLeftButtonDown>.  Estos eventos de entrada utilizan pares de túnel\/propagación, provocan ambos eventos y comparten los datos de evento.  
+### <a name="working-around-event-suppression-by-controls"></a>Solución de la supresión de eventos mediante controles  
+ Un escenario donde normalmente se utilizan los eventos de vista previa es para el control de compuestas de control de eventos de entrada. A veces, el autor del control suprime un determinado evento desde que se originan desde su control, quizás para sustituir un evento definido por el componente que contiene más información o implica un comportamiento más concreto. Por ejemplo, un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> suprime <xref:System.Windows.UIElement.MouseLeftButtonDown> y <xref:System.Windows.UIElement.MouseLeftButtonDown> propagación de eventos generados por el <xref:System.Windows.Controls.Button> o sus elementos compuestos en favor de captura del mouse y generar un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos que siempre se generan mediante el <xref:System.Windows.Controls.Button> propio. El evento y sus datos siguen a lo largo de la ruta, sin embargo, dado el <xref:System.Windows.Controls.Button> marca los datos del evento como <xref:System.Windows.RoutedEventArgs.Handled%2A>, solo los controladores para el evento indicado específicamente que actúe en el `handledEventsToo` caso se invocan.  Si aún deseaban que otros elementos hacia la raíz de la aplicación una oportunidad para controlar un evento suprimido de control, una alternativa consiste en asociar controladores en el código con `handledEventsToo` especificado como `true`. Pero a menudo es una técnica más sencilla cambiar la dirección de enrutamiento controlar para que sea el equivalente de vista previa de un evento de entrada. Por ejemplo, si un control suprime <xref:System.Windows.UIElement.MouseLeftButtonDown>, intentar volver a adjuntar un controlador para <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> en su lugar. Esta técnica solo funciona para los eventos de entrada del elemento base como <xref:System.Windows.UIElement.MouseLeftButtonDown>. Estos eventos de entrada utilizan pares de túnel/propagación, provocan ambos eventos y compartan los datos del evento.  
   
- Cada una de estas técnicas tiene efectos secundarios o limitaciones.  El efecto secundario de controlar el evento de vista previa reside en que controlarlo en ese punto podría deshabilitar los controladores que esperan controlar el evento de propagación, y por consiguiente la limitación consiste en que no suele ser conveniente marcar el evento como controlado mientras se encuentre en la parte de la ruta correspondiente a la vista previa.  La limitación de la técnica de `handledEventsToo` es que no se puede especificar un controlador de `handledEventsToo` en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] como un atributo, hay que registrar el controlador de eventos en código después de obtener una referencia de objeto al elemento al que se asociará el controlador.  
+ Cada una de estas técnicas tiene efectos secundarios o limitaciones. El efecto secundario de controlar el evento de vista previa es que controlar el evento en ese momento podría deshabilitar los controladores que esperan controlar el evento de propagación, y por lo tanto, la limitación es que normalmente no resulta una buena idea para marcar el evento como controlado mientras está conectado a la Previ parte ew de la ruta. La limitación de la `handledEventsToo` técnica es que no se puede especificar un `handledEventsToo` controlador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] como un atributo, debe registrar el controlador de eventos en código después de obtener una referencia de objeto para el elemento donde es el controlador que se adjuntará.  
   
-## Vea también  
- [Marcar eventos enrutados como controlados y control de clases](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)   
+## <a name="see-also"></a>Vea también  
+ [Marcar eventos enrutados como controlados y control de clases](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [Información general sobre eventos enrutados](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

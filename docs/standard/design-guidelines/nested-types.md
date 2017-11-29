@@ -1,60 +1,58 @@
 ---
-title: "Tipos anidados | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "tipos anidados"
-  - "tipos anidados públicos"
-  - "instrucciones de diseño de tipo, los tipos anidados"
-  - "tipos anidados"
-  - "tipo de miembros [.NET Framework]"
-  - "tipos de instrucciones [.NET Framework], anidadas de diseño de biblioteca de clase"
+title: Tipos anidados
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- types, nested
+- public nested types
+- type design guidelines, nested types
+- nested types
+- members [.NET Framework], type
+- class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Tipos anidados
-Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se denomina el tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a campos privados definidos en el tipo envolvente y proteger los campos definidos en todos los antecesores del tipo envolvente.  
+# <a name="nested-types"></a>Tipos anidados
+Un tipo anidado es un tipo definido en el ámbito de otro tipo, que se denomina el tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a los campos privados definidos en el tipo envolvente y proteger los campos definidos en todos los antecesores del tipo envolvente.  
   
- En general, los tipos anidados deben usarse con moderación. Hay varias razones para ello. Algunos desarrolladores no están completamente familiarizados con el concepto. Estos desarrolladores por ejemplo, podrían tener problemas con la sintaxis de declaración de variables de tipos anidados. Los tipos anidados son también muy estrechamente con sus tipos envolventes y como tal no son adecuados para los tipos de uso general.  
+ En general, los tipos anidados deben usarse con moderación. Hay varias razones para ello. Algunos desarrolladores no están totalmente familiarizados con el concepto. Por ejemplo, estos desarrolladores tenga problemas con la sintaxis de la declaración de variables de tipos anidados. Los tipos anidados son también muy estrechamente con sus tipos envolventes y como tal no son adecuados para ser tipos de uso generales.  
   
- Los tipos anidados son más adecuados para el modelado de los detalles de implementación de sus tipos envolventes. El usuario final rara vez deberían tener que declarar las variables de un tipo anidado y casi nunca es necesario crear explícitamente instancias de tipos anidados. Por ejemplo, el enumerador de una colección puede ser un tipo anidado de esa colección. Normalmente se crean instancias de los enumeradores por su tipo envolvente, y dado que muchos lenguajes admiten la instrucción foreach, variables de enumerador rara vez tienen que declararse el usuario final.  
+ Los tipos anidados son más adecuados para modelar los detalles de implementación de sus tipos envolventes. El usuario final rara vez deberían tener que declarar las variables de un tipo anidado y casi nunca debería tener que crear explícitamente instancias de tipos anidados. Por ejemplo, el enumerador de una colección puede ser un tipo anidado de dicha recopilación. Normalmente se crean instancias de los enumeradores por su tipo envolvente, y dado que muchos lenguajes admiten la instrucción foreach, variables de enumerador rara vez tienen que ser declarada por el usuario final.  
   
- **✓ hacer** utilizar tipos anidados cuando la relación entre el tipo anidado y su tipo exterior es tal que es deseable la semántica de accesibilidad de miembros.  
+ **✓ HACER** utilice tipos anidados cuando la relación entre el tipo anidado y su tipo exterior es tal que es deseable la semántica de accesibilidad de miembros.  
   
- **X no** uso de tipos anidados públicos como una agrupación lógica construir; usar espacios de nombres para este.  
+ **X DO NOT** use los tipos anidados públicos como una agrupación lógica construir; usar espacios de nombres para este.  
   
- **Evitar X** exponer públicamente los tipos anidados. La única excepción a esto es si necesitan declararse sólo en escenarios poco habituales, como el uso de subclases u otros escenarios de personalización avanzada variables del tipo anidado.  
+ **X evitar** exponer públicamente los tipos anidados. La única excepción a esto es si las variables del tipo anidado deben declararse sólo en escenarios poco habituales, como el uso de subclases u otros escenarios de personalización avanzada.  
   
- **X no** utilice tipos anidados si el tipo es probable que se hace referencia fuera del tipo contenedor.  
+ **X DO NOT** utilice tipos anidados si el tipo es probable que se hace referencia fuera del tipo contenedor.  
   
- Por ejemplo, una enumeración que se pasa a un método definido en una clase no se debe definir como un tipo anidado en la clase.  
+ Por ejemplo, una enumeración que se pasa a un método definido en una clase no debe definirse como un tipo anidado en la clase.  
   
- **X no** utilice tipos anidados si es necesario crear una instancia por código de cliente.  Si un tipo tiene un constructor público, probablemente no debería anidarse.  
+ **X DO NOT** utilice tipos anidados si necesitan que se creará una instancia de un código de cliente.  Si un tipo tiene un constructor público, probablemente no debería anidarse.  
   
- Si un tipo se puede crear instancias, que parece indicar que el tipo tiene un lugar en el marco de trabajo en su propio \(puede crearlo, trabajar con él y destruir sin necesidad de utilizar el tipo exterior\) y, por tanto, no pueden anidarse. Tipos internos no deberían reutilizar ampliamente fuera del tipo externo sin ninguna relación con el tipo externo.  
+ Si un tipo se puede crear instancias, que parece indicar el tipo tiene un lugar en el marco de trabajo por sí misma (puede crearla, trabajar con ellos y destruir sin necesidad de utilizar el tipo exterior) y, por tanto, no se pueden anidar. Tipos internos no se deberían reutilizar ampliamente fuera del tipo externo sin ninguna relación con el tipo exterior.  
   
- **X no** define un tipo anidado como un miembro de una interfaz. Muchos lenguajes no admiten este tipo de construcción.  
+ **X DO NOT** definir un tipo anidado como un miembro de una interfaz. Muchos lenguajes no admiten este tipo de construcción.  
   
- *Partes © 2009, 2005 Microsoft Corporation. Todos los derechos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*  
   
- *Reimpreso con permiso de Pearson Education, Inc. de [las directrices de diseño de Framework: convenciones, expresiones idiomáticas y patrones para las bibliotecas .NET de reutilizable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison\-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
+ *Volver a imprimir en el permiso de educación de Pearson, Inc. de [directrices de diseño de marco de trabajo: convenciones, expresiones y patrones para las bibliotecas .NET de reutilizable, 2ª edición](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*  
   
-## Vea también  
- [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)   
- [Instrucciones de diseño de Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Vea también  
+ [Instrucciones de diseño de tipos](../../../docs/standard/design-guidelines/type.md)  
+ [Instrucciones de diseño de .NET Framework](../../../docs/standard/design-guidelines/index.md)

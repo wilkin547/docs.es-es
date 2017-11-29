@@ -1,6 +1,6 @@
 ---
 title: Referencia de F# Interactive (fsi.exe)
-description: Referencia de F# Interactive (fsi.exe)
+description: "Obtenga información acerca de cómo F # Interactive (fsi.exe) se usa para ejecutar código de F # de manera interactiva en la consola o para ejecutar scripts de F #."
 keywords: "visual f#, f#, programación funcional"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 87980bada62b568ec8795ab3566089f1bb510652
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F# #
 
 > [!NOTE]
@@ -27,7 +26,7 @@ El vínculo de la referencia de API le llevará a MSDN.  La referencia de API de
 
 F# Interactive (fsi.exe) se utiliza para ejecutar código de F# de manera interactiva en la consola o para ejecutar scripts de F#. En otras palabras, F# Interactive ejecuta un bucle REPL (del inglés Read, Evaluate, Print Loop - bucle Leer, Evaluar, Imprimir) para el lenguaje F#.
 
-Para usar F# Interactive desde la consola, ejecute fsi.exe.  Encontrará fsi.exe en "c:\Archivos de programa (x86)\Microsoft SDKs\F#\<versión>\Framework\<versión>\". Para obtener más información sobre las opciones de línea de comandos disponibles, vea [Opciones de F# Interactive](fsharp-interactive-options.md).
+Para usar F# Interactive desde la consola, ejecute fsi.exe.  Encontrará fsi.exe en "c:\Program archivos (x86) \Microsoft SDKs\F#\<versión > \Framework\<versión >\". Para obtener más información sobre las opciones de línea de comandos disponibles, vea [Opciones de F# Interactive](fsharp-interactive-options.md).
 
 Para ejecutar F# Interactive a través de Visual Studio, puede hacer clic en el botón **F# Interactive** de la barra de herramientas o presionar las teclas **Ctrl+Alt+F**. De este modo, se abrirá la ventana interactiva, que es una ventana de herramientas en la que se ejecuta una sesión de F# Interactive. También puede seleccionar el código que quiere ejecutar en la ventana interactiva y presionar la combinación de teclas **ALT+ENTRAR**. F# Interactive se inicia en la ventana de herramientas con la etiqueta **F# Interactive**. Cuando use esta combinación de teclas, asegúrese de que la ventana del editor tiene el foco.
 

@@ -1,33 +1,39 @@
 ---
-title: "Creaci&#243;n de una fuente RSS b&#225;sica | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Creación de una fuente RSS básica"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: f6671e5707863c3be0421a81351cb1fed04eb0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Creaci&#243;n de una fuente RSS b&#225;sica
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución.En este tema se discute cómo crear un servicio de distribución que exponga una fuente de  distribución RSS.  
+# <a name="how-to-create-a-basic-rss-feed"></a>Creación de una fuente RSS básica
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] le permite crear un servicio que exponga una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de  distribución RSS.  
   
-### Creación de un servicio de distribución básico  
+### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
   
-1.  Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>.Cada operación que se expone como una fuente de distribución debería devolver un objeto <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+1.  Defina un contrato de servicios utilizando una interfaz marcada con el atributo <xref:System.ServiceModel.Web.WebGetAttribute>. Cada operación que se expone como una fuente de distribución debería devolver un objeto <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
      [!code-csharp[htRssBasic#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#0)]
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Todas las operaciones de servicio que apliquen el atributo <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes GET de HTTP.Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: Crear un servicio básico web HTTP de WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Todas las operaciones de servicio que apliquen el atributo <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes GET de HTTP. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Cómo: crear un servicio WCF básico Web HTTP](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implemente el contrato de servicios.  
   
@@ -54,23 +60,23 @@ caps.handback.revision: 18
      [!code-csharp[htRssBasic#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#5)]
      [!code-vb[htRssBasic#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#5)]  
   
-### Hospedaje de un servicio  
+### <a name="to-host-a-service"></a>Hospedaje de un servicio  
   
-1.  Cree un objeto <xref:System.ServiceModel.Web.WebServiceHost>.  
+1.  Crear un objeto <xref:System.ServiceModel.Web.WebServiceHost>.  
   
      [!code-csharp[htRssBasic#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#6)]
      [!code-vb[htRssBasic#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#6)]  
   
-2.  Abra el host del servicio y espere hasta que el usuario presione Entrar.  
+2.  Abra el host de servicio y espere hasta que el usuario presione Entrar.  
   
      [!code-csharp[htRssBasic#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#8)]
      [!code-vb[htRssBasic#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#8)]  
   
-### Realización de llamadas a GetBlog\(\) mediante HTTP GET  
+### <a name="to-call-getblog-with-an-http-get"></a>Realización de llamadas a GetBlog() mediante HTTP GET  
   
-1.  Abra Internet Explorer, escriba la siguiente URL y presione Entrar: http:\/\/localhost:8000\/BlogService\/GetBlogLa URL contiene la dirección base del servicio \(http:\/\/localhost:8000\/BlogService\), la dirección relativa del extremo y la operación del servicio que se va a llamar.  
+1.  Abra Internet Explorer, escriba la siguiente URL y presione Entrar: http://localhost:8000/BlogService/GetBlog La URL contiene la dirección base del servicio (http://localhost:8000/BlogService), la dirección relativa del extremo y la operación del servicio que se va a llamar.  
   
-### Llamar a GetBlog\(\) mediante código  
+### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   
 1.  Cree un <xref:System.Xml.XmlReader> con la dirección base y el método al que está llamando.  
   
@@ -89,15 +95,15 @@ caps.handback.revision: 18
      [!code-csharp[htRssBasic#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#11)]
      [!code-vb[htRssBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#11)]  
   
-## Ejemplo  
- A continuación, se muestra una lista de código completa en este ejemplo.  
+## <a name="example"></a>Ejemplo  
+ A continuación, se muestra una lista de código completa para este ejemplo.  
   
  [!code-csharp[htRssBasic#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#12)]
  [!code-vb[htRssBasic#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#12)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Al compilar el código anterior, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
-## Vea también  
- <xref:System.ServiceModel.WebHttpBinding>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

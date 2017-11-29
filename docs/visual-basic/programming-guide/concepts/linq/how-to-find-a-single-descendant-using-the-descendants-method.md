@@ -1,32 +1,28 @@
 ---
-title: "Cómo: buscar un descendiente único mediante el método Descendants (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: buscar un descendiente único mediante el método Descendants (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74d4dd0b805a5ea2c189cb89bcaeca3f4cac1268
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 0647dee5ced1e986fcb3fac7915437dfb37b0796
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>Cómo: buscar un descendiente único mediante el método Descendants (Visual Basic)
-Puede usar el <xref:System.Xml.Linq.XContainer.Descendants%2A>elemento cuyo nombre de método de eje para escribir rápidamente código para buscar una sola forma inequívoca.</xref:System.Xml.Linq.XContainer.Descendants%2A> Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido y fácil de escribir el código usando el <xref:System.Xml.Linq.XContainer.Descendants%2A>eje.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+Puede utilizar el método de eje <xref:System.Xml.Linq.XContainer.Descendants%2A> para escribir rápidamente código para buscar un solo elemento cuyo nombre es único. Esta técnica es especialmente útil si desea buscar un descendiente particular con un nombre específico. Puede escribir el código para desplazarse al elemento deseado, pero a menudo resulta más rápido escribir el código usando el eje <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se utiliza la <xref:System.Linq.Enumerable.First%2A>operador de consulta estándar.</xref:System.Linq.Enumerable.First%2A>  
+ Este ejemplo utiliza el operador de consulta estándar <xref:System.Linq.Enumerable.First%2A>.  
   
 ```vb  
 Dim root As XElement = _  

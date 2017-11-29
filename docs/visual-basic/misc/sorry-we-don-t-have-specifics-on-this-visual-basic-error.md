@@ -1,9 +1,8 @@
 ---
-title: Lo sentimos, no tenemos detalles sobre este error de Visual Basic | Documentos de Microsoft
-ms.date: 2015-07-20
+title: Lo sentimos, se don &#39; t tiene detalles sobre este error de Visual Basic
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -3048,54 +3047,37 @@ f1_keywords:
 - bc31432
 - bc30233
 - bc30829
-dev_langs:
-- VB
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Lo sentimos, no tenemos detalles sobre este error de Visual Basic
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Lo sentimos, se don &#39; t tiene detalles sobre este error de Visual Basic
 Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. Si lo prefiere, puede preguntar a otros desarrolladores a través de uno de estos foros:  
   
- [Lenguaje Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Proporciona un foro donde plantear preguntas y debate en general acerca del compilador y la sintaxis del lenguaje [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ [Visual Basic (lenguaje)](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ Proporciona un foro donde plantear preguntas y debate en general acerca del compilador y la sintaxis del lenguaje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Interoperabilidad de Visual Basic y actualización](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Proporciona un foro para preguntas y problemas referentes a la actualización de [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] y el uso de las características de interoperabilidad.  
+ [Interoperabilidad y actualización de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ Proporciona un foro para preguntas y problemas referentes a la actualización de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] y el uso de las características de interoperabilidad.  
   
  [IDE de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Proporciona un foro donde plantear preguntas sobre la forma de trabajar en el entorno de [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ Proporciona un foro donde plantear preguntas sobre la forma de trabajar en el entorno de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [General de Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Proporciona un foro donde plantear preguntas y problemas referentes a [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] que no se debaten en otros foros.  
+ [Información general sobre Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ Proporciona un foro donde plantear preguntas y problemas referentes a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] que no se debaten en otros foros.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Ofrece un foro de preguntas y problemas con [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Ofrece un foro de preguntas y problemas con [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Vea también:  
  [Recursos adicionales para programadores de Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Guía de programación de Visual Basic](../../visual-basic/programming-guide/index.md)   
+ [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)  
  [Referencia de Visual Basic](../../visual-basic/reference/index.md)

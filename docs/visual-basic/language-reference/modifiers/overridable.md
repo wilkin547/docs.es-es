@@ -1,70 +1,69 @@
 ---
-title: "Overridable (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overridable"
-  - "vb.Overridable"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "elementos concretos"
-  - "elementos, concretos"
-  - "elementos, virtual"
-  - "Overridable (palabra clave)"
-  - "reemplazar, Overridable (palabra clave)"
-  - "procedimientos, reemplazar"
-  - "procedimientos, redefinir"
-  - "propiedades [Visual Basic], reemplazar"
-  - "propiedades [Visual Basic], redefinir"
-  - "elementos virtuales"
+title: Overridable (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overridable
+- vb.Overridable
+helpviewer_keywords:
+- elements [Visual Basic], concrete
+- properties [Visual Basic], redefining
+- overriding, Overridable keyword
+- elements [Visual Basic], virtual
+- virtual [elements VB]
+- procedures [Visual Basic], overriding
+- concrete [elements VB]
+- procedures [Visual Basic], redefining
+- Overridable keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Overridable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica que una propiedad o procedimiento se puede reemplazar por una propiedad o procedimiento con nombre idéntico de una clase derivada.  
+# <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
+Especifica que una propiedad o procedimiento puede reemplazarse por una propiedad con el mismo nombre o un procedimiento en una clase derivada.  
   
-## Comentarios  
- El modificador de `Overridable` permite una propiedad o un método de una clase que se invalide en una clase derivada.  El modificador de [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) evita que una propiedad o un método se invalide en una clase derivada.  Para obtener más información, vea [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+## <a name="remarks"></a>Comentarios  
+ El `Overridable` modificador permite que una propiedad o método en una clase para que se invalide en una clase derivada. El [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modificador impide que una propiedad o método se invalide en una clase derivada.  Para más información, vea [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Si no se especifica el modificador de `Overridable` o de `NotOverridable` , la configuración predeterminada depende de si la propiedad o el método reemplaza una propiedad o un método de clase base.  Si la propiedad o el método reemplaza una propiedad o un método de clase base, la configuración predeterminada es `Overridable`; de lo contrario, es `NotOverridable`.  
+ Si el `Overridable` o `NotOverridable` modificador no se especifica, el valor predeterminado depende de si la propiedad o método invalida un método o propiedad de clase base. Si la propiedad o método invalida un método o propiedad de clase base, el valor predeterminado es `Overridable`; en caso contrario, es `NotOverridable`.  
   
- Puede sombrear o invalidar para definir de nuevo un elemento heredado, pero hay diferencias significativas entre los dos enfoques.  Para obtener más información, vea [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Puede ocultar o invalide este método para volver a definir un elemento heredado, pero hay diferencias significativas entre los dos enfoques. Para obtener más información, consulte [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- Un elemento que se puede reemplazar se denomina en ocasiones elemento *virtual*.  Si se puede reemplazar, pero no tiene que reemplazarse, en ocasiones también se denomina elemento *concreto*.  
+ Un elemento que se puede invalidar a veces se conoce como un *virtuales* elemento. Si se puede invalidar, pero no tiene que ser, a veces también se denomina un *concreta* elemento.  
   
- Sólo puede utilizarse `Overridable` en una propiedad o instrucción de declaración de procedimiento.  
+ Puede usar `Overridable` únicamente en una instrucción de declaración de procedimiento o propiedad.  
   
-## modificadores combinados  
- No puede especificar `Overridable` o `NotOverridable` para un método de `Private` .  
+## <a name="combined-modifiers"></a>Modificadores combinados  
+ No se puede especificar `Overridable` o `NotOverridable` para un `Private` método.  
   
- No se puede especificar `Overridable` junto con `MustOverride`, `NotOverridable` o `Shared` en la misma declaración.  
+ No se puede especificar `Overridable` junto con `MustOverride`, `NotOverridable`, o `Shared` en la misma declaración.  
   
  Dado que un elemento de reemplazo es reemplazable de forma implícita, no se puede combinar `Overridable` con `Overrides`.  
   
-## Uso  
- El modificador `Overridable` se puede utilizar en estos contextos:  
+## <a name="usage"></a>Uso  
+ El modificador `Overridable` se puede utilizar en los contextos siguientes:  
   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vea también  
- [Modificadores](../../../visual-basic/language-reference/modifiers/index.md)   
- [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)   
+## <a name="see-also"></a>Vea también  
+ [Modificadores](../../../visual-basic/language-reference/modifiers/index.md)  
+ [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)  
  [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

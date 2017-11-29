@@ -1,36 +1,39 @@
 ---
-title: "C&#243;mo: Desplazarse a una direcci&#243;n URL con el control WebBrowser | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WebBrowser.Navigate"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [Windows Forms], WebBrowser (control)"
-  - "direcciones URL, navegar"
-  - "WebBrowser (control) [Windows Forms], ejemplos"
-  - "WebBrowser (control) [Windows Forms], explorar direcciones URL"
+title: "Cómo: Desplazarse a una dirección URL con el control WebBrowser"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+f1_keywords: WebBrowser.Navigate
+helpviewer_keywords:
+- WebBrowser control [Windows Forms], examples
+- URLs [Windows Forms], navigating to
+- WebBrowser control [Windows Forms], navigating to URLs
+- examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28ceb5e465b8737d047c9c0e65bd9efc8cd3c8ec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Desplazarse a una direcci&#243;n URL con el control WebBrowser
-En el ejemplo de código siguiente se muestra la forma de navegar por el control <xref:System.Windows.Forms.WebBrowser> a una dirección URL específica.  
+# <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Cómo: Desplazarse a una dirección URL con el control WebBrowser
+En el ejemplo de código siguiente se muestra cómo navegar hasta el <xref:System.Windows.Forms.WebBrowser> control a una dirección URL específica.  
   
- Para determinar cuándo se carga el nuevo documento totalmente, controle el evento <xref:System.Windows.Forms.WebBrowser.DocumentCompleted>.  Para obtener una descripción de este evento, vea [Cómo: Imprimir con un control WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).  
+ Para determinar cuándo se ha cargado completamente el nuevo documento, controle el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. Para ver una demostración de este evento, vea [Cómo: imprimir con un WebBrowser Control](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md).  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
   
 ```vb  
 Me.webBrowser1.Navigate("http://www.microsoft.com")  
@@ -40,17 +43,17 @@ Me.webBrowser1.Navigate("http://www.microsoft.com")
 this.webBrowser1.Navigate("http://www.microsoft.com");  
 ```  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Un control <xref:System.Windows.Forms.WebBrowser> denominado `webBrowser1`.  
+-   Control <xref:System.Windows.Forms.WebBrowser> denominado `webBrowser1`.  
   
 -   Referencias a los ensamblados `System` y `System.Windows.Forms`.  
   
-## Vea también  
- <xref:System.Windows.Forms.WebBrowser>   
- <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=fullName>   
- <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=fullName>   
- <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=fullName>   
- [WebBrowser \(Control\)](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)   
- [Cómo: Imprimir con un control WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.WebBrowser>  
+ <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>  
+ [WebBrowser (control)](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+ [Imprimir con un control WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)

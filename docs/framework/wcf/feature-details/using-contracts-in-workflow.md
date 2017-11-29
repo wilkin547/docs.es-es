@@ -1,49 +1,52 @@
 ---
-title: "Utilizar contratos en flujo de trabajo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizar contratos en flujo de trabajo
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1c84483b2ca18d63f20e64a62bb757e244db9b24
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Utilizar contratos en flujo de trabajo
-Al implementar un servicio, defina varios contratos que describan el servicio y los datos que envía y recibe.Los datos se representan como contratos de datos y de mensajes; los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y de flujo de trabajo usan datos de contrato y definiciones de contrato de mensaje como parte de las descripciones del servicio.El servicio expone metadatos \(en el formulario de WSDL\) para describir las operaciones del servicio.En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los contratos de servicios y los contratos de operación definen el servicio y las operaciones que admite.Sin embargo, en un servicio de flujo de trabajo, estos contratos forman parte del propio proceso de negocio; se exponen en metadatos mediante un proceso llamado inferencia del contrato.  
+# <a name="using-contracts-in-workflow"></a>Utilizar contratos en flujo de trabajo
+Al implementar un servicio, defina varios contratos que describan el servicio y los datos que envía y recibe. Los datos se representan como contratos de datos y de mensajes; los servicios de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] y de flujo de trabajo usan datos de contrato y definiciones de contrato de mensaje como parte de las descripciones del servicio. El servicio expone metadatos (en el formulario de WSDL) para describir las operaciones del servicio. En [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los contratos de servicios y los contratos de operación definen el servicio y las operaciones que admite. Sin embargo, en un servicio de flujo de trabajo, estos contratos forman parte del propio proceso de negocio; se exponen en metadatos mediante un proceso llamado inferencia del contrato.  
   
-## Inferencia del contrato  
- Cuando un servicio de flujo de trabajo se hospeda mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se examina la definición de flujo de trabajo y se genera un contrato en función del conjunto de actividades de mensajería presentes en el flujo de trabajo.En especial, se emplean las siguientes actividades y propiedades para generar el contrato:  
+## <a name="contract-inference"></a>Inferencia del contrato  
+ Cuando un servicio de flujo de trabajo se hospeda mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>, se examina la definición de flujo de trabajo y se genera un contrato en función del conjunto de actividades de mensajería presentes en el flujo de trabajo. En especial, se emplean las siguientes actividades y propiedades para generar el contrato:  
   
  Actividad <xref:System.ServiceModel.Activities.Receive>  
   
 -   <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.Receive.OperationContractName%2A>  --> `System.ServiceModel.Activities.Receive.OperationContractName`
   
 -   <xref:System.ServiceModel.Activities.Receive.Action%2A>  
   
--   <xref:System.ServiceModel.Activities.Receive.ValueType%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.Receive.ValueType%2A> --> `System.ServiceModel.Activities.Receive.ValueType`
   
  Actividad <xref:System.ServiceModel.Activities.SendReply>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.Action%2A>  
   
--   <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>  
+-   <!--zz <xref:System.ServiceModel.Activities.SendReply.ValueType%2A>-->  `System.ServiceModel.Activities.SendReply.ValueType`
   
  Actividad <xref:System.ServiceModel.Activities.TransactedReceiveScope>  
   
- El resultado final de inferencia del contrato es una descripción del servicio mediante las mismas estructuras de datos que el servicio de WCF y los contratos de operación.A continuación, esta información se utiliza para exponer WSDL para el servicio de flujo de trabajo.  
+ El resultado final de inferencia del contrato es una descripción del servicio mediante las mismas estructuras de datos que el servicio de WCF y los contratos de operación. A continuación, esta información se utiliza para exponer WSDL para el servicio de flujo de trabajo.  
   
-## Vea también  
- [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [Actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md)   
- [Cómo: Crear un servicio de flujo de trabajo con actividades de mensajería](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)   
- [Crear un servicio de flujo de trabajo que consuma un contrato de servicio existente](../../../../docs/framework/windows-workflow-foundation//how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+## <a name="see-also"></a>Vea también  
+ [Servicios de flujo de trabajo](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Las actividades de mensajería](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
+ [Cómo: crear un servicio de flujo de trabajo con las actividades de mensajería](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Cómo crear un servicio de flujo de trabajo que consuma un contrato de servicio existente](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

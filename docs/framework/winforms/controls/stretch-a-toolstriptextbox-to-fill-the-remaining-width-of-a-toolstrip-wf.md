@@ -1,44 +1,48 @@
 ---
-title: "C&#243;mo: Ajustar un elemento ToolStripTextBox para llenar el ancho restante de un control ToolStrip (Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadros de texto, ajustar en control ToolStrip [Windows Forms]"
-  - "ToolStrip (control) [Windows Forms], ajustar un cuadro de texto"
+title: "Cómo: Ajustar un elemento ToolStripTextBox para llenar el ancho restante de un control ToolStrip (Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
+- ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 213929e52f08fff19eb7641092789501c31648e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ajustar un elemento ToolStripTextBox para llenar el ancho restante de un control ToolStrip (Windows Forms)
-Al establecer la propiedad <xref:System.Windows.Forms.ToolStrip.Stretch%2A> de un control <xref:System.Windows.Forms.ToolStrip> en `true`, el control rellena su contenedor de principio a fin y cambia de tamaño cuando lo hace su contenedor.  En esta configuración, puede resultarle útil ajustar un elemento del control, como <xref:System.Windows.Forms.ToolStripTextBox>, para que llene el espacio disponible y para que cambie de tamaño cuando lo haga el control.  Por ejemplo, este ajuste es útil si desea obtener una apariencia y un comportamiento similares a los de la barra de direcciones de Microsoft® Internet Explorer.  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Cómo: Ajustar un elemento ToolStripTextBox para llenar el ancho restante de un control ToolStrip (Windows Forms)
+Al establecer el <xref:System.Windows.Forms.ToolStrip.Stretch%2A> propiedad de un <xref:System.Windows.Forms.ToolStrip> el control a `true`, el control rellena su contenedor de extremo a extremo y cambian de tamaño cuando cambia el tamaño de su contenedor. En esta configuración, quizá le resulte útil para ajustar un elemento en el control, como un <xref:System.Windows.Forms.ToolStripTextBox>, para rellenar el espacio disponible y cambian de tamaño cuando el control cambia de tamaño. Este ajuste es útil, por ejemplo, si desea obtener una apariencia y comportamiento similar a la barra de direcciones de Microsoft® Internet Explorer.  
   
-## Ejemplo  
- El ejemplo de código siguiente proporciona una clase derivada de <xref:System.Windows.Forms.ToolStripTextBox> denominada `ToolStripSpringTextBox`.  Esta clase reemplaza el método <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> para calcular el ancho disponible del control primario <xref:System.Windows.Forms.ToolStrip> una vez restado el ancho combinado de todos los demás elementos.  Este ejemplo de código también proporciona una clase <xref:System.Windows.Forms.Form> y una clase `Program` para mostrar el nuevo comportamiento.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo de código siguiente se proporciona una clase derivada de <xref:System.Windows.Forms.ToolStripTextBox> denominado `ToolStripSpringTextBox`. Esta clase reemplaza la <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> método para calcular el ancho disponible del elemento primario <xref:System.Windows.Forms.ToolStrip> controlar una vez se ha restado el ancho combinado de todos los demás elementos. Este ejemplo de código también proporciona un <xref:System.Windows.Forms.Form> clase y un `Program` clase para mostrar el nuevo comportamiento.  
   
  [!code-csharp[ToolStripSpringTextBox#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
 -   Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
-## Vea también  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripTextBox>   
- <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=fullName>   
- [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
- [Cómo: Utilizar la propiedad Spring de manera interactiva en un control StatusStrip](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripTextBox>  
+ <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>  
+ [Arquitectura del control ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [Utilizar la propiedad Spring de manera interactiva en un control StatusStrip](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

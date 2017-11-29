@@ -1,95 +1,92 @@
 ---
-title: "^ (Operador, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.^"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "^ (operador) [Visual Basic]"
-  - "^ (operador) [Visual Basic], exponenciación"
-  - "operadores aritméticos, exponenciación"
-  - "exponente"
-  - "exponenciación (operador) [Visual Basic]"
-  - "números, elevar"
-  - "potencias"
-  - "elevar números a potencias"
-  - "operador de cuadrado"
+title: ^ (Operador, Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.^
+helpviewer_keywords:
+- raising numbers to powers
+- ^ operator [Visual Basic], exponention
+- square operator [Visual Basic]
+- ^ operator [Visual Basic]
+- exponentiation operator [Visual Basic]
+- exponent
+- numbers [Visual Basic], rasing
+- powers
+- arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# ^ (Operador, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Eleva un número a la potencia indicada por otro.  
+# <a name="-operator-visual-basic"></a>^ (Operador, Visual Basic)
+Eleva un número a la potencia de otro número.  
   
-## Sintaxis  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 number ^ exponent  
 ```  
   
-## Elementos  
+## <a name="parts"></a>Elementos  
  `number`  
- Obligatorio.  Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
  `exponent`  
- Obligatorio.  Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
-## Resultado  
- El resultado es `number` elevado a la potencia de `exponent`, siempre como un valor `Double`.  
+## <a name="result"></a>Resultado  
+ El resultado es `number` elevado a la potencia de `exponent`, siempre como un `Double` valor.  
   
-## Tipos admitidos  
- `Double`.  Operandos de cualquier tipo diferente se convierten a `Double`.  
+## <a name="supported-types"></a>Tipos admitidos  
+ `Double`. Operandos de cualquier tipo diferente se convierten en `Double`.  
   
-## Comentarios  
- Visual Basic siempre realiza la exponenciación en [Double \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/double-data-type.md).  
+## <a name="remarks"></a>Comentarios  
+ Visual Basic siempre realiza la exponenciación en el [tipo de datos Double](../../../visual-basic/language-reference/data-types/double-data-type.md).  
   
  El valor de `exponent` puede ser fraccionario, negativo o ambos.  
   
- Cuando se realizan varias exponenciaciones en una única expresión, el operador `^` se evalúa a medida que se va encontrando de izquierda a derecha.  
+ Cuando se realiza más de una exponenciación en una única expresión, el `^` operador se evalúa tal y como se encuentra de izquierda a derecha.  
   
 > [!NOTE]
->  El operador `^` se puede *sobrecargar*, lo que significa que una clase o una estructura pueden definir de nuevo su comportamiento cuando un operando tiene el tipo de dicha clase o estructura.  Si el código utiliza este operador en una clase o estructura de este tipo, asegúrese de conocer su comportamiento redefinido.  Para obtener más información, vea [Procedimientos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  El `^` puede ser *sobrecargados*, lo que significa que una clase o estructura puede definir de nuevo su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de que conocer su comportamiento redefinido. Para obtener más información, consulte [procedimientos de operadores](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
-## Ejemplo  
- En el ejemplo siguiente se utiliza el operador `^` para elevar un número a la potencia del exponente.  El resultado será el primer operando a la potencia del segundo.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se usa el `^` operador para elevar un número a la potencia de un exponente. El resultado es el primer operando elevado a la potencia del segundo.  
   
  [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
- En el ejemplo anterior los resultados son:  
+ El ejemplo anterior produce los siguientes resultados:  
   
- `exp1` se establece en 4 \(2 al cuadrado\).  
+ `exp1`se establece en 4 (2 al cuadrado).  
   
- `exp2` se establece en 19683 \(3 al cubo; a continuación, ese valor se eleva al cubo\).  
+ `exp2`se establece en 19683 (3 al cubo; a continuación, ese valor al cubo).  
   
- `exp3` se establece en \-125 \(\-5 al cubo\).  
+ `exp3`se establece en -125 (-5 al cubo).  
   
- `exp4` se establece en 625 \(\-5 elevado a la cuarta\).  
+ `exp4`se establece en 625 (-5 a la cuarta potencia).  
   
- `exp5` se establece en 2 \(raíz cúbica de 8\).  
+ `exp5`se establece en 2 (raíz cúbica de 8).  
   
- `exp6` se establece en 0,5 \(1,0 dividido por la raíz cúbica de 8\).  
+ `exp6`se establece en 0,5 (1,0 dividido por la raíz cúbica de 8).  
   
- Observe la importancia de los paréntesis en las expresiones del ejemplo anterior.  Debido a la *prioridad de operadores*, Visual Basic normalmente calcula el operador `^` antes de cualquier otro, antes incluso que el operador unario `–`.  Si `exp4` y `exp6` se hubieran calculado sin paréntesis, habrían generado los resultados siguientes:  
+ Tenga en cuenta la importancia de los paréntesis en las expresiones en el ejemplo anterior. Debido *prioridad de operador*, Visual Basic realiza normalmente la `^` operador antes de los demás, incluso el operador unario `–` operador. Si `exp4` y `exp6` se hubieran calculado sin paréntesis, habrían generado los resultados siguientes:  
   
- `exp4 = -5 ^ 4` se calcula como – \(5 al cuarto potencia\), que darían lugar a \-625.  
+ `exp4 = -5 ^ 4`se calcula como: (5 a la cuarta potencia), lo que podría dar lugar a-625.  
   
- `exp6 = 8 ^ -1.0 / 3.0` se calcularía como \(8 elevado a –1  o 0,125\) dividido entre 3,0, cuyo resultado sería 0,041666666666666666666666666666667.  
+ `exp6 = 8 ^ -1.0 / 3.0`se calcularía como (de 8 a la potencia de – 1 o 0,125) dividido entre 3,0, cuyo resultado sería 0,041666666666666666666666666666667.  
   
-## Vea también  
- [^\= \(Operador\)](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)   
- [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+## <a name="see-also"></a>Vea también  
+ [Operador ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  
+ [Operadores aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [Operadores enumerados por funcionalidad](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Operadores aritméticos en Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

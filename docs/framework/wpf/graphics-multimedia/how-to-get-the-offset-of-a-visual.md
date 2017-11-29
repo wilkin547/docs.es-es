@@ -1,75 +1,81 @@
 ---
-title: "C&#243;mo: Obtener el desplazamiento de un objeto Visual | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "obtener valores de desplazamiento de objetos visuales"
-  - "valores de desplazamiento, recuperar de objetos visuales"
-  - "recuperar valores de desplazamiento de objetos visuales"
-  - "objetos visuales, recuperar valores de desplazamiento de"
+title: "Cómo: Obtener el desplazamiento de un objeto Visual"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- getting offset values from visual objects [WPF]
+- offset values [WPF], retrieving from visual objects [WPF]
+- visual objects [WPF], retrieving offset values from
+- retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22c35a683f479660a17f11e44f9a0721f9d35968
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Obtener el desplazamiento de un objeto Visual
-En estos ejemplos se muestra cómo recuperar el valor de desplazamiento de un objeto visual relativo a su elemento primario o a cualquier antecesor o descendiente.  
+# <a name="how-to-get-the-offset-of-a-visual"></a>Cómo: Obtener el desplazamiento de un objeto Visual
+Estos ejemplos muestran cómo recuperar el valor de desplazamiento de un objeto visual que es relativa a su elemento primario, o cualquier antecesor o descendiente.  
   
-## Ejemplo  
- En el ejemplo de marcado siguiente se muestra un control <xref:System.Windows.Controls.TextBlock> que se define con un valor de <xref:System.Windows.FrameworkElement.Margin%2A> de 4.  
+## <a name="example"></a>Ejemplo  
+ El ejemplo de marcado siguiente se muestra un <xref:System.Windows.Controls.TextBlock> que se define con <xref:System.Windows.FrameworkElement.Margin%2A> valor 4.  
   
- [!code-xml[VisualSnippets#VisualSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet1)]  
+ [!code-xaml[VisualSnippets#VisualSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet1)]  
   
- En el siguiente ejemplo de código se muestra cómo utilizar el método <xref:System.Windows.Media.VisualTreeHelper.GetOffset%2A> para recuperar el desplazamiento del control <xref:System.Windows.Controls.TextBlock>.  Los valores de desplazamiento se encuentran en el valor de <xref:System.Windows.Vector> devuelto.  
+ En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Windows.Media.VisualTreeHelper.GetOffset%2A> método para recuperar el desplazamiento de la <xref:System.Windows.Controls.TextBlock>. Los valores de desplazamiento se encuentran en el valor devuelto <xref:System.Windows.Vector> valor.  
   
  [!code-csharp[VisualSnippets#VisualSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet2)]
  [!code-vb[VisualSnippets#VisualSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet2)]  
   
- El desplazamiento tiene en cuenta el valor de <xref:System.Windows.FrameworkElement.Margin%2A>.  En este caso, el valor de <xref:System.Windows.Vector.X%2A> es 4 y el valor de <xref:System.Windows.Vector.Y%2A> es 4.  
+ El desplazamiento tiene en cuenta el <xref:System.Windows.FrameworkElement.Margin%2A> valor. En este caso, <xref:System.Windows.Vector.X%2A> es 4, y <xref:System.Windows.Vector.Y%2A> es 4.  
   
- El valor de desplazamiento devuelto es relativo al elemento primario del objeto <xref:System.Windows.Media.Visual>.  Si desea devolver un valor de desplazamiento que no sea relativo al elemento primario de un objeto <xref:System.Windows.Media.Visual>, utilice el método <xref:System.Windows.Media.Visual.TransformToAncestor%2A>.  
+ El valor de desplazamiento devuelto es relativo al elemento primario de la <xref:System.Windows.Media.Visual>. Si desea devolver un valor de desplazamiento que no es relativo al elemento primario de un <xref:System.Windows.Media.Visual>, use el <xref:System.Windows.Media.Visual.TransformToAncestor%2A> método.  
   
-## Obtener el desplazamiento relativo a un antecesor  
- En el ejemplo de marcado siguiente se muestra un objeto <xref:System.Windows.Controls.TextBlock> anidado en dos objetos <xref:System.Windows.Controls.StackPanel>.  
+## <a name="getting-the-offset-relative-to-an-ancestor"></a>Obtener el desplazamiento relativo a un antecesor  
+ El ejemplo de marcado siguiente se muestra un <xref:System.Windows.Controls.TextBlock> que está anidada dentro de dos <xref:System.Windows.Controls.StackPanel> objetos.  
   
- [!code-xml[VisualSnippets#VisualSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window2.xaml#visualsnippet7)]  
+ [!code-xaml[VisualSnippets#VisualSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window2.xaml#visualsnippet7)]  
   
- En la ilustración siguiente se muestra el resultado del marcado.  
+ En la siguiente ilustración muestra el resultado del marcado.  
   
- ![Valores de desplazamiento de objetos](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset\_01")  
+ ![Valores de desplazamiento de objetos](../../../../docs/framework/wpf/graphics-multimedia/media/visualoffset-01.png "VisualOffset_01")  
 Objeto TextBlock anidado dentro de dos objetos StackPanel  
   
- En el siguiente ejemplo de código se muestra cómo utilizar el método <xref:System.Windows.Media.Visual.TransformToAncestor%2A> para recuperar el desplazamiento del objeto <xref:System.Windows.Controls.TextBlock> respecto al objeto <xref:System.Windows.Window> contenedor.  Los valores de desplazamiento se encuentran en el valor de <xref:System.Windows.Media.GeneralTransform> devuelto.  
+ En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Windows.Media.Visual.TransformToAncestor%2A> método para recuperar el desplazamiento de la <xref:System.Windows.Controls.TextBlock> con respecto a la que contiene <xref:System.Windows.Window>. Los valores de desplazamiento se encuentran en el valor devuelto <xref:System.Windows.Media.GeneralTransform> valor.  
   
  [!code-csharp[VisualSnippets#VisualSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet5)]
  [!code-vb[VisualSnippets#VisualSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet5)]  
   
- El desplazamiento tiene en cuenta los valores de la propiedad <xref:System.Windows.FrameworkElement.Margin%2A> de todos los objetos del objeto <xref:System.Windows.Window> contendor.  En este caso, el valor de <xref:System.Windows.Vector.X%2A> es 28 \(16 \+ 8 \+ 4\) y el valor de <xref:System.Windows.Vector.Y%2A> es 28.  
+ El desplazamiento tiene en cuenta el <xref:System.Windows.FrameworkElement.Margin%2A> valores para todos los objetos dentro de la que contiene <xref:System.Windows.Window>. En este caso, <xref:System.Windows.Vector.X%2A> es 28 (16 + 8 + 4), y <xref:System.Windows.Vector.Y%2A> es 28.  
   
- El valor de desplazamiento devuelto es relativo al antecesor del objeto <xref:System.Windows.Media.Visual>.  Si desea devolver un valor de desplazamiento que sea relativo al descendiente de un objeto <xref:System.Windows.Media.Visual>, utilice el método <xref:System.Windows.Media.Visual.TransformToDescendant%2A>.  
+ El valor de desplazamiento devuelto es relativo al antecesor de la <xref:System.Windows.Media.Visual>. Si desea devolver un valor de desplazamiento que sea relativo a los descendientes de un <xref:System.Windows.Media.Visual>, use el <xref:System.Windows.Media.Visual.TransformToDescendant%2A> método.  
   
-## Obtener el desplazamiento relativo a un descendiente  
- En el ejemplo de marcado siguiente se muestra un objeto <xref:System.Windows.Controls.TextBlock> contenido en un objeto <xref:System.Windows.Controls.StackPanel>.  
+## <a name="getting-the-offset-relative-to-a-descendant"></a>Obtener el desplazamiento relativo a un descendiente  
+ El ejemplo de marcado siguiente se muestra un <xref:System.Windows.Controls.TextBlock> que está dentro de un <xref:System.Windows.Controls.StackPanel> objeto.  
   
- [!code-xml[VisualSnippets#VisualSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet4)]  
+ [!code-xaml[VisualSnippets#VisualSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml#visualsnippet4)]  
   
- En el siguiente ejemplo de código se muestra cómo utilizar el método <xref:System.Windows.Media.Visual.TransformToDescendant%2A> para recuperar el desplazamiento del objeto <xref:System.Windows.Controls.StackPanel> respecto a su objeto <xref:System.Windows.Controls.TextBlock> secundario.  Los valores de desplazamiento se encuentran en el valor de <xref:System.Windows.Media.GeneralTransform> devuelto.  
+ En el ejemplo de código siguiente se muestra cómo utilizar el <xref:System.Windows.Media.Visual.TransformToDescendant%2A> método para recuperar el desplazamiento de la <xref:System.Windows.Controls.StackPanel> en relación con su elemento secundario <xref:System.Windows.Controls.TextBlock>. Los valores de desplazamiento se encuentran en el valor devuelto <xref:System.Windows.Media.GeneralTransform> valor.  
   
  [!code-csharp[VisualSnippets#VisualSnippet9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualSnippets/CSharp/Window1.xaml.cs#visualsnippet9)]
  [!code-vb[VisualSnippets#VisualSnippet9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualSnippets/visualbasic/window1.xaml.vb#visualsnippet9)]  
   
- El desplazamiento tiene en cuenta los valores de la propiedad <xref:System.Windows.FrameworkElement.Margin%2A> de todos los objetos.  En este caso, el valor de <xref:System.Windows.Vector.X%2A> es \-4 y el valor de <xref:System.Windows.Vector.Y%2A> es \-4.  Los valores de desplazamiento son valores negativos porque el objeto primario tiene un desplazamiento negativo respecto a su objeto secundario.  
+ El desplazamiento tiene en cuenta el <xref:System.Windows.FrameworkElement.Margin%2A> valores para todos los objetos. En este caso, <xref:System.Windows.Vector.X%2A> es -4, y <xref:System.Windows.Vector.Y%2A> es -4. Los valores de desplazamiento son valores negativos, puesto que el objeto primario tiene un desplazamiento negativo respecto a su objeto secundario.  
   
-## Vea también  
- <xref:System.Windows.Media.Visual>   
- <xref:System.Windows.Media.VisualTreeHelper>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Media.Visual>  
+ <xref:System.Windows.Media.VisualTreeHelper>  
  [Información general sobre la representación de gráficos en WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

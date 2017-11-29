@@ -1,36 +1,28 @@
 ---
-title: "Cómo: agrupar archivos por extensión (LINQ) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f78785b4da3ae3b362603eea34d81207ed48a657
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 1e2d81f88371e63f64567422e87ed5b185e7a633
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Cómo: agrupar archivos por extensión (LINQ) (Visual Basic)
-Este ejemplo muestra cómo se puede usar LINQ para realizar avanzadas de agrupación y ordenación de operaciones en las listas de archivos o carpetas. También muestra cómo paginar los resultados en la ventana de consola utilizando la <xref:System.Linq.Enumerable.Skip%2A>y <xref:System.Linq.Enumerable.Take%2A>métodos.</xref:System.Linq.Enumerable.Take%2A> </xref:System.Linq.Enumerable.Skip%2A>  
+En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- La consulta siguiente muestra cómo agrupar el contenido de un árbol de directorio especificado por la extensión de nombre de archivo.  
+ En la siguiente consulta se muestra cómo agrupar el contenido de un árbol de directorio especificado por la extensión de nombre de archivo.  
   
 ```vb  
 Module GroupByExtension  
@@ -108,11 +100,11 @@ Module GroupByExtension
 End Module  
 ```  
   
- El resultado de este programa puede ser largo, dependiendo de los detalles del sistema de archivos local y lo que el `startFolder` está establecido en. Para habilitar la visualización de todos los resultados, este ejemplo muestra cómo paginar los resultados. Las mismas técnicas pueden aplicarse a las aplicaciones Web y de Windows. Observe que, debido a que el código página los elementos de un grupo, anidado `For Each` bucle es necesario. También hay alguna lógica adicional para calcular la posición actual en la lista y para permitir al usuario detener la paginación y salir del programa. En este caso, la consulta de paginación se ejecuta contra los resultados almacenados en caché de la consulta original. En otros contextos, como LINQ to SQL, no se requiere tal almacenamiento en caché.  
+ La salida de este programa puede ser larga, dependiendo de los detalles del sistema de archivos local y de la configuración de `startFolder`. Para habilitar la visualización de todos los resultados, en este ejemplo se muestra cómo paginar los resultados. Se pueden aplicar las mismas técnicas a las aplicaciones web y Windows. Observe que, como el código pagina los elementos en un grupo, se necesita un bucle `For Each` anidado. También hay alguna lógica adicional para calcular la posición actual en la lista y para permitir que el usuario detenga la paginación y salga del programa. En este caso en concreto, la consulta de paginación se ejecuta en los resultados almacenados en caché de la consulta original. En otros contextos, como en LINQ to SQL, este almacenamiento en caché no es necesario.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto destinado a .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+ Crear un proyecto que tiene como destino .NET Framework versión 3.5 o superior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
   
 ## <a name="see-also"></a>Vea también  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
+ [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [LINQ y directorios de archivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

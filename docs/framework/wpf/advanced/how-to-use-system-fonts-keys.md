@@ -1,39 +1,39 @@
 ---
-title: "C&#243;mo: Usar claves de fuentes del sistema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases, SystemFonts"
-  - "claves de recursos, SystemFonts (clase)"
-  - "SystemFonts (clase)"
+title: "Cómo: Usar claves de fuentes del sistema"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18781e3d71b9b30352323081e6d938350c6e53d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Usar claves de fuentes del sistema
-Los recursos del sistema exponen diversas métricas del sistema como recursos para ayudar a los desarrolladores a crear efectos visuales coherentes con la configuración del sistema.  <xref:System.Windows.SystemFonts> es una clase que contiene tanto valores de fuentes del sistema como recursos de fuentes del sistema enlazados a los valores, por ejemplo <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> y <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.  
+# <a name="how-to-use-system-fonts-keys"></a>Cómo: Usar claves de fuentes del sistema
+Los recursos del sistema exponen varias métricas del sistema como recursos para ayudar a los desarrolladores a crear efectos visuales coherentes con la configuración del sistema. <xref:System.Windows.SystemFonts>es una clase que contiene los valores de fuente del sistema y recursos de fuentes del sistema que se enlazan a los valores, por ejemplo, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> y <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.  
   
- Las medidas de las fuentes del sistema se pueden utilizar como recursos estáticos o dinámicos.  Utilice un recurso dinámico si desea que la medida de la fuente se actualice automáticamente mientras se ejecuta la aplicación; de lo contrario, utilice un recurso estático.  
+ La métricas de fuentes del sistema se pueden usar como recursos estáticos o dinámicos. Use un recurso dinámico si quiere que la métrica de fuentes se actualice automáticamente mientras se ejecuta la aplicación. De lo contrario, use un recurso estático.  
   
 > [!NOTE]
->  Los recursos dinámicos tienen la palabra clave *Key* anexada al nombre de propiedad.  
+>  Los recursos dinámicos tienen la palabra clave *clave* anexado al nombre de propiedad.  
   
- En el ejemplo siguiente se muestra cómo obtener acceso a recursos dinámicos de fuentes del sistema y utilizarlos para aplicar un estilo a un botón o personalizarlo.  Este ejemplo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crea un estilo de botón que asigna los valores <xref:System.Windows.SystemFonts> a un botón.  
+ En el ejemplo siguiente se muestra cómo obtener acceso y usar los recursos dinámicos de fuentes del sistema para aplicar estilo a un botón o personalizarlo. Esto [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en el ejemplo se crea un estilo de botón que asigna <xref:System.Windows.SystemFonts> valores a un botón.  
   
-## Ejemplo  
- [!code-xml[SystemRes_snip#FontDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
+## <a name="example"></a>Ejemplo  
+ [!code-xaml[SystemRes_snip#FontDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
   
-## Vea también  
- [Pintar un área con un pincel del sistema](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)   
- [Utilizar SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)   
- [Utilizar SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
+## <a name="see-also"></a>Vea también  
+ [Pintar un área con un pincel del sistema](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [Usar SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
+ [Usar SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)

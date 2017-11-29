@@ -1,34 +1,38 @@
 ---
-title: "Rehospedaje del dise&#241;ador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Rehospedaje del diseñador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 888282d10be9840817274e0fed36b3cb1cf6da32
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Rehospedaje del dise&#241;ador
-El rehospedaje del diseñador es un escenario común que hace referencia al hospedaje del lienzo de diseño de flujo de trabajo dentro de una aplicación personalizada.La aplicación de hospedaje con la que están familiarizados la mayoría de los usuarios es Visual Studio; sin embargo, hay varios escenarios donde puede resultar útil mostrar el diseñador de flujo de trabajo en una aplicación:  
+# <a name="designer-rehosting"></a>Rehospedaje del diseñador
+El rehospedaje del diseñador es un escenario común que hace referencia al hospedaje del lienzo de diseño de flujo de trabajo dentro de una aplicación personalizada. La aplicación de hospedaje con la que están familiarizados la mayoría de los usuarios es Visual Studio; sin embargo, hay varios escenarios donde puede resultar útil mostrar el diseñador de flujo de trabajo en una aplicación:  
   
--   Aplicaciones de supervisión \(que permiten a un usuario final visualizar el proceso, así como datos en tiempo de ejecución sobre el proceso, como el estado activo actual, los datos de tiempo de ejecución agregados o información de otro tipo sobre una instancia del flujo de trabajo\).  
+-   Aplicaciones de supervisión (que permiten a un usuario final visualizar el proceso, así como datos en tiempo de ejecución sobre el proceso, como el estado activo actual, los datos de tiempo de ejecución agregados o información de otro tipo sobre una instancia del flujo de trabajo).  
   
 -   Aplicaciones que permiten a un usuario personalizar el proceso con un conjunto limitado de actividades.  
   
- Para admitir estos tipos de aplicaciones, el diseñador de flujo de trabajo se distribuye dentro de .NET Framework y se puede hospedar dentro de una aplicación WPF o en una aplicación Winforms con el código de hospedaje de WPF adecuado.En este ejemplo se explica cómo:  
+ Para admitir estos tipos de aplicaciones, el diseñador de flujo de trabajo se distribuye dentro de .NET Framework y se puede hospedar dentro de una aplicación WPF o en una aplicación Winforms con el código de hospedaje de WPF adecuado. En este ejemplo se explica cómo:  
   
 -   Rehospedar el diseñador WF.  
   
 -   Utilizar el cuadro de herramientas y la cuadrícula de propiedad hospedados en otro host.  
   
-## Rehospedar el diseñador  
- En este ejemplo se muestra cómo crear el diseño de WPF para contener el diseñador, que se ve en el siguiente diseño de cuadrícula \(el código del cuadro de herramientas se omite por problemas de espacio\).Tenga en cuenta la denominación de los bordes que contienen el diseñador y la cuadrícula de propiedad.  
+## <a name="rehosting-the-designer"></a>Rehospedar el diseñador  
+ En este ejemplo se muestra cómo crear el diseño de WPF para contener el diseñador, que se ve en el siguiente diseño de cuadrícula (el código del cuadro de herramientas se omite por problemas de espacio). Tenga en cuenta la denominación de los bordes que contienen el diseñador y la cuadrícula de propiedad.  
   
 ```xaml  
 <Grid>  
@@ -43,10 +47,9 @@ El rehospedaje del diseñador es un escenario común que hace referencia al hosp
     <Border Grid.Column="1" Name="DesignerBorder"/>  
     <Border Grid.Column="2" Name="PropertyBorder"/>  
 </Grid>  
-  
 ```  
   
- A continuación, el ejemplo crea el diseñador y asocia sus propiedades <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> y <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> primarias al contenedor adecuado en la interfaz de usuario.Hay algunas líneas adicionales de código en el siguiente ejemplo que merecen explicación.La llamada a <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> es necesaria para asociar los diseñadores de actividad predeterminados para las actividades entregadas con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].Se llama a <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> para pasar el elemento de WF que se va a editar.Por último, las propiedades <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> \(lienzo primario\) y <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> \(cuadrícula de propiedad\) se colocan en la superficie de la interfaz de usuario.  
+ A continuación, el ejemplo crea el diseñador y asocia sus propiedades <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> y <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> primarias al contenedor adecuado en la interfaz de usuario. Hay algunas líneas adicionales de código en el siguiente ejemplo que merecen explicación. La llamada a <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> es necesaria para asociar los diseñadores de actividad predeterminados para las actividades entregadas con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Se llama a <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> para pasar el elemento de WF que se va a editar. Por último, las propiedades <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (lienzo primario) y <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (cuadrícula de propiedad) se colocan en la superficie de la interfaz de usuario.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -61,11 +64,10 @@ protected override void OnInitialized(EventArgs e)
    DesignerBorder.Child = wd.View;  
    PropertyBorder.Child = wd.PropertyInspectorView;  
 }  
-  
 ```  
   
-## Utilizar el cuadro de herramientas hospedado en otro host  
- Este ejemplo utiliza el control del cuadro de herramientas hospedado en otro host mediante declaración en XAML.Observe que en el código, se puede pasar un tipo al constructor <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.  
+## <a name="using-the-rehosted-toolbox"></a>Utilizar el cuadro de herramientas hospedado en otro host  
+ Este ejemplo utiliza el control del cuadro de herramientas hospedado en otro host mediante declaración en XAML. Observe que en el código, se puede pasar un tipo al constructor <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.  
   
 ```xaml  
 <!-- Copyright (c) Microsoft Corporation. All rights reserved-->  
@@ -117,10 +119,9 @@ protected override void OnInitialized(EventArgs e)
         <Border Grid.Column="2" Name="PropertyBorder"/>  
     </Grid>  
 </Window>  
-  
 ```  
   
-#### Utilizar el ejemplo  
+#### <a name="using-the-sample"></a>Utilizar el ejemplo  
   
 1.  Abra la solución DesignerRehosting.sln en [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
@@ -129,12 +130,12 @@ protected override void OnInitialized(EventArgs e)
 3.  Una aplicación WPF se inicia con un diseñador hospedado en otro host.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(valor predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`  
   
-## Vea también
+## <a name="see-also"></a>Vea también

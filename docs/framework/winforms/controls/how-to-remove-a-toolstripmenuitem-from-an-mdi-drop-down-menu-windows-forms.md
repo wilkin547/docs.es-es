@@ -1,62 +1,66 @@
 ---
-title: "C&#243;mo: Quitar un elemento ToolStripMenuItem de un men&#250; desplegable MDI (formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDI, combinar elementos de menú"
-  - "elementos de menú, quitar de menús desplegables de MDI"
-  - "MenuStrip (control) [Windows Forms], combinar"
-  - "MenuStrip (control) [Windows Forms], quitar"
+title: "Cómo: Quitar un elemento ToolStripMenuItem de un menú desplegable MDI (formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- menu items [Windows Forms], removing from MDI drop-down menus
+- MenuStrip control [Windows Forms], merging
+- MenuStrip control [Windows Forms], removing
+- MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b265544b45ad0614985fdc1d8dbf6f9c0b909ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Quitar un elemento ToolStripMenuItem de un men&#250; desplegable MDI (formularios Windows Forms)
-En algunas aplicaciones, el tipo de ventana secundaria de la interfaz de múltiples documentos \(MDI\) puede ser diferente al de la ventana primaria de MDI.  Por ejemplo, el elemento primario de MDI podría ser una hoja de cálculo y el elemento secundario de MDI podría ser un gráfico.  En ese caso, desea actualizar el contenido del menú del elemento primario de MDI con el contenido del menú del elemento secundario de MDI ya que están activadas las ventanas secundarias MDI de diferentes tipos.  
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Cómo: Quitar un elemento ToolStripMenuItem de un menú desplegable MDI (formularios Windows Forms)
+En algunas aplicaciones, el tipo de ventana secundaria de una interfaz de múltiples documentos (MDI) puede ser diferente de la ventana primaria MDI. Por ejemplo, el elemento primario MDI podría ser una hoja de cálculo y el elemento secundario MDI podría ser un gráfico. En ese caso, querrá actualizar el contenido del menú del elemento primario MDI con el contenido del menú del elemento secundario MDI cuando se activan ventanas secundarias MDI de diferentes tipos.  
   
- El siguiente procedimiento utiliza las propiedades <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> para quitar un elemento de menú secundario de la parte desplegable del menú del elemento primario de MDI.  Al cerrar la ventana secundaria MDI, se restauran los elementos de menú quitados del menú de elemento primario de MDI.  
+ El siguiente procedimiento usa el <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedades para quitar un elemento de menú de la parte desplegable del menú primario MDI. Cerrar la ventana secundaria MDI restaura los elementos de menú al menú primario MDI.  
   
-### Para quitar un MenuStrip de un menú desplegable de MDI  
+### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>Para quitar un elemento MenuStrip en un menú de lista desplegable MDI  
   
 1.  Cree un formulario y establezca su propiedad <xref:System.Windows.Forms.Form.IsMdiContainer%2A> en `true`.  
   
-2.  Agregue un <xref:System.Windows.Forms.MenuStrip> a `Form1` y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de <xref:System.Windows.Forms.MenuStrip> en `true`.  
+2.  Agregue una <xref:System.Windows.Forms.MenuStrip> a `Form1` y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de la <xref:System.Windows.Forms.MenuStrip> en `true`.  
   
-3.  Agregue un elemento de menú de nivel superior en `Form1`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad de <xref:System.Windows.Forms.Control.Text%2A> a `&File`.  
+3.  Agregue un elemento de menú de nivel superior a la `Form1`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad <xref:System.Windows.Forms.Control.Text%2A> en `&File`.  
   
-4.  Agregue tres elementos de submenú al elemento de menú `&File` y establezca sus propiedades <xref:System.Windows.Forms.ToolStripItem.Text%2A> en `&Open`, `&Import from` y `E&xit`.  
+4.  Agregue tres elementos de submenú en el `&File` elemento de menú y establezca sus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedades para `&Open`, `&Import from`, y `E&xit`.  
   
-5.  Agregue dos elementos de submenú al elemento de submenú `&Import from` y establezca sus propiedades <xref:System.Windows.Forms.ToolStripItem.Text%2A> en `&Word` y `&Excel`.  
+5.  Agregar dos elementos de submenú a la `&Import from` elemento de submenú y establezca sus <xref:System.Windows.Forms.ToolStripItem.Text%2A> propiedades `&Word` y `&Excel`.  
   
-6.  Agregue un formulario al proyecto, agregue <xref:System.Windows.Forms.MenuStrip> al formulario, y establezca la propiedad de <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de `Form2`<xref:System.Windows.Forms.MenuStrip> a `true`.  
+6.  Agregue un formulario al proyecto, agregue una <xref:System.Windows.Forms.MenuStrip> al formulario y establezca la propiedad <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> de la `Form2`<xref:System.Windows.Forms.MenuStrip> en `true`.  
   
-7.  Agregue un elemento de menú de nivel superior en `Form2`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad de <xref:System.Windows.Forms.ToolStripItem.Text%2A> a `&File`.  
+7.  Agregue un elemento de menú de nivel superior a la `Form2`<xref:System.Windows.Forms.MenuStrip> y establezca su propiedad <xref:System.Windows.Forms.ToolStripItem.Text%2A> en `&File`.  
   
-8.  Agregue un elemento de submenú `&Import from` al menú `&File` de `Form2` y agregue un elemento de submenú `&Word` al menú `&File`.  
+8.  Agregar un `&Import from` elemento de submenú a la `&File` menú de `Form2`y agregue un `&Word` elemento de submenú al `&File` menú.  
   
-9. Establezca las propiedades <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> de los elementos de menú de `Form2` tal como se muestra en la tabla siguiente.  
+9. Establecer el <xref:System.Windows.Forms.MergeAction> y <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propiedades de la `Form2` elementos de menú, como se muestra en la tabla siguiente.  
   
-    |Elemento de menú de Form2|valor de MergeAction|valor de MergeIndex|  
-    |-------------------------------|--------------------------|-------------------------|  
-    |Archivo|MatchOnly|\-1|  
-    |Import from|MatchOnly|\-1|  
-    |Word|Quitar|\-1|  
+    |Elemento de menú de Form2|Valor de MergeAction|Valor de MergeIndex|  
+    |---------------------|-----------------------|----------------------|  
+    |Archivo|MatchOnly|-1|  
+    |Importar desde|MatchOnly|-1|  
+    |Palabra|Quitar|-1|  
   
-10. En `Form1`, cree un controlador de eventos para el evento <xref:System.Windows.Forms.Control.Click> de `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. En `Form1`, cree un controlador de eventos para el <xref:System.Windows.Forms.Control.Click> eventos de la `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-11. Dentro del controlador de eventos, inserte el código de ejemplo siguiente para crear y mostrar nuevas instancias de `Form2` como MDI secundario de `Form1`.  
+11. En el controlador de eventos, inserte código similar al ejemplo de código siguiente para crear y mostrar nuevas instancias de `Form2` como elementos secundarios MDI de `Form1`:  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -66,12 +70,9 @@ En algunas aplicaciones, el tipo de ventana secundaria de la interfaz de múltip
         'Display the new form.  
             NewMDIChild.Show()  
     End Sub  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     private void openToolStripMenuItem_Click(object sender, EventArgs e)  
     {  
         Form2 newMDIChild = new Form2();  
@@ -80,33 +81,30 @@ En algunas aplicaciones, el tipo de ventana secundaria de la interfaz de múltip
         // Display the new form.  
             newMDIChild.Show();  
     }  
-  
     ```  
   
-12. Coloque el código de ejemplo siguiente en `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar el controlador de eventos.  
+12. Incluya código similar al ejemplo de código siguiente en el `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar el controlador de eventos.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
     EventArgs) Handles openToolStripMenuItem.Click  
-  
     ```  
   
     ```csharp  
     this.openToolStripMenuItem.Click += new _  
     System.EventHandler(this.openToolStripMenuItem_Click);  
-  
     ```  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Dos controles <xref:System.Windows.Forms.Form> denominados `Form1` y `Form2`.  
+-   Dos controles <xref:System.Windows.Forms.Form> llamados `Form1` y `Form2`.  
   
--   Un control <xref:System.Windows.Forms.MenuStrip> en `Form1` denominado `menuStrip1` y un control <xref:System.Windows.Forms.MenuStrip> en `Form2` denominado `menuStrip2`.  
+-   Un control <xref:System.Windows.Forms.MenuStrip> en `Form1` llamado `menuStrip1` y un control <xref:System.Windows.Forms.MenuStrip> en `Form2` llamado `menuStrip2`.  
   
--   Referencias a los ensamblados <xref:System?displayProperty=fullName> y <xref:System.Windows.Forms?displayProperty=fullName>.  
+-   Referencias a los ensamblados <xref:System?displayProperty=nameWithType> y <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## Vea también  
- [Cómo: Crear formularios principales MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)   
- [Cómo: Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)   
+## <a name="see-also"></a>Vea también  
+ [Crear formularios principales MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
+ [Crear formularios MDI secundarios](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
  [Información general sobre el control MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

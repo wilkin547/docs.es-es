@@ -1,33 +1,34 @@
 ---
-title: "Informaci&#243;n general de gr&#225;ficos (Formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "GDI+, Windows Forms"
-  - "gráficos"
-  - "gráficos, Windows Forms"
-  - "Windows Forms, GDI+"
-  - "Windows Forms, gráficos"
+title: "Información general de gráficos (Formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, graphics
+- Windows Forms, GDI+
+- graphics [Windows Forms], Windows Forms
+- GDI+, Windows Forms
+- graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 08ded27d60bdfcd9b9b1de4ba719c2f5b6018df1
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# Informaci&#243;n general de gr&#225;ficos (Formularios Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es una Interfaz de dispositivo gráfico que permite a los programadores para escribir aplicaciones independientes del dispositivo.  Los servicios de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se exponen a través de un conjunto de clases administradas.  
+# <a name="graphics-overview-windows-forms"></a>Información general de gráficos (Formularios Windows Forms)
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]es una interfaz de dispositivo gráfico que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se exponen a través de un conjunto de clases administradas.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general de gráficos](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
  Proporciona una introducción general a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
@@ -37,21 +38,21 @@ caps.handback.revision: 19
  [Estructura de la interfaz gráfica](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
  Describe la interfaz de clase administrada de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Drawing>  
  Proporciona acceso a la funcionalidad básica de gráficos de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
  <xref:System.Drawing.Drawing2D>  
- Proporciona funcionalidad avanzada de gráficos bidimensionales y de vectores.  
+ Proporciona funcionalidad avanzada de gráficos vectoriales y bidimensionales.  
   
  <xref:System.Drawing.Imaging>  
- Proporciona funcionalidad avanzada de procesamiento de imágenes de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Proporciona la funcionalidad avanzada de imágenes de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
  <xref:System.Drawing.Text>  
- Proporciona funcionalidad tipográfica avanzada de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Proporciona la funcionalidad avanzada de tipografía de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
  <xref:System.Drawing.Printing>  
  Proporciona servicios relacionados con la impresión.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Proporciona funcionalidad de dibujo y medida de texto de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].
+ Proporciona [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] dibujar y medir la funcionalidad de texto.

@@ -1,54 +1,53 @@
 ---
-title: "C&#243;mo: Convertir cadenas en una matriz de bytes en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "matrices [Visual Basic], matrices de bytes"
-  - "matrices [Visual Basic], convertir cadenas en"
-  - "matrices de bytes"
-  - "ejemplos [Visual Basic], conversión de cadenas"
-  - "conversión de cadenas, matrices"
+title: "Cómo: Convertir cadenas en una matriz de bytes en Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- string conversion [Visual Basic], arrays
+- arrays [Visual Basic], converting strings to
+- byte arrays
+- examples [Visual Basic], string conversion
+- arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6d527434dc0a61c9c771b42d05c1ee316094e7fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Convertir cadenas en una matriz de bytes en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En este tema se muestra cómo convertir una cadena en una matriz de bytes.  
+# <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>Cómo: Convertir cadenas en una matriz de bytes en Visual Basic
+Este tema muestra cómo convertir una cadena en una matriz de bytes.  
   
-## Ejemplo  
- Este ejemplo utiliza el método <xref:System.Text.Encoding.GetBytes%2A> de la clase de codificación <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> para convertir una cadena en una matriz de bytes.  
+## <a name="example"></a>Ejemplo  
+ Este ejemplo se utiliza la <xref:System.Text.Encoding.GetBytes%2A> método de la <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> clase para convertir una cadena en una matriz de bytes de codificación.  
   
  [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-strings-into-an-array-of-bytes_1.vb)]  
   
- Puede elegir varias opciones de codificación para convertir una cadena en una matriz de bytes:  
+ Se puede elegir entre varias opciones de codificación para convertir una cadena en una matriz de bytes:  
   
--   <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName>: Obtiene una codificación para el juego de caracteres ASCII \(7 bits\).  
+-   <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType>: Obtiene una codificación para el carácter de ASCII (7 bits) establecidas.  
   
--   <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=fullName>: Obtiene una codificación para el formato UTF\-16 utilizando el orden de bytes big\-endian.  
+-   <xref:System.Text.Encoding.BigEndianUnicode%2A?displayProperty=nameWithType>: Obtiene una codificación para el formato UTF-16 utilizando el orden de bytes big-endian.  
   
--   <xref:System.Text.Encoding.Default%2A?displayProperty=fullName>: Obtiene una codificación para la página de códigos ANSI actual del sistema.  
+-   <xref:System.Text.Encoding.Default%2A?displayProperty=nameWithType>: Obtiene una codificación para la página de códigos ANSI actual del sistema.  
   
--   <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName>: Obtiene una codificación para el formato UTF\-16 utilizando el orden de bytes little\-endian.  
+-   <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType>: Obtiene una codificación para el formato UTF-16 utilizando el orden de bytes little-endian.  
   
--   <xref:System.Text.Encoding.UTF32%2A?displayProperty=fullName>: Obtiene una codificación para el formato UTF\-32 utilizando el orden de bytes little\-endian.  
+-   <xref:System.Text.Encoding.UTF32%2A?displayProperty=nameWithType>: Obtiene una codificación para el formato UTF-32 utilizando el orden de bytes little-endian.  
   
--   <xref:System.Text.Encoding.UTF7%2A?displayProperty=fullName>: Obtiene una codificación para el formato UTF\-7.  
+-   <xref:System.Text.Encoding.UTF7%2A?displayProperty=nameWithType>: Obtiene una codificación para el formato UTF-7.  
   
--   <xref:System.Text.Encoding.UTF8%2A?displayProperty=fullName>: Obtiene una codificación para el formato UTF\-8.  
+-   <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>: Obtiene una codificación para el formato UTF-8.  
   
-## Vea también  
- <xref:System.Text.Encoding?displayProperty=fullName>   
- <xref:System.Text.Encoding.GetBytes%2A>   
- [Cómo: Convertir una matriz de bytes en una cadena en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Text.Encoding?displayProperty=nameWithType>  
+ <xref:System.Text.Encoding.GetBytes%2A>  
+ [Cómo: convertir una matriz de Bytes en una cadena en Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)

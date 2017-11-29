@@ -1,166 +1,167 @@
 ---
-title: "Directorio de c&#243;digo del control DataGridView (Formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cuadrículas de datos, ejemplos"
-  - "DataGridView (control) [Windows Forms], directorio de código"
-  - "DataGridView (control) [Windows Forms], ejemplos"
-  - "ejemplos [Windows Forms], DataGridView (control)"
+title: "Directorio de código del control DataGridView (Formularios Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], examples
+- examples [Windows Forms], DataGridView control
+- DataGridView control [Windows Forms], examples
+- DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89de7edc167ccc21ac2a31fa0de82299c5047969
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Directorio de c&#243;digo del control DataGridView (Formularios Windows Forms)
-En este tema se proporcionan vínculos a ejemplos de código relacionados con <xref:System.Windows.Forms.DataGridView> disponibles en la documentación.  
+# <a name="datagridview-control-code-directory-windows-forms"></a>Directorio de código del control DataGridView (Formularios Windows Forms)
+Este tema proporcionan vínculos a <xref:System.Windows.Forms.DataGridView>-relacionadas con ejemplos de código disponibles en la documentación.  
   
 > [!NOTE]
->  Un vínculo siempre le lleva al principio del tema en el que se encuentra el ejemplo de código.  
+>  Un vínculo siempre se salta a la parte superior del tema en el que se encuentra en el ejemplo de código.  
   
- Los ejemplos de código adicionales están disponibles en la documentación de referencia de la biblioteca de clases.  Para obtener una lista de las clases principales e interfaces asociadas al control <xref:System.Windows.Forms.DataGridView>, vea la tabla en [Resumen de tecnologías para el control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md).  
+ Ejemplos de código adicionales están disponibles en la documentación de referencia de la biblioteca de clases. Para obtener una lista de las clases principales e interfaces asociadas a la <xref:System.Windows.Forms.DataGridView> de control, vea la tabla de [DataGridView Control Technology Summary](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md).  
   
-## Lista de códigos  
+## <a name="codelist"></a>Lista de códigos  
   
-## Ejemplos de datos sin enlazar  
+## <a name="unbound-data-examples"></a>Ejemplos de datos sin enlazar  
   
--   [Cómo: Agregar una columna independiente a un control DataGridView de formularios Windows Forms enlazado a datos](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+-   [Agregar una columna independiente a un control DataGridView de formularios Windows Forms enlazado a datos](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
   
--   [Cómo: Crear un control DataGridView no enlazado en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+-   [Crear un control DataGridView no enlazado en formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
   
--   [Tutorial: Crear un control DataGridView sin enlazar en formularios Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+-   [Tutorial: Crear un control DataGridView sin enlazar en Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
   
-## Ejemplos de enlace a datos  
+## <a name="data-binding-examples"></a>Ejemplos de enlace de datos  
   
--   [Cómo: Enlazar datos al control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+-   [Enlazar datos al control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Generar columnas automáticamente en un control DataGridView de formularios Windows Forms enlazado a datos](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+-   [Generar columnas automáticamente en un control DataGridView de formularios Windows Forms enlazado a datos](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
   
--   [Cómo: Quitar columnas generadas automáticamente desde un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+-   [Quitar columnas generadas automáticamente desde un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
   
--   [Cómo: Enlazar objetos a controles DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+-   [Cómo: Enlazar objetos a controles DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
   
--   [Cómo: Obtener acceso a objetos enlazados a filas DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+-   [Cómo: Obtener acceso a objetos enlazados a filas DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
--   [Cómo: Crear un formulario principal\-detalle mediante dos controles DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagrids.md)  
+-   [Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
   
--   [Tutorial: Crear un formulario principal\-detalle mediante dos controles DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagrids.md)  
+-   [Tutorial: Crear un formulario principal-detalle mediante dos controles DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
   
-## Ejemplos de formato de datos  
+## <a name="data-formatting-examples"></a>Ejemplos de formato de datos  
   
--   [Cómo: Dar formato a datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
+-   [Dar formato a datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-data-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Personalizar el formato de los datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+-   [Personalizar el formato de los datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
   
-## Ejemplos de validación de datos  
+## <a name="data-validation-examples"></a>Ejemplos de validación de datos  
   
--   [Cómo: Validar datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
+-   [Validar datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control.md)  
   
--   [Tutorial: Validar datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+-   [Tutorial: Validar datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+-   [Controlar los errores que se producen durante la entrada de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/handle-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
--   [Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+-   [Tutorial: Controlar los errores que se producen durante la entrada de datos en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
   
-## Ejemplos de personalización de la apariencia  
+## <a name="appearance-customization-examples"></a>Ejemplos de personalización de apariencia  
   
--   [Cómo: Cambiar los estilos de borde y línea de la cuadrícula en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
+-   [Cambiar los estilos de borde y línea de la cuadrícula en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)  
   
--   [Cómo: Establecer estilos de colores y fuentes en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
+-   [Establecer estilos de colores y fuentes en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+-   [Establecer estilos de celda predeterminados para el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Utilizar la plantilla de filas para personalizar filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
+-   [Utilizar la plantilla de filas para personalizar filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)  
   
--   [Cómo: Establecer estilos de fila alternos para el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
+-   [Establecer estilos de fila alternos para el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)  
   
-## Ejemplos de personalización del comportamiento  
+## <a name="behavior-customization-examples"></a>Ejemplos de personalización del comportamiento  
   
--   [Cómo: Especificar el modo de edición del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+-   [Especificar el modo de edición del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Especificar valores predeterminados para nuevas filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+-   [Especificar valores predeterminados para nuevas filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
   
--   [Cómo: Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
+-   [Impedir la adición y eliminación de filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md)  
   
--   [Cómo: Llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+-   [Llevar a cabo una acción personalizada en función de los cambios que se realicen en una celda de un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
   
--   [Cómo: Permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+-   [Permitir que los usuarios copien varias celdas en el Portapapeles desde el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
   
--   [Cómo: Agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+-   [Agregar información sobre herramientas a celdas individuales en un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
   
--   [Cómo: Mostrar imágenes en celdas del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+-   [Cómo: Mostrar imágenes en celdas del control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Personalizar la ordenación en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+-   [Personalizar la ordenación en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
-## Ejemplos de manipulación de columna  
+## <a name="column-manipulation-examples"></a>Ejemplos de manipulación de columna  
   
--   [Cómo: Inmovilizar columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
+-   [Inmovilizar columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
+-   [Habilitar la reordenación de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Cambiar el orden de las columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+-   [Cambiar el orden de las columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Ocultar columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
+-   [Ocultar columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
+-   [Ocultar encabezados de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
+-   [Crear columnas de sólo lectura en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Establecer modos de ordenación de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+-   [Cómo: Establecer modos de ordenación de columnas en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
   
--   [Cómo: Trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+-   [Trabajar con columnas de imágenes en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Manipular columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+-   [Manipular columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
   
-## Ejemplos de ajuste del tamaño de fila y columna  
+## <a name="row-and-column-sizing-examples"></a>Ejemplos de ajuste de tamaño de columna y fila  
   
 -   [Modo de relleno de columnas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Establecer modos de cambio de tamaño para el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
+-   [Establecer modos de cambio de tamaño para el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Cambiar mediante programación el tamaño de las celdas para ajustar el contenido en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
+-   [Cambiar mediante programación el tamaño de las celdas para ajustar el contenido en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/programmatically-resize-cells-to-fit-content-in-the-datagrid.md)  
   
--   [Cómo: Cambiar automáticamente el tamaño de las celdas cuando se modifica el contenido en un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
+-   [Cambiar automáticamente el tamaño de las celdas cuando se modifica el contenido en un control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
   
-## Ejemplos de selección  
+## <a name="selection-examples"></a>Ejemplos de selección  
   
--   [Cómo: Establecer el modelo de selección del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+-   [Establecer el modelo de selección del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
   
--   [Cómo: Obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/selected-cells-rows-and-columns-datagridview.md)  
+-   [Obtener las celdas, filas y columnas seleccionadas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/selected-cells-rows-and-columns-datagridview.md)  
   
--   [Cómo: Obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
+-   [Obtener y establecer la celda actual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/get-and-set-the-current-cell-wf-datagridview-control.md)  
   
-## Ejemplos de personalización avanzada  
+## <a name="advanced-customization-examples"></a>Ejemplos de personalización avanzada  
   
--   [Cómo: Personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Procedimiento para personalizar la apariencia de las celdas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Cómo: Personalizar la apariencia de las filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Procedimiento para personalizar la apariencia de las filas en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
--   [Cómo: Personalizar celdas y columnas en el control DataGridView de formularios Windows Forms ampliando su comportamiento y apariencia](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+-   [Personalizar celdas y columnas en el control DataGridView de formularios Windows Forms ampliando su comportamiento y apariencia](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
   
--   [Cómo: Deshabilitar botones en una columna de botones del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
+-   [Deshabilitar botones en una columna de botones del control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
   
--   [Cómo: Alojar controles en celdas DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+-   [Alojar controles en celdas DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
   
-## Ejemplos de datos avanzados  
+## <a name="advanced-data-examples"></a>Ejemplos de datos avanzados  
   
--   [Cómo: Implementar el modo virtual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
+-   [Implementar el modo virtual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)  
   
--   [Tutorial: Implementar el modo virtual en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
+-   [Tutorial: Implementar el modo virtual en el control DataGridView de Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)  
   
--   [Implementar el modo virtual mediante la carga de datos Just\-In\-Time en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+-   [Implementar el modo virtual mediante la carga de datos Just-In-Time en el control DataGridView de formularios Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## Vea también  
- <xref:System.Windows.Forms.DataGridView>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.DataGridView>  
  [Información general del control DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

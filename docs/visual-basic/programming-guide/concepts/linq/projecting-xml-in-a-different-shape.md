@@ -1,28 +1,24 @@
 ---
-title: Proyectar un XML con una forma diferente (Visual Basic) | Documentos de Microsoft
+title: Proyectando XML de una forma diferente (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b05fbff86bcac06a3ce375c162c70dc308f4913
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 2cf5f963b8675f22c9cab0297d8f48eb68f5aefb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proyectar un XML con una forma diferente (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Proyectando XML de una forma diferente (Visual Basic)
 Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es diferente a la del XML de origen.  
   
  Muchas de las transformación típicas de un XML consisten en consultas encadenadas, como ocurre en este ejemplo. Es habitual comenzar con una cierta forma de XML, proyectar los resultados intermedios como colecciones de tipos anónimos o con nombre y, finalmente, proyectar de nuevo los resultados en XML, cuya forma es completamente diferente a la del XML de origen.  
@@ -30,9 +26,9 @@ Este tema muestra un ejemplo de cómo proyectar un XML cuya apariencia es difere
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo y el texto de cada uno de los párrafos. Por último, el ejemplo proyecta el XML con una forma diferente. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. La nueva instrucción encargada de la proyección está señalada en los comentarios del código siguiente:  
   
- Para obtener instrucciones para crear el documento de origen para este ejemplo, vea [crear Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Para obtener instrucciones para crear el documento de origen para este ejemplo, vea [crear el origen de Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -241,7 +237,7 @@ End Module
 ```  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- En el ejemplo siguiente, consulta para buscar todo el texto en un documento de Word:  
+ En el siguiente ejemplo, realizará una consulta para buscar todo el texto de un documento de Word:  
   
 -   [Buscar texto en documentos de Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   

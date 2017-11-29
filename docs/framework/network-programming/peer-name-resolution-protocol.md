@@ -7,24 +7,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0deccc8be5616c76f4c447c50f22544fe0fabe47
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Protocolo de resolución de nombres del mismo nivel
+# <a name="peer-name-resolution-protocol"></a>Protocolo de resolución de nombres del mismo nivel
 En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolución de nombres específicos para resolver sus respectivas ubicaciones de red (direcciones, protocolos y puertos) a partir de nombres u otros tipos de identificadores. Antes, la resolución de nombres del mismo nivel resultaba complicada por la conectividad intrínsecamente transitoria y por otras limitaciones del Sistema de nombres de dominio (DNS).  
   
  La plataforma de red punto a punto de Microsoft® Windows® soluciona este problema con el Protocolo de resolución de nombres de mismo nivel (PNRP), que es un registro de nombres seguro, escalable y dinámico. Este protocolo de resolución de nombres se desarrolló inicialmente para Windows XP y posteriormente se actualizó en Windows Vista™. El funcionamiento de PNRP es muy diferente del de los sistemas de resolución de nombres tradicionales y ofrece nuevas posibilidades muy interesantes para los desarrolladores de aplicaciones.  
@@ -45,7 +39,7 @@ En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolu
   
 -  
   
-## El espacio de nombres System.Net.PeerToPeer  
+## <a name="the-systemnetpeertopeer-namespace"></a>El espacio de nombres System.Net.PeerToPeer  
   
 -   La funcionalidad PNRP está definida por el espacio de nombres <xref:System.Net.PeerToPeer> en .NET Framework versión 3.5. Proporciona un conjunto de tipos que se pueden usar para registrar y resolver nombres del mismo nivel con un servicio PNRP disponible.  
   
@@ -73,9 +67,8 @@ En entornos punto a punto, los elementos del mismo nivel usan sistemas de resolu
   
 -  
   
-## Vea también  
- <xref:System.ServiceModel.PeerResolvers>   
- <xref:System.Net.PeerToPeer>   
- [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.ServiceModel.PeerResolvers>  
+ <xref:System.Net.PeerToPeer>  
+ [Network Programming Samples (Ejemplos de programación de red)](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Ejemplo de tecnología punto a punto](http://go.microsoft.com/fwlink/?LinkID=179571)
-

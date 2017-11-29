@@ -1,40 +1,44 @@
 ---
-title: "C&#243;mo: Aplicar el modelo PropertyNameChanged | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles personalizados [Windows Forms], cambios en las propiedades (utilizando el código)"
-  - "enlace de datos, controles personalizados"
-  - "PropertyNameChanged (modelo), aplicar"
+title: "Cómo: Aplicar el modelo PropertyNameChanged"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom controls [Windows Forms], property changes (using code)
+- data binding [Windows Forms], custom controls
+- PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f53dd2fdaa622e022f49c153b6dbc83030ae791
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Aplicar el modelo PropertyNameChanged
-En el ejemplo de código siguiente se muestra cómo aplicar el modelo *nombreDePropiedad*Changed a un control personalizado.  Aplique este modelo cuando implemente los controles personalizados utilizados con el motor de enlace de datos de Windows Forms.  
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>Cómo: Aplicar el modelo PropertyNameChanged
+En el ejemplo de código siguiente se muestra cómo aplicar el *PropertyName*modelo Changed a un control personalizado. Este patrón se aplican al implementar controles personalizados que se usan con el motor de enlace de datos de formularios Windows Forms.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  [!code-csharp[System.Windows.Forms.ChangeNotification#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/CS/Form1.cs#3)]
  [!code-vb[System.Windows.Forms.ChangeNotification#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ChangeNotification/VB/Form1.vb#3)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para compilar el ejemplo de código anterior:  
   
--   Pegue el código en un archivo de código vacío.  Debe utilizar el control personalizado en un Windows Form que contenga un método `Main`.  
+-   Pegue el código en un archivo de código vacío. Debe utilizar el control personalizado en un formulario Windows Forms que contiene un `Main` método.  
   
-## Vea también  
- [Cómo: Implementar la interfaz INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)   
- [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)   
+## <a name="see-also"></a>Vea también  
+ [Implementar la interfaz INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
+ [Notificación de cambios en el enlace de datos de Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [Enlace de datos en Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

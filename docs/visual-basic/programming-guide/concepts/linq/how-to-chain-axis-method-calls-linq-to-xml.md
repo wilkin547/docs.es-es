@@ -1,37 +1,32 @@
 ---
-title: "Cómo: encadenar llamadas de método de eje (LINQ to XML) (Visual Basic) | Documentos de Microsoft"
+title: "Cómo: encadenar llamadas de método de eje (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c0e9d440ab50b7f275296731e5210578bcedcaa
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 39579d08d339ed8964520936d28ee289de5fb15d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>Cómo: encadenar llamadas de método de eje (LINQ to XML) (Visual Basic)
 Un patrón común que puede utilizar en el código consiste en llamar a un método Axis y, después, llamar a uno de los métodos de extensión Axes.  
   
- Hay dos ejes con el nombre de `Elements` que devuelven una colección de elementos: el <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>método y <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>método.</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> Puede combinar estos dos ejes para encontrar todos los elementos de un nombre especificado en una profundidad determinada del árbol.  
+ Hay dos métodos Axes con el nombre `Elements` que devuelven una colección de elementos: el método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> y el método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>. Puede combinar estos dos ejes para encontrar todos los elementos de un nombre especificado en una profundidad determinada del árbol.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo utiliza <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>y <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>para encontrar todos los `Name` en todos los elementos `Address` en todos los elementos `PurchaseOrder` elementos.</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>  
+ En este ejemplo se usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> y <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> para buscar todos los elementos `Name` en todos los elementos `Address` de todos los elementos `PurchaseOrder`.  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de muestra: varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -54,7 +49,7 @@ Next
 <Name>Jessica Arnold</Name>  
 ```  
   
- Esto funciona porque una de las implementaciones de la `Elements` eje es un método de extensión de <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XContainer>.</xref:System.Xml.Linq.XContainer> </xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>se deriva de <xref:System.Xml.Linq.XContainer>, por lo que se puede llamar a la <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>método en los resultados de una llamada a la <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>método.</xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> </xref:System.Xml.Linq.XContainer></xref:System.Xml.Linq.XElement>  
+ Esto funciona porque una de las implementaciones del eje `Elements` es un método de extensión en <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XContainer>. <xref:System.Xml.Linq.XElement> se deriva de <xref:System.Xml.Linq.XContainer>, de modo que puede llamar al método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> según los resultados de una llamada al método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Ejemplo  
  A veces, desea recuperar todos los elementos de una profundidad determinada cuando es posible que intervengan (o no) antecesores. Por ejemplo, en el siguiente documento, podría recuperar todos los elementos `ConfigParameter` que son secundarios del elemento `Customer`, pero no el elemento `ConfigParameter` que es un secundario del elemento `Root`.  
@@ -81,7 +76,7 @@ Next
 </Root>  
 ```  
   
- Para ello, puede usar el <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>eje, como sigue:</xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>  
+ Para ello, puede usar el eje <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> de la siguiente manera:  
   
 ```vb  
 Dim root As XElement = XElement.Load("Irregular.xml")  
@@ -102,7 +97,7 @@ Next
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra la misma técnica para XML que se encuentre en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- Este ejemplo utiliza el siguiente documento XML: [archivo XML de muestra: varios pedidos de compra en un Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
+ En este ejemplo se usa el siguiente documento XML: [Archivo XML de ejemplo: Varios pedidos de compra en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -132,4 +127,4 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ejes LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [Ejes de LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

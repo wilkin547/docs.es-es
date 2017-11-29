@@ -1,69 +1,68 @@
 ---
-title: "M&#233;todos parciales (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.PartialMethod"
-  - "PartialMethod"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "lógica personalizada en el código [Visual Basic]"
-  - "insertar lógica personalizada en el código"
-  - "métodos [Visual Basic], métodos parciales"
-  - "métodos parciales [Visual Basic]"
-  - "partial, métodos [Visual Basic]"
+title: "Métodos parciales (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.PartialMethod
+- PartialMethod
+helpviewer_keywords:
+- custom logic into code [Visual Basic]
+- partial methods [Visual Basic]
+- partial [Visual Basic], methods [Visual Basic]
+- methods [Visual Basic], partial methods
+- inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# M&#233;todos parciales (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Los métodos parciales permiten a los programadores insertar la lógica personalizada en el código.  Normalmente, el código forma parte de una clase generada por el diseñador.  Los métodos parciales se definen en una clase parcial que crea un generador de código y se suelen usar para notificar que se ha cambiado algo.  Permiten al programador especificar el comportamiento personalizado en respuesta al cambio.  
+# <a name="partial-methods-visual-basic"></a>Métodos parciales (Visual Basic)
+Los métodos parciales permiten a los desarrolladores insertar lógica personalizada en código. Normalmente, el código es parte de una clase generada por el diseñador. Métodos parciales se definen en una clase parcial que se crea un generador de código y se suelen usar para proporcionar una notificación que algo ha cambiado. Le permiten al programador especificar un comportamiento personalizado en respuesta al cambio.  
   
- El diseñador del generador de código define sólo la firma de método y una o más llamadas al mismo.  Después, los programadores pueden proporcionar las implementaciones del método si desean personalizar el comportamiento del código generado.  Cuando no se proporciona ninguna implementación, el compilador quita las llamadas al método produciéndose una sobrecarga de rendimiento adicional.  
+ El diseñador del generador de código define sólo la firma del método y una o más llamadas al método. Los desarrolladores pueden proporcionar, a continuación, las implementaciones del método si desea personalizar el comportamiento del código generado. Cuando no se proporciona ninguna implementación, se quitan las llamadas al método por el compilador, lo que da lugar ninguna sobrecarga de rendimiento adicional.  
   
-## Declaración  
- El código generado marca la definición de un método parcial colocando la palabra clave `Partial` al principio de la línea de firma.  
+## <a name="declaration"></a>Declaración  
+ El código generado marca la definición de un método parcial mediante la colocación de la palabra clave `Partial` al principio de la línea de firma.  
   
-```vb#  
+```vb  
 Partial Private Sub QuantityChanged()  
 End Sub  
 ```  
   
  La definición debe cumplir las condiciones siguientes:  
   
--   El método debe ser `Sub`, no `Function`.  
+-   El método debe ser un `Sub`, no un `Function`.  
   
--   El cuerpo del método debe quedar vacío.  
+-   El cuerpo del método se debe dejar vacío.  
   
 -   El modificador de acceso debe ser `Private`.  
   
-## Implementación  
- La implementación está formada principalmente por el rellenado del cuerpo del método parcial.  Normalmente, la implementación está en una clase parcial independiente de la definición y la escribe un programador que desea extender el código generado.  
+## <a name="implementation"></a>Implementación  
+ La implementación consiste principalmente en rellenar en el cuerpo del método parcial. La implementación está normalmente en una clase parcial independiente de la definición y se escribe por un desarrollador que desea ampliar el código generado.  
   
-```vb#  
+```vb  
 Private Sub QuantityChanged()  
 '    Code for executing the desired action.  
 End Sub  
 ```  
   
- El ejemplo anterior duplica la firma en la declaración exactamente, pero son posibles las variaciones.  En particular, se pueden agregar otros modificadores, como `Overloads` u `Overrides`.  Se permite sólo un modificador `Overrides`.  Para obtener más información sobre modificadores de métodos, vea [Sub \(Instrucción\)](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ El ejemplo anterior duplica la firma en la declaración exactamente, pero son posibles las variaciones. En concreto, otros modificadores pueden agregarse, como `Overloads` o `Overrides`. Solo un `Overrides` se permite el modificador. Para obtener más información acerca de los modificadores de método, consulte [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## Utilice  
- Llame a un método parcial como llamaría a cualquier otro procedimiento `Sub`.  Si se ha implementado el método, se evalúan los argumentos y se ejecuta el cuerpo del método.  Sin embargo, recuerde que implementar un método parcial es opcional.  Si no se implementa el método, una llamada a éste no tiene ningún efecto y no se evalúan las expresiones pasadas como argumentos al método.  
+## <a name="use"></a>Uso  
+ Se llama a un método parcial como llamaría a cualquier otro `Sub` procedimiento. Si el método se ha implementado, se evalúan los argumentos y se ejecuta el cuerpo del método. Sin embargo, recuerde que implementa un método parcial es opcional. Si no se implementa el método, una llamada a éste no tiene ningún efecto y no se evalúan las expresiones pasadas como argumentos al método.  
   
-## Ejemplo  
- En un archivo denominado Product.Designer.vb, defina una clase `Product` que tiene una propiedad `Quantity`.  
+## <a name="example"></a>Ejemplo  
+ En un archivo denominado Product.Designer.vb, defina un `Product` clase que tiene un `Quantity` propiedad.  
   
  [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
@@ -71,18 +70,18 @@ End Sub
   
  [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
- Finalmente, en el método Main de un proyecto, declare una instancia de `Product` y proporcione un valor inicial para su propiedad `Quantity`.  
+ Por último, en el método Main de un proyecto, declare un `Product` instancia y proporcionar un valor inicial para su `Quantity` propiedad.  
   
  [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
- Debe aparecer un cuadro de mensaje con este mensaje:  
+ Debe aparecer un cuadro de mensaje que muestra este mensaje:  
   
  `Quantity was changed to 100`  
   
-## Vea también  
- [Sub \(Instrucción\)](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Procedimientos Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Parámetros opcionales](../../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)   
- [Generación de código en LINQ to SQL](../Topic/Code%20Generation%20in%20LINQ%20to%20SQL.md)   
- [Agregar lógica empresarial utilizando métodos Partial](../Topic/Adding%20Business%20Logic%20By%20Using%20Partial%20Methods.md)
+## <a name="see-also"></a>Vea también  
+ [Sub (instrucción)](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Subprocedimientos](./sub-procedures.md)  
+ [Parámetros opcionales](./optional-parameters.md)  
+ [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)  
+ [Generación de código en LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
+ [Agregar lógica de negocios utilizando métodos parciales](https://msdn.microsoft.com/library/bb546176)

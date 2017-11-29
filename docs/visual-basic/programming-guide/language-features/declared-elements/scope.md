@@ -1,68 +1,67 @@
 ---
-title: "&#193;mbito en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ámbito de bloque"
-  - "elementos declarados, ámbito"
-  - "niveles de ámbito"
-  - "nivel de módulo"
-  - "ámbito de módulo"
-  - "espacios de nombres, ámbito"
-  - "ámbito de procedimiento"
-  - "procedimientos, ámbito"
-  - "ámbito, acerca del ámbito"
-  - "ámbito, elementos declarados"
-  - "ámbito, niveles"
-  - "ámbito, Visual Basic"
+title: "Ámbito en Visual Basic"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module scope [Visual Basic]
+- scope [Visual Basic], levels
+- module level
+- procedures [Visual Basic], scope
+- declared elements [Visual Basic], scope
+- namespaces [Visual Basic], scope
+- scope [Visual Basic], declared elements
+- scope [Visual Basic], about scope
+- levels of scope [Visual Basic]
+- block scope [Visual Basic]
+- scope [Visual Basic], Visual Basic
+- procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# &#193;mbito en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-El *ámbito* de un elemento declarado es el conjunto de todo el código que puede hacer referencia a él sin calificar su nombre o marcarlo como disponible mediante [Instrucción Imports \(Tipo y espacio de nombres de .NET\)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  Un elemento puede tener uno de los niveles de ámbito siguientes:  
+# <a name="scope-in-visual-basic"></a>Ámbito en Visual Basic
+El *ámbito* de un elemento declarado es el conjunto de todo el código que puede hacer referencia sin calificar su nombre o ponerlo a disposición a través de un [Imports (instrucción Namespace de .NET y tipo)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un elemento puede tener ámbito en uno de los siguientes niveles:  
   
 |Nivel|Descripción|  
 |-----------|-----------------|  
-|Ámbito de bloque|Ámbito disponible únicamente en el bloque de código en el que se ha declarado|  
-|Ámbito de procedimiento|Disponible para todo el código dentro del procedimiento en el que se ha declarado|  
-|Ámbito de módulo|Disponible para todo el código dentro del módulo, clase o estructura en el que se ha declarado|  
-|Ámbito de espacio de nombres|Disponible para todo el código dentro del espacio de nombres en el que se ha declarado|  
+|Ámbito de bloque|Disponible solo en el código del bloque en el que se declara|  
+|Ámbito de procedimiento|Disponible para todo el código dentro del procedimiento en el que se declara|  
+|Ámbito de módulo|Disponible para todo el código dentro del módulo, clase o estructura en la que se ha declarado|  
+|Ámbito de Namespace|Disponible para todo el código en el espacio de nombres en el que se declara|  
   
- Estos niveles de ámbito progresan desde el más restringido \(bloque\) al más amplio \(espacio de nombres\), donde *ámbito más restringido* significa el conjunto de código más pequeño que puede hacer referencia al elemento sin calificación.  Para obtener más información, vea "Niveles de ámbito" en esta página.  
+ Estos niveles de ámbito progresan desde el más restringido (bloque) al más amplio (espacio de nombres), donde *ámbito más restringido* significa que el conjunto más pequeño de código que puede hacer referencia al elemento sin calificación. Para obtener más información, vea "Niveles de ámbito" en esta página.  
   
-## Especificar ámbito y definir variables  
- El ámbito de un elemento se especifica al declararlo  y puede depender de los factores siguientes:  
+## <a name="specifying-scope-and-defining-variables"></a>Especificar ámbito y definir Variables  
+ Especifique el ámbito de un elemento cuando se declara. El ámbito puede depender de los siguientes factores:  
   
--   La región \(bloque, procedimiento, módulo, clase o estructura\) donde se declara el elemento.  
+-   La región (bloque, procedimiento, módulo, clase o estructura) en el que se declara el elemento  
   
--   El espacio de nombres que contiene la declaración del elemento.  
+-   El espacio de nombres que contiene la declaración del elemento  
   
 -   El nivel de acceso que se declara para el elemento.  
   
- Tenga cuidado cuando defina variables del mismo nombre pero con ámbito diferente, puesto que ello podría causar resultados inesperados.  Para obtener más información, vea [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Tenga cuidado al definir las variables con el mismo nombre pero con un ámbito diferente, porque si lo hace, puede provocar resultados inesperados. Para obtener más información, consulta [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## Niveles de ámbito  
- Un elemento de programación está disponible en toda la región en la que se declara.  Todo el código de la misma región puede hacer referencia al elemento sin calificar su nombre.  
+## <a name="levels-of-scope"></a>Niveles de ámbito  
+ Un elemento de programación está disponible en toda la región en la que se declara. Todo el código en la misma región puede hacer referencia al elemento sin calificar su nombre.  
   
-### Ámbito de bloque  
- Un bloque es un conjunto de instrucciones incluido dentro de las instrucciones de declaración de inicio y fin, como lo siguiente:  
+### <a name="block-scope"></a>Ámbito de bloque  
+ Un bloque es un conjunto de instrucciones entre de inicio y finalización de instrucciones de declaración, como las siguientes:  
   
 -   `Do` y `Loop`  
   
--   `For` \[`Each`\] y `Next`  
+-   `For`[`Each`] y`Next`  
   
 -   `If` y `End If`  
   
@@ -76,7 +75,7 @@ El *ámbito* de un elemento declarado es el conjunto de todo el código que pued
   
 -   `With` y `End With`  
   
- Si declara una variable dentro de un bloque, sólo puede utilizarla dentro de ese bloque.  En el ejemplo siguiente, el ámbito de la variable de entero `cube` es el bloque entre `If` y `End If`, y las referencias a `cube` dejan de ser posibles cuando termina la ejecución del bloque.  
+ Si se declara una variable dentro de un bloque, se puede usar solo dentro de dicho bloque. En el ejemplo siguiente, el ámbito de la variable de entero `cube` es el bloque entre `If` y `End If`, y ya no se puede hacer referencia a `cube` cuando se transfiere el bloque de ejecución.  
   
 ```  
 If n < 1291 Then  
@@ -86,24 +85,24 @@ End If
 ```  
   
 > [!NOTE]
->  Incluso si el ámbito de una variable está limitado a un bloque, su período de duración sigue siendo el del procedimiento completo.  Si utiliza el bloque varias veces durante el procedimiento, todas las variables de bloque conservan su valor anterior.  Para evitar resultados inesperados en estos casos, es mejor inicializar las variables de bloque al principio del bloque.  
+>  Incluso si el ámbito de una variable está limitado a un bloque, su duración sigue siendo de todo el procedimiento. Si escribe el bloque varias veces durante el procedimiento, cada variable de bloque conserva su valor anterior. Para evitar resultados inesperados en este caso, es aconsejable inicializar las variables de bloque al principio del bloque.  
   
-### Ámbito de procedimiento  
- Un elemento declarado en un procedimiento no está disponible fuera de él.  Solamente el procedimiento que contiene su declaración puede utilizarlo.  Las variables en este nivel también se denominan *variables locales*.  Se declaran con [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md), con o sin la palabra clave [Static](../../../../visual-basic/language-reference/modifiers/static.md).  
+### <a name="procedure-scope"></a>Ámbito de procedimiento  
+ Un elemento declarado dentro de un procedimiento no está disponible fuera de ese procedimiento. Solo el procedimiento que contiene la declaración puede utilizarlo. Las variables en este nivel son también se denomina *variables locales*. Se declaran con la [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md), con o sin el [estático](../../../../visual-basic/language-reference/modifiers/static.md) palabra clave.  
   
- Los ámbitos de procedimiento y de bloque están estrechamente relacionados.  Si se declara una variable dentro de un procedimiento, pero fuera de un bloque dentro del procedimiento, puede considerarse que la variable tiene ámbito de bloque, donde el bloque es el procedimiento completo.  
+ Ámbito de procedimiento y de bloque están estrechamente relacionados. Si se declara una variable dentro de un procedimiento, pero fuera de un bloque dentro de ese procedimiento, se puede considerar la variable tiene ámbito de bloque, donde el bloque es el procedimiento completo.  
   
 > [!NOTE]
->  Todos los elementos locales, aunque sean variables `Static`, son privados para el procedimiento en el que aparecen.  No se puede declarar un elemento mediante la palabra clave [Public](../../../../visual-basic/language-reference/modifiers/public.md) dentro de un procedimiento.  
+>  Todos los elementos locales, incluso si están `Static` , son privados para el procedimiento en el que aparecen. No se puede declarar un elemento mediante la [público](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave dentro de un procedimiento.  
   
-### Ámbito de módulo  
- Por comodidad, el término *nivel de módulo* se aplica por igual a módulos, clases y estructuras.  Puede declarar elementos a este nivel si sitúa la instrucción de declaración fuera de cualquier procedimiento o bloque pero dentro del módulo, clase o estructura.  
+### <a name="module-scope"></a>Ámbito de módulo  
+ Para mayor comodidad, el término único *nivel de módulo* se aplica por igual a módulos, clases y estructuras. Puede declarar elementos en este nivel mediante la colocación de la instrucción de declaración fuera de cualquier procedimiento o bloque pero dentro del módulo, clase o estructura.  
   
- Cuando se incluye una declaración en el nivel de módulo, el nivel de acceso elegido determina el ámbito.  El espacio de nombres que contiene el módulo, la clase o la estructura también afecta al ámbito.  
+ Cuando se incluye una declaración en el nivel de módulo, el nivel de acceso que seleccione determina el ámbito. El espacio de nombres que contiene el módulo, clase o estructura también afecta al ámbito.  
   
- Los elementos para los que declara un nivel de acceso [Private](../../../../visual-basic/language-reference/modifiers/private.md) están disponibles en cada procedimiento de ese módulo, pero no en el código de otro módulo.  La instrucción `Dim` en el nivel de módulo toma `Private` como valor predeterminado si no utiliza ninguna palabra nivel de acceso.  No obstante, el ámbito y el nivel de acceso serán más patentes si utiliza la palabra clave `Private` en la instrucción `Dim`.  
+ Elementos para los que declara [privada](../../../../visual-basic/language-reference/modifiers/private.md) nivel de acceso están disponibles para todos los procedimientos de ese módulo, pero no en cualquier código en un módulo diferente. El `Dim` tiene como valor predeterminado en la instrucción en el nivel de módulo para `Private` si no utiliza las palabras clave de nivel de acceso. Sin embargo, se puede realizar el nivel de ámbito y acceso más obvio usando la `Private` palabra clave en el `Dim` instrucción.  
   
- En el ejemplo siguiente, todos los procedimientos definidos en el módulo pueden hacer referencia a la variable de cadena `strMsg`.  Cuando se llama al segundo procedimiento, muestra el contenido de la variable de cadena `strMsg` en un cuadro de diálogo:  
+ En el ejemplo siguiente, todos los procedimientos definidos en el módulo pueden hacer referencia a la variable de cadena `strMsg`. Cuando se llama el segundo procedimiento, muestra el contenido de la variable de cadena `strMsg` en un cuadro de diálogo.  
   
 ```  
 ' Put the following declaration at module level (not in any procedure).  
@@ -118,35 +117,35 @@ Sub usePrivateVariable()
 End Sub  
 ```  
   
-### Ámbito de espacio de nombres  
- Si declara un elemento en el nivel de módulo mediante la palabra clave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [Public](../../../../visual-basic/language-reference/modifiers/public.md), dicho elemento quedará disponible para todos los procedimientos del espacio de nombres en los que se declare.  La siguiente modificación del ejemplo anterior permite que el código haga referencia a la variable de cadena `strMsg` en cualquier parte del espacio de nombres de su declaración.  
+### <a name="namespace-scope"></a>Ámbito de Namespace  
+ Si declara un elemento en el nivel de módulo mediante la [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) o [público](../../../../visual-basic/language-reference/modifiers/public.md) palabra clave, estará disponible para todos los procedimientos en todo el espacio de nombres en el que se declara el elemento. Con la modificación siguiente al ejemplo anterior, la variable de cadena `strMsg` puede hacer referencia a código en cualquier lugar en el espacio de nombres de su declaración.  
   
 ```  
 ' Include this declaration at module level (not inside any procedure).  
 Public strMsg As String  
 ```  
   
- El ámbito de espacio de nombres incluye espacios de nombres anidados.  Un elemento disponible de un espacio de nombres también está disponible en cualquier espacio de nombres anidado en su interior.  
+ Ámbito de Namespace incluye espacios de nombres anidados. Un elemento disponible en un espacio de nombres también está disponible en cualquier espacio de nombres anidado dentro de ese espacio de nombres.  
   
- Si un proyecto no contiene [Namespace \(Instrucción\)](../../../../visual-basic/language-reference/statements/namespace-statement.md), todo lo que incluya el proyecto estará en el mismo espacio de nombres.  En este caso, el ámbito de espacio de nombres se puede considerar como el ámbito del proyecto.  Los elementos `Public` de un módulo, clase o estructura también están disponibles para cualquier proyecto que haga referencia a su proyecto.  
+ Si el proyecto no contiene ninguno [instrucción Namespace](../../../../visual-basic/language-reference/statements/namespace-statement.md)s, todo el contenido en el proyecto está en el mismo espacio de nombres. En este caso, el ámbito de espacio de nombres puede considerarse como el ámbito del proyecto. `Public`elementos de un módulo, clase o estructura también están disponibles para cualquier proyecto que hace referencia a su proyecto.  
   
-## Elección de ámbito  
- Cuando declara una variable, debe tener presente los puntos siguientes al elegir su ámbito.  
+## <a name="choice-of-scope"></a>Elección de ámbito  
+ Cuando se declara una variable, debe tener en cuenta los siguientes puntos al elegir su ámbito.  
   
-### Ventajas de variables locales  
+### <a name="advantages-of-local-variables"></a>Ventajas de las Variables locales  
  Las variables locales son una buena elección para cualquier tipo de cálculo temporal, por las razones siguientes:  
   
--   **Evitar conflictos de nombres.** Los nombres de variables locales no son susceptibles de entrar en conflicto.  Por ejemplo, es posible crear varios procedimientos distintos que contengan una variable denominada `intTemp`.  En tanto que `intTemp` esté declarado como una variable local, cada procedimiento reconocerá únicamente su propia versión de `intTemp`.  Cualquier procedimiento puede cambiar el valor de su variable `intTemp` local sin que ello afecte a las variables `intTemp` del resto de los procedimientos.  
+-   **Evitar conflictos de nombres.** Nombres de variables locales no son susceptibles a entrar en conflicto. Por ejemplo, puede crear varios procedimientos distintos que contengan una variable denominada `intTemp`. Siempre que cada uno de ellos `intTemp` se declara como una variable local, cada procedimiento reconocerá únicamente su propia versión de `intTemp`. Cualquier procedimiento puede cambiar el valor de su local `intTemp` sin que afecte a `intTemp` variables en otros procedimientos.  
   
--   **Consumo de memoria.** Las variables locales sólo utilizan la memoria mientras su procedimiento está en ejecución.  Su memoria se libera cuando el procedimiento vuelve al código de llamada.  Por el contrario, las variables [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) y [Static](../../../../visual-basic/language-reference/modifiers/static.md) consumen recursos de memoria hasta que su aplicación deja de ejecutarse, por lo que se deben utilizar sólo cuando sea necesario.  Las *variables de instancia* utilizan la memoria mientras su instancia sigue existiendo, lo que les resta eficacia frente a las variables locales pero son potencialmente más eficaces que las variables `Shared` o `Static`.  
+-   **Consumo de memoria.** Las variables locales consumen memoria solo mientras se ejecuta el procedimiento. Su memoria se libera cuando el procedimiento vuelve al código de llamada. Por el contrario, [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) y [estático](../../../../visual-basic/language-reference/modifiers/static.md) variables consumen recursos de memoria hasta que la aplicación deje de ejecutarse, así que utilícelas solo cuando sea necesario. *Las variables de instancia* consumen memoria mientras su instancia sigue existiendo, lo que hace que sean menos eficaz que las variables locales, pero potencialmente más eficaz que `Shared` o `Static` las variables.  
   
-### Minimizar el ámbito  
- En general, cuando se declara una variable o una constante, es un buen hábito de programación asignar un ámbito lo más restringido posible \(el ámbito de un bloque es el más restringido\).  Esto permite que no se pierda memoria y reduce al mínimo la posibilidad de que el código haga referencia por error a una variable incorrecta.  Del mismo modo, sólo debería declararse una variable como [Static](../../../../visual-basic/language-reference/modifiers/static.md) si es necesario que conserve su valor entre una llamada al procedimiento y otra.  
+### <a name="minimizing-scope"></a>Minimizar el ámbito  
+ En general, al declarar cualquier variable o constante, es buena práctica para realizar el ámbito estrecha posible de programación (ámbito de bloque es el más restringido). Esto ayuda a conservar memoria y minimiza las posibilidades de que el código de forma errónea que hace referencia a la variable equivocada. De igual forma, debe declarar una variable para que sea [estático](../../../../visual-basic/language-reference/modifiers/static.md) sólo cuando es necesario que conserve su valor entre llamadas a procedimiento.  
   
-## Vea también  
- [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Cómo: Controlar el ámbito de una variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)   
- [Período de duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Declaración de variable](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Vea también  
+ [Características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Controlar el ámbito de una variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)  
+ [Duración en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [Niveles de acceso en Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Referencias a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [Declaración de variables](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -1,36 +1,28 @@
 ---
-title: Serializar en XmlReader (invocar XSLT) (Visual Basic) | Documentos de Microsoft
+title: Serializar en XmlReader (invocando XSLT) (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bca1e63bbe5b3ccd13f183c3cc6081917624ad94
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ea4a8a17e938b22d6e307ebe307c69481e44e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializar en XmlReader (invocar XSLT) (Visual Basic)
-Cuando se usa el <xref:System.Xml?displayProperty=fullName>capacidades de interoperabilidad de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], puede utilizar <xref:System.Xml.Linq.XNode.CreateReader%2A>para crear un <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> </xref:System.Xml.Linq.XNode.CreateReader%2A> </xref:System.Xml?displayProperty=fullName> El módulo que lee desde el <xref:System.Xml.XmlReader>lee los nodos del árbol XML y los procesa.</xref:System.Xml.XmlReader>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Serializar en XmlReader (invocando XSLT) (Visual Basic)
+Cuando use las funciones de interoperabilidad <xref:System.Xml?displayProperty=nameWithType> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], puede usar <xref:System.Xml.Linq.XNode.CreateReader%2A> para crear un objeto <xref:System.Xml.XmlReader>. El módulo que lee desde el objeto <xref:System.Xml.XmlReader> lee los nodos desde el árbol XML y los procesa.  
   
 ## <a name="invoking-an-xslt-transformation"></a>Invocar una transformación XSLT  
- Un uso posible para este método es la invocación de una transformación XSLT. Puede crear un árbol XML, crear un <xref:System.Xml.XmlReader>desde el árbol XML, crear un nuevo documento y, a continuación, crear un <xref:System.Xml.XmlWriter>para escribir en el nuevo documento.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> A continuación, puede invocar la transformación XSLT, pasando <xref:System.Xml.XmlReader>y <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
+ Un uso posible para este método es la invocación de una transformación XSLT. Puede crear un árbol XML, crear un objeto <xref:System.Xml.XmlReader> desde el árbol XML, crear un nuevo documento y crear un objeto <xref:System.Xml.XmlWriter> que escribirá en el nuevo documento. A continuación, puede invocar la transformación XSLT, pasando <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>. Después de que se complete correctamente la transformación, se rellenará el nuevo árbol XML con los resultados de la transformación.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  

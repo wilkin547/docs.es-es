@@ -1,38 +1,37 @@
 ---
-title: "C&#243;mo: Hacer que un elemento gire en su posici&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "clases, DoubleAnimation"
-  - "clases, RotateTransform"
-  - "DoubleAnimation (clase)"
-  - "gráficos, girar elementos"
-  - "RotateTransform (clase)"
-  - "girar elementos"
+title: "Cómo: Hacer que un elemento gire en su posición"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- graphics [WPF], spinning elements
+- spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e7dac2b1afb9d0ed385f3c25c2e30a93ea8a24f5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Hacer que un elemento gire en su posici&#243;n
-En este ejemplo se muestra cómo hacer girar un elemento mediante una clase <xref:System.Windows.Media.RotateTransform> y una clase <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+# <a name="how-to-make-an-element-spin-in-place"></a>Cómo: Hacer que un elemento gire en su posición
+Este ejemplo muestra cómo hacer que un elemento de número utilizando un <xref:System.Windows.Media.RotateTransform> y <xref:System.Windows.Media.Animation.DoubleAnimation>.  
   
- En el ejemplo siguiente se aplica <xref:System.Windows.Media.RotateTransform> a la propiedad <xref:System.Windows.UIElement.RenderTransform%2A> del elemento.  En el ejemplo se utiliza <xref:System.Windows.Media.Animation.DoubleAnimation> para animar la propiedad <xref:System.Windows.Media.RotateTransform.Angle%2A> de <xref:System.Windows.Media.RotateTransform>.  Para hacer que el elemento gire en su posición, en el ejemplo se establece la propiedad <xref:System.Windows.UIElement.RenderTransformOrigin%2A> del elemento en el punto \(0,5, 0,5\).  
+ El ejemplo siguiente aplica el <xref:System.Windows.Media.RotateTransform> a la <xref:System.Windows.UIElement.RenderTransform%2A> propiedad del elemento. El ejemplo se usa un <xref:System.Windows.Media.Animation.DoubleAnimation> para animar la <xref:System.Windows.Media.RotateTransform.Angle%2A> de la <xref:System.Windows.Media.RotateTransform>. Para hacer que el elemento gire en su lugar, el ejemplo establece la <xref:System.Windows.UIElement.RenderTransformOrigin%2A> propiedad del elemento en el punto (0,5, 0,5).  
   
-## Ejemplo  
- [!code-xml[transformanimations_snip#11](../../../../samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
+## <a name="example"></a>Ejemplo  
+ [!code-xaml[transformanimations_snip#11](../../../../samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- Para obtener el ejemplo completo, que incluye más ejemplos de transformaciones, vea [2\-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Para obtener el ejemplo completo, que incluye varios ejemplos de transformación, vea [2-D Transforms Sample](http://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## Vea también  
- [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
+## <a name="see-also"></a>Vea también  
+ [Información general sobre animaciones](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Información general sobre transformaciones](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

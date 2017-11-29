@@ -1,34 +1,30 @@
 ---
-title: Ejemplo que genera partes de documento de Office Open XML (Visual Basic) | Documentos de Microsoft
+title: Ejemplo que muestra los elementos de documento XML abierto de Office (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72e8cd6126cd049cafff6e18e1ef609f600cf7c9
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 96596c86674f5df2b9949a07adab2f313a07633d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Ejemplo que genera partes de documento de Office Open XML (Visual Basic)
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Ejemplo que muestra los elementos de documento XML abierto de Office (Visual Basic)
 Este tema muestra cómo abrir un documento XML abierto de Office y obtener acceso a sus partes.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo abre un documento XML abierto de Office e imprime las partes de documento y estilo de la consola.  
   
- Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos en el <xref:System.IO.Packaging?displayProperty=fullName>espacio de nombres.</xref:System.IO.Packaging?displayProperty=fullName>  
+ Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -78,4 +74,4 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Detalles de Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ [Detalles de Office documentos WordprocessingML XML abierto (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

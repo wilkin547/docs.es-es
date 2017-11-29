@@ -1,89 +1,88 @@
 ---
-title: "Shadows (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Shadows"
-  - "shadows"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "nombres duplicados"
-  - "nombres, sombrear"
-  - "ámbito, sombrear"
-  - "sombrear"
-  - "Shadows (palabra clave)"
+title: Shadows (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Shadows
+- shadows
+helpviewer_keywords:
+- shadowing
+- duplicate names [Visual Basic]
+- scope [Visual Basic], shadowing
+- Shadows keyword [Visual Basic]
+- names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bb767c372cc05d61d569227af8eef0dc3c67489b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Shadows (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica que un elemento de programación declarado vuelve a declarar y oculta un elemento denominado de forma idéntica o un conjunto de elementos sobrecargados, en una clase base.  
+# <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
+Especifica que un elemento de programación declarado vuelve a declarar y oculta un elemento con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base.  
   
-## Comentarios  
- El propósito principal del sombreado \(que también se conoce como *ocultar por nombre*\) es conservar la definición de los miembros de clase.  La clase base puede sufrir un cambio que cree un elemento con el mismo nombre que otro ya definido.  Si sucede esto, el modificador `Shadows` fuerza a referencias a través de la clase para que se resuelvan en el miembro definido en lugar de hacerlo en el nuevo elemento de la clase base.  
+## <a name="remarks"></a>Comentarios  
+ El propósito principal de sombreado (también conocido como *ocultar por nombre*) consiste en conservar la definición de los miembros de clase. La clase base puede sufrir un cambio que se crea un elemento con el mismo nombre que ya se ha definido. Si esto ocurre, el `Shadows` modificador fuerza referencias a través de la clase para que se resuelvan en el miembro definido, en lugar de en el nuevo elemento de clase base.  
   
- El sombreado y el reemplazo definen de nuevo un elemento heredado, pero existen diferencias significativas entre los dos enfoques.  Para obtener más información, vea [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Aunque tanto el sombreado como el reemplazo redefinen elementos heredados, existen diferencias significativas entre ambos conceptos. Para obtener más información, consulte [sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
-## Reglas  
+## <a name="rules"></a>Reglas  
   
--   **Contexto de la declaración.** Sólo puede utilizar `Shadows` en el nivel de clase.  Esto significa que el contexto de la declaración para un elemento `Shadows` debe ser una clase, y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
+-   **Contexto de la declaración.** Puede usar `Shadows` en el nivel de clase. Esto significa que el contexto de la declaración de un `Shadows` elemento debe ser una clase y no puede ser un archivo de código fuente, espacio de nombres, interfaz, módulo, estructura o procedimiento.  
   
-     Se puede declarar sólo un elemento de sombreado en una única instrucción de declaración.  
+     Puede declarar un único elemento sombreado en una única instrucción de declaración.  
   
--   **Modificadores combinados.** No se puede especificar `Shadows` junto con `Overloads`, `Overrides` o `Static` en la misma declaración.  
+-   **Modificadores combinados.** No se puede especificar `Shadows` junto con `Overloads`, `Overrides`, o `Static` en la misma declaración.  
   
--   **Tipos de elementos.** Puede hacer que cualquier tipo de elemento declarado prevalezca sobre cualquier otro tipo.  Si sombrea una propiedad o procedimiento con otra propiedad o procedimiento, los parámetros y el tipo de valor devuelto no tienen que coincidir con los de la propiedad o procedimiento de la clase base.  
+-   **Tipos de elemento.** Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo. Si sombrea una propiedad o procedimiento con otra propiedad o procedimiento, los parámetros y el tipo de valor devuelto no es necesario para que coincida con los de la propiedad de clase base o procedimiento.  
   
--   **Acceso.** El elemento sombreado en la clase base no está disponible normalmente desde la clase derivada que lo sombrea.  No obstante, se aplican las siguientes consideraciones.  
+-   **Obtener acceso a.** El elemento sombreado en la clase base está disponible normalmente desde la clase derivada que lo reemplaza. Sin embargo, se aplican las consideraciones siguientes.  
   
-    -   Si el elemento de sombreado no es accesible desde el código que hace referencia a él, la referencia se resuelve como el elemento sombreado.  Por ejemplo, si un elemento `Private` sombrea un elemento de clase base, el código que no tiene el permiso para obtener acceso al elemento `Private` obtiene acceso al elemento de clase base.  
+    -   Si el elemento reemplazado no es accesible desde el código que hace referencia a él, la referencia se resuelve como el elemento reemplazado. Por ejemplo, si un `Private` elemento sombrea un elemento de clase base, el código que no tiene permiso para tener acceso a la `Private` elemento accede al elemento de clase base en su lugar.  
   
-    -   Si se sombrea un elemento, aún se podrá tener acceso al mismo mediante un objeto declarado con el tipo de la clase base.  También puede tener acceso a él a través de `MyBase`.  
+    -   Si sombrea un elemento, es posible tener acceso el elemento sombreado a través de un objeto declarado con el tipo de la clase base. También puede acceder a él a través de `MyBase`.  
   
- El modificador `Shadows` se puede utilizar en estos contextos:  
+ El modificador `Shadows` se puede utilizar en los contextos siguientes:  
   
- [Class \(Instrucción\)](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class (instrucción)](../../../visual-basic/language-reference/statements/class-statement.md)  
   
- [Const \(Instrucción\)](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const (instrucción)](../../../visual-basic/language-reference/statements/const-statement.md)  
   
- [Declare \(Instrucción\)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- [Delegate \(Instrucción\)](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate (instrucción)](../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
- [Dim \(Instrucción\)](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim (instrucción)](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
- [Enum \(Instrucción\)](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum (instrucción)](../../../visual-basic/language-reference/statements/enum-statement.md)  
   
- [Event \(Instrucción\)](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event (instrucción)](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Function \(Instrucción\)](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function (instrucción)](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Interface \(Instrucción\)](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface (instrucción)](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
- [Property \(Instrucción\)](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property (instrucción)](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Structure \(Instrucción\)](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure (instrucción)](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
- [Sub \(Instrucción\)](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## Vea también  
- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)   
- [Static](../../../visual-basic/language-reference/modifiers/static.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)   
- [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
+## <a name="see-also"></a>Vea también  
+ [Shared](../../../visual-basic/language-reference/modifiers/shared.md)  
+ [Static](../../../visual-basic/language-reference/modifiers/static.md)  
+ [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [Me, My, MyBase y MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
+ [Fundamentos de la herencia](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)  
+ [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
  [Sombrear en Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

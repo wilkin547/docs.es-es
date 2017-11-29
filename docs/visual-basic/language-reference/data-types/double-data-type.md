@@ -1,74 +1,72 @@
 ---
-title: "Double (Tipo de datos, Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Double"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "# (carácter de tipo identificador)"
-  - "caracteres 0, finales"
-  - "tipos de datos [Visual Basic], asignar"
-  - "Double (tipo de datos)"
-  - "Double (tipo de datos) [Visual Basic]"
-  - "números de precisión doble"
-  - "números de punto flotante, Double (tipo de datos)"
-  - "caracteres de tipo identificador, #"
-  - "caracteres de tipo literal, R"
-  - "R (carácter de tipo literal)"
-  - "números reales"
-  - "caracteres 0 finales"
-  - "ceros finales"
-  - "ceros, finales"
+title: Double (Tipo de datos, Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Double
+helpviewer_keywords:
+- 'identifier type characters [Visual Basic], #'
+- trailing zeros
+- real numbers
+- trailing 0 characters [Visual Basic]
+- 0 characters [Visual Basic], trailing
+- literal type characters [Visual Basic], R
+- data types [Visual Basic], assigning
+- Double data type [Visual Basic]
+- '# identifier type character'
+- double-precision numbers
+- floating-point numbers [Visual Basic], Double data type
+- R literal type character [Visual Basic]
+- zeros, trailing
+- Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-caps.latest.revision: 25
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ad0e8082edfb7b7d96b0ca2019da88514e5b3b09
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Double (Tipo de datos, Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Contiene números IEEE de punto flotante de doble precisión de 64 bits \(8 bytes\) que van de un valor de –1,79769313486231570E\+308 a –4,94065645841246544E\-324 para números negativos y de 4,94065645841246544E\-324 a 1,79769313486231570E\+308 para números positivos.  Los números de doble precisión almacenan aproximaciones de números reales.  
+# <a name="double-data-type-visual-basic"></a>Double (Tipo de datos, Visual Basic)
+Incluye números IEEE de 64 bits (8 bytes) precisión doble números de punto flotante que van de un valor de - 1, 79769313486231570E + 308 a - 4, 94065645841246544E-324 para los valores negativos y de 4, 94065645841246544E-324 a 1, 79769313486231570E + 308 para valores positivos. Los números de precisión doble almacenan una aproximación de un número real.  
   
-## Comentarios  
- El tipo de datos `Double` proporciona las magnitudes mayores y menores posibles para un número.  
+## <a name="remarks"></a>Comentarios  
+ El `Double` tipo de datos proporciona las magnitudes mayores y menores posibles para un número.  
   
  El valor predeterminado de `Double` es 0.  
   
-## Sugerencias de programación  
+## <a name="programming-tips"></a>Sugerencias de programación  
   
--   **Precisión.** Cuando trabaje con números de punto flotante, tenga presente que no siempre tienen una representación precisa en memoria.  Esto podría conducir a resultados inesperados en ciertas operaciones, como la comparación de valores y el operador `Mod`.  Para obtener más información, vea [Solucionar problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+-   **Precisión.** Cuando trabaje con números de punto flotante, recuerde que no siempre tienen una representación precisa en memoria. Esto podría provocar resultados inesperados en ciertas operaciones, como comparación de valores y la `Mod` operador. Para obtener más información, consulte [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Ceros finales.** Los tipos de datos de punto flotante no tienen representación interna de caracteres cero finales.  Por ejemplo, no distinguen entre 4,2000 y 4,2.  Por consiguiente, los caracteres cero finales no aparecen cuando muestra o imprime valores de punto flotante.  
+-   **Ceros finales.** Los tipos de datos de punto flotante no tiene una representación interna de cero caracteres finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, los caracteres cero finales no aparecen al mostrar o imprimir valores de punto flotante.  
   
--   **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte al tipo de datos `Double`.  Por ejemplo, si `R` sigue a un valor entero, el valor se cambia a `Double`.  
+-   **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. Por ejemplo, si está seguido de un valor entero `R`, el valor se cambia a un `Double`.  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
     Dim dub As Double = 4.0R  
     ```  
   
-     Si se agrega el carácter de tipo identificador `#` a cualquier identificador, se convierte su tipo de datos al tipo `Double`.  En el ejemplo siguiente, la variable `num` es de tipo `Double`:  
+     Si se agrega el carácter de tipo identificador `#` a cualquier identificador, se convierte forzosamente al tipo `Double`. En el ejemplo siguiente, la variable `num` se escribe como un `Double`:  
   
     ```  
     Dim num# = 3  
     ```  
   
--   **Tipo en Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=fullName>.  
+-   **Tipo de Framework.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.  
   
-## Vea también  
- <xref:System.Double?displayProperty=fullName>   
- [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Decimal \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)   
- [Single \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/single-data-type.md)   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Solucionar problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Double?displayProperty=nameWithType>  
+ [Tipos de datos](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Decimal (tipo de datos)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
+ [Single (tipo de datos)](../../../visual-basic/language-reference/data-types/single-data-type.md)  
+ [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Resumen de conversión](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [Uso eficiente de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [Solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Caracteres de tipo](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

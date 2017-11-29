@@ -1,27 +1,33 @@
 ---
-title: "C&#243;mo: Ordenar una columna de GridView cuando se hace clic en un encabezado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controles de GridView"
-  - "controles ListView"
-  - "ListView (controles), ordenar columnas de GridView"
-  - "Controles GridView, el control ListView"
+title: "Cómo: Ordenar una columna de GridView cuando se hace clic en un encabezado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], GridView
+- controls [WPF], ListView
+- ListView controls [WPF], sorting GridView columns
+- GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f05f9f1fef335bc0bae578220d458ade9bfe06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Ordenar una columna de GridView cuando se hace clic en un encabezado
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Cómo: Ordenar una columna de GridView cuando se hace clic en un encabezado
 Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> control que implementa un <xref:System.Windows.Controls.GridView> Ver modo y ordena los datos de contenido cuando un usuario hace clic en un encabezado de columna.  
   
 ## <a name="example"></a>Ejemplo  
@@ -62,7 +68,7 @@ Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> cont
 </ListView.ItemsSource>  
 ```  
   
- El `s` y `p` identificadores en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] etiquetas hacen referencia a asignaciones de espacio de nombres que se definen en los metadatos de la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página. En el ejemplo siguiente se muestra la definición de metadatos.  
+ Los identificadores `s` y `p` de las etiquetas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hacen referencia a las asignaciones de espacios de nombre que se definen en los metadatos de la página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. En el siguiente ejemplo se muestra la definición de metadatos.  
   
 ```xaml  
 <Window        
@@ -73,7 +79,7 @@ Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> cont
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Para ordenar los datos según el contenido de una columna, el ejemplo define un controlador de eventos para controlar la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que tiene lugar cuando se presiona el botón del encabezado de columna. En el ejemplo siguiente se muestra cómo especificar un controlador de eventos para el <xref:System.Windows.Controls.GridViewColumnHeader> control.  
+ Para ordenar los datos según el contenido de una columna, en el ejemplo se define un controlador de eventos para controlar la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento que tiene lugar cuando se presiona el botón de encabezado de columna. En el ejemplo siguiente se muestra cómo especificar un controlador de eventos para el <xref:System.Windows.Controls.GridViewColumnHeader> control.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -82,7 +88,7 @@ Este ejemplo muestra cómo crear un <xref:System.Windows.Controls.ListView> cont
  >  
 ```  
   
- En el ejemplo se define el controlador de eventos para que cambie la dirección de ordenación entre ascendente y descendente cada vez que presione el botón de encabezado de columna. En el ejemplo siguiente se muestra el controlador de eventos.  
+ En el ejemplo se define el controlador de eventos de manera que la dirección de orden cambia entre el orden ascendente y descendente cada vez que presiona el botón del encabezado de columna. El ejemplo siguiente muestra el controlador de eventos.  
   
 ```csharp  
 public partial class Window1 : Window  
@@ -196,7 +202,7 @@ Partial Public Class Window1
         End Sub  
 ```  
   
- En el ejemplo siguiente se muestra el algoritmo de ordenación que se llama al controlador de eventos para ordenar los datos. La ordenación se realiza creando un nuevo <xref:System.ComponentModel.SortDescription> estructura.  
+ El ejemplo siguiente muestra el algoritmo de orden invocado por el controlador de eventos para ordenar los datos. La ordenación se realiza mediante la creación de un nuevo <xref:System.ComponentModel.SortDescription> estructura.  
   
 ```csharp  
 private void Sort(string sortBy, ListSortDirection direction)  
@@ -209,7 +215,6 @@ private void Sort(string sortBy, ListSortDirection direction)
     dataView.SortDescriptions.Add(sd);  
     dataView.Refresh();  
 }  
-  
 ```  
   
 ```vb  
@@ -224,8 +229,8 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Windows.Controls.ListView>   
- <xref:System.Windows.Controls.GridView>   
- [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)   
+ <xref:System.Windows.Controls.ListView>  
+ <xref:System.Windows.Controls.GridView>  
+ [Información general sobre ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [Información general sobre GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
  [Temas de procedimientos](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

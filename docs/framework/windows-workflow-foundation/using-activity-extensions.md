@@ -1,34 +1,37 @@
 ---
-title: "Utilizar extensiones de actividad | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Utilizar extensiones de actividad
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7ff4f441df437dc5785b6df77c16923a1a1c9906
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Utilizar extensiones de actividad
-Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.  
+# <a name="using-activity-extensions"></a>Utilizar extensiones de actividad
+Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.  En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.  
   
-### Utilizar una extensión de actividad para contar las ejecuciones  
+### <a name="to-use-an-activity-extension-to-count-executions"></a>Utilizar una extensión de actividad para contar las ejecuciones  
   
-1.  Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].Seleccione **Nuevo**, **Proyecto**.Bajo el nodo **Visual C\#**, seleccione **Flujo de trabajo**.Seleccione **Aplicación de consola de flujos de trabajo** en la lista de plantillas.Asigne al proyecto el nombre `Extensiones`.Haga clic en **Aceptar** para crear el proyecto.  
+1.  Abra [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]. Seleccione **nueva**, **proyecto**. En el **Visual C#** nodo, seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** de la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.  
   
-2.  Agregue una instrucción `using` para el espacio de nombres **System.Collections.Generic** en el archivo Program.cs.  
+2.  Agregar un `using` instrucción en el archivo Program.cs para la **System.Collections.Generic** espacio de nombres.  
   
     ```  
     using System.Collections.Generic;  
-  
     ```  
   
-3.  En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**.El siguiente código crea una extensión de flujo de trabajo que realiza el seguimiento de los identificadores de instancia cuando se llama al método **Register**.  
+3.  En el archivo Program.cs, cree una nueva clase denominada **ExecutionCountExtension**. El código siguiente crea una extensión de flujo de trabajo que realiza un seguimiento de los identificadores de instancia cuando su **registrar** se llama al método.  
   
     ```  
     // This extension collects a list of workflow Ids  
@@ -60,10 +63,9 @@ Las actividades pueden interactuar con extensiones de aplicación de flujo de tr
             }  
         }  
     }  
-  
     ```  
   
-4.  Cree una actividad que use **ExecutionCountExtension**.El siguiente código define una actividad que recupera el objeto **ExecutionCountExtension** del runtime y llama a su método **Register** cuando la actividad se ejecuta.  
+4.  Crear una actividad que consume el **ExecutionCountExtension**. El código siguiente define una actividad que recupera la **ExecutionCountExtension** objeto del tiempo de ejecución y llama su **registrar** método cuando se ejecuta la actividad.  
   
     ```  
     // Activity that consumes an extension provided by the host. If the extension is available  
@@ -80,10 +82,9 @@ Las actividades pueden interactuar con extensiones de aplicación de flujo de tr
   
         }  
     }  
-  
     ```  
   
-5.  Implemente la actividad en el método **Main** del archivo program.cs.El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.  
+5.  Implemente la actividad en el **Main** método del archivo program.cs. El siguiente código contiene los métodos para generar dos flujos de trabajo diferentes, ejecuta cada flujo de trabajo varias veces y muestra los datos resultantes que se contienen en la extensión.  
   
     ```  
     class Program  

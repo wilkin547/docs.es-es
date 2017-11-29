@@ -1,46 +1,50 @@
 ---
-title: "Seguimiento personalizado | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Seguimiento personalizado
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3a32e76bdee87d6f00a5f01893e76ccb3de9ef51
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# Seguimiento personalizado
-En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento.Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario.El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.  
+# <a name="custom-tracking"></a>Seguimiento personalizado
+En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento. Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario. El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.  
   
-## Detalles del ejemplo  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] proporciona una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo.El tiempo de ejecución de seguimiento implementa una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos de seguimiento personalizados.En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.  
+## <a name="sample-details"></a>Detalles del ejemplo  
+ [!INCLUDE[wf](../../../../includes/wf-md.md)] proporciona una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento implementa una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos de seguimiento personalizados. En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.  
   
 |Componente|Descripción|  
-|----------------|-----------------|  
+|---------------|-----------------|  
 |Tiempo de ejecución de seguimiento|Proporciona la infraestructura para emitir registros de seguimiento.|  
-|Participantes de seguimiento|Usa los registros de seguimiento.[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows \(ETW\).|  
+|Participantes de seguimiento|Usa los registros de seguimiento. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] se distribuye con un participante de seguimiento que escribe los eventos de seguimiento como eventos de Seguimiento de eventos para Windows (ETW).|  
 |Perfil de seguimiento|Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.|  
   
  En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.  
   
 |Registro de seguimiento|Descripción|  
-|-----------------------------|-----------------|  
-|Registros de seguimiento de instancia de flujo de trabajo.|Describe el ciclo de vida de la instancia de flujo de trabajo.Por ejemplo, se emite un registro de instancia cuando el flujo de trabajo se inicia o se completa.|  
-|Registros de seguimiento de estado de actividad.|Describe la ejecución de la actividad.Estos registros indican el estado de una actividad de flujo de trabajo; por ejemplo, cuándo se programa una actividad, cuándo se completa o cuándo se produce un error.|  
+|---------------------|-----------------|  
+|Registros de seguimiento de instancia de flujo de trabajo.|Describe el ciclo de vida de la instancia de flujo de trabajo. Por ejemplo, se emite un registro de instancia cuando el flujo de trabajo se inicia o se completa.|  
+|Registros de seguimiento de estado de actividad.|Describe la ejecución de la actividad. Estos registros indican el estado de una actividad de flujo de trabajo; por ejemplo, cuándo se programa una actividad, cuándo se completa o cuándo se produce un error.|  
 |Registro de reanudación de marcadores.|Se emite siempre que se reanude un marcador en una instancia de flujo de trabajo.|  
 |Registros de seguimiento personalizados.|Un autor del flujo de trabajo puede crear registros de seguimiento personalizados y emitirlos en la actividad personalizada.|  
   
- El participante de seguimiento se suscribe a un subconjunto de los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos utilizando perfiles de seguimiento.Un perfil de seguimiento contiene consultas de seguimiento que permiten suscribirse a un tipo de registro de seguimiento concreto.Los perfiles de seguimiento se pueden especificar mediante código o en la configuración.  
+ El participante de seguimiento se suscribe a un subconjunto de los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos utilizando perfiles de seguimiento. Un perfil de seguimiento contiene consultas de seguimiento que permiten suscribirse a un tipo de registro de seguimiento concreto. Los perfiles de seguimiento se pueden especificar mediante código o en la configuración.  
   
-### Participante de seguimiento personalizado  
+### <a name="custom-tracking-participant"></a>Participante de seguimiento personalizado  
  La API de participante de seguimiento permite la ampliación del tiempo de ejecución de seguimiento mediante un participante de seguimiento proporcionado por el usuario que puede incluir una lógica personalizada para controlar los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos por el tiempo de ejecución de flujo de trabajo.  
   
- Para escribir un participante de seguimiento, el usuario debe implementar <xref:System.Activities.Tracking.TrackingParticipant>.Concretamente, el participante personalizado debe implementar el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>.Se llama a este método cuando el tiempo de ejecución de flujo de trabajo emite un registro <xref:System.Activities.Tracking.TrackingRecord>.  
+ Para escribir un participante de seguimiento, el usuario debe implementar <xref:System.Activities.Tracking.TrackingParticipant>. Concretamente, el participante personalizado debe implementar el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. Se llama a este método cuando el tiempo de ejecución de flujo de trabajo emite un registro <xref:System.Activities.Tracking.TrackingRecord>.  
   
 ```csharp  
 public abstract class TrackingParticipant  
@@ -50,7 +54,6 @@ public abstract class TrackingParticipant
     public virtual TrackingProfile TrackingProfile { get; set; }  
     public abstract void Track(TrackingRecord record, TimeSpan timeout);  
 }  
-  
 ```  
   
  El participante de seguimiento completo se implementa en el archivo ConsoleTrackingParticipant.cs. En el siguiente ejemplo de código se muestra el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> para el participante de seguimiento personalizado.  
@@ -97,7 +100,6 @@ protected override void Track(TrackingRecord record, TimeSpan timeout)
     Console.WriteLine();  
   
 }  
-  
 ```  
   
  El siguiente ejemplo de código agrega el participante de la consola al invocador de flujo de trabajo.  
@@ -112,15 +114,14 @@ ConsoleTrackingParticipant customTrackingParticipant = new ConsoleTrackingPartic
   
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
 invoker.Extensions.Add(customTrackingParticipant);  
-  
 ```  
   
-### Emitir registros de seguimiento personalizados  
+### <a name="emitting-custom-tracking-records"></a>Emitir registros de seguimiento personalizados  
  En este ejemplo también se muestra la capacidad de emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad de flujo de trabajo personalizada:  
   
 -   Los objetos <xref:System.Activities.Tracking.CustomTrackingRecord> se crean y rellenan con datos definidos por el usuario que se desean emitir con el registro.  
   
--   E registro <xref:System.Activities.Tracking.CustomTrackingRecord> se emite mediante una llamada al método de seguimiento de <xref:System.Activities.ActivityContext>.  
+-   El <xref:System.Activities.Tracking.CustomTrackingRecord> se genera mediante una llamada al método de seguimiento de la <xref:System.Activities.ActivityContext>.  
   
  En el siguiente ejemplo se muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad personalizada.  
   
@@ -137,25 +138,24 @@ CustomTrackingRecord customRecord = new CustomTrackingRecord("OrderIn")
   
 // Emit custom tracking record  
 context.Track(customRecord);  
-  
 ```  
   
-#### Para utilizar este ejemplo  
+#### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
 1.  Con [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], abra el archivo de solución CustomTrackingSample.sln.  
   
-2.  Para compilar la solución, presione Ctrl\+MAYÚS\+B.  
+2.  Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
-3.  Para ejecutar la solución, presione CTRL\+F5.  
+3.  Para ejecutar la solución, presione CTRL+F5.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo.Compruebe el siguiente directorio \(predeterminado\) antes de continuar.  
+>  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<>InstallDrive:\WF_WCF_Samples`  
+>  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a la página de [ejemplos de Windows Communication Foundation \(WCF\) y Windows Workflow Foundation \(WF\) Samples para .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los ejemplos de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].Este ejemplo se encuentra en el siguiente directorio.  
+>  Si no existe este directorio, vaya a la página [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) [Ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4] para descargar todos los ejemplos de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<unidadDeInstalación>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Ejemplos de supervisión de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)

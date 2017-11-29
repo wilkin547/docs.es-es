@@ -1,45 +1,43 @@
 ---
-title: "Ansi (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Ansi"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "ANSI"
-  - "ANSI, Visual Basic"
-  - "Declare (instrucción), calcular las referencias de cadenas"
+title: Ansi (Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Ansi
+helpviewer_keywords:
+- Declare statement [Visual Basic], marshaling strings [Visual Basic]
+- ANSI, Visual Basic
+- ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: aa5724eb9123b2776c3a579e4244c55b3129816b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Ansi (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Especifica que Visual Basic debe calcular las referencias de todas las cadenas a valores ANSI \(American National Standards Institute\), independientemente del nombre del procedimiento externo que se declara.  
+# <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
+Especifica que Visual Basic debe calcular las referencias de todas las cadenas con valores de American National Standards Institute (ANSI) sin tener en cuenta el nombre del procedimiento externo que se declara.  
   
- Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información que necesita para llamarlo correctamente.  Esta información incluye la ubicación del procedimiento, la forma de identificación, su secuencia de llamada y tipo de valor devuelto y el juego de caracteres de cadena que utiliza.  [Declare \(Instrucción\)](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
+ Cuando se llama a un procedimiento definido fuera del proyecto, el compilador de Visual Basic no tiene acceso a la información que necesita para llamar correctamente al procedimiento. Esta información incluye donde se encuentra el procedimiento, el lo identifica, su secuencia de llamada y el tipo de valor devuelto y juego de caracteres de la cadena que utiliza. El [instrucción Declare](../../../visual-basic/language-reference/statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
   
- La parte de `charsetmodifier` en la instrucción `Declare` proporciona la información del juego de caracteres para calcular las referencias de las cadenas durante una llamada al procedimiento externo.  También afecta a la forma en que Visual Basic busca el nombre de procedimiento externo en el archivo externo.  El modificador `Ansi` especifica que Visual Basic debe calcular las referencias de todas las cadenas a valores ANSI y debe localizar el procedimiento sin modificar su nombre durante la búsqueda.  
+ El `charsetmodifier` parte de la `Declare` instrucción proporciona la información del conjunto de caracteres para calcular referencias de cadenas durante una llamada al procedimiento externo. También afecta al modo en que Visual Basic busca el archivo externo para el nombre del procedimiento externo. El `Ansi` modificador especifica que Visual Basic debe calcular las referencias de todas las cadenas a valores ANSI y debe buscar el procedimiento sin modificar su nombre durante la búsqueda.  
   
- Si no se especifica un modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
+ Si no se especifica ningún modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
   
-## Comentarios  
- El modificador `Ansi` se puede utilizar en este contexto:  
+## <a name="remarks"></a>Comentarios  
+ El `Ansi` modificador se puede usar en este contexto:  
   
- [Declare \(Instrucción\)](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare (instrucción)](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## Notas para desarrolladores de dispositivos Smart Device  
+## <a name="smart-device-developer-notes"></a>Notas de desarrollador de Smart Device  
  No se admite esta palabra clave.  
   
-## Vea también  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)   
+## <a name="see-also"></a>Vea también  
+ [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
+ [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)  
  [Palabras clave](../../../visual-basic/language-reference/keywords/index.md)

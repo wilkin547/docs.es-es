@@ -1,62 +1,53 @@
 ---
-title: "Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic) | Documentos de Microsoft"
+title: "Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
-ms.contentlocale: es-es
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 26e6fee5147e8477c64f7eaf0dc2aeb928c13e15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Tutorial: Incrustar información de tipos de ensamblados de Microsoft Office en Visual Studio (Visual Basic)
-Si incrusta la información de tipo en una aplicación que hace referencia a objetos COM, puede eliminar la necesidad de un ensamblado de interoperabilidad primario (PIA). Además, la información de tipo incrustada permite conseguir la independencia de la versión de la aplicación. Es decir, el programa puede escribirse usar tipos de varias versiones de una biblioteca COM sin necesidad de un PIA específico para cada versión. Se trata de un escenario común para las aplicaciones que usan objetos de las bibliotecas de Microsoft Office. Incrustar información de tipos permite la misma versión de un programa para trabajar con distintas versiones de Microsoft Office en equipos diferentes sin necesidad de volver a implementar el programa o el PIA para cada versión de Microsoft Office.  
+Si inserta la de tipos en una aplicación que hace referencia a objetos COM, puede eliminar la necesidad de un ensamblado de interoperabilidad primario (PIA). Además, la información de tipo incrustada permite que la versión de la aplicación gane en independencia. Es decir, el programa puede escribirse de modo que use tipos de varias versiones de una biblioteca COM sin necesidad de requerir un PIA específico para cada versión. Se trata de un escenario común para las aplicaciones que usan objetos de las bibliotecas de Microsoft Office. La inserción de la información de tipos permite que la misma compilación de un programa funcione con distintas versiones de Microsoft Office en equipos diferentes sin necesidad de volver a implementar el programa o el PIA para cada versión de Microsoft Office.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  En este tutorial se requiere lo siguiente:  
   
--   Un equipo en el que están instalado Visual Studio y Microsoft Excel.  
+-   Un equipo en el que estén instalados Visual Studio y Microsoft Excel.  
   
--   Un segundo equipo en el que están instalados .NET Framework 4 o superior y una versión diferente de Excel.  
+-   Un segundo equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.  
   
-##  <a name="BKMK_createapp"></a>Para crear una aplicación que funcione con varias versiones de Microsoft Office  
+##  <a name="BKMK_createapp"></a> Para crear una aplicación que funcione con varias versiones de Microsoft Office  
   
-1.  Inicie Visual Studio en un equipo donde esté instalado Excel.  
+1.  Inicie Visual Studio en un equipo en el que esté instalado Excel.  
   
 2.  En el menú **Archivo** , elija **Nuevo**, **Proyecto**.  
   
-3.  En el **nuevo proyecto** cuadro de diálogo el **tipos de proyecto** panel, asegúrese de que **Windows** está seleccionada. Seleccione **aplicación de consola** en el **plantillas** panel. En el **nombre** , escriba `CreateExcelWorkbook`y, a continuación, elija la **Aceptar** botón. Se crea el nuevo proyecto.  
+3.  En el panel **Tipos de proyecto** del cuadro de diálogo **Nuevo proyecto**, asegúrese de que esté seleccionado **Windows**. Seleccione **Aplicación de consola** en el panel **Plantillas**. En el cuadro **Nombre**, escriba `CreateExcelWorkbook` y seleccione el botón **Aceptar**. Se crea el proyecto.  
   
 4.  Abra el menú contextual para el proyecto CreateExcelWorkbook y, a continuación, elija **propiedades**. Elija la **referencias** ficha. Elija el botón de **Agregar** .  
   
-5.  En el **.NET** ficha, elija la versión más reciente de `Microsoft.Office.Interop.Excel`. Por ejemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Elija el botón **Aceptar** .  
+5.  En la pestaña **.NET**, elija la versión más reciente de `Microsoft.Office.Interop.Excel`. Por ejemplo, **Microsoft.Office.Interop.Excel 14.0.0.0**. Elija el botón **Aceptar** .  
   
-6.  En la lista de referencias para el **CreateExcelWorkbook** de proyectos, seleccione la referencia para `Microsoft.Office.Interop.Excel` que agregó en el paso anterior. En el **propiedades** ventana, asegúrese de que el `Embed Interop Types` propiedad está establecida en `True`.  
+6.  En la lista de referencias para el proyecto **CreateExcelWorkbook**, seleccione la referencia para `Microsoft.Office.Interop.Excel` que agregó en el paso anterior. En la ventana **Propiedades**, asegúrese de que la propiedad `Embed Interop Types` esté establecida en `True`.  
   
     > [!NOTE]
-    >  La aplicación creada en este tutorial se ejecuta con distintas versiones de Microsoft Office debido a la información de tipo de interoperabilidad incrustado. Si el `Embed Interop Types` propiedad se establece en `False`, debe incluir un PIA para cada versión de Microsoft Office que la aplicación se ejecutará con.  
+    >  La aplicación creada en este tutorial se ejecuta con distintas versiones de Microsoft Office debido a la información de tipo de interoperabilidad insertada. Si la propiedad `Embed Interop Types` está establecida en `False`, debe incluir un PIA para cada versión de Microsoft Office con la que se ejecute la aplicación.  
   
-7.  Abra el archivo Module1.vb. Reemplace el código en el archivo con el código siguiente:  
+7.  Abra el archivo Module1.vb. Reemplace el código de este archivo por el código siguiente:  
   
     ```vb  
     Imports Excel = Microsoft.Office.Interop.Excel  
@@ -113,21 +104,20 @@ Si incrusta la información de tipo en una aplicación que hace referencia a obj
   
 8.  Guarde el proyecto.  
   
-9. Presione CTRL + F5 para compilar y ejecutar el proyecto. Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.  
+9. Pulse CTRL+F5 para compilar y ejecutar el proyecto. Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.  
   
-##  <a name="BKMK_publishapp"></a>Para publicar la aplicación en un equipo en el que se instala una versión diferente de Microsoft Office  
+##  <a name="BKMK_publishapp"></a> Para publicar la aplicación en un equipo en el que está instalada una versión diferente de Microsoft Office  
   
-1.  Abra el proyecto creado por este tutorial en Visual Studio.  
+1.  Abra el proyecto creado mediante este tutorial en Visual Studio.  
   
-2.  En el **crear** menú, elija **publicar CreateExcelWorkbook**. Siga los pasos del Asistente para publicación para crear una versión instalable de la aplicación. Para obtener más información, consulte [Asistente para publicación (desarrollo de Office en Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  En el menú **Compilar**, elija **Publicar CreateExcelWorkbook**. Siga los pasos del Asistente para publicación para crear una versión instalable de la aplicación. Para obtener más información, vea [Asistente para publicación (Desarrollo de Office en Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
   
-3.  Instalar la aplicación en un equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.  
+3.  Instale la aplicación en un equipo en el que estén instalados .NET Framework 4 o superior y una versión diferente de Excel.  
   
-4.  Cuando finalice la instalación, ejecute el programa de instalación.  
+4.  Cuando finalice la instalación, ejecute el programa instalado.  
   
 5.  Compruebe que se ha creado un libro de Excel en la ubicación especificada en el código de ejemplo: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
- [/Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
-
+ [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+ [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

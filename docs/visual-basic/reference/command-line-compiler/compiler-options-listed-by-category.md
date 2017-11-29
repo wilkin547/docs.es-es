@@ -1,42 +1,24 @@
 ---
-title: "Opciones del compilador de Visual Basic ordenadas por categoría | Documentos de Microsoft"
-ms.date: 2015-07-20
+title: "Opciones del compilador de Visual Basic, por categoría"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c379a937f798a02badd7b7cd8470f2e1ce3b072
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
-El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] se ofrece como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]. La siguiente es una lista de las opciones de línea de comandos del compilador [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] clasificadas por categoría funcional.  
+El compilador de línea de comandos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] se ofrece como alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. La siguiente es una lista de las opciones de línea de comandos del compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] clasificadas por categoría funcional.  
   
 ## <a name="compiler-output"></a>Resultado de compilación  
   
@@ -57,10 +39,10 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programmin
   
 ## <a name="output-files"></a>Archivos de resultados  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Procesa los comentarios de documentación generando un archivo XML.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)].|  
+|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[/out](../../../visual-basic/reference/command-line-compiler/out.md)|Especifica un directorio de salida.|  
 |[/target](../../../visual-basic/reference/command-line-compiler/target.md)|Especifica el formato de la salida.|  
   
@@ -93,16 +75,16 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programmin
   
 ## <a name="help"></a>Ayuda  
   
-|Opción|Propósito|  
+|Opción|Finalidad|  
 |---|---|  
 |[/?](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/help`. No se produce ninguna compilación.|  
-|[/Help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/?`. No se produce ninguna compilación.|  
+|[/help](../../../visual-basic/reference/command-line-compiler/help.md)|Muestra las opciones del compilador. Este comando equivale a especificar la opción `/?`. No se produce ninguna compilación.|  
   
 ## <a name="language"></a>Lenguaje  
   
 |Opción|Propósito|  
 |---|---|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especificar la versión de idioma: 9 | 9.0 | 10 | 10.0 | 11 | 11.0.|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|Especificar versión de lenguaje: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0.|  
 |[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|Exige la declaración explícita de variables.|  
 |[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Exige la semántica de tipos estricta.|  
 |[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|Especifica si las comparaciones de cadenas deben ser binarias o usar la semántica de texto específica de la configuración regional.|  
@@ -130,9 +112,9 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programmin
 |[@ (especificar archivo de respuesta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Especifica un archivo de respuesta.|  
 |[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Especifica la dirección base de un archivo DLL.|  
 |[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Especifica la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] los errores internos del compilador.|  
+|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Especifica cómo debe documentar el compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] los errores internos del compilador.|  
 |[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Indica al kernel de Windows si un archivo ejecutable determinado admite selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica la clase que contiene el `Sub``Main` procedimiento para usar durante el inicio.|  
+|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica la clase que contiene el `Sub``Main` procedimiento que se utilizará en el inicio.|  
 |[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|No compila con Vbc.rsp.|  
 |[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Hace que el compilador no haga referencia a las bibliotecas estándar.|  
 |[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Indica al compilador que no inserte ningún manifiesto de la aplicación en el archivo ejecutable.|  
@@ -146,7 +128,7 @@ El compilador de línea de comandos [!INCLUDE[vbprvb](../../../csharp/programmin
 |`/checksumalgorithm:<alg>`|Especifique el algoritmo para calcular la suma de comprobación del archivo de origen almacenada en el archivo PDB.  Los valores admitidos son: SHA1 (predeterminado) o SHA256.|  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones del compilador de Visual Basic ordenadas alfabéticamente](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)   
- [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [Opciones del compilador de C# alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [Opciones del compilador de Visual Basic, por orden alfabético](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+ [Introducción al Diseñador de proyectos](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Opciones del compilador de C#, por orden alfabético](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opciones del compilador de C#, por categoría](../../../csharp/language-reference/compiler-options/listed-by-category.md)

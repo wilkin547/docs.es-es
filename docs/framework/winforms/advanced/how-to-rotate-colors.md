@@ -1,60 +1,64 @@
 ---
-title: "C&#243;mo: Rotar colores | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colores, rotar"
-  - "ejemplos [Windows Forms], rotar colores"
+title: "Cómo: Rotar colores"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors [Windows Forms], rotating
+- examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c82a77ff3d643afc0ddd542868a96c17d31ef336
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Rotar colores
-La rotación en un espacio de color cuatridimensional es difícil de visualizar.  Para poder ver la rotación fácilmente, se ha decidido mantener uno de los componentes de color fijo.  Supongamos que se decide fijar el componente alfa en 1 \(completamente opaco\).  Entonces se podrá ver un espacio de color tridimensional con los ejes rojo, verde y azul como se muestra en la siguiente ilustración.  
+# <a name="how-to-rotate-colors"></a>Cómo: Rotar colores
+Rotación en un espacio de colores de cuatro dimensiones es difícil de visualizar. Podemos facilitar la visualizar rotación decidido mantener uno de los componentes de color fijo. Supongamos que se decide mantener el componente alfa fijado en 1 (completamente opaco). A continuación, podemos visualizar un espacio de color tridimensional con ejes de rojos, verde y azules como se muestra en la siguiente ilustración.  
   
  ![Cambio de color](../../../../docs/framework/winforms/advanced/media/recoloring03.gif "recoloring03")  
   
- Los colores se pueden considerar como puntos en un espacio tridimensional.  Por ejemplo, el punto \(1, 0, 0\) en un espacio representa el color rojo, mientras que el punto \(0, 1, 0\) en un espacio representa el color verde.  
+ Un color puede considerarse como un punto en un espacio 3D. Por ejemplo, el punto (1, 0, 0) en un espacio representa el color rojo y el punto (0, 1, 0) en un espacio representa el color verde.  
   
- En la siguiente ilustración se muestra el resultado al rotar el color \(1, 0, 0\) en un ángulo de 60 grados en el plano Rojo\-Verde.  La rotación en un plano paralelo al plano Rojo\-Verde puede considerarse como una rotación sobre el eje azul.  
+ En la siguiente ilustración se muestra lo que significa para rotar el color (1, 0, 0) a través de un ángulo de 60 grados en el plano rojo y verde. Rotación en un plano paralelo al plano rojo-verde puede considerarse como una rotación sobre el eje azul.  
   
  ![Cambio de color](../../../../docs/framework/winforms/advanced/media/recoloring04.gif "recoloring04")  
   
- En la siguiente ilustración se muestra cómo inicializar una matriz de color para realizar rotaciones sobre cada uno de los tres ejes de coordenadas \(rojo, verde, azul\).  
+ La ilustración siguiente muestra cómo inicializar una matriz de color para realizar rotaciones sobre cada uno de los tres ejes de coordenadas (rojo, verde, azul).  
   
  ![Cambio de color](../../../../docs/framework/winforms/advanced/media/recoloring05.gif "recoloring05")  
   
-## Ejemplo  
- En el siguiente ejemplo se toma una imagen de un solo color \(1, 0, 0,6\) y se aplica una rotación de 60 grados sobre el eje azul.  El ángulo de rotación se trazará en un plano paralelo al plano rojo\-verde.  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se toma una imagen que es un color (1, 0, 0,6) y se aplica una rotación de 60 grados sobre el eje azul. El ángulo de rotación se trazará en un plano paralelo al plano rojo y verde.  
   
- En la siguiente ilustración se muestra la imagen original a la izquierda y la imagen con rotación de colores a la derecha.  
+ En la siguiente ilustración se muestra la imagen original a la izquierda y la imagen gira de color de la derecha.  
   
  ![Rotar colores](../../../../docs/framework/winforms/advanced/media/colortrans5.png "colortrans5")  
   
- En la siguiente ilustración se muestra una visualización de la rotación de color realizada en el siguiente código.  
+ En la siguiente ilustración muestra una visualización de la rotación de color realizada en el código siguiente.  
   
  ![Cambio de color](../../../../docs/framework/winforms/advanced/media/recoloring06.gif "recoloring06")  
   
  [!code-csharp[System.Drawing.RotateColors#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
-## Compilar el código  
- El ejemplo anterior está diseñado para formularios Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro del controlador del evento <xref:System.Windows.Forms.Control.Paint>.  Reemplace `RotationInput.bmp` por un nombre de archivo de imagen y una ruta de acceso válidos en el sistema.  
+## <a name="compiling-the-code"></a>Compilar el código  
+ El ejemplo anterior está diseñado para su uso con Windows Forms y requiere <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro del controlador de eventos <xref:System.Windows.Forms.Control.Paint>. Reemplace `RotationInput.bmp` con un nombre de archivo de imagen y la ruta de acceso válida en su sistema.  
   
-## Vea también  
- <xref:System.Drawing.Imaging.ColorMatrix>   
- <xref:System.Drawing.Imaging.ImageAttributes>   
- [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Drawing.Imaging.ColorMatrix>  
+ <xref:System.Drawing.Imaging.ImageAttributes>  
+ [Gráficos y dibujos en Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Cambiar el color de las imágenes](../../../../docs/framework/winforms/advanced/recoloring-images.md)

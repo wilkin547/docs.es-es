@@ -1,49 +1,50 @@
 ---
-title: "NotifyIcon (Componente, formularios Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "iconos de aplicaciones, procesos en segundo plano"
-  - "icono de programa en segundo plano"
-  - "menús contextuales, para procesos en segundo plano"
-  - "NotifyIcon (componente)"
-  - "icono de la bandeja de estado"
-  - "iconos de la bandeja del sistema"
-  - "SysTray (iconos)"
-  - "interfaz de usuario, para procesos en segundo plano"
+title: NotifyIcon (Componente, formularios Windows Forms)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application icons [Windows Forms], background processes
+- context menus [Windows Forms], for background processes
+- status tray icon
+- system tray icons
+- user interface [Windows Forms], for background processes
+- background program icon
+- NotifyIcon component
+- SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 56c0991bfbe8c190c06a7907cf04fa4576435864
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/22/2017
 ---
-# NotifyIcon (Componente, formularios Windows Forms)
-El componente `NotifyIcon` de formularios Windows Forms muestra iconos en el área de notificación de estado de la barra de tareas para procesos que se ejecutan en segundo plano y que, de otro modo, no tendrían interfaz de usuario.  Un ejemplo sería un programa de protección antivirus al que se puede tener acceso si se hace clic en un icono situado en el área de notificación de estado de la barra de tareas.  
+# <a name="notifyicon-component-windows-forms"></a>NotifyIcon (Componente, formularios Windows Forms)
+Los formularios de Windows `NotifyIcon` componente muestra iconos en el área de notificación de estado de la barra de tareas para procesos que se ejecutan en segundo plano y no lo haría en caso contrario, tienen interfaces de usuario. Un ejemplo sería un programa antivirus al que se puede acceder haciendo clic en un icono en el área de notificación de estado de la barra de tareas.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general sobre el componente NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)  
- Presenta conceptos generales acerca del componente `NotifyIcon`, que permite a los usuarios ver iconos de los procesos que se ejecutan en segundo plano y que no tienen interfaz de usuario.  
+ Presenta los conceptos generales de la `NotifyIcon` componente, que permite a los usuarios ver iconos de los procesos que se ejecutan en segundo plano y que no tienen una interfaz de usuario.  
   
- [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- Describe los pasos necesarios para configurar el icono que muestra el componente `NotifyIcon`.  
+ [Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ Proporciona los pasos para configurar el icono que muestra la `NotifyIcon` componente.  
   
- [Cómo: Asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- Proporciona los pasos para agregar un menú contextual a un componente `NotifyIcon`.  
+ [Asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ Proporciona los pasos necesarios para agregar un menú contextual para un `NotifyIcon` componente.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.NotifyIcon>  
- Proporciona información de referencia acerca de la clase y sus miembros.  
+ Contiene información de referencia sobre la clase y sus miembros.  
   
-## Secciones relacionadas  
- [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Proporciona una lista completa de los controles de formularios Windows Forms con vínculos a la información sobre su utilización.
+## <a name="related-sections"></a>Secciones relacionadas  
+ [Controles que se usan en Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ Proporciona una lista completa de controles de Windows Forms, con vínculos a información sobre su uso.

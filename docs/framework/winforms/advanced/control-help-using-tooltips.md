@@ -1,33 +1,34 @@
 ---
-title: "Controlar la ayuda mediante informaci&#243;n sobre herramientas | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "controles [Windows Forms], información sobre herramientas"
-  - "Ayuda, agregar a cuadros de diálogo"
-  - "Ayuda, información sobre herramientas para controles"
-  - "información sobre herramientas [Windows Forms], para controles"
+title: "Controlar la ayuda mediante información sobre herramientas"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Help [Windows Forms], tooltips for controls
+- controls [Windows Forms], tooltips
+- tooltips [Windows Forms], for controls
+- Help [Windows Forms], adding to dialog boxes
 ms.assetid: 03263f94-e539-440b-a67c-8b9110c96dcd
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3bb0bffe79c7b00e42708f58a035d983802b53d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Controlar la ayuda mediante informaci&#243;n sobre herramientas
-El componente <xref:System.Windows.Forms.ToolTip> se puede utilizar para mostrar un mensaje de Ayuda breve y especializado para los controles individuales de los formularios Windows Forms.  El componente <xref:System.Windows.Forms.ToolTip> incorpora una propiedad que especifica el texto que se muestra para cada uno de los controles del formulario.  Para obtener más información sobre cómo trabajar con el componente <xref:System.Windows.Forms.ToolTip> de esta manera, vea [Cómo: Establecer información sobre herramientas en controles de Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md).  Además, puede configurar el componente <xref:System.Windows.Forms.ToolTip> de modo que haya un retardo antes de mostrarse.  Para obtener más información, vea [Cómo: Cambiar el retardo del componente ToolTip de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
+# <a name="control-help-using-tooltips"></a>Controlar la ayuda mediante información sobre herramientas
+Puede usar el <xref:System.Windows.Forms.ToolTip> especializado de componente para mostrar un breve mensaje de ayuda para controles individuales de formularios Windows Forms. El <xref:System.Windows.Forms.ToolTip> componente proporciona una propiedad que especifica el texto mostrado para cada control en el formulario. Para obtener más información sobre cómo trabajar con el <xref:System.Windows.Forms.ToolTip> componentes de esta manera, consulte [Cómo: establecer información sobre herramientas para controles en un formulario Windows Forms en tiempo de diseño](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). Además, puede configurar el <xref:System.Windows.Forms.ToolTip> componente para que haya un retraso antes de que se muestre. Para obtener más información, consulte [Cómo: cambiar el retardo del componente ToolTip de formularios Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
   
-## Vea también  
- [Cómo: Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)   
- [ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)   
- [Integrar la Ayuda de usuario en formularios Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ [Mostrar ayuda emergente](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
+ [ToolTip (componente)](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ [Integrar la Ayuda de usuario en Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

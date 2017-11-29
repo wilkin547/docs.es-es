@@ -1,47 +1,46 @@
 ---
-title: "Valores devueltos para la funci&#243;n CStr (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "CStr (función)"
-  - "Date (tipo de datos), convertir"
-  - "fechas [Visual Basic]"
-  - "fechas [Visual Basic], valores devueltos para la función CStr"
-  - "String (tipo de datos), convertir"
-  - "cadenas [Visual Basic], valor devuelto"
-  - "horas, valores devueltos para la función CStr"
-  - "conversión de tipos"
+title: "Valores devueltos para la función CStr (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- times [Visual Basic], CStr Function return values
+- type conversion [Visual Basic]
+- dates [Visual Basic], CStr Function return values
+- CStr function
+- strings [Visual Basic], return value
+- Date data type [Visual Basic], converting
+- dates [Visual Basic]
+- String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b498c9b1b7916467c96ed2c645c7131192a5e8b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Valores devueltos para la funci&#243;n CStr (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-En la tabla siguiente se describen los valores devueltos por la función `CStr` en varios tipos de `expression`.  
+# <a name="return-values-for-the-cstr-function-visual-basic"></a>Valores devueltos para la función CStr (Visual Basic)
+La tabla siguiente describen los valores devueltos por `CStr` para distintos tipos de datos de `expression`.  
   
-|Si el tipo de `expression` es|`CStr` devuelve|  
-|-----------------------------------|---------------------|  
-|[Boolean \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Cadena que contiene "True" o "False".|  
-|[Date \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/date-data-type.md)|Cadena que contiene un valor `Date` \(fecha y hora\) en el formato de fecha corta del sistema.|  
-|[Tipos de datos numéricos](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Cadena que representa el número.|  
+|Si `expression` es de tipo|`CStr`Devuelve|  
+|-----------------------------|--------------------|  
+|[Boolean (tipo de datos)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Una cadena que contiene "True" o "False".|  
+|[Date (tipo de datos)](../../../visual-basic/language-reference/data-types/date-data-type.md)|Una cadena que contiene un `Date` valor (fecha y hora) en el formato de fecha corta del sistema.|  
+|[Tipos de datos numéricos](../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)|Una cadena que representa el número.|  
   
-## CStr y Date  
- El tipo `Date` siempre contiene información de fecha y hora.  Para la conversión de tipos, Visual Basic considera 1\/1\/0001 \(1 de enero del año 1\) un *valor neutral* de fecha y 00:00:00 \(medianoche\) un valor neutral de hora.  `CStr` no incluye los valores neutros en la cadena resultante.  Por ejemplo, si se convierte `#January 1, 0001 9:30:00#` en una cadena, el resultado sería "9:30:00 a.m.", ya que la información de fecha se omite.  No obstante, la información de fecha sigue estando presente en el valor `Date` original y se puede recuperar mediante funciones como <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
+## <a name="cstr-and-date"></a>CStr y Date  
+ El `Date` tipo siempre contiene información de fecha y hora. Para fines de conversión de tipos, Visual Basic considera 1/1/0001 (del 1 de enero del año 1) como un *valor neutral* de fecha y 00:00:00 (medianoche) un valor neutral por vez. `CStr`no incluye valores neutrales en la cadena resultante. Por ejemplo, si convierte `#January 1, 0001 9:30:00#` en una cadena, el resultado es "9:30:00 AM"; se suprime la información de fecha. Sin embargo, la información de fecha aún está presente en la versión original `Date` valor y se pueden recuperar con funciones como <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>.  
   
 > [!NOTE]
->  La función `CStr` realiza su conversión basándose en la configuración de la referencia cultural actual de la aplicación.  Para obtener la representación en forma de cadena de un número en una referencia cultural determinada, utilice el método `ToString(IFormatProvider)` del número.  Por ejemplo, utilice <xref:System.Double.ToString%2A?displayProperty=fullName> al convertir un valor de tipo `Double` en `String`.  
+>  El `CStr` función realiza su conversión basándose en la configuración de referencia cultural actual para la aplicación. Para obtener la representación de cadena de un número en una referencia cultural determinada, use el número `ToString(IFormatProvider)` método. Por ejemplo, utilice <xref:System.Double.ToString%2A?displayProperty=nameWithType> al convertir un valor de tipo `Double` a una `String`.  
   
-## Vea también  
- <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>   
- [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Boolean \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)   
- [Date \(Tipo de datos\)](../../../visual-basic/language-reference/data-types/date-data-type.md)
+## <a name="see-also"></a>Vea también  
+ <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>  
+ [Funciones de conversión de tipos](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [Boolean (tipo de datos)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
+ [Date (tipo de datos)](../../../visual-basic/language-reference/data-types/date-data-type.md)

@@ -1,48 +1,40 @@
 ---
-title: Controlar el flujo en programas Async (Visual Basic) | Documentos de Microsoft
+title: Flujo de control en programas Async (Visual Basic)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 15e02fbc023db9ae2f3ee9f40598faa7c9c027a0
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 28d5d087b48e4c816cbe3a84966346be6cda772e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Flujo de control en programas Async (Visual Basic)
-Puede escribir y mantener más fácilmente programas asincrónicas utilizando la `Async` y `Await` palabras clave. Sin embargo, los resultados pueden sorprenderle si no comprende cómo funciona su programa. Seguimientos de este tema del flujo de control a través de un programa asincrónico simple para mostrar cuando el control se mueve de un método a otra y qué información se transfiere cada vez.  
+Puede escribir y mantener los programas asincrónicos más fácilmente usando las palabras clave `Async` y `Await`. Aun así, los resultados pueden sorprenderle si no sabe cómo funciona el programa. En este tema se hace un seguimiento del flujo de control a través de un programa asincrónico simple en el que se muestra cuándo se mueve el control de un método a otro y qué información se transfiere cada vez.  
   
 > [!NOTE]
 >  Las palabras clave `Async` y `Await` se incluyeron en Visual Studio 2012.  
   
- En general, marcar los métodos que contienen código asincrónico con la [Async](../../../../visual-basic/language-reference/modifiers/async.md) modificador. En un método que está marcado con un modificador async, puede usar un [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) (operador) para especificar que el método pausa para esperar un proceso denominado asincrónico completar. Para obtener más información, consulte [la programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ En general, marcar los métodos que contienen código asincrónico con el [Async](../../../../visual-basic/language-reference/modifiers/async.md) modificador. En un método que se marca con un modificador async, puede usar un [Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) operador para especificar que el método se pausa para esperar un proceso denominado asincrónico que se complete. Para obtener más información, consulte [programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- En el ejemplo siguiente se utiliza métodos asincrónicos para descargar el contenido de un sitio Web especificado como una cadena y mostrar la longitud de la cadena. El ejemplo contiene los dos métodos siguientes.  
+ En el ejemplo siguiente se usan métodos asincrónicos para descargar el contenido de un sitio web especificado como una cadena y mostrar la longitud de la cadena. El ejemplo contiene los dos métodos siguientes:  
   
--   `startButton_Click`, que llama `AccessTheWebAsync` y muestra el resultado.  
+-   `startButton_Click`, que llama a `AccessTheWebAsync` y muestra el resultado.  
   
--   `AccessTheWebAsync`, que descarga el contenido de un sitio Web como una cadena y devuelve la longitud de la cadena. `AccessTheWebAsync`usa asincrónico <xref:System.Net.Http.HttpClient>método, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, para descargar el contenido.</xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> </xref:System.Net.Http.HttpClient>  
+-   `AccessTheWebAsync`, que descarga el contenido de un sitio web como una cadena y devuelve la longitud de esta. `AccessTheWebAsync` usa un método <xref:System.Net.Http.HttpClient> asincrónico, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, para descargar el contenido.  
   
- Numeran mostrar líneas aparecen en puntos estratégicos en todo el programa para ayudarle a entender cómo se ejecuta el programa y explican lo que ocurre en cada punto marcado. Las líneas de la pantalla se etiquetan "Uno"a "seis." Las etiquetas representan el orden en el que el programa llegue a estas líneas de código.  
+ Las líneas de visualización numeradas aparecen en puntos estratégicos de todo el programa para ayudarle a entender cómo se ejecuta el programa y explicar lo que ocurre en cada punto marcado. Las líneas de visualización tienen las etiquetas comprendidas entre "UNO" y "SEIS". Las etiquetas representan el orden en el que el programa alcanza estas líneas de código.  
   
- El código siguiente muestra un esquema del programa.  
+ En el código siguiente se muestra un esquema del programa.  
   
 ```vb  
 Class MainWindow  
@@ -76,13 +68,11 @@ Class MainWindow
     End Function  
   
 End Class  
-  
 ```  
   
- Cada una de las ubicaciones con la etiqueta "Uno"a "seis," muestra información sobre el estado actual del programa. Se produce el siguiente resultado.  
+ Cada una de las ubicaciones etiquetadas (del "UNO" al "SEIS") muestra información sobre el estado actual del programa. Se genera la siguiente salida.  
   
 ```  
-  
 ONE:   Entering startButton_Click.  
            Calling AccessTheWebAsync.  
   
@@ -111,19 +101,19 @@ Length of the downloaded string: 33946.
 ```  
   
 ## <a name="set-up-the-program"></a>Configurar el programa  
- Puede descargar el código que utiliza en este tema de MSDN o crearla usted mismo.  
+ Puede descargar el código que se usa en este tema desde MSDN o crearlo usted mismo.  
   
 > [!NOTE]
->  Para ejecutar el ejemplo, debe tener Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior, instalado en el equipo.  
+>  Para ejecutar el ejemplo, debe tener Visual Studio 2012 o versiones más reciente y .NET Framework 4.5 o posterior instalado en el equipo.  
   
-### <a name="download-the-program"></a>Descargue el programa  
- Puede descargar la aplicación de este tema de [ejemplo Async: flujo de Control en programas Async](http://go.microsoft.com/fwlink/?LinkId=255285). Los siguientes pasos se abra y ejecuten el programa.  
+### <a name="download-the-program"></a>Descargar el programa  
+ Puede descargar la aplicación de este tema en [Ejemplo de Async: Controlar el flujo en los programas asincrónicos](http://go.microsoft.com/fwlink/?LinkId=255285). Con los siguientes pasos se abre y se ejecuta el programa.  
   
-1.  Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
+1.  Descomprima el archivo descargado e inicie Visual Studio.  
   
 2.  En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.  
   
-3.  Navegue hasta la carpeta que contiene el código de ejemplo sin comprimir, abra el archivo de solución (.sln) y, a continuación, elija la tecla F5 para compilar y ejecutar el proyecto.  
+3.  Navegue hasta la carpeta que contiene el código de ejemplo descomprimido, abra el archivo de la solución (.sln) y elija la tecla F5 para compilar y ejecutar el proyecto.  
   
 ### <a name="build-the-program-yourself"></a>Compilar el programa usted mismo  
  El siguiente proyecto de Windows Presentation Foundation (WPF) contiene el ejemplo de código de este tema.  
@@ -136,17 +126,17 @@ Length of the downloaded string: 33946.
   
      Aparece el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En el **plantillas instaladas** panel, elija **Visual Basic**y, a continuación, elija **aplicación WPF** de la lista de tipos de proyecto.  
+3.  En el **plantillas instaladas** panel, elija **Visual Basic**y, a continuación, elija **aplicación WPF** en la lista de tipos de proyecto.  
   
-4.  Escriba `AsyncTracer` como el nombre del proyecto y, a continuación, elija la **Aceptar** botón.  
+4.  Escriba `AsyncTracer` como el nombre del proyecto y elija el botón **Aceptar**.  
   
-     El proyecto nuevo aparece en **el Explorador de soluciones**.  
+     El proyecto nuevo aparece en el **Explorador de soluciones**.  
   
 5.  En el Editor de código de Visual Studio, elija la pestaña **MainWindow.xaml** .  
   
-     Si la ficha no está visible, abra el menú contextual de MainWindow.xaml en **el Explorador de soluciones**y, a continuación, elija **ver código**.  
+     Si la pestaña no está visible, abra el menú contextual de MainWindow.xaml en el **Explorador de soluciones** y elija **Ver código**.  
   
-6.  En el **XAML** ver de MainWindow.xaml, reemplace el código por el código siguiente.  
+6.  En la vista **XAML** de MainWindow.xaml, reemplace el código por el código siguiente.  
   
     ```vb  
     <Window  
@@ -160,16 +150,15 @@ Length of the downloaded string: 33946.
   
         </Grid>  
     </Window>  
-  
     ```  
   
-     Aparece una ventana simple que contiene un cuadro de texto y un botón en la **diseño** vista de MainWindow.xaml.  
+     En la vista **Diseño** de MainWindow.xaml aparece una ventana simple que contiene un cuadro de texto y un botón.  
   
-7.  Agregue una referencia de <xref:System.Net.Http>.</xref:System.Net.Http>  
+7.  Agregue una referencia para <xref:System.Net.Http>.  
   
-8.  En **el Explorador de soluciones**, abra el menú contextual para MainWindow.xaml.vb y, a continuación, elija **ver código**.  
+8.  En **el Explorador de soluciones**, abra el menú contextual de MainWindow.XAML y, a continuación, elija **ver código**.  
   
-9. En MainWindow.xaml.vb, reemplace el código con el código siguiente.  
+9. En el archivo MainWindow.xaml.vb, reemplace el código con el código siguiente.  
   
     ```vb  
     ' Add an Imports statement and a reference for System.Net.Http.  
@@ -266,83 +255,120 @@ Length of the downloaded string: 33946.
     Length of the downloaded string: 33946.  
     ```  
   
-## <a name="trace-the-program"></a>El programa de seguimiento  
+## <a name="trace-the-program"></a>Hacer un seguimiento del programa  
   
 ### <a name="steps-one-and-two"></a>Pasos UNO y DOS  
- Las dos primeros mostrar las líneas rastrear la ruta de acceso como `startButton_Click` llamadas `AccessTheWebAsync`, y `AccessTheWebAsync` llama al <xref:System.Net.Http.HttpClient>método <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>.</xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> </xref:System.Net.Http.HttpClient> de asincrónica La imagen siguiente describe las llamadas de método a método.  
+ Las dos primeras líneas siguen la ruta de acceso a medida que `startButton_Click` llama a `AccessTheWebAsync` y `AccessTheWebAsync` llama al método <xref:System.Net.Http.HttpClient> asincrónico <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>. En la siguiente imagen se describen las llamadas de método a método.  
   
- ![Pasos uno y dos](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace ONETWO")  
+ ![Pasos UNO y DOS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")  
   
- El tipo de valor devuelto de ambos `AccessTheWebAsync` y `client.GetStringAsync` es <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> Para `AccessTheWebAsync`, TResult es un entero. Para `GetStringAsync`, TResult es una cadena. Para obtener más información sobre los tipos de valor devuelto de método asincrónico, vea [Async devolver tipos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
+ El tipo de valor devuelto de `AccessTheWebAsync` y `client.GetStringAsync` es <xref:System.Threading.Tasks.Task%601>. Para `AccessTheWebAsync`, TResult es un entero. Para `GetStringAsync`, TResult es una cadena. Para obtener más información sobre tipos de valor devuelto de método asincrónico, vea [tipos de valor devueltos de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
- Un método asincrónico de devolución de tarea devuelve una instancia de la tarea cuando se desplaza el control al llamador. Devuelve el control de un método asincrónico a su llamador cuando un `Await` operador se encuentra en el método llamado o cuando finaliza el método llamado. Mostrar líneas que tienen la etiqueta "Tres"a "seis" esta parte del proceso de seguimiento.  
+ Un método asincrónico de devolución de tarea devuelve una instancia de la tarea cuando el control se desplaza al llamador. El control vuelve a su llamador procedente de un método asincrónico cuando se encuentra un operador `Await` en el método llamado o cuando este finaliza. Las líneas de visualización que tienen las etiquetas comprendidas entre "TRES" y "SEIS" rastrean esta parte del proceso.  
   
 ### <a name="step-three"></a>Paso TRES  
- En `AccessTheWebAsync`, el método asincrónico <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>se llama para descargar el contenido de la página Web de destino.</xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> Devuelve el control de `client.GetStringAsync` a `AccessTheWebAsync` cuando `client.GetStringAsync` devuelve.  
+ En `AccessTheWebAsync`, el método asincrónico <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> se llama para descargar el contenido de la página web de destino. El control vuelve a `AccessTheWebAsync` procedente de `client.GetStringAsync` cuando se devuelve `client.GetStringAsync`.  
   
- El `client.GetStringAsync` método devuelve una tarea de la cadena que se asigna a la `getStringTask` variable `AccessTheWebAsync`. La siguiente línea en el programa de ejemplo muestra la llamada a `client.GetStringAsync` y la asignación.  
+ El método `client.GetStringAsync` devuelve una tarea de la cadena que se asigna a la variable `getStringTask` en `AccessTheWebAsync`. En la siguiente línea del programa de ejemplo se muestra la llamada a `client.GetStringAsync` y la asignación.  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
- Puede pensar de la tarea como un compromiso por `client.GetStringAsync` para generar una cadena real finalmente. Mientras tanto, si `AccessTheWebAsync` tiene trabajo que no dependa de la cadena de Promise `client.GetStringAsync`, que puede continuar el trabajo mientras `client.GetStringAsync` espera. En el ejemplo, las siguientes líneas de salida, que se denomina "Tres", representan la oportunidad de realizar un trabajo independiente  
+```vb  
+Dim getStringTask As Task(Of String) = client.GetStringAsync("http://msdn.microsoft.com")  
+```  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
- La siguiente instrucción suspende el progreso en `AccessTheWebAsync` cuando `getStringTask` esperado.  
+ Puede considerar la tarea como una promesa de `client.GetStringAsync` de generar una cadena real. Mientras tanto, si `AccessTheWebAsync` tiene trabajo que no depende de la cadena prometida de `client.GetStringAsync`, dicho trabajo puede continuar mientras `client.GetStringAsync` espera. En el ejemplo, las siguientes líneas de salida, que tienen la etiqueta "TRES", representan la oportunidad de realizar un trabajo independiente  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```  
+THREE: Back in AccessTheWebAsync.  
+           Task getStringTask is started.  
+           About to await getStringTask & return a Task<int> to startButton_Click.  
+```  
+  
+ La siguiente instrucción suspende el progreso en `AccessTheWebAsync` cuando se espera a `getStringTask`.  
+  
+```vb  
+Dim urlContents As String = Await getStringTask  
+```  
+  
  La siguiente imagen muestra el flujo de control de `client.GetStringAsync` para la asignación a `getStringTask` y desde la creación de `getStringTask` a la aplicación de un operador Await.  
   
- ![Paso tres](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace tres")  
+ ![Paso TRES](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")  
   
- La expresión await suspende `AccessTheWebAsync` hasta que `client.GetStringAsync` devuelve. Mientras tanto, el control vuelve al llamador del `AccessTheWebAsync`, `startButton_Click`.  
+ La expresión await suspende `AccessTheWebAsync` hasta que se devuelva `client.GetStringAsync`. Mientras tanto, el control vuelve al llamador de `AccessTheWebAsync`, `startButton_Click`.  
   
 > [!NOTE]
->  Normalmente, espera la llamada a un método asincrónico inmediatamente. Por ejemplo, la siguiente asignación podría reemplazar el código anterior que crea y, a continuación, espera `getStringTask`:`Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
+>  Normalmente se espera la llamada a un método asincrónico de forma inmediata. Por ejemplo, la siguiente asignación podría reemplazar el código anterior que crea y espera `getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("http://msdn.microsoft.com")`  
 >   
 >  En este tema, el operador await se aplica más adelante para dar cabida a las líneas de salida que marcan el flujo de control a través del programa.  
   
 ### <a name="step-four"></a>Paso CUATRO  
- El declarado tipo de valor devuelto de `AccessTheWebAsync` es `Task(Of Integer)`. Por lo tanto, cuando `AccessTheWebAsync` está suspendido, devuelve una tarea de entero en `startButton_Click`. Debe entender que la tarea devuelta no es `getStringTask`. La tarea devuelta es una nueva tarea de entero que representa lo que falta por hacer en el método suspendido, `AccessTheWebAsync`. La tarea es una promesa de `AccessTheWebAsync` para producir un entero cuando se completa la tarea.  
+ El tipo de valor devuelto declarado de `AccessTheWebAsync` es `Task(Of Integer)`. Por lo tanto, cuando se suspende `AccessTheWebAsync`, devuelve una tarea de entero en `startButton_Click`. Debe entender que la tarea devuelta no es `getStringTask`. La tarea devuelta es una nueva tarea de entero que representa lo que falta por hacer en el método suspendido, `AccessTheWebAsync`. La tarea es una promesa de `AccessTheWebAsync` de generar un entero cuando finalice la tarea.  
   
- La instrucción siguiente asigna esta tarea a la `getLengthTask` variable.  
+ La siguiente instrucción asigna esta tarea a la variable `getLengthTask`.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
- Como en `AccessTheWebAsync`, `startButton_Click` puede continuar con el trabajo que no dependa de los resultados de la tarea asincrónica (`getLengthTask`) hasta que la tarea se espera. Las siguientes líneas de salida representan ese trabajo.  
+```vb  
+Dim getLengthTask As Task(Of Integer) = AccessTheWebAsync()  
+```  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
- Progreso de `startButton_Click` se suspende cuando `getLengthTask` esperado. Suspende la siguiente instrucción de asignación `startButton_Click` hasta `AccessTheWebAsync` completada.  
+ Como en `AccessTheWebAsync`, `startButton_Click` puede continuar con el trabajo que no depende de los resultados de la tarea asincrónica (`getLengthTask`) hasta que se espere la tarea. Las siguientes líneas de salida representan ese trabajo.  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
- En la siguiente ilustración, las flechas muestran el flujo de control de la expresión await en `AccessTheWebAsync` a la asignación de un valor a `getLengthTask`, seguido por el procesamiento normal en `startButton_Click` hasta `getLengthTask` esperado.  
+```  
+FOUR:  Back in startButton_Click.  
+           Task getLengthTask is started.  
+           About to await getLengthTask -- no caller to return to.  
+```  
   
- ![Paso cuatro](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace cuatro")  
+ El progreso de `startButton_Click` se suspende cuando se espera `getLengthTask`. La siguiente instrucción de asignación suspende `startButton_Click` hasta que concluya `AccessTheWebAsync`.  
+  
+```vb  
+Dim contentLength As Integer = Await getLengthTask  
+```  
+  
+ En la siguiente ilustración, las flechas muestran el flujo de control desde la expresión await en `AccessTheWebAsync` hasta la asignación de un valor a `getLengthTask`, seguido del procesamiento normal en `startButton_Click` hasta que se espera a `getLengthTask`.  
+  
+ ![Paso CUATRO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")  
   
 ### <a name="step-five"></a>Paso CINCO  
- Cuando `client.GetStringAsync` indica que ha finalizado, el procesamiento en `AccessTheWebAsync` se libera de la suspensión y puede continuar más allá de la instrucción await. Las siguientes líneas de salida representan la reanudación del procesamiento.  
+ Cuando `client.GetStringAsync` indica que ha finalizado, el procesamiento de `AccessTheWebAsync` sale de la suspensión y puede continuar una vez superada la instrucción await. En las siguientes líneas de salida se representa la reanudación del procesamiento.  
   
-<CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
- El operando de la instrucción return, `urlContents.Length`, se almacena en la tarea que `AccessTheWebAsync` devuelve. La expresión await recupera ese valor de `getLengthTask` en `startButton_Click`.  
+```  
+FIVE:  Back in AccessTheWebAsync.  
+           Task getStringTask is complete.  
+           Processing the return statement.  
+           Exiting from AccessTheWebAsync.  
+```  
   
- La siguiente imagen muestra la transferencia de control después de `client.GetStringAsync` (y `getStringTask`) están completos.  
+ El operando de la instrucción de devolución, `urlContents.Length`, se almacena en la tarea que devuelve `AccessTheWebAsync`. La expresión await recupera ese valor de `getLengthTask` en `startButton_Click`.  
   
- ![Paso cinco](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace cinco")  
+ En la siguiente imagen se muestra la transferencia de control una vez concluido `client.GetStringAsync` (y `getStringTask`).  
   
- `AccessTheWebAsync`se ejecuta hasta el final y el control se devuelve a `startButton_Click`, que está esperando la finalización.  
+ ![Paso CINCO](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
+  
+ `AccessTheWebAsync` se ejecuta hasta el final y el control vuelve a `startButton_Click`, que espera la finalización.  
   
 ### <a name="step-six"></a>Paso SEIS  
- Cuando `AccessTheWebAsync` señala que haya finalizado, el procesamiento puede continuar más allá de la instrucción await en `startButton_Async`. De hecho, el programa no tiene nada más que hacer.  
+ Cuando `AccessTheWebAsync` indica que ha finalizado, el procesamiento puede continuar una vez superada la instrucción await en `startButton_Async`. De hecho, el programa no tiene nada más que hacer.  
   
- Las siguientes líneas de salida representan la reanudación del procesamiento en `startButton_Async`:  
+ En las siguientes líneas de salida se representa la reanudación del procesamiento en `startButton_Async`:  
   
-<CodeContentPlaceHolder>12</CodeContentPlaceHolder>  
- La expresión await recupera de `getLengthTask` el valor entero que es el operando de la instrucción return en `AccessTheWebAsync`. La instrucción siguiente asigna ese valor a la `contentLength` variable.  
+```  
+SIX:   Back in startButton_Click.  
+           Task getLengthTask is finished.  
+           Result from AccessTheWebAsync is stored in contentLength.  
+           About to display contentLength and exit.  
+```  
   
-<CodeContentPlaceHolder>13</CodeContentPlaceHolder>  
- La siguiente imagen muestra la devolución del control de `AccessTheWebAsync` a `startButton_Click`.  
+ La expresión await recupera de `getLengthTask` el valor entero que es el operando de la instrucción de devolución de `AccessTheWebAsync`. La siguiente instrucción asigna ese valor a la variable `contentLength`.  
   
- ![Paso seis](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace seis")  
+```vb  
+Dim contentLength As Integer = Await getLengthTask  
+```  
+  
+ En la siguiente imagen se muestra la devolución del control de `AccessTheWebAsync` a `startButton_Click`.  
+  
+ ![Paso SEIS](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
   
 ## <a name="see-also"></a>Vea también  
- [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Tipos de valor devueltos de Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)   
- [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Ejemplo ASYNC: Flujo de Control en programas asincrónicos (C# y Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Tipos de valor devuelto de Async [Visual Basic])  
+ [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Tutorial: Acceso a web usando Async y Await [Visual Basic])  
+ [Ejemplo de Async: Controlar el flujo en los programas asincrónicos (C# y Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)

@@ -1,60 +1,59 @@
 ---
-title: "C&#243;mo: Contener m&#225;s de un valor en una variable (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "matrices [Visual Basic], errores de compilación"
-  - "matrices [Visual Basic], tipos de datos compuestos"
-  - "clases [Visual Basic], tipos de datos compuestos"
-  - "tipos de datos compuestos"
-  - "tipos compuestos"
-  - "tipos de datos [Visual Basic], compuestos"
-  - "estructuras, tipos de datos compuestos"
-  - "tipos [Visual Basic], compuestos"
+title: "Cómo: Contener más de un valor en una variable (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- classes [Visual Basic], composite data types
+- composite types [Visual Basic]
+- composite data types [Visual Basic]
+- data types [Visual Basic], composite
+- arrays [Visual Basic], composite data types
+- structures [Visual Basic], composite data types
+- arrays [Visual Basic], compilation errors
+- types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c8c567ec2ba01d094819c98a2937af75cd105956
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Contener m&#225;s de un valor en una variable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Una variable contiene más de un valor si la declara como un *tipo de datos compuesto*.  
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Cómo: Contener más de un valor en una variable (Visual Basic)
+Una variable contiene más de un valor si se declara como de un *tipo de datos compuesto*.  
   
- [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluye estructuras, matrices y clases.  Una variable de un tipo de datos compuesto puede contener una combinación de tipos de datos básicos y otros tipos compuestos.  Las estructuras y clases pueden contener código así como datos.  
+ [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluyen estructuras, matrices y clases. Una variable de un tipo de datos compuesto puede contener una combinación de tipos de datos básicos y otros tipos compuestos. Estructuras y clases pueden contener código, así como datos.  
   
-### Para contener varios valores en una variable  
+### <a name="to-hold-more-than-one-value-in-a-variable"></a>Para contener más de un valor en una variable  
   
-1.  Determine qué tipo de datos compuesto desea utilizar para la variable.  
+1.  Determinar el tipo de datos compuestos que desea usar para la variable.  
   
-2.  Si el tipo de datos compuesto no está aún definido, defínalo para que la variable pueda utilizarlo.  
+2.  Si aún no se ha definido el tipo de datos compuesto, definirlo para que pueda utilizar la variable.  
   
-    -   Defina una estructura con [Structure \(Instrucción\)](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    -   Definir una estructura con un [Structure (instrucción)](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Defina una matriz con [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    -   Definir una matriz con un [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Defina una clase con [Class \(Instrucción\)](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    -   Definir una clase con un [Class (instrucción)](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Declare la variable con una instrucción `Dim`.  
+3.  Declare la variable con un `Dim` instrucción.  
   
-4.  Agregue detrás del nombre de variable una cláusula `As`.  
+4.  Siga el nombre de variable con un `As` cláusula.  
   
-5.  Agregue detrás de la palabra clave `As` el nombre del tipo de datos compuesto adecuado.  
+5.  Siga el `As` palabra clave con el nombre del tipo de datos compuesto adecuado.  
   
-## Vea también  
- [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Tipos de valor y tipos de referencia](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Vea también  
+ [Tipos de datos](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+ [Tipos de datos compuestos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [Estructuras](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [Objetos y clases](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [Tipos de valores y tipos de referencias](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

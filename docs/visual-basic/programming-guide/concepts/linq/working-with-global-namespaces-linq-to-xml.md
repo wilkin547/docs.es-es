@@ -1,33 +1,25 @@
 ---
-title: Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML) | Documentos de Microsoft
+title: Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e20d0c0b670d63ebe2be137a48dc1a1a9a861b9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 376a6d2dfbca22fb8efc6395f478839d716e14d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
-Una de las características clave de los literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante el `Imports` instrucción. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
+Una de las características claves de los literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante el `Imports` instrucción. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
   
  Esta capacidad es útil en dos situaciones. En primer lugar, los espacios de nombres declarados en los literales XML no se mantienen en expresiones incrustadas. La declaración de espacios de nombres globales reduce la cantidad de trabajo que tiene que realizar para usar expresiones incrustadas con espacios de nombres. En segundo lugar, debe declarar espacios de nombres globales para usar espacios de nombres con propiedades XML.  
   
@@ -35,10 +27,10 @@ Una de las características clave de los literales XML en Visual Basic es la cap
   
  Cuando se utilizan literales XML o propiedades XML que están en espacios de nombres declarados globalmente, se puede ver el nombre expandido de las propiedades o los literales XML manteniendo el mouse sobre ellos en Visual Studio. Verá el nombre expandido en una información sobre herramientas.  
   
- Puede obtener un <xref:System.Xml.Linq.XNamespace>objeto que se corresponde con un espacio de nombres global usando el `GetXmlNamespace` método.</xref:System.Xml.Linq.XNamespace>  
+ Puede obtener un objeto <xref:System.Xml.Linq.XNamespace> que se corresponde con un espacio de nombres global usando el método `GetXmlNamespace`.  
   
 ## <a name="examples-of-global-namespaces"></a>Ejemplos de espacios de nombres globales  
- En el ejemplo siguiente se declara un espacio de nombres global predeterminado usando el `Imports` instrucción y, a continuación, usa un literal XML para inicializar un <xref:System.Xml.Linq.XElement>objeto en ese espacio de nombres:</xref:System.Xml.Linq.XElement>  
+ El siguiente ejemplo declara un espacio de nombres global predeterminado usando la instrucción `Imports` y después usa un literal XML para inicializar un objeto <xref:System.Xml.Linq.XElement> en ese espacio de nombres:  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -194,7 +186,7 @@ End Module
 ```  
   
 ## <a name="xnamespace-and-global-namespaces"></a>XNamespace y espacios de nombres globales  
- Puede obtener un <xref:System.Xml.Linq.XNamespace>objeto usando el `GetXmlNamespace` método:</xref:System.Xml.Linq.XNamespace>  
+ Puede obtener un objeto <xref:System.Xml.Linq.XNamespace> usando el método `GetXmlNamespace`:  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

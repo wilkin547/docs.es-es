@@ -1,36 +1,42 @@
 ---
-title: "C&#243;mo: Habilitar estilos visuales en una aplicaci&#243;n h&#237;brida | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "aplicaciones híbridas [interoperabilidad con WPF]"
-  - "estilos visuales [formularios Windows Forms]"
+title: "Cómo: Habilitar estilos visuales en una aplicación híbrida"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- hybrid applications [WPF interoperability]
+- visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e628835f0e5fb315f15b9e9946c48f7017092bae
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Habilitar estilos visuales en una aplicaci&#243;n h&#237;brida
-En este tema se muestra cómo habilitar los estilos visuales de [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] en un control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado en una aplicación basada en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Cómo: Habilitar estilos visuales en una aplicación híbrida
+Este tema muestra cómo habilitar [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual estilos en una [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hospedado en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-aplicación basada en.  
   
- Si la aplicación llama al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, la mayoría de los controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usarán automáticamente estilos visuales cuando la aplicación se ejecute en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  Para obtener más información, consulte [Representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
+ Si la aplicación llama a la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método, la mayoría de los [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles usarán automáticamente estilos visuales cuando la aplicación se ejecuta en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]. Para obtener más información, consulte [representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md).  
   
- Para obtener una lista de código completa de las tareas ilustradas en este tema, vea [Enabling Visual Styles in a Hybrid Application Sample](http://go.microsoft.com/fwlink/?LinkID=159986).  
+ Para obtener una lista de código completa de las tareas ilustradas en este tema, consulte [habilitar estilos visuales en un ejemplo de aplicación híbrido](http://go.microsoft.com/fwlink/?LinkID=159986).  
   
-## Habilitar los estilos visuales de formularios Windows Forms  
+## <a name="enabling-windows-forms-visual-styles"></a>Habilitar estilos visuales de Windows Forms  
   
-#### Para habilitar los estilos visuales de formularios Windows Forms  
+#### <a name="to-enable-windows-forms-visual-styles"></a>Para habilitar estilos visuales de Windows Forms  
   
-1.  Cree un proyecto de aplicación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denominado `HostingWfWithVisualStyles`.  
+1.  Crear un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proyecto de aplicación denominado `HostingWfWithVisualStyles`.  
   
 2.  En el Explorador de soluciones, agregue referencias a los ensamblados siguientes.  
   
@@ -38,41 +44,41 @@ En este tema se muestra cómo habilitar los estilos visuales de [!INCLUDE[TLA#tl
   
     -   System.Windows.Forms  
   
-3.  En el Cuadro de herramientas, haga doble clic en el icono <xref:System.Windows.Controls.Grid> para colocar un elemento <xref:System.Windows.Controls.Grid> en la superficie de diseño.  
+3.  En el cuadro de herramientas, haga doble clic en el <xref:System.Windows.Controls.Grid> icono para colocar un <xref:System.Windows.Controls.Grid> elemento en la superficie de diseño.  
   
-4.  En la ventana Propiedades, establezca los valores de las propiedades <xref:System.Windows.FrameworkElement.Height%2A> y <xref:System.Windows.FrameworkElement.Width%2A> en **Auto**.  
+4.  En la ventana Propiedades, establezca los valores de la <xref:System.Windows.FrameworkElement.Height%2A> y <xref:System.Windows.FrameworkElement.Width%2A> propiedades **automática**.  
   
-5.  En la vista Diseño o la vista XAML, seleccione <xref:System.Windows.Window>.  
+5.  En la vista Diseño o la vista XAML, seleccione la <xref:System.Windows.Window>.  
   
-6.  En la ventana Propiedades, haga clic en la pestaña **Eventos**.  
+6.  En la ventana Propiedades, haga clic en el **eventos** ficha.  
   
-7.  Haga doble clic en el evento <xref:System.Windows.FrameworkElement.Loaded>.  
+7.  Haga doble clic en el <xref:System.Windows.FrameworkElement.Loaded> eventos.
   
-8.  En MainWindow.xaml.vb o MainWindow.xaml.cs, inserte el código siguiente para controlar el evento <xref:System.Windows.FrameworkElement.Loaded>.  
+8.  En el archivo MainWindow.Xaml.cs o MainWindow.Xaml.vb, inserte el siguiente código para controlar la <xref:System.Windows.FrameworkElement.Loaded> eventos.  
   
      [!code-csharp[HostingWfWithVisualStyles#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
   
 9. Presione F5 para compilar y ejecutar la aplicación.  
   
-     El control de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] se pinta con estilos visuales.  
+     El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control se dibuja con estilos visuales.  
   
-## Deshabilitar los estilos visuales de formularios Windows Forms  
- Para deshabilitar los estilos visuales, basta con quitar la llamada al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.  
+## <a name="disabling-windows-forms-visual-styles"></a>Deshabilitar estilos visuales de Windows Forms  
+ Para deshabilitar los estilos visuales, basta con quitar la llamada a la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método.  
   
-#### Para deshabilitar los estilos visuales de formularios Windows Forms  
+#### <a name="to-disable-windows-forms-visual-styles"></a>Para deshabilitar estilos visuales de Windows Forms  
   
-1.  En el Editor de código, abra MainWindow.xaml.vb o MainWindow.xaml.cs.  
+1.  Abra MainWindow.xaml.vb o MainWindow.xaml.cs en el Editor de código.  
   
-2.  Marque como comentario la llamada al método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.  
+2.  Marcar como comentario la llamada a la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método.  
   
 3.  Presione F5 para compilar y ejecutar la aplicación.  
   
-     El control [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] se pinta con el estilo predeterminado del sistema.  
+     El [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control se dibuja con el estilo predeterminado del sistema.  
   
-## Vea también  
- <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>   
- <xref:System.Windows.Forms.VisualStyles>   
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>   
- [Representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>  
+ <xref:System.Windows.Forms.VisualStyles>  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
+ [Representar controles con estilos visuales](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)  
  [Tutorial: Hospedar un control de Windows Forms en WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)

@@ -1,43 +1,47 @@
 ---
-title: "C&#243;mo: Obtener acceso a elementos espec&#237;ficos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox (control) [Windows Forms], obtener acceso a elementos"
-  - "cuadros combinados, obtener acceso a elementos"
-  - "ComboBox (control) [Windows Forms], obtener acceso a elementos"
-  - "cuadros de lista, obtener acceso a elementos"
-  - "ListBox (control) [Windows Forms], obtener acceso a elementos"
-  - "ListBox (control) [Windows Forms], devolver información de elemento"
+title: "Cómo: Obtener acceso a elementos específicos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Obtener acceso a elementos espec&#237;ficos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms
-Obtener acceso a elementos determinados de un cuadro combinado, de un cuadro de lista o de un cuadro de lista con marcas de verificación de un formulario Windows Forms resulta una tarea fundamental,  ya que permite determinar mediante programación qué hay en una lista, en cualquier posición dada.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Cómo: Obtener acceso a elementos específicos de un control ComboBox, CheckedListBox o ListBox de formularios Windows Forms
+Obtener acceso a elementos específicos en un cuadro combinado de formularios Windows Forms, un cuadro de lista o un cuadro de lista activados es una tarea esencial. Permite determinar mediante programación qué hay en una lista, en cualquier posición dada.  
   
-### Para obtener acceso a un elemento específico  
+### <a name="to-access-a-specific-item"></a>Para obtener acceso a un elemento específico  
   
-1.  efectúe una consulta en la colección `Items`  mediante el índice del elemento específico:  
+1.  Consulta el `Items` colección utilizando el índice del elemento específico:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ Obtener acceso a elementos determinados de un cuadro combinado, de un cuadro de 
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ Obtener acceso a elementos determinados de un cuadro combinado, de un cuadro de 
        }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
  [Controles de formularios Windows Forms usados para mostrar opciones](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

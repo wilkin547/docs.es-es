@@ -1,54 +1,55 @@
 ---
-title: "ToolStripContainer (Control) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "barras de herramientas [Windows Forms], espacio compartido integrado"
-  - "ToolStrip (control) [Windows Forms], ToolStripContainer"
-  - "ToolStripContainer (control) [Windows Forms]"
+title: ToolStripContainer (Control)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms], built-in rafting
+- ToolStripContainer control [Windows Forms]
+- ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 763ce6d47b0fe40eb2d27b2e062d46cfd9e1b8a2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/18/2017
 ---
-# ToolStripContainer (Control)
-Los controles <xref:System.Windows.Forms.ToolStrip> presentan espacio compartido integrado \(uso compartido del espacio horizontal o vertical dentro del área de la herramienta cuando se acopla\) utilizando <xref:System.Windows.Forms.ToolStripContainer>.  
+# <a name="toolstripcontainer-control"></a>ToolStripContainer (Control)
+Los controles <xref:System.Windows.Forms.ToolStrip> presentan espacio compartido integrado (uso compartido del espacio horizontal o vertical dentro del área de la herramienta cuando se acopla) utilizando <xref:System.Windows.Forms.ToolStripContainer>.  
   
- Los temas de esta sección describen los conceptos y técnicas que puede usar para crear características <xref:System.Windows.Forms.ToolStripContainer> en sus aplicaciones.  
+ En los temas de esta sección se describen los conceptos y las técnicas que puede usar para compilar características de <xref:System.Windows.Forms.ToolStripContainer> en sus aplicaciones.  
   
-## En esta sección  
+## <a name="in-this-section"></a>En esta sección  
  [Información general del control ToolStripContainer](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  Proporciona temas que describen el propósito y los conceptos principales del control <xref:System.Windows.Forms.ToolStripContainer> de Windows Forms.  
   
- [Cómo: Agregar un ToolStripContainer a un formulario](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Agregar un ToolStripContainer a un formulario](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
  Muestra cómo agregar un <xref:System.Windows.Forms.ToolStripContainer> a una aplicación y agregar un control a un panel específico del <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [Cómo: Agregar un control a un ToolStripContentPanel](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Agregar un control a un ToolStripContentPanel](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Muestra cómo agregar un control al <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
-## Referencia  
+## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.ToolStripContainer>  
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripContainer>.  
   
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  Proporciona documentación de referencia para el <xref:System.Windows.Forms.ToolStripContentPanel> de un control <xref:System.Windows.Forms.ToolStripContainer>.  
   
- Consulte también [Tareas de ToolStripContainer \(Cuadro de diálogo\)](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Consulte también [cuadro de diálogo de tareas de ToolStripContainer](http://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
   
-## Secciones relacionadas  
+## <a name="related-sections"></a>Secciones relacionadas  
  <xref:System.Windows.Forms.ToolStripPanel>  
  Proporciona documentación de referencia para el control <xref:System.Windows.Forms.ToolStripPanel>.  
   
-## Vea también  
+## <a name="see-also"></a>Vea también  
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

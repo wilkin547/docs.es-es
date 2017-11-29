@@ -1,44 +1,49 @@
 ---
-title: "C&#243;mo: Mostrar v&#237;nculos de estilo Web con el control RichTextBox de formularios Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ejemplos [Windows Forms], cuadros de texto"
-  - "RichTextBox (control) [Windows Forms], vincular a páginas Web"
-  - "cuadros de texto, mostrar vínculos Web"
+title: "Cómo: Mostrar vínculos de estilo Web con el control RichTextBox de formularios Windows Forms"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- text boxes [Windows Forms], displaying Web links
+- examples [Windows Forms], text boxes
+- RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Mostrar v&#237;nculos de estilo Web con el control RichTextBox de formularios Windows Forms
-El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms puede mostrar vínculos Web en color y subrayados.  Puede escribir código que abra una ventana de explorador que muestre el sitio web especificado en el texto del vínculo, al hacer clic en el vínculo.  
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Cómo: Mostrar vínculos de estilo Web con el control RichTextBox de formularios Windows Forms
+Los formularios Windows Forms <xref:System.Windows.Forms.RichTextBox> control puede mostrar vínculos Web en color y subrayados. Puede escribir código que se abre una ventana del explorador que muestra el sitio Web especificado en el texto del vínculo cuando se hace clic en el vínculo.  
   
-### Para vincular una página Web con el control RichTextBox  
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Para vincular a una página Web con el control RichTextBox  
   
-1.  Establezca la propiedad <xref:System.Windows.Forms.RichTextBox.Text%2A> en una cadena que incluya una dirección URL válida \(por ejemplo, "http:\/\/www.microsoft.com\/spanish"\).  
+1.  Establecer el <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad a una cadena que incluye una dirección URL válida (por ejemplo, "http://www.microsoft.com/").  
   
-2.  Asegúrese de que la propiedad <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> está establecida en `true` \(el valor predeterminado\).  
+2.  Asegúrese de que el <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> propiedad está establecida en `true` (valor predeterminado).  
   
-3.  Cree una nueva instancia global del objeto <xref:System.Diagnostics.Process>.  
+3.  Crear una nueva instancia global de la <xref:System.Diagnostics.Process> objeto.  
   
-4.  Escriba un controlador de eventos para el evento <xref:System.Windows.Forms.RichTextBox.LinkClicked> que envíe al explorador el texto deseado.  
+4.  Escribir un controlador de eventos para el <xref:System.Windows.Forms.RichTextBox.LinkClicked> eventos que envía al explorador el texto que desee.  
   
-     En el ejemplo siguiente, el evento <xref:System.Windows.Forms.RichTextBox.LinkClicked> abre una instancia de Internet Explorer con una dirección URL especificada en la propiedad <xref:System.Windows.Forms.RichTextBox.Text%2A> del control <xref:System.Windows.Forms.RichTextBox>.  Este ejemplo supone un formulario con un control <xref:System.Windows.Forms.RichTextBox>.  
+     En el ejemplo siguiente, la <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento abre una instancia de Internet Explorer para la dirección URL especificada en el <xref:System.Windows.Forms.RichTextBox.Text%2A> propiedad de la <xref:System.Windows.Forms.RichTextBox> control. En este ejemplo se da por supuesto un formulario con un <xref:System.Windows.Forms.RichTextBox> control.  
   
     > [!IMPORTANT]
-    >  Al llamar al método <xref:System.Diagnostics.Process.Start%2A?displayProperty=fullName> encontrará una excepción <xref:System.Security.SecurityException> por falta de privilegios si ejecuta el código en un contexto de confianza parcial.  Para obtener más información, vea [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Que realiza la llamada la <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> método, se producirá un <xref:System.Security.SecurityException> excepción si está ejecutando el código en un contexto de confianza parcial debido a privilegios suficientes. Para obtener más información, vea [Code Access Security Basics](../../../../docs/framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código).  
   
     ```vb  
     Public p As New System.Diagnostics.Process  
@@ -50,7 +55,6 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
           ' with link text as URL.  
           p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -63,7 +67,6 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
        // with link text as URL.  
        p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
     }  
-  
     ```  
   
     ```cpp  
@@ -81,19 +84,18 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
        }  
     ```  
   
-     \([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Debe inicializar el proceso`p`. Puede hacerlo incluyendo la siguiente instrucción en el constructor del formulario:  
+     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Debe inicializar el proceso `p`, lo que puede hacer mediante la inclusión de la siguiente instrucción en el constructor del formulario:  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
        System.Windows.Forms.LinkClickedEventHandler  
        (this.richTextBox1_LinkClicked);  
-  
     ```  
   
     ```cpp  
@@ -102,13 +104,12 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
        (this, &Form1::richTextBox1_LinkClicked);  
     ```  
   
-     Es importante detener inmediatamente el proceso que ha creado una vez que termine de trabajar con él.  Tomando como referencia el código anterior, el código para detener el proceso sería similar al siguiente:  
+     Es importante detener inmediatamente el proceso que se ha creado una vez que haya terminado de trabajar con él. Consultar el código presentado anteriormente, el código para detener el proceso podría ser similar al siguiente:  
   
     ```vb  
     Public Sub StopWebProcess()  
        p.Kill()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -116,7 +117,6 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
     {  
        p.Kill();  
     }  
-  
     ```  
   
     ```cpp  
@@ -126,9 +126,9 @@ El control <xref:System.Windows.Forms.RichTextBox> de formularios Windows Forms 
     }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>   
- <xref:System.Windows.Forms.RichTextBox.LinkClicked>   
- <xref:System.Windows.Forms.RichTextBox>   
- [RichTextBox \(Control\)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
+ <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [RichTextBox (control)](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [Controles que se utilizan en formularios Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

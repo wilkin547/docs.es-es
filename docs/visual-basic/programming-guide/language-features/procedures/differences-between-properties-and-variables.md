@@ -1,66 +1,65 @@
 ---
-title: "Diferencias entre propiedades y variables en Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "propiedades [Visual Basic], y variables"
-  - "propiedades [Visual Basic], definición"
-  - "propiedades [Visual Basic], valores"
-  - "valores de propiedades"
-  - "valores, propiedades"
-  - "variables [Visual Basic]"
-  - "variables [Visual Basic], y propiedades"
-  - "variables [Visual Basic], definición"
-  - "código de Visual Basic, procedimientos"
-  - "código de Visual Basic, propiedades"
-  - "código de Visual Basic, variables"
+title: Diferencias entre propiedades y variables en Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- property values [Visual Basic]
+- variables [Visual Basic]
+- Visual Basic code, procedures
+- values [Visual Basic], properties
+- variables [Visual Basic], definition
+- Visual Basic code, variables
+- Visual Basic code, properties
+- properties [Visual Basic], values
+- properties [Visual Basic], defined
+- variables [Visual Basic], and properties
+- properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Diferencias entre propiedades y variables en Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Tanto las variables como las propiedades representan valores a los que puede tener acceso.  Sin embargo, existen diferencias en su almacenamiento e implementación.  
+# <a name="differences-between-properties-and-variables-in-visual-basic"></a>Diferencias entre propiedades y variables en Visual Basic
+Las variables y propiedades representan valores que puede tener acceso. Sin embargo, hay diferencias en el almacenamiento y la implementación.  
   
-## Variables  
- Una *variable* se corresponde directamente con una ubicación de la memoria.  Una variable se define con una única instrucción de declaración.  Una variable puede ser una *variable local*, si está definida dentro de un procedimiento y sólo está disponible en dicho procedimiento, o puede ser una *variable miembro*, si se define en un módulo, una clase o una estructura, pero no dentro de un procedimiento.  Una variable miembro también se denomina *campo*.  
+## <a name="variables"></a>Variables  
+ A *variable* corresponde directamente a una ubicación de memoria. Definir una variable con una única instrucción de declaración. Una variable puede ser un *variable local*, definido dentro de un procedimiento y está disponible solo en ese procedimiento, o puede ser un *variable miembro*, definidos en un módulo, clase o estructura, pero no dentro de cualquiera procedimiento. Una variable de miembro también se denomina un *campo*.  
   
-## Propiedades  
- Una *propiedad* es un elemento de datos que se define en un módulo, una clase o una estructura.  Una propiedad se define con un bloque de código comprendido entre las instrucciones `Property` y `End Property`.  El bloque de código contiene un procedimiento `Get`, un procedimiento `Set` o ambos procedimientos.  Estos procedimientos se denominan *procedimientos de propiedades* o *descriptores de acceso de propiedades*.  Además de recuperar o almacenar el valor de una propiedad, también pueden llevar a cabo acciones personalizadas, como actualizar un contador de acceso.  
+## <a name="properties"></a>Propiedades  
+ A *propiedad* es un elemento de datos definido en un módulo, clase o estructura. Definir una propiedad con un bloque de código entre la `Property` y `End Property` las instrucciones. El bloque de código contiene un `Get` procedimiento, un `Set` procedimiento, o ambos. Estos procedimientos se denominan *property (procedimientos)* o *descriptores de acceso de propiedad*. Además de recuperar o almacenar el valor de propiedad, también pueden realizar las acciones personalizadas, como actualizar un contador de acceso.  
   
-## Diferencias  
- En la tabla siguiente se muestran algunas diferencias importantes que existen entre las variables y propiedades.  
+## <a name="differences"></a>Diferencias  
+ En la tabla siguiente muestra algunas diferencias importantes entre las variables y propiedades.  
   
-|Punto de diferencia|Variable|Propiedad.|  
-|-------------------------|--------------|----------------|  
+|Punto de diferencia|Variable|Propiedad|  
+|-------------------------|--------------|--------------|  
 |Declaración|Única instrucción de declaración|Serie de instrucciones en un bloque de código|  
-|Implementación|Única ubicación de almacenamiento|Código ejecutable \(procedimientos de propiedades\)|  
-|Almacenamiento|Directamente asociado con el valor de una variable|Normalmente dispone de un almacén interno que no está disponible fuera de la clase o el módulo que contiene la propiedad<br /><br /> El valor de la propiedad podría existir o no como un elemento almacenado <sup>1</sup>|  
-|Código ejecutable|None|Debe tener al menos un procedimiento|  
-|Acceso de lectura y escritura|Acceso de lectura y escritura o de sólo lectura|Acceso de lectura y escritura, de sólo lectura o de sólo escritura|  
-|Acciones personalizadas \(además de aceptar o devolver un valor\)|No es posible|Se pueden llevar a cabo como parte del proceso de configuración o de recuperación del valor de propiedad|  
+|Implementación|Ubicación de almacenamiento único|Código ejecutable (procedimientos de propiedades)|  
+|Almacenamiento|Se asocian directamente con el valor de la variable|Normalmente tiene almacenamiento interno no está disponible fuera de la clase o módulo contenedor de la propiedad<br /><br /> Valor de la propiedad podría existir o no como un elemento almacenado <sup>1</sup>|  
+|Código ejecutable|Ninguna|Debe tener al menos un procedimiento|  
+|Acceso de lectura y escritura|Lectura/escritura o de solo lectura|Lectura y escritura, de solo lectura o de solo escritura|  
+|Acciones personalizadas (además de Aceptar o devolver un valor)|No es posible|Se puede realizar como parte de la configuración ni la recuperación de valor de propiedad|  
   
- <sup>1</sup> A diferencia de una variable, es posible que el valor de una propiedad no se corresponda directamente con un único elemento de almacenamiento.  El almacenamiento podría dividirse en partes por motivos de comodidad o seguridad, o el valor podría almacenarse en un formato cifrado.  En estos casos, el procedimiento `Get` ensamblaría las partes o descifraría el valor almacenado, y el procedimiento `Set` cifraría el nuevo valor o lo dividiría en el almacenamiento fundamental.  El valor de una propiedad podría ser efímero, como una hora del día, en cuyo caso el procedimiento `Get` lo calcularía sobre la marcha cada vez que se obtuviera acceso a la propiedad.  
+ <sup>1</sup> a diferencia de una variable, el valor de una propiedad podría no corresponderse directamente a un único elemento de almacenamiento. El almacenamiento podría dividirse en partes por comodidad o seguridad, o el valor podría almacenarse en un formato cifrado. En estos casos el `Get` procedimiento podría ensamblar los elementos o descifrar el valor almacenado y el `Set` procedimiento podría cifrar el nuevo valor o dividir en el almacenamiento que lo componen. Un valor de propiedad podría ser efímero, como una hora del día, en cuyo caso el `Get` procedimiento lo calcularía sobre la marcha cada vez que se tiene acceso a la propiedad.  
   
-## Vea también  
- [Procedimientos de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)   
- [Argumentos y parámetros de procedimiento](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Property \(Instrucción\)](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Dim \(Instrucción\)](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Cómo: Crear una propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-property.md)   
- [Cómo: Declarar una propiedad con niveles de acceso mixtos](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)   
- [Cómo: Llamar a un procedimiento de propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-property-procedure.md)   
- [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)   
- [Cómo: Establecer un valor en una propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-put-a-value-in-a-property.md)   
- [Cómo: Obtener un valor de una propiedad](../../../../visual-basic/programming-guide/language-features/procedures/how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Vea también  
+ [Procedimientos de propiedades](./property-procedures.md)  
+ [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)  
+ [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Dim (instrucción)](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Crear una propiedad](./how-to-create-a-property.md)  
+ [Declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Llamar a un procedimiento de propiedad](./how-to-call-a-property-procedure.md)  
+ [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)  
+ [Establecer un valor en una propiedad](./how-to-put-a-value-in-a-property.md)  
+ [Obtener un valor de una propiedad](./how-to-get-a-value-from-a-property.md)

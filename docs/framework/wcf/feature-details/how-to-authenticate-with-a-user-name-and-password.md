@@ -1,33 +1,35 @@
 ---
-title: "C&#243;mo: Autenticar con un nombre de usuario y contrase&#241;a | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "autenticación [WCF], nombre de usuario y contraseña"
+title: "Cómo: Autenticar con un nombre de usuario y contraseña"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73ef3c3f4f4aeb9295cedbbf56635454869b3f4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Autenticar con un nombre de usuario y contrase&#241;a
-Este tema muestra cómo permitir a un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autenticar un cliente con un nombre de usuario y una contraseña de un dominio de Windows.Se supone que tiene un servicio WCF autohospedado que funciona.Para obtener un ejemplo de cómo crear un servicio WCF autohospedado, vea [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md).En este tema se supone que el servicio se configura en código.Si desea ver un ejemplo de configuración de un servicio similar usando un archivo de configuración, vea [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Cómo: Autenticar con un nombre de usuario y contraseña
+Este tema muestra cómo permitir a un servicio [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] autenticar un cliente con un nombre de usuario y una contraseña de un dominio de Windows. Se supone que tiene un servicio WCF autohospedado que funciona. Para obtener un ejemplo de creación de un vea servicio hospedado por sí mismo básico de WCF, [Tutorial de introducción](../../../../docs/framework/wcf/getting-started-tutorial.md). En este tema se supone que el servicio se configura en código. Si le gustaría ver un ejemplo de cómo configurar un servicio similar mediante un archivo de configuración vea [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
- Para configurar un servicio para autenticar a sus clientes mediante nombre de usuario y contraseñas de dominio Windows, use <xref:System.ServiceModel.WSHttpBinding> y establezca su propiedad `Security.Mode` en `Message`.Además debe especificar un certificado X509 que se usará para cifrar el nombre de usuario y la contraseña que se envían del cliente al servicio.  
+ Para configurar un servicio para autenticar a sus clientes mediante nombre de usuario y contraseñas del dominio de Windows, use el <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> y establezca su `Security.Mode` propiedad `Message`. Además debe especificar un certificado X509 que se usará para cifrar el nombre de usuario y la contraseña que se envían del cliente al servicio.  
   
  En el cliente, debe pedir al usuario el nombre de usuario y la contraseña y especificar las credenciales del usuario en el proxy de cliente de WCF.  
   
-### Para configurar un servicio de WCF para autenticar mediante nombre de usuario y contraseña de un dominio de Windows.  
+### <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Para configurar un servicio de WCF para autenticar mediante nombre de usuario y contraseña de un dominio de Windows.  
   
-1.  Cree una instancia de <xref:System.ServiceModel.WSHttpBinding>, establezca el modo de seguridad del enlace en `SecurityMode.Message`, establezca el `ClientCredentialType` del enlace en `MessageCredentialType.UserName` y agregue un extremo de servicio usando el enlace configurado al host del servicio tal y como se muestra en el código siguiente:  
+1.  Cree una instancia de la <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, establezca el modo de seguridad del enlace a `SecurityMode.Message`, establezca el `ClientCredentialType` del enlace a `MessageCredentialType.UserName`y agregue un extremo de servicio usando el enlace configurado al host de servicio, tal como se muestra en el código siguiente:  
   
     ```  
     // ...  
@@ -38,7 +40,7 @@ Este tema muestra cómo permitir a un servicio [!INCLUDE[indigo1](../../../../in
     // ...  
     ```  
   
-2.  Especifique el certificado de servidor usado para cifrar la información de nombre de usuario y contraseña enviada a través de la conexión.Este código debe seguir inmediatamente al código anterior.El ejemplo siguiente usa el certificado creado por el archivo setup.bat del ejemplo [Nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md):  
+2.  Especifique el certificado de servidor usado para cifrar la información de nombre de usuario y contraseña enviada a través de la conexión. Este código debe seguir inmediatamente al código anterior. En el ejemplo siguiente se utiliza el certificado que se creó el archivo setup.bat desde la [nombre de usuario de seguridad de mensaje](../../../../docs/framework/wcf/samples/message-security-user-name.md) ejemplo:  
   
     ```  
     // ...  
@@ -46,11 +48,11 @@ Este tema muestra cómo permitir a un servicio [!INCLUDE[indigo1](../../../../in
     // ...  
     ```  
   
-     Puede usar su propio certificado; simplemente modifique el código para hacer referencia al certificado.Para obtener más información sobre cómo crear y usar certificados, vea [Trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).Asegúrese de que el certificado está en el almacén de certificados Personas de confianza del equipo local.Puede hacerlo ejecutando mmc.exe y seleccionando el elemento de menú **Archivo**, **Agregar o quitar complemento…** .En el cuadro de diálogo **Agregar o quitar complementos**, seleccione **Complemento Certificados** y haga clic en **Agregar**.En el cuadro de diálogo Complemento Certificados, seleccione **Cuenta de equipo**.De forma predeterminada el certificado generado por el ejemplo de Nombre de usuario de seguridad de mensaje se encuentra en la carpeta Personal\/Certificados.Se mostrará como “localhost” bajo la columna Emitido para en la ventana de MMC.Arrastre y coloque el certificado en la carpeta **Personas de confianza**.Esto permitirá a WCF tratar el certificado como certificado de confianza al realizar la autenticación.  
+     Puede usar su propio certificado; simplemente modifique el código para hacer referencia al certificado. Para obtener más información sobre la creación y uso de certificados, consulte [trabajar con certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Asegúrese de que el certificado está en el almacén de certificados Personas de confianza del equipo local. Puede hacerlo ejecutando mmc.exe y seleccionando la **archivo**, **agregar o quitar complemento...**  elemento de menú. En el **agregar o quitar complementos** cuadro de diálogo, seleccione la **complemento certificados** y haga clic en **agregar**. En el cuadro de diálogo complemento de certificados seleccione **cuenta de equipo**. De forma predeterminada el certificado generado por el ejemplo de Nombre de usuario de seguridad de mensaje se encuentra en la carpeta Personal/Certificados.  Se enumerarán como "localhost" en la columna emitido para en la ventana de MMC. Arrastre y coloque el certificado en el **personas de confianza** carpeta. Esto permitirá a WCF tratar el certificado como certificado de confianza al realizar la autenticación.  
   
-### Para llamar al servicio pasando el nombre de usuario y la contraseña  
+### <a name="to-call-the-service-passing-username-and-password"></a>Para llamar al servicio pasando el nombre de usuario y la contraseña  
   
-1.  La aplicación cliente debe pedir al usuario su nombre de usuario y contraseña.El siguiente código pide al usuario el nombre de usuario y la contraseña.  
+1.  La aplicación cliente debe pedir al usuario su nombre de usuario y contraseña. El siguiente código pide al usuario el nombre de usuario y la contraseña.  
   
     > [!WARNING]
     >  Este código no se debe usar en producción porque se muestra la contraseña mientras se está escribiendo.  
@@ -65,7 +67,6 @@ Este tema muestra cómo permitir a un servicio [!INCLUDE[indigo1](../../../../in
                 password = Console.ReadLine();             
                 return;  
             }  
-  
     ```  
   
 2.  Cree una instancia del proxy de cliente que especifique las credenciales del cliente tal y como se muestra en el código siguiente:  
@@ -89,15 +90,15 @@ Este tema muestra cómo permitir a un servicio [!INCLUDE[indigo1](../../../../in
     // Call the service operation using the proxy  
     ```  
   
-## Vea también  
- <xref:System.ServiceModel.WsHttpBinding>   
- <xref:System.ServiceModel.WSHttpSecurity>   
- <xref:System.ServiceModel.SecurityMode>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>   
- <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>   
- <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>   
- <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>   
- [Seguridad de transporte con autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)   
- [Seguridad distribuida de aplicaciones](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)   
- [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+## <a name="see-also"></a>Vea también  
+ <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
+ <xref:System.ServiceModel.WSHttpSecurity>  
+ <xref:System.ServiceModel.SecurityMode>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.Password%2A>  
+ <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
+ <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>  
+ <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
+ [Seguridad de transporte con autenticación básica](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [Seguridad de la aplicación distribuida](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
+ [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

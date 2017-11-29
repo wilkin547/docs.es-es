@@ -1,37 +1,41 @@
 ---
-title: "C&#243;mo: Agregar o quitar controles de una colecci&#243;n en tiempo de ejecuci&#243;n | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "colecciones, agregar elementos"
-  - "controles [Windows Forms], agregar mediante colecciones"
-  - "controles [Windows Forms], quitar mediante colecciones"
-  - "colecciones de controles"
-  - "tiempo de ejecución, agregar controles"
-  - "tiempo de ejecución, quitar controles"
+title: "Cómo: Agregar o quitar controles de una colección en tiempo de ejecución"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- run time [Windows Forms], removing controls
+- controls [Windows Forms], adding using collections
+- controls collections
+- collections [Windows Forms], adding items
+- run time [Windows Forms], adding controls
+- controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3b359679df68bf3caa9bab1bdbadedadcde45ac5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Agregar o quitar controles de una colecci&#243;n en tiempo de ejecuci&#243;n
-Las tareas comunes de desarrollo de una aplicación son la inclusión y eliminación de controles de un control de contenedores en formularios \(como el control <xref:System.Windows.Forms.Panel> o <xref:System.Windows.Forms.GroupBox> o incluso el mismo formulario\).  En tiempo de diseño, los controles se pueden arrastrar directamente al panel o cuadro de grupo.  En tiempo de ejecución, estos controles mantienen una colección `Controls`, que realiza el seguimiento de los controles que se colocan en ellos.  
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Cómo: Agregar o quitar controles de una colección en tiempo de ejecución
+Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar controles de cualquier control de contenedor en los formularios (como el <xref:System.Windows.Forms.Panel> o <xref:System.Windows.Forms.GroupBox> control o incluso el propio formulario). En tiempo de diseño, los controles se pueden arrastrar directamente al panel o grupo de cuadro. En tiempo de ejecución, estos controles mantienen una colección `Controls`, que realiza un seguimiento de los controles que se colocan en ellos.  
   
 > [!NOTE]
->  Tenga en cuenta que el ejemplo siguiente se aplica a cualquier control que contenga una colección de controles.  
+>  El ejemplo de código siguiente se aplica a cualquier control que contenga una colección de controles.  
   
-### Para agregar un control a una colección mediante programación  
+### <a name="to-add-a-control-to-a-collection-programmatically"></a>Para agregar un control a una colección mediante programación  
   
 1.  Cree una instancia del control que se va a agregar.  
   
@@ -39,7 +43,7 @@ Las tareas comunes de desarrollo de una aplicación son la inclusión y eliminac
   
 3.  Agregue el control a la colección `Controls` del control primario.  
   
-     El ejemplo siguiente muestra cómo crear una instancia del control <xref:System.Windows.Forms.Button>.  Requiere que haya un control <xref:System.Windows.Forms.Panel> en un formulario y que ya existe el método de control de eventos para el botón que se va a crear, `NewPanelButton_Click`.  
+     En el ejemplo de código siguiente se muestra cómo crear una instancia de la <xref:System.Windows.Forms.Button> control. Requiere un formulario con un <xref:System.Windows.Forms.Panel> control y que se crea el método de control de eventos para el botón, `NewPanelButton_Click`, ya existe.  
   
     ```vb  
     Public NewPanelButton As New Button()  
@@ -53,7 +57,6 @@ Las tareas comunes de desarrollo de una aplicación son la inclusión y eliminac
        ' handler for your application.  
        AddHandler NewPanelButton.Click, AddressOf NewPanelButton_Click  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -65,19 +68,19 @@ Las tareas comunes de desarrollo de una aplicación son la inclusión y eliminac
        // from the Control class. In this case, it is a Button control.  
        panel1.Controls.Add(newPanelButton);  
        // The event handler indicated for the Click event in the code   
-       // below is used as an example. Substite the appropriate event  
+       // below is used as an example. Substitute the appropriate event  
        // handler for your application.  
        this.newPanelButton.Click += new System.EventHandler(this. NewPanelButton_Click);  
     }  
     ```  
   
-### Para quitar controles de una colección mediante programación  
+### <a name="to-remove-controls-from-a-collection-programmatically"></a>Para quitar controles de una colección mediante programación  
   
-1.  Quite el controlador de eventos del evento.  En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], utilice la palabra clave [RemoveHandler \(Instrucción\)](../../../../ocs/visual-basic/language-reference/statements/removehandler-statement.md), en [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] utilice [\-\= \(Operador\)](../Topic/-=%20Operator%20\(C%23%20Reference\)2.md).  
+1.  Quite el controlador de eventos del evento. En [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], use la palabra clave [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md); en [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], utilice [-= Operador (Referencia de C#)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
 2.  Utilice el método `Remove` para eliminar el control deseado de la colección `Controls` del panel.  
   
-3.  Llame al método <xref:System.Windows.Forms.Control.Dispose%2A> para liberar todos los recursos utilizados por el control.  
+3.  Llame a la <xref:System.Windows.Forms.Control.Dispose%2A> método para liberar todos los recursos utilizados por el control.  
   
     ```vb  
     Public Sub RemoveControl()  
@@ -90,7 +93,6 @@ Las tareas comunes de desarrollo de una aplicación son la inclusión y eliminac
           NewPanelButton.Dispose()  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -108,6 +110,6 @@ Las tareas comunes de desarrollo de una aplicación son la inclusión y eliminac
     }  
     ```  
   
-## Vea también  
- <xref:System.Windows.Forms.Panel>   
- [Control Panel](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+## <a name="see-also"></a>Vea también  
+ <xref:System.Windows.Forms.Panel>  
+ [Panel (control)](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

@@ -1,57 +1,61 @@
 ---
-title: "C&#243;mo: Dibujar texto ajustado en un rect&#225;ngulo | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "cadenas [formularios Windows Forms], dibujar en un rectángulo"
-  - "texto [Windows Forms], dibujar en un rectángulo"
-  - "Windows Forms, dibujar texto en un rectángulo"
+title: "Cómo: Dibujar texto ajustado en un rectángulo"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, drawing text in a rectangle
+- text [Windows Forms], drawing in a rectangle
+- strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 773216c30adf1c684ec705a909038354aab0fec9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Dibujar texto ajustado en un rect&#225;ngulo
-Puede dibujar texto ajustado en un rectángulo utilizando el método sobrecargado <xref:System.Drawing.Graphics.DrawString%2A> de la clase <xref:System.Drawing.Graphics> que toma como parámetro <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF>.  También debe utilizar <xref:System.Drawing.Brush> y <xref:System.Drawing.Font>.  
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Cómo: Dibujar texto ajustado en un rectángulo
+Se puede dibujar texto ajustado en un rectángulo con el <xref:System.Drawing.Graphics.DrawString%2A> sobrecargar el método de la <xref:System.Drawing.Graphics> clase que toma un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF> parámetro. También se utiliza un <xref:System.Drawing.Brush> y <xref:System.Drawing.Font>.  
   
- También puede dibujar texto ajustado en un rectángulo utilizando el método sobrecargado <xref:System.Windows.Forms.TextRenderer.DrawText%2A> de <xref:System.Windows.Forms.TextRenderer> que toma como parámetro <xref:System.Drawing.Rectangle> o <xref:System.Windows.Forms.TextFormatFlags>.  También debe utilizar <xref:System.Drawing.Color> y <xref:System.Drawing.Font>.  
+ También se puede dibujar texto ajustado en un rectángulo con el <xref:System.Windows.Forms.TextRenderer.DrawText%2A> sobrecargar el método de la <xref:System.Windows.Forms.TextRenderer> que toma un <xref:System.Drawing.Rectangle> y un <xref:System.Windows.Forms.TextFormatFlags> parámetro. También se utiliza un <xref:System.Drawing.Color> y <xref:System.Drawing.Font>.  
   
- La ilustración siguiente muestra el resultado de un texto dibujado en el rectángulo mediante el método <xref:System.Drawing.Graphics.DrawString%2A>.  
+ En la siguiente ilustración muestra el resultado del texto dibujado en el rectángulo, cuando se usa el <xref:System.Drawing.Graphics.DrawString%2A> método.  
   
  ![Texto de las fuentes](../../../../docs/framework/winforms/advanced/media/csfontstext2.png "csfontstext2")  
   
-### Para dibujar texto ajustado en un rectángulo con GDI\+  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Para dibujar texto ajustado en un rectángulo con GDI +  
   
-1.  Utilice el método sobrecargado <xref:System.Drawing.Graphics.DrawString%2A>, pasando el texto que desee, <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> y <xref:System.Drawing.Brush>.  
+1.  Use la <xref:System.Drawing.Graphics.DrawString%2A> método sobrecargado, pasando el texto que desee, <xref:System.Drawing.Rectangle> o <xref:System.Drawing.RectangleF>, <xref:System.Drawing.Font> y <xref:System.Drawing.Brush>.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
      [!code-vb[System.Drawing.AlignDrawnText#50](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
-### Para dibujar texto ajustado en un rectángulo con GDI  
+### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Para dibujar texto ajustado en un rectángulo con GDI  
   
-1.  Utilice el valor de enumeración de <xref:System.Windows.Forms.TextFormatFlags> para especificar el texto que se va a ajustar con el método sobrecargado <xref:System.Windows.Forms.TextRenderer.DrawText%2A>, pasando el texto que desee, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> y <xref:System.Drawing.Color>.  
+1.  Use la <xref:System.Windows.Forms.TextFormatFlags> valor de enumeración para especificar el texto debe ajustarse a la <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método sobrecargado, pasando el texto que desee, <xref:System.Drawing.Rectangle>, <xref:System.Drawing.Font> y <xref:System.Drawing.Color>.  
   
      [!code-csharp[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
      [!code-vb[System.Drawing.AlignDrawnText#60](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Los ejemplos anteriores requieren:  
   
--   <xref:System.Windows.Forms.PaintEventArgs> `e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+-   <xref:System.Windows.Forms.PaintEventArgs>`e`, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Vea también  
- [Cómo: Dibujar texto con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)   
- [Utilizar fuentes y texto](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)   
- [Cómo: Construir fuentes y familias de fuentes](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)   
- [Cómo: Dibujar texto en una ubicación especificada](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)
+## <a name="see-also"></a>Vea también  
+ [Dibujar texto con GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [Utilizar fuentes y texto](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
+ [Construir fuentes y familias de fuentes](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [Dibujar texto en una ubicación especificada](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)

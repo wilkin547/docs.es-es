@@ -1,28 +1,30 @@
 ---
-title: "Acceso a los servicios mediante un cliente WCF | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "clientes [WCF], uso de servicios"
+title: Acceso a los servicios mediante un cliente WCF
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 36
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 36
+caps.latest.revision: "36"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6154309f24ea0eda062b7108ae280175d3ad97e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Acceso a los servicios mediante un cliente WCF
-Después de crear un servicio, el paso siguiente es crear un cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  Una aplicación de cliente usa el cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para comunicarse con el servicio.  Las aplicaciones de cliente suelen importar los metadatos de un servicio para generar el código de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se puede usar para invocar el servicio.  
+# <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
+Después de crear un servicio, el paso siguiente es crear un cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Una aplicación de cliente usa el cliente proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] para comunicarse con el servicio. Las aplicaciones de cliente suelen importar los metadatos de un servicio para generar el código de cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] que se puede usar para invocar el servicio.  
   
  Los pasos básicos para crear un cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] son los siguientes:  
   
@@ -32,16 +34,16 @@ Después de crear un servicio, el paso siguiente es crear un cliente proxy [!INC
   
 3.  Cree una instancia del proxy de cliente de WCF.  
   
- El proxy de cliente de WCF se puede generar manualmente mediante la herramienta de utilidad de metadatos del modelo de servicio \(SvcUtil.exe\); para obtener más información, vea [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  El proxy de cliente de WCF también se puede generar en Visual Studio mediante la característica Agregar referencia de servicio.  Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución.  Si el servicio se autohospeda, debe ejecutar el host.  Si el servicio se hospeda en IIS\/WAS no necesita hacer nada más.  
+ El proxy de cliente WCF puede generarse manualmente mediante el uso de Service Model Metadata Utility Tool (SvcUtil.exe) para obtener más información, vea [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). El proxy de cliente de WCF también se puede generar en Visual Studio mediante la característica Agregar referencia de servicio. Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución. Si el servicio se autohospeda, debe ejecutar el host. Si el servicio se hospeda en IIS/WAS no necesita hacer nada más.  
   
-## Herramienta de utilidad de metadatos ServiceModel  
- [Herramienta de utilidad de metadatos de ServiceModel \(Svcutil.exe\)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) es una herramienta de línea de comandos para generar código a partir de metadatos.  A continuación se muestra un ejemplo del uso de un comando básico Svcutil.exe.  
+## <a name="servicemodel-metadata-utility-tool"></a>Herramienta de utilidad de metadatos ServiceModel  
+ El [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) es una herramienta de línea de comandos para generar código de metadatos. A continuación se muestra un ejemplo del uso de un comando básico Svcutil.exe.  
   
 ```  
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
 ```  
   
- Como alternativa, puede usar Svcutil.exe con archivos de Lenguaje de descripción de servicios Web \(WSDL\) y de lenguaje de definición de esquemas XML \(XSD\) en el sistema de archivos.  
+ Como alternativa, puede usar Svcutil.exe con archivos de Lenguaje de descripción de servicios Web (WSDL) y de lenguaje de definición de esquemas XML (XSD) en el sistema de archivos.  
   
 ```  
 Svcutil.exe <list of WSDL and XSD files on file system>  
@@ -55,142 +57,148 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida.  Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] la configuración, vea [Configurar enlaces para los servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
+ Si se proporciona solo uno nombre de archivo, ése será el nombre del archivo de salida. Si se proporcionan dos nombres de archivo, entonces el primer archivo es un archivo de configuración de entrada cuyo contenido está combinado con la configuración generada y que se escribe en el segundo archivo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]configuración, consulte [configurar enlaces para servicios](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).  
   
 > [!IMPORTANT]
->  Las solicitudes de metadatos que no son seguras plantean ciertos riesgos, al igual que cualquier solicitud de una red no segura: si no está seguro de que el extremo con el que se está comunicando es el que dice ser, es posible que la información que recupere sean metadatos de un servicio malintencionado.  
+>  Las solicitudes de metadatos que no son seguras plantean ciertos riesgos, al igual que cualquier solicitud de una red no segura: si no está seguro de que el punto de conexión con el que se está comunicando es el que dice ser, es posible que la información que recupere sean metadatos de un servicio malintencionado.  
   
-## Agregar referencia de servicio en Visual Studio  
- Con el servicio en ejecución, haga clic con el botón secundario en el proyecto que contendrá el proxy de cliente de WCF y seleccione **Agregar referencia de servicio**.  En el cuadro de diálogo **Agregar referencia de servicio**, escriba la dirección URL del servicio al que desea llamar y haga clic en el botón **Ir**.  El cuadro de diálogo mostrará una lista de servicios disponibles en la dirección especificada.  Haga doble clic en el servicio para ver los contratos y las operaciones disponibles, especifique un espacio de nombres para el código generado y haga clic en el botón **Aceptar**.  
+## <a name="add-service-reference-in-visual-studio"></a>Agregar referencia de servicio en Visual Studio  
+ Con el servicio en ejecución, haga clic en el proyecto que contendrá el proxy de cliente WCF y seleccione **Agregar referencia de servicio**. En el **Agregar cuadro de diálogo de referencia de servicio** escriba la dirección URL para el servicio que desea llamar y haga clic en el **vaya** botón. El cuadro de diálogo mostrará una lista de servicios disponibles en la dirección especificada. Haga doble clic en el servicio para ver los contratos y operaciones disponibles, especifique un espacio de nombres para el código generado y haga clic en el **Aceptar** botón.  
   
-## Ejemplo  
+## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente muestra un contrato de servicio creado para un servicio.  
   
-```csharp  
-// Define a service contract.  
-[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
-public interface ICalculator  
-{  
-    [OperationContract]  
-    double Add(double n1, double n2);  
-    // Other methods are not shown here.  
-}  
+```csharp
+// Define a service contract.
+[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
+public interface ICalculator
+{
+    [OperationContract]
+    double Add(double n1, double n2);
+    // Other methods are not shown here.
+}
+```
+  
+```vb
+' Define a service contract.
+<ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
+Public Interface ICalculator
+    <OperationContract()>  _
+    Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
+    ' Other methods are not shown here.
+End Interface
+```
+  
+ La herramienta de utilidad de metadatos de ServiceModel y Agregar referencia de servicio en Visual Studio genera la clase de cliente siguiente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La clase adquiere de la clase <xref:System.ServiceModel.ClientBase%601> genérica e implementa la interfaz `ICalculator`. La herramienta también genera la interfaz (no se muestra aquí) `ICalculator`.  
+  
+```csharp
+public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
+{
+    public CalculatorClient()
+    {}
+
+    public CalculatorClient(string endpointConfigurationName) :
+            base(endpointConfigurationName)
+    {}
+
+    public CalculatorClient(string endpointConfigurationName, string remoteAddress) :
+            base(endpointConfigurationName, remoteAddress)
+    {}
+
+    public CalculatorClient(string endpointConfigurationName,
+        System.ServiceModel.EndpointAddress remoteAddress) :
+            base(endpointConfigurationName, remoteAddress)
+    {}
+
+    public CalculatorClient(System.ServiceModel.Channels.Binding binding,
+        System.ServiceModel.EndpointAddress remoteAddress) :
+            base(binding, remoteAddress)
+    {}
+
+    public double Add(double n1, double n2)
+    {
+        return base.Channel.Add(n1, n2);
+    }
+}
 ```  
   
 ```vb  
-' Define a service contract.  
-<ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")> _  
-Public Interface ICalculator  
-    <OperationContract()>  _  
-    Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double   
-    ' Other methods are not shown here.  
-End Interface   
-```  
+Partial Public Class CalculatorClient
+    Inherits System.ServiceModel.ClientBase(Of ICalculator)
+    Implements ICalculator
+
+    Public Sub New()
+        MyBase.New
+    End Sub
+
+    Public Sub New(ByVal endpointConfigurationName As String)
+        MyBase.New(endpointConfigurationName)
+    End Sub
+
+    Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As String)
+        MyBase.New(endpointConfigurationName, remoteAddress)
+    End Sub
+
+    Public Sub New(ByVal endpointConfigurationName As String,
+        ByVal remoteAddress As System.ServiceModel.EndpointAddress)
+        MyBase.New(endpointConfigurationName, remoteAddress)
+    End Sub
+
+    Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding,
+        ByVal remoteAddress As System.ServiceModel.EndpointAddress)
+        MyBase.New(binding, remoteAddress)
+    End Sub
+
+    Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
+        Implements ICalculator.Add
+        Return MyBase.Channel.Add(n1, n2)
+    End Function
+End Class
+```
   
- La herramienta de utilidad de metadatos de ServiceModel y Agregar referencia de servicio en Visual Studio genera la clase de cliente siguiente de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  La clase adquiere de la clase <xref:System.ServiceModel.ClientBase%601> genérica e implementa la interfaz `ICalculator`.  La herramienta también genera la interfaz \(no se muestra aquí\) `ICalculator`.  
-  
-```csharp  
-public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator  
-{  
-    public CalculatorClient(){}  
-  
-    public CalculatorClient(string configurationName) :   
-            base(configurationName)  
-    {}  
-  
-    public CalculatorClient(System.ServiceModel.Binding binding) :   
-            base(binding)  
-    {}  
-  
-    public CalculatorClient(System.ServiceModel.EndpointAddress address,  
-    System.ServiceModel.Binding binding) :   
-            base(address, binding)  
-    {}  
-  
-    public double Add(double n1, double n2)  
-    {  
-        return base.InnerChannel.Add(n1, n2);  
-    }  
-}  
-  
-```  
-  
-```vb  
-Partial Public Class CalculatorClient  
-    Inherits System.ServiceModel.ClientBase(Of ICalculator)  
-    Implements ICalculator  
-  
-    Public Sub New()  
-        MyBase.New  
-    End Sub  
-  
-    Public Sub New(ByVal configurationName As String)  
-        MyBase.New(configurationName)  
-    End Sub  
-  
-    Public Sub New(ByVal binding As System.ServiceModel.Binding)  
-        MyBase.New(binding)  
-    End Sub  
-  
-    Public Sub New(ByVal address As _  
-    System.ServiceModel.EndpointAddress, _  
-    ByVal binding As System.ServiceModel.Binding)  
-        MyBase.New(address, binding)  
-    End Sub  
-  
-    Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As _  
-    Double Implements ICalculator.Add  
-        Return MyBase.InnerChannel.Add(n1, n2)  
-    End Function   
-End Class  
-  
-```  
-  
-## Uso del cliente WCF  
+## <a name="using-the-wcf-client"></a>Uso del cliente WCF  
  Para usar el cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], cree una instancia del cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] y, a continuación, llame a sus métodos, tal y como se muestra en el código siguiente.  
   
-```csharp  
-// Create a client object with the given client endpoint configuration.  
-CalculatorClient calcClient = new CalculatorClient("CalculatorEndpoint"));  
-// Call the Add service operation.  
-double value1 = 100.00D;  
-double value2 = 15.99D;  
-double result = calcClient.Add(value1, value2);  
-Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
+```csharp
+// Create a client object with the given client endpoint configuration.
+CalculatorClient calcClient = new CalculatorClient("CalculatorEndpoint"));
+// Call the Add service operation.
+double value1 = 100.00D;
+double value2 = 15.99D;
+double result = calcClient.Add(value1, value2);
+Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
+```
   
-```  
+```vb
+' Create a client object with the given client endpoint configuration.
+Dim calcClient As CalculatorClient = _
+New CalculatorClient("CalculatorEndpoint")
+
+' Call the Add service operation.
+Dim value1 As Double = 100.00D
+Dim value2 As Double = 15.99D
+Dim result As Double = calcClient.Add(value1, value2)
+Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
+```
   
-```vb  
-' Create a client object with the given client endpoint configuration.  
-Dim calcClient As CalculatorClient = _  
-New CalculatorClient("CalculatorEndpoint")  
-  
-' Call the Add service operation.  
-Dim value1 As Double = 100.00D  
-Dim value2 As Double = 15.99D  
-Dim result As Double = calcClient.Add(value1, value2)  
-Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)  
-  
-```  
-  
-## Depuración de las excepciones iniciadas por un cliente  
- Muchas de las excepciones iniciadas por un cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tienen su origen en una excepción del servicio.  Estos son algunos ejemplos:  
+## <a name="debugging-exceptions-thrown-by-a-client"></a>Depuración de las excepciones iniciadas por un cliente  
+ Muchas de las excepciones iniciadas por un cliente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] tienen su origen en una excepción del servicio. Estos son algunos ejemplos:  
   
 -   <xref:System.Net.Sockets.SocketException>: el host remoto forzó el cierre de la conexión existente.  
   
 -   <xref:System.ServiceModel.CommunicationException>: la conexión ha terminado de forma inesperada.  
   
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: se anuló la conexión de socket.  La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.  
+-   <xref:System.ServiceModel.CommunicationObjectAbortedException>: se anuló la conexión de socket. La causa puede ser un error en el procesamiento del mensaje, que se superó el tiempo de espera de recepción en el host remoto, o bien un problema de recursos de red subyacente.  
   
- Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] seguimiento, vea [Seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [Uso del seguimiento para solucionar problemas de su aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Cuando se producen estos tipos de excepciones, la mejor manera de resolver el problema es activar el seguimiento en el lado del servicio y determinar qué excepción se produjo allí. [!INCLUDE[crabout](../../../includes/crabout-md.md)]seguimiento, consulte [seguimiento](../../../docs/framework/wcf/diagnostics/tracing/index.md) y [utilizando el seguimiento para solucionar problemas de la aplicación](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
-## Vea también  
- [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [Cómo: Obtener acceso a los servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)   
- [Cómo: Llamar a operaciones de servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)   
- [Cómo: Obtener acceso a los servicios con contratos unidireccionales y de solicitud\-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)   
- [Cómo: Obtener acceso a un servicio WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)   
- [Comprender códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)   
- [Cómo: Mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)   
- [Especificación del comportamiento de tiempo de ejecución del cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)   
+## <a name="see-also"></a>Vea también  
+ [Cómo crear un cliente](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Cómo: obtener acceso a servicios con un contrato dúplex](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Cómo: llamar a las operaciones del servicio de forma asincrónica](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Cómo: tener acceso a servicios con unidireccional y los contratos de solicitud-respuesta](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Cómo: obtener acceso a un WSE 3.0 Service](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Comprender códigos de cliente generado](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
+ [Cómo: mejorar el inicio del tiempo de aplicaciones cliente de WCF mediante XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [Especificación del comportamiento de tiempo de ejecución del cliente](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [Configuración de los comportamientos del cliente](../../../docs/framework/wcf/configuring-client-behaviors.md)

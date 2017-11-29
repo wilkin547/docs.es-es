@@ -1,39 +1,42 @@
 ---
-title: "C&#243;mo: Enlazar las propiedades de dos controles | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "enlazar propiedades de dos controles"
-  - "controles, enlazar propiedades de"
-  - "enlace de datos, enlazar propiedades de dos controles"
+title: "Cómo: Enlazar las propiedades de dos controles"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [WPF], binding properties of two controls
+- binding properties of two controls [WPF]
+- controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ff3da19d33e747ec514de9cd24fa08ccd6ab13bd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Enlazar las propiedades de dos controles
-En este ejemplo se muestra cómo enlazar la propiedad de un control del que se ha creado una instancia con la de otro, utilizando la propiedad <xref:System.Windows.Data.Binding.ElementName%2A>.  
+# <a name="how-to-bind-the-properties-of-two-controls"></a>Cómo: Enlazar las propiedades de dos controles
+Este ejemplo muestra cómo enlazar la propiedad de un control de instancias a la de otra utilizando el <xref:System.Windows.Data.Binding.ElementName%2A> propiedad.  
   
-## Ejemplo  
- En el ejemplo siguiente se muestra cómo enlazar la propiedad <xref:System.Windows.Controls.Panel.Background%2A> de un control <xref:System.Windows.Controls.Canvas> con la propiedad <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> de un control <xref:System.Windows.Controls.ComboBox>:  
+## <a name="example"></a>Ejemplo  
+ En el ejemplo siguiente se muestra cómo enlazar la <xref:System.Windows.Controls.Panel.Background%2A> propiedad de un <xref:System.Windows.Controls.Canvas> a la <xref:System.Windows.Controls.Primitives.Selector.SelectedItem%2A>.<xref:System.Windows.Controls.ContentControl.Content%2A> propiedad de un <xref:System.Windows.Controls.ComboBox>:  
   
- [!code-xml[BindDptoDp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindDPtoDP/CS/Window1.xaml#1)]  
+ [!code-xaml[BindDptoDp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindDPtoDP/CS/Window1.xaml#1)]  
   
- Cuando se representa este ejemplo tiene un aspecto similar a lo siguiente:  
+ Cuando se representa este ejemplo, tiene un aspecto similar a lo siguiente:  
   
- ![Lienzo con un fondo verde](../../../../docs/framework/wpf/data/media/databindingbindingdpssample.png "DataBindingBindingDPsSample")  
+ ![Un lienzo con un fondo verde](../../../../docs/framework/wpf/data/media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
   
- **Nota** La propiedad [de destino del enlace](GTMT) \(en este ejemplo, la propiedad <xref:System.Windows.Controls.Panel.Background%2A>\) debe ser una [propiedad de dependencia](GTMT).  Para obtener más información, vea [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ **Tenga en cuenta** la propiedad de destino de enlace (en este ejemplo, el <xref:System.Windows.Controls.Panel.Background%2A> propiedad) debe ser una propiedad de dependencia. Para obtener más información, consulte [Información general sobre el enlace de datos](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
-## Vea también  
- [Especificar el origen de enlace](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)   
- [Temas "Cómo..."](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Vea también  
+ [Especificación del origen de enlace](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
+ [Temas de procedimientos](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,56 +1,59 @@
 ---
-title: "Propiedades de dependencia de s&#243;lo lectura | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "propiedades de dependencia, solo lectura"
-  - "propiedades de dependencia de sólo lectura"
+title: "Propiedades de dependencia de sólo lectura"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dependency properties [WPF], read-only
+- read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9cb4477fe388c294bbd6b87589d5a3108a90d27f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Propiedades de dependencia de s&#243;lo lectura
-En este tema se describen las propiedades de dependencia de sólo lectura; se incluyen las ya existentes, así como los escenarios y las técnicas para crear una personalizada.  
+# <a name="read-only-dependency-properties"></a>Propiedades de dependencia de sólo lectura
+En este tema se describen las propiedades de dependencia de solo lectura, incluidas las propiedades de dependencia de solo lectura existentes y los escenarios y las técnicas para crear una propiedad de dependencia de solo lectura personalizada.  
   
-   
+
   
 <a name="prerequisites"></a>   
-## Requisitos previos  
- En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia, así como la aplicación de una propiedad a una propiedad de dependencia personalizada.  Vea [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) para obtener contexto.  
+## <a name="prerequisites"></a>Requisitos previos  
+ En este tema se supone que entiende los escenarios básicos de la implementación de una propiedad de dependencia y cómo se aplican los metadatos a una propiedad de dependencia personalizada. Consulte [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) y [Metadatos de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) para obtener contexto.  
   
 <a name="existing"></a>   
-## Propiedades de la dependencia de sólo lectura existentes  
- Algunas de las propiedades de dependencia definidos en el marco de trabajo de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son de sólo lectura.  El motivo habitual típica para especificar una propiedad de dependencia de sólo lectura es que se trata de propiedades deben utilizarse para determinar el estado en casos en que hay muchos factores que afectan a este último, pero en los que limitarse a establecer la propiedad en ese estado no es deseable desde el punto de vista del diseño de la interfaz de usuario.  Por ejemplo, la propiedad <xref:System.Windows.UIElement.IsMouseOver%2A> se limita, en realidad, a exponer el estado determinado por la entrada de mouse.  Cualquier intento de establecer este valor mediante programación y eludir la entrada de mouse real sería imprevisible y daría lugar a incoherencias.  
+## <a name="existing-read-only-dependency-properties"></a>Propiedades de dependencia de solo lectura existentes  
+ Algunas de las propiedades de dependencia definidas en el marco de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son de solo lectura. La razón típica para especificar una propiedad de dependencia de solo lectura es que son propiedades que se deben usar para determinar el estado, si ese estado depende de muchos factores, pero, simplemente, establecer la propiedad en ese estado no es deseable desde una perspectiva de diseño de la interfaz de usuario. Por ejemplo, la propiedad <xref:System.Windows.UIElement.IsMouseOver%2A> simplemente es mostrar estado tal y como se determina a partir de la entrada de mouse (ratón). Cualquier intento de establecer este valor mediante programación y sortear la entrada de ratón real sería imprevisible y daría lugar a incoherencias.  
   
- Al no poder establecerse, las propiedades de dependencia de sólo lectura no son adecuadas para muchos de los escenarios en que las propiedades de dependencia suelen ofrecer una solución \(a saber: enlace de datos, aplicación de un estilo directo a un valor, validación, animación o herencia\).  A pesar de no poderse establecer, las propiedades de dependencia de sólo lectura conservan algunas de las funciones adicionales que admiten las propiedades de dependencia en el sistema de propiedades.  De éstas, la más importante es la capacidad de ser utilizadas como desencadenador de propiedad en un estilo.  Los desencadenadores no se pueden habilitar con una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] normal; se necesita una propiedad de dependencia.  La propiedad <xref:System.Windows.UIElement.IsMouseOver%2A> mencionada anteriormente es un ejemplo perfecto de un escenario donde podría resultar de gran utilidad definir un estilo para un control, donde alguna propiedad visible, como el fondo, el primer plano u otras propiedades similares de elementos compuestos dentro del control cambiará cuando el usuario sitúe un mouse sobre alguna zona definida del control.  Los procesos de invalidación inherentes al sistema de propiedades pueden detectar y comunicar los cambios de una propiedad de dependencia de sólo lectura, lo que constituye la compatibilidad interna con la funcionalidad de desencadenador de propiedad.  
+ Al no poder establecerse, las propiedades de dependencia de solo lectura no son adecuadas para muchos de los escenarios para los que las propiedades de dependencia suelen ofrecen una solución, es decir: enlace de datos, aplicar directamente estilos a un valor, validación, animación, herencia). A pesar de que no se pueden establecer, las propiedades de solo lectura todavía tienen algunas funciones adicionales que admiten las propiedades de dependencia en el sistema de propiedades. La funcionalidad restante más importante es que la propiedad de dependencia de solo lectura aún puede usarse como desencadenador de propiedad en un estilo. No puede habilitar desencadenadores con una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] normal: debe ser una propiedad de dependencia. El mencionado anteriormente <xref:System.Windows.UIElement.IsMouseOver%2A> propiedad es un ejemplo perfecto de un escenario donde puede ser muy útil definir un estilo para un control, donde algunos propiedad visible como un fondo, primer plano o propiedades similares de elementos compuestos dentro de la control cambiará cuando el usuario coloca el mouse sobre alguna zona definida del control. Los procesos de invalidación inherentes del sistema de propiedades también pueden detectar y notificar los cambios en una propiedad de dependencia de solo lectura y, de hecho, esto admite la función de desencadenador de propiedad internamente.  
   
 <a name="new"></a>   
-## Crear propiedades de dependencia de sólo lectura personalizadas  
- Asegúrese de leer la sección anterior sobre los motivos por los que las propiedades de dependencia de sólo lectura no funcionan en muchos escenarios de propiedades de dependencia típicos.  Sin embargo, si el escenario es el adecuado, puede ser conveniente crear su propia propiedad de dependencia de sólo lectura.  
+## <a name="creating-custom-read-only-dependency-properties"></a>Crear propiedades de dependencia de solo lectura  
+ Asegúrese de leer la sección anterior sobre por qué no funcionan las propiedades de dependencia de solo lectura para muchos escenarios típicos de propiedades de dependencia. Pero si tiene un escenario adecuado, es posible que quiera crear su propia propiedad de dependencia de solo lectura.  
   
- Gran parte del proceso de creación de una propiedad de dependencia de sólo lectura es igual al descrito en los temas [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) y [Implementar una propiedad de dependencia](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md).  Hay tres diferencias importantes:  
+ Gran parte del proceso de creación de una propiedad de dependencia de solo lectura es el mismo que se describe en los temas [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) e [Implementar una propiedad de dependencia](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md). Hay tres diferencias importantes:  
   
--   Al registrar la propiedad, llame al método <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> en lugar de al método <xref:System.Windows.DependencyProperty.Register%2A> normal para el registro de propiedades.  
+-   Al registrar la propiedad, llame a la <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> método en lugar del vector normal <xref:System.Windows.DependencyProperty.Register%2A> método de registro de la propiedad.  
   
--   Al implementar la propiedad de "contenedor" de [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], asegúrese de que tampoco el contenedor tenga una implementación de establecimiento, de tal forma que no haya ninguna incoherencia en el estado de sólo lectura para el contenedor público que se expone.  
+-   Al implementar la propiedad "wrapper" [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], asegúrese de que el contenedor no tenga tampoco ninguna implementación establecida, para que no haya ninguna incoherencia en el estado de solo lectura para el contenedor público que exponga.  
   
--   El objeto devuelto por el registro de sólo lectura es <xref:System.Windows.DependencyPropertyKey> en lugar de <xref:System.Windows.DependencyProperty>.  Este campo debe almacenarse igualmente como miembro, pero no es habitual convertirlo en un miembro público del tipo.  
+-   El objeto devuelto por el registro de solo lectura es <xref:System.Windows.DependencyPropertyKey> en lugar de <xref:System.Windows.DependencyProperty>. Todavía debe almacenar este campo como miembro, pero, normalmente, no lo convertiría en un miembro público del tipo.  
   
- Por supuesto, el valor o campo privado que respalda la propiedad de dependencia de sólo lectura puede ser de lectura y escritura con la lógica que usted decida.  Sin embargo, la manera más sencilla de establecer la propiedad, ya sea inicialmente o como parte de lógica de tiempo de ejecución, es utilizar las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] del sistema de propiedades, en lugar de eludir el sistema de propiedades y establecer directamente el campo de respaldo privado.  En particular, existe una firma de <xref:System.Windows.DependencyObject.SetValue%2A> que acepta un parámetro de tipo <xref:System.Windows.DependencyPropertyKey>.  Cómo y dónde se establezca este valor mediante programación dentro de la lógica de la aplicación afectará a cómo se establecerá el acceso en la <xref:System.Windows.DependencyPropertyKey> creada al registrar la propiedad de dependencia por primera vez.  Si toda esta lógica se administra dentro de la clase, puede hacerlo privado, pero si requiere que se establezca desde otro componente del ensamblado, puede establecerlo como interno.  Un enfoque consiste en llamar a <xref:System.Windows.DependencyObject.SetValue%2A> dentro de un controlador de eventos de clase de un evento pertinente que comunique a una instancia de clase que es preciso cambiar el valor de propiedad almacenado.  Otro enfoque consiste en vincular las propiedades de dependencia entre sí mediante devoluciones de llamada <xref:System.Windows.PropertyChangedCallback> y <xref:System.Windows.CoerceValueCallback> emparejadas como parte de los metadatos de esas propiedades durante el registro.  
+ Por supuesto, cualquier valor o campo privado que respalde la propiedad de dependencia de solo lectura se puede escribir completamente con cualquier lógica que decida. Sin embargo, la manera más sencilla de establecer la propiedad inicialmente o como parte de la lógica en tiempo de ejecución es usar [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] del sistema de propiedades, en lugar de burlar el sistema de propiedades y establecer el campo de respaldo privado directamente. En concreto, hay una firma de <xref:System.Windows.DependencyObject.SetValue%2A> que acepta un parámetro de tipo <xref:System.Windows.DependencyPropertyKey>. Cómo y dónde establecer este valor mediante programación dentro de la lógica de aplicación afectará a cómo puede que desee configurar el acceso en el <xref:System.Windows.DependencyPropertyKey> creado al registrar primero la propiedad de dependencia. Si controla toda esta lógica dentro de la clase, puede hacerla privada o, si necesita establecerla desde otras partes del ensamblado, puede establecerla como interna. Un enfoque consiste en llamar a <xref:System.Windows.DependencyObject.SetValue%2A> dentro de un controlador de eventos de clase de un evento pertinente que informa a una instancia de clase que debe cambiarse el valor de propiedad almacenado. Otro enfoque consiste en vincular las propiedades de dependencia mediante el uso de emparejar <xref:System.Windows.PropertyChangedCallback> y <xref:System.Windows.CoerceValueCallback> las devoluciones de llamada como parte de metadatos las propiedades durante el registro.  
   
- Dado que <xref:System.Windows.DependencyPropertyKey> es privada, y que el sistema de propiedades no la propaga fuera del código, una propiedad de dependencia de sólo lectura aporta mayor seguridad de establecimiento que una propiedad de dependencia de lectura y escritura.  Para una propiedad de dependencia de lectura y escritura, el campo de identificación es público de manera explícita o implícita, con lo que la propiedad se puede establecer ampliamente.  Para obtener información más específica, vea [Seguridad de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
+ Dado que la <xref:System.Windows.DependencyPropertyKey> es privado y no se propaga por el sistema de propiedad fuera de su código, tiene una propiedad de dependencia de solo lectura mayor seguridad de establecimiento de una propiedad de dependencia de lectura y escritura. Para una propiedad de dependencia de solo lectura, el campo de identificación es explícitamente o implícitamente público y, por lo tanto, se puede establecer la propiedad. Para obtener más información específica, consulte [Seguridad de las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
   
-## Vea también  
- [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
+## <a name="see-also"></a>Vea también  
+ [Información general sobre las propiedades de dependencia](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Propiedades de dependencia personalizadas](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [Aplicar estilos y plantillas](../../../../docs/framework/wpf/controls/styling-and-templating.md)

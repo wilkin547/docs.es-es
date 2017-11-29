@@ -1,42 +1,45 @@
 ---
-title: "C&#243;mo: Determinar los par&#225;metros admitidos por un codificador | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "parámetros de codificador, determinación compatible"
+title: "Cómo: Determinar los parámetros admitidos por un codificador"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3e041434e9ace24618dbdc45341a0e8468721c3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# C&#243;mo: Determinar los par&#225;metros admitidos por un codificador
-Puede ajustar parámetros de imagen como la calidad y el nivel de compresión, pero debe conocer qué parámetros admite un codificador de imágenes determinado.  La clase <xref:System.Drawing.Image> proporciona el método <xref:System.Drawing.Image.GetEncoderParameterList%2A> para que pueda determinar qué parámetros de imagen se admiten para un codificador determinado.  El codificador se especifica con un GUID.  El método <xref:System.Drawing.Image.GetEncoderParameterList%2A> devuelve una matriz de objetos <xref:System.Drawing.Imaging.EncoderParameter>.  
+# <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Cómo: Determinar los parámetros admitidos por un codificador
+Puede ajustar los parámetros de imagen, como el nivel de calidad y la compresión, pero debe saber qué parámetros son compatibles con un codificador de imágenes especificado. El <xref:System.Drawing.Image> clase proporciona el <xref:System.Drawing.Image.GetEncoderParameterList%2A> método para que pueda determinar qué parámetros de imagen se admiten para un codificador determinado. El codificador se especifica con un GUID. El <xref:System.Drawing.Image.GetEncoderParameterList%2A> método devuelve una matriz de <xref:System.Drawing.Imaging.EncoderParameter> objetos.  
   
-## Ejemplo  
- El siguiente código de ejemplo genera los parámetros compatibles para el codificador de JPEG.  Utilice la lista de categorías de parámetro y GUID asociados en la información general de la clase <xref:System.Drawing.Imaging.Encoder> para determinar la categoría de cada parámetro.  
+## <a name="example"></a>Ejemplo  
+ El código de ejemplo siguiente genera los parámetros compatibles para el codificador JPEG. Utilice la lista de categorías de parámetro y los GUID asociados en la <xref:System.Drawing.Imaging.Encoder> general sobre la clase para determinar la categoría para cada parámetro.  
   
  [!code-csharp[UsingImageEncodersDecoders#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/UsingImageEncodersDecoders/CS/Form1.cs#3)]
  [!code-vb[UsingImageEncodersDecoders#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/UsingImageEncodersDecoders/VB/Form1.vb#3)]  
   
-## Compilar el código  
+## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una aplicación de formularios Windows Forms.  
+-   Una aplicación de Windows Forms.  
   
--   Un argumento <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+-   A <xref:System.Windows.Forms.PaintEventArgs>, que es un parámetro de <xref:System.Windows.Forms.PaintEventHandler>.  
   
-## Vea también  
- [Cómo: Enumerar los codificadores instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)   
- [Tipos de mapas de bits](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)   
- [Usar codificadores y descodificadores de imagen en la interfaz GDI\+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+## <a name="see-also"></a>Vea también  
+ [Enumerar los codificadores instalados](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Tipos de mapas de bits](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
+ [Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

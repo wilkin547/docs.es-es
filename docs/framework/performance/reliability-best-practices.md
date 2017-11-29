@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -46,16 +45,15 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c3f93e90c330881ec5002b820569b27416e049a
-ms.contentlocale: es-es
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 Las siguientes reglas de confiabilidad están orientadas a SQL Server, pero también se aplican a cualquier aplicación de servidor basada en host. Es extremadamente importante que los servidores como SQL Server no pierdan recursos ni se interrumpan.  Pero eso no se puede realizar mediante la escritura de código devuelto para todos los métodos que modifican el estado de un objeto.  El objetivo no es escribir código administrado confiable al 100 por cien que se recupere de los errores en todas las ubicaciones con código devuelto.  Eso sería una tarea desalentadora con escasa probabilidad de éxito.  El Common Language Runtime (CLR) no puede proporcionar fácilmente garantías lo bastante seguras para el código administrado para que la escritura de código perfecto sea viable.  Tenga en cuenta que, a diferencia de ASP.NET, SQL Server solo usa un proceso que no se puede reciclar sin cerrar una base de datos durante un período inaceptablemente prolongado.  
@@ -96,7 +94,7 @@ Las siguientes reglas de confiabilidad están orientadas a SQL Server, pero tamb
   
  La mayoría de las clases que actualmente tienen un finalizador simplemente para limpiar un identificador del sistema operativo ya no lo necesitarán. En su lugar, el finalizador estará en la clase derivada <xref:System.Runtime.InteropServices.SafeHandle>.  
   
- Tenga en cuenta que <xref:System.Runtime.InteropServices.SafeHandle> no es un sustituto de <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>.  Todavía hay posibles ventajas de contención de recursos y rendimiento a la eliminación explícita de recursos del sistema operativo.  Simplemente tenga en cuenta que es posible que los bloques `finally` que eliminan explícitamente de los recursos no se ejecuten hasta su finalización.  
+ Tenga en cuenta que <xref:System.Runtime.InteropServices.SafeHandle> no es un sustituto de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  Todavía hay posibles ventajas de contención de recursos y rendimiento a la eliminación explícita de recursos del sistema operativo.  Simplemente tenga en cuenta que es posible que los bloques `finally` que eliminan explícitamente de los recursos no se ejecuten hasta su finalización.  
   
  <xref:System.Runtime.InteropServices.SafeHandle> permite implementar su propio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> que realiza el trabajo necesario para liberar el identificador, como pasar el estado a una rutina de liberación de identificadores del sistema operativo o liberar un conjunto de identificadores en un bucle.  El CLR garantiza que este método se ejecute.  Es responsabilidad del autor de la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> asegurarse de que el identificador se libera en todas las circunstancias. Si no lo hace, se producirá la pérdida del identificador, lo que a menudo produce la pérdida de recursos nativos asociados al identificador. Por tanto, es fundamental estructurar las clases derivadas de <xref:System.Runtime.InteropServices.SafeHandle> para que la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> no requiera la asignación de ningún recurso que pueda no estar disponible en el momento de la invocación. Tenga en cuenta que se permite llamar a métodos que pueden producir un error en la implementación de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> siempre que el código pueda controlar esos errores y finalizar el contrato para liberar el identificador nativo. Para la depuración, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tiene un valor devuelto de <xref:System.Boolean>, que se puede establecer en `false` si se produce un error catastrófico que impida la liberación del recurso. Si se hace esto, se activará el MDA [releaseHandleFailed](../../../docs/framework/debug-trace-profile/releasehandlefailed-mda.md), si está habilitado, para ayudar a identificar el problema. No afecta el tiempo de ejecución de ninguna otra forma; no se volverá a llamar a <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> para el mismo recurso y, por tanto, el identificador se perderá.  
   
@@ -289,6 +287,5 @@ public static MyClass SingletonProperty
  Hacer esto indica al compilador Just-In-Time que prepare todo el código en el bloque finally antes de ejecutar el bloque `try`. Esto garantiza que el código en el bloque finally se compila y se ejecuta en todos los casos. No es raro que una CER tenga un bloque `try` vacío. El uso de una CER protege frente a anulaciones de subprocesos asincrónicos y excepciones de memoria insuficiente. Vea <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> para obtener una forma de CER que además administra desbordamientos de pila para código excesivamente profundo.  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.ConstrainedExecution>  
  [Programación en SQL Server y atributos de protección de host](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)
-

@@ -1,31 +1,34 @@
 ---
-title: "MessageLoggingOn | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: MessageLoggingOn
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b6252ce4-395f-4b9a-a58c-7de8c81c7c5a
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11cf15edaf95f6f299c8d3282e1ece34c86b4684
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# MessageLoggingOn
+# <a name="messageloggingon"></a>MessageLoggingOn
 Id: 116  
   
  Gravedad: error  
   
  Categoría: ServiceModel  
   
-## Descripción  
- Se ha activado Registro de mensajes.  Se puede registrar la información confidencial, incluso si se cifró en la conexión.  Por ejemplo, cuerpos del mensaje.  El evento enumera AppID, la excepción, el nombre del proceso y el id. del mismo.  
+## <a name="description"></a>Descripción  
+ Se ha activado Registro de mensajes. Se puede registrar la información confidencial, incluso si se cifró en la conexión. Por ejemplo, cuerpos del mensaje. El evento enumera AppID, la excepción, el nombre del proceso y el id. del mismo.  
   
-## Vea también  
- [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [Referencia general de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a>Vea también  
+ [Registro de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [Referencia General de eventos](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -1,31 +1,29 @@
 ---
-title: "No se puede convertir un tipo an&#243;nimo en un &#225;rbol de expresi&#243;n porque contiene un campo que se usa en la inicializaci&#243;n de otro campo | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc36548"
-  - "vbc36548"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC36548"
+title: "No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc36548
+- vbc36548
+helpviewer_keywords: BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: c2cf8a40060359393807cfb648c46fef9ed853af
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# No se puede convertir un tipo an&#243;nimo en un &#225;rbol de expresi&#243;n porque contiene un campo que se usa en la inicializaci&#243;n de otro campo
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-El compilador no acepta la conversión de un anónimo a un árbol de expresión cuando una propiedad del tipo anónimo se usa para inicializar otra propiedad del tipo anónimo.  Por ejemplo, en el código siguiente, `Prop1` se declara en la lista de inicializaciones y, a continuación, se usa como valor inicial para `Prop2`.  
+# <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>No se puede convertir un tipo anónimo en un árbol de expresión porque contiene un campo que se usa en la inicialización de otro campo
+El compilador no acepta la conversión de un anónimo a un árbol de expresión cuando una propiedad del tipo anónimo se utiliza para inicializar otra propiedad del tipo anónimo. Por ejemplo, en el código siguiente, `Prop1` se declara en la lista de inicialización y, a continuación, se utiliza como valor inicial para `Prop2`.  
   
-```vb#  
+```vb  
 Module M2  
   
     Sub ExpressionExample(Of T)(ByVal x As Expressions.Expression(Of Func(Of T)))  
@@ -41,9 +39,9 @@ End Module
   
  **Id. de error:** BC36548  
   
-### Para corregir este error  
+## <a name="to-correct-this-error"></a>Para corregir este error  
   
--   Asigne el valor inicial para `Prop1` a una variable local.  Asigne esta variable a `Prop1` y `Prop2`, como se muestra en el código siguiente.  
+-   Asigne el valor inicial para `Prop1` a una variable local. Asigne esta variable a ambos `Prop1` y `Prop2`, tal y como se muestra en el código siguiente.  
   
     ```  
     Sub Main()  
@@ -54,7 +52,7 @@ End Module
     End Sub  
     ```  
   
-## Vea también  
- [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Árboles de expresión](../Topic/Expression%20Trees%20\(C%23%20and%20Visual%20Basic\).md)   
- [Cómo: Usar árboles de expresión para crear consultas dinámicas](../Topic/How%20to:%20Use%20Expression%20Trees%20to%20Build%20Dynamic%20Queries%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>Vea también  
+ [Tipos anónimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Árboles de expresión](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Usar árboles de expresión para crear consultas dinámicas](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)

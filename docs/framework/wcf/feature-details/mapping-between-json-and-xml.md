@@ -1,41 +1,44 @@
 ---
-title: "Asignaci&#243;n entre JSON y XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Asignación entre JSON y XML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 8bcc8f178f76c536b189058210a586d0d37a1834
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/21/2017
 ---
-# Asignaci&#243;n entre JSON y XML
-Los lectores y escritores producidos por la <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> proporcionan una API de XML sobre contenido de JavaScript Object Notation (JSON). JSON codifica datos mediante un subconjunto de literales de objeto de JavaScript. Los lectores y escritores producidos por este generador también se usan cuando el contenido JSON enviados o recibidos por [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplicaciones mediante la <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> o <xref:System.ServiceModel.WebHttpBinding>.  
+# <a name="mapping-between-json-and-xml"></a>Asignación entre JSON y XML
+Los sistemas de lectura y escritura generados por el <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> proporcionan una API de XML sobre contenido de notación de objetos JavaScript (JSON) JSON codifica datos mediante un subconjunto de literales de objeto de JavaScript. También se utilizan los sistemas de lectura y escritura producidos por este generador cuando las aplicaciones de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] envían o reciben contenido JSON utilizando el <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> o <xref:System.ServiceModel.WebHttpBinding>.  
   
  Cuando se inicializa con contenido de JSON, el lector de JSON se comporta del mismo modo que un lector XML textual sobre una instancia de XML. El sistema de escritura de JSON, cuando se proporciona una secuencia de llamadas que en un lector XML textual genera una cierta instancia XML, escribe contenido JSON. La asignación entre esta instancia de XML y el contenido de JSON se describe en este tema para su uso en escenarios avanzados.  
   
  Internamente, JSON se representa como un conjunto de información XML cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lo procesa. Normalmente no tiene que preocuparse por esta representación interna, puesto que la asignación solo es una representación lógica: JSON no se convierte normalmente en XML en memoria ni se convierte a JSON a partir de XML. La asignación significa que API XML se utilizan para obtener acceso al contenido de JSON.  
   
- Cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza JSON, el escenario habitual es que el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sea conectado automáticamente mediante la <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> comportamiento, o por el <xref:System.ServiceModel.Description.WebHttpBehavior> comportamiento cuando corresponda. El <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> entiende la asignación entre JSON y el conjunto de información XML y actúa como si se trata directamente con JSON. (Es posible utilizar el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> con cualquier lector de XML o escritura, teniendo en cuenta que el XML se ajusta a la siguiente asignación.)  
+ Cuando [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utiliza JSON, el escenario habitual es que el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sea conectado automáticamente mediante el comportamiento <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, o, cuando sea apropiado, mediante el comportamiento <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> entiende la asignación entre JSON y los conjuntos de información XML y actúa como si tratase directamente con JSON. (Es posible utilizar el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> con cualquier sistema de lectura o escritura XML, siempre que se comprenda que el XML cumple la asignación siguiente).  
   
- En escenarios avanzados, puede volverse necesario tener acceso directamente a la siguiente asignación. Estos escenarios se producen cuando desea serializar y deserializar JSON de maneras personalizadas, sin depender de la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, o cuando se trabaja con el <xref:System.ServiceModel.Channels.Message> tipo directamente para los mensajes que contienen JSON. La asignación JSON-XML también se utiliza para el registro de mensajes. Al utilizar la característica de registro de mensajes en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los mensajes de JSON se registran como XML de acuerdo con la asignación descrita en la siguiente sección.  
+ En escenarios avanzados, puede volverse necesario tener acceso directamente a la siguiente asignación. Estos escenarios se producen cuando desea serializar y deserializar JSON de maneras personalizadas, sin basarse en el <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, o cuando se trata directamente con el tipo <xref:System.ServiceModel.Channels.Message> para mensajes que contienen JSON. La asignación JSON-XML también se utiliza para el registro de mensajes. Al utilizar la característica de registro de mensajes en [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], los mensajes de JSON se registran como XML de acuerdo con la asignación descrita en la siguiente sección.  
   
  Para aclarar el concepto de asignación, se proporciona el siguiente ejemplo, que procede de un documento JSON.  
   
-```  
+```json  
 {"product":"pencil","price":12}  
 ```  
   
- Para leer este documento JSON mediante uno de los lectores previamente mencionados, utilice la misma secuencia de <xref:System.Xml.XmlDictionaryReader> llama a como lo haría para leer el siguiente documento XML.  
+ Para leer este documento JSON mediante uno de los lectores previamente mencionados, utilice la misma secuencia de llamadas a <xref:System.Xml.XmlDictionaryReader> que utilizaría para leer el siguiente documento XML.  
   
-```  
+```xml  
 <root type="object">  
     <product type="string">pencil</product>  
     <price type="number">12</price>  
@@ -45,7 +48,7 @@ Los lectores y escritores producidos por la <xref:System.Runtime.Serialization.J
  Es más, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recibe el mensaje de JSON del ejemplo y lo registra, vería el fragmento XML en el registro anterior.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Asignación entre JSON y el conjunto de información XML  
- Formalmente, la asignación se produce entre JSON como se describe en [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (excepto con determinadas restricciones flexibles y otras restricciones adicionales) y el XML infoset (y no XML textual) como se describe en [XML Information Set](http://go.microsoft.com/fwlink/?LinkId=98809) . Vea este tema para las definiciones de *elementos de información* y campos entre [corchetes].  
+ Formalmente, la asignación es entre JSON como se describe en [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (excepto con ciertas restricciones estrictas y algunas otras restricciones que se agregan) y el XML infoset (y no textual XML) como se describe en [información XML Establecer](http://go.microsoft.com/fwlink/?LinkId=98809) . Vea este tema para las definiciones de *elementos de información* y campos entre [corchetes].  
   
  Un documento de JSON en blanco se asigna a un documento XML en blanco, y un documento XML en blanco se asigna a un documento JSON en blanco. En la asignación de XML a JSON, no se permiten espacios iniciales ni finales después del documento.  
   
@@ -61,7 +64,7 @@ Los lectores y escritores producidos por la <xref:System.Runtime.Serialization.J
   
  `<root type="number">42</root>`  
   
- Ambos tienen una asignación a JSON. El `root`> es el elemento JSON raíz en ambos casos.  
+ Ambos tienen una asignación a JSON. El <`root`> es el elemento JSON raíz en ambos casos.  
   
  Es más, en el caso de un DII, se debería tener considerar lo siguiente:  
   
@@ -71,7 +74,7 @@ Los lectores y escritores producidos por la <xref:System.Runtime.Serialization.J
   
 -   La lista [children] no conserva elementos de información de DTD.  
   
--   La lista [children] no conserva elementos de información personal (PI) (la declaración \<? xml.> no está considerada como un elemento de información de PI).  
+-   La lista [children] no conserva ningún elemento de información personal de información (PI) (la \<? xml... > declaración no se considera un elemento de información de PI)  
   
 -   El conjunto [notations] (notaciones) está vacío.  
   
@@ -153,11 +156,11 @@ Los lectores y escritores producidos por la <xref:System.Runtime.Serialization.J
   
 |[normalized value] del AII del `JSON Type Attribute`|[children] permitido del EII correspondiente|Asignación a JSON|  
 |---------------------------------------------------------|---------------------------------------------------|---------------------|  
-|`string` (o ausencia del AII de tipo JSON)<br /><br /> Una `string` y la ausencia del AII de tipo JSON son lo mismo, y hace que `string` sea el valor predeterminado.<br /><br /> De modo que, `<root> string1</root>``string` asigna a la "string1"  de JSON.|0 o más CII|`string` JSON (RFC de JSON, sección 2.5). Cada `char` es un carácter que corresponde al [character code] (código de carácter) del CII. Si no hay ningún CII, asigna a una `string`de JSON vacía.<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON:<br /><br /> `<root type="string">42</root>`<br /><br /> El fragmento de JSON es "42".<br /><br /> En la asignación de XML a JSON, los caracteres que deben establecerse como secuencia de escape se asignan a caracteres con escape, el resto se asigna a caracteres sin escape. El carácter "/" es especial: escape aunque no tiene que ser (escrito como "\\/").<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> El fragmento JSON es "el \\" DAS\\/ta\\"".<br /><br /> En la asignación de JSON a XML, cualquier carácter con escape y sin escape se asignan correctamente al [character code] correspondiente.<br /><br /> Ejemplo: el fragmento de JSON "\u0041BC" se asigna al siguiente elemento XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> La cadena puede estar rodeada por espacios ('ws' en la sección 2 de JSON RFC) que no se asignan a XML.<br /><br /> Ejemplo: el fragmento de JSON           "ABC", (hay espacios antes de la primera comilla doble) asigna al siguiente elemento XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Cualquier espacio en XML se asigna a un espacio en JSON.<br /><br /> Ejemplo: el elemento XML siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> El fragmento de JSON es " A BC ".|  
+|`string` (o ausencia del AII de tipo JSON)<br /><br /> Una `string` y la ausencia del AII de tipo JSON son lo mismo, y hace que `string` sea el valor predeterminado.<br /><br /> De modo que, `<root> string1</root>``string` asigna a la "string1"  de JSON.|0 o más CII|`string` JSON (RFC de JSON, sección 2.5). Cada `char` es un carácter que corresponde al [character code] (código de carácter) del CII. Si no hay ningún CII, asigna a una `string`de JSON vacía.<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON:<br /><br /> `<root type="string">42</root>`<br /><br /> El fragmento de JSON es "42".<br /><br /> En la asignación de XML a JSON, los caracteres que deben establecerse como secuencia de escape se asignan a caracteres con escape, el resto se asigna a caracteres sin escape. El carácter "/" es especial: que sea de escape aunque no tiene que ser (escrito como "\\/").<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> El fragmento JSON es "la \\" DAS\\/ta\\"".<br /><br /> En la asignación de JSON a XML, cualquier carácter con escape y sin escape se asignan correctamente al [character code] correspondiente.<br /><br /> Ejemplo: el fragmento de JSON "\u0041BC" se asigna al siguiente elemento XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> La cadena puede estar rodeada por espacios ('ws' en la sección 2 de JSON RFC) que no se asignan a XML.<br /><br /> Ejemplo: el fragmento de JSON           "ABC", (hay espacios antes de la primera comilla doble) asigna al siguiente elemento XML.<br /><br /> `<root type="string">ABC</root>`<br /><br /> Cualquier espacio en XML se asigna a un espacio en JSON.<br /><br /> Ejemplo: el elemento XML siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> El fragmento de JSON es " A BC ".|  
 |`number`|1 o más CII|Un `number` de JSON (JSON RFC, sección 2.4), posiblemente rodeado por espacios. Cada carácter en la combinación de número/espacio en blanco es un carácter que corresponde al [character code] del CII.<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="number">    42</root>`<br /><br /> El fragmento JSON es    42<br /><br /> (Se conserva el espacio en blanco).|  
 |`boolean`|4 ó 5 CII (que corresponde a `true` o `false`), posiblemente rodeado por CII de espacios adicionales.|Una secuencia de CII que corresponde a la cadena "true" se asigna al `true` literal, y una secuencia de CII que corresponde a la cadena "false" se asigna al `false` literal. Se conservan los espacios envolventes.<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="boolean"> false</root>`<br /><br /> El fragmento de JSON es `false`.|  
 |`null`|Ninguno permitido.|El literal `null`. En la asignación de JSON a XML, el valor `null` puede estar rodeado por espacios (‘ws’ en la sección 2) que no se asignan a XML.<br /><br /> Ejemplo: el elemento siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="null"/>`<br /><br /> o<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> El fragmento de JSON es en ambos casos `Null`.|  
-|`object`|0 o más EII.|`begin-object` (llave izquierda) como en la sección 2.2 de la RFC de JSON, seguida por un registro de miembros para cada EII, tal y como se describe más adelante. Si hay más de un EII, hay separadores de valores (comas) entre los registros de miembros. Todo esto va seguido de un objeto de fin (llave derecha).<br /><br /> Ejemplo: el elemento siguiente se asigna al fragmento de JSON.<br /><br /> <root type="object"></root>\><br /><br /> <type1 type="string"></type1>\>aaa\><br /><br /> <type2 type="string"></type2>\>bbb\><br /><br /> \><br /><br /> El fragmento de JSON es {"type1":"aaa","type2":"bbb"}.<br /><br /> Si el atributo del tipo de contrato de datos está presente en la asignación de XML a JSON, se inserta un registro de miembro adicional al principio. Su nombre es el [local name] del atributo del tipo de contrato de datos ("__type") y su valor es el [normalized value] del atributo. Por el contrario, en JSON a la asignación de XML, si el primer miembro-nombre del registro es el [local name] del atributo de tipo de contrato de datos (es decir, "\_e_scriba"), un atributo de tipo de contrato de datos correspondiente está presente en el XML asignado, pero no está presente un EII correspondiente. Observe que este registro de miembro debe producirse primero en el objeto JSON para que se aplique esta asignación especial. Esto representa una salida del procesamiento de JSON habitual, donde el orden de los registros de miembros no es importante.<br /><br /> Ejemplo:<br /><br /> El siguiente fragmento de JSON se asigna a XML.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> El XML es el código siguiente.<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> Observe que la \_e_scriba AII está presente, pero no hay ningún \_e_scriba EII.<br /><br /> Sin embargo, si se invierte el orden en JSON como se muestra en el ejemplo siguiente.<br /><br /> {"nombre": "John","\_e_scriba": "Persona"}<br /><br /> Se muestra el XML correspondiente.<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> Es decir, \_e_scriba deja de tener un significado especial y se asigna a un EII como es habitual, no AII.<br /><br /> Las reglas de escapado/no escapado para el [normalized value] del AII cuando se asigna a un valor JSON son las mismas que para las cadenas de JSON, especificadas en la fila "string" de esta tabla.<br /><br /> Ejemplo:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> en el ejemplo anterior puede asignarse al siguiente JSON.<br /><br /> `{"__type":"\\abc"}`<br /><br /> En una asignación de XML a JSON, no debe ser del primer EII [local name] "\_e_scriba".<br /><br /> El espacio en blanco (`ws`) nunca se genera en la asignación de XML a JSON para objetos y se omite en la asignación de JSON a XML.<br /><br /> Ejemplo: el siguiente fragmento de JSON se asigna a un elemento XML.<br /><br /> {   "ccc"   :  "aaa",   "ddd"    :"bbb"}<br /><br /> El elemento XML se muestra en el siguiente código.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|  
+|`object`|0 o más EII.|`begin-object` (llave izquierda) como en la sección 2.2 de la RFC de JSON, seguida por un registro de miembros para cada EII, tal y como se describe más adelante. Si hay más de un EII, hay separadores de valores (comas) entre los registros de miembros. Todo esto va seguido de un objeto de fin (llave derecha).<br /><br /> Ejemplo: el elemento siguiente se asigna al fragmento de JSON.<br /><br /> \<tipo de raíz = "object" ><br /><br /> \<tipo de type1 = "string" > aaa\</type1 ><br /><br /> \<tipo de type2 = "string" > bbb\</type2 ><br /><br /> \</ root ><br /><br /> El fragmento de JSON es {"type1":"aaa","type2":"bbb"}.<br /><br /> Si el atributo del tipo de contrato de datos está presente en la asignación de XML a JSON, se inserta un registro de miembro adicional al principio. Su nombre es el [local name] del atributo del tipo de contrato de datos ("__type") y su valor es el [normalized value] del atributo. Por el contrario, en JSON para la asignación de XML, si el primer miembro-nombre del registro es el [local name] del atributo de tipo de contrato de datos (es decir, "\_e_scriba"), un atributo de tipo de contrato de datos correspondiente está presente en el XML asignado, pero no es de un EII correspondiente está presente. Observe que este registro de miembro debe producirse primero en el objeto JSON para que se aplique esta asignación especial. Esto representa una salida del procesamiento de JSON habitual, donde el orden de los registros de miembros no es importante.<br /><br /> Ejemplo:<br /><br /> El siguiente fragmento de JSON se asigna a XML.<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> El XML es el código siguiente.<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> Tenga en cuenta que la \_e_scriba AII está presente, pero no hay ningún \_e_scriba EII.<br /><br /> Sin embargo, si se invierte el orden en JSON como se muestra en el ejemplo siguiente.<br /><br /> {"name": "John","\_e_scriba": "Persona"}<br /><br /> Se muestra el XML correspondiente.<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> Es decir, \_e_scriba deja de tener un significado especial y se asigna a un EII como es habitual, no AII.<br /><br /> Las reglas de escapado/no escapado para el [normalized value] del AII cuando se asigna a un valor JSON son las mismas que para las cadenas de JSON, especificadas en la fila "string" de esta tabla.<br /><br /> Ejemplo:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> en el ejemplo anterior puede asignarse al siguiente JSON.<br /><br /> `{"__type":"\\abc"}`<br /><br /> En una asignación de XML a JSON, no debe ser del primer EII [local name] "\_e_scriba".<br /><br /> El espacio en blanco (`ws`) nunca se genera en la asignación de XML a JSON para objetos y se omite en la asignación de JSON a XML.<br /><br /> Ejemplo: el siguiente fragmento de JSON se asigna a un elemento XML.<br /><br /> {   "ccc"   :  "aaa",   "ddd"    :"bbb"}<br /><br /> El elemento XML se muestra en el siguiente código.<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|  
 Ray'|0 o más EII|Una matriz de comienzo (corchete de apertura) como en la sección 2.3 de la JSON RFC, seguida por un registro de matriz para cada EII, tal y como se describe más adelante. Si hay más de un EII, hay separadores de valores (comas) entre los registros de matrices. Una matriz es seguida por una matriz de final.<br /><br /> Ejemplo: el elemento XML siguiente se asigna a un fragmento de JSON.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> El fragmento de JSON es ["aaa", "bbb"]<br /><br /> El espacio en blanco (`ws`) nunca se genera en la asignación de XML a JSON para matrices y se omite en la asignación de JSON a XML.<br /><br /> Ejemplo: fragmento de AJSON.<br /><br /> [     "aaa",     "bbb"]<br /><br /> El elemento XML al que se asigna.<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|  
   
  Los registros de miembros funcionan de la siguiente manera:  
@@ -238,6 +241,6 @@ Ray'|0 o más EII|Una matriz de comienzo (corchete de apertura) como en la secci
  `["myValue1",2,[true,null]]`  
   
 ## <a name="see-also"></a>Vea también  
- <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>   
- [Serialización independiente de JSON](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+ <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
+ [Serialización de JSON independiente](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
